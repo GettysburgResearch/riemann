@@ -32,7 +32,7 @@ PR 910 Prop. 7.2 [imported] turns a diagonal-size `2k`-th moment over `D^h` rows
   The per-row statistics are complex-Gaussian, with `M_{2k}/M₂^k ≈ k!`
   ([moments/](moments/README.md)).
 
-### 1.2 The dual objects change type as k grows (PROPOSED identification + EMPIRICAL check)
+### 1.2 The dual coefficients change shape as k grows (PROPOSED analogy + EMPIRICAL check)
 
 After Poisson in the row variable and Möbius absorption, the `2k`-th moment dual has columns
 `r = d₁⋯d_k` with a balanced `k`-fold divisor weight and coefficient `conj(α(r)) γ₂(r)`. For pairwise
@@ -43,23 +43,32 @@ coprime primary primes, twisted multiplicativity gives
 with a cubic symbol on *every pair*. This is checked:
 * `k = 2`: 362 pairs (`a2/check_twisted_mult.py`).
 * `k = 3`: 209 triples, max deviation `3.5·10⁻¹⁴`; dropping one pair symbol fails
-  (`a2/check_triple.py`).
+  (`a2/check_triple.py`). This is implied by the `k = 2` rule `γ₂(ab) = γ₂(a)γ₂(b)conj((b/a)₃)` by
+  induction, so it is a consistency check of `eis.py`, not new evidence.
 
 As a Weyl-group multiple Dirichlet series pattern (one node per factor, a pair symbol `(·/·)₃^{-1}`
 per edge; orientation immaterial for primary elements, A2_LITERATURE §2), this is the
 **complete graph `K_k`**. Its Cartan matrix is `C_k = 3I − J`, with
 `det C_k = 3^{k−1}(3 − k)`.
 
-| rung | moment | graph | type | known automorphic home |
+| rung | moment | graph | coprime-support coefficient shape | known automorphic home |
 |---|---|---|---|---|
 | `k = 1` | 2nd (Oct 5, imported) | one node | `A₁` | cubic theta on the 3-fold cover of GL(2) (Patterson) |
-| `k = 2` | 4th (PR 910 (3.5)) | edge | `A₂`, finite | cubic GL(3) Eisenstein Whittaker coefficients (BBF); GL(3) theta vanishes on the support (A2_LITERATURE §3) |
+| `k = 2` | 4th (PR 910 FOURTH_MOMENT_REDUCTION.md (3.5); UPSTREAM (7.1) at k = 2) | edge | `A₂`, finite | cubic GL(3) Eisenstein Whittaker coefficients (BBF); GL(3) theta vanishes on the support (A2_LITERATURE §3) |
 | `k = 3` | 6th | triangle | **affine `Ã₂`** (`det = 0`) | infinite Weyl group; natural boundaries expected (cf. the affine `D̃₄` fourth moment of quadratic L-functions in Diaconu–Goldfeld–Hoffstein theory) |
 | `k ≥ 4` | 8th, … | `K_k` | **Lorentzian** (signature `(k−1, 1)`) | none known |
 
-This identifies coefficient shape only, and the extra quadratic factor `(h/r)₂` lies outside every
+The pair pattern is forced by the one-variable twisted multiplicativity of `γ₂`. The type
+assignment presumes one complex variable per factor (supplied by the balanced divisor weight) and
+has been checked only on coprime squarefree support. It is a PROPOSED coefficient-shape analogy,
+not an identification of the series. (The same complete-graph pattern appears for any split of `r`
+into `k` coprime factors; whether the series is a WMDS of type `K_k` also depends on the
+prime-power data at primes dividing several `d_i`, which was not checked.)
+
+This compares coefficient shape only, and the extra quadratic factor `(h/r)₂` lies outside every
 cubic WMDS (A2_LITERATURE §2). The table still makes the ladder concrete: each rung up gives the
-same boundary for the same `ρ`, while its dual object leaves finite type at `k = 3`.
+same boundary for the same `ρ`, while, on this analogy, its dual coefficient shape leaves finite type
+at `k = 3`.
 
 ## 2. Higher zeros (height T, PR 910's native-height route)
 
@@ -91,17 +100,21 @@ same boundary for the same `ρ`, while its dual object leaves finite type at `k 
   (Proskurin, Bump–Hoffstein, as quoted by Friedberg–Ginzburg) [IMPORTED]. Its coefficients vanish
   on the coprime squarefree support of the fourth-moment dual. So the "next reflection" disappears.
 * A2-shaped theta coefficients need covering degree `n ≥ 4`, e.g. the quartic theta on GL(3).
-  Even its GL(2) coefficients are known only up to sign.
+  Even its GL(2) prime coefficients are undetermined (non-unique Whittaker models); the open
+  Eckhardt–Patterson conjecture would fix their square (LEVERAGE §3.3).
 
 ## 4. Deeper half-planes (σ₀ → 1/2)
 
 | statement | members `L(s, ψ_u)` | principal (`ζ_K`) |
 |---|---|---|
-| Mom(1, ρ), `ρ > 1` (imported Oct 5 input) | trivial | `1/2 + 5ρ/12` → 11/12 |
-| Mom(1, ρ), `ρ < 1` | `1/2 + ρ/2` (Prop. R, rigorous) | `1/2 + 5ρ/12` |
+| Mom(1, ρ), `ρ > 1` (imported Oct 5 input) | `1/2 + 5ρ/12` (Prop. R′ (RUNG), PROPOSED via unreviewed PR 910 extraction; nontrivial for `ρ < 6/5`) | `1/2 + 5ρ/12` → 11/12 |
+| Mom(1, ρ), `ρ < 1` | `1/2 + 5ρ/12` (Prop. R′ (RUNG)); `1/2 + ρ/2` (Prop. R (RUNG), elementary, unreviewed) | `1/2 + 5ρ/12` |
 | Mom(1, ρ) for all `ρ > 0` | GRH (equivalence, RUNG_STRENGTH Corollary) | RH for `ζ_K` |
 
-Going deeper is the same as going sub-diagonal. The first loss in the manuscript's own pipeline is
+Going deeper *requires* going sub-diagonal: sub-diagonal mean squares imply half-planes. The
+converse holds only at the GRH endpoint; a member half-plane `β* > 1/2` gives
+`M₂ ≪ D^{1+ρ+2(β*−1/2)}`, not Mom(1, ρ) ([DISPERSION_GRH_STEP.md](DISPERSION_GRH_STEP.md) §3(a)).
+The first loss in the manuscript's own pipeline is
 the positivity step, which discards the `μ(f)` cancellation of the dual diagonal
 ([DISPERSION_GRH_STEP.md](DISPERSION_GRH_STEP.md) §4).
 
@@ -109,7 +122,7 @@ the positivity step, which discards the `μ(f)` cancellation of the dual diagona
 
 | direction | what happens as it increases | proved / checked |
 |---|---|---|
-| moment order `k` | same boundary at the same `ρ`; the dual type goes `A₁ → A₂ → Ã₂ → Lorentzian` | Observation 1 (elementary); pair pattern checked for `k ≤ 3` |
+| moment order `k` | same boundary at the same `ρ`; the dual coefficient shape on coprime support goes `A₁ → A₂ → Ã₂ → Lorentzian` (PROPOSED analogy) | Observation 1 (elementary); pair pattern checked for `k ≤ 3` (`k = 3` implied by `k = 2`) |
 | zero height `T` | large values of `ζ`, not zeros, become the threat | numerics to `10⁶`; Prop. A (RH-conditional) |
 | reflection rank | the GL(3) cubic theta vanishes where needed | literature (IMPORTED) |
-| depth `σ₀ → 1/2` | equivalent to sub-diagonal mean squares; endpoint ⇔ family GRH | Prop. R, Corollary (elementary) |
+| depth `σ₀ → 1/2` | implied by sub-diagonal mean squares (converse only at the endpoint); endpoint ⇔ family GRH | Prop. R (RUNG), Corollary (elementary, PROPOSED); Prop. R′ (RUNG) via unreviewed PR 910 |

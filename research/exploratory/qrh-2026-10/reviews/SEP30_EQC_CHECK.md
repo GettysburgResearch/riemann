@@ -26,7 +26,13 @@ Exact sources or dependencies:
         cross-check the symbol tables (A0).
 What was actually run: reviews/sep30_eqc_check.py (written for this note), as
   `nice -n 10 python3 -I sep30_eqc_check.py --out <scratch>/full.json` and with `--quick`.
-  RESULT_LINE_PLACEHOLDER
+  Script SHA-256 445f71c162c235940b0e48d49f6a6caae6554322935f46e172f0656cf50918c3.
+  * Full run: 50/50 checks pass in about 63 s. Log SHA-256 a22a5d20...a722, JSON 27371c1b...dcca
+    (scratch only). A second full run printed identical check lines.
+  * Quick run: 46/46 checks pass.
+  * An earlier version of the script failed 2/50: the replay controls in a degenerate third
+    configuration, where E = 1 and the masks killed all but 36 tuples. That configuration was
+    replaced by a non-degenerate one; no identity check ever failed.
   Residue symbols are exact integer tables. Gauss sums, Gamma, kernels and lattice sums are double
   precision: EMPIRICAL, not certified. Pointwise tolerance 1e-9 absolute (all compared values have
   modulus 0 or 1; observed max error 3e-15); replay tolerance 1e-9 relative.
@@ -50,7 +56,7 @@ RH remains unsolved. This note checks one arithmetic identity inside the proof o
 Three independent routes agree:
 1. **A hand derivation (§3).** It reproduces every factor of (C) and also writes down the u-independent remainder, which the paper leaves undisplayed ("outer coefficients").
 2. **A pointwise numerical identity (C1, C2).** Both sides were computed from the definitions on 900 random admissible tuples, 613 of them with nonzero value, and the maximum error was 3e-15. A second check (C2) does not use the explicit remainder at all: it shows that the remainder is independent of (u_1,u_2), over 6233 pairs in 12 outer families.
-3. **An end-to-end replay of the first Poisson transform of block (A) at tiny scale (E).** The k-lattice sum agrees with the Poisson side written through (C) to relative error at most RELERR_PLACEHOLDER, for 3 label configurations, each with a radial and a shifted Gaussian.
+3. **An end-to-end replay of the first Poisson transform of block (A) at tiny scale (E).** The k-lattice sum agrees with the Poisson side written through (C) to relative error at most 2.5e-15. Measured against the h ≠ 0 (nonprincipal) part alone, which is 1.4e-4 to 5.7e-3 of the total, the error is at most 2.4e-12, for 3 label configurations, each with a radial and a shifted Gaussian.
 
 All 14 failing controls fail, and each has a minimal counterexample (§5). One further mutation was predicted to be harmless and is: the reciprocity orientation inside ξ, because the exponents there are even.
 
@@ -148,7 +154,7 @@ Each step names the script check that replays it.
 | C4 | mark split | 1200 sides | 0 |
 | C5 | ray Fourier expansion | 4 classes of P_T | 8.7e-16 |
 | D | 14 failing controls + 1 predicted-insensitive | 613 nonzero tuples | §5 |
-| E | first-Poisson replay of block (A), 3 configs × {radial, shifted} Φ | REPLAY_SIZE_PLACEHOLDER | REPLAY_RESULT_PLACEHOLDER |
+| E | first-Poisson replay of block (A), 3 configs × {radial, shifted} Φ | 26244 raw tuples; about 4.35·10^5 k-points per run; 6 runs | rel err ≤ 2.5e-15; ≤ 2.4e-12 of the h ≠ 0 part |
 
 **C1 coverage (nonzero tuples):**
 * all 8 table rows;
@@ -172,13 +178,42 @@ The zero cases include f meeting u_i, h meeting u_1u_2R_1, h = 0, and punctured 
 * The radial Gaussian is the case of Lemma 17.5, where every ψ_1 nontrivial on units vanishes on both sides.
 * The shifted Gaussian exp(−π|k−z_0|²/K) uses the general Poisson formula with ĝ(y) = e(−z_0y)(2/√3)K e^{−4πK|y|²/3}. It makes almost every tuple contribute.
 
-REPLAY_TABLE_PLACEHOLDER
+In the table below, "tuples" counts the raw tuples that survive β, ρ, the marks and the
+zero masks. "h≠0 share" is |LHS − (h = 0 part of RHS)|/LHS. The last column gives the
+relative error of the RHS under the two replay controls.
+
+| config | Φ | tuples | h≠0 share | LHS | RHS | rel err | err / h≠0 part | drop R(·,P_T) / drop E |
+|---|---|---|---|---|---|---|---|---|
+| f=1, empty mark, ν6, puncture 73a | radial | 24336 | 5.73e-03 | 1945759.0616877361 | 1945759.0616877312 − 6.8e-12i | 2.5e-15 | 4.4e-13 | 7.5e-03 / 3.0e-03 |
+| same | shifted | 24336 | 2.29e-03 | 1939050.2012477932 | 1939050.2012477894 + 1.3e-10i | 1.9e-15 | 8.4e-13 | 8.4e-03 / 2.4e-04 |
+| f=13a, two slot lists, χ_4 | radial | 2809 | 2.94e-03 | 70027.3170728111 | 70027.3170728111 + 7.9e-13i | 6.2e-16 | 2.1e-13 | 2.1e-04 / 2.2e-03 |
+| same | shifted | 2809 | 3.35e-03 | 69998.7261691448 | 69998.7261691448 − 1.9e-14i | 2.1e-16 | 6.2e-14 | 7.6e-03 / 5.7e-03 |
+| f=7b (meets b), one slot list, trivial ν, puncture 103a | radial | 7225 | 1.39e-04 | 348629.0818107656 | 348629.0818107657 − 4.3e-12i | 3.3e-16 | 2.4e-12 | 1.7e-03 / 1.7e-04 |
+| same | shifted | 7225 | 2.56e-03 | 349477.0474990257 | 349477.0474990256 + 2.1e-11i | 3.4e-16 | 1.3e-13 | 1.8e-04 / 5.7e-05 |
+
+* With the radial Φ, roughly 1/6 of the tuples have a nonvanishing h-sum, as expected. With the shifted Φ, almost all do.
+* The radial and shifted LHS differ, so the dual (h ≠ 0) terms are genuinely exercised.
 
 ## 5. Failing controls (part D; minimal counterexamples by N(m_1)N(n_1)N(n_2))
 
 | control | mutation | fails | minimal counterexample |
 |---|---|---|---|
-CONTROL_TABLE_PLACEHOLDER
+| conj_h | χ_u(h~) instead of conj χ_u(h~) | 325/613 | u_1=1, u_2=7a, 𝔅=1, f=103a·103b, h=26+45ω, ν=χ_4 |
+| G_swap | G(u_2u_1^{-1}) instead of G(u_1u_2^{-1}) | 373/613 | u_1=1, u_2=7b, 𝔅=1, f=13a·13b, h=14+32ω, ν=ν6 |
+| drop_RPT | R(u_1u_2^{-1},P_T) dropped | 97/613 | u_1=1, u_2=13a, 𝔅={7a} with row (π,a_1,a_2)=(1,1,1) (t=3), f=37a |
+| drop_R12 | cross factor R(u_1,u_2) dropped | 82/613 | u_1=13a, u_2=7b, 𝔅=1, f=19a·79b, ν trivial |
+| drop_chim1 | G(u_2^{-1}) → conj G(u_2) (χ_{u_2}(−1) dropped) | 172/613 | u_1=1, u_2=7b, 𝔅=1 |
+| G_split | G(u_1) conj G(u_2) instead of G(u_1u_2^{-1}) | 140/613 | u_1=1, u_2=7b, 𝔅=1 |
+| side2_plus | conjugated side keeps +t_p | 111/613 | u_1=1, u_2=37b, 𝔅={7a} with row (1,1,0) (t=4), f=1 |
+| xi_2pi | table built with t = a_1 − a_2 + 2π | 239/613 | u_1=13a, u_2=1, 𝔅={7b} with row (1,1,0) |
+| drop_E | E removed from h~ | 192/613 | u_1=13a, u_2=1, 𝔅={7b} with row (1,1,0) (E = 7b), f=103a, h=−1−ω |
+| drop_f2 | f² removed from h~ | 254/613 | u_1=1, u_2=7a, 𝔅=1, f=103a·103b |
+| drop_C4 | χ_u(C)^4 removed | 114/613 | u_1=1, u_2=7b, C=19b, h=−ω |
+| drop_dk | χ_u(d_k) removed | 156/613 | u_1=61b, u_2=1, 𝔅={7a} with row (0,0,0), d_k=7a |
+| drop_xi | ξ removed | 242/613 | u_1=13a, u_2=1, 𝔅={7b} with row (1,1,0) |
+| drop_mu | μ(u) removed | 320/613 | u_1=1, u_2=7b, 𝔅=1 |
+
+At each minimal counterexample, RAW and the mutated value are distinct sixth roots of unity, or distinct unit-modulus values. The full values are in the JSON.
 
 **Predicted insensitive:** xi_orient replaces ξ(u) by Π χ_p(u)^{e_p}. It fails on 0/613, as predicted in remark R2.
 

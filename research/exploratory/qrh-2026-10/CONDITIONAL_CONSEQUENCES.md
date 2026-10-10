@@ -24,8 +24,10 @@ Smallest remaining gap: each RH-equivalent premise in the repo needs exponent 0;
 > * the Linnik non-improvement;
 > * the explicit μ(σ) convexity numbers.
 
-Throughout, `Θ = sup{Re ρ : ζ(ρ) = 0}` and **QRH-IMPORT** is the unreviewed external claim `Θ ≤ 7/8`
-(in fact claimed for all Dirichlet L-functions). Write `θ_* = Θ − 1/2 ≤ 3/8` for the "excess".
+Throughout, `Θ = sup{Re ρ : ζ(ρ) = 0}`. **QRH-IMPORT** (INTAKE.md) is the unreviewed claim that
+every Dirichlet `L` is zero-free in `Re s > 7/8`. Sections 1.1–1.3, 2 and 3 use only its ζ-part
+`Θ ≤ 7/8`; the least-prime bullet of §1.4 and the Siegel bullets of §1.5 use the full statement.
+Write `θ_* = Θ − 1/2 ≤ 3/8` for the "excess".
 
 ## 1. Classical analytic consequences (conditional, imported)
 
@@ -54,16 +56,6 @@ would give `X^{ε}`).
   (A survey note giving `9/128` used the wrong normalisation.)
 * Zero density: `N(σ,T) = 0` for `σ > 7/8` is new, but the density hypothesis is already known
   on `σ ≥ 25/32`; nothing follows directly on `[1/2, 25/32]`.
-* Siegel zeros and class numbers (CONDITIONAL; standard argument, recorded in
-  [SIEGEL_DETERMINANT.md](SIEGEL_DETERMINANT.md) §5).
-  * If the imported half-plane holds for every Dirichlet `L`, every real zero has `β ≤ 7/8`
-    (`≤ 11/12` from the Oct 5 claim). Then `(1−β) log q ≥ (log 3)/8` for all `q ≥ 3`, which is
-    an *effective* Landau–Siegel exclusion.
-  * The Siegel–Goldfeld positivity argument then gives `L(1,χ) ≫ 1/log q` with effective constants.
-  * Hence `h(D) ≫ √|D|/log|D|` effectively for imaginary quadratic fields.
-  * This is a major consequence of the external claims, but it says nothing about RH. The separate
-    Oct 1 determinant paper gives only the weaker logarithmic statement; read with the
-    manuscript's constants, `c ≈ 3·10⁻⁴`.
 * Least prime in a progression: a uniform zero-free half-plane `Re s > θ` gives `p ≪ q^{1/(1−θ)+ε}
   = q^{8+ε}`, weaker than Linnik with `L = 5`.
 * Robin: the repository's Robin packet has no Θ-graded statement, and its canonical reduction
@@ -73,8 +65,24 @@ would give `X^{ε}`).
   * with no zeros in `Re s > θ`, `σ(n)/(e^γ n log log n) ≤ 1 + C(log n)^{θ−1}/log log n` for
     large `n`;
   * so QRH-IMPORT bounds the relative size of any Robin violation by `(log n)^{−1/8+ε}`;
-  * with Robin's Ω-result this exponent is sharp: QRH ⟺ that inequality for every `ε`.
+  * with Robin's Ω-result this exponent is sharp: `Θ ≤ 7/8` ⟺ that inequality for every `ε`.
   Violations are bounded in size, not excluded.
+
+**1.5 Siegel zeros and class numbers (CONDITIONAL on QRH-IMPORT for all real primitive
+characters).** Standard argument, recorded in [SIEGEL_DETERMINANT.md](SIEGEL_DETERMINANT.md) §5.
+* If the imported half-plane holds for every real primitive Dirichlet character, every real zero
+  has `β ≤ 7/8`. Then `(1−β) log q ≥ (log 3)/8` for all `q ≥ 3`, which is an *effective*
+  Landau–Siegel exclusion. (From the Oct 5 claim: `β ≤ 11/12`, hence `(1−β) log q ≥ (log 3)/12`.)
+* The Siegel–Goldfeld positivity argument then gives `L(1,χ) ≫ 1/log q` with effective constants.
+* Hence, **if QRH-IMPORT (or the Oct 5 claim) holds for every real primitive Dirichlet character**,
+  `h(D) ≫ √|D|/log|D|` for imaginary quadratic fields, with an effectively computable constant.
+  A half-plane should give more (`L(1,χ) ≫ 1/log log q` by the usual short Euler product argument;
+  standard, not re-derived here). The logarithmic form is recorded only for comparison with the
+  Oct 1 paper.
+* This would be a significant consequence of the external claims if they hold, but it says nothing
+  about RH. The separate Oct 1 determinant paper gives only the weaker logarithmic statement; read
+  with the manuscript's constants (effective in principle, PROPOSED reading), `c ≈ 3·10⁻⁴`
+  (2.8·10⁻⁴ at the paper's `H`).
 
 ## 2. A graded form of the repository's Mellin criterion (native, PROPOSED)
 

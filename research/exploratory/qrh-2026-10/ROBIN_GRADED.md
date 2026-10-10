@@ -21,7 +21,7 @@ Smallest remaining gap: Lemma K (Sec. 2) is the load-bearing new step. For the R
 
 Notation. `f(n) = σ(n)/(n log log n)`, `f_φ(n) = n/(φ(n) log log n)`, `N_k = p_1⋯p_k` (primorial),
 `ϑ(x) = Σ_{p≤x} log p`, `ψ` Chebyshev's function, `S(x) = ϑ(x) − x`, `R(x) = ψ(x) − x`.
-`Θ = sup Re ρ` over nontrivial zeros. `H(θ)` means that `ζ(s) ≠ 0` for `Re s > θ`, so QRH-IMPORT is `H(7/8)`.
+`Θ = sup Re ρ` over nontrivial zeros. `H(θ)` means that `ζ(s) ≠ 0` for `Re s > θ`, so QRH-IMPORT implies `H(7/8)`; write `QRH_ζ := H(7/8)`, the only part used here.
 `w(t) = t^{−2}(1/log t + 1/log² t)` and `K(x) = ∫_x^∞ S(t) w(t) dt` (Nicolas's notation).
 
 ## 0. Bottom line
@@ -32,8 +32,8 @@ Notation. `f(n) = σ(n)/(n log log n)`, `f_φ(n) = n/(φ(n) log log n)`, `N_k = 
    - The constant is ineffective as stated.
 2. **The exponent is sharp, giving a Θ-graded Robin criterion (PROPOSED assembly).** Define the Robin violation exponent `v_R = limsup log V(n)/log log n` over the `n` with `V(n) := f(n)/e^γ − 1 > 0`. Then:
    - `v_R = −∞` if RH holds (Robin);
-   - `v_R = Θ − 1` if RH fails. The upper half is item 1. The lower half is Robin's Ω-theorem, with every exponent `b ∈ (1−Θ, 1/2)`.
-   - Hence, for every `θ ∈ [1/2,1)`, `Θ ≤ θ ⟺ v_R ≤ θ − 1`. In particular **QRH-IMPORT ⟺ for every ε > 0, `σ(n) < e^γ n log log n·(1 + (log n)^{−1/8+ε})` for all sufficiently large n.**
+   - `v_R = Θ − 1` if RH fails. The upper half is item 1. The lower half is Robin's Ω-theorem, with every exponent `β ∈ (1−Θ, 1/2)`.
+   - Hence, for every `θ ∈ [1/2,1)`, `Θ ≤ θ ⟺ v_R ≤ θ − 1`. In particular **`QRH_ζ` (Θ ≤ 7/8) ⟺ for every ε > 0, `σ(n) < e^γ n log log n·(1 + (log n)^{−1/8+ε})` for all sufficiently large n.** QRH-IMPORT implies this inequality; the converse gives only `QRH_ζ`.
 3. **Nicolas (primorials), PROPOSED.** Under `H(θ)`, `|log(f_φ(N_k)/e^γ)| ≤ (C_θ + o(1)) p_k^{θ−1}/log p_k`. Under QRH-IMPORT this is `(log N_k)^{−1/8}/log log N_k` up to the constant.
 4. **Where Θ enters.** The leading Θ-dependence is the Mertens integral `K(x)`. Bounding it needs only the absolutely convergent explicit formula for `ψ_1 = ∫ψ` (no Perron truncation). The boundary term `S(x)/(x log x)` of the Mertens remainder cancels *exactly* against the `log log N` normalisation. That cancellation is why the scale is `x^{θ−1}/log x`, not `x^{θ−1} log x`. The pointwise Perron bound `ψ(x) − x ≪ x^θ log² x` is used only to make a second-order term `S(x)²/(x² log x)` lower order.
 5. **Repository impact (Sec. 5).** The reviewed Robin packet is finite exact arithmetic: the barrier to 5582, the canonical reduction and the rational bounded-tail envelope. QRH-IMPORT changes none of its statements or constants, and shrinks no reviewed search region.
@@ -177,7 +177,7 @@ equivalently `σ(n)/n < n/φ(n) ≤ e^γ log log n + e^γ(C_θ+δ)(log n)^{θ−
 With the K′ sketch constant, the factor `0.79` becomes `0.0465`.
 
 **Calibration (do not over-read).** `(log n)^{−1/8}` decays very slowly.
-- With the rigorous constant, the QRH envelope beats Robin's unconditional R2 (`f(n)/e^γ − 1 < 0.364/(log log n)²`) only once `log log n ≳ 35`, that is `log n ≳ 10^{15}`.
+- With the Lemma K constant (`0.79`; proved here, unreviewed), the QRH envelope beats Robin's unconditional R2 (`f(n)/e^γ − 1 < 0.364/(log log n)²`) only once `log log n ≳ 35`, that is `log n ≳ 10^{15}`.
 - `n_0` is not effective in any case.
 
 ### 3.3 The violation exponent equals Θ − 1
@@ -196,20 +196,20 @@ With the K′ sketch constant, the factor `0.79` becomes `0.0465`.
     Θ ≤ θ  ⟺  v_R ≤ θ − 1  ⟺  ∀ε>0 ∃n_ε ∀n ≥ n_ε:  σ(n) < e^γ n log log n · (1 + (log n)^{θ−1+ε}).
 
 - At `θ = 1/2` this is a weak, cofinal shadow of Robin's sharp criterion R1.
-- At `θ = 7/8` it is a **Robin-language equivalent of QRH-IMPORT**. The `ε` and the ineffective `n_ε` are essential: unlike R1, this criterion has no finite threshold.
+- At `θ = 7/8` it is a **Robin-language equivalent of `QRH_ζ`** (the ζ-part of QRH-IMPORT). The `ε` and the ineffective `n_ε` are essential: unlike R1, this criterion has no finite threshold.
 
 **Nicolas analogue.** Proposition N gives `limsup_k log|log(f_φ(N_k)/e^γ)| / log p_k ≤ Θ − 1`.
 - With N3 (if the b-range reading holds), equality holds when RH fails, in both the `Nicolas-violation` direction and the opposite direction.
 - Under RH, N4 gives `f_φ(N_k)/e^γ − 1 ≍ 1/(√p_k log p_k)` with positive sign. The exponent is `−1/2 = Θ − 1` in that case too, but there are no violations.
 
-## 4. Statements conditional on QRH-IMPORT (Θ ≤ 7/8)
+## 4. Statements conditional on QRH-IMPORT (used only through its ζ-part `QRH_ζ`: Θ ≤ 7/8)
 
 These come from Sec. 3 at `θ = 7/8`. Every bound holds for `n ≥ n_0`, which is not effective.
 
 | Object | Bound under QRH-IMPORT | Under RH (for comparison) |
 |---|---|---|
 | Robin violation size `V(n)` | `≤ 0.79 (log n)^{−1/8}/log log n` | no violation for `n > 5040` |
-| Robin violation exponent `v_R` | `≤ −1/8` (⟺ QRH-IMPORT) | `−∞` |
+| Robin violation exponent `v_R` | `≤ −1/8` (⟺ `QRH_ζ`; implied by QRH-IMPORT) | `−∞` |
 | Nicolas deviation at primorials | `\|log(f_φ(N_k)/e^γ)\| ≤ 0.79 p_k^{−1/8}/log p_k` | `f_φ(N_k)/e^γ − 1 = c(N_k)/(e^γ√(log N_k) log log N_k)`, `c(N_k) ∈ [c(2), e^γ(2+β_N))` for `k ≥ 120569` (N4) |
 | CA numbers, largest prime x | zero term `≤ 0.79 x^{−1/8}/log x`; second-order term `O(x^{−1/4} log³ x)` | `≤ −(2√2−2−β_N)/(√x log x)` (R4) |
 | non-squarefree mass of a violator, `log(n/N_{ω(n)})` | `≤ c (log n)^{7/8}` (S1) | — |
@@ -235,7 +235,7 @@ All four are finite exact (rational or directed) arithmetic, or purely structura
 
 - Sec. 3 says that **if** a canonical violator exists far out, its relative excess is at most `(log n)^{−1/8}/log log n` (times a constant). It is also near-squarefree in the sense of (S1)–(S2).
 - **A relative-size bound does not exclude violations.** To exclude them one needs the sign of `log f` at the scale `(log n)^{−1/2}/log log n`, which is the RH margin (R4, N4). QRH-IMPORT gives the scale `(log n)^{−1/8}`.
-- The exponent gap `Θ − 1/2 = 3/8` is the same `3/8` recorded in [CONDITIONAL_CONSEQUENCES.md](CONDITIONAL_CONSEQUENCES.md) for every other RH-equivalent premise in the repository.
+- The exponent gap `7/8 − 1/2 = 3/8` (Θ − 1/2 ≤ 3/8 under QRH) is the same `3/8` recorded in [CONDITIONAL_CONSEQUENCES.md](CONDITIONAL_CONSEQUENCES.md) for every other RH-equivalent premise in the repository.
 - **Canonical ≠ CA** (packet "Common misreadings"). R5 lets an analyst restrict to CA numbers. There, under QRH, the zero term `−I(x)` is `O(x^{−1/8}/log x)` and the second-order term `S²/(x² log x)` is `O(x^{−1/4} log³ x)`. Both dominate the structural RH margin `(2√2−2)/(√x log x)`, so QRH alone cannot decide the sign at any large CA number.
 - (S1)–(S2) could become cofinal pruning rules for a future tail theorem, but only after the constants and `n_0` are made explicit. That requires explicit versions of I1 and I2 under `H(7/8)`, which have not been done.
 
@@ -259,7 +259,7 @@ This route is not the repository's, but it is the one place where a half-plane h
 
 The current text of `CONDITIONAL_CONSEQUENCES.md` §1.4 ("Robin: there is no Θ-graded statement …") could become:
 
-> Robin: the reviewed packet is finite arithmetic and is unaffected. A Θ-graded statement exists (ROBIN_GRADED.md, PROPOSED). The Robin violation exponent equals `Θ − 1` when RH fails, so QRH-IMPORT ⟺ eventually `σ(n) < e^γ n log log n(1 + (log n)^{−1/8+ε})`. This bounds the size of violations, not their existence.
+> Robin: the reviewed packet is finite arithmetic and is unaffected. A Θ-graded statement exists (ROBIN_GRADED.md, PROPOSED). The Robin violation exponent equals `Θ − 1` when RH fails, so `Θ ≤ 7/8` ⟺ eventually `σ(n) < e^γ n log log n(1 + (log n)^{−1/8+ε})`. This bounds the size of violations, not their existence.
 
 ## 6. Numerics (EMPIRICAL; floating point, not directed)
 
@@ -290,7 +290,7 @@ This is consistent with the known verified range of Robin's inequality. It is a 
 ## 7. Misreadings to avoid
 
 - Prop. R and Theorem V **do not** show that Robin violations are absent under QRH. They cap the size of violations; Robin's sign needs exponent `−1/2`.
-- "QRH ⟺ `v_R ≤ −1/8`" is cofinal and ineffective. It is not a finite-check criterion like R1.
+- "`Θ ≤ 7/8` ⟺ `v_R ≤ −1/8`" is cofinal and ineffective. It is not a finite-check criterion like R1.
 - The constant `0.79` comes from a crude integration by parts. `0.0465` is a sketch (K′). Neither has an effective threshold.
 - R3's admissible range `β ∈ (1−Θ, 1/2)` is quoted from Lagarias's account of Robin. N3's range is our reading. If either were narrower, only the lower half of Theorem V (respectively, the Nicolas analogue) would weaken. Prop. R and Prop. N do not depend on R3 or N3.
 - The cancellation of `S(x)/(x log x)` is specific to the `log log N` normalisation at primorials and CA numbers. The bare Mertens remainder `Σ_{p≤x} −log(1−1/p) − log log x − γ` is genuinely of size `x^{θ−1} log x` pointwise under `H(θ)`.

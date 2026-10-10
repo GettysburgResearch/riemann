@@ -46,7 +46,7 @@ means taken from [OAI5] or from repository notes without independent proof.
 
 ## 0. Verdict
 
-**c = 5/6 is forced for the structural proof, given every automorphic input currently known.**
+**On the HEURISTIC model of §3 and every automorphic input currently known, no examined family beats c = 5/6.**
 No family examined has c < 5/6 together with all three ingredients: absorption, reflection and a
 quadratic-type large sieve. The reasons, in order of strength:
 
@@ -71,7 +71,8 @@ after one Poisson average, **absorption and a quadratic post-reflection twist ar
 congruence**. Ingredients (A) and (LS) are therefore not independent. The binding constraint is the
 existence of the theta function.
 
-The only escape inside this architecture is a coefficient theorem for n-fold covers of GL(2) with
+The only escape found inside this architecture (on the HEURISTIC model of §3) is a coefficient
+theorem for n-fold covers of GL(2) with
 n ∈ {6, 4, 10}, which would give 5/6, 7/8 and 9/10 respectively (Section 5). It is exactly the
 range where Deligne and Kazhdan–Patterson show that Whittaker models are not unique.
 
@@ -182,14 +183,15 @@ The quartic line is EXACT for 78/78 primes of `Q(i)`, inert `−3, −7, −11, 
 
 Let `F ⊇ μ_m`, and take rows `u ∈ O_F` in a ball if `F` is imaginary quadratic, or in a box with
 `≍ H` lattice points if the unit group is infinite. The symbol `χ_n(u) = (u/n)_m` is principal in
-`n` iff `u ∈ (unit)·F^{×m}`; with only finitely many units modulo m-th powers, this gives `≍ H^{1/m}`
-principal rows. Hence
+`n` iff `u ∈ F^{×m}`, which gives `≍ H^{1/m}` principal rows; each of the finitely many classes
+`ε F^{×m}` (ε a unit, `ε ∉ F^{×m}`) is a single nonprincipal member, so each member still has
+`≍ H^{1/m}` rows. Hence
 
     c = 1 − 1/m,    and the leverage law (RUNG_STRENGTH §1–2) gives σ = 1/2 + cρ/2.
 
 The base field enters only through which symbols and thetas exist. The same holds for:
-* restricting rows to a sublattice (e.g. `u ∈ Z` inside `Z[ω]`, where `u = ±w⁶` or `−27w⁶` are
-  principal);
+* restricting rows to a sublattice (e.g. `u ∈ Z` inside `Z[ω]`, where `u = w⁶` or
+  `−27w⁶ = ((1+2ω)w)⁶` are principal);
 * restricting them to a multiplicative semigroup (smooth numbers, S-units).
 
 In each case the principal count is the m-th root of the row count, up to constants. If rows are
@@ -391,8 +393,9 @@ quartic-Gauss-sum coefficient, against the EP shape) and **9/10** (m = 5: a 10-f
 
 ## 6. Consequences
 
-* Within the Oct 5 architecture, the leverage axis is closed with current knowledge. 11/12 is the
-  optimum over all Kummer families, products, quotients, norm forms and twisted rows.
+* Within the Oct 5 architecture, the leverage axis is closed for the families examined, with current
+  knowledge. 11/12 is the best value among the families examined here (Kummer, products, quotients,
+  norm forms, twisted rows), on the HEURISTIC model of §3.
 * The two remaining axes are:
   * `ρ < 1`, i.e. sub-diagonal mean squares, which need a Möbius-specific on-average GRH
     (RUNG_STRENGTH §4);

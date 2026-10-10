@@ -7,7 +7,7 @@ Scope: the 2k-th moment hypotheses of PR 910 Prop. 7.2 for the sextic Moebius fa
   Oct 5 (11/12) manuscript. No zero-free region is proved; nothing here bears on RH directly.
 Exact sources or dependencies: Oct 5 manuscript (PR 908 import, paper2.tex Sections 1-3: the family
   A_u(D), sextic reciprocity, prime extraction); PR 910 UPSTREAM_HEIGHT_AND_MOMENTS.md Prop. 7.2
-  (Hoelder exponent (k + h - h/6)/(2k)); A2_LITERATURE.md Sections 0 and 5; FOURTH_MOMENT_A2.md
+  (Hoelder exponent (k + h - h/6)/(2k); NOT covered by PR 910's REVIEW.md, so Prop. R' is unreviewed); A2_LITERATURE.md Sections 0 and 5; FOURTH_MOMENT_A2.md
   Sections 4 and 6; ALT_PROBES.md (why the family is sextic); moments/README.md
 What was actually run: moments/moments.py with theta in {-0.1, ..., -0.6} (k = 1, rows H = D^0.4 to
   D^0.9), D in {1000, ..., 64000}; output moments/results/subdiag_k1.{json,log}; about 10 s
@@ -32,8 +32,11 @@ on `[1, 2]`. Write
 **Mom(k, h)** is the hypothesis `M_{2k}(D; h) ≪_ε D^{k+h+ε}` for all large `D`. This is diagonal size:
 `A_u(D)^k` is a Dirichlet polynomial of length about `D^k`, and there are about `D^h` rows.
 
-PR 910 Prop. 7.2 [imported; PR 910's own review found no error] says that Mom(k, h) implies that
-`ζ_K`, hence `ζ`, has no zero in `Re s > (k + h − h/6)/(2k)`. The mechanism is extraction from the
+PR 910 Prop. 7.2 [imported; PR 910's REVIEW.md explicitly does not review it; reconstructed in
+Prop. R′ below, not independently reviewed] says that Mom(k, h) for a fixed `W` implies
+`A_1(D) ≪ D^{(k+h−h/6)/(2k)+η}`. If Mom(k, h) holds for every smooth `W` on `[1, 2]` (fixed
+`ν = 1_{(n,6)=1}`), the Mellin argument of Prop. R turns this into: `ζ_K`, hence `ζ`, has no zero in
+`Re s > (k + h − h/6)/(2k)`. The mechanism is extraction from the
 `≍ D^{h/6}` sixth-power rows `u = π⁶`, on which `χ_n(u)` is principal. The Oct 5 manuscript's own
 second-moment bound at `H = D^{1+θ}` is the case `k = 1`, `h = 1 + θ`, and gives 11/12 as `θ → 0`.
 
@@ -60,22 +63,25 @@ The simplest member of each class is the **sub-diagonal second moment** Mom(1, �
 * If `ρ ≥ 1`, the trivial bound `|A_u(D)| ≪ D` shows that no single row contributes more than
   `D^{2k} ≤ D^{k+h}`. No individual row can violate Mom(k, h); its whole content is collective,
   through the multiplicity of the sixth-power rows.
-* If `ρ < 1`, positivity gives `max_{N u ≤ D^h} |A_u(D)| ≪ D^{(1+ρ)/2+ε}`. That is a power saving
+* If `ρ < 1`, positivity under Mom(k, h) gives `max_{N u ≤ D^h} |A_u(D)| ≪ D^{(1+ρ)/2+ε}`. That is a power saving
   `D^{(1−ρ)/2}` for every member of conductor up to `D^h` at once.
 
-**Proposition R (each member, rigorous, elementary).** Suppose Mom(k, h) holds for every smooth `W`
+**Proposition R (each member, elementary; PROPOSED: proved here, not reviewed).** (Other notes in
+this folder call it "Prop. R (RUNG)", to keep it apart from the Oct 5 manuscript's `prop:R`.) Suppose Mom(k, h) holds for every smooth `W`
 supported in `[1, 2]` (constants may depend on `W`). Then, for every fixed `u ≠ 0`, the Hecke
 L-function `L(s, ψ_u)` of the finite-order character `ψ_u : n ↦ χ_n(u)` has no zero in
 `Re s > 1/2 + h/(2k)`. Here `𝔫 ↦ (u/𝔫)₆` depends only on the ideal `𝔫 = (n)`. By Artin
 reciprocity it is the Hecke character of the Kummer extension `K(u^{1/6})/K`, and `ψ_u` denotes the
-primitive character inducing it.
+primitive character inducing it. We write `ψ_u^♭(n) := χ_n(u)` for the imprimitive symbol (zero when
+`(n, 6u) ≠ 1`); `F_u` and step 2 of Prop. R′ use `ψ_u^♭`, and `F_u = E_u/L(s, ψ_u)` with `E_u` as
+stated.
 
 *Proof.* For `D^h ≥ N u`, positivity gives `|A_u(D)|^{2k} ≤ M_{2k}(D; h) ≪ D^{k+h+ε}`. So
 `A_u(D) ≪ D^{a+ε}` with `a = 1/2 + h/(2k)`. Also `A_u(D) = 0` for `D < 1/2`.
 
 Since `∫_0^∞ W(N n/D) D^{−s−1} dD = N(n)^{−s} Ŵ(s)` with `Ŵ(s) = ∫ W(y) y^{s−1} dy` entire,
 
-    ∫_0^∞ A_u(D) D^{−s−1} dD = Ŵ(s) F_u(s),   F_u(s) = Σ_n μ(n)ν(n)ψ_u(n) N(n)^{−s},
+    ∫_0^∞ A_u(D) D^{−s−1} dD = Ŵ(s) F_u(s),   F_u(s) = Σ_n μ(n)ν(n)ψ_u^♭(n) N(n)^{−s},
 
 and the left side converges absolutely, locally uniformly, on `Re s > a`. Hence `Ŵ F_u` is
 holomorphic there.
@@ -97,22 +103,23 @@ supported in `[1, 2]`. Then, for every fixed `u ≠ 0` and every `η > 0`,
 
 and `L(s, ψ_u)` has no zero in `Re s > 1/2 + 5h/(12k)`.
 
-*Proof.* This is PR 910's proof of its Prop. 7.2 (reviewed there), with the target row `1`
+*Proof.* This is PR 910's proof of its Prop. 7.2 (not reviewed in PR 910; each step re-derived in
+reviews/WAVE_REDTEAM.md §2.1, a partial check, not a review), with the target row `1`
 replaced by `u`.
 1. Put `Y = (D^h/N u)^{1/6}`, and let `𝒫` be the primes `𝔭 ∉ S`, `𝔭 ∤ u`, with
    `Y/2 < N𝔭 ≤ Y`. There are `J ≍ Y/log Y` of them.
 2. The rows `u𝔭⁶` are distinct and have norm `≤ D^h`. Since
-   `χ_n(u𝔭⁶) = ψ_u(n) 1_{𝔭 ∤ n}`,
+   `χ_n(u𝔭⁶) = ψ_u^♭(n) 1_{𝔭 ∤ n}`,
 
-       B_𝔭(x) := A_{u𝔭⁶}(x) = Σ_{(n,S)=1, 𝔭∤n} μ(n)ν(n)ψ_u(n) W(N n/x).
+       B_𝔭(x) := A_{u𝔭⁶}(x) = Σ_{(n,S)=1, 𝔭∤n} μ(n)ν(n)ψ_u^♭(n) W(N n/x).
 
 3. Exact separation of the multiples of `𝔭`, using `μ(𝔭m) = −μ(m)` and the complete
-   multiplicativity of `νψ_u`, gives
+   multiplicativity of `νψ_u^♭`, gives
 
        A_u(x) = B_𝔭(x) − ν(𝔭)ψ_u(𝔭) B_𝔭(x/N𝔭),
        B_𝔭(x) = Σ_{j≥0} (ν(𝔭)ψ_u(𝔭))^j A_u(x/N𝔭^j).
 
-   The second sum is finite by compact support, and `|ν(𝔭)ψ_u(𝔭)| = 1`.
+   The second sum is finite by compact support, and `|ν(𝔭)ψ_u(𝔭)| = 1` (`ψ_u(𝔭) = ψ_u^♭(𝔭)` as `𝔭 ∤ 6u`).
 4. Average over `𝒫` exactly as in PR 910 (7.6). Hölder and Mom(k, h) bound the first term by
    `(D^{k+h+ε}/J)^{1/(2k)} ≪ D^{(k + h − h/6)/(2k) + ε} (N u)^{1/(12k)} log D`.
 5. The second term is handled by the same dyadic induction (PR 910 (7.8)): every argument is at
@@ -132,8 +139,8 @@ principal character is not special. The conductor enters only through the consta
   * ⇒: Prop. R with `k = 1`, `h = ρ → 0`.
   * ⇐: GRH gives `A_u(D) ≪ D^{1/2+ε} (N u)^ε`, by Perron and the GRH bound
     `1/L(s, ψ) ≪ (q(|t|+2))^ε` on `Re s ≥ 1/2 + ε`. Summing over `D^ρ` rows gives `D^{1+ρ+ε}`.
-* In between, Mom(1, ρ) gives `1/2 + 5ρ/12` for the principal member (by extraction) and
-  `1/2 + ρ/2` for every member (by Prop. R).
+* In between, Mom(1, ρ) gives `1/2 + 5ρ/12` for every member (Prop. R′, via the unreviewed PR 910
+  extraction), and the weaker `1/2 + ρ/2` for every member by the self-contained Prop. R.
 
 In their conclusions, the sub-diagonal hypotheses therefore interpolate between the imported claim and GRH
 for the family. They do not imply one another formally: more rows is not implied by fewer. That
@@ -152,8 +159,9 @@ needs input specific to the Möbius coefficients. (This is trivial, but it locat
 
 **(b) The same wall in the dual.** For `H < L`, Poisson summation in `u` produces a dual with
 `𝓗 = L²/H > L` rows. After Cauchy–Schwarz, the dual diagonal alone contributes `(H/L)·𝓗·L = L²`. In
-the actual sextic family the dual mean square equals its diagonal to within 1–3 %
-([A2_LITERATURE.md](A2_LITERATURE.md) §5; [FOURTH_MOMENT_A2.md](FOURTH_MOMENT_A2.md) §6). The Oct 5
+the actual sextic family the dual mean square is diagonal-sized at tiny scale: `M/Diag ∈ [0.968, 1.137]`
+for 1.8–43 rows per column ([A2_LITERATURE.md](A2_LITERATURE.md) §5), and within 4 % on the A2 checks
+([FOURTH_MOMENT_A2.md](FOURTH_MOMENT_A2.md) §6). The Oct 5
 pipeline (Poisson, Möbius absorption into `conj(α)γ₂`, cubic theta reflection, quadratic large sieve)
 ends in a row-blind large sieve. It is therefore capped at `ρ ≥ 1`, i.e. at
 
@@ -184,11 +192,13 @@ asserts).
 * Poisson summation in either variable and the cubic-theta reflection both act exactly on the pair
   (row exponent, column exponent) and preserve `|cols − rows| = 1 − ρ`.
 * The reflection is itself an involution: twist exponent `j ↦ −j−2 (mod 6)`.
-* Every reformulation reachable with these moves therefore asks for a saving of some multiple
-  `k(1−ρ)` below its own diagonal, and that saving is zero only for Mom(1, ρ) itself.
+* Every reformulation reachable with these moves therefore asks for a deficit `j(1−ρ)`, `j ≥ 0`,
+  below its own diagonal; `j = 0` occurs only at Mom(1, ρ) itself, which has fewer rows than
+  columns. No reachable state is both diagonal-sized and has rows ≥ columns.
 * In particular, the reflected-side statement (Q_ρ) is equivalent to Mom(1, ρ) with no change of
   exponent.
-* Quadratic-twist moment technology stops at effective moment degree 4 with log savings, while
+* Quadratic-twist moment technology over number fields stops at effective moment degree 4 with log
+  savings, while
   (Q_ρ) has degree `4(3−2ρ)/(2−ρ) > 4`. So it is out of reach as well.
 
 The `ρ = 1` wall is thus invariant under every move in the Oct 5 toolbox.
@@ -197,11 +207,12 @@ The `ρ = 1` wall is thus invariant under every move in the Oct 5 toolbox.
 absorption needs a quadratic factor next to a theta with explicit Gauss-sum coefficients. Only the
 cubic theta has such coefficients, so the family is sextic and `c = 1 − 1/6`.
 
-This is now made precise in [LEVERAGE_FAMILIES.md](LEVERAGE_FAMILIES.md).
-* The absorbed `−1` per prime is the sign of the cubic Jacobi sum `J(χ₃, χ₃) = −p`. It was checked
-  exactly at 77 primes.
-* Every family with `c < 5/6` loses either the absorption or the theta step.
-* The only escape is a GL(2) theta on an `n`-fold cover, `n ∈ {4, 6, 10}`, whose prime
+This is examined further, on a HEURISTIC pipeline model, in [LEVERAGE_FAMILIES.md](LEVERAGE_FAMILIES.md).
+* The absorbed `−1` per prime is the sign of the cubic Jacobi sum: `J(ψ, ψ) = −π` for the primary
+  prime element π (`π ≡ 1 mod 3`), `ψ = (·/π)₃`. It was checked exactly at 77 primes.
+* Every examined family with `c < 5/6` loses either the absorption or the theta step (on that model).
+* Within the HEURISTIC pipeline model of LEVERAGE_FAMILIES §3 and on known automorphic inputs, the
+  only escape found is a GL(2) theta on an `n`-fold cover, `n ∈ {4, 6, 10}`, whose prime
   coefficients are a Hecke character times one Gauss sum of order `n`. That would give 7/8, 5/6 or
   9/10.
 
@@ -217,7 +228,8 @@ with coprimality corrections. A proof of Mom(k, h) with `ρ < 1` must deliver al
 1. **Conductor-uniform member bounds:** `|A_u(D)| ≪ D^{(1+ρ)/2+ε}` for all `N u ≤ D^h`
    (Observation 2).
 2. **Conductor-graded small-row bounds.** For `N w = D^ω`, Mom(k, h) needs
-   `|A_w(D)| ≪ D^{1/2 + 5ρ/12 + ω/(12k)}`. At `ω = 0` this is the *conclusion* itself, so leverage is
+   `|A_w(D)| ≪ D^{1/2 + 5ρ/12 + ω/(12k)}` (heuristic extrapolation of Prop. R′; uniformity in `u` is
+   not proved). At `ω = 0` this is the *conclusion* itself, so leverage is
    tight. The hypothesis cannot be proved by first proving its conclusion for the small rows and then
    handling the rest; that only closes at the fixed point.
 3. **An on-average GRH for generic rows (large-values count):**
@@ -300,12 +312,13 @@ transfer of exactly this kind, and this note quantifies it (PROPOSED; inputs imp
 | item | value in the Oct 5 family |
 |---|---|
 | family | Kummer characters `ψ_u` of `K(u^{1/6})/K`, `K = Q(ω)`, rows `0 < N u ≤ H`, all `u` (units and non-primary included) |
-| physical measure | counting measure on rows. The principal member has multiplicity `≍ H^{1/6}` (rows `u = unit·v⁶`), and member `ψ_w` has multiplicity `≍ (H/N w)^{1/6}` |
+| physical measure | counting measure on rows. The principal member has multiplicity `≍ H^{1/6}` (rows `u = v⁶`). The rows `ε v⁶`, with `ε` a nontrivial unit, carry the five nonprincipal members `ψ_ε`, each with the same multiplicity. Member `ψ_w` has multiplicity `≍ (H/N w)^{1/6}` |
 | ramified factors and masks | `ν = 1_{(n,6)=1}` and coprimality to `v`. These are finite Euler products `E_u`, nonvanishing on `Re s > 0` (Prop. R) |
 | transfer law | a diagonal-size `2k`-th moment over `D^h` rows gives `1/2 + (1 − 1/6)ρ/2`, `ρ = h/k`, for the principal member (PR 910 Prop. 7.2) |
 | why nonprincipal control is not enough | the bound must hold *including* the principal rows. Row-blind bounds therefore stop at `ρ = 1` (§3), and below it the small-conductor rows sit at a fixed point (§4, item 2) |
-| conductor dependence | member `ψ_w` with `N w = D^ω` needs `D^{1/2 + 5ρ/12 + ω/(12k)}` |
+| conductor dependence | member `ψ_w` with `N w = D^ω` needs `D^{1/2 + 5ρ/12 + ω/(12k)}` (heuristic extrapolation of Prop. R′; uniformity in `u` is not proved) |
 
 The cut's warning is visible here in exact form. A family statement transfers to the principal
-member only through the principal member's own multiplicity. The family estimate is useful exactly
-when it is proved *without* looking at individual members, i.e. at `ρ ≥ 1`.
+member only through the principal member's own multiplicity. At `ρ ≥ 1` the estimate can be proved
+row-blind (no single row can violate it). At `ρ < 1` it already contains a power saving for every
+member (Observation 2), so it cannot be proved without member-level input.
