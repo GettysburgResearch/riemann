@@ -11,8 +11,8 @@ Exact sources or dependencies: pr908 = 31c706bbb3dce49a7ebabbe71cd7cbacdaa6cbb6,
   SHA-256 d9a8f15aa770cf883d0eabd2b775fad694ce20b44cba7928f5c0c9a6d8750d4d (3988 lines)
 What was actually run: see the three reviews; their check scripts are reviews/oct5_r1_checks.py,
   reviews/oct5_r2_iteration_check.py and reviews/oct5_r3_theta_checks.py
-Smallest remaining gap: the imported external theorems listed in Section 2, and the items in
-  Section 3 that were checked by reading only
+Smallest remaining gap: the imported external theorems listed in Section 2; the Section 3 items were
+  closed by a follow-up (OCT5_RESIDUAL_ITEMS.md)
 ```
 
 RH remains unsolved. A zero-free half-plane `Re s > 11/12` is a quasi-RH statement and says nothing
@@ -52,6 +52,17 @@ The reviews also noted the following points, none of them load-bearing:
 * There is no end-to-end numerical test of eq:reflection; it would need about 10⁶ dual terms.
 * Derivative orders grow like `5·4^{⌈4/ϑ⌉}`. This is finite for fixed `ϑ`, but the result is not
   height-uniform (R2 F3; PR 910 §1.1).
+
+## 3a. Residual items closed ([OCT5_RESIDUAL_ITEMS.md](OCT5_RESIDUAL_ITEMS.md))
+
+* **Goldmakher–Louvel** (arXiv:1112.1642v2, read in full): the manuscript's use matches their
+  Theorem 1.1 exactly. Their own estimates were not re-derived.
+* **Contour shift** (3395–3418): correct and complete. A numerical kernel-shift check passes, and
+  a control line picks up exactly the residue at `t = −5/6`.
+* **R1's minor points** (line 752, lines 1193–1203): harmless omissions with one-line repairs.
+
+After this, the only unverified inputs are the published external theorems themselves
+(Goldmakher–Louvel's estimates, Dunn–Radziwiłł/Patterson theta theory, and standard results).
 
 ## 4. What this does and does not mean
 

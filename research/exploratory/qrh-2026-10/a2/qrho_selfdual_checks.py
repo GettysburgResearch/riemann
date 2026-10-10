@@ -19,6 +19,8 @@ Part II (EXACT, sympy rationals): exponent bookkeeping for the Poisson / theta-r
   columns of each row (available only on Gauss-sum coordinates).  Asserts: |c - r| = 1 - rho is invariant;
   the deficit delta = r - e is 0 only on the original Moebius family; effective quadratic-moment degree
   k(rho) = 4 (3 - 2 rho)/(2 - rho) > 4 for rho < 1.
+Part II(b) (EXACT rationals on a grid): Li's prime-square row inflation transplanted to the sextic family
+  (rows u -> u v^6) combined with the imported Oct 5 bound never gives a boundary below 11/12.
 
 Usage:  python3 -I a2/qrho_selfdual_checks.py [OUT.json]      (about 10-20 s, one process)
 """
@@ -212,6 +214,25 @@ out['Q_rho'] = {'rows': str(H), 'cols M': str(M), 'needed off exp': '1',
                 'deficit below diag': str(sp.simplify(H - 1)), 'saving over large sieve (H+M)': str(sp.simplify(M - 1)),
                 'power saving vs diag, as exponent of diag': str(sp.simplify((H - 1) / H))}
 
+# ---------------------------------------------------------------- Part II(b): Li-type row inflation, sextic version
+# Inflate rows u -> u v^6 (v prime, N v ~ D^w): chi_n(u v^6) = chi_n(u) 1_{v not | n}.  Then
+#   sum_{N u <= D^rho} |A_u|^2 << (1/#v) sum_{N u' <= D^(rho+6w)} |A_u'|^2 + D^rho (D^(1-w))^2,
+# and the imported Oct 5 bound applies to the inflated family when rho + 6w >= 1:  m = max(1+rho+5w, 3+rho-2w-1).
+# Boundary via PR 910 extraction (k = 1): sigma = (m - rho/6)/2.  Claim: min over admissible w is >= 11/12.
+def sig(m, r): return (m - r / 6) / 2
+worst = []
+for j in range(1, 40):
+    r = Fr(j, 40)
+    best = None
+    for i in range(0, 4001):
+        w = Fr(i, 4000)
+        if r + 6 * w < 1: continue
+        m = max(1 + r + 5 * w, 2 + r - 2 * w)
+        sgm = sig(m, r)
+        best = sgm if best is None or sgm < best else best
+    worst.append((str(r), str(best)))
+    assert best >= Fr(11, 12), (r, best)
+out['inflation_best_sigma'] = worst[::6]
 js = json.dumps(out, indent=1, default=str)
 if len(sys.argv) > 1:
     with open(sys.argv[1], 'w') as f: f.write(js)

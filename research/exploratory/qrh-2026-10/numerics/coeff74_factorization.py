@@ -500,8 +500,10 @@ def K_direct(W, T, var=frozenset(), cacheA=None):
     if "nonprimary_A" in var:                  # control: generator -A (c -> -c)
         c = neg(c)
         A = neg(A)
-    if "nonprimary_s" in var:
+    if "nonprimary_s" in var:                  # generator -s (invariance expected, see doc)
         s = neg(s)
+    if "nonprimary_s_omega" in var:            # generator omega*s (control)
+        s = E.mul((0, 1), s)
     H = E.mul(u, epow(a, 6))
     b = W.bstar
     bA = E.mul(b, A)
@@ -830,7 +832,7 @@ def build_tiers(W, which):
 def run_tuples(W, tuples, label, fs_check=True, diag=True, log=print):
     t0 = time.time()
     cacheA = {}
-    worst = dict(K=0.0, FS=0.0, Kclosed=0.0)
+    worst = dict(K=0.0, FS=0.0, Kclosed=0.0, Knz=0.0)
     nonzero = 0
     zero_both = 0
     zero_by_cancel = 0
@@ -857,6 +859,7 @@ def run_tuples(W, tuples, label, fs_check=True, diag=True, log=print):
             fails.append((T.key(W), T, Kd, Kl))
         if abs(Kl) > 1e-6:
             nonzero += 1
+            worst["Knz"] = max(worst["Knz"], dev)
             pt["nonzero"] += 1
             if diag:
                 for kf, vf in diagnostics(W, T, info).items():
@@ -872,6 +875,7 @@ def run_tuples(W, tuples, label, fs_check=True, diag=True, log=print):
     res = dict(label=label, tuples=len(tuples), nonzero=nonzero, zero_both_sides=zero_both,
                zero_with_nonempty_congruence=zero_by_cancel,
                max_rel_dev_K=worst["K"], max_rel_dev_K_using_closed_C=worst["Kclosed"],
+               max_rel_dev_K_on_nonzero=worst["Knz"],
                max_rel_dev_FS=worst["FS"] if fs_check else None, failures=len(fails),
                per_tier=per_tier, exercised_on_nonzero=flags,
                seconds=round(time.time() - t0, 1))
@@ -884,7 +888,7 @@ def run_tuples(W, tuples, label, fs_check=True, diag=True, log=print):
 def run_controls(W, tuples, log=print):
     out = {}
     direct_sw = ["alpha_noconj", "G_noconj", "drop_R", "Xi_drop_chiAb", "drop_chisb",
-                 "xi_u_noconj", "tau_conj", "nonprimary_s", "nonprimary_A", "F_e_conj"]
+                 "xi_u_noconj", "tau_conj", "nonprimary_s", "nonprimary_s_omega", "nonprimary_A", "F_e_conj"]
     local_sw = ["gamma3_noconj", "rho_sign", "drop_omega_ll", "drop_omega_tk", "gamma1_pos"]
     for sw in direct_sw + local_sw:
         t0 = time.time()
@@ -907,7 +911,7 @@ def run_controls(W, tuples, log=print):
             worst = max(worst, dev)
             nfail += dev > TOL
         out[sw] = dict(max_rel_dev=worst, failing_tuples=nfail, of=len(tuples),
-                       nonzero=nnz, verdict="FAILS (control OK)" if nfail else "passes (!)",
+                       nonzero=nnz, verdict="identity FAILS" if nfail else "identity holds",
                        seconds=round(time.time() - t0, 1))
         log(f"   control {sw:16s} maxdev={worst:.3g} failing={nfail}/{len(tuples)}")
     return out
@@ -959,7 +963,7 @@ def check_P1(W, log=print):
 
 def check_P2(W, log=print):
     """F(s,A,H) = 0 if H meets S (H = 0, lambda*..., 2*..., extra S primes)."""
-    nm = [W.pname(P) for P in W.primes if P.N <= 13]
+    nm = [W.pname(P) for P in W.primes if P.N <= 19][:3]
     worst = 0.0
     count = 0
     lam = (1, 2)
@@ -1044,7 +1048,78 @@ def self_tests(W, log=print):
     return out
 
 
+def table_row(e0, l, k, j, m):
+    """Row of the manuscript's table (7.16) hit by a nonzero local summand with t > 0."""
+    if e0 == 0 and l % 2 == 0:
+        r = (l - 2) // 2
+        if k == 0 and m >= r + 1:
+            return f"1:(0,2r+2),k=0,m>=r+1 [r={r}]"
+        if k == 0 and j == 5 and m == r:
+            return f"2:(0,2r+2),k=0,j=5 [r={r}]"
+        if k == 1 and j == 0 and m == r + 1:
+            return f"3:(0,2r+2),k=1,j=0 [r={r}]"
+    if e0 == 1 and l % 2 == 0:
+        r = l // 2
+        if k == 0 and j == 0 and m == r:
+            return f"4:(1,2r),k=0,j=0 [r={r}]"
+        if k == 1 and j == 1 and m == r:
+            return f"5:(1,2r),k=1,j=1 [r={r}]"
+        if k == 1 and m >= r + (1 if j <= 1 else 0):
+            return f"6:(1,2r),k=1,m>=r+1_(j<=1) [r={r}]"
+    if e0 == 0 and l % 2 == 1:
+        r = (l - 1) // 2
+        if k == 0 and j == 2 and m == r:
+            return f"7:(0,2r+1),k=0,j=2 [r={r}]"
+        if k == 1 and j == 3 and m == r:
+            return f"8:(0,2r+1),k=1,j=3 [r={r}]"
+    if e0 == 1 and l % 2 == 1:
+        r = (l - 1) // 2
+        if k == 0 and j == 3 and m == r:
+            return f"9:(1,2r+1),k=0,j=3 [r={r}]"
+        if k == 1 and j == 4 and m == r:
+            return f"10:(1,2r+1),k=1,j=4 [r={r}]"
+    return "NOT IN TABLE"
+
+
+def coverage(outpath):
+    """Which local cases of (7.8)/(7.16) occur in nonzero tuples (closed form (7.8) only)."""
+    W = World()
+    tuples = build_tiers(W, "main")
+    rows = {}
+    t0rows = {}
+    for T in tuples:
+        loc, u = local_data(W, T)
+        cases = []
+        ok = True
+        for (name, e0, l, k, m, j, rho_k) in loc:
+            t = e0 + 3 * l
+            if W.C_closed(name, t, k, j + 6 * m) == 0:
+                ok = False
+                break
+            cases.append((W.byname[name].N, e0, l, k, m, j))
+        if not ok:
+            continue
+        for (Q, e0, l, k, m, j) in cases:
+            if e0 + 3 * l > 0:
+                key = table_row(e0, l, k, j, m)
+                rows[key] = rows.get(key, 0) + 1
+                rows[f"{key} Q={Q}"] = rows.get(f"{key} Q={Q}", 0) + 1
+            else:
+                key = f"t=0,k={k}" + (",j'=0" if k else "")
+                t0rows[key] = t0rows.get(key, 0) + 1
+    out = dict(table_rows=dict(sorted(rows.items())), t0_cases=dict(sorted(t0rows.items())))
+    with open(outpath, "w") as fh:
+        json.dump(out, fh, indent=1)
+    for k, v in sorted(rows.items()):
+        if "Q=" not in k:
+            print(f"{v:8d}  {k}")
+    print(t0rows)
+
+
 def main():
+    if len(sys.argv) > 2 and sys.argv[1] == "--coverage":
+        coverage(sys.argv[2])
+        return
     outpath = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, "results",
                                                                   "coeff74_factorization.json")
     logs = []
