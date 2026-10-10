@@ -283,6 +283,8 @@ Reading:
 - The observed deviations sit at the RH scale `1/(√p log p)` with the predicted constants. `Z_P` drifts into its band from above, a lower-order `O(1/log p)` effect. `Z_CA` wanders around the band edge by about 0.01.
 - They lie a factor `≈ p^{3/8}` (about 10³ at `p = 10^8`) inside the QRH envelope.
 
+Raw output: `results/robin_graded_numerics.txt` (sha256 `5e2e30f2…`). Script sha256: `ab7dfa3f…`.
+
 This is consistent with the known verified range of Robin's inequality. It is a sanity check of the normalisations only. **It is not evidence for QRH-IMPORT or RH:** finite data cannot see `Θ`.
 
 ## 7. Misreadings to avoid
