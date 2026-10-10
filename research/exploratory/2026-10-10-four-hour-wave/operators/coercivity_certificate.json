@@ -1,0 +1,25 @@
+{
+  "status": "EXACT_ARITHMETIC_ACCEPT",
+  "scope": "source multiplier lower bound and codimension-18 primitive coercivity at L=1",
+  "gamma_prefix_last_index": 64,
+  "frequency_variable": "x=omega^2",
+  "covered_cells": 4096,
+  "covered_compact": "[0,4096]",
+  "unbounded_tail": "x>=4096 by monotonicity and V(4096)>1",
+  "strict_smallest_cell_margin": {
+    "cell": 935,
+    "lower": "47666828819699057767976538191/11330657244338111939933634560"
+  },
+  "tail_v_lower": "7156363812710450482011463/6044629098073145873530880",
+  "classical_inputs": [
+    "3<pi<22/7",
+    "gamma<H_128-log(128)",
+    "digamma partial fraction identity"
+  ],
+  "not_authenticated": [
+    "xi/Weil terminal source adapter",
+    "effective matrix positivity",
+    "all-window positivity"
+  ],
+  "checker_sha256": "921c74c4b0659c8f6c0d1602f16f218e71219b64e31250b457cce92a808f0f87"
+}
