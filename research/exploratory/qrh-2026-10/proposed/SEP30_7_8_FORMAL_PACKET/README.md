@@ -226,8 +226,13 @@ review): Part II as written, plus an endpoint row count extended from `δ = 5/6`
 * 32/32 exact gates pass and 10/10 failing controls fire.
 * Remark 19.3 becomes load-bearing, and two short lemmas (P1F.1-P1F.2) are new.
 * This is a new composition and needs its own independent review.
-* **Second review: pending.** `reviews/PART1_FREE_ROUTE_REVIEW2.md` does not exist at
-  `995eb31fd`.
+* **Second review** (added after drafting): [../../reviews/PART1_FREE_ROUTE_REVIEW2.md](../../reviews/PART1_FREE_ROUTE_REVIEW2.md),
+  verdict **"(A) with corrections"**, no obstruction found. It is another bounded agent pass of
+  the same model family, so it is not independent in the AGENTS.md sense. Its corrections:
+  * P1F.2 needs the loss bound `λ ≤ 527/300`;
+  * gate T2 checks only line ranges;
+  * Lemma 17.6 stays in the node set (balanced bins);
+  * Remark 19.3 should be rated no better than Rp.
 
 **5.4 The Lean route and the paper routes differ.**
 
