@@ -191,9 +191,10 @@ the critical line.
      * Hypothesis (H-B), the nested order, survived a fresh attack with no break found
        ([reviews/CUBIC_HB_ATTACK.md](reviews/CUBIC_HB_ATTACK.md)). It requires choosing
        `ξ ≤ μ*(δ)ρ/2` and `2ξ ≤ δ`; the first is smaller than the manuscript's `ρ/30`.
-     * The route stays PROPOSED. It is conditional on (H-A), (H-B), Lemma 4.K (sketched, not
-       reviewed by any note; risk item 7) and the correctness of the manuscript's Lemma 18.1
-       case 1. Every other itemized risk has had a bounded single-agent attack with no break
+     * The route stays PROPOSED. It is conditional on (H-A), (H-B) and the correctness of the
+       manuscript's Lemma 18.1 case 1. Lemma 4.K (risk item 7) now has a written PROPOSED proof
+       ([LEMMA_4K.md](proposed/CUBIC_FOURTH_MOMENT/LEMMA_4K.md); it corrects the reasoning at the
+       prime above 3, not the statement). Lemma 4.I is still only sketched. Every other itemized risk has had a bounded single-agent attack with no break
        found.
      * End-of-wave status ([proposed/CUBIC_FOURTH_MOMENT/STATUS_END_OF_WAVE.md](proposed/CUBIC_FOURTH_MOMENT/STATUS_END_OF_WAVE.md)):
        * (H-A) is now an explicit checklist of 19 inherited items (6 checked by exact model only,

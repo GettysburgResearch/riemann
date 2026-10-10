@@ -244,3 +244,19 @@ are:
 * (H-A): 19 inherited items, of which 6 are checked by exact model only and 13 are imported as is;
 * separately: 12 items re-derived at n = 3, 2 only sketched (Lemmas 4.I and 4.K), and 1 replaced
   by (H-B).
+
+## Note added at the end of the wave: Lemma 4.K (risk item 7)
+
+[LEMMA_4K.md](LEMMA_4K.md) writes out Lemma 4.K, the row functional equation with conductor
+`≤ Z^M`. **Proved (PROPOSED; one agent, unreviewed), with a correction to the reasoning, not to
+the statement.**
+* "The S-part is a fixed family" does not bound the `λ`-exponent. The row's primary good part
+  ramifies at `λ = 1 − ω` with exponent 0 or 2, according to `N c mod 9`.
+* A universal local bound replaces that argument: the conductor exponent is at most 4 at `λ`
+  (exactly 0, 2, 3 or 4) and at most 1 elsewhere. So `N(f)·N(R₀) ≤ C_*·N(k)·Z^q ≪ Z^M`.
+* Checks 10/10: for 713 characters with `N ≤ 500` (12,540 moduli), the least period equals the
+  formula, and four failing controls are detected.
+* Hecke's functional equation is imported (classical) and was not re-read.
+
+With this, every cubic-specific lemma of SKETCH §4 has a written proof, all PROPOSED, except
+Lemma 4.I, which is only sketched.
