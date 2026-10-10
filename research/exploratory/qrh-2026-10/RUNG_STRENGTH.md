@@ -221,3 +221,23 @@ true. What is missing is a mechanism, not evidence.
 * Read the statement that the Oct 5 architecture "tends to 1/2" as follows. Its conclusion improves
   continuously as `ρ` decreases, and `ρ < 1` is the entire difficulty. That difficulty is an
   on-average GRH for a family with a fixed point at its own conclusion.
+
+## 7. Relation to the repository's open cut "principal-member transfer"
+
+[OPEN_CUTS.md §5](../../../OPEN_CUTS.md#family-transfer) asks for family-to-principal transfers
+that state the family, measure, ramification, masks and conductor dependence. It warns that
+nonprincipal control can miss an arbitrarily large principal component. The Oct 5 extraction is a
+transfer of exactly this kind, and this note quantifies it (PROPOSED; inputs imported):
+
+| item | value in the Oct 5 family |
+|---|---|
+| family | Kummer characters `ψ_u` of `K(u^{1/6})/K`, `K = Q(ω)`, rows `0 < N u ≤ H`, all `u` (units and non-primary included) |
+| physical measure | counting measure on rows. The principal member has multiplicity `≍ H^{1/6}` (rows `u = unit·v⁶`), and member `ψ_w` has multiplicity `≍ (H/N w)^{1/6}` |
+| ramified factors and masks | `ν = 1_{(n,6)=1}` and coprimality to `v`. These are finite Euler products `E_u`, nonvanishing on `Re s > 0` (Prop. R) |
+| transfer law | a diagonal-size `2k`-th moment over `D^h` rows gives `1/2 + (1 − 1/6)ρ/2`, `ρ = h/k`, for the principal member (PR 910 Prop. 7.2) |
+| why nonprincipal control is not enough | the bound must hold *including* the principal rows. Row-blind bounds therefore stop at `ρ = 1` (§3), and below it the small-conductor rows sit at a fixed point (§4, item 2) |
+| conductor dependence | member `ψ_w` with `N w = D^ω` needs `D^{1/2 + 5ρ/12 + ω/(12k)}` |
+
+The cut's warning is visible here in exact form. A family statement transfers to the principal
+member only through the principal member's own multiplicity. The family estimate is useful exactly
+when it is proved *without* looking at individual members, i.e. at `ρ ≥ 1`.
