@@ -1,0 +1,465 @@
+{
+ "A": {
+  "X": 30000,
+  "n_primes": 3240,
+  "A1": {
+   "pairs": 613,
+   "mismatches": 0
+  },
+  "A2": {
+   "(2/.)_3": {
+    "minimal_passing": [
+     [
+      1,
+      2
+     ]
+    ],
+    "conductor": "2^1 lambda^2",
+    "Q": 36,
+    "classes": 3,
+    "classes_hit": 3,
+    "strict_divisors_certified_fail": true
+   },
+   "(lambda/.)_3": {
+    "minimal_passing": [
+     [
+      0,
+      4
+     ]
+    ],
+    "conductor": "2^0 lambda^4",
+    "Q": 81,
+    "classes": 9,
+    "classes_hit": 9,
+    "strict_divisors_certified_fail": true
+   },
+   "(2/.)_6": {
+    "minimal_passing": [
+     [
+      3,
+      2
+     ]
+    ],
+    "conductor": "2^3 lambda^2",
+    "Q": 576,
+    "classes": 48,
+    "classes_hit": 48,
+    "strict_divisors_certified_fail": true
+   },
+   "(lambda/.)_6": {
+    "minimal_passing": [
+     [
+      2,
+      4
+     ]
+    ],
+    "conductor": "2^2 lambda^4",
+    "Q": 1296,
+    "classes": 108,
+    "classes_hit": 108,
+    "strict_divisors_certified_fail": true
+   },
+   "(zeta6/.)_6": {
+    "minimal_passing": [
+     [
+      2,
+      3
+     ]
+    ],
+    "conductor": "2^2 lambda^3",
+    "Q": 432,
+    "classes": 36,
+    "classes_hit": 36,
+    "strict_divisors_certified_fail": true
+   },
+   "(2lambda/.)_3": {
+    "minimal_passing": [
+     [
+      1,
+      4
+     ]
+    ],
+    "conductor": "2^1 lambda^4",
+    "Q": 324,
+    "classes": 27,
+    "classes_hit": 27,
+    "strict_divisors_certified_fail": true
+   },
+   "(-1/.)_6": {
+    "minimal_passing": [
+     [
+      2,
+      0
+     ]
+    ],
+    "conductor": "2^2 lambda^0",
+    "Q": 16,
+    "classes": 2,
+    "classes_hit": 2,
+    "strict_divisors_certified_fail": true
+   },
+   "(2/.)_2": {
+    "minimal_passing": [
+     [
+      3,
+      0
+     ]
+    ],
+    "conductor": "2^3 lambda^0",
+    "Q": 64,
+    "classes": 8,
+    "classes_hit": 8,
+    "strict_divisors_certified_fail": true
+   }
+  },
+  "A3": {
+   "common_modulus": "2^3 lambda^4",
+   "Q": 5184,
+   "distinct": 216
+  },
+  "A4": {
+   "5": {
+    "S-supported moduli tested (all fail)": 30,
+    "no S-supported modulus": true,
+    "|Cl| of periodicity modulus": 2592,
+    "primes used": 3240,
+    "periodic mod 36 rad(u) [Prop 16.1]": true,
+    "classes hit": 2133,
+    "each good prime needed (exponent 1)": true
+   },
+   "pi7": {
+    "S-supported moduli tested (all fail)": 30,
+    "no S-supported modulus": true,
+    "|Cl| of periodicity modulus": 648,
+    "primes used": 3240,
+    "periodic mod 36 rad(u) [Prop 16.1]": true,
+    "classes hit": 648,
+    "each good prime needed (exponent 1)": true
+   },
+   "pi13*pi7": {
+    "S-supported moduli tested (all fail)": 30,
+    "no S-supported modulus": true,
+    "|Cl| of periodicity modulus": 7776,
+    "primes used": 3240,
+    "periodic mod 36 rad(u) [Prop 16.1]": true,
+    "classes hit": 3238,
+    "each good prime needed (exponent 1)": true
+   },
+   "pi7^2": {
+    "S-supported moduli tested (all fail)": 30,
+    "no S-supported modulus": true,
+    "|Cl| of periodicity modulus": 648,
+    "primes used": 3240,
+    "periodic mod 36 rad(u) [Prop 16.1]": true,
+    "classes hit": 648,
+    "each good prime needed (exponent 1)": true
+   },
+   "zeta6*pi19": {
+    "S-supported moduli tested (all fail)": 30,
+    "no S-supported modulus": true,
+    "|Cl| of periodicity modulus": 1944,
+    "primes used": 3240,
+    "periodic mod 36 rad(u) [Prop 16.1]": true,
+    "classes hit": 1731,
+    "each good prime needed (exponent 1)": true
+   },
+   "lambda*2*pi19": {
+    "S-supported moduli tested (all fail)": 30,
+    "no S-supported modulus": true,
+    "|Cl| of periodicity modulus": 7776,
+    "primes used": 3240,
+    "periodic mod common*rad": true,
+    "classes hit": 3144,
+    "each good prime needed (exponent 1)": true
+   }
+  }
+ },
+ "B": {
+  "ratios": {
+   "0": [
+    0.018465602111771735,
+    0.28209479177387814
+   ],
+   "1": [
+    0.014050612831492332,
+    0.7614377844119269
+   ],
+   "2": [
+    0.019281017291060347,
+    6.4747777096015575
+   ],
+   "3": [
+    0.04848887320308743,
+    148.6068074594323
+   ]
+  },
+  "mellin_err": 1.719122795302153e-31
+ },
+ "C": {
+  "max_ratio": 0.37481621841107055
+ },
+ "D": {
+  "zeta_F(11/10)": 6.62984732713932,
+  "C_left": 0.4328632985684623,
+  "C_right": 0.6898904606804703,
+  "C": 0.6898904606804703,
+  "C_principal": 0.6898904606804703,
+  "D1_max_rel_err": 2.6521934362458345e-32,
+  "D2": {
+   "(2/.)_3": {
+    "Q": 36,
+    "ratios": [
+     [
+      1.0,
+      0.6597539553864471
+     ],
+     [
+      1.0,
+      0.43527528164806206
+     ],
+     [
+      1.0,
+      0.8122523963562355
+     ]
+    ]
+   },
+   "(lambda/.)_3": {
+    "Q": 81,
+    "ratios": [
+     [
+      1.0,
+      0.6597539553864471
+     ],
+     [
+      1.0,
+      0.43527528164806206
+     ],
+     [
+      1.0,
+      0.8122523963562355
+     ]
+    ]
+   },
+   "(-1/.)_6": {
+    "Q": 16,
+    "ratios": [
+     [
+      1.0,
+      0.6597539553864471
+     ],
+     [
+      1.0,
+      0.43527528164806206
+     ],
+     [
+      1.0,
+      0.8122523963562355
+     ]
+    ]
+   },
+   "(2/.)_2": {
+    "Q": 64,
+    "ratios": [
+     [
+      1.0,
+      0.6597539553864471
+     ],
+     [
+      1.0,
+      0.43527528164806206
+     ],
+     [
+      1.0,
+      0.8122523963562355
+     ]
+    ]
+   }
+  },
+  "D3": {
+   "(2/.)_3": [
+    36,
+    0.042892857576846084,
+    0.19373055933311456
+   ],
+   "(lambda/.)_3": [
+    81,
+    0.044751389899705,
+    0.14297749293412715
+   ],
+   "(-1/.)_6": [
+    16,
+    0.027297828705472715,
+    0.23327454022143926
+   ],
+   "(2/.)_2": [
+    64,
+    0.047522096407083166,
+    0.2768224426987967
+   ],
+   "chi_4 o N": [
+    16,
+    0.08794095810196018,
+    0.23327454022143926
+   ],
+   "chi_5 o N": [
+    25,
+    0.10567972008063692,
+    0.2714274187457464
+   ],
+   "chi_7 o N": [
+    49,
+    0.07574522268471232,
+    0.2811334343971188
+   ],
+   "chi_8 o N": [
+    64,
+    0.056314674259216796,
+    0.2768224426987967
+   ],
+   "chi_11 o N": [
+    121,
+    0.108784421872698,
+    0.30868417912565205
+   ],
+   "chi_13 o N": [
+    169,
+    0.06905873376062374,
+    0.24944426156466798
+   ],
+   "chi_17 o N": [
+    289,
+    0.0820127827176416,
+    0.3660441190645523
+   ],
+   "chi_19 o N": [
+    361,
+    0.10188456503989295,
+    0.2616748691083875
+   ],
+   "chi_23 o N": [
+    529,
+    0.06369372674163411,
+    0.30392492015996075
+   ],
+   "chi_29 o N": [
+    841,
+    0.08795820900866443,
+    0.36357222966998776
+   ],
+   "chi_31 o N": [
+    961,
+    0.06484388929683836,
+    0.235909210634525
+   ],
+   "principal (s-1)zeta_F/(s+1)": [
+    1,
+    0.06544118904250515,
+    null
+   ]
+  }
+ },
+ "E": {
+  "theta": {
+   "a=0.5,e=0.001": 0.998801416374741,
+   "a=0.75,e=0.001": 0.9982787461986979,
+   "a=1.0,e=0.001": 0.9971663156751215,
+   "a=0.5,e=0.0001": 0.999880758127709,
+   "a=0.75,e=0.0001": 0.9998290230976367,
+   "a=1.0,e=0.0001": 0.9997193350099994
+  },
+  "chi_5 o N (Q=25), t=0.0": {
+   "winding_R2": 0.0,
+   "max Re g on R3": 0.20317461335267062,
+   "|g(center)|": 0.1074974933166283,
+   "max|g| R4": 0.7872313735273166,
+   "B-C bound": 991.7728619815833,
+   "max|g| r0": 0.1965570997014802,
+   "max|g| R6": 0.7847904207010348,
+   "three-circles bound": 0.7859588411349953,
+   "max|g'| R8": 1.3981869641842557,
+   "Cauchy bound": 435.99467816723575,
+   "log calC": 6.1092475827643655
+  },
+  "chi_5 o N (Q=25), t=14.0": {
+   "winding_R2": 0.0,
+   "max Re g on R3": 0.8735763190597009,
+   "|g(center)|": 0.1224091580323258,
+   "max|g| R4": 1.3039628826494023,
+   "B-C bound": 3179.3080520353474,
+   "max|g| r0": 0.20842927968135794,
+   "max|g| R6": 1.297176318936909,
+   "three-circles bound": 1.3011783001185604,
+   "max|g'| R8": 3.9348281755195713,
+   "Cauchy bound": 720.6535105204955,
+   "log calC": 9.578449693540579
+  },
+  "principal (Q=1), t=0.0": {
+   "winding_R2": 0.0,
+   "max Re g on R3": -0.5645046971729377,
+   "|g(center)|": 0.8477049778717209,
+   "max|g| R4": 1.4155230663584215,
+   "B-C bound": 2706.7219943440355,
+   "max|g| r0": 0.9967659730688401,
+   "max|g| R6": 1.4145068537588195,
+   "three-circles bound": 1.4149443383525964,
+   "max|g'| R8": 0.563710209453628,
+   "Cauchy bound": 785.8371409771115,
+   "log calC": 2.8903717578961645
+  },
+  "principal (Q=1), t=14.0": {
+   "winding_R2": 0.0,
+   "max Re g on R3": 0.3937564893299611,
+   "|g(center)|": 0.10802563350196252,
+   "max|g| R4": 1.938520692573714,
+   "B-C bound": 1601.7965617127834,
+   "max|g| r0": 0.19433734373029207,
+   "max|g| R6": 1.9177944982613004,
+   "three-circles bound": 1.9333291650733144,
+   "max|g'| R8": 12.126668185967961,
+   "Cauchy bound": 1065.4413879229305,
+   "log calC": 6.359573868672378
+  }
+ },
+ "F": {
+  "trials": 3000,
+  "violations": 0
+ },
+ "G": {
+  "Cl_6": [
+   [
+    10000,
+    0.9260824122562775,
+    0.9655977401324618
+   ],
+   [
+    100000,
+    0.9997008744592603,
+    1.0338415131796699
+   ],
+   [
+    1000000,
+    0.9712039673945763,
+    0.9988519131656539
+   ]
+  ],
+  "Cl_12": [
+   [
+    10000,
+    0.9317296432314307,
+    0.9714859347417606
+   ],
+   [
+    100000,
+    0.9634115840145594,
+    0.9963129124711235
+   ],
+   [
+    1000000,
+    0.9565457844498441,
+    0.9837764454272386
+   ]
+  ]
+ },
+ "fails": [],
+ "seconds": 1252.2334957122803
+}

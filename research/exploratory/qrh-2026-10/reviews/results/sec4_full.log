@@ -1,0 +1,87 @@
+
+=== A: Lemma 4.1 fixed numerators give ray characters (EXACT) ===
+prime ideals of norm <= 30000 prime to 6: 3240  (0.0s)
+PASS A1 residue degree of X^6-a equals order of (a/p)_6 (split, sympy GF(p)); root count 6/0 (inert) : 613 (a,p) pairs, 0 mismatches
+PASS A3a numerator multiplicativity chi_A(u lam^v1 2^v2) = sum of exponents
+PASS A2 (2/.)_3: unique minimal modulus 2^1 lambda^2 (Q=36), supported on 6a; every strict divisor fails by exact collision : classes hit 3/3
+PASS A2 (lambda/.)_3: unique minimal modulus 2^0 lambda^4 (Q=81), supported on 6a; every strict divisor fails by exact collision : classes hit 9/9
+PASS A2 (2/.)_6: unique minimal modulus 2^3 lambda^2 (Q=576), supported on 6a; every strict divisor fails by exact collision : classes hit 48/48
+PASS A2 (lambda/.)_6: unique minimal modulus 2^2 lambda^4 (Q=1296), supported on 6a; every strict divisor fails by exact collision : classes hit 108/108
+PASS A2 (zeta6/.)_6: unique minimal modulus 2^2 lambda^3 (Q=432), supported on 6a; every strict divisor fails by exact collision : classes hit 36/36
+PASS A2 (2lambda/.)_3: unique minimal modulus 2^1 lambda^4 (Q=324), supported on 6a; every strict divisor fails by exact collision : classes hit 27/27
+PASS A2 (-1/.)_6: unique minimal modulus 2^2 lambda^0 (Q=16), supported on 6a; every strict divisor fails by exact collision : classes hit 2/2
+PASS A2 (2/.)_2: unique minimal modulus 2^3 lambda^0 (Q=64), supported on 6a; every strict divisor fails by exact collision : classes hit 8/8
+PASS A3 216 characters A -> chi_A(u lam^v1 2^v2) all periodic mod common 2^3 lambda^4 (Q=5184); depend on v mod 6 only
+PASS A3 the 216 characters are pairwise distinct (so the bound 6^{|S|+1} is attained) : 216
+PASS A4 control numerator 5: no S-supported modulus (exact collisions); periodic mod 36*rad; each good prime needed to exponent exactly 1 : {'S-supported moduli tested (all fail)': 30, 'no S-supported modulus': True, '|Cl| of periodicity modulus': 2592, 'primes used': 3240, 'periodic mod 36 rad(u) [Prop 16.1]': True, 'classes hit': 2133, 'each good prime needed (exponent 1)': True}
+PASS A4 control numerator pi7: no S-supported modulus (exact collisions); periodic mod 36*rad; each good prime needed to exponent exactly 1 : {'S-supported moduli tested (all fail)': 30, 'no S-supported modulus': True, '|Cl| of periodicity modulus': 648, 'primes used': 3240, 'periodic mod 36 rad(u) [Prop 16.1]': True, 'classes hit': 648, 'each good prime needed (exponent 1)': True}
+PASS A4 control numerator pi13*pi7: no S-supported modulus (exact collisions); periodic mod 36*rad; each good prime needed to exponent exactly 1 : {'S-supported moduli tested (all fail)': 30, 'no S-supported modulus': True, '|Cl| of periodicity modulus': 7776, 'primes used': 3240, 'periodic mod 36 rad(u) [Prop 16.1]': True, 'classes hit': 3238, 'each good prime needed (exponent 1)': True}
+PASS A4 control numerator pi7^2: no S-supported modulus (exact collisions); periodic mod 36*rad; each good prime needed to exponent exactly 1 : {'S-supported moduli tested (all fail)': 30, 'no S-supported modulus': True, '|Cl| of periodicity modulus': 648, 'primes used': 3240, 'periodic mod 36 rad(u) [Prop 16.1]': True, 'classes hit': 648, 'each good prime needed (exponent 1)': True}
+PASS A4 control numerator zeta6*pi19: no S-supported modulus (exact collisions); periodic mod 36*rad; each good prime needed to exponent exactly 1 : {'S-supported moduli tested (all fail)': 30, 'no S-supported modulus': True, '|Cl| of periodicity modulus': 1944, 'primes used': 3240, 'periodic mod 36 rad(u) [Prop 16.1]': True, 'classes hit': 1731, 'each good prime needed (exponent 1)': True}
+PASS A4 control numerator lambda*2*pi19: no S-supported modulus (exact collisions); periodic mod common*rad; each good prime needed to exponent exactly 1 : {'S-supported moduli tested (all fail)': 30, 'no S-supported modulus': True, '|Cl| of periodicity modulus': 7776, 'primes used': 3240, 'periodic mod common*rad': True, 'classes hit': 3144, 'each good prime needed (exponent 1)': True}
+
+=== B: Lemma 4.6 Gaussian annular decomposition (FLOAT / MP) ===
+PASS B1 sum_k chi(u-k) = 1 (normalized translates of a bump positive on [-1/2,1/2]) : 2.2e-16
+   max p_j(w_k)/envelope: |k|>10 vs |k|<=10: {0: ('0.0185', '0.282'), 1: ('0.0141', '0.761'), 2: ('0.0193', '6.47'), 3: ('0.0485', '149')}
+PASS B2 p_j(w_k) <= C_j (1+|k|)^j exp(-((|k|-1)_+)^2/4): ratio bounded, not growing in |k| (j<=3)
+PASS B3 sum_k e^{5|k|} p_j(w_k) finite (|k|<=40 partial sums) : {0: '1.435e+12', 1: '1.294e+13', 2: '2.117e+14', 3: '6.371e+15'}
+PASS B4 M W_G(s) = e^{s^2} with M W(s) = int W(y) y^s dy/y : 1.7e-31
+
+=== C: Lemma 4.7 finite seminorms (symbolic + MP) ===
+PASS C1 radial: r d_r F(r) = (xi . d_xi)/2 [F(|xi|^2)] (d = 2, 3)
+PASS C3 twist costs at most (1+|omega|)^{h+j} : 735 <= 6.56e+03
+PASS C2 |(x d_x)^j K_W(x)| <= (1/2pi) x^-sigma C_m C_j int |MW(-sigma-it)|(1+|t|)^{h+j} dt (W_G, m=(s+3)^2, j<=2, omega in {0,8}) : max ratio 0.375
+
+=== D: Lemma 4.8 Hecke strip growth (MP, not certified) ===
+explicit boundary constants: zeta_F(1.1)=6.6298, C_left=0.4329, C_right=0.6899  => |L| <= C Q^(3/5)|s+2|^2 with C=0.6899
+PASS D0 Stirling: |Gamma(11/10-it)/Gamma(-1/10+it)| ~ |t|^{6/5} (ratio at t=10,100,1000) : [1.00022, 1.0, 1.0]
+PASS D1 theta/Poisson series (paper l. 1460-1475) = L(s,chi)L(s,chi chi_-3) for chi o N : max rel err 2.65e-32 over 15 points (dps 40)
+PASS D2 FE |Lambda(s)|=|Lambda(1-conj s)| for (2/.)_3 with Q=36 (and fails with 4Q) : [(1.0, 0.6598), (1.0, 0.4353), (1.0, 0.8123)]
+PASS D2 FE |Lambda(s)|=|Lambda(1-conj s)| for (lambda/.)_3 with Q=81 (and fails with 4Q) : [(1.0, 0.6598), (1.0, 0.4353), (1.0, 0.8123)]
+PASS D2 FE |Lambda(s)|=|Lambda(1-conj s)| for (-1/.)_6 with Q=16 (and fails with 4Q) : [(1.0, 0.6598), (1.0, 0.4353), (1.0, 0.8123)]
+PASS D2 FE |Lambda(s)|=|Lambda(1-conj s)| for (2/.)_2 with Q=64 (and fails with 4Q) : [(1.0, 0.6598), (1.0, 0.4353), (1.0, 0.8123)]
+   (2/.)_3                      Q=   36  max |L|/(Q^.6|s+2|^2) = 4.2893e-02   max on sigma=-1/10 of |L|/(Q^.6(3+|t|)^1.2) = 1.9373e-01
+   (lambda/.)_3                 Q=   81  max |L|/(Q^.6|s+2|^2) = 4.4751e-02   max on sigma=-1/10 of |L|/(Q^.6(3+|t|)^1.2) = 1.4298e-01
+   (-1/.)_6                     Q=   16  max |L|/(Q^.6|s+2|^2) = 2.7298e-02   max on sigma=-1/10 of |L|/(Q^.6(3+|t|)^1.2) = 2.3327e-01
+   (2/.)_2                      Q=   64  max |L|/(Q^.6|s+2|^2) = 4.7522e-02   max on sigma=-1/10 of |L|/(Q^.6(3+|t|)^1.2) = 2.7682e-01
+   chi_4 o N                    Q=   16  max |L|/(Q^.6|s+2|^2) = 8.7941e-02   max on sigma=-1/10 of |L|/(Q^.6(3+|t|)^1.2) = 2.3327e-01
+   chi_5 o N                    Q=   25  max |L|/(Q^.6|s+2|^2) = 1.0568e-01   max on sigma=-1/10 of |L|/(Q^.6(3+|t|)^1.2) = 2.7143e-01
+   chi_7 o N                    Q=   49  max |L|/(Q^.6|s+2|^2) = 7.5745e-02   max on sigma=-1/10 of |L|/(Q^.6(3+|t|)^1.2) = 2.8113e-01
+   chi_8 o N                    Q=   64  max |L|/(Q^.6|s+2|^2) = 5.6315e-02   max on sigma=-1/10 of |L|/(Q^.6(3+|t|)^1.2) = 2.7682e-01
+   chi_11 o N                   Q=  121  max |L|/(Q^.6|s+2|^2) = 1.0878e-01   max on sigma=-1/10 of |L|/(Q^.6(3+|t|)^1.2) = 3.0868e-01
+   chi_13 o N                   Q=  169  max |L|/(Q^.6|s+2|^2) = 6.9059e-02   max on sigma=-1/10 of |L|/(Q^.6(3+|t|)^1.2) = 2.4944e-01
+   chi_17 o N                   Q=  289  max |L|/(Q^.6|s+2|^2) = 8.2013e-02   max on sigma=-1/10 of |L|/(Q^.6(3+|t|)^1.2) = 3.6604e-01
+   chi_19 o N                   Q=  361  max |L|/(Q^.6|s+2|^2) = 1.0188e-01   max on sigma=-1/10 of |L|/(Q^.6(3+|t|)^1.2) = 2.6167e-01
+   chi_23 o N                   Q=  529  max |L|/(Q^.6|s+2|^2) = 6.3694e-02   max on sigma=-1/10 of |L|/(Q^.6(3+|t|)^1.2) = 3.0392e-01
+   chi_29 o N                   Q=  841  max |L|/(Q^.6|s+2|^2) = 8.7958e-02   max on sigma=-1/10 of |L|/(Q^.6(3+|t|)^1.2) = 3.6357e-01
+   chi_31 o N                   Q=  961  max |L|/(Q^.6|s+2|^2) = 6.4844e-02   max on sigma=-1/10 of |L|/(Q^.6(3+|t|)^1.2) = 2.3591e-01
+   principal (s-1)zeta_F/(s+1)  Q=    1  max |L|/(Q^.6|s+2|^2) = 6.5441e-02
+PASS D3 |L(s,psi)| <= C Q^{3/5}|s+2|^2 with the explicit proof constant C on the strip grid (Kummer and base-change characters, Q up to 961)
+PASS D3 principal (s-1)zeta_F(s)/(s+1) <= C_pr |s+2|^2
+
+=== E: Lemma 4.9 logarithmic control (MP, sanity only) ===
+   theta(a,e) = log(R6/r0)/log(R4/r0): {'a=0.5,e=0.001': 0.998801, 'a=0.75,e=0.001': 0.998279, 'a=1.0,e=0.001': 0.997166, 'a=0.5,e=0.0001': 0.999881, 'a=0.75,e=0.0001': 0.999829, 'a=1.0,e=0.0001': 0.999719}
+PASS E0 theta < 1 for a in [1/2,1], e < 1e-3 (max at a = 1) : 0.999880758127709
+   chi_5 o N (Q=25), t=0.0: winding_R2=0, max Re g on R3=0.2032, |g(center)|=0.1075, max|g| R4=0.7872, B-C bound=991.8, max|g| r0=0.1966, max|g| R6=0.7848, three-circles bound=0.786, max|g'| R8=1.398, Cauchy bound=436, log calC=6.109
+PASS E1 chi_5 o N (Q=25) t=0.0: zero-free hypothesis (winding 0 on R2) and B-C, 3-circles, Cauchy inequalities hold numerically
+   chi_5 o N (Q=25), t=14.0: winding_R2=0, max Re g on R3=0.8736, |g(center)|=0.1224, max|g| R4=1.304, B-C bound=3179, max|g| r0=0.2084, max|g| R6=1.297, three-circles bound=1.301, max|g'| R8=3.935, Cauchy bound=720.7, log calC=9.578
+PASS E1 chi_5 o N (Q=25) t=14.0: zero-free hypothesis (winding 0 on R2) and B-C, 3-circles, Cauchy inequalities hold numerically
+   principal (Q=1), t=0.0: winding_R2=0, max Re g on R3=-0.5645, |g(center)|=0.8477, max|g| R4=1.416, B-C bound=2707, max|g| r0=0.9968, max|g| R6=1.415, three-circles bound=1.415, max|g'| R8=0.5637, Cauchy bound=785.8, log calC=2.89
+PASS E1 principal (Q=1) t=0.0: zero-free hypothesis (winding 0 on R2) and B-C, 3-circles, Cauchy inequalities hold numerically
+   principal (Q=1), t=14.0: winding_R2=0, max Re g on R3=0.3938, |g(center)|=0.108, max|g| R4=1.939, B-C bound=1602, max|g| r0=0.1943, max|g| R6=1.918, three-circles bound=1.933, max|g'| R8=12.13, Cauchy bound=1065, log calC=6.36
+PASS E1 principal (Q=1) t=14.0: zero-free hypothesis (winding 0 on R2) and B-C, 3-circles, Cauchy inequalities hold numerically
+
+=== F: Lemma 4.10 deleted Euler factors (FLOAT) ===
+PASS F1 |D_R^{+-1}| <= prod(1-q^-s0)^-1, |D'/D| <= sum log q/(q^s0-1) <= log(2q_R)/(2^s0-1), |D_R(s)| <= q_R^{(-sigma)+} 2^{omega(R)} : 3000 random trials, 0 violations
+
+=== G: Lemma 13.1 fixed-ray prime normalizer (EXACT counts, FLOAT sums; EMPIRICAL) ===
+   prime ideals of norm <= 2000000: 148938 (0.9s)
+PASS G0 trivial class of Cl_6 = {p : (2/p)_3 = 1} (Lemma 4.1 + A2), first 3000 primes
+   |Cl_6| = 3  |Cl_12| = 12
+   T=Cl_6 (|T|=3): (P, LHS/main, LHS/[int W(x/P)x^-5/6 dx/(|T|log x)]) = [(10000, np.float64(0.9261), 0.9656), (100000, np.float64(0.9997), 1.0338), (1000000, np.float64(0.9712), 0.9989)]
+PASS G1 Cl_6: LHS/refined -> 1 and LHS/main approaches 1 (slow log correction)
+   T=Cl_12 (|T|=12): (P, LHS/main, LHS/[int W(x/P)x^-5/6 dx/(|T|log x)]) = [(10000, np.float64(0.9317), 0.9715), (100000, np.float64(0.9634), 0.9963), (1000000, np.float64(0.9565), 0.9838)]
+PASS G1 Cl_12: LHS/refined -> 1 and LHS/main approaches 1 (slow log correction)
+
+ALL PASS
+total 1252s

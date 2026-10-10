@@ -31,7 +31,7 @@ Exact sources or dependencies:
         (sha256 87ca11d98bf3ee130a6dab613b5f7efe444058320b7c22b005327686f2798e65, asserted at
         start-up), plus numpy, sympy (GF(p) factorization, symbolic radial identity) and mpmath.
 What was actually run: nice -n 10 python3 -I reviews/sep30_sec4_checks.py OUT.json (one process,
-  RUNTIME_PLACEHOLDER). Python 3.13, numpy 2.5.3, sympy 1.14.0, mpmath 1.3.0. The log and JSON are in
+  full run 1252 s, ALL PASS; log reviews/results/sec4_full.log). Python 3.13, numpy 2.5.3, sympy 1.14.0, mpmath 1.3.0. The log and JSON are in
   the session scratchpad (sec4/full.log, sec4/full.json) and are not committed. A "quick"
   argument gives a 78 s smoke run.
 Smallest remaining gap: none inside the scoped lemmas. Outside scope:
@@ -166,7 +166,26 @@ So `C = 0.69`, and `|L| ≤ 0.74 Q^{3/5}(3+|t|)^2`. The constant was computed at
 sup taken on the grid `t ∈ [0, 200]` (step 1/4); the function decays like `t^{−4/5}` beyond. It is
 not certified. On the grid `σ ∈ {−0.1, 0.25, 0.5, 0.8, 1.1}`, the maximum of `|L|/(Q^{3/5}|s+2|^2)` is:
 
-D3_TABLE_PLACEHOLDER
+| character | Q | max \|L\|/(Q^{3/5}\|s+2\|²) |
+|---|---|---|
+| (2/.)_3 | 36 | 4.2893e-02 |
+| (lambda/.)_3 | 81 | 4.4751e-02 |
+| (-1/.)_6 | 16 | 2.7298e-02 |
+| (2/.)_2 | 64 | 4.7522e-02 |
+| chi_4 o N | 16 | 8.7941e-02 |
+| chi_5 o N | 25 | 1.0568e-01 |
+| chi_7 o N | 49 | 7.5745e-02 |
+| chi_8 o N | 64 | 5.6315e-02 |
+| chi_11 o N | 121 | 1.0878e-01 |
+| chi_13 o N | 169 | 6.9059e-02 |
+| chi_17 o N | 289 | 8.2013e-02 |
+| chi_19 o N | 361 | 1.0188e-01 |
+| chi_23 o N | 529 | 6.3694e-02 |
+| chi_29 o N | 841 | 8.7958e-02 |
+| chi_31 o N | 961 | 6.4844e-02 |
+| principal (s-1)zeta_F/(s+1) | 1 | 6.5441e-02 |
+
+All values lie below the explicit proof constant `C = 0.6899` (`C_left = 0.4329`, `C_right = 0.6899`). The `σ = −1/10` line ratios are in the log. MP is mpmath, not certified.
 
 All values are below `C`. The stated exponents are not sharp: convexity would give
 `Q^{(1−σ)/2+ε}`-type bounds. But only `log|L|` enters Lemma 4.9, so the weaker bound is all that
@@ -219,14 +238,62 @@ is correct: `D_R` has no zeros in `Re s > 0`. **Verdict: no wrong step found.**
 * **Stieltjes step.** `|∫E d(W(x/P)x^{−5/6})| ≤ sup_{[aP,bP]}|E| · TV = o(P/log P)·O(P^{−5/6})`, which is `o(P^{1/6}/log P)`. The boundary terms vanish because `W` is annular. Correct.
 * **Main term.** With `x = Py`, it is `P^{1/6}/(|T| log P) ∫W(y)y^{−5/6} (log P/log(Py)) dy`, and the ratio tends to 1 uniformly on `[a, b]`. Positivity holds because `W ≥ 0` and `W ≠ 0`. Deleting a fixed finite set does not matter, since it is eventually outside the window. Correct.
 * **Use in Sec. 20.1 (15562-15585).** `T`, `W_i`, `ℓ_i` and the deleted set `S` are fixed, and `P_i = Z^{ℓ_i}`. The product `A_T(Z) = (−1)^K Z^{−ℓ/6}∏S_i ~ (−1)^K|T|^{−K}(log Z)^{−K}∏ℓ_i^{−1}∫W_i y^{−5/6}` was re-derived: `∏P_i^{1/6} = Z^{ℓ/6}` and `log P_i = ℓ_i log Z`. Correct. The disjoint windows (6868-6880) make the `𝒫_i(Z)` disjoint but do not affect the single-slot asymptotic.
-* **G0, G1** (EMPIRICAL; prime ideals up to norm 2·10^6). The trivial class of `Cl_6` (`|Cl_6| = 3`) equals `{p : (2/p)_3 = 1}` exactly on the first 3,000 primes, which links Lemma 4.1 and A2. For `T = Cl_6` and `T = Cl_12` (`|T| = 12`), the ratio of the left side to the refined main term `|T|^{−1}∫W(x/P)x^{−5/6}dx/log x` tends to 1. The ratio to the paper's main term drifts to 1 like `1 − O(1/log P)`, as the `log P/log(Py)` factor predicts. G_TABLE_PLACEHOLDER
+* **G0, G1** (EMPIRICAL; prime ideals up to norm 2·10^6). The trivial class of `Cl_6` (`|Cl_6| = 3`) equals `{p : (2/p)_3 = 1}` exactly on the first 3,000 primes, which links Lemma 4.1 and A2. For `T = Cl_6` and `T = Cl_12` (`|T| = 12`), the ratio of the left side to the refined main term `|T|^{−1}∫W(x/P)x^{−5/6}dx/log x` tends to 1. The ratio to the paper's main term drifts to 1 like `1 − O(1/log P)`, as the `log P/log(Py)` factor predicts. Raw output:
+
+```
+T=Cl_6 (|T|=3): (P, LHS/main, LHS/[int W(x/P)x^-5/6 dx/(|T|log x)]) = [(10000, np.float64(0.9261), 0.9656), (100000, np.float64(0.9997), 1.0338), (1000000, np.float64(0.9712), 0.9989)]
+T=Cl_12 (|T|=12): (P, LHS/main, LHS/[int W(x/P)x^-5/6 dx/(|T|log x)]) = [(10000, np.float64(0.9317), 0.9715), (100000, np.float64(0.9634), 0.9963), (1000000, np.float64(0.9565), 0.9838)]
+```
 
 **Verdict: no wrong step found.**
 
 ## 8. Mechanical checks (`sep30_sec4_checks.py`)
 
 ```
-OUTPUT_PLACEHOLDER
+PASS A1 residue degree of X^6-a equals order of (a/p)_6 (split, sympy GF(p)); root count 6/0 (inert) : 613 (a,p) pairs, 0 mismatches
+PASS A3a numerator multiplicativity chi_A(u lam^v1 2^v2) = sum of exponents
+PASS A2 (2/.)_3: unique minimal modulus 2^1 lambda^2 (Q=36), supported on 6a; every strict divisor fails by exact collision : classes hit 3/3
+PASS A2 (lambda/.)_3: unique minimal modulus 2^0 lambda^4 (Q=81), supported on 6a; every strict divisor fails by exact collision : classes hit 9/9
+PASS A2 (2/.)_6: unique minimal modulus 2^3 lambda^2 (Q=576), supported on 6a; every strict divisor fails by exact collision : classes hit 48/48
+PASS A2 (lambda/.)_6: unique minimal modulus 2^2 lambda^4 (Q=1296), supported on 6a; every strict divisor fails by exact collision : classes hit 108/108
+PASS A2 (zeta6/.)_6: unique minimal modulus 2^2 lambda^3 (Q=432), supported on 6a; every strict divisor fails by exact collision : classes hit 36/36
+PASS A2 (2lambda/.)_3: unique minimal modulus 2^1 lambda^4 (Q=324), supported on 6a; every strict divisor fails by exact collision : classes hit 27/27
+PASS A2 (-1/.)_6: unique minimal modulus 2^2 lambda^0 (Q=16), supported on 6a; every strict divisor fails by exact collision : classes hit 2/2
+PASS A2 (2/.)_2: unique minimal modulus 2^3 lambda^0 (Q=64), supported on 6a; every strict divisor fails by exact collision : classes hit 8/8
+PASS A3 216 characters A -> chi_A(u lam^v1 2^v2) all periodic mod common 2^3 lambda^4 (Q=5184); depend on v mod 6 only
+PASS A3 the 216 characters are pairwise distinct (so the bound 6^{|S|+1} is attained) : 216
+PASS A4 control numerator 5: no S-supported modulus (exact collisions); periodic mod 36*rad; each good prime needed to exponent exactly 1 : {'S-supported moduli tested (all fail)': 30, 'no S-supported
+PASS A4 control numerator pi7: no S-supported modulus (exact collisions); periodic mod 36*rad; each good prime needed to exponent exactly 1 : {'S-supported moduli tested (all fail)': 30, 'no S-support
+PASS A4 control numerator pi13*pi7: no S-supported modulus (exact collisions); periodic mod 36*rad; each good prime needed to exponent exactly 1 : {'S-supported moduli tested (all fail)': 30, 'no S-su
+PASS A4 control numerator pi7^2: no S-supported modulus (exact collisions); periodic mod 36*rad; each good prime needed to exponent exactly 1 : {'S-supported moduli tested (all fail)': 30, 'no S-suppo
+PASS A4 control numerator zeta6*pi19: no S-supported modulus (exact collisions); periodic mod 36*rad; each good prime needed to exponent exactly 1 : {'S-supported moduli tested (all fail)': 30, 'no S-
+PASS A4 control numerator lambda*2*pi19: no S-supported modulus (exact collisions); periodic mod common*rad; each good prime needed to exponent exactly 1 : {'S-supported moduli tested (all fail)': 30,
+PASS B1 sum_k chi(u-k) = 1 (normalized translates of a bump positive on [-1/2,1/2]) : 2.2e-16
+PASS B2 p_j(w_k) <= C_j (1+|k|)^j exp(-((|k|-1)_+)^2/4): ratio bounded, not growing in |k| (j<=3)
+PASS B3 sum_k e^{5|k|} p_j(w_k) finite (|k|<=40 partial sums) : {0: '1.435e+12', 1: '1.294e+13', 2: '2.117e+14', 3: '6.371e+15'}
+PASS B4 M W_G(s) = e^{s^2} with M W(s) = int W(y) y^s dy/y : 1.7e-31
+PASS C1 radial: r d_r F(r) = (xi . d_xi)/2 [F(|xi|^2)] (d = 2, 3)
+PASS C3 twist costs at most (1+|omega|)^{h+j} : 735 <= 6.56e+03
+PASS C2 |(x d_x)^j K_W(x)| <= (1/2pi) x^-sigma C_m C_j int |MW(-sigma-it)|(1+|t|)^{h+j} dt (W_G, m=(s+3)^2, j<=2, omega in {0,8}) : max ratio 0.375
+PASS D0 Stirling: |Gamma(11/10-it)/Gamma(-1/10+it)| ~ |t|^{6/5} (ratio at t=10,100,1000) : [1.00022, 1.0, 1.0]
+PASS D1 theta/Poisson series (paper l. 1460-1475) = L(s,chi)L(s,chi chi_-3) for chi o N : max rel err 2.65e-32 over 15 points (dps 40)
+PASS D2 FE |Lambda(s)|=|Lambda(1-conj s)| for (2/.)_3 with Q=36 (and fails with 4Q) : [(1.0, 0.6598), (1.0, 0.4353), (1.0, 0.8123)]
+PASS D2 FE |Lambda(s)|=|Lambda(1-conj s)| for (lambda/.)_3 with Q=81 (and fails with 4Q) : [(1.0, 0.6598), (1.0, 0.4353), (1.0, 0.8123)]
+PASS D2 FE |Lambda(s)|=|Lambda(1-conj s)| for (-1/.)_6 with Q=16 (and fails with 4Q) : [(1.0, 0.6598), (1.0, 0.4353), (1.0, 0.8123)]
+PASS D2 FE |Lambda(s)|=|Lambda(1-conj s)| for (2/.)_2 with Q=64 (and fails with 4Q) : [(1.0, 0.6598), (1.0, 0.4353), (1.0, 0.8123)]
+PASS D3 |L(s,psi)| <= C Q^{3/5}|s+2|^2 with the explicit proof constant C on the strip grid (Kummer and base-change characters, Q up to 961)
+PASS D3 principal (s-1)zeta_F(s)/(s+1) <= C_pr |s+2|^2
+PASS E0 theta < 1 for a in [1/2,1], e < 1e-3 (max at a = 1) : 0.999880758127709
+PASS E1 chi_5 o N (Q=25) t=0.0: zero-free hypothesis (winding 0 on R2) and B-C, 3-circles, Cauchy inequalities hold numerically
+PASS E1 chi_5 o N (Q=25) t=14.0: zero-free hypothesis (winding 0 on R2) and B-C, 3-circles, Cauchy inequalities hold numerically
+PASS E1 principal (Q=1) t=0.0: zero-free hypothesis (winding 0 on R2) and B-C, 3-circles, Cauchy inequalities hold numerically
+PASS E1 principal (Q=1) t=14.0: zero-free hypothesis (winding 0 on R2) and B-C, 3-circles, Cauchy inequalities hold numerically
+PASS F1 |D_R^{+-1}| <= prod(1-q^-s0)^-1, |D'/D| <= sum log q/(q^s0-1) <= log(2q_R)/(2^s0-1), |D_R(s)| <= q_R^{(-sigma)+} 2^{omega(R)} : 3000 random trials, 0 violations
+PASS G0 trivial class of Cl_6 = {p : (2/p)_3 = 1} (Lemma 4.1 + A2), first 3000 primes
+PASS G1 Cl_6: LHS/refined -> 1 and LHS/main approaches 1 (slow log correction)
+PASS G1 Cl_12: LHS/refined -> 1 and LHS/main approaches 1 (slow log correction)
+ALL PASS
+total 1252s
 ```
 
 **Exactness and limits.**
