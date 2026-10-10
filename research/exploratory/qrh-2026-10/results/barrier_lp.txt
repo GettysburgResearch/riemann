@@ -1,0 +1,4 @@
+Barrier 1 (low side): LP min s = 0.866666667; exact certificate valid=True, bound = 13/15 ; multipliers [Fraction(17, 30), Fraction(2, 5), Fraction(1, 30), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)]
+Barrier 2 (low + floor bin): LP min s = 0.869791667 at (lx,ly,ell) = [0.40625 0.40625 0.1875 ]; exact certificate valid=True, bound = 167/192 = 0.869792; multipliers [Fraction(259, 384), Fraction(0, 1), Fraction(25, 192), Fraction(25, 128), Fraction(25, 768), Fraction(0, 1), Fraction(0, 1)]
+Barrier 3 (optimal energy + floor bin): LP min s = 0.869791667 at [0.40625 0.40625 0.1875 ]; certificate valid=True, bound = 167/192 = 0.869792
+Barrier 2' (floor at a0=1/2): LP min s = 0.866666667; certificate valid=True, bound = 13/15 = 0.866667

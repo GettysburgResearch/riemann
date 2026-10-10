@@ -1,0 +1,85 @@
+# Consequences of an imported zero-free half-plane for this repository's programmes
+
+```text
+Status: PROPOSED (native graded lemma, Sec. 2) + CONDITIONAL on QRH-IMPORT (Secs. 1, 3) + survey
+Scope: conditional / quantitative; nothing here proves or approaches RH (target exponent stays 0)
+Exact sources or dependencies: QRH-IMPORT (INTAKE.md); Titchmarsh, Theory of the Riemann
+  Zeta-Function, 2nd ed., Sec. 14.2 argument; Bourgain, JAMS 30 (2017) mu(1/2) <= 13/84;
+  de Bruijn (1950) strip theorem; repository Mellin route (research/integrated/CURRENT_RESULTS.md#mellin,
+  reviews/C/pass4-math-completion/proofs/MELLIN_ANALYTIC_GAPS.md); R15 adapter (reviews/D-final/REPAIRS.md).
+What was actually run: no computation; proofs below are short adaptations, not reviewed.
+Smallest remaining gap: each RH-equivalent premise in the repo needs exponent 0; QRH-IMPORT gives 3/8.
+```
+
+Throughout, `Θ = sup{Re ρ : ζ(ρ) = 0}` and **QRH-IMPORT** is the unreviewed external claim `Θ ≤ 7/8`
+(in fact claimed for all Dirichlet L-functions). Write `θ_* = Θ − 1/2 ≤ 3/8` for the "excess".
+
+## 1. Classical analytic consequences (conditional, imported)
+
+**1.1 Lindelöf in the zero-free half-plane.** If ζ has no zero in `Re s > Θ`, then for every fixed
+`σ > Θ`, `ζ(σ+it) = t^{o(1)}` and `1/ζ(σ+it) = t^{o(1)}`. *Route:* Borel–Carathéodory for
+`log ζ` on the disk about `2+it` of radius `2−Θ−δ`, then Hadamard three circles with an inner disk
+in `Re s > 1` (Titchmarsh Sec. 14.2; the same argument is Lemma 5 of [K]). Hence `μ(σ) = 0` for
+`σ ≥ Θ` (continuity of μ). Under QRH-IMPORT: `μ(σ) = 0` on `[7/8, 1]`.
+
+**1.2 Convexity interpolation.** With `μ(1/2) ≤ 13/84` (Bourgain) and convexity of μ,
+QRH-IMPORT gives `μ(σ) ≤ (26/63)(7/8 − σ)` on `[1/2, 7/8]`; e.g. `μ(3/4) ≤ 13/252 ≈ 0.0516`
+versus `13/168 ≈ 0.0774` from convexity with `μ(1)=0`. *Novelty not assessed:* compare with current
+exponent-pair tables before using this as an improvement.
+
+**1.3 Prime and Möbius sums.** `ψ(x) = x + O(x^{7/8} log² x)` and `M(x) ≪ x^{7/8+ε}` (Perron with
+1.1). Note the repository's SHARP/critical-Taylor obstruction (`OPEN.ARITH.CV`) is a *sign*
+statement; a size bound `x^{7/8+ε}` only grades it (R17-style splitting gives `X^{3/8+ε}` where RH
+would give `X^{ε}`).
+
+**1.4 Non-improvements (recorded to prevent misreadings).**
+* de Bruijn–Newman: with `H_0(z) = ξ((1+iz)/2)/8`, `Θ ≤ 7/8` puts zeros in `|Im z| ≤ 3/4`, and
+  de Bruijn's strip theorem gives only `Λ ≤ 9/32`, weaker than the known `Λ ≤ 0.2`.
+  (A survey note giving `9/128` used the wrong normalisation.)
+* Zero density: `N(σ,T) = 0` for `σ > 7/8` is new, but the density hypothesis is already known
+  on `σ ≥ 25/32`; nothing follows directly on `[1/2, 25/32]`.
+* Least prime in a progression: a uniform zero-free half-plane `Re s > θ` gives `p ≪ q^{1/(1−θ)+ε}
+  = q^{8+ε}`, weaker than Linnik with `L = 5`.
+* Robin: there is no Θ-graded statement in the repository's Robin packet; the canonical reduction
+  and bounded tail are finite arithmetic and are unaffected.
+
+## 2. A graded form of the repository's Mellin criterion (native, PROPOSED)
+
+**Lemma G (graded Mellin premise).** Let `F` be a fixed, noncancelling Mellin detector satisfying the
+hypotheses of `research/integrated/CURRENT_RESULTS.md#mellin` (local integrability, initial absolute
+convergence, continuation `MF` holomorphic near each real `s > θ`, multiplier not cancelling any
+reciprocal-zeta pole in the relevant half-strip). Let `θ ≥ 0`. If
+
+    N_F(Y) = ∫_1^Y F_-(x) dx/x = O_ε(Y^{θ+ε})   for every ε > 0,
+
+then ζ has no zero with `Re ρ > 1/2 + θ` (at the poles `s = ρ − 1/2` of the fixed rows' consumer).
+
+*Proof (adaptation of the repository route).* For `Re s ≥ θ + η`, dyadic summation of the premise
+gives absolute convergence of `M(F_-)(s) = ∫ F_- x^{-s-1} dx` and of its derivatives, so `M(F_-)` is
+holomorphic on `Re s > θ`. The positive part has a Laplace-type transform with abscissa `c`.
+If `c > θ`, then `M(F_+) = MF + M(F_-)` extends holomorphically through a neighbourhood of the real
+point `c` (both summands do), contradicting the tail Landau theorem used in the repository route.
+Hence `c ≤ θ`, so `MF` is holomorphic on `Re s > θ`; noncancellation then excludes a reciprocal-zeta
+pole there, i.e. a zero with `Re ρ − 1/2 > θ`. The case `c = −∞` is as in the original route. ∎
+
+*Converse under QRH-IMPORT (sketch, needs the row-specific growth of the multiplier).* If
+`MF(s) = H(s)/(s² ζ(s+1/2))` with `H` holomorphic and `H(s) ≪ (1+|t|)^{1−η}` on `Re s ≥ θ_* + ε`,
+then Perron inversion and 1.1 give `|F(x)| ≪ x^{θ_*+ε}`, hence `N_F(Y) ≪ Y^{3/8+ε}`.
+So for such rows the premise exponent is *exactly* the zero excess: **QRH-IMPORT moves the Mellin
+premise from the trivial exponent 1/2 to 3/8; RH requires 0.** The graded lemma is consistent with
+(and adds nothing beyond) QRH-IMPORT; it is recorded because it makes the gap quantitative.
+
+## 3. Repository hooks located by the survey (all quantitative, none closes a criterion)
+
+| Hook | File | Effect of `Θ ≤ 7/8` |
+|---|---|---|
+| R15 reciprocal-growth / wavelet energy abscissa `Θ + 1/2` | `reviews/D-final/REPAIRS.md` (R15) | energy finite for `σ0 > 11/8`; `1/ζ ≪ t^ε` on `Re w > 7/8` |
+| A-115 / A-117 (tent energy `2Θ−1`, Mertens shift) | `reviews/A/CLAIMS.tsv` | tent-energy exponent `≤ 3/4` |
+| T-9502 / T-9503 totient errors (PROPOSED) | `claims/theorems/` | error `O(x^{-9/8+ε})`; RH would give `x^{-3/2+ε}` |
+| Dyadic cocycle `Θ_a` positivity (PROPOSED) | `claims/lemmas/L-91027…` | holds for every `a > 3/8` |
+| Safe-line VK disc (`CONDITIONAL_EXACT`) | `research/integrated/safe_line/README.md` | half-plane input is far stronger than VK; region could enlarge (unverified) |
+| Xi order-3 conditional theorem | `research/integrated/xi` | offsets `a_i ≤ 3/8` shrink the reserve budget; order ≥ 4 untouched |
+
+Every RH-equivalent premise in the repository is a *subpower* (exponent-0) statement; QRH-IMPORT
+supplies exponent `3/8` uniformly. This is the precise sense in which the quasi-RH claim is
+"structurally adjacent but quantitatively distant" from every open node here.
