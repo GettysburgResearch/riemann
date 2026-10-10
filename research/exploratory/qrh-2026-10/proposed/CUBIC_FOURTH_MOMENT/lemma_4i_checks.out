@@ -1,0 +1,16 @@
+[I0] CHECK PASS: direct cubic symbol x^{(Np-1)/3} agrees with (eis sextic symbol)^2 at Np = 7, 7, 13, 19
+[I1] CHECK PASS: q_u^(1/2) G(u,0) = sum_x chi_u(x) equals phi(u) 1[u a cube ideal] exactly, for all 131 moduli over {N=4,7,7,13,13,19,25} with norm <= 2500 plus 6 larger (10 cubes, 121 non-cubes)
+[I1-CTRL] CTRL PASS: sextic rule 'G(u,0)=0 unless u is a sixth power' is FALSE at n = 3: 10 counterexamples, first [(13, 3)]
+[I1b] CHECK PASS: on cubes |G(u,0)|^2 = phi(u)^2/q_u <= q_u (exact integer comparison)
+[I2] CHECK PASS: cube ideals u = v^3 prime to 3 with N(u) <= Y = Yv^3 (Yv <= 20000) and s | u, s squarefree (6 choices): q_s^3 <= q_u in all 19652 cases; max #{u} q_s / Y^(1/3) = 0.7000 (<= 2; the asymptotic constant is pi/(3 sqrt 3) * 2/3 * residue factor)
+[I2-CTRL] CTRL PASS: with s = p^3 (not squarefree; l. 13067 says s is squarefree) and u = p^3 a cube: s | u but q_s^3 = 7^9 > q_u = 7^3, so the crude bound s_0 <= (a_0+theta)/3 needs squarefree s
+[I3] CHECK PASS: exact on 2600 grid points (theta_N in {0,1/100,1/10,1/3}, a_0 >= -theta_N, 0 <= s_0 <= (a_0+theta_N)/3): refined slack = (a_0+theta_N)/3 + s_0 >= 0; crude slack = (a_0+theta_N)/3 - s_0 >= 0 (equality at s_0 = (a_0+theta_N)/3, 260 points); sextic l. 13584 inequality reproduced
+[I3-CTRL-n2] CTRL PASS: n = 2 analogue with the crude count (squares: Z^{-a_0}(Y^{1/2} Y^{1/2})^2 = Z^{a_0+2theta}) exceeds the allowance a_0 - s_0 + 2theta at a_0 = 1, s_0 = 1/4
+[I3-CTRL-theta] CTRL PASS: cubic crude count with support correction 2theta_N - theta_N/100 (instead of 2theta_N) fails at s_0 = (a_0+theta_N)/3: the crude route uses the whole 2theta_N
+[I4] CHECK PASS: (floating point) max Q/(Y^(2/3)/q_s^2) = 0.0214, max Q/(Y/q_s) = 0.0002 over 6 s and Y = Yv^3, Yv in {1e2,1e3,5e3,2e4}: bounded, consistent with the refined bound (a finite check, not a proof)
+
+SUMMARY: checks 6/6 PASS; failing controls detected 4/4
+
+real	0m2.636s
+user	0m2.604s
+sys	0m0.016s

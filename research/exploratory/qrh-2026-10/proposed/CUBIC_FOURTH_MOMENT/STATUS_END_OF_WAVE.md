@@ -165,3 +165,7 @@ Table 2b counts 15 entries. Of these, R7 (Lemma 4.I) is only sketched, R14 (Lemm
 sketched and unreviewed, and R15 is hypothesis (H-B), a replacement rather than a re-derivation.
 So the honest count is 12 re-derived at n = 3 (PROPOSED), 2 sketched, and 1 replaced by (H-B).
 The route is conditional on (H-A), (H-B), Lemma 4.K and the correctness of Lemma 18.1 case 1.
+
+Update (end of wave): R7 (Lemma 4.I, corrected form) and R14 (Lemma 4.K) now have written
+PROPOSED proofs ([LEMMA_4I.md](LEMMA_4I.md), [LEMMA_4K.md](LEMMA_4K.md)). The count becomes 14
+re-derived at n = 3 (PROPOSED) and 1 replaced by (H-B).

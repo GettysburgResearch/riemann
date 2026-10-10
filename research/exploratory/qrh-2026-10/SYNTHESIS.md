@@ -194,13 +194,15 @@ the critical line.
      * The route stays PROPOSED. It is conditional on (H-A), (H-B) and the correctness of the
        manuscript's Lemma 18.1 case 1. Lemma 4.K (risk item 7) now has a written PROPOSED proof
        ([LEMMA_4K.md](proposed/CUBIC_FOURTH_MOMENT/LEMMA_4K.md); it corrects the reasoning at the
-       prime above 3, not the statement). Lemma 4.I is still only sketched. Every other itemized risk has had a bounded single-agent attack with no break
+       prime above 3, not the statement). Lemma 4.I now has one too, in a corrected form
+       ([LEMMA_4I.md](proposed/CUBIC_FOURTH_MOMENT/LEMMA_4I.md)). Every cubic-specific lemma
+       4.A-4.K now has a written PROPOSED proof (bounded, unreviewed). Every other itemized risk has had a bounded single-agent attack with no break
        found.
      * End-of-wave status ([proposed/CUBIC_FOURTH_MOMENT/STATUS_END_OF_WAVE.md](proposed/CUBIC_FOURTH_MOMENT/STATUS_END_OF_WAVE.md)):
        * (H-A) is now an explicit checklist of 19 inherited items (6 checked by exact model only,
          13 imported as is);
-       * separately, 12 items have been re-derived at n = 3 (PROPOSED), 2 are only sketched
-         (Lemmas 4.I and 4.K), and 1 is replaced by hypothesis (H-B);
+       * separately, 14 items have been re-derived at n = 3 (PROPOSED; this includes Lemmas 4.I
+         and 4.K, written out at the end of the wave), and 1 is replaced by hypothesis (H-B);
        * the smallest failure point is the symmetry of Lemma 18.2 across the two rectangles, or
          the zero-slack ledger at `v = L`;
        * a referee would need to read about 110 pages.

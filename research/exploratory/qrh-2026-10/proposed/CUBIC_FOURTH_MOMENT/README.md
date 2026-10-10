@@ -260,3 +260,18 @@ the statement.**
 
 With this, every cubic-specific lemma of SKETCH §4 has a written proof, all PROPOSED, except
 Lemma 4.I, which is only sketched.
+
+## Note added at the end of the wave: Lemma 4.I
+
+[LEMMA_4I.md](LEMMA_4I.md) proves Lemma 4.I in a **corrected form** (PROPOSED; one agent,
+unreviewed; checks 6/6 with 4 failing controls detected).
+* The cube-moduli bound is `Z^{2a_0/3 − 2s_0 + 5θ_N/3 + ε_1}`, with slack `(a_0 + θ_N)/3 + s_0`.
+* Four imprecisions in SKETCH are fixed:
+  * the missing `θ_N` and `ε_1` terms;
+  * equality holds at `s_0 = (a_0+θ_N)/3`;
+  * the crude count needs squarefree `s`;
+  * the CRT factorisation is needed beyond Lemma 4.A.
+
+With this, every cubic-specific lemma of SKETCH §4 (4.A-4.K) has a written PROPOSED proof. The
+route remains conditional on (H-A) (19 inherited items), (H-B), and the correctness of the
+manuscript's Lemma 18.1 case 1.
