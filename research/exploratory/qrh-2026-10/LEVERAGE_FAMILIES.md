@@ -169,7 +169,7 @@ absorbing coefficient is `τ(p) = (Hecke)·γ(χ'^a)`, with `χ'` of order `n`.
 | cubic `γ_2` vs cubic `γ_2` (other pairing) | `μγ_2/γ_4 = −γ_2²`, cube `= −α²` | — | no: infinity type would be `α^{2/3}` | S7 (dev 6e-15) |
 | cubic `γ_2` vs **sextic** `γ_{−1}` | `μγ_2 = χ(−1)αGγ_{−1}` | one | yes, but needs a sextic-coefficient theta | S6 |
 | cubic² (two Poisson averages) vs cubic `γ_4` | `μγ_2² = αγ_4` | one | **yes** (product family, §2.2) | S5 |
-| quartic `γ(χ_4)` vs `conj γ(χ_4)` over `Q(i)` | `γ(χ)² = J(χ,χ)γ(ρ)/|π|`, `J = −χ(−1)π` | one | **yes** (needs a quartic-coefficient theta) | Q1–Q3 |
+| quartic `γ(χ_4)` vs `conj γ(χ_4)` over `Q(i)` | `γ(χ)² = J(χ,χ)γ(ρ)/\|π\|`, `J = −χ(−1)π` | one | **yes** (needs a quartic-coefficient theta) | Q1–Q3 |
 | quadratic `γ(ρ)` vs anything Hecke | `γ(ρ)` is explicit | none | no; μ is left alone | Q4 |
 
 The quartic line is EXACT for 78/78 primes of `Q(i)`, inert `−3, −7, −11, −19` included:
@@ -281,7 +281,7 @@ quadratic.**
 | n = 2, GL(2) (classical θ) | `τ(p) = 0` | classical |
 | **n = 3, GL(2)** | **`τ(p)` = cubic Gauss sum** | Patterson; [DR] (5.7); R3 |
 | n = 3, GL(3) | `τ(p,1) = 0`; support on cubes | Proskurin, Bump–Hoffstein, quoted in [FG15] §5 |
-| **n = 4, GL(3)** (c odd) | **`τ(p,1) = |p|^{−1/2} ḡ_4(p)`**, `τ(p^{4k+1},1) = |p|^{k−1/2}ḡ(p)` | [FG15] §5; unique model by [KP] Cor. I.3.6 |
+| **n = 4, GL(3)** (c odd) | **`τ(p,1) = \|p\|^{−1/2} ḡ_4(p)`**, `τ(p^{4k+1},1) = \|p\|^{k−1/2}ḡ(p)` | [FG15] §5; unique model by [KP] Cor. I.3.6 |
 | n = 4, GL(2) | undetermined. Suzuki gives `τ(a²)`, biquadrate periodicity, vanishing at cubes, and a quadratic support condition, but "nothing about `ψ(π)`". The Eckhardt–Patterson conjecture: `τ(π)² N(π)^{1/4} ∝ ḡ_4(π)`, open, true on average (Bump–Hoffstein) | [DDHL] §1 and theta section |
 | n ≥ 4, GL(2) | `n/2 − 1` (n even) or `(n−1)/2 − 1` (n odd) undetermined classes per prime; non-unique Whittaker models (Deligne, [KP]) | [DDHL] |
 | n > 4, GL(3) | model not unique; coefficients unknown | [FG15] §5 |

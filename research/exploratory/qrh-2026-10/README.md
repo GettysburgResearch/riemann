@@ -60,6 +60,7 @@ they are unreviewed.
 | [AGENDA.md](AGENDA.md) | bounded open problems with payoffs (moment ladder, 7/8 escape routes, verification, repo bridges) |
 | [INTAKE.md](INTAKE.md) | exact claimed statements, architecture, dependencies, what was verified |
 | [HEIGHT_LEVELS.md](HEIGHT_LEVELS.md) | what happens as you go higher, in four senses: moment order (same boundary at the same ρ; the dual type goes A₁ → A₂ → affine Ã₂ → Lorentzian, with the k = 3 pair pattern checked), zero height T, reflection rank, half-plane depth |
+| [LEVERAGE_FAMILIES.md](LEVERAGE_FAMILIES.md) | is leverage c = 5/6 forced? μ-absorption = the sign of one cubic Jacobi sum (checked exactly); every other family fails absorption, the theta step or the leverage; the only escape is a GL(2) theta on an n-fold cover, n ∈ {6, 4, 10}, with Hecke × order-n Gauss-sum coefficients (would give 5/6, 7/8, 9/10) |
 | [RUNG_STRENGTH.md](RUNG_STRENGTH.md) | the moment ladder depends only on `ρ = h/k`; `ρ = 1` wall at 11/12; a single-row Prop. R; what any `ρ < 1` input must contain; sub-diagonal numerics |
 | [A2_LITERATURE.md](A2_LITERATURE.md) | literature check: exact A2 WMDS dictionary (plus an extra quadratic factor); GL(3) cubic theta vanishes on the support; the missing input is a dispersion asymptotic |
 | [moments/DUAL_ANATOMY.md](moments/DUAL_ANATOMY.md) | anatomy of the sub-diagonal cancellation: random-sign-like across pairs, no μ-specific cancelling structure; an explicit Galois secondary term (positive, not cancelling); no dual bias at small D |

@@ -183,6 +183,14 @@ fails and the "contraction" becomes an expansion, so the recursion has no base. 
 absorption needs a quadratic factor next to a theta with explicit Gauss-sum coefficients. Only the
 cubic theta has such coefficients, so the family is sextic and `c = 1 − 1/6`.
 
+This is now made precise in [LEVERAGE_FAMILIES.md](LEVERAGE_FAMILIES.md).
+* The absorbed `−1` per prime is the sign of the cubic Jacobi sum `J(χ₃, χ₃) = −p`. It was checked
+  exactly at 77 primes.
+* Every family with `c < 5/6` loses either the absorption or the theta step.
+* The only escape is a GL(2) theta on an `n`-fold cover, `n ∈ {4, 6, 10}`, whose prime
+  coefficients are a Hecke character times one Gauss sum of order `n`. That would give 7/8, 5/6 or
+  9/10.
+
 So 11/12 plays the role for the Oct 5 architecture that 13/15 plays for the Sep 30 one
 ([THRESHOLD_CALCULUS.md](THRESHOLD_CALCULUS.md)). It is a ceiling for the stated pipeline, not a
 theorem about the true size of the moments; Section 5 shows the moments themselves are much smaller.
