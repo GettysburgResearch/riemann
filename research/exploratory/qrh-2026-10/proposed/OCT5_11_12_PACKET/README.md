@@ -14,8 +14,9 @@ Exact sources or dependencies: manuscript paper2.tex at ref pr908 = 31c706bbb3dc
   record at commit c2050a5dd8c251f25e5fc285c0845b9f4a42487b on branch claude/peaceful-faraday-ki4ewu.
   Imported external theorems are listed in Section 4.
 What was actually run: for this draft, the manuscript was re-extracted and re-hashed, all review
-  files and scripts were re-hashed, and the four check scripts were rerun (see CHECKS.md). Every
-  line range cited here was checked against the source. No new mathematics was reviewed.
+  files and scripts were re-hashed, and the four check scripts were rerun (see CHECKS.md). Line
+  ranges were either checked against the source for this draft or taken from the reviews, which
+  cite the same hash. No new mathematics was reviewed.
 Smallest remaining gap: an independent exact-SHA review of Prop. prop:R (paper2.tex 1317-1333,
   proof 1632-2214 and 2874-3479), and a human integrator's decision. See Sections 8 and 9.
 ```
@@ -111,7 +112,8 @@ Let `K = Q(√−3) = Q(ω)`, with `ω = e^{2πi/3}`, and let `O = Z[ω]`.
 
 1. **Hecke family.** Let `ν` be any finite-order Hecke character of `K`, and let `L_K(s, ν)` be its
    Hecke L-function. Then `L_K(s, ν) ≠ 0` for every `s` with `Re s > 11/12`. When `ν` is
-   principal, the point `s = 1` is a pole and is excluded. No uniformity in `ν` is claimed or
+   principal (trivial on the ideals prime to its modulus), the point `s = 1` is a pole and is
+   excluded. No uniformity in `ν` is claimed or
    needed; the abscissa `11/12` is the same for every `ν`.
 2. **Dirichlet L-functions.** Let `χ` be any Dirichlet character of any modulus `q ≥ 1`, primitive
    or imprimitive, including principal characters. Then `L(s, χ) ≠ 0` for `Re s > 11/12`. When `χ`
@@ -187,7 +189,7 @@ their own objects:
 | Uniformity | qualitative. The abscissa is uniform; constants are not. The `W`-dependence has derivative order at least `5·4^⌈4/ϑ⌉ − 4` (R2 F3), and `‖W‖_{C^k} ≍ |Im ϱ|^k`, so there is no height-uniform estimate |
 | Effectivity | the deduction of thm:main is qualitative, by contradiction at a fixed zero. The "effective" claim in cor:primes-ap is not reviewed |
 | Family | finite-order Hecke characters of `Q(√−3)`, hence Dirichlet characters. Nothing about other number fields or higher-degree L-functions |
-| Relation to RH | none directly. RH would place every nontrivial zero of `ζ` on `Re s = 1/2`. This statement only excludes `Re s > 11/12` (and, by the functional equation, `Re s < 1/12` for primitive characters) |
+| Relation to RH | none directly. RH would place every nontrivial zero of `ζ` on `Re s = 1/2`. This statement only excludes `Re s > 11/12`. By the functional equation, primitive L-functions then also have no nontrivial zeros in `Re s < 1/12`; that is a standard consequence, not part of the reviewed statement |
 
 ## 4. Native versus imported
 

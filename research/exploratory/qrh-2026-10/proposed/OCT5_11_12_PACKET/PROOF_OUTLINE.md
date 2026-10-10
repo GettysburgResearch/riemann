@@ -150,8 +150,8 @@ cubic theta function.
 eq:cube-inverse (1361-1373): the column sum equals `Σ_h μ(h) ᾱ(h)³ Ψ_k(h)³ N(h)^{−1} T(X/N(h)³; k, f)`.
 Split it at `H_c³ = min(X, X²/𝓗²)`.
 
-* *Short part* (`N(h) ≤ H_c`). Apply prop:R. The result is
-  `≼ 𝓗 + 𝓗²F H_c³/X ≤ 2Σ`, with equality in the last step exactly when `H_c³ = X²/𝓗²` (R2 C).
+* *Short part* (`N(h) ≤ H_c`). Apply prop:R. The result is `≼ 𝓗 + 𝓗²F H_c³/X ≤ 2Σ`. Here
+  `𝓗 ≤ Σ` by hypothesis, and `𝓗²F H_c³/X ≤ Σ`, with equality when `H_c³ = X²/𝓗²` (R2 C).
 * *Long part* (`N(h) > H_c`). Expand `T` again and put `b = hc`. Weighted Cauchy–Schwarz then gives
   `log²·sup_{N(b)>H_c, L_b>1} E(𝓗, L_b, F)`, where `L_b = X/N(b)³`.
 
@@ -248,8 +248,8 @@ This statement carries all of the automorphic content.
 **5b. Transformation (lem:reflection 1805-1821; proof 2904-3479).** [S3] Stated schematically.
 
 * *Automorphy.* Each translate is moved to one of three cusps `σ ∈ {0, +, −}` by an automorphy with
-  Kubota multiplier `κ(g) = (c/a)_3`. The multiplier formula eq:ray-multiplier (3175) holds 700/700
-  EXACT (R3 check D). The translate identity eq:theta-cusp-automorphy (3161) holds on 44 cases
+  Kubota multiplier `κ(g) = (c/a)_3`. The multiplier formula eq:ray-multiplier (3175) was read by
+  hand and matches `(c₁/a₁)_3` on 700/700 test instances, EXACT (R3 check D). The translate identity eq:theta-cusp-automorphy (3161) holds on 44 cases
   (check E).
 * *Local twists.* The local Fourier analysis at active primes gives the factors `B_{p,j}`
   (eq:theta-local-factors, 1735). Here `B_{p,j} = χ_p^{−j−2}` for `j ≠ 0, 4`.
