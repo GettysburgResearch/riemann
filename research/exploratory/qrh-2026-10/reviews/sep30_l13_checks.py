@@ -413,7 +413,7 @@ def local_elems(p, c):
     return units + lifts, nonunits
 
 
-def part_B(mut=frozenset(), quiet=False):
+def part_B(mut=frozenset(), quiet=False, enum_cs=(4, 5, 6, 7)):
     mism, cases = 0, 0
     period_ok = True
     grid = [(p7, 1), (p7, 2), (p7, 3), (p13, 1), (p13, 2), (q5, 1), (q5, 2), (q11, 1)]
@@ -421,7 +421,7 @@ def part_B(mut=frozenset(), quiet=False):
         units, nonunits = local_elems(p, c)
         Cf = {p: c}
         pairs = [(a, b) for a in units for b in units[:6]] + [(a, b) for a in nonunits for b in units[:4]] \
-            + [(b, a) for a in nonunits for b in units[:4]]
+            + [(b, a) for a in nonunits for b in units[:4]] + [(a, b) for a in units[:6] for b in units[6:]]
         vals = {}
         for n1, n2 in pairs:
             MC, La, Lb = L_table(Cf, n1, n2)
@@ -436,6 +436,9 @@ def part_B(mut=frozenset(), quiet=False):
             for n2 in units[:6]:
                 A_ = vals[(units[i], n2)]
                 B_ = vals[(units[6 + i], n2)]
+                period_ok &= bool((A_[0] == B_[0]).all() and (A_[1] == B_[1]).all())
+                A_ = vals[(n2, units[i])]
+                B_ = vals[(n2, units[6 + i])]
                 period_ok &= bool((A_[0] == B_[0]).all() and (A_[1] == B_[1]).all())
         if not quiet:
             print("   B grid p=%s c=%d: %d (n1,n2) pairs x %d k" % (NAME[p], c, len(pairs), E.norm(p) ** c))
@@ -452,7 +455,7 @@ def part_B(mut=frozenset(), quiet=False):
         if ctab[t] not in seen:
             seen.add(ctab[t])
             units_int.append(t)
-    for c in (4, 5, 6, 7):
+    for c in enum_cs:
         PC = P ** c
         Mc = Mod(elem({p7: c}))
         assert Mc.g == 1 and Mc.d1 == PC          # O/p^c = Z/P^c, omega -> -w0
@@ -516,7 +519,7 @@ def part_B(mut=frozenset(), quiet=False):
               "%d (n1,n2,k) cases, %d mismatches" % (cases, mism - sweep_bad))
         check("B2 field-level sweep: modulus p, character chi_p^c, c=1..12 (principal branch at inert 5, 11)",
               sweep_bad == 0, "%d mismatches" % sweep_bad)
-        check("B3 genuine L_{p^c} periodic modulo p in the first column (n1 -> n1 + p), c<=3", period_ok)
+        check("B3 genuine L_{p^c} periodic modulo p in each column (n_i -> n_i + p), c<=3", period_ok)
     return mism
 
 
@@ -830,7 +833,7 @@ def part_D():
 # ----------------------------------------------------------------------------------------------
 def part_N():
     for m in ["minus1", "orient", "P2", "onesided_no6"]:
-        nb = part_B(frozenset([m]), quiet=True)
+        nb = part_B(frozenset([m]), quiet=True, enum_cs=(6,))
         check("N control eq:correlation-local mutated '%s' is detected" % m, nb > 0, "%d mismatches" % nb)
     for m in ["dropR", "chi2_plus", "phi_q", "orient", "minus1"]:
         na = part_A(frozenset([m]), quiet=True)

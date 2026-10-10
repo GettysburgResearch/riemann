@@ -6,8 +6,8 @@ read as data.  RH is unsolved; nothing here bears on it.
 
 Status: review instrument (exploration level), written for SEP30_EQC_CHECK.md.
 Scope:  paper.tex lines 10145-10295 (first Poisson transformation in the proof of Lemma 17.2):
-        eq:first-masked-data (10166), the u_1-side factor list (10214-10229), the fixed-ray quotient
-        G(u_1u_2^{-1}) R(u_1u_2^{-1},P_T) (10234-10245), the exponent table (10255-10272), and the
+        eq:first-masked-data (10166), the u_1-side factor list (10207-10225), the fixed-ray quotient
+        G(u_1u_2^{-1}) R(u_1u_2^{-1},P_T) (10227-10244), the exponent table (10246-10272), and the
         column coefficient (C) (10279).  Conventions: 573-664 (symbols, gamma_j, alpha, e(z)),
         843-1100 (Gamma, r, R, G, eq:signal, CRT), 9289-9294/7290-7313 (a(n), Psi_k, marks),
         9722-9746 (Lemma 17.5, masked primitive Poisson), 9984-9997 (block (A)).
@@ -27,7 +27,7 @@ What the checks are:
      no CRT), against CLAIM = Coef_1(u_1) conj Coef_2(u_2) G(u_1u_2^{-1}) R(u_1u_2^{-1},P_T) OUTER,
      Coef_i = (C) with nu_i := nu before Fourier expansion, OUTER independent of u_1, u_2.
      C2 checks u-independence WITHOUT the explicit OUTER (ratio constancy over many u-pairs).
-     C3 checks the intermediate u_1-side list of 10220-10223 and the cross factor R(u_1,u_2).
+     C3 checks the intermediate u_1-side list of 10214-10225 and the cross factor R(u_1,u_2).
      C4 checks the slot-priority split of the mark d(n_i b_i^3) into outer slots times d_I'(u_i).
   D  failing controls (wrong conjugation, wrong reciprocity factor, dropped mark/label), each must fail.
   E  end-to-end replay of the first Poisson transform of block (A) at tiny scale, for a fixed label f:
@@ -438,7 +438,7 @@ def part_A(rng):
     rec('A5', 'G(vw)=G(v)G(w)R(v,w) (eq:G-quadratic-refinement), G(v^-1)=R(v,v)conj G(v), chi_v(-1)=R(v,v)',
         max(wq, wi, wm) < TOL, f'{wq:.1e}, {wi:.1e}, {wm:.1e}')
 
-    # A6 gamma_2(ab) = gamma_2(a) gamma_2(b) chi_b(a)^4 = ... chi_a(b)^2 chi_b(a)^2 (10214-10218)
+    # A6 gamma_2(ab) = gamma_2(a) gamma_2(b) chi_b(a)^4 = ... chi_a(b)^2 chi_b(a)^2 (10207-10212)
     w6 = 0.0
     cnt = 0
     for A in sq:
@@ -458,7 +458,7 @@ def part_A(rng):
     rec('A6', f'gamma_2(ab) = gamma_2(a)gamma_2(b)chi_b(a)^4 = ..chi_a(b)^2chi_b(a)^2 on {cnt} coprime pairs',
         w6 < TOL, f'{w6:.1e}')
 
-    # A7 gamma(conj chi_u; u) = chi_u(-1) conj gamma_1(u); raw second Gauss-signal factor (10237-10241)
+    # A7 gamma(conj chi_u; u) = chi_u(-1) conj gamma_1(u); raw second Gauss-signal factor (10234-10239)
     w7 = w7b = 0.0
     for c in sq:
         cg = gen_of(c)
@@ -469,7 +469,7 @@ def part_A(rng):
     rec('A7', 'gamma(conj chi_u;u) = chi_u(-1) conj gamma_1(u); alpha conj(gamma_2) gamma(conj chi_u) = mu chi_u(-1) conj G',
         max(w7, w7b) < TOL, f'{w7:.1e}, {w7b:.1e}')
 
-    # A8 chi_u(f)^4 = conj chi_u(f^2) including zeros (10248)
+    # A8 chi_u(f)^4 = conj chi_u(f^2) including zeros (10251-10252)
     w8 = 0.0
     for _ in range(2000):
         u = [rng.choice(PRIMES[:20]) for _ in range(rng.randint(1, 3))]
@@ -715,7 +715,7 @@ def part_B(rng, tuples):
     rec('B2', f'eq:first-masked-data: k-character = psi_1(k) 1_(k, CB/R_1)=1 on {cnt} (tuple,k) ({nz} nonzero)',
         worst < TOL, f'{worst:.1e}')
 
-    # B3 m_1 = 1 iff n1 = n2 and b1 b2 a square (10194-10197)
+    # B3 m_1 = 1 iff n1 = n2 and b1 b2 a square (10192-10202)
     Bs = [dict(), {PR['7a']: 1}, {PR['7a']: 2}, {PR['7a']: 3}, {PR['7b']: 1}, {PR['7a']: 1, PR['7b']: 1},
           {PR['13a']: 2}, {PR['7a']: 1, PR['13a']: 1}]
     ns = [[], [PR['7a']], [PR['7b']], [PR['13a']], [PR['7a'], PR['13a']], [PR['19a']], [PR['7a'], PR['19a']],
@@ -828,7 +828,7 @@ def part_C(rng, tuples):
     rec('C2', f'u-independence: RAW / (Coef_1 conj Coef_2 G R) is the same for all {pairs} (u1,u2) pairs in {fams} outer families',
         worst2 < TOL, f'max spread {worst2:.1e}')
 
-    # C3 intermediate: Poisson root = U1part * U2part * R(u1,u2) * Rpart (10220-10231), and a(n) split
+    # C3 intermediate: Poisson root = U1part * U2part * R(u1,u2) * Rpart (10214-10225), and a(n) split
     worst3 = worst3b = 0.0
     cnt = 0
     for t, raw in keep[: (80 if QUICK else 400)]:
@@ -883,7 +883,7 @@ def part_C(rng, tuples):
     rec('C4', f'mark split d(n b^3) = sum_I\' outer slots x d_I\'(u) with original coefficients ({cnt} sides)',
         worst4 < 1e-12, f'{worst4:.1e}')
 
-    # C5 fixed-ray Fourier step (10242-10245): for each class of P_T, F(x,y) = G(xy^-1) R(xy^-1,P_T) on T x T,
+    # C5 fixed-ray Fourier step (10240-10244): for each class of P_T, F(x,y) = G(xy^-1) R(xy^-1,P_T) on T x T,
     # T = primary classes = (O/4)^x (order 12), is a combination of theta_1(x) conj theta_2(y) with
     # sum |c| <= |T x T|^{1/2} = 12.  Characters: chi4^a * r(., y), a in Z/3, y in the 4 square classes.
     chars = []

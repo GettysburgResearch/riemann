@@ -61,10 +61,11 @@ Smallest remaining gap: unchanged. It is Mom(1, ρ) itself, equivalently (OD_ρ)
 5. **The (c) rider: the quadratic-twist templates do not reach it.** In quadratic coordinates
    (Q_ρ) is a moment of effective degree `k(ρ) = 4(3 − 2ρ)/(2 − ρ) ∈ (4, 6)`; at `ρ = 9/10` this is
    `48/11`. Its required precision is a power `D^{−(1−ρ)}` below the diagonal.
-   * Every known quadratic-twist asymptotic (Sound00, SY10, Li24, SS24) is at degree `≤ 4`.
+   * Every known quadratic-twist asymptotic over number fields (Sound00, SY10, Li24, SS24) is at
+     degree `≤ 4`.
    * At degree 4 the known error terms save only powers of `log`.
    * The large-sieve inputs of these papers (HB95, Li24 Prop. 3.2, SS24 Prop. 1.3) all have the
-     row-blind shape `rows + columns`, which is Prop. R again.
+     row-blind shape `rows + columns`, which is Oct 5 prop:R again.
    * The one direct Möbius analogue (GZ23) needs GRH, and even then works only with more rows than
      columns.
    * Li's prime-square inflation, transplanted as sixth-power inflation, is the extraction in reverse.
@@ -84,7 +85,7 @@ Smallest remaining gap: unchanged. It is Mom(1, ρ) itself, equivalently (OD_ρ)
 * **Relation to `P_h`.** The `b = 1` part is `P_k(X) = X^{−1/2} Σ* a_ξ(n) χ_n(k) χ_n(f)⁴ W(N n/X)`,
   with `a_ξ = ᾱ γ₂ ξ`. In outline form, `T_h(X) = Σ_b w_h(b) N(b)^{−1} P_h(X/N(b)³)`, where
   `w_h(b) = ᾱ(b)³ ξ(b)³ χ_b(h)³` (eq:intro-cube-completion).
-* **Rows.** The proof of Prop. prop:R writes `k = u₀ s v²` with `s` squarefree, and moves `v²` into
+* **Rows.** The proof of Oct 5 prop:R writes `k = u₀ s v²` with `s` squarefree, and moves `v²` into
   the twist (`T(X; u₀sv², f) = T(X; u₀s, fv²)`). Lemma lem:squarefree-completed then writes
   `s = t k₀`, with `t | rad(g·S)` fixed and `k₀` squarefree primary, coprime to `gS`. So **the rows
   of (Q_ρ) are squarefree `k₀` in fixed ray classes**, `N(k₀) ≤ 𝓗₀ = 𝓗/N(t)`. Principal (square)
@@ -168,7 +169,7 @@ would be needed on top of (Q_ρ^T).
 **Required strength.**
 * Relative precision `X/𝓗 = D^{−(1−ρ)}` below the diagonal.
 * Equivalently, the power `(1−ρ)/(2−ρ)` of the row count.
-* Against Prop. R's `𝓗 + 𝓗²/X`, this is a saving of `D^{2(1−ρ)}`.
+* Against Oct 5 prop:R's `𝓗 + 𝓗²/X`, this is a saving of `D^{2(1−ρ)}`.
 
 ## 2. Duality check: Poisson summation in the rows
 
@@ -299,7 +300,7 @@ for which `Σ_{d ≤ R} L(½, χ_d)^k` has linear length `N²`. For (Q_ρ), `k(�
 
 | source | statement [LIT] | regime | precision reached | key steps | available for cubic-theta coefficients? |
 |---|---|---|---|---|---|
-| HB95 quadratic large sieve (GL over number fields = Oct 5 lem:quadratic) | `Σ*_{m≤M} \|Σ*_{n≤N} a_n (n/m)\|² ≪ (MN)^ε (M + N) ‖a‖²` | all M, N, all coefficients | none: an upper bound of shape rows + cols, row-blind | Poisson + reciprocity recursion (self-duality) | yes; it *is* Prop. R, giving `𝓗 + 𝓗²/X`, capped at ρ = 1 |
+| HB95 quadratic large sieve (GL over number fields = Oct 5 lem:quadratic) | `Σ*_{m≤M} \|Σ*_{n≤N} a_n (n/m)\|² ≪ (MN)^ε (M + N) ‖a‖²` | all M, N, all coefficients | none: an upper bound of shape rows + cols, row-blind | Poisson + reciprocity recursion (self-duality) | yes; it *is* Oct 5 prop:R, giving `𝓗 + 𝓗²/X`, capped at ρ = 1 |
 | SY10 (JEMS 12, 1097-1116) | `Σ*_{d<X} L(½, f⊗χ_{8d})² ∼ C X log X` under GRH; matching lower bound unconditionally | R = X, N = X (AFE length): balanced, k = 4 | `o(main)`, log-power savings | AFE; Sound's Poisson with `G_k(n)`; Euler product of the dual series into `L(f⊗χ_k)²`×(abs. conv.); GRH-conditional shifted moments | AFE yes (Patterson). Euler product no. The GRH moment method needs `log L`, so no |
 | Li24 (Invent. Math. 237, 697-733) | SY10 unconditionally; smoothed error `O(X(log X)^{1/2+ε})` | as SY10, k = 4 | log savings. Key Prop. 3.2: `S♭(M,N,t) ≤ 𝓛^{2/3}(1+\|t\|)²(M + N log(2+N/M))` | prime-square inflation `m ↦ mp²`, `p ≍ √𝓛`; nested induction on M, N alternating FE in n with Poisson in m; Euler-product factorisation of the dual | Poisson self-duality yes (§2.2). FE does **not** close: a quadratic twist goes to a sextic twist. Prop. 3.2 still has the shape `M + N` (row count + column count), so at `N > M` it gives `N`, which is Prop. R. Inflation: §3.3 |
 | Shen19 (GRH) / SS24 (unconditional) | 4th moment of `L(½, χ_{8d})`: `XQ₁₀(log X) + O(X(log X)^{6+ε})` | R = X, N = X (for `L²`), k = 4 | log savings; power saving open (AIM list, Problem 19) | Prop. 1.3: `Σ\|Σχ_m(n)n^{−½−it}G\|⁴ ≤ 𝓛^{2/3}(1+\|t\|)²(M + N² log)log⁶`, again rows + cols; square rows `m = □` give `≫ √M N²` and are cancelled against square dual frequencies by explicit Dirichlet-series main terms | the square-row cancellation needs the principal rows to be explicit. In Möbius coordinates the principal rows are the extraction rows, whose value `\|A_ε(D)\|²` is the unknown. In T-coordinates there are no principal rows, but the target is below the diagonal |
@@ -308,8 +309,8 @@ for which `Σ_{d ≤ R} L(½, χ_d)^k` has linear length `N²`. For (Q_ρ), `k(�
 
 ### 3.2 The three axes
 
-1. **Family size versus length.** All unconditional quadratic-twist asymptotics stop at effective
-   degree 4, where the Poisson dual is as long as the row range. SS24 call `M ≍ N²` the critical range
+1. **Family size versus length.** All unconditional quadratic-twist asymptotics over number fields
+   stop at effective degree 4, where the Poisson dual is as long as the row range. SS24 call `M ≍ N²` the critical range
    where "standard tools ... are of no use" without inflation. (Q_ρ) is at degree `> 4` for every
    ρ < 1, and degree 4 corresponds exactly to ρ = 1, the Oct 5 boundary 11/12.
 2. **Precision.** No source reaches a power saving below the diagonal at degree 4. SY10, Li24 and
@@ -357,7 +358,7 @@ induction that uses the functional equation. Here the larger family's bound is o
 The precise obstruction has three parts:
 
 1. **Degree.** Its effective degree `4(3 − 2ρ)/(2 − ρ)` exceeds 4, where all unconditional asymptotics
-   stop.
+   over number fields stop.
 2. **Precision.** Its required saving is a power, while degree-4 results save logs.
 3. **Shape.** Every large-sieve-type input in these papers has the row-blind shape `rows + columns`.
 
@@ -368,8 +369,10 @@ the family.
 
 **What a non-circular input would have to be.** It must carry information that P and R cannot
 generate from the family itself. Two examples:
-* a family zero-density estimate counted with row multiplicity, with exponent `A < 4/3`; by the
-  bootstrap fixed point `1 − 1/(6A)` of DISPERSION_GRH_STEP §3(c), this would beat 7/8;
+* a family zero-density estimate counted with row multiplicity, with exponent `A < 4/3`, **together
+  with** zero-free half-planes for all members `N u ≤ H`, uniform in `u`, at each stage of the
+  bootstrap (not supplied by extraction or Prop. R′ (RUNG), whose constants depend on `u`). Its
+  formal fixed point `1 − 1/(6A)` (DISPERSION_GRH_STEP §3(c)) would then beat 7/8;
 * any external arithmetic input for `Σ_{n₁≠n₂} μν(n₁)μν(n₂) Σ_u χ_{n₁}χ̄_{n₂}(u)` at relative
   precision `D^{−(1−ρ)}`.
 
@@ -388,12 +391,16 @@ We know of no unconditional result of either kind.
 * The literature was read at the level stated in the header. SY10 and Sound00 were read only at
   abstract level, and their content is as reported by Li24 and SS24 §1. HB95 was not read. The
   "effective degree" is our bookkeeping device, not a notion from those papers.
+* Function-field results (e.g. Bergström–Diaconu–Petersen–Westerland, arXiv:2302.07664) reach
+  higher moments for large `q`; they were not examined, and the number-field obstruction is what
+  matters here.
 * The equivalence (Q_ρ^P) ⟺ Mom(1, ρ) is as strong as the manuscript's transfer lemmas, which were
   reviewed only in a bounded agent review (R2). Mom(1, ρ) itself remains OPEN; RUNG_STRENGTH §5 gives
   finite evidence that it is true.
-* Suggested follow-up (not done; existing files were not edited): in DISPERSION_GRH_STEP §§0 and 5,
-  replace "the only non-involutive step" and "does not visibly return to A_u" by a pointer to §§2.1-2.3
-  here, and mark (Q_ρ) as circular in AGENDA A1.
+* Suggested follow-up (when this note was written, existing files were not edited): in
+  DISPERSION_GRH_STEP §§0 and 5, replace "the only non-involutive step" and "does not visibly return
+  to A_u" by a pointer to §§2.1-2.3 here (since applied; see reviews/WAVE_REDTEAM.md, editor log),
+  and mark (Q_ρ) as circular in AGENDA A1.
 
 ## Sources
 

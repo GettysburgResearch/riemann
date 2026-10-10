@@ -47,8 +47,10 @@ GRH-conditional paper; we use only its structure, not its conclusions.
 2. **Dictionary.** DR's Gauss-weighted side corresponds to our dual `Σ_h |B_h|²`. DR's plain side,
    after Poisson summation in the row variable, corresponds to our original family `Σ_u |A_u|²`.
    Poisson in the row variable is an exact involution between these two sides (Oct 5
-   (eq:convert1)/(eq:convert2)). So DR's GRH input becomes **quasi-GRH for the family members
-   `L(s, ψ_u)`, `N u ≤ H`, themselves**. That alone already implies Mom(1, ρ) trivially.
+   (eq:convert1)/(eq:convert2)). So DR's GRH input becomes **a quasi-GRH (axiom (iv) at loss `η`)
+   for the family members `L(s, ψ_u)`, `N u ≤ H`, themselves**. That gives Mom(1, ρ) only up to
+   `D^{2η}`, and it already contains member half-planes `1/2 + η`, stronger than anything extraction
+   returns (§3(a)).
    DR's *principal* dual frequencies (cubes), which produce the Patterson bias, correspond to the
    sixth-power rows `u = ε v⁶`. These rows are the extraction rows: their size is the conclusion.
 3. **Averaged replacements stop at ρ = 1.**
@@ -66,8 +68,8 @@ GRH-conditional paper; we use only its structure, not its conclusions.
 5. **Unblocking lemma.** None non-circular is identified (§5). The smallest statement that would
    unblock the Oct 5 route at ρ < 1 is the off-diagonal bound (OD_ρ). It is equivalent to
    Mom(1, ρ) by the exact Poisson identity, so it is not a reduction. A candidate that is not
-   visibly circular must act through the theta reflection, which is the only non-involutive step;
-   it is stated as (Q_ρ), OPEN.
+   visibly circular must act through the theta reflection (but see Q_RHO_ANALYSIS: it is also an
+   involution, and (Q_ρ) ⟺ Mom(1, ρ)); it is stated as (Q_ρ), OPEN.
 
 ## 1. Where and why DR24 use GRH [LIT unless tagged]
 
@@ -208,7 +210,7 @@ gives `1/2 + 5ρ/12`.
 * With `η = β* − 1/2` from a family half-plane `Re s > β*`, this is `β* + 5ρ/12 > β*`. There is no
   gain for any `ρ > 0`.
 * Even `β* = 11/12` would have to hold *uniformly* in `N u ≤ H`. The Oct 5 output is stated for a
-  fixed `ν`; RUNG_STRENGTH §2 Remark says the conductor enters as `(N u)^{1/12}`.
+  fixed `ν`; RUNG_STRENGTH §2, after Prop. R′, says the conductor enters as `(N u)^{1/12}`.
 * With `η = 5/12`, DR's own hypothesis `η ≤ 1/4` fails.
 * On the dual side, the original off-diagonal is then `≲ H·D^{2β*}`. Scaled by `L/H`, this gives a
   dual off-diagonal of `L^{1+2β*} = L^{17/6}`, against the required `L^2`. Relative to
@@ -219,7 +221,8 @@ gives `1/2 + 5ρ/12`.
   `m = max(1 + ρ, 2)` and `σ = 1 − ρ/12 > 11/12` for `ρ < 1`.
 * Over `h` it is the Oct 5 Step 4 route (§4). It keeps the dual diagonal, which is the same loss.
 
-**(c) Zero-density counts for the family.** [standard zero-detection; HEURISTIC in constants]
+**(c) Zero-density counts for the family.** [standard zero-detection; HEURISTIC (constants, and
+uniformity over rows at each iteration); a fixed point of a *formal* map]
 
 Assume:
 * (Z1) every `L(s, ψ_u)` with `N u ≤ H` is zero-free in `Re s > β*`, with polylog control of
@@ -300,7 +303,7 @@ only once `μ(f)` is replaced by `|μ(f)|`.
 | `μγ₋₁ ∝ conj(α)γ₂` (eq:convert2) | exact | none |
 | positivity: `\|𝓢_{ξ;B,F}\|` bounded by the full dual mean square `𝓔` ((eq:weighted), smooth-weight lemma with row coefficient `μ(f)`) | **first loss**: drops the `μ(f)` cancellation that removes the dual diagonal | `𝓔 ≳ 𝓗 = D^{2−ρ}` against the needed `XF = D`: factor `D^{1−ρ} = L/H` |
 | sufficient condition (eq:auxiliary-target) `𝓔 ≪ D^ε XF` | **false** at `ρ < 1`, unless each block's off-diagonal cancels its own diagonal; [EMP] the `γ₂` dual is diagonal-sized | — |
-| theta reflection (lem:reflection) + quadratic large sieve (lem:quadratic) → Prop. R: `Σ_k \|T\|² ≪ 𝓗 + 𝓗²N(f)/X` | reflection *lengthens*: dual length `𝓗²/X > 𝓗 > X` | extra factor `𝓗/X = D^{1−ρ}` |
+| theta reflection (lem:reflection) + quadratic large sieve (lem:quadratic) → Oct 5 prop:R: `Σ_k \|T\|² ≪ 𝓗 + 𝓗²N(f)/X` | reflection *lengthens*: dual length `𝓗²/X > 𝓗 > X` | extra factor `𝓗/X = D^{1−ρ}` |
 | cube removal (Step 5): cutoff `H_c = min(X^{1/3}, (X/𝓗)^{2/3})` | `< 1`: the short-cube range is empty, and the recursion's target `𝓔 ≲ X` lies below the diagonal `𝓗` | — |
 
 Net result if Steps 4–5 are granted at no further cost:
@@ -330,8 +333,8 @@ which is the dual off-diagonal at relative precision `H/L`. The DR mechanism app
 * The DR dispersion step needs pointwise (axiom (iv)) cancellation of the *plain* column sequence
   against every non-principal dual character, up to the dual length.
 * For the sextic family the plain side is the family itself, so this is quasi-GRH for
-  `L(s, ψ_u)`, `N u ≤ H`. That trivially implies Mom(1, ρ), and by Prop. R it implies member
-  half-planes `1/2 + ρ/2`.
+  `L(s, ψ_u)`, `N u ≤ H`: it gives Mom(1, ρ) up to `D^{2η}` and member half-planes `1/2 + η`
+  directly.
 * The principal dual frequencies are the extraction rows.
 * Every averaged substitute is row-blind or DH-type and stops at `ρ = 1`. Its bootstrap has fixed
   point `1 − 1/(6A)`, which is 11/12 under DH.
@@ -347,7 +350,8 @@ which is the dual off-diagonal at relative precision `H/L`. The DR mechanism app
   reduction.
 * Within the DR paradigm, no smaller lemma exists: the only external input DR use becomes the
   conclusion.
-* A candidate that is not visibly circular has to come from the non-involutive theta reflection.
+* A candidate that is not visibly circular has to come from the theta reflection (which is also an
+  involution; see the coordinator note above).
   After Prop. lem:reflection the dual block becomes, up to the fixed finite sums and weights of
   that proposition,
 
@@ -360,9 +364,10 @@ which is the dual off-diagonal at relative precision `H/L`. The DR mechanism app
   * This is a mean square of **quadratic** twists of cubic-theta cusp coefficients, with rows
     `𝓗 < M ≍ 𝓗²/X` (row/column exponent `(2−ρ)/(3−2ρ) ∈ (ρ, 1)`).
   * It is required at relative precision `X/𝓗 = H/L` below its diagonal.
-  * Its Poisson dual (in `h`) carries quadratic Gauss sums against `γ₂`-type coefficients, so it
-    does not visibly return to `A_u`.
-  * Whether (Q_ρ) is equivalent to (OD_ρ) by some other duality has not been checked.
+  * Its Poisson dual (in `h`) carries quadratic Gauss sums against `γ₂`-type coefficients, and it
+    returns to `A_u` exactly (Q_RHO §2.1).
+  * So (Q_ρ) is equivalent to (OD_ρ), i.e. to Mom(1, ρ), as strongly as the manuscript's transfer
+    lemmas hold (Q_RHO §5).
   * No large sieve can prove it: it is sub-diagonal, and the quadratic large sieve gives
     `(𝓗 + M)`, i.e. a loss of `(𝓗/X)² = D^{2(1−ρ)}` against the needed `X`.
 

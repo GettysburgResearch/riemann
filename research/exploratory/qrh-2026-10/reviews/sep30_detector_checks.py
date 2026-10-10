@@ -471,26 +471,60 @@ def has_cycle(extra_edges):
 
 
 check("graph as stated is acyclic", not has_cycle([]))
-# Stated-independence claims: each is an edge the paper asserts is ABSENT. If adding it creates a
-# cycle, the claim is load-bearing for the order of choices.
+def ancestors(node, extra_edges):
+    adj = {n: set(deps) for n, _, deps, _ in NODES}
+    for n, dp in extra_edges:
+        adj[n].add(dp)
+    seen, stack = set(), [node]
+    while stack:
+        u = stack.pop()
+        for v in adj[u]:
+            if v not in seen:
+                seen.add(v)
+                stack.append(v)
+    return seen
+
+
+def classify(edge):
+    """'cycle' if the order becomes impossible; 'target' if omega or sigma would depend on a
+    target-stage quantity (fatal for Prop 2.1); otherwise 'reorder' (a later re-staging absorbs it)."""
+    if has_cycle([edge]):
+        return "cycle"
+    anc = ancestors("omega", [edge]) | ancestors("sigma", [edge])
+    if any(stage[a] == "T" for a in anc):
+        return "target"
+    return "reorder"
+
+
+# Stated-independence claims: each is an edge the paper asserts is ABSENT.  Classification of what
+# happens if the claim failed (expected value in the third slot).
 CLAIMS = [
     ("I1 Lemma 18.1 mesh independent of the slot count (12570-12572, 16241-16243)",
-     ("eta_mesh", "K_slots")),
-    ("I2 moment-loss cost coefficients independent of K (16228-16233)", ("moment_losses", "K_slots")),
-    ("I3 A_eta independent of tau and N (16384-16389, 16428-16431)", ("A_eta_B_eta", "tau_eta")),
-    ("I4 B_eta independent of N (16385-16389; Lemma 11.1 6538)", ("A_eta_B_eta", "N_eta")),
-    ("I5 P0 cutoff independent of the target (uniform majorant; CONTOUR review)", ("P0_cutoff", "target_eta")),
-    ("I6 K's capacity gap uniform in zeta < 1/48 (16269-16275)", ("K_slots", "zeta")),
-    ("I7 margins m_w, m_z independent of e (15673-15676)", ("m_w_m_z", "e_bin")),
-    ("I8 m_small independent of e (error-free saving, 15889)", ("m_small", "e_bin")),
-    ("I9 eps_ht (detector height allowance) independent of the target (16371)", ("eps_ht", "target_eta")),
+     ("eta_mesh", "K_slots"), "cycle"),
+    ("I2 moment-loss cost coefficients independent of K (16228-16233)", ("moment_losses", "K_slots"), "cycle"),
+    ("I3 A_eta independent of tau and N (16384-16389, 16428-16431)", ("A_eta_B_eta", "tau_eta"), "cycle"),
+    ("I4 B_eta independent of N (16385-16389; Lemma 11.1 6538)", ("A_eta_B_eta", "N_eta"), "cycle"),
+    ("I5 P0 cutoff independent of the target (uniform majorant; CONTOUR review)",
+     ("P0_cutoff", "target_eta"), "reorder"),
+    ("I6 K's capacity gap uniform in zeta < 1/48 (16269-16275)", ("K_slots", "zeta"), "reorder"),
+    ("I7 margins m_w, m_z independent of e (15673-15676)", ("m_w_m_z", "e_bin"), "cycle"),
+    ("I8 m_small independent of e (error-free saving, 15889)", ("m_small", "e_bin"), "cycle"),
+    ("I9 eps_ht (detector height allowance) independent of the target (16371)",
+     ("eps_ht", "target_eta"), "reorder"),
+    # moment losses -> eta_mesh -> K -> m_P -> m -> sigma -> target: a cycle through the target
+    ("I10 moment losses independent of the target (Lemma 18.1 uniform over moving moduli)",
+     ("moment_losses", "target_eta"), "cycle"),
+    ("I12 Lemma 18.1 mesh independent of the arithmetic datum (12570-12577)",
+     ("eta_mesh", "target_eta"), "cycle"),
+    # e and the remaining power losses only have to be SMALLER than fixed fractions of pretarget
+    # margins; the margin m does not depend on them, so a target-dependent e would be harmless.
+    ("I11 O(e+theta+eps) constant of Lemma 20.1 independent of the target (15751-15753)",
+     ("power_losses", "target_eta"), "reorder"),
 ]
-for name, edge in CLAIMS:
-    lb = has_cycle([edge])
-    crosses = stage[edge[0]] in "GP" and stage[edge[1]] == "T"
-    print(f"INFO {name}: violating it {'creates a cycle' if lb else 'creates no cycle'}"
-          f"{' and puts a target quantity before the target' if crosses else ''}")
-    check(f"{name.split()[0]} is load-bearing (its failure breaks the order)", lb or crosses)
+for name, edge, expect in CLAIMS:
+    got = classify(edge)
+    print(f"INFO {name}: if violated -> {got}")
+    check(f"{name.split()[0]} classification is '{expect}'", got == expect, got)
 
 print()
 print(f"{len(FAILS)} failure(s)")
