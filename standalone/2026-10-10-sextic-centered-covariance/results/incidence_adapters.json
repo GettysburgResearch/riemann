@@ -1,0 +1,73 @@
+{
+  "arithmetic": "exact integers and rational numbers",
+  "gcd_controls": {
+    "all_row_ball_norm": 15,
+    "moment_orders": [
+      4,
+      6
+    ],
+    "prime_ideal_norms": [
+      7,
+      13
+    ],
+    "row_count": 54,
+    "rows_with_nonunit_symbols": 12,
+    "thresholds": [
+      1,
+      2,
+      7,
+      8,
+      13,
+      14,
+      91,
+      92
+    ]
+  },
+  "incidence_controls": {
+    "eligible_pattern_counts_by_k": {
+      "2": 8,
+      "3": 30,
+      "4": 112,
+      "5": 422,
+      "6": 1608
+    },
+    "exact_cutoff_exponents": [
+      {
+        "beta": "1",
+        "global_gcd_cutoff": "1/2",
+        "triple_core_cutoff": "3/5"
+      },
+      {
+        "beta": "7/8",
+        "global_gcd_cutoff": "3/7",
+        "triple_core_cutoff": "9/17"
+      },
+      {
+        "beta": "139999/160000",
+        "global_gcd_cutoff": "59999/139999",
+        "triple_core_cutoff": "179997/339997"
+      }
+    ]
+  },
+  "predicate_count": 36190,
+  "predicates": {
+    "all_six_unit_rows_retained": 1,
+    "eligible_incidence_is_native_mobius": 15260,
+    "even_principal_pattern_keeps_nonunit_zero": 5451,
+    "exact_squarefree_gcd_extraction": 216,
+    "full_hermitian_gcd_sector_identity": 864,
+    "gcd_diagonal_cutoff_exponent": 27,
+    "gcd_mobius_cutoff_identity": 32,
+    "hermitian_sector_is_real": 864,
+    "incidence_mass_exponent_identity": 5451,
+    "incidence_parity": 5451,
+    "literal_gcd_row_mask": 216,
+    "literal_split_sextic_symbol": 96,
+    "mixed_sign_forward_euler_identity": 2254,
+    "nonunit_rows_actually_tested": 1,
+    "triple_native_core_cutoff_exponent": 3,
+    "triple_selected_length_order": 3
+  },
+  "scope": "finite identities only; no asymptotic or zero-free claim",
+  "status": "PASS"
+}
