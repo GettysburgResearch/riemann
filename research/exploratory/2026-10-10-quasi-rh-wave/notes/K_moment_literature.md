@@ -1,0 +1,25 @@
+# Note K (lead): the "generalized 2k-th moment" literature for this family, and how it relates to the detector
+
+```text
+Status: IMPORTED (literature) / PROPOSED (reading)
+Scope: moments of r-th order Hecke L-functions over fields containing mu_{2r}; the sextic Kummer family of the 7/8 proof
+Exact sources: Diaconu–Ion–Paşol–Popa, arXiv:2607.27131 (29 Jul 2026), Theorems A–F, Remark 1.1.3, Theorem 10.5.2 and eq. (38); Lin–Wong arXiv:2511.08783 (abstract); David–de Faveri–Dunn–Stucky arXiv:2410.03048; de Faveri–Dunn–Hoffstein arXiv:2607.07911
+What was actually run: reading of the extracted text; no computation
+Smallest remaining gap: none of these results reaches the capacity region the detector needs (Section 3)
+```
+
+## 1. What is known (July 2026)
+
+- **Second moment, squarefree family** (DIPP Theorem A): for $r\ge3$ and $F\supset\mu_{2r}$, $\sum_{a}\mu^2(a)|L^S(\tfrac12,\chi_a)|^2W(|a|/X)=XR^{(1)}_W(\log X)+O(X^{(r+A_r)/(r+1)+\epsilon})$, $A_3=1/3$, $A_r=1/2$ ($r>3$). For $r=3$, $F=\mathbb Q(\sqrt{-3})$ the error is $X^{5/6+\epsilon}$, the same as David–de Faveri–Dunn–Stucky; it "falls just short" of the conjectured second-order term $X^{5/6}Q_W(\log X)$. Method: multiple Dirichlet series (Diaconu's program, after Diaconu–Whitehead's cubic moment of quadratic $L$-functions). Remark 1.1.3: any improvement of the large-sieve bound for $S(Q_1,Q_2)=\sum_{a,b}\mu^2(ab)|L(\tfrac12,\chi_{ab^2})|^2$ would improve the error; under GRH $S\ll(Q_1Q_2)^{1+\epsilon}$ and the error becomes $X^{3/4+\epsilon}$; the obstacle is Heath-Brown's $(AB)^{2/3}$, now provably sharp (DFDH 2026). **The same $5/6$ barrier appears in Patterson's bias (Dunn–Radziwiłł) and is the Mellin shift of the 7/8 proof.**
+- **First moment** (Theorem B): asymptotic with second-order term $F_1X^{1/2+1/r}$ captured only for $r=3$, because the constant $F_1$ involves the Whittaker–Fourier coefficients of the theta function on the $r$-fold cover, "far from being well understood" for $r\ge4$ (Hoffstein, Kazhdan–Patterson, Suzuki, Eckhardt–Patterson) — the same obstruction note C/F identify for the quartic route.
+- **$r$-th-power-free family** (Theorems D–E): sharper errors $X^{(3r-2)/(4r-2)+\epsilon}$ (second moment; $5/6$ again at $r=3$... $=7/10$ for $r=3$: $(9-2)/(12-2)=7/10$) with a second-order term for $r=3,4$. This is the family indexed like the paper's rows (sixth-power-free $u$ corresponds to $r$-th-power-free ideals for the sextic symbol).
+- **Twisted second moment** (Theorem 10.5.2, the mollification input): valid with mollifier length $M=X^{\theta_\kappa-\epsilon}$, where for $r=3$, $\kappa=1$: $\tilde\delta_1=5/6$ and **$\theta_1=1/11$** (eq. (38)); nonvanishing proportion $\ge\theta_1/(\theta_1+1)=1/12$ (Theorem C).
+- **Higher moments**: Lin–Wong (Nov 2025) give GRH-conditional *lower* bounds toward Keating–Snaith for a thin cubic family (Radziwiłł–Soundararajan method, twisted one-level density). No unconditional asymptotic or upper bound of the conjectured order is known for any $2k$-th moment with $k\ge2$ in these families; for Dirichlet characters the fourth moment is the limit (Heath-Brown, Young).
+
+## 2. What the 7/8 proof itself contains, read as moment theorems
+
+Lemma 18.1 with $m=1/2$, $z=0$ is a Lindelöf-on-average **fourth moment** of the sextic Kummer family on the critical line, $\sum_{u\asymp U}|S_{1/2}(u)|^4\ll U^{1+\epsilon}$ (rows with inducing character in the fixed group $\Theta$ excluded), proved by Hecke reflection plus two finite Poisson transformations in the row variable (the family is a lattice, so Poisson in $u$ is available; a Dirichlet-character family has no such structure). Lemma 17.1 is a second moment of a truncated reciprocal $\sum\mu(a)\psi_u(a)$ of length up to $U^{1-c}$ times short prime products: a **mollified** moment with mollifier length near $1$, far beyond the $\theta_1=1/11$ of the asymptotic literature — possible because only an upper bound is needed and the Möbius sign is converted into cubic Gauss sums (Hasse–Davenport) and reflected. These two lemmas are stronger than anything in the asymptotic-moment literature for this family; they are the right place to look for a "generalized moment".
+
+## 3. Relation to the detector (notes/H, I, G)
+
+The detector needs, for the critical class, a bound on rows where $|M_rS_m|^2\gg U^{\delta(r+m)}$ with $r\approx0.72$, $m\approx0.41$. In moment language that is a *mollified second moment with a long mollifier* ($r+m\le1$ ideal). The literature's $\theta_1=1/11$ is two orders of magnitude short; the paper's own Lemma 17.1 reaches $r\le1$ but only with prime products (capacity $r+2z\le1$), not with a full plain factor. Higher powers of the plain witness ($2k$-th moments, $k\ge3$) would not move the bound (note H), so the "generalized $2k$-th moment" that matters for the zero-free half-plane is the **mixed moment** $\sum_u|M_rS_m|^2$ (note I), not a higher pure moment. A sixth moment of sextic Hecke $L$-functions would be a major theorem in its own right (open even for Dirichlet characters) but is not what this architecture consumes.
