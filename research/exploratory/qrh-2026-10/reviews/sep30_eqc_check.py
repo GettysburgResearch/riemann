@@ -1154,12 +1154,16 @@ def part_E(rng):
                                        tuple((P.name, dec['t'][P]) for P in dec['R1']), (), phi), (0, 0))[0]) > 1e-12
             rel = abs(LHS - RHS['']) / abs(LHS)
             relc = {v: abs(LHS - RHS[v]) / abs(LHS) for v in RHS if v}
+            nonp = abs(LHS - RHS0)                           # size of the h != 0 (nonprincipal) part
+            rel_np = abs(LHS - RHS['']) / nonp
             row = {'config': cfg['name'], 'Phi': phi, 'K': K, 'k_points': int(len(ka)), 'tuples': nterms,
                    'tuples_with_nonvanishing_d1_hsum': nnz, 'LHS': LHS, 'RHS': [RHS[''].real, RHS[''].imag],
-                   'rel_err': rel, 'controls_rel_err': relc}
+                   'RHS_h0': [RHS0.real, RHS0.imag], 'nonprincipal_share': nonp / abs(LHS),
+                   'rel_err': rel, 'err_rel_to_nonprincipal_part': rel_np, 'controls_rel_err': relc}
             out.append(row)
             rec('E', f'replay [{cfg["name"]}; {phi} Phi]: LHS {LHS:.12g} vs RHS {RHS[""].real:.12g}{RHS[""].imag:+.1e}i '
-                     f'({nterms} tuples, {nnz} with nonvanishing h-sum at d=1)', rel < 1e-9, f'rel err {rel:.1e}')
+                     f'({nterms} tuples, {nnz} with nonvanishing h-sum at d=1; h!=0 share {nonp / abs(LHS):.2e})',
+                rel < 1e-9 and rel_np < 1e-9, f'rel err {rel:.1e}, relative to the h!=0 part {rel_np:.1e}')
             rec('E', f'replay controls must break [{cfg["name"]}; {phi}]: drop R(.,P_T) rel {relc["drop_RPT"]:.1e}, '
                      f'drop E rel {relc["drop_E"]:.1e}', min(relc.values()) > 1e-6)
     OUT['E_replay'] = out

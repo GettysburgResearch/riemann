@@ -542,9 +542,10 @@ control(G, "FC5", "control", "Lemma 18.1 with the BASELINE capacity 2(1-2m)/9 at
         1 - 2 * m - 6 * kap * zP0(m), [m, Dl], [(F(1, 3), F(1, 2)), (0, F(1, 24))])
 control(G, "FC6", "control", "Lemma 20.2 with margin 229/10^6 (above the true minimum)",
         sp.expand(negE - R(229, 10 ** 6) * 2 * J), [de, x], BOXdx)
-control(G, "FC7", "control", "plain-side bound WITHOUT the Delta/4 term (C_pl(m,z_P(m)) <= R_short(t))",
-        sp.expand(sp.cancel((Rshort - C_pl(m_pl, zP(m_pl))) * Dx * (R(9, 2) + 12 * Dl))), [de, x, t, Dl, s, v],
-        [(0, F(5, 6)), (0, F(1, 2)), (1, F(3, 2)), (0, F(1, 24)), (0, 1), (0, 1)])
+control(G, "FC7", "control", "plain-side bound WITHOUT the Delta/4 term, at the crossing r = r_*, m = t - r_* "
+        "(C_pl(m,z_P(m)) <= R_short(t))",
+        sp.expand(sp.cancel((Rshort - C_pl(t - rstar, zP(t - rstar))) * Dx * (R(9, 2) + 12 * Dl))), [de, x, t, Dl],
+        [(0, F(5, 6)), (0, F(1, 2)), (1, F(3, 2)), (0, F(1, 24))])
 control(G, "FC8", "control", "B&B sanity: J >= 1 (false; min is 35/54)", J, [de, x], BOXdx, F(1))
 
 # =============================================================================================
