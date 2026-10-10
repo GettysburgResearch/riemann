@@ -311,8 +311,9 @@ an independent review confirms HECKE_LEAN_FIDELITY.md.
    about the manuscript, not a condition hidden inside this one.
 5. **Housekeeping.** Keep the Hecke clause and the corollaries as separate objects. If the Lean
    source becomes resident, keep the upstream Apache-2.0 notices (PR 908 `THIRD_PARTY_NOTICES.md`).
-   Commit the build helper scripts: `env.sh`, `step3_build.sh` and
-   `apply_post_update_patches.sh` live in session scratch only and are not in the repository.
+   The build helper scripts (`env.sh`, `step2_cache.sh`, `step3_build.sh`,
+   `apply_post_update_patches.sh` and others) were copied into the repository after this draft
+   was written: [../../lean/build_scripts/](../../lean/build_scripts/README.md).
 
 ## 9. The smallest statement whose failure would invalidate the result
 

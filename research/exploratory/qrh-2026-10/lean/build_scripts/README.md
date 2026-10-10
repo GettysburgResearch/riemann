@@ -22,5 +22,6 @@ Smallest remaining gap: the scripts assume the layout above; the comparator comm
 * `progress.sh`, `closure.py`, `verify_revs.py`: build progress, import closure, and manifest
   revision checks.
 
-Usage: `export LEANBUILD=/some/dir`, extract the import there, then `. env.sh` and run the steps
+Usage: `export LEANBUILD=/some/dir`, copy these files to `${LEANBUILD}/scripts/` (they source
+`${LEANBUILD}/scripts/env.sh`), extract the import to `${LEANBUILD}/src`, then `. env.sh` and run the steps
 in order.
