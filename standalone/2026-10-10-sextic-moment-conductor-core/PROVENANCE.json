@@ -1,0 +1,154 @@
+{
+  "additional_unmerged_dependency": {
+    "commit": "6afd64e042ce7b59d550c3d76e9e2cca8b2c7379",
+    "pr": 912,
+    "scope": "Mellin nonvanishing test used only in zero-free extraction implications"
+  },
+  "classical_a2_source": {
+    "authors": [
+      "Brubaker",
+      "Bump",
+      "Chinta",
+      "Friedberg",
+      "Hoffstein"
+    ],
+    "interfaces": [
+      "prime-power table (13)",
+      "twisted multiplicativity (20)",
+      "Theorem 2 and functional equation (25)"
+    ],
+    "scope": "Arithmetic coefficient match; no moving-twist or quantitative analytic extension assumed",
+    "title": "Weyl Group Multiple Dirichlet Series I",
+    "url": "https://chinta.ccny.cuny.edu/publ/wmd1.pdf",
+    "version_date": "2006-03-30"
+  },
+  "date": "2026-10-10",
+  "files": {
+    "A2_COMPLETION.md": {
+      "bytes": 36064,
+      "sha256": "d99eade56807077b07e5ec1325001f1592115db216e1e10e6a3906a3e01f0aad"
+    },
+    "CONDUCTOR_SECTORS.md": {
+      "bytes": 24272,
+      "sha256": "c160bbb1b1d7c6bcc5514d496ad41f15fd17ea3d36206b0d05cfa0d7d6503983"
+    },
+    "INTERACTION_GRAPH.md": {
+      "bytes": 7547,
+      "sha256": "46ac022dcbeee727689d1f2bc247ec22eae54850dd7e010ff2de35d42e1405c5"
+    },
+    "README.md": {
+      "bytes": 10464,
+      "sha256": "13141356386bfd2e71937cf579de0b8f21b816f80b4b311bb05764f171fef5de"
+    },
+    "REPLICA_AVERAGES.md": {
+      "bytes": 24598,
+      "sha256": "489bac05b84802d9366c8c398fbf300affeb126a05acc66f2b77cd3cc8be8357"
+    },
+    "VALIDATION.md": {
+      "bytes": 5774,
+      "sha256": "331cb6359f3e1325723b6632b04d1aa57dab0c58ccdd7d5641ac48f50320d6f1"
+    },
+    "checks/.gitignore": {
+      "bytes": 13,
+      "sha256": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b"
+    },
+    "checks/check_a2_projection.py": {
+      "bytes": 10040,
+      "sha256": "3c4666ec71c9021fb1b7806813a1800c95d9e03ffb0f219f2b59ced54f32bdf5"
+    },
+    "checks/check_local_structure.py": {
+      "bytes": 11583,
+      "sha256": "76cc2e5147175829804820a632fb4cd60a633c1510d784dd483294d1ad95970d"
+    },
+    "results/a2_projection.json": {
+      "bytes": 1095,
+      "sha256": "f72d14714236c407a3f29d3aed931a0451e4e193d539b8610b2374e4fd2228a5"
+    },
+    "results/local_structure.json": {
+      "bytes": 3636,
+      "sha256": "6fabde7e386feca8fdd143a2fff4a0a065cb5fe41d6cbe355aab31b30a457f92"
+    },
+    "reviews/a2_checker_review.md": {
+      "bytes": 5790,
+      "sha256": "ecda3af582e11a02f12926c4f62a956c3887d8b485c36b3365bf671dbdf17ec0"
+    },
+    "reviews/a2_initial_review.md": {
+      "bytes": 10132,
+      "sha256": "08c516fbd425eb6cad311646b0f3da15062f734543015cb994c8176150ea48de"
+    },
+    "reviews/a2_tail_and_diagonal_review.md": {
+      "bytes": 14175,
+      "sha256": "906266eac496b241bdb331b76aadd5ca6a815b6fd42796137bfc5dea00ab29a2"
+    },
+    "reviews/conductor_and_checker_review.md": {
+      "bytes": 6566,
+      "sha256": "2e1c0a7b14c06fefe5c34217a715ea578bbb8ea104542bcf54905f931f66661d"
+    },
+    "reviews/moment_structure_independent_review_manifest.json": {
+      "bytes": 945,
+      "sha256": "0c448f4780c542258c8e9d2276b18bfd2679476994334dd89a62754b8769f021"
+    },
+    "reviews/moment_structure_independent_review_supplement_manifest.json": {
+      "bytes": 1833,
+      "sha256": "9642079ce1512177639089ef77de9dd692b0798e7de1f952d0ca5671258ab797"
+    },
+    "reviews/replica_and_assembly_review.md": {
+      "bytes": 5173,
+      "sha256": "c97e8b6aee8bf1894beb83298d01d9b393561410659c7c362a495c37b7bb1790"
+    }
+  },
+  "manifest_scope": "Hashes all final packet files except this manifest itself. Root README has a navigation-only edit.",
+  "parent_commit": "6498d6cc2eded03159c7332b25fd224ad07f89c1",
+  "parent_pr": 913,
+  "repository": "GettysburgResearch/riemann",
+  "research_branch": "research/sextic-moment-conductor-core-20261010",
+  "sources": {
+    "fourth_moment_attack": {
+      "bytes": 37899,
+      "path": "standalone/2026-10-10-sextic-moment-descent/FOURTH_MOMENT_ATTACK.md",
+      "repository_commit": "6498d6cc2eded03159c7332b25fd224ad07f89c1",
+      "sha256": "354e8f7f5f81d0f8821ea6e821f55546f9c9641ac0690def1ae373000b4b3d08"
+    },
+    "general_moment_attack": {
+      "bytes": 27326,
+      "path": "standalone/2026-10-10-sextic-moment-descent/GENERAL_MOMENT_ATTACK.md",
+      "repository_commit": "6498d6cc2eded03159c7332b25fd224ad07f89c1",
+      "sha256": "a4ca15c0d731ef6000b19507b39b64a4786a7f8af9939864b3176221bf02b499"
+    },
+    "mellin_and_spikes": {
+      "bytes": 19873,
+      "git_blob": "99f75ea589ae544d788d438b50a25eff2787822a",
+      "path": "standalone/2026-10-10-generalized-inverse-moments/MELLIN_AND_SPIKES.md",
+      "repository_commit": "6afd64e042ce7b59d550c3d76e9e2cca8b2c7379",
+      "sha256": "f3bdeb168714d838a4b13347cd353675d9644b9629041cdf7def78dc496162e3"
+    },
+    "moment_obstructions": {
+      "bytes": 31027,
+      "path": "standalone/2026-10-10-sextic-moment-descent/MOMENT_OBSTRUCTIONS.md",
+      "repository_commit": "6498d6cc2eded03159c7332b25fd224ad07f89c1",
+      "sha256": "663c6ac878eb0fdd865389ac066ff5a23dbb33016e7061384a83fd186be3fd9b"
+    },
+    "october5_paper": {
+      "bytes": 169005,
+      "path": "standalone/2026-10-07-openai-quasi-riemann-import/upstream/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex",
+      "sha256": "d9a8f15aa770cf883d0eabd2b775fad694ce20b44cba7928f5c0c9a6d8750d4d",
+      "upstream_commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a"
+    },
+    "refined_all_row_sieve": {
+      "bytes": 17097,
+      "path": "standalone/2026-10-10-sextic-moment-descent/REFINED_ALL_ROW_SIEVE.md",
+      "repository_commit": "6498d6cc2eded03159c7332b25fd224ad07f89c1",
+      "sha256": "6879e094fb63969ddc88c637bf633cf46360d144d2b1615573647e734b4141e8"
+    }
+  },
+  "status": "PROPOSED_COMPONENT_PROOFS_FULL_MOMENT_OPEN",
+  "target_branch": "research/sextic-moment-descent-20261010",
+  "validation": {
+    "a2_projection_predicates": 167052,
+    "formal_proof_build": false,
+    "full_moment_proved": false,
+    "local_structure_predicates": 222127,
+    "new_zero_free_boundary": false,
+    "ordinary_and_optimized_outputs_agree": true
+  }
+}
