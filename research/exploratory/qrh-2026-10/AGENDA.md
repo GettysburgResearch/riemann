@@ -60,6 +60,14 @@ small `η`.
 counts, `θ ≥ 1/50` reaches 13/15. Below 13/15 it must be combined with B2. No rigorous `θ > 0` is
 known ([FLOOR_BIN_BARRIER.md](FLOOR_BIN_BARRIER.md)).
 
+*Cross-architecture remark.* The Oct 5 mean square controls truncated reciprocals
+`A_u ≈ 1/L(s, χ_u)` on average over rows. Used through Cauchy–Schwarz it gives only absolute-value
+control. The floor bin needs a *signed first moment* of the ratios `L(w, χ_u)/L(s, ηχ_u)`, and over
+a *zero-defined* subset of rows, which breaks the Poisson/theta structure that makes the full row
+sum tractable. A workable variant would estimate the sum over all rows by the probe identity and
+subtract the few non-floor rows using zero-density counts. Whether that subtraction can be made
+uniform is open.
+
 **B2. Bilinear saving on the reflected side.** Beat Cauchy–Schwarz in `Σ_m A_m(Y) B_m(Z)` by
 `Z^{ϑ}`. Each unit is worth `4/5` of a unit of boundary, down to 2/3
 ([THRESHOLD_CALCULUS.md](THRESHOLD_CALCULUS.md) §5).
