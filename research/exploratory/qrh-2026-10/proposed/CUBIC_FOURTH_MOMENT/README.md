@@ -143,3 +143,23 @@ Recommended edits to SKETCH.md, recorded here rather than applied:
 * correct the Sec. 2.7 losses to `(log X)⁴(log log X)⁴`.
 
 Numerics: 26/27; one crude fit (E3) fails, and the failure is kept and explained.
+
+## Note added later the same day: risk item 10 (allocation losses)
+
+[../../reviews/CUBIC_ALLOCATION_LOSS.md](../../reviews/CUBIC_ALLOCATION_LOSS.md): **verdict (a)**,
+no hidden loss of order `M` in the common-support allocations at `n = 3`. Bounded review by one
+agent.
+* Every allocation inequality of both transforms (A2, A4), redone at `n = 3` in exact arithmetic,
+  has minimum slack exactly 0, and none is negative.
+* Where the slack is 0:
+  * the budget (2.6) at prime types (1,1) and (2,1);
+  * `F_1 = 5c/6`;
+  * `F_2 = b_2` at three types;
+  * the crude Gauss-row count.
+* A joint exact LP over both transforms gives worst centred-deficit slack 0, at `v = L`.
+* The script passes 56/56, with 11 failing controls, all detected.
+
+Correction to the risk register's tolerance:
+* `c*(δ) = (11−147δ)/432` covers only a loss confined to the centred deficit.
+* A loss in an order-free ledger would be fatal for any `c > 0`.
+* A loss in `F_1/F_2` scales with `v`, and two stages would then need `κ ≥ 3 − √5 ≈ 0.764`.

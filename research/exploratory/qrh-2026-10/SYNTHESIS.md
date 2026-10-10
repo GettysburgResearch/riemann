@@ -169,6 +169,9 @@ the critical line.
      * Risk item 1 (uniformity over complex Mellin profiles) is closed, given that the
        profile-uniformity clause transfers as part of (H-A)
        ([reviews/CUBIC_PROFILE_UNIFORMITY.md](reviews/CUBIC_PROFILE_UNIFORMITY.md)).
+     * Risk item 10 (hidden losses in the common-support allocations): no loss of order `M` at
+       `n = 3`; every inequality has minimum slack exactly 0, checked in exact arithmetic
+       ([reviews/CUBIC_ALLOCATION_LOSS.md](reviews/CUBIC_ALLOCATION_LOSS.md)).
      * The route stays PROPOSED and conditional on (H-A) and (H-B).
    * The 7/8 paper's Gauss/reciprocity helpers (Lemmas 4.2–4.4), which the sextic packet
      needs, had one bounded review: no wrong step found
