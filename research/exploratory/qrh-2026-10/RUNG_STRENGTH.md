@@ -143,6 +143,11 @@ The induction uses three facts:
 * the hypothesis `max(H, LF) ≤ Σ`;
 * the contraction `H' < H (H/Σ)²` per level.
 
+In the exact Poisson identity at `ρ < 1`, the dual diagonal is cancelled by the Möbius variable
+`μ(f)`. The first loss is the positivity step (eq:weighted), which bounds the signed sum by the full
+dual mean square, i.e. replaces `μ(f)` by `|μ(f)|`, at a cost of `D^{1−ρ}`
+([DISPERSION_GRH_STEP.md](DISPERSION_GRH_STEP.md)).
+
 A sub-diagonal primal (`θ < 0`, i.e. `ρ < 1`) starts with `H/Σ = D^{|θ|} > 1`. Then the hypothesis
 fails and the "contraction" becomes an expansion, so the recursion has no base. The level count
 `⌈4/ϑ⌉` also blows up as `ϑ → 0⁺`. So the manuscript's own mechanism is exactly the `ρ ≥ 1` method.

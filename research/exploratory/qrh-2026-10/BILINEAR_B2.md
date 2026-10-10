@@ -128,7 +128,7 @@ row `B^J_{m,σ}` (l. 8097) is completed at `Z q_{p_{J^c}} ≍ Z^{1+ℓ'}` with t
   sums. Its cross-prime part is `χ_p(c/p)^{2j+2}` (l. 2271). For two row primes this gives the
   cubic pair phase `(q/p)_3` (l. 7446).
 * **Moving columns.** These are exactly `χ_R(nb³)³ = χ_R(nb)³`, a quadratic symbol in the residual
-  row `R`, and `χ_P(n)^{-2}1_{(P,b)=1}`, a cubic symbol for the active marks `P` (l. 7466–7475).
+  row `R`, and `χ_P(n)^{-2}1_{(P,b)=1}`, a cubic symbol for the active marks `P` (l. 7469–7474).
 * **Energy.** Lemma `hybrid-energy` (l. 7510, bound l. 7523) combines Goldmakher–Louvel
   (eq. (l. 2644): `Σ_a |Σ_b c_b χ_a(b)³|² ≪ (U+V) Σ|c_b|²`) with Heath-Brown's cubic large sieve
   (eq. (l. 7491): `≪ (U + V + (UV)^{2/3}) Σ|c_b|²`).
@@ -136,14 +136,14 @@ row `B^J_{m,σ}` (l. 8097) is completed at `Z q_{p_{J^c}} ≍ Z^{1+ℓ'}` with t
   Lemma `probe-row-norm` (l. 8111, bound (l. 8118)) give `Σ_{q_m≪Q} |B^J_m|² ≪ Z^{M'+ε}` at the
   paper geometry. In general this is `Z^{E_B(M',ℓ')}`, with
   `E_B = max(M', (2M'+1+3ℓ')/4, 2M'+ℓ'−1)` (THRESHOLD_CALCULUS §2).
-* **Dual length.** The proof of Lemma 15.1 (l. 8195–8203) shows `T_d ≤ H − 3d + o(1) ≤ M'`. So at
+* **Dual length.** The proof of Lemma 15.1 (l. 8242–8250) shows `T_d ≤ H − 3d + o(1) ≤ M'`. So at
   the paper geometry the reflected sum is never longer than the row range: the large-sieve diagonal
   `Q` is attained.
 
 ### 1.5 The Cauchy–Schwarz step (Prop. `probe-low`, l. 8564; CS at l. 8612)
 
     |Σ_m A_m B^J_m| ≤ (Σ|A_m|²)^{1/2} (Σ|B^J_m|²)^{1/2}
-    ⇒ tuple output Q^{-1/2}[(Q/Y')P_a^{1/6}]^{1/2}[Z^{M'}]^{1/2} = r_J X'^{1/2} P_a^{1/12}  (l. 8615–8625).
+    ⇒ tuple output Q^{-1/2}[(Q/Y')P_a^{1/6}]^{1/2}[Z^{M'}]^{1/2} = r_J X'^{1/2} P_a^{1/12}  (l. 8612–8624).
 
 There are `Z^d` rescaled tuples, each with coefficient `Z^{-3d/2}`. So the total exponent is
 `lx/2 + b/12 − d` ((5.5), l. 8632), and the low estimate is `Z^{lx/2+b/12} = Z^{3/16}` ((5.10), l. 8571).
@@ -294,8 +294,9 @@ Readings:
   * Lemma 18.1 is used at `κ = 3/4` while the actual `2β* − 1` would be smaller;
   * Lemma 15.1's proof assumes `M + ℓ = 1`; the model uses the LP closed form instead.
 
-  The a priori bound `β* ≤ 7/8` (Part II accepted) was rechecked at the `ϑ = 1/20` optimum; see the
-  script output.
+* **A priori bound.** Rechecking with `β* ≤ 7/8` (Part II accepted; bins `δ ≤ 3/4`) at the
+  `ϑ = 1/20` optimum, re-optimized, gives `σ = 0.834353`, the same to 6 digits. The binding bin is
+  far below the ceiling.
 
 ## 5. Verdict
 

@@ -19,6 +19,14 @@ Smallest remaining gap: an unconditional asymptotic (dispersion) estimate
   No reflection-type theorem supplies this, whether for GL(3) or GL(2).
 ```
 
+> **Coordinator correction (after [DISPERSION_GRH_STEP.md](DISPERSION_GRH_STEP.md)).** Dunn–Radziwiłł's
+> dispersion estimate is *not* an asymptotic at the relative precision `H/L` needed here, even under
+> GRH. Its error terms `B^{2+2η} + X^{1+ε}` sit at the large-sieve scale, and its `X^{1+ε}` term is
+> the size of our dual diagonal. Read "the only analogous asymptotic" below as "the closest
+> analogue". GRH enters DR pointwise, at every non-cube dual frequency (Def. 3.1 (iv); Props. 7.1,
+> 9.2). After Poisson in the row variable this becomes quasi-GRH for our own family, which is
+> circular.
+
 ## 0. Verdict in brief
 
 * **The shape identification is correct and exact** [LIT + EMP]. On coprime squarefree pairs, our

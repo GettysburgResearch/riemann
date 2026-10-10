@@ -66,8 +66,11 @@ improves continuously as the row/column ratio `ρ` falls below 1. That makes it 
      identities were checked with exact sextic symbols.
    * The literature check confirms the shape exactly: `N(de)^{-1/2} H(d,e; h,h)` times a quadratic
      factor that lies outside every cubic WMDS. It also *closes* the reflection idea: the `GL(3)`
-     cubic theta has `τ(m,1) = 0` off cubes, so it vanishes on the needed support. The missing
-     input is an unconditional dispersion asymptotic, which is GRH-conditional even in `GL(2)`.
+     cubic theta has `τ(m,1) = 0` off cubes, so it vanishes on the needed support.
+   * The missing input would be an unconditional dispersion asymptotic at relative precision `H/L`.
+     Dunn–Radziwiłł's GL(2) estimate is GRH-conditional, and it does not reach that precision even
+     under GRH. Its GRH input becomes quasi-GRH for our own family after Poisson, which is circular
+     ([DISPERSION_GRH_STEP.md](DISPERSION_GRH_STEP.md)).
    * [FOURTH_MOMENT_A2.md](FOURTH_MOMENT_A2.md), [A2_LITERATURE.md](A2_LITERATURE.md).
 3a. **The moment ladder is one statement** ([RUNG_STRENGTH.md](RUNG_STRENGTH.md)).
    * PR 910's `2k`-th moment boundary depends only on `ρ = h/k`: `1/2 + 5ρ/12`.
@@ -140,13 +143,27 @@ a curve `σ₀(Y) = 1/2 + c loglog Y/log Y`, `Y ≈ 4T`.
    * The `GL(3)` reflection idea is closed ([A2_LITERATURE.md](A2_LITERATURE.md)).
    * The fourth moment's A2 / bilinear structure is worth pursuing only if it supplies a dispersion
      asymptotic. No unconditional precedent exists even in `GL(2)`.
+   * *Where exactly the cancellation is lost* ([DISPERSION_GRH_STEP.md](DISPERSION_GRH_STEP.md)).
+     At `ρ < 1` the exact Poisson identity has no dual diagonal: it cancels through the Möbius
+     variable `μ(f)`. The first loss is the positivity step (eq:weighted), which replaces `μ(f)` by
+     `|μ(f)|` and costs `D^{1−ρ}`. Any proof must keep that sign.
+   * Averaged substitutes for GRH are circular. Zero-density exponent `A` plus a half-plane
+     bootstrap has fixed point `1 − 1/(6A)`, which is exactly 11/12 under DH.
 2. **Cross-row cancellation for zero-free rows (Sep 30 architecture).** A ratios-type average of
    `L(w, χ_u)/L(s, ηχ_u)` over the sextic family. With DH-quality counts, a floor saving `θ` gives
    `σ = max(13/15, (167−225θ)/(192−225θ))`, reaching 13/15 at `θ = 1/50`. Going below 13/15 needs
    savings in every bin *and* a better reflected energy, with floor 5/6 at `θ = 14/75`. No rigorous
    `θ > 0` is known; see [FLOOR_BIN_BARRIER.md](FLOOR_BIN_BARRIER.md).
-3. **Bilinear saving on the reflected side (Sep 30).** Worth `4/5` per unit, uncapped down to 2/3
-   in this model.
+3. **Bilinear saving on the reflected side (Sep 30).** It is the *one* input that moves the
+   manuscript's own optimum.
+   * Uniform saving `Z^{−ϑ}` gives `σ(ϑ) ≈ 7/8 − 0.8125ϑ` in the paper's model, with the same
+     mid-depth bin binding. That reaches 13/15 at `ϑ ≈ 0.0102` and 5/6 at `ϑ ≈ 0.051`.
+   * Improving the energy or the counts alone does nothing until the floor bin.
+   * No known estimate gives any `ϑ > 0` ([BILINEAR_B2.md](BILINEAR_B2.md)). Large-sieve splits
+     reach at most Cauchy–Schwarz. Dunn's bilinear sieve needs cusp forms. Heath-Brown–Patterson
+     is out of its Type I range.
+   * The precise missing estimate is a bound better than the large sieve for
+     `Σ_m w(m) χ̄_s(m) B_m`, averaged over moduli `s ≍ Y'`.
 4. Everything else (moment constants, detector floor, joint moments, iteration) is capped at
    `≤ 1/120` by the certificates.
 

@@ -34,7 +34,8 @@ GRH-conditional paper; we use only its structure, not its conclusions.
 **Verdict (b): circular.** The averaging over `h` does not change this.
 
 1. **Where GRH enters DR24.** [LIT] It enters in two ways. Both are pointwise, character-by-character
-   statements about prime sums; DR24 uses no mollifier and no averaged Lindelöf.
+   statements about sums of primes or of `μ` against Hecke characters; DR24 uses no mollifier and
+   no averaged Lindelöf.
    * *Throughout:* axiom (iv) of Definition 3.1 (square-root cancellation of the column sequence
      against **every** non-principal cubic Hecke character, uniformly in the conductor). It is
      verified for prime products by GRH (Lemmas 6.1–6.2). It is used for every non-cube dual
@@ -123,7 +124,7 @@ the dual length, and DR24 do not split them into small and large `k`. In DR's ap
 * `≈ X^{1/2}` for narrow Type II (`A ≈ B ≈ X^{1/2}`);
 * `B³/X ∈ [X^{3ξ}, X^{1/2−3ξ}]` for broad Type II.
 
-DR24 (Sec. 1.3, after (1.14)) describe their dispersion estimate as GRH replacing "the usual
+DR24 (Sec. 1.4, after (1.14)) describe their dispersion estimate as GRH replacing "the usual
 Siegel–Walfisz assumption". It is used on conductors far beyond the Siegel–Walfisz range.
 
 **Why it is needed (operator-norm reason).** [LIT + INF] With `K = B²/A` dual rows, pointwise
@@ -165,7 +166,7 @@ non-trivial cubic characters and `w > (AB)^ε`, the corrected mean square is
     ≪ (AB)^{o(1)} (AB + B² + (AB)^{2/3−ε}·B).
 
 That is the optimal large-sieve scale `(A + B)B`, after subtracting the Patterson bias. Prop. 9.2
-has the same shape, with errors `X^{1+ε}` (from `𝒟₁^⋄`, bounded trivially in (9.27)) and
+has the same shape, with errors `X^{1+ε}` (from `𝒟₁^⋄`, bounded trivially in (9.21)) and
 `B^{2+2η}` (`𝒟₂`).
 
 This is an asymptotic only because the bias `A^{2/3}B^{5/3}` exceeds both `AB` and `B²` when

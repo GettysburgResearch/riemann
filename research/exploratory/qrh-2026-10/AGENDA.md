@@ -64,6 +64,9 @@ cubic `GL(3)` theta, with Kazhdan–Patterson's unique Whittaker model. In `GL(2
 The A2 functional equations act only on Gauss-sum variables, keep the twist index, and lengthen
 the sums in the needed regime ([A2_LITERATURE.md](A2_LITERATURE.md) §§3, 6). What would be needed
 instead is an unconditional dispersion asymptotic for `Σ_h |C_h|²` with error `O(L^{2+ε})`.
+Dunn–Radziwiłł's estimate does not supply it, even under GRH, and its GRH input is circular here
+([DISPERSION_GRH_STEP.md](DISPERSION_GRH_STEP.md)). The precise target is to keep the `μ(f)` sign
+through the positivity step (eq:weighted). The candidate (Q_ρ) is stated there as OPEN.
 
 **A2′. Induction by alternating Poisson and reflection (SPECULATIVE).** One `GL(2)` reflection of
 the fourth-moment dual returns a Möbius sum in the second factor `e`, twisted by
@@ -101,8 +104,13 @@ subtract the few non-floor rows using zero-density counts. Whether that subtract
 uniform is open.
 
 **B2. Bilinear saving on the reflected side.** Beat Cauchy–Schwarz in `Σ_m A_m(Y) B_m(Z)` by
-`Z^{ϑ}`. Each unit is worth `4/5` of a unit of boundary, down to 2/3
-([THRESHOLD_CALCULUS.md](THRESHOLD_CALCULUS.md) §5).
+`Z^{ϑ}`. The barrier moves by `4/5` per unit ([THRESHOLD_CALCULUS.md](THRESHOLD_CALCULUS.md) §5),
+and the paper's own optimum by `≈ 0.8125` per unit ([BILINEAR_B2.md](BILINEAR_B2.md)).
+* No known theorem gives `ϑ > 0`.
+* Exact gap: a bound better than the large sieve for `Σ_m w(m) χ̄_s(m) B_m`, averaged over
+  `s ≍ Y'`.
+* The `P_a^{1/6}` excess matches the conjectured `n = 6` large-sieve term of
+  de Faveri–Dunn–Hoffstein, so it is likely genuine.
 
 **B3. Things that are not worth doing.**
 * Tuning the geometry: exhausted at ≈ 0.874957.
