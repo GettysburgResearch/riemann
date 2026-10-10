@@ -95,6 +95,22 @@ fixed member, with the conductor entering only through a factor `(N u)^{1/(12k)}
 re-verified line by line. The ladder conclusions are family statements, like the imported 7/8 and
 11/12 claims.
 
+**Corollary (the endpoints of the ladder).** Write Mom(1, ρ) for the second-moment hypothesis with
+`D^ρ` rows, for every smooth `W` on `[1, 2]`.
+* `ρ > 1`: Mom(1, ρ) is the imported Oct 5 input, giving 11/12 as `ρ → 1⁺`.
+* `ρ → 0`: Mom(1, ρ) holds for every `ρ > 0` **if and only if** GRH holds for every `L(s, ψ_u)`,
+  `ψ_u` the sextic characters of the family.
+  * ⇒: Prop. R with `k = 1`, `h = ρ → 0`.
+  * ⇐: GRH gives `A_u(D) ≪ D^{1/2+ε} (N u)^ε`, by Perron and the GRH bound
+    `1/L(s, ψ) ≪ (q(|t|+2))^ε` on `Re s ≥ 1/2 + ε`. Summing over `D^ρ` rows gives `D^{1+ρ+ε}`.
+* In between, Mom(1, ρ) gives `1/2 + 5ρ/12` for the principal member (by extraction) and
+  `1/2 + ρ/2` for every member (by Prop. R).
+
+In their conclusions, the sub-diagonal hypotheses therefore interpolate between the imported claim and GRH
+for the family. They do not imply one another formally: more rows is not implied by fewer. That
+is a precise sense in which "the Oct 5 architecture tends to 1/2": its remaining input is a
+quantitative fragment of GRH.
+
 ## 3. The ρ = 1 wall (HEURISTIC barrier for the Oct 5 pipeline)
 
 **(a) Row-blind bounds stop at ρ = 1.** Consider any bound
