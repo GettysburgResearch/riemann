@@ -1,10 +1,10 @@
 {
  "object_sha256": "42a5ee0febca59fd1def55cfd6c6808c322ef4237d7726303ea52f711deac6a3",
- "n_gates": 31,
- "n_gates_pass": 31,
+ "n_gates": 32,
+ "n_gates_pass": 32,
  "n_controls": 10,
  "n_controls_fire": 10,
- "junction_replay": false,
+ "junction_replay": true,
  "arithmetic": "EXACT: sympy over Q; fractions.Fraction; multi-affine vertex maxima",
  "items": [
   {
@@ -846,6 +846,21 @@
    "ok": true,
    "kind": "sens",
    "detail": ""
+  },
+  {
+   "group": "J junction replay",
+   "id": "J1",
+   "claim": "junction gates replayed on Delta in (0, 1/8] (13 box substitutions): every gate passes except P2 (kappa <= 5/6), and all failing controls still fire",
+   "ok": true,
+   "kind": "gate",
+   "detail": {
+    "failed": [
+     "P2"
+    ],
+    "controls_not_firing": [],
+    "n_gates": 84,
+    "seconds": 65.6
+   }
   }
  ]
 }

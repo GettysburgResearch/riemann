@@ -21,8 +21,9 @@ What was actually run: a clean lake build of the three modules (as OAI.QRHWave.*
   ../reviews/LEAN_BUILD_ATTEMPT.md, Addendum C (not run when this header was written)
 Smallest remaining gap: ZetaZeroStrip rests on the zeta 7/8 theorem, which comparator accepted
   under the assumptions of LEAN_BUILD_ATTEMPT Addendum B. DirichletZeroStrip and
-  SiegelFromSevenEighths rest on the Dirichlet 7/8 theorem, which has `#print axioms` evidence
-  (comparator run pending; Addendum C). No part of the Lean development has had a human review
+  SiegelFromSevenEighths rest on the Dirichlet 7/8 theorem, which comparator also accepted
+  (Addendum C). The corollaries themselves have `#print axioms` evidence; their own comparator
+  runs are in Addendum C. No part of the Lean development has had a human review
 ```
 
 RH remains unsolved. None of the files says anything about the critical line beyond reflecting the

@@ -97,7 +97,6 @@ C        c=C e^-g     log x1         c_U (upper)    eta          log n1 = L1 (bo
    log x = 10000  ours (H(7/8)) <= 3.391e-538   FKS Table 3: 1.3680e-30   JY Thm 1.1 closed form: 1.256e-29
    first integer log x in [190,300] from which ours < FKS step value for every larger tested log x: 253
    clean shape 0.0026 x^(7/8) log^2 x beats JY Thm 1.1 closed form from log x = 41 and JY Thm 1.4 (VK) closed form from log x = 41 (checked to log x < 3000; both ratios then move monotonically in our favour)
-
---- EMPIRICAL (float) sanity: partial sums over the first 200 zeros ---
-   sum_{n<=200} 2/(1/4+g^2) = 0.04206972063485344 (< s_low = 0.0461914 as it must be)
-   sum_{n<=200} 1/g_n       = 1.3516254262168779  vs Z1(g_200) bound 2.0314176783742086
+   pi: 0.00266 x^(7/8) log x < eps_pi(FKS Table 4) x/log x from log x = 259 (clean shape; tested to 300, then monotone)
+   sensitivity: with M multiplied by 2 the sup over x >= e^40 becomes <= 0.00257258
+   sensitivity: with M multiplied by 4 the sup over x >= e^40 becomes <= 0.00259928

@@ -1,0 +1,52 @@
+{
+ "original": "sep30_junction_check.py",
+ "original_sha256": "30573564aa1a8910ab2bececbb678cd528fc397da80c4ab8c5fcb30875d24efc",
+ "substitution": "(0, F(1, 24)) -> (0, F(1, 8))",
+ "n_substitutions": 13,
+ "seconds": 65.6,
+ "exit_code": 1,
+ "n_gates": 84,
+ "n_gates_pass": 83,
+ "failed_gates": [
+  "P2"
+ ],
+ "n_controls": 8,
+ "controls_not_firing": [],
+ "failed_detail": [
+  {
+   "group": "4 Lemma 18.1 instances",
+   "id": "P2",
+   "lines": "12531",
+   "claim": "kappa = 3/4 + 2 Delta in [3/4, 1] for Delta in [0, 1/24]  (kappa <= 5/6)",
+   "ok": false,
+   "control": false,
+   "detail": {
+    "boxes": 1,
+    "seconds": 0.0,
+    "method": "direct",
+    "witness": [
+     "1/16"
+    ],
+    "value": "-1/24",
+    "excess": "-1/24",
+    "excess_float": -0.041666666666666664
+   }
+  }
+ ],
+ "delta_dependent_gates": {
+  "B2e": true,
+  "P1": true,
+  "P2": false,
+  "P3": true,
+  "P5": true,
+  "K1": true,
+  "C6": true,
+  "E5": true,
+  "E11": true
+ },
+ "stdout_tail": [
+  "PASS [F1] float reconnaissance skipped :: ModuleNotFoundError(\"No module named 'threshold_calculus'\")",
+  "",
+  "83/84 gates pass; 8/8 failing controls fail as designed"
+ ]
+}

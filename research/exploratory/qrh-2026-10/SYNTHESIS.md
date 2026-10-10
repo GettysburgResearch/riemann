@@ -51,8 +51,8 @@ integration verdict.
        zeta and Dirichlet statements are about Mathlib's own `riemannZeta` and
        `DirichletCharacter.LFunction`. The Hecke statement uses project-defined characters and
        `L`-functions, whose fidelity to the paper is unchecked.
-       **Comparator accepts the upstream 7/8 zeta challenge: "Lean default kernel accepts the
-       solution"** ([reviews/LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md), Addenda A–B).
+       **Comparator accepts the upstream 7/8 zeta and Dirichlet challenges: "Lean default kernel
+       accepts the solution"** ([reviews/LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md), Addenda A–B).
        Its trust assumptions are listed there; in particular the solution was precompiled
        (a non-adversarial reproduction).
        This is a machine check of the Lean statement, not a review of the manuscript.

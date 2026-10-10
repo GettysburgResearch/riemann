@@ -137,8 +137,7 @@ strip itself has `#print axioms` evidence only.
 
 * Every nontrivial zero `ρ = β + iγ` of `ζ` has `1/8 ≤ β ≤ 7/8`, at every height `γ`.
 * The same strip holds for primitive `χ ≠ 1`, off the poles of the Gamma factor. This version
-  rests on the Dirichlet 7/8 theorem, which has `#print axioms` evidence; its comparator status
-  is in Addendum C.
+  rests on the Dirichlet 7/8 theorem, which comparator also accepted (Addendum C).
 
 How it sits against the other height facts:
 

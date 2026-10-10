@@ -286,7 +286,7 @@ Lemma 20.2 was already certified three times; the Lean proof is a fourth, indepe
 
 **Bottom line.**
 * For ζ, comparator has accepted the 7/8 zero-free half-plane under the trust assumptions in LEAN_BUILD_ATTEMPT Addendum B.
-* For Dirichlet L-functions, the same build and `#print axioms` support it, but the comparator run is pending.
+* For Dirichlet L-functions, the same build and `#print axioms` support it. [Update after this note was written: comparator has since accepted the Dirichlet challenge too; LEAN_BUILD_ATTEMPT Addendum C.]
 * In both cases the result is established formally independently of whether the manuscript's argument is correct as written. That is the statement `Re s > 7/8`, not RH. The paper's own verification status stays as recorded in SEP30_VERIFICATION_MAP_V2.md: bounded agent reviews, with no wrong step reported. The formal proof shows that a closely related argument works. It also shows that the paper's Part I is not needed for that argument. A formal certificate for the manuscript's text would need statement-level work on the C/N rows above, and it would need the paper to be re-read along the Lean route rather than its own route.
 
 ## 7. Known misreadings to avoid

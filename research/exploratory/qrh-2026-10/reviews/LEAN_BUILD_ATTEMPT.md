@@ -169,7 +169,7 @@ as in Addendum B, and their outcomes are recorded here as they complete:
 
 | challenge JSON | solution module | outcome |
 |---|---|---|
-| upstream `DirichletSevenEighths.json` | `OAI.NumberTheory.DirichletL.Nonvanishing` | pending |
+| upstream `DirichletSevenEighths.json` | `OAI.NumberTheory.DirichletL.Nonvanishing` | **accepted**: "Lean default kernel accepts the solution", 1108 s, exit 0 ([results/comparator_DirichletSevenEighths.log](results/comparator_DirichletSevenEighths.log)). Like the zeta challenge, the challenge module imports only Mathlib, so `DirichletCharacter.LFunction` is Mathlib's and the Addendum B statement-meaning argument now covers this theorem too |
 | upstream `HeckeSevenEighths.json` | `OAI.NumberTheory.DirichletL.Hecke.Nonvanishing` | pending |
 | wave `SiegelFromSevenEighths.json` (upstream `SiegelZeros` challenge module) | `OAI.QRHWave.SiegelFromSevenEighths` | pending |
 | wave `QRHWaveStrip.json` (challenge written in this wave) | `OAI.QRHWave.ZetaZeroStrip` | pending |

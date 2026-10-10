@@ -123,8 +123,8 @@ and the paper's own optimum by `≈ 0.8125` per unit ([BILINEAR_B2.md](BILINEAR_
 **C1.** Build the 7/8 Lean closure and run the comparator challenges, and record
 `#print axioms`. See [reviews/LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md) for this wave's
 attempt. *Done in part:* the closure is built; `#print axioms` is standard for the zeta,
-Dirichlet and Hecke theorems; comparator accepts the zeta challenge; the remaining comparator
-runs are recorded in Addendum C.
+Dirichlet and Hecke theorems; comparator accepts the zeta and Dirichlet challenges; the
+remaining comparator runs are recorded in Addendum C.
 
 **C2.** Kintali Lemma 3 (weak reflection, Appendix B) and identities (4)–(6).
 * *Done in this wave: no error found* ([reviews/KINTALI_LEMMA3_REVIEW.md](reviews/KINTALI_LEMMA3_REVIEW.md)).

@@ -435,6 +435,26 @@ def theta_at_next_prime(x1):
     return p_next, th
 
 
+def sensitivity():
+    """Recompute the Theorem-1 supremum with M replaced by 2M and 4M (rigorous for those M)."""
+    global M_CHJ, C1_HAT, L_B_MIN
+    M_save, C1_save, LBm_save = M_CHJ, C1_HAT, L_B_MIN
+    sens = []
+    try:
+        for fac in ("2", "4"):
+            M_CHJ = M_save * I(fac)
+            C1_HAT = iv.log(4 * M_CHJ)
+            L_B_MIN = 8 * iv.log(H0 / (8 * PI * M_CHJ))
+            assert up(L_B_MIN) <= lo(L_B)
+            sI, sII, sIII, _ = psi_constant()
+            sens.append((fac, float(max(sI, sII, sIII))))
+            say("   sensitivity: with M multiplied by", fac, "the sup over x >= e^40 becomes <=",
+                mp.nstr(max(sI, sII, sIII), 6))
+    finally:
+        M_CHJ, C1_HAT, L_B_MIN = M_save, C1_save, LBm_save
+    return sens
+
+
 # ---------------------------------------------------------------------------------------------
 # main
 # ---------------------------------------------------------------------------------------------
@@ -737,6 +757,25 @@ def main():
         "ratios then move monotonically in our favour)")
     res["crossover_clean_vs_JY11"] = c11
     res["crossover_clean_vs_JY14"] = c14
+
+    # pi: clean shape 0.00266 x^(7/8) log x, relative to x/log x, vs FKS Table 4 (eps_pi,num)
+    fks_pi = [(200, "1.7789e-12"), (210, "1.7675e-12"), (220, "1.7571e-12"), (230, "1.7476e-12"),
+              (240, "1.7390e-12"), (250, "1.7311e-12"), (260, "1.7238e-12"), (270, "1.7171e-12"),
+              (280, "1.7108e-12"), (290, "1.7051e-12"), (300, "1.6997e-12")]
+    crossp = None
+    for L in range(200, 301):
+        ours = up(I("0.00266") * I(L) ** 2 * iv.exp(-I(L) / 8))
+        eps = [mp.mpf(v) for (l0, v) in fks_pi if l0 <= L][-1]
+        if ours < eps and crossp is None:
+            crossp = L
+        if ours >= eps:
+            crossp = None
+    say("   pi: 0.00266 x^(7/8) log x < eps_pi(FKS Table 4) x/log x from log x =", crossp,
+        "(clean shape; tested to 300, then monotone)")
+    res["crossover_pi_vs_FKS"] = crossp
+
+    # ---- sensitivity of Theorem 1 to the truncation constant M (rigorous for the altered M) ----
+    res["sensitivity_M"] = sensitivity()
 
     # ---- optional empirical zero check ---------------------------------------------------------
     if "--zeros" in sys.argv:
