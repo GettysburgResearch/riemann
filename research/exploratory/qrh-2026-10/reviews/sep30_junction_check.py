@@ -513,12 +513,12 @@ ident(G, "L0", "16074", "dt/d delta = alpha P_x D_x/(2 J^2)", dt_dd, al * Px * D
 for cid, nm, ex, bd in (("L1", "dt/ddelta", dt_dd, 2), ("L2", "dt/dx", dt_dx, F(1, 4)),
                         ("L3", "dR_*/ddelta", dR_dd, 2), ("L4", "dR_*/dx", dR_dx, F(1, 10))):
     nume, deno = sp.fraction(sp.together(ex))
-    kk = sp.simplify(sp.sqrt(sp.factor(deno)) / J)
-    ok_den = kk.is_number and kk != 0 and sp.expand(deno - (kk * J) ** 2) == 0
+    kk = sp.cancel(deno / J ** 2)            # must be a positive rational constant
+    ok_den = bool(kk.is_number and kk > 0 and sp.expand(deno - kk * J ** 2) == 0)
     bdq = sp.Rational(bd.numerator, bd.denominator) if isinstance(bd, F) else bd
     up = certify_auto(sp.expand(bdq * deno - nume), [de, x], BOXdx)
     lo = certify_auto(sp.expand(bdq * deno + nume), [de, x], BOXdx)
-    rec(G, cid, "16074-16075", f"|{nm}| <= {bd} on [0,5/6]x[0,1/2] (denominator = (k J)^2, k = {kk})",
+    rec(G, cid, "16074-16075", f"|{nm}| <= {bd} on [0,5/6]x[0,1/2] (denominator = {kk} J^2 > 0)",
         ok_den and up["ok"] and lo["ok"], dict(boxes=up["boxes"] + lo["boxes"], den_ok=bool(ok_den),
                                                up=up["ok"], lo=lo["ok"]))
 r_dt = sp.cancel(sp.diff(rstar, t))

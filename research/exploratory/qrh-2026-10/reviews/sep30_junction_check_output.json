@@ -1,0 +1,1157 @@
+{
+ "object_sha256": "42a5ee0febca59fd1def55cfd6c6808c322ef4237d7726303ea52f711deac6a3",
+ "n_gates": 84,
+ "n_gates_pass": 84,
+ "n_controls": 8,
+ "n_controls_ok": 8,
+ "arithmetic": "EXACT: sympy over Q for identities; Fraction branch-and-bound for inequalities",
+ "supplementary_direct_C1": {
+  "ok": false,
+  "boxes": 30000,
+  "undecided": true,
+  "witness": null
+ },
+ "checks": [
+  {
+   "group": "0 source",
+   "id": "S0",
+   "lines": "-",
+   "claim": "paper.tex SHA-256 matches the reviewed object",
+   "ok": true,
+   "control": false,
+   "detail": "42a5ee0febca59fd1def55cfd6c6808c322ef4237d7726303ea52f711deac6a3"
+  },
+  {
+   "group": "0 source",
+   "id": "S1",
+   "lines": "anchors",
+   "claim": "label anchors found at the cited line numbers",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "4510": "prop:detector-witness",
+    "9250": "lem:marked",
+    "9296": "lem:canonical-moment",
+    "12362": "lem:inverse-amplification",
+    "12531": "lem:plain",
+    "12562": "old-eq:3.9",
+    "15015": "lem:bin-prime-bound",
+    "15177": "eq:plain-zero-loss-capacity",
+    "15185": "prop:detector-counts",
+    "15282": "eq:no-slot-inverse-count",
+    "15335": "eq:selected-counts",
+    "15402": "eq:capacity-comparison",
+    "15415": "eq:short-crossing-count",
+    "15946": "eq:large-delta-endpoint",
+    "15966": "eq:target-cutoff",
+    "15994": "lem:balanced-endpoint",
+    "16104": "eq:adaptive-endpoint"
+   }
+  },
+  {
+   "group": "1 identities",
+   "id": "I1",
+   "lines": "15174-15177",
+   "claim": "z_P(m) = (1-2m)/(6 kappa) = (1-2m)/(9/2+12 Delta)",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "1 identities",
+   "id": "I2",
+   "lines": "15178-15179, 12571",
+   "claim": "Lemma 18.1 instance n1=n2=m, M=1 (row width 1, q=0): n1+n2+6 kappa z_P(m) = M exactly",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "1 identities",
+   "id": "I3",
+   "lines": "15106, 12573",
+   "claim": "Lemma 18.1 zero-free hypothesis beta_* <= (1+kappa)/2 holds with equality",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "1 identities",
+   "id": "I4",
+   "lines": "15337",
+   "claim": "inverse count at full capacity z_M(r) equals A_I(r)",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "1 identities",
+   "id": "I5",
+   "lines": "15338",
+   "claim": "baseline plain count at z = 2(1-2m)/9, m = t-r, equals S_t(r)",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "1 identities",
+   "id": "I6",
+   "lines": "15350",
+   "claim": "A_I(r_*) = S_t(r_*) (r_* is the crossing)",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "1 identities",
+   "id": "I7",
+   "lines": "15352-15359",
+   "claim": "r_*(3/2) = 1 and t - r_*(t) = ((1-x)t + 5x/9)/D_x",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "1 identities",
+   "id": "I8",
+   "lines": "15408-15415",
+   "claim": "R_short(t) = [(2-8x/9) A_I(r) + (1-x) S_t(r)]/D_x for every r (r cancels)",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "1 identities",
+   "id": "I9",
+   "lines": "15392-15397",
+   "claim": "capacity comparison: 2q(1-2m)(2/9 - 1/(9/2+12D)) = 24q(1-2m)D/((9/2)(9/2+12D)) = C_pl(m, z_P(m)) - C_pl(m, z_P0(m))",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "1 identities",
+   "id": "I10",
+   "lines": "15373-15377",
+   "claim": "Lemma 17.1 instance: with z = z_M(r) - nu0, 1-r-2z = 2 nu0 and 3-2r-8z = 4(1-r-2z)+(2r-1)",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "1 identities",
+   "id": "I11",
+   "lines": "15969-15972",
+   "claim": "D_x - P_x = 1 + x - 8x^2/9",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "1 identities",
+   "id": "I12",
+   "lines": "15976-15982",
+   "claim": "D_x (R_short(t) - L(t)) at the cutoff t = 1 + delta P_x/(2J) vanishes",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "1 identities",
+   "id": "I13",
+   "lines": "15986-15989",
+   "claim": "at delta = alpha: J = alpha P_x, t = 3/2, R_* = 1 - delta",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "1 identities",
+   "id": "I14",
+   "lines": "16020-16021, PR910",
+   "claim": "R_* = 1 - delta + (alpha-delta) delta P_x/(2J)",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "1 identities",
+   "id": "I15",
+   "lines": "15726-15734",
+   "claim": "the two lines of eq:common-high-exponent agree at the Part II geometry (C_0 = -1/48)",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "1 identities",
+   "id": "I16",
+   "lines": "15942-15946",
+   "claim": "delta = alpha endpoint: E(h) at R = 1-delta, q = delta/2 equals -1/48 - delta/16",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "1 identities",
+   "id": "I17",
+   "lines": "16089-16091",
+   "claim": "coefficient of R in E(d) is d: E(h)|_{R+Delta/4} - E(h)|_R = h Delta/4",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "1 identities",
+   "id": "I18",
+   "lines": "16094-16101",
+   "claim": "-49/440640 + h Delta/4 - Delta = -49/440640 - (51/64) Delta",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "1 identities",
+   "id": "I19",
+   "lines": "16019-16023",
+   "claim": "-E_* = (1+(3+8y)delta)/48 - (13/32)(5/6-delta) delta P_x/J with y = 1/2 - x",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "1 identities",
+   "id": "I20",
+   "lines": "15434-15444",
+   "claim": "no-slot t=1 count: R_short(1) at x=0 is 1 - 2delta/3 and L(1) = 1 - delta",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "1 identities",
+   "id": "I21",
+   "lines": "15269-15281",
+   "claim": "Lemma 17.6 losses: 5cR0/6 + (1+R0)eps0 = eps_m/2 if R0>=1 (and <= eps_m/2 if R0<1)",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "1 identities",
+   "id": "I22",
+   "lines": "12216-12287",
+   "claim": "17.1 init: with eta, tau_init <= cbar/100 both canonical margins >= 3cbar/4 > c_* = cbar/2; at the junction cbar = min(2 nu0, 9/37) = 2 nu0 for nu0 < 9/74, so c_* = nu0",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "2 crossing geometry",
+   "id": "B1a",
+   "lines": "15353, 15969",
+   "claim": "D_x >= 37/18 on x in [0,1/2]",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 1,
+    "seconds": 0.0,
+    "method": "direct"
+   }
+  },
+  {
+   "group": "2 crossing geometry",
+   "id": "B1b",
+   "lines": "15969",
+   "claim": "P_x >= 7/9",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 2,
+    "seconds": 0.01,
+    "method": "direct"
+   }
+  },
+  {
+   "group": "2 crossing geometry",
+   "id": "B1c",
+   "lines": "15969",
+   "claim": "P_x <= 2",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 3,
+    "seconds": 0.01,
+    "method": "factored: (x)^1 * (4*x - 13)^1 * -2/9"
+   }
+  },
+  {
+   "group": "2 crossing geometry",
+   "id": "B1d",
+   "lines": "15970",
+   "claim": "D_x - P_x >= 1 (> 0)",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 2,
+    "seconds": 0.01,
+    "method": "direct"
+   }
+  },
+  {
+   "group": "2 crossing geometry",
+   "id": "B1e",
+   "lines": "15972",
+   "claim": "J >= 35/54 on [0,5/6]x[0,1/2] (tight at delta=5/6, x=1/2)",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 2,
+    "seconds": 0.01,
+    "method": "direct"
+   }
+  },
+  {
+   "group": "2 crossing geometry",
+   "id": "B1f",
+   "lines": "15972",
+   "claim": "J <= 5/2",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 2,
+    "seconds": 0.02,
+    "method": "direct"
+   }
+  },
+  {
+   "group": "2 crossing geometry",
+   "id": "B2a",
+   "lines": "15360-15363",
+   "claim": "r_*(t) >= 23/37 on t in [1,3/2], x in [0,1/2] (times D_x; tight at t=1, x=1/2)",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 2,
+    "seconds": 0.02,
+    "method": "direct"
+   }
+  },
+  {
+   "group": "2 crossing geometry",
+   "id": "B2b",
+   "lines": "15363",
+   "claim": "r_*(t) <= 1",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 4,
+    "seconds": 0.02,
+    "method": "factored: (4*x - 9)^1 * (2*t - 3)^1 * 1/9"
+   }
+  },
+  {
+   "group": "2 crossing geometry",
+   "id": "B2c",
+   "lines": "15363",
+   "claim": "t - r_*(t) >= 1/3 (tight at t=1, x=0)",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 2,
+    "seconds": 0.02,
+    "method": "direct"
+   }
+  },
+  {
+   "group": "2 crossing geometry",
+   "id": "B2d",
+   "lines": "15363",
+   "claim": "t - r_*(t) <= 1/2 (tight at t=3/2)",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 4,
+    "seconds": 0.02,
+    "method": "factored: (x - 1)^1 * (2*t - 3)^1 * 1/2"
+   }
+  },
+  {
+   "group": "2 crossing geometry",
+   "id": "B2e",
+   "lines": "15322-15329",
+   "claim": "plain exponents decrease in m: 2 - 4x/(9/2+12D) >= 14/9 and 2 - 8x/9 >= 14/9",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 1,
+    "seconds": 0.01,
+    "method": "direct"
+   }
+  },
+  {
+   "group": "3 Lemma 17.1 instances",
+   "id": "M1",
+   "lines": "15371-15379, 9278",
+   "claim": "2r + 8z <= 3m - c2 with m = 1, c2 = 9/37 for every r >= r_*(t), z <= z_M(r)  [times D_x; tight only at t=1, x=1/2, s=0, mu=1]",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 1246,
+    "seconds": 0.8,
+    "method": "direct"
+   }
+  },
+  {
+   "group": "3 Lemma 17.1 instances",
+   "id": "M2",
+   "lines": "15371-15373, 9278",
+   "claim": "r + 2z <= m - c1 with c1 = 2 nu0 for z = mu (z_M(r) - nu0), r in [23/37, 1-2nu0], nu0 in (0,1/1000]  [s parametrises r]",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 6,
+    "seconds": 0.02,
+    "method": "factored: (mu - 1)^1 * (37*nu0 - 7)^1 * (s - 1)^1 * -2/37"
+   }
+  },
+  {
+   "group": "3 Lemma 17.1 instances",
+   "id": "M3",
+   "lines": "15385-15386",
+   "claim": "inverse capacity z_M(r) <= 7/37 on r >= r_*(t)  [times D_x]",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 14,
+    "seconds": 0.02,
+    "method": "direct"
+   }
+  },
+  {
+   "group": "3 Lemma 17.1 instances",
+   "id": "M4",
+   "lines": "15372, 9277",
+   "claim": "0 <= r <= 1 on the inverse branch  [times D_x]",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 1,
+    "seconds": 0.02,
+    "method": "direct"
+   }
+  },
+  {
+   "group": "4 Lemma 18.1 instances",
+   "id": "P1",
+   "lines": "15174-15179, 12571",
+   "claim": "n1+n2+6 kappa z <= M (M = 1) for z = mu z_P(m), every m in [t-r_*, 1/2]  [margin 0 at mu = 1: invoked at equality; the hypothesis is non-strict]",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 8,
+    "seconds": 0.04,
+    "method": "factored: (x - 1)^1 * (v - 1)^1 * (mu - 1)^1 * (2*t - 3)^1 * 1"
+   }
+  },
+  {
+   "group": "4 Lemma 18.1 instances",
+   "id": "P2",
+   "lines": "12531",
+   "claim": "kappa = 3/4 + 2 Delta in [3/4, 1] for Delta in [0, 1/24]  (kappa <= 5/6)",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 1,
+    "seconds": 0.01,
+    "method": "direct"
+   }
+  },
+  {
+   "group": "4 Lemma 18.1 instances",
+   "id": "P3",
+   "lines": "15386-15387",
+   "claim": "plain capacity z_P(m) <= 2/27 on the plain branch  [times 6 kappa D_x]",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 29,
+    "seconds": 0.05,
+    "method": "direct"
+   }
+  },
+  {
+   "group": "4 Lemma 18.1 instances",
+   "id": "P4",
+   "lines": "16118-16121, 12560",
+   "claim": "mesh: base-U slot length ell_i/d <= 2 ell_i for d in [1/2, h + 1/48]",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 1,
+    "seconds": 0.01,
+    "method": "direct"
+   }
+  },
+  {
+   "group": "4 Lemma 18.1 instances",
+   "id": "P5",
+   "lines": "15166-15179",
+   "claim": "robust variant: with z = z_P(m) - nu0 the Lemma 18.1 condition has margin 6 kappa nu0 >= 9 nu0/2",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 2,
+    "seconds": 0.01,
+    "method": "factored: (Delta)^1 * (nu0)^1 * 12"
+   }
+  },
+  {
+   "group": "5 supply",
+   "id": "Q1",
+   "lines": "15388-15391",
+   "claim": "supply ell/d - 7/37 >= 23/1443 for d in [1/2, h]  [times d; tight at d=h]",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 1,
+    "seconds": 0.0,
+    "method": "direct"
+   }
+  },
+  {
+   "group": "5 supply",
+   "id": "Q2",
+   "lines": "16121-16126",
+   "claim": "supply ell/d >= 1/5 for d in [1/2, h+1/48]; margin over 7/37 is 2/185",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 1,
+    "seconds": 0.0,
+    "method": "direct"
+   }
+  },
+  {
+   "group": "5 supply",
+   "id": "Q3",
+   "lines": "16116, 16126",
+   "claim": "8/39 - 7/37 = 23/1443, 1/5 - 7/37 = 2/185, 5 ell - h = 1/48, 2/27 < 7/37",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "6 Delta/4 comparison",
+   "id": "K1",
+   "lines": "15392-15405",
+   "claim": "increase <= Delta/4 with slack >= (83/972) Delta on delta<=5/6, x<=1/2, m in [1/3,1/2], Delta<=1/24 [times 9(9/2+12D); tight at delta=5/6, x=1/2, m=1/3, Delta=0]",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 2,
+    "seconds": 0.03,
+    "method": "direct"
+   }
+  },
+  {
+   "group": "6 Delta/4 comparison",
+   "id": "K2",
+   "lines": "15402-15404",
+   "claim": "manuscript's crude chain: 24*(1/2)*(1/3)/(4*4) = 1/4 (2q<=1, 1-2m<=1/3, denominators>=4)",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "6 Delta/4 comparison",
+   "id": "K3",
+   "lines": "15392-15405",
+   "claim": "exact worst ratio increase/(Delta/4) as Delta->0 is 160/243 (< 1)",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "7 Prop 19.2 case cover",
+   "id": "C1a",
+   "lines": "15363-15418",
+   "claim": "plain branch decomposition (derived here): R_short(t) + Delta/4 - C_pl(m, z_P(m)) = delta(2-8x/9)[(r_* - r) + (m - (t-r))] + Delta*K(m), K = 1/4 - 48 q(1-2m)/(9(9/2+12 Delta))",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "7 Prop 19.2 case cover",
+   "id": "C1",
+   "lines": "15363-15418",
+   "claim": "plain branch: C_pl(m, z_P(m)) <= R_short(t) + Delta/4 on r in [t-1/2, r_*], m in [t-r, 1/2]: each term of C1a is >= 0 (r <= r_*, m >= t-r by the branch; 2-8x/9 >= 14/9 by B2e; K >= 83/972 by K1 since m >= t - r_* >= 1/3 by B2c)",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "7 Prop 19.2 case cover",
+   "id": "C2a",
+   "lines": "15364-15418",
+   "claim": "inverse branch: R_short(t) - A_I(r) = delta(1-x)(r - r_*)",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "7 Prop 19.2 case cover",
+   "id": "C3a",
+   "lines": "15297-15311",
+   "claim": "long branch: L(t) - (1-alpha+(alpha-delta)r) = (alpha-delta)(t-r)",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "7 Prop 19.2 case cover",
+   "id": "C2",
+   "lines": "15364-15418",
+   "claim": "inverse branch: A_I(r) <= R_short(t) for r in [r_*, 1]  [times D_x]",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 8,
+    "seconds": 0.02,
+    "method": "factored: (x - 1)^1 * (s)^1 * (2*t - 3)^1 * (4*x - 9)^1 * (delta)^1 * -1/9"
+   }
+  },
+  {
+   "group": "7 Prop 19.2 case cover",
+   "id": "C3",
+   "lines": "15297-15311",
+   "claim": "long branch (Lemma 17.6, r in [1,t]): 1-alpha+(alpha-delta)r <= L(t) for delta <= alpha",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 5,
+    "seconds": 0.02,
+    "method": "factored: (t - 1)^1 * (s - 1)^1 * (6*delta - 5)^1 * 1/6"
+   }
+  },
+  {
+   "group": "7 Prop 19.2 case cover",
+   "id": "C4",
+   "lines": "15312-15315",
+   "claim": "m >= 1/2 branch: 1-2 delta m <= 1-delta <= R_short(t)  [times D_x]",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 4,
+    "seconds": 0.03,
+    "method": "factored: (8*t*x**2 - 26*t*x + 18*t + 34*v*x - 54*v - 12*x**2 + 39*x - 27)^1 * (delta)^1 * -1/9"
+   }
+  },
+  {
+   "group": "7 Prop 19.2 case cover",
+   "id": "C5",
+   "lines": "15421-15426",
+   "claim": "zero inverse capacity (r >= 1-2nu0): 1-delta r <= 1-delta+2 delta nu0",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 3,
+    "seconds": 0.0,
+    "method": "factored: (nu0)^1 * (s)^1 * (delta)^1 * 2"
+   }
+  },
+  {
+   "group": "7 Prop 19.2 case cover",
+   "id": "C6",
+   "lines": "15426-15428",
+   "claim": "zero plain capacity (1-2m <= 6 kappa nu0): 1-2 delta m <= 1-delta+6 delta nu0",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 4,
+    "seconds": 0.01,
+    "method": "factored: (nu0)^1 * (8*Delta*s + 3*s - 4)^1 * (delta)^1 * -3/2"
+   }
+  },
+  {
+   "group": "7 Prop 19.2 case cover",
+   "id": "C7",
+   "lines": "15315, 15428",
+   "claim": "R_short(t) >= 1 - delta  [times D_x]",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 7,
+    "seconds": 0.02,
+    "method": "factored: (x - 1)^1 * (2*t - 3)^1 * (4*x - 9)^1 * (delta)^1 * -1/9"
+   }
+  },
+  {
+   "group": "7 Prop 19.2 case cover",
+   "id": "C8",
+   "lines": "15434-15444",
+   "claim": "no-slot t=1: inverse 1-delta r (r in [2/3,1]) and plain 1-2 delta m (m >= 1-r, r<=2/3) are <= 1 - 2 delta/3",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 2,
+    "seconds": 0.0,
+    "method": "factored: (s)^1 * (delta)^1 * 1/3"
+   }
+  },
+  {
+   "group": "8 endpoint",
+   "id": "E1",
+   "lines": "15974-15975",
+   "claim": "cutoff t >= 1 (delta P_x >= 0) on the Lemma 20.2 box",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 5,
+    "seconds": 0.01,
+    "method": "factored: (x - 1)^1 * (4*x - 9)^1 * (delta)^1 * 2/9"
+   }
+  },
+  {
+   "group": "8 endpoint",
+   "id": "E2",
+   "lines": "15974-15975",
+   "claim": "cutoff t <= 3/2: J - delta P_x = (alpha-delta) D_x >= 0",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 4,
+    "seconds": 0.01,
+    "method": "factored: (17*x - 27)^1 * (6*delta - 5)^1 * 1/54"
+   }
+  },
+  {
+   "group": "8 endpoint",
+   "id": "E3",
+   "lines": "16130",
+   "claim": "R_* >= 1 - delta  [times 2J]",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 7,
+    "seconds": 0.02,
+    "method": "factored: (x - 1)^1 * (4*x - 9)^1 * (delta)^1 * (6*delta - 5)^1 * -1/27"
+   }
+  },
+  {
+   "group": "8 endpoint",
+   "id": "E4",
+   "lines": "16139",
+   "claim": "R_* <= 17/12  [times 2J]  (in fact R_* <= 1)",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 3,
+    "seconds": 0.01,
+    "method": "direct"
+   }
+  },
+  {
+   "group": "8 endpoint",
+   "id": "E4b",
+   "lines": "16139 (sharper)",
+   "claim": "R_* <= 1  [times 2J]",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 2,
+    "seconds": 0.01,
+    "method": "factored: (delta)^1 * (36*delta*x**2 - 66*delta*x - 10*x**2 - 10*x + 45)^1 * 2/27"
+   }
+  },
+  {
+   "group": "8 endpoint",
+   "id": "E5",
+   "lines": "16141",
+   "claim": "R_* + Delta/4 <= 139/96  [times 2J]",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 4,
+    "seconds": 0.03,
+    "method": "direct"
+   }
+  },
+  {
+   "group": "8 endpoint",
+   "id": "E6",
+   "lines": "16131-16134",
+   "claim": "slope R + delta/2 - 17/50 >= 4/25 for R >= 1 - delta, delta <= 5/6",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 1,
+    "seconds": 0.0,
+    "method": "direct"
+   }
+  },
+  {
+   "group": "8 endpoint",
+   "id": "E7",
+   "lines": "16143-16144",
+   "claim": "extension cost: 139/96 + 1/2 - 17/50 < 2; floor slope 1+1/100-17/50 and alpha-slope (1-5/6)+5/12-17/50 are < 2",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "8 endpoint",
+   "id": "E8",
+   "lines": "15994-16072 (Lemma 20.2)",
+   "claim": "-E_* >= 49/440640 on [0,5/6]x[0,1/2]  [times 2J; independent of (20.9)]",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 322,
+    "seconds": 0.13,
+    "method": "direct"
+   }
+  },
+  {
+   "group": "8 endpoint",
+   "id": "E9",
+   "lines": "beyond source",
+   "claim": "-E_* >= 228/10^6 (true minimum ~2.2815e-4)",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 381,
+    "seconds": 0.12,
+    "method": "direct"
+   }
+  },
+  {
+   "group": "8 endpoint",
+   "id": "E10",
+   "lines": "15942-15946",
+   "claim": "delta = alpha endpoint: E(h) <= -1/48 - delta/16 for q <= delta/2 (R = 1-delta)",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 3,
+    "seconds": 0.01,
+    "method": "factored: (2*x - 1)^1 * (delta)^1 * -1/12"
+   }
+  },
+  {
+   "group": "8 endpoint",
+   "id": "E11",
+   "lines": "16080-16106",
+   "claim": "adaptive endpoint: E_* + h Delta/4 - Delta <= -49/440640 - (51/64) Delta  [times 2J]",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 323,
+    "seconds": 0.14,
+    "method": "direct"
+   }
+  },
+  {
+   "group": "9 ranges of invoked lemmas",
+   "id": "H1",
+   "lines": "4512-4517, 15929",
+   "claim": "Prop 8.3 is invoked with t in [1,3/2]: both cutoff bounds (E1, E2) and 1/50 < delta <=> a > 51/100",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 1,
+    "seconds": 0.0,
+    "method": "direct"
+   }
+  },
+  {
+   "group": "9 ranges of invoked lemmas",
+   "id": "H2",
+   "lines": "15022-15024",
+   "claim": "Lemma 19.1 range: a = (1+delta)/2 in [51/100, 1] for delta in [1/50, 5/6]",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 1,
+    "seconds": 0.0,
+    "method": "direct"
+   }
+  },
+  {
+   "group": "9 ranges of invoked lemmas",
+   "id": "H3",
+   "lines": "12397-12401, 15269",
+   "claim": "Lemma 17.6: inverse witness length r in [t-1/2, t] subset [1/2, 3/2] = bounded nonnegative range (R0 = 3/2 + o(1))",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 1,
+    "seconds": 0.0,
+    "method": "direct"
+   }
+  },
+  {
+   "group": "9 ranges of invoked lemmas",
+   "id": "H4",
+   "lines": "4523-4531",
+   "claim": "Prop 8.3 saturation: 2 delta (m-1/2)_+ <= C eps gives (m-1/2)_+ <= 25 C eps for delta >= 1/50",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 1,
+    "seconds": 0.0,
+    "method": "direct"
+   }
+  },
+  {
+   "group": "9 ranges of invoked lemmas",
+   "id": "H5",
+   "lines": "15476-15485",
+   "claim": "height ceiling: tau_0 = d_min eps_ht/(20(A+1)) <= d_min/100 whenever eps_ht <= 1/5 (A >= 0); y stands for eps_ht",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 1,
+    "seconds": 0.0,
+    "method": "direct"
+   }
+  },
+  {
+   "group": "10 Lipschitz bounds",
+   "id": "L0",
+   "lines": "16074",
+   "claim": "dt/d delta = alpha P_x D_x/(2 J^2)",
+   "ok": true,
+   "control": false,
+   "detail": ""
+  },
+  {
+   "group": "10 Lipschitz bounds",
+   "id": "L1",
+   "lines": "16074-16075",
+   "claim": "|dt/ddelta| <= 2 on [0,5/6]x[0,1/2] (denominator = 2916 J^2 > 0)",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 19,
+    "den_ok": true,
+    "up": true,
+    "lo": true
+   }
+  },
+  {
+   "group": "10 Lipschitz bounds",
+   "id": "L2",
+   "lines": "16074-16075",
+   "claim": "|dt/dx| <= 1/4 on [0,5/6]x[0,1/2] (denominator = 2916 J^2 > 0)",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 60,
+    "den_ok": true,
+    "up": true,
+    "lo": true
+   }
+  },
+  {
+   "group": "10 Lipschitz bounds",
+   "id": "L3",
+   "lines": "16074-16075",
+   "claim": "|dR_*/ddelta| <= 2 on [0,5/6]x[0,1/2] (denominator = 2916 J^2 > 0)",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 16,
+    "den_ok": true,
+    "up": true,
+    "lo": true
+   }
+  },
+  {
+   "group": "10 Lipschitz bounds",
+   "id": "L4",
+   "lines": "16074-16075",
+   "claim": "|dR_*/dx| <= 1/10 on [0,5/6]x[0,1/2] (denominator = 2916 J^2 > 0)",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 202,
+    "den_ok": true,
+    "up": true,
+    "lo": true
+   }
+  },
+  {
+   "group": "10 Lipschitz bounds",
+   "id": "L5",
+   "lines": "16074",
+   "claim": "0 <= dr_*/dt = (2-8x/9)/D_x <= 1",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "boxes": 1,
+    "seconds": 0.0,
+    "method": "direct"
+   }
+  },
+  {
+   "group": "11 failing controls",
+   "id": "FC1",
+   "lines": "control",
+   "claim": "Lemma 17.1 c2 = 9/37 on the WHOLE witness range r in [t-1/2, 1] (drop r >= r_*)",
+   "ok": true,
+   "control": true,
+   "detail": {
+    "boxes": 2,
+    "witness": [
+     "1",
+     "0"
+    ],
+    "value": "-9/37",
+    "excess": "-9/37",
+    "excess_float": -0.24324324324324326
+   }
+  },
+  {
+   "group": "11 failing controls",
+   "id": "FC2",
+   "lines": "control",
+   "claim": "r_*(t) >= 23/37 with the amplitude range widened to x in [0,1]",
+   "ok": true,
+   "control": true,
+   "detail": {
+    "boxes": 2,
+    "witness": [
+     "1",
+     "1"
+    ],
+    "value": "-5/37",
+    "excess": "-5/37",
+    "excess_float": -0.13513513513513514
+   }
+  },
+  {
+   "group": "11 failing controls",
+   "id": "FC3",
+   "lines": "control",
+   "claim": "Delta/4 comparison without m >= 1/3 (m in [0,1/2])",
+   "ok": true,
+   "control": true,
+   "detail": {
+    "boxes": 3,
+    "witness": [
+     "5/6",
+     "1/2",
+     "0",
+     "0"
+    ],
+    "value": "-79/8",
+    "excess": "-79/8",
+    "excess_float": -9.875
+   }
+  },
+  {
+   "group": "11 failing controls",
+   "id": "FC4",
+   "lines": "control",
+   "claim": "supply ell/d >= 7/37 on d in [1/2, 9/10] (frequency range beyond h + 1/48)",
+   "ok": true,
+   "control": true,
+   "detail": {
+    "boxes": 2,
+    "witness": [
+     "9/10"
+    ],
+    "value": "-2/555",
+    "excess": "-2/555",
+    "excess_float": -0.0036036036036036037
+   }
+  },
+  {
+   "group": "11 failing controls",
+   "id": "FC5",
+   "lines": "control",
+   "claim": "Lemma 18.1 with the BASELINE capacity 2(1-2m)/9 at the actual kappa = 3/4 + 2Delta",
+   "ok": true,
+   "control": true,
+   "detail": {
+    "boxes": 1,
+    "witness": [
+     "5/12",
+     "1/48"
+    ],
+    "value": "-1/108",
+    "excess": "-1/108",
+    "excess_float": -0.009259259259259259
+   }
+  },
+  {
+   "group": "11 failing controls",
+   "id": "FC6",
+   "lines": "control",
+   "claim": "Lemma 20.2 with margin 229/10^6 (above the true minimum)",
+   "ok": true,
+   "control": true,
+   "detail": {
+    "boxes": 137,
+    "witness": [
+     "595/1536",
+     "1/2"
+    ],
+    "value": "-96823/53084160000",
+    "excess": "-96823/53084160000",
+    "excess_float": -1.8239527572820216e-06
+   }
+  },
+  {
+   "group": "11 failing controls",
+   "id": "FC7",
+   "lines": "control",
+   "claim": "plain-side bound WITHOUT the Delta/4 term, at the crossing r = r_*, m = t - r_* (C_pl(m,z_P(m)) <= R_short(t))",
+   "ok": true,
+   "control": true,
+   "detail": {
+    "boxes": 1,
+    "witness": [
+     "5/12",
+     "1/4",
+     "5/4",
+     "1/48"
+    ],
+    "value": "-5/1152",
+    "excess": "-5/1152",
+    "excess_float": -0.004340277777777778
+   }
+  },
+  {
+   "group": "11 failing controls",
+   "id": "FC8",
+   "lines": "control",
+   "claim": "B&B sanity: J >= 1 (false; min is 35/54)",
+   "ok": true,
+   "control": true,
+   "detail": {
+    "boxes": 2,
+    "witness": [
+     "5/6",
+     "1/2"
+    ],
+    "value": "35/54",
+    "excess": "-19/54",
+    "excess_float": -0.35185185185185186
+   }
+  },
+  {
+   "group": "12 float reconnaissance",
+   "id": "F1",
+   "lines": "model",
+   "claim": "threshold_calculus.R_fast(kappa=3/4+2Delta) <= R_* + Delta/4 on a grid (float, not a gate)",
+   "ok": true,
+   "control": false,
+   "detail": {
+    "max_excess": -0.00024232687178094015,
+    "max_model_penalty_over_Delta": 0.007673128219032321
+   }
+  }
+ ]
+}
