@@ -89,8 +89,8 @@ integration verdict.
        * every nontrivial zero of `ζ` lies in `1/8 ≤ Re s ≤ 7/8`, stated in the shape of
          Mathlib's `RiemannHypothesis`;
        * the Oct 1 Siegel-zero challenge statement is derived in Lean, with `c = (log 3)/8`, from
-         the imported 7/8 Dirichlet theorem (axioms standard; comparator status in
-         LEAN_BUILD_ATTEMPT Addendum C).
+         the imported 7/8 Dirichlet theorem. Comparator accepts it against the upstream Oct 1
+         challenge, and the constant is explicit (LEAN_BUILD_ATTEMPT Addendum C; lean/README).
    * **Kintali 47/48:** Lemma 3 shows no error. The best citable density input gives 29/30.
    * **Oct 1, Landau–Siegel:** intrinsically logarithmic-scale, effective in principle, and a weak
      corollary of either quasi-RH claim ([SIEGEL_DETERMINANT.md](SIEGEL_DETERMINANT.md)).

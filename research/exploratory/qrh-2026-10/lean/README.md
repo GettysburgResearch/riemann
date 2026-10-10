@@ -6,7 +6,8 @@ Status: EXPLORATORY formal corollaries of the imported 7/8 theorem. All three fi
   (../reviews/results/lean_corollary_build.log; lake also prints the 23 "has local changes"
   notices of the patched packages, filtered from that log). `#print axioms` shows only
   [propext, Classical.choice, Quot.sound] (../reviews/results/lean_corollary_axioms.log).
-  Comparator status for these files: ../reviews/LEAN_BUILD_ATTEMPT.md, Addendum C. No RH claim.
+  Comparator (../reviews/LEAN_BUILD_ATTEMPT.md, Addendum C): SiegelFromSevenEighths ACCEPTED
+  against the upstream SiegelZeros challenge; for the other files see the table there. No RH claim.
 Scope: ZetaZeroStrip.lean (nontrivial zeros of Mathlib's riemannZeta lie in 1/8 <= Re s <= 7/8);
   DirichletZeroStrip.lean (the same strip for L(s, chi), chi primitive and nontrivial);
   SiegelFromSevenEighths.lean (both statements of the imported Siegel-zero comparator challenge,
