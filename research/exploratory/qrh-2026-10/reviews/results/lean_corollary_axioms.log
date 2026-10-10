@@ -1,5 +1,10 @@
 QRHWave.quasi_critical_strip : ∀ (s : ℂ),
   riemannZeta s = 0 → (¬∃ n, s = -2 * (↑n + 1)) → s ≠ 1 → 1 / 8 ≤ s.re ∧ s.re ≤ 7 / 8
+@QRHWave.LFunction_quasi_critical_strip : ∀ {N : ℕ} [inst : NeZero N] {χ : DirichletCharacter ℂ N},
+  χ.IsPrimitive →
+    χ ≠ 1 → ∀ {s : ℂ}, DirichletCharacter.LFunction χ s = 0 → χ.gammaFactor s ≠ 0 → 1 / 8 ≤ s.re ∧ s.re ≤ 7 / 8
+@QRHWave.gammaFactor_eq_zero_iff : ∀ {N : ℕ} (χ : DirichletCharacter ℂ N) (s : ℂ),
+  χ.gammaFactor s = 0 ↔ (χ.Even ∧ ∃ n, s = -(2 * ↑n)) ∨ ¬χ.Even ∧ ∃ n, s = -(2 * ↑n) - 1
 OAI.SiegelZeros.WeightedTorusJets.exists_absolute_real_zero_gap : ∃ c,
   0 < c ∧
     ∀ (q : ℕ) [inst : NeZero q],
@@ -11,6 +16,9 @@ OAI.SiegelZeros.WeightedTorusJets.exists_absolute_real_zero_gap : ∃ c,
                 ∀ (β : ℝ), 0 < β → β < 1 → DirichletCharacter.LFunction χ ↑β = 0 → c ≤ (1 - β) * Real.log ↑q
 'QRHWave.quasi_critical_strip' depends on axioms: [propext, Classical.choice, Quot.sound]
 'QRHWave.riemannZeta_zero_re_lt_one_eighth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QRHWave.LFunction_quasi_critical_strip' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QRHWave.LFunction_zero_re_lt_one_eighth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QRHWave.gammaFactor_eq_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
 'OAI.SiegelZeros.WeightedTorusJets.exists_absolute_real_zero_gap' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]

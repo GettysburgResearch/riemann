@@ -5,6 +5,7 @@ Status: EXPLORATORY tooling (reading only). No Lean process is started.
 
 Usage:
   python3 -I lean_closure_map.py <lean_root> <out_json> [--git-ref REF --git-prefix PREFIX --repo DIR]
+          [--decls DECLS_TSV]   (default: <out_json stem>_decls.tsv; about 3 MB)
 
 <lean_root> is the upstream `lean/` directory (the one containing `OAI/` and `lakefile.lean`).
 The root module is OAI.NumberTheory.DirichletL.Nonvanishing.
@@ -313,6 +314,7 @@ def main(argv):
         "trust_counts": trust_counts,
         "trust_hits": {k: v for k, v in hits.items()
                        if k not in ("decide (tactic or term)", "set_option maxHeartbeats",
+                                    "notation (local/scoped/global)",
                                     "set_option maxRecDepth", "set_option synthInstance.maxHeartbeats",
                                     "set_option (other)")},
         "set_option_other_values": dict(Counter(
@@ -325,11 +327,14 @@ def main(argv):
             (re.search(r"maxRecDepth\s+(\d+)", h["text"]) or [None, "?"])[1]
             for h in hits.get("set_option maxRecDepth", []))),
         "decl_kind_counts": dict(kinds),
+        "notation_texts": dict(Counter(re.sub(r"\s+", " ", h["text"]) for h in
+                                       hits.get("notation (local/scoped/global)", [])).most_common(10)),
         "closure_module_list": [{"module": m, "lines": lines[m], "depth": depth.get(m)} for m in closure_sorted],
     }
     with open(out_json, "w") as fh:
         json.dump(out, fh, indent=1, sort_keys=False)
-    decl_path = os.path.splitext(out_json)[0] + "_decls.tsv"
+    decl_path = (argv[argv.index("--decls") + 1] if "--decls" in argv
+                 else os.path.splitext(out_json)[0] + "_decls.tsv")
     with open(decl_path, "w") as fh:
         fh.write("kind\tname\tmodule\tline\n")
         for d in decls:

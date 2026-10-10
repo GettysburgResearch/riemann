@@ -1,0 +1,2003 @@
+{
+ "Prop 2.1 continuation": {
+  "pattern": "common_signal|CommonProbe|PrimitiveContract|continuationMargin|nonzero_of_probe_bounds",
+  "n_decls": 14,
+  "n_modules": 4,
+  "top_modules": [
+   {
+    "module": "Hecke.CommonProbe",
+    "hits": 6,
+    "examples": [
+     "PrimitiveContract",
+     "UniformCommonProbe",
+     "beta_le_seven_eighths"
+    ]
+   },
+   {
+    "module": "Supremum",
+    "hits": 4,
+    "examples": [
+     "continuationMargin",
+     "continuationMargin_pos",
+     "continuationMargin_le_gap"
+    ]
+   },
+   {
+    "module": "Continuation",
+    "hits": 3,
+    "examples": [
+     "common_signal_bound",
+     "common_signal_bound_with_margin",
+     "nonzero_of_common_signal"
+    ]
+   },
+   {
+    "module": "Hecke.SignalIdentity",
+    "hits": 1,
+    "examples": [
+     "nonzero_of_probe_bounds"
+    ]
+   }
+  ]
+ },
+ "Lem 4.1 ray characters": {
+  "pattern": "RayCharacter|rayCharacter|fixedNumerator|FixedNumerator|RayFour",
+  "n_decls": 92,
+  "n_modules": 9,
+  "top_modules": [
+   {
+    "module": "GaussSum.RayCharacters",
+    "hits": 39,
+    "examples": [
+     "prime_unit_mod_four",
+     "prime_product_unit_mod_four",
+     "rayMask_prime_product"
+    ]
+   },
+   {
+    "module": "GaussSum.CompletedExpansion",
+    "hits": 32,
+    "examples": [
+     "O",
+     "RayRing",
+     "rayRingFintype"
+    ]
+   },
+   {
+    "module": "Detector.RayCharacterFamily",
+    "hits": 9,
+    "examples": [
+     "fixedTwistSupport",
+     "fixedTwistSupport_prime",
+     "inverse_twist_base_modulus"
+    ]
+   },
+   {
+    "module": "RayOrthogonality",
+    "hits": 4,
+    "examples": [
+     "rayCharacters",
+     "mem_rayCharacters_iff",
+     "sum_rayCharacters"
+    ]
+   },
+   {
+    "module": "Moments.FixedRay",
+    "hits": 3,
+    "examples": [
+     "primaryRayCharacter",
+     "primaryRayCharacter_modulus",
+     "primaryRayCharacter_primary"
+    ]
+   },
+   {
+    "module": "Moments.FirstAmplifiedPaidReserve",
+    "hits": 2,
+    "examples": [
+     "fixedNumerator",
+     "fixedNumerator_nonneg"
+    ]
+   }
+  ]
+ },
+ "Lem 4.2 prime Gauss identities": {
+  "pattern": "PrimeGauss|primeGauss|prime_gauss|gaussSum_prime|cubicGauss|CubicGauss",
+  "n_decls": 84,
+  "n_modules": 22,
+  "top_modules": [
+   {
+    "module": "Eisenstein.PrimeGaussFactors",
+    "hits": 34,
+    "examples": [
+     "unramifiedCubicGaussSeries_prime_two_power",
+     "unramifiedCubicGaussSeries_square_cube",
+     "unramifiedGaussResidue_square_cube"
+    ]
+   },
+   {
+    "module": "Eisenstein.BesselMellinTransform",
+    "hits": 7,
+    "examples": [
+     "primeCubicGauss",
+     "primeCubicGauss_mod_three",
+     "primeCubicGauss_eq_gaussSum"
+    ]
+   },
+   {
+    "module": "Eisenstein.PrimePowerGaussSums",
+    "hits": 5,
+    "examples": [
+     "unramifiedCubicGaussSeries_prime_finite",
+     "unramifiedCubicGaussSeries_prime_zero_power",
+     "unramifiedCubicGaussSeries_prime_one_power"
+    ]
+   },
+   {
+    "module": "Eisenstein.RamifiedGaussSeries",
+    "hits": 5,
+    "examples": [
+     "unramifiedCubicGaussSeries",
+     "unramifiedCubicGaussSeries_neg",
+     "unramifiedCubicGaussSeries_lambda_pow"
+    ]
+   },
+   {
+    "module": "Detector.CubicGaussCRT",
+    "hits": 4,
+    "examples": [
+     "gaussTwo_eq_elementFourier",
+     "residueGauss_principalCubicCharacter",
+     "gaussTwo_coprime_product"
+    ]
+   },
+   {
+    "module": "GaussSum.FiniteFourier",
+    "hits": 4,
+    "examples": [
+     "cubicGauss_cube",
+     "cubicGauss_cube_complex",
+     "cubicGauss_normalized_cube_complex"
+    ]
+   }
+  ]
+ },
+ "Lem 4.3 quadratic four-term": {
+  "pattern": "fourTerm|FourTerm|four_term|QuadraticNormalization|quadraticGauss",
+  "n_decls": 59,
+  "n_modules": 6,
+  "top_modules": [
+   {
+    "module": "GaussSum.QuadraticNormalization",
+    "hits": 52,
+    "examples": [
+     "quadraticGammaO",
+     "quadraticGammaO_traceLambda",
+     "quadraticGammaO_negTraceLambda"
+    ]
+   },
+   {
+    "module": "GaussSum.QuadraticTrace",
+    "hits": 2,
+    "examples": [
+     "breveGaussianFourTerms_rational_odd",
+     "quadraticGammaRational_eq_fourTerms"
+    ]
+   },
+   {
+    "module": "GaussSum.RamifiedTracePhase",
+    "hits": 2,
+    "examples": [
+     "breveGaussianFourTerms",
+     "breveGaussianFourTerms_formula"
+    ]
+   },
+   {
+    "module": "GaussSum.AbelPhaseLimit",
+    "hits": 1,
+    "examples": [
+     "fixedDualPhase_four_terms"
+    ]
+   },
+   {
+    "module": "GaussSum.SquarePhaseFactorization",
+    "hits": 1,
+    "examples": [
+     "fourTerms_eq_of_mod_four"
+    ]
+   },
+   {
+    "module": "GaussSum.ThetaLocalRows",
+    "hits": 1,
+    "examples": [
+     "quadraticGammaO_eq_fourTerms"
+    ]
+   }
+  ]
+ },
+ "Lem 4.4 sextic reciprocity / Gauss phase": {
+  "pattern": "[Rr]eciprocity|KubotaCharacter|kubota|sexticPhase|SexticNormalization|gaussPhase|GaussPhase",
+  "n_decls": 446,
+  "n_modules": 27,
+  "top_modules": [
+   {
+    "module": "Reciprocity.CubicJacobi",
+    "hits": 71,
+    "examples": [
+     "O",
+     "K",
+     "primeValue"
+    ]
+   },
+   {
+    "module": "Reciprocity.KubotaCharacter",
+    "hits": 66,
+    "examples": [
+     "rationalEmbedding",
+     "levelThreeConjugate",
+     "levelThree_bottom_primary"
+    ]
+   },
+   {
+    "module": "Reciprocity.CubeCorrespondence",
+    "hits": 54,
+    "examples": [
+     "cubeDiagonal",
+     "cubeCorrespondence",
+     "cubeCorrespondenceLeft"
+    ]
+   },
+   {
+    "module": "Reciprocity.RamifiedSymbol",
+    "hits": 49,
+    "examples": [
+     "cubicExp",
+     "cubicExp_eq_of_dvd_sub",
+     "cubicExp_add"
+    ]
+   },
+   {
+    "module": "Reciprocity.RamifiedCuspPhases",
+    "hits": 48,
+    "examples": [
+     "actualCubeCuspPhaseSum",
+     "actualCubeCuspPhaseSum_coprime",
+     "actualCubeCuspPhaseSum_dvd"
+    ]
+   },
+   {
+    "module": "Reciprocity.PrimaryCongruences",
+    "hits": 44,
+    "examples": [
+     "integer_congruence_primary_cases",
+     "symbol_three_shift_primary",
+     "symbol_three_shift_integer"
+    ]
+   }
+  ]
+ },
+ "Lem 4.5 smooth calculus": {
+  "pattern": "LogProfiles|logProfile|smoothCalculus|SmoothCalculus|UniformKernelBounds",
+  "n_decls": 129,
+  "n_modules": 8,
+  "top_modules": [
+   {
+    "module": "Mellin.LogProfiles",
+    "hits": 63,
+    "examples": [
+     "mobiusExpSum_continuousOn_pos",
+     "mobiusExpSum_inv_continuousOn_pos",
+     "mobiusExpSum_inv_locallyIntegrableOn_pos"
+    ]
+   },
+   {
+    "module": "Fourier.PositiveLogProfiles",
+    "hits": 27,
+    "examples": [
+     "log_dyad_bound",
+     "A3_primary_unit_eq_one",
+     "A3_ramified_zero_lower_left"
+    ]
+   },
+   {
+    "module": "Mellin.UniformKernelBounds",
+    "hits": 27,
+    "examples": [
+     "compact_family_mul_fourier_power_source_bound",
+     "compact_family_mul_fourier_weighted_source_bound",
+     "negativeLogPullbackCLM"
+    ]
+   },
+   {
+    "module": "Moments.ReflectedAnnuli",
+    "hits": 5,
+    "examples": [
+     "logProfile",
+     "logProfile_apply",
+     "logProfile_tsupport"
+    ]
+   },
+   {
+    "module": "Hecke.DetectorRowwisePolynomial",
+    "hits": 4,
+    "examples": [
+     "logProfile",
+     "logProfile_cover",
+     "logProfile_support"
+    ]
+   },
+   {
+    "module": "ContinuationInversion",
+    "hits": 1,
+    "examples": [
+     "integrable_logProfile"
+    ]
+   }
+  ]
+ },
+ "Lem 4.6 Gaussian annular decomposition": {
+  "pattern": "annularDecomposition|AnnularDecomposition|gaussianAnnular|GaussianAnnular|annular_decomp",
+  "n_decls": 0,
+  "n_modules": 0,
+  "top_modules": []
+ },
+ "Lem 4.7 finite seminorms": {
+  "pattern": "[Ss]eminorm",
+  "n_decls": 45,
+  "n_modules": 21,
+  "top_modules": [
+   {
+    "module": "Detector.GaussianSeminorm",
+    "hits": 13,
+    "examples": [
+     "gaussianFixedWindow",
+     "gaussianFixedWindow_small",
+     "gaussianFixedWindow_large"
+    ]
+   },
+   {
+    "module": "Fourier.FrequencyTwists",
+    "hits": 5,
+    "examples": [
+     "derivativeSeminormSum",
+     "derivativeSeminormSum_nonneg",
+     "seminorm_le_derivativeSeminormSum"
+    ]
+   },
+   {
+    "module": "Mellin.LogProfiles",
+    "hits": 4,
+    "examples": [
+     "logProfile_zero_seminorm_decay",
+     "logProfile_uniform_seminorm",
+     "fourier_seminorm_from_derivative_integrals"
+    ]
+   },
+   {
+    "module": "Inversion.ClippingProfiles",
+    "hits": 2,
+    "examples": [
+     "rootSchwartz_seminorm",
+     "rooted_twist_seminorm"
+    ]
+   },
+   {
+    "module": "Moments.DetectorDictionaryUniform",
+    "hits": 2,
+    "examples": [
+     "compact_family_seminorm",
+     "compact_family_finite_seminorm"
+    ]
+   },
+   {
+    "module": "Moments.ReflectedAnnuli",
+    "hits": 2,
+    "examples": [
+     "logProfile_finite_seminorm",
+     "logProfile_dyadic_seminorm_sum"
+    ]
+   }
+  ]
+ },
+ "Lem 4.8 Hecke strip growth": {
+  "pattern": "HeckeStrip|strip_growth|stripGrowth|StripActual|Hecke\\.Strip|convexity",
+  "n_decls": 41,
+  "n_modules": 3,
+  "top_modules": [
+   {
+    "module": "Hecke.Strip",
+    "hits": 28,
+    "examples": [
+     "gammaConstant",
+     "gammaConstant_pos",
+     "gamma_ratio_left_bound"
+    ]
+   },
+   {
+    "module": "Hecke.StripActual",
+    "hits": 12,
+    "examples": [
+     "",
+     "conductor",
+     "conductor_ge_one"
+    ]
+   },
+   {
+    "module": "Mellin.VerticalContourShift",
+    "hits": 1,
+    "examples": [
+     "integral_eq_of_exponential_strip_growth"
+    ]
+   }
+  ]
+ },
+ "Lem 4.9 logarithmic control": {
+  "pattern": "LogarithmicControl|borelCaratheodory|borel_caratheodory|BorelCarath|logarithmic_control",
+  "n_decls": 27,
+  "n_modules": 2,
+  "top_modules": [
+   {
+    "module": "LogarithmicControl",
+    "hits": 25,
+    "examples": [
+     "differentiableOn_of_exp_eq",
+     "exists_holomorphic_log",
+     "exists_holomorphic_log_normalized"
+    ]
+   },
+   {
+    "module": "Hecke.EulerLog",
+    "hits": 2,
+    "examples": [
+     "continued_logarithmic_control",
+     "principal_continued_logarithmic_control"
+    ]
+   }
+  ]
+ },
+ "Lem 4.10 deleted Euler factors": {
+  "pattern": "FiniteDeletion|DeletionBounds|deletion_bound|excludePrimes",
+  "n_decls": 34,
+  "n_modules": 5,
+  "top_modules": [
+   {
+    "module": "Hecke.DeletionBounds",
+    "hits": 15,
+    "examples": [
+     "constant_pow_primeSupport_bound",
+     "localBound",
+     "localBound_pos"
+    ]
+   },
+   {
+    "module": "Hecke.FiniteDeletion",
+    "hits": 14,
+    "examples": [
+     "factors",
+     "factors_eq",
+     "factors_differentiable"
+    ]
+   },
+   {
+    "module": "Hecke.ModulusRefinement",
+    "hits": 3,
+    "examples": [
+     "excludePrimes",
+     "idealCoeff_excludePrimes",
+     "excludePrimes_mask"
+    ]
+   },
+   {
+    "module": "Detector.RowRadicalConductor",
+    "hits": 1,
+    "examples": [
+     "equal_elements_excludePrimes"
+    ]
+   },
+   {
+    "module": "Detector.RowReflectedAllocation",
+    "hits": 1,
+    "examples": [
+     "central_deletion_bound"
+    ]
+   }
+  ]
+ },
+ "Prop 5.1 completed cubic reflection": {
+  "pattern": "completedReflection|CompletedReflection|cubic_reflection|CubicReflection|reflection_identity",
+  "n_decls": 135,
+  "n_modules": 9,
+  "top_modules": [
+   {
+    "module": "QuadraticSieve.MainTermDifference",
+    "hits": 32,
+    "examples": [
+     "realBeta",
+     "realBeta_nonneg",
+     "betaIntegral_ofReal"
+    ]
+   },
+   {
+    "module": "Mellin.InverseContour",
+    "hits": 29,
+    "examples": [
+     "inverseMellinIntegrand",
+     "inverseMellinIntegrand_differentiableAt",
+     "inverseMellinIntegrand_vertical_integrable"
+    ]
+   },
+   {
+    "module": "Mellin.ReflectedKernel",
+    "hits": 29,
+    "examples": [
+     "reflectedLogProfile_deriv_bound",
+     "momentScale",
+     "momentScale_nonneg"
+    ]
+   },
+   {
+    "module": "QuadraticSieve.InitialBound",
+    "hits": 17,
+    "examples": [
+     "gammaMultiplier",
+     "gammaMultiplier_neg",
+     "Gamma_vertical_ne_zero"
+    ]
+   },
+   {
+    "module": "Mellin.UniformKernelBounds",
+    "hits": 14,
+    "examples": [
+     "compact_family_mul_fourier_power_source_bound",
+     "compact_family_mul_fourier_weighted_source_bound",
+     "negativeLogPullbackCLM"
+    ]
+   },
+   {
+    "module": "RowCompletion.PeriodicRows",
+    "hits": 10,
+    "examples": [
+     "completedReflectionPool",
+     "mem_completedReflectionPool",
+     "completedReflectionPool_maximal"
+    ]
+   }
+  ]
+ },
+ "Lem 5.2 fixed ray sectors": {
+  "pattern": "[Ss]ector",
+  "n_decls": 427,
+  "n_modules": 122,
+  "top_modules": [
+   {
+    "module": "Moments.SectorLocalization",
+    "hits": 80,
+    "examples": [
+     "cutoff",
+     "cutoff_one",
+     "cutoff_zero"
+    ]
+   },
+   {
+    "module": "CubicSieve.ResidualSectors",
+    "hits": 35,
+    "examples": [
+     "second_common_support_reconstruct",
+     "secondSourcePairKernel",
+     "secondFrequencyKernel_eq_kernelPair"
+    ]
+   },
+   {
+    "module": "QuadraticSieve.LogarithmicSectors",
+    "hits": 19,
+    "examples": [
+     "lowPrincipalErrorSum",
+     "lowPrincipal_actual_error_sum_bound",
+     "sqrt_product_column_shell"
+    ]
+   },
+   {
+    "module": "Moments.FirstSectors",
+    "hits": 10,
+    "examples": [
+     "residualPool",
+     "mem_residualPool",
+     "pairSector"
+    ]
+   },
+   {
+    "module": "Moments.SecondSectorColumns",
+    "hits": 9,
+    "examples": [
+     "sectorPool",
+     "sectorPool_supported",
+     "sectorElement"
+    ]
+   },
+   {
+    "module": "CubicSieve.FrequencyBlocks",
+    "hits": 8,
+    "examples": [
+     "sector_b0_ne_bot",
+     "secondSectorZ",
+     "secondSectorUd"
+    ]
+   }
+  ]
+ },
+ "Lem 5.3 common annular kernel": {
+  "pattern": "annularKernel|AnnularKernel|commonProfile|CommonProfile",
+  "n_decls": 19,
+  "n_modules": 4,
+  "top_modules": [
+   {
+    "module": "Moments.CommonProfile",
+    "hits": 8,
+    "examples": [
+     "liveIndices",
+     "remainingTuple",
+     "remainingTuple_slot"
+    ]
+   },
+   {
+    "module": "Descent.FirstCommonProfile",
+    "hits": 4,
+    "examples": [
+     "firstNormProfile_common_support",
+     "firstNormProfile_actual_common",
+     "firstCoupledRayColumns"
+    ]
+   },
+   {
+    "module": "Inversion.InitialCommonProfile",
+    "hits": 4,
+    "examples": [
+     "slotRatio",
+     "slotRatio_pos",
+     "common_profile_separation"
+    ]
+   },
+   {
+    "module": "PrimeRows.CubeCommonProfile",
+    "hits": 3,
+    "examples": [
+     "cubeArithmeticSum",
+     "cube_sum_eq_common_profile",
+     "cube_common_profile_integral"
+    ]
+   }
+  ]
+ },
+ "Lem 5.4 lattice kernel tails": {
+  "pattern": "lattice_tail|latticeTail|LatticeTail|LatticeEnvelopes",
+  "n_decls": 60,
+  "n_modules": 4,
+  "top_modules": [
+   {
+    "module": "Poisson.LatticeEnvelopes",
+    "hits": 55,
+    "examples": [
+     "nonzeroLatticeEnvelopeConstant",
+     "nonzeroLatticeEnvelopeConstant_nonneg",
+     "scaled_cauchy_nonzero_mass"
+    ]
+   },
+   {
+    "module": "Moments.Tail",
+    "hits": 3,
+    "examples": [
+     "weighted_lattice_tail",
+     "weighted_set_lattice_tail",
+     "uniform_sector_lattice_tail"
+    ]
+   },
+   {
+    "module": "Moments.SectorLocalization",
+    "hits": 1,
+    "examples": [
+     "actual_discarded_lattice_tail"
+    ]
+   },
+   {
+    "module": "Poisson.RadialFourier",
+    "hits": 1,
+    "examples": [
+     "paperRadialFourier_lattice_tail"
+    ]
+   }
+  ]
+ },
+ "Lem 5.5 quadratic reduction": {
+  "pattern": "quadraticReduction|QuadraticReduction|quadratic_reduction",
+  "n_decls": 1,
+  "n_modules": 1,
+  "top_modules": [
+   {
+    "module": "Descent.HybridReduction",
+    "hits": 1,
+    "examples": [
+     "hybrid_quadratic_reduction"
+    ]
+   }
+  ]
+ },
+ "Def 5.6/Lem 5.7 unmarked reflected block": {
+  "pattern": "[Uu]nmarkedReflected|unmarked_block|UnmarkedBlock|reflectedBlock|ReflectedBlock",
+  "n_decls": 0,
+  "n_modules": 0,
+  "top_modules": []
+ },
+ "Sec 7.1 probe Poisson identity": {
+  "pattern": "probe_poisson|ProbePoisson|probePoisson|exact_poisson|ExactPoisson",
+  "n_decls": 0,
+  "n_modules": 0,
+  "top_modules": []
+ },
+ "Lem 7.1 complete local identity": {
+  "pattern": "LocalEulerIdentities|localIdentity|local_identity|completeLocal|CompleteLocal",
+  "n_decls": 44,
+  "n_modules": 3,
+  "top_modules": [
+   {
+    "module": "Hecke.LocalEulerIdentities",
+    "hits": 41,
+    "examples": [
+     "chiMinusThree_mod_one",
+     "chiMinusThree_mod_two",
+     "chiMinusThree_mod_zero"
+    ]
+   },
+   {
+    "module": "GaussSum.RamifiedTracePhase",
+    "hits": 2,
+    "examples": [
+     "first_local_identity_ring",
+     "first_local_identity_canonicalSextic"
+    ]
+   },
+   {
+    "module": "GaussSum.FiniteFourier",
+    "hits": 1,
+    "examples": [
+     "first_local_identity"
+    ]
+   }
+  ]
+ },
+ "Lem 8.1 buffered zero-free bins": {
+  "pattern": "[Bb]uffered",
+  "n_decls": 49,
+  "n_modules": 25,
+  "top_modules": [
+   {
+    "module": "PrimeRows.BufferedBin",
+    "hits": 5,
+    "examples": [
+     "sourceDetectorFamily",
+     "sourceDetectorFamily_denominator",
+     "sourceDetectorFamily_numerator"
+    ]
+   },
+   {
+    "module": "PrimeRows.BufferedContour",
+    "hits": 5,
+    "examples": [
+     "reciprocal_differentiableAt_of_nonzero",
+     "physicalCompensatedRow_buffered_differentiableAt_x",
+     "sourceMellinWeight_differentiable_x"
+    ]
+   },
+   {
+    "module": "Hecke.DyadicBuffered",
+    "hits": 3,
+    "examples": [
+     "presentationComplexity_mono_height",
+     "buffered_rectangle_control",
+     "translated_rectangle_mem"
+    ]
+   },
+   {
+    "module": "Hecke.PrimeDyadicBuffered",
+    "hits": 3,
+    "examples": [
+     "binCost",
+     "binCost_nonneg",
+     "polynomial_bound_in_bin"
+    ]
+   },
+   {
+    "module": "PrimeRows.DetectorBins",
+    "hits": 3,
+    "examples": [
+     "detector_nonzero_on_buffered_disk",
+     "detectorEntire_nonzero_on_buffered_disk",
+     "exists_detector_buffered_bin"
+    ]
+   },
+   {
+    "module": "Detector",
+    "hits": 2,
+    "examples": [
+     "buffered_bin_of_rounding",
+     "exists_buffered_bin"
+    ]
+   }
+  ]
+ },
+ "Lem 8.2 pointwise dyadic estimates": {
+  "pattern": "DyadicPointwise|dyadic_pointwise|pointwise_dyadic|DyadicEstimates",
+  "n_decls": 10,
+  "n_modules": 3,
+  "top_modules": [
+   {
+    "module": "Hecke.PrimeDyadicEstimates",
+    "hits": 4,
+    "examples": [
+     "absolute_tail_bound",
+     "central_segment_bound",
+     "horizontal_join_bound"
+    ]
+   },
+   {
+    "module": "Hecke.DyadicEstimates",
+    "hits": 3,
+    "examples": [
+     "rapid_tail_bound",
+     "absolute_tail_bound",
+     "central_segment_bound"
+    ]
+   },
+   {
+    "module": "Hecke.DyadicPointwise",
+    "hits": 3,
+    "examples": [
+     "norm_four_sides",
+     "polynomial_bound_of_rectangle",
+     "polynomial_bound_of_rectangle_split"
+    ]
+   }
+  ]
+ },
+ "Prop 8.3 two saturated witnesses": {
+  "pattern": "[Ss]aturat|twoWitness|two_witness|DetectorWitness",
+  "n_decls": 23,
+  "n_modules": 5,
+  "top_modules": [
+   {
+    "module": "Hecke.DetectorWitnessArithmetic",
+    "hits": 8,
+    "examples": [
+     "cutoffCoefficient",
+     "fiber_norm_le",
+     "cutoffCoefficient_small"
+    ]
+   },
+   {
+    "module": "Hecke.DetectorWitnessRows",
+    "hits": 8,
+    "examples": [
+     "dyadicLength",
+     "Witness",
+     "frequency"
+    ]
+   },
+   {
+    "module": "Detector",
+    "hits": 3,
+    "examples": [
+     "simultaneous_saturation",
+     "inverse_length_of_saturation",
+     "complex_simultaneous_saturation"
+    ]
+   },
+   {
+    "module": "Hecke.DetectorSaturation",
+    "hits": 3,
+    "examples": [
+     "logarithmic_cost_eventually",
+     "normalized_product_lower",
+     "actual_saturation"
+    ]
+   },
+   {
+    "module": "Energy.CappedBandTransport",
+    "hits": 1,
+    "examples": [
+     "saturated_successor"
+    ]
+   }
+  ]
+ },
+ "Def 10.1-Lem 10.6 high representation": {
+  "pattern": "retained|Retained|outerRow|OuterRow|principalSignal|PrincipalSignal|exactHigh|ExactHigh",
+  "n_decls": 569,
+  "n_modules": 158,
+  "top_modules": [
+   {
+    "module": "PrincipalSignalComparison",
+    "hits": 52,
+    "examples": [
+     "raw_inverse_ae_reciprocal",
+     "raw_quotient_integral_eq",
+     "slotMass"
+    ]
+   },
+   {
+    "module": "Moments.RetainedProfile",
+    "hits": 34,
+    "examples": [
+     "dilated",
+     "dilated_contDiff",
+     "dilated_support"
+    ]
+   },
+   {
+    "module": "Inversion.WholePriorityRetainedSource",
+    "hits": 25,
+    "examples": [
+     "unifiedSource",
+     "mem_unifiedSource",
+     "unified_frequency_ne_zero"
+    ]
+   },
+   {
+    "module": "Moments.AmplifiedRetainedRadius",
+    "hits": 24,
+    "examples": [
+     "ballProfile_support_upper",
+     "ballProfile_radius_le",
+     "gaussEnergy_radius_le"
+    ]
+   },
+   {
+    "module": "Moments.SectorLocalization",
+    "hits": 24,
+    "examples": [
+     "Retained",
+     "retainedWeight",
+     "retained_summable"
+    ]
+   },
+   {
+    "module": "QuadraticSieve.RetainedDualBounds",
+    "hits": 23,
+    "examples": [
+     "primePoolDensity",
+     "principalTruncation_scaled",
+     "unrestrictedPrincipalDensity"
+    ]
+   }
+  ]
+ },
+ "Lem 11.1 late height choice": {
+  "pattern": "height_choice|heightChoice|chosen_data_height|lateHeight",
+  "n_decls": 1,
+  "n_modules": 1,
+  "top_modules": [
+   {
+    "module": "Detector.FinalAssemblyChosenData",
+    "hits": 1,
+    "examples": [
+     "chosen_data_height"
+    ]
+   }
+  ]
+ },
+ "Prop 11.3 quadratic transfer": {
+  "pattern": "dirichlet_seven_eighths_of_hecke|LFunction_eq_dirichlet_product|baseChange",
+  "n_decls": 39,
+  "n_modules": 11,
+  "top_modules": [
+   {
+    "module": "Hecke.FiniteEulerFactors",
+    "hits": 8,
+    "examples": [
+     "baseChangeWeight_norm_le_one",
+     "outsideCoeff_baseChange_isBigO_linear",
+     "outsideCoeff_LSeriesSummable_baseChange"
+    ]
+   },
+   {
+    "module": "Hecke.LocalEulerIdentities",
+    "hits": 8,
+    "examples": [
+     "baseChangeWeight_zero_of_norm_prime_pow_ge_three",
+     "normFiberCoeff_baseChangeWeight_prime_pow_ge_three",
+     "baseChangeChar_prime_zero_of_dvd_q"
+    ]
+   },
+   {
+    "module": "Hecke.NormFiberCharacters",
+    "hits": 7,
+    "examples": [
+     "normFiberCoeff_baseChangeWeight_zero",
+     "baseChangeChar",
+     "baseChangeChar_ne_one_of_one"
+    ]
+   },
+   {
+    "module": "Hecke.Dirichlet",
+    "hits": 3,
+    "examples": [
+     "LFunction_eq_dirichlet_product_right",
+     "LFunction_eq_dirichlet_product",
+     "dirichlet_seven_eighths_of_hecke"
+    ]
+   },
+   {
+    "module": "Hecke.PrimeExtraction",
+    "hits": 3,
+    "examples": [
+     "baseChangeWeight_zero_of_not_squarefree",
+     "baseChangeWeight_mul_of_isRelPrime",
+     "baseChange_restore_insert_prime"
+    ]
+   },
+   {
+    "module": "PrimeRows.NormFiberExtraction",
+    "hits": 3,
+    "examples": [
+     "baseChangeWeight_zero_of_not_squarefree",
+     "baseChangeWeight_norm_le_one",
+     "baseChange_prime_extraction_from_MS"
+    ]
+   }
+  ]
+ },
+ "Lem 13.1 ray prime normalizer": {
+  "pattern": "RayPrimeNormalizer|rayPrimeNormalizer|RayAsymptotic|normalizer",
+  "n_decls": 42,
+  "n_modules": 12,
+  "top_modules": [
+   {
+    "module": "PrimeCounting.RayAsymptotic",
+    "hits": 26,
+    "examples": [
+     "classCoeff",
+     "sum_coeff",
+     "average_coeff"
+    ]
+   },
+   {
+    "module": "RayPrimeNormalizer",
+    "hits": 4,
+    "examples": [
+     "normalizer",
+     "asymptotic",
+     "eventually_lower_bound"
+    ]
+   },
+   {
+    "module": "Moments.SecondCanonicalScalar",
+    "hits": 2,
+    "examples": [
+     "normalizer",
+     "normalizer_pos"
+    ]
+   },
+   {
+    "module": "PrincipalSignalComparison",
+    "hits": 2,
+    "examples": [
+     "source_normalizer_cast",
+     "source_normalizer_ne_zero"
+    ]
+   },
+   {
+    "module": "Detector.LowTupleGram",
+    "hits": 1,
+    "examples": [
+     "low_mellin_normalizer_norm"
+    ]
+   },
+   {
+    "module": "Detector.PrincipalNormalizer",
+    "hits": 1,
+    "examples": [
+     "signed_source_normalizer_ne_zero"
+    ]
+   }
+  ]
+ },
+ "Lem 13.2 prime-power Fourier sums": {
+  "pattern": "PrimePowerGauss|primePowerGauss|prime_power_fourier|primePowerFourier",
+  "n_decls": 60,
+  "n_modules": 6,
+  "top_modules": [
+   {
+    "module": "Eisenstein.PrimePowerGaussSums",
+    "hits": 47,
+    "examples": [
+     "cubicUnitGaussSum_one",
+     "cubicUnitGaussSum_frequency_dvd",
+     "cubicUnitGaussSum_prime_power_zero"
+    ]
+   },
+   {
+    "module": "Detector.PrimePower",
+    "hits": 6,
+    "examples": [
+     "primePowerGauss",
+     "primePowerGauss_support",
+     "primePowerGauss_zero_off_support"
+    ]
+   },
+   {
+    "module": "Detector.LiftedFourier",
+    "hits": 3,
+    "examples": [
+     "primePowerGauss_lift_add",
+     "primePowerGauss_add_period",
+     "primePowerGauss_eq_quotientFourier"
+    ]
+   },
+   {
+    "module": "Detector.GaussValuation",
+    "hits": 2,
+    "examples": [
+     "primePowerGauss_at_pow_nonprincipal",
+     "primePowerGauss_at_pow_principal"
+    ]
+   },
+   {
+    "module": "Detector.Sextic",
+    "hits": 1,
+    "examples": [
+     "actualSextic_primePowerGauss_at_pow"
+    ]
+   },
+   {
+    "module": "Eisenstein.BesselMellinTransform",
+    "hits": 1,
+    "examples": [
+     "cubicUnitGaussSum_prime_power_fourier"
+    ]
+   }
+  ]
+ },
+ "Lem 13.3/13.4 correlations": {
+  "pattern": "[Cc]orrelation|commonSupport|CommonSupport",
+  "n_decls": 121,
+  "n_modules": 28,
+  "top_modules": [
+   {
+    "module": "Moments.Correlation",
+    "hits": 24,
+    "examples": [
+     "fourierSum",
+     "fullCorrelation",
+     "fullCorrelation_swap"
+    ]
+   },
+   {
+    "module": "Moments.CommonSupport",
+    "hits": 17,
+    "examples": [
+     "Residue",
+     "principalCRT",
+     "principalCRT_mk"
+    ]
+   },
+   {
+    "module": "Moments.SupportedCorrelation",
+    "hits": 14,
+    "examples": [
+     "supportedModulusCharacter",
+     "supportedModulusCharacter_mk",
+     "supported_mul_elements"
+    ]
+   },
+   {
+    "module": "Moments.FullCorrelation",
+    "hits": 12,
+    "examples": [
+     "scaledResidue",
+     "scaledResidue_mk",
+     "fullModulusCorrelation"
+    ]
+   },
+   {
+    "module": "Moments.PrimePower",
+    "hits": 9,
+    "examples": [
+     "primePowerReduction",
+     "primePowerReduction_surjective",
+     "primePowerReduction_multiplicity"
+    ]
+   },
+   {
+    "module": "Moments.CRT",
+    "hits": 6,
+    "examples": [
+     "fullCorrelation_ringEquiv",
+     "fullCorrelation_product",
+     "fullCorrelation_pi"
+    ]
+   }
+  ]
+ },
+ "Cor 14.1 marked completed reflection": {
+  "pattern": "wholeIndex|WholeIndex|markedReflection|MarkedReflection|whole_index",
+  "n_decls": 6,
+  "n_modules": 1,
+  "top_modules": [
+   {
+    "module": "Descent.MarkedReflection",
+    "hits": 6,
+    "examples": [
+     "markTwist",
+     "markTwist_norm",
+     "markTwist_periodic"
+    ]
+   }
+  ]
+ },
+ "Lem 14.2 quadratic-cubic norm": {
+  "pattern": "quadraticCubic|QuadraticCubic|HeathBrown|heathBrown|heath_brown|cubic_large_sieve|cubicLargeSieve",
+  "n_decls": 10,
+  "n_modules": 1,
+  "top_modules": [
+   {
+    "module": "HeathBrownIteration",
+    "hits": 10,
+    "examples": [
+     "step",
+     "step_sub",
+     "step_gt"
+    ]
+   }
+  ]
+ },
+ "Lem 14.3 reflected energy": {
+  "pattern": "reflectedEnergy|ReflectedEnergy|reflected_energy",
+  "n_decls": 16,
+  "n_modules": 9,
+  "top_modules": [
+   {
+    "module": "Descent.ShortReflectedEnergy",
+    "hits": 4,
+    "examples": [
+     "tupleDivisibilityMark",
+     "completed_tuple_mark",
+     "short_cube_exact_scale"
+    ]
+   },
+   {
+    "module": "Detector.LowActualReflectedEnergy",
+    "hits": 3,
+    "examples": [
+     "lowActualIdealPolynomial",
+     "lowSelectedInverseRow_actual_ideal",
+     "lowSelectedInverseRow_actual_reflected_energy"
+    ]
+   },
+   {
+    "module": "Reflection.UniformFiltered",
+    "hits": 2,
+    "examples": [
+     "filtered_actual_weighted_reflected_energy_type_uniform",
+     "integrated_filtered_actual_reflected_energy_type_uniform"
+    ]
+   },
+   {
+    "module": "Reflection.UniformSieve",
+    "hits": 2,
+    "examples": [
+     "summed_actual_weighted_reflected_energy_type_uniform",
+     "integrated_summed_actual_reflected_energy_type_uniform"
+    ]
+   },
+   {
+    "module": "Moments.ReflectedChild",
+    "hits": 1,
+    "examples": [
+     "finite_reflected_energy_le_gaussEnergy"
+    ]
+   },
+   {
+    "module": "Reflection.FilteredEnergy",
+    "hits": 1,
+    "examples": [
+     "filtered_actual_weighted_reflected_energy"
+    ]
+   }
+  ]
+ },
+ "Lem 15.1 compensated row norm": {
+  "pattern": "compensatedRow|CompensatedRow|compensated_row|completedRowNorm",
+  "n_decls": 22,
+  "n_modules": 12,
+  "top_modules": [
+   {
+    "module": "Detector.CompensatedRows",
+    "hits": 4,
+    "examples": [
+     "compensatedRowOnLines",
+     "compensatedRows_counting_product_integrable",
+     "counting_product_integral_tsum"
+    ]
+   },
+   {
+    "module": "PrimeRows.MarkedHolomorphic",
+    "hits": 4,
+    "examples": [
+     "physicalCompensatedRow",
+     "physicalCompensatedRow_first_differentiableAt_x",
+     "physicalCompensatedRow_first_differentiableAt_w"
+    ]
+   },
+   {
+    "module": "PrimeRows.MarkedContinuation",
+    "hits": 3,
+    "examples": [
+     "continuedCompensatedRow",
+     "continuedCompensatedRow_eq_initial",
+     "continuedCompensatedRow_eq_indexed"
+    ]
+   },
+   {
+    "module": "Detector.CompensatedTriple",
+    "hits": 2,
+    "examples": [
+     "compensatedRowSeries",
+     "compensatedRowTripleIntegral"
+    ]
+   },
+   {
+    "module": "PrimeRows.MarkedSubset",
+    "hits": 2,
+    "examples": [
+     "spectralCompensatedRow",
+     "spectralCompensatedRow_eq_product"
+    ]
+   },
+   {
+    "module": "Detector.PrincipalSplit",
+    "hits": 1,
+    "examples": [
+     "compensatedRowTripleIntegral_principal_split"
+    ]
+   }
+  ]
+ },
+ "Prop 15.2 additive Gram bound": {
+  "pattern": "[Gg]ram\\b|[Gg]ram_|Gram[A-Z]",
+  "n_decls": 559,
+  "n_modules": 86,
+  "top_modules": [
+   {
+    "module": "Detector.GramPeriodicPoisson",
+    "hits": 109,
+    "examples": [
+     "Joint",
+     "point",
+     "embeddingPair"
+    ]
+   },
+   {
+    "module": "Detector.GramJointConstruction",
+    "hits": 46,
+    "examples": [
+     "q1",
+     "q2",
+     "q1_smooth"
+    ]
+   },
+   {
+    "module": "Detector.GramLatticeDecay",
+    "hits": 27,
+    "examples": [
+     "Joint",
+     "point",
+     "sourceControl"
+    ]
+   },
+   {
+    "module": "Detector.GramJointProfile",
+    "hits": 21,
+    "examples": [
+     "rayControl",
+     "rayControl_nonneg",
+     "mul_derivative_bound"
+    ]
+   },
+   {
+    "module": "Detector.GramCanonical",
+    "hits": 18,
+    "examples": [
+     "GramFrequency",
+     "GramPrime",
+     "gramPrime"
+    ]
+   },
+   {
+    "module": "Detector.GramGcd",
+    "hits": 16,
+    "examples": [
+     "SupportedIdeal",
+     "gram_supported_divisor",
+     "gram_supported_quotient"
+    ]
+   }
+  ]
+ },
+ "Prop 15.3 compensated low estimate": {
+  "pattern": "probe_low|lowEstimate|low_estimate|LowEstimate|compensatedLow",
+  "n_decls": 1,
+  "n_modules": 1,
+  "top_modules": [
+   {
+    "module": "Detector.FinalAssemblyData",
+    "hits": 1,
+    "examples": [
+     "probe_low"
+    ]
+   }
+  ]
+ },
+ "Prop 16.1 conductor allocation": {
+  "pattern": "conductorAllocation|ConductorAllocation|dynamicLocal|DynamicLocal|localError",
+  "n_decls": 3,
+  "n_modules": 1,
+  "top_modules": [
+   {
+    "module": "Moments.AmplificationErrorEnergy",
+    "hits": 3,
+    "examples": [
+     "localErrorCost",
+     "localErrorCost_nonneg",
+     "localErrorCost_exact"
+    ]
+   }
+  ]
+ },
+ "Lem 16.2 absolute local tuple bounds": {
+  "pattern": "tupleBound|TupleBound|tuple_bound|TupleWeights|absoluteLocal",
+  "n_decls": 40,
+  "n_modules": 3,
+  "top_modules": [
+   {
+    "module": "Fourier.TupleWeights",
+    "hits": 38,
+    "examples": [
+     "finite_triple_bounded_integral",
+     "tupleOuterWeight",
+     "tupleOuterWeight_continuous"
+    ]
+   },
+   {
+    "module": "PrimeRows.TupleBound",
+    "hits": 1,
+    "examples": [
+     "continued_selected_tuple_with_correction"
+    ]
+   },
+   {
+    "module": "PrimeRows.TupleSums",
+    "hits": 1,
+    "examples": [
+     "continued_selected_tuple_bound"
+    ]
+   }
+  ]
+ },
+ "Lem 17.1 marked inverse moment": {
+  "pattern": "inverse_marked|inverseMarked|InverseMarked|markedInverse|MarkedInverse",
+  "n_decls": 132,
+  "n_modules": 26,
+  "top_modules": [
+   {
+    "module": "Dictionary.InverseMarkedPadding",
+    "hits": 16,
+    "examples": [
+     "radialMajorant",
+     "radialMajorant_compact",
+     "radialMajorant_nonneg"
+    ]
+   },
+   {
+    "module": "Dictionary.InverseMarkedUniform",
+    "hits": 11,
+    "examples": [
+     "clipped_one_zero",
+     "family_mode_integrable",
+     "family_polynomial_fourier"
+    ]
+   },
+   {
+    "module": "Dictionary.InverseMarkedReferenceProducts",
+    "hits": 10,
+    "examples": [
+     "assignedIdeal",
+     "remainingIdeal",
+     "joinTuple_assigned"
+    ]
+   },
+   {
+    "module": "Dictionary.InverseMarkedReferenceTuples",
+    "hits": 9,
+    "examples": [
+     "Tuple",
+     "Assigned",
+     "Remaining"
+    ]
+   },
+   {
+    "module": "Dictionary.InverseMarkedPhysicalRows",
+    "hits": 8,
+    "examples": [
+     "actualRow",
+     "actualRow_injective",
+     "actual_rows_sum"
+    ]
+   },
+   {
+    "module": "Dictionary.InverseMarkedReferenceArithmetic",
+    "hits": 8,
+    "examples": [
+     "tuple_supported",
+     "tuple_admissible",
+     "remainingFromPi"
+    ]
+   }
+  ]
+ },
+ "Lem 17.2 canonical marked estimate": {
+  "pattern": "canonicalMarked|CanonicalMarked|canonical_marked",
+  "n_decls": 18,
+  "n_modules": 12,
+  "top_modules": [
+   {
+    "module": "Descent.Canonical",
+    "hits": 4,
+    "examples": [
+     "finiteCanonicalMarkedRow",
+     "finiteCanonicalMarkedRow_actual_columns",
+     "finiteCanonicalMarkedRow_restore_pool"
+    ]
+   },
+   {
+    "module": "Descent.CompletedReopening",
+    "hits": 3,
+    "examples": [
+     "outsideCanonicalMarkedRow",
+     "outsideCanonicalMarkedRow_cube_split",
+     "outsideCanonicalMarkedRow_reopened"
+    ]
+   },
+   {
+    "module": "Descent.SecondFixedFamily",
+    "hits": 2,
+    "examples": [
+     "finiteCanonicalMarkedRow_drop_puncture",
+     "canonicalMarkedSplit_original_lists"
+    ]
+   },
+   {
+    "module": "Descent.CanonicalPunctureMask",
+    "hits": 1,
+    "examples": [
+     "finiteCanonicalMarkedRow_redundant_puncture"
+    ]
+   },
+   {
+    "module": "Descent.CanonicalRankExistence",
+    "hits": 1,
+    "examples": [
+     "canonical_marked_energy_exists"
+    ]
+   },
+   {
+    "module": "Descent.CompleteMarkedPool",
+    "hits": 1,
+    "examples": [
+     "finiteCanonicalMarkedRow_complete_global"
+    ]
+   }
+  ]
+ },
+ "Lem 17.3/Cor 17.4 seminorm propagation": {
+  "pattern": "[Pp]ropagation|propagate",
+  "n_decls": 0,
+  "n_modules": 0,
+  "top_modules": []
+ },
+ "Lem 17.5 masked primitive Poisson": {
+  "pattern": "maskedPoisson|MaskedPoisson|masked_poisson|maskedPrimitive|MaskedPrimitive",
+  "n_decls": 5,
+  "n_modules": 2,
+  "top_modules": [
+   {
+    "module": "QuadraticSieve.PoissonComparison",
+    "hits": 4,
+    "examples": [
+     "maskedPoissonDifference",
+     "maskedPoissonDifference_centered",
+     "maskedPoissonDifference_norm_le"
+    ]
+   },
+   {
+    "module": "CubicSieve.ArithmeticBins",
+    "hits": 1,
+    "examples": [
+     "originalHigh_gcd_eq_maskedPoissonDifference"
+    ]
+   }
+  ]
+ },
+ "Lem 17.6 sixth-power amplification": {
+  "pattern": "[Aa]mplification|sixthPower|SixthPower|sixth_power",
+  "n_decls": 429,
+  "n_modules": 65,
+  "top_modules": [
+   {
+    "module": "Moments.FirstAmplificationChoice",
+    "hits": 71,
+    "examples": [
+     "ballProfile",
+     "ballProfile_nonneg",
+     "ballProfile_le_one"
+    ]
+   },
+   {
+    "module": "Mellin.SixthPowerAverage",
+    "hits": 35,
+    "examples": [
+     "exists_averaging_test",
+     "prime_coprime_span_iff",
+     "squarefree_sixth_row_coprime"
+    ]
+   },
+   {
+    "module": "Moments.AmplificationChildSourceCaps",
+    "hits": 35,
+    "examples": [
+     "geometry",
+     "geometry_ge_one",
+     "norm_ge_one"
+    ]
+   },
+   {
+    "module": "Moments.AmplificationChildInput",
+    "hits": 26,
+    "examples": [
+     "original",
+     "volume",
+     "volume_pos"
+    ]
+   },
+   {
+    "module": "Moments.AmplificationShortening",
+    "hits": 16,
+    "examples": [
+     "residualCharacter",
+     "crossFactor_primary",
+     "gauss_primary_power_product"
+    ]
+   },
+   {
+    "module": "Moments.AmplificationGlobal",
+    "hits": 11,
+    "examples": [
+     "full_column_unchanged",
+     "amplificationError",
+     "polynomial_amplification"
+    ]
+   }
+  ]
+ },
+ "Lem 18.1 fourth moment (plain)": {
+  "pattern": "plain_marked|plain_unmarked|PlainMarked|PlainUnmarked|fourthMoment|FourthMoment",
+  "n_decls": 29,
+  "n_modules": 8,
+  "top_modules": [
+   {
+    "module": "Moments.DetectorPlainMarkedState",
+    "hits": 9,
+    "examples": [
+     "source_slot_coefficient",
+     "retained_eq_initial_energy",
+     "plain_length_eq"
+    ]
+   },
+   {
+    "module": "Moments.DetectorPlainUnmarkedState",
+    "hits": 7,
+    "examples": [
+     "allowance",
+     "allowance_nonneg",
+     "padded_width"
+    ]
+   },
+   {
+    "module": "Detector.DetectorPlainUnmarkedField",
+    "hits": 5,
+    "examples": [
+     "radialSupportUpper",
+     "radialSupportUpper_spec",
+     "unmarked_power_eq"
+    ]
+   },
+   {
+    "module": "Detector.DetectorPlainMarkedFineField",
+    "hits": 2,
+    "examples": [
+     "PositiveFineSourceInput",
+     "source_batch_plain_marked_fine"
+    ]
+   },
+   {
+    "module": "Detector.DetectorPlainUnmarkedRestrictedField",
+    "hits": 2,
+    "examples": [
+     "source_zero_from_gated",
+     "source_batch_plain_unmarked"
+    ]
+   },
+   {
+    "module": "Hecke.DetectorRawBranches",
+    "hits": 2,
+    "examples": [
+     "plain_marked_count",
+     "plain_unmarked_count"
+    ]
+   }
+  ]
+ },
+ "Lem 18.2 common coefficient": {
+  "pattern": "commonCoefficient|CommonCoefficient|completeExtraction|CompleteExtraction",
+  "n_decls": 3,
+  "n_modules": 3,
+  "top_modules": [
+   {
+    "module": "CubicSieve.ResidualSectors",
+    "hits": 1,
+    "examples": [
+     "secondSourceCommonCoefficient"
+    ]
+   },
+   {
+    "module": "CubicSieve.SupportNorms",
+    "hits": 1,
+    "examples": [
+     "secondSourceCommonCoefficient_norm_le_one"
+    ]
+   },
+   {
+    "module": "Descent.FirstPhysicalCommon",
+    "hits": 1,
+    "examples": [
+     "firstCommonCoefficient"
+    ]
+   }
+  ]
+ },
+ "Lem 18.3 masked rectangle cancellation": {
+  "pattern": "[Rr]ectangle",
+  "n_decls": 134,
+  "n_modules": 62,
+  "top_modules": [
+   {
+    "module": "Moments.SourceRectangle",
+    "hits": 27,
+    "examples": [
+     "tuplePools",
+     "tuplePool",
+     "pack"
+    ]
+   },
+   {
+    "module": "Moments.DivisorRectangle",
+    "hits": 6,
+    "examples": [
+     "factorTuple",
+     "selectedPlain",
+     "selectedSlot"
+    ]
+   },
+   {
+    "module": "Moments.Rectangle",
+    "hits": 5,
+    "examples": [
+     "idealWeight",
+     "idealWeight_mul",
+     "idealRectangle"
+    ]
+   },
+   {
+    "module": "Moments.Extraction",
+    "hits": 4,
+    "examples": [
+     "idealRectangle_extract",
+     "extracted_rectangle_coefficient",
+     "extracted_rectangle_sum"
+    ]
+   },
+   {
+    "module": "Moments.SourceRectangleMask",
+    "hits": 4,
+    "examples": [
+     "rowWeight_ideal_mask",
+     "ideal_mask_nonzero",
+     "fullMaskedRectangle_eq_maskedRectangle"
+    ]
+   },
+   {
+    "module": "Moments.AmplificationRectangle",
+    "hits": 3,
+    "examples": [
+     "centralRoot_extract",
+     "centered_coefficient_prime_extract",
+     "centered_product_prime_extract"
+    ]
+   }
+  ]
+ },
+ "Lem 19.1 prime bound in a bin": {
+  "pattern": "PrimeBin|primeBin|prime_bin",
+  "n_decls": 2,
+  "n_modules": 2,
+  "top_modules": [
+   {
+    "module": "Hecke.PrimeBin",
+    "hits": 1,
+    "examples": [
+     "prime_bin_bound"
+    ]
+   },
+   {
+    "module": "Hecke.PrimeRay",
+    "hits": 1,
+    "examples": [
+     "ray_prime_bin_bound"
+    ]
+   }
+  ]
+ },
+ "Prop 19.2 row counts": {
+  "pattern": "RowCount|rowCount|row_count",
+  "n_decls": 41,
+  "n_modules": 8,
+  "top_modules": [
+   {
+    "module": "Hecke.DetectorRowCountCrossing",
+    "hits": 23,
+    "examples": [
+     "denominator",
+     "primeWeight",
+     "crossing"
+    ]
+   },
+   {
+    "module": "Hecke.DetectorRowCountEndpoint",
+    "hits": 7,
+    "examples": [
+     "denominator_endpoint",
+     "primeWeight_endpoint",
+     "balanced_cutoff_bounds"
+    ]
+   },
+   {
+    "module": "Hecke.DetectorRowCount",
+    "hits": 4,
+    "examples": [
+     "card_of_energy",
+     "inverse_count",
+     "plain_count"
+    ]
+   },
+   {
+    "module": "PrimeRows.RowCount",
+    "hits": 3,
+    "examples": [
+     "freeRow_count",
+     "frequencyWeight_ideal_norm",
+     "dyadic_weighted_rows"
+    ]
+   },
+   {
+    "module": "CenteredExceptionalProfile",
+    "hits": 1,
+    "examples": [
+     "fixed_inducing_row_count"
+    ]
+   },
+   {
+    "module": "Endpoint",
+    "hits": 1,
+    "examples": [
+     "balancedRowCount"
+    ]
+   }
+  ]
+ },
+ "Lem 20.1 high exponent for one bin": {
+  "pattern": "highExponent|HighExponent|high_exponent|bin_exponent",
+  "n_decls": 0,
+  "n_modules": 0,
+  "top_modules": []
+ },
+ "Lem 20.2 endpoint certificate": {
+  "pattern": "endpoint_identity|balanced_endpoint|balancedExponent|Endpoint\\.",
+  "n_decls": 14,
+  "n_modules": 2,
+  "top_modules": [
+   {
+    "module": "Endpoint",
+    "hits": 13,
+    "examples": [
+     "denominator",
+     "primeWeight",
+     "balanceDenominator"
+    ]
+   },
+   {
+    "module": "Hecke.DetectorRowCountEndpoint",
+    "hits": 1,
+    "examples": [
+     "balanced_endpoint_with_loss"
+    ]
+   }
+  ]
+ },
+ "Prop 20.3 order of choices": {
+  "pattern": "FinalAssembly|HighData|exists_high_data|central_budget",
+  "n_decls": 61,
+  "n_modules": 20,
+  "top_modules": [
+   {
+    "module": "Detector.FinalAssemblyCertifiedBands",
+    "hits": 9,
+    "examples": [
+     "detectorMesh",
+     "detectorMesh_pos",
+     "DetectorCertifiedBands"
+    ]
+   },
+   {
+    "module": "Detector.FinalAssemblyChosenData",
+    "hits": 8,
+    "examples": [
+     "ChosenMomentInput",
+     "FineMomentInput",
+     "chosen_input_of_fine"
+    ]
+   },
+   {
+    "module": "Detector.FinalAssemblyData",
+    "hits": 8,
+    "examples": [
+     "SourceData",
+     "exists_source_data",
+     "modulus"
+    ]
+   },
+   {
+    "module": "Detector.FinalAssemblyMomentInput",
+    "hits": 5,
+    "examples": [
+     "SourceMomentBound",
+     "mono_constant",
+     "RawMomentInput"
+    ]
+   },
+   {
+    "module": "Detector.FinalAssembly",
+    "hits": 4,
+    "examples": [
+     "common_probe_of_raw_moments",
+     "dirichlet_of_raw_moments",
+     "zeta_of_raw_moments"
+    ]
+   },
+   {
+    "module": "Detector.FinalAssemblySource",
+    "hits": 4,
+    "examples": [
+     "normalizedProbe",
+     "isBigO_rpow_of_eventual_norm_bound",
+     "normalizedProbe_low"
+    ]
+   }
+  ]
+ }
+}
