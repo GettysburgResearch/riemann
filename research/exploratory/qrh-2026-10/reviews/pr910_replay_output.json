@@ -1,0 +1,472 @@
+{
+ "reviewed_sha": "670a76c1a3a8f325c43c1755b1cfc24d313a3e3c",
+ "n_checks": 66,
+ "n_pass": 65,
+ "n_documented_findings": 1,
+ "n_unexpected_fail": 0,
+ "arithmetic": "EXACT_RATIONAL + sympy exact (Q(sqrt 921)); float only in section 6 and minimum location",
+ "checks": [
+  {
+   "section": "0 geometry",
+   "claim": "tuple ell,lx,ly,h = 20003/120000, 84997/240000, 114997/240000, 65003/80000",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "0 geometry",
+   "claim": "M + ell = 1 and h = (1+3 ell+b)/2",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "0 geometry",
+   "claim": "C(s) = s - 11/16 at the perturbed geometry (independent of ell)",
+   "pass": true,
+   "detail": "-11/16",
+   "documented_finding": false
+  },
+  {
+   "section": "1 low side",
+   "claim": "Pa exponent 2(ly-d) - (M-2d) = b for every d",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "1 low side",
+   "claim": "max over d in [0,ell] of the low excess is exactly 0, attained at d=0",
+   "pass": true,
+   "detail": "{'0': '0', '3997/312000': '-3997/312000', '3997/24000': '-3997/24000', '20003/120000': '-80003/480000'}",
+   "documented_finding": false
+  },
+  {
+   "section": "1 low side",
+   "claim": "L0 = lx/2 + b/12 = 3/16 - 1/160000",
+   "pass": true,
+   "detail": "29999/160000",
+   "documented_finding": false
+  },
+  {
+   "section": "1 low side",
+   "claim": "beta0 = L0 + 11/16 = 139999/160000 = 7/8 - 1/160000",
+   "pass": true,
+   "detail": "139999/160000",
+   "documented_finding": false
+  },
+  {
+   "section": "1 low side",
+   "claim": "beta0 = 11/12 - ell/4 = 1 - h/6 + b/12",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "1 low side",
+   "claim": "PR f_ell(d) equals my rebuilt excess at all breakpoints and 98 rational d",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "1 low side",
+   "claim": "PR (4.1): energy sup = M' + (5ell-1+d)_+/4 (third branch 2M'+ell'-1 = M'-3d never binds)",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "1 low side",
+   "claim": "row-norm loss is genuinely positive for d > 1-5ell = 1/6 - 1/8000 (max 3/80000 at d=ell)",
+   "pass": true,
+   "detail": "kink=3997/24000, loss(ell)=3/80000",
+   "documented_finding": false
+  },
+  {
+   "section": "1 low side",
+   "claim": "f_ell slopes -1 and -7/8; f_ell(ell) = -ell + 6 s0/8 < 0",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "1 low side",
+   "claim": "length gates: lx-ell = 44991/240000, M-2ell = 19997/40000, ly-ell-11b/6 = 19991/240000 (all > 0)",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "1 low side",
+   "claim": "symbolic: beta0(ell,b) = 1 - h/6 + b/12 = 11/12 - ell/4 on M+ell=1",
+   "pass": true,
+   "detail": "11/12 - ell/4",
+   "documented_finding": false
+  },
+  {
+   "section": "1 low side",
+   "claim": "symbolic: C(s)-s = -2/3 - b/6 on M+ell=1 (ell-free)",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "2 high side",
+   "claim": "PR (3.6) equals the sum of outside powers and source factors minus C(sigma0) (any geometry)",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "2 high side",
+   "claim": "PR (6.1): E(h) = -1/4+5ell/4+b/6+delta(1/2+ell)+x delta ell - h(1-R) (z0 drops out at d=h)",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "2 high side",
+   "claim": "at ell=1/6,b=1/8 PR (6.1) reduces to source (20.4) at d=h: C0+2delta/3+q/6-h(1-R)",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "2 high side",
+   "claim": "R_* from balancing source R_short(t)=L(t) equals PR (5.2)",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "2 high side",
+   "claim": "plain capacity at kappa=3/4: (1-2m)/(6 kappa) = 2(1-2m)/9",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "2 high side",
+   "claim": "P_x = 2 - 26x/9 + 8x^2/9 (envelope note form) equals (2-8x/9)(1-x)",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "2 high side",
+   "claim": "identity 1-R_* = delta[(alpha-delta)(2Dx-Px)+2delta Px]/(2J), hence R_* <= 1 on 0<=delta<=5/6",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "2 high side",
+   "claim": "PR Lemma 6.1 derivative: dE/d ell = 5/4 + delta(1+x) - (3/2)(1-R_*) at fixed b",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "2 high side",
+   "claim": "E is exactly affine in ell at fixed (delta,x,b) (second derivative 0)",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "2 high side",
+   "claim": "dE/d ell <= 5/4 + (5/6)(3/2) = 5/2 on the rectangle (since 1-R_* >= 0)",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "2 high side",
+   "claim": "margin 49/440640 - (5/2)(1/40000) = 49/440640 - 1/16000 = 1073/22032000",
+   "pass": true,
+   "detail": "1073/22032000",
+   "documented_finding": false
+  },
+  {
+   "section": "2 high side",
+   "claim": "B&B: J >= 1/2 > 0 on [0,5/6]x[0,1/2] (true min 35/54 at the corner)",
+   "pass": true,
+   "detail": "(5, '3 certified boxes')",
+   "documented_finding": false
+  },
+  {
+   "section": "2 high side",
+   "claim": "B&B (independent of (20.9)): source Lemma 20.2, -E_old >= 49/440640 on [0,5/6]x[0,1/2]",
+   "pass": true,
+   "detail": "(341, '171 certified boxes') in 0.3s",
+   "documented_finding": false
+  },
+  {
+   "section": "2 high side",
+   "claim": "B&B DIRECT at perturbed geometry: -E_new >= 1073/22032000 on [0,5/6]x[0,1/2]",
+   "pass": true,
+   "detail": "(327, '164 certified boxes') in 0.4s",
+   "documented_finding": false
+  },
+  {
+   "section": "2 high side",
+   "claim": "B&B: in fact -E_new >= 19/100000 (about 4x the PR's stated margin)",
+   "pass": true,
+   "detail": "(441, '221 certified boxes')",
+   "documented_finding": false
+  },
+  {
+   "section": "2 high side",
+   "claim": "float location of min(-E): old geometry vs new geometry (informative)",
+   "pass": true,
+   "detail": "{'new': (0.00019483098883506939, 0.3866449994004793, 0.5), 'old': (0.00022814730881971432, 0.3866375625939497, 0.5)}",
+   "documented_finding": false
+  },
+  {
+   "section": "3 other ranges",
+   "claim": "floor bin (delta=1/50, R=1, q=delta/2) at d=h: exact value < 0 and >= PR bound -7/1200+(32/25)s0",
+   "pass": true,
+   "detail": "-4351/750000 = -5.801333e-03",
+   "documented_finding": false
+  },
+  {
+   "section": "3 other ranges",
+   "claim": "floor frequency slope R+delta0/2-z0 > 0",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "3 other ranges",
+   "claim": "intermediate rows d=1/2, R=76/75-2delta/3, q=delta/2: affine in delta, endpoints < 0",
+   "pass": true,
+   "detail": "['-2.152015e-01', '-3.380653e-03']",
+   "documented_finding": false
+  },
+  {
+   "section": "3 other ranges",
+   "claim": "intermediate slope in d positive for delta<=5/6: 76/75-delta/6-17/50 > 0",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "3 other ranges",
+   "claim": "small rows: h(z0-1/6)-ly/2 + 2 dmin < 0, and = -(63/800 - (51/100) s0) exactly",
+   "pass": true,
+   "detail": "-7.873725e-02",
+   "documented_finding": false
+  },
+  {
+   "section": "3 other ranges",
+   "claim": "principal margins ly/20, h/600 > 0",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "3 other ranges",
+   "claim": "prime supply ell/h > 8/39 > 7/37 and 5ell - h = 1/48 + (7/2)s0",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "3 other ranges",
+   "claim": "moderate frequency slope R_*+delta/2-z0 >= 33/50 - delta/2 > 0 for delta <= 5/6",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "3 other ranges",
+   "claim": "bin ceiling delta <= 2*(7/8)-1 = 3/4 under the imported 7/8 theorem; kappa = 3/4 admissible (Lemma 18.1 hypothesis beta* <= (1+kappa)/2 = 7/8)",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "4 Euler domain",
+   "claim": "good-prime exponents match PR list and max = -907/500 (< -1: summable)",
+   "pass": true,
+   "detail": "{'DV': '-233/125', 'DW': '-228/125', 'VW': '-97/50', 'E_p first (R)': '-1117/500', 'E_p second': '-907/500'}",
+   "documented_finding": false
+  },
+  {
+   "section": "4 Euler domain",
+   "claim": "ramified decay exponents match PR list; min = 103/125 > 0",
+   "pass": true,
+   "detail": "{'R': '1117/500', 'strict 2nd family (Q-1)Q^{-x-w}': '103/125', 'J1 Q^{-x-w}': '228/125', 'J2 Q^{3/2-3x}': '561/500', 'J3a Q^{2-3x-w}': '393/250', 'J3b Q^{2-4x}': '187/125', 'J4 Q^{5/2-4x-w}': '973/500', 'J5 Q^{3-6x}': '561/250'}",
+   "documented_finding": false
+  },
+  {
+   "section": "4 Euler domain",
+   "claim": "|R| <= Q^{301/100-6alpha0} < Q^{-1}",
+   "pass": true,
+   "detail": "-1117/500",
+   "documented_finding": false
+  },
+  {
+   "section": "4 Euler domain",
+   "claim": "principal tail sum over Np>P0 of Q^{-907/500} is O(P0^{-407/500})",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "4 Euler domain",
+   "claim": "selected principal error decays (alpha0, 99/100, 5alpha0-301/100, 47/50): min = 437/500",
+   "pass": true,
+   "detail": "{'Q^-x': '437/500', 'Q^-6z': '99/100', 'Q^{4-5x-6z}': '34/25', 'Q^{1-w-6z}': '47/50'}",
+   "documented_finding": false
+  },
+  {
+   "section": "4 Euler domain",
+   "claim": "reproduces source at alpha=7/8: good -363/200, ramified 33/40",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "4 Euler domain",
+   "claim": "alpha0 = 437/500 < beta0 (gap 1/1000 - 1/160000 = 159/160000)",
+   "pass": true,
+   "detail": "159/160000",
+   "documented_finding": false
+  },
+  {
+   "section": "4 Euler domain",
+   "claim": "small-row lines (beta*+e, 1/2, 17/50) lie in D1(1/3): beta0 > 5/6",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "4 Euler domain",
+   "claim": "small-row selected exponents at Re s >= alpha0: good all < 0, ramified (after Q^{Re s}) all <= 1/2",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "4 Euler domain",
+   "claim": "mu = (437/1000) ell/K satisfies 0 < mu < (437/500) min ell_i",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "4 Euler domain",
+   "claim": "good-prime excess decay min(6a-401/100, a-3/50) vanishes exactly at a = 401/600",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "5 envelope",
+   "claim": "R_*(delta,1/2) - 2/3 = (288 delta^2 - 588 delta + 185)/(3(185-138 delta))",
+   "pass": true,
+   "detail": "-(288*delta**2 - 588*delta + 185)/(3*(138*delta - 185))",
+   "documented_finding": false
+  },
+  {
+   "section": "5 envelope",
+   "claim": "smaller root delta0 = (49 - sqrt 921)/48 ~ 0.3885789, inside (3/8, 19/48), other root > 5/6",
+   "pass": true,
+   "detail": "[0.388583712271, 1.65308295440]",
+   "documented_finding": false
+  },
+  {
+   "section": "5 envelope",
+   "claim": "dE/db = (R_* - 2/3)/2, so b cancels exactly where R_* = 2/3",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "5 envelope",
+   "claim": "E at R_*=2/3, x=1/2: -5/12 + delta/2 + ell(3/4 + 3 delta/2) (b-free)",
+   "pass": true,
+   "detail": "",
+   "documented_finding": false
+  },
+  {
+   "section": "5 envelope",
+   "claim": "ell* = (8 sqrt 921 + 33)/1653 and beta_limit = (1507 - 2 sqrt 921)/1653",
+   "pass": true,
+   "detail": "0.874957069799169",
+   "documented_finding": false
+  },
+  {
+   "section": "5 envelope",
+   "claim": "exact enclosure: 0.8749570697 < (1507-2sqrt921)/1653 < 0.8749570698, and beta0 = 0.87499375 lies above it (gap 3.668e-5)",
+   "pass": true,
+   "detail": "[0.874957069799, 0.874957069799]; beta0-limit ~ 3.668020e-05",
+   "documented_finding": false
+  },
+  {
+   "section": "5 envelope",
+   "claim": "PR's displayed decimal '0.874957067...' (ENVELOPE_LIMIT.md:110, README.md:90, REVIEW.md:101) is a correct truncation of the exact limit",
+   "pass": false,
+   "detail": "exact value lies in [0.874957069799, 0.874957069799]: correct truncation is 0.874957069...; PR checker bracket (0.87495706, 0.87495708) is too coarse to see this",
+   "documented_finding": true
+  },
+  {
+   "section": "5 envelope",
+   "claim": "on the b-free curve R_*=2/3 the ell-threshold is smallest at x = 1/2 (scan x=0..1/2 step 1/100)",
+   "pass": true,
+   "detail": "min ell_thr = 0.166838387 at x=0.5; at x=0: 0.178571",
+   "documented_finding": false
+  },
+  {
+   "section": "5 envelope",
+   "claim": "tightness probe: at ell = ell*, min_b sup_{delta<=3/4,x} E is ~0 (b-window where the corner binds)",
+   "pass": true,
+   "detail": "min_b supE = 2.292e-09 at b = 0.1235; supE(ell*-1e-5, b) = -1.333e-05",
+   "documented_finding": false
+  },
+  {
+   "section": "5 envelope",
+   "claim": "our optimiser optimum (0.8749602 / 0.8749610 with 2e-5 slack) corrected for its slack lands on (1507-2sqrt921)/1653 to < 2e-7",
+   "pass": true,
+   "detail": "{'A_paper_bp11_12': '0.87496099 -> 0.87495723', 'B_paper_bp7_8': '0.87496023 -> 0.87495705'}",
+   "documented_finding": false
+  },
+  {
+   "section": "6 model",
+   "claim": "model low_threshold at PR geometry = 0.87499375",
+   "pass": true,
+   "detail": "0.87499375",
+   "documented_finding": false
+  },
+  {
+   "section": "6 model",
+   "claim": "model sup F at PR geometry, beta_prev=11/12 (nde=401,nx=51,nd=41) < -1073/22032000",
+   "pass": true,
+   "detail": "-1.949115e-04 at (np.float64(0.386), np.float64(0.5), np.float64(0.81254), np.float64(0.669052)) (8s)",
+   "documented_finding": false
+  },
+  {
+   "section": "6 model",
+   "claim": "model sup F at PR geometry, beta_prev=7/8 (the PR's bootstrap setting, delta<=3/4)",
+   "pass": true,
+   "detail": "-1.948373e-04 at (np.float64(0.38682), np.float64(0.5), np.float64(0.81254), np.float64(0.668291)) (7s)",
+   "documented_finding": false
+  },
+  {
+   "section": "6 model",
+   "claim": "model sup F at source geometry (reference; expect ~ -2.28e-4)",
+   "pass": true,
+   "detail": "-2.282260e-04 at (np.float64(0.386), np.float64(0.5), np.float64(0.8125), np.float64(0.669052))",
+   "documented_finding": false
+  },
+  {
+   "section": "6 model",
+   "claim": "shift in sup F from source to PR geometry ~ s0 * dE/dell at binding point (~1.333 s0 = 3.3e-5)",
+   "pass": true,
+   "detail": "3.3314e-05 vs 3.3332e-05",
+   "documented_finding": false
+  }
+ ]
+}
