@@ -1,0 +1,623 @@
+{
+  "status": "FINITE_NUMERICAL_DIAGNOSTIC_ONLY",
+  "field": "Q(sqrt(-3)); omega^2+omega+1=0",
+  "fixed_twist": "nu=1",
+  "excluded_column_primes": [
+    2,
+    3
+  ],
+  "weight": "W(x)=exp(1-1/(1-(4x-3)^2)) for 1/2<x<1; zero elsewhere",
+  "symbol_arithmetic": "exact finite fields; exponents modulo 6 with nonunit zero",
+  "row_cutoff_arithmetic": "H=ceil(D^(1+theta)) by exact rational integer comparison",
+  "sum_arithmetic": "ordinary binary64; not directed or certified",
+  "exact_small_field_predicates": 68680,
+  "exact_independent_norm_coefficient_predicates": 8192,
+  "scope": "All element rows in each finite norm ball; all squarefree ideal columns in the bump support",
+  "not_established": [
+    "uniform asymptotic moment bound",
+    "17/24 zero-free boundary",
+    "RH"
+  ],
+  "panels": [
+    {
+      "D": 64,
+      "H": 98,
+      "theta": 0.1,
+      "theta_exact": "1/10",
+      "rows": 360,
+      "prime_ideals": 15,
+      "nonzero_weight_columns": 7,
+      "squarefree_column_manifest_sha256": "9d858d482a68c6401828667ba420747d5d854f8bf484fa9c786a1a3003974cba",
+      "coefficient_energy": 2.977081833324806,
+      "sixth_power_ideal_rows": 6,
+      "exact_sixth_power_rows": 1,
+      "maximum": {
+        "a": 8,
+        "b": 0,
+        "norm": 64,
+        "absolute_sum": 3.893775791984227
+      },
+      "moments": [
+        {
+          "k": 1,
+          "moment": 2,
+          "sum": 1061.6038845938942,
+          "ratio_to_H_D_power_k": 0.16926082343652651,
+          "ratio_to_row_count_empirical_second_power_k": 1.0,
+          "sixth_power_ideal_row_fraction": 0.028044223643675252,
+          "exact_sixth_power_row_fraction": 0.003406257449015389
+        },
+        {
+          "k": 2,
+          "moment": 4,
+          "sum": 5011.055224932221,
+          "ratio_to_H_D_power_k": 0.012483695454331306,
+          "ratio_to_row_count_empirical_second_power_k": 1.6006880093949096,
+          "sixth_power_ideal_row_fraction": 0.032787974262846936,
+          "exact_sixth_power_row_fraction": 0.0026094606236284463
+        },
+        {
+          "k": 3,
+          "moment": 6,
+          "sum": 31191.161084149324,
+          "ratio_to_H_D_power_k": 0.0012141309887691157,
+          "ratio_to_row_count_empirical_second_power_k": 3.3786954429875102,
+          "sixth_power_ideal_row_fraction": 0.031721876303883616,
+          "exact_sixth_power_row_fraction": 0.0015159621690240472
+        },
+        {
+          "k": 4,
+          "moment": 8,
+          "sum": 242385.9510363917,
+          "ratio_to_H_D_power_k": 0.0001474217194905036,
+          "ratio_to_row_count_empirical_second_power_k": 8.903585842808972,
+          "sixth_power_ideal_row_fraction": 0.02619653529241741,
+          "exact_sixth_power_row_fraction": 0.0007054275707305294
+        },
+        {
+          "k": 5,
+          "moment": 10,
+          "sum": 2264678.686549764,
+          "ratio_to_H_D_power_k": 2.1521901888105372e-05,
+          "ratio_to_row_count_empirical_second_power_k": 28.210065909465023,
+          "sixth_power_ideal_row_fraction": 0.018774923046126848,
+          "exact_sixth_power_row_fraction": 0.00027301923727909296
+        },
+        {
+          "k": 6,
+          "moment": 12,
+          "sum": 24498068.671513066,
+          "ratio_to_H_D_power_k": 3.637692026189468e-06,
+          "ratio_to_row_count_empirical_second_power_k": 103.4830826541849,
+          "sixth_power_ideal_row_fraction": 0.01194016243939957,
+          "exact_sixth_power_row_fraction": 9.126577847935388e-05
+        }
+      ]
+    },
+    {
+      "D": 128,
+      "H": 208,
+      "theta": 0.1,
+      "theta_exact": "1/10",
+      "rows": 756,
+      "prime_ideals": 30,
+      "nonzero_weight_columns": 19,
+      "squarefree_column_manifest_sha256": "832b480a28260c927caf5d6191b07a2218b4636c5b25910463cbc2a20c2ab16e",
+      "coefficient_energy": 10.147189456422495,
+      "sixth_power_ideal_rows": 6,
+      "exact_sixth_power_rows": 1,
+      "maximum": {
+        "a": 8,
+        "b": 0,
+        "norm": 64,
+        "absolute_sum": 8.385173246513098
+      },
+      "moments": [
+        {
+          "k": 1,
+          "moment": 2,
+          "sum": 7038.829611225768,
+          "ratio_to_H_D_power_k": 0.2643791170081794,
+          "ratio_to_row_count_empirical_second_power_k": 1.0,
+          "sixth_power_ideal_row_fraction": 0.02573602625856872,
+          "exact_sixth_power_row_fraction": 0.002167375081288944
+        },
+        {
+          "k": 2,
+          "moment": 4,
+          "sum": 127630.22185486437,
+          "ratio_to_H_D_power_k": 0.037451589101604864,
+          "ratio_to_row_count_empirical_second_power_k": 1.9474863165354046,
+          "sixth_power_ideal_row_fraction": 0.05251115828652342,
+          "exact_sixth_power_row_fraction": 0.00182354100028799
+        },
+        {
+          "k": 3,
+          "moment": 6,
+          "sum": 3564484.073914826,
+          "ratio_to_H_D_power_k": 0.008171531039739631,
+          "ratio_to_row_count_empirical_second_power_k": 5.841695459652918,
+          "sixth_power_ideal_row_fraction": 0.08035525437060112,
+          "exact_sixth_power_row_fraction": 0.0009961090966771873
+        },
+        {
+          "k": 4,
+          "moment": 8,
+          "sum": 135643608.49295568,
+          "ratio_to_H_D_power_k": 0.0024293837440729515,
+          "ratio_to_row_count_empirical_second_power_k": 23.876073749591043,
+          "sixth_power_ideal_row_fraction": 0.0978180621196473,
+          "exact_sixth_power_row_fraction": 0.00039933628959309844
+        },
+        {
+          "k": 5,
+          "moment": 10,
+          "sum": 6350512481.725044,
+          "ratio_to_H_D_power_k": 0.0008885780701033504,
+          "ratio_to_row_count_empirical_second_power_k": 120.05871592231554,
+          "sixth_power_ideal_row_fraction": 0.10069057134653314,
+          "exact_sixth_power_row_fraction": 0.00013012593629332489
+        },
+        {
+          "k": 6,
+          "moment": 12,
+          "sum": 338077382316.5087,
+          "ratio_to_H_D_power_k": 0.0003695668125073622,
+          "ratio_to_row_count_empirical_second_power_k": 686.4712926294452,
+          "sixth_power_ideal_row_fraction": 0.09284961389801297,
+          "exact_sixth_power_row_fraction": 3.728988573523477e-05
+        }
+      ]
+    },
+    {
+      "D": 256,
+      "H": 446,
+      "theta": 0.1,
+      "theta_exact": "1/10",
+      "rows": 1626,
+      "prime_ideals": 52,
+      "nonzero_weight_columns": 37,
+      "squarefree_column_manifest_sha256": "4c79189ba482dd85ca393f54e8d293edc816cde2d168895070b01a2f281c7069",
+      "coefficient_energy": 17.248822409633643,
+      "sixth_power_ideal_rows": 6,
+      "exact_sixth_power_rows": 1,
+      "maximum": {
+        "a": -19,
+        "b": -13,
+        "norm": 283,
+        "absolute_sum": 11.460197314833742
+      },
+      "moments": [
+        {
+          "k": 1,
+          "moment": 2,
+          "sum": 25731.257514511715,
+          "ratio_to_H_D_power_k": 0.2253648535113484,
+          "ratio_to_row_count_empirical_second_power_k": 1.0,
+          "sixth_power_ideal_row_fraction": 0.009559823930693361,
+          "exact_sixth_power_row_fraction": 0.002916828064718566
+        },
+        {
+          "k": 2,
+          "moment": 4,
+          "sum": 834109.9447194831,
+          "ratio_to_H_D_power_k": 0.0285370127834263,
+          "ratio_to_row_count_empirical_second_power_k": 2.0484332565388335,
+          "sixth_power_ideal_row_fraction": 0.02033393862679791,
+          "exact_sixth_power_row_fraction": 0.006753367494589338
+        },
+        {
+          "k": 3,
+          "moment": 6,
+          "sum": 41352960.28979829,
+          "ratio_to_H_D_power_k": 0.005526521319471438,
+          "ratio_to_row_count_empirical_second_power_k": 6.417481913594034,
+          "sixth_power_ideal_row_fraction": 0.03041266560042085,
+          "exact_sixth_power_row_fraction": 0.010223719345723354
+        },
+        {
+          "k": 4,
+          "moment": 8,
+          "sum": 2739728738.9087453,
+          "ratio_to_H_D_power_k": 0.0014302529276168782,
+          "ratio_to_row_count_empirical_second_power_k": 26.867369274113063,
+          "sixth_power_ideal_row_fraction": 0.0343079590006854,
+          "exact_sixth_power_row_fraction": 0.01158189968885035
+        },
+        {
+          "k": 5,
+          "moment": 10,
+          "sum": 224300686508.63174,
+          "ratio_to_H_D_power_k": 0.00045739974435791725,
+          "ratio_to_row_count_empirical_second_power_k": 138.99773135186317,
+          "sixth_power_ideal_row_fraction": 0.0313475279188079,
+          "exact_sixth_power_row_fraction": 0.010617654833328683
+        },
+        {
+          "k": 6,
+          "moment": 12,
+          "sum": 21400301930032.67,
+          "ratio_to_H_D_power_k": 0.00017046893586835838,
+          "ratio_to_row_count_empirical_second_power_k": 838.0241611071173,
+          "sixth_power_ideal_row_fraction": 0.024580729934521383,
+          "exact_sixth_power_row_fraction": 0.008352397334330857
+        }
+      ]
+    },
+    {
+      "D": 512,
+      "H": 956,
+      "theta": 0.1,
+      "theta_exact": "1/10",
+      "rows": 3462,
+      "prime_ideals": 93,
+      "nonzero_weight_columns": 74,
+      "squarefree_column_manifest_sha256": "fa3505dc1f82db49043113362addb10198e1392d4d5de3e38a024c57f9aeaa6f",
+      "coefficient_energy": 32.9078779924757,
+      "sixth_power_ideal_rows": 12,
+      "exact_sixth_power_rows": 2,
+      "maximum": {
+        "a": -16,
+        "b": -7,
+        "norm": 193,
+        "absolute_sum": 14.873504595899933
+      },
+      "moments": [
+        {
+          "k": 1,
+          "moment": 2,
+          "sum": 104937.61686029144,
+          "ratio_to_H_D_power_k": 0.2143894172910635,
+          "ratio_to_row_count_empirical_second_power_k": 1.0,
+          "sixth_power_ideal_row_fraction": 0.0073876893491253365,
+          "exact_sixth_power_row_fraction": 0.002186368340523492
+        },
+        {
+          "k": 2,
+          "moment": 4,
+          "sum": 6327020.865885571,
+          "ratio_to_H_D_power_k": 0.025246515896073227,
+          "ratio_to_row_count_empirical_second_power_k": 1.989133520133529,
+          "sixth_power_ideal_row_fraction": 0.009823860311721073,
+          "exact_sixth_power_row_fraction": 0.004159870316967031
+        },
+        {
+          "k": 3,
+          "moment": 6,
+          "sum": 558640559.3128603,
+          "ratio_to_H_D_power_k": 0.004353762041706142,
+          "ratio_to_row_count_empirical_second_power_k": 5.794193566399868,
+          "sixth_power_ideal_row_fraction": 0.010164801904281142,
+          "exact_sixth_power_row_fraction": 0.005404694196216782
+        },
+        {
+          "k": 4,
+          "moment": 8,
+          "sum": 63044575323.38869,
+          "ratio_to_H_D_power_k": 0.0009596436356844569,
+          "ratio_to_row_count_empirical_second_power_k": 21.57268121020862,
+          "sixth_power_ideal_row_fraction": 0.008835739612094147,
+          "exact_sixth_power_row_fraction": 0.005493895542777416
+        },
+        {
+          "k": 5,
+          "moment": 10,
+          "sum": 8405169609094.621,
+          "ratio_to_H_D_power_k": 0.0002498841928273533,
+          "ratio_to_row_count_empirical_second_power_k": 94.88525959479782,
+          "sixth_power_ideal_row_fraction": 0.006776774265024745,
+          "exact_sixth_power_row_fraction": 0.004727223884453112
+        },
+        {
+          "k": 6,
+          "moment": 12,
+          "sum": 1261158116876441.2,
+          "ratio_to_H_D_power_k": 7.323048007579128e-05,
+          "ratio_to_row_count_empirical_second_power_k": 469.6968789127498,
+          "sixth_power_ideal_row_fraction": 0.004747496407780449,
+          "exact_sixth_power_row_fraction": 0.0036141622458351896
+        }
+      ]
+    },
+    {
+      "D": 1024,
+      "H": 2048,
+      "theta": 0.1,
+      "theta_exact": "1/10",
+      "rows": 7446,
+      "prime_ideals": 169,
+      "nonzero_weight_columns": 139,
+      "squarefree_column_manifest_sha256": "b112346f99a4a6bf5a99e380fd275d3901b2e4e39172d85013a8894810dc93f1",
+      "coefficient_energy": 72.42731007968159,
+      "sixth_power_ideal_rows": 12,
+      "exact_sixth_power_rows": 2,
+      "maximum": {
+        "a": 8,
+        "b": 0,
+        "norm": 64,
+        "absolute_sum": 36.305499240880096
+      },
+      "moments": [
+        {
+          "k": 1,
+          "moment": 2,
+          "sum": 505602.44434849976,
+          "ratio_to_H_D_power_k": 0.24109003274369228,
+          "ratio_to_row_count_empirical_second_power_k": 1.0000000000000002,
+          "sixth_power_ideal_row_fraction": 0.002378158524590065,
+          "exact_sixth_power_row_fraction": 0.0003911440972130426
+        },
+        {
+          "k": 2,
+          "moment": 4,
+          "sum": 70667096.81977943,
+          "ratio_to_H_D_power_k": 0.032906931275399134,
+          "ratio_to_row_count_empirical_second_power_k": 2.0583629301203423,
+          "sixth_power_ideal_row_fraction": 0.0031318604158410697,
+          "exact_sixth_power_row_fraction": 0.00027672261027348916
+        },
+        {
+          "k": 3,
+          "moment": 6,
+          "sum": 16427119539.33813,
+          "ratio_to_H_D_power_k": 0.007470189093209288,
+          "ratio_to_row_count_empirical_second_power_k": 7.046605956473891,
+          "sixth_power_ideal_row_fraction": 0.00283158910531532,
+          "exact_sixth_power_row_fraction": 0.00011771083157678409
+        },
+        {
+          "k": 4,
+          "moment": 8,
+          "sum": 6881315621315.65,
+          "ratio_to_H_D_power_k": 0.00305591801699896,
+          "ratio_to_row_count_empirical_second_power_k": 43.471428730493976,
+          "sixth_power_ideal_row_fraction": 0.0014727449608117715,
+          "exact_sixth_power_row_fraction": 2.7785762379335096e-05
+        },
+        {
+          "k": 5,
+          "moment": 10,
+          "sum": 5304488805849087.0,
+          "ratio_to_H_D_power_k": 0.0023004553148906477,
+          "ratio_to_row_count_empirical_second_power_k": 493.50304915093903,
+          "sixth_power_ideal_row_fraction": 0.0004220504054320233,
+          "exact_sixth_power_row_fraction": 3.56423399272894e-06
+        },
+        {
+          "k": 6,
+          "moment": 12,
+          "sum": 5.792807711315866e+18,
+          "ratio_to_H_D_power_k": 0.002453349494296658,
+          "ratio_to_row_count_empirical_second_power_k": 7936.870287682902,
+          "sixth_power_ideal_row_fraction": 8.588466252721348e-05,
+          "exact_sixth_power_row_fraction": 3.2272795226993443e-07
+        }
+      ]
+    },
+    {
+      "D": 2048,
+      "H": 4390,
+      "theta": 0.1,
+      "theta_exact": "1/10",
+      "rows": 15936,
+      "prime_ideals": 308,
+      "nonzero_weight_columns": 294,
+      "squarefree_column_manifest_sha256": "b93181fedb1f11a297e1799978cb0aefea3632ecdfceb7ee032a88fce5038615",
+      "coefficient_energy": 143.07961857105022,
+      "sixth_power_ideal_rows": 18,
+      "exact_sixth_power_rows": 3,
+      "maximum": {
+        "a": -36,
+        "b": 35,
+        "norm": 3781,
+        "absolute_sum": 35.66367275197556
+      },
+      "moments": [
+        {
+          "k": 1,
+          "moment": 2,
+          "sum": 2149324.691148998,
+          "ratio_to_H_D_power_k": 0.23906035235765302,
+          "ratio_to_row_count_empirical_second_power_k": 1.0,
+          "sixth_power_ideal_row_fraction": 0.0012522981260648291,
+          "exact_sixth_power_row_fraction": 0.00040416310791684167
+        },
+        {
+          "k": 2,
+          "moment": 4,
+          "sum": 592735150.0409067,
+          "ratio_to_H_D_power_k": 0.03219113263241559,
+          "ratio_to_row_count_empirical_second_power_k": 2.0447298999732473,
+          "sixth_power_ideal_row_fraction": 0.0008777105333879866,
+          "exact_sixth_power_row_fraction": 0.0004243609917232923
+        },
+        {
+          "k": 3,
+          "moment": 6,
+          "sum": 248363788592.86298,
+          "ratio_to_H_D_power_k": 0.0065861845966275505,
+          "ratio_to_row_count_empirical_second_power_k": 6.352443846237501,
+          "sixth_power_ideal_row_fraction": 0.0004698415013763767,
+          "exact_sixth_power_row_fraction": 0.0002932549175976949
+        },
+        {
+          "k": 4,
+          "moment": 8,
+          "sum": 139484428334080.11,
+          "ratio_to_H_D_power_k": 0.0018060983563449825,
+          "ratio_to_row_count_empirical_second_power_k": 26.451821218806376,
+          "sixth_power_ideal_row_fraction": 0.0002053992780377996,
+          "exact_sixth_power_row_fraction": 0.00015119773814740076
+        },
+        {
+          "k": 5,
+          "moment": 10,
+          "sum": 9.726813430227043e+16,
+          "ratio_to_H_D_power_k": 0.0006149733614163589,
+          "ratio_to_row_count_empirical_second_power_k": 136.76586950979112,
+          "sixth_power_ideal_row_fraction": 7.659305442827946e-05,
+          "exact_sixth_power_row_fraction": 6.278239472186585e-05
+        },
+        {
+          "k": 6,
+          "moment": 12,
+          "sum": 7.954752756980246e+19,
+          "ratio_to_H_D_power_k": 0.0002455740381749157,
+          "ratio_to_row_count_empirical_second_power_k": 829.2989666138167,
+          "sixth_power_ideal_row_fraction": 2.5280753010223578e-05,
+          "exact_sixth_power_row_fraction": 2.2228963802163212e-05
+        }
+      ]
+    },
+    {
+      "D": 4096,
+      "H": 9411,
+      "theta": 0.1,
+      "theta_exact": "1/10",
+      "rows": 34122,
+      "prime_ideals": 563,
+      "nonzero_weight_columns": 583,
+      "squarefree_column_manifest_sha256": "d04c3aaf85fda6448c5b3fd569cb6c7a45ddbaa3aefda436cc1f21608ddb8955",
+      "coefficient_energy": 287.2532800757151,
+      "sixth_power_ideal_rows": 18,
+      "exact_sixth_power_rows": 3,
+      "maximum": {
+        "a": -43,
+        "b": -7,
+        "norm": 1597,
+        "absolute_sum": 56.81397594037591
+      },
+      "moments": [
+        {
+          "k": 1,
+          "moment": 2,
+          "sum": 9222600.780567132,
+          "ratio_to_H_D_power_k": 0.23925316318065534,
+          "ratio_to_row_count_empirical_second_power_k": 1.0,
+          "sixth_power_ideal_row_fraction": 0.0016979455918389099,
+          "exact_sixth_power_row_fraction": 0.00010118522052220384
+        },
+        {
+          "k": 2,
+          "moment": 4,
+          "sum": 5192631325.589756,
+          "ratio_to_H_D_power_k": 0.03288757258647786,
+          "ratio_to_row_count_empirical_second_power_k": 2.0831241232002875,
+          "sixth_power_ideal_row_fraction": 0.006546566577567079,
+          "exact_sixth_power_row_fraction": 5.590263006756807e-05
+        },
+        {
+          "k": 3,
+          "moment": 6,
+          "sum": 4583063323069.387,
+          "ratio_to_H_D_power_k": 0.007086637866703113,
+          "ratio_to_row_count_empirical_second_power_k": 6.802437903455077,
+          "sixth_power_ideal_row_fraction": 0.017424417143741804,
+          "exact_sixth_power_row_fraction": 1.970212678236336e-05
+        },
+        {
+          "k": 4,
+          "moment": 8,
+          "sum": 5621441784717950.0,
+          "ratio_to_H_D_power_k": 0.002122130817463411,
+          "ratio_to_row_count_empirical_second_power_k": 30.870062913694156,
+          "sixth_power_ideal_row_fraction": 0.03361867997188289,
+          "exact_sixth_power_row_fraction": 4.996552870869075e-06
+        },
+        {
+          "k": 5,
+          "moment": 10,
+          "sum": 8.87265970948001e+18,
+          "ratio_to_H_D_power_k": 0.0008177457811278573,
+          "ratio_to_row_count_empirical_second_power_k": 180.2705116994012,
+          "sixth_power_ideal_row_fraction": 0.05045115788040817,
+          "exact_sixth_power_row_fraction": 9.847219456615185e-07
+        },
+        {
+          "k": 6,
+          "moment": 12,
+          "sum": 1.6939783156078098e+22,
+          "ratio_to_H_D_power_k": 0.00038116444725697546,
+          "ratio_to_row_count_empirical_second_power_k": 1273.3851521661725,
+          "sixth_power_ideal_row_fraction": 0.0625983354404578,
+          "exact_sixth_power_row_fraction": 1.604385887076763e-07
+        }
+      ]
+    },
+    {
+      "D": 8192,
+      "H": 20172,
+      "theta": 0.1,
+      "theta_exact": "1/10",
+      "rows": 73140,
+      "prime_ideals": 1022,
+      "nonzero_weight_columns": 1145,
+      "squarefree_column_manifest_sha256": "3291b33c19388d80e94aa5a022341af80189a41c3b3c617bebc68e75762d1a8c",
+      "coefficient_energy": 566.9022043496349,
+      "sixth_power_ideal_rows": 18,
+      "exact_sixth_power_rows": 3,
+      "maximum": {
+        "a": -135,
+        "b": -95,
+        "norm": 14425,
+        "absolute_sum": 76.89614659098024
+      },
+      "moments": [
+        {
+          "k": 1,
+          "moment": 2,
+          "sum": 38823919.00011481,
+          "ratio_to_H_D_power_k": 0.23494189593588652,
+          "ratio_to_row_count_empirical_second_power_k": 1.0,
+          "sixth_power_ideal_row_fraction": 0.0001706369195275662,
+          "exact_sixth_power_row_fraction": 1.2518878124140044e-05
+        },
+        {
+          "k": 2,
+          "moment": 4,
+          "sum": 43049918516.60579,
+          "ratio_to_H_D_power_k": 0.03180119845319997,
+          "ratio_to_row_count_empirical_second_power_k": 2.0889524062833877,
+          "sixth_power_ideal_row_fraction": 6.921129853379347e-05,
+          "exact_sixth_power_row_fraction": 1.8290938050105473e-06
+        },
+        {
+          "k": 3,
+          "moment": 6,
+          "sum": 74670497174250.9,
+          "ratio_to_H_D_power_k": 0.006733335470824074,
+          "ratio_to_row_count_empirical_second_power_k": 6.825914409143952,
+          "sixth_power_ideal_row_fraction": 1.9072495208351935e-05,
+          "exact_sixth_power_row_fraction": 1.708452066964511e-07
+        },
+        {
+          "k": 4,
+          "moment": 8,
+          "sum": 1.7878731792418998e+17,
+          "ratio_to_H_D_power_k": 0.001968013056418934,
+          "ratio_to_row_count_empirical_second_power_k": 30.789602951781447,
+          "sixth_power_ideal_row_fraction": 3.873216474338111e-06,
+          "exact_sixth_power_row_fraction": 1.1560022013684485e-08
+        },
+        {
+          "k": 5,
+          "moment": 10,
+          "sum": 5.451751542171328e+20,
+          "ratio_to_H_D_power_k": 0.0007325501767144251,
+          "ratio_to_row_count_empirical_second_power_k": 176.871972027772,
+          "sixth_power_ideal_row_fraction": 6.207132403218699e-07,
+          "exact_sixth_power_row_fraction": 6.141901458928946e-10
+        },
+        {
+          "k": 6,
+          "moment": 12,
+          "sum": 1.9875605027235574e+24,
+          "ratio_to_H_D_power_k": 0.0003260106115663446,
+          "ratio_to_row_count_empirical_second_power_k": 1214.7835560070032,
+          "sixth_power_ideal_row_fraction": 8.332765503578458e-08,
+          "exact_sixth_power_row_fraction": 2.72936784391579e-11
+        }
+      ]
+    }
+  ]
+}

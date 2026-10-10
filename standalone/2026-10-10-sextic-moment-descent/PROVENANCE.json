@@ -1,0 +1,255 @@
+{
+  "schema_version": 1,
+  "packet": "2026-10-10-sextic-moment-descent",
+  "prepared_on_utc": "2026-10-10",
+  "status": "PROPOSED_STANDALONE_RESEARCH_WITH_COMPLETE_COMPONENT_PROOFS_AND_SCOPED_AI_REVIEW",
+  "repository": "GettysburgResearch/riemann",
+  "branch": "research/sextic-moment-descent-20261010",
+  "parent": {
+    "commit": "670a76c1a3a8f325c43c1755b1cfc24d313a3e3c",
+    "tree": "79f5d1196c418dc23ac3b31c458aa315d48944e5",
+    "branch": "research/quasi-rh-height-descent-20261010",
+    "pull_request": "https://github.com/GettysburgResearch/riemann/pull/910",
+    "source_import_pull_request": "https://github.com/GettysburgResearch/riemann/pull/908",
+    "earlier_packet_modified": false
+  },
+  "main_results": [
+    {
+      "component": "all_row_sextic_sieve",
+      "bound": "(HL)^epsilon * [H+(HL)^(2/3)+H^(1/6)L] * sum_n|z_n|^2",
+      "scope": "All nonzero element rows; arbitrary complex squarefree good-prime columns; literal zero masks. Classical sieve inputs only."
+    },
+    {
+      "component": "general_k_actual_overlap_ranges",
+      "bound": "HD^k + H^(1/6)D^(2k)C^(2-2k) + H^(2/3)D^(5k/3)C^(2-5k/3)",
+      "scope": "Full-common-gcd tail of actual A_u(D)^k for each fixed k>=2; not the full moment."
+    },
+    {
+      "component": "sextic_gram_correlation",
+      "bound": "(PZ)^epsilon * [PZ+P^2 Z^(1/3)]",
+      "scope": "Off-diagonal square-sum over squarefree primary character moduli for a fixed smooth unrestricted primary inner sum."
+    },
+    {
+      "component": "direct_gram_composition",
+      "scope": "Proved all-row adapter and exact parameter comparison; no stronger uniform moment/core range than refined sieve."
+    },
+    {
+      "component": "structured_transfer",
+      "scope": "Balanced divisor weights closed under the named two-Poisson transfer; completed theta extension and favorable initialization not proved."
+    },
+    {
+      "component": "weaker_full_moments",
+      "bound": "H D^(1+2(k-1)beta+epsilon)",
+      "scope": "Conditional on a common zero-free beta>1/2 and imported second moment; uniform conductor adapter proved; no bootstrap improvement."
+    },
+    {
+      "component": "unbounded_hierarchy_equivalence",
+      "scope": "For fixed finite-order nu, diagonal moments at one fixed polynomial row scale for unbounded fixed orders and all fixed smooth tests are equivalent to GRH for the entire associated sextic row-twist family."
+    }
+  ],
+  "not_established": [
+    "Full near-linear-row fourth moment HD^(2+epsilon)",
+    "17/24 zero-free boundary",
+    "Unbounded diagonal moment hierarchy",
+    "Further improvement beyond the preceding conditional139999/160000 boundary",
+    "Height-dependent band shrinking to1/2",
+    "RH or GRH",
+    "External novelty of the component deductions",
+    "Lean kernel build or integrated repository acceptance"
+  ],
+  "upstream_sources": [
+    {
+      "upstream_path": "preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex",
+      "bytes": 169005,
+      "sha256": "d9a8f15aa770cf883d0eabd2b775fad694ce20b44cba7928f5c0c9a6d8750d4d",
+      "git_blob": "2000faddbbebac5de0ecfe0b962534ea61a852d5",
+      "repository": "openai/math",
+      "commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex"
+    },
+    {
+      "upstream_path": "preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/build/paper.tex",
+      "bytes": 766316,
+      "sha256": "42a5ee0febca59fd1def55cfd6c6808c322ef4237d7726303ea52f711deac6a3",
+      "git_blob": "268c4e3206d460c617d3d2129742a72b831b3def",
+      "repository": "openai/math",
+      "commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/build/paper.tex"
+    },
+    {
+      "upstream_path": "preprints/An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026/build/sections/dual.tex",
+      "bytes": 21454,
+      "sha256": "1209fd17cee79f4a21b71d66d3d8b60b210216fa783ec555959d2ebff2fba483",
+      "git_blob": "8dcddce96894146ca745b8227c922c34f5990dcf",
+      "repository": "openai/math",
+      "commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026/build/sections/dual.tex"
+    },
+    {
+      "upstream_path": "preprints/An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026/build/sections/background.tex",
+      "bytes": 27216,
+      "sha256": "1c7be908c862dc440772964cfdd59e095e7b0f079cec11d99f5c7a9644198dd1",
+      "git_blob": "3d31d5791ef3cf55c9608066997f9dc6c6bb861a",
+      "repository": "openai/math",
+      "commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026/build/sections/background.tex"
+    }
+  ],
+  "classical_inputs": [
+    {
+      "title": "L-functions with n-th order twists",
+      "authors": "Blomer, Goldmakher, Louvel",
+      "reference": "Theorem1.3 and primitive-character conventions",
+      "url": "https://arxiv.org/abs/1112.1650"
+    },
+    {
+      "title": "A quadratic large sieve inequality over number fields",
+      "authors": "Goldmakher, Louvel",
+      "reference": "Theorem1.1, Corollary1.2 and Section2 conductor conventions",
+      "url": "https://arxiv.org/abs/1112.1642"
+    },
+    {
+      "reference": "Planar additive large sieve",
+      "location": "Pinned September30 manuscript, lem:planar-additive-sieve; the ordinary primitive-character reduction is proved in REFINED_ALL_ROW_SIEVE.md"
+    }
+  ],
+  "review": {
+    "report": "INDEPENDENT_MOMENT_REVIEW.md",
+    "review_type": "Collaborating AI-agent source and proof review, not human peer review or formalization",
+    "bound_files": [
+      "README.md",
+      "FOURTH_MOMENT_ATTACK.md",
+      "GENERAL_MOMENT_ATTACK.md",
+      "ALL_ROW_SIEVE_AND_GCD_TAIL.md",
+      "REFINED_ALL_ROW_SIEVE.md",
+      "MOMENT_OBSTRUCTIONS.md",
+      "SEXTIC_GRAM_BOUND.md",
+      "GRAM_MOMENT_COMPOSITION.md",
+      "checks/sextic_moment_probe.py",
+      "checks/check_sextic_probe.py",
+      "results/sextic_moment_probe.json",
+      "results/sextic_probe_additional_checks.json"
+    ],
+    "roles": {
+      "root": "Research synthesis, refined-sieve strategy, component cross-checks, diagnostic implementation and final rerun",
+      "audit_openai_riemann": "Structured transfer, conductor-uniform weaker moments, refined-sieve proof, sextic Gram adaptation and additional symbol checker",
+      "map_existing_riemann": "General-k incidence and extraction proofs, independent Gram adapter check, direct-composition proof and obstruction cross-checks",
+      "audit_formalization": "Independent component review, authored obstruction note, contribution to bounded-inner Gram strengthening, exact-cutoff and checker acceptance review"
+    },
+    "collaborative_and_authored_sections_distinguished": true,
+    "outstanding_must_fixes": []
+  },
+  "validation": {
+    "report": "VALIDATION.md",
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "fixed_twist": "nu=1",
+    "scales": [
+      64,
+      128,
+      256,
+      512,
+      1024,
+      2048,
+      4096,
+      8192
+    ],
+    "theta_exact": "1/10",
+    "row_cutoff": "Exact integer ceiling of D^(11/10)",
+    "moments": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12
+    ],
+    "exact_small_field_predicates": 68680,
+    "exact_independent_norm_coefficient_predicates": 8192,
+    "exact_additional_symbol_predicates": 51688,
+    "exact_arithmetic_predicates_total": 128560,
+    "independent_cutoff_review_predicates": 3593,
+    "checker_normal_and_optimized_results_identical": true,
+    "reviewer_altered_symbol_rejected_in_both_modes": true,
+    "floating_arithmetic": "ordinary binary64, not directed or certified",
+    "numerical_results_imply_asymptotic_bound": false,
+    "lean_build_performed": false
+  },
+  "repository_navigation": {
+    "path": "README.md",
+    "sha256": "3c670ee702cc9ac08040fe116bfd9d863c33ff39889ca2679f5045a588b561e8"
+  },
+  "files": [
+    {
+      "path": "ALL_ROW_SIEVE_AND_GCD_TAIL.md",
+      "bytes": 9589,
+      "sha256": "08c78f5127829e4b02e6dcf058cefc1bd22e5149f9bcca2f287edea7857897bf"
+    },
+    {
+      "path": "FOURTH_MOMENT_ATTACK.md",
+      "bytes": 37899,
+      "sha256": "354e8f7f5f81d0f8821ea6e821f55546f9c9641ac0690def1ae373000b4b3d08"
+    },
+    {
+      "path": "GENERAL_MOMENT_ATTACK.md",
+      "bytes": 27326,
+      "sha256": "a4ca15c0d731ef6000b19507b39b64a4786a7f8af9939864b3176221bf02b499"
+    },
+    {
+      "path": "GRAM_MOMENT_COMPOSITION.md",
+      "bytes": 6680,
+      "sha256": "91194de87b98e0cd0e1197172c248fcdd687e0815ee91b2da41a738789007a80"
+    },
+    {
+      "path": "INDEPENDENT_MOMENT_REVIEW.md",
+      "bytes": 21092,
+      "sha256": "9786b2acd3f3c565bac57d4e55d4e829dc1121576968abe28b279b6135257732"
+    },
+    {
+      "path": "MOMENT_OBSTRUCTIONS.md",
+      "bytes": 31027,
+      "sha256": "663c6ac878eb0fdd865389ac066ff5a23dbb33016e7061384a83fd186be3fd9b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 14631,
+      "sha256": "940d8a9b096b42457bafead7d59aa1786a023a7c68451a8e72cd979d043ec34c"
+    },
+    {
+      "path": "REFINED_ALL_ROW_SIEVE.md",
+      "bytes": 17097,
+      "sha256": "6879e094fb63969ddc88c637bf633cf46360d144d2b1615573647e734b4141e8"
+    },
+    {
+      "path": "SEXTIC_GRAM_BOUND.md",
+      "bytes": 15156,
+      "sha256": "c2b6c326f929de85a4f6d50ae2f4bdf4fc089f4f4705961d1c59ea1ad35d4fe1"
+    },
+    {
+      "path": "VALIDATION.md",
+      "bytes": 9236,
+      "sha256": "b0c63e187611dd50b4604560fad826758688d564147a059491e1d4447f209fb4"
+    },
+    {
+      "path": "checks/check_sextic_probe.py",
+      "bytes": 3886,
+      "sha256": "62987a152eb65e0e38d2996081289500410cc749325f1025644792208ae43c50"
+    },
+    {
+      "path": "checks/sextic_moment_probe.py",
+      "bytes": 11346,
+      "sha256": "5c97cd58bea1067215f98f112bbb19c31ad9d0179575159ecdc3a390f8c0884f"
+    },
+    {
+      "path": "results/sextic_moment_probe.json",
+      "bytes": 22645,
+      "sha256": "7f4a2a0003d75883a439778080ba0df43c356ca3e56125d01cd211791f01d59e"
+    },
+    {
+      "path": "results/sextic_probe_additional_checks.json",
+      "bytes": 802,
+      "sha256": "5805ecd1e6516d3972212af3973573905ef340a5d2692ca423958665100c7962"
+    }
+  ],
+  "self_hash_omitted": "The manifest omits its own hash. The Git tree and commit bind the final manifest."
+}

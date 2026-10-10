@@ -71,6 +71,10 @@ The pages above describe reviewed components at their recorded sources, with lat
 
 [The October 10 research packet](standalone/2026-10-10-quasi-riemann-height-descent/README.md) gives a completed deduction of the boundary \(139999/160000\), conditional on the imported analytic machinery, with explicit proof adapters and a scoped independent review. It also proves native height-local detector components and exact higher-moment reductions, identifies the open signed off-diagonal estimate needed for a shrinking band, and records an exact limit of the current geometric exponent envelope. These are proposed research results with their dependency and validation boundaries; they have not been promoted to the integrated record or formalized in Lean.
 
+## Follow-up research: fourth and higher sextic moments
+
+[The sextic-moment packet](standalone/2026-10-10-sextic-moment-descent/README.md) proves an all-row character sieve with cost \(H+(HL)^{2/3}+H^{1/6}L\), derives explicit controlled overlap ranges inside every fixed moment, and adapts a cubic Gauss-sum correlation argument to the sextic family. It also records the balanced-weight transfer, exact moment-to-zero-free implications, scoped proof reviews, and reproducible finite diagnostics. The full fourth moment needed for \(17/24\), the unbounded hierarchy, and any further zero-free improvement remain open. This is proposed standalone research, stacked on the preceding packet.
+
 ## License
 
 Project code and original research materials are available under the [MIT License](LICENSE). Third-party material retains its existing terms and notices.

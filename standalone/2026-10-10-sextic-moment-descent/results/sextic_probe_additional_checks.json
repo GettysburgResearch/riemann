@@ -1,0 +1,23 @@
+{
+  "status": "PASS_SCOPED_EXACT_SYMBOL_IDENTITIES",
+  "probe_sha256": "5c97cd58bea1067215f98f112bbb19c31ad9d0179575159ecdc3a390f8c0884f",
+  "checker_sha256": "62987a152eb65e0e38d2996081289500410cc749325f1025644792208ae43c50",
+  "prime_ideal_norm_limit": 8192,
+  "prime_ideals": 1022,
+  "base_sample": "all a+b*omega with a,b in {-3,...,3}",
+  "base_sample_size": 49,
+  "maximum_sixth_power_coordinate": 19683,
+  "exact_predicates_by_kind": {
+    "minus_one": 1022,
+    "sixth_power_and_zero_mask": 50078,
+    "inert_conjugation": 588
+  },
+  "exact_predicates_total": 51688,
+  "arithmetic": "integer identities and safely bounded int64 residue arithmetic",
+  "not_checked": [
+    "full independent finite-field implementation",
+    "floating moment sums",
+    "asymptotic moment bound",
+    "RH"
+  ]
+}
