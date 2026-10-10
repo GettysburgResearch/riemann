@@ -1,0 +1,38 @@
+{
+  "arithmetic": "RATIONAL_POLYNOMIAL_AND_Q_SQRT_921",
+  "candidate_boundary": "139999/160000",
+  "causal_horizons": [
+    "1",
+    "63",
+    "64",
+    "65",
+    "127/2",
+    "192",
+    "729",
+    "4095",
+    "4096",
+    "4097",
+    "15625"
+  ],
+  "conditional_moment_targets": {
+    "2": "11/12",
+    "4": "17/24",
+    "6": "23/36"
+  },
+  "explicit_predicates": 148,
+  "gcd_decomposition_panels": 90,
+  "geometry_limit_expression": "(1507-2*sqrt(921))/1653",
+  "geometry_limit_strict_interval": [
+    "723152018189012963/826500000000000000",
+    "60262668182417747/68875000000000000"
+  ],
+  "main_high_margin": "1073/22032000",
+  "not_verified": [
+    "imported analytic lemmas",
+    "higher moment hypothesis",
+    "local off-diagonal saving",
+    "RH",
+    "Lean kernel build"
+  ],
+  "status": "PASS"
+}

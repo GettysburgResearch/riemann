@@ -1,0 +1,61 @@
+{
+  "arithmetic": "INTEGER_FRACTION_GAUSSIAN_RATIONAL",
+  "explicit_predicates": 29785,
+  "not_run": [
+    "zeta zero evaluations",
+    "infinite analytic moment verification",
+    "physical-height interval arithmetic",
+    "Lean build"
+  ],
+  "panels": [
+    {
+      "Y": 1,
+      "blocks": 2,
+      "exact_detail_majorant": "0",
+      "last_native_index": 3
+    },
+    {
+      "Y": 2,
+      "blocks": 4,
+      "exact_detail_majorant": "37/1225",
+      "last_native_index": 8
+    },
+    {
+      "Y": 3,
+      "blocks": 7,
+      "exact_detail_majorant": "1169/28800",
+      "last_native_index": 15
+    },
+    {
+      "Y": 5,
+      "blocks": 11,
+      "exact_detail_majorant": "107511035297/1442437476480",
+      "last_native_index": 35
+    },
+    {
+      "Y": 7,
+      "blocks": 15,
+      "exact_detail_majorant": "16570569983046412713/179115419226602936000",
+      "last_native_index": 63
+    },
+    {
+      "Y": 15,
+      "blocks": 33,
+      "exact_detail_majorant": "598323792734009036263973387036773980693029378336943132709504539261978921697936349/4759159488261314419792264604364661862646107060027176703498484981310603520224320000",
+      "last_native_index": 255
+    },
+    {
+      "Y": 31,
+      "blocks": 71,
+      "exact_detail_majorant": "4554684375924001236158103877237726301702946395168843567797268854833800055345494533620421284612125689783407585923976648627641604938024466516255631086013/29551109743113830317933221902289957822552682218520272914177150491439445493182685581697033272883836832973955876566651831288719381752821372826234581976000",
+      "last_native_index": 1023
+    }
+  ],
+  "status": "PASS",
+  "structural_character": {
+    "chi_2": "i",
+    "chi_3": "(3+4i)/5",
+    "chi_5": "-1",
+    "other_primes": "1"
+  }
+}

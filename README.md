@@ -67,6 +67,10 @@ The pages above describe reviewed components at their recorded sources, with lat
 
 [OpenAI's quasi-Riemann result, imported 7 October 2026](standalone/2026-10-07-openai-quasi-riemann-import/README.md) preserves family 003's three complete manuscripts, the internal Lean implementation dependency closure, source hashes, selective audits, and a comparison with the current native-covariance branches. Its claimed zero-free half-plane is $\Re s>7/8$. The packet distinguishes the supplied unconditional formalization from verification performed here, and records conditional research bridges and the remaining native covariance estimate. It is an external source import, not promotion to the accepted integrated results.
 
+## Follow-up research: constant and height
+
+[The October 10 research packet](standalone/2026-10-10-quasi-riemann-height-descent/README.md) gives a completed deduction of the boundary \(139999/160000\), conditional on the imported analytic machinery, with explicit proof adapters and a scoped independent review. It also proves native height-local detector components and exact higher-moment reductions, identifies the open signed off-diagonal estimate needed for a shrinking band, and records an exact limit of the current geometric exponent envelope. These are proposed research results with their dependency and validation boundaries; they have not been promoted to the integrated record or formalized in Lean.
+
 ## License
 
 Project code and original research materials are available under the [MIT License](LICENSE). Third-party material retains its existing terms and notices.

@@ -1,0 +1,110 @@
+{
+  "status": "passed",
+  "exact_predicate_count": 83,
+  "scope": "Exact local polynomial identities and rational inequalities; no zero-free theorem",
+  "symbolic_identities": [
+    "full_principal_extraction",
+    "double_residue_factorization",
+    "local_nonvanishing_factor"
+  ],
+  "affine_envelopes": {
+    "good_prime_lambda": {
+      "interval": [
+        "401/600",
+        "1"
+      ],
+      "left_endpoint_excluded": true,
+      "affine_partition_nodes": [
+        "401/600",
+        "79/100",
+        "99/125",
+        "4/5",
+        "33/40",
+        "19/20",
+        "99/100",
+        "1"
+      ],
+      "exact_node_comparisons": 8
+    },
+    "ramified_mu": {
+      "interval": [
+        "401/600",
+        "1"
+      ],
+      "left_endpoint_excluded": true,
+      "affine_partition_nodes": [
+        "401/600",
+        "29/40",
+        "73/100",
+        "79/100",
+        "99/125",
+        "5/6",
+        "19/20",
+        "59/60",
+        "1"
+      ],
+      "exact_node_comparisons": 9
+    },
+    "principal_selected_nu": {
+      "interval": [
+        "401/600",
+        "1"
+      ],
+      "left_endpoint_excluded": true,
+      "affine_partition_nodes": [
+        "401/600",
+        "301/400",
+        "79/100",
+        "4/5",
+        "47/50",
+        "99/100",
+        "1"
+      ],
+      "exact_node_comparisons": 7
+    },
+    "factored_kappa": {
+      "interval": [
+        "301/600",
+        "1"
+      ],
+      "left_endpoint_excluded": true,
+      "affine_partition_nodes": [
+        "301/600",
+        "61/120",
+        "59/100",
+        "74/125",
+        "3/5",
+        "79/120",
+        "19/20",
+        "99/100",
+        "1"
+      ],
+      "exact_node_comparisons": 9
+    }
+  },
+  "rational_instances": {
+    "3/4": {
+      "good_defect_decay": "149/100",
+      "ramified_defect_decay": "7/10",
+      "selected_error_decay": "37/50"
+    },
+    "4/5": {
+      "good_defect_decay": "87/50",
+      "ramified_defect_decay": "3/4",
+      "selected_error_decay": "4/5"
+    },
+    "437/500": {
+      "good_defect_decay": "907/500",
+      "ramified_defect_decay": "103/125",
+      "selected_error_decay": "437/500"
+    },
+    "7/8": {
+      "good_defect_decay": "363/200",
+      "ramified_defect_decay": "33/40",
+      "selected_error_decay": "7/8"
+    }
+  },
+  "low_exponent": "3/16",
+  "principal_constant": "-11/16",
+  "low_endpoint_gap": "exactly beta_star - 7/8"
+}

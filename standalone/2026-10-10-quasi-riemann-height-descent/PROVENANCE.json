@@ -1,0 +1,170 @@
+{
+  "schema": "quasi-riemann-height-descent-provenance-v1",
+  "date_utc": "2026-10-10",
+  "status": "PROPOSED_CONDITIONAL_RESEARCH_NOT_INTEGRATED",
+  "target_repository": "GettysburgResearch/riemann",
+  "base_import_commit": "31c706bbb3dce49a7ebabbe71cd7cbacdaa6cbb6",
+  "base_import_pr": 908,
+  "base_branch": "import/openai-quasi-rh-20261007",
+  "publication_branch": "research/quasi-rh-height-descent-20261010",
+  "upstream_repository": "openai/math",
+  "upstream_import_pin": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "upstream_checked_head": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "upstream_checked_head_commit_date_utc": "2026-10-07T22:20:00-07:00",
+  "upstream_relevant_paths_compared": [
+    "preprints/The-Quasi-Riemann-Hypothesis-September-30-2026",
+    "preprints/The-Quasi-Riemann-Hypothesis-October-5-2026",
+    "preprints/Uniform-exclusion-of-Landau-Siegel-zeros-October-1-2026",
+    "lean/docs/003.md",
+    "lean/OAI/NumberTheory/DirichletL",
+    "lean/OAI/NumberTheory/SiegelZeros"
+  ],
+  "upstream_relevant_paths_changed": [],
+  "load_bearing_manuscript_and_overview_files": [
+    {
+      "upstream_path": "preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/build/paper.tex",
+      "bytes": 766316,
+      "sha256": "42a5ee0febca59fd1def55cfd6c6808c322ef4237d7726303ea52f711deac6a3"
+    },
+    {
+      "upstream_path": "preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex",
+      "bytes": 169005,
+      "sha256": "d9a8f15aa770cf883d0eabd2b775fad694ce20b44cba7928f5c0c9a6d8750d4d"
+    },
+    {
+      "upstream_path": "preprints/Uniform-exclusion-of-Landau-Siegel-zeros-October-1-2026/build/paper.tex",
+      "bytes": 31166,
+      "sha256": "b011ba9c1f55ee2164292492c55e0c6d75c458eb30d4808808f9953823b8ded4"
+    },
+    {
+      "upstream_path": "lean/docs/003.md",
+      "bytes": 1911,
+      "sha256": "41e52ed718260e6feb1db218f8e97287e703cb63c6f16e6c36f5563e6e2395ce"
+    }
+  ],
+  "new_constant": {
+    "boundary": "139999/160000",
+    "decimal": "0.87499375",
+    "improvement_below_7_over_8": "1/160000",
+    "scope": "Conditional on the imported analytic inputs explicitly listed in GEOMETRY_PERTURBATION.md; no additional hypothetical moment estimate; principal poles permitted; boundary line excluded."
+  },
+  "stronger_open_inputs": [
+    "Height-local signed off-diagonal energy bound",
+    "Squarefree balanced-divisor mean square sufficient for the actual sextic fourth moment",
+    "Higher moments beyond the imported second moment"
+  ],
+  "validation": {
+    "python_version": "3.12.14",
+    "native_predicates": 29785,
+    "tail_euler_predicates": 83,
+    "research_algebra_predicates": 148,
+    "total_predicates_per_mode": 30016,
+    "modes": [
+      "ordinary",
+      "optimized"
+    ],
+    "output_identical_between_modes": true,
+    "output_matches_recorded_results": true,
+    "independent_replay": [
+      "check_tail_euler.py",
+      "check_research_algebra.py"
+    ],
+    "fresh_lean_kernel_build": false,
+    "comparator_build": false,
+    "complete_independent_upstream_analytic_audit": false,
+    "physical_height_certified_numerics": false
+  },
+  "review": {
+    "file": "REVIEW.md",
+    "sha256": "b7db37e34a856122de72c8d561816f2e99d6eb8c5a50e9781f71c475a0a5afa2",
+    "kind": "Independent AI-agent source-level review within this research pass; coverage and exclusions listed in the report",
+    "frozen_geometry_sha256": "6e3befcc15b92536dd80f376a87384d5fa4688a938c11d949be7924d4a4c1e12"
+  },
+  "hash_contract": "SHA-256 of literal file bytes. Packet manifest excludes itself to avoid a recursive hash; the publication Git commit binds this manifest. Root README navigation entry is hashed separately.",
+  "root_navigation_file": {
+    "path": "README.md",
+    "sha256": "5077ee7e5537932ccfacdae7d655efcfeba39e0f5e35186b330502db03e4dd09"
+  },
+  "files": [
+    {
+      "path": "CAUSAL_AUXILIARY_FACTOR.md",
+      "bytes": 7410,
+      "sha256": "fdd44e2be5ccfd50b073f09aaf4295188f2c534adda6d51120b1b1738e87ce06"
+    },
+    {
+      "path": "FOURTH_MOMENT_REDUCTION.md",
+      "bytes": 12862,
+      "sha256": "8dc1b1377ee3205dd791fac64195513a98ac569f403d4f8b56253e0860355e7f"
+    },
+    {
+      "path": "GEOMETRY_ENVELOPE_LIMIT.md",
+      "bytes": 5853,
+      "sha256": "9118bde4dd41557cb155f15304cbd58dd0c0a0852a5ca551f6d59d72aeedde80"
+    },
+    {
+      "path": "GEOMETRY_PERTURBATION.md",
+      "bytes": 35888,
+      "sha256": "6e3befcc15b92536dd80f376a87384d5fa4688a938c11d949be7924d4a4c1e12"
+    },
+    {
+      "path": "NATIVE_HEIGHT.md",
+      "bytes": 24189,
+      "sha256": "75bfb4c03058f7e9a17da08fdb9d83340a40eb376e0c136b91c2b950a14fae7f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 13105,
+      "sha256": "27c6774ff360dcce91a7471f29627fbbcd3a1d8b0bd58947a16f1709a5526fa3"
+    },
+    {
+      "path": "REVIEW.md",
+      "bytes": 17670,
+      "sha256": "b7db37e34a856122de72c8d561816f2e99d6eb8c5a50e9781f71c475a0a5afa2"
+    },
+    {
+      "path": "TAIL_AND_EULER.md",
+      "bytes": 34444,
+      "sha256": "9bc21c039465f14c9125f97718c82b91f3a91be334ab9071ce74dd50a90a81a0"
+    },
+    {
+      "path": "UPSTREAM_HEIGHT_AND_MOMENTS.md",
+      "bytes": 43651,
+      "sha256": "17b039afccc1d8bb3b440e1b216e3a94facd2d73493141f17cd50eee193a66b5"
+    },
+    {
+      "path": "VALIDATION.md",
+      "bytes": 6767,
+      "sha256": "2f7bcd39789a3e1f0181ba286809ff0d095a28cdb8c78978ab7b74d59aedf9d8"
+    },
+    {
+      "path": "checks/check_native_height.py",
+      "bytes": 7437,
+      "sha256": "16109d376fad342d9a8c423fb5fd46ae98b174fb5bc65f1e30fd68462a8bbbe8"
+    },
+    {
+      "path": "checks/check_research_algebra.py",
+      "bytes": 9450,
+      "sha256": "532ae0038e015f1a4674683c299e783c6b50b3a0ff1bc23589a0161f1a222ef6"
+    },
+    {
+      "path": "checks/check_tail_euler.py",
+      "bytes": 8000,
+      "sha256": "355a05fd9ea92b7b497fe78e12972d498450e6a5104562a3f762e226c42696f3"
+    },
+    {
+      "path": "results/check_native_height.json",
+      "bytes": 1738,
+      "sha256": "dfe85b85478f07380f6d27ca4a1d64cf9079a58b6585260cf9dbf6b1cd11685c"
+    },
+    {
+      "path": "results/check_research_algebra.json",
+      "bytes": 807,
+      "sha256": "fb51e01d92b5dc6e94c56f63674bd0276597017d1e36c020bff6c22a1ec64649"
+    },
+    {
+      "path": "results/check_tail_euler.json",
+      "bytes": 2382,
+      "sha256": "ad2c47b0b8af2d5884710f4f3c5829095b15aa08ff18d028c051895abf6e7323"
+    }
+  ]
+}
