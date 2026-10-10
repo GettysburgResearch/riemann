@@ -50,6 +50,7 @@ they are unreviewed.
 | [ZERO_DENSITY_CONDITIONAL.md](ZERO_DENSITY_CONDITIONAL.md) | QRH-conditional zero density via ANTEDB: no `A(σ)` gain below 7/8; exact μ envelope |
 | [reviews/KINTALI_LEMMA3_REVIEW.md](reviews/KINTALI_LEMMA3_REVIEW.md) | Kintali Lemma 3 (weak reflection) and App. B: no error found; DR inputs quoted correctly; theta automorphy, cusp reflection and multiplier checked numerically/exactly; first unverified step App. A.2 (high side) |
 | [NRC32_TWISTS.md](NRC32_TWISTS.md) | the NRC32 coarse kernel generates only the trivial character; twists give no leverage for issue 902's family-relative step; exact twisted checker (1.29M checks) |
+| [reviews/OCT5_R2_ITERATION_TRANSFER.md](reviews/OCT5_R2_ITERATION_TRANSFER.md) | Oct 5 (11/12) transfer recursion (two Poisson steps, cube reduction, ⌈4/ϑ⌉ levels): PASS conditional on Prop R and Lemma arithmetic; 53 checks; regime H > X undocumented but fine |
 | [reviews/CONTOUR_LEMMAS_BELOW_7_8.md](reviews/CONTOUR_LEMMAS_BELOW_7_8.md) | Lemmas 10.3–10.6 remain valid at 139999/160000 with PR 910's substitutions (no gap found in the ranges read) |
 | [FOURTH_MOMENT_A2.md](FOURTH_MOMENT_A2.md) | the fourth-moment rung (to 17/24) has cubic GL(3)-metaplectic shape; nesting identity (a2/) |
 | [BRIDGE_MELLIN.md](BRIDGE_MELLIN.md) | QRH continuation vs the repo's Mellin–Landau premise; graded NRC32 identity; family-relative step |
