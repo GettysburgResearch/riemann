@@ -140,7 +140,7 @@ def part_G2():
             for h in [1, 2, 3]:
                 go, gn = G(a, h), G(a, h * p ** 6)
                 o2, _ = G_formula(P, a, 0)
-                n2, _ = G_formula(P, a, 6 if a <= 7 or True else 6)
+                n2, _ = G_formula(P, a, 6)
                 worst = max(worst, abs(abs(go) ** 2 - float(o2)) / max(1.0, float(o2)),
                             abs(abs(gn) ** 2 - float(n2)) / max(1.0, float(n2)))
                 c = (go - gn) / P ** (a / 2)
@@ -293,12 +293,12 @@ def random_child(force_tight=False):
     s = rng.choice(SIG)
     th = rfr(0, s / 400)
     d1, d2 = rfr(0, s / 100), rfr(0, s / 100)
-    eta = rfr(s / 200, s / 7)
+    eta = rfr(s / 20, s / 7)
     kap = rfr(Fr(3, 4), 1)
     Mv = rfr(Fr(1, 4), 3)
     qv = rfr(0, Mv / 2)
     mv = Mv - qv
-    z = rfr(0, Mv / (6 * kap))
+    z = rfr(0, min(Mv / (6 * kap), 12 * eta))
     Av = rfr(z, Mv - (6 * kap - 1) * z)
     if force_tight:
         Av = Mv - (6 * kap - 1) * z
@@ -352,7 +352,7 @@ def part_C():
     check("C1 (old-eq:3.14) identity, c_2 side and d_2 side   [l. 14184-14190]", ok)
 
     # (3.14) inequality, all four norm types, both sides; tightness of the amplified main
-    ok, worst, okc = True, None, False
+    ok, worst = True, None
     for _ in range(8000):
         ch = random_child(force_tight=(rng.random() < 0.1))
         for side_len in (ch["c2"], ch["d2v"]):
@@ -366,7 +366,6 @@ def part_C():
           "max(lhs - rhs) = %s (0 = attained)" % worst)
     # the error-type step w - w_o + sigma <= 6w needs l_p >= sigma/6 at i = 1 (tight there)
     s = Fr(1, 10)
-    tight = [(lp, 6 * lp - lp - lp + lp) for lp in [s / 6]]
     ok = all((w - wo + s) <= 6 * w for lp in [s / 6 + s * Fr(k, 600) for k in range(0, 101)]
              for (_, w, wo, _, _) in norm_types(s, lp)[1:])
     eq16 = (lambda lp: (lp - lp + s) - 6 * lp)(s / 6)
@@ -437,11 +436,10 @@ def part_C():
             gap = F - (6 * (ch["w"] + ch["ell"]) + ch["d1"] + 2 * th)
             worstF = gap if worstF is None else max(worstF, gap)
             # slots of the actual product: z_act = z' split into pieces <= eta
-            slots, rem = [], zp
-            while rem > 0:
-                x = min(rem, rfr(eta / 20, eta))
-                slots.append(x)
-                rem -= x
+            nsl = 2 * math.ceil(zp / eta) + rng.randint(0, 2) if zp > 0 else 0
+            wts = [rng.randint(1, 2) for _ in range(nsl)]
+            slots = [zp * Fr(x, sum(wts)) for x in wts]
+            assert all(x <= eta for x in slots) and sum(slots) == zp
             dz = greedy(slots, F, kap)
             after = (Aclip - dz) - ch["Mact"] + (6 * kap - 1) * (zp - dz)
             okG &= dz <= min(zp, F / (6 * kap) + eta)

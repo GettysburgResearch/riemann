@@ -113,8 +113,8 @@ Let `K = Q(√−3) = Q(ω)`, with `ω = e^{2πi/3}`, and let `O = Z[ω]`.
 1. **Hecke family.** Let `ν` be any finite-order Hecke character of `K`, and let `L_K(s, ν)` be its
    Hecke L-function. Then `L_K(s, ν) ≠ 0` for every `s` with `Re s > 11/12`. When `ν` is
    principal (trivial on the ideals prime to its modulus), the point `s = 1` is a pole and is
-   excluded. No uniformity in `ν` is claimed or
-   needed; the abscissa `11/12` is the same for every `ν`.
+   excluded. No uniformity in `ν` is claimed or needed; the abscissa `11/12` is the same for
+   every `ν`.
 2. **Dirichlet L-functions.** Let `χ` be any Dirichlet character of any modulus `q ≥ 1`, primitive
    or imprimitive, including principal characters. Then `L(s, χ) ≠ 0` for `Re s > 11/12`. When `χ`
    is principal, the pole at `s = 1` is excluded.
@@ -298,8 +298,8 @@ consequences (84-125) were not read.
 | N1 | 752 | The identity theorem for principal `ν` must exclude `s = 1` | one line; `ϱ ≠ 1` because `ϱ` is a zero and `1` is the pole (residual §3) |
 | N2 | 1193-1203 | Smoothness of `Φ̂` near `0` is used but not stated | one line; only bounds on `(t∂_t)^j Φ̂` are needed, and they hold (residual §3) |
 | N3 | 206-658 | The outline is labelled "rough" | none needed; Sections 3-4 do not use it (R1 §6) |
-| F1 | after 1556 | The regime `H > X` (`H_c < 1`) is handled but not discussed | one sentence; the contraction then comes from `F^{−2}` (R2 §6) |
-| F2 | 604-613 | The outline's "ratio stays fixed" | the proof uses only `H'/Σ' ≤ H/Σ` (R2 §6) |
+| F1 | after 1556 | The regime `𝓗 > X` (`H_c < 1`) is handled but not discussed | one sentence; the contraction then comes from `F^{−2}` (R2 §6) |
+| F2 | 604-613 | The outline's "ratio stays fixed" | the proof uses only `𝓗'/Σ' ≤ 𝓗/Σ` (R2 §6) |
 | F3 | whole descent | derivative order at least `5·4^⌈4/ϑ⌉ − 4` | no height uniformity; harmless for the qualitative theorem (R2 §6) |
 | F4 | 1572, 2588 | some slack is discarded | cosmetic (R2 §6) |
 | R3-m1 | 362, 1647, 3154 | DR equation pointers are off; "(5.6)" should be the unnumbered expansion, and (5.5) or (5.11) | cosmetic (R3 §8) |
@@ -367,16 +367,17 @@ consequences (84-125) were not read.
 ## 8. The smallest statement whose failure would invalidate the result
 
 **Prop. prop:R (eq:R, lines 1317-1333), in the form used at lines 1389-1400.** Fix
-`ε > 0`, `C₀ ≥ 1` and a ray class character `ξ`. For `1 ≤ H, X, N(f) ≤ D^{C₀}`, squarefree primary
+`ε > 0`, `C₀ ≥ 1` and a ray class character `ξ`. For `1 ≤ 𝓗, X, N(f) ≤ D^{C₀}`, squarefree primary
 `f` prime to `S`, and `W ∈ C_c^∞(I)`, it asserts
 
-    Σ_{0<N(k)≪H} |T(X;k,f)|²  ≪_{I,ξ,S,ε,C₀}  D^ε ‖W‖²_{C^J(I)} (H + H² N(f)/X),
+    Σ_{0<N(k)≪𝓗} |T(X;k,f)|²  ≪_{I,ξ,S,ε,C₀}  D^ε ‖W‖²_{C^J(I)} (𝓗 + 𝓗² N(f)/X),
 
-**with no term that grows with `X` alone** (no Patterson-type `X^{5/6}` main term).
+**with no term that grows with `X` alone** (no Patterson-type `X^{5/6}` main term). Here `𝓗` is a
+dual row range, as in the manuscript, not the original `H = D^{1+ϑ}`.
 
 * The rest of the chain is a deduction from prop:R, lem:arithmetic (exact algebra) and classical
   theorems (R1, R2).
-* The cube cutoff `H_c³ = min(X, X²/H²)` and the contraction rate are calibrated to this exact
+* The cube cutoff `H_c³ = min(X, X²/𝓗²)` and the contraction rate are calibrated to this exact
   shape. R2 §6.4 notes that a weaker prop:R, for example one with an extra `X^{2/3}` term, would
   change both.
 
@@ -387,8 +388,9 @@ Inside prop:R, the review record makes three facts load-bearing. Each would inva
 2. **Active primes become quadratic.** `B_{p,1} = χ_p³` (lines 1735-1745, 3232-3275). The exponent
    is `−j−2` under the multiplier `(c/a)_3`. With the conjugate convention, `j = 1` would give a
    sextic character, and GL would not apply (R3 §3; checks A, C, D, E).
-3. **GL Thm 1.1 applies to the family `ψ_k`** (I1). This is an imported theorem, so its failure would
-   be a failure of published mathematics (residual §1).
+3. **GL Thm 1.1 applies to the family `ψ_k`** (I1). A failure here would mean either an error in
+   GL Thm 1.1, which is refereed and published, or a hypothesis mismatch that the residual review
+   missed (residual §1).
 
 Outside prop:R, the next-smallest load-bearing statement is the sign-sum regrouping in
 lem:second-transfer (lines 2550-2585): `Σ μ(e)μ(w) = τ(r)·1_{f'|k'}` over the preimages of a fixed
