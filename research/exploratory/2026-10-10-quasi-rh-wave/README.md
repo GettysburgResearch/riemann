@@ -5,7 +5,7 @@ Status: EXPLORATORY / IMPORTED (external theorems) / PROPOSED (new statements)
 Scope: global for the imported zero-free half-planes; conditional/proposed for everything derived here
 Exact sources or dependencies: see "Sources" below (frozen copies of the four external manuscripts were read in full extract; nothing in this directory is a repository-reviewed theorem)
 What was actually run: reading of the primary manuscripts; a Python reconstruction of the Part II exponent system (scripts/); literature search; repo hypothesis audit
-Smallest remaining gap: a single new moment or large-sieve input that moves the 11/12 - ell/4 comparison below Liu's 0.874957 (see FINDINGS.md)
+Smallest remaining gap: every wall located in this wave is a sixth-power diagonal of the sextic family (FINDINGS.md section 0); the two constructions with a chance are a hybrid Möbius x plain second moment with r + m <= 5/4 (notes G, I, O) and breaking the direct-side diagonal by moving a selected prime into the additive variable (notes J, Q)
 ```
 
 **RH remains open.** Nothing in this directory proves or disproves RH, and nothing here is integrated. This is a three-hour reconnaissance wave on the October 2026 external development: a *uniform zero-free half-plane* for all Dirichlet $L$-functions and all finite-order Hecke $L$-functions over $\mathbb Q(\sqrt{-3})$.
@@ -32,7 +32,7 @@ so $\ell=0$ is Part I (11/12), $\ell=1/6$ is Part II (7/8), and $\ell\to2/3$ wou
 
 - `README.md` — this hub.
 - `FINDINGS.md` — synthesized findings of the wave (bottleneck model, bootstrap barrier, alternative architectures, repository consequences), with exact statements and the smallest remaining gaps.
-- `notes/` — working notes: A (full exponent model and sensitivity), B (bootstrap/κ barrier), C (mechanism, alternative families, literature), D (unconditional consequences for this repository), E (lead reconstruction of the endpoint exponent), H (what a generalized 2k-th moment buys), and later wave-2 notes (F quartic feasibility, G 2k-moment lemma attack, I mixed-moment attack, J direct-side Gram loss) as produced.
+- `notes/` — working notes, in reading order: FINDINGS first; then A (full exponent model and sensitivity), E (lead re-derivation of the endpoint exponent), B (bootstrap/κ barrier), C (mechanism, alternative families, literature), F (quartic route closed), H/G/I/K (the 2k-th and mixed moment question), J (direct-side Gram term is a sixth-power diagonal), M/N (floor rows: diagonal and mollified-first-moment proposal), O (hybrid induction with a cubic-theta reset), P (twisted Kubota double series), Q (prime in the additive variable), D (unconditional consequences for this repository), L (heights, aspects, critical-line moments), R (adversarial referee pass; its corrections have been applied).
 - `scripts/` — the exponent-system reconstruction and any experiments (ordinary floating point; not certificates).
 
 Nothing here changes `RESULTS.md`, `STATUS.md` or the integrated record. Any statement below marked PROPOSED needs its own exact-SHA review before it can be cited.
