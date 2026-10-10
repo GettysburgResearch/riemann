@@ -74,6 +74,24 @@ bicharacter `R(d, e)` of the quadratic refinement `G`) descend to a fixed ray cl
 split the sum into finitely many classes. (Heuristic derivation; the exact masks and coprimality
 bookkeeping of the source have not been redone here.)
 
+**Equivalent GL(2) view.** For squarefree `r = de` with `(d, e) = 1`, the identity
+`γ₂(de) = γ₂(d)γ₂(e)·conj((e/d)₃)` is exact. The dual column sum therefore equals
+
+    C_h(X) = Σ_{r squarefree} conj(α(r)) γ₂(r) · W_X(r) · χ_r(h),
+    W_X(r) = #{(d, e) : de = r, N d, N e ∈ (X, 2X]}   (smoothed),
+
+up to ray phases. This is a *GL(2) cubic-theta coefficient sum* (Patterson's `γ₂`), weighted by a
+balanced divisor function instead of a smooth function of `N r`. Mellin inversion in the two
+factor sizes turns `W_X` into the double series `Σ_{d,e} γ₂(de) χ_{de}(h) N(d)^{-s₁} N(e)^{-s₂}`.
+The "A2" and "theta × divisor function" descriptions are the same object, so two toolboxes are in
+play:
+
+* `GL(3)` metaplectic reflection (A2 functional equations);
+* Rankin–Selberg / shifted-convolution methods for the cubic theta against Eisenstein series on
+  the cubic cover of `GL(2)`.
+
+This also explains PR 910's reduction (3.5): its balanced-divisor column weight is exactly `W_X`.
+
 **Shape identification.** On coprime squarefree pairs, the coefficient `γ₂(d)γ₂(e)·(e/d)₃^{-1}` has
 the twisted-multiplicative form of the coefficients `H(c₁, c₂)` of the **type-A2 Weyl group multiple
 Dirichlet series with cubic Gauss sums** (Brubaker–Bump–Friedberg; Chinta–Gunnells for A2). Those
