@@ -66,8 +66,9 @@ The simplest member of each class is the **sub-diagonal second moment** Mom(1, �
 **Proposition R (each member, rigorous, elementary).** Suppose Mom(k, h) holds for every smooth `W`
 supported in `[1, 2]` (constants may depend on `W`). Then, for every fixed `u ≠ 0`, the Hecke
 L-function `L(s, ψ_u)` of the finite-order character `ψ_u : n ↦ χ_n(u)` has no zero in
-`Re s > 1/2 + h/(2k)`. Here `ψ_u` is a ray class character by sextic reciprocity, as used in the
-Oct 5 manuscript.
+`Re s > 1/2 + h/(2k)`. Here `𝔫 ↦ (u/𝔫)₆` depends only on the ideal `𝔫 = (n)`. By Artin
+reciprocity it is the Hecke character of the Kummer extension `K(u^{1/6})/K`, and `ψ_u` denotes the
+primitive character inducing it.
 
 *Proof.* For `D^h ≥ N u`, positivity gives `|A_u(D)|^{2k} ≤ M_{2k}(D; h) ≪ D^{k+h+ε}`. So
 `A_u(D) ≪ D^{a+ε}` with `a = 1/2 + h/(2k)`. Also `A_u(D) = 0` for `D < 1/2`.
@@ -79,8 +80,9 @@ Since `∫_0^∞ W(N n/D) D^{−s−1} dD = N(n)^{−s} Ŵ(s)` with `Ŵ(s) = ∫
 and the left side converges absolutely, locally uniformly, on `Re s > a`. Hence `Ŵ F_u` is
 holomorphic there.
 
-With `ν` the indicator of `(n, 6) = 1`, `F_u = E_u / L(s, ψ_u)`, where `E_u` is a finite Euler
-product that is holomorphic and nonvanishing on `Re s > 0`. A zero `ρ₀` of `L(s, ψ_u)` with
+With `ν` the indicator of `(n, 6) = 1`, `F_u = E_u / L(s, ψ_u)`. Here
+`E_u = ∏_{𝔭 | 6u} (1 − ψ_u(𝔭) N𝔭^{−s})^{−1}` (only primes where the imprimitive and primitive
+characters differ contribute) is holomorphic and nonvanishing on `Re s > 0`. A zero `ρ₀` of `L(s, ψ_u)` with
 `Re ρ₀ > a` would force `Ŵ(ρ₀) = 0` for every admissible `W`. That is false, because
 `W ↦ Ŵ(ρ₀)` is a nonzero linear functional. ∎
 
