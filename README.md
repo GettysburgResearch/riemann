@@ -83,6 +83,10 @@ The pages above describe reviewed components at their recorded sources, with lat
 
 [The theta-support packet](standalone/2026-10-10-theta-support-descent/README.md) proves an exact support cutoff for complete projected Ramanujan groups at all three source cusps. It extends the source's second-moment method to fixed angular characters, supplies uniform reciprocal bounds for the needed angular types beyond 11/12, and continues the full reunited standard-face series meromorphically across its former v=1 boundary with an explicit possible residue. The proofs retain their imported analytic dependencies and include scoped independent AI-agent reviews and exact local diagnostics. The continuation supplies no saving at the critical moment scales; the full fourth moment, the generalized hierarchy, and RH remain open.
 
+## Further research: signed finite rays and conductor means
+
+[The signed-covariance packet](standalone/2026-10-10-signed-covariance-descent/README.md) evaluates the actual finite Fourier data and proves that the apparent v=1 pole in the preceding packet cancels. It proves a prescribed cube-character law at all three cusps, a larger continuation domain for the complete reflected series, and a conductor mean for the canonical Gauss family in Re(u)>5/8. An exact comparison shows that the new contour estimate still does not improve the existing physical envelope at the moment's critical scales. These are proposed source-conditional deductions; the full fourth moment, generalized hierarchy, and RH remain open.
+
 ## License
 
 Project code and original research materials are available under the [MIT License](LICENSE). Third-party material retains its existing terms and notices.

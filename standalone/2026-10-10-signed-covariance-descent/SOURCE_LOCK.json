@@ -1,0 +1,131 @@
+{
+  "repository": "GettysburgResearch/riemann",
+  "base_pr": 920,
+  "base_commit": "2edc467ef4dea4aa685219ac6a558a158b88768d",
+  "base_mathematical_source": "6aceafc1729ca0962eb12519b407b69c3b5a4d5f",
+  "primary_source": {
+    "repository": "OpenAI/math",
+    "upstream_commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+    "commit": "2edc467ef4dea4aa685219ac6a558a158b88768d",
+    "path": "standalone/2026-10-07-openai-quasi-riemann-import/upstream/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex",
+    "git_blob": "2000faddbbebac5de0ecfe0b962534ea61a852d5",
+    "sha256": "d9a8f15aa770cf883d0eabd2b775fad694ce20b44cba7928f5c0c9a6d8750d4d",
+    "bytes": 169005
+  },
+  "inherited_dependencies": [
+    {
+      "commit": "6aceafc1729ca0962eb12519b407b69c3b5a4d5f",
+      "path": "standalone/2026-10-10-theta-support-descent/POST_REFLECTION_EULER_CONTINUATION.md",
+      "git_blob": "3a28bbd99315ea0b4e469c7e9cef5456f49c6a1a",
+      "sha256": "7ddcaf96aba2f109fb5696880ed9098e435712e2075613e72474b76fc00a3072",
+      "bytes": 24257
+    },
+    {
+      "commit": "6aceafc1729ca0962eb12519b407b69c3b5a4d5f",
+      "path": "standalone/2026-10-10-theta-support-descent/DEFORMED_GAUSS_CONTINUATION.md",
+      "git_blob": "d91fe4491b9f192a60733e69e921554e5b4389a7",
+      "sha256": "b01b17194884b3e2331d9f668ee71abb33a5e2f1e047d16cb2e906a1c5b32c81",
+      "bytes": 17920
+    },
+    {
+      "commit": "6aceafc1729ca0962eb12519b407b69c3b5a4d5f",
+      "path": "standalone/2026-10-10-theta-support-descent/HIGHER_ANGULAR_SECOND_MOMENT.md",
+      "git_blob": "956445e9baa91356a352cc089852dbf34f90dbef",
+      "sha256": "82edbaed050710fcdbfa65c20a39cc83338e9f283473462c1756ea717f035959",
+      "bytes": 23187
+    },
+    {
+      "commit": "6aceafc1729ca0962eb12519b407b69c3b5a4d5f",
+      "path": "standalone/2026-10-10-theta-support-descent/RAMANUJAN_SUPPORT_PRUNING.md",
+      "git_blob": "fae954cda842026d9f9edeabf1e5cdb4c0ed9e5c",
+      "sha256": "9a019b2253a0f35ade96455bf5d249cd1ca09285c4f2d7e17c475b5b5522c3ea",
+      "bytes": 11249
+    },
+    {
+      "commit": "6aceafc1729ca0962eb12519b407b69c3b5a4d5f",
+      "path": "standalone/2026-10-10-theta-support-descent/ALL_CUSP_REFLECTION.md",
+      "git_blob": "979c54bb310fe8ec48d83d4ac118ca6a97144ff6",
+      "sha256": "4a0201c3de364c1747726b9561f91ffc825da0aca926528844c543c9bbcd908d",
+      "bytes": 16372
+    },
+    {
+      "commit": "9959364671f89b86f3992ec5ed5e19f804eb607b",
+      "path": "standalone/2026-10-10-sextic-critical-core/COUPLED_THETA_COMPLETION.md",
+      "git_blob": "981f102d643f0052489d9025ef305be23a458823",
+      "sha256": "f3b57f69338e8736ffe4addd5a6e2ebf6d5f8976ee9d2fda5921c83ff484eb36",
+      "bytes": 18030
+    },
+    {
+      "commit": "9959364671f89b86f3992ec5ed5e19f804eb607b",
+      "path": "standalone/2026-10-10-sextic-critical-core/NEGATIVE_BRANCH_DIRICHLET_SERIES.md",
+      "git_blob": "d061eab036051e8a2bd9a636a5be51b4ec067e6b",
+      "sha256": "025b1f9507f7aff3794d93e80a10337e61732944ec3ba1cb28107c8a7d59326e",
+      "bytes": 8685
+    },
+    {
+      "commit": "9959364671f89b86f3992ec5ed5e19f804eb607b",
+      "path": "standalone/2026-10-10-sextic-critical-core/REUNITED_RAMANUJAN_EULER_PRODUCT.md",
+      "git_blob": "bc6b01263b5d3c0006c275c957d1854fcf7f506a",
+      "sha256": "6d1f0e01d8645972de0c38897e37633d8bfc70d193f6e279dcf8f33b0e992433",
+      "bytes": 9791
+    },
+    {
+      "commit": "9959364671f89b86f3992ec5ed5e19f804eb607b",
+      "path": "standalone/2026-10-10-sextic-moment-descent/ALL_ROW_SIEVE_AND_GCD_TAIL.md",
+      "git_blob": "059b4754891b9c01d125f6cb83db507d2e47f5b9",
+      "sha256": "08c78f5127829e4b02e6dcf058cefc1bd22e5149f9bcca2f287edea7857897bf",
+      "bytes": 9589
+    },
+    {
+      "commit": "9959364671f89b86f3992ec5ed5e19f804eb607b",
+      "path": "standalone/2026-10-10-sextic-moment-descent/REFINED_ALL_ROW_SIEVE.md",
+      "git_blob": "69589ba1350c1ed5bd62cf87b976c3ba2142f94e",
+      "sha256": "6879e094fb63969ddc88c637bf633cf46360d144d2b1615573647e734b4141e8",
+      "bytes": 17097
+    },
+    {
+      "commit": "9959364671f89b86f3992ec5ed5e19f804eb607b",
+      "path": "standalone/2026-10-10-sextic-moment-descent/GENERAL_MOMENT_ATTACK.md",
+      "git_blob": "893d0e394041d16cf36d643794b544b7556303de",
+      "sha256": "a4ca15c0d731ef6000b19507b39b64a4786a7f8af9939864b3176221bf02b499",
+      "bytes": 27326
+    },
+    {
+      "commit": "9959364671f89b86f3992ec5ed5e19f804eb607b",
+      "path": "standalone/2026-10-10-sextic-moment-descent/MOMENT_OBSTRUCTIONS.md",
+      "git_blob": "a3bfa63cb6398d6b1ced163602f32a5fb052bf75",
+      "sha256": "663c6ac878eb0fdd865389ac066ff5a23dbb33016e7061384a83fd186be3fd9b",
+      "bytes": 31027
+    }
+  ],
+  "sibling_signed_average_source": {
+    "commit": "9b04a887e171b3104a66cf57296ce5b0b2920d78",
+    "path": "standalone/2026-10-10-averaged-conductor-frontier/SMALL_GCD_CONDUCTOR_REDUCTION.md",
+    "git_blob": "4154f9d25537e863e235fd86ce5de9620256222c",
+    "sha256": "9a371bd84f63b7fae2a3983c05829f2d69e2bbed918ab3eed119a2e7a11125a2",
+    "bytes": 16386
+  },
+  "external_primary_references": [
+    {
+      "title": "Bias in cubic Gauss sums: Patterson’s conjecture",
+      "authors": [
+        "Alexander Dunn",
+        "Maksym Radziwill"
+      ],
+      "version": "arXiv:2109.07463v3 (2024-05-14)",
+      "url": "https://arxiv.org/html/2109.07463v3",
+      "used": "Explicit coefficient identities (5.7), (5.8), (5.13), (5.14), and Appendix A; not GRH-conditional dispersion or prime-sum conclusions."
+    },
+    {
+      "title": "L-functions with n-th order twists",
+      "authors": [
+        "Valentin Blomer",
+        "Leo Goldmakher",
+        "Benoit Louvel"
+      ],
+      "url": "https://arxiv.org/abs/1112.1650",
+      "used": "Theorem 1.3 as the classical squarefree sextic and cubic sieve input, in the pinned imported primary normalization."
+    }
+  ],
+  "scope": "Source-conditional deductions. Primitive theta automorphy, transforms and source completed mean square are inputs, not independently verified foundations. No Lean build, accepted integration, full fourth moment, generalized moment hierarchy or new zero-free boundary."
+}
