@@ -136,6 +136,11 @@ attempt.
   (paper.tex l. 13192–13349 and 13686–13933).
 * The numerology has zero slack at three points. This is the highest-value single verification
   target in the 7/8 manuscript.
+* *Complete read* ([reviews/LEMMA18_1_CASE2_SEC188.md](reviews/LEMMA18_1_CASE2_SEC188.md)).
+  * With case 2 and Sec. 18.8 done, every proof line of Lemma 18.1 has been read with no wrong
+    step found.
+  * Imported: helper Lemmas 4.x and Sec. 13; the ray-class prime ideal theorem; Rankin.
+  * Not a certification.
 * *Follow-up done* ([reviews/LEMMA18_1_COMMON_SUPPORT.md](reviews/LEMMA18_1_COMMON_SUPPORT.md)):
   no error was found in the common-support allocations, and 24/24 checks passed. Lemma 18.1 as a
   whole is still not certified. Case 2, Sec. 18.8 and the use in Prop. 19.2 remain unreviewed.
