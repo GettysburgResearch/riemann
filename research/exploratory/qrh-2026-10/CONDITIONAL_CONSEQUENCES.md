@@ -11,6 +11,16 @@ What was actually run: no computation; proofs below are short adaptations, not r
 Smallest remaining gap: each RH-equivalent premise in the repo needs exponent 0; QRH-IMPORT gives 3/8.
 ```
 
+> **Status update (10 Oct 2026, end of wave).** The ζ-part of QRH-IMPORT, `ζ(s) ≠ 0` for
+> `Re s > 7/8`, is now also a Lean theorem about Mathlib's `riemannZeta`. Lean's kernel accepted it
+> through comparator, using only the three standard axioms ([LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md),
+> Addenda A–B, where the trust assumptions are listed). The Dirichlet version is axiom-clean too.
+> * The statements below that use only `H(7/8)` for ζ or for Dirichlet `L`-functions are therefore
+>   conditional on accepting that machine check, not on the unreviewed manuscript text.
+> * The classical derivations they rest on are still imported or PROPOSED as labelled.
+> * Statements that need the Hecke family or the Oct 5 claim are unchanged.
+
+
 > **Prior work.** Most of Sections 1.3 and 3 already appear in branch
 > `claude/openai-math-riemann-analysis-w5copg`
 > (`standalone/2026-10-07-openai-quasi-rh/README.md` §§4–5) and in

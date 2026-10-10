@@ -1,7 +1,8 @@
 # Lean build attempt: OpenAI 7/8 comparator challenge (family 003)
 
 ```text
-Status: VERIFICATION (formal build COMPLETED; see Addendum A, and Addendum B for comparator);
+Status: VERIFICATION (formal build COMPLETED, Addendum A; comparator ACCEPTS the 7/8 zeta challenge,
+  Addendum B);
   no mathematical claim beyond what the build shows. Sections 1-8 are the original partial
   attempt and are kept unchanged as the record of that attempt
 Scope: Kernel build of the import closure of OAI.NumberTheory.DirichletL.Nonvanishing, the solution
@@ -68,6 +69,65 @@ What this does and does not establish:
   nothing about the critical line.
 * `#print axioms` trusts the elaborated environment. Comparator's export-and-replay is the
   stronger check (Addendum B).
+
+## Addendum B (10 Oct 2026): comparator accepts the 7/8 zeta challenge
+
+Comparator was run on the upstream challenge `ComparatorChallenges/QuasiRiemannHypothesis.json`
+with the toolchain-matched tools of Section 5:
+* comparator d03acab, lean4export 076e8e57, landrun 0.1.18 with `--best-effort`;
+* challenge JSON sha256 `46ebb7ed…f320`; challenge Lean file sha256 `065f8c9a…12cc5`;
+* permitted axioms `propext`, `Quot.sound`, `Classical.choice`; `enable_nanoda: false`.
+
+```text
+Building ComparatorChallenges.QuasiRiemannHypothesis            (sandboxed; no-op, already built)
+Exporting #[…, OAI.riemannZeta_ne_zero_of_seven_eighths_lt_re, …] from ComparatorChallenges.QuasiRiemannHypothesis
+Building OAI.NumberTheory.DirichletL.Nonvanishing               (sandboxed; no-op, already built)
+Exporting #[…] from OAI.NumberTheory.DirichletL.Nonvanishing
+Running Lean default kernel on solution.
+Lean default kernel accepts the solution
+Your solution is okay!
+```
+
+The run took 1094 s wall time, exited 0, and peaked at about 7 GB RSS in lean4export. The full
+log is [results/comparator_QuasiRiemannHypothesis.log](results/comparator_QuasiRiemannHypothesis.log).
+
+What comparator adds over `#print axioms`:
+* It exports the challenge statement from a module that imports only Mathlib, and checks that
+  the solution's theorem has the identical statement over identical constants. So
+  `riemannZeta`, `Complex.re` and the rest are Mathlib's.
+* It re-checks the exported proof with a fresh Lean kernel (`Environment.replay`), outside the
+  elaborator, and checks that only the permitted axioms occur.
+
+The patched third-party packages cannot change the meaning of the statement, because the
+statement mentions only Mathlib constants and Mathlib is unpatched. Their proofs are among the
+replayed constants.
+
+Trust assumptions, stated as comparator's README asks:
+* **Assumption 2 is not met.** The solution was compiled outside the sandbox before the check,
+  so a malicious build could in principle have altered files the check reads. This is a
+  non-adversarial reproduction.
+  * As a partial guard, none of the 8,548 Mathlib `.olean` files has a modification time later
+    than the cache unpack (12:48–12:51 UTC); `find -newermt "2026-10-10 13:00"` finds 0.
+  * Mathlib's git tree is clean at d13f23b7.
+* The landrun sandbox ran in `--best-effort` mode on Landlock ABI v7, and the systemd
+  `AF_UNIX` wrapper was not used (Section 5).
+* Only the Lean kernel was used. No second kernel, such as nanoda, was run.
+
+**What is established:** under these assumptions, Lean's kernel accepts a proof, from the
+three standard axioms, of
+
+    ∀ s : ℂ, 7/8 < Re s → riemannZeta s ≠ 0
+
+for Mathlib's `riemannZeta`.
+
+**What is not established:**
+* This is not a review of the 30 Sep manuscript's text, and not a human review of the Lean
+  development.
+* It is not RH. The half-plane `Re s > 7/8` says nothing about the critical line.
+
+Corollaries proved in this wave on top of this theorem (strip, Dirichlet strip, Siegel challenge)
+are in [../lean/](../lean/README.md). Comparator runs on the Dirichlet, Hecke and corollary
+challenges are recorded below as they complete.
 
 ## 1. Verdict of the original attempt (superseded by Addendum A): PARTIAL
 

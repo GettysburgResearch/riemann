@@ -315,7 +315,9 @@ consequences (84-125) were not read.
 * Goldmakher–Louvel's estimates were not re-derived. The journal versions of GL and DR were not
   compared with the arXiv versions.
 * No human reviewed any part.
-* The upstream Lean release was not built here, and it does not formalize this argument (Section 7).
+* The upstream Lean release does not formalize this argument (Section 7). Its 7/8 targets were
+  built and checked later the same day (../../reviews/LEAN_BUILD_ATTEMPT.md, Addenda A–B); that
+  says nothing about the 11/12 proof.
 
 ## 7. Known misreadings
 
@@ -350,7 +352,9 @@ consequences (84-125) were not read.
      depends on the multiplier convention `θ(gw) = (c/a)_3 θ(w)` (R3 §3, check A).
 7. **"The Lean formalization checks this."** No.
    * The upstream Lean release targets the Sep 30 7/8 theorem and the Oct 1 Siegel-zero theorem.
-   * It was not built or run in this repository (PR 908 `FORMALIZATION_AUDIT.md`).
+   * When this packet was drafted it had not been built in this repository (PR 908
+     `FORMALIZATION_AUDIT.md`). Its 7/8 targets have since been built and accepted by comparator
+     (../../reviews/LEAN_BUILD_ATTEMPT.md). None of that formalizes the 11/12 argument.
 8. **"The numerical checks are evidence for the theorem."** No.
    * They are finite and at tiny scales (`D ≤ 60`, norms ≤ a few thousand). They test conventions
      and exact identities.

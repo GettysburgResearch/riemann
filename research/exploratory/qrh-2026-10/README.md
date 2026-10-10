@@ -11,7 +11,9 @@ Smallest remaining gap: RH itself (sup Re rho = 1/2) is untouched by everything 
 RH remains unproved. This folder studies the October 2026 *quasi*-RH manuscripts as an imported
 object and as a source of mechanisms. The manuscripts claim zero-free half-planes (`Re s > 7/8`
 Sep 30; `Re s > 11/12` Oct 5; Kintali `47/48`) and, separately, a Landau–Siegel exclusion (Oct 1);
-they are unreviewed.
+they are unreviewed by humans. The Lean statement of the Sep 30 claim, `ζ(s) ≠ 0` for `Re s > 7/8`
+(Mathlib's `riemannZeta`), has been kernel-checked here with comparator
+([reviews/LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md), Addendum B).
 
 ## Headline findings (PROPOSED; conditional on the manuscript's stated lemma outputs)
 
@@ -86,7 +88,8 @@ they are unreviewed.
 | [reviews/SEP30_JUNCTION_CHECK.md](reviews/SEP30_JUNCTION_CHECK.md) | 7/8 row-count junction: every quantitative lemma-hypothesis instance certified in exact rationals (84/84, 8 failing controls). Lemma 18.1 is used on its boundary. Qualitative side conditions unchecked |
 | [reviews/SEP30_EQC_CHECK.md](reviews/SEP30_EQC_CHECK.md) | 7/8 eq. (C) (first-Poisson CRT/reciprocity identification in Lemma 17.2): verified by hand, on 900 exact tuples and by an end-to-end replay; 14 controls fail |
 | [reviews/SEP30_DETECTOR_QUANTIFIERS.md](reviews/SEP30_DETECTOR_QUANTIFIERS.md) | 7/8 zero detector (Lemmas 8.1–8.3), quantifier order of Prop 20.3, Prop 16.1: no gap found (114 exact checks). **The detector floor 51/100 is a convention: any 1/2+η works.** Four independence claims in Prop 20.3 are accepted without proof |
-| [reviews/LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md) | Lean build of the 7/8 comparator closure (pinned toolchain and Mathlib; cache; patches): PARTIAL, 350/2924 modules with 0 errors and no `sorry`; challenge statements build; resumed in this session |
+| [reviews/LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md) | Lean build of the 7/8 comparator closure (pinned toolchain and Mathlib; cache; patches): **complete** (7061 jobs, 0 errors, 0 `sorry`); `#print axioms` = `[propext, Classical.choice, Quot.sound]` for the zeta, Dirichlet and Hecke 7/8 theorems; **comparator accepts the upstream 7/8 zeta challenge** (Addendum B, with trust assumptions) |
+| [lean/](lean/README.md) | formal corollaries built on the 7/8 theorem: nontrivial zeros of `ζ` lie in `1/8 ≤ Re s ≤ 7/8` (in the shape of Mathlib's `RiemannHypothesis`); the same for primitive Dirichlet `L`; the Oct 1 Siegel-zero challenge statement with `c = (log 3)/8`. Axioms standard |
 | [numerics/B2_NUMERICS.md](numerics/B2_NUMERICS.md) | the 7/8 low-side bilinear form numerically: the true form is ≈ Q^{−1/2} below Cauchy–Schwarz, exactly as for random phases. The relevant Gram sits at its diagonal, far below the large-sieve constant. The gap is provability, not truth |
 | [proposed/OCT5_11_12_PACKET/](proposed/OCT5_11_12_PACKET/README.md) | **PROPOSED** integration-packet draft for the Oct 5 (11/12) proof (statement, dependency chain, review record, proof outline, rerunnable checks, integrator gaps). Not an integrated packet |
 | [reviews/SEP30_L13_L45_REVIEW.md](reviews/SEP30_L13_L45_REVIEW.md) | 7/8 common-support correlations (Lemmas 13.3, 13.4; 13.2 now exact) and smooth calculus (Lemma 4.5): no wrong step. Millions of exact local values brute-forced in Z[ω]; 12 mutation controls detected; 33/33 checks |

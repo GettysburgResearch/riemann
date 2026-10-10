@@ -1,0 +1,71 @@
+OAI modules on disk: 3235 (556624 lines)
+closure of OAI.NumberTheory.DirichletL.Nonvanishing: 2924 modules, 486490 lines; longest chain 404; missing 0
+external import roots: {'Mathlib': 248, 'RellichKondrachov': 1, 'PrimeNumberTheoremAnd': 1, 'Lean': 1}
+external non-Mathlib imports: ['PrimeNumberTheoremAnd.Wiener', 'RellichKondrachov.Analysis.FunctionalSpaces.Sobolev.Euclidean.Rellich']
+git check vs 31c706bbb3dce49a7ebabbe71cd7cbacdaa6cbb6: 2924 files, 0 mismatches, 0 absent
+closure by directory (modules, lines):
+  Moments                                    679    82625
+  Eisenstein                                  82    53369
+  Detector                                   414    42100
+  Descent                                    419    41501
+  CubicSieve                                  91    37017
+  Energy                                     208    27394
+  Inversion                                  155    24257
+  QuadraticSieve                              36    23974
+  GaussSum                                    34    23362
+  Reflection                                 266    23203
+  Hecke                                      180    21359
+  PrimeRows                                  182    18083
+  MeanSquare                                  18    11320
+  (DirichletL root files)                     54    11008
+  RowCompletion                               15     9427
+  Mellin                                      11     8202
+  Poisson                                      8     5262
+  Arithmetic                                   7     4931
+  Dictionary                                  42     4567
+  Reciprocity                                  6     4289
+  Cusp                                         5     3288
+  Fourier                                      4     2885
+  ChineseRemainder                             3     1848
+  PrimeCounting                                5     1219
+not in closure, by directory: {'Hecke': 2, 'OAI.NumberTheory.SiegelZeros': 306, 'OAI.QRHWave.DirichletZeroStrip': 1, 'OAI.QRHWave.SiegelFromSevenEighths': 1, 'OAI.QRHWave.ZetaZeroStrip': 1}
+trust counts:
+  axiom (declaration)                           0
+  axiom (any token)                             0
+  sorry                                         0
+  admit                                         0
+  sorryAx                                       0
+  native_decide                                 0
+  decide +native / +kernel                      4
+  kernel := true / native := true               0
+  Lean.ofReduceBool / reduceBool                0
+  trustCompiler                                 0
+  implemented_by                                0
+  extern                                        0
+  unsafe                                        0
+  csimp                                         0
+  debug.skipKernelTC                            0
+  opaque                                        0
+  partial def                                   0
+  syntax (custom)                               0
+  macro (custom)                                0
+  macro_rules                                   0
+  elab (custom)                                 0
+  elab_rules                                    0
+  notation (local/scoped/global)                2884
+  initialize / builtin_initialize               0
+  run_cmd / run_elab / run_meta                 0
+  #eval                                         0
+  Lean.Elab / Lean.Meta use                     1
+  attribute [irreducible]/[implemented_by]      1
+  set_option maxHeartbeats                      0
+  set_option synthInstance.maxHeartbeats        0
+  set_option maxRecDepth                        0
+  set_option (other)                            0
+  decide (tactic or term)                       754
+  Decidable.decide / by rfl on Bool             0
+maxHeartbeats values: {}
+maxRecDepth values: {}
+other set_option: {}
+decl kinds: {'theorem': 13824, 'abbrev': 260, 'def': 4834, 'lemma': 6783, 'instance': 119, 'structure': 88, 'inductive': 2}
+wrote results/lean_closure_map.json and /tmp/claude-0/-home-user-riemann/0f40aeb7-3b99-59f5-bdd3-8b0e9e4502dc/scratchpad/corr/lean_closure_map_decls.tsv

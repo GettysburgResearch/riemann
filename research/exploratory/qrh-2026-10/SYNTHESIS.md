@@ -48,8 +48,10 @@ integration verdict.
        `#print axioms` on `riemannZeta s ≠ 0 for Re s > 7/8`, on the Dirichlet version and on
        the Hecke-family version gives only `[propext, Classical.choice, Quot.sound]`. The
        statements are about Mathlib's own `riemannZeta` and `DirichletCharacter.LFunction`.
-       Comparator status is in [reviews/LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md),
-       Addenda A–B.
+       **Comparator accepts the upstream 7/8 zeta challenge: "Lean default kernel accepts the
+       solution"** ([reviews/LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md), Addenda A–B).
+       Its trust assumptions are listed there; in particular the solution was precompiled
+       (a non-adversarial reproduction).
        This is a machine check of the Lean statement, not a review of the manuscript.
      * Two short formal corollaries ([lean/](lean/README.md)):
        * every nontrivial zero of `ζ` lies in `1/8 ≤ Re s ≤ 7/8`, stated in the shape of

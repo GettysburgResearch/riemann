@@ -1,11 +1,12 @@
 # Lean files of the qrh-2026-10 wave
 
 ```text
-Status: EXPLORATORY formal corollaries of the imported 7/8 theorem. Both files compile on top of the
+Status: EXPLORATORY formal corollaries of the imported 7/8 theorem. All three files compile on top of the
   completed import build with no errors or warnings, and `#print axioms` shows only
   [propext, Classical.choice, Quot.sound]. Comparator results are in
   ../reviews/LEAN_BUILD_ATTEMPT.md, Addendum B. No RH claim.
 Scope: ZetaZeroStrip.lean (nontrivial zeros of Mathlib's riemannZeta lie in 1/8 <= Re s <= 7/8);
+  DirichletZeroStrip.lean (the same strip for L(s, chi), chi primitive and nontrivial);
   SiegelFromSevenEighths.lean (both statements of the imported Siegel-zero comparator challenge,
   with c = log 3 / 8)
 Exact sources or dependencies: pr908 = 31c706bbb3dce49a7ebabbe71cd7cbacdaa6cbb6,
@@ -13,13 +14,13 @@ Exact sources or dependencies: pr908 = 31c706bbb3dce49a7ebabbe71cd7cbacdaa6cbb6,
   openai/math@adc7f1241b42e322a6451854ab7e4b4c146bf78a lean/); Lean v4.34.1; Mathlib d13f23b7;
   the imported theorems OAI.riemannZeta_ne_zero_of_seven_eighths_lt_re and
   OAI.DirichletCharacter.LFunction_ne_zero_of_seven_eighths_lt_re; Mathlib's riemannZeta_one_sub
-What was actually run: lake build of both modules (as OAI.QRHWave.*) in the scratch copy of the
+What was actually run: lake build of the three modules (as OAI.QRHWave.*) in the scratch copy of the
   import; checks/CorollaryAxioms.lean; comparator (Addendum B)
 Smallest remaining gap: everything here inherits the trust status of the imported 7/8 Lean
   development (a kernel check under comparator's assumptions, not a human review)
 ```
 
-RH remains unsolved. Neither file says anything about the critical line beyond reflecting the
+RH remains unsolved. None of the files says anything about the critical line beyond reflecting the
 imported half-plane.
 
 ## ZetaZeroStrip.lean: the quasi-critical strip
@@ -34,6 +35,20 @@ The proof:
   then `ζ(1 − s) ≠ 0` (7/8 theorem), `Γ(1 − s) ≠ 0` and `(2π)^{−(1−s)} ≠ 0`, so
   `cos(π(1 − s)/2) = 0`. That forces `s = −2k` with an integer `k ≥ 1`, using `ζ(0) = −1/2` to
   exclude `k = 0`.
+
+## DirichletZeroStrip.lean: the strip for primitive Dirichlet L-functions
+
+`QRHWave.LFunction_quasi_critical_strip`: let `χ` be a primitive Dirichlet character with
+`χ ≠ 1`. Then every zero `s` of Mathlib's `DirichletCharacter.LFunction χ` at which the
+Archimedean factor `gammaFactor χ s` does not vanish has `1/8 ≤ Re s ≤ 7/8`.
+
+`gammaFactor_eq_zero_iff` identifies the excluded points as the trivial zeros: `s = 0, −2, −4, …`
+for even `χ`, and `s = −1, −3, …` for odd `χ`.
+
+The lower edge applies Mathlib's functional equation to the primitive character `χ⁻¹`, whose
+conductor equals that of `χ` by `conductor_inv`. Then `Λ(χ, s) = 0` forces `Λ(χ⁻¹, 1 − s) = 0`,
+hence `L(χ⁻¹, 1 − s) = 0` with `Re(1 − s) > 7/8`. That contradicts the imported 7/8 theorem.
+No non-vanishing of the root number is needed.
 
 ## SiegelFromSevenEighths.lean: the Siegel-zero challenge from 7/8
 
@@ -59,10 +74,10 @@ says nothing about whether the Oct 1 argument itself is correct, or about its ow
 
 ## How to check
 
-Both files must be compiled inside the imported Lean project (they import
+All three files must be compiled inside the imported Lean project (they import
 `OAI.NumberTheory.DirichletL.Nonvanishing`):
 1. Copy them to `OAI/QRHWave/` in that project, and run
-   `lake build OAI.QRHWave.SiegelFromSevenEighths OAI.QRHWave.ZetaZeroStrip`.
+   `lake build OAI.QRHWave.SiegelFromSevenEighths OAI.QRHWave.ZetaZeroStrip OAI.QRHWave.DirichletZeroStrip`.
 2. Run `lake env lean <this dir>/checks/CorollaryAxioms.lean`.
 3. For comparator, copy `comparator/QRHWaveStrip.lean` and the two JSON files into
    `ComparatorChallenges/`, then run `lake env comparator ComparatorChallenges/<name>.json`.

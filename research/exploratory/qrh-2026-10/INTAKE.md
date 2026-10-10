@@ -111,3 +111,17 @@ OpenAI, "Uniform exclusion of Landau–Siegel zeros" (1 October 2026), is import
 It claims an absolute `c > 0` with `(1−β) log q ≥ c` for every real zero of every primitive real
 Dirichlet `L`. Intake, budget and scope are in [SIEGEL_DETERMINANT.md](SIEGEL_DETERMINANT.md).
 
+
+## Addendum: the Lean release, built and checked (10 Oct 2026, end of wave)
+
+The "partial formalization" caveat above is out of date for the 7/8 targets.
+* The import's Lean closure for `OAI.riemannZeta_ne_zero_of_seven_eighths_lt_re` was built
+  completely here (Lean v4.34.1, Mathlib d13f23b7).
+* `#print axioms` shows only `propext`, `Classical.choice` and `Quot.sound`; the Dirichlet and
+  Hecke-family versions show the same.
+* Comparator accepted the upstream zeta challenge.
+
+Details and trust assumptions are in
+[reviews/LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md), Addenda A–B. This checks the Lean
+statement, not the manuscript's prose, and it is not RH. The 11/12 (Oct 5) argument has no Lean
+formalization in the release.

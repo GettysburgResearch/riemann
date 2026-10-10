@@ -1,0 +1,194 @@
+Prop 2.1 continuation: 14 decls in 4 modules
+       6 Hecke.CommonProbe  e.g. PrimitiveContract, UniformCommonProbe
+       4 Supremum  e.g. continuationMargin, continuationMargin_pos
+       3 Continuation  e.g. common_signal_bound, common_signal_bound_with_margin
+       1 Hecke.SignalIdentity  e.g. nonzero_of_probe_bounds
+Lem 4.1 ray characters: 92 decls in 9 modules
+      39 GaussSum.RayCharacters  e.g. prime_unit_mod_four, prime_product_unit_mod_four
+      32 GaussSum.CompletedExpansion  e.g. O, RayRing
+       9 Detector.RayCharacterFamily  e.g. fixedTwistSupport, fixedTwistSupport_prime
+       4 RayOrthogonality  e.g. rayCharacters, mem_rayCharacters_iff
+Lem 4.2 prime Gauss identities: 84 decls in 22 modules
+      34 Eisenstein.PrimeGaussFactors  e.g. unramifiedCubicGaussSeries_prime_two_power, unramifiedCubicGaussSeries_square_cube
+       7 Eisenstein.BesselMellinTransform  e.g. primeCubicGauss, primeCubicGauss_mod_three
+       5 Eisenstein.PrimePowerGaussSums  e.g. unramifiedCubicGaussSeries_prime_finite, unramifiedCubicGaussSeries_prime_zero_power
+       5 Eisenstein.RamifiedGaussSeries  e.g. unramifiedCubicGaussSeries, unramifiedCubicGaussSeries_neg
+Lem 4.3 quadratic four-term: 59 decls in 6 modules
+      52 GaussSum.QuadraticNormalization  e.g. quadraticGammaO, quadraticGammaO_traceLambda
+       2 GaussSum.QuadraticTrace  e.g. breveGaussianFourTerms_rational_odd, quadraticGammaRational_eq_fourTerms
+       2 GaussSum.RamifiedTracePhase  e.g. breveGaussianFourTerms, breveGaussianFourTerms_formula
+       1 GaussSum.AbelPhaseLimit  e.g. fixedDualPhase_four_terms
+Lem 4.4 sextic reciprocity / Gauss phase: 446 decls in 27 modules
+      71 Reciprocity.CubicJacobi  e.g. O, K
+      66 Reciprocity.KubotaCharacter  e.g. rationalEmbedding, levelThreeConjugate
+      54 Reciprocity.CubeCorrespondence  e.g. cubeDiagonal, cubeCorrespondence
+      49 Reciprocity.RamifiedSymbol  e.g. cubicExp, cubicExp_eq_of_dvd_sub
+Lem 4.5 smooth calculus: 129 decls in 8 modules
+      63 Mellin.LogProfiles  e.g. mobiusExpSum_continuousOn_pos, mobiusExpSum_inv_continuousOn_pos
+      27 Fourier.PositiveLogProfiles  e.g. log_dyad_bound, A3_primary_unit_eq_one
+      27 Mellin.UniformKernelBounds  e.g. compact_family_mul_fourier_power_source_bound, compact_family_mul_fourier_weighted_source_bound
+       5 Moments.ReflectedAnnuli  e.g. logProfile, logProfile_apply
+Lem 4.6 Gaussian annular decomposition: 0 decls in 0 modules
+Lem 4.7 finite seminorms: 45 decls in 21 modules
+      13 Detector.GaussianSeminorm  e.g. gaussianFixedWindow, gaussianFixedWindow_small
+       5 Fourier.FrequencyTwists  e.g. derivativeSeminormSum, derivativeSeminormSum_nonneg
+       4 Mellin.LogProfiles  e.g. logProfile_zero_seminorm_decay, logProfile_uniform_seminorm
+       2 Inversion.ClippingProfiles  e.g. rootSchwartz_seminorm, rooted_twist_seminorm
+Lem 4.8 Hecke strip growth: 41 decls in 3 modules
+      28 Hecke.Strip  e.g. gammaConstant, gammaConstant_pos
+      12 Hecke.StripActual  e.g. , conductor
+       1 Mellin.VerticalContourShift  e.g. integral_eq_of_exponential_strip_growth
+Lem 4.9 logarithmic control: 27 decls in 2 modules
+      25 LogarithmicControl  e.g. differentiableOn_of_exp_eq, exists_holomorphic_log
+       2 Hecke.EulerLog  e.g. continued_logarithmic_control, principal_continued_logarithmic_control
+Lem 4.10 deleted Euler factors: 34 decls in 5 modules
+      15 Hecke.DeletionBounds  e.g. constant_pow_primeSupport_bound, localBound
+      14 Hecke.FiniteDeletion  e.g. factors, factors_eq
+       3 Hecke.ModulusRefinement  e.g. excludePrimes, idealCoeff_excludePrimes
+       1 Detector.RowRadicalConductor  e.g. equal_elements_excludePrimes
+Prop 5.1 completed cubic reflection: 135 decls in 9 modules
+      32 QuadraticSieve.MainTermDifference  e.g. realBeta, realBeta_nonneg
+      29 Mellin.InverseContour  e.g. inverseMellinIntegrand, inverseMellinIntegrand_differentiableAt
+      29 Mellin.ReflectedKernel  e.g. reflectedLogProfile_deriv_bound, momentScale
+      17 QuadraticSieve.InitialBound  e.g. gammaMultiplier, gammaMultiplier_neg
+Lem 5.2 fixed ray sectors: 427 decls in 122 modules
+      80 Moments.SectorLocalization  e.g. cutoff, cutoff_one
+      35 CubicSieve.ResidualSectors  e.g. second_common_support_reconstruct, secondSourcePairKernel
+      19 QuadraticSieve.LogarithmicSectors  e.g. lowPrincipalErrorSum, lowPrincipal_actual_error_sum_bound
+      10 Moments.FirstSectors  e.g. residualPool, mem_residualPool
+Lem 5.3 common annular kernel: 19 decls in 4 modules
+       8 Moments.CommonProfile  e.g. liveIndices, remainingTuple
+       4 Descent.FirstCommonProfile  e.g. firstNormProfile_common_support, firstNormProfile_actual_common
+       4 Inversion.InitialCommonProfile  e.g. slotRatio, slotRatio_pos
+       3 PrimeRows.CubeCommonProfile  e.g. cubeArithmeticSum, cube_sum_eq_common_profile
+Lem 5.4 lattice kernel tails: 60 decls in 4 modules
+      55 Poisson.LatticeEnvelopes  e.g. nonzeroLatticeEnvelopeConstant, nonzeroLatticeEnvelopeConstant_nonneg
+       3 Moments.Tail  e.g. weighted_lattice_tail, weighted_set_lattice_tail
+       1 Moments.SectorLocalization  e.g. actual_discarded_lattice_tail
+       1 Poisson.RadialFourier  e.g. paperRadialFourier_lattice_tail
+Lem 5.5 quadratic reduction: 1 decls in 1 modules
+       1 Descent.HybridReduction  e.g. hybrid_quadratic_reduction
+Def 5.6/Lem 5.7 unmarked reflected block: 0 decls in 0 modules
+Sec 7.1 probe Poisson identity: 0 decls in 0 modules
+Lem 7.1 complete local identity: 44 decls in 3 modules
+      41 Hecke.LocalEulerIdentities  e.g. chiMinusThree_mod_one, chiMinusThree_mod_two
+       2 GaussSum.RamifiedTracePhase  e.g. first_local_identity_ring, first_local_identity_canonicalSextic
+       1 GaussSum.FiniteFourier  e.g. first_local_identity
+Lem 8.1 buffered zero-free bins: 49 decls in 25 modules
+       5 PrimeRows.BufferedBin  e.g. sourceDetectorFamily, sourceDetectorFamily_denominator
+       5 PrimeRows.BufferedContour  e.g. reciprocal_differentiableAt_of_nonzero, physicalCompensatedRow_buffered_differentiableAt_x
+       3 Hecke.DyadicBuffered  e.g. presentationComplexity_mono_height, buffered_rectangle_control
+       3 Hecke.PrimeDyadicBuffered  e.g. binCost, binCost_nonneg
+Lem 8.2 pointwise dyadic estimates: 10 decls in 3 modules
+       4 Hecke.PrimeDyadicEstimates  e.g. absolute_tail_bound, central_segment_bound
+       3 Hecke.DyadicEstimates  e.g. rapid_tail_bound, absolute_tail_bound
+       3 Hecke.DyadicPointwise  e.g. norm_four_sides, polynomial_bound_of_rectangle
+Prop 8.3 two saturated witnesses: 23 decls in 5 modules
+       8 Hecke.DetectorWitnessArithmetic  e.g. cutoffCoefficient, fiber_norm_le
+       8 Hecke.DetectorWitnessRows  e.g. dyadicLength, Witness
+       3 Detector  e.g. simultaneous_saturation, inverse_length_of_saturation
+       3 Hecke.DetectorSaturation  e.g. logarithmic_cost_eventually, normalized_product_lower
+Def 10.1-Lem 10.6 high representation: 569 decls in 158 modules
+      52 PrincipalSignalComparison  e.g. raw_inverse_ae_reciprocal, raw_quotient_integral_eq
+      34 Moments.RetainedProfile  e.g. dilated, dilated_contDiff
+      25 Inversion.WholePriorityRetainedSource  e.g. unifiedSource, mem_unifiedSource
+      24 Moments.AmplifiedRetainedRadius  e.g. ballProfile_support_upper, ballProfile_radius_le
+Lem 11.1 late height choice: 1 decls in 1 modules
+       1 Detector.FinalAssemblyChosenData  e.g. chosen_data_height
+Prop 11.3 quadratic transfer: 39 decls in 11 modules
+       8 Hecke.FiniteEulerFactors  e.g. baseChangeWeight_norm_le_one, outsideCoeff_baseChange_isBigO_linear
+       8 Hecke.LocalEulerIdentities  e.g. baseChangeWeight_zero_of_norm_prime_pow_ge_three, normFiberCoeff_baseChangeWeight_prime_pow_ge_three
+       7 Hecke.NormFiberCharacters  e.g. normFiberCoeff_baseChangeWeight_zero, baseChangeChar
+       3 Hecke.Dirichlet  e.g. LFunction_eq_dirichlet_product_right, LFunction_eq_dirichlet_product
+Lem 13.1 ray prime normalizer: 42 decls in 12 modules
+      26 PrimeCounting.RayAsymptotic  e.g. classCoeff, sum_coeff
+       4 RayPrimeNormalizer  e.g. normalizer, asymptotic
+       2 Moments.SecondCanonicalScalar  e.g. normalizer, normalizer_pos
+       2 PrincipalSignalComparison  e.g. source_normalizer_cast, source_normalizer_ne_zero
+Lem 13.2 prime-power Fourier sums: 60 decls in 6 modules
+      47 Eisenstein.PrimePowerGaussSums  e.g. cubicUnitGaussSum_one, cubicUnitGaussSum_frequency_dvd
+       6 Detector.PrimePower  e.g. primePowerGauss, primePowerGauss_support
+       3 Detector.LiftedFourier  e.g. primePowerGauss_lift_add, primePowerGauss_add_period
+       2 Detector.GaussValuation  e.g. primePowerGauss_at_pow_nonprincipal, primePowerGauss_at_pow_principal
+Lem 13.3/13.4 correlations: 121 decls in 28 modules
+      24 Moments.Correlation  e.g. fourierSum, fullCorrelation
+      17 Moments.CommonSupport  e.g. Residue, principalCRT
+      14 Moments.SupportedCorrelation  e.g. supportedModulusCharacter, supportedModulusCharacter_mk
+      12 Moments.FullCorrelation  e.g. scaledResidue, scaledResidue_mk
+Cor 14.1 marked completed reflection: 6 decls in 1 modules
+       6 Descent.MarkedReflection  e.g. markTwist, markTwist_norm
+Lem 14.2 quadratic-cubic norm: 10 decls in 1 modules
+      10 HeathBrownIteration  e.g. step, step_sub
+Lem 14.3 reflected energy: 16 decls in 9 modules
+       4 Descent.ShortReflectedEnergy  e.g. tupleDivisibilityMark, completed_tuple_mark
+       3 Detector.LowActualReflectedEnergy  e.g. lowActualIdealPolynomial, lowSelectedInverseRow_actual_ideal
+       2 Reflection.UniformFiltered  e.g. filtered_actual_weighted_reflected_energy_type_uniform, integrated_filtered_actual_reflected_energy_type_uniform
+       2 Reflection.UniformSieve  e.g. summed_actual_weighted_reflected_energy_type_uniform, integrated_summed_actual_reflected_energy_type_uniform
+Lem 15.1 compensated row norm: 22 decls in 12 modules
+       4 Detector.CompensatedRows  e.g. compensatedRowOnLines, compensatedRows_counting_product_integrable
+       4 PrimeRows.MarkedHolomorphic  e.g. physicalCompensatedRow, physicalCompensatedRow_first_differentiableAt_x
+       3 PrimeRows.MarkedContinuation  e.g. continuedCompensatedRow, continuedCompensatedRow_eq_initial
+       2 Detector.CompensatedTriple  e.g. compensatedRowSeries, compensatedRowTripleIntegral
+Prop 15.2 additive Gram bound: 559 decls in 86 modules
+     109 Detector.GramPeriodicPoisson  e.g. Joint, point
+      46 Detector.GramJointConstruction  e.g. q1, q2
+      27 Detector.GramLatticeDecay  e.g. Joint, point
+      21 Detector.GramJointProfile  e.g. rayControl, rayControl_nonneg
+Prop 15.3 compensated low estimate: 1 decls in 1 modules
+       1 Detector.FinalAssemblyData  e.g. probe_low
+Prop 16.1 conductor allocation: 3 decls in 1 modules
+       3 Moments.AmplificationErrorEnergy  e.g. localErrorCost, localErrorCost_nonneg
+Lem 16.2 absolute local tuple bounds: 40 decls in 3 modules
+      38 Fourier.TupleWeights  e.g. finite_triple_bounded_integral, tupleOuterWeight
+       1 PrimeRows.TupleBound  e.g. continued_selected_tuple_with_correction
+       1 PrimeRows.TupleSums  e.g. continued_selected_tuple_bound
+Lem 17.1 marked inverse moment: 132 decls in 26 modules
+      16 Dictionary.InverseMarkedPadding  e.g. radialMajorant, radialMajorant_compact
+      11 Dictionary.InverseMarkedUniform  e.g. clipped_one_zero, family_mode_integrable
+      10 Dictionary.InverseMarkedReferenceProducts  e.g. assignedIdeal, remainingIdeal
+       9 Dictionary.InverseMarkedReferenceTuples  e.g. Tuple, Assigned
+Lem 17.2 canonical marked estimate: 18 decls in 12 modules
+       4 Descent.Canonical  e.g. finiteCanonicalMarkedRow, finiteCanonicalMarkedRow_actual_columns
+       3 Descent.CompletedReopening  e.g. outsideCanonicalMarkedRow, outsideCanonicalMarkedRow_cube_split
+       2 Descent.SecondFixedFamily  e.g. finiteCanonicalMarkedRow_drop_puncture, canonicalMarkedSplit_original_lists
+       1 Descent.CanonicalPunctureMask  e.g. finiteCanonicalMarkedRow_redundant_puncture
+Lem 17.3/Cor 17.4 seminorm propagation: 0 decls in 0 modules
+Lem 17.5 masked primitive Poisson: 5 decls in 2 modules
+       4 QuadraticSieve.PoissonComparison  e.g. maskedPoissonDifference, maskedPoissonDifference_centered
+       1 CubicSieve.ArithmeticBins  e.g. originalHigh_gcd_eq_maskedPoissonDifference
+Lem 17.6 sixth-power amplification: 429 decls in 65 modules
+      71 Moments.FirstAmplificationChoice  e.g. ballProfile, ballProfile_nonneg
+      35 Mellin.SixthPowerAverage  e.g. exists_averaging_test, prime_coprime_span_iff
+      35 Moments.AmplificationChildSourceCaps  e.g. geometry, geometry_ge_one
+      26 Moments.AmplificationChildInput  e.g. original, volume
+Lem 18.1 fourth moment (plain): 29 decls in 8 modules
+       9 Moments.DetectorPlainMarkedState  e.g. source_slot_coefficient, retained_eq_initial_energy
+       7 Moments.DetectorPlainUnmarkedState  e.g. allowance, allowance_nonneg
+       5 Detector.DetectorPlainUnmarkedField  e.g. radialSupportUpper, radialSupportUpper_spec
+       2 Detector.DetectorPlainMarkedFineField  e.g. PositiveFineSourceInput, source_batch_plain_marked_fine
+Lem 18.2 common coefficient: 3 decls in 3 modules
+       1 CubicSieve.ResidualSectors  e.g. secondSourceCommonCoefficient
+       1 CubicSieve.SupportNorms  e.g. secondSourceCommonCoefficient_norm_le_one
+       1 Descent.FirstPhysicalCommon  e.g. firstCommonCoefficient
+Lem 18.3 masked rectangle cancellation: 134 decls in 62 modules
+      27 Moments.SourceRectangle  e.g. tuplePools, tuplePool
+       6 Moments.DivisorRectangle  e.g. factorTuple, selectedPlain
+       5 Moments.Rectangle  e.g. idealWeight, idealWeight_mul
+       4 Moments.Extraction  e.g. idealRectangle_extract, extracted_rectangle_coefficient
+Lem 19.1 prime bound in a bin: 2 decls in 2 modules
+       1 Hecke.PrimeBin  e.g. prime_bin_bound
+       1 Hecke.PrimeRay  e.g. ray_prime_bin_bound
+Prop 19.2 row counts: 41 decls in 8 modules
+      23 Hecke.DetectorRowCountCrossing  e.g. denominator, primeWeight
+       7 Hecke.DetectorRowCountEndpoint  e.g. denominator_endpoint, primeWeight_endpoint
+       4 Hecke.DetectorRowCount  e.g. card_of_energy, inverse_count
+       3 PrimeRows.RowCount  e.g. freeRow_count, frequencyWeight_ideal_norm
+Lem 20.1 high exponent for one bin: 0 decls in 0 modules
+Lem 20.2 endpoint certificate: 14 decls in 2 modules
+      13 Endpoint  e.g. denominator, primeWeight
+       1 Hecke.DetectorRowCountEndpoint  e.g. balanced_endpoint_with_loss
+Prop 20.3 order of choices: 61 decls in 20 modules
+       9 Detector.FinalAssemblyCertifiedBands  e.g. detectorMesh, detectorMesh_pos
+       8 Detector.FinalAssemblyChosenData  e.g. ChosenMomentInput, FineMomentInput
+       8 Detector.FinalAssemblyData  e.g. SourceData, exists_source_data
+       5 Detector.FinalAssemblyMomentInput  e.g. SourceMomentBound, mono_constant
