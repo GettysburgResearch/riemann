@@ -59,6 +59,7 @@ they are unreviewed.
 | [SYNTHESIS.md](SYNTHESIS.md) | **start here**: the two architectures, what is new, where a breakthrough would have to come from |
 | [AGENDA.md](AGENDA.md) | bounded open problems with payoffs (moment ladder, 7/8 escape routes, verification, repo bridges) |
 | [INTAKE.md](INTAKE.md) | exact claimed statements, architecture, dependencies, what was verified |
+| [HEIGHT_LEVELS.md](HEIGHT_LEVELS.md) | what happens as you go higher, in four senses: moment order (same boundary at the same ρ; the dual type goes A₁ → A₂ → affine Ã₂ → Lorentzian, with the k = 3 pair pattern checked), zero height T, reflection rank, half-plane depth |
 | [RUNG_STRENGTH.md](RUNG_STRENGTH.md) | the moment ladder depends only on `ρ = h/k`; `ρ = 1` wall at 11/12; a single-row Prop. R; what any `ρ < 1` input must contain; sub-diagonal numerics |
 | [A2_LITERATURE.md](A2_LITERATURE.md) | literature check: exact A2 WMDS dictionary (plus an extra quadratic factor); GL(3) cubic theta vanishes on the support; the missing input is a dispersion asymptotic |
 | [moments/](moments/README.md) | actual sextic-family `M₂, M₄, M₆` at `H = D^{1+θ}` (and sub-diagonal `k = 1`): diagonal-sized up to `D = 64000` (finite) |

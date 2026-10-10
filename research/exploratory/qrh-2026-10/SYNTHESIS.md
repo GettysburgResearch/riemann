@@ -121,7 +121,14 @@ improves continuously as the row/column ratio `ρ` falls below 1. That makes it 
    * NRC32 twists generate only the trivial character, so they give no family leverage for issue 902
      ([NRC32_TWISTS.md](NRC32_TWISTS.md)).
 
-**Height levels.** PR 910's native-height route asks for a one-sided off-diagonal condition along
+**Height levels** ([HEIGHT_LEVELS.md](HEIGHT_LEVELS.md)). Going up the moment ladder leaves the
+boundary unchanged at fixed `ρ`. Meanwhile the dual objects change type, because every pair of
+factors carries a cubic symbol (complete graph `K_k`, Cartan matrix `3I − J`):
+* `A₂` at the 4th moment (finite type);
+* affine `Ã₂` at the 6th;
+* Lorentzian from the 8th on.
+
+PR 910's native-height route asks for a one-sided off-diagonal condition along
 a curve `σ₀(Y) = 1/2 + c loglog Y/log Y`, `Y ≈ 4T`.
 * It holds numerically up to `T = 10⁶`, with a factor-8 margin
   ([falsification/PR910_HEIGHT_TEST.md](falsification/PR910_HEIGHT_TEST.md)).
