@@ -180,3 +180,17 @@ exact checks 18/18 with 12 failing controls, all detected):
   `θ = 1/3`, stays OPEN.
 
 Updated register lines for items 3-5 are in its §6.
+
+## Note added later the same day: the F_2 ledger formula (LF) at θ = 1/3
+
+[LF_THETA_THIRD.md](LF_THETA_THIRD.md): **(LF) holds at θ = 1/3** (PROPOSED; one agent;
+exact checks 14/14, with 7 failing controls detected).
+* With θ left free, the manuscript's derivation (l. 14433-14460) gives
+  `F_2(θ) = 2b_2 − (1−θ)g_2 − p_2 + t_2 + θV + θf`. This is (2.16) at θ = 1/6 and (LF) at
+  θ = 1/3. θ enters only through the exceptional-row count exponent.
+* **Hazard.** The manuscript's `f = 2v_1` (l. 14350) must become `f = v_1` at n = 3, because the
+  row `h' = p` is exceptional. Keeping `2v_1` would invent a spurious 1/3 of slack.
+* Lemma 4.G's table, `κ_2 = 1` and its three tight points are confirmed exactly.
+
+Remaining for 4.G: the "no older moving character" claim at nonunit `i = 1` primes (l. 14352,
+A4) is inherited, not re-derived.
