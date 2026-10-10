@@ -22,7 +22,8 @@ import b2_common as C  # noqa: E402
 from common import PrimeData  # noqa: E402  (moments/common.py)
 
 E = C.E
-NV = 16              # heights v = 0..NV-1 (statistics over the fixed-height forms)
+NV = 16              # heights v = 9*j, j = 0..NV-1 (statistics over the fixed-height forms)
+VSTEP = 9.0
 NA_RAND = 8          # random-phase draws for gamma_1(s)
 
 
@@ -152,7 +153,8 @@ def rung(ctx, Z, Q, Y, seed=1):
             if lb != "true" and la not in ("true", "rand0", "rand1"):
                 continue
             rec = []
-            for v in range(NV):
+            for jv in range(NV):
+                v = VSTEP * jv
                 ys = (Ns / Y) ** (1j * v)
                 yq = (R["N"] / Q) ** (-1j * v)
                 bvec = w * xi * yq * B                          # b_m

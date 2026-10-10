@@ -49,7 +49,7 @@ def run(Q, Ys, seed=5):
         res = np.zeros((NV, len(coefs)))
         for v in range(NV):
             A = np.zeros((len(coefs), len(w)), dtype=np.complex128)
-            ys = (Ns / Y) ** (1j * v)
+            ys = (Ns / Y) ** (9j * v)
             for i in range(len(fam)):
                 row = zt[codes[i]]
                 for k, cf in enumerate(coefs):
