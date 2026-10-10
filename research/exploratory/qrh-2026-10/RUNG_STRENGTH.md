@@ -133,6 +133,18 @@ ends in a row-blind large sieve. It is therefore capped at `ρ ≥ 1`, i.e. at
 for every moment order. The GL(3) cubic theta, which would have been the next reflection, has
 coefficients that vanish on the needed support ([A2_LITERATURE.md](A2_LITERATURE.md) §3).
 
+*The same wall inside the manuscript's own induction.* The Oct 5 proof reduces the mean square to
+a canonical dual problem `E(H, X, F) ≤ Σ D^ε` and proves it by induction on the row range `H`
+(Prop canonical; reviewed in [reviews/OCT5_R2_ITERATION_TRANSFER.md](reviews/OCT5_R2_ITERATION_TRANSFER.md)).
+The induction uses three facts:
+* the gap `H/Σ ≤ D^{−κ}`, which is initially `D^{−ϑ}` with `ϑ` the primal `θ` (eq:initial-scales);
+* the hypothesis `max(H, LF) ≤ Σ`;
+* the contraction `H' < H (H/Σ)²` per level.
+
+A sub-diagonal primal (`θ < 0`, i.e. `ρ < 1`) starts with `H/Σ = D^{|θ|} > 1`. Then the hypothesis
+fails and the "contraction" becomes an expansion, so the recursion has no base. The level count
+`⌈4/ϑ⌉` also blows up as `ϑ → 0⁺`. So the manuscript's own mechanism is exactly the `ρ ≥ 1` method.
+
 **(c) Why `c = 5/6`.** By the heuristic parity rule of [ALT_PROBES.md](ALT_PROBES.md), the Möbius
 absorption needs a quadratic factor next to a theta with explicit Gauss-sum coefficients. Only the
 cubic theta has such coefficients, so the family is sextic and `c = 1 − 1/6`.

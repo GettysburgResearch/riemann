@@ -99,6 +99,18 @@ improves continuously as the row/column ratio `ρ` falls below 1. That makes it 
    controls. Kintali's phase claims were checked exhaustively mod 36 ([numerics/](numerics/README.md)).
    The A2 dual off-diagonal is within 4% of its diagonal at tiny scale.
 
+**Height levels.** PR 910's native-height route asks for a one-sided off-diagonal condition along
+a curve `σ₀(Y) = 1/2 + c loglog Y/log Y`, `Y ≈ 4T`.
+* It holds numerically up to `T = 10⁶`, with a factor-8 margin
+  ([falsification/PR910_HEIGHT_TEST.md](falsification/PR910_HEIGHT_TEST.md)).
+* What pushes it toward failure is large values of `ζ`, not zeros. On the curve the damping is only
+  a log power, while `ζ` has Ω-values `exp(√(log T/loglog T))`. So the condition is heuristically
+  expected to fail for every fixed `c` once `log T ~ 10³–10⁴`.
+* An RH-conditional Proposition A turns this into a precise lower-bound question for the Möbius
+  tail at large-value heights.
+* This is the clearest instance in the wave of "what happens as you go higher": finite-height
+  evidence is uninformative exactly where the mechanism changes.
+
 ## 3. Where a breakthrough would have to come from (ranked)
 
 1. **A sub-diagonal mean square of the sextic Möbius family (Oct 5 architecture).** This is the
