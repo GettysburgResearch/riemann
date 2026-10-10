@@ -75,6 +75,10 @@ The pages above describe reviewed components at their recorded sources, with lat
 
 [The sextic-moment packet](standalone/2026-10-10-sextic-moment-descent/README.md) proves an all-row character sieve with cost \(H+(HL)^{2/3}+H^{1/6}L\), derives explicit controlled overlap ranges inside every fixed moment, and adapts a cubic Gauss-sum correlation argument to the sextic family. It also records the balanced-weight transfer, exact moment-to-zero-free implications, scoped proof reviews, and reproducible finite diagnostics. The full fourth moment needed for \(17/24\), the unbounded hierarchy, and any further zero-free improvement remain open. This is proposed standalone research, stacked on the preceding packet.
 
+## Further research: coupled reflection and moment ranges
+
+[The coupled-reflection packet](standalone/2026-10-10-sextic-critical-core/README.md) retains the outer divisor sum through theta reflection, proves stronger bounds for specified reflected components, and gives an exact reunited Ramanujan Euler product with its angular characters, moving exclusions and polar divisor. It also controls a further incidence portion of every fixed higher moment and combines adjacent arithmetic work into a polynomial positivity-horizon criterion. Exact source snapshots, local arithmetic diagnostics and scoped independent AI-agent reviews are included. The full fourth moment, \(17/24\), the unbounded hierarchy and any further zero-free improvement remain open.
+
 ## License
 
 Project code and original research materials are available under the [MIT License](LICENSE). Third-party material retains its existing terms and notices.
