@@ -32,7 +32,12 @@ they are unreviewed.
 
 | File | Content |
 |---|---|
+| [SYNTHESIS.md](SYNTHESIS.md) | **start here**: the two architectures, what is new, where a breakthrough would have to come from |
 | [INTAKE.md](INTAKE.md) | exact claimed statements, architecture, dependencies, what was verified |
+| [FOURTH_MOMENT_A2.md](FOURTH_MOMENT_A2.md) | the fourth-moment rung (to 17/24) has cubic GL(3)-metaplectic shape; nesting identity (a2/) |
+| [BRIDGE_MELLIN.md](BRIDGE_MELLIN.md) | QRH continuation vs the repo's Mellin–Landau premise; graded NRC32 identity; family-relative step |
+| [reports/REPO_RECENT_WORK.md](reports/REPO_RECENT_WORK.md) | digest of prior QRH work in PRs 908–910 and branches (read before extending) |
+| [numerics/](numerics/README.md) | finite checks: Lemma 7.1 local identity, Kintali eq. (1) phases, joint-moment and Patterson-sum reconnaissance |
 | [THRESHOLD_CALCULUS.md](THRESHOLD_CALCULUS.md) | the exponent model, barriers 13/15, 167/192 and 5/6, experiments |
 | [CONDITIONAL_CONSEQUENCES.md](CONDITIONAL_CONSEQUENCES.md) | graded Mellin lemma (PROPOSED), conditional corollaries, non-improvements, repo hooks |
 | [scripts/ledger_check.py](scripts/ledger_check.py) | 53 exact-rational checks of the manuscripts' stated arithmetic |

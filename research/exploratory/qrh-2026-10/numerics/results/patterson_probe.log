@@ -1,0 +1,14 @@
+18019 primes, gamma_2 done (105.8s); max|g^3+alpha|=3.9e-15, max|g(conj)-conj g|=1.8e-15 (N<=20000)
+56433 squarefree c (106.1s)
+CRT recursion vs direct sum: 425 composites N<=3000, max dev 1.9e-15
+k=-2: |S(X)| = 15.3 at X=200000, fit exp (X>=5000) 0.376, runmax exp 0.525, |S|/X^(5/6) = 0.001, |S|/X^(1/2) = 0.03
+k=-1: |S(X)| = 25.0 at X=200000, fit exp (X>=5000) 0.632, runmax exp 0.522, |S|/X^(5/6) = 0.001, |S|/X^(1/2) = 0.06
+k=+0: |S(X)| = 5095.0 at X=200000, fit exp (X>=5000) 0.840, runmax exp 0.836, |S|/X^(5/6) = 0.195, |S|/X^(1/2) = 11.39
+k=+1: |S(X)| = 1.9 at X=200000, fit exp (X>=5000) -0.029, runmax exp 0.431, |S|/X^(5/6) = 0.000, |S|/X^(1/2) = 0.00
+k=+2: |S(X)| = 81.4 at X=200000, fit exp (X>=5000) -0.181, runmax exp 0.372, |S|/X^(5/6) = 0.003, |S|/X^(1/2) = 0.18
+k=+3: |S(X)| = 50.1 at X=200000, fit exp (X>=5000) 0.292, runmax exp 0.403, |S|/X^(5/6) = 0.002, |S|/X^(1/2) = 0.11
+done in 106.3s -> results/patterson_probe.json
+
+real	1m46.718s
+user	1m9.698s
+sys	0m31.676s

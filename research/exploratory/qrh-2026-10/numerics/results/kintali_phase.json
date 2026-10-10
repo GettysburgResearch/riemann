@@ -1,0 +1,63 @@
+{
+ "source": "Kintali QRH manuscript eq. (1) and Appendix A.1 (read from rendered PDF); OpenAI QRH Lemma 4.3/4.4",
+ "K1": {
+  "label": "FLOATING_RECONNAISSANCE",
+  "X": 10000,
+  "odd_elements": 27234,
+  "non_primary": 24207,
+  "divisible_by_lambda": 9072,
+  "divisible_by_3": 3018,
+  "max_abs_dev": 1.340082432202525e-14
+ },
+ "K2": {
+  "label": "EXACT",
+  "odd_classes_mod36": 972,
+  "primary_classes_mod36_prime_to_6": 108,
+  "Gamma_q_not_periodic": 0,
+  "max_abs_absGamma_minus_1": 0.0,
+  "mod4": {
+   "classes": 12,
+   "R_not_sign": 0,
+   "R_asymmetric": 0,
+   "bicharacter_failures": 0,
+   "triples": 1728
+  },
+  "square_class_table_failures": 0,
+  "Gamma_on_reps": {
+   "(0, 0)": "(1+0j)",
+   "(0, 1)": "1j",
+   "(1, 0)": "(1+0j)",
+   "(1, 1)": "-1j"
+  },
+  "max_abs_absG_minus_1": 1.1102230246251565e-16,
+  "mod36_primary": {
+   "classes": 108,
+   "R_not_sign": 0,
+   "R_asymmetric": 0,
+   "R_lift_dependence": 0,
+   "bicharacter_failures": 0,
+   "triples": 1259712,
+   "max_abs_G_multiplicativity_dev": 8.005932084973442e-16
+  },
+  "G_values_per_class_mod4_max": 1,
+  "G_values_per_class_mod2_max": 3
+ },
+ "K3": {
+  "label": "EXACT (symbols) + exact class arithmetic",
+  "primes": 2265,
+  "G_p3_ne_Gamma_p": "0",
+  "R_pp_ne_chi_p_minus1": 0,
+  "chi_p4_ne_cube_root_mod2": 0,
+  "G_p2_ne_chi_p4": "0"
+ },
+ "K4": {
+  "label": "EXACT",
+  "X": 2000,
+  "ideals": 606,
+  "nonsquarefree_ideals": 39,
+  "coprime_ordered_pairs": 342684,
+  "sextic_reciprocity_failures": 0,
+  "chi_n_minus1_ne_R_nn": 0
+ },
+ "runtime_s": 16.689484357833862
+}

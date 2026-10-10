@@ -1,0 +1,22 @@
+== K1: Gamma_q(c) vs |c|^-1 sum_x e(x^2/c), all odd c with N(c) <= 10000 ==
+  27234 odd c (24207 non-primary, 9072 divisible by lambda, 3018 divisible by 3): max |dev| = 1.34e-14
+== K2: exhaustive class algebra (EXACT) ==
+  odd_classes_mod36: 972
+  primary_classes_mod36_prime_to_6: 108
+  Gamma_q_not_periodic: 0
+  max_abs_absGamma_minus_1: 0.0
+  mod4: {'classes': 12, 'R_not_sign': 0, 'R_asymmetric': 0, 'bicharacter_failures': 0, 'triples': 1728}
+  square_class_table_failures: 0
+  max_abs_absG_minus_1: 1.1102230246251565e-16
+  mod36_primary: {'classes': 108, 'R_not_sign': 0, 'R_asymmetric': 0, 'R_lift_dependence': 0, 'bicharacter_failures': 0, 'triples': 1259712, 'max_abs_G_multiplicativity_dev': np.float64(8.005932084973442e-16)}
+  G_values_per_class_mod4_max: 1
+  G_values_per_class_mod2_max: 3
+  Gamma_q on 1, lam, -1, -lam: {'(0, 0)': '(1+0j)', '(0, 1)': '1j', '(1, 0)': '(1+0j)', '(1, 1)': '-1j'}
+== K3/K4: symbols (EXACT): primes N<=20000; coprime primary pairs N<=2000 ==
+  K3 over 2265 primes: G(p^3)!=Gamma_q(p): 0; R(p,p)!=chi_p(-1): 0; chi_p(4)!=(p mod 2): 0; G(p^2)!=chi_p(4): 0
+  K4: 606 primary ideals (39 nonsquarefree), 342684 coprime ordered pairs: (A.2) failures 0; chi_n(-1)!=R(n,n): 0
+done in 16.7 s -> results/kintali_phase.json
+
+real	0m17.107s
+user	0m15.466s
+sys	0m0.486s

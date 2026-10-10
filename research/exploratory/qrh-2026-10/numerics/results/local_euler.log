@@ -1,0 +1,50 @@
+== Part A: brute force (7.7) vs (7.8), and Gauss lifts ==
+  p=(-2, -3) N=7 split: t<=4, k<=3 done
+  p=(1, 3) N=7 split: t<=4, k<=3 done
+  p=(1, -3) N=13 split: t<=3, k<=2 done
+  p=(4, 3) N=13 split: t<=3, k<=2 done
+  p=(-5, -3) N=19 split: t<=3, k<=2 done
+  p=(-2, 3) N=19 split: t<=3, k<=2 done
+  p=(-5, 0) N=25 inert: t<=2, k<=2 done
+  p=(-5, -6) N=31 split: t<=2, k<=2 done
+  p=(1, 6) N=31 split: t<=2, k<=2 done
+  (7.8): 524 cases (117 nonzero), max rel dev 3.33e-14
+  lifts: 630 cases, max rel dev 9.40e-16
+== Part B: series (7.10) vs closed form (7.11) ==
+  x=1.2,w=1.1,z=0.4: 1386 cases over 77 primes (N<=400), max rel dev P 8.12e-16, P* 2.81e-15
+  x=0.8,w=0.3,z=0.15: 1386 cases over 77 primes (N<=400), max rel dev P 2.21e-15, P* 6.60e-14
+  ablations (x=1.2,w=1.1,z=0.4; P* relative deviation, max over cases):
+    drop bar on gamma_3 in (7.10): 4.34e-01  per j: 0:8.0e-16 1:9.9e-16 2:4.3e-01 3:2.8e-01 4:4.0e-02 5:1.0e-15
+    drop bar on alpha in a_p (both sides): 7.41e-02  per j: 0:1.1e-15 1:1.1e-15 2:9.5e-16 3:7.4e-02 4:9.5e-16 5:7.9e-16
+    drop bar on chi_p(4) in b_p: 1.47e-01  per j: 0:8.4e-16 1:1.2e-15 2:6.3e-16 3:1.5e-01 4:9.6e-16 5:1.0e-15
+    random Gauss phases (|G_r| = sqrt Q, Lemma 4.2 violated): 1.64e-01  per j: 0:2.8e-04 1:2.5e-03 2:2.9e-04 3:1.6e-01 4:3.5e-04 5:6.6e-03
+== Part C: sympy, table (7.16) -> (7.11), and (7.17) ==
+  j=0: sum(table) - (7.11) = 0
+  j=1: sum(table) - (7.11) = 0
+  j=2: sum(table) - (7.11) = 0
+  j=3: sum(table) - (7.11) = 0
+  j=4: sum(table) - (7.11) = 0
+  j=5: sum(table) - (7.11) = 0
+  (7.17) j=0: difference = 0;  j>0 (W=D=0): 0
+== Part D: |H_p - 1| at region corners (closed form) ==
+  (7.15) x=7/8,z=33/200,w=19/20 Q=7 max_abs_Hm1_good=0.0756 max_abs_Hm1_ramified=0.282 scaled_good(Q^1.815)=2.59 scaled_ram(Q^0.825)=1.41
+  (7.15) x=7/8,z=33/200,w=19/20 Q=13 max_abs_Hm1_good=0.0208 max_abs_Hm1_ramified=0.166 scaled_good(Q^1.815)=2.19 scaled_ram(Q^0.825)=1.38
+  (7.15) x=7/8,z=33/200,w=19/20 Q=25 max_abs_Hm1_good=0.00559 max_abs_Hm1_ramified=0.0938 scaled_good(Q^1.815)=1.92 scaled_ram(Q^0.825)=1.34
+  (7.15) x=7/8,z=33/200,w=19/20 Q=97 max_abs_Hm1_good=0.000392 max_abs_Hm1_ramified=0.0285 scaled_good(Q^1.815)=1.58 scaled_ram(Q^0.825)=1.24
+  (7.15) x=7/8,z=33/200,w=19/20 Q=1.01e+03 max_abs_Hm1_good=4.38e-06 max_abs_Hm1_ramified=0.00374 scaled_good(Q^1.815)=1.24 scaled_ram(Q^0.825)=1.12
+  (7.15) x=7/8,z=33/200,w=19/20 Q=1e+04 max_abs_Hm1_good=5.78e-08 max_abs_Hm1_ramified=0.000532 scaled_good(Q^1.815)=1.05 scaled_ram(Q^0.825)=1.06
+  (7.15) x=7/8,z=33/200,w=19/20 Q=1e+05 max_abs_Hm1_good=7.7e-10 max_abs_Hm1_ramified=7.74e-05 scaled_good(Q^1.815)=0.916 scaled_ram(Q^0.825)=1.03
+  (7.15) x=7/8,z=33/200,w=19/20 Q=1e+06 max_abs_Hm1_good=1.04e-11 max_abs_Hm1_ramified=1.14e-05 scaled_good(Q^1.815)=0.808 scaled_ram(Q^0.825)=1.02
+  (7.14) x=51/100,z=17/50,w=53/100 (eps0=1/25) Q=7 max_abs_Hm1_good=0.304 max_abs_Hm1_ramified=2.99 scaled_good(Q^1.02)=2.21 scaled_ram(Q^0.02)=3.11
+  (7.14) x=51/100,z=17/50,w=53/100 (eps0=1/25) Q=13 max_abs_Hm1_good=0.146 max_abs_Hm1_ramified=2.77 scaled_good(Q^1.02)=2 scaled_ram(Q^0.02)=2.92
+  (7.14) x=51/100,z=17/50,w=53/100 (eps0=1/25) Q=25 max_abs_Hm1_good=0.0715 max_abs_Hm1_ramified=2.64 scaled_good(Q^1.02)=1.91 scaled_ram(Q^0.02)=2.82
+  (7.14) x=51/100,z=17/50,w=53/100 (eps0=1/25) Q=97 max_abs_Hm1_good=0.0158 max_abs_Hm1_ramified=2.42 scaled_good(Q^1.02)=1.68 scaled_ram(Q^0.02)=2.65
+  (7.14) x=51/100,z=17/50,w=53/100 (eps0=1/25) Q=1.01e+03 max_abs_Hm1_good=0.00127 max_abs_Hm1_ramified=2.18 scaled_good(Q^1.02)=1.47 scaled_ram(Q^0.02)=2.5
+  (7.14) x=51/100,z=17/50,w=53/100 (eps0=1/25) Q=1e+04 max_abs_Hm1_good=0.00011 max_abs_Hm1_ramified=1.96 scaled_good(Q^1.02)=1.32 scaled_ram(Q^0.02)=2.35
+  (7.14) x=51/100,z=17/50,w=53/100 (eps0=1/25) Q=1e+05 max_abs_Hm1_good=9.49e-06 max_abs_Hm1_ramified=1.76 scaled_good(Q^1.02)=1.19 scaled_ram(Q^0.02)=2.22
+  (7.14) x=51/100,z=17/50,w=53/100 (eps0=1/25) Q=1e+06 max_abs_Hm1_good=8.27e-07 max_abs_Hm1_ramified=1.59 scaled_good(Q^1.02)=1.09 scaled_ram(Q^0.02)=2.09
+done in 51.0 s -> results/local_euler.json
+
+real	0m51.830s
+user	0m49.604s
+sys	0m0.715s

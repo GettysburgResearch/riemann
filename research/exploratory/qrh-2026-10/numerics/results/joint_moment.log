@@ -1,0 +1,29 @@
+D=500 L=500 U=500: rows=900 |n|=139 |l|=150 (0.6s)
+   sextic   : E max|M|^2=0.176 E max|S|^2=0.177 E|M|^2=0.080 E|S|^2=0.081 | joint_max/marg_max=0.640 joint_max/marg_typ=3.06 rowprod/marg_max=1.048 t=0 ratio=1.030 corr=0.118
+   null_iid : E max|M|^2=0.173 E max|S|^2=0.183 E|M|^2=0.080 E|S|^2=0.083 | joint_max/marg_max=0.635 joint_max/marg_typ=3.00 rowprod/marg_max=0.993 t=0 ratio=0.979 corr=-0.021
+   null_mult: E max|M|^2=0.175 E max|S|^2=0.179 E|M|^2=0.082 E|S|^2=0.082 | joint_max/marg_max=0.683 joint_max/marg_typ=3.20 rowprod/marg_max=1.044 t=0 ratio=1.024 corr=0.113
+D=1000 L=1000 U=1000: rows=1824 |n|=286 |l|=304 (1.5s)
+   sextic   : E max|M|^2=0.172 E max|S|^2=0.182 E|M|^2=0.079 E|S|^2=0.084 | joint_max/marg_max=0.679 joint_max/marg_typ=3.22 rowprod/marg_max=1.073 t=0 ratio=1.069 corr=0.184
+   null_iid : E max|M|^2=0.172 E max|S|^2=0.177 E|M|^2=0.078 E|S|^2=0.081 | joint_max/marg_max=0.610 joint_max/marg_typ=2.94 rowprod/marg_max=1.005 t=0 ratio=0.940 corr=0.016
+   null_mult: E max|M|^2=0.171 E max|S|^2=0.174 E|M|^2=0.077 E|S|^2=0.080 | joint_max/marg_max=0.648 joint_max/marg_typ=3.15 rowprod/marg_max=1.052 t=0 ratio=1.043 corr=0.126
+D=2000 L=2000 U=2000: rows=3600 |n|=561 |l|=600 (3.3s)
+   sextic   : E max|M|^2=0.172 E max|S|^2=0.174 E|M|^2=0.078 E|S|^2=0.081 | joint_max/marg_max=0.653 joint_max/marg_typ=3.10 rowprod/marg_max=1.057 t=0 ratio=1.037 corr=0.139
+   null_iid : E max|M|^2=0.168 E max|S|^2=0.177 E|M|^2=0.077 E|S|^2=0.080 | joint_max/marg_max=0.626 joint_max/marg_typ=3.03 rowprod/marg_max=1.010 t=0 ratio=1.006 corr=0.029
+   null_mult: E max|M|^2=0.167 E max|S|^2=0.179 E|M|^2=0.076 E|S|^2=0.081 | joint_max/marg_max=0.667 joint_max/marg_typ=3.23 rowprod/marg_max=1.058 t=0 ratio=1.061 corr=0.142
+D=4000 L=4000 U=4000: rows=7278 |n|=1129 |l|=1213 (14.1s)
+   sextic   : E max|M|^2=0.166 E max|S|^2=0.177 E|M|^2=0.076 E|S|^2=0.081 | joint_max/marg_max=0.637 joint_max/marg_typ=3.05 rowprod/marg_max=1.031 t=0 ratio=1.039 corr=0.077
+   null_iid : E max|M|^2=0.169 E max|S|^2=0.179 E|M|^2=0.077 E|S|^2=0.082 | joint_max/marg_max=0.629 joint_max/marg_typ=3.01 rowprod/marg_max=1.005 t=0 ratio=1.031 corr=0.015
+   null_mult: E max|M|^2=0.167 E max|S|^2=0.180 E|M|^2=0.076 E|S|^2=0.082 | joint_max/marg_max=0.651 joint_max/marg_typ=3.11 rowprod/marg_max=1.043 t=0 ratio=1.032 corr=0.101
+D=8000 L=8000 U=8000: rows=14472 |n|=2252 |l|=2412 (35.9s)
+   sextic   : E max|M|^2=0.168 E max|S|^2=0.176 E|M|^2=0.076 E|S|^2=0.080 | joint_max/marg_max=0.650 joint_max/marg_typ=3.14 rowprod/marg_max=1.050 t=0 ratio=1.054 corr=0.121
+   null_iid : E max|M|^2=0.166 E max|S|^2=0.180 E|M|^2=0.076 E|S|^2=0.082 | joint_max/marg_max=0.626 joint_max/marg_typ=2.99 rowprod/marg_max=1.006 t=0 ratio=1.013 corr=0.016
+   null_mult: E max|M|^2=0.167 E max|S|^2=0.179 E|M|^2=0.076 E|S|^2=0.081 | joint_max/marg_max=0.650 joint_max/marg_typ=3.14 rowprod/marg_max=1.052 t=0 ratio=1.036 corr=0.121
+D=8000 L=2000 U=8000: rows=14472 |n|=2252 |l|=600 (27.8s)
+   sextic   : E max|M|^2=0.168 E max|S|^2=0.179 E|M|^2=0.076 E|S|^2=0.081 | joint_max/marg_max=0.654 joint_max/marg_typ=3.18 rowprod/marg_max=1.058 t=0 ratio=1.036 corr=0.142
+   null_iid : E max|M|^2=0.165 E max|S|^2=0.177 E|M|^2=0.075 E|S|^2=0.081 | joint_max/marg_max=0.621 joint_max/marg_typ=2.99 rowprod/marg_max=1.003 t=0 ratio=0.990 corr=0.008
+   null_mult: E max|M|^2=0.168 E max|S|^2=0.181 E|M|^2=0.076 E|S|^2=0.083 | joint_max/marg_max=0.650 joint_max/marg_typ=3.15 rowprod/marg_max=1.044 t=0 ratio=1.067 corr=0.105
+done in 83.6 s -> results/joint_moment.json
+
+real	1m23.924s
+user	1m15.701s
+sys	0m19.255s
