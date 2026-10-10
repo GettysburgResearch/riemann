@@ -123,8 +123,8 @@ def optimise_theta(theta, beta_prev, warm=None, inp=tc.PAPER):
     from scipy.optimize import minimize
     starts = [(17/48, 23/48, 1/6), (0.40, 0.42, 0.17), (0.38, 0.46, 0.15), (0.33, 0.47, 0.20),
               (0.42, 0.44, 0.12)]
-    if warm is not None:
-        starts = [tuple(warm)] + starts
+    if warm is not None:                     # warm start plus two fixed starts (keeps the run light)
+        starts = [tuple(warm), starts[0], starts[1]]
     best = (9.0, None)
     for st in starts:
         r = minimize(lambda p: sigma_geom(p, theta, beta_prev, inp)[0], st, method='Nelder-Mead',
