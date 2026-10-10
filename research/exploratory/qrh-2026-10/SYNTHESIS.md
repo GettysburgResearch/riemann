@@ -106,6 +106,12 @@ improves continuously as the row/column ratio `ρ` falls below 1. That makes it 
        ([reviews/CONTOUR_LEMMAS_BELOW_7_8.md](reviews/CONTOUR_LEMMAS_BELOW_7_8.md));
      * the Oct 5 transfer recursion passes, conditional on Prop R and Lemma arithmetic
        ([reviews/OCT5_R2_ITERATION_TRANSFER.md](reviews/OCT5_R2_ITERATION_TRANSFER.md));
+     * Prop R itself (the cubic theta reflection) has no wrong step in the ranges read, and the
+       absence of a Kubota/Patterson main term is proved there
+       ([reviews/OCT5_R3_THETA_REFLECTION.md](reviews/OCT5_R3_THETA_REFLECTION.md));
+     * **combined:** the three Oct 5 reviews read every proof line (206–3648) and found no wrong
+       step; what remains is imported published theorems
+       ([reviews/OCT5_REVIEW_SUMMARY.md](reviews/OCT5_REVIEW_SUMMARY.md));
      * PR 910's exponent arithmetic replays exactly ([reviews/PR910_REPLAY.md](reviews/PR910_REPLAY.md)).
    * Conditional zero density: the imported 7/8 half-plane does not improve `A(σ)` below 7/8
      ([ZERO_DENSITY_CONDITIONAL.md](ZERO_DENSITY_CONDITIONAL.md)).
