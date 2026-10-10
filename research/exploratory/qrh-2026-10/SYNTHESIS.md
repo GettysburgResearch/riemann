@@ -23,6 +23,62 @@ zero-free half-planes (`Re s > 7/8` Sep 30; `Re s > 11/12` Oct 5; Kintali `47/48
 a Landau–Siegel exclusion (Oct 1). All are unreviewed. This wave asked what those
 methods *can* and *cannot* do, and where a push could move the constant.
 
+## 0. Executive summary (end of the 10-hour wave, 10 Oct 2026)
+
+Every statement below is labelled in its source file. None is an RH claim, and none is a human or
+integration verdict.
+
+1. **Verification of the external claims** (bounded agent reviews at exact SHAs, with exact or
+   numerical checks and failing controls).
+   * **Oct 5, 11/12: every proof line read, no wrong step found**
+     ([reviews/OCT5_REVIEW_SUMMARY.md](reviews/OCT5_REVIEW_SUMMARY.md)). The key theta
+     reflection was confirmed end to end numerically
+     ([reviews/OCT5_REFLECTION_E2E.md](reviews/OCT5_REFLECTION_E2E.md)). A PROPOSED integration
+     packet is drafted for human integrators: [proposed/OCT5_11_12_PACKET/](proposed/OCT5_11_12_PACKET/README.md).
+   * **Sep 30, 7/8: 43 of 65 load-bearing results reviewed, 5 more partially**
+     ([reviews/SEP30_VERIFICATION_MAP_V2.md](reviews/SEP30_VERIFICATION_MAP_V2.md)).
+     * No wrong step was found in any of them, including the low-side chain that sets 7/8, the
+       reflection engine, the inverse-moment engine and the zero detector.
+     * Lemma 18.1 has been read in full; the row-count junction is certified in exact rationals.
+     * Part I can be replaced by the Oct 5 theorem ([reviews/PART1_SUBSTITUTION.md](reviews/PART1_SUBSTITUTION.md)).
+       Then no load-bearing node is left entirely unchecked.
+     * Lean: a build of the import's 7/8 closure ran with 0 errors over most of its modules
+       ([reviews/LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md); final status recorded there).
+   * **Kintali 47/48:** Lemma 3 shows no error. The best citable density input gives 29/30.
+   * **Oct 1, Landau–Siegel:** intrinsically logarithmic-scale, effective in principle, and a weak
+     corollary of either quasi-RH claim ([SIEGEL_DETERMINANT.md](SIEGEL_DETERMINANT.md)).
+2. **Ceilings of both architectures** (PROPOSED or HEURISTIC, with exact certificates where stated).
+   * **Sep 30.** Its low side cannot go below 13/15. Zero-free floor rows force 167/192 at the
+     manuscript's floor; that floor is only a convention, and lowering it to 1/2⁺ moves the bound
+     to 13/15. The probe family's floor is 5/6.
+   * **What moves 7/8, priced:** only a bilinear saving on the low side, at about 0.81 per unit.
+     No known estimate gives one, and the published de Faveri–Dunn–Hoffstein sieve conjecture buys
+     nothing ([CONDITIONAL_B2.md](CONDITIONAL_B2.md)).
+   * **Oct 5.** The boundary is `1/2 + 5ρ/12` in the row/column ratio alone. Row-blind inputs stop
+     at `ρ = 1`, i.e. 11/12, and this wall is invariant under every Poisson and reflection move
+     ([RUNG_STRENGTH.md](RUNG_STRENGTH.md), [Q_RHO_ANALYSIS.md](Q_RHO_ANALYSIS.md)). Leverage
+     `c = 5/6` is forced on known automorphic input ([LEVERAGE_FAMILIES.md](LEVERAGE_FAMILIES.md)).
+3. **Where the true gap is.** On both sides, numerics show that the needed cancellation *exists*
+   and looks exactly like random-sign cancellation
+   ([moments/](moments/README.md), [moments/DUAL_ANATOMY.md](moments/DUAL_ANATOMY.md),
+   [numerics/B2_NUMERICS.md](numerics/B2_NUMERICS.md)). What is missing is a sub-diagonal,
+   coefficient-specific mechanism of "GRH on average" type: a mechanism, not evidence.
+4. **Spin-offs that are not about RH.**
+   * The 7/8 manuscript's Lemma 18.1 is itself a new Lindelöf-strength sextic fourth moment.
+   * Transferring its scheme gives a PROPOSED conditional route to the open **optimal cubic fourth
+     moment** `Σ|L(1/2, χ_c)|⁴ ≪ X^{1+ε}`, against `X^{4/3}` in the literature
+     ([proposed/CUBIC_FOURTH_MOMENT/](proposed/CUBIC_FOURTH_MOMENT/README.md)). It is under
+     adversarial testing.
+5. **Height levels** ([HEIGHT_LEVELS.md](HEIGHT_LEVELS.md)).
+   * The moment ladder gives the same boundary at a fixed `ρ`, while its dual objects change type:
+     `A₁ → A₂ → Ã₂ → Lorentzian`, as a coefficient-shape pattern (HEURISTIC).
+   * PR 910's height route is threatened at large heights by large values of `ζ`, not by zeros.
+6. **For this repository.**
+   * Graded Robin: `Θ ≤ 7/8` for `ζ` is equivalent to an asymptotic Robin-type inequality.
+   * Conditional zero density: no improvement below 7/8.
+   * NRC32 twists give no family leverage.
+   * Conditionally, effective Siegel-zero exclusion and effective class-number bounds.
+
 ## 1. Two architectures, two very different scaling laws
 
 | | Sep 30 "7/8" architecture | Oct 5 "11/12" architecture |
