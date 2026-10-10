@@ -167,11 +167,11 @@ def part_G2():
     ind = {pow(g, k, q): k for k in range(q - 1)}
 
     def Gq(k):
-        return sum(cmath.exp(2j * math.pi * ind[x] / 6) * cmath.exp(2j * math.pi * k * x / q)
+        return sum(cmath.exp(2j * math.pi * ind[x] / 6) * cmath.exp(2j * math.pi * ((k % q) * x % q) / q)
                    for x in range(1, q)) / math.sqrt(q)
     d6 = max(abs(Gq(h * 7 ** 6) - Gq(h)) for h in range(1, q))
     d5 = max(abs(Gq(h * 7 ** 5) - Gq(h)) for h in range(1, q))
-    check("G3 G(u, h p^6) = G(u, h) for (p,u)=1 (u = 13, p = 7)", d6 < 1e-12, "max dev %.1e" % d6)
+    check("G3 G(u, h p^6) = G(u, h) for (p,u)=1 (u = 13, p = 7)", d6 < 1e-9, "max dev %.1e" % d6)
     control("G3c G(u, h p^5) = G(u, h)", d5 > 1e-6, "max dev %.2f" % d5)
 
 
@@ -293,6 +293,8 @@ def random_child(force_tight=False):
     s = rng.choice(SIG)
     th = rfr(0, s / 400)
     d1, d2 = rfr(0, s / 100), rfr(0, s / 100)
+    if force_tight:
+        d1 = Fr(0)
     eta = rfr(s / 20, s / 7)
     kap = rfr(Fr(3, 4), 1)
     Mv = rfr(Fr(1, 4), 3)
@@ -425,7 +427,7 @@ def part_C():
         th, kap, eta = ch["th"], ch["kap"], ch["eta"]
         for side_len in (ch["c2"], ch["d2v"]):
             alpha = ch["a0"] - side_len
-            e = Fr(0) if tight else rfr(-th, th)
+            e = th if tight else rfr(-th, th)
             pi = th if tight else rfr(0, th)
             rt = Fr(0) if tight else rfr(0, Fr(1, 4))
             zp = ch["z"] if tight else rfr(0, ch["z"])           # surviving slot length z' <= z

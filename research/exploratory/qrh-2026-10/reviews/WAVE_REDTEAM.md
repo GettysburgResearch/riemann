@@ -535,3 +535,86 @@ problems are the strengthenings listed above, plus the one boundary violation in
 * ROBIN Theorem V lower half: Lagarias's transcription of Robin's β-range (R3). The original was not
   read.
 * SPF 29/31: Sep 30 Prop. 6.3 and Lemma 5.8 at `L = 16/31` and row exponent `32/31`.
+
+## 5. Fixes applied (editor log)
+
+Editor pass, 2026-10-10, on the working tree after `d47a04076` (the target notes were unchanged
+since the reviewed commit). This section is numbered 5 because §§3–4 above already exist; it is the
+"Fixes applied (editor log)" section the coordinator asked for. The fixes are labelling,
+provenance and scope edits only. No mathematics that §3 confirmed was changed. Where §2 gives exact
+text, that text was used, with small changes for grammar or context. Where it gives only a
+direction, the edit is the smallest one that resolves the issue. No statement was strengthened.
+
+Name convention for #25: the Oct 5 manuscript's proposition is "Oct 5 prop:R". RUNG_STRENGTH's
+Mellin proposition is "Prop. R (RUNG)" (and "Prop. R′ (RUNG)") outside RUNG_STRENGTH. Inside
+RUNG_STRENGTH it keeps the local name, and its heading now says so. ROBIN_GRADED's own "Prop. R" is
+a third, file-local Robin proposition and keeps its name.
+
+| # | Status | Files touched (location) |
+|---|---|---|
+| 1 | applied | ROBIN_GRADED (notation line: `QRH_ζ := H(7/8)`; §0 item 2; §3.3 Corollary; §4 heading and table; §5.2; §5.4; §7); CONDITIONAL_CONSEQUENCES (definition of QRH-IMPORT, which now says which sections use only the ζ-part; Robin bullet); README (ROBIN row) |
+| 2 | applied | RUNG_STRENGTH (header sources; §1; Prop. R′ proof line); FOURTH_MOMENT_A2 (§0) |
+| 3 | applied | RUNG_STRENGTH (Corollary, third bullet); HEIGHT_LEVELS (§4 table, rows 1–2, review text) |
+| 4 | applied | DISPERSION_GRH_STEP (§0 item 2; §5 second bullet, where "by Prop. R … 1/2 + ρ/2" is deleted); SYNTHESIS (§2 item 3: optional "(at loss η; not Mom(1, ρ) itself)" added) |
+| 5 | applied | SYNTHESIS (§1: "whose (unreviewed) manuscript claims 7/8") |
+| 6 | applied | SYNTHESIS (§2 item 5a: `(log 3)/8` Sep 30, `(log 3)/12` Oct 5); CONDITIONAL_CONSEQUENCES (§1.5, the optional Oct 5 wording) |
+| 7 | applied | HEIGHT_LEVELS (§4 "requires going sub-diagonal" paragraph; §5 depth row) |
+| 8 | applied | HEIGHT_LEVELS (§1.2 heading now says "PROPOSED analogy"; the k = 3 check is marked as implied by k = 2; column renamed "coprime-support coefficient shape"; review caveat paragraph after the table; §5 row); SYNTHESIS (Height-levels paragraph); README (HEIGHT row) |
+| 9 | applied | HEIGHT_LEVELS (§3) |
+| 10 | applied | LEVERAGE_FAMILIES (§0 verdict; §0 "only escape found … on the HEURISTIC model" sentence, a straggler; §6 first bullet); RUNG_STRENGTH (§3(c)); README (LEVERAGE row) |
+| 11 | applied | RUNG_STRENGTH (Prop. R heading: "rigorous" becomes "PROPOSED: proved here, not reviewed"); SYNTHESIS (§2 item 3a, review text, plus the Prop. R′ and GRH-endpoint bullets); HEIGHT_LEVELS (§4 table) |
+| 12 | applied | SYNTHESIS (§2 item 5: "model value", SPF §6, Prop. 6.3 obligation); README (SPF row) |
+| 13 | applied | RUNG_STRENGTH (§7 last sentence) |
+| 14 | applied | Q_RHO_ANALYSIS (§4 "non-circular input" bullet); DISPERSION_GRH_STEP (§3(c) label: "HEURISTIC (constants, and uniformity over rows at each iteration); a fixed point of a formal map") |
+| 15 | applied | SIEGEL_DETERMINANT (§0 (d); §3(d) constant). For consistency: SYNTHESIS §2 item 5a, README SIEGEL row, CONDITIONAL §1.5 |
+| 16 | applied | CONDITIONAL_CONSEQUENCES (Siegel bullets moved from §1.4 to a new §1.5 "CONDITIONAL on QRH-IMPORT for all real primitive characters", reworded with the review text; the `1/log log q` remark is kept as "standard, not re-derived here") |
+| 17 | applied | RUNG_STRENGTH (Prop. R statement defines `ψ_u^♭`; `F_u`, step 2 and step 3 of Prop. R′ now use `ψ_u^♭`) |
+| 18 | applied | RUNG_STRENGTH (§1, review text) |
+| 19 | applied | RUNG_STRENGTH (§7 table, multiplicity row); LEVERAGE_FAMILIES (§2.1: kernel `F^{×m}`, unit classes are nonprincipal members; `w⁶`, `−27w⁶ = ((1+2ω)w)⁶`) |
+| 20 | applied | RUNG_STRENGTH (§4 item 2; §7 conductor row) |
+| 21 | applied | RUNG_STRENGTH (§3(b)) |
+| 22 | applied | RUNG_STRENGTH (§3(b) degree-4 bullet); Q_RHO_ANALYSIS (§0 item 5; §3.2 item 1; rider (c) item 1, a straggler; §5 function-field line); README (Q_RHO row) |
+| 23 | applied | DISPERSION_GRH_STEP (§0 item 5; §5 candidate bullet; the (Q_ρ) bullets now say "returns to `A_u` exactly (Q_RHO §2.1)"; the equivalence carries the Q_RHO §5 caveat about the manuscript's transfer lemmas, so it is not strengthened; the coordinator note is updated); FOURTH_MOMENT_A2 (§5 note); Q_RHO_ANALYSIS (§5 follow-up marked as applied) |
+| 24 | applied | SHORT_PROOF_FRONTIER (§4 energy sentence, review text; header gap now includes the Prop. 6.3 re-run at `Z^{16/31}`) |
+| 25 | applied | DISPERSION_GRH_STEP (§4 table); Q_RHO_ANALYSIS (§0 item 5, §1 Rows, §1 required strength, §3.1 table); SYNTHESIS (§2 item 7, two bullets); README (R2 row); HEIGHT_LEVELS ("(RUNG)" suffixes); RUNG_STRENGTH (naming note at the Prop. R heading) |
+| 26 | applied | SYNTHESIS (opening paragraph); README (opening paragraph) |
+| 27 | applied | HEIGHT_LEVELS (§1.2 table) |
+| 28 | applied | DISPERSION_GRH_STEP (§3(a)) |
+| 29 | applied | ROBIN_GRADED (§0 item 2: `b` becomes `β`; §5.2 "`7/8 − 1/2 = 3/8` (Θ − 1/2 ≤ 3/8 under QRH)") |
+| 30 | partially applied | RUNG_STRENGTH §3(c): `J(ψ, ψ) = −π` for the primary prime element, applied. SHORT_PROOF_FRONTIER: a note after the §0 table records that THRESHOLD_CALCULUS §8 writes `(Q²T)` and that only the conductor exponent matters. The two formulas were **not** unified. THRESHOLD_CALCULUS was not edited, and the editor did not re-derive which height normalisation is intended. |
+
+Unnumbered §2 items, all applied:
+* RUNG Observation 2: "under Mom(k, h)".
+* RUNG §3(b) invariant bullet: deficit `j(1−ρ)`, plus the decisive conjunct.
+* SYNTHESIS §3 optional deficit parenthesis.
+* README l.35, optional: the large-values count of RUNG §4 item 3.
+* README l.65: Prop. R′ and the GRH endpoint.
+
+Consistency grep, run over all `*.md` in the folder except this file:
+
+| Pattern | Remaining hits |
+|---|---|
+| "QRH-IMPORT ⟺" | 0 |
+| "found no error in" next to Prop. 7.2 | 0. The remaining hits concern Kintali or Lemma 18.1. |
+| "proves 7/8" | 0. The only near-hit, in proposed/OCT5_11_12_PACKET, already says "claims". |
+| "(log 3)/8" next to Oct 5 | 0. All three remaining hits refer to 7/8 / Sep 30. |
+| "c = 5/6 is forced" | 0 |
+| "trivially" | Only unrelated uses (trivial counting or bounds). |
+| "rigorous" | See below. |
+
+Stragglers for "rigorous" fixed in the edited files:
+* SIEGEL_DETERMINANT: 4 places now read "manuscript-conditional proved" or "proved".
+* ROBIN_GRADED §3.2: "the Lemma K constant (proved here, unreviewed)".
+* SYNTHESIS §3: "No proved θ > 0".
+
+Remaining "rigorous" hits are not labels on unreviewed propositions:
+* SIEGEL "Rigorous share (PROPOSED …)" and "rigorous only up to floating point";
+* files outside this pass: FLOOR_BIN_BARRIER, AGENDA, falsification/, KINTALI_DENSITY_UPGRADE,
+  ZERO_DENSITY_CONDITIONAL. Their uses are qualified ("rigorous-conditional", "modulo cited
+  theorems", "in the model only", "rigorously citable" for a published theorem).
+
+Not done in this pass:
+* No file outside the list in the editor's brief was edited (in particular THRESHOLD_CALCULUS,
+  AGENDA and A2_LITERATURE).
+* DISPERSION §6's suggested propagation of its §0 item 4 correction to A2_LITERATURE and AGENDA is
+  still open. It is outside this review's issue list.
