@@ -1,0 +1,104 @@
+{
+  "all_real_endpoints_follow_from_manuscript": true,
+  "arithmetic": "ARB_DIRECTED_BALLS_AND_EXACT_RATIONAL_COEFFICIENTS",
+  "checker_sha256": "8486059b8468ceb6cb59d34c4c16c61eeb72a8097583596e5253b934571e5104",
+  "covered_power_interval": [
+    "1.7725",
+    "1.81"
+  ],
+  "critical_power_one_proved": false,
+  "global_sufficient_power": "709/400",
+  "global_sufficient_power_decimal": "1.7725",
+  "larger_power_input": "POWER_THRESHOLD.md A-SP1, threshold 1.80206853774",
+  "precision_bits": 192,
+  "python_flint_version": "0.9.0",
+  "rh_proved": false,
+  "slabs": [
+    {
+      "duplicate_67_labels": 1,
+      "finite_removal_mass": "[0.999910199212835926121683041772027441123294668837630637 +/- 7.83e-55]",
+      "horizon": 29200,
+      "one_minus_removal_mass": "[8.9800787164073878316958227972558876705331162369363e-5 +/- 7.83e-55]",
+      "ordinary_prime_count": 3173,
+      "pairing_mass_entire_ball_below_one": true,
+      "power_interval": [
+        "709/400",
+        "1773/1000"
+      ],
+      "prime_list_sha256": "e8c174c64a46dd12e62c765cc0a65fb4dbfde22a17eef46934534ee8dd808ab7",
+      "tail_left_ball": "[16.5651182990863030775226195875076842433893084841840998016 +/- 8.16e-56]",
+      "tail_margin_ball": "[0.0484568309370821789210987510927372482784099447562724198 +/- 8.29e-56]",
+      "tail_margin_entire_ball_positive": true,
+      "tail_right_exact": "194179072/11756557"
+    },
+    {
+      "duplicate_67_labels": 1,
+      "finite_removal_mass": "[0.999778038382571333787380723046600668640393322874198970 +/- 9.04e-55]",
+      "horizon": 30000,
+      "one_minus_removal_mass": "[0.000221961617428666212619276953399331359606677125801030 +/- 9.04e-55]",
+      "ordinary_prime_count": 3245,
+      "pairing_mass_entire_ball_below_one": true,
+      "power_interval": [
+        "1773/1000",
+        "887/500"
+      ],
+      "prime_list_sha256": "79dbfd1cc57e2366265ed9e16605994c04ec18e187d1429c34be8864e04a0bfa",
+      "tail_left_ball": "[16.7909231674952751183382803620726206042691535903490602518 +/- 8.95e-56]",
+      "tail_margin_ball": "[0.2183043380641908470283007956801199122841994422448259865 +/- 7.53e-56]",
+      "tail_margin_entire_ball_positive": true,
+      "tail_right_exact": "48557392/2929977"
+    },
+    {
+      "duplicate_67_labels": 1,
+      "finite_removal_mass": "[0.999612068965462812108327000955471650182554090276450999 +/- 6.75e-55]",
+      "horizon": 32000,
+      "one_minus_removal_mass": "[0.000387931034537187891672999044528349817445909723549001 +/- 6.75e-55]",
+      "ordinary_prime_count": 3432,
+      "pairing_mass_entire_ball_below_one": true,
+      "power_interval": [
+        "887/500",
+        "889/500"
+      ],
+      "prime_list_sha256": "814608e601247a6bd083a4b22050669de5fb431d1143af168ae381574b7336ba",
+      "tail_left_ball": "[17.322608990846861147972834903987212074546873808645738727 +/- 3.34e-55]",
+      "tail_margin_ball": "[0.520726649617552954002092492927109267523144404530346813 +/- 5.24e-55]",
+      "tail_margin_entire_ball_positive": true,
+      "tail_right_exact": "16202576/964331"
+    },
+    {
+      "duplicate_67_labels": 1,
+      "finite_removal_mass": "[0.99967828299688205157580534423667653337478525980751291 +/- 2.18e-54]",
+      "horizon": 35000,
+      "one_minus_removal_mass": "[0.00032171700311794842419465576332346662521474019248709 +/- 2.18e-54]",
+      "ordinary_prime_count": 3732,
+      "pairing_mass_entire_ball_below_one": true,
+      "power_interval": [
+        "71/40",
+        "179/100"
+      ],
+      "prime_list_sha256": "ce4816d5bbab66e97235c83b7bbe801588d8701ba4fedcf481512d0a2907e5ba",
+      "tail_left_ball": "[18.0467484827147085953770231254237110976194028360135377675 +/- 8.57e-56]",
+      "tail_margin_ball": "[0.500771316106519882521769556019376531750735323665692905 +/- 1.03e-55]",
+      "tail_margin_entire_ball_positive": true,
+      "tail_right_exact": "650096/37051"
+    },
+    {
+      "duplicate_67_labels": 1,
+      "finite_removal_mass": "[0.996769981999540884549973279448649583010723507134413265 +/- 8.07e-55]",
+      "horizon": 40000,
+      "one_minus_removal_mass": "[0.003230018000459115450026720551350416989276492865586735 +/- 8.07e-55]",
+      "ordinary_prime_count": 4203,
+      "pairing_mass_entire_ball_below_one": true,
+      "power_interval": [
+        "89/50",
+        "181/100"
+      ],
+      "prime_list_sha256": "8e2ca324f12a64b1e2d772824c9a9b044c67d381ded56029903fc9f7843204a4",
+      "tail_left_ball": "[19.616749155623847857443770315344516687005031175974095909 +/- 4.42e-55]",
+      "tail_margin_ball": "[0.608011169142996752345480090057695432653009607403692565 +/- 3.48e-55]",
+      "tail_margin_entire_ball_positive": true,
+      "tail_right_exact": "1960048/103113"
+    }
+  ],
+  "status": "PASS_GLOBAL_SHARP_FINITE_HORIZON_TAIL_STITCH"
+}

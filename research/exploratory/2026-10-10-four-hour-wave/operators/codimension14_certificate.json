@@ -1,0 +1,24 @@
+{
+  "status": "EXACT_ARITHMETIC_ACCEPT",
+  "scope": "codimension-14 source coercivity at L=1, not effective sign",
+  "supporting_line": {
+    "alpha": "13/10",
+    "constant": 710
+  },
+  "gamma_last_index": 256,
+  "compact_cells": 4096,
+  "arithmetic": "integer floors at scale 2^100 and exact Fraction",
+  "minimum_cell_margin": {
+    "cell": 1418,
+    "lower": "46532047206201669989241053626754123/17311353509366757764189353148416000"
+  },
+  "unbounded_tail_v_lower": "210504802984478740971221621778721/158456325028528675187087900672000",
+  "kappa_lower": "2843702413/2368565340",
+  "classical_inputs": [
+    "Machin identity",
+    "gamma<H_1024-log1024",
+    "digamma partial fractions"
+  ],
+  "checker_sha256": "4263b37ca623e74aa8312d10b8bb98c2b75e72e61f7e501bd7329ea426b58351",
+  "helper_sha256": "921c74c4b0659c8f6c0d1602f16f218e71219b64e31250b457cce92a808f0f87"
+}

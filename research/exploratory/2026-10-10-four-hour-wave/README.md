@@ -40,7 +40,7 @@ estimates do not discharge it.
 |---|---|
 | `arithmetic/` | Critical negative-mass rates and a lower SHARP positivity threshold |
 | `xi/` | Quantitative derivative transport and exact obstruction models |
-| `heights/` | Height-versus-order mechanisms and bounded four-node positivity |
+| `heights/` | Height-versus-order mechanisms and compact positivity through 96 points |
 | `operators/` | Source-specific continuum coercivity and effective-matrix bounds |
 | `literature/` | Exact new-paper sources, admissibility audit, and exponent optimization |
 | `correlations/` | Quantitative correlation-to-arithmetic adapters with explicit uniformity |
@@ -56,3 +56,11 @@ Related prior repository research is draft PR
 same-envelope obstruction, and native height detector are credited in the
 component comparisons. Its draft status is preserved; it is not an accepted
 source verdict. Publication receipts are recorded in `CHECKPOINTS.md`.
+
+The second checkpoint adds independently reviewed component deductions:
+an exact critical negative-mass exponent identity, all-real SHARP positivity
+for m>=1.737, an H^-7 negative-only tail completion, 96-point compact kernel
+positivity, codimension-14 continuum coercivity, a positive continuum window
+of length 3/20 and a conditional bound Re(s)>0.87495703. The latter assumes
+the imported analytic inputs; the others retain their stated source, height
+and domain restrictions. See `SCOPED_REVIEWS.md` for the review boundary.

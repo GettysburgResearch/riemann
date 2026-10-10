@@ -1,0 +1,1131 @@
+{
+  "status": "PASS_EXACT_FINITE_CONTROLS",
+  "primitive_low_anchor_replay": {
+    "status": "DIRECTED_LOW_ANCHORS_REGENERATED",
+    "precision_bits": 128,
+    "anchor_count": 16,
+    "certificate_sha256": "9036997e5baa13ae586ac0371f7c59394e9d664447b4e5089f5f001c7f1c4c5f",
+    "producer_sha256": "44c83f855447c7acf348da070b9617ca12d5ce270ef949d5a99eb7bf17dc6a6a",
+    "scope": "Low critical pairs only; high-height theorem imported",
+    "xi_one_half_lower_bound": "1/4"
+  },
+  "native_count_coefficient": "201217/163840",
+  "scalar_derivative_sign_orders": {
+    "classical_strip": "0 through 4499999999999",
+    "seven_eighths_strip": "0 through 5999999999999"
+  },
+  "anchor_algebra": [
+    {
+      "order": 4,
+      "squared_anchors": [
+        "200",
+        "441"
+      ],
+      "nodes": [
+        "1",
+        "2",
+        "5",
+        "8"
+      ],
+      "three_exact_identities": "PASS"
+    },
+    {
+      "order": 6,
+      "squared_anchors": [
+        "200",
+        "441",
+        "626"
+      ],
+      "nodes": [
+        "1",
+        "2",
+        "3",
+        "5",
+        "8",
+        "13"
+      ],
+      "three_exact_identities": "PASS"
+    }
+  ],
+  "negative_feature_identity": {
+    "status": "PASS_TWO_EXACT_QUARTET_SPLITS",
+    "rational_entries": 32,
+    "parameters": {
+      "a": "3/8",
+      "b": "1025",
+      "m": "256"
+    }
+  },
+  "uniform_compact_sufficient_bounds": [
+    {
+      "method": "SIGNED_SHADOW",
+      "order": 4,
+      "extent": "100",
+      "scale": "20",
+      "height": "3000000000000",
+      "strip_width": "3/8",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 3837680466446490255283,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "070649f32d93ed01cb61af71305d244e59ea035436df163e0f65cca09d25a649",
+        "numerator_bits": 22,
+        "denominator_bits": 49,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "067432f37af01147288a8e572b61d2cf586842b5dd55ba118c81492be3cff7e6",
+        "numerator_bits": 266,
+        "denominator_bits": 364,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "b2db155c826c6afe14fb2ecaf0851bda63659c89caf52ab6bde85fb17928a0ea",
+        "numerator_bits": 381,
+        "denominator_bits": 408,
+        "sign": 1
+      }
+    },
+    {
+      "method": "SIGNED_SHADOW",
+      "order": 4,
+      "extent": "100",
+      "scale": "20",
+      "height": "3000000000000",
+      "strip_width": "1/2",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 2158695262376150768596,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "070649f32d93ed01cb61af71305d244e59ea035436df163e0f65cca09d25a649",
+        "numerator_bits": 22,
+        "denominator_bits": 49,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "44bc8d378c4d71b25977aa720e3372184d71ad512355645d95c07587c5a0651b",
+        "numerator_bits": 266,
+        "denominator_bits": 363,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "e81627c8e8ad2c32f5ad57f14bd9e3154ef37c21f76fc6b6b34d10ebeb52cd03",
+        "numerator_bits": 380,
+        "denominator_bits": 407,
+        "sign": 1
+      }
+    },
+    {
+      "method": "SIGNED_SHADOW",
+      "order": 8,
+      "extent": "100",
+      "scale": "20",
+      "height": "3000000000000",
+      "strip_width": "3/8",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 33650063,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "a8bf342f54fec1a93b36d554f396d858dc364a8b0d4a9a04a3aed6151df7d546",
+        "numerator_bits": 62,
+        "denominator_bits": 116,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "8dce4e375627ceed859d40cc71f8cf51648e84fcaf5fe53c5ba585975d2a4503",
+        "numerator_bits": 606,
+        "denominator_bits": 684,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "984be07a16ddc26acdce085187a5a763f1d1d0f1d202803658bfe4429a717e00",
+        "numerator_bits": 746,
+        "denominator_bits": 799,
+        "sign": 1
+      }
+    },
+    {
+      "method": "SIGNED_SHADOW",
+      "order": 8,
+      "extent": "100",
+      "scale": "20",
+      "height": "3000000000000",
+      "strip_width": "1/2",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 18928160,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "a8bf342f54fec1a93b36d554f396d858dc364a8b0d4a9a04a3aed6151df7d546",
+        "numerator_bits": 62,
+        "denominator_bits": 116,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "cf58b71db5810860fbf7d0ec43648ccee4ffdd209329c0138a692f1f4051c9cb",
+        "numerator_bits": 606,
+        "denominator_bits": 683,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "b67c795e5064256fe9110d82be919472a8ddaff05bd88ea34ecec39d5b74fcf0",
+        "numerator_bits": 745,
+        "denominator_bits": 798,
+        "sign": 1
+      }
+    },
+    {
+      "method": "SIGNED_SHADOW",
+      "order": 12,
+      "extent": "40",
+      "scale": "30",
+      "height": "3000000000000",
+      "strip_width": "3/8",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 11099330744,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "ead4f6dbdf99eea26fc7415e79eb5104e19c53012937cefcaf20758bb1d2d3f3",
+        "numerator_bits": 172,
+        "denominator_bits": 228,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "b2d49de77904fc1133f7dd443da20652a4e5b67af983cb40a267afc938c2195e",
+        "numerator_bits": 914,
+        "denominator_bits": 1003,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "9e194da0e250231c02986b8ebb6cfd835d5733435aef7ea25f0b562a2bae0769",
+        "numerator_bits": 1175,
+        "denominator_bits": 1231,
+        "sign": 1
+      }
+    },
+    {
+      "method": "SIGNED_SHADOW",
+      "order": 12,
+      "extent": "40",
+      "scale": "30",
+      "height": "3000000000000",
+      "strip_width": "1/2",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 6243373543,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "ead4f6dbdf99eea26fc7415e79eb5104e19c53012937cefcaf20758bb1d2d3f3",
+        "numerator_bits": 172,
+        "denominator_bits": 228,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "c0136bf0c1bbee9cc9662d26e5bddf718c521c662d2d9c16788590aa7d257dab",
+        "numerator_bits": 914,
+        "denominator_bits": 1002,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "b8f6fc4a4480a04d90d42048a8d6df1f254401b704042f12f67a653de3ac882d",
+        "numerator_bits": 1174,
+        "denominator_bits": 1230,
+        "sign": 1
+      }
+    },
+    {
+      "method": "SIGNED_SHADOW",
+      "order": 18,
+      "extent": "10",
+      "scale": "35",
+      "height": "3000000000000",
+      "strip_width": "3/8",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 134107150806567,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "2aa80a4fd04981994dc54bad0f162e208908a27d5058196f8229e6f915cd1bca",
+        "numerator_bits": 373,
+        "denominator_bits": 423,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "5c8eecff8035a5dd51684c1bddf1819965ca7509a44ee393dae2aed9bc78de02",
+        "numerator_bits": 1479,
+        "denominator_bits": 1576,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "4a96c6f76800075a2efaf760aeb5d123f232863372f9f9a50ec9d5d163552c16",
+        "numerator_bits": 1949,
+        "denominator_bits": 1999,
+        "sign": 1
+      }
+    },
+    {
+      "method": "SIGNED_SHADOW",
+      "order": 18,
+      "extent": "10",
+      "scale": "35",
+      "height": "3000000000000",
+      "strip_width": "1/2",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 75435272328693,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "2aa80a4fd04981994dc54bad0f162e208908a27d5058196f8229e6f915cd1bca",
+        "numerator_bits": 373,
+        "denominator_bits": 423,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "1a9e1eae9c2fded3a7bd4a79c7a0f560e5940de0823a202fda6237ad1aff43b4",
+        "numerator_bits": 1479,
+        "denominator_bits": 1575,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "3fca0e82e6a318247ef4fed2b0929a71ba09bf8aa0824a77013176579c14004c",
+        "numerator_bits": 1948,
+        "denominator_bits": 1998,
+        "sign": 1
+      }
+    },
+    {
+      "method": "SIGNED_SHADOW",
+      "order": 24,
+      "extent": "5",
+      "scale": "40",
+      "height": "3000000000000",
+      "strip_width": "3/8",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 50767344421,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "21eb54521a9a520894ac6c91918127162c56ac679ee4602a11caa1c4a3292aa1",
+        "numerator_bits": 677,
+        "denominator_bits": 736,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "ba6b33906b7565f6571731a96be0ed60b8f49a039fe49aacde80ae63817cb83e",
+        "numerator_bits": 1866,
+        "denominator_bits": 1960,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "2b04e3ad8b4782ac73e857a25c17734f52f3e4d0141667d39f1b3541aa55a069",
+        "numerator_bits": 2637,
+        "denominator_bits": 2696,
+        "sign": 1
+      }
+    },
+    {
+      "method": "SIGNED_SHADOW",
+      "order": 24,
+      "extent": "5",
+      "scale": "40",
+      "height": "3000000000000",
+      "strip_width": "1/2",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 28556631237,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "21eb54521a9a520894ac6c91918127162c56ac679ee4602a11caa1c4a3292aa1",
+        "numerator_bits": 677,
+        "denominator_bits": 736,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "ca6759ada8539b59fe13c9729be78ce7b321fabf09578d8ccfa5a51686afde0f",
+        "numerator_bits": 1866,
+        "denominator_bits": 1959,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "4b487609e82693ff27b921c9e02d744da509f80c451a91c0e1fda5638f11f1bf",
+        "numerator_bits": 2636,
+        "denominator_bits": 2695,
+        "sign": 1
+      }
+    },
+    {
+      "method": "SIGNED_SHADOW",
+      "order": 32,
+      "extent": "1",
+      "scale": "50",
+      "height": "3000000000000",
+      "strip_width": "3/8",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 20588619,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "f0bcd3814c6b3732f5102767cdfa47a0dae9e7a86485abf7b2341b281d0a7ae3",
+        "numerator_bits": 1103,
+        "denominator_bits": 1172,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "59308b066f8c6cfe5982b6b7cd011f8fd03eb9b3762b448cb4fbfc2c2da1014f",
+        "numerator_bits": 2490,
+        "denominator_bits": 2583,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "a6921c70b93b86925bc14ac1d1a1af924b9d58868f92a40463e145c9d157fd35",
+        "numerator_bits": 3686,
+        "denominator_bits": 3754,
+        "sign": 1
+      }
+    },
+    {
+      "method": "SIGNED_SHADOW",
+      "order": 32,
+      "extent": "1",
+      "scale": "50",
+      "height": "3000000000000",
+      "strip_width": "1/2",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 11581098,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "f0bcd3814c6b3732f5102767cdfa47a0dae9e7a86485abf7b2341b281d0a7ae3",
+        "numerator_bits": 1103,
+        "denominator_bits": 1172,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "8faef4bb5a2fa17499a0cecb43430677cfdc166064fe1fe1fbc12f3f08dfe49b",
+        "numerator_bits": 2490,
+        "denominator_bits": 2582,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "df18cd9375193e9d6c7c0fcb556877c146cf4728dc2cedcd8216440a4133791c",
+        "numerator_bits": 3685,
+        "denominator_bits": 3753,
+        "sign": 1
+      }
+    }
+  ],
+  "negative_feature_compact_bounds": [
+    {
+      "method": "EXACT_NEGATIVE_FEATURES",
+      "order": 8,
+      "extent": "500",
+      "scale": "20",
+      "height": "3000000000000",
+      "strip_width": "3/8",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 23681412,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "73ee0cb5e87c75d685cc1956990aaa61cbeeb0444a546af7af75034d62068db1",
+        "numerator_bits": 64,
+        "denominator_bits": 148,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "0f87320f2e4b668bebd35bedf67449b2d03f90ad47692be02e1bf9b226407c4e",
+        "numerator_bits": 734,
+        "denominator_bits": 843,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "39f38c6efbdbd7870487697623d69fc3a62220c66509c66b0ad2893a2c88b675",
+        "numerator_bits": 898,
+        "denominator_bits": 982,
+        "sign": 1
+      }
+    },
+    {
+      "method": "EXACT_NEGATIVE_FEATURES",
+      "order": 8,
+      "extent": "500",
+      "scale": "20",
+      "height": "3000000000000",
+      "strip_width": "1/2",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 13320794,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "73ee0cb5e87c75d685cc1956990aaa61cbeeb0444a546af7af75034d62068db1",
+        "numerator_bits": 64,
+        "denominator_bits": 148,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "ed977a59cba7e56c254ddfae6d3eca84930b2d51f0bd82cf5463d26aafefd579",
+        "numerator_bits": 730,
+        "denominator_bits": 838,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "6cbe53c42a6b5914d39c8952c95cf3643259c082ad8b35c7c5fc62459dfbee76",
+        "numerator_bits": 901,
+        "denominator_bits": 985,
+        "sign": 1
+      }
+    },
+    {
+      "method": "EXACT_NEGATIVE_FEATURES",
+      "order": 12,
+      "extent": "200",
+      "scale": "30",
+      "height": "3000000000000",
+      "strip_width": "3/8",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 7465810,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "249a5f67772c890ae18ad29301c9c4e64f0454d4807c865a97b3a0edb62e8b9e",
+        "numerator_bits": 163,
+        "denominator_bits": 257,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "d9f6483792d1c3a8e7ad8d772773e544661095ad0c8fabd5effbc60099747bef",
+        "numerator_bits": 1069,
+        "denominator_bits": 1185,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "26ba70cfb4739c08ce23c06cdadf947054704f311de348d2472b64bfe134adbf",
+        "numerator_bits": 1348,
+        "denominator_bits": 1442,
+        "sign": 1
+      }
+    },
+    {
+      "method": "EXACT_NEGATIVE_FEATURES",
+      "order": 12,
+      "extent": "200",
+      "scale": "30",
+      "height": "3000000000000",
+      "strip_width": "1/2",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 4199518,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "249a5f67772c890ae18ad29301c9c4e64f0454d4807c865a97b3a0edb62e8b9e",
+        "numerator_bits": 163,
+        "denominator_bits": 257,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "67e22a415469507d6f8f22902a1f9671cddd9e49f6087478544918dabede773e",
+        "numerator_bits": 1065,
+        "denominator_bits": 1180,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "809a5cc89c59cdbb79cf9e9f45d6f6c68c776d0e6b48be918cc561dac6f7b54e",
+        "numerator_bits": 1343,
+        "denominator_bits": 1437,
+        "sign": 1
+      }
+    },
+    {
+      "method": "EXACT_NEGATIVE_FEATURES",
+      "order": 18,
+      "extent": "100",
+      "scale": "35",
+      "height": "3000000000000",
+      "strip_width": "3/8",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 42180,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "ac61e3e5d573f1a4683be1b472c480d205ecefbcd4ac52218d3c24f72feabe6e",
+        "numerator_bits": 374,
+        "denominator_bits": 477,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "f110b089a94fc1bfbb5e135d39cdea1a0acddce0017df4c9cd389e61babfd7a4",
+        "numerator_bits": 1642,
+        "denominator_bits": 1760,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "af7682b103f9609d172e5729b0e7d6167117bc35e3ad997ae2650730aca7ccc6",
+        "numerator_bits": 2134,
+        "denominator_bits": 2236,
+        "sign": 1
+      }
+    },
+    {
+      "method": "EXACT_NEGATIVE_FEATURES",
+      "order": 18,
+      "extent": "100",
+      "scale": "35",
+      "height": "3000000000000",
+      "strip_width": "1/2",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 23726,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "ac61e3e5d573f1a4683be1b472c480d205ecefbcd4ac52218d3c24f72feabe6e",
+        "numerator_bits": 374,
+        "denominator_bits": 477,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "8e2adcf5d30adfd3d50b32cbc1062ad4d82c4a3b16dfae5d5bf34811e7119b21",
+        "numerator_bits": 1643,
+        "denominator_bits": 1759,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "aa0afb4b8c4751dd41bfa1fea84b3b85432c8a0e75532ee02eb3630c73e5823d",
+        "numerator_bits": 2133,
+        "denominator_bits": 2236,
+        "sign": 1
+      }
+    },
+    {
+      "method": "EXACT_NEGATIVE_FEATURES",
+      "order": 24,
+      "extent": "40",
+      "scale": "40",
+      "height": "3000000000000",
+      "strip_width": "3/8",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 3327831859252,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "14a669b35340ff37ee0983c00c91a34e70aff3c0009fbbc220b5cd91f826f48f",
+        "numerator_bits": 531,
+        "denominator_bits": 625,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "b4a0e73160fa144a2be6549d8eb008c4e2bf716d054d01bd1f76ad85217639f8",
+        "numerator_bits": 2013,
+        "denominator_bits": 2149,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "34f809464e6f7d1d7655d74ec68a00f644af203c6b26de0493896840d5b480b8",
+        "numerator_bits": 2679,
+        "denominator_bits": 2773,
+        "sign": 1
+      }
+    },
+    {
+      "method": "EXACT_NEGATIVE_FEATURES",
+      "order": 24,
+      "extent": "40",
+      "scale": "40",
+      "height": "3000000000000",
+      "strip_width": "1/2",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 1871905420829,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "14a669b35340ff37ee0983c00c91a34e70aff3c0009fbbc220b5cd91f826f48f",
+        "numerator_bits": 531,
+        "denominator_bits": 625,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "fd0ea8aacffb1c9fca43b9bd55fd2e2d85616a39e1035f1d74ac80c41877d920",
+        "numerator_bits": 2015,
+        "denominator_bits": 2150,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "7ccb4b0056cdf524a8af3ef6eec96ede3d2147c5934173c512484d9ccf3cb40d",
+        "numerator_bits": 2680,
+        "denominator_bits": 2774,
+        "sign": 1
+      }
+    },
+    {
+      "method": "EXACT_NEGATIVE_FEATURES",
+      "order": 32,
+      "extent": "40",
+      "scale": "50",
+      "height": "3000000000000",
+      "strip_width": "3/8",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 7262,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "99269d87d6b48addcdb2aa80420056182b827f0b068215e2aa794e1ac68449da",
+        "numerator_bits": 897,
+        "denominator_bits": 1010,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "36eb52fa7071c99c6d0cb511201ffd9089e8b51779fd3b62a1e75d183c831d80",
+        "numerator_bits": 2668,
+        "denominator_bits": 2794,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "47e21f5eca15e35347440df1883b44a24ea65f164b9b81813945862454c8c468",
+        "numerator_bits": 3691,
+        "denominator_bits": 3804,
+        "sign": 1
+      }
+    },
+    {
+      "method": "EXACT_NEGATIVE_FEATURES",
+      "order": 32,
+      "extent": "40",
+      "scale": "50",
+      "height": "3000000000000",
+      "strip_width": "1/2",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 4085,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "99269d87d6b48addcdb2aa80420056182b827f0b068215e2aa794e1ac68449da",
+        "numerator_bits": 897,
+        "denominator_bits": 1010,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "323c0f210e79e0bd5ce1408943bb7230ce6cfb4a2420dde38b3f5e8bf5866c1b",
+        "numerator_bits": 2664,
+        "denominator_bits": 2789,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "023c83009f31220bcb94ab6f21a85a4c6a16b904dc14cdc7e46f6ca1e2afe1c6",
+        "numerator_bits": 3686,
+        "denominator_bits": 3799,
+        "sign": 1
+      }
+    }
+  ],
+  "extended_primitive_low_anchor_replay": {
+    "status": "DIRECTED_LOW_ANCHORS_REGENERATED",
+    "precision_bits": 128,
+    "anchor_count": 48,
+    "certificate_sha256": "f6e081f3c36bdbf1aa582f3dbcf308d8c04283ea27aa33eafad687e25229ef9a",
+    "producer_sha256": "875baffd29b1dde90683503536814e3eb9f7cb9d75745407fc7c4641e2f3a574",
+    "scope": "Low critical pairs only; high-height theorem imported",
+    "xi_one_half_lower_bound": "1/4"
+  },
+  "recompleted_compact_bounds": [
+    {
+      "method": "RECOMPLETED_NEGATIVE_FEATURES",
+      "order": 32,
+      "extent": "1",
+      "scale": "50",
+      "height": "3000000000000",
+      "strip_width": "3/8",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 23228756456277421507954125042209508524654804281132118,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "1dcc41a31db72719eb268fac0a7abf4acbf8841e921d45349a22fb0c88a7e23d",
+        "numerator_bits": 2423,
+        "denominator_bits": 2485,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "da5ebf7ed1ffdeb438bd0573ec04b8ee71a4689cb028ffe7494b463a047d4c74",
+        "numerator_bits": 2955,
+        "denominator_bits": 3191,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "10fac754df09de4f9c0465d35229b185520fa897f5307aae4e71cded06688084",
+        "numerator_bits": 5614,
+        "denominator_bits": 5676,
+        "sign": 1
+      }
+    },
+    {
+      "method": "RECOMPLETED_NEGATIVE_FEATURES",
+      "order": 32,
+      "extent": "1",
+      "scale": "50",
+      "height": "3000000000000",
+      "strip_width": "1/2",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 13066175506656049598224195177452521207284391318386652,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "1dcc41a31db72719eb268fac0a7abf4acbf8841e921d45349a22fb0c88a7e23d",
+        "numerator_bits": 2423,
+        "denominator_bits": 2485,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "93f1228d319a168cb32a51ebf9c89bde5367eabaef3f3657dc2224462858a606",
+        "numerator_bits": 2957,
+        "denominator_bits": 3193,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "3383d812d4af46d3dddf02679d7678d108ebccc9f5b419bcd0dcab368c023443",
+        "numerator_bits": 5615,
+        "denominator_bits": 5678,
+        "sign": 1
+      }
+    },
+    {
+      "method": "RECOMPLETED_NEGATIVE_FEATURES",
+      "order": 64,
+      "extent": "1",
+      "scale": "80",
+      "height": "3000000000000",
+      "strip_width": "3/8",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 112196495148114776347960436417,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "3190ea2467273dde82786e01ab05f88e8408d08a2be0165359da8fe1479336df",
+        "numerator_bits": 6649,
+        "denominator_bits": 6764,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "8a9a80fe12dad149f445b1a51131667af6ca46e12599cadb8ad3a932c98b4bc9",
+        "numerator_bits": 5773,
+        "denominator_bits": 5985,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "df70d53b1d7158f18a280a3a4da3e5dd7bf9c1a3441effc69fb27b965a9aebc7",
+        "numerator_bits": 12634,
+        "denominator_bits": 12748,
+        "sign": 1
+      }
+    },
+    {
+      "method": "RECOMPLETED_NEGATIVE_FEATURES",
+      "order": 64,
+      "extent": "1",
+      "scale": "80",
+      "height": "3000000000000",
+      "strip_width": "1/2",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 63110528520814561695727744717,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "3190ea2467273dde82786e01ab05f88e8408d08a2be0165359da8fe1479336df",
+        "numerator_bits": 6649,
+        "denominator_bits": 6764,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "1493924ccc8a70335f898ee381dc20e5e901fc1b6645405f9478fa12b516078c",
+        "numerator_bits": 5776,
+        "denominator_bits": 5986,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "3f4e37a76e0dd562048595f7fc836e17b6bb1cf64a2a8f931a3632e095b485cf",
+        "numerator_bits": 12635,
+        "denominator_bits": 12750,
+        "sign": 1
+      }
+    },
+    {
+      "method": "RECOMPLETED_NEGATIVE_FEATURES",
+      "order": 72,
+      "extent": "1",
+      "scale": "80",
+      "height": "3000000000000",
+      "strip_width": "3/8",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 71001558077073255420237,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "dc838861d58dbc5bc8dc7166e486962d16cd9a9683668d4152acabbd70c2fda4",
+        "numerator_bits": 7688,
+        "denominator_bits": 7811,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "f02b15a0746d8914eb1cd144b37b4eef36fd3a34d7ecedd293f700707e21cc32",
+        "numerator_bits": 6508,
+        "denominator_bits": 6707,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "85b23cc4171cd256237ddf274625cce5822e3d8f7a822a9c591fd3408569b725",
+        "numerator_bits": 14394,
+        "denominator_bits": 14517,
+        "sign": 1
+      }
+    },
+    {
+      "method": "RECOMPLETED_NEGATIVE_FEATURES",
+      "order": 72,
+      "extent": "1",
+      "scale": "80",
+      "height": "3000000000000",
+      "strip_width": "1/2",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 39938376418353706173883,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "dc838861d58dbc5bc8dc7166e486962d16cd9a9683668d4152acabbd70c2fda4",
+        "numerator_bits": 7688,
+        "denominator_bits": 7811,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "ac8c23bb954758a91e28491fca2ab1e8e5e88979d192c9302381ac196e93bf7b",
+        "numerator_bits": 6510,
+        "denominator_bits": 6708,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "3f2636dd3a6127cb48ada63f6e57f70cbe7513200e85748c6c5dbf656b1ceb3d",
+        "numerator_bits": 14396,
+        "denominator_bits": 14519,
+        "sign": 1
+      }
+    },
+    {
+      "method": "RECOMPLETED_NEGATIVE_FEATURES",
+      "order": 80,
+      "extent": "1",
+      "scale": "80",
+      "height": "3000000000000",
+      "strip_width": "3/8",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 1922440138799406,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "b1192d2299db08d0b53355d261139726cec9b00f01af2e75683e08d523ffcc32",
+        "numerator_bits": 8659,
+        "denominator_bits": 8794,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "09f3392da381a9adf5d2bd5cb061f07c32890681dbecbaf20ccfab8244a35894",
+        "numerator_bits": 7199,
+        "denominator_bits": 7385,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "fed41ea745962fc1f513dd82878fbd4669ae1d8cca81fde059e34f2344007bd6",
+        "numerator_bits": 16043,
+        "denominator_bits": 16178,
+        "sign": 1
+      }
+    },
+    {
+      "method": "RECOMPLETED_NEGATIVE_FEATURES",
+      "order": 80,
+      "extent": "1",
+      "scale": "80",
+      "height": "3000000000000",
+      "strip_width": "1/2",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 1081372578074666,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "b1192d2299db08d0b53355d261139726cec9b00f01af2e75683e08d523ffcc32",
+        "numerator_bits": 8659,
+        "denominator_bits": 8794,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "1b6ed16ce3c9c46d30219597eecd58103f892103aa212dad8f9fcec3bfd517b2",
+        "numerator_bits": 7202,
+        "denominator_bits": 7386,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "f4e90b426ede8a489709394709eabdce199b880dc6829af61a2e33c2c1dadd8a",
+        "numerator_bits": 16045,
+        "denominator_bits": 16179,
+        "sign": 1
+      }
+    },
+    {
+      "method": "RECOMPLETED_NEGATIVE_FEATURES",
+      "order": 88,
+      "extent": "1",
+      "scale": "100",
+      "height": "3000000000000",
+      "strip_width": "3/8",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 169549135288,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "d15436abe2fc4c49d5b2e688b64aa7e319ee83c1cdce38b97a24cc0922006803",
+        "numerator_bits": 9972,
+        "denominator_bits": 10128,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "3f8355f97a6c75a96a7cdff513100f2a1882bd6ea6a6432ec4253c4605c44235",
+        "numerator_bits": 7912,
+        "denominator_bits": 8105,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "34117115c68f165ddeb46508883319d4c65a915b800ce6356f90413d042b0ed8",
+        "numerator_bits": 18077,
+        "denominator_bits": 18233,
+        "sign": 1
+      }
+    },
+    {
+      "method": "RECOMPLETED_NEGATIVE_FEATURES",
+      "order": 88,
+      "extent": "1",
+      "scale": "100",
+      "height": "3000000000000",
+      "strip_width": "1/2",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 95371388599,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "d15436abe2fc4c49d5b2e688b64aa7e319ee83c1cdce38b97a24cc0922006803",
+        "numerator_bits": 9972,
+        "denominator_bits": 10128,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "d6157752e37d17f9170b2128c752ff154158c760f07145c1a118d68df2aaf9fd",
+        "numerator_bits": 7914,
+        "denominator_bits": 8107,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "c85f146826a412d4d6f9a28c2cfec453f86e83d0ee18ae6d0c1799b3ca026378",
+        "numerator_bits": 18078,
+        "denominator_bits": 18234,
+        "sign": 1
+      }
+    },
+    {
+      "method": "RECOMPLETED_NEGATIVE_FEATURES",
+      "order": 96,
+      "extent": "1",
+      "scale": "100",
+      "height": "3000000000000",
+      "strip_width": "3/8",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 6100903,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "ae4c6ccee929fe9c664566b5723e67bca71011ad82787563e9eb56a1f2a17145",
+        "numerator_bits": 11113,
+        "denominator_bits": 11272,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "d3dc939a7873646dc7df5cef93bb44f00d3709e15cfa79c02020d54fc8d22a4b",
+        "numerator_bits": 8622,
+        "denominator_bits": 8803,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "257c2a3d8e270e3411d421b9cd243b120141ec31e036962c41d5603b1d946d48",
+        "numerator_bits": 19916,
+        "denominator_bits": 20075,
+        "sign": 1
+      }
+    },
+    {
+      "method": "RECOMPLETED_NEGATIVE_FEATURES",
+      "order": 96,
+      "extent": "1",
+      "scale": "100",
+      "height": "3000000000000",
+      "strip_width": "1/2",
+      "strict_sufficient_inequality": true,
+      "margin_ratio_floor": 3431758,
+      "anchor_lower": {
+        "sha256_of_hex_fraction": "ae4c6ccee929fe9c664566b5723e67bca71011ad82787563e9eb56a1f2a17145",
+        "numerator_bits": 11113,
+        "denominator_bits": 11272,
+        "sign": 1
+      },
+      "signed_error_upper": {
+        "sha256_of_hex_fraction": "6424648a46e3348987749b03e3ada68d3d6ecbf6afef0661d5876c3216509fa6",
+        "numerator_bits": 8628,
+        "denominator_bits": 8809,
+        "sign": 1
+      },
+      "exact_margin": {
+        "sha256_of_hex_fraction": "8ff6cdd1db88577098a328562a651c323a95eedb682469c0a6d7aa5ef6217060",
+        "numerator_bits": 19922,
+        "denominator_bits": 20081,
+        "sign": 1
+      }
+    }
+  ],
+  "extended_out_of_range_control": {
+    "method": "RECOMPLETED_NEGATIVE_FEATURES",
+    "order": 96,
+    "extent": "100",
+    "scale": "100",
+    "height": "3000000000000",
+    "strip_width": "3/8",
+    "strict_sufficient_inequality": false,
+    "margin_ratio_floor": 0,
+    "anchor_lower": {
+      "sha256_of_hex_fraction": "2ae48ae4acb7ba244f7c6acf7de44a4ee21c3492b92026c33a2df5e7c6ebc853",
+      "numerator_bits": 9845,
+      "denominator_bits": 10183,
+      "sign": 1
+    },
+    "signed_error_upper": {
+      "sha256_of_hex_fraction": "07e0cbbeef0f8441f114652f15aa981afd6008ae61b0d7aa491fb586fb199438",
+      "numerator_bits": 8718,
+      "denominator_bits": 8758,
+      "sign": 1
+    },
+    "exact_margin": {
+      "sha256_of_hex_fraction": "dd70bd03a23978dbd6609c79f35226ecb4e3a0c59e97c0c3bfacca07c6a7e7d7",
+      "numerator_bits": 18901,
+      "denominator_bits": 18941,
+      "sign": -1
+    }
+  },
+  "out_of_range_control": {
+    "method": "SIGNED_SHADOW",
+    "order": 32,
+    "extent": "100",
+    "scale": "50",
+    "height": "3000000000000",
+    "strip_width": "3/8",
+    "strict_sufficient_inequality": false,
+    "margin_ratio_floor": 0,
+    "anchor_lower": {
+      "sha256_of_hex_fraction": "51aa1161c1a9109252a5e68c9cf7e75b9c1ffa8394e409d4e45140fffc4ab2d8",
+      "numerator_bits": 745,
+      "denominator_bits": 904,
+      "sign": 1
+    },
+    "signed_error_upper": {
+      "sha256_of_hex_fraction": "b26ca991a699edb8750d9eeff3ccc236c9d02ed3c90f110d174699de56dd202a",
+      "numerator_bits": 2538,
+      "denominator_bits": 2554,
+      "sign": 1
+    },
+    "exact_margin": {
+      "sha256_of_hex_fraction": "469e06b194c9fcceaed0661b7a5fdfa46b9ae412f85d3af9ad14c4c1774e83d0",
+      "numerator_bits": 3441,
+      "denominator_bits": 3457,
+      "sign": -1
+    }
+  },
+  "single_reserve_counterexample": {
+    "status": "EXACT_SYNTHETIC_NEGATIVE_4_BY_4",
+    "parameters": {
+      "r": "200",
+      "a": "3/8",
+      "b": "1025",
+      "m": "256"
+    },
+    "nodes": [
+      "10250",
+      "20500",
+      "30750",
+      "41000"
+    ],
+    "positive_principal_minors_of_size_at_most_three": 14,
+    "fourth_determinant": {
+      "sha256_of_hex_fraction": "a888ec0eb2f4bfecde4912153fbec1f44a2f7ed0937d4ae8916267d48b024f26",
+      "numerator_bits": 553,
+      "denominator_bits": 721,
+      "sign": -1
+    },
+    "D0": "4518253421430481/2",
+    "D1": "-3346984876045740972698225/16",
+    "scope": "Finite polynomial model; no actual xi violation"
+  },
+  "simple_cofinal_countermodel": {
+    "status": "PASS_EXACT_SIMPLE_SPECTRUM_COUNTERMODEL",
+    "quartet_count": 256,
+    "all_multiplicities": 1,
+    "first_ordinate_base": "3000000000001",
+    "shift_step": "1/1048576",
+    "variance": "21845/4398046511104",
+    "B6_coefficient": "-188978539179/1048576",
+    "D0_at_base": {
+      "sha256_of_hex_fraction": "5576a263d1a4424e1685aff43ccb549dc11e3826990ca247847019b8f1a8677e",
+      "numerator_bits": 247,
+      "denominator_bits": 71,
+      "sign": 1
+    },
+    "D1_at_base": {
+      "sha256_of_hex_fraction": "805618544b3f32e87842d46cd501b69013fa0a13eb1ff0d54b6793e6f4d6dec9",
+      "numerator_bits": 408,
+      "denominator_bits": 142,
+      "sign": -1
+    },
+    "scope": "Cofinal polynomial source; no actual xi violation"
+  },
+  "checker_sha256": "8dc03fdc909e2d776e1ac45ebc2ee134e6e668f50eaf5a704d89a5c1ab2a5a70",
+  "proof_scope": "Theorems remain proposed; no global RH or all-order conclusion"
+}

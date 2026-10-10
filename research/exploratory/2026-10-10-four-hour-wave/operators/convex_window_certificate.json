@@ -1,0 +1,24 @@
+{
+  "status": "EXACT_ARITHMETIC_ACCEPT",
+  "scope": "complete source positivity L=3/20, all complex L2 tests",
+  "length": "3/20",
+  "P2_lower": "361255564233066138017082705737/633825300114114700748351602688",
+  "P2_upper": "722511528275603353921005750487/1267650600228229401496703205376",
+  "Wprime_endpoint_upper": "-876425869685593879250201679/316912650057057350374175801344",
+  "Wsecond_whole_interval_lower": "1683567632044425422452855703211/1267650600228229401496703205376",
+  "source_integral_lower": "14730438200841414394890467/39614081257132168796771975168",
+  "W_endpoint_upper": "-2349212138464228163267426777/316912650057057350374175801344",
+  "result": "q>=3/500||H-mu/2||\u00b2+1/300|mu|\u00b2",
+  "checker_sha256": "72ff5c1c4653558f40b737348860a9937ae21be49201329b44c5178673072c2e",
+  "helper_hashes": {
+    "check_coercivity.py": "921c74c4b0659c8f6c0d1602f16f218e71219b64e31250b457cce92a808f0f87",
+    "check_codimension14.py": "4263b37ca623e74aa8312d10b8bb98c2b75e72e61f7e501bd7329ea426b58351",
+    "check_small_window.py": "6572aaa94813527f99ec4cea84b726d6c9886ebd55d9f12e22555bf6e7d451a1"
+  },
+  "not_proved": [
+    "source positivity L=1",
+    "interval joining",
+    "all-window positivity",
+    "RH"
+  ]
+}

@@ -18,8 +18,8 @@ For real t define
 
 The log-Gamma branch is analytic on the right half-plane and real on the
 positive real axis. The functional equation makes Z real and continuous
-on the real axis. The script starts from exact integers and rational
-quarters, and computes enclosing complex balls for log-Gamma, pi, exp,
+on the real axis. The script starts from exact integers and half-integers,
+and computes enclosing complex balls for log-Gamma, pi, exp,
 and zeta. Each real enclosure excludes zero with the reported sign. The
 imaginary enclosure containing zero is a consistency check; reality itself
 comes from the functional equation, not from a numerical smallness test.
@@ -33,6 +33,11 @@ have squared ordinates in `[196,225]`, `[441,484]`, `[625,676]`, `[900,961]`,
 All sixteen exact squared intervals are emitted in the receipt. Half-integer
 endpoints start from `Fraction` and are stored as rational strings in JSON;
 binary floating-point inputs are never used.
+
+The same script also certifies `xi(1/2)>1/4` from the exact expression
+`s(s-1) pi^(-s/2) Gamma(s/2) zeta(s)/2` at `s=1/2`. This supplies the
+nonzero central value used in the independent Jensen zero-count estimate;
+it makes no claim about any other central-point normalization.
 
 What ran:
 

@@ -27,3 +27,29 @@ Prepared around 12:20 UTC. Included work:
 
 Other workstreams remain under active analysis and are omitted from this first
 publication snapshot until their proofs and execution receipts are ready.
+
+Publication receipt: commit `e742f14` pushed to the research branch. Draft PR
+<https://github.com/GettysburgResearch/riemann/pull/911> was created and attached.
+
+## Checkpoint 2: reviewed adapters and stronger uniform bounds
+
+Prepared around 12:55 UTC. Included work:
+
+- Exact critical negative-mass exponent equality, a fully written
+  zero-free-to-Mertens adapter, and all-real SHARP positivity for m>=1.737.
+- Negative-only quartet completions with H^-5 and H^-7 tails, a native
+  complete zero count, 48 directed critical anchors and compact positivity
+  through 96 points on 0<x<=1.
+- Native codimension-14 continuum coercivity and a convex full-continuum
+  window of length 3/20, with explicit positive lower constants.
+- Source-qualified derivative, theta-tail and modularly normalized quartet
+  obstruction models, plus fifteen compiled Lean capacity inequalities.
+- A conditional new half-plane B=0.87495703 from the enlarged plain-moment
+  adapter, assuming the frozen source analytic inputs.
+- Exact correlation transfer, square-divisor transport and a bounded
+  multiplicative log-saving example with no summatory power saving.
+
+The review record is `SCOPED_REVIEWS.md`. Root replayed the completed
+component checks. The continuation imports, compact height restriction,
+modified-source restriction and continuum residual gap remain explicit.
+New two-label, mixed-node and all-order outer-ray work continues separately.

@@ -52,11 +52,18 @@ def certificate(precision: int) -> dict:
     for left, right in ANCHORS:
         if ENDPOINT_SIGNS[left] == ENDPOINT_SIGNS[right]:
             raise RuntimeError("Anchor endpoints must have opposite signs")
+    s = arb(1) / 2
+    xi_half = s * (s - 1) / 2 * (-s / 2 * arb.pi().log()).exp()
+    xi_half *= (s / 2).gamma() * s.zeta()
+    if not xi_half > arb(1) / 4:
+        raise RuntimeError(f"Uncertified central xi lower bound: {xi_half}")
     return {"status": "DIRECTED_INTERVAL_ENDPOINT_CERTIFICATE",
             "python": platform.python_version(), "python_flint": flint.__version__,
             "precision_bits": precision, "endpoints": records,
             "critical_ordinate_intervals": [[exact_json(a), exact_json(b)] for a, b in ANCHORS],
             "critical_squared_ordinate_intervals": [[exact_json(a*a), exact_json(b*b)] for a, b in ANCHORS],
+            "xi_one_half_enclosure": str(xi_half),
+            "xi_one_half_lower_bound": "1/4",
             "scope": "Existence of at least one critical-line zero in each open interval; no simplicity or completeness claim"}
 
 
