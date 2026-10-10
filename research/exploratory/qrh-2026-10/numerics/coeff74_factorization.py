@@ -539,7 +539,7 @@ def K_direct(W, T, var=frozenset(), cacheA=None):
     nsol = 0
     for i in np.nonzero(ok)[0]:
         k = (int(w0[i]) // Ns, int(w1[i]) // Ns)
-        F += chis[i] * cxA.lookup(Gt, k, W.esign)
+        F += chis[i] * cxA.lookup(Gt, k, -W.esign if "F_e_conj" in var else W.esign)
         nsol += 1
     # prefactors
     chis_b = W.chi(sfac, b)
@@ -552,7 +552,8 @@ def K_direct(W, T, var=frozenset(), cacheA=None):
     g2 = W.gamma_j(cfac, 2) if "nonprimary_A" not in var else gamma_j_gen(W, c, cfac, 2)
     alA = to_c(A) / math.sqrt(E.norm(A))
     alA_term = alA if "alpha_noconj" in var else np.conj(alA)
-    GA = np.conj(W.chi(Afac, (4, 0))) * gamma4(A)
+    GamA = gamma4(A) if W.esign == 1 else np.conj(gamma4(A))
+    GA = np.conj(W.chi(Afac, (4, 0))) * GamA
     GA_term = GA if "G_noconj" in var else np.conj(GA)
     etaA = 1 + 0j
     for name, e in Afac.items():
@@ -879,7 +880,7 @@ def run_tuples(W, tuples, label, fs_check=True, diag=True, log=print):
 def run_controls(W, tuples, log=print):
     out = {}
     direct_sw = ["alpha_noconj", "G_noconj", "drop_R", "Xi_drop_chiAb", "drop_chisb",
-                 "xi_u_noconj", "tau_conj", "nonprimary_s", "nonprimary_A"]
+                 "xi_u_noconj", "tau_conj", "nonprimary_s", "nonprimary_A", "F_e_conj"]
     local_sw = ["gamma3_noconj", "rho_sign", "drop_omega_ll", "drop_omega_tk", "gamma1_pos"]
     for sw in direct_sw + local_sw:
         t0 = time.time()
@@ -1061,6 +1062,8 @@ def main():
     log(f"   main: {json.dumps(res, default=str)}")
     result["main"] = res
     result["C_brute_vs_closed"] = dict(W.Cstats)
+    result["fft_table_vs_direct_gauss_sum_maxdev_over_sqrtN"] = getattr(W, "fftcheck", None)
+    log(f"   fast Gauss table vs direct summation (3 random k per A): {getattr(W, 'fftcheck', None)}")
     log(f"   C_p brute [7.7] vs closed [7.8]: {W.Cstats}")
 
     # controls on a subset that contains every tier
@@ -1073,11 +1076,15 @@ def main():
     result["controls"] = run_controls(W, sub, log)
 
     # whole-world controls: primary normalization and additive character orientation
-    for label, kw in (("ctrl_gen_minus_p", dict(gen_sign=-1)), ("ctrl_e_conjugate", dict(esign=-1))):
+    # ctrl_gen_minus_p: every prime generator replaced by the non-primary associate -p
+    #   (composites are products of these), consistently on both sides.
+    # probe_e_conjugate: e(z) -> e(-z) consistently everywhere (Gauss sums, gamma_j, tau,
+    #   Gamma); this is an invariance probe, not a control.
+    for label, kw in (("ctrl_gen_minus_p", dict(gen_sign=-1)), ("probe_e_conjugate", dict(esign=-1))):
         Wc = World(**kw)
         tt = build_tiers(Wc, "alt")
         r = run_tuples(Wc, tt, label, fs_check=False, diag=False, log=log)
-        r["verdict"] = "FAILS (control OK)" if r["failures"] else "passes (!)"
+        r["verdict"] = "identity FAILS" if r["failures"] else "identity holds"
         log(f"   {label}: tuples={r['tuples']} maxdev={r['max_rel_dev_K']:.3g} "
             f"failures={r['failures']}")
         result[label] = r

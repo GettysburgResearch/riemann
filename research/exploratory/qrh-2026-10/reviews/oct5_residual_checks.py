@@ -311,7 +311,7 @@ def part_g(B, B_pairs, rec):
         illus.append({"H=U": HU, "rows": len(rows), "lambda_max(AA*)": smax2,
                       "ratio_to_H+U": smax2 / (2 * HU)})
     res["G6_illustration"] = illus
-    res["seconds"] = round(time.time() - t0, 1)
+    print("G part: %.1f s" % (time.time() - t0))
     rec["G"] = res
     return res
 
@@ -463,8 +463,7 @@ def main():
         print("C1:", r)
     for r in kernel_shift_check(rec):
         print("C2:", r)
-    rec["seconds_total"] = round(time.time() - t0, 1)
-    print("ALL CHECKS PASSED in", rec["seconds_total"], "s")
+    print("ALL CHECKS PASSED in %.1f s" % (time.time() - t0))
     if args.out:
         with open(args.out, "w") as fh:
             json.dump(rec, fh, indent=1, sort_keys=True)

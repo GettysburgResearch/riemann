@@ -96,7 +96,7 @@ def cmd_bias(PMAX=2_000_000):
             best.append((run, D))
         best.sort(reverse=True)
         rec[sign] = best[:3]
-    fields = [-163, -67, -43, -427] + [D for _, D in rec[-1][:2]] + [5, 8 * 0 + 13] + [D for _, D in rec[1][:2]]
+    fields = [8, -8, -163, -67, -43, -427] + [D for _, D in rec[-1][:2]] + [5, 8 * 0 + 13] + [D for _, D in rec[1][:2]]
     seen = []
     for D in fields:
         if D not in seen and is_fundamental(D): seen.append(D)
