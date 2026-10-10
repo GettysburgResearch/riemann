@@ -1,0 +1,170 @@
+{
+  "Eisenstein_primary_cubes": {
+    "lattice_phase_cases": 7225,
+    "m_coordinate_range": [
+      -2,
+      2
+    ],
+    "primary_elements_b_equal_1_plus_3t": 289,
+    "t_coordinate_range": [
+      -8,
+      8
+    ]
+  },
+  "acceptance": "Every stated require must succeed; a failed condition raises RuntimeError under normal or optimized Python.",
+  "arithmetic": "Integers, fractions, exact polynomial division, finite cyclotomic quotient rings; no floating point.",
+  "checker_sha256": "675187430abcfa5433f7a749da594b6121bc3fc2d06c7febb63fafb027124280",
+  "finite_additive_Fourier": {
+    "character_scope": "Every multiplicative character of each field; phi(0)=0.",
+    "exact_cyclotomic_Fourier_covariance_equalities": 16560,
+    "prime_fields": [
+      7,
+      13,
+      19
+    ],
+    "wrong_contragredient_control_detected": true
+  },
+  "finite_character_cube_support": {
+    "finite_abelian_groups": [
+      [
+        6
+      ],
+      [
+        9
+      ],
+      [
+        6,
+        3
+      ],
+      [
+        12,
+        3
+      ],
+      [
+        4,
+        9
+      ]
+    ],
+    "input_output_character_pairs": 3033,
+    "method": "Exact cyclotomic evaluation of the cube-equivariant projection.",
+    "rejected_pairs": 2394,
+    "retained_pairs": 639
+  },
+  "local_algebra": {
+    "cleared_denominator_polynomial_identities": 5,
+    "finite_Euler_reunion_masks": 27,
+    "finite_geometric_identities_with_exact_remainders": 360,
+    "literal_deleted_prime_terms_and_powers": 69,
+    "rational_local_cases": 36
+  },
+  "negative_controls": [
+    "Wrong Ramanujan sign does not cancel the free-prime z term.",
+    "K*y different from x breaks the complete cube identity.",
+    "rho^3 in place of bar(rho)^3 fails finite Fourier covariance.",
+    "Characters with a different cube have zero projection and fail covariance.",
+    "Deleting the nonunit mask creates a false cube Euler factor; ordinary 0**0 is rejected.",
+    "Nonprimary b=2 fails the lambda^4 cube congruence.",
+    "At a=3/5 the spectral conductor comparison exceeds 1/2; strict domain boundaries are rejected."
+  ],
+  "not_authenticated": [
+    "The primitive theta coefficient or automorphy formulas.",
+    "The global Kubota multiplier covariance at arbitrary bad moduli.",
+    "Analytic continuation, normal convergence, source large sieves, or spectral mean bounds.",
+    "A generalized inverse-Mobius moment, an improved zero-free boundary, or RH."
+  ],
+  "source_scope": [
+    "FINITE_RAY_REUNION.md: local factors and finite d^-2 Fourier scaling.",
+    "FINITE_CUBE_HOMOGENEITY.md: finite cube Fourier scaling and character-support projection.",
+    "ALL_CUSP_COEFFICIENT_ADAPTER.md: primary cube congruence preserving intrinsic phases.",
+    "SECOND_REFLECTION_BOOTSTRAP.md: K*y=x, exact complete cubes, dominant n extraction, and strict domain arithmetic.",
+    "SPECTRAL_ROW_MEAN.md: crossover powers and strict 5/8 threshold arithmetic."
+  ],
+  "spectral_and_domain_arithmetic": {
+    "boundary_note": "5/8 and 13/16 are exact arithmetic comparisons, not endpoint analytic claims.",
+    "crossover_identities": 2,
+    "domain_witnesses": [
+      {
+        "balanced_scalar_exponent": "1",
+        "name": "new_only_9_10",
+        "new_tube": true,
+        "old_absolute_tube": false,
+        "s": "-1/20",
+        "spectral_tube": true,
+        "u": "19/20",
+        "v": "9/10"
+      },
+      {
+        "balanced_scalar_exponent": "1",
+        "name": "new_only_7_10",
+        "new_tube": true,
+        "old_absolute_tube": false,
+        "s": "-3/20",
+        "spectral_tube": true,
+        "u": "17/20",
+        "v": "7/10"
+      },
+      {
+        "balanced_scalar_exponent": "9/10",
+        "name": "new_only_half",
+        "new_tube": true,
+        "old_absolute_tube": false,
+        "s": "-1/5",
+        "spectral_tube": true,
+        "u": "7/10",
+        "v": "1/2"
+      },
+      {
+        "balanced_scalar_exponent": "9/10",
+        "name": "divisor_boundary",
+        "new_tube": false,
+        "old_absolute_tube": false,
+        "s": "-1/10",
+        "spectral_tube": false,
+        "u": "4/5",
+        "v": "7/10"
+      },
+      {
+        "balanced_scalar_exponent": "1",
+        "name": "spectral_boundary",
+        "new_tube": true,
+        "old_absolute_tube": false,
+        "s": "-3/8",
+        "spectral_tube": false,
+        "u": "5/8",
+        "v": "1/4"
+      },
+      {
+        "balanced_scalar_exponent": "1/2",
+        "name": "insufficient_gauss_real_part",
+        "new_tube": false,
+        "old_absolute_tube": false,
+        "s": "-1/8",
+        "spectral_tube": false,
+        "u": "3/8",
+        "v": "1/4"
+      },
+      {
+        "balanced_scalar_exponent": "5",
+        "name": "negative_v_old_overlap",
+        "new_tube": true,
+        "old_absolute_tube": true,
+        "s": "-3",
+        "spectral_tube": false,
+        "u": "2",
+        "v": "-1"
+      },
+      {
+        "balanced_scalar_exponent": "13/16",
+        "name": "joint_lower_envelope_boundary",
+        "new_tube": false,
+        "old_absolute_tube": false,
+        "s": "-3/16",
+        "spectral_tube": false,
+        "u": "5/8",
+        "v": "7/16"
+      }
+    ],
+    "spectral_real_part_cases": 7
+  },
+  "status": "PASS"
+}
