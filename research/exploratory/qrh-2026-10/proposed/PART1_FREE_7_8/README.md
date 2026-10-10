@@ -2,8 +2,8 @@
 
 ```text
 Status: PROPOSED object (exploration level). It is NOT an integrated packet and assigns no
-  verdict. It collects a new composition of arguments: the 7/8 statement of the Sep 30
-  manuscript proved from beta_* <= 1 alone, without Part I. Every review cited here is a bounded
+  verdict. It collects a new composition of arguments: a proposed proof of the 7/8 statement of
+  the Sep 30 manuscript from beta_* <= 1 alone, without Part I. Every review cited here is a bounded
   agent review, written within one model family. Before integration, the composition needs a
   review independent of this model family. It is not a claim about RH, which is unsolved.
 Scope: the composition (Part II as written, plus literal edits E1-E6 and three short lemmas

@@ -20,8 +20,8 @@ Exact sources or dependencies: pr908 = 31c706bbb3dce49a7ebabbe71cd7cbacdaa6cbb6,
   the imported theorems OAI.riemannZeta_ne_zero_of_seven_eighths_lt_re and
   OAI.DirichletCharacter.LFunction_ne_zero_of_seven_eighths_lt_re; Mathlib's riemannZeta_one_sub
 What was actually run: a clean lake build of the three modules (as OAI.QRHWave.*) in the scratch
-  copy of the import; checks/CorollaryAxioms.lean. Comparator runs on comparator/*.json: see
-  ../reviews/LEAN_BUILD_ATTEMPT.md, Addendum C (not run when this header was written)
+  copy of the import; checks/CorollaryAxioms.lean; comparator on comparator/SiegelFromSevenEighths.json
+  (accepted, 1082 s) and comparator/QRHWaveStrip.json (accepted, 1104 s), LEAN_BUILD_ATTEMPT Addendum C
 Smallest remaining gap: ZetaZeroStrip rests on the zeta 7/8 theorem, which comparator accepted
   under the assumptions of LEAN_BUILD_ATTEMPT Addendum B. DirichletZeroStrip and
   SiegelFromSevenEighths rest on the Dirichlet 7/8 theorem, which comparator also accepted
@@ -84,9 +84,11 @@ The constant is explicit. The helper theorem `gap_of_real_zero` states, with no 
 
     q ≥ 3,  χ any Dirichlet character mod q,  β < 1,  L(β, χ) = 0   ⟹   (log 3)/8 ≤ (1 − β) log q.
 
-So this is an *effective* Landau–Siegel-type bound with constant `(log 3)/8 ≈ 0.137`. It is
-conditional only on accepting the imported 7/8 Dirichlet theorem (comparator-accepted; Addendum
-C). By contrast, the upstream Oct 1 proof states only `∃ c`, and its witness comes out of a chain
+So, conditional on the 7/8 Dirichlet theorem (comparator-accepted under the Addendum B
+assumptions), the constant is explicit: `(log 3)/8 ≈ 0.137`.
+* It is read off the helper `gap_of_real_zero`. That helper is kernel-checked in the build and
+  replayed as a dependency, but it is not itself a comparator target.
+* This is a consequence of a zero-free half-plane, not an unconditional effective Siegel bound. By contrast, the upstream Oct 1 proof states only `∃ c`, and its witness comes out of a chain
 of lemmas (`SiegelZerosAwei.W50.uniform_exclusion_of_local_isolated_bezout`). Whether that `c` is
 explicit was not checked here.
 

@@ -457,10 +457,13 @@ The paper-to-Lean correspondence is [SEP30_LEAN_CORRESPONDENCE.md](SEP30_LEAN_CO
 * 37 are name-level candidates only, and 6 have no counterpart found.
 
 [PART1_FREE_ROUTE.md](PART1_FREE_ROUTE.md) checks the same bypass at paper level (PROPOSED,
-bounded review). It gives verdict (A): Part II as written, plus the extended endpoint count,
-proves 7/8 from `β* ≤ 1`.
+bounded review). It gives verdict (A), PROPOSED: Part II as written, plus the extended endpoint
+count, would prove 7/8 from `β* ≤ 1`. A second same-family review gives "(A) with corrections"
+([PART1_FREE_ROUTE_REVIEW2.md](PART1_FREE_ROUTE_REVIEW2.md)): `λ ≤ 527/300`, Lemma 17.6 stays,
+and Remark 19.3 is at most Rp.
 * The node set would be the 57 nodes of the substituted graph, with no [O5] import.
-* It adds new obligations: Remark 19.3 and two short proposed lemmas.
+* It adds new obligations: Remark 19.3 (as Lemma P1F.0, Rp) and Lemmas P1F.1-P1F.2
+  ([../proposed/PART1_FREE_7_8/](../proposed/PART1_FREE_7_8/README.md)).
 
 The counts are hand-entered from the review headers. They were not regenerated with
 `sep30_depgraph_v2.py`, whose status table is the v2 one.

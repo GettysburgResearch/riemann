@@ -55,7 +55,7 @@ integration verdict.
        exception as the paper's Thm 1.1 ([reviews/HECKE_LEAN_FIDELITY.md](reviews/HECKE_LEAN_FIDELITY.md);
        no Lean run, float cross-checks to about 1e-11).
        **Comparator accepts all three upstream 7/8 challenges (zeta, Dirichlet, Hecke family):
-       "Lean default kernel accepts the solution"** ([reviews/LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md), Addenda A–B).
+       "Lean default kernel accepts the solution"** ([reviews/LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md), Addendum B for zeta, Addendum C for Dirichlet and Hecke).
        Its trust assumptions are listed there; in particular the solution was precompiled
        (a non-adversarial reproduction).
        This is a machine check of the Lean statement, not a review of the manuscript.
@@ -68,16 +68,17 @@ integration verdict.
        * So the formal 7/8 depends neither on the paper's Part I nor on the Oct 5 paper.
        * **The same works on paper** ([reviews/PART1_FREE_ROUTE.md](reviews/PART1_FREE_ROUTE.md);
          PROPOSED, bounded review). Part II as written, plus the endpoint count extended to all
-         bins `δ ∈ [5/6, 1]`, proves 7/8 from `β* ≤ 1` alone.
+         bins `δ ∈ [5/6, 1]`, would prove 7/8 from `β* ≤ 1` alone (PROPOSED; bounded same-family
+         review only).
          * The extension rests on the exact identity `(1+5r)/6 − δr − (1−δ) = (5/6−δ)(r−1) ≤ 0`,
-           with margin `≤ −7/96 − Δ`.
+           with margin `≤ −7/96 − Δ`, up to the `O(ε)` losses `(13/16)λ + 2ζ`.
          * Remark 19.3 becomes load-bearing.
          * 32/32 exact gates pass, and 10/10 controls fail as designed.
          * Thm 3.1 and its 7 Part-I-only nodes drop out, and no imported 11/12 theorem is needed.
          * A second, adversarial agent review gives "(A) with corrections"
            ([reviews/PART1_FREE_ROUTE_REVIEW2.md](reviews/PART1_FREE_ROUTE_REVIEW2.md)). It finds
-           no obstruction and makes four bookkeeping corrections (one loss bound; Lemma 17.6 stays;
-           Remark 19.3 rated no better than Rp).
+           no obstruction and makes four corrections: `λ ≤ 527/300` in P1F.2; gate T2 checks line
+           ranges only; Lemma 17.6 stays; Remark 19.3 at most Rp.
          * Remark 19.3 is now written out as a labelled lemma with a full proof
            ([proposed/PART1_FREE_7_8/](proposed/PART1_FREE_7_8/README.md); 43/43 exact gates,
            14 controls). Its Lean counterpart is `no_slot_inverse_count`. The paper-level status
@@ -90,8 +91,9 @@ integration verdict.
          Mathlib's `RiemannHypothesis` (comparator accepts it against a Mathlib-only challenge
          written in this wave);
        * the Oct 1 Siegel-zero challenge statement is derived in Lean, with `c = (log 3)/8`, from
-         the imported 7/8 Dirichlet theorem. Comparator accepts it against the upstream Oct 1
-         challenge, and the constant is explicit (LEAN_BUILD_ATTEMPT Addendum C; lean/README).
+         the imported 7/8 Dirichlet theorem. Comparator accepts the `∃ c` statement against the
+         upstream Oct 1 challenge. The helper `gap_of_real_zero` gives `c = (log 3)/8`
+         explicitly (lean/README).
    * **Kintali 47/48:** Lemma 3 shows no error. The best citable density input gives 29/30.
    * **Oct 1, Landau–Siegel:** intrinsically logarithmic-scale, effective in principle, and a weak
      corollary of either quasi-RH claim ([SIEGEL_DETERMINANT.md](SIEGEL_DETERMINANT.md)).

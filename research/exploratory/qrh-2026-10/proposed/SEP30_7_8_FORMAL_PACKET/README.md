@@ -148,7 +148,7 @@ How to read the Lean text:
 | Object | Status at `995eb31fd` | Why it is outside |
 |---|---|---|
 | Hecke-family theorem `OAI.SevenEighths.HeckeFamily.LFunction_ne_zero_of_seven_eighths_lt_re` | built; `#print axioms` standard (`lean_hecke_axioms.log`); comparator **pending** at drafting, **accepted** since (1096 s; LEAN_BUILD_ATTEMPT Addendum C) | Stated over project-defined `HeckeFamily.Character` (a multiplicative character of `O/m`, `O = Z[ω]`, trivial on units) and `LFunction` (one sixth of a continued lattice-theta Mellin transform), written into the challenge file. Mathlib has no Hecke L-function to compare with. [HECKE_LEAN_FIDELITY.md](../../reviews/HECKE_LEAN_FIDELITY.md) (EXPLORATORY; reading, paper-level argument and EMPIRICAL float checks; one bounded agent pass) finds the family "exactly the finite-order Hecke L-functions of K = Q(√−3) as the Sep 30 paper defines them", with the same pole exception, neither narrower nor broader. Its stated gaps: the solution's bridge lemmas are not comparator targets and had no `#print axioms` run of their own, and "finite-order Hecke character = ray class character" is a textbook step, not formalized. Not independently reviewed. |
-| Wave corollaries in `lean/`: zeta strip `1/8 ≤ Re s ≤ 7/8`, Dirichlet strip (primitive `χ ≠ 1`, off the Gamma-factor poles), Siegel challenge with `c = (log 3)/8` | built; axioms standard; comparator **pending** | Separate objects. They rest on this theorem. |
+| Wave corollaries in `lean/`: zeta strip `1/8 ≤ Re s ≤ 7/8`, Dirichlet strip (primitive `χ ≠ 1`, off the Gamma-factor poles), Siegel challenge with `c = (log 3)/8` | built; axioms standard; comparator **pending** at drafting; since then the Siegel corollary (1082 s) and the zeta strip (1104 s) are **accepted** (Addendum C); the Dirichlet strip has no comparator challenge | Separate objects. They rest on this theorem. |
 | Oct 1 Siegel-zero development | built (9242 jobs); axioms standard; loads no `DirichletL` module | Independent of the 7/8 development. |
 | Manuscript Thm 1.1's proof, Part I (Thm 3.1, 11/12), Cor 1.2 | paper-level record in Section 5 | The formal theorem does not depend on them. |
 | Explicit consequences (`EXPLICIT_PNT_7_8.md`) | PROPOSED, conditional, unreviewed | Use imported explicit results; not formal. |
@@ -185,7 +185,7 @@ Read the file, not this table, for the current status.
 | challenge JSON | solution module | outcome |
 |---|---|---|
 | upstream `HeckeSevenEighths.json` | `OAI.NumberTheory.DirichletL.Hecke.Nonvanishing` | pending at drafting; **accepted** since (1096 s) |
-| wave `SiegelFromSevenEighths.json` (upstream `SiegelZeros` challenge module) | `OAI.QRHWave.SiegelFromSevenEighths` | pending |
+| wave `SiegelFromSevenEighths.json` (upstream `SiegelZeros` challenge module) | `OAI.QRHWave.SiegelFromSevenEighths` | pending at drafting; **accepted** since (1082 s) |
 | wave `QRHWaveStrip.json` (challenge written in this wave) | `OAI.QRHWave.ZetaZeroStrip` | pending |
 | upstream `SiegelZeros.json` | `OAI.NumberTheory.SiegelZeros.Main` (Oct 1 route) | pending |
 | `QuasiRiemannHypothesisNanoda.json` (upstream zeta challenge with `enable_nanoda: true`) | `OAI.NumberTheory.DirichletL.Nonvanishing` | queued: a **second, independent kernel**. nanoda_lib 0.4.19 (ammkrn/nanoda_lib@3a24072) was built here with cargo 1.97.0 (`cargo build --release`, 32 s) and is passed to comparator through `COMPARATOR_NANODA` |
@@ -222,7 +222,7 @@ Part-I-only nodes (3 A, 5 U) are unreviewed. No bounded review reported a wrong 
 
 **5.3 Part-I-free paper route** (PART1_FREE_ROUTE.md). **Verdict (A), PROPOSED** (bounded
 review): Part II as written, plus an endpoint row count extended from `δ = 5/6` to all
-`δ ∈ [5/6, 1]`, proves 7/8 from `β* ≤ 1` alone.
+`δ ∈ [5/6, 1]`, would prove 7/8 from `β* ≤ 1` alone (PROPOSED; bounded same-family review only).
 * 32/32 exact gates pass and 10/10 failing controls fire.
 * Remark 19.3 becomes load-bearing, and two short lemmas (P1F.1-P1F.2) are new.
 * This is a new composition and needs its own independent review.
@@ -350,7 +350,8 @@ The mathematics is kernel-checked, so the smallest failure point is in the trust
    not as part of this packet's statement.
 4. **"There is an effective constant."** No. The theorem has no constants. The Siegel corollary
    states only `∃ c > 0`; its proof happens to use `c = (log 3)/8`, but the checked statement is
-   existential, and that corollary has no comparator run yet. The explicit bounds of
+   existential. Comparator has since accepted it (1082 s). The explicit `c` is in the helper
+   `gap_of_real_zero`, which is not a comparator target. The explicit bounds of
    EXPLICIT_PNT_7_8.md are PROPOSED derivations from imported explicit results; they are not
    formal and not reviewed.
 5. **"Kintali's 47/48 and the Oct 5 11/12 papers are now verified."** No. Their ζ and Dirichlet
@@ -358,8 +359,8 @@ The mathematics is kernel-checked, so the smallest failure point is in the trust
    lie inside `Re s > 7/8`. Their *arguments* are not checked by it, and their Hecke clauses
    would also need the Hecke theorem (item 3).
 6. **"Comparator accepted the corollaries / the Oct 1 Siegel proof."** Not at `995eb31fd`
-   (Section 4); see Addendum C for later runs. The Hecke theorem was accepted after this draft
-   was written.
+   (Section 4). The Hecke theorem, the Siegel corollary and the zeta strip were accepted after
+   this draft was written. For the Oct 1 route see Addendum C.
 7. **"Mathlib's git tree is clean, so its definitions are checked."** The sources were checked;
    the oleans came from cache (T3).
 8. **"Two kernels agree."** Only the Lean kernel has run. The nanoda run is queued.

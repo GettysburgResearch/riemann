@@ -202,7 +202,8 @@ Two bounded agent passes give verdict (A), the second with four corrections. Sti
 * a labelled, proved statement of Remark 19.3, which is unlabeled in the manuscript. *Drafted:*
   [proposed/PART1_FREE_7_8/REMARK_19_3.md](proposed/PART1_FREE_7_8/REMARK_19_3.md). It stays
   Rp, because it rests on Lemmas 17.1-17.2.
-That would give a paper-level 7/8 proof with no Part I and no 11/12 import.
+That would give a paper-level 7/8 proof with no Part I and no 11/12 import, at the bounded-review
+level of its 57 kept nodes (6 Rp, 2 I).
 
 **C7. A formal improvement below 7/8?**
 * PR 910 claims, conditionally on imported inputs, `Re s > 139999/160000 ≈ 0.874994`.

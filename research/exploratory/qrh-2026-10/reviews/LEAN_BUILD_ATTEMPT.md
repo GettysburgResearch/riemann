@@ -1,8 +1,9 @@
 # Lean build attempt: OpenAI 7/8 comparator challenge (family 003)
 
 ```text
-Status: VERIFICATION (formal build COMPLETED, Addendum A; comparator ACCEPTS the 7/8 zeta challenge,
-  Addendum B);
+Status: VERIFICATION (formal build COMPLETED, Addendum A; comparator ACCEPTS the zeta challenge,
+  Addendum B, and the Dirichlet, Hecke, wave-Siegel and wave-strip challenges, Addendum C; the
+  upstream Oct 1 SiegelZeros and nanoda runs are recorded in Addendum C);
   no mathematical claim beyond what the build shows. Sections 1-8 are the original partial
   attempt and are kept unchanged as the record of that attempt
 Scope: Kernel build of the import closure of OAI.NumberTheory.DirichletL.Nonvanishing, the solution
@@ -20,7 +21,9 @@ What was actually run: the original attempt (below), then three bounded resumpti
   incremental build (one stopped by the background time limit, one by a full disk while writing an
   .olean, one completing): "Build completed successfully (7061 jobs)", 0 errors, 0 `sorry`
   warnings in the final log. Then `#print axioms` and a statement-pinning check (Addendum A),
-  and comparator (Addendum B).
+  and comparator (Addendum B). Addendum C: the Hecke build (7062 jobs), the Oct 1 SiegelZeros
+  build (9242 jobs), the nanoda_lib build, and comparator on the DirichletSevenEighths,
+  HeckeSevenEighths, SiegelFromSevenEighths and QRHWaveStrip challenges.
 Smallest remaining gap: the kernel check checks the Lean statement against Lean + Mathlib (from
   its binary cache) + the 23 patched third-party packages, under comparator's trust assumptions
   (Addendum B). It does not check the manuscript's text, and no human has reviewed the Lean
@@ -166,6 +169,7 @@ float cross-checks, not a Lean comparison; Mathlib has no Hecke `L`-function to 
 **Oct 1 Siegel-zero development (upstream solution `OAI.NumberTheory.SiegelZeros.Main`).**
 * After the regenerable `ir/*.setup.json` files were deleted to free disk (Lake still reported
   the build up to date without them), `nice -n 19 lake build OAI.NumberTheory.SiegelZeros.Main`
+  ran from 17:10:53 to 17:39:44 UTC (1731 s) and
   built the missing 306 OAI modules (about 70k lines) plus their PNT+ dependencies:
   "Build completed successfully (9242 jobs)". There were 0 errors and 0
   `declaration uses 'sorry'` warnings (`results/lean_siegel_build_tail.log`).
@@ -175,9 +179,11 @@ float cross-checks, not a Lean comparison; Mathlib has no Hecke `L`-function to 
   `OAI.NumberTheory.DirichletL.*` module. So the Oct 1 formal proof does not use the 7/8
   development.
 * The challenge statement, `∃ c > 0` with `c ≤ (1 − β) log q` for every real zero of every real
-  primitive nonprincipal `χ` mod `q ≥ 3`, therefore has two independent Lean proofs here:
-  * the Oct 1 route;
-  * the wave's three-line corollary of the 7/8 Dirichlet theorem (`../lean/SiegelFromSevenEighths.lean`).
+  primitive nonprincipal `χ` mod `q ≥ 3`, therefore has two Lean proofs here that share no
+  `OAI.*` module (they do share Mathlib, the kernel and the trust base):
+  * the Oct 1 route (built, axioms standard; comparator: see the table below);
+  * the wave's three-line corollary of the 7/8 Dirichlet theorem (`../lean/SiegelFromSevenEighths.lean`;
+    comparator accepted, below).
 * A Lean `∃ c` proved classically says nothing about whether `c` is effective.
 
 **Corollaries of this wave** ([../lean/](../lean/README.md)):
@@ -185,7 +191,23 @@ float cross-checks, not a Lean comparison; Mathlib has no Hecke `L`-function to 
 * axioms: `results/lean_corollary_axioms.log`, all `[propext, Classical.choice, Quot.sound]`.
 
 **Comparator runs after Addendum B.** These are run sequentially with the same tools and settings
-as in Addendum B, and their outcomes are recorded here as they complete:
+as in Addendum B, and their outcomes are recorded here as they complete.
+
+**Concurrency, disclosed.** Some builds ran in the same Lake tree while comparator runs were in
+progress:
+* the Hecke build (about 17:09), during the zeta run;
+* the Oct 1 Siegel build (17:10:53–17:39:44), during the zeta, Dirichlet and the start of the
+  Hecke runs;
+* a clean rebuild of the three `OAI.QRHWave.*` corollary modules (about 17:30), during the
+  Dirichlet run.
+
+A check after the runs found that all 2,924 `.olean` files of the 7/8 closure
+(`OAI.NumberTheory.DirichletL.Nonvanishing`) were last written at or before 16:56:51 UTC, before
+the first comparator run started (17:00:59). Mathlib's oleans date from the cache unpack. The
+326 oleans written after 17:00 are all outside that closure: Siegel, challenge, corollary and the
+two Hecke-only modules. Each run's solution closure was built before that run started. This
+remains a deviation from comparator's clean-environment assumption (assumption 2, already not
+met).
 
 | challenge JSON | solution module | outcome |
 |---|---|---|

@@ -250,7 +250,7 @@ None of these changes the verdict, the node set (57 nodes plus Remark 19.3) or t
 
 ## 9. Known misreadings to avoid
 
-1. **"This review confirms the 7/8 theorem."** No. It confirms that, in the parts read, the Part-I-free composition is no weaker than Part II as written. The 57 remaining nodes keep their v2 statuses, four of them A.
+1. **"This review confirms the 7/8 theorem."** No. It confirms that, in the parts read, the Part-I-free composition is no weaker than Part II as written. The 57 remaining nodes keep their v2 statuses, four of them A. [Dated note: under map addendum v2.1 they keep their v2.1 statuses, 6 Rp and 2 I, with no A.]
 2. **"Remark 19.3 is a proved lemma of the paper."** No. It is a remark whose correctness rests on inspecting a derivation inside Prop 19.2.
 3. **"The amplification is unnecessary."** Only for the sign in the high bins. It is needed in the balanced bins (NC2).
 4. **"T2 proves the census complete."** No. T2 checks coverage by line range; completeness rests on the reading (NC1, NI1, NI2).

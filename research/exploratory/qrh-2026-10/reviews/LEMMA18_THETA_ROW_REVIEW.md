@@ -51,7 +51,7 @@ no asymptotic statement is inferred from them.
 
 * **No wrong step found in the lines read.** Every displayed identity and inequality in the target
   lines was rederived by hand. Each exponent identity was also checked in exact arithmetic.
-* **Lemma 18.3 (lattice cancellation).** Its proof is correct as written. It is lattice Poisson on
+* **Lemma 18.3 (lattice cancellation).** No wrong step was found in its proof. It is lattice Poisson on
   a fixed finite union of residue classes, with the mask inserted by Möbius inversion, and the
   remaining steps are elementary algebra. The main-term coefficient really is independent of `X`
   and `t`, and the two rectangle main terms really cancel. The error is `2^{ω(𝔑_*)}` times a

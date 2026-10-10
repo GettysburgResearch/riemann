@@ -4,7 +4,8 @@
 Status: IMPORTED classical theorems (Sec. 1) + PROPOSED derivations (Secs. 2-3, ours, unreviewed)
   + CONDITIONAL on QRH-IMPORT (Sec. 4) + HEURISTIC (Sec. 5.3) + EMPIRICAL sanity numerics (Sec. 6).
   RH is unsolved; nothing here proves or disproves it.
-Scope: asymptotic/cofinal. Bounds hold for n >= n_0(theta) with n_0 NOT made effective.
+Scope: asymptotic/cofinal. Bounds hold for n >= n_0(theta) with n_0 not made effective here; an
+  explicit version, by a different route, is in EXPLICIT_PNT_7_8.md (PROPOSED).
   The bounds limit the relative SIZE of a Robin or Nicolas violation. They exclude no violation.
 Exact sources or dependencies: Robin, J. Math. Pures Appl. 63 (1984) 187-213 (via Lagarias
   arXiv:math/0008177v2, Nicolas-Sondow arXiv:1211.6944v4, Caveney-Nicolas-Sondow arXiv:1110.5078v2,
@@ -27,7 +28,8 @@ Smallest remaining gap: Lemma K (Sec. 2) is the load-bearing new step. For the R
 > * The statements below use only `H(7/8)` for ζ, so they are conditional on accepting the
 >   comparator check, not on the unreviewed manuscript text.
 > * The classical derivations they rest on are still imported or PROPOSED as labelled.
-> * The ineffective `n_0` of Sec. 3 is made explicit in [EXPLICIT_PNT_7_8.md](EXPLICIT_PNT_7_8.md)
+> * The ineffective `n_0` of Sec. 3 is made explicit, by a different route (Lemma J via
+>   Cully-Hugill–Johnston, not Lemma K), in [EXPLICIT_PNT_7_8.md](EXPLICIT_PNT_7_8.md)
 >   (PROPOSED): for example, `C = 1.41` once `log n ≥ 4462.69`.
 
 

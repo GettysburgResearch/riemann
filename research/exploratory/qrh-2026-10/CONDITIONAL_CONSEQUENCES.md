@@ -20,7 +20,10 @@ Smallest remaining gap: each RH-equivalent premise in the repo needs exponent 0;
 > * Statements that use `H(7/8)` for Dirichlet `L`-functions are conditional on the same kind of
 >   check: comparator accepted the Dirichlet challenge too (LEAN_BUILD_ATTEMPT Addendum C).
 > * The classical derivations they rest on are still imported or PROPOSED as labelled.
-> * Statements that need the Hecke family or the Oct 5 claim are unchanged.
+> * Statements that need the Hecke family: comparator accepted the Lean Hecke theorem
+>   (LEAN_BUILD_ATTEMPT Addendum C), but its match to the paper's family rests on
+>   HECKE_LEAN_FIDELITY.md (reading-level, one agent pass). Statements that need the Oct 5 claim
+>   are unchanged.
 
 
 > **Prior work.** Most of Sections 1.3 and 3 already appear in branch

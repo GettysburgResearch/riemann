@@ -43,7 +43,7 @@ All rows are CONDITIONAL on H(7/8) and the imports of Sec. 1, and PROPOSED (our 
 | Cor 3 | `\|π(x) − li(x)\| ≤ 0.00266 x^{7/8} log x` | all `x > 2657` |
 | Cor 4 | `(x, x + 0.006 x^{7/8} log² x]` contains a prime | all `x ≥ 967` |
 | Thm R | `σ(n)/n < n/φ(n) ≤ e^γ log log n + 1.41 (log n)^{−1/8}` | all `n ≥ e^{4462.69}` (≈ `10^{1938.1}`) |
-| Thm R | same with `C = 0.1`, `0.01`, `10^{−6}`, `10^{−10}` | `log n ≥ 2.52·10^7`, `5.23·10^{10}`, `1.02·10^{26}`, `3.55·10^{114}` |
+| Thm R | same with `C = 0.1`, `0.01`, `10^{−6}`, `10^{−10}` | `log n ≥ 2.52·10^7`, `5.23·10^{10}`, `1.013·10^{26}`, `3.55·10^{114}` |
 
 Three points to keep in view.
 - **Where H(7/8) is actually used.** For `x ≤ e^{190}` (about `10^{82.5}`), Theorem 1 uses only zeros below `H_0`, so it is unconditional there. It is also weaker there than the best published unconditional bounds. H(7/8) starts to matter at `x ≈ e^{190}`. The conditional bound beats the best unconditional table (Fiori–Kadiri–Swidinsky) from `log x ≈ 253`, about `x ≈ 10^{110}`.
@@ -119,7 +119,7 @@ Read but not used: Dudek, arXiv:1401.4233v1, Thm 2.1. It gives error `2x log² x
 
 The script evaluates all four bounds in interval arithmetic. Two consistency checks:
 - ROBIN_GRADED §5.3 used the heuristic tail `ε(T) ≈ 3.0·10^{−12}`; (Z3) is the rigorous version.
-- EMPIRICAL: the first 200 zeros give `Σ 2/(1/4+γ²) = 0.04207 < s_low`.
+- EMPIRICAL: the first 200 zeros give `Σ 2/(1/4+γ²) = 0.04207`, below the (Z4) bound `0.046191`.
 
 ## 3. Theorem 1: the ψ bound (CONDITIONAL, PROPOSED)
 
@@ -195,7 +195,7 @@ In regime III, `log(T/2π) = L/8 + log 4M`. Expanding (3.2) gives
 - So `(x+h)^{7/8} log²(x+h) ≤ (1+δ) x^{7/8} log² x`, where `δ ≤ (1 + 34.65c)^{7/8}(1 + log(1 + 34.65c)/log 967)² − 1 ≤ 0.2455` at `c = 0.006`.
 - Then `0.0026(2 + δ) ≤ 0.00584 < 0.006`. ∎
 
-Asymptotically the constant tends to `2·0.0025498 ≈ 0.0051`. For comparison, Cully-Hugill–Johnston (Thm 1.3, unconditional) give a prime between consecutive 140th powers, an interval of length about `140 x^{139/140}`. The first-order differencing refinement (`h ≍ x^{7/8} log x log log x`) was not carried out.
+Asymptotically the constant tends to `2/(128π) ≈ 0.00497`; uniformly on `x ≥ e^{190}` it is at most `2·0.0025498 ≈ 0.0051`. For comparison, Cully-Hugill–Johnston (Thm 1.3, unconditional) give a prime between consecutive 140th powers, an interval of length about `140 x^{139/140}`. The first-order differencing refinement (`h ≍ x^{7/8} log x log log x`) was not carried out.
 
 ## 5. Robin and Nicolas, explicit (CONDITIONAL, PROPOSED)
 
@@ -344,9 +344,9 @@ Below, "ours" means the bound (3.1)/(3.2) with the best `T` from a candidate gri
 - **Theorem R bounds the size of a Robin violation; it does not exclude one.** The sign question at the RH scale `(log n)^{−1/2}` is untouched (Sec. 5, last table row).
 - **The thresholds are not new verification ranges.** For `x ≤ e^{190}` Theorem 1 is unconditional and weaker than published tables. The small `n_1` for `C = 1.41` reflects Büthe's imported finite range, not new information about zeros.
 - **"Explicit" means explicit modulo the imports.** CHJ's Theorem 1.2 is load-bearing beyond `e^{190}` (Theorem 1) and beyond `2.169·10^25` (Lemma J). Its own constants changed between arXiv versions, and its text and Table 4 disagree.
-- **Smallest statement whose failure would break the results.** Theorem 1 beyond `e^{190}` breaks only if CHJ Thm 1.2 failed at `log x ≥ 40` by more than a factor of 4 in `M`. Theorem R with `x_1 < 2.169·10^25` breaks if Büthe's Theorem 2 failed in that range.
+- **Smallest statement whose failure would break the results.** Among the imported constants, Theorem 1 beyond `e^{190}` is most exposed to CHJ Thm 1.2. It survives a fourfold error in `M`. It also rests on HSW Cor. 1.2, Platt–Trudgian and H(7/8) (with the trust assumptions of LEAN_BUILD_ATTEMPT). Theorem R with `x_1 < 2.169·10^25` breaks if Büthe's Theorem 2 failed in that range.
 
-## Addendum: independent sweep of the small-x ranges (coordinator, same day)
+## Addendum: separate float64 sweep of the small-x ranges (coordinator, same day)
 
 `scripts/explicit_pnt_sweep_check.py` is a separate float64 check (EMPIRICAL, not interval
 arithmetic) of the step functions ψ and θ at every prime-power jump up to `2·10⁷`. At each jump it

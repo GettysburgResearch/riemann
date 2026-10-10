@@ -248,7 +248,7 @@ The junction quantities that depend on `Δ` were re-run on `Δ ∈ (0, 1/8]` (Se
 **Load-bearing node set.** The starting point is the 65 nodes of SEP30_VERIFICATION_MAP.
 
 * **Leave (8):** Thm 3.1 (A), Lemma 5.8 (U), Lemma 6.1 (U), Lemma 6.2 (U), Prop 6.3 (A), Lemma 9.1 (U), Prop 9.2 (U) and Prop 11.2 (A). This is the same set that leaves under the Oct 5 substitution (PART1_SUBSTITUTION §3.1). The imports BGL and Huxley/Baier-Bansal leave with them. Def 5.6 stays, through Lemma 5.7.
-* **Stay (57):** as in the substitution column of the v2 map: R 43, Rp 5, I 5, A 4. The four A nodes are Lemmas 4.2, 4.3, 4.4 and 17.1. Their ranges widen (`a`, `κ`, `δ`, `Δ` up to 1, 1, 1, 1/8), and every one of them is stated for the wider range (Sec. 1, second table).
+* **Stay (57):** as in the substitution column of the v2 map: R 43, Rp 5, I 5, A 4. The four A nodes are Lemmas 4.2, 4.3, 4.4 and 17.1. [Update: under map addendum v2.1 the 57 kept nodes are R 49, Rp 6, I 2, A 0 (Lemmas 4.2-4.4 now R, 17.1 Rp).] Their ranges widen (`a`, `κ`, `δ`, `Δ` up to 1, 1, 1, 1/8), and every one of them is stated for the wider range (Sec. 1, second table).
 * **New obligations:**
   1. **`β* ≤ 1`.** This is stated at 386-387 and immediate from the definition. It is not a new node.
   2. **Remark 19.3** (15448-15467) becomes load-bearing; the v2 map listed it as not load-bearing. Bounded check here: its derivation (15248-15294) uses no `δ ≤ α`.
@@ -320,7 +320,7 @@ These are consistent with the text having been calibrated for `Δ ≤ 1/8` and `
 3. **"The intermediate-row paragraph covers the high bins."** No. It fails for `δ > 529/625` (FC4). High bins must use P1F.1 at every `d`.
 4. **"`m_high = 51Δ/64`."** Only for `Δ ≤ 42/425`. Prop 20.3 defines `m_high` as `min{51Δ/64, 63/800}`, which is what is used.
 5. **"The Lean distinct slot lengths are needed for `Δ ≤ 1/8`."** No. They are a disjointness device; the paper's equal slots with disjoint supports `I_i` serve the same purpose (Sec. 3.3).
-6. **"Verdict (A) certifies the 7/8 manuscript."** No. The 57 remaining nodes keep their v2 statuses, four of them A (Lemmas 4.2-4.4 and 17.1). Nothing here bears on RH.
+6. **"Verdict (A) certifies the 7/8 manuscript."** No. The 57 remaining nodes keep their v2.1 statuses (6 Rp, 2 I; the earlier A nodes, Lemmas 4.2-4.4 and 17.1, are now R and Rp). Nothing here bears on RH.
 
 ## 9. Reproduction
 
@@ -337,7 +337,7 @@ python3 -I part1_free_checks.py /tmp/sep30.tex --replay-junction     # adds J1 (
 [PART1_FREE_ROUTE_REVIEW2.md](PART1_FREE_ROUTE_REVIEW2.md) is an adversarial second pass: one
 agent, the same model family. Its verdict is **"(A) with corrections"**, with no obstruction
 found in the parts read.
-* It independently re-derived the census (153 substantive lines, the same set line by line) and
+* It re-derived the census from its own regex (153 substantive lines, the same set line by line) and
   the margin (worst case `−7/96`).
 * It checked ten riskiest (a) items against the cited lemmas' actual ranges.
 * It traced the (c) item at 16165: its hypothesis excludes high bins.
