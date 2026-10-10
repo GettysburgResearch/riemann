@@ -32,7 +32,7 @@ so $\ell=0$ is Part I (11/12), $\ell=1/6$ is Part II (7/8), and $\ell\to2/3$ wou
 
 - `README.md` — this hub.
 - `FINDINGS.md` — synthesized findings of the wave (bottleneck model, bootstrap barrier, alternative architectures, repository consequences), with exact statements and the smallest remaining gaps.
-- `notes/` — the four working notes A–D and later wave notes, as produced.
+- `notes/` — working notes: A (full exponent model and sensitivity), B (bootstrap/κ barrier), C (mechanism, alternative families, literature), D (unconditional consequences for this repository), E (lead reconstruction of the endpoint exponent), H (what a generalized 2k-th moment buys), and later wave-2 notes (F quartic feasibility, G 2k-moment lemma attack, I mixed-moment attack, J direct-side Gram loss) as produced.
 - `scripts/` — the exponent-system reconstruction and any experiments (ordinary floating point; not certificates).
 
 Nothing here changes `RESULTS.md`, `STATUS.md` or the integrated record. Any statement below marked PROPOSED needs its own exact-SHA review before it can be cited.

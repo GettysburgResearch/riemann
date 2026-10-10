@@ -44,6 +44,20 @@ where $\delta=2a-1$ is the zero class of a nonprincipal row (its twist has a zer
 
 Reading. (i) The three moment lemmas together are worth $<10^{-2}$. (ii) With *perfect* zero-density inputs the architecture reaches exactly $13/15$ (an independent public verification repository reports the same "density barrier"), and is then pinned by the **floor**: rows whose twists have no zero above $51/100$, which the proof counts trivially ($U^1$) and bounds pointwise (Lemma 10.4 applies the triangle inequality to the row sum; the floor bin "uses no witness", §10.5). The floor constraint is just $C_0\le0$, i.e. $\ell\le\tfrac15-\tfrac{2b}{15}$. (iii) Since under GRH for the family *every* row is a floor row, the $13/15$ wall is an *absolute-value* wall, not a zero-density wall: no bound that sums nonprincipal rows with absolute values can beat $13/15$ in this bookkeeping. (iv) $3/4$ would need a saving of $U^{7/18}$ over the trivial floor sum at $d=h$ — i.e. cancellation *between* Poisson rows $u$ — which nothing in the proof attempts.
 
+### 2b. Independent full model (notes/A_exponent_model.md, scripts/exponent_model.py)
+
+A second, independent reconstruction with all side constraints (floor class, intermediate rows $d\le1/2$ with $R=76/75-2\delta/3$, small-row margin, supply, $l_x>\ell$, the reflected-majorant penalties $(8b+3\ell-3)_+/12$ and $(5\ell-1)_+/8$ of Liu's Prop. 22.2) reproduces every margin of Section 20 exactly ($-7/1200$, $-49/14400$, $63/800$, $8/39$), the endpoint minimum $2.282\times10^{-4}$ (the paper's $49/440640$ is the same identity weakened by $J\le5/2$), and Liu's $B_{\rm new}$ to $7\times10^{-10}$. Its sensitivity table adds one decisive row to the table above:
+
+| dial | current | hypothetical | best $B$ | $dB/d(\text{dial})$ |
+|---|---|---|---|---|
+| $\alpha$ (Lemma 17.6) | 5/6 | 2/3 / 1/2 / 0 (Lindelöf on average) | 0.873916 / 0.872227 / 0.869792 | +0.0047 |
+| $c_\kappa=1/(6\kappa)$ (Lemma 18.1) | 2/9 | 1 | 0.874052 | −0.0020 |
+| $c_M$ (Lemma 17.1, $r+2z\le1\to r+z\le1$) | 1/2 | 1 | 0.874052 (supply cap $\ell/h$ then binds) | −0.0096 |
+| **$\theta$, the Gram loss $b/12$ in the direct bound $l_x/2+\theta b$ (the $P_a^{1/6}$ term of Prop. 15.2, $P_a=Y'^2/Q=Z^b$)** | 1/12 | 1/24 / 0 | **0.869608 / 0.863950** | **+0.100** |
+| $z_0$, floor $a_0$, supply, sextic sieve (Lemma 9.1) | — | — | no change | 0 |
+
+So the single most valuable input is on the **direct** side: the additive Gram bound (15.4), $\sum_{q_m\ll Q}|A_m|^2\ll(Q/Y')(1+P_a^{1/6}+P_a^2/Y')Z^\epsilon$. Removing its $P_a^{1/6}$ term is worth more than all count dials together ($0.8698$). Cumulative best-conceivable values in this bookkeeping: ideal counts $0.8698$; $+$ floor $a_0\to1/2$: $13/15$; $\theta=0$ alone $0.86395$; $\theta=0$ $+$ all counts $+$ floor: $0.85985$; $+$ no supply constraint: $6/7$ at $(b,\ell)=(2/7,1/7)$, pinned by $B_{\rm low}=11/12-\ell/4-b/12$, the floor $B\ge2/3+b/6+\ell$ and the second Gram term $b\le l_y/2$. Only by dropping the second Gram term and the reflected penalty does the system degenerate to $5/6$ (the Mellin shift). **$3/4$ is not attainable by any improvement of the moment lemmas**; it would need a different signal normalization (the $5/6$ shift, i.e. the sextic family) or beating the trivial floor count.
+
 ## 3. Why the direct side is also far from the truth
 
 Under RH the probe's true size is $Z^{C(1/2)}=Z^{-1/6}$ (Part I), while the direct bound is $Z^{1/4}$: the direct side loses up to $Z^{5/12}$, all of it in the Cauchy–Schwarz over the $\asymp Y$ rows $s$ before the quadratic large sieve (notes/C_alternatives.md §3). The sieve's diagonal is then unavoidable. The object that would replace this step is a two-variable series $Z_\eta(s,w)=\sum_s\sum_c\gamma_2(c)\alpha(c)\eta(c)(c/s)_2q_c^{-s}q_s^{-w}$ (quadratic twists of Kubota's Gauss-sum Dirichlet series, summed over the quadratic modulus). Friedberg–Hoffstein–Lieman (Math. Ann. 2003) continue the *untwisted* $n$-th order double series $\sum_m L(s,\chi_m)N\mathfrak m^{-w}$ with a group of functional equations relating it to a Gauss-sum series; the character-twisted case is listed as an open problem in the 2025 axiomatic-MDS literature. So direction 3 is a real open problem, not a bounded project.
@@ -58,6 +72,7 @@ The pairing (order-$N$ character, theta coefficient $g(\chi^b)$) needs $g(\chi)g
 
 ## 6. The smallest statements that would move the bound
 
+0. **(Direct-side Gram term; largest *reachable* lever.)** Prop. 15.2 without the $P_a^{1/6}$ term: $\sum_{q_m\ll Q}|A_m|^2\ll(Q/Y')(1+P_a^2/Y')Z^\epsilon$. Worth $0.874957\to0.86395$ now, $6/7$ with everything else ideal; even halving the exponent ($P_a^{1/12}$) gives $0.8696$. Whether the term is an artifact or intrinsic is examined in note J.
 1. **(Floor cancellation; largest lever.)** For the compensated probe of §12 and the floor bin at $U=Z^h$: $\sum_{u\asymp U,\,u\text{ floor}}\mathrm{Row}_u(Z)\ll Z^{C(7/8)+C_0-fh+\epsilon}$ for some $f>0$. Each $0.01$ of $f$ is worth $\approx0.0025$ in $B$; $f=0.389$ with ideal counts is $3/4$.
 2. **(Bias-corrected sextic sieve; bounded.)** Unconditional version of Dunn–Radziwiłł §9 with DFDH's Lindelöf-on-average replacing GRH: $\sum_a\mu^2(a)|\sum_bc_b(b/a)_3|^2=$ explicit main term $+O((A+B)(AB)^\epsilon\sum|\beta|^2)$ for $c_b=\tilde g(b)\beta_b$, $A\asymp B$. Re-run §19 with the bias row as a principal-type row. Ceiling $13/15$.
 3. **(Quartic reflection; family change.)** A completed quartic reflection over $\mathbb Q(i)$ needing only $\sum_{Nm\le M}|d_{\theta_4}(m)|^2\ll M^{1+\epsilon}$ at the undetermined indices. Predicted $7/8$ (Part I) and $\approx13/16$ (Part II) for Hecke over $\mathbb Q(i)$ and all Dirichlet $L$-functions; not for non-norm Hecke characters over $\mathbb Q(\sqrt{-3})$.
