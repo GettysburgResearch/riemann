@@ -79,6 +79,10 @@ The pages above describe reviewed components at their recorded sources, with lat
 
 [The coupled-reflection packet](standalone/2026-10-10-sextic-critical-core/README.md) retains the outer divisor sum through theta reflection, proves stronger bounds for specified reflected components, and gives an exact reunited Ramanujan Euler product with its angular characters, moving exclusions and polar divisor. It also controls a further incidence portion of every fixed higher moment and combines adjacent arithmetic work into a polynomial positivity-horizon criterion. Exact source snapshots, local arithmetic diagnostics and scoped independent AI-agent reviews are included. The full fourth moment, \(17/24\), the unbounded hierarchy and any further zero-free improvement remain open.
 
+## Further research: exact support and angular twists
+
+[The theta-support packet](standalone/2026-10-10-theta-support-descent/README.md) proves an exact support cutoff for complete projected Ramanujan groups at all three source cusps. It extends the source's second-moment method to fixed angular characters, supplies uniform reciprocal bounds for the needed angular types beyond 11/12, and continues the full reunited standard-face series meromorphically across its former v=1 boundary with an explicit possible residue. The proofs retain their imported analytic dependencies and include scoped independent AI-agent reviews and exact local diagnostics. The continuation supplies no saving at the critical moment scales; the full fourth moment, the generalized hierarchy, and RH remain open.
+
 ## License
 
 Project code and original research materials are available under the [MIT License](LICENSE). Third-party material retains its existing terms and notices.
