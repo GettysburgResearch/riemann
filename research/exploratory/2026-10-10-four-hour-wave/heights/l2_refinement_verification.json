@@ -1,0 +1,678 @@
+{
+  "all_positive_node_scales": true,
+  "auxiliary_orders": {
+    "count": 2873,
+    "first": 256,
+    "last": 6000,
+    "step": 2
+  },
+  "horizontal_depth": "1/2",
+  "input_sha256": {
+    "ANNULAR_GLOBAL_PICK.md": "c04cdf51ad64972137ecd3f4aa2c835e82481d4984115bd7fadf9b8621311724",
+    "L2_ANNULAR_PICK.md": "6f44295912442e75913f8d979369049d72f04cca226ceb782069b5479680913c",
+    "L2_FRAME_REFINEMENT.md": "a014e267f479b731503b0db5b5f1049b63a1ec6e001e58836c1ee7d7ed104ecf",
+    "verify_annular.py": "150341214b3a6a5fde8ad3b7e53da2d4631970b4c6291c1beab5fe6f422cedb0",
+    "verify_l2_annular.py": "0a8fd4e7a3c3cad885d9b3d18a1e3ffa1f78f10f1568abf23069dbcd60f43882",
+    "verify_l2_refinement.py": "c820c8af26e25dd3d8ec05e2f72f9e9eb9597d254cf1c077f838c00a9da50c92"
+  },
+  "limitations": [
+    "global claim relies on the analytic refinement proof",
+    "complete source and published argument/height inputs are imported",
+    "finite Legendre and arithmetic checks are not a zero census",
+    "RH remains unproved"
+  ],
+  "packet_size": 6000,
+  "published_inputs_replayed": false,
+  "sharp_legendre_controls": [
+    {
+      "degree": 0,
+      "derivative_frobenius_squared_exact": "0",
+      "two_endpoint_bound_exact": "1"
+    },
+    {
+      "degree": 1,
+      "derivative_frobenius_squared_exact": "3",
+      "two_endpoint_bound_exact": "3"
+    },
+    {
+      "degree": 2,
+      "derivative_frobenius_squared_exact": "18",
+      "two_endpoint_bound_exact": "6"
+    },
+    {
+      "degree": 3,
+      "derivative_frobenius_squared_exact": "60",
+      "two_endpoint_bound_exact": "10"
+    },
+    {
+      "degree": 4,
+      "derivative_frobenius_squared_exact": "150",
+      "two_endpoint_bound_exact": "15"
+    },
+    {
+      "degree": 5,
+      "derivative_frobenius_squared_exact": "315",
+      "two_endpoint_bound_exact": "21"
+    },
+    {
+      "degree": 6,
+      "derivative_frobenius_squared_exact": "588",
+      "two_endpoint_bound_exact": "28"
+    },
+    {
+      "degree": 7,
+      "derivative_frobenius_squared_exact": "1008",
+      "two_endpoint_bound_exact": "36"
+    },
+    {
+      "degree": 8,
+      "derivative_frobenius_squared_exact": "1620",
+      "two_endpoint_bound_exact": "45"
+    },
+    {
+      "degree": 9,
+      "derivative_frobenius_squared_exact": "2475",
+      "two_endpoint_bound_exact": "55"
+    },
+    {
+      "degree": 10,
+      "derivative_frobenius_squared_exact": "3630",
+      "two_endpoint_bound_exact": "66"
+    },
+    {
+      "degree": 11,
+      "derivative_frobenius_squared_exact": "5148",
+      "two_endpoint_bound_exact": "78"
+    },
+    {
+      "degree": 12,
+      "derivative_frobenius_squared_exact": "7098",
+      "two_endpoint_bound_exact": "91"
+    },
+    {
+      "degree": 13,
+      "derivative_frobenius_squared_exact": "9555",
+      "two_endpoint_bound_exact": "105"
+    },
+    {
+      "degree": 14,
+      "derivative_frobenius_squared_exact": "12600",
+      "two_endpoint_bound_exact": "120"
+    },
+    {
+      "degree": 15,
+      "derivative_frobenius_squared_exact": "16320",
+      "two_endpoint_bound_exact": "136"
+    },
+    {
+      "degree": 16,
+      "derivative_frobenius_squared_exact": "20808",
+      "two_endpoint_bound_exact": "153"
+    },
+    {
+      "degree": 17,
+      "derivative_frobenius_squared_exact": "26163",
+      "two_endpoint_bound_exact": "171"
+    },
+    {
+      "degree": 18,
+      "derivative_frobenius_squared_exact": "32490",
+      "two_endpoint_bound_exact": "190"
+    },
+    {
+      "degree": 19,
+      "derivative_frobenius_squared_exact": "39900",
+      "two_endpoint_bound_exact": "210"
+    },
+    {
+      "degree": 20,
+      "derivative_frobenius_squared_exact": "48510",
+      "two_endpoint_bound_exact": "231"
+    },
+    {
+      "degree": 21,
+      "derivative_frobenius_squared_exact": "58443",
+      "two_endpoint_bound_exact": "253"
+    },
+    {
+      "degree": 22,
+      "derivative_frobenius_squared_exact": "69828",
+      "two_endpoint_bound_exact": "276"
+    },
+    {
+      "degree": 23,
+      "derivative_frobenius_squared_exact": "82800",
+      "two_endpoint_bound_exact": "300"
+    },
+    {
+      "degree": 24,
+      "derivative_frobenius_squared_exact": "97500",
+      "two_endpoint_bound_exact": "325"
+    },
+    {
+      "degree": 25,
+      "derivative_frobenius_squared_exact": "114075",
+      "two_endpoint_bound_exact": "351"
+    },
+    {
+      "degree": 26,
+      "derivative_frobenius_squared_exact": "132678",
+      "two_endpoint_bound_exact": "378"
+    },
+    {
+      "degree": 27,
+      "derivative_frobenius_squared_exact": "153468",
+      "two_endpoint_bound_exact": "406"
+    },
+    {
+      "degree": 28,
+      "derivative_frobenius_squared_exact": "176610",
+      "two_endpoint_bound_exact": "435"
+    },
+    {
+      "degree": 29,
+      "derivative_frobenius_squared_exact": "202275",
+      "two_endpoint_bound_exact": "465"
+    },
+    {
+      "degree": 30,
+      "derivative_frobenius_squared_exact": "230640",
+      "two_endpoint_bound_exact": "496"
+    },
+    {
+      "degree": 31,
+      "derivative_frobenius_squared_exact": "261888",
+      "two_endpoint_bound_exact": "528"
+    },
+    {
+      "degree": 32,
+      "derivative_frobenius_squared_exact": "296208",
+      "two_endpoint_bound_exact": "561"
+    },
+    {
+      "degree": 33,
+      "derivative_frobenius_squared_exact": "333795",
+      "two_endpoint_bound_exact": "595"
+    },
+    {
+      "degree": 34,
+      "derivative_frobenius_squared_exact": "374850",
+      "two_endpoint_bound_exact": "630"
+    },
+    {
+      "degree": 35,
+      "derivative_frobenius_squared_exact": "419580",
+      "two_endpoint_bound_exact": "666"
+    },
+    {
+      "degree": 36,
+      "derivative_frobenius_squared_exact": "468198",
+      "two_endpoint_bound_exact": "703"
+    },
+    {
+      "degree": 37,
+      "derivative_frobenius_squared_exact": "520923",
+      "two_endpoint_bound_exact": "741"
+    },
+    {
+      "degree": 38,
+      "derivative_frobenius_squared_exact": "577980",
+      "two_endpoint_bound_exact": "780"
+    },
+    {
+      "degree": 39,
+      "derivative_frobenius_squared_exact": "639600",
+      "two_endpoint_bound_exact": "820"
+    },
+    {
+      "degree": 40,
+      "derivative_frobenius_squared_exact": "706020",
+      "two_endpoint_bound_exact": "861"
+    },
+    {
+      "degree": 41,
+      "derivative_frobenius_squared_exact": "777483",
+      "two_endpoint_bound_exact": "903"
+    },
+    {
+      "degree": 42,
+      "derivative_frobenius_squared_exact": "854238",
+      "two_endpoint_bound_exact": "946"
+    },
+    {
+      "degree": 43,
+      "derivative_frobenius_squared_exact": "936540",
+      "two_endpoint_bound_exact": "990"
+    },
+    {
+      "degree": 44,
+      "derivative_frobenius_squared_exact": "1024650",
+      "two_endpoint_bound_exact": "1035"
+    },
+    {
+      "degree": 45,
+      "derivative_frobenius_squared_exact": "1118835",
+      "two_endpoint_bound_exact": "1081"
+    },
+    {
+      "degree": 46,
+      "derivative_frobenius_squared_exact": "1219368",
+      "two_endpoint_bound_exact": "1128"
+    },
+    {
+      "degree": 47,
+      "derivative_frobenius_squared_exact": "1326528",
+      "two_endpoint_bound_exact": "1176"
+    },
+    {
+      "degree": 48,
+      "derivative_frobenius_squared_exact": "1440600",
+      "two_endpoint_bound_exact": "1225"
+    },
+    {
+      "degree": 49,
+      "derivative_frobenius_squared_exact": "1561875",
+      "two_endpoint_bound_exact": "1275"
+    },
+    {
+      "degree": 50,
+      "derivative_frobenius_squared_exact": "1690650",
+      "two_endpoint_bound_exact": "1326"
+    },
+    {
+      "degree": 51,
+      "derivative_frobenius_squared_exact": "1827228",
+      "two_endpoint_bound_exact": "1378"
+    },
+    {
+      "degree": 52,
+      "derivative_frobenius_squared_exact": "1971918",
+      "two_endpoint_bound_exact": "1431"
+    },
+    {
+      "degree": 53,
+      "derivative_frobenius_squared_exact": "2125035",
+      "two_endpoint_bound_exact": "1485"
+    },
+    {
+      "degree": 54,
+      "derivative_frobenius_squared_exact": "2286900",
+      "two_endpoint_bound_exact": "1540"
+    },
+    {
+      "degree": 55,
+      "derivative_frobenius_squared_exact": "2457840",
+      "two_endpoint_bound_exact": "1596"
+    },
+    {
+      "degree": 56,
+      "derivative_frobenius_squared_exact": "2638188",
+      "two_endpoint_bound_exact": "1653"
+    },
+    {
+      "degree": 57,
+      "derivative_frobenius_squared_exact": "2828283",
+      "two_endpoint_bound_exact": "1711"
+    },
+    {
+      "degree": 58,
+      "derivative_frobenius_squared_exact": "3028470",
+      "two_endpoint_bound_exact": "1770"
+    },
+    {
+      "degree": 59,
+      "derivative_frobenius_squared_exact": "3239100",
+      "two_endpoint_bound_exact": "1830"
+    },
+    {
+      "degree": 60,
+      "derivative_frobenius_squared_exact": "3460530",
+      "two_endpoint_bound_exact": "1891"
+    },
+    {
+      "degree": 61,
+      "derivative_frobenius_squared_exact": "3693123",
+      "two_endpoint_bound_exact": "1953"
+    },
+    {
+      "degree": 62,
+      "derivative_frobenius_squared_exact": "3937248",
+      "two_endpoint_bound_exact": "2016"
+    },
+    {
+      "degree": 63,
+      "derivative_frobenius_squared_exact": "4193280",
+      "two_endpoint_bound_exact": "2080"
+    },
+    {
+      "degree": 64,
+      "derivative_frobenius_squared_exact": "4461600",
+      "two_endpoint_bound_exact": "2145"
+    },
+    {
+      "degree": 65,
+      "derivative_frobenius_squared_exact": "4742595",
+      "two_endpoint_bound_exact": "2211"
+    },
+    {
+      "degree": 66,
+      "derivative_frobenius_squared_exact": "5036658",
+      "two_endpoint_bound_exact": "2278"
+    },
+    {
+      "degree": 67,
+      "derivative_frobenius_squared_exact": "5344188",
+      "two_endpoint_bound_exact": "2346"
+    },
+    {
+      "degree": 68,
+      "derivative_frobenius_squared_exact": "5665590",
+      "two_endpoint_bound_exact": "2415"
+    },
+    {
+      "degree": 69,
+      "derivative_frobenius_squared_exact": "6001275",
+      "two_endpoint_bound_exact": "2485"
+    },
+    {
+      "degree": 70,
+      "derivative_frobenius_squared_exact": "6351660",
+      "two_endpoint_bound_exact": "2556"
+    },
+    {
+      "degree": 71,
+      "derivative_frobenius_squared_exact": "6717168",
+      "two_endpoint_bound_exact": "2628"
+    },
+    {
+      "degree": 72,
+      "derivative_frobenius_squared_exact": "7098228",
+      "two_endpoint_bound_exact": "2701"
+    },
+    {
+      "degree": 73,
+      "derivative_frobenius_squared_exact": "7495275",
+      "two_endpoint_bound_exact": "2775"
+    },
+    {
+      "degree": 74,
+      "derivative_frobenius_squared_exact": "7908750",
+      "two_endpoint_bound_exact": "2850"
+    },
+    {
+      "degree": 75,
+      "derivative_frobenius_squared_exact": "8339100",
+      "two_endpoint_bound_exact": "2926"
+    },
+    {
+      "degree": 76,
+      "derivative_frobenius_squared_exact": "8786778",
+      "two_endpoint_bound_exact": "3003"
+    },
+    {
+      "degree": 77,
+      "derivative_frobenius_squared_exact": "9252243",
+      "two_endpoint_bound_exact": "3081"
+    },
+    {
+      "degree": 78,
+      "derivative_frobenius_squared_exact": "9735960",
+      "two_endpoint_bound_exact": "3160"
+    },
+    {
+      "degree": 79,
+      "derivative_frobenius_squared_exact": "10238400",
+      "two_endpoint_bound_exact": "3240"
+    },
+    {
+      "degree": 80,
+      "derivative_frobenius_squared_exact": "10760040",
+      "two_endpoint_bound_exact": "3321"
+    },
+    {
+      "degree": 81,
+      "derivative_frobenius_squared_exact": "11301363",
+      "two_endpoint_bound_exact": "3403"
+    },
+    {
+      "degree": 82,
+      "derivative_frobenius_squared_exact": "11862858",
+      "two_endpoint_bound_exact": "3486"
+    },
+    {
+      "degree": 83,
+      "derivative_frobenius_squared_exact": "12445020",
+      "two_endpoint_bound_exact": "3570"
+    },
+    {
+      "degree": 84,
+      "derivative_frobenius_squared_exact": "13048350",
+      "two_endpoint_bound_exact": "3655"
+    },
+    {
+      "degree": 85,
+      "derivative_frobenius_squared_exact": "13673355",
+      "two_endpoint_bound_exact": "3741"
+    },
+    {
+      "degree": 86,
+      "derivative_frobenius_squared_exact": "14320548",
+      "two_endpoint_bound_exact": "3828"
+    },
+    {
+      "degree": 87,
+      "derivative_frobenius_squared_exact": "14990448",
+      "two_endpoint_bound_exact": "3916"
+    },
+    {
+      "degree": 88,
+      "derivative_frobenius_squared_exact": "15683580",
+      "two_endpoint_bound_exact": "4005"
+    },
+    {
+      "degree": 89,
+      "derivative_frobenius_squared_exact": "16400475",
+      "two_endpoint_bound_exact": "4095"
+    },
+    {
+      "degree": 90,
+      "derivative_frobenius_squared_exact": "17141670",
+      "two_endpoint_bound_exact": "4186"
+    },
+    {
+      "degree": 91,
+      "derivative_frobenius_squared_exact": "17907708",
+      "two_endpoint_bound_exact": "4278"
+    },
+    {
+      "degree": 92,
+      "derivative_frobenius_squared_exact": "18699138",
+      "two_endpoint_bound_exact": "4371"
+    },
+    {
+      "degree": 93,
+      "derivative_frobenius_squared_exact": "19516515",
+      "two_endpoint_bound_exact": "4465"
+    },
+    {
+      "degree": 94,
+      "derivative_frobenius_squared_exact": "20360400",
+      "two_endpoint_bound_exact": "4560"
+    },
+    {
+      "degree": 95,
+      "derivative_frobenius_squared_exact": "21231360",
+      "two_endpoint_bound_exact": "4656"
+    },
+    {
+      "degree": 96,
+      "derivative_frobenius_squared_exact": "22129968",
+      "two_endpoint_bound_exact": "4753"
+    },
+    {
+      "degree": 97,
+      "derivative_frobenius_squared_exact": "23056803",
+      "two_endpoint_bound_exact": "4851"
+    },
+    {
+      "degree": 98,
+      "derivative_frobenius_squared_exact": "24012450",
+      "two_endpoint_bound_exact": "4950"
+    },
+    {
+      "degree": 99,
+      "derivative_frobenius_squared_exact": "24997500",
+      "two_endpoint_bound_exact": "5050"
+    },
+    {
+      "degree": 100,
+      "derivative_frobenius_squared_exact": "26012550",
+      "two_endpoint_bound_exact": "5151"
+    },
+    {
+      "degree": 101,
+      "derivative_frobenius_squared_exact": "27058203",
+      "two_endpoint_bound_exact": "5253"
+    },
+    {
+      "degree": 102,
+      "derivative_frobenius_squared_exact": "28135068",
+      "two_endpoint_bound_exact": "5356"
+    },
+    {
+      "degree": 103,
+      "derivative_frobenius_squared_exact": "29243760",
+      "two_endpoint_bound_exact": "5460"
+    },
+    {
+      "degree": 104,
+      "derivative_frobenius_squared_exact": "30384900",
+      "two_endpoint_bound_exact": "5565"
+    },
+    {
+      "degree": 105,
+      "derivative_frobenius_squared_exact": "31559115",
+      "two_endpoint_bound_exact": "5671"
+    },
+    {
+      "degree": 106,
+      "derivative_frobenius_squared_exact": "32767038",
+      "two_endpoint_bound_exact": "5778"
+    },
+    {
+      "degree": 107,
+      "derivative_frobenius_squared_exact": "34009308",
+      "two_endpoint_bound_exact": "5886"
+    },
+    {
+      "degree": 108,
+      "derivative_frobenius_squared_exact": "35286570",
+      "two_endpoint_bound_exact": "5995"
+    },
+    {
+      "degree": 109,
+      "derivative_frobenius_squared_exact": "36599475",
+      "two_endpoint_bound_exact": "6105"
+    },
+    {
+      "degree": 110,
+      "derivative_frobenius_squared_exact": "37948680",
+      "two_endpoint_bound_exact": "6216"
+    },
+    {
+      "degree": 111,
+      "derivative_frobenius_squared_exact": "39334848",
+      "two_endpoint_bound_exact": "6328"
+    },
+    {
+      "degree": 112,
+      "derivative_frobenius_squared_exact": "40758648",
+      "two_endpoint_bound_exact": "6441"
+    },
+    {
+      "degree": 113,
+      "derivative_frobenius_squared_exact": "42220755",
+      "two_endpoint_bound_exact": "6555"
+    },
+    {
+      "degree": 114,
+      "derivative_frobenius_squared_exact": "43721850",
+      "two_endpoint_bound_exact": "6670"
+    },
+    {
+      "degree": 115,
+      "derivative_frobenius_squared_exact": "45262620",
+      "two_endpoint_bound_exact": "6786"
+    },
+    {
+      "degree": 116,
+      "derivative_frobenius_squared_exact": "46843758",
+      "two_endpoint_bound_exact": "6903"
+    },
+    {
+      "degree": 117,
+      "derivative_frobenius_squared_exact": "48465963",
+      "two_endpoint_bound_exact": "7021"
+    },
+    {
+      "degree": 118,
+      "derivative_frobenius_squared_exact": "50129940",
+      "two_endpoint_bound_exact": "7140"
+    },
+    {
+      "degree": 119,
+      "derivative_frobenius_squared_exact": "51836400",
+      "two_endpoint_bound_exact": "7260"
+    },
+    {
+      "degree": 120,
+      "derivative_frobenius_squared_exact": "53586060",
+      "two_endpoint_bound_exact": "7381"
+    },
+    {
+      "degree": 121,
+      "derivative_frobenius_squared_exact": "55379643",
+      "two_endpoint_bound_exact": "7503"
+    },
+    {
+      "degree": 122,
+      "derivative_frobenius_squared_exact": "57217878",
+      "two_endpoint_bound_exact": "7626"
+    },
+    {
+      "degree": 123,
+      "derivative_frobenius_squared_exact": "59101500",
+      "two_endpoint_bound_exact": "7750"
+    },
+    {
+      "degree": 124,
+      "derivative_frobenius_squared_exact": "61031250",
+      "two_endpoint_bound_exact": "7875"
+    },
+    {
+      "degree": 125,
+      "derivative_frobenius_squared_exact": "63007875",
+      "two_endpoint_bound_exact": "8001"
+    },
+    {
+      "degree": 126,
+      "derivative_frobenius_squared_exact": "65032128",
+      "two_endpoint_bound_exact": "8128"
+    },
+    {
+      "degree": 127,
+      "derivative_frobenius_squared_exact": "67104768",
+      "two_endpoint_bound_exact": "8256"
+    },
+    {
+      "degree": 128,
+      "derivative_frobenius_squared_exact": "69226560",
+      "two_endpoint_bound_exact": "8385"
+    }
+  ],
+  "status": "PASS_EXACT_L2_FRAME_REFINEMENT_CONTROLS",
+  "sufficient_ratio_decimal": 0.7801737176513969,
+  "sufficient_ratio_exact": "31206948706055875500099/40000000000000000000000",
+  "sufficient_ratio_upper": "4/5",
+  "verified_height": 3000000000000
+}

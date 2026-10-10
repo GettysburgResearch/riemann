@@ -84,3 +84,30 @@ The reviewed runtime and analytic scopes are recorded in `SCOPED_REVIEWS.md`
 and the separate literature review files. The weighted arithmetic extension,
 full continuum residual and Gaussian slab extension continue separately and
 are excluded from this checkpoint.
+
+Publication receipt: commit `5c5613e7e3021e8a2173853a00f92b533421533b`
+pushed at approximately 13:29 UTC; remote branch verified.
+
+## Checkpoint 4: square-root height mechanism and exact source cancellation
+
+Prepared around 14:00 UTC. Included work:
+
+- Global kernel positivity through order 700000 from weighted rational
+  dilation, and complete-tail positivity through even 6n²<=T above the
+  named counting threshold. All positive node packets are allowed.
+- Earlier independently reviewed global order 6000 and cubic-root tail
+  estimates, with exact normal and optimized receipts retained for comparison.
+- All-real arithmetic positivity for m>=13/10 via weighted moments and
+  exact used-label exclusions, plus a rigorous fixed-pair method barrier.
+- Literal signed common-factor cancellation in the simplified quasi-RH
+  source; the diagonal is O(D log D), with the off-diagonal estimate still open.
+- Conditional replica tradeoff and prime-deletion bootstrap, and a positive
+  modified-source countermodel preserving the same count-error envelope.
+- Reviewed complete continuum convolution and weighted dual-residual
+  mechanisms, with source moment/provenance controls. Long directed residual
+  integrations have no accepted effective sign yet.
+
+The growing-order tail kernels change with height. The full kernel statement
+remains finite order and imports published finite-height verification. RH
+remains open. Larger arithmetic and native companion certificates continue
+in separate working files until their reviews and receipts are complete.

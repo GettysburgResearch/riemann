@@ -133,3 +133,51 @@ full tail and both companion denominators are protected. Rounded console
 minima were corrected to approximate displays; exact rational per-box
 acceptance is unchanged. The result covers only its named closed rectangle,
 order zero and lambda ten. See `literature/NATIVE_COMPLEMENT_REVIEW.md`.
+
+## Checkpoint 4 additions
+
+The weighted-moment stitch at m>=33/25 and exact used-label exclusion stitch
+at m>=13/10 passed coordinator analytic/code review and separate full
+independent normal/optimized runtime replays. The independent integer
+censuses, weighted/marked moments and Bernstein controls agreed. The first
+uses 315 bounded rectangles and 15 whole-tail certificates; the second uses
+210 rectangles and 10 tails. Their finite arithmetic checks complement the
+analytic removal identities, rather than machine-proving them. Critical
+power one remains open. The fixed-pair Bonferroni barrier was separately
+reviewed by the coordinator and replayed in both modes; its negative ideal
+margin is a method limitation, not native negative-source evidence.
+
+The sharper L2 annular theorem through order 6000 and cubic-root growing
+tail theorem passed coordinator and independent analytic/code review and
+normal/optimized exact replay. The subsequent weighted rational W1--W19
+theorem passed a full coordinator audit and independent operator audit,
+including endpoint trace, triangular Frobenius identity, variable complex
+displacements, complete source weights and conjugate Taylor cancellation.
+Its exact guards passed in both modes. It proves global positivity through
+700000 points with the named published verification, and tail positivity
+through even n>=256 with 6n²<=T, T>=3*10^12 using only the classical strip
+and complete count inputs. The published count and verified zero census
+were not independently rebuilt. The growing tails are different kernels,
+so this does not establish unrestricted order for one full kernel.
+
+The coordinator and literature reviewer independently reconstructed the
+literal signed source regrouping D1--D5 in the frozen October 5 manuscript.
+It gives an O(D log D) diagonal in the unnormalized row moment; the source-
+qualified off-diagonal bound OPEN-D6 remains unproved. Exact finite ideal
+models check the divisor cancellation and normalization only. The replica
+tradeoff and prime-deletion bootstrap passed separate analytic/code review
+and exact normal/optimized checks; every new half-plane they price assumes
+an explicitly open below-diagonal moment contract at its fixed scales.
+
+The finite-order firewall passed coordinator and independent review and
+exact replay. Its modified positive-theta source preserves the exact
+quarter-log count envelope and finite verified census while adding a
+remote off-axis quartet. It shows why these particular count/census inputs
+and finite-order conclusions cannot by themselves establish RH; the
+modified source does not retain the actual xi Euler identity.
+
+The complete continuum convolution and weighted primitive residual
+derivations passed coordinator and independent review. Outward source
+moment controls and stale-producer rejection were replayed. The expensive
+full residual integrations remain pending at this checkpoint, and no
+effective lower-matrix sign is asserted.

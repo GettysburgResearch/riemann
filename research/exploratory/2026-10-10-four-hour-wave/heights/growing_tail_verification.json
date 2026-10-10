@@ -1,0 +1,62 @@
+{
+  "condition": "14*n^3 <= T",
+  "critical_line_census_used": false,
+  "examples": [
+    {
+      "14_n_cubed": 2999872454656,
+      "height": 3000000000000,
+      "tail_order": 5984
+    },
+    {
+      "14_n_cubed": 99991154501168,
+      "height": 100000000000000,
+      "tail_order": 19258
+    },
+    {
+      "14_n_cubed": 999990841368379392,
+      "height": 1000000000000000000,
+      "tail_order": 414912
+    },
+    {
+      "14_n_cubed": 999999951678178432715664,
+      "height": 1000000000000000000000000,
+      "tail_order": 41491326
+    },
+    {
+      "14_n_cubed": 999999999991889482039512140574331952,
+      "height": 1000000000000000000000000000000000000,
+      "tail_order": 414913266682
+    }
+  ],
+  "input_sha256": {
+    "ANNULAR_GLOBAL_PICK.md": "c04cdf51ad64972137ecd3f4aa2c835e82481d4984115bd7fadf9b8621311724",
+    "GROWING_TAIL_ORDER.md": "51df9085d30cfc1841f541d4cce82bcbbe2fe098bb3b9c9dca4f0a2419ff4e03",
+    "L2_ANNULAR_PICK.md": "6f44295912442e75913f8d979369049d72f04cca226ceb782069b5479680913c",
+    "L2_FRAME_REFINEMENT.md": "a014e267f479b731503b0db5b5f1049b63a1ec6e001e58836c1ee7d7ed104ecf",
+    "verify_growing_tail.py": "63f71d081c24afd4222f2d7e7906be49d556a108b48ba5a16158b6e806af510d"
+  },
+  "limitations": [
+    "tail kernels change as T increases",
+    "the complete kernel below T is not certified by this theorem",
+    "analytic source/count/frame inputs are not replaced by arithmetic",
+    "RH remains unproved"
+  ],
+  "minimum_even_order": 256,
+  "monotone_variation_coefficients": [
+    "3/8",
+    "5/8",
+    "27/32",
+    "19/16",
+    "7/8",
+    "9/32",
+    "1/32"
+  ],
+  "published_inputs_replayed": false,
+  "relative_loss_strict_upper": "4/5",
+  "relative_loss_uniform_upper_decimal": 0.773881630021728,
+  "relative_loss_uniform_upper_exact": "397622115000015139509/513802240000000000000",
+  "sampling_worst_exact": "1213/6144",
+  "status": "PASS_EXACT_UNIFORM_GROWING_TAIL_GUARDS",
+  "threshold": 3000000000000,
+  "variation_worst_exact": "3399806556571905/9007199254740992"
+}

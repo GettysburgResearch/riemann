@@ -1,0 +1,36 @@
+{
+  "status": "PASS_EXACT_CONDITIONAL_PRIME_DELETION_BOOTSTRAP",
+  "open_source_moment_proved": false,
+  "rh_proved": false,
+  "checker_sha256": "f555725322faeb35e1fc7fd950937db43355abb27b23e4d12ac654bd96a5fa3c",
+  "pricing_controls": [
+    {
+      "kappa": "2/5",
+      "h": "1/2",
+      "conditional_bound": "97/120",
+      "contraction": "11/12",
+      "sufficient_steps": 3
+    },
+    {
+      "kappa": "2/5",
+      "h": "18/23",
+      "conditional_bound": "20/23",
+      "contraction": "20/23",
+      "sufficient_steps": 1
+    },
+    {
+      "kappa": "0",
+      "h": "1/10",
+      "conditional_bound": "13/24",
+      "contraction": "59/60",
+      "sufficient_steps": 37
+    },
+    {
+      "kappa": "1/2",
+      "h": "3/4",
+      "conditional_bound": "7/8",
+      "contraction": "7/8",
+      "sufficient_steps": 1
+    }
+  ]
+}

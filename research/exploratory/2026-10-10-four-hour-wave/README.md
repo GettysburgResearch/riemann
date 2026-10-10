@@ -40,7 +40,7 @@ estimates do not discharge it.
 |---|---|
 | `arithmetic/` | Critical negative-mass rates and a lower SHARP positivity threshold |
 | `xi/` | Quantitative derivative transport and exact obstruction models |
-| `heights/` | Height-versus-order mechanisms and global positivity through 3500 points |
+| `heights/` | Height-versus-order mechanisms and global positivity through 700000 points |
 | `operators/` | Source-specific continuum coercivity and effective-matrix bounds |
 | `literature/` | Exact new-paper sources, admissibility audit, and exponent optimization |
 | `correlations/` | Quantitative correlation-to-arithmetic adapters with explicit uniformity |
@@ -75,3 +75,20 @@ B=0.87495703 assumes
 the imported analytic inputs. A further B=0.874956 implication prices a
 new, explicitly open joint-witness estimate and does not establish it.
 See `SCOPED_REVIEWS.md` for the exact review boundary.
+
+The fourth checkpoint raises the global kernel order to **700000** at every
+packet of positive nodes, using the same published count and finite verified
+height inputs. A new weighted rational dilation argument proves positive
+definiteness of the complete tail above T through even orders satisfying
+6n²<=T, T>=3*10^12; its order grows like sqrt(T/6). The tail theorem does
+not assume those tail zeros lie on the critical line. The corresponding
+full-kernel theorem has a finite verified-height input and remains finite
+order. Neither is an RH proof.
+
+The arithmetic range is now **m>=13/10** for all real x>=1, with separate
+normal and optimized directed replays. The signed quasi-RH source adapter
+removes an artificial diagonal cost exactly, while leaving its off-diagonal
+estimate open. Conditional prime-deletion bootstraps and an exact
+same-count-envelope countermodel record both opportunities and barriers.
+Full continuum residual integrations and larger native companion-domain
+certificates continue separately.

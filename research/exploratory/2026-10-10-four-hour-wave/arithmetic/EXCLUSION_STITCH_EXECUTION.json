@@ -1,0 +1,56 @@
+{
+  "analytic_infinite_statements_machine_proved": false,
+  "analytic_review_status": "Root independently accepted analytic E1-E10/S-E1-S-E2, source and normal/optimized runtime on 2026-10-10",
+  "bernstein_tail_leaf_counts": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "bounded_rectangle_certificates": 210,
+  "critical_power_one_proved": false,
+  "execution_time_utc": "2026-10-10T13:45:46.787855+00:00",
+  "global_sufficient_power": "13/10",
+  "independent_controls": {
+    "errors": 0,
+    "failures": 0,
+    "normal_command": "python3 -B test_exclusion_moments.py",
+    "optimized_command": "python3 -B -O test_exclusion_moments.py",
+    "skips": 0,
+    "tests_per_mode": 4
+  },
+  "normal_command": "python3 -B verify_exclusion_stitch.py --progress --output results/exclusion-stitch.normal.json",
+  "normal_optimized_json_byte_identical": true,
+  "optimized_command": "python3 -B -O verify_exclusion_stitch.py --progress --output results/exclusion-stitch.optimized.json",
+  "power_slabs": 10,
+  "result": "PASS_GLOBAL_SHARP_EXCLUSION_STITCH",
+  "result_hashes": {
+    "results/exclusion-stitch.normal.json": "fbe84f776aef421655f2b4575391357ab89fbe107b4d3aa6b2705df6386a90b1",
+    "results/exclusion-stitch.optimized.json": "fbe84f776aef421655f2b4575391357ab89fbe107b4d3aa6b2705df6386a90b1"
+  },
+  "review_status_updated_utc": "2026-10-10T13:58:37.140549+00:00",
+  "rh_proved": false,
+  "source_hashes": {
+    "EXCLUSION_PAIRS.md": "7a152be729d8bf58a125f31ccac953bd19f8c1d7fd4db9e934781c875c188d3f",
+    "EXCLUSION_STITCH.md": "a7fcfda562d0063b698b4703839a7ee3178f606cd0f74086b9c35b4a2121d635",
+    "check_threshold_arb.py": "82013dad13521fd9b619e18b6e4efe23ea4a8f7f1d5632e930964f2f512c7615",
+    "exclusion_moments.py": "8ac22c96b7ac1edf03defc9e099fdefe2c17907f21f3c24f3fbd180a2824dc1c",
+    "exclusion_tail.py": "79c8a5667fe2156fa593725ba012eda3e6635ec49898e80b82d8d7732442635c",
+    "polynomial_tail.py": "ae8ec2f91e8f00d286a7e8176d1f47bbe56a5013f22357d6dab52fa8ffb5e295",
+    "test_exclusion_moments.py": "735784552db0fe56e9fbfcbf3e7abb708ce72403b9c15aed34ead104358156d0",
+    "verify_exclusion_stitch.py": "393adee89aa073024f7093b4f0dc415abdd8c4cdb5e7e7d761a9e3646ac04b79",
+    "verify_four_label.py": "e07cd340f82fe61e39c864d2a91a944beb5211cd884a464e20baf2289ff707b6",
+    "verify_horizon_stitch.py": "8486059b8468ceb6cb59d34c4c16c61eeb72a8097583596e5253b934571e5104",
+    "verify_two_label.py": "9d58b1b9b2ef69e335ef64ff08a976a2a30051cc5e5cf23812369adf8aaf1212",
+    "verify_weighted_stitch.py": "14355093aed45e9a4378dc6a405ec251ea9c699c808cca4473983563776c85ab",
+    "weighted_moments.py": "715dae97b834735064aae0a9951c505750697ec003aacaafffa17c5975621677"
+  },
+  "status": "ROOT_REVIEWED_COMPONENT_DEDUCTION_WITH_EXECUTED_CERTIFICATES",
+  "whole_unbounded_tail_certificates": 10
+}
