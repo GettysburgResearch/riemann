@@ -27,73 +27,91 @@ methods *can* and *cannot* do, and where a push could move the constant.
 ## 0. Executive summary (end of the 10-hour wave, 10 Oct 2026)
 
 Every statement below is labelled in its source file. None is an RH claim, and none is a human or
-integration verdict.
+integration verdict. RH remains unsolved: a zero-free half-plane `Re s > 7/8` says nothing about
+the critical line.
 
-1. **Verification of the external claims** (bounded agent reviews at exact SHAs, with exact or
-   numerical checks and failing controls).
+**Headline.**
+* **The 7/8 half-plane is machine-checked.**
+  * The import's Lean proof that `ζ(s) ≠ 0` for `Re s > 7/8` (Mathlib's `riemannZeta`), and its
+    Dirichlet and Hecke-family versions, were built here and accepted by comparator with
+    Lean's kernel.
+  * Only the three standard axioms are used.
+  * The trust assumptions are listed in [reviews/LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md).
+* **Neither the formal proof nor, on paper, the 7/8 argument needs Part I or the 11/12 theorem**
+  (the paper-level route is PROPOSED, with two same-family reviews).
+* **Both architectures have ceilings** (13/15 and 11/12 for the known inputs). What is missing
+  below them is a mechanism, not evidence.
+
+1. **Formal verification (Lean).**
+   * **The 7/8 closure builds completely** (7061 jobs, 0 errors, 0 `sorry`).
+     * `#print axioms` on the zeta, Dirichlet and Hecke-family theorems gives only
+       `[propext, Classical.choice, Quot.sound]`.
+     * The zeta and Dirichlet statements are about Mathlib's own `riemannZeta` and
+       `DirichletCharacter.LFunction`.
+     * The Hecke statement uses project-defined characters and `L`-functions. A reading-level
+       check finds that they are exactly the finite-order Hecke `L`-functions of `Q(√−3)` (ray
+       class characters, trivial on units), with the same pole exception as the paper's Thm 1.1
+       ([reviews/HECKE_LEAN_FIDELITY.md](reviews/HECKE_LEAN_FIDELITY.md); no Lean run, float
+       cross-checks to about 1e-11).
+   * **Comparator accepts all three upstream 7/8 challenges (zeta, Dirichlet, Hecke family):
+     "Lean default kernel accepts the solution"**
+     ([reviews/LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md), Addendum B for zeta,
+     Addendum C for Dirichlet and Hecke).
+     * The solution was precompiled (a non-adversarial reproduction).
+     * Mathlib came from its binary cache.
+     * Some builds overlapped the runs; this is disclosed, and the 7/8 closure's oleans predate
+       every run.
+     * This is a machine check of the Lean statement, not a review of the manuscript.
+   * **The Lean route needs no Part I** ([reviews/SEP30_LEAN_CORRESPONDENCE.md](reviews/SEP30_LEAN_CORRESPONDENCE.md)).
+     * It replaces the 11/12 bootstrap by the trivial `β ≤ 1`, and extends the paper's own endpoint
+       row count from `δ = 5/6` to all `δ ∈ [5/6, 1]`, with margin `−1/48 − δ/16`.
+     * It proves its own instances of the cited theorems (cubic theta, cubic and quadratic sieves,
+       Chebotarev via Wiener–Ikehara).
+     * Otherwise it uses the paper's 7/8 exponent bookkeeping constant for constant.
+     * Of the 65 paper nodes: 14 have a spot-checked Lean counterpart, 8 are bypassed, and 43 are
+       matched by name only or not found.
+   * **Formal corollaries written in this wave** ([lean/](lean/README.md)). Both comparator
+     acceptances below are for the wave's challenges or solutions; see Addendum C.
+     * Every nontrivial zero of `ζ` lies in `1/8 ≤ Re s ≤ 7/8`. This is stated in the shape of
+       Mathlib's `RiemannHypothesis`, and comparator accepts it against a Mathlib-only challenge
+       written in this wave.
+     * The same strip holds for primitive Dirichlet `L(s, χ)`, `χ ≠ 1` (axioms standard).
+     * The Oct 1 Siegel-zero challenge statement follows from the 7/8 Dirichlet theorem, and
+       comparator accepts it against the upstream challenge. The helper `gap_of_real_zero` gives
+       `c = (log 3)/8` explicitly.
+   * **The Oct 1 Siegel development** builds (9242 jobs, 0 errors, 0 `sorry`). Its axioms are
+     standard, and it uses no 7/8 module. Its comparator run is recorded in Addendum C.
+   * A proposed integration packet is drafted:
+     [proposed/SEP30_7_8_FORMAL_PACKET/](proposed/SEP30_7_8_FORMAL_PACKET/README.md).
+1′. **Paper-level verification** (bounded agent reviews at exact SHAs, with exact or numerical
+   checks and failing controls).
    * **Oct 5, 11/12: every proof line read, no wrong step found**
-     ([reviews/OCT5_REVIEW_SUMMARY.md](reviews/OCT5_REVIEW_SUMMARY.md)). The key theta
-     reflection was confirmed end to end numerically
-     ([reviews/OCT5_REFLECTION_E2E.md](reviews/OCT5_REFLECTION_E2E.md)). A PROPOSED integration
-     packet is drafted for human integrators: [proposed/OCT5_11_12_PACKET/](proposed/OCT5_11_12_PACKET/README.md).
+     ([reviews/OCT5_REVIEW_SUMMARY.md](reviews/OCT5_REVIEW_SUMMARY.md)).
+     * The key theta reflection was confirmed end to end numerically
+       ([reviews/OCT5_REFLECTION_E2E.md](reviews/OCT5_REFLECTION_E2E.md)).
+     * A PROPOSED packet is drafted: [proposed/OCT5_11_12_PACKET/](proposed/OCT5_11_12_PACKET/README.md).
    * **Sep 30, 7/8: 49 of 65 load-bearing results reviewed, 6 more partially, 2 inspected**
      ([reviews/SEP30_VERIFICATION_MAP_V2.md](reviews/SEP30_VERIFICATION_MAP_V2.md), Addendum
-     v2.1; this adds the Lemma 4.2–4.4 review [reviews/SEP30_L42_44_REVIEW.md](reviews/SEP30_L42_44_REVIEW.md)).
+     v2.1, including the Lemma 4.2–4.4 review [reviews/SEP30_L42_44_REVIEW.md](reviews/SEP30_L42_44_REVIEW.md)).
      * No wrong step was found in any of them, including the low-side chain that sets 7/8, the
        reflection engine, the inverse-moment engine and the zero detector.
-     * Lemma 18.1 has been read in full; the row-count junction is certified in exact rationals.
+     * Lemma 18.1 has been read in full. The row-count junction is checked in exact rationals.
      * Part I can be replaced by the Oct 5 theorem ([reviews/PART1_SUBSTITUTION.md](reviews/PART1_SUBSTITUTION.md)).
-       Then every load-bearing node has at least a bounded review or inspection
-       (of the 57 remaining nodes: 49 R, 6 partial, 2 inspected, 0 A/U).
-     * **Lean: the import's 7/8 closure now builds completely** (7061 jobs, 0 errors, 0 `sorry`).
-       `#print axioms` on `riemannZeta s ≠ 0 for Re s > 7/8`, on the Dirichlet version and on
-       the Hecke-family version gives only `[propext, Classical.choice, Quot.sound]`. The
-       zeta and Dirichlet statements are about Mathlib's own `riemannZeta` and
-       `DirichletCharacter.LFunction`. The Hecke statement uses project-defined characters and
-       `L`-functions. A reading-level check finds that they are exactly the finite-order Hecke
-       `L`-functions of `Q(√−3)` (ray class characters, trivial on units), with the same pole
-       exception as the paper's Thm 1.1 ([reviews/HECKE_LEAN_FIDELITY.md](reviews/HECKE_LEAN_FIDELITY.md);
-       no Lean run, float cross-checks to about 1e-11).
-       **Comparator accepts all three upstream 7/8 challenges (zeta, Dirichlet, Hecke family):
-       "Lean default kernel accepts the solution"** ([reviews/LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md), Addendum B for zeta, Addendum C for Dirichlet and Hecke).
-       Its trust assumptions are listed there; in particular the solution was precompiled
-       (a non-adversarial reproduction).
-       This is a machine check of the Lean statement, not a review of the manuscript.
-     * **The Lean route needs no Part I** ([reviews/SEP30_LEAN_CORRESPONDENCE.md](reviews/SEP30_LEAN_CORRESPONDENCE.md)).
-       * It replaces the 11/12 bootstrap by the trivial `β ≤ 1`. The paper's own endpoint row count
-         is extended from `δ = 5/6` to all `δ ∈ [5/6, 1]`, with margin `−1/48 − δ/16`.
-       * It proves its own instances of the cited theorems (cubic theta, cubic and quadratic
-         sieves, Chebotarev via Wiener–Ikehara).
-       * Otherwise it uses the paper's 7/8 exponent bookkeeping constant for constant.
-       * So the formal 7/8 depends neither on the paper's Part I nor on the Oct 5 paper.
-       * **The same works on paper** ([reviews/PART1_FREE_ROUTE.md](reviews/PART1_FREE_ROUTE.md);
-         PROPOSED, bounded review). Part II as written, plus the endpoint count extended to all
-         bins `δ ∈ [5/6, 1]`, would prove 7/8 from `β* ≤ 1` alone (PROPOSED; bounded same-family
-         review only).
-         * The extension rests on the exact identity `(1+5r)/6 − δr − (1−δ) = (5/6−δ)(r−1) ≤ 0`,
-           with margin `≤ −7/96 − Δ`, up to the `O(ε)` losses `(13/16)λ + 2ζ`.
-         * Remark 19.3 becomes load-bearing.
-         * 32/32 exact gates pass, and 10/10 controls fail as designed.
-         * Thm 3.1 and its 7 Part-I-only nodes drop out, and no imported 11/12 theorem is needed.
-         * A second, adversarial agent review gives "(A) with corrections"
-           ([reviews/PART1_FREE_ROUTE_REVIEW2.md](reviews/PART1_FREE_ROUTE_REVIEW2.md)). It finds
-           no obstruction and makes four corrections: `λ ≤ 527/300` in P1F.2; gate T2 checks line
-           ranges only; Lemma 17.6 stays; Remark 19.3 at most Rp.
-         * Remark 19.3 is now written out as a labelled lemma with a full proof
-           ([proposed/PART1_FREE_7_8/](proposed/PART1_FREE_7_8/README.md); 43/43 exact gates,
-           14 controls). Its Lean counterpart is `no_slot_inverse_count`. The paper-level status
-           stays Rp, because it inherits Lemmas 17.1-17.2.
-         * This is a new composition; it needs a review independent of this model family.
-       * Of the 65 paper nodes: 14 have a spot-checked Lean counterpart, 8 are bypassed, and 43 are
-         matched by name only or not found.
-     * Two short formal corollaries ([lean/](lean/README.md)):
-       * every nontrivial zero of `ζ` lies in `1/8 ≤ Re s ≤ 7/8`, stated in the shape of
-         Mathlib's `RiemannHypothesis` (comparator accepts it against a Mathlib-only challenge
-         written in this wave);
-       * the Oct 1 Siegel-zero challenge statement is derived in Lean, with `c = (log 3)/8`, from
-         the imported 7/8 Dirichlet theorem. Comparator accepts the `∃ c` statement against the
-         upstream Oct 1 challenge. The helper `gap_of_real_zero` gives `c = (log 3)/8`
-         explicitly (lean/README).
+       Of the 57 remaining nodes: 49 R, 6 partial, 2 inspected, 0 A/U.
+   * **A Part-I-free paper route** ([reviews/PART1_FREE_ROUTE.md](reviews/PART1_FREE_ROUTE.md),
+     [proposed/PART1_FREE_7_8/](proposed/PART1_FREE_7_8/README.md); PROPOSED).
+     * Part II as written, plus the endpoint count extended to all bins `δ ∈ [5/6, 1]`, would
+       prove 7/8 from `β* ≤ 1` alone.
+     * The extension rests on the exact identity `(1+5r)/6 − δr − (1−δ) = (5/6−δ)(r−1) ≤ 0`, with
+       margin `≤ −7/96 − Δ` up to the `O(ε)` losses `(13/16)λ + 2ζ`. 32/32 exact gates pass, and
+       10/10 controls fail as designed.
+     * Thm 3.1 and its 7 Part-I-only nodes drop out. No imported 11/12 theorem is needed.
+     * A second, adversarial agent review gives "(A) with corrections"
+       ([reviews/PART1_FREE_ROUTE_REVIEW2.md](reviews/PART1_FREE_ROUTE_REVIEW2.md)): `λ ≤ 527/300`
+       in P1F.2; gate T2 checks line ranges only; Lemma 17.6 stays; Remark 19.3 at most Rp.
+     * Remark 19.3 is written out as Lemma P1F.0 with a full proof (43/43 exact gates, 14
+       controls). Its Lean counterpart is `no_slot_inverse_count`.
+     * This is a new composition. It needs a review independent of this model family.
    * **Kintali 47/48:** Lemma 3 shows no error. The best citable density input gives 29/30.
    * **Oct 1, Landau–Siegel:** intrinsically logarithmic-scale, effective in principle, and a weak
      corollary of either quasi-RH claim ([SIEGEL_DETERMINANT.md](SIEGEL_DETERMINANT.md)).
