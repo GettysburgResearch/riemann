@@ -57,6 +57,11 @@
    "detail": ""
   },
   {
+   "check": "Z4 saving th*(L-v)_+ suffices iff th >= 2/3 (Lemma 18.3 gives th = 1: multiplicative slack 1/3)",
+   "pass": true,
+   "detail": ""
+  },
+  {
    "check": "Z2 witness (2,1)-prime + nonunit mult-1 primes, v = L, sigma=0: excess = A - M + 5 sigma/6",
    "pass": true,
    "detail": "excess=0"
@@ -92,6 +97,6 @@
    "detail": "F1=5/2 2c/3=10/3"
   }
  ],
- "npass": 18,
- "n": 18
+ "npass": 19,
+ "n": 19
 }

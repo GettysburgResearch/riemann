@@ -20,7 +20,8 @@ conditional routes needing a sub-diagonal mean square of the Oct 5 family
 
 **RH remains unproved. Nothing here proves or disproves it.** The October 2026 manuscripts claim
 zero-free half-planes (`Re s > 7/8` Sep 30; `Re s > 11/12` Oct 5; Kintali `47/48`) and, separately,
-a Landau–Siegel exclusion (Oct 1). All are unreviewed. This wave asked what those
+a Landau–Siegel exclusion (Oct 1). None has had a human review. The Lean statement of the Sep 30
+zeta claim is machine-checked (§0, item 1). This wave asked what those
 methods *can* and *cannot* do, and where a push could move the constant.
 
 ## 0. Executive summary (end of the 10-hour wave, 10 Oct 2026)
@@ -43,11 +44,13 @@ integration verdict.
      * Lemma 18.1 has been read in full; the row-count junction is certified in exact rationals.
      * Part I can be replaced by the Oct 5 theorem ([reviews/PART1_SUBSTITUTION.md](reviews/PART1_SUBSTITUTION.md)).
        Then every load-bearing node has at least a bounded review or inspection
-       (49 R, 6 partial, 2 inspected, 0 unreviewed).
+       (of the 57 remaining nodes: 49 R, 6 partial, 2 inspected, 0 A/U).
      * **Lean: the import's 7/8 closure now builds completely** (7061 jobs, 0 errors, 0 `sorry`).
        `#print axioms` on `riemannZeta s ≠ 0 for Re s > 7/8`, on the Dirichlet version and on
        the Hecke-family version gives only `[propext, Classical.choice, Quot.sound]`. The
-       statements are about Mathlib's own `riemannZeta` and `DirichletCharacter.LFunction`.
+       zeta and Dirichlet statements are about Mathlib's own `riemannZeta` and
+       `DirichletCharacter.LFunction`. The Hecke statement uses project-defined characters and
+       `L`-functions, whose fidelity to the paper is unchecked.
        **Comparator accepts the upstream 7/8 zeta challenge: "Lean default kernel accepts the
        solution"** ([reviews/LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md), Addenda A–B).
        Its trust assumptions are listed there; in particular the solution was precompiled
@@ -65,8 +68,9 @@ integration verdict.
      * Two short formal corollaries ([lean/](lean/README.md)):
        * every nontrivial zero of `ζ` lies in `1/8 ≤ Re s ≤ 7/8`, stated in the shape of
          Mathlib's `RiemannHypothesis`;
-       * the Oct 1 Siegel-zero challenge statement holds with `c = (log 3)/8`, as a
-         corollary of 7/8.
+       * the Oct 1 Siegel-zero challenge statement is derived in Lean, with `c = (log 3)/8`, from
+         the imported 7/8 Dirichlet theorem (axioms standard; comparator status in
+         LEAN_BUILD_ATTEMPT Addendum C).
    * **Kintali 47/48:** Lemma 3 shows no error. The best citable density input gives 29/30.
    * **Oct 1, Landau–Siegel:** intrinsically logarithmic-scale, effective in principle, and a weak
      corollary of either quasi-RH claim ([SIEGEL_DETERMINANT.md](SIEGEL_DETERMINANT.md)).

@@ -8,7 +8,8 @@ Status: VERIFICATION (formal build COMPLETED, Addendum A; comparator ACCEPTS the
 Scope: Kernel build of the import closure of OAI.NumberTheory.DirichletL.Nonvanishing, the solution
   module named in ComparatorChallenges/QuasiRiemannHypothesis.json and DirichletSevenEighths.json.
   The theorem in question is the quasi-RH zero-free half-plane Re s > 7/8. It is NOT RH.
-  Hecke and SiegelZeros challenges were not attempted.
+  Hecke: module built and `#print axioms` standard (Addendum C). The upstream SiegelZeros
+  solution: see Addendum C. The wave's own Siegel corollary is in ../lean/.
 Exact sources or dependencies: repo ref pr908 = 31c706bbb3dce49a7ebabbe71cd7cbacdaa6cbb6
   (draft PR 908); tree standalone/2026-10-07-openai-quasi-riemann-import/upstream/lean =
   git tree ef5d0c6c35578aacaa83cca392c6752fcc8b1784; this is a byte-exact import of
@@ -20,9 +21,10 @@ What was actually run: the original attempt (below), then three bounded resumpti
   .olean, one completing): "Build completed successfully (7061 jobs)", 0 errors, 0 `sorry`
   warnings in the final log. Then `#print axioms` and a statement-pinning check (Addendum A),
   and comparator (Addendum B).
-Smallest remaining gap: the kernel check certifies the Lean statement against Lean + Mathlib +
-  the 23 patched third-party packages, under comparator's trust assumptions (Addendum B). It does
-  not certify the manuscript's text, and no human has reviewed the Lean development.
+Smallest remaining gap: the kernel check checks the Lean statement against Lean + Mathlib (from
+  its binary cache) + the 23 patched third-party packages, under comparator's trust assumptions
+  (Addendum B). It does not check the manuscript's text, and no human has reviewed the Lean
+  development.
 ```
 
 ## Addendum A (10 Oct 2026, later the same day): build completed; axioms are standard
@@ -31,11 +33,13 @@ The incremental build was resumed three times from the scratch state of Section 
 * The first resumption hit the 2-hour background limit.
 * The second failed only because the disk filled while writing an `.olean` ("failed to write");
   that is an environment error, not a Lean error. About 1.2 GB of caches were freed.
-* The third finished: `✔ [7061/7061] Built OAI.NumberTheory.DirichletL.Nonvanishing`,
+* The third finished (scratch log `step3_build_resume4.log`, because the first resumption was
+  numbered 2; its tail is `results/lean_build_resume4_tail.log`): `✔ [7061/7061] Built OAI.NumberTheory.DirichletL.Nonvanishing`,
   "Build completed successfully (7061 jobs)". Its log has 0 errors and 0
   `declaration uses 'sorry'` warnings.
 
-`lake env lean scripts/Axioms.lean` then printed:
+`lake env lean scripts/Axioms.lean` (committed as `../lean/checks/Axioms.lean`; output in
+`results/lean_axioms.log`) then printed:
 
 ```text
 @OAI.riemannZeta_ne_zero_of_seven_eighths_lt_re : ∀ {s : ℂ}, 7 / 8 < s.re → riemannZeta s ≠ 0
@@ -49,7 +53,8 @@ The incremental build was resumed three times from the scratch state of Section 
 So there is no `sorryAx`, no `Lean.ofReduceBool` (`native_decide`), no `Lean.trustCompiler` and no
 project-declared axiom behind either theorem.
 
-A second check file (`scripts/Statement.lean`) pins the statements:
+A second check file (`scripts/Statement.lean`, committed as `../lean/checks/Statement.lean`;
+output in `results/lean_statement.log`) pins the statements:
 * it elaborates both theorems against the explicit types written with `_root_.riemannZeta` and
   `_root_.DirichletCharacter.LFunction`;
 * it reports the defining modules: `riemannZeta` from `Mathlib.NumberTheory.LSeries.RiemannZeta`,
@@ -63,7 +68,8 @@ Section 3. They are part of the trusted input, and they were not reviewed beyond
 
 What this does and does not establish:
 * It establishes that Lean's kernel accepted a proof of `∀ s, 7/8 < Re s → ζ(s) ≠ 0` (and the
-  Dirichlet analogue), built on this machine from the pinned sources, using only the three
+  Dirichlet analogue), built on this machine from the pinned sources (Mathlib from its binary
+  cache, not rebuilt), using only the three
   standard axioms.
 * It is not a review of the 30 Sep manuscript, and it is not RH. The half-plane `Re s > 7/8` says
   nothing about the critical line.
@@ -98,9 +104,11 @@ What comparator adds over `#print axioms`:
 * It re-checks the exported proof with a fresh Lean kernel (`Environment.replay`), outside the
   elaborator, and checks that only the permitted axioms occur.
 
-The patched third-party packages cannot change the meaning of the statement, because the
-statement mentions only Mathlib constants and Mathlib is unpatched. Their proofs are among the
-replayed constants.
+For the zeta theorem, the patched third-party packages cannot change the meaning of the
+statement: comparator compared it against an export from a module that imports only Mathlib,
+and Mathlib is unpatched. The patched packages' proofs are among the replayed constants. This
+argument applies to the comparator-checked zeta theorem only. For the Dirichlet theorem,
+`Statement.lean` elaborated the type in an environment that also loads the patched packages.
 
 Trust assumptions, stated as comparator's README asks:
 * **Assumption 2 is not met.** The solution was compiled outside the sandbox before the check,
@@ -108,7 +116,13 @@ Trust assumptions, stated as comparator's README asks:
   non-adversarial reproduction.
   * As a partial guard, none of the 8,548 Mathlib `.olean` files has a modification time later
     than the cache unpack (12:48–12:51 UTC); `find -newermt "2026-10-10 13:00"` finds 0.
-  * Mathlib's git tree is clean at d13f23b7.
+  * Mathlib's git tree is clean at d13f23b7. That checks the sources, not the `.olean` files:
+    **Mathlib was not rebuilt from source.** Its oleans came from Mathlib's binary cache
+    (`lake exe cache get`), and the exported definition of `riemannZeta` is whatever the cached
+    olean contains.
+  * The mtime window (12:48–12:51) overlaps the unsandboxed lakefile `run_cmd` clone-and-patch
+    step of `lake exe cache get` (12:43–12:51). So the guard does not cover code run at
+    configuration time.
 * The landrun sandbox ran in `--best-effort` mode on Landlock ABI v7, and the systemd
   `AF_UNIX` wrapper was not used (Section 5).
 * Only the Lean kernel was used. No second kernel, such as nanoda, was run.
@@ -126,8 +140,39 @@ for Mathlib's `riemannZeta`.
 * It is not RH. The half-plane `Re s > 7/8` says nothing about the critical line.
 
 Corollaries proved in this wave on top of this theorem (strip, Dirichlet strip, Siegel challenge)
-are in [../lean/](../lean/README.md). Comparator runs on the Dirichlet, Hecke and corollary
-challenges are recorded below as they complete.
+are in [../lean/](../lean/README.md). The Hecke build and the comparator runs on the Dirichlet,
+Hecke and corollary challenges are recorded in Addendum C.
+
+## Addendum C (10 Oct 2026): Hecke build, corollaries, and further comparator runs
+
+**Hecke 7/8.** `lake build OAI.NumberTheory.DirichletL.Hecke.Nonvanishing` added the 2 missing
+modules (68 lines) to the completed closure: "Build completed successfully (7062 jobs)", in 21 s.
+`../lean/checks/HeckeAxioms.lean` then printed (`results/lean_hecke_axioms.log`):
+
+```text
+OAI.SevenEighths.HeckeFamily.LFunction_ne_zero_of_seven_eighths_lt_re : ∀ (χ : OAI.SevenEighths.HeckeFamily.Character)
+  {s : ℂ}, 7 / 8 < s.re → ¬(χ.residue = 1 ∧ s = 1) → OAI.SevenEighths.HeckeFamily.LFunction χ s ≠ 0
+'…LFunction_ne_zero_of_seven_eighths_lt_re' depends on axioms: [propext, Classical.choice, Quot.sound]
+```
+
+The Hecke statement uses project-defined objects (`HeckeFamily.Character` and an `LFunction`
+built from a lattice theta construction), written into the challenge file itself. They are not
+Mathlib objects. Nobody has checked that they match the manuscript's finite-order Hecke
+`L`-functions of `Q(√−3)`.
+
+**Corollaries of this wave** ([../lean/](../lean/README.md)):
+* clean build log: `results/lean_corollary_build.log`;
+* axioms: `results/lean_corollary_axioms.log`, all `[propext, Classical.choice, Quot.sound]`.
+
+**Comparator runs after Addendum B.** These are run sequentially with the same tools and settings
+as in Addendum B, and their outcomes are recorded here as they complete:
+
+| challenge JSON | solution module | outcome |
+|---|---|---|
+| upstream `DirichletSevenEighths.json` | `OAI.NumberTheory.DirichletL.Nonvanishing` | pending |
+| upstream `HeckeSevenEighths.json` | `OAI.NumberTheory.DirichletL.Hecke.Nonvanishing` | pending |
+| wave `SiegelFromSevenEighths.json` (upstream `SiegelZeros` challenge module) | `OAI.QRHWave.SiegelFromSevenEighths` | pending |
+| wave `QRHWaveStrip.json` (challenge written in this wave) | `OAI.QRHWave.ZetaZeroStrip` | pending |
 
 ## 1. Verdict of the original attempt (superseded by Addendum A): PARTIAL
 

@@ -280,7 +280,7 @@ The table lists every lemma of the manuscript that Section 18 cites by label or 
 | 13.4 `complete-support-correlation` | 7196-7247 | second-transform extraction (13686-13697) | L13 §2: no wrong step |
 
 Lemma 4.2 (`prime-gauss-identities`, 766-836) and Lemma 13.1 are not cited in Section 18. Lemma
-4.2 is also status A.
+4.2 is also status A. [Superseded: see the note after Section 10.]
 
 ### 4.3 Imported external theorems (not re-proved in the manuscript)
 
@@ -288,7 +288,7 @@ Lemma 4.2 (`prime-gauss-identities`, 766-836) and Lemma 13.1 are not cited in Se
 |---|---|---|---|---|
 | E1 | **Hecke**: functional equation and entireness of `L(s, ψ)` for primitive nonprincipal finite-order `ψ` of `F`; the manuscript cites Gao–Zhao, JNT 209 (2020), eq. (1.1) | Lemma 4.8, then reflection (12700) | SEC4 D2: the functional equation holds numerically with the conductors found in A2 | IMPORTED, classical |
 | E2 | **Kummer theory and Artin reciprocity** for `F(a^{1/6})/F` (Milne, CFT notes, VIII (5.3), (5.5)) | Lemma 4.1 | SEC4 A1-A4 (conductors found and minimal moduli confirmed by exact collisions) | IMPORTED, classical |
-| E3 | **Sextic reciprocity** with supplementary laws, and the quadratic Gauss-sum facts behind `G` and `𝔯` | Lemmas 4.3-4.4 | **numerically only** (L13 A5; L18b B4, 3298 pairs) | IMPORTED, classical; manuscript proofs unreviewed |
+| E3 | **Sextic reciprocity** with supplementary laws, and the quadratic Gauss-sum facts behind `G` and `𝔯` | Lemmas 4.3-4.4 | **numerically only** (L13 A5; L18b B4, 3298 pairs) [superseded: see the note after Section 10] | IMPORTED, classical; manuscript proofs unreviewed |
 | E4 | **Lattice Poisson summation** on `O` with the self-dual measure `(2/√3)dx dy` (610-617) | both transforms (13226-13268; 13606-13620) | L18b D (end-to-end bridge, four configurations); L13 D1 (exact in `Z[ζ_L]`) | IMPORTED, classical |
 | E5 | **Powerful-ideal count** `O(Y^{1/2+ε})` | first-transform zero frequency (13182-13190) | read (L18a §2.4) | classical |
 | E6 | **Rankin's bound** and polynomial-size Euler products | label counts (13355-13366, 13824-13836) | read (L18b §2-3) | classical |
@@ -363,13 +363,15 @@ read Sec. 18.8 line by line.
 
 **What no review did.**
 
-* No review read the proofs of Lemmas 4.2, 4.3 or 4.4 (MAP2: status A).
+* No review read the proofs of Lemmas 4.2, 4.3 or 4.4 (MAP2: status A). [Superseded: see the note after Section 10.]
 * No review replayed an analytic estimate: Fourier-measure `L¹` norms, tails and the lattice
   cancellation were read, not computed.
 * L18a called the proof of Lemma 18.3 "standard lattice Poisson plus Möbius" and found nothing
   wrong. No later note re-derived that proof line by line.
 * Whether each displayed ledger describes the analysis was read, not formalised.
-* No human reviewed any part. No Lean formalisation of Lemma 18.1 exists in this repository.
+* No human reviewed any part. The imported Lean development contains a normalized, specialized
+  instance of Lemma 18.1 (../../reviews/SEP30_LEAN_CORRESPONDENCE.md, code Fv). The general
+  statement is not formalized.
 
 ## 7. Known misreadings
 
@@ -484,7 +486,7 @@ covered the works above and the earlier agent searches recorded in L18a §1 and
 1. **Independent exact-SHA review** of the centred Θ-row stage (Section 8): Lemma 18.2
    (13953-13996), Lemma 18.3 with its proof (14545-14680), and (2.18)-(2.19) (14680-14778). Human
    scrutiny by an analytic number theorist is preferred.
-2. **First review of Lemmas 4.3 and 4.4** (841-1070), which no bounded review has read.
+2. **First review of Lemmas 4.3 and 4.4** (841-1070), which no bounded review has read. [Superseded: see the note after Section 10.]
 3. **A replay of the one-measure separation** at the two bridges, or a written proof that the
    measure's `L¹` norm is uniform in the sector, citing Lemmas 4.5 and 4.7.
 4. **Optional:** write out and review the sextic L-value deduction of Section 2.3 as a separate
@@ -518,9 +520,19 @@ Lemmas 4.2-4.4 (the Gauss and reciprocity helpers that this draft listed as neve
 since had one bounded agent review:
 [../../reviews/SEP30_L42_44_REVIEW.md](../../reviews/SEP30_L42_44_REVIEW.md). It found no wrong
 step, and `sep30_l42_44_checks.py` gave 65/65 PASS with every control failing as predicted.
-* Lemma 4.4 imports classical cubic reciprocity and also applies it to the inert prime 2. The
+* Lemma 4.4 imports classical cubic reciprocity and also applies it to the inert prime `−2` (the primary associate of 2). The
   cited source was not opened.
 * This is still not an independent exact-SHA review in the sense of AGENTS.md.
 
-A separate fresh-eyes review of the centred Θ-row stage (Section 8) is being prepared as
-`reviews/LEMMA18_THETA_ROW_REVIEW.md`.
+A separate fresh-eyes review of the centred Θ-row stage (Section 8) has since been written:
+[../../reviews/LEMMA18_THETA_ROW_REVIEW.md](../../reviews/LEMMA18_THETA_ROW_REVIEW.md). It is a
+bounded review by one agent of the same model family as the earlier reviews.
+* No wrong step was found in Lemmas 18.2-18.3 or (2.15)-(2.19).
+* Its main finding is that the zero-slack point `v = L` does not use Lemma 18.3. There the centred
+  saving `(L − v)_+` is zero, and the case closes through the uncentred ledger
+  `F_1 + F_2 ≥ 2v/3`.
+* The padding `A − M ≤ 2ξ < δ` is paid from `ε`, so the zero slack is harmless.
+* Lemma 18.2 holds given its cited constructions; the imported one-measure Fourier separation was
+  read as statements only.
+* Runs: exact ledger 19/19; EMPIRICAL float64 Z[ω] lattice model 14/14, with its four controls
+  failing as predicted.

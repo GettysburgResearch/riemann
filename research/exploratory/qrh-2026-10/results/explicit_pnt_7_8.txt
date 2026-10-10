@@ -1,0 +1,103 @@
+================================================================================================
+explicit_pnt_7_8.py: explicit consequences of H(7/8) + RH to H0 (mpmath.iv, prec 128)
+================================================================================================
+[sympy] Nicolas (2.2) integrand identity: True | (2.6) step: True | int w = 1/(x log x): True | int P/t^2 antiderivative: True
+
+--- Section 2: zero sums (upper bounds) ---
+a = log(H0/2pi)                          in [ 26.891756338187 , 26.891756338187 ]
+Z1(H0) >= sum_{0<g<=H0} 1/g              <= 58.18593034
+s_low  >= sum_{|g|<=H0} 1/|rho|^2        <= 0.0461914179322 (= 2 + gamma - log 4pi)
+s_high >= sum_{|g|>H0} 1/g^2             <= 2.9594073e-12
+eps_bar (Z2 slack)                       <= 1.3251216e-11
+int_14^oo Q/t^2                          <= 0.72088719
+
+--- Section 3: Theorem 1 (psi) ---
+regime boundaries: L_A = 2 log(4 H0) = 60.23185553 ; L_B used = 190.0 (needs >= 189.1546554 )
+sup A_eff, regime I  (40 <= L <= L_A, T = x^(1/2)/4)      <= 2.05661e-7
+sup A_eff, regime II (L_A <= L <= 190, T = H0)            <= 0.000232776
+sup A_eff, regime III (L >= 190, T = 8 pi M x^(1/8))      <= 0.0025497514
+   regime III: A_eff <= 1/(128pi) + b/L - d/L^2 + 2 Z1(H0) e^{-3L/8}/L^2,
+   b = 0.16899965  d >= 113.41712  L* = 2d/b ~ 1342.22  1/(128 pi) = 0.002486795986
+=> sup_{x >= e^40} B(x)/(x^(7/8) log^2 x) <= 0.0025497514  < A = 0.0026
+
+table: sup over L >= L0 of the bound / (x^(7/8) log^2 x)
+   L0 = 190       A(L0) <= 0.002549751
+   L0 = 250       A(L0) <= 0.002549751
+   L0 = 500       A(L0) <= 0.002549751
+   L0 = 1000      A(L0) <= 0.002549751
+   L0 = 1500      A(L0) <= 0.002549055
+   L0 = 2000      A(L0) <= 0.002542942
+   L0 = 5000      A(L0) <= 0.002516059
+   L0 = 10000     A(L0) <= 0.002502562
+   L0 = 100000    A(L0) <= 0.002488475
+   L0 = 1000000   A(L0) <= 0.002486965
+two-term form (x >= e^190): |psi(x)-x| <= x^(7/8)[L^2/(128 pi) + b L + c0] + 2 Z1(H0) x^(1/2),
+   with b <= 0.16899965 , c0 <= -113.41712 (negative), 2 Z1(H0) <= 116.37186
+   2 Z1(H0) x^(-3/8) at L=190 <= 1.325e-29 ; so for x >= e^190:
+   |psi(x)-x| <= x^(7/8) (log^2 x/(128 pi) + 0.17 log x - 113)
+
+small x for Theorem 1:
+   Platt-Trudgian Cor. 1 bound is <= 0.0026 x^(7/8) log^2 x once x >= 1443.5487 (and x <= 2.169e25; e^40 = 2.35385e+17 < 2.169e25)
+   exact enumeration (interval logs) on [n, n+1), n <= 1500: psi bound holds for all x >= 227 ; theta bound for all x >= 967
+   (psi - theta) adds at most 2.845e-10 x^(7/8) log^2 x for x >= e^40 (decreasing),
+   so A_theta := A_sup + extra <= 0.0025497517 < 0.0026 as well.
+
+--- Section 4: corollaries ---
+Buthe Thm 2 condition at x = 2.169e25: 4.92 sqrt(x/log x) <= 2.999962215e+12 <= T = 3000175332800: True
+pi - li: for x > 2.169e25, |pi(x)-li(x)| <= A_pi x^(7/8) log x with A_pi <= 0.0026509339
+   Buthe (7.2) bound sqrt(x) log x/(8 pi) on (2657, 2.169e25] is <= 0.00266 x^(7/8) log x for x >= 1358.3427
+   (with Platt-Trudgian Cor. 1 as printed, sqrt(x) log^2 x/(8pi), the threshold would be x >= 1.63948e+6 )
+   => |pi(x) - li(x)| <= 0.00266 x^(7/8) log x for every x > 2657 (Buthe's range starts there)
+short intervals: h = 0.006 x^(7/8) log^2 x; need c > A_theta (2 + delta), delta <= 0.245406 ; A_theta(2+delta) <= 0.00583806
+
+--- Section 5: Robin / Nicolas, explicit ---
+Jtail(XP) * XP^(1/8) log XP <= 9.62983e-7
+  of which s_high part ~ 3.02405e-12 and the CHJ truncation part 8M XP^(-3/8)(log XP + 1) <= 9.62965e-7
+C        c=C e^-g     log x1         c_U (upper)    eta          log n1 = L1 (bound)       
+1.41     0.79166      8.42           0.75782        0.0419       4462.6872 (theta(4547) exactly)
+         two-sided Nicolas c_U = 0.75782; (S1) holds for log n >= 5886.4946; sharper than R2 at n1: False
+1        0.56146      9.47           0.54667        0.0313       12840.315 (theta(12967) exactly)
+         two-sided Nicolas c_U = 0.54667; (S1) holds for log n >= 15251.475; sharper than R2 at n1: False
+0.5      0.28073      11.68          0.27769        0.0158       117744.71 (theta(118189) exactly)
+         two-sided Nicolas c_U = 0.27769; (S1) holds for log n >= 125680.73; sharper than R2 at n1: False
+0.1      0.056146     17.04          0.055884       0.0023       25198681.0 (x1(1+eta)+log(2 x1))
+         two-sided Nicolas c_U = 0.055884; (S1) holds for log n >= 25367326.0; sharper than R2 at n1: True
+0.01     0.0056146    24.68          0.0055964      0.000106     5.229183e+10 (x1(1+eta)+log(2 x1))
+         two-sided Nicolas c_U = 0.0055964; (S1) holds for log n >= 5.2305258e+10; sharper than R2 at n1: True
+1e-3     0.00056146   32.05          0.00056012     4.49e-6      8.301185e+13 (x1(1+eta)+log(2 x1))
+         two-sided Nicolas c_U = 0.00056012; (S1) holds for log n >= 8.3012698e+13; sharper than R2 at n1: True
+1e-4     5.6146e-5    39.23          5.6024e-5      1.85e-7      1.0898647e+17 (x1(1+eta)+log(2 x1))
+         two-sided Nicolas c_U = 5.6024e-5; (S1) holds for log n >= 1.0898652e+17; sharper than R2 at n1: True
+1e-5     5.6146e-6    46.71          5.5993e-6      6.25e-9      1.9315024e+20 (x1(1+eta)+log(2 x1))
+         two-sided Nicolas c_U = 5.5993e-6; (S1) holds for log n >= 1.9315024e+20; sharper than R2 at n1: True
+1e-6     5.6146e-7    59.88          5.6053e-7      4.25e-10     1.0128697e+26 (x1(1+eta)+log(2 x1))
+         two-sided Nicolas c_U = 5.6053e-7; (S1) holds for log n >= 1.0128697e+26; sharper than R2 at n1: True
+1e-8     5.6146e-9    200.76         5.6131e-9      2.66e-10     1.5451128e+87 (x1(1+eta)+log(2 x1))
+         two-sided Nicolas c_U = 5.6131e-9; (S1) holds for log n >= 1.5451128e+87; sharper than R2 at n1: True
+1e-10    5.6146e-11   263.76         5.567e-11      5.03e-13     3.5441537e+114 (x1(1+eta)+log(2 x1))
+         two-sided Nicolas c_U = 5.567e-11; (S1) holds for log n >= 3.5441537e+114; sharper than R2 at n1: True
+
+--- Section 6: comparison with unconditional explicit PNT (COMPARISON) ---
+   log x = 60     ours (H(7/8)) <= 1.395e-10    FKS Table 3: 1.1851e-11   JY Thm 1.1 closed form: 7.641
+   log x = 100    ours (H(7/8)) <= 2.144e-10    FKS Table 3: 2.0097e-12   JY Thm 1.1 closed form: 2.566
+   log x = 150    ours (H(7/8)) <= 3.215e-10    FKS Table 3: 1.8461e-12   JY Thm 1.1 closed form: 0.7388
+   log x = 200    ours (H(7/8)) <= 2.756e-10    FKS Table 3: 1.7684e-12   JY Thm 1.1 closed form: 0.2382
+   log x = 240    ours (H(7/8)) <= 6.586e-12    FKS Table 3: 1.7304e-12   JY Thm 1.1 closed form: 0.1028
+   log x = 250    ours (H(7/8)) <= 2.259e-12    FKS Table 3: 1.7229e-12   JY Thm 1.1 closed form: 0.08394
+   log x = 260    ours (H(7/8)) <= 7.576e-13    FKS Table 3: 1.7160e-12   JY Thm 1.1 closed form: 0.06875
+   log x = 270    ours (H(7/8)) <= 2.498e-13    FKS Table 3: 1.7095e-12   JY Thm 1.1 closed form: 0.05645
+   log x = 280    ours (H(7/8)) <= 8.125e-14    FKS Table 3: 1.7036e-12   JY Thm 1.1 closed form: 0.04648
+   log x = 300    ours (H(7/8)) <= 8.338e-15    FKS Table 3: 1.6930e-12   JY Thm 1.1 closed form: 0.03174
+   log x = 400    ours (H(7/8)) <= 6.791e-20    FKS Table 3: 1.6560e-12   JY Thm 1.1 closed form: 0.005347
+   log x = 500    ours (H(7/8)) <= 4.261e-25    FKS Table 3: 1.6341e-12   JY Thm 1.1 closed form: 0.001063
+   log x = 1000   ours (H(7/8)) <= 1.313e-51    FKS Table 3: 1.5907e-12   JY Thm 1.1 closed form: 1.427e-6
+   log x = 2000   ours (H(7/8)) <= 2.715e-105   FKS Table 3: 1.5692e-12   JY Thm 1.1 closed form: 8.012e-11
+   log x = 3000   ours (H(7/8)) <= 3.141e-159   FKS Table 3: 4.9678e-15   JY Thm 1.1 closed form: 3.622e-14
+   log x = 5000   ours (H(7/8)) <= 2.315e-267   FKS Table 3: 2.9942e-20   JY Thm 1.1 closed form: 1.472e-19
+   log x = 10000  ours (H(7/8)) <= 3.391e-538   FKS Table 3: 1.3680e-30   JY Thm 1.1 closed form: 1.256e-29
+   first integer log x in [190,300] from which ours < FKS step value for every larger tested log x: 253
+   clean shape 0.0026 x^(7/8) log^2 x beats JY Thm 1.1 closed form from log x = 41 and JY Thm 1.4 (VK) closed form from log x = 41 (checked to log x < 3000; both ratios then move monotonically in our favour)
+
+--- EMPIRICAL (float) sanity: partial sums over the first 200 zeros ---
+   sum_{n<=200} 2/(1/4+g^2) = 0.04206972063485344 (< s_low = 0.0461914 as it must be)
+   sum_{n<=200} 1/g_n       = 1.3516254262168779  vs Z1(g_200) bound 2.0314176783742086

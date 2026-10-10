@@ -298,6 +298,20 @@ ok = (sp.diff(low, vv) == sp.Rational(1, 3) and sp.diff(high, vv) == -sp.Rationa
       and sp.simplify(high.subs(vv, Ls) - (Av - Ms)) == 0)
 record("Z1 (old-eq:2.19) max_v [A - 5M/6 - 2v/3 - (L-v)_+] = A - M, attained only at v = L", ok)
 
+# Z4: how much of the centred saving is needed.  With r(v) = th * (L - v)_+, the maximum over
+# v >= 0 of A - 5M/6 - 2v/3 - r(v) equals A - M iff th >= 2/3; for th < 2/3 it is
+# A - M + (2/3 - th) L, attained at v = 0.  So Lemma 18.3's saving (th = 1) has slack
+# (1/3)(L - v) except at v = L, where r = 0 and the lemma is not used at all.
+ths = sp.Symbol("th", nonnegative=True)
+ok4 = True
+for thv in [sp.Rational(k, 12) for k in range(0, 19)]:
+    lowv = Av - sp.Rational(5, 6) * Ms - sp.Rational(2, 3) * vv - thv * (Ls - vv)
+    best = max(sp.simplify(lowv.subs(vv, 0)), sp.simplify(lowv.subs(vv, Ls)),
+               key=lambda e: sp.N(e.subs({Av: 0, Ms: 1})))
+    expect = (Av - Ms) if thv >= sp.Rational(2, 3) else (Av - Ms + (sp.Rational(2, 3) - thv) * Ls)
+    ok4 &= sp.simplify(best - expect) == 0
+record("Z4 saving th*(L-v)_+ suffices iff th >= 2/3 (Lemma 18.3 gives th = 1: multiplicative slack 1/3)", ok4)
+
 # explicit configuration: zero slots, first transform one prime (i,j)=(2,1), second transform
 # nonunit multiplicity-one primes, q = E = 0, K = K0, chosen so that v = c + c2 = L.
 Mv = Fr(4)

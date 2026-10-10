@@ -1,0 +1,851 @@
+{
+ "object_sha256": "42a5ee0febca59fd1def55cfd6c6808c322ef4237d7726303ea52f711deac6a3",
+ "n_gates": 31,
+ "n_gates_pass": 31,
+ "n_controls": 10,
+ "n_controls_fire": 10,
+ "junction_replay": false,
+ "arithmetic": "EXACT: sympy over Q; fractions.Fraction; multi-affine vertex maxima",
+ "items": [
+  {
+   "id": "U1",
+   "lines": "6812-6815",
+   "category": "R"
+  },
+  {
+   "id": "U2",
+   "lines": "6816-6819",
+   "category": "a"
+  },
+  {
+   "id": "U3",
+   "lines": "6821-6830",
+   "category": "b"
+  },
+  {
+   "id": "U4",
+   "lines": "6842-6842",
+   "category": "a"
+  },
+  {
+   "id": "U5",
+   "lines": "8647-8648",
+   "category": "a"
+  },
+  {
+   "id": "U6",
+   "lines": "9110-9139",
+   "category": "a"
+  },
+  {
+   "id": "U7",
+   "lines": "12532-12573",
+   "category": "a"
+  },
+  {
+   "id": "U8",
+   "lines": "12581-12584",
+   "category": "a"
+  },
+  {
+   "id": "U9",
+   "lines": "12833-12906",
+   "category": "a"
+  },
+  {
+   "id": "U10",
+   "lines": "12932-14906",
+   "category": "a"
+  },
+  {
+   "id": "U11",
+   "lines": "15097-15108",
+   "category": "b"
+  },
+  {
+   "id": "U12",
+   "lines": "15175-15180",
+   "category": "a"
+  },
+  {
+   "id": "U13",
+   "lines": "15185-15226",
+   "category": "a"
+  },
+  {
+   "id": "U14",
+   "lines": "15289-15311",
+   "category": "a"
+  },
+  {
+   "id": "U15",
+   "lines": "15326-15341",
+   "category": "a"
+  },
+  {
+   "id": "U16",
+   "lines": "15398-15420",
+   "category": "a"
+  },
+  {
+   "id": "U17",
+   "lines": "15429-15429",
+   "category": "a"
+  },
+  {
+   "id": "U18",
+   "lines": "15447-15466",
+   "category": "a"
+  },
+  {
+   "id": "U19",
+   "lines": "15498-15504",
+   "category": "a"
+  },
+  {
+   "id": "U20",
+   "lines": "15614-15692",
+   "category": "a"
+  },
+  {
+   "id": "U21",
+   "lines": "15724-15724",
+   "category": "a"
+  },
+  {
+   "id": "U22",
+   "lines": "15763-15763",
+   "category": "a"
+  },
+  {
+   "id": "U23",
+   "lines": "15859-15882",
+   "category": "a"
+  },
+  {
+   "id": "U24",
+   "lines": "15926-15946",
+   "category": "b"
+  },
+  {
+   "id": "U25",
+   "lines": "15949-15992",
+   "category": "a"
+  },
+  {
+   "id": "U26",
+   "lines": "15995-16072",
+   "category": "a"
+  },
+  {
+   "id": "U27",
+   "lines": "16087-16108",
+   "category": "a"
+  },
+  {
+   "id": "U28",
+   "lines": "16128-16144",
+   "category": "b"
+  },
+  {
+   "id": "U29",
+   "lines": "16146-16168",
+   "category": "c"
+  },
+  {
+   "id": "U30",
+   "lines": "16174-16185",
+   "category": "a"
+  },
+  {
+   "id": "U31",
+   "lines": "16196-16233",
+   "category": "b"
+  },
+  {
+   "id": "U32",
+   "lines": "16241-16241",
+   "category": "a"
+  },
+  {
+   "id": "U33",
+   "lines": "16269-16269",
+   "category": "a"
+  },
+  {
+   "id": "U34",
+   "lines": "16324-16324",
+   "category": "a"
+  },
+  {
+   "id": "U35",
+   "lines": "16333-16350",
+   "category": "b"
+  },
+  {
+   "id": "U36",
+   "lines": "16370-16446",
+   "category": "a"
+  },
+  {
+   "id": "U37",
+   "lines": "16454-16460",
+   "category": "a"
+  }
+ ],
+ "checks": [
+  {
+   "group": "T text",
+   "id": "T0",
+   "claim": "paper.tex SHA-256 matches the reviewed object",
+   "ok": true,
+   "kind": "gate",
+   "detail": "42a5ee0febca59fd1def55cfd6c6808c322ef4237d7726303ea52f711deac6a3"
+  },
+  {
+   "group": "T text",
+   "id": "T1",
+   "claim": "32 anchor strings found at the cited lines",
+   "ok": true,
+   "kind": "gate",
+   "detail": {
+    "387": "beta_* <= 1 by definition and Euler convergence (input of this route)",
+    "1593": "Lemma 4.9 global clause covers b > 1 (contours at beta_*+e when beta_* = 1)",
+    "4054": "Lemma 7.1 region one allows w_r >= -1/100",
+    "4285": "Lemma 8.1 bins cover a in [51/100, 1]",
+    "4338": "Lemma 8.1 allows a zero on Re s = 1",
+    "4372": "detector delta range is [1/50, 1]",
+    "4513": "Prop 8.3 for every t in [1, 3/2]",
+    "4529": "Prop 8.3 witness: r >= t - 1/2 - O(eps)",
+    "5857": "Lemma 10.3 contour Re w = 1-a-6e stays in region one for a <= 1",
+    "6300": "Lemma 10.5 (principal signal) covers beta_* = 1",
+    "6812": "the bootstrap sentence",
+    "6817": "eq:part-II-bootstrap",
+    "6825": "eq:part-II-bin-ceiling",
+    "8854": "Prop 16.1 for 51/100 <= a <= 1",
+    "12532": "Lemma 18.1 stated for kappa in [3/4, 1]",
+    "12565": "Lemma 18.1 kappa = 1 clause",
+    "15023": "Lemma 19.1 uniform for 51/100 <= a <= 1",
+    "15104": "Sec 19.2 preamble uses kappa < 1",
+    "15275": "no-slot amplified exponent e(r)",
+    "15282": "eq:no-slot-inverse-count",
+    "15448": "Remark 19.3",
+    "15458": "Remark 19.3: valid for delta <= 1",
+    "15928": "endpoint argument at delta = alpha",
+    "15946": "eq:large-delta-endpoint",
+    "16133": "frequency slope 4/25 (the delta <= 1 value)",
+    "16141": "139/96 (the Delta <= 1/8 value)",
+    "16165": "intermediate range uses delta <= 5/6",
+    "16168": "delta = alpha count used for all d <= h",
+    "16223": "m_high is a min",
+    "16241": "Prop 20.3 mesh sentence",
+    "16269": "Prop 20.3 rounding sentence",
+    "16324": "choices depend on Delta"
+   }
+  },
+  {
+   "group": "T text",
+   "id": "T2",
+   "claim": "census: 282 Part II pattern lines, 129 notation-only (other symbols), 153 substantive; every substantive line lies in exactly one item",
+   "ok": true,
+   "kind": "gate",
+   "detail": {
+    "unclassified": [],
+    "overlap": [],
+    "items_without_hits": [],
+    "lines_per_category": {
+     "R": 3,
+     "a": 117,
+     "b": 30,
+     "c": 3
+    },
+    "per_item": {
+     "U1": [
+      6812,
+      6814,
+      6815
+     ],
+     "U2": [
+      6816,
+      6817,
+      6819
+     ],
+     "U3": [
+      6822,
+      6824,
+      6825,
+      6828,
+      6830
+     ],
+     "U4": [
+      6842
+     ],
+     "U5": [
+      8647,
+      8648
+     ],
+     "U6": [
+      9110,
+      9139
+     ],
+     "U7": [
+      12532,
+      12561,
+      12564,
+      12565,
+      12573
+     ],
+     "U8": [
+      12581,
+      12583,
+      12584
+     ],
+     "U9": [
+      12833,
+      12834,
+      12837,
+      12844,
+      12847,
+      12873,
+      12878,
+      12882,
+      12893,
+      12896,
+      12897,
+      12898
+     ],
+     "U10": [
+      12932,
+      12933,
+      12949,
+      12971,
+      12975,
+      14219,
+      14227,
+      14228,
+      14259,
+      14260,
+      14263,
+      14271,
+      14272,
+      14827,
+      14889,
+      14906
+     ],
+     "U11": [
+      15097,
+      15099,
+      15100,
+      15101,
+      15103,
+      15104,
+      15105,
+      15106,
+      15107,
+      15108
+     ],
+     "U12": [
+      15175,
+      15176,
+      15180
+     ],
+     "U13": [
+      15188,
+      15198,
+      15201,
+      15208
+     ],
+     "U14": [
+      15289,
+      15300,
+      15302,
+      15303,
+      15306,
+      15307
+     ],
+     "U15": [
+      15326,
+      15338,
+      15341
+     ],
+     "U16": [
+      15398,
+      15399,
+      15400,
+      15420
+     ],
+     "U17": [
+      15429
+     ],
+     "U18": [
+      15464
+     ],
+     "U19": [
+      15498,
+      15501,
+      15502,
+      15503
+     ],
+     "U20": [
+      15614,
+      15667,
+      15668,
+      15669,
+      15692
+     ],
+     "U21": [
+      15724
+     ],
+     "U22": [
+      15763
+     ],
+     "U23": [
+      15859,
+      15882
+     ],
+     "U24": [
+      15926,
+      15928,
+      15934
+     ],
+     "U25": [
+      15949,
+      15951,
+      15952,
+      15953,
+      15955,
+      15956,
+      15960,
+      15963,
+      15978,
+      15983,
+      15988
+     ],
+     "U26": [
+      15995,
+      16003,
+      16019,
+      16025,
+      16032
+     ],
+     "U27": [
+      16087,
+      16091,
+      16098,
+      16099,
+      16101,
+      16106,
+      16108
+     ],
+     "U28": [
+      16128,
+      16129,
+      16139,
+      16141,
+      16143
+     ],
+     "U29": [
+      16146,
+      16165,
+      16166
+     ],
+     "U30": [
+      16174,
+      16175,
+      16178,
+      16179,
+      16182,
+      16183,
+      16185
+     ],
+     "U31": [
+      16197,
+      16200,
+      16212,
+      16222,
+      16233
+     ],
+     "U32": [
+      16241
+     ],
+     "U33": [
+      16269
+     ],
+     "U34": [
+      16324
+     ],
+     "U35": [
+      16333,
+      16350
+     ],
+     "U36": [
+      16370,
+      16440,
+      16446
+     ],
+     "U37": [
+      16459,
+      16460
+     ]
+    }
+   }
+  },
+  {
+   "group": "T text",
+   "id": "T3",
+   "claim": "the only Part II citation of Thm 3.1 (thm:eleven-twelfths) is line 6812",
+   "ok": true,
+   "kind": "gate",
+   "detail": [
+    6812
+   ]
+  },
+  {
+   "group": "T text",
+   "id": "T4",
+   "claim": "Remark 19.3 (15448) is the only occurrence of its title (unlabeled; no \\ref reaches it)",
+   "ok": true,
+   "kind": "gate",
+   "detail": [
+    15448
+   ]
+  },
+  {
+   "group": "A algebra",
+   "id": "A1",
+   "claim": "eq:common-high-exponent (15726-15734): first line = second line, C_0 = -1/48 (identity in delta, q, R, d; no range used)",
+   "ok": true,
+   "kind": "gate",
+   "detail": ""
+  },
+  {
+   "group": "A algebra",
+   "id": "A2",
+   "claim": "count, r >= 1: (1+5r)/6 - delta r - (1-delta) = (5/6 - delta)(r - 1)",
+   "ok": true,
+   "kind": "gate",
+   "detail": ""
+  },
+  {
+   "group": "A algebra",
+   "id": "A3",
+   "claim": "count, r < 1 (e(r) = 1): 1 - delta r - (1-delta) = delta (1 - r)",
+   "ok": true,
+   "kind": "gate",
+   "detail": ""
+  },
+  {
+   "group": "A algebra",
+   "id": "A4",
+   "claim": "(1+5r)/6 <= 1 iff r <= 1, so e(r) = 1 on r <= 1 and (1+5r)/6 on r >= 1",
+   "ok": true,
+   "kind": "gate",
+   "detail": ""
+  },
+  {
+   "group": "A algebra",
+   "id": "A5",
+   "claim": "for 5/6 <= delta <= 1 and 1 <= r <= 3/2: (1+5r)/6 - delta r <= 1 - delta (max of the difference is 0, at delta = 5/6 or r = 1)",
+   "ok": true,
+   "kind": "gate",
+   "detail": {
+    "max": "0",
+    "at": [
+     "5/6",
+     "1"
+    ]
+   }
+  },
+  {
+   "group": "A algebra",
+   "id": "A6",
+   "claim": "Lean high_bin_count shape: for r in [1-gamma, 1), 1 - delta r <= 1 - delta + gamma (checked as max of delta(1-r) - gamma over r >= 1-gamma: substitute r = 1 - s gamma)",
+   "ok": true,
+   "kind": "gate",
+   "detail": ""
+  },
+  {
+   "group": "A algebra",
+   "id": "A7",
+   "claim": "high margin identity with R = 1 - delta + lambda: E(d) - Delta = -1/48 - delta/16 - Delta + (q - delta/2)/6 + (13/16) lambda + (d - h)(33/50 - delta/2 + lambda)",
+   "ok": true,
+   "kind": "gate",
+   "detail": ""
+  },
+  {
+   "group": "A algebra",
+   "id": "A8",
+   "claim": "at d = h, q = delta/2, lambda = 0: E(h) - Delta = -1/48 - delta/16 - Delta (the claimed margin; paper (eq:large-delta-endpoint) minus Delta; Lean high_source_margin)",
+   "ok": true,
+   "kind": "gate",
+   "detail": ""
+  },
+  {
+   "group": "A algebra",
+   "id": "A9",
+   "claim": "frequency slope S(delta) = R + delta/2 - 17/50 at R = 1-delta: S(1) = 4/25 > 0, S(5/6) = 73/300 < 2; S is decreasing, so 4/25 <= S <= 73/300 on [5/6, 1]",
+   "ok": true,
+   "kind": "gate",
+   "detail": ""
+  },
+  {
+   "group": "A algebra",
+   "id": "A10",
+   "claim": "margin over the whole range: for 5/6 <= delta <= 1, 0 <= Delta <= 1/8, 0 <= q <= delta/2, 1/100 <= d <= h: E(d) - Delta <= -1/48 - delta/16 - Delta, equality iff d = h and q = delta/2 (by A7: both correction terms are products of factors of fixed sign; checked at the vertices of (q/delta, delta, d))",
+   "ok": true,
+   "kind": "gate",
+   "detail": ""
+  },
+  {
+   "group": "A algebra",
+   "id": "A11",
+   "claim": "extension h < d <= h + zeta: (d - h) S <= (73/300) zeta <= 2 zeta (Lean relative_extend uses 2 zeta)",
+   "ok": true,
+   "kind": "gate",
+   "detail": ""
+  },
+  {
+   "group": "A algebra",
+   "id": "A12",
+   "claim": "claimed margin at the corners: -7/96 (5/6, 0), -19/96 (5/6, 1/8), -1/12 (1, 0), -5/24 (1, 1/8); maximum over the range is -7/96 < 0",
+   "ok": true,
+   "kind": "gate",
+   "detail": {
+    "delta=5/6,Delta=0": "-7/96",
+    "delta=5/6,Delta=1/8": "-19/96",
+    "delta=1,Delta=0": "-1/12",
+    "delta=1,Delta=1/8": "-5/24"
+   }
+  },
+  {
+   "group": "A algebra",
+   "id": "A13",
+   "claim": "high-bin margin dominates the balanced one: -1/48 - delta/16 - Delta <= -(51/64)Delta - 7/96 (so every high bin keeps more than m_hi >= m_high)",
+   "ok": true,
+   "kind": "gate",
+   "detail": "0"
+  },
+  {
+   "group": "A algebra",
+   "id": "A14",
+   "claim": "balanced: -49/440640 + h Delta/4 - Delta = -49/440640 - (51/64) Delta (any Delta)",
+   "ok": true,
+   "kind": "gate",
+   "detail": ""
+  },
+  {
+   "group": "A algebra",
+   "id": "A15a",
+   "claim": "capacity comparison: (Delta/4 - increase) * 18(9/2+12 Delta)/Delta = 81/4 + 54 Delta - 96 q (1-2m)",
+   "ok": true,
+   "kind": "gate",
+   "detail": ""
+  },
+  {
+   "group": "A algebra",
+   "id": "A15",
+   "claim": "capacity comparison <= Delta/4 for every Delta in [0, 1/8] (q <= 1/2, 1 - 2m <= 1/3): the bracket is >= 17/4 > 0; it only grows with Delta",
+   "ok": true,
+   "kind": "gate",
+   "detail": "-17/4"
+  },
+  {
+   "group": "A algebra",
+   "id": "A16",
+   "claim": "139/96 = 17/12 + (1/8)/4 exactly (the paper's R_* + Delta/4 bound is the Delta <= 1/8 value; with Delta <= 1/24 it would be 137/96); 139/96 + 1/2 - 17/50 < 2",
+   "ok": true,
+   "kind": "gate",
+   "detail": ""
+  },
+  {
+   "group": "A algebra",
+   "id": "A17",
+   "claim": "m_high = min{51 Delta/64, 63/800} switches at Delta = 42/425, inside (1/24, 1/8]: for larger Delta, m_high = m_small (Prop 20.3 defines it as the min, so nothing changes)",
+   "ok": true,
+   "kind": "gate",
+   "detail": "42/425"
+  },
+  {
+   "group": "A algebra",
+   "id": "A18",
+   "claim": "kappa = 3/4 + 2 Delta lies in [3/4, 1] iff Delta in [0, 1/8]; kappa = 1 iff Delta = 1/8 iff beta_* = 1 (then Lemma 18.1's kappa = 1 clause applies); delta <= kappa <= 1",
+   "ok": true,
+   "kind": "gate",
+   "detail": ""
+  },
+  {
+   "group": "A algebra",
+   "id": "A19",
+   "claim": "high bins (delta > 5/6) can occur only if kappa > 5/6, i.e. Delta > 1/24",
+   "ok": true,
+   "kind": "gate",
+   "detail": ""
+  },
+  {
+   "group": "A algebra",
+   "id": "A20",
+   "claim": "Lemma 10.3 / Prop 16.1 contours for a <= 1, 0 < e < 1/1000: Re w = 1 - a - 6e >= -6e > -1/100, and Re s + Re w = 1 + 10e (region one with eps_0 = 10e)",
+   "ok": true,
+   "kind": "gate",
+   "detail": ""
+  },
+  {
+   "group": "A algebra",
+   "id": "A21",
+   "claim": "Lemma 16.2 small-row line x_r = beta_* + e: the local exponents -x_r and 4 - 5x_r - 6z_r decrease in beta_*, so beta_* >= 7/8 is the binding case and beta_* <= 1 is never used",
+   "ok": true,
+   "kind": "gate",
+   "detail": ""
+  },
+  {
+   "group": "A algebra",
+   "id": "A22",
+   "claim": "Prop 8.3 Gamma-integral exponent -3 + t(5/4 - sigma) <= -189/100 uses only sigma >= 51/100 (decreasing in sigma; at sigma = 1 it is -21/8)",
+   "ok": true,
+   "kind": "gate",
+   "detail": ""
+  },
+  {
+   "group": "G grid",
+   "id": "G1",
+   "claim": "exact grid: e(r) - delta r <= 1 - delta + delta (1-r)_+ on 11 delta x 6 r points in [5/6,1] x [1 - 1/100, 3/2]",
+   "ok": true,
+   "kind": "gate",
+   "detail": {
+    "max_excess": "0"
+   }
+  },
+  {
+   "group": "G grid",
+   "id": "G2",
+   "claim": "exact grid: E(d) - Delta <= -1/48 - delta/16 - Delta + (13/16)lambda + 2(d-h)_+ on 11 delta x 6 Delta x 3 q x 7 d x 2 lambda points (corners delta = 5/6, 1 and Delta = 0, 1/8 included)",
+   "ok": true,
+   "kind": "gate",
+   "detail": {
+    "points": 2838,
+    "max_excess": "0",
+    "at": [
+     "5/6",
+     "0",
+     "5/12",
+     "13/16",
+     "0"
+    ]
+   }
+  },
+  {
+   "group": "F controls",
+   "id": "FC1",
+   "claim": "drop delta >= 5/6: at delta = 4/5, r = 3/2 the amplified count exceeds 1 - delta",
+   "ok": true,
+   "kind": "control",
+   "detail": "1/60"
+  },
+  {
+   "group": "F controls",
+   "id": "FC2",
+   "claim": "drop the t = 3/2 witness (r >= 1 - O(eps)): at r = 1/2 the count is 1 - delta/2 > 1 - delta",
+   "ok": true,
+   "kind": "control",
+   "detail": [
+    "5/12",
+    "1/2"
+   ]
+  },
+  {
+   "group": "F controls",
+   "id": "FC3",
+   "claim": "use the t = 1 no-slot count R = 1 - 2 delta/3 in a high bin: E(h) = -1/48 + 5 delta/24 > 0 (11/72 at delta = 5/6)",
+   "ok": true,
+   "kind": "control",
+   "detail": "11/72"
+  },
+  {
+   "group": "F controls",
+   "id": "FC4",
+   "claim": "reuse the paper's intermediate count (16146-16165) in a high bin: E(1/2) = -529/2400 + 25 delta/96 is <= -49/14400 exactly iff delta <= 5/6, vanishes at delta = 529/625 and equals +1/25 at delta = 1",
+   "ok": true,
+   "kind": "control",
+   "detail": {
+    "E_at_1": "1/25",
+    "E_at_5_6": "-49/14400"
+   }
+  },
+  {
+   "group": "F controls",
+   "id": "FC5",
+   "claim": "139/96 chain beyond Delta = 1/8: at Delta = 1/7, 17/12 + Delta/4 > 139/96",
+   "ok": true,
+   "kind": "control",
+   "detail": "1/224"
+  },
+  {
+   "group": "F controls",
+   "id": "FC6",
+   "claim": "the literal 'm_high = 51 Delta/64' (SEP30_DETECTOR_QUANTIFIERS 6.2) at Delta = 1/8: 51/512 > 63/800",
+   "ok": true,
+   "kind": "control",
+   "detail": "267/12800"
+  },
+  {
+   "group": "F controls",
+   "id": "FC7",
+   "claim": "drop the subtraction of Delta (16106-16108) in a balanced bin at Delta = 1/8: -49/440640 + h Delta/4 > 0",
+   "ok": true,
+   "kind": "control",
+   "detail": "89113/3525120"
+  },
+  {
+   "group": "F controls",
+   "id": "FC8",
+   "claim": "kappa <= 5/6 (16241, eq:part-II-bootstrap) at Delta = 1/8: kappa = 1 > 5/6",
+   "ok": true,
+   "kind": "control",
+   "detail": "1/6"
+  },
+  {
+   "group": "F controls",
+   "id": "FC9",
+   "claim": "a beyond 1 (a = 101/100, e = 1/1000): Re w = 1 - a - 6e < -1/100 leaves region one",
+   "ok": true,
+   "kind": "control",
+   "detail": "-3/500"
+  },
+  {
+   "group": "F controls",
+   "id": "FC10",
+   "claim": "the slope bound 73/300 (exact min on delta <= 5/6, JUNCTION R3) fails at delta = 1; the paper's 4/25 is the delta <= 1 value",
+   "ok": true,
+   "kind": "control",
+   "detail": "-1/12"
+  },
+  {
+   "group": "S sensitivity",
+   "id": "S1a",
+   "claim": "without amplification (raw moment, exponent max{1,r}) at t = 3/2: R = (3/2)(1-delta), E(h) = 37/96 - 15 delta/32",
+   "ok": true,
+   "kind": "gate",
+   "detail": ""
+  },
+  {
+   "group": "S sensitivity",
+   "id": "S1",
+   "claim": "control 'drop the amplification' does NOT fail on [5/6, 1]: E(h) <= -1/192 (zero at delta = 37/45 < 5/6); the margin shrinks from 7/96 to 1/192 at delta = 5/6",
+   "ok": true,
+   "kind": "sens",
+   "detail": {
+    "5/6": "-1/192",
+    "9/10": "-7/192",
+    "1": "-1/12"
+   }
+  },
+  {
+   "group": "S sensitivity",
+   "id": "S2",
+   "claim": "control 'e(r) = 1' (an unproven, stronger moment) does NOT fail: it lowers the count to 1 - delta r <= 1 - delta for r >= 1; uninformative",
+   "ok": true,
+   "kind": "sens",
+   "detail": ""
+  }
+ ]
+}

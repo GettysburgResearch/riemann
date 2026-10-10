@@ -316,8 +316,9 @@ consequences (84-125) were not read.
   compared with the arXiv versions.
 * No human reviewed any part.
 * The upstream Lean release does not formalize this argument (Section 7). Its 7/8 targets were
-  built and checked later the same day (../../reviews/LEAN_BUILD_ATTEMPT.md, Addenda A–B); that
-  says nothing about the 11/12 proof.
+  built later the same day, with `#print axioms` standard for the zeta, Dirichlet and Hecke
+  theorems, and comparator accepted the zeta challenge (../../reviews/LEAN_BUILD_ATTEMPT.md).
+  That says nothing about the 11/12 proof.
 
 ## 7. Known misreadings
 
@@ -353,8 +354,10 @@ consequences (84-125) were not read.
 7. **"The Lean formalization checks this."** No.
    * The upstream Lean release targets the Sep 30 7/8 theorem and the Oct 1 Siegel-zero theorem.
    * When this packet was drafted it had not been built in this repository (PR 908
-     `FORMALIZATION_AUDIT.md`). Its 7/8 targets have since been built and accepted by comparator
-     (../../reviews/LEAN_BUILD_ATTEMPT.md). None of that formalizes the 11/12 argument.
+     `FORMALIZATION_AUDIT.md`). Its 7/8 targets have since been built, and `#print axioms` is standard for the
+     zeta, Dirichlet and Hecke theorems. Comparator has accepted the zeta challenge
+     (../../reviews/LEAN_BUILD_ATTEMPT.md, Addendum B); the other comparator runs are recorded
+     there. None of this formalizes the 11/12 argument.
 8. **"The numerical checks are evidence for the theorem."** No.
    * They are finite and at tiny scales (`D ≤ 60`, norms ≤ a few thousand). They test conventions
      and exact identities.

@@ -22,11 +22,11 @@ Smallest remaining gap: Lemma K (Sec. 2) is the load-bearing new step. For the R
 > **Status update (10 Oct 2026, end of wave).** The ζ-part of QRH-IMPORT, `ζ(s) ≠ 0` for
 > `Re s > 7/8`, is now also a Lean theorem about Mathlib's `riemannZeta`. Lean's kernel accepted it
 > through comparator, using only the three standard axioms ([LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md),
-> Addenda A–B, where the trust assumptions are listed). The Dirichlet version is axiom-clean too. This note uses only `QRH_ζ = H(7/8)`, which is exactly that Lean statement.
-> * The statements below that use only `H(7/8)` for ζ or for Dirichlet `L`-functions are therefore
->   conditional on accepting that machine check, not on the unreviewed manuscript text.
+> Addenda A–B, where the trust assumptions are listed). This note uses only `QRH_ζ = H(7/8)`, which
+> is exactly that Lean statement.
+> * The statements below use only `H(7/8)` for ζ, so they are conditional on accepting the
+>   comparator check, not on the unreviewed manuscript text.
 > * The classical derivations they rest on are still imported or PROPOSED as labelled.
-> * Statements that need the Hecke family or the Oct 5 claim are unchanged.
 
 
 Notation. `f(n) = σ(n)/(n log log n)`, `f_φ(n) = n/(φ(n) log log n)`, `N_k = p_1⋯p_k` (primorial),

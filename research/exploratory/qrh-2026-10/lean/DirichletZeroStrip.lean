@@ -3,9 +3,11 @@ Exploratory (qrh-2026-10 wave). Not part of the imported OpenAI development.
 
 For a primitive nontrivial Dirichlet character `χ`, the imported 7/8 Dirichlet theorem plus
 Mathlib's functional equation puts every nontrivial zero of `L(s, χ)` in the closed strip
-`1/8 ≤ Re s ≤ 7/8`. "Nontrivial" means that the Archimedean factor `gammaFactor χ s` (Mathlib's
-`Gammaℝ s` or `Gammaℝ (s + 1)`) does not vanish; `gammaFactor_eq_zero_iff` spells out the
-trivial zeros.
+`1/8 ≤ Re s ≤ 7/8`. "Nontrivial" is expressed as `gammaFactor χ s ≠ 0`, where `gammaFactor` is
+Mathlib's `Gammaℝ s` or `Gammaℝ (s + 1)`. The true Archimedean factor never vanishes; in Lean
+`gammaFactor χ s = 0` holds exactly at its poles, because Mathlib's `Gamma` takes the junk value 0
+at non-positive integers. So the hypothesis says that `s` is not a pole of the Gamma factor,
+which for primitive `χ ≠ 1` is exactly the set of trivial zeros (`gammaFactor_eq_zero_iff`).
 
 The functional equation is used for `χ⁻¹`, so no non-vanishing of the root number is needed.
 
@@ -36,8 +38,8 @@ theorem gammaFactor_eq_zero_iff (χ : DirichletCharacter ℂ N) (s : ℂ) :
     · rintro ⟨n, hn⟩
       exact ⟨n, by linear_combination hn⟩
 
-/-- Reflected half-plane: for primitive `χ ≠ 1`, a zero of `L(s, χ)` with `Re s < 1/8` is a zero
-of the Archimedean factor, i.e. a trivial zero. -/
+/-- Reflected half-plane: for primitive `χ ≠ 1`, a zero of `L(s, χ)` with `Re s < 1/8` is a pole
+of the Gamma factor (where Mathlib's `gammaFactor` is 0 by convention), i.e. a trivial zero. -/
 theorem LFunction_zero_re_lt_one_eighth {χ : DirichletCharacter ℂ N}
     (hχ : χ.IsPrimitive) (hχ1 : χ ≠ 1) {s : ℂ}
     (hs : DirichletCharacter.LFunction χ s = 0) (hlo : s.re < 1 / 8) :
@@ -67,8 +69,8 @@ theorem LFunction_zero_re_lt_one_eighth {χ : DirichletCharacter ℂ N}
     exact hχ1 (inv_eq_one.mp h1)
   exact OAI.DirichletCharacter.LFunction_ne_zero_of_seven_eighths_lt_re χ⁻¹ hre hpole hL
 
-/-- Quasi-GRH strip: for primitive `χ ≠ 1`, every zero of `L(s, χ)` that is not a zero of the
-Archimedean factor has `1/8 ≤ Re s ≤ 7/8`. -/
+/-- Quasi-GRH strip: for primitive `χ ≠ 1`, every zero of `L(s, χ)` that is not a pole of the
+Gamma factor (Mathlib: `gammaFactor χ s ≠ 0`) has `1/8 ≤ Re s ≤ 7/8`. -/
 theorem LFunction_quasi_critical_strip {χ : DirichletCharacter ℂ N}
     (hχ : χ.IsPrimitive) (hχ1 : χ ≠ 1) {s : ℂ}
     (hs : DirichletCharacter.LFunction χ s = 0)

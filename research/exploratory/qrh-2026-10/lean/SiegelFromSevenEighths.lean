@@ -4,7 +4,12 @@ Exploratory (qrh-2026-10 wave). Not part of the imported OpenAI development.
 The two statements of `ComparatorChallenges/SiegelZeros.lean` (the Oct 1 Landau-Siegel
 challenge), derived from the 7/8 Dirichlet theorem of the imported development
 (`OAI.DirichletCharacter.LFunction_ne_zero_of_seven_eighths_lt_re`), with the explicit
-constant `c = log 3 / 8`. Primitivity and reality of `χ` are not used.
+constant `c = log 3 / 8`. Primitivity, reality and non-principality of `χ` are not used.
+
+The declarations reuse the challenge's fully qualified names
+`OAI.SiegelZeros.WeightedTorusJets.*`, because comparator matches by name. These are the same
+names as in the upstream Siegel development, so this module and that one cannot be imported
+together. "WeightedTorusJets" names the upstream method; this proof does not use it.
 
 This file proves nothing about RH. It shows that the Siegel challenge statement is a short
 corollary of the 7/8 zero-free half-plane, so the 7/8 theorem's correctness and this

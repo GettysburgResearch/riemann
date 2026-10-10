@@ -15,8 +15,10 @@ Smallest remaining gap: each RH-equivalent premise in the repo needs exponent 0;
 > `Re s > 7/8`, is now also a Lean theorem about Mathlib's `riemannZeta`. Lean's kernel accepted it
 > through comparator, using only the three standard axioms ([LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md),
 > Addenda A–B, where the trust assumptions are listed). The Dirichlet version is axiom-clean too.
-> * The statements below that use only `H(7/8)` for ζ or for Dirichlet `L`-functions are therefore
->   conditional on accepting that machine check, not on the unreviewed manuscript text.
+> * Statements below that use only `H(7/8)` for ζ are conditional on accepting the comparator
+>   check, not on the unreviewed manuscript text.
+> * Statements that use `H(7/8)` for Dirichlet `L`-functions rest on the `#print axioms` check
+>   (comparator status: LEAN_BUILD_ATTEMPT Addendum C).
 > * The classical derivations they rest on are still imported or PROPOSED as labelled.
 > * Statements that need the Hecke family or the Oct 5 claim are unchanged.
 

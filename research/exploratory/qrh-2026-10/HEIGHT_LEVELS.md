@@ -127,15 +127,18 @@ the positivity step, which discards the `μ(f)` cancellation of the dual diagona
 | reflection rank | the GL(3) cubic theta vanishes where needed | literature (IMPORTED) |
 | depth `σ₀ → 1/2` | implied by sub-diagonal mean squares (converse only at the endpoint); endpoint ⇔ family GRH | Prop. R (RUNG), Corollary (elementary, PROPOSED); Prop. R′ (RUNG) via unreviewed PR 910 |
 
-## 6. A formal anchor that holds at every height (added at the end of the wave)
+## 6. A formal anchor, uniform in height (added at the end of the wave)
 
-The four directions above are about mechanisms. One statement now holds uniformly at all heights
-and is machine-checked. It is a Lean theorem about Mathlib's `riemannZeta`, built on the
-imported 7/8 theorem, which comparator accepts
-([reviews/LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md); [lean/](lean/README.md)):
+The four directions above are about mechanisms. One statement is now machine-checked uniformly in
+height, under the trust assumptions of [reviews/LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md),
+Addendum B. It is a Lean theorem about Mathlib's `riemannZeta`, derived in this wave from the
+imported 7/8 theorem ([lean/](lean/README.md)). Comparator accepted that imported theorem; the
+strip itself has `#print axioms` evidence only.
 
-* every nontrivial zero `ρ = β + iγ` of `ζ` has `1/8 ≤ β ≤ 7/8`, at every height `γ`;
-* the same holds for primitive Dirichlet `L`-functions.
+* Every nontrivial zero `ρ = β + iγ` of `ζ` has `1/8 ≤ β ≤ 7/8`, at every height `γ`.
+* The same strip holds for primitive `χ ≠ 1`, off the poles of the Gamma factor. This version
+  rests on the Dirichlet 7/8 theorem, which has `#print axioms` evidence; its comparator status
+  is in Addendum C.
 
 How it sits against the other height facts:
 
@@ -143,7 +146,7 @@ How it sits against the other height facts:
 |---|---|---|
 | `0 < γ ≤ 3·10¹²` | `β = 1/2` | IMPORTED computation (Platt–Trudgian 2021; not re-run here) |
 | all `γ` | `1/8 ≤ β ≤ 7/8` | Lean theorem (this wave), on the imported 7/8 development |
-| `γ → ∞` | classical zero-free regions `β < 1 − c/(log γ)^{2/3}(log log γ)^{1/3}` | IMPORTED; weaker than 7/8 at every height beyond the verified range |
+| `γ → ∞` | classical zero-free regions `β < 1 − c/((log γ)^{2/3}(log log γ)^{1/3})` | IMPORTED; weaker than 7/8 at every height beyond the verified range |
 
 So, at the level of zero-free regions, "going higher" now has a floor that does not erode: the
 strip does not narrow towards `Re s = 1` as `γ` grows. That is all it says. In particular:

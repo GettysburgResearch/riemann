@@ -1,7 +1,8 @@
 # Verification-status map v2 of the 30 Sep 2026 OpenAI 7/8 manuscript
 
 ```text
-Status: EXPLORATORY (verification bookkeeping). This is not a review verdict on any lemma, not an
+Status: EXPLORATORY (verification bookkeeping). Addendum v2.1 (Sec. 10) supersedes the counts and
+  the gap stated in this header. This is not a review verdict on any lemma, not an
   integration record, and not a statement that the 7/8 theorem holds. It collates the verdicts of
   the bounded agent reviews written since v1, recounts the load-bearing graph, and ranks what is
   left. v1 (SEP30_VERIFICATION_MAP.md, sha256 657696c2a661...) is unchanged and remains the record
@@ -366,7 +367,7 @@ Without the substitution the shares are 43/65 (66%) and 48/65 (74%) of nodes, an
    * the supply margin 23/1443.
 
    So a fixed-power loss anywhere in these chains would move or break 7/8. A high reviewed fraction does not lower this risk proportionally.
-7. **Lean does not change this.** The import claims a formalization of the theorem, not of the numbered lemmas, and the formal route differs from the paper (v1 Sec. 5). LEAN_BUILD_ATTEMPT built 350 of 2,924 modules, with no errors, before its time budget ran out. The comparator was not run, and `#print axioms` was not obtained.
+7. **Lean does not change this.** The import claims a formalization of the theorem, not of the numbered lemmas, and the formal route differs from the paper (v1 Sec. 5). LEAN_BUILD_ATTEMPT built 350 of 2,924 modules, with no errors, before its time budget ran out. The comparator was not run, and `#print axioms` was not obtained. (Superseded: the closure now builds, `#print axioms` is standard, and comparator accepts the zeta challenge; see Sec. 10.)
 8. **Nothing here bears on RH.** The statement is a fixed half-plane `Re s > 7/8`.
 
 ## 7. Non-fatal findings collected from the reviews
@@ -415,8 +416,8 @@ seven nodes:
 |---|---|---|---|
 | Lem 4.2 Prime Gauss identities | A | R | [SEP30_L42_44_REVIEW.md](SEP30_L42_44_REVIEW.md): no wrong step; exact checks at 422 primes |
 | Lem 4.3 Quadratic four-term formula | A | R | same: no wrong step; the four-term formula is exact for all 5,454 odd `c` with `N(c) ≤ 2000`; one compressed step closed by an exhaustive finite check |
-| Lem 4.4 Sextic reciprocity, fixed Gauss phase | A | R | same: no wrong step, given classical cubic reciprocity (imported; also applied to the inert prime 2; the cited source was not opened) |
-| Lem 17.1 Marked inverse moment | A | Rp | [SEP30_MISC_REVIEW.md](SEP30_MISC_REVIEW.md): initialization transform replayed exactly at tiny scale; still conditional on Lemma 17.2 (Rp) |
+| Lem 4.4 Sextic reciprocity, fixed Gauss phase | A | R | same: no wrong step, given classical cubic reciprocity (imported; also applied to the inert prime `−2`, the primary associate; the cited source was not opened) |
+| Lem 17.1 Marked inverse moment | A | Rp | [SEP30_MISC_REVIEW.md](SEP30_MISC_REVIEW.md): initialization transform replayed at tiny scale (exact symbols and exponent identities; double-precision end-to-end agreement ≤ 3.3e-15, EMPIRICAL); still conditional on Lemma 17.2 (Rp) |
 | Lem 20.1 High exponent for one row bin | I | R | SEP30_MISC_REVIEW.md: correct as a reduction to named imported inputs |
 | Prop 2.1 Continuation from a common signal | I | R | SEP30_MISC_REVIEW.md: complete proof read line by line |
 | Thm 1.1 (final assembly only) | I | R | SEP30_MISC_REVIEW.md: the final contradiction read; correct |

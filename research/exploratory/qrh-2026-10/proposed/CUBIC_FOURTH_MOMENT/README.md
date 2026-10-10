@@ -93,8 +93,9 @@ displayed steps**:
 * The binding point `v = L` uses no lattice saving.
 * The tightest constraint there is `κ = 5/6` (Lemmas 4.F/4.G), which was not re-reviewed.
 
-Its script passes 18 of 19 checks. The one failure is a tiny-scale effect: `Z^ε` dominates at
-`Z ≤ 10⁸`.
+Its script passes 18 of 19 checks. The one failure, [L2b], is attributed (CUBIC_CENTRED_ATTACK
+§3.3) to `Z^ε` and divisor factors dominating at `Z ≤ 10⁸`. At this scale the check is
+uninformative; it is not a pass.
 
 Left open: whether every step of l. 13114-14310 acts identically on both rectangles. If one
 does not, the loss can be as large as `M/3`, which would exceed the tolerance.

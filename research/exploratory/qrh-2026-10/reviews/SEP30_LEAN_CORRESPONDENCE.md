@@ -41,7 +41,7 @@ What was actually run (no Lean, Lake or lean4export process was started):
     (Sec. 2), plus the 14 statement spot checks of Sec. 3.2 against the TeX.
 Smallest remaining gap: the Lean route does not pass through the paper's Part I (Thm 3.1, 11/12)
   and proves its own versions of the imported external theorems. The formal check therefore
-  certifies the 7/8 statement (zeta: comparator-accepted; Dirichlet: `#print axioms` only),
+  checks the 7/8 statement (zeta: comparator-accepted; Dirichlet: `#print axioms` only),
   under the stated trust assumptions, but not the manuscript's text. Of the 65 nodes, 6 have a spot-checked Lean
   counterpart of the same strength, 8 a spot-checked variant, 37 only a name-level candidate, 8
   are bypassed, and 6 have no counterpart found by name.
