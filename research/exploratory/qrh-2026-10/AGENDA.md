@@ -136,6 +136,9 @@ attempt.
   (paper.tex l. 13192–13349 and 13686–13933).
 * The numerology has zero slack at three points. This is the highest-value single verification
   target in the 7/8 manuscript.
+* *Follow-up done* ([reviews/LEMMA18_1_COMMON_SUPPORT.md](reviews/LEMMA18_1_COMMON_SUPPORT.md)):
+  no error was found in the common-support allocations, and 24/24 checks passed. Lemma 18.1 as a
+  whole is still not certified. Case 2, Sec. 18.8 and the use in Prop. 19.2 remain unreviewed.
 
 **C2″. Spin-off: the cubic fourth moment** ([CUBIC_FOURTH_MOMENT_TRANSFER.md](CUBIC_FOURTH_MOMENT_TRANSFER.md)).
 * Lemma 18.1's scheme, transferred to cubic characters, fails as is. The saving is `κ = 5/6`
