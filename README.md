@@ -71,6 +71,10 @@ The pages above describe reviewed components at their recorded sources, with lat
 
 [The October 10 research packet](standalone/2026-10-10-quasi-riemann-height-descent/README.md) gives a completed deduction of the boundary \(139999/160000\), conditional on the imported analytic machinery, with explicit proof adapters and a scoped independent review. It also proves native height-local detector components and exact higher-moment reductions, identifies the open signed off-diagonal estimate needed for a shrinking band, and records an exact limit of the current geometric exponent envelope. These are proposed research results with their dependency and validation boundaries; they have not been promoted to the integrated record or formalized in Lean.
 
+## Follow-up research: generalized inverse moments
+
+[The generalized-moment packet](standalone/2026-10-10-generalized-inverse-moments/README.md) proves a general moment bound for long row ranges, an all-order prime-incidence decomposition, uniform removal of moving exclusions, and a single-test characterization of moment growth by the rightmost zero. It also gives counterexamples to arbitrary-coefficient shortcuts. The crucial short-row fourth and higher moments remain open; no new zero-free boundary or RH proof is claimed. The packet records complete proofs, scoped independent agent reviews, and exact finite character checks.
+
 ## License
 
 Project code and original research materials are available under the [MIT License](LICENSE). Third-party material retains its existing terms and notices.
