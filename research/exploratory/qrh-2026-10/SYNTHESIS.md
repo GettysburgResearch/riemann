@@ -172,6 +172,9 @@ the critical line.
      * Risk item 10 (hidden losses in the common-support allocations): no loss of order `M` at
        `n = 3`; every inequality has minimum slack exactly 0, checked in exact arithmetic
        ([reviews/CUBIC_ALLOCATION_LOSS.md](reviews/CUBIC_ALLOCATION_LOSS.md)).
+     * The sketched cubic Lemmas 4.B, 4.C, 4.D and 4.H are now proved in full, with precision
+       fixes. 4.G is proved given one inherited ledger formula, which stays OPEN
+       ([proposed/CUBIC_FOURTH_MOMENT/LEMMAS_4BCD_GH.md](proposed/CUBIC_FOURTH_MOMENT/LEMMAS_4BCD_GH.md)).
      * The route stays PROPOSED and conditional on (H-A) and (H-B).
    * The 7/8 paper's Gauss/reciprocity helpers (Lemmas 4.2–4.4), which the sextic packet
      needs, had one bounded review: no wrong step found

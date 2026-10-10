@@ -1,0 +1,60 @@
+== Lemma 4.B: full correlation, cubic local factors ==
+   u=N7^1           v=N7^1            j checked      49  mismatches 0
+   u=N7^2           v=N7^2            j checked    2401  mismatches 0
+   u=N7^3           v=N7^3            j checked  117649  mismatches 0
+   u=N7^4           v=N7^1            j checked   16807  mismatches 0
+   u=N7^4           v=N7^3            j checked  823543  mismatches 0
+   u=N7^2           v=N7^3            j checked   16807  mismatches 0
+   u=N7^2           v=N7^1*N13^1      j checked    4459  mismatches 0
+   u=N7^2*N13^1     v=N7^2            j checked   31213  mismatches 0
+   u=N7^1*N7^1      v=N7^2            j checked    2401  mismatches 0
+   u=N7^3           v=N7^3*N7^1       j checked  823543  mismatches 0
+   u=N25^2          v=N25^1           j checked   15625  mismatches 0
+   u=N25^2          v=N25^2           j checked  390625  mismatches 0
+   u=N13^1*N19^1    v=N7^1            j checked    1729  mismatches 0
+   u=N7^1           v=N13^2           j checked    1183  mismatches 0
+[B1] CHECK PASS: 14 configurations, all j mod uv (2248034 frequencies, 7960 with F != 0): exact agreement with the cubic local formula
+[B1-CTRL6] CTRL PASS: sextic rule (6|c) at u=v=p^3, N p=7: 294/117649 mismatches
+[B1-CTRL6b] CTRL PASS: sextic rule at (u,v)=(p^3,p^4): 2058/823543 mismatches
+[B1-CTRLc] CTRL PASS: conjugated residual symbol chi-bar_n1(k): 1008/12103 mismatches
+[B2] CHECK PASS: Corollary (i > j0): (2,1),(3,1),(4,3),(5,3),(3,2),(4,2) at N p = 7, all j
+[B3] CHECK PASS: zero frequency: F(u,v;0) = phi(u) 1_{u=v}
+== Lemma 4.C: complete-common-support child character ==
+[C1] CHECK PASS: 7 configurations, all j mod uv (2864491 frequencies, 34266 with F != 0): F(Da,Eb;j) = F(D,E;j) chi_a(j) chi-bar_b(-j)
+[C1-CTRLc] CTRL PASS: conjugated sign chi-bar_a(j) at D=E=p (N7), a=N13, b=N7': 336/4459 mismatches
+[C1-CTRLc3] CTRL PASS: conjugated sign chi-bar_a(j) at D=E=p^3, a=N13: 2744/1529437 mismatches
+[C1-CTRLh] CTRL PASS: hypothesis (a,b)=1 violated (a = b = N13 prime, D = E = N7 prime): 1183/8281 mismatches
+== Lemma 4.D: r-classification and bridge CRT factorization ==
+[D1] CHECK PASS: single prime: chi_p^i chi-bar_p^j = xi_p 1 if 3 !| i-j (xi nonprincipal), = 1_{p !| k} if 3 | i-j; i,j in 1..7, N p in {7,13,25}
+[D1-CTRL6] CTRL PASS: sextic classification at (i,j)=(4,1): puts p in r but the cubic character is principal
+[D2] CHECK PASS: composite c = p1 p2 p1' (norms 7,13,7), 216 exponent patterns: chi_C chi-bar_D = xi_r 1_{(k,c/r)=1} on all k mod c; xi_r primitive mod r
+[D3] CHECK PASS: bridge CRT: k = br x + ar y + ab z is a bijection and chi_a(k) chi-bar_b(k) xi(k) factors termwise with phase chi_a(br) chi-bar_b(ar) xi(ab)
+[D4] CHECK PASS: cubic reciprocity chi_b(a) = chi_a(b), 3466 coprime primary pairs (primes of norm <= 200 and products): R = 1
+[D4-CTRL6] CTRL PASS: the sextic symbol is NOT reciprocal on the same pairs (1464/3466 differ): the phase is genuinely trivial only at n = 3
+[D3-F] CHECK PASS: FLOAT (not certified): full bridge Gauss sum = phase * G(a,h) conj(G(b,-h)) G_xi(r,h) (unnormalized); max error 2.8e-14
+== Lemma 4.H: Kummer / fixed numerator, mu_3 ==
+[H1] CHECK PASS: 27 numerators w^s 2^t lam^r: A -> chi_A(numerator) is constant on primary primes A in each class mod 18 (422 primes, norm <= 3000)
+[H1-CTRL6] CTRL PASS: the same characters are NOT periodic mod 6
+[H2] CHECK PASS: exactly 27 distinct characters among the 27 numerators (units mod cubes: 3 classes)
+[H2b] CHECK PASS: chi_A(-1) = 1 on all primary primes (−1 = (−1)^3)
+[H3] CHECK PASS: a = q good prime (N q = 7): A -> chi_A(q) on primary primes A depends only on A mod q (conductor exponent 1 at q) and is nonconstant
+[H4] CHECK PASS: Frobenius: X^3 - a has a root mod p iff (a/p)_3 = 1 (261 pairs, N p <= 200)
+[H4-CTRL6] CTRL PASS: the sextic criterion (a/p)_6 = 1 misclassifies 37/261 pairs
+== Corollary 4.H: forced residues and the cube form ==
+[H5] CHECK PASS: forced residue: over 1074 rows h' (N h' <= 300, all units and S-parts) and e in {0,1,2}, the mod-18 test agrees with 'v_q(h') = 0 mod 3 off p0, v_p0(h') = -e mod 3' (162 exceptional)
+[H5-CTRL6] CTRL PASS: the sextic rule (mod 6) disagrees on 66 rows
+   (illustration, not a check) Y=   1000: #exceptional good ideals (h') = p0 * v^3, N <= Y :    1;  (Y/7)^(1/3) =    5.23
+   (illustration, not a check) Y=  10000: #exceptional good ideals (h') = p0 * v^3, N <= Y :    3;  (Y/7)^(1/3) =   11.26
+   (illustration, not a check) Y= 100000: #exceptional good ideals (h') = p0 * v^3, N <= Y :    7;  (Y/7)^(1/3) =   24.26
+== Lemma 4.G [G0]: absolute local correlation table, brute force (cubic analogue of l. 13742-13751) ==
+[G0] CHECK PASS: max |F(p^i,p^j0;G k)|^2 over unit / nonunit k equals the cubic table (N p = 7, 13): equal 3!|i: P^{i-1} / P^{i-1}(P-1); equal 3|i: P^{i-1}(P-2) / P^{i-1}(P-1); unequal: P^{j0-1}(P-1) 1_{3|j0} / 0
+== Lemma 4.G: table arithmetic only (per-prime values follow from (LF) in the note; (LF) itself is not checked here) ==
+[G1] CHECK PASS: table arithmetic: F_2 >= b_2 in every listed row, i <= 60; min F_2 - b_2 = 0 at ('eq 3|i', 3)
+[G1-CTRL] CTRL PASS: without the forced residue the nonunit i=1 entry is 2/3 < b_2 = 1 (ratio 2/3)
+[G2] CHECK PASS: SKETCH column F_2 - b_2 = (3i - j0 - 6)/6 for the unequal row is the exact difference
+
+SUMMARY: checks 18/18 PASS; failing controls detected 12/12
+
+real	0m56.523s
+user	0m55.299s
+sys	0m0.836s

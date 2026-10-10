@@ -163,3 +163,20 @@ Correction to the risk register's tolerance:
 * `c*(δ) = (11−147δ)/432` covers only a loss confined to the centred deficit.
 * A loss in an order-free ledger would be fatal for any `c > 0`.
 * A loss in `F_1/F_2` scales with `v`, and two stages would then need `κ ≥ 3 − √5 ≈ 0.764`.
+
+## Note added later the same day: the sketched cubic lemmas (risk items 3-5)
+
+[LEMMAS_4BCD_GH.md](LEMMAS_4BCD_GH.md) writes out full proofs (PROPOSED; bounded, one agent;
+exact checks 18/18 with 12 failing controls, all detected):
+* **4.C** proved: the three reciprocity factors equal 1 by cubic reciprocity.
+* **4.D** proved, split into D1 (the classification, with ξ primitive) and D2 (the bridge CRT
+  factorisation). A notation clash in SKETCH (`𝔯` for both an ideal and a bicharacter) is flagged.
+* **4.B** proved. SKETCH silently drops a reciprocity factor; that is valid only because cubic
+  reciprocity makes it 1, and the factor is restored explicitly.
+* **4.H** proved, with two precision fixes: the ray character holds only on ideals coprime to
+  `3a`, and there are exactly 27 S-characters. Its corollary is proved except at `e_p = i+1`,
+  which needs the imported A4 claim (l. 14347-14350).
+* **4.G** proved given the `F_2` ledger formula (LF). (LF), inherited from the manuscript at
+  `θ = 1/3`, stays OPEN.
+
+Updated register lines for items 3-5 are in its §6.
