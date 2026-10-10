@@ -34,8 +34,7 @@ the critical line.
 * **The 7/8 half-plane is machine-checked.**
   * The import's Lean proof that `ζ(s) ≠ 0` for `Re s > 7/8` (Mathlib's `riemannZeta`), and its
     Dirichlet and Hecke-family versions, were built here and accepted by comparator with
-    Lean's kernel. The zeta and Dirichlet statements are also accepted by the independent nanoda
-    kernel.
+    Lean's kernel, and also by the independent nanoda kernel.
   * Only the three standard axioms are used.
   * The trust assumptions are listed in [reviews/LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md).
 * **Neither the formal proof nor, on paper, the 7/8 argument needs Part I or the 11/12 theorem**
@@ -62,9 +61,9 @@ the critical line.
      * Mathlib came from its binary cache.
      * Some builds overlapped the runs; this is disclosed, and the 7/8 closure's oleans predate
        every run.
-     * **For the zeta and Dirichlet statements, a second, independent kernel agrees:** comparator with nanoda
+     * **For all three upstream 7/8 statements, a second, independent kernel agrees:** comparator with nanoda
        (a Rust type checker) reports "nanoda kernel accepts the solution" as well as the Lean
-       kernel's acceptance (zeta 1238 s, Dirichlet 1223 s; Addendum C).
+       kernel's acceptance (zeta 1238 s, Dirichlet 1223 s, Hecke 1222s; Addendum C).
      * This is a machine check of the Lean statement, not a review of the manuscript.
    * **The Lean route needs no Part I** ([reviews/SEP30_LEAN_CORRESPONDENCE.md](reviews/SEP30_LEAN_CORRESPONDENCE.md)).
      * It replaces the 11/12 bootstrap by the trivial `β ≤ 1`, and extends the paper's own endpoint

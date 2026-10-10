@@ -3,8 +3,8 @@
 ```text
 Status: VERIFICATION (formal build COMPLETED, Addendum A; comparator ACCEPTS the zeta challenge,
   Addendum B, and the Dirichlet, Hecke, upstream Oct 1 SiegelZeros, wave-Siegel and wave-strip
-  challenges, Addendum C; the zeta challenge is also accepted by the independent nanoda kernel,
-  Addendum C);
+  challenges, Addendum C; the zeta, Dirichlet and Hecke challenges are also accepted by the
+  independent nanoda kernel, Addendum C);
   no mathematical claim beyond what the build shows. Sections 1-8 are the original partial
   attempt and are kept unchanged as the record of that attempt
 Scope: Kernel build of the import closure of OAI.NumberTheory.DirichletL.Nonvanishing, the solution
@@ -221,7 +221,7 @@ met).
 | upstream `SiegelZeros.json` | `OAI.NumberTheory.SiegelZeros.Main` (Oct 1 route) | **accepted**: "Lean default kernel accepts the solution", 900 s, exit 0 ([results/comparator_SiegelZeros.log](results/comparator_SiegelZeros.log)). Its solution closure contains no `OAI.NumberTheory.DirichletL.*` module |
 | wave `QRHWaveDirichletStrip.json` (challenge written in this wave; Mathlib-only) | `OAI.QRHWave.DirichletZeroStrip` | **accepted**: "Lean default kernel accepts the solution", 1130 s, exit 0 ([results/comparator_QRHWaveDirichletStrip.log](results/comparator_QRHWaveDirichletStrip.log)) |
 | `DirichletSevenEighthsNanoda.json` (upstream challenge with `enable_nanoda: true`) | `OAI.NumberTheory.DirichletL.Nonvanishing` | **accepted by both kernels** (nanoda and Lean), 1223 s, exit 0 ([results/comparator_DirichletSevenEighths_nanoda.log](results/comparator_DirichletSevenEighths_nanoda.log)) |
-| `HeckeSevenEighthsNanoda.json` (upstream challenge with `enable_nanoda: true`) | `OAI.NumberTheory.DirichletL.Hecke.Nonvanishing` | running |
+| `HeckeSevenEighthsNanoda.json` (upstream challenge with `enable_nanoda: true`) | `OAI.NumberTheory.DirichletL.Hecke.Nonvanishing` | **accepted by both kernels** (nanoda and Lean), 1222s, exit 0 ([results/comparator_HeckeSevenEighths_nanoda.log](results/comparator_HeckeSevenEighths_nanoda.log)) |
 | `QuasiRiemannHypothesisNanoda.json` (upstream zeta challenge with `enable_nanoda: true`) | `OAI.NumberTheory.DirichletL.Nonvanishing` | **accepted by both kernels**: "nanoda kernel accepts the solution" and "Lean default kernel accepts the solution", 1238 s, exit 0 ([results/comparator_QuasiRiemannHypothesis_nanoda.log](results/comparator_QuasiRiemannHypothesis_nanoda.log)). nanoda_lib 0.4.19 (ammkrn/nanoda_lib@3a24072) is an independent type checker written in Rust; it was built here with cargo 1.97.0 (`cargo build --release`, 32 s) and passed to comparator through `COMPARATOR_NANODA` |
 
 ## 1. Verdict of the original attempt (superseded by Addendum A): PARTIAL

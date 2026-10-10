@@ -165,7 +165,7 @@ How to read the Lean text:
 | T6 | Comparator and lean4export | 4/4 self-tests passed. The toolchain was matched to v4.34.1. | Their own correctness; the local toolchain override. |
 | T7 | Comparator assumption 2 (solution not precompiled) | **Not met.** The solution was compiled outside the sandbox first. This is a non-adversarial reproduction. | — |
 | T8 | landrun sandbox | v0.1.18 `--best-effort` on Landlock ABI v7 (strict mode wants v9). A write outside the allowed paths was denied in a test. | The systemd `AF_UNIX` wrapper was not used. |
-| T9 | Second kernel | At drafting none had run. Since then the **nanoda kernel accepts the zeta challenge** (`QuasiRiemannHypothesisNanoda.json`, 1238 s, together with the Lean kernel; Addendum C). The Dirichlet and Hecke challenges have the Lean kernel only. | — |
+| T9 | Second kernel | At drafting none had run. Since then the **nanoda kernel accepts the zeta challenge** (`QuasiRiemannHypothesisNanoda.json`, 1238 s, together with the Lean kernel; Addendum C). Later the Dirichlet and Hecke challenges were also accepted by both kernels (Addendum C). | — |
 | T10 | Human review | **None**, of the Lean development, the statement or the trust base. | — |
 
 ## 4. Formal run record
@@ -279,7 +279,7 @@ claim ID. A grep for the proposed ID itself finds nothing. No `IMPORTED.` ID exi
 | check evidence | build, `#print axioms`, statement pin, comparator ×2 (LEAN_BUILD_ATTEMPT Addenda A-C, at `995eb31fd`) |
 | quantifier_scope | global; open half-plane |
 | proof_kind | imported formal proof (Lean 4 kernel; three standard axioms) |
-| trust_assumptions | Mathlib oleans from cache; 23 unreviewed patches; comparator assumption 2 not met; landrun best-effort; two kernels (Lean, nanoda) for the zeta statement, Lean only for the others |
+| trust_assumptions | Mathlib oleans from cache; 23 unreviewed patches; comparator assumption 2 not met; landrun best-effort; two kernels (Lean, nanoda) for the zeta, Dirichlet and Hecke statements; Lean only for the corollaries |
 | rh_relationship | none directly |
 | final_verdict | **not assigned**: awaits an independent exact-SHA review and the decision of Section 8 |
 | first_broken_arrow | none known; smallest failure point in Section 9 |
@@ -364,8 +364,8 @@ The mathematics is kernel-checked, so the smallest failure point is in the trust
 7. **"Mathlib's git tree is clean, so its definitions are checked."** The sources were checked;
    the oleans came from cache (T3).
 8. **"Two kernels agree."** For the zeta statement, yes: nanoda and the Lean kernel both
-   accepted it (added after drafting; Addendum C). The Dirichlet and Hecke statements and the
-   corollaries have the Lean kernel only.
+   accepted it, and later the Dirichlet and Hecke statements too (added after drafting;
+   Addendum C). The corollaries have the Lean kernel only.
 9. **"The Lean statement at `s = 1` says something about the pole."** It is a fact about Mathlib's
    junk value.
 10. **"Agent reviews make this reviewed."** No. Integration needs an independent exact-SHA review.
