@@ -85,7 +85,7 @@ the critical line.
        `c = (log 3)/8` explicitly.
    * **The Oct 1 Siegel development** builds (9242 jobs, 0 errors, 0 `sorry`). Its axioms are
      standard, it uses no 7/8 module, and **comparator accepts it** against the upstream
-     challenge (900 s). So the Siegel-zero statement has two comparator-accepted Lean proofs
+     challenge, with both the Lean and nanoda kernels (900 s; 999 s with nanoda). So the Siegel-zero statement has two comparator-accepted Lean proofs
      that share no OAI module: the Oct 1 route, and the wave's three-line corollary of 7/8.
    * A proposed integration packet is drafted:
      [proposed/SEP30_7_8_FORMAL_PACKET/](proposed/SEP30_7_8_FORMAL_PACKET/README.md).
