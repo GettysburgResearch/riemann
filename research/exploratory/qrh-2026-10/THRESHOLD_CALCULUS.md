@@ -246,12 +246,16 @@ See `results/S*.json`; summary table filled from those runs:
 
 | Change (all else manuscript) | Best σ0 |
 |---|---|
-| plain capacity `2m + 4κz ≤ 1` (was 6κ) | (pending) |
-| inverse capacity `r + z ≤ 1` (was `r + 2z`) | (pending) |
-| amplification slope α = 3/4 (was 5/6) | (pending) |
-| detector `t ≤ 2` (was 3/2) | (pending) |
-| central contour `z0 = 0.33` (was 17/50) | (pending) |
-| prime slots used for `d ≥ 0.05` (was 1/2) | (pending) |
+| plain capacity `2m + 4κz ≤ 1` (was 6κ) | 0.874712 (gain 2.9·10⁻⁴) |
+| inverse capacity `r + z ≤ 1` (was `r + 2z`) | (run in progress; see results/S2_invcap1.json when present) |
+| amplification slope α = 3/4 (was 5/6) | 0.874514 (gain 4.9·10⁻⁴) |
+| detector `t ≤ 2` (was 3/2) | not run (stopped for CPU) |
+| central contour `z0 = 0.33` (was 17/50) | not run (stopped for CPU) |
+| prime slots used for `d ≥ 0.05` (was 1/2) | not run (stopped for CPU) |
+
+Every single-lemma improvement tried buys less than `5·10⁻⁴`. The 7/8 architecture is
+rigid with respect to its moment constants. Large movements need the structural changes of
+Section 5.
 
 ## 7. Lemma-range obligations for any other geometry
 
