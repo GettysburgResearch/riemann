@@ -8,8 +8,8 @@ Status: EXPLORATORY formal corollaries of the imported 7/8 theorem. All three fi
   [propext, Classical.choice, Quot.sound] (../reviews/results/lean_corollary_axioms.log).
   Comparator (../reviews/LEAN_BUILD_ATTEMPT.md, Addendum C): SiegelFromSevenEighths ACCEPTED
   against the upstream SiegelZeros challenge; ZetaZeroStrip ACCEPTED against the wave's
-  Mathlib-only challenge comparator/QRHWaveStrip.lean. DirichletZeroStrip has no comparator
-  challenge (axioms only). No RH claim.
+  Mathlib-only challenge comparator/QRHWaveStrip.lean; DirichletZeroStrip ACCEPTED against the
+  wave's Mathlib-only challenge comparator/QRHWaveDirichletStrip.lean. No RH claim.
 Scope: ZetaZeroStrip.lean (nontrivial zeros of Mathlib's riemannZeta lie in 1/8 <= Re s <= 7/8);
   DirichletZeroStrip.lean (the same strip for L(s, chi), chi primitive and nontrivial);
   SiegelFromSevenEighths.lean (both statements of the imported Siegel-zero comparator challenge,
@@ -21,7 +21,8 @@ Exact sources or dependencies: pr908 = 31c706bbb3dce49a7ebabbe71cd7cbacdaa6cbb6,
   OAI.DirichletCharacter.LFunction_ne_zero_of_seven_eighths_lt_re; Mathlib's riemannZeta_one_sub
 What was actually run: a clean lake build of the three modules (as OAI.QRHWave.*) in the scratch
   copy of the import; checks/CorollaryAxioms.lean; comparator on comparator/SiegelFromSevenEighths.json
-  (accepted, 1082 s) and comparator/QRHWaveStrip.json (accepted, 1104 s), LEAN_BUILD_ATTEMPT Addendum C
+  (accepted, 1082 s), comparator/QRHWaveStrip.json (accepted, 1104 s) and
+  comparator/QRHWaveDirichletStrip.json (accepted, 1130 s), LEAN_BUILD_ATTEMPT Addendum C
 Smallest remaining gap: ZetaZeroStrip rests on the zeta 7/8 theorem, which comparator accepted
   under the assumptions of LEAN_BUILD_ATTEMPT Addendum B. DirichletZeroStrip and
   SiegelFromSevenEighths rest on the Dirichlet 7/8 theorem, which comparator also accepted

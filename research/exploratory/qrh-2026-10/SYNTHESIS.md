@@ -78,7 +78,8 @@ the critical line.
      * Every nontrivial zero of `ζ` lies in `1/8 ≤ Re s ≤ 7/8`. This is stated in the shape of
        Mathlib's `RiemannHypothesis`, and comparator accepts it against a Mathlib-only challenge
        written in this wave.
-     * The same strip holds for primitive Dirichlet `L(s, χ)`, `χ ≠ 1` (axioms standard).
+     * The same strip holds for primitive Dirichlet `L(s, χ)`, `χ ≠ 1`. Comparator accepts this
+       against a Mathlib-only challenge written in this wave.
      * The Oct 1 Siegel-zero challenge statement follows from the 7/8 Dirichlet theorem, and
        comparator accepts it against the upstream challenge. The helper `gap_of_real_zero` gives
        `c = (log 3)/8` explicitly.
