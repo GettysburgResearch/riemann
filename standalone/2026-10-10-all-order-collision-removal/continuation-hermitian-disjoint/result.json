@@ -1,0 +1,183 @@
+{
+  "arithmetic_dependency_git_blob": "08ca528df9074ff8e418a29ba240b5cc1057b93d",
+  "kernel_coverage": [
+    {
+      "colours": 2,
+      "maximum_each_valuation": 2,
+      "valuation_vectors": 9
+    },
+    {
+      "colours": 4,
+      "maximum_each_valuation": 2,
+      "valuation_vectors": 81
+    },
+    {
+      "colours": 6,
+      "maximum_each_valuation": 2,
+      "valuation_vectors": 729
+    },
+    {
+      "colours": 8,
+      "maximum_each_valuation": 2,
+      "valuation_vectors": 6561
+    }
+  ],
+  "norm_panels": [
+    {
+      "D": 37,
+      "disjoint_integral": "1738844904921472/10350255164257",
+      "finite_prime_ideal_norms": [
+        19,
+        19,
+        31,
+        31,
+        37,
+        37
+      ],
+      "k": 2,
+      "moment_integral": "1742410576081672/10350255164257",
+      "pointwise_negative_example": {
+        "A_moment": 49,
+        "C_value": -12,
+        "row": [
+          -4,
+          -4
+        ],
+        "scale_midpoint": "17"
+      },
+      "q_upper_bound": "58052164859089707019225/131434425404541879975936",
+      "rational_t_majorants": [
+        "1/9",
+        "1/9",
+        "1/13",
+        "1/13",
+        "1/15",
+        "1/15"
+      ],
+      "row_norm_bound": 19,
+      "rows": 72,
+      "scale_intervals": 7,
+      "sigma": "3/4"
+    },
+    {
+      "D": 73,
+      "disjoint_integral": "106163322553432260/393197529565681",
+      "finite_prime_ideal_norms": [
+        61,
+        61,
+        67,
+        67,
+        73,
+        73
+      ],
+      "k": 3,
+      "moment_integral": "4278918386259701399971935/15846741990358230556802",
+      "pointwise_negative_example": {
+        "A_moment": 27,
+        "C_value": -36,
+        "row": [
+          -5,
+          -3
+        ],
+        "scale_midpoint": "195/4"
+      },
+      "q_upper_bound": "487768151918265897923642501337665242009/828192550982062983251040298598400000000",
+      "rational_t_majorants": [
+        "1/15",
+        "1/15",
+        "1/16",
+        "1/16",
+        "1/17",
+        "1/17"
+      ],
+      "row_norm_bound": 19,
+      "rows": 72,
+      "scale_intervals": 7,
+      "sigma": "2/3"
+    },
+    {
+      "D": 223,
+      "disjoint_integral": "329613545056217482017743688/738381597968878950195995",
+      "finite_prime_ideal_norms": [
+        193,
+        193,
+        199,
+        199,
+        211,
+        211,
+        223,
+        223
+      ],
+      "k": 4,
+      "moment_integral": "43021240734907847114633709502894377657974039211492/96373697852090533782541362464341650654371759255",
+      "pointwise_negative_example": {
+        "A_moment": 28561,
+        "C_value": -2880,
+        "row": [
+          -4,
+          -4
+        ],
+        "scale_midpoint": "609/4"
+      },
+      "q_upper_bound": "259361977300294122545149151273890777515485309629103914798754063517424783818629441229241/589802165754194913773683123399215247866274696008945647616000000000000000000000000000000",
+      "rational_t_majorants": [
+        "1/26",
+        "1/26",
+        "1/27",
+        "1/27",
+        "1/28",
+        "1/28",
+        "1/29",
+        "1/29"
+      ],
+      "row_norm_bound": 19,
+      "rows": 72,
+      "scale_intervals": 9,
+      "sigma": "5/8"
+    }
+  ],
+  "predicate_counts": {
+    "dual": 30,
+    "exponent": 336,
+    "fixture": 4,
+    "kernel": 7380,
+    "norm": 2117,
+    "reconstruction": 2160,
+    "source": 1
+  },
+  "scale_reconstructions": [
+    {
+      "finite_prime_norms": [
+        7,
+        13
+      ],
+      "k": 1,
+      "nonzero_kernel_tuples": 3,
+      "rows": 72,
+      "scale_intervals": 5
+    },
+    {
+      "finite_prime_norms": [
+        7,
+        13
+      ],
+      "k": 2,
+      "nonzero_kernel_tuples": 29,
+      "rows": 72,
+      "scale_intervals": 5
+    },
+    {
+      "finite_prime_norms": [
+        7,
+        13
+      ],
+      "k": 3,
+      "nonzero_kernel_tuples": 375,
+      "rows": 72,
+      "scale_intervals": 5
+    }
+  ],
+  "scope": "exact finite identities and finite-prime-alphabet norms; no infinite moment theorem",
+  "status": "PASS",
+  "total_predicates": 12028
+}

@@ -1,0 +1,56 @@
+{
+  "base_commit": "670a76c1a3a8f325c43c1755b1cfc24d313a3e3c",
+  "checker_sha256": "8e5b599ec43662f6fc634e8339228f79c33b37f8385e55c30d34cb136edfc4d9",
+  "conditional_fractions": {
+    "k=2,lambda=0": "17/24",
+    "k=2,lambda=1/2": "5/6",
+    "k=2,lambda=2/3": "7/8",
+    "k=3,lambda=0": "23/36",
+    "k=3,lambda=1": "29/36"
+  },
+  "finite_rows": {
+    "cases_with_zero_phases": 21,
+    "fixture_prime_ideal_norms": [
+      7,
+      13
+    ],
+    "forward_and_inverse_cases": 42,
+    "moving_exclusion_cases": 42,
+    "warning": "Finite free-ideal-monoid and rational-weight identities, not an arithmetic moment experiment."
+  },
+  "local": {
+    "inverse_convolutions": 791,
+    "maximum_derangement_order": 16,
+    "maximum_full_local_order": 8,
+    "multiindices": 24309
+  },
+  "not_proved_by_computation": [
+    "infinite kernel asymptotic",
+    "arithmetic higher moments",
+    "zero-free improvement",
+    "RH",
+    "independent proof review"
+  ],
+  "predicate_counts": {
+    "binary_closed_form": 144,
+    "defect_extraction": 155,
+    "derangement_boundary": 16,
+    "energy_log_exponent": 31,
+    "extraction_fractions": 5,
+    "finite_forward": 42,
+    "finite_inverse": 42,
+    "inverse_convolution": 791,
+    "local_expansion": 24309,
+    "moving_exclusion": 42,
+    "mutant_guard": 4,
+    "one_slot_vanishing": 288,
+    "pair_pole_removal": 16,
+    "positive_series_prefix": 16,
+    "positivity": 24309,
+    "scalar_collapse": 144,
+    "sixth_power_masks": 7
+  },
+  "rejected_deliberate_mutations": 4,
+  "schema": "all-order-collision-replay-v1",
+  "successful_predicates": 50357
+}

@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-10",
+  "dependencies": [
+    "Unique factorization of nonzero ideals and complete multiplicativity of the fixed zero-extended row character.",
+    "Fixed-field ideal counting from the Eisenstein lattice, with the elementary proof sketched in PROOF.md.",
+    "Classical fixed-field prime ideal theorem, used only in the conditional moment-to-cancellation transfer; not reproved.",
+    "Standard Hecke/Dirichlet analytic continuation and functional equations, used only in conditional zero conclusions."
+  ],
+  "inspected_sources": [
+    {
+      "coverage": "full file",
+      "git_blob_sha1": "c2181ad9ebf037614f3daa8957df640159f8d968",
+      "path": "AGENTS.md"
+    },
+    {
+      "coverage": "Sections 3-4, current pinned connector read; prior conversation also included Section 2",
+      "git_blob_sha1": "1ce93d608abbe74a653b0535aefe2bffdb037ab2",
+      "path": "standalone/2026-10-10-quasi-riemann-height-descent/FOURTH_MOMENT_REDUCTION.md"
+    },
+    {
+      "coverage": "Sections 7-8, current pinned connector read",
+      "git_blob_sha1": "cbf310c820f96427d758b5763473683f2acbfceb",
+      "path": "standalone/2026-10-10-quasi-riemann-height-descent/UPSTREAM_HEIGHT_AND_MOMENTS.md"
+    }
+  ],
+  "intended_base_branch": "research/quasi-rh-height-descent-20261010",
+  "intended_base_commit": "670a76c1a3a8f325c43c1755b1cfc24d313a3e3c",
+  "intended_new_branch": "research/all-order-collision-removal-20261010",
+  "not_dependencies": [
+    "No claimed new higher moment is assumed inside the collision-removal proof.",
+    "No September 30 or October 5 quasi-RH result is used to prove the kernel or norm comparison."
+  ],
+  "predecessor_pr": 910,
+  "remote_publication": {
+    "commit": null,
+    "pull_request": null,
+    "pushed": false,
+    "reason": "Available connector exposes reads, not writes; container git fetch failed to resolve github.com."
+  },
+  "repository": "GettysburgResearch/riemann",
+  "status": "Proposed component proofs; no new moment or zero-free theorem; no independent review"
+}

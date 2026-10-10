@@ -1,0 +1,38 @@
+{
+  "claims_not_verified": [
+    "infinite signed covariance bound",
+    "external large-sieve proof",
+    "fourth/sixth arithmetic moment",
+    "new zero-free half-plane",
+    "RH"
+  ],
+  "counts": {
+    "cyclotomic": 56,
+    "extraction": 4,
+    "finite_norm": 5148,
+    "local_inverse": 2994,
+    "prime_removal": 20580,
+    "sieve": 2749,
+    "window": 551
+  },
+  "deliberately_false_identities_rejected": 3,
+  "finite_norm_fixture": {
+    "horizon": 16,
+    "q_2": "11023/423801",
+    "q_3": "327108233/3831867375",
+    "q_4": "260661703991/1385858700625",
+    "rows": 343
+  },
+  "scope": "Exact rational and Q(zeta_6) algebra; finite free-monoid fixtures, not Hecke moment data.",
+  "status": "PASS_FINITE_IDENTITIES_ONLY",
+  "total_successful_predicates": 32082,
+  "window_even_moments_0_through_12": [
+    "1",
+    "1/9",
+    "19/675",
+    "583/59535",
+    "132809/32531625",
+    "46840699/24405225075",
+    "4068990560161/4133856862760625"
+  ]
+}

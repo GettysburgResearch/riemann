@@ -1,0 +1,91 @@
+{
+  "D": 96,
+  "H": 96,
+  "annular_diagonal": {
+    "denominator": "323944985185872412013576192501962445656212763346476780678067257344000000",
+    "numerator": "6762385106632012344344806494900134879266906945417582725475177352570731"
+  },
+  "annular_scale_range": [
+    48,
+    96
+  ],
+  "annular_signed_offdiagonal": {
+    "denominator": "647889970371744824027152385003924891312425526692953561356134514688000000",
+    "numerator": "3040628629971503222000372398610947295649190456533542340664234836918347"
+  },
+  "annular_signed_over_diagonal": {
+    "denominator": "13524770213264024688689612989800269758533813890835165450950354705141462",
+    "numerator": "3040628629971503222000372398610947295649190456533542340664234836918347"
+  },
+  "annular_total": {
+    "denominator": "647889970371744824027152385003924891312425526692953561356134514688000000",
+    "numerator": "16565398843235527910689985388411217054183004347368707791614589542059809"
+  },
+  "column_window": "1_(1/2,1]",
+  "common_mask_zero_instances": 649638,
+  "diagonal": {
+    "denominator": "2221938653389898874001119104370960414755963343793484238670863318122496000000",
+    "numerator": "50301375798586225093677792786702842301033404037262963560403868133456215574607"
+  },
+  "excluded_prime_support": [
+    2,
+    3
+  ],
+  "extra_symbolic_boundary_checks": 28,
+  "extra_symbolic_boundary_scope": "SymPy exact divisibility of all partial derivatives through total order 6 by (1-(x*x+y*y)/2)^(8-order). This is separate from the standard-library diagnostic.",
+  "field": "Q(sqrt(-3))",
+  "full_output_sha256": "b60ed6c863ef747650f797b8f6dd7d57a2e4b429f3bc637b0259e0e705d396aa",
+  "good_prime_ideals": 21,
+  "negative_controls_rejected": [
+    "removed_zero_mask",
+    "forged_covariance",
+    "discarded_offdiagonal"
+  ],
+  "nonzero_offdiagonal_pairs": 801,
+  "normal_optimized_byte_equal": true,
+  "primitive_inventory_sha256": "64f3f9665611c24b13572f925972108c882c5804c2ea9f751256b4da3dfb576d",
+  "product_columns": 153,
+  "row_window": "(1-Nu/(2H))_+^8",
+  "rows": 684,
+  "scale_exponent": 3,
+  "schema": 1,
+  "separate_tamper_exit": 1,
+  "separate_tamper_message": "REJECT: complete primitive reconstruction mismatch",
+  "signed_offdiagonal": {
+    "denominator": "37981857322904254256429386399503596833435270834076653652493390053376000000",
+    "numerator": "835822376650152018460923765294154126181035898453188454939349213136875601"
+  },
+  "signed_over_diagonal": {
+    "denominator": "100602751597172450187355585573405684602066808074525927120807736266912431149214",
+    "numerator": "97791218068067786159928080539416032763181200119023049227903857937014445317"
+  },
+  "source_sha256": "c8ca550014559799231c704e9aaaabac913dbe269fb3ec264a379d406a632d1c",
+  "squarefree_input_ideals": 27,
+  "status": "exact finite actual-Eisenstein diagnostic; not asymptotic certification",
+  "successful_checks": {
+    "native_annular_covariance_identity": 1,
+    "native_balanced_product_identity": 64980,
+    "native_common_mask_identity": 3328344,
+    "native_diagonal_kernel": 153,
+    "native_full_integrated_covariance_identity": 1,
+    "native_independent_quotient_field": 14364,
+    "native_nonnegative_norms": 64980,
+    "native_offdiagonal_nonprincipal_conductor": 4866,
+    "native_primary_factor_reconstruction": 29,
+    "native_prime_zero_mask": 14364,
+    "native_radial_block_zero": 4065,
+    "native_residue_multiplicativity": 7581,
+    "native_unit_covariance": 14364,
+    "native_unit_label_norm_congruence": 4866,
+    "rational_conductor_cutoff": 7,
+    "rational_first_join": 7,
+    "rational_second_join": 7
+  },
+  "target": "principal",
+  "total_balanced_integral": {
+    "denominator": "4624221963350465918836876387868804193040506438696117041978903887872000000",
+    "numerator": "104787245385265887589506257704417378392122777601087357096811280046669558371"
+  },
+  "total_successful_checks": 3522979,
+  "unit_forced_zero_pairs": 4065
+}

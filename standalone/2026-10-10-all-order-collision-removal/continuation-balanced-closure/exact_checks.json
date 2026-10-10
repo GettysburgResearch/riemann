@@ -1,0 +1,100 @@
+{
+  "checker_sha256": "e6808524522ac08bea6666fb78c0a2447b4ffe63c2d9ef5ab5173d69a17f7ef7",
+  "finite_envelopes": {
+    "envelope_panels": [
+      {
+        "balanced": "4050916080858735361/580475289600000000",
+        "k": 2,
+        "measure": 0,
+        "moment": "4050916080858735361/580475289600000000",
+        "q": "181/5184"
+      },
+      {
+        "balanced": "4050916080858735361/3482851737600000000",
+        "k": 2,
+        "measure": 1,
+        "moment": "4050916080858735361/3482851737600000000",
+        "q": "181/5184"
+      },
+      {
+        "balanced": "28356412566011147527/1160950579200000000",
+        "k": 2,
+        "measure": 2,
+        "moment": "28356412566011147527/1160950579200000000",
+        "q": "181/5184"
+      },
+      {
+        "balanced": "8153233300105872536627860609/1083306204463104000000000000",
+        "k": 3,
+        "measure": 0,
+        "moment": "8153233300105872536627860609/1083306204463104000000000000",
+        "q": "5441/46656"
+      },
+      {
+        "balanced": "8153233300105872536627860609/6499837226778624000000000000",
+        "k": 3,
+        "measure": 1,
+        "moment": "8153233300105872536627860609/6499837226778624000000000000",
+        "q": "5441/46656"
+      },
+      {
+        "balanced": "57072633100741107756395024263/2166612408926208000000000000",
+        "k": 3,
+        "measure": 2,
+        "moment": "57072633100741107756395024263/2166612408926208000000000000",
+        "q": "5441/46656"
+      },
+      {
+        "balanced": "16409921094159896165416436180231800321/2021709371017223208960000000000000000",
+        "k": 4,
+        "measure": 0,
+        "moment": "16409921094159896165416436180231800321/2021709371017223208960000000000000000",
+        "q": "260803/995328"
+      },
+      {
+        "balanced": "16409921094159896165416436180231800321/12130256226103339253760000000000000000",
+        "k": 4,
+        "measure": 1,
+        "moment": "16409921094159896165416436180231800321/12130256226103339253760000000000000000",
+        "q": "260803/995328"
+      },
+      {
+        "balanced": "114869447659119273157915053261622602247/4043418742034446417920000000000000000",
+        "k": 4,
+        "measure": 2,
+        "moment": "114869447659119273157915053261622602247/4043418742034446417920000000000000000",
+        "q": "260803/995328"
+      }
+    ],
+    "scale_count": 14,
+    "warning": "Exact sigma=1 finite free-ideal-monoid fixtures with rational weights, not genuine sextic-family moment data."
+  },
+  "parent_commit": "dabd6da99fb92eead7c99f941331ed9cbd2ec4ad",
+  "predicate_counts": {
+    "bootstrap_fraction": 3,
+    "contraction_constants": 2,
+    "cutoff_mass": 95,
+    "cutoff_power": 95,
+    "cycle_integrality": 319,
+    "cycle_product": 322,
+    "deliberate_error": 3,
+    "finite_balanced_absorption": 9,
+    "finite_balanced_to_rectangular": 114,
+    "finite_prime_reinsertion": 84,
+    "finite_q": 3,
+    "finite_rectangular_upper": 114,
+    "fractional_defect_identity": 228,
+    "gain_threshold_identity": 76,
+    "generic_sieve_obstruction": 1,
+    "global_contraction_budget": 95,
+    "independent_primitive_orbits": 319,
+    "local_mass_bound": 152,
+    "source_binding": 1
+  },
+  "primitive_rotation_orbits": 1183,
+  "rejected_deliberate_errors": 3,
+  "schema": "balanced-closure-replay-v1",
+  "scope": "Finite exact rational/cyclotomic algebra; analytic proofs require review; no arithmetic moment or zero-free theorem proved by computation.",
+  "source_dependency_sha256": "8e5b599ec43662f6fc634e8339228f79c33b37f8385e55c30d34cb136edfc4d9",
+  "successful_predicates": 2032
+}

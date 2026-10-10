@@ -1,0 +1,54 @@
+{
+  "executed_refusals": 8,
+  "records": [
+    {
+      "expected_failure": "ValueError: row_kernel:exact_mask_identity",
+      "mode": "normal",
+      "mutation": "erase_shared_prime_mask",
+      "returncode": 1
+    },
+    {
+      "expected_failure": "ValueError: row_kernel:exact_mask_identity",
+      "mode": "normal",
+      "mutation": "erase_dilation_phase",
+      "returncode": 1
+    },
+    {
+      "expected_failure": "ValueError: local:Gauss_autocorrelation",
+      "mode": "normal",
+      "mutation": "wrong_quadratic_conjugation",
+      "returncode": 1
+    },
+    {
+      "expected_failure": "REJECT: recorded result differs from full exact replay",
+      "mode": "normal",
+      "mutation": "tampered_result",
+      "returncode": 1
+    },
+    {
+      "expected_failure": "ValueError: row_kernel:exact_mask_identity",
+      "mode": "optimized",
+      "mutation": "erase_shared_prime_mask",
+      "returncode": 1
+    },
+    {
+      "expected_failure": "ValueError: row_kernel:exact_mask_identity",
+      "mode": "optimized",
+      "mutation": "erase_dilation_phase",
+      "returncode": 1
+    },
+    {
+      "expected_failure": "ValueError: local:Gauss_autocorrelation",
+      "mode": "optimized",
+      "mutation": "wrong_quadratic_conjugation",
+      "returncode": 1
+    },
+    {
+      "expected_failure": "REJECT: recorded result differs from full exact replay",
+      "mode": "optimized",
+      "mutation": "tampered_result",
+      "returncode": 1
+    }
+  ],
+  "status": "PASS"
+}
