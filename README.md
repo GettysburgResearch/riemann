@@ -87,6 +87,10 @@ The pages above describe reviewed components at their recorded sources, with lat
 
 [The averaged-conductor packet](standalone/2026-10-10-averaged-conductor-frontier/README.md) combines the oscillating-overlap and scale-averaging results with the conductor reductions. It proves a smaller sufficient fourth-moment remainder, shows that only a one-sided signed dyadic average is required, and gives a cofinal higher-moment criterion allowing sublinear losses. A bounded audit records the precise scope of the all-order collision kernel. The remaining arithmetic averages, a new full moment, \(17/24\), and a further zero-free improvement are still open.
 
+## Further research: all-row Gauss estimates and separated moment sectors
+
+[The separated-cores packet](standalone/2026-10-10-sextic-separated-cores/README.md) proves a source-conditional all-row estimate for the literal completed and raw two-axis Gauss family, including sixth-power copies. Its raw mean-square exponent at row height \(H=D^{1/2}\) improves from \(25/12\) to \(379/228\). It also controls an additional signed fourth-moment cross-gcd sector with cost \(R^{2b-1}\), and improves a specified sixth-moment incidence loss from \(7/8\) to \(623/720\). Exact source snapshots, scoped independent reviews and finite algebra checks are included. The moving-conductor comparison, full fourth moment, \(17/24\), and further zero-free improvement remain open.
+
 ## License
 
 Project code and original research materials are available under the [MIT License](LICENSE). Third-party material retains its existing terms and notices.

@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "packet": "2026-10-10-sextic-separated-cores",
+  "parent_commit": "9b04a887e171b3104a66cf57296ce5b0b2920d78",
+  "parent_tree": "8ea427d06a0fd4c9d2543540c666a995093f35cb",
+  "status": "Proposed source-conditional research; no full fourth moment or new zero-free boundary",
+  "files": [
+    {
+      "path": "ALL_ROW_COMPLETION_AND_RAW_GAIN.md",
+      "bytes": 16037,
+      "sha256": "a0e6bd5517a81f44d2a18bd32dc4f0db623b9951c17068e56af7009c8914fdec"
+    },
+    {
+      "path": "ALL_ROW_COMPLETION_AND_RAW_GAIN_REVIEW.md",
+      "bytes": 9873,
+      "sha256": "e62ff69985293a193c66d455d6530562fbd0b25fece1160202ea997f219ce598"
+    },
+    {
+      "path": "ALL_ROW_LOCAL_AUDIT.md",
+      "bytes": 13362,
+      "sha256": "3e22014aeea7dbcf222f89833a27b56848deece013602a8ec4c94e9bfe46cf17"
+    },
+    {
+      "path": "ALL_ROW_LOCAL_AUDIT_REVIEW.md",
+      "bytes": 2562,
+      "sha256": "2119b15442869888cbca58382c7889e2b38486be40abb652f6b12d6b7b049e32"
+    },
+    {
+      "path": "CROSS_SIDE_SEPARATION_REVIEW.md",
+      "bytes": 3343,
+      "sha256": "cfc28146a6de30e8910c2b30a11f43bc87fceedf1742d45051b4417e693361d3"
+    },
+    {
+      "path": "CROSS_SIDE_SEPARATION_SECTOR.md",
+      "bytes": 25067,
+      "sha256": "299b8cc4f981bd1bdfe1c3c8ac4b0d4eea23eec77c4e87b4ac46ff6ee0dcb263"
+    },
+    {
+      "path": "INTEGRATION_REVIEW.md",
+      "bytes": 12638,
+      "sha256": "059c67953027f4278f012dd818b4104997529fe976ff25710014f2ad75957227"
+    },
+    {
+      "path": "OVERVIEW_DIAGNOSTIC_REVIEW.md",
+      "bytes": 9321,
+      "sha256": "1cd07c6757f5fbb430d34e68375434d2f717a3ce896382f093eb31f46c025595"
+    },
+    {
+      "path": "PRUNED_COUPLED_MEAN_SQUARE.md",
+      "bytes": 22426,
+      "sha256": "411d7b28c0dabc97807d21683d731126e742d16424b1809787c87849dfb9e8d1"
+    },
+    {
+      "path": "PRUNED_COUPLED_MEAN_SQUARE_REVIEW.md",
+      "bytes": 8712,
+      "sha256": "b698b712080acf92bce6b1f1c3712bde05ebe939bcedf0a4897e2ab9f21a5486"
+    },
+    {
+      "path": "README.md",
+      "bytes": 12941,
+      "sha256": "5c0f249ccc885522a7b15baa494636794971d2711007b4698cf2e8f21fb63b36"
+    },
+    {
+      "path": "SHORT_CUBE_RAW_GAIN.md",
+      "bytes": 7560,
+      "sha256": "8d97d0a4e6a0eef6ca0178e0dca7ff6e2cd059d594eba1e45fee47d57563cc40"
+    },
+    {
+      "path": "SHORT_CUBE_RAW_GAIN_REVIEW.md",
+      "bytes": 4981,
+      "sha256": "9ab14f33fad4aaeee0a775fab5273b4cc9a94a6f7cdb564c3f33a0bf5b80e3ae"
+    },
+    {
+      "path": "SOURCE_LOCK.json",
+      "bytes": 10050,
+      "sha256": "b14457ae7ab480514eaf21acac9c44a9c019294d6a61a37bdea88f4fe9cb59f7"
+    },
+    {
+      "path": "SUBSET_PRODUCT_INCIDENCE.md",
+      "bytes": 19942,
+      "sha256": "9d62a79c0074c7506d273ff7203807e4efd054bfdf0b85baddf340304da4f3de"
+    },
+    {
+      "path": "SUBSET_PRODUCT_INCIDENCE_REVIEW.md",
+      "bytes": 7378,
+      "sha256": "b7b531edaca97357ba49dc5dfe56520d3cb3c70d8a90825e8315ac697eb11a95"
+    },
+    {
+      "path": "VALIDATION.md",
+      "bytes": 3912,
+      "sha256": "6b35934b4710520358d3ec9ce458aa82987d524a1726d0b5b3e8bdc4c40f5e35"
+    },
+    {
+      "path": "checks/check_exact_diagnostics.py",
+      "bytes": 9750,
+      "sha256": "29a59166931a7a09d2f5dd201a950819c79c713f08c2d94aaaa6502c45b42f15"
+    },
+    {
+      "path": "checks/exact_diagnostics.json",
+      "bytes": 2099,
+      "sha256": "6144a306fb9aa56cd703591a08b0e65eb9da7ed5d092cf660b5c6b37dcd833c5"
+    },
+    {
+      "path": "checks/verify_packet.py",
+      "bytes": 4017,
+      "sha256": "4e3b1e4b55782902c8f5011a3d22f6990241b98e755ebf60ff21870906b343b5"
+    },
+    {
+      "path": "sources/README.md",
+      "bytes": 1663,
+      "sha256": "1e39bd3a6aabe16756d8d13fe61ce165474a956d77f8f88245553b09065ae08f"
+    },
+    {
+      "path": "sources/pr916/BALANCED_CLOSURE.md",
+      "bytes": 11912,
+      "sha256": "f4f7f4d55f32ad070f8e7ab51215b431860340df5e8129633c2906441c6fa1b6"
+    },
+    {
+      "path": "sources/pr920/ALL_CUSP_REFLECTION.md",
+      "bytes": 16372,
+      "sha256": "4a0201c3de364c1747726b9561f91ffc825da0aca926528844c543c9bbcd908d"
+    },
+    {
+      "path": "sources/pr920/HIGHER_ANGULAR_SECOND_MOMENT.md",
+      "bytes": 23187,
+      "sha256": "82edbaed050710fcdbfa65c20a39cc83338e9f283473462c1756ea717f035959"
+    },
+    {
+      "path": "sources/pr920/OPPOSITE_DERIVATIVE_REFLECTION.md",
+      "bytes": 15584,
+      "sha256": "9532f14dc452edf9a50e7ec905e0629c54d510fd9937c5d8c19bcf7dfb4e9ccb"
+    },
+    {
+      "path": "sources/pr920/RAMANUJAN_SUPPORT_PRUNING.md",
+      "bytes": 11249,
+      "sha256": "9a019b2253a0f35ade96455bf5d249cd1ca09285c4f2d7e17c475b5b5522c3ea"
+    }
+  ],
+  "review_bindings": [
+    {
+      "review": "CROSS_SIDE_SEPARATION_REVIEW.md",
+      "targets": {
+        "CROSS_SIDE_SEPARATION_SECTOR.md": "299b8cc4f981bd1bdfe1c3c8ac4b0d4eea23eec77c4e87b4ac46ff6ee0dcb263"
+      }
+    },
+    {
+      "review": "SUBSET_PRODUCT_INCIDENCE_REVIEW.md",
+      "targets": {
+        "SUBSET_PRODUCT_INCIDENCE.md": "9d62a79c0074c7506d273ff7203807e4efd054bfdf0b85baddf340304da4f3de"
+      }
+    },
+    {
+      "review": "PRUNED_COUPLED_MEAN_SQUARE_REVIEW.md",
+      "targets": {
+        "PRUNED_COUPLED_MEAN_SQUARE.md": "411d7b28c0dabc97807d21683d731126e742d16424b1809787c87849dfb9e8d1"
+      }
+    },
+    {
+      "review": "SHORT_CUBE_RAW_GAIN_REVIEW.md",
+      "targets": {
+        "SHORT_CUBE_RAW_GAIN.md": "8d97d0a4e6a0eef6ca0178e0dca7ff6e2cd059d594eba1e45fee47d57563cc40",
+        "PRUNED_COUPLED_MEAN_SQUARE.md": "411d7b28c0dabc97807d21683d731126e742d16424b1809787c87849dfb9e8d1"
+      }
+    },
+    {
+      "review": "ALL_ROW_LOCAL_AUDIT_REVIEW.md",
+      "targets": {
+        "ALL_ROW_LOCAL_AUDIT.md": "3e22014aeea7dbcf222f89833a27b56848deece013602a8ec4c94e9bfe46cf17"
+      }
+    },
+    {
+      "review": "ALL_ROW_COMPLETION_AND_RAW_GAIN_REVIEW.md",
+      "targets": {
+        "ALL_ROW_COMPLETION_AND_RAW_GAIN.md": "a0e6bd5517a81f44d2a18bd32dc4f0db623b9951c17068e56af7009c8914fdec",
+        "ALL_ROW_LOCAL_AUDIT.md": "3e22014aeea7dbcf222f89833a27b56848deece013602a8ec4c94e9bfe46cf17"
+      }
+    },
+    {
+      "review": "INTEGRATION_REVIEW.md",
+      "targets": {
+        "CROSS_SIDE_SEPARATION_SECTOR.md": "299b8cc4f981bd1bdfe1c3c8ac4b0d4eea23eec77c4e87b4ac46ff6ee0dcb263",
+        "SUBSET_PRODUCT_INCIDENCE.md": "9d62a79c0074c7506d273ff7203807e4efd054bfdf0b85baddf340304da4f3de",
+        "PRUNED_COUPLED_MEAN_SQUARE.md": "411d7b28c0dabc97807d21683d731126e742d16424b1809787c87849dfb9e8d1",
+        "SHORT_CUBE_RAW_GAIN.md": "8d97d0a4e6a0eef6ca0178e0dca7ff6e2cd059d594eba1e45fee47d57563cc40",
+        "ALL_ROW_LOCAL_AUDIT.md": "3e22014aeea7dbcf222f89833a27b56848deece013602a8ec4c94e9bfe46cf17",
+        "ALL_ROW_COMPLETION_AND_RAW_GAIN.md": "a0e6bd5517a81f44d2a18bd32dc4f0db623b9951c17068e56af7009c8914fdec",
+        "README.md": "5c0f249ccc885522a7b15baa494636794971d2711007b4698cf2e8f21fb63b36",
+        "SOURCE_LOCK.json": "b14457ae7ab480514eaf21acac9c44a9c019294d6a61a37bdea88f4fe9cb59f7",
+        "checks/check_exact_diagnostics.py": "29a59166931a7a09d2f5dd201a950819c79c713f08c2d94aaaa6502c45b42f15",
+        "checks/exact_diagnostics.json": "6144a306fb9aa56cd703591a08b0e65eb9da7ed5d092cf660b5c6b37dcd833c5"
+      }
+    },
+    {
+      "review": "OVERVIEW_DIAGNOSTIC_REVIEW.md",
+      "targets": {
+        "README.md": "5c0f249ccc885522a7b15baa494636794971d2711007b4698cf2e8f21fb63b36",
+        "INTEGRATION_REVIEW.md": "059c67953027f4278f012dd818b4104997529fe976ff25710014f2ad75957227",
+        "VALIDATION.md": "6b35934b4710520358d3ec9ce458aa82987d524a1726d0b5b3e8bdc4c40f5e35",
+        "SOURCE_LOCK.json": "b14457ae7ab480514eaf21acac9c44a9c019294d6a61a37bdea88f4fe9cb59f7",
+        "checks/check_exact_diagnostics.py": "29a59166931a7a09d2f5dd201a950819c79c713f08c2d94aaaa6502c45b42f15",
+        "checks/exact_diagnostics.json": "6144a306fb9aa56cd703591a08b0e65eb9da7ed5d092cf660b5c6b37dcd833c5",
+        "checks/verify_packet.py": "4e3b1e4b55782902c8f5011a3d22f6990241b98e755ebf60ff21870906b343b5"
+      }
+    }
+  ],
+  "self_exclusion": "MANIFEST.json does not hash itself; compare its complete bytes in the immutable commit."
+}
