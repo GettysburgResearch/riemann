@@ -1,0 +1,58 @@
+{
+  "arithmetic": "exact integers and rational numbers",
+  "checker_sha256": "568717cd7108be21b1f01361645e2bf0e42c6c5d906df0e368c3baf10ef724d1",
+  "fourier": {
+    "exact_fourier_equalities": 192,
+    "normalization": "sums are q times the normalized transform",
+    "residue_norms": [
+      7,
+      13,
+      19,
+      25
+    ]
+  },
+  "matrices": {
+    "construction_cases": {
+      "C_multiple_of_3": 68,
+      "lambda_unit": 1022,
+      "lambda_valuation_1": 260
+    },
+    "counts": {
+      "matrix_constructions": 1350,
+      "primitive_columns": 450,
+      "transformed_denominator_zero": 12,
+      "transformed_norm_differs": 808
+    },
+    "target_cusps": [
+      346,
+      502,
+      502
+    ]
+  },
+  "not_certified": [
+    "imported automorphy",
+    "analytic continuation",
+    "infinite moments",
+    "zero-free regions"
+  ],
+  "ramanujan": {
+    "divisor_identities": 1554,
+    "projection_identities": 22620,
+    "rejected_extra_negative_mask": {
+      "b_valuation": 1,
+      "incorrect_coprime_negative": 0,
+      "n_valuation": 0,
+      "prime_norm": 7,
+      "true_negative": -1
+    }
+  },
+  "scales": {
+    "double_transform_return_factor": 27,
+    "exact_scale_cases": 96,
+    "minimum_frequency_norm": "1/81",
+    "raw_cutoff_multiplier": 3,
+    "standard_face_cutoff_multiplier": 81
+  },
+  "scope": "finite local identities and integral matrices only",
+  "status": "PASS"
+}

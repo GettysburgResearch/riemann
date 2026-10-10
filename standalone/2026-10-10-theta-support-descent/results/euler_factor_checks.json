@@ -1,0 +1,181 @@
+{
+  "status": "PASS",
+  "arithmetic": "exact integer polynomials and fractions; no floating point",
+  "symbolic_identities": [
+    "cubic_remainder_identity",
+    "n_prime_factor_identity",
+    "conditioned_cube_cancellation"
+  ],
+  "linear_extraction_orders": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "rational_local_cases": 64,
+  "literal_zero_mask_cases": 4,
+  "contour_cases": [
+    {
+      "delta": "1/32",
+      "path": "fixed_w",
+      "w": "1/2",
+      "v": "15/32",
+      "t": "-1/96",
+      "r": "31/32",
+      "w_plus_v": "31/32",
+      "relative_d_power": "-1/96",
+      "relative_q_power_before_convexity": "-1/48",
+      "both_numerators_convexity_q_power": "1/32",
+      "combined_q_power": "1/96"
+    },
+    {
+      "delta": "1/32",
+      "path": "coupled",
+      "w": "17/32",
+      "v": "15/32",
+      "t": "-1/48",
+      "r": "15/16",
+      "w_plus_v": "1",
+      "relative_d_power": "1/96",
+      "relative_q_power_before_convexity": "-1/24",
+      "both_numerators_convexity_q_power": "1/32",
+      "combined_q_power": "-1/96"
+    },
+    {
+      "delta": "1/16",
+      "path": "fixed_w",
+      "w": "1/2",
+      "v": "7/16",
+      "t": "-1/48",
+      "r": "15/16",
+      "w_plus_v": "15/16",
+      "relative_d_power": "-1/48",
+      "relative_q_power_before_convexity": "-1/24",
+      "both_numerators_convexity_q_power": "1/16",
+      "combined_q_power": "1/48"
+    },
+    {
+      "delta": "1/16",
+      "path": "coupled",
+      "w": "9/16",
+      "v": "7/16",
+      "t": "-1/24",
+      "r": "7/8",
+      "w_plus_v": "1",
+      "relative_d_power": "1/48",
+      "relative_q_power_before_convexity": "-1/12",
+      "both_numerators_convexity_q_power": "1/16",
+      "combined_q_power": "-1/48"
+    },
+    {
+      "delta": "1/8",
+      "path": "fixed_w",
+      "w": "1/2",
+      "v": "3/8",
+      "t": "-1/24",
+      "r": "7/8",
+      "w_plus_v": "7/8",
+      "relative_d_power": "-1/24",
+      "relative_q_power_before_convexity": "-1/12",
+      "both_numerators_convexity_q_power": "1/8",
+      "combined_q_power": "1/24"
+    },
+    {
+      "delta": "1/8",
+      "path": "coupled",
+      "w": "5/8",
+      "v": "3/8",
+      "t": "-1/12",
+      "r": "3/4",
+      "w_plus_v": "1",
+      "relative_d_power": "1/24",
+      "relative_q_power_before_convexity": "-1/6",
+      "both_numerators_convexity_q_power": "1/8",
+      "combined_q_power": "-1/24"
+    }
+  ],
+  "completed_domain_cases": [
+    {
+      "sigma": "-1/3",
+      "w": "351/100",
+      "v": "101/100",
+      "row_conductor_exponent": "5/3",
+      "divisor_conductor_exponent": "7/6",
+      "combined_scalar_row_exponent": "0"
+    },
+    {
+      "sigma": "-1/12",
+      "w": "69/25",
+      "v": "101/100",
+      "row_conductor_exponent": "7/6",
+      "divisor_conductor_exponent": "2/3",
+      "combined_scalar_row_exponent": "0"
+    },
+    {
+      "sigma": "0",
+      "w": "251/100",
+      "v": "101/100",
+      "row_conductor_exponent": "1",
+      "divisor_conductor_exponent": "1/2",
+      "combined_scalar_row_exponent": "0"
+    },
+    {
+      "sigma": "1/4",
+      "w": "427/200",
+      "v": "277/200",
+      "row_conductor_exponent": "3/4",
+      "divisor_conductor_exponent": "3/8",
+      "combined_scalar_row_exponent": "1/4"
+    },
+    {
+      "sigma": "17/36",
+      "w": "1081/600",
+      "v": "1031/600",
+      "row_conductor_exponent": "19/36",
+      "divisor_conductor_exponent": "19/72",
+      "combined_scalar_row_exponent": "17/36"
+    },
+    {
+      "sigma": "1/2",
+      "w": "44/25",
+      "v": "44/25",
+      "row_conductor_exponent": "1/2",
+      "divisor_conductor_exponent": "1/4",
+      "combined_scalar_row_exponent": "1/2"
+    },
+    {
+      "sigma": "3/4",
+      "w": "277/200",
+      "v": "427/200",
+      "row_conductor_exponent": "1/4",
+      "divisor_conductor_exponent": "1/8",
+      "combined_scalar_row_exponent": "3/4"
+    },
+    {
+      "sigma": "1",
+      "w": "101/100",
+      "v": "251/100",
+      "row_conductor_exponent": "0",
+      "divisor_conductor_exponent": "0",
+      "combined_scalar_row_exponent": "1"
+    },
+    {
+      "sigma": "3/2",
+      "w": "101/100",
+      "v": "401/100",
+      "row_conductor_exponent": "0",
+      "divisor_conductor_exponent": "0",
+      "combined_scalar_row_exponent": "2"
+    }
+  ],
+  "scope": "Local algebra and conductor-exponent arithmetic only; no analytic or moment validation."
+}
