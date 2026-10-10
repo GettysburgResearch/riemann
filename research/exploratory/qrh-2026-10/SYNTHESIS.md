@@ -166,6 +166,9 @@ the critical line.
        closed at the level of the displayed steps
        ([reviews/CUBIC_BOTH_RECTANGLES.md](reviews/CUBIC_BOTH_RECTANGLES.md)). The only split
        is on non-Θ rows and costs nothing, and `n = 3` adds no asymmetry.
+     * Risk item 1 (uniformity over complex Mellin profiles) is closed, given that the
+       profile-uniformity clause transfers as part of (H-A)
+       ([reviews/CUBIC_PROFILE_UNIFORMITY.md](reviews/CUBIC_PROFILE_UNIFORMITY.md)).
      * The route stays PROPOSED and conditional on (H-A) and (H-B).
    * The 7/8 paper's Gauss/reciprocity helpers (Lemmas 4.2–4.4), which the sextic packet
      needs, had one bounded review: no wrong step found

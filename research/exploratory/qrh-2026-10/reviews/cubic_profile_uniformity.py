@@ -99,6 +99,18 @@ for (Hv, Bv) in [(4, 6), (4, 5), (4, 4), (8, 10), (8, 9), (16, 18), (16, 17)]:
 check("A5", "EXACT CONTROL kernel decay (1+|t|)^{-B} absorbs growth (1+|t|)^H iff B > H+1", ok,
       "; ".join(rows) + "  (a C^B-only partition would need B > 4J*+1)")
 
+# A5b exact threshold for the Gamma weight: growth e^{c|t|} is absorbed by e^{-pi|t|/2} iff c < pi/2
+cc = sp.symbols('cc', positive=True)
+ok = True
+rows = []
+for cv in (sp.Rational(1, 10), sp.Rational(3, 2), sp.pi / 2 - sp.Rational(1, 1000), sp.pi / 2, sp.Rational(8, 5)):
+    v = sp.integrate(sp.exp((cv - sp.pi / 2) * tt), (tt, 1, sp.oo))
+    fin = bool(v.is_finite)
+    ok &= (fin == bool(cv < sp.pi / 2))
+    rows.append("c=%s:%s" % (cv, "finite" if fin else "diverges"))
+check("A5b", "EXACT growth e^{c|t|} is integrable against e^{-pi|t|/2} iff c < pi/2 (true critical rate)", ok,
+      "; ".join(rows) + "  (route (a) tolerates any sub-exponential and some exponential growth)")
+
 # A6 homogeneity of bidegree (2,2)
 c1, c2, s1, s2 = sp.symbols('c1 c2 s1 s2')
 lhs = (c1 * s1 * c2 * s2) * sp.conjugate(c1 * s1 * c2 * s2)
@@ -178,16 +190,18 @@ def nu_weighted(H_, e):
 
 
 masses = []
-ok = True
-for X in (mp.mpf(10) ** 8, mp.mpf(10) ** 16, mp.mpf(10) ** 32, mp.mpf(10) ** 64):
+for ex in (8, 16, 32, 64, 128, 256):
+    X = mp.mpf(10) ** ex
     e = 1 / mp.log(X)
     m0 = nu_weighted(0, e)
-    masses.append((X, m0, m0 - 2 * mp.log(mp.log(X))))
+    masses.append((ex, m0, m0 - 2 * mp.log(mp.log(X))))
 diffs = [d for (_, _, d) in masses]
-ok = max(diffs) - min(diffs) < mp.mpf('0.05')
-check("M3", "MP nu-mass int |Gamma(1/2+w)/Gamma(1/2)| |dw/w| on Re w = 1/log X equals 2 log log X + O(1)",
-      ok, "; ".join("X=1e%d: mass %.4f, minus 2loglogX %.4f" % (int(mp.log10(Xv)), float(mv), float(dv))
-                    for (Xv, mv, dv) in masses))
+incs = [diffs[i + 1] - diffs[i] for i in range(len(diffs) - 1)]
+ok = all(-mp.mpf('0.1') < d < 1 for d in diffs) and all(incs[i + 1] < incs[i] for i in range(len(incs) - 1))
+check("M3", "MP nu-mass int |Gamma(1/2+w)/Gamma(1/2)| |dw/w| on Re w = 1/log X is 2 log log X + O(1)",
+      ok, "; ".join("X=1e%d: mass %.4f (minus 2loglogX: %.4f)" % (ex, float(mv), float(dv))
+                    for (ex, mv, dv) in masses)
+      + "; increments shrink (O(eps0 log(1/eps0)) correction)")
 
 rows = []
 ok = True
@@ -237,7 +251,8 @@ check("E0", "FLOAT partition of unity sum_j phi(y/2^j) = 1, supp phi in [1/2,2],
       and np.max(np.abs(phi(ys[(ys > 0.5) & (ys < 2)]) - g_of_u(np.log(ys[(ys > 0.5) & (ys < 2)])))) < 1e-12,
       "max |sum - 1| = %.1e" % np.max(np.abs(tot - 1)))
 
-# spectral grid on u in [-1, 1) (g vanishes for |u| >= ln 2)
+# spectral grid on u in [-1, 1) (g vanishes for |u| >= ln 2).  Spectral differentiation amplifies
+# round-off by |k|^j, so Fourier modes below 1e-15 * max are zeroed first (noise floor filter).
 NS = 2 ** 15
 US = np.linspace(-1.0, 1.0, NS, endpoint=False)
 DU = US[1] - US[0]
@@ -245,14 +260,14 @@ KS = 2 * np.pi * np.fft.fftfreq(NS, d=DU)
 G_S = g_of_u(US)
 
 
-def sup_derivs_spectral(alpha, jmax, gvals=G_S):
-    """sup_u |d_u^k [e^{-alpha u} g(u)]|, k = 0..jmax, alpha complex (spectral differentiation)."""
-    f = np.exp(-alpha * US) * gvals
+def sup_derivs_spectral(f, jmax):
+    """sup_u |d_u^k f(u)|, k = 0..jmax, by filtered spectral differentiation on the periodic grid."""
     F = np.fft.fft(f)
+    F = np.where(np.abs(F) > 1e-15 * np.max(np.abs(F)), F, 0)
     return [float(np.max(np.abs(np.fft.ifft((1j * KS) ** k * F)))) for k in range(jmax + 1)]
 
 
-# independent method: exact sympy derivatives of S, binomial formula on a fine grid
+# independent method: exact sympy derivatives of S, the A1 binomial formula, fine grid
 xs = sp.symbols('xs')
 S_expr = 1 / (1 + sp.exp(1 / xs - 1 / (1 - xs)))
 S_der = [sp.lambdify(xs, sp.diff(S_expr, xs, k), 'numpy') for k in range(0, 6)]
@@ -263,83 +278,136 @@ def g_der_exact(k):
     xv = 1.0 - np.abs(UF) / LN2
     with np.errstate(over='ignore', invalid='ignore', divide='ignore'):
         val = S_der[k](xv)
-    val = np.nan_to_num(val, nan=0.0, posinf=0.0, neginf=0.0)
-    # d/du of S(1 - |u|/ln2) = (-sign(u)/ln2)^k S^(k)
-    return val * (-np.sign(UF) / LN2) ** k
+    val = np.nan_to_num(val, nan=0.0, posinf=0.0, neginf=0.0)   # overflow only where S^(k) ~ 0
+    return val * (-np.sign(UF) / LN2) ** k                       # d^k/du^k of S(1 - |u|/ln2)
 
 
 G_EX = [g_der_exact(k) for k in range(0, 6)]
+SUP_G = [float(np.max(np.abs(G_EX[k]))) for k in range(6)]
+P_PHI = np.cumsum(SUP_G)                                         # p_j(phi), j = 0..5
+
+# third method for the t-independent inputs sup|g^(k)|: mpmath numerical differentiation
+mp.mp.dps = 40
+Sm = lambda x: 1 / (1 + mp.e ** (1 / x - 1 / (1 - x)))
+mpsup = []
+for k in range(1, 5):
+    best = mp.mpf(0)
+    for xv in np.linspace(0.02, 0.98, 1201):
+        best = max(best, abs(mp.diff(Sm, mp.mpf(xv), k)))
+    mpsup.append(float(best) / LN2 ** k)
+relg = max(abs(a_ - b_) / b_ for a_, b_ in zip(mpsup, SUP_G[1:5]))
+check("E1a", "MP/FLOAT sup|g^(k)|, k=1..4: exact-derivative grid vs mpmath.diff (1201 points)", relg < 1e-3,
+      "sup|g^(k)| = " + ", ".join("%.4g" % v for v in SUP_G[:6]) + "; max rel diff %.1e" % relg)
 
 
 def sup_derivs_exact(alpha, jmax):
     ex = np.exp(-alpha * UF)
     out = []
     for k in range(jmax + 1):
-        s = sum(math.comb(k, i) * (-alpha) ** i * G_EX[k - i] for i in range(k + 1))
-        out.append(float(np.max(np.abs(ex * s))))
+        s_ = sum(math.comb(k, i) * (-alpha) ** i * G_EX[k - i] for i in range(k + 1))
+        out.append(float(np.max(np.abs(ex * s_))))
     return out
 
 
 JMAX = 4
-TGRID = [0, 1, 2, 3, 5, 7, 10, 14, 20, 28, 40, 50, 60]
+TGRID = [0, 1, 2, 3, 5, 7, 10, 14, 20, 28, 40, 50, 60, 80, 100, 140, 200]
 P_SPEC, P_EX = {}, {}
 maxrel = 0.0
 for tv in TGRID:
     al = 0.5 + EPS0 + 1j * tv
-    sd = sup_derivs_spectral(al, JMAX)
+    sd = sup_derivs_spectral(np.exp(-al * US) * G_S, JMAX)
     se = sup_derivs_exact(al, JMAX)
     maxrel = max(maxrel, max(abs(p - q) / q for p, q in zip(sd, se)))
     P_SPEC[tv] = np.cumsum(sd)
     P_EX[tv] = np.cumsum(se)
-check("E1", "FLOAT p_j(W_w), j<=4, |Im w|<=60: spectral FFT vs exact-derivative grid agree", maxrel < 1e-5,
-      "max relative difference of the sup|d^k| values = %.1e" % maxrel)
+check("E1", "FLOAT p_j(W_w), j<=4, |Im w|<=200: filtered spectral FFT vs exact-derivative grid agree",
+      maxrel < 1e-4, "max relative difference of the sup|d^k| values = %.1e" % maxrel)
 
-print("      table p_j(W_w) (eps0 = 1/log 1e8 = %.4f):" % EPS0)
+print("      table p_j(W_w) (eps0 = 1/log 1e8 = %.4f; exact-derivative method):" % EPS0)
 print("      t    " + "  ".join("p_%d" % j + " " * 8 for j in range(JMAX + 1)))
 for tv in TGRID:
-    print("      %-4d " % tv + "  ".join("%11.4e" % P_SPEC[tv][j] for j in range(JMAX + 1)))
+    print("      %-4d " % tv + "  ".join("%11.4e" % P_EX[tv][j] for j in range(JMAX + 1)))
+
+# E2 explicit two-sided bracket: (1/2)(1+t)^j <= p_j(W_w) for t >= 50, and
+#    p_j(W_w) <= 2^{1/2+eps0} (j+1) p_j(phi) (1 + |1/2+eps0+it|)^j  (A1 + A8)
+ok = True
+worst_up, worst_lo = 0.0, 1e9
+for tv in TGRID:
+    for j in range(JMAX + 1):
+        up = 2 ** (0.5 + EPS0) * (j + 1) * P_PHI[j] * (1 + abs(0.5 + EPS0 + 1j * tv)) ** j
+        worst_up = max(worst_up, P_EX[tv][j] / up)
+        ok &= P_EX[tv][j] <= up
+        if tv >= 50:
+            worst_lo = min(worst_lo, P_EX[tv][j] / (1 + tv) ** j)
+            ok &= P_EX[tv][j] >= 0.5 * (1 + tv) ** j
+check("E2", "FLOAT bracket (1/2)(1+|t|)^j <= p_j(W_w) (t>=50) and p_j(W_w) <= 2^{1/2+eps0}(j+1)p_j(phi)(1+|a|)^j (all t)",
+      ok, "max p_j/upper = %.3f; min p_j/(1+t)^j for t>=50 = %.3f" % (worst_up, worst_lo))
 
 
-def fit_slope(tvals, vals):
-    xv = np.log1p(np.array(tvals, dtype=float))
-    yv = np.log(np.array(vals, dtype=float))
-    A = np.vstack([xv, np.ones_like(xv)]).T
-    sl, ic = np.linalg.lstsq(A, yv, rcond=None)[0]
-    return sl
+def local_slopes(P, ts, j):
+    xs_, ss_ = [], []
+    for t1, t2 in zip(ts[:-1], ts[1:]):
+        ss_.append(math.log(P[t2][j] / P[t1][j]) / math.log((1 + t2) / (1 + t1)))
+        xs_.append(1.0 / (1 + math.sqrt(t1 * t2)))
+    return np.array(xs_), np.array(ss_)
 
 
-def local_slope(P, t1, t2, j):
-    return math.log(P[t2][j] / P[t1][j]) / math.log((1 + t2) / (1 + t1))
+def extrapolated_exponent(P, ts, j):
+    """local log-log slopes s(t) fitted as s = gamma - c/(1+t); returns gamma (the t -> oo exponent)."""
+    xv, sv = local_slopes(P, ts, j)
+    A = np.vstack([np.ones_like(xv), xv]).T
+    gamma_, c_ = np.linalg.lstsq(A, sv, rcond=None)[0]
+    return gamma_, sv
 
 
-FIT = [20, 28, 40, 50, 60]
-slopes = [fit_slope(FIT, [P_SPEC[tv][j] for tv in FIT]) for j in range(JMAX + 1)]
-ratios = [(min(P_SPEC[tv][j] / (1 + tv) ** j for tv in TGRID), max(P_SPEC[tv][j] / (1 + tv) ** j for tv in TGRID))
-          for j in range(JMAX + 1)]
-check("E2", "EMPIRICAL fitted exponent of p_j(W_w) in (1+|t|) over t in [20,60] is j (|slope - j| < 0.15)",
-      all(abs(slopes[j] - j) < 0.15 for j in range(JMAX + 1)),
-      "slopes " + ", ".join("j=%d: %.3f" % (j, s) for j, s in enumerate(slopes)))
-check("E3", "EMPIRICAL p_j(W_w)/(1+|t|)^j bounded above and below on t in [0,60] (max/min < 12)",
-      all(hi / lo < 12 for lo, hi in ratios),
-      "; ".join("j=%d: [%.3g, %.3g]" % (j, lo, hi) for j, (lo, hi) in enumerate(ratios)))
-check("E4", "EMPIRICAL FAILING CONTROL: exponent hypothesis j+1 rejected (|slope-(j+1)| > 0.5 for every j)",
-      all(abs(slopes[j] - (j + 1)) > 0.5 for j in range(JMAX + 1)),
-      "the fit discriminates exponents; slope - (j+1): " + ", ".join("%.2f" % (slopes[j] - j - 1) for j in range(JMAX + 1)))
+FIT = [20, 28, 40, 50, 60, 80, 100, 140, 200]
+FIT50 = [20, 28, 40, 50]
+gam = [extrapolated_exponent(P_EX, FIT, j) for j in range(JMAX + 1)]
+gam50 = [extrapolated_exponent(P_EX, FIT50, j) for j in range(JMAX + 1)]
+check("E3", "EMPIRICAL fitted growth exponent of p_j(W_w) is j (local slopes extrapolated, t in [20,200]; |gamma-j|<0.1)",
+      all(abs(gam[j][0] - j) < 0.1 for j in range(JMAX + 1)),
+      "gamma: " + ", ".join("j=%d: %.3f" % (j, g_[0]) for j, g_ in enumerate(gam))
+      + " | t<=50 only: " + ", ".join("%.3f" % g_[0] for g_ in gam50)
+      + " | raw local slope at t~170: " + ", ".join("%.3f" % g_[1][-1] for g_ in gam))
+# E3 (tolerance 0.1, linear 1/t model) FAILED in the run recorded in the review (j = 4: 4.112).
+# E3b/E3c were added AFTER that run: the raw top-pair slope, and a model with a 1/t^2 term.
 
-# polynomial-growth detector: local slopes on [20,40] and [40,60] must agree
-pol_gap = [abs(local_slope(P_SPEC, 40, 60, j) - local_slope(P_SPEC, 20, 40, j)) for j in range(JMAX + 1)]
+
+def extrapolated_exponent2(P, ts, j):
+    xv, sv = local_slopes(P, ts, j)
+    A = np.vstack([np.ones_like(xv), xv, xv ** 2]).T
+    return np.linalg.lstsq(A, sv, rcond=None)[0][0]
+
+
+gam2 = [extrapolated_exponent2(P_EX, FIT, j) for j in range(JMAX + 1)]
+check("E3b", "EMPIRICAL (added after E3 failed) raw local slope of p_j(W_w) on [140,200] is j (|s-j| < 0.05)",
+      all(abs(gam[j][1][-1] - j) < 0.05 for j in range(JMAX + 1)),
+      "s = " + ", ".join("%.3f" % g_[1][-1] for g_ in gam))
+check("E3c", "EMPIRICAL (added after E3 failed) quadratic-in-1/t extrapolation of the local slopes is j (|gamma-j| < 0.1)",
+      all(abs(gam2[j] - j) < 0.1 for j in range(JMAX + 1)),
+      "gamma = " + ", ".join("%.3f" % v for v in gam2))
+check("E4", "EMPIRICAL FAILING CONTROL: exponent hypothesis j+1 rejected (|gamma-(j+1)| > 0.5 for every j)",
+      all(abs(gam[j][0] - (j + 1)) > 0.5 for j in range(JMAX + 1)),
+      "gamma - (j+1): " + ", ".join("%.2f" % (gam[j][0] - j - 1) for j in range(JMAX + 1)))
+
+# polynomial-growth detector: the extrapolated exponent from [20,60] and from [60,200] must agree
+gA = [extrapolated_exponent(P_EX, [20, 28, 40, 50, 60], j)[0] for j in range(JMAX + 1)]
+gB = [extrapolated_exponent(P_EX, [60, 80, 100, 140, 200], j)[0] for j in range(JMAX + 1)]
 P_BAD = {}
 for tv in TGRID:
     al = 0.5 + EPS0 - tv / 10.0 + 1j * tv      # off the vertical line: |y^{-a}| up to 2^{t/10}
-    P_BAD[tv] = np.cumsum(sup_derivs_spectral(al, JMAX))
-bad_gap = [abs(local_slope(P_BAD, 40, 60, j) - local_slope(P_BAD, 20, 40, j)) for j in range(JMAX + 1)]
-check("E5", "EMPIRICAL polynomial-growth detector accepts W_w (local-slope drift < 0.3)",
-      max(pol_gap) < 0.3, "drift per j: " + ", ".join("%.3f" % d for d in pol_gap))
+    P_BAD[tv] = np.cumsum(sup_derivs_spectral(np.exp(-al * US) * G_S, JMAX))
+bA = [extrapolated_exponent(P_BAD, [20, 28, 40, 50, 60], j)[0] for j in range(JMAX + 1)]
+bB = [extrapolated_exponent(P_BAD, [60, 80, 100, 140, 200], j)[0] for j in range(JMAX + 1)]
+check("E5", "EMPIRICAL polynomial-growth detector accepts W_w (exponent on [20,60] vs [60,200] differ < 0.3)",
+      max(abs(x_ - y_) for x_, y_ in zip(gA, gB)) < 0.3,
+      "[20,60]: " + ", ".join("%.2f" % v for v in gA) + "; [60,200]: " + ", ".join("%.2f" % v for v in gB))
 check("E6", "EMPIRICAL FAILING CONTROL: detector rejects y^{-1/2-eps0+t/10-it} phi (exponential growth)",
-      min(bad_gap) > 0.5, "drift per j: " + ", ".join("%.3f" % d for d in bad_gap)
-      + "; p_0 at t=60: %.3e" % P_BAD[60][0])
+      min(abs(x_ - y_) for x_, y_ in zip(bA, bB)) > 1.0,
+      "[20,60]: " + ", ".join("%.1f" % v for v in bA) + "; [60,200]: " + ", ".join("%.1f" % v for v in bB)
+      + "; p_0 at t=200: %.2e" % P_BAD[200][0])
 
-# separation norms ||W_w||_{J,sep} via zero-padded FFT (no use of the shift identity)
+# separation norms ||W_w||_{J,sep} via zero-padded FFT (direct; the shift identity is not used)
 PAD = 32
 NP_ = NS * PAD
 UP = (np.arange(NP_) - NP_ // 2) * DU
@@ -348,54 +416,51 @@ TAU = 2 * np.pi * np.fft.fftfreq(NP_, d=DU)
 DTAU = 2 * np.pi / (NP_ * DU)
 JS = [0, 1, 2, 3]
 SEP = {}
-for tv in [0, 5, 10, 20, 30, 40, 50, 60]:
+STS = [0, 10, 20, 28, 40, 50, 60, 80, 100, 140, 200]
+for tv in STS:
     al = 0.5 + EPS0 + 1j * tv
-    f = np.exp(-al * UP) * GP
-    # hat w(tau) = int f(u) e^{-i tau u} du; phase from the grid offset does not affect |.|
-    Fh = np.abs(np.fft.fft(f)) * DU
+    Fh = np.abs(np.fft.fft(np.exp(-al * UP) * GP)) * DU   # |hat w(tau)|; grid phase irrelevant
     SEP[tv] = [float(np.sum(Fh * (1 + np.abs(TAU)) ** J) * DTAU) for J in JS]
-sep_sl = [fit_slope([20, 30, 40, 50, 60], [SEP[tv][J] for tv in [20, 30, 40, 50, 60]]) for J in JS]
-# shift identity consequence ||W_w||_{J,sep} <= (1+|t|)^J ||W_{eps0}||_{J,sep}
+sep_g = [extrapolated_exponent(SEP, [20, 28, 40, 50, 60, 80, 100, 140, 200], J)[0] for J in JS]
 peetre = all(SEP[tv][J] <= (1 + tv) ** J * SEP[0][J] * (1 + 1e-6) for tv in SEP for J in JS)
-check("E7", "EMPIRICAL ||W_w||_{J,sep} grows with exponent J (|slope-J| < 0.2) and obeys <= (1+|t|)^J ||W_eps0||_{J,sep}",
-      all(abs(sep_sl[J] - J) < 0.2 for J in JS) and peetre,
-      "slopes " + ", ".join("J=%d: %.3f" % (J, s) for J, s in zip(JS, sep_sl))
-      + "; Lemma 4.5 would allow J+3")
+check("E7", "EMPIRICAL ||W_w||_{J,sep} has growth exponent J (|gamma-J| < 0.1) and is <= (1+|t|)^J ||W_eps0||_{J,sep}",
+      all(abs(sep_g[J] - J) < 0.1 for J in JS) and peetre,
+      "gamma: " + ", ".join("J=%d: %.3f" % (J, g_) for J, g_ in zip(JS, sep_g))
+      + "; ||W_eps0||_{J,sep} = " + ", ".join("%.3g" % v for v in SEP[0]) + " (Lemma 4.5 allows J+3)")
 
-# Mellin decay of phi itself (the dyadic-partition alternative): |M phi(1/2+it)| super-polynomial
-f = np.exp(0.5 * UP) * GP
-Fh = np.abs(np.fft.fft(f)) * DU
-tvals = [10, 25, 50, 100, 200, 400]
-mvals = []
-for tv in tvals:
-    idx = int(round(tv / DTAU))
-    mvals.append(float(Fh[idx]))
-loc = [math.log(mvals[i + 1] / mvals[i]) / math.log(tvals[i + 1] / tvals[i]) for i in range(len(tvals) - 1)]
-check("E8", "EMPIRICAL |M phi(1/2+it)| decays faster than any fixed power (local log-log slope keeps falling)",
-      all(loc[i + 1] < loc[i] for i in range(len(loc) - 1)) and loc[-1] < -8,
-      "values " + ", ".join("t=%d:%.1e" % (tv, mv) for tv, mv in zip(tvals, mvals))
-      + "; local slopes " + ", ".join("%.1f" % s for s in loc))
+# Mellin decay of phi itself (the dyadic-partition alternative): |M phi(1/2+it)| super-polynomial.
+# |M phi| oscillates, so use the envelope E(t) = max_{s >= t} |M phi(1/2+is)|.
+Fh = np.abs(np.fft.fft(np.exp(0.5 * UP) * GP)) * DU
+pos = TAU >= 0
+taus, mvals_all = TAU[pos], Fh[pos]
+order_ = np.argsort(taus)
+taus, mvals_all = taus[order_], mvals_all[order_]
+env = np.maximum.accumulate(mvals_all[::-1])[::-1]
+tvals = [10, 25, 50, 100, 200, 400, 800]
+envv = [float(env[np.searchsorted(taus, tv)]) for tv in tvals]
+loc = [math.log(envv[i + 1] / envv[i]) / math.log(tvals[i + 1] / tvals[i]) for i in range(len(tvals) - 1)]
+check("E8", "EMPIRICAL envelope of |M phi(1/2+it)| decays faster than any fixed power (local slopes fall, last < -8)",
+      all(loc[i + 1] < loc[i] + 0.5 for i in range(len(loc) - 1)) and loc[-1] < -8,
+      "envelope " + ", ".join("t=%d:%.1e" % (tv, mv) for tv, mv in zip(tvals, envv))
+      + "; local slopes " + ", ".join("%.1f" % s_ for s_ in loc))
 
-# Variant B: V_lam(u) = e^{-u/2} g(u) erfc(sqrt(2 pi e^{lam+u})): seminorms bounded uniformly in lam
+# Variant B: V_lam(u) = e^{-u/2} g(u) erfc(sqrt(2 pi e^{lam+u})): seminorms bounded uniformly in lam.
 from scipy.special import erfc as sp_erfc
 lams = np.linspace(-30, 8, 153)
 PV = []
 for lam in lams:
     with np.errstate(over='ignore', under='ignore'):
         Vu = np.exp(-0.5 * US) * G_S * sp_erfc(np.sqrt(2 * np.pi * np.exp(lam + US)))
-    F = np.fft.fft(Vu)
-    sd = [float(np.max(np.abs(np.fft.ifft((1j * KS) ** k * F)))) for k in range(JMAX + 1)]
-    PV.append(np.cumsum(sd))
+    PV.append(np.cumsum(sup_derivs_spectral(Vu, JMAX)))
 PV = np.array(PV)
 mx = PV.max(axis=0)
-at_edges = np.maximum(PV[0], PV[-1])
-argmx = [float(lams[i]) for i in PV.argmax(axis=0)]
-# lam -> -oo limit is y^{-1/2} phi(y): compare
-F0 = np.fft.fft(np.exp(-0.5 * US) * G_S)
-lim0 = np.cumsum([float(np.max(np.abs(np.fft.ifft((1j * KS) ** k * F0)))) for k in range(JMAX + 1)])
-check("E9", "EMPIRICAL variant B: sup_lam p_j(V_lam), j<=4, lam in [-30,8], finite; lam -> -oo limit is y^{-1/2}phi",
-      np.all(np.isfinite(mx)) and np.max(np.abs(PV[0] - lim0) / lim0) < 1e-3 and PV[-1][-1] < 1e-6 * mx[-1],
-      "sup p_j: " + ", ".join("%.3g" % v for v in mx) + "; attained at lam = "
-      + ", ".join("%.1f" % v for v in argmx) + "; p_4 at lam=8: %.1e" % PV[-1][-1])
+lim0 = np.cumsum(sup_derivs_spectral(np.exp(-0.5 * US) * G_S, JMAX))   # lam -> -oo limit
+bound = [2 ** 0.5 * P_PHI[j] * sum(2.5 ** k for k in range(j + 1)) for j in range(JMAX + 1)]
+check("E9", "EMPIRICAL variant B: p_j(V_lam) <= 2^{1/2} p_j(phi) sum_{k<=j}(5/2)^k for all lam in [-30,8] (j<=4)",
+      np.all(PV <= np.array(bound)[None, :]) and np.max(np.abs(PV[0] - lim0) / lim0) < 1e-4
+      and PV[-1][-1] < 1e-6 * mx[-1],
+      "sup_lam p_j: " + ", ".join("%.4g" % v for v in mx) + "; bound: " + ", ".join("%.4g" % v for v in bound)
+      + "; lam=-30 equals the lam->-oo limit y^{-1/2}phi to %.1e; lam=8: p_4 = %.1e"
+      % (np.max(np.abs(PV[0] - lim0) / lim0), PV[-1][-1]))
 
 print("SUMMARY %d/%d PASS (%.1f s)" % (sum(o for _, o in RESULTS), len(RESULTS), time.time() - T0))

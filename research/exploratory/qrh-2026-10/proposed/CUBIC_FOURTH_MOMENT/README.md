@@ -122,3 +122,24 @@ went undetected at the smallest geometry (a scale limit, recorded as FAIL).
 
 The route stays PROPOSED and CONDITIONAL on (H-A) and (H-B). The Fourier-measure lemmas remain
 imported, and no human has checked any of this.
+
+## Note added later the same day: risk item 1 (profile uniformity)
+
+[../../reviews/CUBIC_PROFILE_UNIFORMITY.md](../../reviews/CUBIC_PROFILE_UNIFORMITY.md) closes risk
+item 1 with **verdict (a)**, conditional on Lemma 18.1's profile-uniformity clause carrying over to
+`n = 3` as part of (H-A). Bounded review by one agent.
+* Statement C allows any smooth profile supported in a fixed compact interval of `(0, ∞)`,
+  complex values included. Its constant depends on finitely many seminorms
+  (l. 12571-12578, 719-722).
+* Polynomial dependence on the seminorms is not stated in the manuscript. It follows from
+  linearity (Lemma H there).
+* The application feeds in only `W_w(y) = y^{−1/2−w} φ(y)`, with `p_j(W_w) ≍ (1+|Im w|)^j`. The
+  Gamma weight integrates every polynomial, so the `X`-exponent stays `1+ε`.
+* The 7/8 proof itself (Prop 19.2) applies Lemma 18.1 to complex witness profiles, so the same
+  clause is load-bearing there too, in a stronger form.
+
+Recommended edits to SKETCH.md, recorded here rather than applied:
+* state the clause in Statement C, and list it as A8 under (H-A);
+* correct the Sec. 2.7 losses to `(log X)⁴(log log X)⁴`.
+
+Numerics: 26/27; one crude fit (E3) fails, and the failure is kept and explained.
