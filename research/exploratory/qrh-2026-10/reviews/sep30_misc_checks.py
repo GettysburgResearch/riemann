@@ -364,7 +364,7 @@ def part_A3():
         f'{sum(ok)}/{len(ok)}')
     # margins under the premises: m-r-2z+2G >= c1 and 3m-2r-8z+10G+2P1 >= c2 - 4 eta
     rng = random.Random(5)
-    bad = badc = 0
+    bad = 0
     for _ in range(20000):
         c1v, c2v = Fr(rng.randint(1, 50), 100), Fr(rng.randint(1, 50), 100)
         rv, zv = Fr(rng.randint(0, 200), 100), Fr(rng.randint(0, 100), 100)
@@ -376,8 +376,6 @@ def part_A3():
             P1v = -2 * etav
         bad += not (mv - rv - 2 * zv + 2 * Gv >= c1v)
         bad += not (3 * mv - 2 * rv - 8 * zv + 10 * Gv + 2 * P1v >= c2v - 4 * etav)
-        badc += not (3 * mv - 2 * rv - 8 * zv + 10 * Gv + 2 * P1v >= c2v - 3 * etav) and P1v == -2 * etav \
-            and Gv == 0 and 2 * rv + 8 * zv + c2v == 3 * mv
     rec('A3', 'formal margins >= c_1 and >= c_2 - 4 eta under the marked premises, G >= 0, P_1 >= -2 eta '
         '(20000 exact random instances)', bad == 0, f'{bad} failures')
 
@@ -389,11 +387,14 @@ def part_A4(rng):
     X = 300.0 if not QUICK else 200.0
     pool = [P for P in PRIMES if P.N <= (79 if not QUICK else 61)]
     cfgs = [
-        dict(name='j=13a, nu_0=nu6, upsilon=1.3, two surviving slot lists', j=[PR['13a']], nu='nu6', ups=1.3,
-             lists=[{PR['7b']: 0.8 - 0.3j, PR['31a']: 0.5, PR['61a']: -0.4j}, {PR['37b']: 0.7, PR['19a']: -0.5 + 0.2j}],
+        dict(name='j=13a, nu_0=nu6, upsilon=1.3, one surviving slot list', j=[PR['13a']], nu='nu6', ups=1.3,
+             lists=[{PR['7b']: 0.8 - 0.3j, PR['19a']: 0.5, PR['31a']: -0.4j, PR['37b']: 0.7, PR['43a']: 0.3 + 0.6j}],
              K=1500.0 if not QUICK else 900.0),
-        dict(name='j=7a.19b, nu_0=chi4, upsilon=-0.7, one surviving slot list', j=[PR['7a'], PR['19b']], nu='chi4',
-             ups=-0.7, lists=[{PR['13b']: 1.0, PR['43a']: 0.3 + 0.6j, PR['31b']: -0.6}], K=600.0),
+        dict(name='j=37a.61b, nu_0=chi4, upsilon=-0.7, two surviving slot lists', j=[PR['37a'], PR['61b']],
+             nu='chi4', ups=-0.7, lists=[{PR['7a']: 1.0, PR['13a']: -0.6, PR['19a']: 0.3 + 0.6j},
+                                         {PR['7b']: 0.7, PR['31b']: -0.5 + 0.2j, PR['43b']: 0.9j}], K=600.0),
+        dict(name='j=1 (G=0), no surviving slots, nu_0=quad, upsilon=0', j=[], nu='quad', ups=0.0, lists=[],
+             K=1200.0),
     ]
     if QUICK:
         cfgs = cfgs[:1]
@@ -520,7 +521,7 @@ def part_A4(rng):
                                 for n in ns:
                                     if set(n) & pun:
                                         continue
-                                    b = a0(n) * nu0(cls(n)) * chi_n(n, fgen, 4) * W0(qC * qs * norm(n) / X)
+                                    b = a0(n) * chi_n(n, fgen, 4) * W0(qC * qs * norm(n) / X)     # nu_0 conj theta: in ray
                                     if b == 0:
                                         continue
                                     parts = []
