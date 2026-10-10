@@ -84,8 +84,9 @@ the critical line.
      * The same strip holds for primitive Dirichlet `L(s, χ)`, `χ ≠ 1`. Comparator accepts this
        against a Mathlib-only challenge written in this wave.
      * The Oct 1 Siegel-zero challenge statement follows from the 7/8 Dirichlet theorem, and
-       comparator accepts it against the upstream challenge. The helper `gap_of_real_zero` gives
-       `c = (log 3)/8` explicitly.
+       comparator accepts it against the upstream challenge. The explicit, ∃-free form
+       `(log 3)/8 ≤ (1−β) log q` (every Dirichlet character mod `q ≥ 3`) is itself
+       comparator-accepted by both kernels against a Mathlib-only challenge (lean/README).
    * **The Oct 1 Siegel development** builds (9242 jobs, 0 errors, 0 `sorry`). Its axioms are
      standard, it uses no 7/8 module, and **comparator accepts it** against the upstream
      challenge, with both the Lean and nanoda kernels (900 s; 999 s with nanoda). So the Siegel-zero statement has two comparator-accepted Lean proofs

@@ -23,7 +23,7 @@ they are unreviewed by humans. The Lean statement of the Sep 30 claim, `ζ(s) �
   standard axioms are used, under the trust assumptions in
   [reviews/LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md). The wave adds formal corollaries:
   * the strip `1/8 ≤ Re s ≤ 7/8` for nontrivial zeros of `ζ` and of primitive Dirichlet `L`;
-  * the Oct 1 Siegel-zero challenge (`∃ c > 0`), comparator-accepted; the explicit `c = (log 3)/8` is read off the kernel-checked helper `gap_of_real_zero` (see lean/README for its own comparator run).
+  * the Oct 1 Siegel-zero challenge (`∃ c > 0`), comparator-accepted; the explicit, ∃-free bound `(log 3)/8 ≤ (1−β) log q` is itself comparator-accepted by both kernels (lean/README).
 * **Structure.** The formal proof uses no Part I. On paper, a Part-I-free route is PROPOSED with
   two same-family reviews ([reviews/PART1_FREE_ROUTE.md](reviews/PART1_FREE_ROUTE.md)).
 * **Limits.** Both architectures have ceilings for known inputs, 13/15 and 11/12. Numerics show
