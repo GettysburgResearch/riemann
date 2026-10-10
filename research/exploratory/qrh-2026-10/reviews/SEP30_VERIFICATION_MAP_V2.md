@@ -405,3 +405,49 @@ python3 -I sep30_depgraph_v2.py /tmp/sep30.tex /tmp/map_v2.json /tmp/map_v2_tabl
 ```
 
 The script prints the sha256 check, the counts of Sec. 2 (including the without-SEC4 variant), the owned-line shares, both rankings and the per-node ndep. It authenticates only text-level facts (hash, `\ref` edges, line ownership). Statuses and evidence strings are hand-entered from the files in the header.
+
+## 10. Addendum v2.1 (later on 10 Oct 2026): two more reviews
+
+The tables above are unchanged and record the v2 state. Two reviews written after v2 move
+seven nodes:
+
+| node | v2 | v2.1 | source |
+|---|---|---|---|
+| Lem 4.2 Prime Gauss identities | A | R | [SEP30_L42_44_REVIEW.md](SEP30_L42_44_REVIEW.md): no wrong step; exact checks at 422 primes |
+| Lem 4.3 Quadratic four-term formula | A | R | same: no wrong step; the four-term formula is exact for all 5,454 odd `c` with `N(c) ≤ 2000`; one compressed step closed by an exhaustive finite check |
+| Lem 4.4 Sextic reciprocity, fixed Gauss phase | A | R | same: no wrong step, given classical cubic reciprocity (imported; also applied to the inert prime 2; the cited source was not opened) |
+| Lem 17.1 Marked inverse moment | A | Rp | [SEP30_MISC_REVIEW.md](SEP30_MISC_REVIEW.md): initialization transform replayed exactly at tiny scale; still conditional on Lemma 17.2 (Rp) |
+| Lem 20.1 High exponent for one row bin | I | R | SEP30_MISC_REVIEW.md: correct as a reduction to named imported inputs |
+| Prop 2.1 Continuation from a common signal | I | R | SEP30_MISC_REVIEW.md: complete proof read line by line |
+| Thm 1.1 (final assembly only) | I | R | SEP30_MISC_REVIEW.md: the final contradiction read; correct |
+
+Recount (same 65 nodes, same statuses otherwise):
+
+| | R | Rp | I | A | U | L | total |
+|---|---|---|---|---|---|---|---|
+| v2.1, as written | 49 | 6 | 2 | 3 | 5 | – | 65 |
+| **v2.1, with the Oct 5 substitution** | **49** | **6** | **2** | **0** | **0** | **8** | **57** + [O5] thm:main |
+
+Owned lines with the substitution (11,134):
+* R: 7,469 (67.1%);
+* Rp: 3,526 (31.7%);
+* I: 139 (1.2%; Def 5.6 and Prop 11.3);
+* A and U: 0.
+
+What this means:
+* Under the substitution, every load-bearing numbered node now has at least a bounded review or
+  an inspection.
+* The open parts are:
+  * the "read only" pieces of the six Rp nodes, the largest being Lemma 17.2's Fourier separations;
+  * the two inspected nodes;
+  * the imported external theorems of Section 5, now including classical cubic reciprocity as
+    used in Lemma 4.4.
+* As written, the 8 Part-I-only nodes (3 A, 5 U) remain unreviewed.
+
+Separately, the import's Lean development of the 7/8 theorem now builds completely, and its
+axioms are the three standard ones ([LEAN_BUILD_ATTEMPT.md](LEAN_BUILD_ATTEMPT.md), Addenda A–B).
+That is a machine check of the Lean statement, not of this manuscript's text. A paper-to-Lean
+correspondence is being prepared separately.
+
+The counts are hand-entered from the review headers. They were not regenerated with
+`sep30_depgraph_v2.py`, whose status table is the v2 one.

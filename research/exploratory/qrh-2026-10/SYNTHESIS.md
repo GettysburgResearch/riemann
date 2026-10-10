@@ -35,15 +35,27 @@ integration verdict.
      reflection was confirmed end to end numerically
      ([reviews/OCT5_REFLECTION_E2E.md](reviews/OCT5_REFLECTION_E2E.md)). A PROPOSED integration
      packet is drafted for human integrators: [proposed/OCT5_11_12_PACKET/](proposed/OCT5_11_12_PACKET/README.md).
-   * **Sep 30, 7/8: 43 of 65 load-bearing results reviewed, 5 more partially**
-     ([reviews/SEP30_VERIFICATION_MAP_V2.md](reviews/SEP30_VERIFICATION_MAP_V2.md)).
+   * **Sep 30, 7/8: 49 of 65 load-bearing results reviewed, 6 more partially, 2 inspected**
+     ([reviews/SEP30_VERIFICATION_MAP_V2.md](reviews/SEP30_VERIFICATION_MAP_V2.md), Addendum
+     v2.1; this adds the Lemma 4.2–4.4 review [reviews/SEP30_L42_44_REVIEW.md](reviews/SEP30_L42_44_REVIEW.md)).
      * No wrong step was found in any of them, including the low-side chain that sets 7/8, the
        reflection engine, the inverse-moment engine and the zero detector.
      * Lemma 18.1 has been read in full; the row-count junction is certified in exact rationals.
      * Part I can be replaced by the Oct 5 theorem ([reviews/PART1_SUBSTITUTION.md](reviews/PART1_SUBSTITUTION.md)).
-       Then no load-bearing node is left entirely unchecked.
-     * Lean: a build of the import's 7/8 closure ran with 0 errors over most of its modules
-       ([reviews/LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md); final status recorded there).
+       Then every load-bearing node has at least a bounded review or inspection
+       (49 R, 6 partial, 2 inspected, 0 unreviewed).
+     * **Lean: the import's 7/8 closure now builds completely** (7061 jobs, 0 errors, 0 `sorry`).
+       `#print axioms` on `riemannZeta s ≠ 0 for Re s > 7/8`, on the Dirichlet version and on
+       the Hecke-family version gives only `[propext, Classical.choice, Quot.sound]`. The
+       statements are about Mathlib's own `riemannZeta` and `DirichletCharacter.LFunction`.
+       Comparator status is in [reviews/LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md),
+       Addenda A–B.
+       This is a machine check of the Lean statement, not a review of the manuscript.
+     * Two short formal corollaries ([lean/](lean/README.md)):
+       * every nontrivial zero of `ζ` lies in `1/8 ≤ Re s ≤ 7/8`, stated in the shape of
+         Mathlib's `RiemannHypothesis`;
+       * the Oct 1 Siegel-zero challenge statement holds with `c = (log 3)/8`, as a
+         corollary of 7/8.
    * **Kintali 47/48:** Lemma 3 shows no error. The best citable density input gives 29/30.
    * **Oct 1, Landau–Siegel:** intrinsically logarithmic-scale, effective in principle, and a weak
      corollary of either quasi-RH claim ([SIEGEL_DETERMINANT.md](SIEGEL_DETERMINANT.md)).
@@ -67,8 +79,14 @@ integration verdict.
    * The 7/8 manuscript's Lemma 18.1 is itself a new Lindelöf-strength sextic fourth moment.
    * Transferring its scheme gives a PROPOSED conditional route to the open **optimal cubic fourth
      moment** `Σ|L(1/2, χ_c)|⁴ ≪ X^{1+ε}`, against `X^{4/3}` in the literature
-     ([proposed/CUBIC_FOURTH_MOMENT/](proposed/CUBIC_FOURTH_MOMENT/README.md)). It is under
-     adversarial testing.
+     ([proposed/CUBIC_FOURTH_MOMENT/](proposed/CUBIC_FOURTH_MOMENT/README.md)).
+     * Its most likely failure point, the centred stage, survived one adversarial attack
+       ([reviews/CUBIC_CENTRED_ATTACK.md](reviews/CUBIC_CENTRED_ATTACK.md)).
+     * One condition is left open: that every step acts identically on both rectangles.
+     * The route stays conditional.
+   * The 7/8 paper's Gauss/reciprocity helpers (Lemmas 4.2–4.4), which the sextic packet
+     needs, had one bounded review: no wrong step found
+     ([proposed/SEXTIC_FOURTH_MOMENT/](proposed/SEXTIC_FOURTH_MOMENT/README.md)).
 5. **Height levels** ([HEIGHT_LEVELS.md](HEIGHT_LEVELS.md)).
    * The moment ladder gives the same boundary at a fixed `ρ`, while its dual objects change type:
      `A₁ → A₂ → Ã₂ → Lorentzian`, as a coefficient-shape pattern (HEURISTIC).

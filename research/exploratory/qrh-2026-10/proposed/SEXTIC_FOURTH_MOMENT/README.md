@@ -24,7 +24,8 @@ What was actually run: the manuscript was re-extracted and re-hashed; all review
   same hash. No new mathematics was reviewed.
 Smallest remaining gap: an independent exact-SHA review of the centred Theta-row stage
   (Lemmas 18.2-18.3 and (old-eq:2.18)-(2.19), paper.tex 13953-13996, 14312-14778), together with
-  the two Gauss/reciprocity helpers that no review has read (Lemmas 4.3-4.4, 841-1070). See
+  the two Gauss/reciprocity helpers Lemmas 4.3-4.4 (841-1070); these have since had one bounded
+  review (../../reviews/SEP30_L42_44_REVIEW.md, no wrong step; see the note after Section 10). See
   Sections 8 and 10.
 ```
 
@@ -267,8 +268,8 @@ The table lists every lemma of the manuscript that Section 18 cites by label or 
 | Lemma (label) | Lines | Where Section 18 uses it | Review status |
 |---|---|---|---|
 | 4.1 `fixed-numerator-ray` | 646-699 | conductor bound at `S` (12687-12700); finite ray choices on Θ-rows (14325-14340); 14961 | SEC4 §1: no wrong step |
-| 4.3 `quadratic-four-term`, which defines the bicharacter `𝔯` (eq:reciprocity-four-class, 857) | 841-932 | through Lemma 4.4 | **not reviewed** (MAP2 status A: numerics only) |
-| 4.4 `fixed-gauss-phase`, with eq:row-fixed-ray-reduction (1054-1070) | 934-1052 | reciprocity phases in both transforms (13258-13268; 13686-13697), the supplementary character in `Θ` (12511-12520), Θ-row reduction (14325-14335) | **not reviewed** (MAP2 status A). Checked numerically on small pairs: L13 A5, L18b B4 |
+| 4.3 `quadratic-four-term`, which defines the bicharacter `𝔯` (eq:reciprocity-four-class, 857) | 841-932 | through Lemma 4.4 | **not reviewed** when drafted (MAP2 status A); since then one bounded review, no wrong step (SEP30_L42_44_REVIEW) |
+| 4.4 `fixed-gauss-phase`, with eq:row-fixed-ray-reduction (1054-1070) | 934-1052 | reciprocity phases in both transforms (13258-13268; 13686-13697), the supplementary character in `Θ` (12511-12520), Θ-row reduction (14325-14335) | **not reviewed** when drafted (MAP2 status A). Checked numerically on small pairs: L13 A5, L18b B4. Since then one bounded review, no wrong step, given classical cubic reciprocity (SEP30_L42_44_REVIEW) |
 | 4.5 `smooth-calculus` | 1123-1286 | Fourier separation with one common measure (13320-13335, 13910-13935); rowwise suprema (12780-12786); heights (14834-14856) | L13 §4: no wrong step. Its invocations were read, not replayed (MAP2) |
 | 4.7 `kernel-seminorms` | 1347-1413 | localisation tails (13156); radial kernels uniform in `R_sc` (14834-14842) | L13; SEC4 §3: no wrong step |
 | 4.8 `hecke-strip-growth` | 1425-1529 | primitive functional equation and entireness for reflection (12700-12704) | SEC4 §4: no wrong step |
@@ -508,5 +509,18 @@ covered the works above and the earlier agent searches recorded in L18a §1 and
 | proof_kind | analytic induction using manuscript Lemmas 4.1, 4.3-4.5, 4.7, 4.8, 4.10, 13.2-13.4 and imported theorems E1-E9 |
 | rh_relationship | none; a moment bound |
 | required_fix | none recorded (findings S1-S5 are slack or remarks) |
-| final_verdict | **not assigned**: awaits an independent exact-SHA review and a first review of Lemmas 4.3-4.4 |
+| final_verdict | **not assigned**: awaits an independent exact-SHA review (Lemmas 4.3-4.4 have since had a first bounded agent review) |
 | first_broken_arrow | none found by the agent reviews; the smallest failure point is the centred Θ-row estimate (§8) |
+
+## Note added after drafting (same day)
+
+Lemmas 4.2-4.4 (the Gauss and reciprocity helpers that this draft listed as never reviewed) have
+since had one bounded agent review:
+[../../reviews/SEP30_L42_44_REVIEW.md](../../reviews/SEP30_L42_44_REVIEW.md). It found no wrong
+step, and `sep30_l42_44_checks.py` gave 65/65 PASS with every control failing as predicted.
+* Lemma 4.4 imports classical cubic reciprocity and also applies it to the inert prime 2. The
+  cited source was not opened.
+* This is still not an independent exact-SHA review in the sense of AGENTS.md.
+
+A separate fresh-eyes review of the centred Θ-row stage (Section 8) is being prepared as
+`reviews/LEMMA18_THETA_ROW_REVIEW.md`.

@@ -9,7 +9,7 @@ Status: REVIEW (adversarial, bounded) of risk item 9 of proposed/CUBIC_FOURTH_MO
 Scope: case 1 (z = 0) of Lemma 18.1 of the OpenAI manuscript, transferred to n = 3. Only these
   steps were attacked: Lemma centered-coefficient-invariant (l. 13954), Lemma
   centered-lattice-cancellation (l. 14545), and their use in l. 14684-14770, together with the
-  comparison construction (l. 12940-13008) and reflection (l. 12723-12828) that feed them. The
+  comparison construction (l. 12940-13008) and reflection (l. 12677-12828) that feed them. The
   kappa = 5/6 bounds (Lemmas 4.F, 4.G) and the nested order (H-B) were not re-reviewed.
 Exact sources or dependencies:
   repo HEAD f6044af1de105feb3bb3bf88281c29c6e9b7328e (branch claude/peaceful-faraday-ki4ewu).
@@ -96,7 +96,7 @@ displayed proof contains no mechanism for a partial mismatch of size between the
 ### 1.2 Lemma centered-coefficient-invariant (l. 13954-13997)
 
 "For a centered input, the two transforms and the intervening Gauss-row enlargement … preserve"
-the coefficient form eq:centered-coefficient-form (l. 13047-13063):
+the coefficient form eq:centered-coefficient-form (l. 13050-13063):
 
     (slot factors) · D_b(l_1,l_2) · τ_1(u) q_u^{it} 1_{(u,R)=1} 1_{s|u},   u = Π l_1 l_2,
     D_b(l_1,l_2) = Π_i W_i(q_{b_i} q_{l_i}/X_i) − Π_i W_i(q_{b_i} q_{l_i}/Y_i),   X_1X_2 = Y_1Y_2   (old-eq:2.18a).
@@ -171,8 +171,8 @@ The lattice lemma's proof uses only that "primary generators … with the fixed 
 `ϑ` are a finite weighted collection of residue classes in a fixed lattice". For `Z[ω]` and
 `S = {2, λ}`:
 
-* the primary odd elements are the 27 classes in `(1 + 3O) ∩ (O/2)^×` modulo `6O`;
-* the `Θ`-characters are functions mod 18.
+* the primary odd elements form 3 classes modulo `6O`, i.e. 27 classes modulo `18O`;
+* the `Θ`-characters are constant on each of those 27 classes.
 
 [L0] checks exactly the closed forms used: `(2/p)_3 = (p mod 2) ∈ F_4^×` and
 `(ω/p)_3 = ω^{(Np−1)/3}`, for all 422 primary primes of norm `≤ 3000`. [L1] then confirms
@@ -186,7 +186,7 @@ old-eq:2.18d with these characters. The maximum absolute error is `≤ 29` for `
 
 Concern: the dual side might carry Gauss-sum phases instead of the original coefficients.
 
-* **What reflection produces.** The Hecke functional equation (l. 12723-12790) gives
+* **What reflection produces.** The Hecke functional equation (l. 12700-12790) gives
   `T_ψ(X;W) = ε_k Σ_{d_0,h_0} (…) T_{ψ̄^0}(Y;W^♯)`. The dual coefficients are `ψ̄_k^0(n)`, and the
   only Gauss-type object is the row constant `ε_k`.
   * [R1] checks this numerically for two primitive cubic characters of conductor norm 2017 and 2053.
@@ -252,8 +252,8 @@ So any of these, if it happened anywhere in l. 13114-14310, would leave a full `
 I checked each operation the invariance proof cites (Sec. 1.2) against the text. Each is stated to
 act on the whole product, or on both rectangles with a common factor. I found none that acts on
 one rectangle, one plain, or one scale only. The remaining risk is that this line-by-line claim
-is wrong somewhere in the about 1200 lines I did not re-derive (l. 13420-13900 were not read for
-this note).
+is wrong somewhere in lines I did not re-derive (l. 13420-13595 and 13700-13900 were not read
+for this note).
 
 ## 3. Numerics (scripts/cubic_centred_attack.py)
 

@@ -81,3 +81,22 @@ literature is `X^{4/3+ε}`.
   application step, the exact margin (which replaces the grid value), and the exact tolerance for
   a loss confined to the centred deficit. CUBIC_N3_GAPS quotes 0.0155M; that is the more
   conservative margin, demanded in every constraint at once.
+
+## Note added after drafting (same day): the centred stage survived one attack
+
+[../../reviews/CUBIC_CENTRED_ATTACK.md](../../reviews/CUBIC_CENTRED_ATTACK.md) attacked risk item 9
+(the inherited centred stage) adversarially. Its verdict is **(a) survives at the level of the
+displayed steps**:
+* No loss of size `cM` was found in the centred-coefficient invariance or in the masked lattice
+  cancellation, for `n = 3`, for reflected inputs, or for `L` up to the caps.
+* Both lemmas are order-free. The lattice error is `O(Z^ε)`.
+* The binding point `v = L` uses no lattice saving.
+* The tightest constraint there is `κ = 5/6` (Lemmas 4.F/4.G), which was not re-reviewed.
+
+Its script passes 18 of 19 checks. The one failure is a tiny-scale effect: `Z^ε` dominates at
+`Z ≤ 10⁸`.
+
+Left open: whether every step of l. 13114-14310 acts identically on both rectangles. If one
+does not, the loss can be as large as `M/3`, which would exceed the tolerance.
+
+The route stays PROPOSED and CONDITIONAL on (H-A) and (H-B). No moment bound is proved.
