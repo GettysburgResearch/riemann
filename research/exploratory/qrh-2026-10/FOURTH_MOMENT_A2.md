@@ -210,6 +210,18 @@ Setup of `a2/dual_offdiag.py` (results in `a2/results/dual_offdiag.jsonl`):
 | 30 | 200 / 1000 / 3000 | 21 | 0.959 / 0.983 / 0.997 | −5.0 / −10.3 / −4.7 |
 | 60 | 500 / 3000 / 12000 | 151 | 0.976 / 1.017 / 1.004 | −1.0 / +4.4 / +4.5 |
 
+**Poisson in the row variable is an involution here.** The dual off-diagonal is exactly `L/H`
+times the original off-diagonal. Poisson summation therefore helps only when it lands on the side
+with *fewer rows than columns*, where an upper bound by a large sieve suffices and no asymptotic
+is needed.
+
+* The Oct 5 second moment (`H = D^{1+θ}`, dual rows `D^{1−θ} < D`) is on the good side.
+* The fourth moment at `H < D² = L` is not. Its dual has more rows than columns, and what it needs
+  (an asymptotic with error `O(L²)` against a diagonal `𝓗L`) is equivalent to the original claim.
+
+All progress must therefore come from the non-involutive step, the theta reflection. The
+second-step analysis above shows that a single `GL(2)` reflection reproduces a Möbius-type sum.
+
 At these tiny scales the A2-structured dual mean square equals its diagonal within 4%. At `X = 60`,
 ρ stays at about 4.5 as the row range grows fourfold. This is *consistent with*, and not evidence
 for, a diagonal-sized fourth moment. Proving it would require exactly the dual off-diagonal control
