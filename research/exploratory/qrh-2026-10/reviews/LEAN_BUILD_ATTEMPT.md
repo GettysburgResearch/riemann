@@ -3,7 +3,8 @@
 ```text
 Status: VERIFICATION (formal build COMPLETED, Addendum A; comparator ACCEPTS the zeta challenge,
   Addendum B, and the Dirichlet, Hecke, upstream Oct 1 SiegelZeros, wave-Siegel and wave-strip
-  challenges, Addendum C; the nanoda second-kernel run is recorded in Addendum C);
+  challenges, Addendum C; the zeta challenge is also accepted by the independent nanoda kernel,
+  Addendum C);
   no mathematical claim beyond what the build shows. Sections 1-8 are the original partial
   attempt and are kept unchanged as the record of that attempt
 Scope: Kernel build of the import closure of OAI.NumberTheory.DirichletL.Nonvanishing, the solution
@@ -128,7 +129,9 @@ Trust assumptions, stated as comparator's README asks:
     configuration time.
 * The landrun sandbox ran in `--best-effort` mode on Landlock ABI v7, and the systemd
   `AF_UNIX` wrapper was not used (Section 5).
-* Only the Lean kernel was used. No second kernel, such as nanoda, was run.
+* Only the Lean kernel was used in this run. (Update, Addendum C: a later run on the same
+  challenge with `enable_nanoda: true` was accepted by both the nanoda kernel and the Lean
+  kernel.)
 
 **What is established:** under these assumptions, Lean's kernel accepts a proof, from the
 three standard axioms, of
@@ -217,7 +220,7 @@ met).
 | wave `QRHWaveStrip.json` (challenge written in this wave) | `OAI.QRHWave.ZetaZeroStrip` | **accepted**: "Lean default kernel accepts the solution", 1104 s, exit 0 ([results/comparator_QRHWaveStrip.log](results/comparator_QRHWaveStrip.log)). The challenge file (`../lean/comparator/QRHWaveStrip.lean`) imports only Mathlib and states the strip in the binder shape of Mathlib's `RiemannHypothesis` |
 | upstream `SiegelZeros.json` | `OAI.NumberTheory.SiegelZeros.Main` (Oct 1 route) | **accepted**: "Lean default kernel accepts the solution", 900 s, exit 0 ([results/comparator_SiegelZeros.log](results/comparator_SiegelZeros.log)). Its solution closure contains no `OAI.NumberTheory.DirichletL.*` module |
 | wave `QRHWaveDirichletStrip.json` (challenge written in this wave; Mathlib-only) | `OAI.QRHWave.DirichletZeroStrip` | queued after the nanoda run |
-| `QuasiRiemannHypothesisNanoda.json` (upstream zeta challenge with `enable_nanoda: true`) | `OAI.NumberTheory.DirichletL.Nonvanishing` | queued: a **second, independent kernel**. nanoda_lib 0.4.19 (ammkrn/nanoda_lib@3a24072) was built here with cargo 1.97.0 (`cargo build --release`, 32 s) and is passed to comparator through `COMPARATOR_NANODA` |
+| `QuasiRiemannHypothesisNanoda.json` (upstream zeta challenge with `enable_nanoda: true`) | `OAI.NumberTheory.DirichletL.Nonvanishing` | **accepted by both kernels**: "nanoda kernel accepts the solution" and "Lean default kernel accepts the solution", 1238 s, exit 0 ([results/comparator_QuasiRiemannHypothesis_nanoda.log](results/comparator_QuasiRiemannHypothesis_nanoda.log)). nanoda_lib 0.4.19 (ammkrn/nanoda_lib@3a24072) is an independent type checker written in Rust; it was built here with cargo 1.97.0 (`cargo build --release`, 32 s) and passed to comparator through `COMPARATOR_NANODA` |
 
 ## 1. Verdict of the original attempt (superseded by Addendum A): PARTIAL
 

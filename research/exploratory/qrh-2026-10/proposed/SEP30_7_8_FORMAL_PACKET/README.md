@@ -55,7 +55,7 @@ RH remains unsolved. This draft does not claim that RH is proved or disproved. T
 | `lake-manifest.json` | sha256 `cf6105a25d9dca2f166b241d9191bd12c7e13305890dc9c4d0952351cccc0794`; 42 packages at manifest revisions | hash recomputed; revisions from §3 |
 | Patches (23) | 11 applied by the lakefile `run_cmd`: iut, tate-curves-theta, genl, heights, pi1, orbicurve-cores, oka, tempered-fundamental-groups, elliptic-curves, formal-schemes, belyi. 12 from the `post_update` hook, replicated by a script: fixed-point-theorems, PrimeNumberTheoremAnd, Zeta3Irrational, rellich-kondrachov, carleson, StrongPNT, AbsorptionCutoff, AINTLIB, ClassFieldTheory, schoenflies-lean, SphereEversion, gromov | from §3 |
 | Comparator tools | comparator `d03acab154d269c06e60e4de7e4cc85deebff94b` (toolchain overridden locally to v4.34.1); lean4export `076e8e57707e813375e8f9da8bf989799ace9680`; landrun `811cfff51ceaf3d9843708aa6d22e9b84ccac8b4` (v0.1.18) | from §5 |
-| Second kernel (queued) | nanoda_lib 0.4.19, `ammkrn/nanoda_lib@3a24072` | Addendum C |
+| Second kernel | nanoda_lib 0.4.19, `ammkrn/nanoda_lib@3a24072` (queued at drafting; since run: accepts the zeta challenge) | Addendum C |
 
 **Challenge files** at the import ref, path `.../upstream/lean/ComparatorChallenges/` (sha256 recomputed for this draft):
 
@@ -165,7 +165,7 @@ How to read the Lean text:
 | T6 | Comparator and lean4export | 4/4 self-tests passed. The toolchain was matched to v4.34.1. | Their own correctness; the local toolchain override. |
 | T7 | Comparator assumption 2 (solution not precompiled) | **Not met.** The solution was compiled outside the sandbox first. This is a non-adversarial reproduction. | — |
 | T8 | landrun sandbox | v0.1.18 `--best-effort` on Landlock ABI v7 (strict mode wants v9). A write outside the allowed paths was denied in a test. | The systemd `AF_UNIX` wrapper was not used. |
-| T9 | Second kernel | None has run. A **nanoda run is queued** (`QuasiRiemannHypothesisNanoda.json`, zeta only; Addendum C). | — |
+| T9 | Second kernel | At drafting none had run. Since then the **nanoda kernel accepts the zeta challenge** (`QuasiRiemannHypothesisNanoda.json`, 1238 s, together with the Lean kernel; Addendum C). The Dirichlet and Hecke challenges have the Lean kernel only. | — |
 | T10 | Human review | **None**, of the Lean development, the statement or the trust base. | — |
 
 ## 4. Formal run record
@@ -188,7 +188,7 @@ Read the file, not this table, for the current status.
 | wave `SiegelFromSevenEighths.json` (upstream `SiegelZeros` challenge module) | `OAI.QRHWave.SiegelFromSevenEighths` | pending at drafting; **accepted** since (1082 s) |
 | wave `QRHWaveStrip.json` (challenge written in this wave) | `OAI.QRHWave.ZetaZeroStrip` | pending |
 | upstream `SiegelZeros.json` | `OAI.NumberTheory.SiegelZeros.Main` (Oct 1 route) | pending at drafting; **accepted** since (900 s) |
-| `QuasiRiemannHypothesisNanoda.json` (upstream zeta challenge with `enable_nanoda: true`) | `OAI.NumberTheory.DirichletL.Nonvanishing` | queued: a **second, independent kernel**. nanoda_lib 0.4.19 (ammkrn/nanoda_lib@3a24072) was built here with cargo 1.97.0 (`cargo build --release`, 32 s) and is passed to comparator through `COMPARATOR_NANODA` |
+| `QuasiRiemannHypothesisNanoda.json` (upstream zeta challenge with `enable_nanoda: true`) | `OAI.NumberTheory.DirichletL.Nonvanishing` | queued at drafting; since **accepted by both kernels** (nanoda and Lean, 1238 s; Addendum C). nanoda_lib 0.4.19 (ammkrn/nanoda_lib@3a24072) was built here with cargo 1.97.0 (`cargo build --release`, 32 s) and is passed to comparator through `COMPARATOR_NANODA` |
 
 ## 5. Paper-level record (context; not load-bearing for the formal statement)
 
@@ -279,7 +279,7 @@ claim ID. A grep for the proposed ID itself finds nothing. No `IMPORTED.` ID exi
 | check evidence | build, `#print axioms`, statement pin, comparator ×2 (LEAN_BUILD_ATTEMPT Addenda A-C, at `995eb31fd`) |
 | quantifier_scope | global; open half-plane |
 | proof_kind | imported formal proof (Lean 4 kernel; three standard axioms) |
-| trust_assumptions | Mathlib oleans from cache; 23 unreviewed patches; comparator assumption 2 not met; landrun best-effort; single kernel |
+| trust_assumptions | Mathlib oleans from cache; 23 unreviewed patches; comparator assumption 2 not met; landrun best-effort; two kernels (Lean, nanoda) for the zeta statement, Lean only for the others |
 | rh_relationship | none directly |
 | final_verdict | **not assigned**: awaits an independent exact-SHA review and the decision of Section 8 |
 | first_broken_arrow | none known; smallest failure point in Section 9 |
@@ -330,8 +330,8 @@ The mathematics is kernel-checked, so the smallest failure point is in the trust
 * If it failed, comparator would still compare like with like, but against a different
   `riemannZeta`.
 * Rebuilding Mathlib from source (Section 8.3) closes this point.
-* Next in line: the soundness of the single Lean kernel (the queued nanoda run addresses it), then
-  the integrity of the unsandboxed precompiled build (T7).
+* Next in line: kernel soundness (for the zeta statement this is now covered by two independent
+  kernels; see T9), then the integrity of the unsandboxed precompiled build (T7).
 
 ## 10. Known misreadings
 
@@ -363,7 +363,9 @@ The mathematics is kernel-checked, so the smallest failure point is in the trust
    this draft was written. For the Oct 1 route see Addendum C.
 7. **"Mathlib's git tree is clean, so its definitions are checked."** The sources were checked;
    the oleans came from cache (T3).
-8. **"Two kernels agree."** Only the Lean kernel has run. The nanoda run is queued.
+8. **"Two kernels agree."** For the zeta statement, yes: nanoda and the Lean kernel both
+   accepted it (added after drafting; Addendum C). The Dirichlet and Hecke statements and the
+   corollaries have the Lean kernel only.
 9. **"The Lean statement at `s = 1` says something about the pole."** It is a fact about Mathlib's
    junk value.
 10. **"Agent reviews make this reviewed."** No. Integration needs an independent exact-SHA review.

@@ -193,7 +193,8 @@ needs (7.9) and the `b*`/`ξ`/`τ` and pair-phase cancellations; only the local 
   * on a fresh checkout, with Mathlib rebuilt from source rather than taken from its binary
     cache;
   * with the solution *not* compiled outside the sandbox beforehand (comparator assumption 2);
-  * with the nanoda second kernel (queued here; see LEAN_BUILD_ATTEMPT Addendum C).
+  * with the nanoda second kernel. Done here for the zeta challenge, which both kernels accept
+    (LEAN_BUILD_ATTEMPT Addendum C); not yet run for Dirichlet or Hecke.
   The full closure took about 4 CPU-hours here, plus Mathlib.
 
 **C6. The Part-I-free paper route** ([reviews/PART1_FREE_ROUTE.md](reviews/PART1_FREE_ROUTE.md)).
