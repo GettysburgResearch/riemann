@@ -53,13 +53,6 @@ def G2_all(fs, ys):
         res.append(s)
     return res, N
 
-def cls(n, m):
-    """class of n modulo m (canonical representative)."""
-    r = reduce_mod(n, m)
-    # canonicalise: reduce_mod is deterministic for a given (n mod m) only up to the rounding rule;
-    # compare via a residue-system lookup instead
-    return r
-
 def class_key(n, m, table):
     for i, r in enumerate(table):
         d = (n[0] - r[0], n[1] - r[1])
@@ -127,8 +120,8 @@ for name, m in mods.items():
     seen, ok = {}, True
     for key, (fs, z) in g3.items():
         k4 = chi(fs, (4, 0))
-        w = rnd(z * ZETA[(-k4) % 6]) if abs(rnd(z * ZETA[(-k4) % 6]) - z * ZETA[(-k4) % 6]) < 1e-9 else complex(z * ZETA[(-k4) % 6])
-        w = (round(w.real, 6), round(w.imag, 6))
+        wz = z * ZETA[(-k4) % 6]
+        w = (round(wz.real, 6) + 0.0, round(wz.imag, 6) + 0.0)
         c = class_key(key, m, tables[name])
         if c in seen and seen[c] != w:
             ok = False; break
@@ -207,7 +200,7 @@ assert deltas == [0, 1, 1, 2, 2, 3], deltas
 out['orbit'] = rows
 k_eff = 4 * (3 - 2 * rho) / (2 - rho)
 out['k_eff'] = {str(v): str(k_eff.subs(rho, v)) for v in (sp.Rational(1, 2), sp.Rational(3, 4), sp.Rational(9, 10), 1)}
-assert k_eff.subs(rho, 1) == 4 and sp.simplify(sp.diff(k_eff, rho)) < 0 if False else True
+assert k_eff.subs(rho, 1) == 4
 assert all(k_eff.subs(rho, sp.Rational(j, 20)) > 4 for j in range(1, 20))
 rho_last = sp.simplify(chain[-1][2] / chain[-1][3])
 out['last_moebius_rows_over_cols'] = str(rho_last)

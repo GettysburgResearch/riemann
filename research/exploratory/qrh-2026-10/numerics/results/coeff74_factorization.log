@@ -32,3 +32,19 @@
    ctrl_gen_minus_p: tuples=8352 maxdev=2 failures=4713
    probe_e_conjugate: tuples=8352 maxdev=1.25e-12 failures=0
    alt_bstar_unit_zeta: tuples=8352 nonzero=5247 maxdev=1.21e-12 FS=4.19e-12 failures=0
+   alt_bstar_unit_minus: tuples=8352 nonzero=5247 maxdev=1.25e-12 FS=4.35e-12 failures=0
+   alt_xi2_conj: tuples=8352 nonzero=5247 maxdev=1.33e-12 FS=4.59e-12 failures=0
+   alt_eta_seed: tuples=8352 nonzero=5247 maxdev=1.25e-12 FS=4.35e-12 failures=0
+== enlarged S = {2, lambda, both primes of norm 7}; xi = chi^3 and chi^1 there
+   self-tests: {'symbol_table_vs_exact': '2400/2400', 'prime_gauss_identities_maxdev': 3.034891656391957e-15, 'four_term_vs_direct_Gamma_maxdev': 1.422573102488521e-14, 'xi_units': 216, 'xi_order_divides_6': True, 'tau': [0.9222837188593076, 0.38651357275915466], 'abs_tau_minus_1': 4.440892098500626e-16}
+Traceback (most recent call last):
+  File "/home/user/riemann/research/exploratory/qrh-2026-10/numerics/coeff74_factorization.py", line 1126, in <module>
+    main()
+    ~~~~^^
+  File "/home/user/riemann/research/exploratory/qrh-2026-10/numerics/coeff74_factorization.py", line 1111, in main
+    result["bigS_P2"] = check_P2(Wb, log)
+                        ~~~~~~~~^^^^^^^^^
+  File "/home/user/riemann/research/exploratory/qrh-2026-10/numerics/coeff74_factorization.py", line 968, in check_P2
+    for sfac in ({}, {nm[0]: 1}, {nm[2]: 1}):
+                                  ~~^^^
+IndexError: list index out of range
