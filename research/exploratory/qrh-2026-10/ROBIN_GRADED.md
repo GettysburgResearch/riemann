@@ -27,6 +27,8 @@ Smallest remaining gap: Lemma K (Sec. 2) is the load-bearing new step. For the R
 > * The statements below use only `H(7/8)` for ζ, so they are conditional on accepting the
 >   comparator check, not on the unreviewed manuscript text.
 > * The classical derivations they rest on are still imported or PROPOSED as labelled.
+> * The ineffective `n_0` of Sec. 3 is made explicit in [EXPLICIT_PNT_7_8.md](EXPLICIT_PNT_7_8.md)
+>   (PROPOSED): for example, `C = 1.41` once `log n ≥ 4462.69`.
 
 
 Notation. `f(n) = σ(n)/(n log log n)`, `f_φ(n) = n/(φ(n) log log n)`, `N_k = p_1⋯p_k` (primorial),

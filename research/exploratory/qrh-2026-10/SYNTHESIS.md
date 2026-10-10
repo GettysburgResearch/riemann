@@ -121,6 +121,15 @@ integration verdict.
    * PR 910's height route is threatened at large heights by large values of `ζ`, not by zeros.
 6. **For this repository.**
    * Graded Robin: `Θ ≤ 7/8` for `ζ` is equivalent to an asymptotic Robin-type inequality.
+   * **Explicit versions of the 7/8 consequences** ([EXPLICIT_PNT_7_8.md](EXPLICIT_PNT_7_8.md)).
+     These are PROPOSED derivations, conditional on the Lean-checked `H(7/8)` plus imported explicit
+     results, with constants from interval arithmetic:
+     * `|ψ(x) − x| ≤ 0.0026 x^{7/8} log² x` for all `x ≥ 227`;
+     * `|π(x) − li(x)| ≤ 0.00266 x^{7/8} log x` for `x > 2657`;
+     * a prime in `(x, x + 0.006 x^{7/8} log² x]` for `x ≥ 967`;
+     * ROBIN_GRADED's ineffective `n₀` made explicit: `σ(n)/n < e^γ log log n + 1.41 (log n)^{−1/8}`
+       once `log n ≥ 4462.69`.
+     * The ψ bound beats the best published unconditional table from about `x ≈ 10^{110}`.
    * Conditional zero density: no improvement below 7/8.
    * NRC32 twists give no family leverage.
    * Conditionally, effective Siegel-zero exclusion and effective class-number bounds.

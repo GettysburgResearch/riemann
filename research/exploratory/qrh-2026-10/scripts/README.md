@@ -13,6 +13,7 @@ companions. Run them from this directory unless noted. Runtimes are for one core
 | `sensitivity.py <scenario>` | Nelder–Mead geometry optimization for one scenario (see `SCENARIOS`); writes `../results/<scenario>.json` | FLOATING_RECONNAISSANCE | `python3 sensitivity.py A_paper_bp11_12` | 1–10 min |
 | `floor_lp.py`, `floor_theta.py` | floor-bin cancellation payoff, exact LP and model (FLOOR_BIN_BARRIER.md) | EXACT / FLOATING | see file headers | minutes |
 | `make_ladder_svg.py` | the barrier-ladder figure (`../figures/barrier_ladder.svg`) | n/a | `python3 make_ladder_svg.py` | seconds |
+| `explicit_pnt_7_8.py` | explicit psi/theta/pi-li/short-interval bounds and the explicit Robin envelope under H(7/8) (EXPLICIT_PNT_7_8.md); writes `../results/explicit_pnt_7_8.{txt,json}` | INTERVAL (mpmath.iv, outward rounding); `--zeros` adds a FLOATING sanity check | `python3 -I explicit_pnt_7_8.py [--zeros]` | ~17 s (45 s with `--zeros`) |
 | `zd_*.py` | ANTEDB-based zero-density runs (ZERO_DENSITY_CONDITIONAL.md); needs a sandboxed ANTEDB checkout, see that file | EXACT (ANTEDB rationals) / float grid | see file headers | minutes |
 
 Companion folders, each with its own README or header:

@@ -9,7 +9,8 @@ Scope: explicit (all constants and thresholds stated) bounds for psi, theta, pi 
   stated thresholds. Finite verification ranges are imported, not extended.
 Exact sources or dependencies:
   H(7/8): Lean theorem OAI.riemannZeta_ne_zero_of_seven_eighths_lt_re, kernel-checked with axioms
-    propext, Classical.choice, Quot.sound (reviews/LEAN_BUILD_ATTEMPT.md, Addendum A);
+    propext, Classical.choice, Quot.sound, under the trust assumptions recorded in
+    reviews/LEAN_BUILD_ATTEMPT.md (Addenda A, B); the Lean development itself is unreviewed;
   Platt-Trudgian, RH true up to 3e12, arXiv:2004.09765v1 (Bull. LMS 53 (2021)), Thm 1 and Cor. 1;
   Buthe, partial-RH estimates, arXiv:1410.7015v4 (Math. Comp. 85 (2016)), Thm 2;
   Hasanalizade-Shen-Wong, N(T) bound, arXiv:2107.06506v1 (J. Number Theory 235 (2022)), Cor. 1.2;
@@ -42,7 +43,7 @@ All rows are CONDITIONAL on H(7/8) and the imports of Sec. 1, and PROPOSED (our 
 | Cor 3 | `\|π(x) − li(x)\| ≤ 0.00266 x^{7/8} log x` | all `x > 2657` |
 | Cor 4 | `(x, x + 0.006 x^{7/8} log² x]` contains a prime | all `x ≥ 967` |
 | Thm R | `σ(n)/n < n/φ(n) ≤ e^γ log log n + 1.41 (log n)^{−1/8}` | all `n ≥ e^{4462.69}` (≈ `10^{1938.1}`) |
-| Thm R | same with `C = 0.1`, `0.01`, `10^{−6}`, `10^{−10}` | `log n ≥ 2.52·10^7`, `5.23·10^{10}`, `1.01·10^{26}`, `3.54·10^{114}` |
+| Thm R | same with `C = 0.1`, `0.01`, `10^{−6}`, `10^{−10}` | `log n ≥ 2.52·10^7`, `5.23·10^{10}`, `1.02·10^{26}`, `3.55·10^{114}` |
 
 Three points to keep in view.
 - **Where H(7/8) is actually used.** For `x ≤ e^{190}` (about `10^{82.5}`), Theorem 1 uses only zeros below `H_0`, so it is unconditional there. It is also weaker there than the best published unconditional bounds. H(7/8) starts to matter at `x ≈ e^{190}`. The conditional bound beats the best unconditional table (Fiori–Kadiri–Swidinsky) from `log x ≈ 253`, about `x ≈ 10^{110}`.
@@ -183,7 +184,7 @@ In regime III, `log(T/2π) = L/8 + log 4M`. Expanding (3.2) gives
 **Corollary 3 (π − li).** `|π(x) − li(x)| ≤ 0.00266 x^{7/8} log x` for all `x > 2657`.
 
 *Proof.*
-- For `2657 < x ≤ X := 2.169·10^25`, Bü's `√x log x/(8π)` is below the claim once `x ≥ 1358.3`.
+- For `2657 < x ≤ X := 2.169·10^25`, Bü's `√x log x/(8π)` is below the claim once `x ≥ 1358.4`.
 - For `x > X`, partial summation gives `π(x) − li(x) = π(X) − li(X) + (θ(x) − x)/log x − (θ(X) − X)/log X + ∫_X^x (θ(t) − t)/(t log² t) dt`.
 - Use Bü at `X` and Corollary 2 inside, with `∫_X^x t^{−1/8} dt ≤ (8/7) x^{7/8}`. This gives the constant `0.0026 (1 + 8/(7 log X)) + √X log X/(4π X^{7/8} log X) ≤ 0.0026510`. ∎
 
@@ -258,27 +259,27 @@ So the supremum over `x ≥ x_1` is computed by finitely many interval evaluatio
   - This is at most `e^γ g(L)` once `L ≥ L_1 := y_1`.
   - `y_1` is computed exactly when `x_1 < 10^7`. Otherwise we use `y_1 ≤ x_1(1+η) + log(2x_1)` (Bertrand). ∎
 
-**Table R** (interval-verified; `c_U` is the upper-side constant, and the two-sided Nicolas constant came out equal in every row):
+**Table R** (interval-verified; all entries rounded in the safe direction; `c_U` is the upper-side constant, and the two-sided Nicolas constant came out equal in every row):
 
 | `C` | `log x_1` | `x_1` | `c_U` | `log n_1 = L_1` | sharper than Robin's R2 for `n ≥ n_1`? |
 |---|---|---|---|---|---|
-| 1.41 | 8.42 | 4 537 | 0.7578 | 4462.69 = θ(4547) | no |
-| 1 | 9.47 | 12 965 | 0.5467 | 12 840.3 = θ(12967) | no |
-| 0.5 | 11.68 | 1.18·10^5 | 0.2777 | 117 744.7 = θ(118189) | no |
-| 0.1 | 17.04 | 2.51·10^7 | 0.05588 | 2.520·10^7 | yes |
-| 0.01 | 24.68 | 5.23·10^{10} | 5.596·10^{−3} | 5.229·10^{10} | yes |
-| 10^{−3} | 32.05 | 8.30·10^{13} | 5.601·10^{−4} | 8.301·10^{13} | yes |
-| 10^{−4} | 39.23 | 1.09·10^{17} | 5.602·10^{−5} | 1.090·10^{17} | yes |
-| 10^{−6} | 59.88 | 1.01·10^{26} | 5.605·10^{−7} | 1.013·10^{26} | yes |
-| 10^{−8} | 200.76 | 1.55·10^{87} | 5.613·10^{−9} | 1.545·10^{87} | yes |
-| 10^{−10} | 263.76 | 3.54·10^{114} | 5.567·10^{−11} | 3.544·10^{114} | yes |
+| 1.41 | 8.42 | 4 537 | 0.7579 | 4462.69 ≥ θ(4547) | no |
+| 1 | 9.47 | 12 965 | 0.5467 | 12 840.4 ≥ θ(12967) | no |
+| 0.5 | 11.68 | 1.18·10^5 | 0.2777 | 117 744.8 ≥ θ(118189) | no |
+| 0.1 | 17.04 | 2.51·10^7 | 0.05589 | 2.520·10^7 | yes |
+| 0.01 | 24.68 | 5.23·10^{10} | 5.597·10^{−3} | 5.230·10^{10} | yes |
+| 10^{−3} | 32.05 | 8.30·10^{13} | 5.602·10^{−4} | 8.302·10^{13} | yes |
+| 10^{−4} | 39.23 | 1.09·10^{17} | 5.603·10^{−5} | 1.090·10^{17} | yes |
+| 10^{−6} | 59.88 | 1.01·10^{26} | 5.606·10^{−7} | 1.013·10^{26} | yes |
+| 10^{−8} | 200.76 | 1.55·10^{87} | 5.614·10^{−9} | 1.546·10^{87} | yes |
+| 10^{−10} | 263.76 | 3.54·10^{114} | 5.568·10^{−11} | 3.545·10^{114} | yes |
 
 How to read Table R.
 - **`C = 1.41` (ROBIN_GRADED's constant) holds for all `n ≥ e^{4462.69}`.** The threshold is small because for `p_k ≤ 2.169·10^25` Büthe's RH-quality bounds control everything. H(7/8) enters only through zeros above `H_0`, whose total weight is `s_high ≈ 3·10^{−12}`. The dominant term in `c_U` at small `x_1` is the crude Chebyshev bound for `J_0`.
 - **`C` can be made very small.** As `n_1 → ∞`, `C` can go down to `e^γ s_high (1+o(1)) ≈ 5.3·10^{−12}`. The jump between the `10^{−6}` and `10^{−8}` rows is a bookkeeping artifact. It comes from the second-order term `S²` in regime II (`T = H_0`), where `S/x^{1/2}` grows like `x^{1/2}/H_0`. A per-`x` choice of `T` would smooth it.
 - **Comparison with R2** (Robin's unconditional `σ(n)/n < e^γ log log n + 0.6483/log log n`, which ROBIN_GRADED quotes secondhand via Lagarias). From `log n ≈ 2.5·10^7` the explicit conditional envelope is sharper. This replaces ROBIN_GRADED's calibration ("only once `log log n ≳ 35`"), which used only `C = 0.79`. Robin's inequality itself is known numerically far beyond these `n` (Morrill–Platt, not imported). So for the repository the new content starts only above that verified range.
 
-**Corollary S1 (explicit pruning rule).** In the setting of Theorem R, suppose `log n ≥ y_1 e^{c y_1^{−1/8}}` (the column `log_n1_S1` in results JSON; for example 5886.49 for `C = 1.41`). If `σ(n) ≥ e^γ n log log n`, then:
+**Corollary S1 (explicit pruning rule).** In the setting of Theorem R, suppose `log n ≥ y_1 e^{c y_1^{−1/8}}` (the column `log_n1_S1` in results JSON; for example 5886.50 for `C = 1.41`). If `σ(n) ≥ e^γ n log log n`, then:
 - `p_{ω(n)} ≥ x_1`;
 - `log(n/N_{ω(n)}) < c e^c (log n)^{7/8}`.
 
@@ -329,7 +330,8 @@ Below, "ours" means the bound (3.1)/(3.2) with the best `T` from a candidate gri
   - Exact enumeration of `ψ(n)` and `θ(n)` for `n ≤ 1500`.
   - sympy checks of the four integration identities used: Ni (2.2), (2.6), `∫_x^∞ w = 1/(x log x)`, and the antiderivative of `P/t²`.
 - **Optional `--zeros`.** EMPIRICAL float check with `mpmath.zetazero` for the first 200 zeros: `Σ 2/(1/4+γ²) = 0.04207` (below `s_low`) and `Σ 1/γ = 1.352` (below the (Z1) bound 2.031).
-- **Outputs.** `results/explicit_pnt_7_8.txt`, `results/explicit_pnt_7_8.json`.
+- **Outputs.** `results/explicit_pnt_7_8.txt`, `results/explicit_pnt_7_8.json` (from the `--zeros` run, 45 s).
+  sha256: script `f13f8787e0d7b3f7…`, txt `4daf86cae016b77d…`, json `8b67201826ba95c4…`.
 - **Not done.**
   - Interval evaluation of `li` (so `π − li` below 2657 is not covered).
   - The `x^{7/8} log x log log x` short-interval refinement.
@@ -343,3 +345,17 @@ Below, "ours" means the bound (3.1)/(3.2) with the best `T` from a candidate gri
 - **The thresholds are not new verification ranges.** For `x ≤ e^{190}` Theorem 1 is unconditional and weaker than published tables. The small `n_1` for `C = 1.41` reflects Büthe's imported finite range, not new information about zeros.
 - **"Explicit" means explicit modulo the imports.** CHJ's Theorem 1.2 is load-bearing beyond `e^{190}` (Theorem 1) and beyond `2.169·10^25` (Lemma J). Its own constants changed between arXiv versions, and its text and Table 4 disagree.
 - **Smallest statement whose failure would break the results.** Theorem 1 beyond `e^{190}` breaks only if CHJ Thm 1.2 failed at `log x ≥ 40` by more than a factor of 4 in `M`. Theorem R with `x_1 < 2.169·10^25` breaks if Büthe's Theorem 2 failed in that range.
+
+## Addendum: independent sweep of the small-x ranges (coordinator, same day)
+
+`scripts/explicit_pnt_sweep_check.py` is a separate float64 check (EMPIRICAL, not interval
+arithmetic) of the step functions ψ and θ at every prime-power jump up to `2·10⁷`. At each jump it
+checks both the left limit and the right value, against the claimed bound on the claimed range
+(`results/explicit_pnt_sweep_check.txt`):
+
+* ψ, `x ≥ 227`, `C = 0.0026`: the largest ratio is 0.00196 (the left limit at 347). OK.
+* θ, `x ≥ 967`, `C = 0.0026`: the largest ratio is 0.002595 (the left limit at 1009). OK, but
+  tight.
+
+Just below the thresholds the bounds fail, as expected: the left limit at 227 has ratio 0.00298.
+This is consistent with "227" and "967" being the smallest workable starting points.

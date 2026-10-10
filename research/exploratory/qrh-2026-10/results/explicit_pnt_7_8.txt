@@ -100,3 +100,7 @@ C        c=C e^-g     log x1         c_U (upper)    eta          log n1 = L1 (bo
    pi: 0.00266 x^(7/8) log x < eps_pi(FKS Table 4) x/log x from log x = 259 (clean shape; tested to 300, then monotone)
    sensitivity: with M multiplied by 2 the sup over x >= e^40 becomes <= 0.00257258
    sensitivity: with M multiplied by 4 the sup over x >= e^40 becomes <= 0.00259928
+
+--- EMPIRICAL (float) sanity: partial sums over the first 200 zeros ---
+   sum_{n<=200} 2/(1/4+g^2) = 0.04206972063485344 (< s_low = 0.0461914 as it must be)
+   sum_{n<=200} 1/g_n       = 1.3516254262168779  vs Z1(g_200) bound 2.0314176783742086
