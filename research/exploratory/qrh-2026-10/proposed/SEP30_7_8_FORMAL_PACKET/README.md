@@ -279,7 +279,7 @@ claim ID. A grep for the proposed ID itself finds nothing. No `IMPORTED.` ID exi
 | check evidence | build, `#print axioms`, statement pin, comparator ×2 (LEAN_BUILD_ATTEMPT Addenda A-C, at `995eb31fd`) |
 | quantifier_scope | global; open half-plane |
 | proof_kind | imported formal proof (Lean 4 kernel; three standard axioms) |
-| trust_assumptions | Mathlib oleans from cache; 23 unreviewed patches; comparator assumption 2 not met; landrun best-effort; two kernels (Lean, nanoda) for the zeta, Dirichlet and Hecke statements; Lean only for the corollaries |
+| trust_assumptions | Mathlib oleans from cache; 23 unreviewed patches; comparator assumption 2 not met; landrun best-effort; two kernels (Lean, nanoda) for every comparator challenge of the wave |
 | rh_relationship | none directly |
 | final_verdict | **not assigned**: awaits an independent exact-SHA review and the decision of Section 8 |
 | first_broken_arrow | none known; smallest failure point in Section 9 |
@@ -365,7 +365,7 @@ The mathematics is kernel-checked, so the smallest failure point is in the trust
    the oleans came from cache (T3).
 8. **"Two kernels agree."** For the zeta statement, yes: nanoda and the Lean kernel both
    accepted it, and later the Dirichlet and Hecke statements too (added after drafting;
-   Addendum C). The corollaries have the Lean kernel only.
+   Addendum C). The corollaries and both Siegel proofs were later accepted by both kernels too.
 9. **"The Lean statement at `s = 1` says something about the pole."** It is a fact about Mathlib's
    junk value.
 10. **"Agent reviews make this reviewed."** No. Integration needs an independent exact-SHA review.

@@ -61,7 +61,8 @@ the critical line.
      * Mathlib came from its binary cache.
      * Some builds overlapped the runs; this is disclosed, and the 7/8 closure's oleans predate
        every run.
-     * **For all three upstream 7/8 statements, a second, independent kernel agrees:** comparator with nanoda
+     * **For all three upstream 7/8 statements (and for every other comparator challenge of the
+       wave, including both Siegel proofs and both strips), a second, independent kernel agrees:** comparator with nanoda
        (a Rust type checker) reports "nanoda kernel accepts the solution" as well as the Lean
        kernel's acceptance (zeta 1238 s, Dirichlet 1223 s, Hecke 1222s; Addendum C).
      * This is a machine check of the Lean statement, not a review of the manuscript.
