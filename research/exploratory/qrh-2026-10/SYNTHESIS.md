@@ -27,7 +27,7 @@ methods *can* and *cannot* do, and where a push could move the constant.
 | | Sep 30 "7/8" architecture | Oct 5 "11/12" architecture |
 |---|---|---|
 | core object | cubic-theta probe with three scales and prime slots; Poisson rows binned by zeros | sextic Möbius family `A_u(D)`, mean square over rows `u`, extraction at `u = p⁶` |
-| what sets the constant | low (reflection) estimate `θ_low` | leverage of sixth-power rows (`c = 5/6`) times the moment order |
+| what sets the constant | low (reflection) estimate `θ_low` | leverage of sixth-power rows (`c = 5/6`) and the row/column ratio `ρ`: `1/2 + cρ/2` |
 | scaling with better inputs | **stalls**: 13/15 even with perfect zero counts, perfect energy and row-by-row GLH; 5/6 floor for the probe family | **stalls at 11/12 for row-blind inputs**: the boundary is `1/2 + 5ρ/12` in the row/column ratio `ρ` alone, whatever the moment order; `ρ < 1` needs an on-average GRH for the family ([RUNG_STRENGTH.md](RUNG_STRENGTH.md)) |
 | next rung | cross-row (ratios-type) cancellation, or a bilinear bound beating Cauchy–Schwarz | any sub-diagonal mean square; the simplest is the second moment over `D^ρ` rows, `ρ < 1` (`ρ < 9/10` beats 7/8) |
 
@@ -87,8 +87,10 @@ improves continuously as the row/column ratio `ρ` falls below 1. That makes it 
      instead of the trivial one; RH needs `0`.
 5. **Kintali's 47/48 architecture** has closed form `max(11/12, 7/6 − 1/(2A))` in its density
    exponent `A`. It reaches 11/12 only with DH-quality Hecke density, and never below.
-   * A bounded review found no error in the checked steps.
-   * The first unverified step is Lemma 3 (weak reflection, App. B).
+   * Two bounded reviews found no error in the checked steps. The second covers Lemma 3 (weak
+     reflection) and App. B, with numerical theta automorphy and cusp reflection
+     ([reviews/KINTALI_LEMMA3_REVIEW.md](reviews/KINTALI_LEMMA3_REVIEW.md)).
+   * The first unverified step is now App. A.2, the phase cancellation on the high side.
    * The cited density lemma is in Khale–O'Kuhn–Panidapu–Sun–Zhang (JNT 2021). Its sketchy proof
      can be repaired by citing Hinz (1976).
    * [reviews/KINTALI_REVIEW.md](reviews/KINTALI_REVIEW.md)
@@ -99,6 +101,16 @@ improves continuously as the row/column ratio `ρ` falls below 1. That makes it 
 7. **Verification:** 53/53 exact checks of the 7/8 manuscript's stated arithmetic. Lemma 7.1's local Euler identity was checked for 77 primes with failing
    controls. Kintali's phase claims were checked exhaustively mod 36 ([numerics/](numerics/README.md)).
    The A2 dual off-diagonal is within 4% of its diagonal at tiny scale.
+   * Bounded reviews of manuscript steps:
+     * contour Lemmas 10.3–10.6 stay valid below 7/8 with PR 910's substitutions
+       ([reviews/CONTOUR_LEMMAS_BELOW_7_8.md](reviews/CONTOUR_LEMMAS_BELOW_7_8.md));
+     * the Oct 5 transfer recursion passes, conditional on Prop R and Lemma arithmetic
+       ([reviews/OCT5_R2_ITERATION_TRANSFER.md](reviews/OCT5_R2_ITERATION_TRANSFER.md));
+     * PR 910's exponent arithmetic replays exactly ([reviews/PR910_REPLAY.md](reviews/PR910_REPLAY.md)).
+   * Conditional zero density: the imported 7/8 half-plane does not improve `A(σ)` below 7/8
+     ([ZERO_DENSITY_CONDITIONAL.md](ZERO_DENSITY_CONDITIONAL.md)).
+   * NRC32 twists generate only the trivial character, so they give no family leverage for issue 902
+     ([NRC32_TWISTS.md](NRC32_TWISTS.md)).
 
 **Height levels.** PR 910's native-height route asks for a one-sided off-diagonal condition along
 a curve `σ₀(Y) = 1/2 + c loglog Y/log Y`, `Y ≈ 4T`.
