@@ -1,0 +1,37 @@
+{
+ "sigma0": 0.9355161987573744,
+ "sigma0_eff": 0.9355161987573744,
+ "lx": 0.516144064337504,
+ "ly": 0.5161440742113199,
+ "ell": 4.435381168140953e-05,
+ "M_plus_ell": 1.0323324923605053,
+ "high_sup": -2.000081903230644e-05,
+ "arg": "('kink', 0.6, np.float64(0.5), np.float64(0.4839), 1.0)",
+ "objective": 0.9355161987573744,
+ "scenario": "hinz_linear",
+ "label": "Hinz/[K] linear form R = min(1, 5(1-a)) (A = 5/2)",
+ "cap": null,
+ "energy": "paper",
+ "beta_prev": 1.0,
+ "lp_value": "29/31",
+ "lp_value_float": 0.9354838709677419,
+ "lp_geom": [
+  "16/31",
+  "16/31",
+  "0"
+ ],
+ "seconds": 17.9,
+ "inputs": {
+  "alpha": 0.8333333333333334,
+  "plain_cap": 6.0,
+  "inv_cap": 2.0,
+  "tmax": 1.5,
+  "z0": 0.34,
+  "energy": "paper",
+  "counts": "density:hinz_linear",
+  "d_sel": 0.5,
+  "kappa_floor": 0.75,
+  "R_shift": 0.0,
+  "a_star": 0.8
+ }
+}

@@ -127,9 +127,41 @@ def _R_bin_wrapped(delta, x, d, kappa, ell, inp=tc.PAPER):
 tc.R_bin = _R_bin_wrapped
 
 
+def high_sup_kink(lx, ly, ell, sigma0, beta_prev, inp, nde=41, nx=6, nd=5):
+    """tc.high_sup plus the bins at (and just around) the crossing delta* = 2a* - 1, where the
+    density count leaves the trivial value 1.  F is maximal at that kink, which a uniform delta grid
+    can miss (the optimiser then exploits the gap).  Same F, same x and d sets as tc.high_sup."""
+    worst = tc.high_sup(lx, ly, ell, sigma0, beta_prev, inp, nde=nde, nx=nx, nd=nd)
+    a_star = getattr(inp, 'a_star', None)
+    if a_star is None:
+        return worst
+    h = 1 - lx + ell
+    dsel = list(np.linspace(inp.d_sel, h, nd)) if h > inp.d_sel else []
+    ds = 2*a_star - 1
+    for delta in (ds - 1e-9, ds, ds + 1e-9):
+        if not (tc.DELTA0 < delta <= 2*beta_prev - 1):
+            continue
+        a = (1 + delta)/2
+        beta = max(sigma0 + 1e-12, a)
+        for x in np.linspace(0, 0.5, nx):
+            for d in [0.01, min(inp.d_sel, h)] + dsel:
+                R = tc.R_bin(delta, x, d, 0.75, ell, inp)
+                Fv = tc.F_high(delta, x, d, lx, ly, ell, beta, R, inp.z0)
+                if Fv > worst[0]:
+                    worst = (Fv, ('kink', round(delta, 6), round(x, 3), round(d, 5), round(R, 6)))
+    return worst
+
+
+def closes_kink(lx, ly, ell, beta_prev, inp, fine=False):
+    s0 = tc.low_threshold(lx, ly, ell, inp)
+    kw = dict(nde=241, nx=26, nd=17) if fine else dict(nde=41, nx=6, nd=5)
+    return s0, high_sup_kink(lx, ly, ell, s0, beta_prev, inp, **kw)
+
+
 def optimise_capped(beta_prev, inp, cap=None, starts=None, penalty=200.0, slack=2e-5):
-    """tc.optimise with an optional extra constraint lx + ly + ell <= cap (cap = 1 keeps the
-    manuscript's Lemma 15.1 hypothesis M + ell = 1 in its '<=' form)."""
+    """tc.optimise with (i) the kink bin added to the high side and (ii) an optional extra constraint
+    lx + ly + ell <= cap (cap = 1 keeps the manuscript's Lemma 15.1 hypothesis M + ell = 1 as '<=').
+    Reported sigma0_eff = sigma0 + max(0, sup F) is the boundary the geometry actually certifies."""
     from scipy.optimize import minimize
     def obj(p):
         lx, ly, ell = p
@@ -140,7 +172,7 @@ def optimise_capped(beta_prev, inp, cap=None, starts=None, penalty=200.0, slack=
         s0 = tc.low_threshold(lx, ly, ell, inp, nd=41)
         if s0 >= beta_prev:
             return 1.5 + s0
-        hs = tc.high_sup(lx, ly, ell, s0, beta_prev, inp, nde=41, nx=6, nd=5)[0]
+        hs = high_sup_kink(lx, ly, ell, s0, beta_prev, inp, nde=41, nx=6, nd=5)[0]
         return s0 + penalty*max(0.0, hs + slack)
     best = (9.0, None)
     for st in starts:
@@ -149,9 +181,9 @@ def optimise_capped(beta_prev, inp, cap=None, starts=None, penalty=200.0, slack=
         if r.fun < best[0]:
             best = (r.fun, tuple(r.x))
     lx, ly, ell = best[1]
-    s0, hs = tc.closes(lx, ly, ell, beta_prev, inp, fine=True)
-    return dict(sigma0=s0, lx=lx, ly=ly, ell=ell, M_plus_ell=lx + ly + ell,
-                high_sup=hs[0], arg=hs[1], objective=best[0])
+    s0, hs = closes_kink(lx, ly, ell, beta_prev, inp, fine=True)
+    return dict(sigma0=s0, sigma0_eff=s0 + max(0.0, hs[0]), lx=lx, ly=ly, ell=ell,
+                M_plus_ell=lx + ly + ell, high_sup=hs[0], arg=hs[1], objective=best[0])
 
 # ------------------------------------------------------------------------------------------------
 # Exact LP (extends barrier_lp.py: same variables v = (lx, ly, ell, s), same low-side rows)
@@ -265,11 +297,11 @@ def cmd_check():
     """full threshold_calculus model (fine grid, all bins/amplitudes/dyads, beta_prev = 1) at the LP optima."""
     rows = []
     for name, (a_star, Afl, Rfr, label) in SCEN.items():
-        inp = DensityInputs(Afl, 'density:' + name)
+        inp = DensityInputs(Afl, 'density:' + name); inp.a_star = float(a_star)
         for cap in (None, 1):
             r = lp_solve(lp_rows(a_star, Rfr, cap=cap))
             lx, ly, ell = (float(v) for v in r['geom'])
-            s0, hs = tc.closes(lx, ly, ell, 1.0, inp, fine=True)
+            s0, hs = closes_kink(lx, ly, ell, 1.0, inp, fine=True)
             rows.append((name, cap, str(r['bound']), s0, hs[0], hs[1]))
             print(f"{name:14s} cap={cap}: LP {str(r['bound']):>8s} ({float(r['bound']):.6f}); model low = {s0:.6f};"
                   f" sup F = {hs[0]:+.2e} at {hs[1]}", flush=True)
@@ -278,7 +310,7 @@ def cmd_check():
 
 def cmd_run(name, cap=None, energy='paper'):
     a_star, Afl, Rfr, label = SCEN[name]
-    inp = DensityInputs(Afl, 'density:' + name, energy=energy)
+    inp = DensityInputs(Afl, 'density:' + name, energy=energy); inp.a_star = float(a_star)
     r = lp_solve(lp_rows(a_star, Rfr, cap=cap))
     lpg = tuple(float(v) for v in r['geom'])
     starts = [lpg, (0.5, 0.5, 0.0), (17/48, 23/48, 1/6), (0.4, 0.45, 0.1), (0.3, 0.45, 0.2),

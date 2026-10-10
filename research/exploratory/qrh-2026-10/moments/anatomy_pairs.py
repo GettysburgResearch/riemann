@@ -38,7 +38,7 @@ PAIRCLS = ("gcd", "conj", "unit", "generic")
 DL_EDGES = [-np.inf, 0.0, 1.0, 2.0, 3.0, np.inf]       # log10(conductor / H) bins
 
 
-def coef_vectors(cols, K, seed):
+def coef_vectors(cols, K, seed, primes_ref):
     rng = np.random.default_rng(seed)
     W, sqf = cols["W"], cols["sqf"]
     vec = {"mu": cols["mu"] * W, "lam": cols["lam"] * W, "one": sqf * W}
@@ -51,7 +51,22 @@ def coef_vectors(cols, K, seed):
         for i in f:
             rmf[j] *= fp[pos[i]]
     rmf *= (sqf * W)[:, None]
-    return vec, rand.astype(float), rmf
+    # conjugation-symmetric controls (mu(conj n) = mu(n)):
+    #   randc: iid +-1 on conjugation orbits {n, conj n};  rmfc: f(pi) = f(conj pi) = f_p
+    gens = cols["gens"]
+    gidx = {g: k for k, g in enumerate(gens)}
+    orb = np.array([min(k, gidx.get(E.conj(g), k)) for k, g in enumerate(gens)])
+    eo = rng.integers(0, 2, size=(len(W), K)) * 2 - 1
+    randc = eo[orb] * (sqf * W)[:, None]
+    rp = sorted({primes_ref[i].p for i in used})
+    rpos = {q: k for k, q in enumerate(rp)}
+    fq = rng.integers(0, 2, size=(len(rp), K)) * 2 - 1
+    rmfc = np.ones((len(W), K))
+    for j, f in enumerate(cols["facs"]):
+        for i in f:
+            rmfc[j] *= fq[rpos[primes_ref[i].p]]
+    rmfc *= (sqf * W)[:, None]
+    return vec, rand.astype(float), rmf, randc.astype(float), rmfc
 
 
 def stats_vec(a, ReS, masks, absS):
@@ -92,10 +107,10 @@ def run_D(D, rhos, K, seed, primes, lib, pd, chunk=3000):
     for k, c in enumerate(ROWCLS[:3]):
         rclass_id[rcls[c]] = k
     cut = [int(np.searchsorted(N, H, side="right")) for H in Hs]
-    vec, rand, rmf = coef_vectors(cols, K, seed)
+    vec, rand, rmf, randc, rmfc = coef_vectors(cols, K, seed, primes)
     names = list(vec)
     Amat_named = np.stack([vec[k] for k in names], axis=1)
-    Aall = np.concatenate([Amat_named, rand, rmf], axis=1)          # nc x (3 + 2K)
+    Aall = np.concatenate([Amat_named, rand, rmf, randc, rmfc], axis=1)          # nc x (3 + 4K)
     abs2 = Aall * Aall
     # unit code: chi_n(zeta), zeta = 1 + omega
     zcode = AC.chi_block(cols, AC.prime_codes(primes, used, np.array([1]), np.array([1])), slice(0, 1))[:, 0]
@@ -198,7 +213,7 @@ def run_D(D, rhos, K, seed, primes, lib, pd, chunk=3000):
             per["named"][k]["rowcheck_M2"] = float(racc_M[hi, :, j].sum())
         per["rows_by_class"] = {c: int(nrows_cls[hi, ci]) for ci, c in enumerate(ROWCLS)}
         # random controls
-        for lab, Am, off0 in (("rand", rand, 3), ("rmf", rmf, 3 + K)):
+        for lab, Am, off0 in (("rand", rand, 3), ("rmf", rmf, 3 + K), ("randc", randc, 3 + 2 * K), ("rmfc", rmfc, 3 + 3 * K)):
             dgv = np.sum(Am * Am * np.diag(ReS)[:, None], axis=0)
             full = np.sum(Am * (ReS @ Am), axis=0)
             off = full - dgv
@@ -206,7 +221,9 @@ def run_D(D, rhos, K, seed, primes, lib, pd, chunk=3000):
             byp = {c: summarize(np.sum(Am * ((ReS * masks[c]) @ Am), axis=0) / dgv) for c in PAIRCLS}
             rowoff = {c: summarize((racc_M[hi, ci, off0:off0 + K] - racc_D[hi, ci, off0:off0 + K]) / dgv)
                       for ci, c in enumerate(ROWCLS)}
-            per[lab] = dict(off_over_diag=summarize(off / dgv), sumabs_over_diag=summarize(sabs / dgv),
+            bydl = [summarize(np.sum(Am * ((ReS * masks[f"dl{k}"]) @ Am), axis=0) / dgv)
+                    for k in range(len(DL_EDGES) - 1)]
+            per[lab] = dict(off_over_diag=summarize(off / dgv), by_duallen_over_diag=bydl, sumabs_over_diag=summarize(sabs / dgv),
                             sumabs_over_absoff=summarize(sabs / np.maximum(np.abs(off), 1e-300)),
                             by_pair_over_diag=byp, by_rowclass_off_over_diag=rowoff,
                             M2_over_diag=summarize(full / dgv))
@@ -216,6 +233,8 @@ def run_D(D, rhos, K, seed, primes, lib, pd, chunk=3000):
             nk = per["named"][k]
             nk["off_over_diag"] = nk["off"] / nk["diag"]
             nk["z_vs_rand"] = (nk["off_over_diag"] - rr["mean"]) / rr["std"]
+            rc = per["randc"]["off_over_diag"]
+            nk["z_vs_randc"] = (nk["off_over_diag"] - rc["mean"]) / rc["std"]
             nk["sumabs_over_absoff"] = nk["sum_abs_off"] / max(abs(nk["off"]), 1e-300)
         # positive mean of S over off-diagonal pairs and its share for each vector
         Sbar = st["off"]["mean_ReS_W"]
@@ -291,7 +310,7 @@ def main():
                   f"rand={p['rand']['M2_over_diag']['mean']:.3f}+-{p['rand']['M2_over_diag']['std']:.3f} "
                   f"rmf={p['rmf']['M2_over_diag']['mean']:.3f}+-{p['rmf']['M2_over_diag']['std']:.3f} "
                   f"| mu sumabs/|off|={mu['sumabs_over_absoff']:.0f} sumabs/diag={mu['sum_abs_off']/mu['diag']:.1f} "
-                  f"z={mu['z_vs_rand']:.2f}", flush=True)
+                  f"z={mu['z_vs_rand']:.2f} zc={mu['z_vs_randc']:.2f} randc={p['randc']['M2_over_diag']['mean']:.3f}+-{p['randc']['M2_over_diag']['std']:.3f}", flush=True)
 
 
 if __name__ == "__main__":

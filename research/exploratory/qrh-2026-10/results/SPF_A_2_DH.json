@@ -1,0 +1,37 @@
+{
+ "sigma0": 0.9166979557106024,
+ "sigma0_eff": 0.9166979557106024,
+ "lx": 0.5000140910464057,
+ "ly": 0.5000140915761423,
+ "ell": 4.454754234789911e-05,
+ "M_plus_ell": 1.000072730164896,
+ "high_sup": -2.0000075358739267e-05,
+ "arg": "('kink', 0.5, np.float64(0.5), np.float64(0.50003), 1.0)",
+ "objective": 0.9166979557106024,
+ "scenario": "A_2_DH",
+ "label": "A = 2: density hypothesis for the full Hecke family (conjectural)",
+ "cap": null,
+ "energy": "paper",
+ "beta_prev": 1.0,
+ "lp_value": "11/12",
+ "lp_value_float": 0.9166666666666666,
+ "lp_geom": [
+  "1/2",
+  "1/2",
+  "0"
+ ],
+ "seconds": 31.3,
+ "inputs": {
+  "alpha": 0.8333333333333334,
+  "plain_cap": 6.0,
+  "inv_cap": 2.0,
+  "tmax": 1.5,
+  "z0": 0.34,
+  "energy": "paper",
+  "counts": "density:A_2_DH",
+  "d_sel": 0.5,
+  "kappa_floor": 0.75,
+  "R_shift": 0.0,
+  "a_star": 0.75
+ }
+}

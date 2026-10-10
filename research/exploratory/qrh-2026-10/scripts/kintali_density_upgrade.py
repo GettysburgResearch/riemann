@@ -66,6 +66,10 @@ SCENARIOS = [
     ("S6 + Jutila 1977 analogue", [HINZ_A, HINZ_B, HUX76, HB79_2, JUT77]),
     ("S7 + Heath-Brown 1979 Thm 1 and Thm 3 analogues", [HINZ_A, HINZ_B, HUX76, HB79_2, JUT77, HB79_1, HB79_3]),
     ("S8 hypothetical Q-aspect DH on [3/4,1]", [HINZ_A, HINZ_B, DH_Q]),
+    # single DH-range inputs on top of Hinz (to show what each range alone gives: sigma_D + 1/6)
+    ("S9 Hinz + Heath-Brown 1979 Thm 1 analogue only", [HINZ_A, HINZ_B, HB79_1]),
+    ("S10 Hinz + Jutila 1977 analogue only", [HINZ_A, HINZ_B, JUT77]),
+    ("S11 Hinz + Heath-Brown 1979 Thm 3 analogue only", [HINZ_A, HINZ_B, HB79_3]),
 ]
 
 def gstar(bounds, s):
@@ -177,7 +181,11 @@ def main():
     assert results["S6 + Jutila 1977 analogue"][1] == F(113, 120)
     assert results["S7 + Heath-Brown 1979 Thm 1 and Thm 3 analogues"][1] == F(941, 1002)
     assert results["S8 hypothetical Q-aspect DH on [3/4,1]"][2] == F(11, 12)
+    assert results["S9 Hinz + Heath-Brown 1979 Thm 1 analogue only"][1] == F(20, 21)
+    assert results["S10 Hinz + Jutila 1977 analogue only"][1] == F(17, 18)
+    assert results["S11 Hinz + Heath-Brown 1979 Thm 3 analogue only"][1] == F(941, 1002)
     assert F(29, 30) + KMARGIN == F(47, 48)
+    print("\nall pinned values asserted: OK")
 
     print("\n== where each bound first beats the row count (g(s) = 1) ==")
     for b in (HINZ_A, HINZ_B, HUX76, HB79_2, JUT77, HB79_3, DH_Q):

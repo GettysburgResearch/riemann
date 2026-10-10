@@ -1,0 +1,175 @@
+{
+ "t_range": [
+  20000.0,
+  100000.0
+ ],
+ "n": 600,
+ "seed": 20261010,
+ "result": {
+  "curve": {
+   "bins": [
+    {
+     "zeta_range": [
+      0.0,
+      0.955994792936435
+     ],
+     "n": 300,
+     "median_tail_over_Ymd": 0.768633133044481,
+     "median_tail_over_rmsfloor": 0.8889860635961467,
+     "median_near_over_G": 0.0021551769776527157,
+     "median_G_times_zeta": 0.9997401090937625,
+     "max_zeta_tail": 0.012494041201044243
+    },
+    {
+     "zeta_range": [
+      0.955994792936435,
+      2.112748094539356
+     ],
+     "n": 240,
+     "median_tail_over_Ymd": 0.42403230700594474,
+     "median_tail_over_rmsfloor": 0.4915474233858874,
+     "median_near_over_G": 0.004570148541720467,
+     "median_G_times_zeta": 1.0006433886642672,
+     "max_zeta_tail": 0.019242229757191035
+    },
+    {
+     "zeta_range": [
+      2.112748094539356,
+      3.6011833734376317
+     ],
+     "n": 54,
+     "median_tail_over_Ymd": 0.308720238481099,
+     "median_tail_over_rmsfloor": 0.3580247455117077,
+     "median_near_over_G": 0.010179626120492249,
+     "median_G_times_zeta": 1.001126186589595,
+     "max_zeta_tail": 0.01625318221749154
+    },
+    {
+     "zeta_range": [
+      3.6011833734376317,
+      Infinity
+     ],
+     "n": 6,
+     "median_tail_over_Ymd": 0.21732987183979435,
+     "median_tail_over_rmsfloor": 0.25194743410170584,
+     "median_near_over_G": 0.015063167738848707,
+     "median_G_times_zeta": 0.9994333324873116,
+     "max_zeta_tail": 0.012833890547783524
+    }
+   ],
+   "slope_logtail_on_logzeta": -0.7056440178870036,
+   "max_abs_zeta": 4.826091935122235,
+   "max_zeta_tail": 0.019242229757191035
+  },
+  "0.6": {
+   "bins": [
+    {
+     "zeta_range": [
+      0.0,
+      0.9699811942274661
+     ],
+     "n": 300,
+     "median_tail_over_Ymd": 1.4923481716286515,
+     "median_tail_over_rmsfloor": 0.8559716937607613,
+     "median_near_over_G": 0.06532721417306495,
+     "median_G_times_zeta": 1.0176488553023204,
+     "max_zeta_tail": 0.7711712211195376
+    },
+    {
+     "zeta_range": [
+      0.9699811942274661,
+      3.2691947626898825
+     ],
+     "n": 240,
+     "median_tail_over_Ymd": 0.5756940097818433,
+     "median_tail_over_rmsfloor": 0.33020295532181554,
+     "median_near_over_G": 0.18861082465129342,
+     "median_G_times_zeta": 1.048558851017369,
+     "max_zeta_tail": 1.4500017252719133
+    },
+    {
+     "zeta_range": [
+      3.2691947626898825,
+      7.781137407018131
+     ],
+     "n": 54,
+     "median_tail_over_Ymd": 0.32694664220928615,
+     "median_tail_over_rmsfloor": 0.18752800212557538,
+     "median_near_over_G": 0.6526866421451467,
+     "median_G_times_zeta": 0.9986280033024144,
+     "max_zeta_tail": 1.8067946779504789
+    },
+    {
+     "zeta_range": [
+      7.781137407018131,
+      Infinity
+     ],
+     "n": 6,
+     "median_tail_over_Ymd": 0.2238882633645351,
+     "median_tail_over_rmsfloor": 0.1284164242960481,
+     "median_near_over_G": 1.2477428524167946,
+     "median_G_times_zeta": 1.1312099232642923,
+     "max_zeta_tail": 1.505431523227858
+    }
+   ],
+   "slope_logtail_on_logzeta": -0.7317780814810851,
+   "max_abs_zeta": 11.924706865471833,
+   "max_zeta_tail": 1.8067946779504789
+  },
+  "0.7": {
+   "bins": [
+    {
+     "zeta_range": [
+      0.0,
+      0.9340921222628433
+     ],
+     "n": 300,
+     "median_tail_over_Ymd": 1.0333440443922823,
+     "median_tail_over_rmsfloor": 0.8382029480381094,
+     "median_near_over_G": 0.02214570628366834,
+     "median_G_times_zeta": 0.9988260690218849,
+     "max_zeta_tail": 0.19612499427752136
+    },
+    {
+     "zeta_range": [
+      0.9340921222628433,
+      2.6358009940818174
+     ],
+     "n": 240,
+     "median_tail_over_Ymd": 0.5156527456259095,
+     "median_tail_over_rmsfloor": 0.4182746819833618,
+     "median_near_over_G": 0.05777893019888752,
+     "median_G_times_zeta": 1.0113511171668321,
+     "max_zeta_tail": 0.362642419489761
+    },
+    {
+     "zeta_range": [
+      2.6358009940818174,
+      5.656423909667639
+     ],
+     "n": 54,
+     "median_tail_over_Ymd": 0.32009373226168447,
+     "median_tail_over_rmsfloor": 0.2596458667239493,
+     "median_near_over_G": 0.16107767149731966,
+     "median_G_times_zeta": 1.0051597815051376,
+     "max_zeta_tail": 0.4016929348749559
+    },
+    {
+     "zeta_range": [
+      5.656423909667639,
+      Infinity
+     ],
+     "n": 6,
+     "median_tail_over_Ymd": 0.22154243511288935,
+     "median_tail_over_rmsfloor": 0.1797054168308248,
+     "median_near_over_G": 0.27077116988611305,
+     "median_G_times_zeta": 0.9838600295453068,
+     "max_zeta_tail": 0.3449647697814053
+    }
+   ],
+   "slope_logtail_on_logzeta": -0.7059214359646445,
+   "max_abs_zeta": 8.409092994917444,
+   "max_zeta_tail": 0.4016929348749559
+  }
+ }
+}

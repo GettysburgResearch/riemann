@@ -1,0 +1,37 @@
+{
+ "sigma0": 0.9324642305376484,
+ "sigma0_eff": 0.9324642305376484,
+ "lx": 0.5135282029398789,
+ "ly": 0.5135283549123775,
+ "ell": 4.3715371496492766e-05,
+ "M_plus_ell": 1.0271002732237529,
+ "high_sup": -2.0000727772584437e-05,
+ "arg": "('kink', 0.583333, np.float64(0.5), np.float64(0.48652), 1.0)",
+ "objective": 0.9324642305376484,
+ "scenario": "huxley_12_5",
+ "label": "Huxley-type constant A = 12/5 (hypothetical for this family)",
+ "cap": null,
+ "energy": "paper",
+ "beta_prev": 1.0,
+ "lp_value": "69/74",
+ "lp_value_float": 0.9324324324324325,
+ "lp_geom": [
+  "19/37",
+  "19/37",
+  "0"
+ ],
+ "seconds": 23.5,
+ "inputs": {
+  "alpha": 0.8333333333333334,
+  "plain_cap": 6.0,
+  "inv_cap": 2.0,
+  "tmax": 1.5,
+  "z0": 0.34,
+  "energy": "paper",
+  "counts": "density:huxley_12_5",
+  "d_sel": 0.5,
+  "kappa_floor": 0.75,
+  "R_shift": 0.0,
+  "a_star": 0.7916666666666666
+ }
+}
