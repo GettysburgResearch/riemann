@@ -83,6 +83,10 @@ The pages above describe reviewed components at their recorded sources, with lat
 
 [The support and moment packet](standalone/2026-10-10-sextic-centered-covariance/README.md) proves an exact reunited-divisor cutoff at every nonzero row, bounds the full coupled completion at every cusp, and removes the cube completion using two angular Möbius factors. A further scalar calculation extends the quantitative bounds to all nonzero rows and supplies an explicit moving-auxiliary envelope. It extends the imported theta argument to fixed nonzero angular derivatives, proves new signed sectors at every fixed moment order by treating eligible odd repeated-prime ideals as inverse factors, sharpens the global Hermitian common-gcd cutoff, and gives an exact finite obstruction to centered A2 positivity. Its analytic conclusions retain their pinned imported dependencies and scoped reviews. The balanced fourth moment, the generalized hierarchy, and any new numerical zero-free boundary for zeta remain open.
 
+## Follow-up research: signed auxiliary reunion and stronger higher-moment components
+
+[The signed-reunion packet](standalone/2026-10-10-sextic-signed-reunion/README.md) collapses the complete signed initial auxiliary sum for every primitive off-diagonal pair and proves a quantitative reunited-divisor tail at every fixed moment order. It supplies the moving-column exclusion in the positive theta and A2 norms, combines both inverse Möbius scalars with sixth-power stratification to sharpen the full A2 energy, retains an all-row canonical spectral baseline, and improves higher-moment regions with physical cubic products and mixed integer replications. Exact finite diagnostics and scoped mathematical reviews by separate agents accompany the source-qualified proofs. The small-divisor balanced primitive core, full fourth moment, unbounded moment hierarchy, and RH remain open.
+
 ## License
 
 Project code and original research materials are available under the [MIT License](LICENSE). Third-party material retains its existing terms and notices.

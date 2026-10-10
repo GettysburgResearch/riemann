@@ -1,0 +1,88 @@
+{
+  "mixed_forward": {
+    "coefficients_checked": 10206,
+    "nonunit_phase_included": true,
+    "six_axis_exponent_cap": 2,
+    "wrong_pair_sign_regressions": 6
+  },
+  "predicate_counts": {
+    "classical_cutoff_gain": 2,
+    "classical_cutoff_numeric": 1,
+    "classical_cutoff_numeric_gain": 1,
+    "classical_triangle_cutoff_affine_endpoint": 6,
+    "classical_triangle_cutoff_branch": 2,
+    "complete_triangle_portion_identity": 300,
+    "critical_correction_cubic_weight": 24,
+    "critical_correction_native_weight": 24,
+    "exact_hermitian_energy": 300,
+    "genuine_split_sextic_residue": 414,
+    "hermitian_holder_budget": 8,
+    "literal_triangle_coefficient_identity": 51450,
+    "native_interpolation_exponent": 24,
+    "native_triangle_rejects_wrong_pair_sign": 1,
+    "one_sided_holder_budget": 8,
+    "pointwise_cutoff_long_pool_branch": 2,
+    "pointwise_cutoff_long_pool_endpoint": 2,
+    "pointwise_cutoff_middle_pool_branch": 2,
+    "pointwise_cutoff_middle_pool_endpoint": 2,
+    "pointwise_cutoff_numeric": 1,
+    "q1_improvement": 1,
+    "q2_improvement": 1,
+    "schwartz_row_growth": 24,
+    "six_axis_mixed_forward_coefficient": 10206,
+    "six_units_in_row_ball": 1,
+    "triangle_common_gcd_one": 51450,
+    "triangle_nonunit_rows_present": 1,
+    "triangle_q1_loss": 1,
+    "triangle_q2_loss": 1,
+    "wrong_pair_mobius_sign_rejected": 6
+  },
+  "rational": {
+    "analytic_inputs_are_not_checked": true,
+    "classical_affine_endpoint_certificates": [
+      {
+        "h": "1",
+        "r": "7/18"
+      },
+      {
+        "h": "11/10",
+        "r": "17/45"
+      }
+    ],
+    "classical_diagonal_cutoff_at_h_21_20": "23/60",
+    "pointwise_diagonal_cutoff_at_h_21_20": "19/55",
+    "q2_improvement": "35/288",
+    "triangle_prior_loss": "623/720",
+    "triangle_q1_loss": "181/240",
+    "triangle_q2_loss": "119/160"
+  },
+  "scope": "finite exact algebra and exponent bookkeeping only",
+  "total_exact_predicates": 114266,
+  "triangle": {
+    "coefficient_datum": "trivial finite-order character",
+    "element_rows": 150,
+    "finite_weight_scope": "fixed integer test values, no analytic assertion",
+    "fully_active_tuple_row_cases": 900,
+    "prime_ideal_norms": [
+      7,
+      13,
+      19
+    ],
+    "row_ball_norm": 40,
+    "rows_with_zero_symbols": 36,
+    "wrong_pair_sign_example": {
+      "correct": [
+        1423,
+        0
+      ],
+      "row": [
+        1,
+        0
+      ],
+      "wrong": [
+        -1423,
+        0
+      ]
+    }
+  }
+}

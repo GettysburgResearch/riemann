@@ -1,0 +1,96 @@
+{
+  "A2_child_parameters": {
+    "original_overlap_configurations": 127,
+    "prime_allocation_configurations": 343
+  },
+  "A2_norm_weights": {
+    "beta_samples": "13/24 through 1 in steps of 1/24; diagnostics only",
+    "continuous_scope": "The written proofs separately cover all beta in (1/2,1]."
+  },
+  "actual_residue_masks": {
+    "element_rows": 210,
+    "false_auxiliary_disjointness_failures": 12270,
+    "mask_and_auxiliary_subsets": 8,
+    "row_ball_norm": 60,
+    "rows_with_nonunit_symbols": 60,
+    "split_prime_norms": [
+      7,
+      13,
+      19
+    ],
+    "unmasked_sixth_power_failures": 16290
+  },
+  "arithmetic": "Exact integers, sixth-root phase exponents, and rational numbers",
+  "checker_sha256": "bfacbb69ec8a40e2586fcd96771118f7c15bc8fe624b58d5aabdc0e5778b02f6",
+  "counts": {
+    "A2_H_range_fraction": 1,
+    "A2_balanced_tail_fraction": 1,
+    "A2_cutoff_norm_to_energy_exponent": 12,
+    "A2_explicit_gain_fraction": 1,
+    "A2_remaining_e_sum_exponent": 12,
+    "A2_short_inverse_second_norm_weight": 12,
+    "A2_short_inverse_third_norm_weight": 12,
+    "K_at_most_J_two_thirds": 343,
+    "active_j0_amplitude_length_costs": 1,
+    "active_j0_frequency_separation": 1764,
+    "actual_eisenstein_quotient": 3,
+    "actual_prime_quotient": 3,
+    "all_six_unit_rows": 1,
+    "artificial_sixth_power_preserves_local_exponent": 54,
+    "auxiliary_overlap_redundancy": 107520,
+    "deleted_prime_positive_valuation_maxima": 1,
+    "exact_child_J": 343,
+    "exact_child_K_cubed": 343,
+    "exact_child_deleted_prime_set": 343,
+    "exponent_zero_keeps_nonunit_mask": 1,
+    "false_auxiliary_disjointness_negative_control": 1,
+    "inactive_active_branch_square_count": 1,
+    "literal_cube_index_exclusion": 512,
+    "literal_sixth_power_column_exclusion": 107520,
+    "original_auxiliary_exclusion_overlaps_present": 1,
+    "physical_positive_valuation_progression": 54,
+    "unique_actual_sextic_residue": 146988,
+    "unmasked_sixth_power_negative_control": 1
+  },
+  "cube_and_local_zeros": {
+    "cube_index_cases": 512,
+    "local_scope": "The phase of sqrt(Np) times B_(p,0); its amplitude is checked separately."
+  },
+  "not_checked": [
+    "Actual Gauss sums or the theta transformation",
+    "Analytic norm estimates, convergence, conductor uniformity or moment theorems",
+    "The full imported canonical argument or any RH claim"
+  ],
+  "schema": "moving-masks-finite-algebra-v1",
+  "status": "PASS_FINITE_ALGEBRA",
+  "valuation_algebra": {
+    "active_j0_energy_exponents": [
+      "-1",
+      "1",
+      "1/3"
+    ],
+    "combined_deleted_prime_cost_exponents": [
+      "0",
+      "1",
+      "1/3"
+    ],
+    "six_residue_base_valuations": [
+      6,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "six_step_slopes": [
+      "-6",
+      "-12",
+      "-8"
+    ],
+    "worst_positive_valuation_exponents": [
+      "-1",
+      "0",
+      "0"
+    ]
+  }
+}

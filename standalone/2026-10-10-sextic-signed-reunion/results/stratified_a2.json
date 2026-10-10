@@ -1,0 +1,52 @@
+{
+  "a2_and_stratum_exponents": {
+    "a2_norm_entries": 2952,
+    "beta_grid_size": 164,
+    "clamped_child_cutoff_control": "rejects preservation of the stated norm table",
+    "old_cube_root_x_power": "-17/18",
+    "old_cutoff_control_scope": "independent coordinatewise summation only",
+    "stratum_power_entries": 984
+  },
+  "checker_sha256": "8514752259495996202e0c771093d181b8d754bc9b353686af7cd8f3b2a6a5a8",
+  "inverse_and_caps": {
+    "cap_and_short_support_cases": 2800,
+    "exact_long_support_zero_cases": 20,
+    "forbidden_h_b_coprimality_rejections": 7,
+    "smooth_divisor_identities": 270,
+    "undoubled_cap_rejections": 160
+  },
+  "masks_and_row_strata": {
+    "mask_cases": 4096,
+    "row_valuation_cases": 5832,
+    "v_k0_overlap_cases_retained": 5320
+  },
+  "optimization": {
+    "admissible_rational_parameter_cases": 4158,
+    "optimized_exponent": "89/55",
+    "saving_over_924": "14/1045",
+    "saving_over_unstratified_raw": "19/660",
+    "separate_R2_upper_bound_control": "rejected; only the minimum needs the cap",
+    "square_root_height_energy_exponents": [
+      "3/2",
+      "89/55",
+      "47/30",
+      "1/2",
+      "89/55",
+      "233/165"
+    ],
+    "unit_label_row_height_range": "19/24"
+  },
+  "proof_bytes": 22168,
+  "proof_sha256": "9b540fe779b6e0f3c64baba04deed6ee380f1d9746035afc3cf9c7fdb0cf3ad5",
+  "scope": [
+    "exact finite formal masks and divisor identities",
+    "exact rational valuation and norm-exponent algebra",
+    "finite admissible optimization grids, supplemented by the written proof",
+    "no analytic theorem, automorphy, actual Gauss sum or full moment certification",
+    "all gates use exceptions and remain active under python -O"
+  ],
+  "sixth_power_free_sieve": {
+    "valuation_column_exponent_cases": 7168
+  },
+  "status": "PASS"
+}
