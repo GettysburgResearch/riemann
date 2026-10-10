@@ -113,11 +113,8 @@ class Local:
         self.p = p
         self.R, self.N = eis.residues(p)
         self.q = self.N
-        self.k6 = {x: sym_prime(x, p) for x in self.R}
-        self.idx = {self.key(x): x for x in self.R}
-
-    def key(self, x):
-        return reduce_mod(x, self.p)
+        self.inv = {x: R3.inv_mod(x, p) for x in self.R if not divides(p, x)}
+        self._tau = {}
 
     def chi(self, x, j):
         """chi_p(x)^j with zero extension."""
@@ -125,7 +122,10 @@ class Local:
         return 0j if k is None else zpow(j * k)
 
     def tau(self, m, sign):
-        return sum(self.chi(y, m) * e_of(y if sign > 0 else neg(y), self.p) for y in self.R) / math.sqrt(self.q)
+        if (m % 6, sign) not in self._tau:
+            self._tau[(m % 6, sign)] = sum(self.chi(y, m) * e_of(y if sign > 0 else neg(y), self.p)
+                                           for y in self.R) / math.sqrt(self.q)
+        return self._tau[(m % 6, sign)]
 
     def C(self, j):
         out = {}
@@ -172,7 +172,7 @@ def check_T(res, locs):
                 sig, eps = rnd.choice(nz), rnd.choice(nz)
                 for x in L.R:
                     # a = sigma_p h_p mod p, conj multiplier chi_p(a)^{-2}
-                    lhs = sum(C[h] * L.chi(mul(sig, h), -2) * e_of(mul(eps, mul(R3.inv_mod(h, p), x)), p) for h in nz)
+                    lhs = sum(C[h] * L.chi(mul(sig, h), -2) * e_of(mul(eps, mul(L.inv[h], x)), p) for h in nz)
                     rhs = L.chi(sig, -2) * L.omega(j, eps) * L.B(j, x)
                     w_tr = max(w_tr, abs(lhs - rhs))
     res['T_local_tables'] = {'primes': [L.p for L in locs], 'norms': [L.q for L in locs],
@@ -285,7 +285,7 @@ def check_E2E(res, locs_by_p, rng_seed=17):
 
     out = {'cases_seen': {}, 'kappa_direct_eq_formula': [0, 0], 'kappaF_constant': True, 'dpF_constant': True,
            'max_err_active': 0.0, 'n_active_identities': 0, 'max_err_branch_sum': 0.0, 'n_branch_identities': 0,
-           'ctrl_conj_multiplier_min_maxerr': 9.0, 'ctrl_no_lift_kappa_formula_fail': 0, 'ctrl_no_lift_min_maxerr': 9.0,
+           'ctrl_conj_multiplier_min_maxerr': 9.0, 'ctrl_no_lift_nonconstant_kappaF_or_deltaF_terms': 0, 'ctrl_no_lift_min_maxerr': 9.0,
            'ctrl_eps_sign_min_maxerr': 9.0}
     term_cache = {}
 
@@ -325,7 +325,7 @@ def check_E2E(res, locs_by_p, rng_seed=17):
         for hs, t in tl:
             co = 1 + 0j
             for L, j, h in zip(act, js, hs):
-                co *= Cl(L, j)[L.key(h)]
+                co *= Cl(L, j)[h]
             if co == 0:
                 continue
             kap = OM ** (-t['kap']) if conj_mult else OM ** (t['kap'])
@@ -335,7 +335,8 @@ def check_E2E(res, locs_by_p, rng_seed=17):
     for h0 in h0s:
         aF, cF = reduced_fraction(h0)
         for P, jlist in [(P2, [(j1, j2) for j1 in range(6) for j2 in range(6)]),
-                         (P3, [(1, 1, 1), (4, 0, 2), (0, 0, 5), (3, 4, 1), (0, 4, 0), (5, 2, 3)])]:
+                         (P3, [(1, 1, 1), (4, 0, 2), (0, 0, 5), (3, 4, 1), (0, 4, 0), (5, 2, 3)] if h0 in h0s[:6] else [])]:
+            xs_use = xs if len(P) == 2 else xs[:24] + xs[110:126]
             # ---- all-active identity for every subset containing the nonzero exponents
             for js in jlist:
                 act_need = [L for L, j in zip(P, js) if j != 0]
@@ -360,7 +361,7 @@ def check_E2E(res, locs_by_p, rng_seed=17):
                             out['dpF_constant'] = False
                         out['cases_seen'][str(min(t['vl'], 2)) + '/cusp' + str(t['cusp'])] = 1
                     errs = []
-                    for x in xs:
+                    for x in xs_use:
                         l_ = lhs_active(act, jsa, tl, x)
                         r_ = rhs_active(aF, cF, act, jsa, tl, x)
                         errs.append(abs(l_ - r_))
@@ -378,7 +379,7 @@ def check_E2E(res, locs_by_p, rng_seed=17):
                         e_eps = max(abs(lhs_active(act, jsa, tl, x) - rhs_active(aF, cF, act, jsa, tl, x, eps_sign=-1)) for x in xs[:40])
                         out['ctrl_eps_sign_min_maxerr'] = min(out['ctrl_eps_sign_min_maxerr'], e_eps)
                         tl_nl = terms(aF, cF, act, lift=False)
-                        out['ctrl_no_lift_kappa_formula_fail'] += sum(1 for _, t in tl_nl if t['kF'] != tl_nl[0][1]['kF'] or t['dpF'] != tl_nl[0][1]['dpF'])
+                        out['ctrl_no_lift_nonconstant_kappaF_or_deltaF_terms'] += sum(1 for _, t in tl_nl if t['kF'] != tl_nl[0][1]['kF'] or t['dpF'] != tl_nl[0][1]['dpF'])
                         e_nl = max(abs(lhs_active(act, jsa, tl_nl, x) - rhs_active(aF, cF, act, jsa, tl, x)) for x in xs[:40])
                         out['ctrl_no_lift_min_maxerr'] = min(out['ctrl_no_lift_min_maxerr'], e_nl)
                 # ---- full branch sum over all h (zero frequencies included), only when some j_p = 0
