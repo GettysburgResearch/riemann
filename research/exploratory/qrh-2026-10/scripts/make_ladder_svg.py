@@ -8,15 +8,16 @@ items = [  # (value, label, sublabel, category)
     (1.0, "1", "trivial: Euler product, Re s > 1", "res"),
     (float(F(47, 48)), "47/48", "Kintali, short proof (claimed)", "res"),
     (float(F(11, 12)), "11/12", "OpenAI Part I / Oct 5 mean square (claimed)", "res"),
+    (float(F(11, 12)), "11/12 (ρ=1)", "Oct 5 architecture: ceiling for row-blind inputs, any moment order", "bar"),
     (0.875, "7/8", "OpenAI Part II (claimed); PR 910: 7/8 − 1/160000 conditional", "res"),
     (0.874957, "≈ 0.87496", "optimum of the 7/8 paper's own lemmas (PR 910 exact; model agrees)", "bar"),
     (float(F(167, 192)), "167/192", "zero-free rows at detector floor 51/100: any zero counting", "bar"),
     (float(F(13, 15)), "13/15", "pointwise barrier: perfect counts + energy + row-by-row GLH", "bar"),
     (float(F(5, 6)), "5/6", "cubic-theta probe floor under Cauchy–Schwarz", "bar"),
-    (float(F(17, 24)), "17/24", "Oct 5 route + 4th moment of sextic Möbius family (PR 910); GL(3) shape", "route"),
+    (float(F(17, 24)), "17/24", "Oct 5 route + sub-diagonal mean square at ρ = 1/2 (any moment order)", "route"),
     (float(F(2, 3)), "2/3", "any theta-type probe (heuristic parity rule)", "bar"),
-    (float(F(23, 36)), "23/36", "Oct 5 route + 6th moment", "route"),
-    (0.5, "1/2", "RH  ←  all 2k-th moments: 1/2 + 5/(12k)", "route"),
+    (float(F(23, 36)), "23/36", "Oct 5 route + sub-diagonal mean square at ρ = 1/3", "route"),
+    (0.5, "1/2", "RH  ←  ρ → 0 (equivalent to GRH for the sextic family)", "route"),
 ]
 W, H = 980, 780
 top, bot = 150, 720
@@ -50,7 +51,7 @@ out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H + 20}" v
 # legend
 for (cat, name), (lx, ly) in zip([("res", "claimed / imported result"),
                   ("bar", "barrier for a stated architecture (this wave unless noted)"),
-                  ("route", "conditional route (needs an unproved moment)")], [(40, 96), (300, 96), (40, 118)]):
+                  ("route", "conditional route: σ₀ = 1/2 + 5ρ/12 (needs a sub-diagonal mean square)")], [(40, 96), (300, 96), (40, 118)]):
     out.append(marker(cat, lx + 6, ly))
     out.append(f'<text x="{lx + 18}" y="{ly + 5}" font-size="13" fill="{INK2}">{name}</text>')
 # axis
@@ -64,7 +65,7 @@ out.append(f'<text x="{x_axis - 60}" y="{(top+bot)/2:.0f}" font-size="13" fill="
 # critical-line band label
 out.append(f'<line x1="{x_axis}" y1="{y_of(0.5):.1f}" x2="{W - 40}" y2="{y_of(0.5):.1f}" stroke="{GRID}" stroke-width="1" stroke-dasharray="3 4"/>')
 lab_x = 330
-offs = {"≈ 0.87496": 16, "167/192": 32, "13/15": 48}
+offs = {"≈ 0.87496": 16, "167/192": 32, "13/15": 48, "11/12 (ρ=1)": 16}
 for v, a, b, c, ty, ly in labels:
     mx = x_axis + offs.get(a, 0)
     if mx != x_axis:
