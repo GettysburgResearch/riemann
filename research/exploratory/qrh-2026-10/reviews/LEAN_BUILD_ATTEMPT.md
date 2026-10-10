@@ -229,13 +229,17 @@ met).
 | `HeckeSevenEighthsNanoda.json` (upstream challenge with `enable_nanoda: true`) | `OAI.NumberTheory.DirichletL.Hecke.Nonvanishing` | **accepted by both kernels** (nanoda and Lean), 1222 s, exit 0 ([results/comparator_HeckeSevenEighths_nanoda.log](results/comparator_HeckeSevenEighths_nanoda.log)) |
 | `QuasiRiemannHypothesisNanoda.json` (upstream zeta challenge with `enable_nanoda: true`) | `OAI.NumberTheory.DirichletL.Nonvanishing` | **accepted by both kernels**: "nanoda kernel accepts the solution" and "Lean default kernel accepts the solution", 1238 s, exit 0 ([results/comparator_QuasiRiemannHypothesis_nanoda.log](results/comparator_QuasiRiemannHypothesis_nanoda.log)). nanoda_lib 0.4.19 (ammkrn/nanoda_lib@3a24072) is an independent type checker written in Rust; it was built here with cargo 1.97.0 (`cargo build --release`, 32 s) and passed to comparator through `COMPARATOR_NANODA` |
 
+| wave `QRHWaveSiegelExplicitNanoda.json` (Mathlib-only challenge for the explicit bound `log 3 / 8 ≤ (1 − β) log q`, with `enable_nanoda: true`) | `OAI.QRHWave.SiegelFromSevenEighths` (theorem `gap_of_real_zero`) | **accepted by both kernels** (nanoda and Lean), 1219 s, exit 0 ([results/comparator_QRHWaveSiegelExplicit_nanoda.log](results/comparator_QRHWaveSiegelExplicit_nanoda.log)) |
+
 **Summary of Addendum C.**
 * Seven (challenge, solution) pairs, over six challenge modules, were run through comparator:
   * the three upstream 7/8 challenges (zeta, Dirichlet, Hecke family);
   * the upstream Oct 1 Siegel challenge, with the upstream solution and with the wave's
     corollary as solution;
   * two wave-written Mathlib-only strip challenges.
-* Each pair was accepted by the Lean kernel, and accepted again by both the independent nanoda
+* An eighth pair, the explicit Siegel bound `gap_of_real_zero` against a wave-written Mathlib-only
+  challenge, was run once, with nanoda enabled, and accepted by both kernels.
+* Each of the seven pairs was accepted by the Lean kernel, and accepted again by both the independent nanoda
   kernel and the Lean kernel with `enable_nanoda: true`. That is 14 runs in all; each run's log
   is in `results/comparator_*.log`.
 * The olean modification-time check was repeated at 21:57 UTC, after all of these runs. Every

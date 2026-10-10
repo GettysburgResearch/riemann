@@ -89,8 +89,9 @@ The constant is explicit. The helper theorem `gap_of_real_zero` states, with no 
 
 So, conditional on the 7/8 Dirichlet theorem (comparator-accepted under the Addendum B
 assumptions), the constant is explicit: `(log 3)/8 ≈ 0.137`.
-* It is read off the helper `gap_of_real_zero`. That helper is kernel-checked in the build and
-  replayed as a dependency, but it is not itself a comparator target.
+* It is read off the helper `gap_of_real_zero`. That helper is also a comparator target: against
+  the wave-written Mathlib-only challenge `comparator/QRHWaveSiegelExplicit.lean`, it was
+  accepted by both the nanoda and the Lean kernel (1219 s; LEAN_BUILD_ATTEMPT Addendum C).
 * This is a consequence of a zero-free half-plane, not an unconditional effective Siegel bound. By contrast, the upstream Oct 1 proof states only `∃ c`, and its witness comes out of a chain
 of lemmas (`SiegelZerosAwei.W50.uniform_exclusion_of_local_isolated_bezout`). Whether that `c` is
 explicit was not checked here.
