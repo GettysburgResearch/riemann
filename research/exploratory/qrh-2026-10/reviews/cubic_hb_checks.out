@@ -1,0 +1,28 @@
+[W1-8] PASS  bands=8: Phi=4*beta+j strictly decreases on all 384 edges=True; acyclic=True; longest chain=16 <= 16
+[W1-16] PASS  bands=16: Phi=4*beta+j strictly decreases on all 1776 edges=True; acyclic=True; longest chain=32 <= 32
+[W1-32] PASS  bands=32: Phi=4*beta+j strictly decreases on all 7632 edges=True; acyclic=True; longest chain=64 <= 64
+[W1c] PASS  CONTROL same-stage comparison: Phi decrease=False, acyclic=False (must both be False: detected)
+[W1m] PASS  manuscript k=1 order acyclic=True
+[W2] PASS  child width M - sigma + C_*xi with C_*xi <= sigma/2: band drops by >= 2 (exact, 401 widths x 3)
+[W2c] PASS  CONTROL C_*xi = 7 sigma/8 (drop sigma/8 < sigma/4): band drop >= 2 fails (must be detected)
+[M1-0] PASS  delta=0: exact LP max margin mu=11/612 (0.017974), claim (11-147d)/612=11/612; at b1=31/36
+[M1-1/100] PASS  delta=1/100: exact LP max margin mu=953/61200 (0.015572), claim (11-147d)/612=953/61200; at b1=3121/3600
+[M1-1/50] PASS  delta=1/50: exact LP max margin mu=403/30600 (0.013170), claim (11-147d)/612=403/30600; at b1=1571/1800
+[M1-1/20] PASS  delta=1/20: exact LP max margin mu=73/12240 (0.005964), claim (11-147d)/612=73/12240; at b1=641/720
+[M2-0] PASS  delta=0: (C)-only loss tolerance c*=11/432 (0.02546), claim (11-147d)/432=11/432
+[M2-1/100] PASS  delta=1/100: (C)-only loss tolerance c*=953/43200 (0.02206), claim (11-147d)/432=953/43200
+[M1c] PASS  CONTROL mu*+1e-6 feasible for some b1 in 31/36 +- 0.02: False (must be False)
+[N1-0-mu/2] PASS  delta=0 xi=mu/2: nested chain C2->D'->C1->U closes with every sub-box; min slacks {'R2': '11/1224', 'R1': '11/510'}
+[N1-0-mu] PASS  delta=0 xi=mu: nested chain C2->D'->C1->U closes with every sub-box; min slacks {'R2': '0', 'R1': '0'}
+[N1-1/100-mu/2] PASS  delta=1/100 xi=mu/2: nested chain C2->D'->C1->U closes with every sub-box; min slacks {'R2': '953/122400', 'R1': '953/51000'}
+[N1-1/100-mu] PASS  delta=1/100 xi=mu: nested chain C2->D'->C1->U closes with every sub-box; min slacks {'R2': '0', 'R1': '0'}
+[N2] PASS  C1 on original core data closes (delta=0, xi=mu*/2)
+[N1c] PASS  CONTROL xi = 2 mu*: nested chain must fail; got ok=False (C1 comparison of D' lands above U (A3=244813/367200))
+[N1c2] PASS  CONTROL xi = rho/30 at rho = M = 1 (manuscript's choice, l. 12981) is too large for the nested margin: ok=False (C1 comparison of D' lands above U (A3=15313/22950))
+[P1] PASS  reflection is an involution on profiles: G(s)G(1-s) = 1
+[P1c] PASS  CONTROL Gamma(s+1)/Gamma(1-s): product = s*(1 - s) (must differ from 1)
+[P2] PASS  reflections per width level along a nested branch: 3 (= k+1)
+[C1] PASS  psi(l1)psi(l2) depends only on l1 l2 (common character on the full product)
+[C1c] PASS  CONTROL psi(l1)conj(psi(l2)) depends only on l1 l2: False (must be False)
+[S1] PASS  manuscript path for (0.45,0.6): A=21/20 not core; after R A*=43/50 in core, > 5/6 -> centred; comparison long factor 61/100 > 1/2 reflected again; A_comp=13/20 <= 5/6 -> U.  Two reflections at one width.
+SUMMARY 27/27 PASS (controls are the checks tagged ...c / ...c2; a PASS there means the deliberately broken variant was detected)

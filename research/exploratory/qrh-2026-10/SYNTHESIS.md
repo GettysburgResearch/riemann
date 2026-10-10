@@ -179,7 +179,11 @@ the critical line.
        hazard: the manuscript's `f = 2v_1` must become `f = v_1` at n = 3. Its last inherited
        claim, A4 ("no older moving character"), is proved at n = 3
        ([A4_NO_OLDER_MOVING.md](proposed/CUBIC_FOURTH_MOMENT/A4_NO_OLDER_MOVING.md)).
-     * The route stays PROPOSED and conditional on (H-A) and (H-B).
+     * Hypothesis (H-B), the nested order, survived a fresh attack with no break found
+       ([reviews/CUBIC_HB_ATTACK.md](reviews/CUBIC_HB_ATTACK.md)). It requires choosing
+       `ξ ≤ μ*ρ/2`, smaller than the manuscript's `ρ/30`.
+     * The route stays PROPOSED and conditional on (H-A) and (H-B). Every itemized risk except
+       (H-A) and Lemma 18.1's own correctness has now had a bounded attack with no break found.
    * The 7/8 paper's Gauss/reciprocity helpers (Lemmas 4.2–4.4), which the sextic packet
      needs, had one bounded review: no wrong step found
      ([proposed/SEXTIC_FOURTH_MOMENT/](proposed/SEXTIC_FOURTH_MOMENT/README.md)).

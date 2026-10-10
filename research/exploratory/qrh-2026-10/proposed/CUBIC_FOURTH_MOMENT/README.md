@@ -210,3 +210,26 @@ checks 5/5, with 4 failing controls detected).
   `n = 3`.
 * So Lemma 4.G and Corollary 4.H(4) no longer import A4. They remain relative to the inherited
   cubic datum class and transforms (core (A), i.e. hypothesis (H-A)).
+
+## Note added later the same day: hypothesis (H-B), the nested order
+
+[../../reviews/CUBIC_HB_ATTACK.md](../../reviews/CUBIC_HB_ATTACK.md): **verdict (a), no break
+found** (one agent, at the level of the manuscript's displayed steps; checks 27/27, with 7 failing
+controls detected).
+* The manuscript already centres reflected data: long factors are reflected into the padded
+  core, with suprema taken before centring (l. 12810-12830, 12912-12913, 14797-14798). The datum
+  that (H-B) passes on is the same step applied to the comparison product.
+* The three named failure modes all hold on reflected data:
+  * dual scales are row-independent (rowwise supremum plus conjugation);
+  * profiles stay in the admissible class (reflection is an involution);
+  * each call adds one ξ, and clipping happens before centring.
+* Well-foundedness: the measure `Φ = 4β + j` drops by at least 1 on every call, including the
+  comparisons.
+* An exact LP reproduces `μ* = (11−147δ)/612`. The nested order adds no loss proportional to `M`.
+* **Parameter requirement:** (H-B) needs `ξ ≤ μ*ρ/2`. The manuscript's own `ξ ≤ ρ/30` is not small
+  enough to carry the chain, so the route must choose ξ accordingly.
+* Risk item 8 now fails only if the centred stage is invalid on reflected core data, which would
+  break Lemma 18.1 itself. It also relies on Lemma 4.K and A8.
+
+The route remains PROPOSED and conditional on (H-A), the transfer of the inherited core, which
+has not been re-derived as a whole.
