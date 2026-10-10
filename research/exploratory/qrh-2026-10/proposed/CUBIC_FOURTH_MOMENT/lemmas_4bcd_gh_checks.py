@@ -523,7 +523,7 @@ for p in (p1, p2):
 report('G0', g0bad == 0, "max |F(p^i,p^j0;G k)|^2 over unit / nonunit k equals the cubic table (N p = 7, 13): equal 3!|i: P^{i-1} / P^{i-1}(P-1); equal 3|i: P^{i-1}(P-2) / P^{i-1}(P-1); unequal: P^{j0-1}(P-1) 1_{3|j0} / 0")
 
 # ================================================================= Lemma 4.G table arithmetic
-print("== Lemma 4.G: table arithmetic only (the F_2 local values are NOT derived here) ==")
+print("== Lemma 4.G: table arithmetic only (per-prime values follow from (LF) in the note; (LF) itself is not checked here) ==")
 from fractions import Fraction as Fr
 bad = 0; mins = []
 for i in range(1, 61):

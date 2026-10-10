@@ -179,8 +179,9 @@ coprime good primary elements, `ξ` a character modulo `r` (zero-extended), and 
     Σ_{k mod rab} χ_a(k) χ̄_b(k) ξ(k) e(hk/(rab))
        = χ_a(r) χ̄_b(r) ξ(ab) · g(a,h) · conj g(b,−h) · g_ξ(r,h).
 
-For a further good primary `e` coprime to `ab`, the substitution `k = e k'` multiplies the phase by
-`χ_a(e) χ̄_b(e)`. With `r` the primary generator of `𝔯`, `e` that of `𝔢` and `ξ = ξ_𝔯`, the total
+For a further good primary `e` coprime to `rab`, the substitution `k = e k'` multiplies the
+character factor by `χ_a(e) χ̄_b(e) ξ(e)`. Here `ξ(e)` is a frozen scalar, and the additive
+normalisation of the substitution is order-free (l. 13240-13246). With `r` the primary generator of `𝔯`, `e` that of `𝔢` and `ξ = ξ_𝔯`, the total
 phase is `χ_a(𝔢𝔯) ξ_𝔯(a) · conj(χ_b(𝔢𝔯) conj ξ_𝔯(b))`. That is `τ_C(a) conj τ_D(b)` divided by
 `τ(a) conj τ(b)`, as in l. 13228-13231, and the factor `conj 𝓡(a,b)` of eq:first-poisson-bridge
 equals `1`.
@@ -237,10 +238,10 @@ right-hand factor has that period, so the formula is well posed. (d) The artific
 `L_C` to non-coprime residual pairs (manuscript l. 7114-7122) transfers verbatim, with local value
 `0` when `p | (n_1, n_2)`; it is used only after Möbius inversion and is not a congruence sum.
 
-*Proof.* (Fourier form) Expand both Gauss sums; the `h`-sum
-`Σ_{h mod uv} e(h(vx − uy − j)/(uv))` is `q_u q_v` if `vx − uy ≡ j (mod uv)` and `0` otherwise,
-because `e(·/(uv))` is a nontrivial character on every nonzero class (the pairing is perfect, `e`
-being trivial exactly on the inverse different). This is order-free.
+*Proof.* (Fourier form) Expand both Gauss sums. For `t ∈ O`, `h ↦ e(ht/(uv))` is a character of `O/uv`,
+and it is trivial iff `t/(uv) ∈ O`, because `{z : Tr(zO/√−3) ⊂ Z} = O`. So
+`Σ_{h mod uv} e(h(vx − uy − j)/(uv))` equals `q_u q_v` if `vx − uy ≡ j (mod uv)` and `0` otherwise.
+This is order-free.
 
 (Zero frequency) Nonzero summands have `x, y` units modulo `u, v`. Reducing `vx ≡ uy (mod uv)`
 modulo `u` gives `u | vx`, so `u | v`; symmetrically `v | u`; primary generators then give `u = v`.
@@ -522,6 +523,6 @@ re-instantiated at `θ = 1/3` gives exactly (LF). LC [L1] verifies this as a sym
 
 | # | step | status | evidence | most likely failure mode |
 |---|---|---|---|---|
-| 3 | Lemmas 4.B, 4.C, 4.D (correlations, child character, `𝔯` classification and bridge phase) | **proved here (PROPOSED)**, LEMMAS_4BCD_GH.md Secs. 1-3; uses only Fact 0 and I1 | `lemmas_4bcd_gh_checks.py` [B1]-[B3], [C1], [D1]-[D4] exact, with 9 failing controls detected | essentially none at the stated level. The residual risk is a misapplication downstream (e.g. using 4.C off the coprime locus without the Möbius insertion), not the lemmas themselves |
+| 3 | Lemmas 4.B, 4.C, 4.D (correlations, child character, `𝔯` classification and bridge phase) | **proved here (PROPOSED)**, LEMMAS_4BCD_GH.md Secs. 1-3; uses only Fact 0 and I1 | `lemmas_4bcd_gh_checks.py` [B1]-[B3], [C1], [D1]-[D4] exact, with 8 failing controls detected | essentially none at the stated level. The residual risk is a misapplication downstream (e.g. using 4.C off the coprime locus without the Möbius insertion), not the lemmas themselves |
 | 4 | Lemma 4.G (`F_2` table, `κ_2 = 1`) | **proved here given (LF)** (LEMMAS_4BCD_GH.md Sec. 5): absolute table from 4.B; per-prime `F_2` from (LF) and the A4 definitions of `t_2, V, f` with `6 → 3` | [G0] brute force; [G1], [G2] exact; [G1-CTRL]; LC [L1] for (LF) | (LF), the manuscript's ledger at `θ = 1/6` re-instantiated at `θ = 1/3`, is still inherited (A4); any error there changes the coefficients, not the local table |
 | 5 | Lemma 4.H and its count `Z^{(m'−f)/3}` | **4.H proved here (PROPOSED)** (Kummer/Artin, with the precision fixes: ideals coprime to `3a`, exponent `≤ 1` at all primes `∤ 3` dividing `a`, exactly 27 `S`-characters). **Corollary 4.H parts 1-3 proved here; part 4 (`e_p = i + 1`) proved given A4's "no older moving character at a nonunit equal-multiplicity prime"** | [H1]-[H5] finite exact checks, controls [H1-CTRL6], [H4-CTRL6], [H5-CTRL6] | A4's claim about older moving characters at second-transform primes (l. 14347-14350), on which `f = v_1` rests |
