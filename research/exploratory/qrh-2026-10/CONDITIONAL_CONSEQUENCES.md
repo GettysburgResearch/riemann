@@ -56,8 +56,15 @@ would give `X^{ε}`).
   on `σ ≥ 25/32`; nothing follows directly on `[1/2, 25/32]`.
 * Least prime in a progression: a uniform zero-free half-plane `Re s > θ` gives `p ≪ q^{1/(1−θ)+ε}
   = q^{8+ε}`, weaker than Linnik with `L = 5`.
-* Robin: there is no Θ-graded statement in the repository's Robin packet; the canonical reduction
-  and bounded tail are finite arithmetic and are unaffected.
+* Robin: the repository's Robin packet has no Θ-graded statement, and its canonical reduction
+  and bounded tail are finite arithmetic, so they are unaffected.
+  [ROBIN_GRADED.md](ROBIN_GRADED.md) supplies a graded statement (PROPOSED upper bound, IMPORTED
+  lower bound):
+  * with no zeros in `Re s > θ`, `σ(n)/(e^γ n log log n) ≤ 1 + C(log n)^{θ−1}/log log n` for
+    large `n`;
+  * so QRH-IMPORT bounds the relative size of any Robin violation by `(log n)^{−1/8+ε}`;
+  * with Robin's Ω-result this exponent is sharp: QRH ⟺ that inequality for every `ε`.
+  Violations are bounded in size, not excluded.
 
 ## 2. A graded form of the repository's Mellin criterion (native, PROPOSED)
 
