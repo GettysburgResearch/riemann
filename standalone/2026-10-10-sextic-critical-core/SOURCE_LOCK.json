@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-10",
+  "repository": "GettysburgResearch/riemann",
+  "packet_path": "standalone/2026-10-10-sextic-critical-core",
+  "baseline": {
+    "pr": 913,
+    "head_branch": "research/sextic-moment-descent-20261010",
+    "commit": "6498d6cc2eded03159c7332b25fd224ad07f89c1",
+    "tree": "5abf12dbe5c87c8173dd3c364766243e6a8dd74f"
+  },
+  "upstream_openai": {
+    "repository": "openai/math",
+    "commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+    "source_status": "Imported analytic inputs; no new verification of upstream automorphy or quasi-Riemann formalization in this pass.",
+    "files": [
+      {
+        "path": "preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex",
+        "commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+        "git_blob": "2000faddbbebac5de0ecfe0b962534ea61a852d5",
+        "bytes": 169005,
+        "sha256": "d9a8f15aa770cf883d0eabd2b775fad694ce20b44cba7928f5c0c9a6d8750d4d",
+        "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex"
+      },
+      {
+        "path": "preprints/An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026/build/sections/dual.tex",
+        "commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+        "git_blob": "8dcddce96894146ca745b8227c922c34f5990dcf",
+        "bytes": 21454,
+        "sha256": "1209fd17cee79f4a21b71d66d3d8b60b210216fa783ec555959d2ebff2fba483",
+        "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026/build/sections/dual.tex"
+      },
+      {
+        "path": "preprints/An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026/build/sections/background-type1.tex",
+        "commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+        "git_blob": "3d31d5791ef3cf55c9608066997f9dc6c6bb861a",
+        "bytes": 27216,
+        "sha256": "1c7be908c862dc440772964cfdd59e095e7b0f079cec11d99f5c7a9644198dd1",
+        "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026/build/sections/background-type1.tex"
+      }
+    ]
+  },
+  "adjacent_snapshots": {
+    "manifest": "adjacent-sources/MANIFEST.json",
+    "files": 12,
+    "commits": {
+      "911": "d93e2b2c5a5cb5fc5ad940119dff86ba96503180",
+      "912": "6afd64e042ce7b59d550c3d76e9e2cca8b2c7379"
+    },
+    "verification": "All snapshot bytes compared with their exact Git blobs and SHA-256 by the parent agent."
+  },
+  "primary_literature": [
+    {
+      "url": "https://arxiv.org/pdf/2109.07463v3",
+      "use": "Dunn–Radziwill periodic completed-theta building block; no asserted match for the deformed outer series."
+    },
+    {
+      "url": "https://arxiv.org/pdf/0803.0691",
+      "use": "Chinta–Gunnells coefficient-system requirements; no asserted identification with this packet."
+    }
+  ],
+  "review": "INDEPENDENT_CRITICAL_CORE_REVIEW.md",
+  "limits": [
+    "No full fourth-moment or higher-moment theorem.",
+    "No new zero-free boundary.",
+    "No RH proof or certified off-critical zero.",
+    "No Lean kernel verification."
+  ]
+}

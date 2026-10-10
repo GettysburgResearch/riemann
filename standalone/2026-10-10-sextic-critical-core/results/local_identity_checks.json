@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "arithmetic": "exact integers in explicitly reduced cyclotomic rings",
+  "scope": "finite local identities only; no analytic or asymptotic claim",
+  "script_sha256": "d4fa6751c832591de4a0759e26ab8923d713f342263741d2ee8f2b7ef8219fc4",
+  "fields": [
+    {
+      "rational_prime": 7,
+      "omega_image": 2,
+      "residue_norm": 7,
+      "counts": {
+        "gauss_product": 2,
+        "local_reflection": 84,
+        "fourier_inversion": 14,
+        "field_multiplication": 36
+      }
+    },
+    {
+      "rational_prime": 7,
+      "omega_image": 4,
+      "residue_norm": 7,
+      "counts": {
+        "gauss_product": 2,
+        "local_reflection": 84,
+        "fourier_inversion": 14,
+        "field_multiplication": 36
+      }
+    },
+    {
+      "rational_prime": 13,
+      "omega_image": 3,
+      "residue_norm": 13,
+      "counts": {
+        "gauss_product": 2,
+        "local_reflection": 156,
+        "fourier_inversion": 26,
+        "field_multiplication": 144
+      }
+    },
+    {
+      "rational_prime": 13,
+      "omega_image": 9,
+      "residue_norm": 13,
+      "counts": {
+        "gauss_product": 2,
+        "local_reflection": 156,
+        "fourier_inversion": 26,
+        "field_multiplication": 144
+      }
+    },
+    {
+      "rational_prime": 19,
+      "omega_image": 7,
+      "residue_norm": 19,
+      "counts": {
+        "gauss_product": 2,
+        "local_reflection": 228,
+        "fourier_inversion": 38,
+        "field_multiplication": 324
+      }
+    },
+    {
+      "rational_prime": 19,
+      "omega_image": 11,
+      "residue_norm": 19,
+      "counts": {
+        "gauss_product": 2,
+        "local_reflection": 228,
+        "fourier_inversion": 38,
+        "field_multiplication": 324
+      }
+    },
+    {
+      "rational_prime": 5,
+      "omega_image": null,
+      "residue_norm": 25,
+      "counts": {
+        "gauss_product": 2,
+        "local_reflection": 300,
+        "fourier_inversion": 50,
+        "field_multiplication": 576
+      }
+    }
+  ],
+  "ramanujan_allocation_predicates": 272,
+  "moving_euler_coefficient_predicates": 10912,
+  "total_predicates": 14224
+}
