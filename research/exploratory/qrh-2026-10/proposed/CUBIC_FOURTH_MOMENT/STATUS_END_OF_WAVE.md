@@ -158,3 +158,10 @@ the same reading a referee of the sextic Lemma 18.1 case 1 would need; the cubic
 No manuscript line was re-read; no open item was decided; Lemma 4.K was not reviewed; the exact
 models were not re-derived. The recommended SKETCH edits (A8 in the (H-A) table, the Sec. 2.7
 loss, the Corollary 4.H third-bullet wording) are recorded in README.md and still not applied.
+
+## Correction note (end of wave)
+
+Table 2b counts 15 entries. Of these, R7 (Lemma 4.I) is only sketched, R14 (Lemma 4.K) is
+sketched and unreviewed, and R15 is hypothesis (H-B), a replacement rather than a re-derivation.
+So the honest count is 12 re-derived at n = 3 (PROPOSED), 2 sketched, and 1 replaced by (H-B).
+The route is conditional on (H-A), (H-B), Lemma 4.K and the correctness of Lemma 18.1 case 1.

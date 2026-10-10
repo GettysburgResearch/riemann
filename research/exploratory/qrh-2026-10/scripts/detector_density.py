@@ -328,7 +328,7 @@ def section_C():
         import threshold_calculus as tc
         s0 = tc.low_threshold(17 / 48, 23 / 48, 1 / 6)
         hs = tc.high_sup(17 / 48, 23 / 48, 1 / 6, s0, 11 / 12, nde=121, nx=11, nd=9)[0]
-        win["paper"] = dict(sigma0=s0, model_margin=-hs, certified_margin=49 / 440640,
+        win["paper"] = dict(sigma0=s0, model_margin=-hs, paper_stated_margin=49 / 440640,
                             window_lo=max(s0, 7 / 8 + hs), window_hi=7 / 8)
         opt = json.load(open(os.path.join(HERE, "..", "results", "A_paper_bp11_12.json")))
         win["optimised"] = dict(sigma0=opt["sigma0"], model_margin=-opt["high_sup"],

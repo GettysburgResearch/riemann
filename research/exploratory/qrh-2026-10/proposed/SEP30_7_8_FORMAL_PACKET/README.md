@@ -330,8 +330,8 @@ The mathematics is kernel-checked, so the smallest failure point is in the trust
 * If it failed, comparator would still compare like with like, but against a different
   `riemannZeta`.
 * Rebuilding Mathlib from source (Section 8.3) closes this point.
-* Next in line: kernel soundness (for the zeta statement this is now covered by two independent
-  kernels; see T9), then the integrity of the unsandboxed precompiled build (T7).
+* Next in line: kernel soundness (single-kernel risk now reduced: nanoda and Lean both accept
+  every comparator pair; see T9), then the integrity of the unsandboxed precompiled build (T7).
 
 ## 10. Known misreadings
 

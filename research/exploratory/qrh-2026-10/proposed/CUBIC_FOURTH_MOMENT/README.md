@@ -226,10 +226,21 @@ controls detected).
 * Well-foundedness: the measure `Φ = 4β + j` drops by at least 1 on every call, including the
   comparisons.
 * An exact LP reproduces `μ* = (11−147δ)/612`. The nested order adds no loss proportional to `M`.
-* **Parameter requirement:** (H-B) needs `ξ ≤ μ*ρ/2`. The manuscript's own `ξ ≤ ρ/30` is not small
+* **Parameter requirement:** (H-B) needs `ξ ≤ μ*(δ)ρ/2` and `2ξ ≤ δ`. The manuscript's own `ξ ≤ ρ/30` is not small
   enough to carry the chain, so the route must choose ξ accordingly.
 * Risk item 8 now fails only if the centred stage is invalid on reflected core data, which would
   break Lemma 18.1 itself. It also relies on Lemma 4.K and A8.
 
 The route remains PROPOSED and conditional on (H-A), the transfer of the inherited core, which
 has not been re-derived as a whole.
+
+## Correction note (end of wave)
+
+Besides (H-A) and (H-B), the route also rests on Lemma 4.K (the row functional equation,
+risk item 7), which is sketched and not reviewed by any note. It also rests on the correctness of
+the manuscript's Lemma 18.1 case 1 (risk item 12). Where the notes above say "proved", read
+"PROPOSED proof (one agent, unreviewed)". The counts in [STATUS_END_OF_WAVE.md](STATUS_END_OF_WAVE.md)
+are:
+* (H-A): 19 inherited items, of which 6 are checked by exact model only and 13 are imported as is;
+* separately: 12 items re-derived at n = 3, 2 only sketched (Lemmas 4.I and 4.K), and 1 replaced
+  by (H-B).

@@ -23,7 +23,8 @@ Exact sources or dependencies: pr908 = 31c706bbb3dce49a7ebabbe71cd7cbacdaa6cbb6,
 What was actually run: a clean lake build of the three modules (as OAI.QRHWave.*) in the scratch
   copy of the import; checks/CorollaryAxioms.lean; comparator on comparator/SiegelFromSevenEighths.json
   (accepted, 1082 s), comparator/QRHWaveStrip.json (accepted, 1104 s) and
-  comparator/QRHWaveDirichletStrip.json (accepted, 1130 s), LEAN_BUILD_ATTEMPT Addendum C
+  comparator/QRHWaveDirichletStrip.json (accepted, 1130 s); each again with nanoda enabled,
+  accepted by both kernels (1249 s, 1225 s, 1239 s); LEAN_BUILD_ATTEMPT Addendum C
 Smallest remaining gap: ZetaZeroStrip rests on the zeta 7/8 theorem, which comparator accepted
   under the assumptions of LEAN_BUILD_ATTEMPT Addendum B. DirichletZeroStrip and
   SiegelFromSevenEighths rest on the Dirichlet 7/8 theorem, which comparator also accepted
@@ -112,7 +113,8 @@ All three files must be compiled inside the imported Lean project (they import
 1. Copy them to `OAI/QRHWave/` in that project, and run
    `lake build OAI.QRHWave.SiegelFromSevenEighths OAI.QRHWave.ZetaZeroStrip OAI.QRHWave.DirichletZeroStrip`.
 2. Run `lake env lean <this dir>/checks/CorollaryAxioms.lean`.
-3. For comparator, copy `comparator/QRHWaveStrip.lean` and the two JSON files into
+3. For comparator, copy `comparator/QRHWaveStrip.lean`, `comparator/QRHWaveDirichletStrip.lean`,
+   `comparator/QRHWaveSiegelExplicit.lean` and the JSON files in `comparator/` into
    `ComparatorChallenges/`, then run `lake env comparator ComparatorChallenges/<name>.json`.
 
 Note: `QRHWaveStrip.lean` is a challenge written in this wave, not an upstream one.

@@ -31,14 +31,15 @@ integration verdict. RH remains unsolved: a zero-free half-plane `Re s > 7/8` sa
 the critical line.
 
 **Headline.**
-* **The 7/8 half-plane is machine-checked.**
+* **The Lean statement of the 7/8 half-plane is kernel-checked** (two kernels, under the listed
+  trust assumptions).
   * The import's Lean proof that `ζ(s) ≠ 0` for `Re s > 7/8` (Mathlib's `riemannZeta`), and its
     Dirichlet and Hecke-family versions, were built here and accepted by comparator with
     Lean's kernel, and also by the independent nanoda kernel.
   * Only the three standard axioms are used.
   * The trust assumptions are listed in [reviews/LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md).
-* **Neither the formal proof nor, on paper, the 7/8 argument needs Part I or the 11/12 theorem**
-  (the paper-level route is PROPOSED, with two same-family reviews).
+* **The formal proof does not use Part I or the 11/12 theorem.** A PROPOSED paper-level route
+  (two same-family reviews) also avoids them.
 * **Both architectures have ceilings** (13/15 and 11/12 for the known inputs). What is missing
   below them is a mechanism, not evidence.
 
@@ -59,8 +60,9 @@ the critical line.
      Addendum C for Dirichlet and Hecke).
      * The solution was precompiled (a non-adversarial reproduction).
      * Mathlib came from its binary cache.
-     * Some builds overlapped the runs; this is disclosed, and the 7/8 closure's oleans predate
-       every run.
+     * Some builds overlapped the runs; this is disclosed. A check repeated at 21:57 UTC, after
+       all runs including nanoda, shows that each closure's oleans predate every run that read
+       them. The 7/8 closure's were last written at 16:56:51, and Mathlib's at the cache unpack.
      * **For all three upstream 7/8 statements (and for every other comparator challenge of the
        wave, including both Siegel proofs and both strips), a second, independent kernel agrees:** comparator with nanoda
        (a Rust type checker) reports "nanoda kernel accepts the solution" as well as the Lean
@@ -74,7 +76,7 @@ the critical line.
      * Otherwise it uses the paper's 7/8 exponent bookkeeping constant for constant.
      * Of the 65 paper nodes: 14 have a spot-checked Lean counterpart, 8 are bypassed, and 43 are
        matched by name only or not found.
-   * **Formal corollaries written in this wave** ([lean/](lean/README.md)). Both comparator
+   * **Formal corollaries written in this wave** ([lean/](lean/README.md)). All three comparator
      acceptances below are for the wave's challenges or solutions; see Addendum C.
      * Every nontrivial zero of `ζ` lies in `1/8 ≤ Re s ≤ 7/8`. This is stated in the shape of
        Mathlib's `RiemannHypothesis`, and comparator accepts it against a Mathlib-only challenge
@@ -117,7 +119,8 @@ the critical line.
        ([reviews/PART1_FREE_ROUTE_REVIEW2.md](reviews/PART1_FREE_ROUTE_REVIEW2.md)): `λ ≤ 527/300`
        in P1F.2; gate T2 checks line ranges only; Lemma 17.6 stays; Remark 19.3 at most Rp.
      * Remark 19.3 is written out as Lemma P1F.0 with a full proof (43/43 exact gates, 14
-       controls). Its Lean counterpart is `no_slot_inverse_count`.
+       controls). Its Lean counterpart is `no_slot_inverse_count`. The paper-level status stays
+       Rp, because it inherits Lemmas 17.1-17.2.
      * This is a new composition. It needs a review independent of this model family.
    * **Kintali 47/48:** Lemma 3 shows no error. The best citable density input gives 29/30.
    * **Oct 1, Landau–Siegel:** intrinsically logarithmic-scale, effective in principle, and a weak
@@ -143,8 +146,10 @@ the critical line.
    * The *inner* detector (Prop 8.3 with Lemmas 17.6 and 18.1) does count rows with a zero in
      `Re s ≥ σ`: `≪ U^{f(σ)+ε}`, with `f(σ) = (31−32σ)/(21−12σ)` on `(51/100, 11/12]`.
      * So `f(13/15) = 49/159` and `f(7/8) = 2/7`.
-     * In the sextic case this beats de Faveri's 2026 large-sieve density (about 0.466 at 7/8;
-       arXiv:2610.04045v1), but stays above density-hypothesis quality.
+     * In the `U`-aspect it would lie below de Faveri's `n = 6` bound (55/118 ≈ 0.466 at 7/8;
+       arXiv:2610.04045v1, Cor 1.5), if the general forms of the manuscript's Lemmas 17.6/18.1
+       hold and the family identification (unchecked) is right. It counts members, not zeros, and
+       stays above density-hypothesis quality.
      * It rests on the manuscript's general, unformalized moment lemmas.
    * This is a third structural reason why 7/8 is an endpoint, not a step on a density ladder.
 3. **Where the true gap is.** On both sides, numerics show that the needed cancellation *exists*
@@ -164,30 +169,36 @@ the critical line.
      * Its most likely failure point, the centred stage, survived one adversarial attack
        ([reviews/CUBIC_CENTRED_ATTACK.md](reviews/CUBIC_CENTRED_ATTACK.md)).
      * The condition it left open, that every step acts identically on both rectangles, is
-       closed at the level of the displayed steps
+       closed at the level of the displayed steps (bounded single-agent review)
        ([reviews/CUBIC_BOTH_RECTANGLES.md](reviews/CUBIC_BOTH_RECTANGLES.md)). The only split
        is on non-Θ rows and costs nothing, and `n = 3` adds no asymmetry.
-     * Risk item 1 (uniformity over complex Mellin profiles) is closed, given that the
+     * Risk item 1 (uniformity over complex Mellin profiles) is closed (bounded single-agent
+       review), given that the
        profile-uniformity clause transfers as part of (H-A)
        ([reviews/CUBIC_PROFILE_UNIFORMITY.md](reviews/CUBIC_PROFILE_UNIFORMITY.md)).
      * Risk item 10 (hidden losses in the common-support allocations): no loss of order `M` at
        `n = 3`; every inequality has minimum slack exactly 0, checked in exact arithmetic
        ([reviews/CUBIC_ALLOCATION_LOSS.md](reviews/CUBIC_ALLOCATION_LOSS.md)).
-     * The sketched cubic Lemmas 4.B, 4.C, 4.D and 4.H are now proved in full, with precision
-       fixes ([proposed/CUBIC_FOURTH_MOMENT/LEMMAS_4BCD_GH.md](proposed/CUBIC_FOURTH_MOMENT/LEMMAS_4BCD_GH.md)).
+     * The sketched cubic Lemmas 4.B, 4.C, 4.D and 4.H now have written PROPOSED proofs (one
+       agent, unreviewed), with precision fixes ([proposed/CUBIC_FOURTH_MOMENT/LEMMAS_4BCD_GH.md](proposed/CUBIC_FOURTH_MOMENT/LEMMAS_4BCD_GH.md)).
        4.G's inherited ledger formula is re-derived at θ = 1/3
        ([LF_THETA_THIRD.md](proposed/CUBIC_FOURTH_MOMENT/LF_THETA_THIRD.md)). This also catches a
        hazard: the manuscript's `f = 2v_1` must become `f = v_1` at n = 3. Its last inherited
-       claim, A4 ("no older moving character"), is proved at n = 3
+       claim, A4 ("no older moving character"), has a PROPOSED proof at n = 3, given the
+       imported construction facts H12
        ([A4_NO_OLDER_MOVING.md](proposed/CUBIC_FOURTH_MOMENT/A4_NO_OLDER_MOVING.md)).
      * Hypothesis (H-B), the nested order, survived a fresh attack with no break found
        ([reviews/CUBIC_HB_ATTACK.md](reviews/CUBIC_HB_ATTACK.md)). It requires choosing
-       `ξ ≤ μ*ρ/2`, smaller than the manuscript's `ρ/30`.
-     * The route stays PROPOSED and conditional on (H-A) and (H-B). Every itemized risk except
-       (H-A) and Lemma 18.1's own correctness has now had a bounded attack with no break found.
+       `ξ ≤ μ*(δ)ρ/2` and `2ξ ≤ δ`; the first is smaller than the manuscript's `ρ/30`.
+     * The route stays PROPOSED. It is conditional on (H-A), (H-B), Lemma 4.K (sketched, not
+       reviewed by any note; risk item 7) and the correctness of the manuscript's Lemma 18.1
+       case 1. Every other itemized risk has had a bounded single-agent attack with no break
+       found.
      * End-of-wave status ([proposed/CUBIC_FOURTH_MOMENT/STATUS_END_OF_WAVE.md](proposed/CUBIC_FOURTH_MOMENT/STATUS_END_OF_WAVE.md)):
-       * (H-A) is now an explicit checklist of 19 inherited items (8 exact-model-only, 11 imported
-         as is), plus 15 items re-derived at n = 3;
+       * (H-A) is now an explicit checklist of 19 inherited items (6 checked by exact model only,
+         13 imported as is);
+       * separately, 12 items have been re-derived at n = 3 (PROPOSED), 2 are only sketched
+         (Lemmas 4.I and 4.K), and 1 is replaced by hypothesis (H-B);
        * the smallest failure point is the symmetry of Lemma 18.2 across the two rectangles, or
          the zero-slack ledger at `v = L`;
        * a referee would need to read about 110 pages.
