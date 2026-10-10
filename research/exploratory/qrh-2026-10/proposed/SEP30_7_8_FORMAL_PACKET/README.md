@@ -147,7 +147,7 @@ How to read the Lean text:
 
 | Object | Status at `995eb31fd` | Why it is outside |
 |---|---|---|
-| Hecke-family theorem `OAI.SevenEighths.HeckeFamily.LFunction_ne_zero_of_seven_eighths_lt_re` | built; `#print axioms` standard (`lean_hecke_axioms.log`); comparator **pending** | Stated over project-defined `HeckeFamily.Character` (a multiplicative character of `O/m`, `O = Z[ω]`, trivial on units) and `LFunction` (one sixth of a continued lattice-theta Mellin transform), written into the challenge file. Mathlib has no Hecke L-function to compare with. [HECKE_LEAN_FIDELITY.md](../../reviews/HECKE_LEAN_FIDELITY.md) (EXPLORATORY; reading, paper-level argument and EMPIRICAL float checks; one bounded agent pass) finds the family "exactly the finite-order Hecke L-functions of K = Q(√−3) as the Sep 30 paper defines them", with the same pole exception, neither narrower nor broader. Its stated gaps: the solution's bridge lemmas are not comparator targets and had no `#print axioms` run of their own, and "finite-order Hecke character = ray class character" is a textbook step, not formalized. Not independently reviewed. |
+| Hecke-family theorem `OAI.SevenEighths.HeckeFamily.LFunction_ne_zero_of_seven_eighths_lt_re` | built; `#print axioms` standard (`lean_hecke_axioms.log`); comparator **pending** at drafting, **accepted** since (1096 s; LEAN_BUILD_ATTEMPT Addendum C) | Stated over project-defined `HeckeFamily.Character` (a multiplicative character of `O/m`, `O = Z[ω]`, trivial on units) and `LFunction` (one sixth of a continued lattice-theta Mellin transform), written into the challenge file. Mathlib has no Hecke L-function to compare with. [HECKE_LEAN_FIDELITY.md](../../reviews/HECKE_LEAN_FIDELITY.md) (EXPLORATORY; reading, paper-level argument and EMPIRICAL float checks; one bounded agent pass) finds the family "exactly the finite-order Hecke L-functions of K = Q(√−3) as the Sep 30 paper defines them", with the same pole exception, neither narrower nor broader. Its stated gaps: the solution's bridge lemmas are not comparator targets and had no `#print axioms` run of their own, and "finite-order Hecke character = ray class character" is a textbook step, not formalized. Not independently reviewed. |
 | Wave corollaries in `lean/`: zeta strip `1/8 ≤ Re s ≤ 7/8`, Dirichlet strip (primitive `χ ≠ 1`, off the Gamma-factor poles), Siegel challenge with `c = (log 3)/8` | built; axioms standard; comparator **pending** | Separate objects. They rest on this theorem. |
 | Oct 1 Siegel-zero development | built (9242 jobs); axioms standard; loads no `DirichletL` module | Independent of the 7/8 development. |
 | Manuscript Thm 1.1's proof, Part I (Thm 3.1, 11/12), Cor 1.2 | paper-level record in Section 5 | The formal theorem does not depend on them. |
@@ -184,7 +184,7 @@ Read the file, not this table, for the current status.
 
 | challenge JSON | solution module | outcome |
 |---|---|---|
-| upstream `HeckeSevenEighths.json` | `OAI.NumberTheory.DirichletL.Hecke.Nonvanishing` | pending |
+| upstream `HeckeSevenEighths.json` | `OAI.NumberTheory.DirichletL.Hecke.Nonvanishing` | pending at drafting; **accepted** since (1096 s) |
 | wave `SiegelFromSevenEighths.json` (upstream `SiegelZeros` challenge module) | `OAI.QRHWave.SiegelFromSevenEighths` | pending |
 | wave `QRHWaveStrip.json` (challenge written in this wave) | `OAI.QRHWave.ZetaZeroStrip` | pending |
 | upstream `SiegelZeros.json` | `OAI.NumberTheory.SiegelZeros.Main` (Oct 1 route) | pending |
@@ -279,8 +279,8 @@ claim ID. A grep for the proposed ID itself finds nothing. No `IMPORTED.` ID exi
 | final_verdict | **not assigned**: awaits an independent exact-SHA review and the decision of Section 8 |
 | first_broken_arrow | none known; smallest failure point in Section 9 |
 
-The Hecke clause should be a separate row with its own ID, once its comparator run completes and
-an independent review confirms HECKE_LEAN_FIDELITY.md.
+The Hecke clause should be a separate row with its own ID, once an independent review confirms
+HECKE_LEAN_FIDELITY.md. Its comparator run has since completed: accepted (Addendum C).
 
 ## 8. What an integrator still has to do
 
@@ -351,8 +351,9 @@ The mathematics is kernel-checked, so the smallest failure point is in the trust
    *statements* follow at once from this one, under this trust base, because their half-planes
    lie inside `Re s > 7/8`. Their *arguments* are not checked by it, and their Hecke clauses
    would also need the Hecke theorem (item 3).
-6. **"Comparator accepted the corollaries / the Hecke theorem / the Oct 1 Siegel proof."** No;
-   pending at `995eb31fd` (Section 4).
+6. **"Comparator accepted the corollaries / the Oct 1 Siegel proof."** Not at `995eb31fd`
+   (Section 4); see Addendum C for later runs. The Hecke theorem was accepted after this draft
+   was written.
 7. **"Mathlib's git tree is clean, so its definitions are checked."** The sources were checked;
    the oleans came from cache (T3).
 8. **"Two kernels agree."** Only the Lean kernel has run. The nanoda run is queued.

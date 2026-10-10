@@ -317,7 +317,7 @@ consequences (84-125) were not read.
 * No human reviewed any part.
 * The upstream Lean release does not formalize this argument (Section 7). Its 7/8 targets were
   built later the same day, with `#print axioms` standard for the zeta, Dirichlet and Hecke
-  theorems, and comparator accepted the zeta and Dirichlet challenges
+  theorems, and comparator accepted the zeta, Dirichlet and Hecke challenges
   (../../reviews/LEAN_BUILD_ATTEMPT.md).
   That says nothing about the 11/12 proof.
 

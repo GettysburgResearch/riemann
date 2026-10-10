@@ -190,7 +190,7 @@ as in Addendum B, and their outcomes are recorded here as they complete:
 | challenge JSON | solution module | outcome |
 |---|---|---|
 | upstream `DirichletSevenEighths.json` | `OAI.NumberTheory.DirichletL.Nonvanishing` | **accepted**: "Lean default kernel accepts the solution", 1108 s, exit 0 ([results/comparator_DirichletSevenEighths.log](results/comparator_DirichletSevenEighths.log)). Like the zeta challenge, the challenge module imports only Mathlib, so `DirichletCharacter.LFunction` is Mathlib's and the Addendum B statement-meaning argument now covers this theorem too |
-| upstream `HeckeSevenEighths.json` | `OAI.NumberTheory.DirichletL.Hecke.Nonvanishing` | pending |
+| upstream `HeckeSevenEighths.json` | `OAI.NumberTheory.DirichletL.Hecke.Nonvanishing` | **accepted**: "Lean default kernel accepts the solution", 1096 s, exit 0 ([results/comparator_HeckeSevenEighths.log](results/comparator_HeckeSevenEighths.log)). The project-defined Hecke objects in the challenge file are compared as definitions, so the solution must use exactly them; their fidelity to the paper is the separate reading-level check [HECKE_LEAN_FIDELITY.md](HECKE_LEAN_FIDELITY.md) |
 | wave `SiegelFromSevenEighths.json` (upstream `SiegelZeros` challenge module) | `OAI.QRHWave.SiegelFromSevenEighths` | pending |
 | wave `QRHWaveStrip.json` (challenge written in this wave) | `OAI.QRHWave.ZetaZeroStrip` | pending |
 | upstream `SiegelZeros.json` | `OAI.NumberTheory.SiegelZeros.Main` (Oct 1 route) | pending |

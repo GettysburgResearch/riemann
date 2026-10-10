@@ -54,8 +54,8 @@ integration verdict.
        `L`-functions of `Q(√−3)` (ray class characters, trivial on units), with the same pole
        exception as the paper's Thm 1.1 ([reviews/HECKE_LEAN_FIDELITY.md](reviews/HECKE_LEAN_FIDELITY.md);
        no Lean run, float cross-checks to about 1e-11).
-       **Comparator accepts the upstream 7/8 zeta and Dirichlet challenges: "Lean default kernel
-       accepts the solution"** ([reviews/LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md), Addenda A–B).
+       **Comparator accepts all three upstream 7/8 challenges (zeta, Dirichlet, Hecke family):
+       "Lean default kernel accepts the solution"** ([reviews/LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md), Addenda A–B).
        Its trust assumptions are listed there; in particular the solution was precompiled
        (a non-adversarial reproduction).
        This is a machine check of the Lean statement, not a review of the manuscript.
