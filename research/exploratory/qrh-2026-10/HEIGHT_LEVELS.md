@@ -72,7 +72,15 @@ same boundary for the same `ρ`, while its dual object leaves finite type at `k 
     `exp(√(log T/loglog T))`;
   * so failure is expected (HEURISTIC) once `log T ~ 10³–10⁴`, far beyond any computation.
 * An RH-conditional Proposition A reduces this to a lower bound for the Möbius tail at large-value
-  heights. See [falsification/NOISE_FLOOR.md](falsification/NOISE_FLOOR.md) once present.
+  heights. That lower bound is still open ([falsification/NOISE_FLOOR.md](falsification/NOISE_FLOOR.md)).
+  * Proposition A is correct under RH, which it uses in two places.
+  * Under RH, `R_Y = −ζ·T_Y + O(t^{−1/2+ε})`. So the route survives iff
+    `limsup |ζ·T_Y| ≤ 1/√8` on the region.
+  * Without RH: any zero of `G_Y` on `[σ₀,1) × {T}` kills it.
+  * Every resonance argument that is linear in `R_Y` gives exactly 0, so a proof must handle Möbius
+    correlations quadratically (Chowla-type). That is why the gap remains open.
+  * The heuristic onset of failure is `T ≈ 10^35–10^60`, or `10^300–10^500` if the observed
+    suppression of the tail at large `|ζ|` persists.
 * Lesson: in this route, finite-height evidence is silent exactly where the mechanism switches.
 
 ## 3. Higher rank (the reflection one level up)

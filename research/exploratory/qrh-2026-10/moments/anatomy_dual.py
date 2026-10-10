@@ -64,7 +64,6 @@ def gauss_tau(P):
         g = np.arange(q * q, dtype=np.int64)
         x, y = g // q, g % q
     codes = P.codes(x, y)
-    val = np.where(codes == E.ZERO, 0, ZETA[codes % 6 if True else 0])
     val = np.where(codes == E.ZERO, 0, ZETA[np.minimum(codes, 5)])
     ev = e_frac((x, y), P.gen)
     tau = np.sum(val * ev)
@@ -130,13 +129,21 @@ def run(D, rhos, K, seed, primes, check_pairs=12):
         off_direct = full - diag
         # ---------- dual side ----------
         Qmax = (2 * D) ** 2
-        Hmax = 3 * Qmax * 12.0 / (4 * np.pi * Y)                  # exp(-16) cut
+        CUT = 20.0                                                 # exp(-20) truncation
+        Hmax = 3 * Qmax * CUT / (4 * np.pi * Y)
         ha, hb, hN = lattice_all(Hmax)
+        o = np.argsort(hN, kind="stable")
+        ha, hb, hN = ha[o], hb[o], hN[o]
         hcls = h_classes(ha, hb, Hmax)
+        Hd = 3 * (1.5 * D) ** 2 / (4 * np.pi * Y)                 # dual length at N n = N m = 1.5 D
+        nb_edges = [0, 0.1, 0.3, 1.0, 3.0, np.inf]
+        nbin = np.searchsorted(np.array(nb_edges[1:-1]), hN / Hd, side="left").astype(np.int64)
         chih = {i: chi_val(primes[i], ha, hb) for i in used}
         divh = {i: (chih[i] == 0) for i in used}
-        T = np.zeros((len(ha), vecs.shape[1]))
-        Tabs = np.zeros(len(ha))                                   # sum_{n != m} |a a K| for mu
+        Kc = np.zeros((4, nc, nc))
+        Kb = np.zeros((len(nb_edges) - 1, nc, nc))
+        T_mu = np.zeros(len(ha))
+        Tabs = 0.0
         dual_err = []
         chk = set(map(tuple, rng.integers(0, nc, size=(check_pairs, 2)).tolist()))
         for j in range(nc):
@@ -149,7 +156,8 @@ def run(D, rhos, K, seed, primes, check_pairs=12):
                 for i in allp:
                     c = E.mul(c, primes[i].gen)
                 Q = float(E.norm(c))
-                G = np.ones(len(ha), dtype=np.complex128)
+                hi = int(np.searchsorted(hN, 3 * Q * CUT / (4 * np.pi * Y), side="right"))
+                G = np.ones(hi, dtype=np.complex128)
                 for i in allp:
                     P = primes[i]
                     cp = (1, 0)
@@ -157,19 +165,23 @@ def run(D, rhos, K, seed, primes, check_pairs=12):
                         if i2 != i:
                             cp = E.mul(cp, primes[i2].gen)
                     if i in fj and i in fk:
-                        G *= np.where(divh[i], P.N - 1.0, -1.0)
+                        G *= np.where(divh[i][:hi], P.N - 1.0, -1.0)
                     elif i in fj:
-                        G *= chi_val(P, [cp[0]], [cp[1]])[0] * np.conj(chih[i]) * taus[i][0]
+                        G *= chi_val(P, [cp[0]], [cp[1]])[0] * np.conj(chih[i][:hi]) * taus[i][0]
                     else:
-                        G *= np.conj(chi_val(P, [cp[0]], [cp[1]])[0]) * chih[i] * taus[i][1]
-                wt = (2 * Y / (SQ3 * Q)) * np.exp(-4 * np.pi * Y * hN / (3 * Q))
-                K_h = (wt * G).real            # pair (j,k) + (k,j) are conjugate-symmetric overall
-                coef = vecs[j] * vecs[k]
-                T += K_h[:, None] * coef[None, :]
-                Tabs += np.abs(wt * G) * abs(coef[0])
+                        G *= np.conj(chi_val(P, [cp[0]], [cp[1]])[0]) * chih[i][:hi] * taus[i][1]
+                wG = (2 * Y / (SQ3 * Q)) * np.exp(-4 * np.pi * Y * hN[:hi] / (3 * Q)) * G
+                K_h = wG.real
+                Kc[:, j, k] = np.bincount(hcls[:hi], weights=K_h, minlength=4)
+                Kb[:, j, k] = np.bincount(nbin[:hi], weights=K_h, minlength=len(nb_edges) - 1)
+                T_mu[:hi] += K_h * (mu[j] * mu[k])
+                Tabs += float(np.sum(np.abs(wG))) * abs(mu[j] * mu[k])
                 if (j, k) in chk:
-                    dual_err.append(abs(np.sum(wt * G) - S[j, k]) / max(1.0, abs(S[j, k])))
-        off_dual = T.sum(axis=0)
+                    dual_err.append(abs(np.sum(wG) - S[j, k]) / max(1.0, abs(S[j, k])))
+        quad = lambda M: np.sum(vecs * (M @ vecs), axis=0)            # noqa: E731
+        offc = np.array([quad(Kc[q]) for q in range(4)])               # 4 x nvec
+        offb = np.array([quad(Kb[q]) for q in range(len(nb_edges) - 1)])
+        off_dual = offc.sum(axis=0)
         # dual diagonal (n = m term of the bilinearized dual)
         DD = np.zeros(vecs.shape[1])
         for j in range(nc):
@@ -178,9 +190,6 @@ def run(D, rhos, K, seed, primes, check_pairs=12):
                 cop &= ~divh[i]
             s = np.sum(np.exp(-4 * np.pi * Y * hN[cop] / (3 * norms[j] ** 2)))
             DD += vecs[j] ** 2 * (2 * Y / SQ3) / norms[j] * s
-        # anatomy of T by class of h and by N h / Hdual, Hdual = 3 (1.5 D)^2 / (4 pi Y)
-        Hd = 3 * (1.5 * D) ** 2 / (4 * np.pi * Y)
-        nb_edges = [0, 0.1, 0.3, 1.0, 3.0, np.inf]
         per = dict(rho=rho, Y=Y, dual_length=Hd, n_h=int(len(ha)),
                    identity_maxrelerr=float(max(dual_err) if dual_err else 0.0),
                    offdirect_vs_dual_maxdiff=float(np.max(np.abs(off_direct - off_dual) / diag)))
@@ -189,27 +198,30 @@ def run(D, rhos, K, seed, primes, check_pairs=12):
             per[nm] = dict(diag=float(diag[idx]), off=float(off_dual[idx]), DD=float(DD[idx]),
                            off_over_diag=float(off_dual[idx] / diag[idx]),
                            DD_over_diag=float(DD[idx] / diag[idx]),
-                           by_hclass_over_diag={c: float(T[hcls == ci, idx].sum() / diag[idx])
-                                                for ci, c in enumerate(HCLS)},
-                           by_Nh_over_diag=[float(T[(hN / Hd > nb_edges[q]) & (hN / Hd <= nb_edges[q + 1]), idx].sum()
-                                                  / diag[idx]) for q in range(len(nb_edges) - 1)])
-        per["mu"]["sum_abs_T_over_diag"] = float(np.sum(np.abs(T[:, 0])) / diag[0])
-        per["mu"]["sum_abs_pairterms_over_diag"] = float(Tabs.sum() / diag[0])
+                           by_hclass_over_diag={c: float(offc[ci, idx] / diag[idx]) for ci, c in enumerate(HCLS)},
+                           by_Nh_over_diag=[float(offb[q, idx] / diag[idx]) for q in range(len(nb_edges) - 1)])
+        per["mu"]["sum_abs_T_over_diag"] = float(np.sum(np.abs(T_mu)) / diag[0])
+        per["mu"]["sum_abs_pairterms_over_diag"] = float(Tabs / diag[0])
+        # fraction of |T| mass and of the signed sum carried by the largest |T(h)|
+        oT = np.argsort(-np.abs(T_mu))
+        cs = np.cumsum(T_mu[oT])
+        per["mu"]["signed_partial_sums_by_rank_over_diag"] = {str(r): float(cs[min(r, len(cs)) - 1] / diag[0])
+                                                              for r in (10, 100, 1000, 10000, len(cs))}
         # the special dual rows individually: units and small sixth powers
         sel = np.nonzero(hcls == 0)[0]
         sel = sel[np.argsort(hN[sel])][:12]
         per["mu"]["T_at_sixth_rows_over_DDrow"] = [
-            dict(h=[int(ha[s]), int(hb[s])], Nh=int(hN[s]), T_over_diag=float(T[s, 0] / diag[0])) for s in sel]
+            dict(h=[int(ha[s]), int(hb[s])], Nh=int(hN[s]), T_over_diag=float(T_mu[s] / diag[0])) for s in sel]
         for lab, sl in (("rand", slice(2, 2 + K)), ("randc", slice(2 + K, 2 + 2 * K))):
             dg = diag[sl]
             per[lab] = dict(off_over_diag_mean=float(np.mean(off_dual[sl] / dg)),
                             off_over_diag_std=float(np.std(off_dual[sl] / dg, ddof=1)),
                             DD_over_diag_mean=float(np.mean(DD[sl] / dg)),
-                            by_hclass_over_diag={c: dict(mean=float(np.mean(T[hcls == ci, sl].sum(axis=0) / dg)),
-                                                         std=float(np.std(T[hcls == ci, sl].sum(axis=0) / dg, ddof=1)))
+                            by_hclass_over_diag={c: dict(mean=float(np.mean(offc[ci, sl] / dg)),
+                                                         std=float(np.std(offc[ci, sl] / dg, ddof=1)))
                                                  for ci, c in enumerate(HCLS)},
-                            by_Nh_over_diag=[dict(mean=float(np.mean(T[(hN / Hd > nb_edges[q]) & (hN / Hd <= nb_edges[q + 1]), sl].sum(axis=0) / dg)),
-                                                  std=float(np.std(T[(hN / Hd > nb_edges[q]) & (hN / Hd <= nb_edges[q + 1]), sl].sum(axis=0) / dg, ddof=1)))
+                            by_Nh_over_diag=[dict(mean=float(np.mean(offb[q, sl] / dg)),
+                                                  std=float(np.std(offb[q, sl] / dg, ddof=1)))
                                              for q in range(len(nb_edges) - 1)])
         per["n_h_by_class"] = {c: int(np.sum(hcls == ci)) for ci, c in enumerate(HCLS)}
         per["Nh_bins_over_dual_length"] = nb_edges[:-1] + ["inf"]

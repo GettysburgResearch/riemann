@@ -7,7 +7,9 @@
  "M_plus_ell": 1.0323324923605053,
  "high_sup": -2.000081903230644e-05,
  "arg": "('kink', 0.6, np.float64(0.5), np.float64(0.4839), 1.0)",
+ "high_sup_at_eff": -2.000081903230644e-05,
  "objective": 0.9355161987573744,
+ "mode": "penalty",
  "scenario": "hinz_exact",
  "label": "Hinz Satz A+B exact sigma-dependent form",
  "cap": null,
@@ -20,7 +22,7 @@
   "16/31",
   "0"
  ],
- "seconds": 26.6,
+ "seconds": 31.6,
  "inputs": {
   "alpha": 0.8333333333333334,
   "plain_cap": 6.0,
