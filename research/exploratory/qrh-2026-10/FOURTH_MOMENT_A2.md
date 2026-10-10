@@ -142,6 +142,35 @@ length `X` to about `(N(h)N(e))²/X ≫ X`, so it *lengthens*. The same holds fo
 joint transformation, such as the long Weyl element of the A2 series acting on both variables at
 once, or a non-reflection argument. Iterating the `GL(2)` theory will not do.
 
+**Second-step analysis: the problem reproduces itself (heuristic derivation; local identities
+verified).** Apply the Oct 5 reflection (Prop. `lem:reflection`, local transform
+`eq:ray-local-transform`) to the `d`-sum in the nesting form, with row `g = h·e⁴`.
+
+* Primes `p | h` have twist exponent `j = 1`. They give the quadratic factor
+  `B_{p,1} = χ_p³`, as in the second moment.
+* Primes `p | e` have `j = 4`. They give the Ramanujan-type factor
+  `B_{p,4}(x) = N(p)^{-1/2}(−1 + N(p)·1_{p|x})` with local unit `ω_{p,4} = γ₄(p)`.
+
+For dual indices `ℓ` coprime to `e`, the product over `p | e` is `μ(e) N(e)^{-1/2} ∏_{p|e} γ₄(p)`.
+In our conventions (`a2/check_second_step.py`, 104 primes):
+
+* `γ₂(p)³ = −α(p)`, deviation `7·10⁻¹⁵`;
+* `γ₄(p) = conj(γ₂(p))`, deviation `2·10⁻¹⁵`.
+
+The column coefficient's Gauss sum `γ₂(p)` is therefore cancelled exactly by `ω_{p,4}`. The
+remaining `e`-sum is a **Möbius sum** twisted by `conj(α(e)) χ_e(h)`, with the residual cubic pair
+phases of `γ₂(e)` (the twisted-multiplicativity cocycle) and weight `N(e)^{-1/2}`. That is an
+inverse-`L` type sum of the same kind as the original `A_u`, now with an angular twist.
+
+So one `GL(2)` reflection returns the fourth-moment dual to the original difficulty, a
+Möbius sum against characters. The Möbius absorption `μγ_{-1} ∝ conj(α)γ₂` that powers the
+second moment does not recur at the second step. This is a structural reason why iterated `GL(2)`
+reflection cannot close the fourth moment, beyond the length bookkeeping above.
+
+*Caveat.* The fixed-ray phases (`χ_p(σ_p)^{-2}`, the additive characters `ψ`) and the treatment of
+the pair phases under CRT in the reflection were not tracked. The claim concerns the generic local
+structure only.
+
 **First concrete obstacle.** In the `GL(2)` case the row twist became quadratic after reflection
 (`χ_p^{-1}χ_p^{-2} = χ_p^{3}`), which is why Goldmakher–Louvel's quadratic large sieve applied.
 Whether the `GL(3)` reflection produces a quadratic or a cubic/sextic twist is the decisive local
