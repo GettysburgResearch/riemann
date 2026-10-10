@@ -1,0 +1,139 @@
+{
+  "actual_xi_evaluated": false,
+  "analytic_reflection_identity_formalized": false,
+  "axiom_reports": {
+    "FourHourWave.LowKappaCapacity.below_threshold_failure_example": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FourHourWave.LowKappaCapacity.clipped_reflection_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FourHourWave.LowKappaCapacity.coefficient_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FourHourWave.LowKappaCapacity.coefficient_range": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FourHourWave.LowKappaCapacity.comparison_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FourHourWave.LowKappaCapacity.comparison_bounds_zero_error": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FourHourWave.LowKappaCapacity.comparison_margins": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FourHourWave.LowKappaCapacity.comparison_strict_admissibility": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FourHourWave.LowKappaCapacity.equality_example": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FourHourWave.LowKappaCapacity.positive_clipped_example": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FourHourWave.LowKappaCapacity.positive_error_example": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FourHourWave.LowKappaCapacity.slot_length_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FourHourWave.LowKappaCapacity.slot_length_lt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FourHourWave.LowKappaCapacity.strict_positive_example": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FourHourWave.LowKappaCapacity.terminal_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "candidate_theorem_count": 15,
+  "compiler_output_sha256": "d17e698255f8a4b200fc4d253b58dca32d16e6a82eb8f49fa07c0013a46585bd",
+  "explicit_real_nonvacuity": {
+    "clipped_reflection": {
+      "M": "60",
+      "along": "50",
+      "ell": "3",
+      "kappa": "13/18",
+      "reflected": "10",
+      "short": "10",
+      "xi": "0",
+      "z": "1"
+    },
+    "positive_support_error": {
+      "A": "51",
+      "Acomp": "44",
+      "M": "60",
+      "kappa": "13/18",
+      "xi": "1",
+      "z": "2"
+    },
+    "simultaneous_upper_equalities": {
+      "A": "50",
+      "Acomp": "46",
+      "M": "60",
+      "kappa": "13/18",
+      "xi": "0",
+      "z": "3"
+    },
+    "strict_comparison": {
+      "A": "51",
+      "Acomp": "43",
+      "M": "60",
+      "kappa": "13/18",
+      "xi": "0",
+      "z": "2"
+    }
+  },
+  "fourth_moment_parameter_extension_formalized": false,
+  "ilean_sha256": "f9e7d567e83006c9f0e7ff097408381006b1d620b7484ff661e591f9e6ffb614",
+  "lean_arguments": [
+    "-DwarningAsError=true",
+    "--root=/workspace/riemann/research/exploratory/2026-10-10-four-hour-wave/xi/formal",
+    "-o",
+    "/workspace/riemann/research/exploratory/2026-10-10-four-hour-wave/xi/formal/.build/LowKappaCapacity.olean",
+    "-i",
+    "/workspace/riemann/research/exploratory/2026-10-10-four-hour-wave/xi/formal/.build/LowKappaCapacity.ilean",
+    "/workspace/riemann/research/exploratory/2026-10-10-four-hour-wave/xi/formal/LowKappaCapacity.lean"
+  ],
+  "lean_version": "Lean (version 4.33.0-rc2, x86_64-unknown-linux-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "mathlib_revision": "51e6992efd06126df61a496bebf8f49482a4e129",
+  "olean_sha256": "d179f75594d612eb165cc18bdc9bddf1bcbb8c2ce10a6761707a31e66727a226",
+  "rh_proved": false,
+  "runner_sha256": "b0a4e8facfaddd8030bf4ded287b964596b74e6b0505868b08e8b04fe289a087",
+  "scope": "Real reflection/capacity inequalities with explicit hypotheses only",
+  "source_sha256": "2942de4c33323f8795e2077ab2b2d955e3a5d59f0709fcb36a54f07e60265708",
+  "status": "PASS_COMPILED_REAL_ARITHMETIC_ADAPTERS",
+  "zero_free_conclusion_formalized": false
+}

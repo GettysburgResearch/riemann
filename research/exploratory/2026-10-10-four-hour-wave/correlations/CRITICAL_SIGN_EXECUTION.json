@@ -1,0 +1,20 @@
+{
+  "status": "PASS_DIRECTED_FINITE_RESIDUE_TARGET_WITH_CONDITIONAL_SIGN_IMPLICATION",
+  "analytic_review": "Independent literature auditor and coordinator; finite nonresonance remains an assumption",
+  "normal_command": "python -B check_critical_residues.py --count 1000 --bits 128 --degree 9 --output critical_residue_certificate.json",
+  "optimized_command": "python -B -O check_critical_residues.py --count 1000 --bits 128 --degree 9 --output /tmp/wave-residues-optimized.json",
+  "normal_optimized_json_byte_identical": true,
+  "python_flint_version": "0.9.0",
+  "scan_command": "g++ -O3 -std=c++17 critical_scan.cpp -o /tmp/riemann-critical-scan; /tmp/riemann-critical-scan 100000000",
+  "scan_arithmetic": "ordinary long-double Kahan reconnaissance, not directed",
+  "nonresonance_certified": false,
+  "unconditional_negative_value_certified": false,
+  "rh_proved": false,
+  "source_hashes": {
+    "CRITICAL_SIGN_OBSTRUCTION.md": "1afb76b7acd8dea9ee42efb00a2e093e6099b99c8c9459ad9afa8b77fa67e6e8",
+    "check_critical_residues.py": "cd1fe52887a242be43e7baa6b53375d2f06f15118043db2132f25ca624f4d649",
+    "critical_residue_certificate.json": "1b69ff03236d94e6e53f11f5c71fb0381564f2d2926cb89ddb85e01f1e6175fa",
+    "critical_scan.cpp": "b0c69815f19ae9f6c5b6ebf6eb7f2a83165b31775cfe98b6ce94f80cd23cfa3e",
+    "critical_scan_100m.json": "93002ba581db9cba586f6b059efe6f991f990820e9fcda8e7ed2330f13bebc66"
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "complex_amplification_exact": "237/200",
+  "condition": "10000*n^2 <= 2631*T",
+  "count_constant_exact": "236393/1000000",
+  "count_constant_margin_exact": "1/7000000",
+  "dilation_upper_exact": "6202976839489359/9720079460000000",
+  "examples": [
+    {
+      "height": 3000000000000,
+      "tail_order": 888424
+    },
+    {
+      "height": 100000000000000,
+      "tail_order": 5129326
+    },
+    {
+      "height": 1000000000000000000,
+      "tail_order": 512932744
+    },
+    {
+      "height": 1000000000000000000000000,
+      "tail_order": 512932744128
+    },
+    {
+      "height": 1000000000000000000000000000000000000,
+      "tail_order": 512932744129286406
+    }
+  ],
+  "exponential_upper_exact": "353422528632887207/298767089843750000",
+  "fallback_gap_exact": "294672985812197/6758400000000000000",
+  "fallback_order": 866000,
+  "first_derivative_exact": "6383/10000",
+  "global_critical_census_used": true,
+  "global_order": 888000,
+  "input_sha256": {
+    "ANNULAR_GLOBAL_PICK.md": "c04cdf51ad64972137ecd3f4aa2c835e82481d4984115bd7fadf9b8621311724",
+    "VOLTERRA_RATIONAL_REFINEMENT.md": "a9cf619b13278b71ae7662f55aa25607f1fd8507970b6f8028922abad8e779c9",
+    "WEIGHTED_RATIONAL_DILATION.md": "2ca7783dede49c9f9c382a92ad640e30e8803db506acd672581dfd4dc5ddb2cd",
+    "verify_volterra_refinement.py": "793635294b003ec68d124390e08ba7225538d66788443704f228fa6fad12e59a"
+  },
+  "limitations": [
+    "native analytic operator/source proof remains essential",
+    "published argument bound and finite critical census are imported",
+    "tail order increases for changing kernels",
+    "RH remains open"
+  ],
+  "maximal_even_global_order": 888424,
+  "minimum_height": 3000000000000,
+  "minimum_order": 850000,
+  "published_inputs_replayed": false,
+  "quadrature_coefficient_exact": "1345312563/1250000000",
+  "rational_dilation_exact": "3191/5000",
+  "second_derivative_exact": "2037/5000",
+  "status": "PASS_EXACT_VOLTERRA_REFINEMENT_CONTROLS",
+  "tail_critical_census_used": false,
+  "uniform_gap_decimal": 8.603981171467106e-05,
+  "uniform_gap_exact": "18928758577227631999353142201217/220000000000000000000000000000000000",
+  "volterra_controls": [
+    {
+      "dimension": 1,
+      "endpoint_trace_exact": "1",
+      "kind": "uniform",
+      "norm_upper_exact": "200000/314159",
+      "smallest_ldl_pivot_exact": "40000000000/98695877281"
+    },
+    {
+      "dimension": 1,
+      "endpoint_trace_exact": "1",
+      "kind": "zero_and_unequal",
+      "norm_upper_exact": "200000/314159",
+      "smallest_ldl_pivot_exact": "40000000000/98695877281"
+    },
+    {
+      "dimension": 2,
+      "endpoint_trace_exact": "2",
+      "kind": "uniform",
+      "norm_upper_exact": "400000/314159",
+      "smallest_ldl_pivot_exact": "61304122719/98695877281"
+    },
+    {
+      "dimension": 2,
+      "endpoint_trace_exact": "5/4",
+      "kind": "zero_and_unequal",
+      "norm_upper_exact": "250000/314159",
+      "smallest_ldl_pivot_exact": "151304122719/394783509124"
+    },
+    {
+      "dimension": 3,
+      "endpoint_trace_exact": "3",
+      "kind": "uniform",
+      "norm_upper_exact": "600000/314159",
+      "smallest_ldl_pivot_exact": "32749328728786211952961/25789639628893788047039"
+    },
+    {
+      "dimension": 3,
+      "endpoint_trace_exact": "49/36",
+      "kind": "zero_and_unequal",
+      "norm_upper_exact": "2450000/2827431",
+      "smallest_ldl_pivot_exact": "16015633940239/31977464239044"
+    },
+    {
+      "dimension": 4,
+      "endpoint_trace_exact": "4",
+      "kind": "uniform",
+      "norm_upper_exact": "800000/314159",
+      "smallest_ldl_pivot_exact": "49798431488184957633283025799420959/22684733366427793666507054200579041"
+    },
+    {
+      "dimension": 4,
+      "endpoint_trace_exact": "205/144",
+      "kind": "zero_and_unequal",
+      "norm_upper_exact": "2562500/2827431",
+      "smallest_ldl_pivot_exact": "18271258940239/31977464239044"
+    },
+    {
+      "dimension": 5,
+      "endpoint_trace_exact": "5",
+      "kind": "uniform",
+      "norm_upper_exact": "1000000/314159",
+      "smallest_ldl_pivot_exact": "152519564494016993677283098722359636309676667521/44962657064816272666981552876482281690323332479"
+    },
+    {
+      "dimension": 5,
+      "endpoint_trace_exact": "205/144",
+      "kind": "zero_and_unequal",
+      "norm_upper_exact": "2562500/2827431",
+      "smallest_ldl_pivot_exact": "18271258940239/31977464239044"
+    },
+    {
+      "dimension": 6,
+      "endpoint_trace_exact": "6",
+      "kind": "uniform",
+      "norm_upper_exact": "1200000/314159",
+      "smallest_ldl_pivot_exact": "789538430922689609168652167428129639676905298334718345509599/162469027645375111453630452885770487026163504125761654490401"
+    },
+    {
+      "dimension": 6,
+      "endpoint_trace_exact": "209/144",
+      "kind": "zero_and_unequal",
+      "norm_upper_exact": "2612500/2827431",
+      "smallest_ldl_pivot_exact": "19306258940239/31977464239044"
+    },
+    {
+      "dimension": 7,
+      "endpoint_trace_exact": "7",
+      "kind": "uniform",
+      "norm_upper_exact": "1400000/314159",
+      "smallest_ldl_pivot_exact": "6213583840880167867055068292590968618992238126730734915892436659688479681/941817665036921085053768760527688183606733028465944998505191420311520319"
+    },
+    {
+      "dimension": 7,
+      "endpoint_trace_exact": "10385/7056",
+      "kind": "zero_and_unequal",
+      "norm_upper_exact": "129812500/138544119",
+      "smallest_ldl_pivot_exact": "48210667715513839/76777891637944644"
+    },
+    {
+      "dimension": 8,
+      "endpoint_trace_exact": "8",
+      "kind": "uniform",
+      "norm_upper_exact": "1600000/314159",
+      "smallest_ldl_pivot_exact": "69260294574177523376448595410169749140149661011459129962955719923988302111034561972639/8048381956946306680094983364158250694130270636720429020742217175216713855685438027361"
+    },
+    {
+      "dimension": 8,
+      "endpoint_trace_exact": "41981/28224",
+      "kind": "zero_and_unequal",
+      "norm_upper_exact": "131190625/138544119",
+      "smallest_ldl_pivot_exact": "49649447442076339/76777891637944644"
+    },
+    {
+      "dimension": 9,
+      "endpoint_trace_exact": "9",
+      "kind": "uniform",
+      "norm_upper_exact": "1800000/314159",
+      "smallest_ldl_pivot_exact": "1039536502281434411036466463607070176471631066064611414615496176743204964626505669056428311976285441/95512660546291782265864289068523963706714550378251201513462933043840568016391892526272408023714559"
+    },
+    {
+      "dimension": 9,
+      "endpoint_trace_exact": "41981/28224",
+      "kind": "zero_and_unequal",
+      "norm_upper_exact": "131190625/138544119",
+      "smallest_ldl_pivot_exact": "49649447442076339/76777891637944644"
+    },
+    {
+      "dimension": 10,
+      "endpoint_trace_exact": "10",
+      "kind": "uniform",
+      "norm_upper_exact": "2000000/314159",
+      "smallest_ldl_pivot_exact": "20228323772444202513010322582543067925871903321209640978643743253598980086325030654843850302196952104932837034079/1505955906429426690641444969412450057730504270329129858815374520908817404734720957950028993613331423067162965921"
+    },
+    {
+      "dimension": 10,
+      "endpoint_trace_exact": "1056581/705600",
+      "kind": "zero_and_unequal",
+      "norm_upper_exact": "132072625/138544119",
+      "smallest_ldl_pivot_exact": "50578240188076339/76777891637944644"
+    },
+    {
+      "dimension": 11,
+      "endpoint_trace_exact": "11",
+      "kind": "uniform",
+      "norm_upper_exact": "2200000/314159",
+      "smallest_ldl_pivot_exact": "495536189119532373493612780959177708320917594575267324598292348367802170214311517582443868949011267935578889417870207001140801/30492909664093852394934573993899546080088291047716813674876806859713917151732301759160947998710283237087773072014512998859199"
+    },
+    {
+      "dimension": 11,
+      "endpoint_trace_exact": "128551901/85377600",
+      "kind": "zero_and_unequal",
+      "norm_upper_exact": "16068987625/16763838399",
+      "smallest_ldl_pivot_exact": "751823175301825679299/1124105111471147532804"
+    },
+    {
+      "dimension": 12,
+      "endpoint_trace_exact": "12",
+      "kind": "uniform",
+      "norm_upper_exact": "2400000/314159",
+      "smallest_ldl_pivot_exact": "14927671492648892151732305864245222023836404565676481469262523569473497184381604060681874639410937802272393127919890604354512569477501957919/771866440280483718636224599574010781646140030365980397674640669575663414036922273100759756620377391168050252609789348298629458042498042081"
+    },
+    {
+      "dimension": 12,
+      "endpoint_trace_exact": "43048267/28459200",
+      "kind": "zero_and_unequal",
+      "norm_upper_exact": "5381033375/5587946133",
+      "smallest_ldl_pivot_exact": "84596938746145908811/124900567941238614756"
+    }
+  ]
+}

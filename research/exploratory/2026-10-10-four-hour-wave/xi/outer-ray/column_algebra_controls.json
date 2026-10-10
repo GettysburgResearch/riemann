@@ -1,0 +1,20 @@
+{
+  "actual_xi_values_evaluated": false,
+  "analytic_full_column_authenticated_by_checker": false,
+  "complete_declared_root_sum_controls": 180,
+  "derivative_orders_per_fixture": 6,
+  "exact_companion_point_controls": 3240,
+  "fixtures": 5,
+  "native_complete_count_replayed": false,
+  "rh_proved": false,
+  "scope": "exact finite synthetic polynomial controls; no actual Xi evaluation or full-domain authentication",
+  "source_sha256": {
+    "xi/outer-ray/CENSUS_FULL_COLUMN_SECTOR.md": "db662f2f7c57a61413ecf16d3f4760fd1d5d315f8328bed70984340083960c43",
+    "xi/outer-ray/CENSUS_LOCALIZATION.md": "39cf1735058b98ef0821600f545455bec3a4767267751e5d9aa0621630e7b9e1",
+    "xi/outer-ray/THEOREM.md": "2b35a58b119a6f924658a702769c401126e708e592738551e992403004cdfe6d",
+    "xi/outer-ray/check_column_algebra.py": "f1f337420aa176dc171edc08143d8e6a4cd12cd8e9f9ada901c4fe59062611c5",
+    "xi/outer-ray/check_exact.py": "943ad4d58b328a043f9c4d902d7c035c997c706735bb72db53b4711577b56662"
+  },
+  "status": "PASS_EXACT_FULL_COLUMN_POLYNOMIAL_ALGEBRA",
+  "three_positive_coefficient_controls": 1080
+}

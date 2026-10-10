@@ -1,0 +1,131 @@
+{
+  "actual_xi_zeros_numerically_evaluated": false,
+  "arithmetic": "fractions.Fraction only",
+  "atom_fourth_derivative_global_lower": -4000,
+  "atom_second_derivative_global_lower": -20,
+  "cells": [
+    {
+      "bernstein_coefficients": [
+        "684585/8",
+        "1608581/16",
+        "6991579/60",
+        "10655931/80",
+        "18009101/120",
+        "2664937/16",
+        "364021/2"
+      ],
+      "interval": [
+        3,
+        4
+      ]
+    },
+    {
+      "bernstein_coefficients": [
+        "364021/2",
+        "3159399/16",
+        "25426031/120",
+        "17970973/80",
+        "2820569/12",
+        "3879675/16",
+        "1971875/8"
+      ],
+      "interval": [
+        4,
+        5
+      ]
+    },
+    {
+      "bernstein_coefficients": [
+        "1971875/8",
+        "4007825/16",
+        "1506397/6",
+        "19821287/80",
+        "5767783/24",
+        "3660885/16",
+        "855243/4"
+      ],
+      "interval": [
+        5,
+        6
+      ]
+    },
+    {
+      "bernstein_coefficients": [
+        "855243/4",
+        "3181059/16",
+        "4328305/24",
+        "12720153/80",
+        "2038837/15",
+        "1807863/16",
+        "744877/8"
+      ],
+      "interval": [
+        6,
+        7
+      ]
+    },
+    {
+      "bernstein_coefficients": [
+        "744877/8",
+        "1171645/16",
+        "3383713/60",
+        "3641011/80",
+        "5339753/120",
+        "936929/16",
+        "94525"
+      ],
+      "interval": [
+        7,
+        8
+      ]
+    },
+    {
+      "bernstein_coefficients": [
+        "94525",
+        "2087871/16",
+        "22603883/120",
+        "21998261/80",
+        "23927203/60",
+        "9123347/16",
+        "6416199/8"
+      ],
+      "interval": [
+        8,
+        9
+      ]
+    },
+    {
+      "bernstein_coefficients": [
+        "6416199/8",
+        "16541449/16",
+        "19890742/15",
+        "135314463/80",
+        "51482995/24",
+        "43280525/16",
+        "13569125/4"
+      ],
+      "interval": [
+        9,
+        10
+      ]
+    }
+  ],
+  "checker_sha256": "e7bfcb66f050507f03b9aa0e84e6d1f0d0c23a615631e45c009558ebbda83ade",
+  "classical_inputs": [
+    "pi>3",
+    "correct even theta Fourier identity",
+    "theta derivative convergence and decay",
+    "known xi zero strip"
+  ],
+  "compact_coefficients_verified": 49,
+  "compact_coverage": "[3,10] with all7 degree-six Bernstein coefficients on each of7 unit cells",
+  "compact_minimum_coefficient": "5339753/120",
+  "high_derivative_saddle_numerically_verified": false,
+  "quartet_location_checks": 36,
+  "rh_proved": false,
+  "source_height_threshold": 10,
+  "source_is_actual_theta": false,
+  "status": "PASS_EXACT_THETA_QUARTET_SOURCE_CERTIFICATE",
+  "strict_source_margin_at_threshold": 2000,
+  "unbounded_atom_tail": "t>=10: all positive Taylor coefficients at10"
+}

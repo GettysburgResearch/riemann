@@ -1,0 +1,26 @@
+{
+  "arithmetic": "ARB_DIRECTED_BALLS",
+  "checker_sha256": "82013dad13521fd9b619e18b6e4efe23ea4a8f7f1d5632e930964f2f512c7615",
+  "critical_power_one_proved": false,
+  "precision_bits": 192,
+  "prime_series_cutoff": 40,
+  "python_flint_version": "0.9.0",
+  "records": [
+    {
+      "alpha": "1.40103426886",
+      "entire_ball_above_one": true,
+      "entire_ball_below_one": false,
+      "mass_ball": "[1.000000000008804800 +/- 5.88e-19]",
+      "mass_minus_one_ball": "[8.804800e-12 +/- 5.88e-19]"
+    },
+    {
+      "alpha": "1.40103426887",
+      "entire_ball_above_one": false,
+      "entire_ball_below_one": true,
+      "mass_ball": "[0.999999999991464836 +/- 6.28e-19]",
+      "mass_minus_one_ball": "[-8.535164e-12 +/- 6.28e-19]"
+    }
+  ],
+  "rh_proved": false,
+  "status": "PASS_INDEPENDENT_ARB_THRESHOLD_BRACKET"
+}

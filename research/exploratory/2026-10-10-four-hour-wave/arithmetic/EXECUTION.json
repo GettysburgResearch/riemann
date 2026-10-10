@@ -1,0 +1,81 @@
+{
+  "analytic_infinite_statements_machine_proved": false,
+  "critical_power_one_proved": false,
+  "execution_time_utc": "2026-10-10T12:24:55.614933+00:00",
+  "external_qrh_inputs_independently_proved": false,
+  "horizon_stitch": {
+    "analytic_review_status": "PROPOSED; independent root review requested",
+    "global_sufficient_power": "1.7725",
+    "normal_command": "python3 -B verify_horizon_stitch.py --output results/horizon-stitch.normal.json",
+    "normal_optimized_byte_identical": true,
+    "optimized_command": "python3 -B -O verify_horizon_stitch.py --output results/horizon-stitch.optimized.json",
+    "power_slabs": 5,
+    "precision_bits": 192,
+    "result": "PASS_GLOBAL_SHARP_FINITE_HORIZON_TAIL_STITCH"
+  },
+  "independent_arb": {
+    "command": "python3 -B check_threshold_arb.py --output results/power-threshold.arb.json",
+    "precision_bits": 192,
+    "python_flint_version": "0.9.0",
+    "result": "PASS_INDEPENDENT_ARB_THRESHOLD_BRACKET"
+  },
+  "independent_controls": {
+    "groups": [
+      "Machin pi / four exact even-zeta identities",
+      "direct prime-square partial sum and all-integer tail",
+      "duplicate-67 label projection",
+      "negative directed rounding",
+      "log-product and exponential inverse identities",
+      "invalid arithmetic domain rejection"
+    ],
+    "normal_command": "python3 -B test_threshold.py",
+    "normal_errors": 0,
+    "normal_failures": 0,
+    "normal_skipped": 0,
+    "normal_tests": 6,
+    "optimized_command": "python3 -B -O test_threshold.py",
+    "optimized_errors": 0,
+    "optimized_failures": 0,
+    "optimized_skipped": 0,
+    "optimized_tests": 6
+  },
+  "internal_review": {
+    "outcome": "No proof issue found in the stated scopes; proposed review status remains separate from integration",
+    "reviewer": "root agent",
+    "scope": [
+      "A-NM1 through A-NM3",
+      "A-SP1 and A-SP2",
+      "A-ZM1 including reciprocal-zeta growth and Perron shift"
+    ]
+  },
+  "normal_optimized_threshold_identical": true,
+  "rh_proved": false,
+  "source_hashes": {
+    "check_threshold_arb.py": "82013dad13521fd9b619e18b6e4efe23ea4a8f7f1d5632e930964f2f512c7615",
+    "test_threshold.py": "6c282969b5514ce7a721dc1805611f68b6839764cba5ffdedbb65564749ef9a2",
+    "verify_horizon_stitch.py": "8486059b8468ceb6cb59d34c4c16c61eeb72a8097583596e5253b934571e5104",
+    "verify_power_threshold.py": "3c448f307fc68d616f55558928e9e6ce8ef80aefa2730b5530e0e8bad47fe9b3",
+    "verify_squarefree_stitch.py": "746be9f6382323a0131e3a7ece95e4448461c2b44c7e0dd33310d02675513550"
+  },
+  "squarefree_stitch": {
+    "analytic_review_status": "PROPOSED; independent root review requested",
+    "density_controls": 1000,
+    "direct_weighted_prefix_controls": 9,
+    "global_sufficient_power": "1.737",
+    "normal_command": "python3 -B verify_squarefree_stitch.py --output results/squarefree-stitch.normal.json",
+    "normal_optimized_byte_identical": true,
+    "optimized_command": "python3 -B -O verify_squarefree_stitch.py --output results/squarefree-stitch.optimized.json",
+    "power_slabs": 7,
+    "precision_bits": 192,
+    "result": "PASS_GLOBAL_SHARP_SQUAREFREE_STITCH"
+  },
+  "status": "PROPOSED_MATH_WITH_EXECUTED_FINITE_CHECKS",
+  "threshold_checker_command": "python3 -B verify_power_threshold.py --output <output.json>",
+  "threshold_checker_optimized_command": "python3 -B -O verify_power_threshold.py --output <output.json>",
+  "threshold_checker_result": "PASS_EXACT_LABELLED_PRIME_THRESHOLD_BRACKET",
+  "unperformed": [
+    "proof assistant formalization of the analytic arguments",
+    "external exact-SHA mathematics review",
+    "critical arithmetic negative-mass bound"
+  ]
+}
