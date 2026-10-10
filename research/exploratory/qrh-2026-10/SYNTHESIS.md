@@ -128,6 +128,20 @@ the critical line.
      at `ρ = 1`, i.e. 11/12, and this wall is invariant under every Poisson and reflection move
      ([RUNG_STRENGTH.md](RUNG_STRENGTH.md), [Q_RHO_ANALYSIS.md](Q_RHO_ANALYSIS.md)). Leverage
      `c = 5/6` is forced on known automorphic input ([LEVERAGE_FAMILIES.md](LEVERAGE_FAMILIES.md)).
+2′. **The 7/8 step detects one zero; it cannot count** ([DETECTOR_DENSITY.md](DETECTOR_DENSITY.md);
+   PROPOSED, exact model).
+   * The outer contradiction uses a single zero: the family supremum, through the non-continuation
+     of `1/L` (397–502).
+   * Witnessed rows enter the high-side error with a *positive* coefficient (16089), so more zeros
+     make the error worse rather than adding large values.
+   * Run below 7/8 it therefore gives no family zero-density estimate with `f(7/8) = 0`.
+   * The *inner* detector (Prop 8.3 with Lemmas 17.6 and 18.1) does count rows with a zero in
+     `Re s ≥ σ`: `≪ U^{f(σ)+ε}`, with `f(σ) = (31−32σ)/(21−12σ)` on `(51/100, 11/12]`.
+     * So `f(13/15) = 49/159` and `f(7/8) = 2/7`.
+     * In the sextic case this beats de Faveri's 2026 large-sieve density (about 0.466 at 7/8;
+       arXiv:2610.04045v1), but stays above density-hypothesis quality.
+     * It rests on the manuscript's general, unformalized moment lemmas.
+   * This is a third structural reason why 7/8 is an endpoint, not a step on a density ladder.
 3. **Where the true gap is.** On both sides, numerics show that the needed cancellation *exists*
    and looks exactly like random-sign cancellation
    ([moments/](moments/README.md), [moments/DUAL_ANATOMY.md](moments/DUAL_ANATOMY.md),

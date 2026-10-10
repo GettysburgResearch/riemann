@@ -14,6 +14,7 @@ companions. Run them from this directory unless noted. Runtimes are for one core
 | `floor_lp.py`, `floor_theta.py` | floor-bin cancellation payoff, exact LP and model (FLOOR_BIN_BARRIER.md) | EXACT / FLOATING | see file headers | minutes |
 | `make_ladder_svg.py` | the barrier-ladder figure (`../figures/barrier_ladder.svg`) | n/a | `python3 make_ladder_svg.py` | seconds |
 | `explicit_pnt_7_8.py` | explicit psi/theta/pi-li/short-interval bounds and the explicit Robin envelope under H(7/8) (EXPLICIT_PNT_7_8.md); writes `../results/explicit_pnt_7_8.{txt,json}` | INTERVAL (mpmath.iv, outward rounding); `--zeros` adds a FLOATING sanity check | `python3 -I explicit_pnt_7_8.py [--zeros]` | ~17 s (45 s with `--zeros`) |
+| `detector_density.py` | detector row count as a family zero-density exponent, comparison with [dF] arXiv:2610.04045v1, outer-step sign table and visibility window (DETECTOR_DENSITY.md); writes `../results/detector_density_output.json` | EXACT_RATIONAL (one float cross-check) | `python3 -I detector_density.py [--paper paper.tex]` | ~25 s |
 | `zd_*.py` | ANTEDB-based zero-density runs (ZERO_DENSITY_CONDITIONAL.md); needs a sandboxed ANTEDB checkout, see that file | EXACT (ANTEDB rationals) / float grid | see file headers | minutes |
 
 Companion folders, each with its own README or header:
