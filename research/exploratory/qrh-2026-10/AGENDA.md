@@ -148,6 +148,15 @@ attempt.
   L-functions, against `X^{4/3+ε}` from known tools.
 * Writing out the relaxed induction is a concrete target that would be new as a standalone result.
   It is conditional on Lemma 18.1's unverified bookkeeping.
+* *Done as exponent ledgers* ([CUBIC_RELAXED_INDUCTION.md](CUBIC_RELAXED_INDUCTION.md)):
+  * the paper's induction order gives exactly `X^{53/51}`;
+  * the (2,1) forcing gives `X^{1+ε}` with zero slack;
+  * a PROPOSED nested comparison order gives `X^{1+ε}` with margin `M/12`, and in the quadratic case
+    reproduces Heath-Brown's `K^{1+ε}`.
+* Six steps are unproved, including the n = 3 bookkeeping and the legitimacy of the nested order.
+  If all of them hold, this would be the optimal cubic fourth moment, an open problem; the
+  literature best is `X^{4/3}`. Highest-value non-RH spin-off of the wave; needs adversarial
+  checking of the nested order first.
 
 **C3.** The coefficient (7.4) of the 7/8 manuscript, factored into the local series (7.10). This
 needs (7.9) and the `b*`/`ξ`/`τ` and pair-phase cancellations; only the local identity was checked
