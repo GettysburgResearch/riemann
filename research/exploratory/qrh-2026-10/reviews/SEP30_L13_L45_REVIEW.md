@@ -18,14 +18,14 @@ Exact sources or dependencies:
         The-Quasi-Riemann-Hypothesis-September-30-2026/build/paper.tex, sha256
         42a5ee0febca59fd1def55cfd6c6808c322ef4237d7726303ea52f711deac6a3 (re-hashed here).
         External and unreviewed; read as untrusted data.
-  Code: reviews/sep30_l13_checks.py (new; sha256 in Sec. 5). It imports a2/eis.py unchanged
+  Code: reviews/sep30_l13_checks.py (new; sha256 d1587c070646425eded2887e68024964662bd16671afd05cf72ae81aafd5278d). It imports a2/eis.py unchanged
         (sha256 87ca11d98bf3ee130a6dab613b5f7efe444058320b7c22b005327686f2798e65), numpy, and
         sympy (for cyclotomic polynomials only).
   Prior notes: reviews/SEP30_VERIFICATION_MAP.md (target 5 and "next after these"),
         reviews/LEMMA18_1_COMMON_SUPPORT.md (its checks E and F were floating-point versions of
         part of A-C below).
 What was actually run: nice -n 10 python3 -I sep30_l13_checks.py -> see Sec. 5 (one process,
-  about 5 min). Log: scratchpad l13/full_run.log.
+  114 s): 33/33 PASS. Log: scratchpad l13/full_run.log.
 Smallest remaining gap: none inside the scoped lemmas. What remains is outside scope:
   (i) whether each downstream invocation (Prop 15.2, Lemma 18.1, and the 40 users of Lemma 4.5)
       applies these lemmas inside their hypotheses with the claimed uniformity;
@@ -80,7 +80,7 @@ The identity `Σ_{(a,b)=1} c F = Σ c F~ Σ_{t|a,t|b} μ(t)` is the divisor-sum 
 warns that `F~ ≠ F` off the locus; this is confirmed (**X2**: 27 differing values). The warning is
 therefore needed, not decorative.
 
-**Checks.** **C1**: 15 configurations and 950,605+ values of `j`, every `j mod DEab`, with no
+**Checks.** **C1**: 15 configurations and 1,139,157 values of `j`, every `j mod DEab`, with no
 mismatch. The configurations cover:
 * `D = E`, `D ≠ E` with a shared prime of unequal multiplicity, `D` or `E` equal to `1`, and `a` or `b` equal to `1`;
 * prime-power `a`, `b`, and an inert `q5` in `D` or in `a`.
@@ -159,7 +159,42 @@ Lemma 4.10 is elementary and correct. **No wrong step found** in Lemmas 4.7-4.10
 ## 5. Mechanical checks (`sep30_l13_checks.py`)
 
 ```
-OUTPUT_PLACEHOLDER
+   N/A: prime lambda has norm 3; (N-1)/6 = 0.3333333333333333 is not an integer, so it lies in S and chi is undefined
+   N/A: prime 2 has norm 4; (N-1)/6 = 0.5 is not an integer, so it lies in S and chi is undefined
+PASS A1 eq:correlation-lift (F = 0 unless C|j; chi_n1(k) conj chi_n2(-k) R(n1,n2) L_C) for every j, 21 configs   2631375 (u,v,j) values, 0 mismatches
+PASS A2 L_C congruence sum = product of closed local factors (genuine locus, every k mod C)   1615 (C,k) values, 0 mismatches
+PASS A3 F(u,v;0) = phi(u) 1_{u=v}
+PASS A4 |L_C| <= q_C on every computed value
+PASS A5 R(n1,n2) from symbols = four-class bicharacter r (eq:reciprocity-four-class)
+PASS B1 eq:correlation-local + one-sided formula, local factor L_{p^c}: grid (split 7,13; inert 5,11) and Z/7^c enumeration (c=4..7, incl. 6|c)   291296 (n1,n2,k) cases, 0 mismatches
+PASS B2 field-level sweep: modulus p, character chi_p^c, c=1..12 (principal branch at inert 5, 11)   0 mismatches
+PASS B3 genuine L_{p^c} periodic modulo p in each column (n_i -> n_i + p), c<=3
+PASS C1 eq:correlation-child-character, every j mod DEab, 15 configs   1139157 (config,j) values, 0 mismatches
+PASS C2 the configurations realise each R-factor = -1 at least once   {'R(a,E)': [0, 3], 'R(b,D)': [0, 3], 'R(a,b)': [0, 3]}
+PASS X1 at p | (n1,n2) the congruence sum is not the artificial value 0 (paper's own caveat, l. 7123-7131)   7 nonzero congruence-sum values where the extension is 0
+PASS X2 F~_{D,E}(a,b;j) != F(Da,Eb;j) at some non-coprime (a,b) (paper: 'artificial', l. 7243)   27 differing (a,b,j) values
+PASS X3 Moebius insertion: sum_{(a,b)=1} c F(Da,Eb;j) = sum c F~ sum_{t|a,b} mu(t) (exact)
+PASS D1 Fourier form of F (Lemma 13.3, first display) exact in Z[zeta_L], 6 configs (split, inert)   916 (config,j) values, 0 failures
+PASS D1c control: G(u,h) G(v,h) without conjugation is detected   7 failing j
+PASS D2 Lemma 13.2 (eq:gauss-local) exact: |S|^2 = P^{2a-1} 1_{v=a-1} (6!|a) and S integer formula (a=6, P=7)   797 (p^a,k) values, 0 failures
+PASS N control eq:correlation-local mutated 'minus1' is detected   206928 mismatches
+PASS N control eq:correlation-local mutated 'orient' is detected   112176 mismatches
+PASS N control eq:correlation-local mutated 'P2' is detected   23840 mismatches
+PASS N control eq:correlation-local mutated 'onesided_no6' is detected   39504 mismatches
+PASS N control eq:correlation-lift mutated 'dropR' is detected   12960 mismatches
+PASS N control eq:correlation-lift mutated 'chi2_plus' is detected   18366 mismatches
+PASS N control eq:correlation-lift mutated 'phi_q' is detected   1 mismatches
+PASS N control eq:correlation-lift mutated 'orient' is detected   34224 mismatches
+PASS N control eq:correlation-lift mutated 'minus1' is detected   33570 mismatches
+PASS N control eq:correlation-child-character mutated 'drop_Rab' is detected   35100 mismatches
+PASS N control eq:correlation-child-character mutated 'drop_RaE' is detected   42174 mismatches
+PASS N control eq:correlation-child-character mutated 'chib_plus' is detected   50184 mismatches
+PASS S1 eq:pointwise-mellin-tail IBP identity on W_G (sigma in {-1,.3,2}, T in {.7,1.5,3}, N<=5) [FLOAT]   max rel dev 4.8e-12
+PASS S1c controls: (iT)^{-N} for odd N, and dropping the binomial weights, are detected [FLOAT]   rel dev 2.00, 174.70
+PASS S2 smooth-calculus order: least m with 2m > J+d has 2m <= J+d+2 (J<30, d<8; exact)
+PASS S3 joint-slice inequalities hold on 2e5 Cauchy samples; the factor 2 is needed (control) [FLOAT]   factor-1 violations: 447
+PASS S4 1-D parameter-Sobolev with explicit constant (2/3, 6): max sup/rhs over 300 tests <= 1 [FLOAT]   max ratio 0.504
+33/33 PASS   (114 s)
 ```
 
 **Failing controls (part N).** Every mutation is detected by an exact mismatch:
@@ -182,7 +217,7 @@ are printed.
 
 | Lemma | Verdict | Notes |
 |---|---|---|
-| 13.3 full correlation | **no wrong step found** | all displayed identities exact on 21 global and about 1,900 local configurations; `\|L_C\| ≤ q_C` has slack (`≤ P^{c−1}(P−1)` locally) |
+| 13.3 full correlation | **no wrong step found** | all displayed identities exact on 21 global configurations (2,631,375 values of `j`) and 291,296 local `(n1,n2,k)` cases; `\|L_C\| ≤ q_C` has slack (`≤ P^{c−1}(P−1)` locally) |
 | 13.4 complete-support correlation | **no wrong step found** | the off-locus warning (`F~ ≠ F`) is necessary (X2) |
 | 13.2 prime-power sums (dependency) | **no wrong step found** | now exact-checked (D2) |
 | 4.5 smooth calculus | **no wrong step found** | orders `J+d+2` and `N+⌈J⌉` are right; explicit Sobolev constant `6^d` |
