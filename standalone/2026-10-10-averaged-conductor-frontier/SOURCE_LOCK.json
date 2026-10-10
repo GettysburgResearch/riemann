@@ -1,0 +1,123 @@
+{
+  "schema": "averaged-conductor-source-lock-v1",
+  "date": "2026-10-10",
+  "parent_commit": "cfa102748b26f840ccc4b963a660711424db0ec3",
+  "adjacent_commits": {
+    "917": "6b4723042b3d250024eef45cb1924f88f28e902c",
+    "916": "dabd6da99fb92eead7c99f941331ed9cbd2ec4ad"
+  },
+  "scope": "Proposed standalone reductions and bounded audits. No remaining signed arithmetic average, new full moment, new zero-free boundary, or RH is proved. The fourth-moment small-gcd reduction avoids the imported native second moment; the higher-order singleton-periphery reduction retains it. Source locks do not promote inherited claims.",
+  "files": [
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "6b4723042b3d250024eef45cb1924f88f28e902c",
+      "path": "standalone/2026-10-10-oscillating-overlaps-and-averaged-moments/OSCILLATING_OVERLAPS.md",
+      "bytes": 28553,
+      "sha256": "271f4f71bda533810ee49f6498f4ffbc42c3f0cb37c59151f9f703e715f58397",
+      "git_blob": "aa3137869abcee4b380bb0b621e56e93e2072d71",
+      "role": "Retained cubic character in the large-gcd fourth-moment tail; independently audited in this packet"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "6b4723042b3d250024eef45cb1924f88f28e902c",
+      "path": "standalone/2026-10-10-oscillating-overlaps-and-averaged-moments/SCALE_AVERAGED_CRITERION.md",
+      "bytes": 12654,
+      "sha256": "c6c543037312480fae6154f7a059248fe14658ecff6251aaecb80fe0fdbfd9c0",
+      "git_blob": "f683c09d6ed298aa07384e71ee56d69ebbb35d5f",
+      "role": "Moving-cutoff Euler-removal inverse and scale-averaged moment extraction; independently audited in this packet"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "dabd6da99fb92eead7c99f941331ed9cbd2ec4ad",
+      "path": "standalone/2026-10-10-all-order-collision-removal/PROOF.md",
+      "bytes": 18167,
+      "sha256": "c67f2469e2d2dfce91cdf2b70220fa53978091c0756ffac9a676737e00792a3f",
+      "git_blob": "fd93d4424751a17cc89368039aecbd61e687ad81",
+      "role": "All-order collision-kernel mass and fixed-row-range rectangular norm transfer; bounded audit with the enlarged-S hypothesis"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "dabd6da99fb92eead7c99f941331ed9cbd2ec4ad",
+      "path": "standalone/2026-10-10-all-order-collision-removal/MOMENT_FRONTIER.md",
+      "bytes": 10349,
+      "sha256": "f4da10bd33acc50633353d2c038587ca474ea117cc2830f6c281dcd95ec6bc54",
+      "git_blob": "a120ffbc15140d47752a3716b3a895d763803243",
+      "role": "Moment-excess extraction and cofinal fixed-order quantifiers; separately reviewed in the kernel audit"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "0cc0428fedbbfc340044c7451b3d392c1da9a103",
+      "path": "standalone/2026-10-10-sextic-moment-conductor-core/CONDUCTOR_SECTORS.md",
+      "bytes": 24272,
+      "sha256": "c160bbb1b1d7c6bcc5514d496ad41f15fd17ea3d36206b0d05cfa0d7d6503983",
+      "git_blob": "30c359bf54b91e640786114d7946fd4df39b526c",
+      "role": "Positive absolute accounting for selected full-tuple conductor sectors; already snapshotted in the parent packet"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "cfa102748b26f840ccc4b963a660711424db0ec3",
+      "path": "standalone/2026-10-10-sextic-joint-core/DOUBLE_RESIDUAL_REDUCTION.md",
+      "bytes": 10943,
+      "sha256": "a5f7c8da63cc1367ca0678030a28cc289f0a7350bdbc9dd6e0743cbf0a093324",
+      "git_blob": "f441aa23114865adeb8caad90d712f7675cddb5b",
+      "role": "One-sided singleton periphery and full-tuple conductor combination; exact signed inequality recovered from its smooth residual square"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "cfa102748b26f840ccc4b963a660711424db0ec3",
+      "path": "standalone/2026-10-10-sextic-joint-core/INTERFACE_COMPARISON.md",
+      "bytes": 16228,
+      "sha256": "203df24a48e54cb088a28c1236c78569ae75ea84a6b589f72a30b35720cc8e4c",
+      "git_blob": "4373ac212f31f5472a1e83c69c8b28ec46547957",
+      "role": "Exact A2-to-mixed-theta interface; needed only to delimit the scope of the collision-kernel audit"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "9959364671f89b86f3992ec5ed5e19f804eb607b",
+      "path": "standalone/2026-10-10-sextic-critical-core/ANISOTROPIC_SINGLETON_CORES.md",
+      "bytes": 8894,
+      "sha256": "4854a01c2767a1dc4d7c67c490e5502bcad8935bce3089ba5f37adb1e6d02ea8",
+      "git_blob": "e3dfb64106249415eb4f3d1727186dd744535ca0",
+      "role": "Conditional all-order anisotropic estimate; retains the imported native inverse second moment and any optional uniform pointwise exponent"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "6498d6cc2eded03159c7332b25fd224ad07f89c1",
+      "path": "standalone/2026-10-10-sextic-moment-descent/FOURTH_MOMENT_ATTACK.md",
+      "bytes": 37899,
+      "sha256": "354e8f7f5f81d0f8821ea6e821f55546f9c9641ac0690def1ae373000b4b3d08",
+      "git_blob": "ef01306bf9453d1dd41c9e4ca50793cddac0a6e7",
+      "role": "Native second-moment adapter used only by the higher-order periphery, not by the classical small-gcd fourth reduction"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "6afd64e042ce7b59d550c3d76e9e2cca8b2c7379",
+      "path": "standalone/2026-10-10-generalized-inverse-moments/MELLIN_AND_SPIKES.md",
+      "bytes": 19873,
+      "sha256": "f3bdeb168714d838a4b13347cd353675d9644b9629041cdf7def78dc496162e3",
+      "git_blob": "99f75ea589ae544d788d438b50a25eff2787822a",
+      "role": "Universal smooth Mellin test nonvanishing in the right half-plane"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "6afd64e042ce7b59d550c3d76e9e2cca8b2c7379",
+      "path": "standalone/2026-10-10-generalized-inverse-moments/MASKS_AND_EULER_FACTORS.md",
+      "bytes": 19083,
+      "sha256": "5655f79355dd5c9a3bc357ed27304354a056b4415e12ed7907de7c969c932e60",
+      "git_blob": "6033b50c11a445281f351b39385607bdb289c64f",
+      "role": "Earlier Euler-removal and critical collision-kernel bounds for comparison"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "cfa102748b26f840ccc4b963a660711424db0ec3",
+      "path": "standalone/2026-10-07-openai-quasi-riemann-import/upstream/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex",
+      "bytes": 169005,
+      "sha256": "d9a8f15aa770cf883d0eabd2b775fad694ce20b44cba7928f5c0c9a6d8750d4d",
+      "git_blob": "2000faddbbebac5de0ecfe0b962534ea61a852d5",
+      "role": "Imported arithmetic framework and native second-moment dependency retained only where explicitly invoked",
+      "upstream_repository": "openai/math",
+      "upstream_commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+      "upstream_path": "preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex"
+    }
+  ]
+}
