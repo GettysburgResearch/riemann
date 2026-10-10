@@ -1,0 +1,25 @@
+{
+  "executed_refusals": [
+    {
+      "failure": "kernel:full_local_convolution",
+      "mode": "normal",
+      "mutation": "wrong_kernel"
+    },
+    {
+      "failure": "reconstruction:mixed_scale_identity",
+      "mode": "normal",
+      "mutation": "missing_conjugate_dilation"
+    },
+    {
+      "failure": "kernel:full_local_convolution",
+      "mode": "optimized",
+      "mutation": "wrong_kernel"
+    },
+    {
+      "failure": "reconstruction:mixed_scale_identity",
+      "mode": "optimized",
+      "mutation": "missing_conjugate_dilation"
+    }
+  ],
+  "status": "PASS"
+}

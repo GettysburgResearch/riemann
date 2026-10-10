@@ -1,0 +1,48 @@
+{
+  "files": {
+    "DUAL_CORE.md": {
+      "bytes": 8413,
+      "git_blob_sha1": "742ad2aa55e77b2411a74a077f8bb6ec80a2b435",
+      "sha256": "4d6ed54cbae03f80e3f97581125453c9dd0feb47a0b656371f35daf1aa20f974"
+    },
+    "PROOF.md": {
+      "bytes": 8891,
+      "git_blob_sha1": "1d01930886adcc784ebb783fb6cefb80e27d6447",
+      "sha256": "486de303e07cfc2f617de2f95c77ece22774d3c8bbd80747bf7caf707d87f2b8"
+    },
+    "README.md": {
+      "bytes": 3799,
+      "git_blob_sha1": "b786982612511e7c39851f4587391c55d131add3",
+      "sha256": "3935adb49ac98a253d61a93b9161f6ece5b0ab9af5ddc06555d9074531822f23"
+    },
+    "VALIDATION.md": {
+      "bytes": 5815,
+      "git_blob_sha1": "833309892268450e91394c17cd24ccc2fea28a03",
+      "sha256": "de5d9152632275133601550a64d13e9d035b5a32793c51066403d6df47745bdb"
+    },
+    "check_hermitian_disjoint.py": {
+      "bytes": 11592,
+      "git_blob_sha1": "ba9b97fa78ac6aab7b955383f78d1a2e833da354",
+      "sha256": "ddd1f55eba1388dfa348bcda436977fb539505e602a6c429d2fec6ae6c55d503"
+    },
+    "negative_controls.json": {
+      "bytes": 578,
+      "git_blob_sha1": "9c1903c5d11ada0b9d1a82397cd100141b3d8e50",
+      "sha256": "5b15764f26defa75810c3885a9c9e21ffbe432b8bc486670897d30141abe98ab"
+    },
+    "result.json": {
+      "bytes": 4019,
+      "git_blob_sha1": "f9f35d9e16b09b4e8addd65c27d3ffc1c82b20fd",
+      "sha256": "9bd43e76d906bfdab7a857b241294048c65b63c6248b052f6eae7d65b280e18d"
+    },
+    "tamper_controls.json": {
+      "bytes": 313,
+      "git_blob_sha1": "d2f91d0bd5bb197462062c515eb720fedff0686f",
+      "sha256": "9e9b3923fb9a5201d2f7286c6dffe13bb3f1fe69066c39d1fef7dd8ca4423ab0"
+    }
+  },
+  "normal_stdout_sha256": "9bd43e76d906bfdab7a857b241294048c65b63c6248b052f6eae7d65b280e18d",
+  "optimized_stdout_sha256": "9bd43e76d906bfdab7a857b241294048c65b63c6248b052f6eae7d65b280e18d",
+  "parent_commit": "e5d68883991b390798d993b0bafa7975ab801886",
+  "scope": "Add-only proposed Hermitian disjoint-prime reduction. Manifest excludes itself. No moment closure."
+}
