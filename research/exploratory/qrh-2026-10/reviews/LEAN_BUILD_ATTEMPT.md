@@ -160,6 +160,23 @@ built from a lattice theta construction), written into the challenge file itself
 Mathlib objects. Nobody has checked that they match the manuscript's finite-order Hecke
 `L`-functions of `Q(√−3)`.
 
+**Oct 1 Siegel-zero development (upstream solution `OAI.NumberTheory.SiegelZeros.Main`).**
+* After the regenerable `ir/*.setup.json` files were deleted to free disk (Lake still reported
+  the build up to date without them), `nice -n 19 lake build OAI.NumberTheory.SiegelZeros.Main`
+  built the missing 306 OAI modules (about 70k lines) plus their PNT+ dependencies:
+  "Build completed successfully (9242 jobs)". There were 0 errors and 0
+  `declaration uses 'sorry'` warnings (`results/lean_siegel_build_tail.log`).
+* `../lean/checks/SiegelUpstreamAxioms.lean` (`results/lean_siegel_upstream_axioms.log`) shows
+  both challenge theorems with axioms `[propext, Classical.choice, Quot.sound]`.
+* The environment loads 306 `OAI.NumberTheory.SiegelZeros.*` modules and **no**
+  `OAI.NumberTheory.DirichletL.*` module. So the Oct 1 formal proof does not use the 7/8
+  development.
+* The challenge statement, `∃ c > 0` with `c ≤ (1 − β) log q` for every real zero of every real
+  primitive nonprincipal `χ` mod `q ≥ 3`, therefore has two independent Lean proofs here:
+  * the Oct 1 route;
+  * the wave's three-line corollary of the 7/8 Dirichlet theorem (`../lean/SiegelFromSevenEighths.lean`).
+* A Lean `∃ c` proved classically says nothing about whether `c` is effective.
+
 **Corollaries of this wave** ([../lean/](../lean/README.md)):
 * clean build log: `results/lean_corollary_build.log`;
 * axioms: `results/lean_corollary_axioms.log`, all `[propext, Classical.choice, Quot.sound]`.
@@ -173,6 +190,7 @@ as in Addendum B, and their outcomes are recorded here as they complete:
 | upstream `HeckeSevenEighths.json` | `OAI.NumberTheory.DirichletL.Hecke.Nonvanishing` | pending |
 | wave `SiegelFromSevenEighths.json` (upstream `SiegelZeros` challenge module) | `OAI.QRHWave.SiegelFromSevenEighths` | pending |
 | wave `QRHWaveStrip.json` (challenge written in this wave) | `OAI.QRHWave.ZetaZeroStrip` | pending |
+| upstream `SiegelZeros.json` | `OAI.NumberTheory.SiegelZeros.Main` (Oct 1 route) | pending |
 
 ## 1. Verdict of the original attempt (superseded by Addendum A): PARTIAL
 
