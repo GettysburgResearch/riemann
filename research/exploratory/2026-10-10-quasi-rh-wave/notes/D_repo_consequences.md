@@ -176,3 +176,17 @@ an identity of functions holomorphic on $\mathbb C\setminus(-\infty,1]$ (the bra
 - Theorem A2, step $P^+(N'')\le2P^+(N')$: the injectivity of $p\mapsto\log(1+1/p)/\log p$ only excludes two new primes entering at the same $\epsilon$; the conclusion follows instead from $a_p$ nonincreasing in $p$, which forces the new prime to be the next prime $\le2x$. In the final inequality, $N'\le n\le N''\le N'^3$ gives $(\log N')^{\Theta-1}\le3^{1-\Theta}(\log n)^{\Theta-1}$ and $(\log\log N'')^2\le3(\log\log n)^2$. "First power-of-$\log n$ upper bound" means: as a consequence of any zero-free half-plane; the route is Robin's own and the only new ingredient is the imported theorem.
 - Theorem D1: "in particular $\xi(s)\ne0$ there" restates the hypothesis. Theorem D2 holds at every finite order by the Riesz–Herglotz representation, with no growth condition.
 - The symbol $\Theta$ here is the supremum over zeta's zeros; note L uses it for the supremum over all Dirichlet $L$-functions.
+
+## 5. Numerical illustration of Theorem A2 on colossally abundant numbers (scripts/ca_robin_envelope.py; ordinary floating point, not a certificate)
+
+$\Delta(N)=\sigma(N)/N-e^\gamma\log\log N$ on the CA number with largest prime $x$:
+
+| $x$ | $\log N$ | $\Delta(N)$ | $\Delta\sqrt{\log N}$ (RH scale) | $\Delta(\log N)^{1/8}/(\log\log N)^2$ (new envelope) |
+|---|---|---|---|---|
+| 97 | 100.5 | $-0.1401$ | $-1.405$ | $-0.0117$ |
+| 997 | 1015.7 | $-0.05124$ | $-1.633$ | $-0.00254$ |
+| 9973 | 10064.7 | $-0.01510$ | $-1.515$ | $-0.000563$ |
+| 99991 | 100199 | $-0.004634$ | $-1.467$ | $-0.000147$ |
+| 999983 | 1000035 | $-0.001410$ | $-1.410$ | $-0.0000415$ |
+
+The RH-scale product stays near $-1.4$ (consistent with the Ramanujan–Robin limit), while the unconditional envelope ratio is already $10^{-2}$–$10^{-5}$ and decreasing: the new bound is far from the truth but is the first unconditional envelope of power-of-$\log n$ type.
