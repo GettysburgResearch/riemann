@@ -1,0 +1,196 @@
+{
+ "hinz_linear": {
+  "label": "Hinz/[K] linear form R = min(1, 5(1-a)) (A = 5/2)",
+  "a_star": "4/5",
+  "uncapped": "29/31",
+  "uncapped_float": 0.9354838709677419,
+  "geom": [
+   "16/31",
+   "16/31",
+   "0"
+  ],
+  "cert": true,
+  "primal": true,
+  "capped": "29/30",
+  "capped_geom": [
+   "1/2",
+   "1/2",
+   "0"
+  ],
+  "optimal_energy": "29/31",
+  "closed_form_match": true
+ },
+ "hinz_exact": {
+  "label": "Hinz Satz A+B exact sigma-dependent form",
+  "a_star": "4/5",
+  "uncapped": "29/31",
+  "uncapped_float": 0.9354838709677419,
+  "geom": [
+   "16/31",
+   "16/31",
+   "0"
+  ],
+  "cert": true,
+  "primal": true,
+  "capped": "29/30",
+  "capped_geom": [
+   "1/2",
+   "1/2",
+   "0"
+  ],
+  "optimal_energy": "29/31",
+  "closed_form_match": true
+ },
+ "huxley_12_5": {
+  "label": "Huxley-type constant A = 12/5 (hypothetical for this family)",
+  "a_star": "19/24",
+  "uncapped": "69/74",
+  "uncapped_float": 0.9324324324324325,
+  "geom": [
+   "19/37",
+   "19/37",
+   "0"
+  ],
+  "cert": true,
+  "primal": true,
+  "capped": "23/24",
+  "capped_geom": [
+   "1/2",
+   "1/2",
+   "0"
+  ],
+  "optimal_energy": "69/74",
+  "closed_form_match": true
+ },
+ "huxley_sigma": {
+  "label": "Ingham/Huxley sigma-dependent shape (hypothetical for this family)",
+  "a_star": "7/9",
+  "uncapped": "51/55",
+  "uncapped_float": 0.9272727272727272,
+  "geom": [
+   "28/55",
+   "28/55",
+   "0"
+  ],
+  "cert": true,
+  "primal": true,
+  "capped": "17/18",
+  "capped_geom": [
+   "1/2",
+   "1/2",
+   "0"
+  ],
+  "optimal_energy": "51/55",
+  "closed_form_match": true
+ },
+ "A_7_3": {
+  "label": "A = 7/3 (hypothetical)",
+  "a_star": "11/14",
+  "uncapped": "40/43",
+  "uncapped_float": 0.9302325581395349,
+  "geom": [
+   "22/43",
+   "22/43",
+   "0"
+  ],
+  "cert": true,
+  "primal": true,
+  "capped": "20/21",
+  "capped_geom": [
+   "1/2",
+   "1/2",
+   "0"
+  ],
+  "optimal_energy": "40/43",
+  "closed_form_match": true
+ },
+ "A_9_4": {
+  "label": "A = 9/4 (hypothetical)",
+  "a_star": "7/9",
+  "uncapped": "51/55",
+  "uncapped_float": 0.9272727272727272,
+  "geom": [
+   "28/55",
+   "28/55",
+   "0"
+  ],
+  "cert": true,
+  "primal": true,
+  "capped": "17/18",
+  "capped_geom": [
+   "1/2",
+   "1/2",
+   "0"
+  ],
+  "optimal_energy": "51/55",
+  "closed_form_match": true
+ },
+ "A_2_DH": {
+  "label": "A = 2: density hypothesis for the full Hecke family (conjectural)",
+  "a_star": "3/4",
+  "uncapped": "11/12",
+  "uncapped_float": 0.9166666666666666,
+  "geom": [
+   "1/2",
+   "1/2",
+   "0"
+  ],
+  "cert": true,
+  "primal": true,
+  "capped": "11/12",
+  "capped_geom": [
+   "1/2",
+   "1/2",
+   "0"
+  ],
+  "optimal_energy": "11/12",
+  "closed_form_match": true
+ },
+ "A_3_2": {
+  "label": "A = 3/2: beyond full-family DH (hypothetical)",
+  "a_star": "2/3",
+  "uncapped": "19/21",
+  "uncapped_float": 0.9047619047619048,
+  "geom": [
+   "10/21",
+   "10/21",
+   "1/21"
+  ],
+  "cert": true,
+  "primal": true,
+  "capped": "19/21",
+  "capped_geom": [
+   "10/21",
+   "10/21",
+   "1/21"
+  ],
+  "optimal_energy": "19/21",
+  "closed_form_match": true
+ },
+ "A_1_rowDH": {
+  "label": "A = 1: = threshold_calculus 'DH' (row-family DH)",
+  "a_star": "1/2",
+  "uncapped": "167/192",
+  "uncapped_float": 0.8697916666666666,
+  "geom": [
+   "13/32",
+   "13/32",
+   "3/16"
+  ],
+  "cert": true,
+  "primal": true,
+  "capped": "167/192",
+  "capped_geom": [
+   "13/32",
+   "13/32",
+   "3/16"
+  ],
+  "optimal_energy": "167/192",
+  "closed_form_match": true
+ },
+ "needed_for_7_8": {
+  "a_star": "19/36",
+  "A": "18/17",
+  "value": "7/8"
+ }
+}
