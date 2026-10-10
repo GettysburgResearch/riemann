@@ -38,6 +38,21 @@ they are unreviewed.
      a mechanism ([RUNG_STRENGTH.md](RUNG_STRENGTH.md), [A2_LITERATURE.md](A2_LITERATURE.md)).
 8. **Zero density:** the imported 7/8 half-plane does not improve `A(σ)` on `[1/2, 7/8)`
    ([ZERO_DENSITY_CONDITIONAL.md](ZERO_DENSITY_CONDITIONAL.md)).
+9. **Verification (bounded agent reviews, exact SHA; not integration verdicts).**
+   * **Oct 5 (11/12):** three reviews together read every proof line and found no wrong step
+     ([reviews/OCT5_REVIEW_SUMMARY.md](reviews/OCT5_REVIEW_SUMMARY.md)).
+   * **Sep 30 (7/8):**
+     * contour Lemmas 10.3–10.6 hold below 7/8;
+     * Lemma 18.1, a sextic fourth moment that would be new as a standalone theorem, shows no error,
+       but its common-support step is unverified;
+     * 53/53 arithmetic checks pass.
+   * **Kintali (47/48):** Lemma 3 and App. B show no error.
+10. **What would move 7/8, priced in the paper's own model**
+    ([BILINEAR_B2.md](BILINEAR_B2.md); `results/R_shift_*.json`):
+    * a bilinear saving `ϑ` on the low side is worth `≈ 0.81ϑ`;
+    * a uniform row-count saving `r` is worth `≈ 0.15r`, down to the floor-bin value 0.8698;
+    * better energy alone is worth 0.
+    No known theorem supplies `ϑ > 0`.
 
 | File | Content |
 |---|---|
