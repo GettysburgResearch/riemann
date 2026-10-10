@@ -2,8 +2,8 @@
 
 ```text
 Status: VERIFICATION (formal build COMPLETED, Addendum A; comparator ACCEPTS the zeta challenge,
-  Addendum B, and the Dirichlet, Hecke, wave-Siegel and wave-strip challenges, Addendum C; the
-  upstream Oct 1 SiegelZeros and nanoda runs are recorded in Addendum C);
+  Addendum B, and the Dirichlet, Hecke, upstream Oct 1 SiegelZeros, wave-Siegel and wave-strip
+  challenges, Addendum C; the nanoda second-kernel run is recorded in Addendum C);
   no mathematical claim beyond what the build shows. Sections 1-8 are the original partial
   attempt and are kept unchanged as the record of that attempt
 Scope: Kernel build of the import closure of OAI.NumberTheory.DirichletL.Nonvanishing, the solution
@@ -181,7 +181,7 @@ float cross-checks, not a Lean comparison; Mathlib has no Hecke `L`-function to 
 * The challenge statement, `∃ c > 0` with `c ≤ (1 − β) log q` for every real zero of every real
   primitive nonprincipal `χ` mod `q ≥ 3`, therefore has two Lean proofs here that share no
   `OAI.*` module (they do share Mathlib, the kernel and the trust base):
-  * the Oct 1 route (built, axioms standard; comparator: see the table below);
+  * the Oct 1 route (built, axioms standard; comparator accepted, below);
   * the wave's three-line corollary of the 7/8 Dirichlet theorem (`../lean/SiegelFromSevenEighths.lean`;
     comparator accepted, below).
 * A Lean `∃ c` proved classically says nothing about whether `c` is effective.
@@ -215,7 +215,7 @@ met).
 | upstream `HeckeSevenEighths.json` | `OAI.NumberTheory.DirichletL.Hecke.Nonvanishing` | **accepted**: "Lean default kernel accepts the solution", 1096 s, exit 0 ([results/comparator_HeckeSevenEighths.log](results/comparator_HeckeSevenEighths.log)). The project-defined Hecke objects in the challenge file are compared as definitions, so the solution must use exactly them; their fidelity to the paper is the separate reading-level check [HECKE_LEAN_FIDELITY.md](HECKE_LEAN_FIDELITY.md) |
 | wave `SiegelFromSevenEighths.json` (upstream `SiegelZeros` challenge module) | `OAI.QRHWave.SiegelFromSevenEighths` | **accepted**: "Lean default kernel accepts the solution", 1082 s, exit 0 ([results/comparator_SiegelFromSevenEighths.log](results/comparator_SiegelFromSevenEighths.log)). The challenge is the upstream Oct 1 statement, unchanged; the solution is this wave's corollary of the 7/8 Dirichlet theorem |
 | wave `QRHWaveStrip.json` (challenge written in this wave) | `OAI.QRHWave.ZetaZeroStrip` | **accepted**: "Lean default kernel accepts the solution", 1104 s, exit 0 ([results/comparator_QRHWaveStrip.log](results/comparator_QRHWaveStrip.log)). The challenge file (`../lean/comparator/QRHWaveStrip.lean`) imports only Mathlib and states the strip in the binder shape of Mathlib's `RiemannHypothesis` |
-| upstream `SiegelZeros.json` | `OAI.NumberTheory.SiegelZeros.Main` (Oct 1 route) | pending |
+| upstream `SiegelZeros.json` | `OAI.NumberTheory.SiegelZeros.Main` (Oct 1 route) | **accepted**: "Lean default kernel accepts the solution", 900 s, exit 0 ([results/comparator_SiegelZeros.log](results/comparator_SiegelZeros.log)). Its solution closure contains no `OAI.NumberTheory.DirichletL.*` module |
 | wave `QRHWaveDirichletStrip.json` (challenge written in this wave; Mathlib-only) | `OAI.QRHWave.DirichletZeroStrip` | queued after the nanoda run |
 | `QuasiRiemannHypothesisNanoda.json` (upstream zeta challenge with `enable_nanoda: true`) | `OAI.NumberTheory.DirichletL.Nonvanishing` | queued: a **second, independent kernel**. nanoda_lib 0.4.19 (ammkrn/nanoda_lib@3a24072) was built here with cargo 1.97.0 (`cargo build --release`, 32 s) and is passed to comparator through `COMPARATOR_NANODA` |
 
