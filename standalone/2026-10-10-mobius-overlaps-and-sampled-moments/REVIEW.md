@@ -2,7 +2,21 @@
 
 This is a proposed standalone research packet. The four mathematical notes and their diagnostics are frozen by the content hashes in [PROVENANCE.json](PROVENANCE.json). The root has read and reconstructed every proof, and nonauthor agents have completed their audits of the load-bearing components. Their detailed reports distinguish analytic deductions, imported premises and finite diagnostics.
 
-The initial published commit freezes the full intended mathematical source, including the README's compositions and the checker/result files. Exact-commit receipts are appended after reviewers retrieve that published source. Until those receipts identify the source commit, this file records only the content freeze and the already completed local review work. Later review or publication metadata does not silently extend the scope of an earlier verdict.
+The full intended mathematical source was first published in [PR #926](https://github.com/GettysburgResearch/riemann/pull/926) at commit [a0a31c4f9775c5516a78d5c9eb69088b9c83595a](https://github.com/GettysburgResearch/riemann/commit/a0a31c4f9775c5516a78d5c9eb69088b9c83595a), tree 5082fe79296a9d701bef4e8e88691b80e818cb33. That source includes the complete proofs, the README's compositions, and all checker/result files. The 14 frozen mathematical and diagnostic artifacts are identified in PROVENANCE.json.
+
+After publication, the nonauthor reviewers fetched their assigned source files at that exact commit, recomputed their hashes and Git blob identities, and confirmed byte identity with the manuscripts covered by their previous reviews. The resulting receipts below carry only those prior scoped verdicts onto the published source. Their source authentication is separate from a new checker execution or a review of imported analytic foundations.
+
+The later commit appends review/publication metadata and updates this review record. It preserves every frozen mathematical and diagnostic byte. The receipts remain explicitly bound to the source commit; later metadata does not silently extend their verdicts.
+
+## Exact published-source receipts
+
+| Reviewer | Published-source scope | Receipt | Verdict |
+| --- | --- | --- | --- |
+| Amplification agent | Quadratic proof, reflected proof and physical all-row extension, their previously audited checkers/results, and the packet README | [Exact source seal](reviews/exact_commit_amplification.md) | PASS within prior review scopes |
+| Moment-obstructions agent | Sampling proof; checker/result identities authenticated without a new checker review or replay | [Exact sampling seal](reviews/exact_commit_sampling.md) | PASS within prior proof scope |
+| Theta-closure agent | Overlap proof; checker/result identities authenticated without a new checker review or replay | [Exact overlap seal](reviews/exact_commit_overlap.md) | PASS within prior proof scope |
+
+The root independently fetched all 28 changed source files and matched their complete UTF-8 contents and Git blob identities to the intended payload. The source commit has the specified single parent and tree. Its diff contains the 27 new packet files and four added navigation lines in the root README, with no deletions. [PUBLICATION.json](PUBLICATION.json) records this transport check and the appended receipt identities. These checks authenticate publication; they do not prove an analytic theorem.
 
 ## Author and reviewer boundaries
 

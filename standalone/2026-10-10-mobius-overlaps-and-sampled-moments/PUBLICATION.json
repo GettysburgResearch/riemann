@@ -1,0 +1,293 @@
+{
+  "schema_version": 1,
+  "repository": "GettysburgResearch/riemann",
+  "pr_number": 926,
+  "pr_url": "https://github.com/GettysburgResearch/riemann/pull/926",
+  "branch": "research/mobius-overlaps-sampled-moments-20261010",
+  "base_branch": "research/oscillating-overlaps-averaged-moments-20261010",
+  "base_commit": "6b4723042b3d250024eef45cb1924f88f28e902c",
+  "source_commit": "a0a31c4f9775c5516a78d5c9eb69088b9c83595a",
+  "source_tree": "5082fe79296a9d701bef4e8e88691b80e818cb33",
+  "sequence": [
+    "Publish the full intended mathematical source as the source commit.",
+    "Reviewers fetch their assigned files from that exact published commit and authenticate unchanged reviewed contents.",
+    "Append the three exact-commit receipts and this publication record; update REVIEW.md in a metadata-only successor.",
+    "Fetch the final published payload and confirm every frozen artifact still has its source identity; record final head and verification in the PR description."
+  ],
+  "source_transport_verification": {
+    "source_commit": "a0a31c4f9775c5516a78d5c9eb69088b9c83595a",
+    "source_tree": "5082fe79296a9d701bef4e8e88691b80e818cb33",
+    "files": [
+      {
+        "path": "README.md",
+        "bytes": 10248,
+        "sha256": "0197b4029f543356ee4ec07068caf2160a16aaaee4b5c57bd4b7f95c6894c417",
+        "git_blob_sha": "778f7641c6edc5fa95aed6bc8d0daed50bf1de15",
+        "content_matches": true,
+        "git_blob_matches": true
+      },
+      {
+        "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/JOINT_REFLECTED_BLOCKS.md",
+        "bytes": 37494,
+        "sha256": "c75be63f43de6efb0d9f820da008f256afc53351fdbfe38870f9e97207955bd5",
+        "git_blob_sha": "626c3c7fea879065f8a41891d5e0a25ab0e15aa1",
+        "content_matches": true,
+        "git_blob_matches": true
+      },
+      {
+        "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/MOBIUS_OVERLAP_TAILS.md",
+        "bytes": 43009,
+        "sha256": "980c0e5d4e82e4c6105a21db37aeeb84ff19da9c985be571002fe4f3e9bfba04",
+        "git_blob_sha": "15d6694e748b6e6bca3a7dad1e37045f98cbcde8",
+        "content_matches": true,
+        "git_blob_matches": true
+      },
+      {
+        "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/PROVENANCE.json",
+        "bytes": 10087,
+        "sha256": "93bd8016c0b2cdd41ee3541650e345edff49894a717fe1056c3c679c9522ec75",
+        "git_blob_sha": "2675e720c6e104af6da35070adcfd0e3ed5f1fe6",
+        "content_matches": true,
+        "git_blob_matches": true
+      },
+      {
+        "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/QUADRATIC_INVERSE_PRODUCTS.md",
+        "bytes": 15001,
+        "sha256": "7cc4f91049d6e8b22a24080099a2947e4f30d5be68ea050bb7bcdf52a94c0696",
+        "git_blob_sha": "efd637c097693a45ba09a74cc544f28db59b80df",
+        "content_matches": true,
+        "git_blob_matches": true
+      },
+      {
+        "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/README.md",
+        "bytes": 16403,
+        "sha256": "63dc04d705bade6c4a3d7714ac82dfee9bfe96da4bbe1bce2ff646c4e6772cf3",
+        "git_blob_sha": "5125b610fc06d1607b66acc385190d9352b34903",
+        "content_matches": true,
+        "git_blob_matches": true
+      },
+      {
+        "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/REVIEW.md",
+        "bytes": 4821,
+        "sha256": "560e42bfcdcd537158ad1af6a90fab8b8d5e9dcb5e9a649b62e9e28d807c5f21",
+        "git_blob_sha": "d17522667779be5b09a738f5806796b389e640f2",
+        "content_matches": true,
+        "git_blob_matches": true
+      },
+      {
+        "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/SAMPLED_MOMENT_CRITERION.md",
+        "bytes": 28877,
+        "sha256": "18bf2fdad438eb21ae3318eba7d42e9c03803b2dd1abc4d8f6448fb3b04499de",
+        "git_blob_sha": "ccb083b8bfd2e3c015c9a8aad5b27ba2754243a4",
+        "content_matches": true,
+        "git_blob_matches": true
+      },
+      {
+        "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/VALIDATION.md",
+        "bytes": 7550,
+        "sha256": "e30edbb64b8e079045507c4c073a6000c2a6b1772574ef14124934ae4f2f6bc0",
+        "git_blob_sha": "b156efa1a75eb07666249bb038edb03cfb5a6247",
+        "content_matches": true,
+        "git_blob_matches": true
+      },
+      {
+        "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/checks/check_mobius_overlaps.py",
+        "bytes": 18756,
+        "sha256": "3baada57f5ae301e8d4d374e086fd85b03c03b99f85c01ac7c5d5c8205b8c838",
+        "git_blob_sha": "b3911f4b6dc3055a8f34c8cb89c1b0e7be18de55",
+        "content_matches": true,
+        "git_blob_matches": true
+      },
+      {
+        "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/checks/check_quadratic_masks.py",
+        "bytes": 6768,
+        "sha256": "622af30d6efd58eea1703b329799a9c6812568c12296e36d1d71eed682584ad0",
+        "git_blob_sha": "e6777a216089bae8e5b490d4e3a029f6479dbb6a",
+        "content_matches": true,
+        "git_blob_matches": true
+      },
+      {
+        "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/checks/check_reflected_blocks.py",
+        "bytes": 19678,
+        "sha256": "f156b99c452f514b0bcf0ae4913d8becb24a64612746d06a5e0143ccb8027266",
+        "git_blob_sha": "1eef8195a803117c15fef086fc6b9c06d65c9ac3",
+        "content_matches": true,
+        "git_blob_matches": true
+      },
+      {
+        "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/checks/check_scale_sampling.py",
+        "bytes": 14469,
+        "sha256": "1d1133e4f920b0e5c350ffc661d37bd7f852e53609a0a13e9400dc09133bdbe5",
+        "git_blob_sha": "8d077b27784962d18f2dcc59394addfca6d53726",
+        "content_matches": true,
+        "git_blob_matches": true
+      },
+      {
+        "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/results/mobius_overlaps.json",
+        "bytes": 9002,
+        "sha256": "65457f1cf57581604cc8bda4ac93e8792e7fcd9f664cf3c2b684d3322758f013",
+        "git_blob_sha": "2fc871b6806d3134ba0309d88caad677f38401c3",
+        "content_matches": true,
+        "git_blob_matches": true
+      },
+      {
+        "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/results/quadratic_masks.json",
+        "bytes": 1545,
+        "sha256": "11abaa05d4e6399ee04f206632af0ca498c84a6fc655106c39e7674d70c30cfe",
+        "git_blob_sha": "48e3a9a94c1353d16732a3862ce9f793755c35f4",
+        "content_matches": true,
+        "git_blob_matches": true
+      },
+      {
+        "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/results/reflected_blocks.json",
+        "bytes": 7498,
+        "sha256": "19ec6c46f7bcda904b4f3efb549d731c780b203f448a6125774dbb39bc0870bb",
+        "git_blob_sha": "69d4b01d5d16797706cee664e4cae2e72716a5f7",
+        "content_matches": true,
+        "git_blob_matches": true
+      },
+      {
+        "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/results/release_replay.json",
+        "bytes": 3050,
+        "sha256": "3f59ba217dc24e048d77e9137d4ef767530e6c476db27f2ddd333fe10c194c76",
+        "git_blob_sha": "61fe9ba2d97d15d9d5d0ea3f8eaec1fa33f97ed6",
+        "content_matches": true,
+        "git_blob_matches": true
+      },
+      {
+        "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/results/scale_sampling.json",
+        "bytes": 3459,
+        "sha256": "bff9dbf6e96007dcca74a4dda275a7f1b1ec7fcce4c77d40008660d3c0eb09a9",
+        "git_blob_sha": "3e5598014f3710519ed13d8e560298d10726b77a",
+        "content_matches": true,
+        "git_blob_matches": true
+      },
+      {
+        "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/reviews/overlap_review.md",
+        "bytes": 12084,
+        "sha256": "b4578527422bfeca44d1f2ff2aa5accaa9a144f82632d0b60defcb550ea1cc80",
+        "git_blob_sha": "3281fb37e0f04c7f241182ea6f3e001563277606",
+        "content_matches": true,
+        "git_blob_matches": true
+      },
+      {
+        "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/reviews/quadratic_review.md",
+        "bytes": 12234,
+        "sha256": "ff516d0bb256b00bed79921c38e79bc3c128c381bcdc1a8e5d4f38bb4afa841c",
+        "git_blob_sha": "ac4328623b230c9752c7dd77402bebc2bb504e3b",
+        "content_matches": true,
+        "git_blob_matches": true
+      },
+      {
+        "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/reviews/readme_review.md",
+        "bytes": 7627,
+        "sha256": "fb829d38b22128b71c2d9b24aba3146ac46dc9504de6fc0562f5a08877a08762",
+        "git_blob_sha": "218b4304b51018517c4403463b051b3978f6c1da",
+        "content_matches": true,
+        "git_blob_matches": true
+      },
+      {
+        "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/reviews/reflected_blocks_review.md",
+        "bytes": 14802,
+        "sha256": "cca571ec0ab061e2197b435b6568a97868f5b5f1e9ee91fa65e25455197a320b",
+        "git_blob_sha": "22014baaf4efdea1a2a8430c038ef6fbcacb27b7",
+        "content_matches": true,
+        "git_blob_matches": true
+      },
+      {
+        "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/reviews/reflected_checker_review.md",
+        "bytes": 6608,
+        "sha256": "242d31d330ea81c321439d19865ab2e7a30d0e8e9f3886878dc7a099a8a84358",
+        "git_blob_sha": "32da298978597f76d077e6bfcf79a2463086dbe0",
+        "content_matches": true,
+        "git_blob_matches": true
+      },
+      {
+        "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/reviews/root_audit.md",
+        "bytes": 6980,
+        "sha256": "90e74735bc37127e32ca696288b332920c93a940f9ffe89c1186e31928bf8c33",
+        "git_blob_sha": "1f82d3c234d47b72719a064a35b7921df0a19214",
+        "content_matches": true,
+        "git_blob_matches": true
+      },
+      {
+        "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/reviews/sampling_review.md",
+        "bytes": 4393,
+        "sha256": "c97fb1caaad6d1fe803e800dd020ea92624e9833b8e8452f83f7c2f6b3dfba94",
+        "git_blob_sha": "715d91392525e502a805f76ebfde0c1a6e61d8ab",
+        "content_matches": true,
+        "git_blob_matches": true
+      },
+      {
+        "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/reviews/sibling_924_context.md",
+        "bytes": 4988,
+        "sha256": "cc0d8c120316e289da8aafd81afe09d497784e2dbd18b44853aced549eb1d2c0",
+        "git_blob_sha": "4885d81c5e90a8a384f9ddc66d3292bcecb73a85",
+        "content_matches": true,
+        "git_blob_matches": true
+      },
+      {
+        "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/sources/attack3_moment_sources.json",
+        "bytes": 2182,
+        "sha256": "88a5b01aeb7add49461a96d73f7fb08727f85bd4c6d1424aef5dd15547c75fef",
+        "git_blob_sha": "ac5b3154feb06c3b6ec743f3c5fa98659624fc86",
+        "content_matches": true,
+        "git_blob_matches": true
+      },
+      {
+        "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/sources/consulted_repository_sources.json",
+        "bytes": 23385,
+        "sha256": "b1559fc95b00664c3e2e3c239ca6f1698d8b8e8a3e0201825461caec6e10c3b5",
+        "git_blob_sha": "703920c7463978c4d24b1fe0944221f495f8b405",
+        "content_matches": true,
+        "git_blob_matches": true
+      }
+    ],
+    "status": "PASS",
+    "errors": [],
+    "parent_verified": true,
+    "tree_verified": true,
+    "diff_verified": true,
+    "root_navigation_added_lines": 4
+  },
+  "scoped_review_status": "All three nonauthor exact-commit identity seals passed. Their underlying mathematical scopes and authored-versus-reviewed boundaries are preserved in the linked reports.",
+  "metadata_artifacts": [
+    {
+      "path": "REVIEW.md",
+      "bytes": 6882,
+      "sha256": "69ddebbc3849acce37e9af06b2346dc88f15ab6d4d36999efd770aac43744d50",
+      "git_blob_sha": "375d544e6881351d3b45fc13bbe4e86a29bda29c"
+    },
+    {
+      "path": "reviews/exact_commit_amplification.md",
+      "bytes": 13025,
+      "sha256": "65b44a1b6f82ff419a14acdcead0abf8c5c1b8c690317932c50e0d08a79fd251",
+      "git_blob_sha": "e7cd5a1f51ce93814901fd8253ec4a5fbe435be9"
+    },
+    {
+      "path": "reviews/exact_commit_sampling.md",
+      "bytes": 5139,
+      "sha256": "c01fcbd78f5cdcfb3bc4d91bcd4a303fe0968c579aa2bd9f4cb1f649e4f117db",
+      "git_blob_sha": "35d309f97a40fad8ad43e8747cba81dd8e0a4efe"
+    },
+    {
+      "path": "reviews/exact_commit_overlap.md",
+      "bytes": 7325,
+      "sha256": "86f741ec7ecbede22feeff9ff6511818c1170c8bbd21abf54f7dc9ba05d858f8",
+      "git_blob_sha": "6384e8715173e7acacde63fc464451e08c97eae4"
+    }
+  ],
+  "metadata_successor_contract": {
+    "parent": "a0a31c4f9775c5516a78d5c9eb69088b9c83595a",
+    "allowed_changed_paths": [
+      "REVIEW.md",
+      "PUBLICATION.json",
+      "reviews/exact_commit_amplification.md",
+      "reviews/exact_commit_sampling.md",
+      "reviews/exact_commit_overlap.md"
+    ],
+    "frozen_artifacts_unchanged": 14,
+    "hash_cycle_policy": "This file does not hash itself or predict the containing commit. The PR description records the final verified successor identity."
+  },
+  "limits": "Git hashes and exact returned bytes authenticate publication. Scoped AI-agent reviews and exact finite diagnostics are distinct from external human acceptance, proof-assistant validation, imported analytic assumptions, or a proof of the full moment hypothesis."
+}
