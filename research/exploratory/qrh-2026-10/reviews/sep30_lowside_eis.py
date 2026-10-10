@@ -415,8 +415,8 @@ for Clabel, Cprimes in (("C=1", []), ("C=pi_7", [p7a])):
                 elems.append(n)
     for K in (100, 1000, 10000, Kmax):
         brute = sum(1 for n in elems if n <= K)
-        # structural count: units (6) x lambda^i (i<6) x 2^j (j<6) x C-part^l (l<6) x a1^6, a1 ideal
-        # prime to S and C:  (k) = a1^6 e  with q_{a1}^6 q_e <= K
+        # structural count (manuscript 8535-8544): (k) = a1^6 e, e sixth-power-free supported on
+        # S u C (lambda^i 2^j pi^l, i,j,l < 6), a1 an arbitrary nonzero ideal; elements = 6 x ideals
         struct = 0
         eS = [3 ** i * 4 ** j * (E.norm(p7a) ** l if Cprimes else 1)
               for i in range(6) for j in range(6) for l in (range(6) if Cprimes else [0])]
@@ -431,11 +431,7 @@ for Clabel, Cprimes in (("C=1", []), ("C=pi_7", [p7a])):
                     nn = A_ * A_ - A_ * B_ + B_ * B_
                     if nn == 0 or nn ** 6 * qe > K:
                         continue
-                    if nn % 3 == 0 or nn % 2 == 0:
-                        continue
-                    if Cprimes and E.divides(p7a, (A_, B_)):
-                        continue
-                    na += 1
+                    na += 1                      # a1 unrestricted: (k) = a1^6 e, e 6th-power-free on S u C
             struct += na                     # na counts elements = 6 x ideals; units absorbed here
         COUNTS[(Clabel, K)] = (brute, struct)
         check(f"exceptional frequencies {Clabel}, K={K}: brute force = structural count a1^6 e",
