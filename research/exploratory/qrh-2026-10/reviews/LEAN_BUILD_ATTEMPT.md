@@ -157,8 +157,11 @@ OAI.SevenEighths.HeckeFamily.LFunction_ne_zero_of_seven_eighths_lt_re : ∀ (χ 
 
 The Hecke statement uses project-defined objects (`HeckeFamily.Character` and an `LFunction`
 built from a lattice theta construction), written into the challenge file itself. They are not
-Mathlib objects. Nobody has checked that they match the manuscript's finite-order Hecke
-`L`-functions of `Q(√−3)`.
+Mathlib objects. A later reading-level check ([HECKE_LEAN_FIDELITY.md](HECKE_LEAN_FIDELITY.md)) finds
+that `Character` is exactly a ray class character of `Q(ω)`, trivial on the six units, and that
+`LFunction χ` is the analytic continuation of its Hecke `L`-function. So the theorem matches the
+Hecke clause of the paper's Thm 1.1, with the same pole exception. That check is reading plus
+float cross-checks, not a Lean comparison; Mathlib has no Hecke `L`-function to compare against.
 
 **Oct 1 Siegel-zero development (upstream solution `OAI.NumberTheory.SiegelZeros.Main`).**
 * After the regenerable `ir/*.setup.json` files were deleted to free disk (Lake still reported

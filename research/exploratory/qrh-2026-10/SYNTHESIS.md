@@ -50,7 +50,10 @@ integration verdict.
        the Hecke-family version gives only `[propext, Classical.choice, Quot.sound]`. The
        zeta and Dirichlet statements are about Mathlib's own `riemannZeta` and
        `DirichletCharacter.LFunction`. The Hecke statement uses project-defined characters and
-       `L`-functions, whose fidelity to the paper is unchecked.
+       `L`-functions. A reading-level check finds that they are exactly the finite-order Hecke
+       `L`-functions of `Q(√−3)` (ray class characters, trivial on units), with the same pole
+       exception as the paper's Thm 1.1 ([reviews/HECKE_LEAN_FIDELITY.md](reviews/HECKE_LEAN_FIDELITY.md);
+       no Lean run, float cross-checks to about 1e-11).
        **Comparator accepts the upstream 7/8 zeta and Dirichlet challenges: "Lean default kernel
        accepts the solution"** ([reviews/LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md), Addenda A–B).
        Its trust assumptions are listed there; in particular the solution was precompiled

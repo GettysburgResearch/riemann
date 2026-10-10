@@ -1,0 +1,88 @@
+P parity decomposition: {1: {'norm_identity': True, 'box_covered_once': True, 'max_multiplicity': 1, 'f0_count': 1, 'f0_cell': (0, 0, 0)}, 2: {'norm_identity': True, 'box_covered_once': True, 'max_multiplicity': 1, 'f0_count': 1, 'f0_cell': (0, 0, 0)}, 3: {'norm_identity': True, 'box_covered_once': True, 'max_multiplicity': 1, 'f0_count': 1, 'f0_cell': (0, 0, 0)}, 4: {'norm_identity': True, 'box_covered_once': True, 'max_multiplicity': 1, 'f0_count': 1, 'f0_cell': (0, 0, 0)}, 5: {'norm_identity': True, 'box_covered_once': True, 'max_multiplicity': 1, 'f0_count': 1, 'f0_cell': (0, 0, 0)}, 6: {'norm_identity': True, 'box_covered_once': True, 'max_multiplicity': 1, 'f0_count': 1, 'f0_cell': (0, 0, 0)}}
+
+=== A_trivial_mod_1  (N = 1; modulus = top ideal, O/m zero ring, residue = 1; zeta_K)
+  R: {'unit_trivial': True, 'nonunit_zero_mismatches': 0, 'multiplicativity_failures': 0, 'weight_sum': (1+0j), 'principal_residue_eq_1': True}
+  Lean pair: f0 = 1+0j, g0 = 1.15470053838+0j, eps_i = 0.57735
+  F(t) vs G(1/t)/t rel err at t=0.37, 0.8: [np.float64(1.4228889569261472e-16), np.float64(2.981538862231035e-16)]
+  s=2: M1 1.285190955484+0.000000000000j
+       M2 1.285190955478+0.000000000000j (raw 1.285190350878+0.000000000000j, X=1000000)
+       Euler 1.285190468402+0.000000000000j
+       mpmath 1.285190955484+0.000000000000j
+  s=1.5: M1 1.839029289152+0.000000000000j   mpmath 1.839029289152+0.000000000000j  diff 0.00e+00
+  s=0.9: M1 -5.486816557972+0.000000000000j   mpmath -5.486816557972+0.000000000000j  diff 8.88e-16
+  s=(0.95+3j): M1 0.753602976123+0.198041139340j   mpmath 0.753602976123+0.198041139340j  diff 4.11e-15
+  s=(0.876+6j): M1 1.399587394838-0.207900749098j   mpmath 1.399587394838-0.207900749098j  diff 3.13e-13
+
+=== B_principal_mod_2  (N = 2; imprimitive principal mod (2): zeta_K(s)(1 - 4^-s))
+  R: {'unit_trivial': True, 'nonunit_zero_mismatches': 0, 'multiplicativity_failures': 0, 'weight_sum': (3+0j), 'principal_residue_eq_1': True}
+  Lean pair: f0 = 0+0j, g0 = 0.866025403784+0j, eps_i = 0.144338
+  F(t) vs G(1/t)/t rel err at t=0.37, 0.8: [np.float64(4.303943221472486e-16), np.float64(1.6653345369377348e-16)]
+  s=2: M1 1.204866520766+0.000000000000j
+       M2 1.204866520760+0.000000000000j (raw 1.204866067310+0.000000000000j, X=1000000)
+       Euler 1.204866064127+0.000000000000j
+       mpmath 1.204866520766+0.000000000000j
+  s=1.5: M1 1.609150628008+0.000000000000j   mpmath 1.609150628008+0.000000000000j  diff 0.00e+00
+  s=0.9: M1 -3.911142269394+0.000000000000j   mpmath -3.911142269394+0.000000000000j  diff 8.88e-16
+  s=(0.95+3j): M1 0.904889058747+0.054162183979j   mpmath 0.904889058747+0.054162183979j  diff 7.42e-16
+  s=(0.876+6j): M1 1.640669506776+0.136118008933j   mpmath 1.640669506776+0.136118008933j  diff 5.11e-14
+
+=== C_chi-4_o_Norm_mod_4  (N = 4; quadratic, base change of chi_-4: L(chi_-4) L(chi_-4 chi_-3))
+  R: {'unit_trivial': True, 'nonunit_zero_mismatches': 0, 'multiplicativity_failures': 0, 'weight_sum': 0j, 'principal_residue_eq_1': False}
+  Lean pair: f0 = 0+0j, g0 = 0+0j, eps_i = 0.0360844
+  F(t) vs G(1/t)/t rel err at t=0.37, 0.8: [np.float64(2.6284186826568945e-16), np.float64(2.7755575615628914e-16)]
+  s=2: M1 0.869895388368+0.000000000000j
+       M2 0.869895388377+0.000000000000j (raw 0.869895388377+0.000000000000j, X=1000000)
+       Euler 0.869895388789+0.000000000000j
+       mpmath 0.869895388368+0.000000000000j
+  s=1.5: M1 0.768577882465+0.000000000000j   mpmath 0.768577882465+0.000000000000j  diff 0.00e+00
+  s=0.9: M1 0.552095678735+0.000000000000j   mpmath 0.552095678735+0.000000000000j  diff 1.11e-16
+  s=(0.95+3j): M1 1.264718859263-0.401820063856j   mpmath 1.264718859263-0.401820063856j  diff 9.49e-16
+  s=(0.876+6j): M1 0.423976462365-0.156254160366j   mpmath 0.423976462365-0.156254160366j  diff 1.49e-13
+
+=== D_chi5_o_Norm_mod_5  (N = 5; quadratic, base change of (./5): L(chi_5) L(chi_5 chi_-3))
+  R: {'unit_trivial': True, 'nonunit_zero_mismatches': 0, 'multiplicativity_failures': 0, 'weight_sum': 0j, 'principal_residue_eq_1': False}
+  Lean pair: f0 = 0+0j, g0 = -3.46944695195e-17+0j, eps_i = 0.023094
+  F(t) vs G(1/t)/t rel err at t=0.37, 0.8: [np.float64(5.084162564486188e-16), np.float64(5.551115123125783e-16)]
+  s=2: M1 0.915686838621+0.000000000000j
+       M2 0.915686838603+0.000000000000j (raw 0.915686838603+0.000000000000j, X=1000000)
+       Euler 0.915686838755+0.000000000000j
+       mpmath 0.915686838621+0.000000000000j
+  s=1.5: M1 0.842442613191+0.000000000000j   mpmath 0.842442613191+0.000000000000j  diff 1.11e-16
+  s=0.9: M1 0.656240463596+0.000000000000j   mpmath 0.656240463596+0.000000000000j  diff 2.22e-16
+  s=(0.95+3j): M1 0.784364130259+0.043019862748j   mpmath 0.784364130259+0.043019862748j  diff 2.74e-15
+  s=(0.876+6j): M1 0.733500513014-0.202307771683j   mpmath 0.733500513014-0.202307771683j  diff 7.04e-14
+
+=== E_quadratic_mod_(4+w)_N13  (N = 13; quadratic ray character mod a split prime; not Galois-invariant)
+  R: {'unit_trivial': True, 'nonunit_zero_mismatches': 0, 'multiplicativity_failures': 0, 'weight_sum': 0j, 'principal_residue_eq_1': False}
+  Lean pair: f0 = 0+0j, g0 = -6.93889390391e-18+0j, eps_i = 0.00341627
+  F(t) vs G(1/t)/t rel err at t=0.37, 0.8: [np.float64(1.493252937154877e-15), np.float64(2.55351295663786e-15)]
+  s=2: M1 0.841385544202+0.000000000000j
+       M2 0.841385544216+0.000000000000j (raw 0.841385544216+0.000000000000j, X=1000000)
+       Euler 0.841385544296+0.000000000000j
+  s=1.5: M1 0.727173308875+0.000000000000j
+  s=0.9: M1 0.501553031150+0.000000000000j
+  s=(0.95+3j): M1 1.680431400665-0.370146819410j
+  s=(0.876+6j): M1 0.641537722377+0.417405469904j
+
+=== F_cubic_mod_(5+2w)_N19  (N = 19; cubic residue symbol mod pi, N pi = 19 = 1 mod 9, so trivial on units)
+  R: {'unit_trivial': True, 'nonunit_zero_mismatches': 0, 'multiplicativity_failures': 0, 'weight_sum': (-1.509903313490213e-14+3.9968028886505635e-14j), 'principal_residue_eq_1': False}
+  Lean pair: f0 = 0+0j, g0 = -5.03069808033e-17+1.45716771982e-16j, eps_i = 0.00159931
+  F(t) vs G(1/t)/t rel err at t=0.37, 0.8: [np.float64(1.2696972058606467e-15), np.float64(1.4161135420081074e-15)]
+  s=2: M1 0.897454431175-0.037752414911j
+       M2 0.897454431223-0.037752414874j (raw 0.897454431223-0.037752414874j, X=400000)
+       Euler 0.897454431495-0.037752415093j
+  s=1.5: M1 0.807036370935-0.048603999254j
+  s=0.9: M1 0.598446420257-0.052116271413j
+  s=(0.95+3j): M1 0.830327471263-0.136501996952j
+  s=(0.876+6j): M1 1.015264543910-0.025120787967j
+
+=== NC_cubic_mod_(3+w)_N7_not_unit_trivial  (N = 7; violates unit_trivial; not a Character)
+  R: {'unit_trivial': False, 'nonunit_zero_mismatches': 0, 'multiplicativity_failures': 0, 'weight_sum': (-1.887379141862766e-15+5.10702591327572e-15j), 'principal_residue_eq_1': False}
+  Lean pair: f0 = 0+0j, g0 = -4.85722573274e-17+1.04083408559e-16j, eps_i = 0.0117827
+  F(t) vs G(1/t)/t rel err at t=0.37, 0.8: [np.float64(4.685079946532684e-16), np.float64(3.3224030688586853e-16)]
+  s=2: M1 -0.000000000000+0.000000000000j
+       M2 -0.000000000000+0.000000000000j (raw -0.000000000000+0.000000000000j, X=1000000)
+       Euler 0.910204605236+0.054768504385j
+
+residue at 1 (trivial): Lean reading 0.604599788078073, class number formula 0.604599788078073
+done in 6.9 s
