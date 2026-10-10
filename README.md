@@ -79,6 +79,10 @@ The pages above describe reviewed components at their recorded sources, with lat
 
 [The next moment packet](standalone/2026-10-10-oscillating-overlaps-and-averaged-moments/README.md) proves a sharper cubic common-factor range in the fourth moment and specified higher moments, uniform weighted-energy equivalence for exact sixth-power replicas, and a scale-averaged moment criterion with the same conditional zero-free extraction. It also gives the factorwise theta reflection with its explicit reciprocal angular Hecke L-factor. The nearly coprime short-row moment remains open; this is proposed research with complete proofs, scoped reviews, and exact finite checks, not a new zero-free boundary.
 
+## Follow-up research: Möbius overlaps and sampled moments
+
+[The Möbius-overlap and sampling packet](standalone/2026-10-10-mobius-overlaps-and-sampled-moments/README.md) gives stronger designated-factor tails under explicit pointwise premises, grouped cubic sectors in every fixed higher moment, and an all-row quadratic inverse-product bound. It proves that sparse scale observations suffice for the conditional moment criterion, and improves a specified reflected block including all repeated-prime rows. Complete proofs, exact finite diagnostics, source pins and scoped reviews are recorded; the full short-row moment and any new zero-free boundary remain open.
+
 ## License
 
 Project code and original research materials are available under the [MIT License](LICENSE). Third-party material retains its existing terms and notices.

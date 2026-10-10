@@ -1,0 +1,447 @@
+{
+  "CRT_tuple_panel": {
+    "prime_norms": [
+      7,
+      13
+    ],
+    "simultaneous_residue_count": 91,
+    "squarefree_ideal_tuple_count": 144
+  },
+  "arithmetic": "integer pairs in Z[zeta_6] and fractions.Fraction; no floating point",
+  "checks": {
+    "CRT_designated_tuple_identity": 13104,
+    "CRT_retained_nonunit_zero": 2373,
+    "cutoff_formula_identity": 5,
+    "designated_forward_local_coefficients": 2619,
+    "designated_kernel_strict_weights": 60,
+    "designated_primitive_phase_identity": 4000,
+    "designated_principal_nonunit_mask": 4,
+    "designated_unmasked_one_axis_zero": 46,
+    "exact_affine_interval_certificate": 16,
+    "frozen_source_note_binding": 1,
+    "grouped_mixed_kernel_critical_weights": 66,
+    "literal_nonunit_powers": 26,
+    "mixed_forward_local_coefficients": 432,
+    "mixed_one_axis_mask_adapter": 56,
+    "mixed_primitive_symbol_convolution": 8640,
+    "physical_cubic_critical_pair_only": 7,
+    "physical_cubic_shared_weights": 7,
+    "prime_ideal_embedding": 2,
+    "primitive_sixth_root": 2,
+    "primitive_symbol_lift": 20,
+    "primitive_symbol_multiplicativity": 218,
+    "principal_zero_guard": 2,
+    "tail_geometric_sign": 15,
+    "unit_character_powers": 234
+  },
+  "designated_local_cases": [
+    {
+      "degree": 2,
+      "formal_coefficients_checked": 27,
+      "inside": [
+        0,
+        1
+      ],
+      "max_local_exponent": 2
+    },
+    {
+      "degree": 3,
+      "formal_coefficients_checked": 81,
+      "inside": [
+        0,
+        1
+      ],
+      "max_local_exponent": 2
+    },
+    {
+      "degree": 3,
+      "formal_coefficients_checked": 81,
+      "inside": [
+        0,
+        1,
+        2
+      ],
+      "max_local_exponent": 2
+    },
+    {
+      "degree": 4,
+      "formal_coefficients_checked": 243,
+      "inside": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "max_local_exponent": 2
+    },
+    {
+      "degree": 6,
+      "formal_coefficients_checked": 2187,
+      "inside": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "max_local_exponent": 2
+    }
+  ],
+  "exponent_certificates": {
+    "certificates": [
+      {
+        "affine_coefficients": [
+          "6/11",
+          "-5/11"
+        ],
+        "endpoint_values": [
+          "1/11",
+          "1/22"
+        ],
+        "h_interval": [
+          "1",
+          "11/10"
+        ],
+        "name": "fourth tail term 1",
+        "strict": false
+      },
+      {
+        "affine_coefficients": [
+          "-3/11",
+          "13/33"
+        ],
+        "endpoint_values": [
+          "4/33",
+          "53/330"
+        ],
+        "h_interval": [
+          "1",
+          "11/10"
+        ],
+        "name": "fourth tail term 2",
+        "strict": false
+      },
+      {
+        "affine_coefficients": [
+          "0",
+          "0"
+        ],
+        "endpoint_values": [
+          "0",
+          "0"
+        ],
+        "h_interval": [
+          "1",
+          "11/10"
+        ],
+        "name": "fourth tail term 3",
+        "strict": false
+      },
+      {
+        "affine_coefficients": [
+          "3/77",
+          "3/77"
+        ],
+        "endpoint_values": [
+          "6/77",
+          "9/110"
+        ],
+        "h_interval": [
+          "1",
+          "11/10"
+        ],
+        "name": "sharp fourth strict improvement",
+        "strict": true
+      },
+      {
+        "affine_coefficients": [
+          "0",
+          "0"
+        ],
+        "endpoint_values": [
+          "0",
+          "0"
+        ],
+        "h_interval": [
+          "1",
+          "11/10"
+        ],
+        "name": "refined triple term 1",
+        "strict": false
+      },
+      {
+        "affine_coefficients": [
+          "-63/136",
+          "1/2"
+        ],
+        "endpoint_values": [
+          "5/136",
+          "59/680"
+        ],
+        "h_interval": [
+          "1",
+          "11/10"
+        ],
+        "name": "refined triple term 2",
+        "strict": false
+      },
+      {
+        "affine_coefficients": [
+          "3/2",
+          "-10/9"
+        ],
+        "endpoint_values": [
+          "7/18",
+          "9/26"
+        ],
+        "h_interval": [
+          "1",
+          "27/26"
+        ],
+        "name": "grouped triangle term 1",
+        "strict": false
+      },
+      {
+        "affine_coefficients": [
+          "0",
+          "0"
+        ],
+        "endpoint_values": [
+          "0",
+          "0"
+        ],
+        "h_interval": [
+          "1",
+          "27/26"
+        ],
+        "name": "grouped triangle term 2",
+        "strict": false
+      },
+      {
+        "affine_coefficients": [
+          "1/2",
+          "-13/27"
+        ],
+        "endpoint_values": [
+          "1/54",
+          "0"
+        ],
+        "h_interval": [
+          "1",
+          "27/26"
+        ],
+        "name": "grouped triangle term 3",
+        "strict": false
+      },
+      {
+        "affine_coefficients": [
+          "0",
+          "7/108"
+        ],
+        "endpoint_values": [
+          "7/108",
+          "7/104"
+        ],
+        "h_interval": [
+          "1",
+          "27/26"
+        ],
+        "name": "grouped triangle strict extension",
+        "strict": true
+      },
+      {
+        "affine_coefficients": [
+          "0",
+          "8/27"
+        ],
+        "endpoint_values": [
+          "8/27",
+          "4/13"
+        ],
+        "h_interval": [
+          "1",
+          "27/26"
+        ],
+        "name": "positive singleton log scale",
+        "strict": true
+      },
+      {
+        "affine_coefficients": [
+          "9/11",
+          "-5/11"
+        ],
+        "endpoint_values": [
+          "9/26",
+          "7/22"
+        ],
+        "h_interval": [
+          "27/26",
+          "11/10"
+        ],
+        "name": "grouped triangle term 1",
+        "strict": false
+      },
+      {
+        "affine_coefficients": [
+          "-9/22",
+          "13/33"
+        ],
+        "endpoint_values": [
+          "0",
+          "4/165"
+        ],
+        "h_interval": [
+          "27/26",
+          "11/10"
+        ],
+        "name": "grouped triangle term 2",
+        "strict": false
+      },
+      {
+        "affine_coefficients": [
+          "0",
+          "0"
+        ],
+        "endpoint_values": [
+          "0",
+          "0"
+        ],
+        "h_interval": [
+          "27/26",
+          "11/10"
+        ],
+        "name": "grouped triangle term 3",
+        "strict": false
+      },
+      {
+        "affine_coefficients": [
+          "1/11",
+          "-1/44"
+        ],
+        "endpoint_values": [
+          "7/104",
+          "29/440"
+        ],
+        "h_interval": [
+          "27/26",
+          "11/10"
+        ],
+        "name": "grouped triangle strict extension",
+        "strict": true
+      },
+      {
+        "affine_coefficients": [
+          "2/11",
+          "4/33"
+        ],
+        "endpoint_values": [
+          "4/13",
+          "52/165"
+        ],
+        "h_interval": [
+          "27/26",
+          "11/10"
+        ],
+        "name": "positive singleton log scale",
+        "strict": true
+      }
+    ],
+    "exact_example_gain": "59/880",
+    "grouped_example_cutoff": "19/55",
+    "grouped_example_h": "21/20",
+    "old_example_cutoff": "33/80",
+    "scope": "exact affine endpoint certificates prove each stated interval"
+  },
+  "mixed_positive_inverse_cases": [
+    {
+      "max_local_exponent": 2,
+      "multiplicities": [
+        1,
+        1,
+        2
+      ],
+      "net_powers": [
+        1,
+        -1,
+        2
+      ]
+    },
+    {
+      "max_local_exponent": 2,
+      "multiplicities": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "net_powers": [
+        2,
+        -2,
+        1,
+        -1
+      ]
+    },
+    {
+      "max_local_exponent": 2,
+      "multiplicities": [
+        2,
+        2,
+        1,
+        3
+      ],
+      "net_powers": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "max_local_exponent": 2,
+      "multiplicities": [
+        6,
+        2,
+        1
+      ],
+      "net_powers": [
+        0,
+        -2,
+        -1
+      ]
+    }
+  ],
+  "not_verified": [
+    "PW_b",
+    "R_b",
+    "an infinite character sieve",
+    "an infinite Euler product",
+    "a full moment theorem"
+  ],
+  "note_sha256": "980c0e5d4e82e4c6105a21db37aeeb84ff19da9c985be571002fe4f3e9bfba04",
+  "primitive_split_prime_panels": [
+    {
+      "complete_residue_count": 7,
+      "description": "ideal (p, omega - omega_residue), Np=p",
+      "prime_ideal": [
+        7,
+        2
+      ],
+      "zeta6_image": 3
+    },
+    {
+      "complete_residue_count": 13,
+      "description": "ideal (p, omega - omega_residue), Np=p",
+      "prime_ideal": [
+        13,
+        3
+      ],
+      "zeta6_image": 4
+    }
+  ],
+  "reproducibility": "No absolute paths, timestamps, or optimization-mode fields.",
+  "scope": "bounded primitive/local algebra and exact exponent certificates only",
+  "source_sha256": "3baada57f5ae301e8d4d374e086fd85b03c03b99f85c01ac7c5d5c8205b8c838",
+  "status": "PASS",
+  "total_checks": 31955
+}

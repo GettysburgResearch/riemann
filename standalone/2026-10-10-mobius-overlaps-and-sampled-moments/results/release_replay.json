@@ -1,0 +1,92 @@
+{
+  "status": "PASS",
+  "python": "3.12.14",
+  "scope": "Root execution of exact frozen release copies in normal and optimized Python; finite diagnostics only. Source-author and nonauthor roles are recorded separately in REVIEW.md.",
+  "total_predicates": 392318,
+  "replays": [
+    {
+      "name": "quadratic",
+      "checker": "checks/check_quadratic_masks.py",
+      "checker_sha256": "622af30d6efd58eea1703b329799a9c6812568c12296e36d1d71eed682584ad0",
+      "result": "results/quadratic_masks.json",
+      "predicates": 35737,
+      "runs": [
+        {
+          "mode": "normal",
+          "exit_code": 0,
+          "sha256": "11abaa05d4e6399ee04f206632af0ca498c84a6fc655106c39e7674d70c30cfe",
+          "matches_released_bytes": true
+        },
+        {
+          "mode": "optimized",
+          "exit_code": 0,
+          "sha256": "11abaa05d4e6399ee04f206632af0ca498c84a6fc655106c39e7674d70c30cfe",
+          "matches_released_bytes": true
+        }
+      ]
+    },
+    {
+      "name": "overlap",
+      "checker": "checks/check_mobius_overlaps.py",
+      "checker_sha256": "3baada57f5ae301e8d4d374e086fd85b03c03b99f85c01ac7c5d5c8205b8c838",
+      "result": "results/mobius_overlaps.json",
+      "predicates": 31955,
+      "runs": [
+        {
+          "mode": "normal",
+          "exit_code": 0,
+          "sha256": "65457f1cf57581604cc8bda4ac93e8792e7fcd9f664cf3c2b684d3322758f013",
+          "matches_released_bytes": true
+        },
+        {
+          "mode": "optimized",
+          "exit_code": 0,
+          "sha256": "65457f1cf57581604cc8bda4ac93e8792e7fcd9f664cf3c2b684d3322758f013",
+          "matches_released_bytes": true
+        }
+      ]
+    },
+    {
+      "name": "sampling",
+      "checker": "checks/check_scale_sampling.py",
+      "checker_sha256": "1d1133e4f920b0e5c350ffc661d37bd7f852e53609a0a13e9400dc09133bdbe5",
+      "result": "results/scale_sampling.json",
+      "predicates": 21950,
+      "runs": [
+        {
+          "mode": "normal",
+          "exit_code": 0,
+          "sha256": "bff9dbf6e96007dcca74a4dda275a7f1b1ec7fcce4c77d40008660d3c0eb09a9",
+          "matches_released_bytes": true
+        },
+        {
+          "mode": "optimized",
+          "exit_code": 0,
+          "sha256": "bff9dbf6e96007dcca74a4dda275a7f1b1ec7fcce4c77d40008660d3c0eb09a9",
+          "matches_released_bytes": true
+        }
+      ]
+    },
+    {
+      "name": "theta",
+      "checker": "checks/check_reflected_blocks.py",
+      "checker_sha256": "f156b99c452f514b0bcf0ae4913d8becb24a64612746d06a5e0143ccb8027266",
+      "result": "results/reflected_blocks.json",
+      "predicates": 302676,
+      "runs": [
+        {
+          "mode": "normal",
+          "exit_code": 0,
+          "sha256": "19ec6c46f7bcda904b4f3efb549d731c780b203f448a6125774dbb39bc0870bb",
+          "matches_released_bytes": true
+        },
+        {
+          "mode": "optimized",
+          "exit_code": 0,
+          "sha256": "19ec6c46f7bcda904b4f3efb549d731c780b203f448a6125774dbb39bc0870bb",
+          "matches_released_bytes": true
+        }
+      ]
+    }
+  ]
+}
