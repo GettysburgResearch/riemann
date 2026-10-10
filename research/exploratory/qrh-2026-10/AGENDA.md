@@ -48,6 +48,21 @@ cubic `GL(3)` theta, with Kazhdan–Patterson's unique Whittaker model. In `GL(2
 
 See [A2_LITERATURE.md](A2_LITERATURE.md) for what the literature already gives.
 
+**A2′. Induction by alternating Poisson and reflection (SPECULATIVE).** One `GL(2)` reflection of
+the fourth-moment dual returns a Möbius sum in the second factor `e`, twisted by
+`conj(α(e)) χ_e(h)` with cubic pair phases ([FOURTH_MOMENT_A2.md](FOURTH_MOMENT_A2.md),
+second-step analysis). Its rows satisfy `N h ≤ 𝓗 = X⁴/H`, and `𝓗 > X^{1+θ}`. That is the regime
+where an Oct 5-type mean square of Möbius sums gives square-root cancellation on average.
+
+Two questions remain:
+* whether the Oct 5 mean square extends to an angular twist `conj(α)` plus the pair-phase
+  cocycle. PR 910 Prop. 4.4 already handles archimedean twists with a polynomial conductor cost;
+* whether the coupling to the long reflected `ℓ`-sum (length about `(N(h)N(e))²/X`) can be
+  organized as a bilinear form that this mean square controls.
+
+If both work, the `k`-th moment would reduce to a `(k−1)`-th-type statement for a twisted family,
+which is an induction on the moment ladder. Nothing here is checked beyond the local identities.
+
 **A3. Fourth-moment numerics on the true sextic family.** PR 910 tested only `±1` surrogates; see
 [moments/](moments/README.md). Report `M₄/(diagonal)` across `D`, the row-type decomposition, and any
 structured excess. A finite trend is not a theorem, but a structured excess would falsify A1 at
