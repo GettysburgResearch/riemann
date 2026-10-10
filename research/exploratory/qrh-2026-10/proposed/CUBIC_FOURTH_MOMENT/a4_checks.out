@@ -1,0 +1,22 @@
+primes outside S with norm <= 3000: 407
+[K5] CHECK PASS: cubic reciprocity chi_a(b) = chi_b(a) on 2926 pairs of distinct good primary primes (norm <= 400)
+[K5-CTRL6] CTRL PASS: sextic symbol: chi_a(b) != chi_b(a) on 1180/2926 pairs (the manuscript's R is nontrivial at n = 6)
+[K2] CHECK PASS: 6 displayed moving factor forms attached at q (Nq = 7) vanish on all 86 good primary columns u (Nu <= 2000) with q | u
+[K2-CTRL] CTRL PASS: unit-part extension chi_q(u q^-v)^1 is nonzero on 86/86 columns with q | u (54 with a nontrivial value): it would survive into D_2
+   Np=7, e_old=0: S-ray for k in [1, 4]
+   Np=7, e_old=1: S-ray for k in [0, 3]
+   Np=7, e_old=2: S-ray for k in [2, 5]
+   Np=13, e_old=0: S-ray for k in [1, 4]
+   Np=13, e_old=1: S-ray for k in [0, 3]
+   Np=13, e_old=2: S-ray for k in [2, 5]
+[K3] CHECK PASS: exceptional (S-ray, constant on primary primes mod 18, Nn <= 1500) iff e_old + 2 + k == 0 mod 3; with e_old = 0 the forced residue is k == 1 mod 3
+[K3-CTRL] CTRL PASS: a surviving older chi_p^1 would move the forced residue to k == 0 mod 3 (r_p = 0): detected
+   nonunit equal i, older exponent e_old: r_p = -(i+1+e_old) mod 3, F_2 = 2i - (2/3)i - 1 + 1/3 + r_p/3, b_2 = i
+   i=1: e_old=0: r_p=1, F_2-b_2=0; e_old=1: r_p=0, F_2-b_2=-1/3; e_old=2: r_p=2, F_2-b_2=1/3
+   i=2: e_old=0: r_p=0, F_2-b_2=0; e_old=1: r_p=2, F_2-b_2=2/3; e_old=2: r_p=1, F_2-b_2=1/3
+   i=4: e_old=0: r_p=1, F_2-b_2=1; e_old=1: r_p=0, F_2-b_2=2/3; e_old=2: r_p=2, F_2-b_2=4/3
+   i=5: e_old=0: r_p=0, F_2-b_2=1; e_old=1: r_p=2, F_2-b_2=5/3; e_old=2: r_p=1, F_2-b_2=4/3
+[K4] CHECK PASS: at nonunit i = 1: e_old = 0 gives F_2 = b_2 (tight, kappa_2 = 1); e_old = 1 would give F_2 = (2/3) b_2 (loss 1/3 per unit log-norm); i >= 2 types keep F_2 >= b_2 for every e_old
+[K1] CHECK PASS: F(Da,Eb;j) = F(D,E;j) chi_a(j) conj(chi_b(-j)) with R = 1: 48 (config, j) cases, 34 with nonzero value, 6 configurations (Np = 7, 13, 19), brute-force congruence sums
+[K1-CTRL] CTRL PASS: formula with un-cancelled conj(chi_a(E)) chi_b(D) (character attached at primes of D,E on the residual column) disagrees
+SUMMARY: 5/5 checks PASS; 4/4 failing controls detected

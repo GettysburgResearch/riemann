@@ -176,7 +176,9 @@ the critical line.
        fixes ([proposed/CUBIC_FOURTH_MOMENT/LEMMAS_4BCD_GH.md](proposed/CUBIC_FOURTH_MOMENT/LEMMAS_4BCD_GH.md)).
        4.G's inherited ledger formula is re-derived at θ = 1/3
        ([LF_THETA_THIRD.md](proposed/CUBIC_FOURTH_MOMENT/LF_THETA_THIRD.md)). This also catches a
-       hazard: the manuscript's `f = 2v_1` must become `f = v_1` at n = 3.
+       hazard: the manuscript's `f = 2v_1` must become `f = v_1` at n = 3. Its last inherited
+       claim, A4 ("no older moving character"), is proved at n = 3
+       ([A4_NO_OLDER_MOVING.md](proposed/CUBIC_FOURTH_MOMENT/A4_NO_OLDER_MOVING.md)).
      * The route stays PROPOSED and conditional on (H-A) and (H-B).
    * The 7/8 paper's Gauss/reciprocity helpers (Lemmas 4.2–4.4), which the sextic packet
      needs, had one bounded review: no wrong step found

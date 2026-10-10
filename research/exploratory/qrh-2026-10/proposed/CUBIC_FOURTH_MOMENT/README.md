@@ -194,3 +194,19 @@ exact checks 14/14, with 7 failing controls detected).
 
 Remaining for 4.G: the "no older moving character" claim at nonunit `i = 1` primes (l. 14352,
 A4) is inherited, not re-derived.
+
+## Note added later the same day: A4 ("no older moving character") at n = 3
+
+[A4_NO_OLDER_MOVING.md](A4_NO_OLDER_MOVING.md): **A4 holds at n = 3** (PROPOSED; one agent;
+checks 5/5, with 4 failing controls detected).
+* "Older" is the manuscript's "existing" (l. 14352): a moving factor of the column twist `τ_1`
+  left by ancestors, by the first transform or by the amplifier.
+* Without A4, a surviving older factor at a nonunit `i = 1` prime would cost 1/3 per prime,
+  giving `κ_2 = 2/3` and zero margin.
+* The proof:
+  * an older factor at `p` would force `τ_1(D_2 a) = 0`, which kills the allocation;
+  * the residual columns meet `p` only through `χ_a(j)`, so `e_p = i + 1`.
+* The manuscript's only sextic input there, the reciprocity phase `R`, is identically 1 at
+  `n = 3`.
+* So Lemma 4.G and Corollary 4.H(4) no longer import A4. They remain relative to the inherited
+  cubic datum class and transforms (core (A), i.e. hypothesis (H-A)).
