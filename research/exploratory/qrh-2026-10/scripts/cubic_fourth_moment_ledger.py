@@ -134,7 +134,7 @@ for n in (6, 3, 2):
         k, arg = kappa1(n, forcing)
         K1[(n, forcing)] = k
         print("   n=%d forcing at r-primes=%-5s  kappa_1 = %s  (first minimiser (i,j) = %s)" % (n, forcing, k, arg))
-check("[B1] sextic, paper bookkeeping (no forcing): kappa_1 = 2/3 at (i,j) = (2,1)", K1[(6, False)] == Fr(2, 3))
+check("[B1] sextic, paper bookkeeping (no forcing): kappa_1 = 2/3, attained at (i,j) = (2,1)/(1,2)", K1[(6, False)] == Fr(2, 3))
 check("[B2] cubic, mechanical transfer (no forcing): kappa_1 = 5/6 < 1", K1[(3, False)] == Fr(5, 6))
 check("[B3] cubic with forcing at r-primes: kappa_1 >= 1", K1[(3, True)] >= 1)
 check("[B4] quadratic: kappa_1 >= 1 already without forcing", K1[(2, False)] >= 1)
@@ -171,6 +171,18 @@ print("   zero-budget-slack configurations (i,j < 8) with forcing:", tight)
 bC, bD, bud = cubic_beta(2, 1, False)
 print("   cubic (2,1) without forcing: needs beta_C = %s, beta_D = %s, budget = %s" % (bC, bD, bud))
 check("[B7] cubic (2,1) without forcing: need exceeds budget by exactly 1/3 (log P units)", bC + bD - bud == Fr(1, 3))
+# closed form behind kappa_1 = 5/6 without forcing: B_c = ((kappa-theta)c - (1-theta)d - theta R)_+
+#   = ((3c - 4d - 2R)/6)_+ for n = 3 (the paper's (3c-5d-R)/6 is the same formula at n=6, kappa=2/3)
+ok = True
+for i in range(1, 200):
+    for j in range(1, 200):
+        r = 1 if (i - j) % 3 else 0
+        lhs = pos(Fr(3 * i - 4 * j - 2 * r, 6)) + pos(Fr(3 * j - 4 * i - 2 * r, 6))
+        if lhs > i + j - 2 - r:
+            ok = False
+        if Fr(i, 3) + Fr(2 * j, 3) + Fr(r, 3) + pos(Fr(3 * i - 4 * j - 2 * r, 6)) < Fr(5, 6) * i:
+            ok = False
+check("[B8] cubic closed form B_c = ((3c-4d-2R)/6)_+ fits (2.6) and gives F1 >= 5c/6, i,j < 200", ok)
 
 
 # --------------------------------------------------------------------------------------------
@@ -269,6 +281,25 @@ check("[D4] quadratic: window empty for A > M/2; deficit M/4 at A = M; eta = 1/6
 # critical order: window at A=M nonempty for some kappa <= 1 iff theta <= (1-theta)/2 iff n >= 3
 check("[D5] with kappa <= 1 the A = M window is nonempty iff theta <= 1/3 (n >= 3); n = 3 is critical",
       all((Fr(1, n) <= (1 - Fr(1, n)) / 2) == (n >= 3) for n in range(2, 13)))
+# balanced slack at A = M: max over L of min(comparison slack, centred slack)
+#   s1 = (1-theta) - 2L,  s2 = min(kappa,1) L - theta  ->  s* = (k(1-theta) - 2 theta)/(2 + k)
+
+
+def balanced_slack(n, kap):
+    th_ = Fr(1, n)
+    k = min(kap, Fr(1))
+    Lb = Fr(1) / (2 + k)
+    s1, s2 = (1 - th_) - 2 * Lb, k * Lb - th_
+    assert s1 == s2
+    return s1, Lb
+
+
+for name, n, kap in cases:
+    sl, Lb = balanced_slack(n, kap)
+    print("   %-46s balanced slack at A = M: %s M at L = %s M" % (name, sl, Lb))
+check("[D7] balanced slack at A=M: sextic +1/12 (L=3/8), cubic kappa=1: 0 (L=1/3), cubic 5/6: -2/51, quadratic -1/6",
+      balanced_slack(6, Fr(2, 3)) == (Fr(1, 12), Fr(3, 8)) and balanced_slack(3, Fr(1)) == (0, Fr(1, 3))
+      and balanced_slack(3, Fr(5, 6))[0] == -Fr(2, 51) and balanced_slack(2, Fr(1))[0] == -Fr(1, 6))
 # consistency: principal rows of the full ball, Z^{theta m + A}, fit Z^M exactly at the threshold
 check("[D6] full-ball principal rows Z^{theta M + A} <= Z^M  <=>  A <= (1-theta)M (q = 0)",
       all(Fr(1, n) + (1 - Fr(1, n)) == 1 for n in (2, 3, 6)))

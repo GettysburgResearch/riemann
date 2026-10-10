@@ -51,6 +51,9 @@ import json
 import math
 import os
 import random
+
+for _v in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS"):
+    os.environ.setdefault(_v, "1")     # shared machine: one thread
 import sys
 import time
 
@@ -183,7 +186,57 @@ class ModCtx:
         return np.exp(2j * np.pi * ph / N)
 
     def gsum(self, f, k, sign=1):
+        """g(k) = sum_{d mod M} f(d) e(sign * k d / M), by direct summation."""
         return complex(np.dot(f, self.phases(k, sign)))
+
+    # -- all N values of k -> sum_d f(d) e(kd/M) at once (2-step DFT on the HNF grid) --
+    def _hnf(self):
+        if not hasattr(self, "d1"):
+            a1, b1 = self.M
+            a2, b2 = E.mul(self.M, (0, 1))
+            g = math.gcd(b1, b2)
+            x0, y0 = _bezout(b1, b2, g)
+            self.g = g
+            self.d1 = self.N // g
+            self.wa = (x0 * a1 + y0 * a2) % self.d1      # lattice vector (wa, g)
+        return self.d1, self.g, self.wa
+
+    def table(self, f):
+        """Gt[r2, r1] = sum_{i<d1, j<g} f(i,j) exp(2 pi i (i w1 + j w2)/N) for the
+        character with w1 = g r1, w2 = d1 r2 - wa r1 (every character of O/M has this form)."""
+        d1, g, wa = self._hnf()
+        Fm = f.reshape(g, d1)
+        F1 = np.fft.ifft(Fm, axis=1) * d1
+        jj = np.arange(g, dtype=np.int64)[:, None]
+        rr = np.arange(d1, dtype=np.int64)[None, :]
+        tw = np.exp(-2j * np.pi * ((jj * ((wa * rr) % self.N)) % self.N) / self.N)
+        return np.fft.ifft(F1 * tw, axis=0) * g
+
+    def lookup(self, Gt, k, sign=1):
+        d1, g, wa = self._hnf()
+        N = self.N
+        kc = E.mul(k, self.cM)
+        w1 = (sign * kc[1]) % N
+        w2 = (sign * E.mul(kc, (0, 1))[1]) % N
+        assert w1 % g == 0
+        r1 = w1 // g
+        assert (w2 + wa * r1) % d1 == 0
+        r2 = ((w2 + wa * r1) // d1) % g
+        return complex(Gt[r2, r1])
+
+
+def _bezout(b1, b2, g):
+    """x, y with x b1 + y b2 = g."""
+    def eg(a, b):
+        if b == 0:
+            return (a, 1, 0)
+        q, x, y = eg(b, a % b)
+        return (q, y, x - (a // b) * y)
+    gg, x, y = eg(b1, b2)
+    if gg < 0:
+        gg, x, y = -gg, -x, -y
+    assert gg == g and x * b1 + y * b2 == g
+    return x, y
 
 
 # ---------------------------------------------------------------------------
@@ -453,14 +506,23 @@ def K_direct(W, T, var=frozenset(), cacheA=None):
     b = W.bstar
     bA = E.mul(b, A)
     # F(s, A, H)
-    key = (A, "nA" in var)
+    key = (A[0], A[1])
     if cacheA is not None and key in cacheA:
-        cxA, fA = cacheA[key]
+        cxA, fA, Gt = cacheA[key]
     else:
-        cxA = W.ctx(bA)
+        cxA = ModCtx(bA)
         fA = W.xi_arr(cxA.X, cxA.Y) * W.chi_arr(Afac, cxA.X, cxA.Y)
+        Gt = cxA.table(fA)
+        # spot-check the fast table against direct summation at random frequencies
+        rng = random.Random(hash(key) & 0xffff)
+        for _ in range(3):
+            kk = (rng.randrange(-10**6, 10**6), rng.randrange(-10**6, 10**6))
+            dd = abs(cxA.lookup(Gt, kk, W.esign) - cxA.gsum(fA, kk, W.esign))
+            W.fftcheck = max(getattr(W, "fftcheck", 0.0), dd / math.sqrt(cxA.N))
         if cacheA is not None:
-            cacheA[key] = (cxA, fA)
+            if sum(v[0].N for v in cacheA.values()) + cxA.N > 4e7:
+                cacheA.clear()
+            cacheA[key] = (cxA, fA, Gt)
     cxs = W.ctx(s)
     chis = W.chi_arr(sfac, cxs.X, cxs.Y)
     Hr = E.reduce_mod(H, E.mul(s, bA))
@@ -477,7 +539,7 @@ def K_direct(W, T, var=frozenset(), cacheA=None):
     nsol = 0
     for i in np.nonzero(ok)[0]:
         k = (int(w0[i]) // Ns, int(w1[i]) // Ns)
-        F += chis[i] * cxA.gsum(fA, k, W.esign)
+        F += chis[i] * cxA.lookup(Gt, k, W.esign)
         nsol += 1
     # prefactors
     chis_b = W.chi(sfac, b)

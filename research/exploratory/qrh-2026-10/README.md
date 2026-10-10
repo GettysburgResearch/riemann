@@ -62,6 +62,7 @@ they are unreviewed.
 | [HEIGHT_LEVELS.md](HEIGHT_LEVELS.md) | what happens as you go higher, in four senses: moment order (same boundary at the same ρ; the dual type goes A₁ → A₂ → affine Ã₂ → Lorentzian, with the k = 3 pair pattern checked), zero height T, reflection rank, half-plane depth |
 | [RUNG_STRENGTH.md](RUNG_STRENGTH.md) | the moment ladder depends only on `ρ = h/k`; `ρ = 1` wall at 11/12; a single-row Prop. R; what any `ρ < 1` input must contain; sub-diagonal numerics |
 | [A2_LITERATURE.md](A2_LITERATURE.md) | literature check: exact A2 WMDS dictionary (plus an extra quadratic factor); GL(3) cubic theta vanishes on the support; the missing input is a dispersion asymptotic |
+| [moments/DUAL_ANATOMY.md](moments/DUAL_ANATOMY.md) | anatomy of the sub-diagonal cancellation: random-sign-like across pairs, no μ-specific cancelling structure; an explicit Galois secondary term (positive, not cancelling); no dual bias at small D |
 | [moments/](moments/README.md) | actual sextic-family `M₂, M₄, M₆` at `H = D^{1+θ}` (and sub-diagonal `k = 1`): diagonal-sized up to `D = 64000` (finite) |
 | [ZERO_DENSITY_CONDITIONAL.md](ZERO_DENSITY_CONDITIONAL.md) | QRH-conditional zero density via ANTEDB: no `A(σ)` gain below 7/8; exact μ envelope |
 | [reviews/KINTALI_LEMMA3_REVIEW.md](reviews/KINTALI_LEMMA3_REVIEW.md) | Kintali Lemma 3 (weak reflection) and App. B: no error found; DR inputs quoted correctly; theta automorphy, cusp reflection and multiplier checked numerically/exactly; first unverified step App. A.2 (high side) |

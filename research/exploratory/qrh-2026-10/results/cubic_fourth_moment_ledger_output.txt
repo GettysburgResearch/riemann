@@ -1,0 +1,82 @@
+=== [A] symbolic identities, general theta ===
+PASS [A1] E(theta) = A - (1-theta)M - F1(theta) - F2(theta)
+PASS [A2] at theta = 1/6, F1, F2 equal the paper's (old-eq:2.16)
+PASS [A3] (2.13) M' = M + J - g - g_2 + t_2 does not involve theta
+PASS [A4] first-transform ledger = M + (B_c + B_d - (c+d-2p-R))/2, theta-free
+PASS [A5] (2.12) diagonal excess = (A-M) - d - Dk - w_o - B_c + g - ell, theta-free
+PASS [A6] J >= 0 branch (g = J, ell = 0): F1 = c + 2w + theta(q~ + w_o) + B_c for every theta
+   J < 0 branch (g = ell = w = Dk = 0): F1 = B_c + c*theta - d*(theta - 1) + theta*(E + R + q)
+
+=== [B] first transform: allowance B_c and the coefficient kappa_1 ===
+   n=6 forcing at r-primes=False  kappa_1 = 2/3  (first minimiser (i,j) = (1, 2))
+   n=6 forcing at r-primes=True   kappa_1 = 1  (first minimiser (i,j) = (1, 1))
+   n=3 forcing at r-primes=False  kappa_1 = 5/6  (first minimiser (i,j) = (1, 2))
+   n=3 forcing at r-primes=True   kappa_1 = 1  (first minimiser (i,j) = (1, 1))
+   n=2 forcing at r-primes=False  kappa_1 = 1  (first minimiser (i,j) = (1, 1))
+   n=2 forcing at r-primes=True   kappa_1 = 1  (first minimiser (i,j) = (1, 1))
+PASS [B1] sextic, paper bookkeeping (no forcing): kappa_1 = 2/3, attained at (i,j) = (2,1)/(1,2)
+PASS [B2] cubic, mechanical transfer (no forcing): kappa_1 = 5/6 < 1
+PASS [B3] cubic with forcing at r-primes: kappa_1 >= 1
+PASS [B4] quadratic: kappa_1 >= 1 already without forcing
+PASS [B5] paper's sextic B_c gives F1 >= (2/3) c prime by prime (J<0 branch), i,j < 150
+PASS [B6] cubic allowance beta_C=(i-a_C)_+, beta_D=(j-a_D)_+ fits budget i+j-2-r, all i,j<200 (forcing)
+   zero-budget-slack configurations (i,j < 8) with forcing: [(1, 1), (1, 2), (1, 3), (2, 1), (3, 1)]
+   cubic (2,1) without forcing: needs beta_C = 1/3, beta_D = 0, budget = 0
+PASS [B7] cubic (2,1) without forcing: need exceeds budget by exactly 1/3 (log P units)
+PASS [B8] cubic closed form B_c = ((3c-4d-2R)/6)_+ fits (2.6) and gives F1 >= 5c/6, i,j < 200
+
+=== [C] second transform: F2 >= kappa_2 b_2 ===
+   n=6 forcing=none kappa_2 = 1/3 at ('nonunit', 1)
+   n=6 forcing=i1   kappa_2 = 2/3 at ('nonunit', 1)
+   n=6 forcing=full kappa_2 = 1 at ('nonunit', 1)
+   n=3 forcing=none kappa_2 = 2/3 at ('nonunit', 1)
+   n=3 forcing=i1   kappa_2 = 1 at ('nonunit', 1)
+   n=3 forcing=full kappa_2 = 1 at ('nonunit', 1)
+   n=2 forcing=none kappa_2 = 1 at ('nonunit', 1)
+   n=2 forcing=i1   kappa_2 = 1 at ('nonunit', 1)
+   n=2 forcing=full kappa_2 = 1 at ('nonunit', 1)
+PASS [C1] sextic, paper's device: kappa_2 = 2/3 (paper's F2 >= 2b2/3, tight at nonunit i=1)
+PASS [C2] cubic with the paper's i=1 device (residue 1 mod 3): kappa_2 = 1
+PASS [C3] cubic without forcing: kappa_2 = 2/3 < 1
+PASS [C4] quadratic: kappa_2 = 1 (residue -(1+1) = 0 mod 2: no forcing exists or is needed)
+PASS [C5] cubic, full forcing still has kappa_2 = 1 (tight at nonunit i=2 and equal i=3)
+
+=== [D] comparison window, deficit at A = M, failing range, self-consistent loss ===
+   sextic, paper (kappa=2/3)                      threshold (1-theta)M = 5/6 M; at A=M need L >= 1/4 M, allowed L <= 5/12 M; deficit 0 M; window empty for A > >M M; self-consistent eta = 0
+   cubic, mechanical (kappa=5/6)                  threshold (1-theta)M = 2/3 M; at A=M need L >= 2/5 M, allowed L <= 1/3 M; deficit 1/18 M; window empty for A > 19/21 M; self-consistent eta = 2/51
+   cubic, paper devices only (kappa=min(5/6,1))   threshold (1-theta)M = 2/3 M; at A=M need L >= 2/5 M, allowed L <= 1/3 M; deficit 1/18 M; window empty for A > 19/21 M; self-consistent eta = 2/51
+   cubic + r-prime forcing (kappa=1)              threshold (1-theta)M = 2/3 M; at A=M need L >= 1/3 M, allowed L <= 1/3 M; deficit 0 M; window empty for A > 1 M; self-consistent eta = 0
+   quadratic (kappa=1)                            threshold (1-theta)M = 1/2 M; at A=M need L >= 1/2 M, allowed L <= 1/4 M; deficit 1/4 M; window empty for A > 1/2 M; self-consistent eta = 1/6
+PASS [D1] sextic: window at A = M is [1/4, 5/12] (paper's L = M/4 at its lower end)
+PASS [D2] cubic kappa=5/6: window empty for A > 19M/21; deficit M/18 at A = M; eta = 2/51
+PASS [D3] cubic kappa=1: window at A = M is the single point L = M/3; deficit 0
+PASS [D4] quadratic: window empty for A > M/2; deficit M/4 at A = M; eta = 1/6
+PASS [D5] with kappa <= 1 the A = M window is nonempty iff theta <= 1/3 (n >= 3); n = 3 is critical
+   sextic, paper (kappa=2/3)                      balanced slack at A = M: 1/12 M at L = 3/8 M
+   cubic, mechanical (kappa=5/6)                  balanced slack at A = M: -2/51 M at L = 6/17 M
+   cubic, paper devices only (kappa=min(5/6,1))   balanced slack at A = M: -2/51 M at L = 6/17 M
+   cubic + r-prime forcing (kappa=1)              balanced slack at A = M: 0 M at L = 1/3 M
+   quadratic (kappa=1)                            balanced slack at A = M: -1/6 M at L = 1/3 M
+PASS [D7] balanced slack at A=M: sextic +1/12 (L=3/8), cubic kappa=1: 0 (L=1/3), cubic 5/6: -2/51, quadratic -1/6
+PASS [D6] full-ball principal rows Z^{theta M + A} <= Z^M  <=>  A <= (1-theta)M (q = 0)
+
+=== [E] Gauss-row zero h = 0 (paper l. 13572-13594) ===
+   n=6: refined count fits = True; paper's cruder count fits = True
+   n=3: refined count fits = True; paper's cruder count fits = True
+PASS [E1] cubic Gauss-row zero fits the allowance (crude count tight at s0 = a0/3)
+   n=2: refined count fits = True; paper's cruder count fits = False
+PASS [E2] quadratic Gauss-row zero fits only with the refined count
+
+=== [F] explicit cubic paths at A = M = m (q = 0), L = M/3 ===
+   generic: exceptional count M/3, volume A, saving L, allowance M -> excess 0 (+2 sigma/3)
+PASS [F1] generic cubic path at A = M, L = M/3 has excess exactly 0
+   (2,1) path p=1/6: first-transform ledger slack 0; exceptional excess without forcing 1/18, with forcing 0
+PASS [F2] (2,1) path, c = M/3: excess M/18 without r-forcing, 0 with it
+   (2,1) path p=1/12: first-transform ledger slack 0; exceptional excess without forcing 1/36, with forcing 0
+   (2,1) path p=1/4: first-transform ledger slack 0; exceptional excess without forcing -1/12, with forcing -1/6
+
+=== [G] grid confirmation of [D] (exact Fractions) ===
+   min_L max_v deficit at A = M: cubic 5/6 -> 1/18, cubic 1 -> 0, quadratic -> 1/4, sextic -> -1/9
+PASS [G1] grid reproduces deficits 1/18, 0, 1/4, <=0
+
+SUMMARY: 31/31 checks passed

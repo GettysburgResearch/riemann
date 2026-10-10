@@ -216,6 +216,20 @@ columns are noisy.
 This is what on-average GRH predicts, and it says nothing about provability. The hypotheses look
 true. What is missing is a mechanism, not evidence.
 
+**Anatomy of the cancellation** ([moments/DUAL_ANATOMY.md](moments/DUAL_ANATOMY.md); `D ≤ 4000`;
+floating point, finite).
+* The sub-diagonal off-diagonal cancels across pairs the way random signs do. `μ` sits inside the
+  random-±1 distribution in all 28 cells, and `λ` behaves the same.
+* The only `μ`-specific structure is a small positive Galois term from `μ(n̄) = μ(n)`. It cancels
+  nothing, and random multiplicative signs with `f(π) = f(π̄)` carry it identically.
+* The "positive mean" of the pair sums comes from the sixth-power rows, and any mean-zero signs
+  remove it.
+* No Patterson-type dual bias appears at `D ≤ 300`.
+
+So the sub-diagonal statement is *generic*: it holds for random signs. Row-blind methods cannot
+prove it, because adversarial coefficients violate it. A proof must therefore use the
+multiplicativity of `μ` at a depth comparable to zero-free information.
+
 ## 6. Consequences for the agenda
 
 * Restate [AGENDA.md](AGENDA.md) A1. The basic target is the sub-diagonal **second** moment
