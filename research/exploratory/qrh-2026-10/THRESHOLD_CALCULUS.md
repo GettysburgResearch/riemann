@@ -149,9 +149,10 @@ joint common-frequency moment. Even granted on the whole detector range, it buys
 `7/8 − 167/192 = 1/192 ≈ 0.0052` in this architecture. With
 the detector floor also lowered toward 1/2 it buys at most `7/8 − 13/15 = 1/120`. The binding
 constraint becomes the zero-free (floor) rows, which no zero-counting input can touch. By contrast,
-in the Oct 5 architecture (moments of the sextic Möbius family), PR 910 §7 shows that the moment
-hierarchy scales toward 1/2. That architecture is the one where new analytic input has unbounded
-leverage; see [SYNTHESIS.md](SYNTHESIS.md).
+in the Oct 5 architecture (moments of the sextic Möbius family), PR 910 §7 shows that the
+conclusion `1/2 + 5ρ/12` improves without bound as the row/column ratio `ρ` decreases. However,
+`ρ < 1` already needs an on-average GRH for the family, and row-blind inputs stop at 11/12
+([RUNG_STRENGTH.md](RUNG_STRENGTH.md); [SYNTHESIS.md](SYNTHESIS.md)).
 
 Single-lemma sensitivities are in Section 6.
 
