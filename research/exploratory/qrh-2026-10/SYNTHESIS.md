@@ -184,6 +184,12 @@ the critical line.
        `ξ ≤ μ*ρ/2`, smaller than the manuscript's `ρ/30`.
      * The route stays PROPOSED and conditional on (H-A) and (H-B). Every itemized risk except
        (H-A) and Lemma 18.1's own correctness has now had a bounded attack with no break found.
+     * End-of-wave status ([proposed/CUBIC_FOURTH_MOMENT/STATUS_END_OF_WAVE.md](proposed/CUBIC_FOURTH_MOMENT/STATUS_END_OF_WAVE.md)):
+       * (H-A) is now an explicit checklist of 19 inherited items (8 exact-model-only, 11 imported
+         as is), plus 15 items re-derived at n = 3;
+       * the smallest failure point is the symmetry of Lemma 18.2 across the two rectangles, or
+         the zero-slack ledger at `v = L`;
+       * a referee would need to read about 110 pages.
    * The 7/8 paper's Gauss/reciprocity helpers (Lemmas 4.2–4.4), which the sextic packet
      needs, had one bounded review: no wrong step found
      ([proposed/SEXTIC_FOURTH_MOMENT/](proposed/SEXTIC_FOURTH_MOMENT/README.md)).
