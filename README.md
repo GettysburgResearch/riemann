@@ -75,6 +75,10 @@ The pages above describe reviewed components at their recorded sources, with lat
 
 [The sextic-moment packet](standalone/2026-10-10-sextic-moment-descent/README.md) proves an all-row character sieve with cost \(H+(HL)^{2/3}+H^{1/6}L\), derives explicit controlled overlap ranges inside every fixed moment, and adapts a cubic Gauss-sum correlation argument to the sextic family. It also records the balanced-weight transfer, exact moment-to-zero-free implications, scoped proof reviews, and reproducible finite diagnostics. The full fourth moment needed for \(17/24\), the unbounded hierarchy, and any further zero-free improvement remain open. This is proposed standalone research, stacked on the preceding packet.
 
+## Follow-up research: exact A2 completion and the signed moment core
+
+[The conductor-core packet](standalone/2026-10-10-sextic-moment-conductor-core/README.md) gives an explicit cubic A2 completion and signed inverse for the balanced Gauss coefficients, proves that the entire signed initial dual diagonal is a uniformly bounded lattice discrepancy, and controls all higher-moment terms without singleton primes together with a larger conductor sector. It also proves bounded rough-replica averaging and records exact finite controls and scoped reviews. The remaining strict signed off-diagonal, the full fourth moment, and the unbounded moment hierarchy are open. This is standalone research stacked on the sextic-moment packet, not a new integrated zero-free claim.
+
 ## License
 
 Project code and original research materials are available under the [MIT License](LICENSE). Third-party material retains its existing terms and notices.

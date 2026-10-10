@@ -1,0 +1,153 @@
+{
+  "arithmetic": "EXACT_INTEGER_AND_SIXTH_ROOT_ALGEBRA",
+  "checks": {
+    "actual_cubic_reciprocity": 1,
+    "affine_nilpotence": 1,
+    "affine_nonzero_translation": 1,
+    "affine_power_formula": 16,
+    "double_cubic": 112,
+    "full_residue_field_multiplicativity": 1061,
+    "full_residue_field_orthogonality": 5,
+    "global_mobius_parity": 2259,
+    "graph_common_eigenvector": 9,
+    "graph_transverse_eigenvector": 36,
+    "literal_moment_reconstruction": 5,
+    "local_product_with_exact_zero_mask": 152908,
+    "minimum_load": 21844,
+    "missing_edge_nontrivial": 1,
+    "mobius_parity": 21844,
+    "nonprincipal_nonempty": 21844,
+    "reflection_form": 45,
+    "reflection_involution": 45,
+    "region_conjugation_closure": 15,
+    "singleton_sextic": 56,
+    "split_prime_roots": 19
+  },
+  "infinite_moment_proved_by_computation": false,
+  "interaction_graph": {
+    "coxeter_matrix": [
+      [
+        2,
+        1,
+        -2
+      ],
+      [
+        2,
+        0,
+        -1
+      ],
+      [
+        1,
+        1,
+        -1
+      ]
+    ],
+    "missing_edge_as_sixth_root_exponent": 2,
+    "square_minus_identity": [
+      [
+        3,
+        0,
+        -3
+      ],
+      [
+        3,
+        0,
+        -3
+      ],
+      [
+        3,
+        0,
+        -3
+      ]
+    ]
+  },
+  "panels": [
+    {
+      "D": 16,
+      "H": 23,
+      "columns": 2,
+      "direct_exact_moment": 444,
+      "distinct_row_kernels": 7,
+      "k": 2,
+      "left_product_groups": 3,
+      "product_group_pairs": 9,
+      "regions_exact": {
+        "low_complexity_with_singletons": 0,
+        "no_singletons": 444,
+        "remaining": 0
+      },
+      "rows": 84,
+      "weight_scope": "nu=1, sharp half-open column band and sharp full row norm ball"
+    },
+    {
+      "D": 32,
+      "H": 47,
+      "columns": 5,
+      "direct_exact_moment": 7314,
+      "distinct_row_kernels": 205,
+      "k": 2,
+      "left_product_groups": 15,
+      "product_group_pairs": 225,
+      "regions_exact": {
+        "low_complexity_with_singletons": 72,
+        "no_singletons": 6786,
+        "remaining": 456
+      },
+      "rows": 162,
+      "weight_scope": "nu=1, sharp half-open column band and sharp full row norm ball"
+    },
+    {
+      "D": 64,
+      "H": 97,
+      "columns": 7,
+      "direct_exact_moment": 33534,
+      "distinct_row_kernels": 742,
+      "k": 2,
+      "left_product_groups": 28,
+      "product_group_pairs": 784,
+      "regions_exact": {
+        "low_complexity_with_singletons": 816,
+        "no_singletons": 28926,
+        "remaining": 3792
+      },
+      "rows": 360,
+      "weight_scope": "nu=1, sharp half-open column band and sharp full row norm ball"
+    },
+    {
+      "D": 16,
+      "H": 23,
+      "columns": 2,
+      "direct_exact_moment": 1452,
+      "distinct_row_kernels": 8,
+      "k": 3,
+      "left_product_groups": 4,
+      "product_group_pairs": 16,
+      "regions_exact": {
+        "low_complexity_with_singletons": 0,
+        "no_singletons": 1452,
+        "remaining": 0
+      },
+      "rows": 84,
+      "weight_scope": "nu=1, sharp half-open column band and sharp full row norm ball"
+    },
+    {
+      "D": 32,
+      "H": 47,
+      "columns": 5,
+      "direct_exact_moment": 93054,
+      "distinct_row_kernels": 815,
+      "k": 3,
+      "left_product_groups": 35,
+      "product_group_pairs": 1225,
+      "regions_exact": {
+        "low_complexity_with_singletons": 3780,
+        "no_singletons": 80292,
+        "remaining": 8982
+      },
+      "rows": 162,
+      "weight_scope": "nu=1, sharp half-open column band and sharp full row norm ball"
+    }
+  ],
+  "status": "PASS",
+  "total_predicates": 222127
+}

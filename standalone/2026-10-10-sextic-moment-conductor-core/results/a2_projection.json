@@ -1,0 +1,47 @@
+{
+  "analytic_functional_equation_tested": false,
+  "arithmetic": "EXACT_INTEGER_AND_SIXTH_ROOT_ALGEBRA",
+  "checks": {
+    "actual_cubic_reciprocity": 3,
+    "actual_primary_generator": 3,
+    "actual_primary_prime_norm": 3,
+    "actual_prime_ideal_generator": 3,
+    "actual_support_scale_map": 216,
+    "auxiliary_normalizer_scale": 216,
+    "diagonal_continuum_mobius_cancellation": 8,
+    "exact_diagonal_mask_recombination": 64,
+    "exact_forward_completion_with_masks": 82944,
+    "exact_signed_projection_with_masks": 82944,
+    "squared_averaged_norm_cost": 216,
+    "squared_fixed_auxiliary_norm_cost": 216,
+    "unreduced_twist_equals_five_label_formula": 216
+  },
+  "global_local_patterns": 216,
+  "infinite_moment_proved_by_computation": false,
+  "local_table_is_assumed_input": true,
+  "prime_norms": [
+    7,
+    13,
+    19
+  ],
+  "row_auxiliary_mask_configurations": 82944,
+  "sextic_pair_exponents": [
+    [
+      -1,
+      2,
+      5
+    ],
+    [
+      5,
+      -1,
+      3
+    ],
+    [
+      5,
+      0,
+      -1
+    ]
+  ],
+  "status": "PASS",
+  "total_predicates": 167052
+}
