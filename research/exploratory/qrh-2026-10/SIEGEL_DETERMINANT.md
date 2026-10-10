@@ -46,9 +46,9 @@ Smallest remaining gap:
 * **PROPOSED (structure).** The method is exactly balanced in the generic case. The Frobenius classes that Lemma 7's mechanism can use are `{id, σ, στ}`, with Chebotarev density 3/4, and that equals `κ`. A Siegel zero moves the Frobenius mass into `{σ, στ}` and breaks the balance. The auxiliary `√2` exists to make `κ < 1`.
 * **PROPOSED/HEURISTIC (limits).**
   * (a) The scale is logarithmic and intrinsically so. Under ideal bias the paper's version cannot exceed `δ < (1 − ln 2)/2 ≈ 0.153`, and no variant can exceed `δ < 2`.
-  * (b) More square roots raise the margin `1 − κ` from 1/4 towards 1/2, never past it. Beyond `n = 4` they need a new interpolation lemma, and they improve the rigorous constant by at most a factor 4.
+  * (b) More square roots raise the margin `1 − κ` from 1/4 towards 1/2, never past it. Beyond `n = 4` they need a new interpolation lemma, and they improve the manuscript-conditional proved constant by at most a factor 4.
   * (c) It is blind to the middle strip and to complex zeros beyond a disc of radius `O(1/log q)` at `s = 1`.
-  * (d) The proof is effective. Following the manuscript's own constants gives `c ≳ 3·10⁻⁴` for all `q ≥ 3`, `q ≠ 8` (conditional on the manuscript); `q = 8` is handled separately.
+  * (d) The proof appears effective in principle (PROPOSED reading). Following the manuscript's own constants gives `c ≈ 2.8·10⁻⁴` (`≈ 4·10⁻⁴` with `H = 10⁹`) for all `q ≥ 3`, `q ≠ 8`, conditional on the manuscript; `q = 8` is handled separately.
 * **EMPIRICAL.**
   * Exact `N = 2, 3` determinants satisfy Lemma 7's divisibility at every admissible prime. They fail it at the unusable class `τ` (e.g. `v₅ = 32 < 168`).
   * Fields with small `L(1,χ)` or long inert runs show inert shares above 3/4 only for `X ≤ q^{0.75}` (`D = −163`, `−67`, `−43`), or at no sampled scale (`D = −424708`: 0.73 at `q^{0.5}`). The comparison runs at `X ≈ q^{24}`.
@@ -228,7 +228,7 @@ The ideal ceiling is `δ < (1−2/n)/(2c_arch)`, using all usable classes includ
 * **Complex pair** `ρ, ρ̄ = 1 − a/ℓ ± ib/ℓ` of a real `χ` (HEURISTIC).
   * Its cumulative bias tends to `−2ℓa/(a²+b²)`, so it acts like a real zero with `δ_eff = (a²+b²)/(2a)`.
   * The detectable region is the disc `|s − (1 − δ_c/ℓ)| < δ_c/ℓ`, tangent to `Re s = 1` at `s = 1`.
-  * With the rigorous `δ_c ≈ 0.003` this disc lies inside the classical zero-free region for non-real zeros (Davenport §14). Explicit classical constants such as McCurley 1984 (`≈ 1/9.65`, quoted but not re-checked) are far larger than `2δ_c`.
+  * With the manuscript-conditional proved `δ_c ≈ 0.003` this disc lies inside the classical zero-free region for non-real zeros (Davenport §14). Explicit classical constants such as McCurley 1984 (`≈ 1/9.65`, quoted but not re-checked) are far larger than `2δ_c`.
   * So there is nothing new for complex zeros. Even the ideal `δ_c ≤ 2` keeps everything within `O(1/log q)` of 1.
 * **Non-real `χ`.** There is no two-class Frobenius dichotomy, and classically there are no exceptional zeros to detect.
 
@@ -250,7 +250,7 @@ The ideal ceiling is `δ < (1−2/n)/(2c_arch)`, using all usable classes includ
 | 10⁹ | 0.0072 | **4.4·10⁻⁴** | 0.0050 |
 | 10¹² | 7·10⁻⁶ | 3.7·10⁻⁴ | 0.0053 |
 
-* **Rough explicit constant (PROPOSED, conditional on the manuscript):** `c ≈ 3·10⁻⁴`, i.e. `(1−β) log q ≥ 3·10⁻⁴` for all `q ≥ 3`, `q ≠ 8`.
+* **Rough explicit constant (PROPOSED, conditional on the manuscript):** `c ≈ 3·10⁻⁴` (2.8·10⁻⁴ at the paper's `H`), i.e. `(1−β) log q ≥ 3·10⁻⁴` for all `q ≥ 3`, `q ≠ 8`.
   * For `q = 8` (`χ₈`), the reverse-Lemma-2 run (§4.2) gives no real zero in `[1 − 0.231, 1)`, i.e. `δ ≥ 0.48` (EMPIRICAL, floating point).
   * The logarithms are evaluated in floating point, and the transcendental constants are rounded in the conservative direction.
   * The 97² in Lemma 6 and the crude `Σ_{p|q} ≤ ℓ` dominate the loss. Sharper tracking could plausibly give `c ≈ 10⁻²` (HEURISTIC).
