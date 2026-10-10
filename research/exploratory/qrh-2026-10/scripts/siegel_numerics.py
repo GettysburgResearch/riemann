@@ -301,7 +301,7 @@ def cmd_det(N, d, H):
     assert Nm != 0
     logN4 = math.log(abs(Nm)) / 4
     had = (M / 2) * math.log(M) + (S1 + S2) * math.log(8 * N * math.sqrt(q))
-    print(f"  exact Delta != 0; (1/4) log|Nm Delta| = {logN4:.1f}; Hadamard upper bound (4.1) = {had:.1f}  [{time.time()-t0:.1f}s]")
+    print(f"  exact Delta != 0; (1/4) log|Nm Delta| = {logN4:.1f}; Hadamard upper bound (5.1) = {had:.1f}  [{time.time()-t0:.1f}s]")
     print("   p  class          chi(p) (2/p)  4E_p  v_p(Nm Delta)  predicted")
     lower = 0.0
     for p in primes_upto(max(a1max, 3)):

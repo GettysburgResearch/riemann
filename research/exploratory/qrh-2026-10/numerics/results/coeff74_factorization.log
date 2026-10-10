@@ -10,3 +10,15 @@
    [main] 100000/141264  maxdev=4.09e-14  52s
    [main] 120000/141264  maxdev=1.07e-11  65s
    [main] 140000/141264  maxdev=1.45e-09  79s
+   main: {"label": "main", "tuples": 141264, "nonzero": 70723, "zero_both_sides": 70541, "zero_with_nonempty_congruence": 38232, "max_rel_dev_K": 1.45077622530228e-09, "max_rel_dev_K_using_closed_C": 1.768585287031727e-10, "max_rel_dev_FS": 5.025636265273081e-09, "failures": 0, "per_tier": {"T1": {"n": 106488, "nonzero": 68430, "maxdev": 4.086014051569528e-14}, "T2": {"n": 33696, "nonzero": 2205, "maxdev": 1.45077622530228e-09}, "T3": {"n": 1080, "nonzero": 88, "maxdev": 2.0398224631200492e-10}}, "exercised_on_nonzero": {"tau": 70723, "xi_s": 38753, "xi_u": 58965, "xi_A": 50473, "chiA_b": 56827, "chis_b": 51520, "R_As": 26162, "cross_As": 25530, "within_A": 4806, "diag_omega_tk": 1558, "omega_ll": 80, "l_pos": 2293, "l2": 80, "two_prime_A": 5459, "k_pos_t_pos": 2284, "m_pos": 43817, "unit_u": 58831}, "seconds": 115.7}
+   fast Gauss table vs direct summation (3 random k per A): 2.3495642917269007e-14
+   C_p brute [7.7] vs closed [7.8]: {'brute': 216, 'closed_only': 0, 'maxdiff': np.float64(4.077726603564114e-12)}
+== controls on 5844 tuples
+   control alpha_noconj     maxdev=2 failing=1908/5844
+   control G_noconj         maxdev=2 failing=1864/5844
+   control drop_R           maxdev=2 failing=780/5844
+   control Xi_drop_chiAb    maxdev=2 failing=1643/5844
+   control drop_chisb       maxdev=2 failing=1518/5844
+   control xi_u_noconj      maxdev=1.73 failing=1413/5844
+   control tau_conj         maxdev=2 failing=2104/5844
+   control nonprimary_s     maxdev=1.44e-09 failing=0/5844

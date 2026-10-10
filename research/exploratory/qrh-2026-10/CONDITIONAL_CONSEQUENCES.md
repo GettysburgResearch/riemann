@@ -54,6 +54,16 @@ would give `X^{ε}`).
   (A survey note giving `9/128` used the wrong normalisation.)
 * Zero density: `N(σ,T) = 0` for `σ > 7/8` is new, but the density hypothesis is already known
   on `σ ≥ 25/32`; nothing follows directly on `[1/2, 25/32]`.
+* Siegel zeros and class numbers (CONDITIONAL; standard argument, recorded in
+  [SIEGEL_DETERMINANT.md](SIEGEL_DETERMINANT.md) §5).
+  * If the imported half-plane holds for every Dirichlet `L`, every real zero has `β ≤ 7/8`
+    (`≤ 11/12` from the Oct 5 claim). Then `(1−β) log q ≥ (log 3)/8` for all `q ≥ 3`, which is
+    an *effective* Landau–Siegel exclusion.
+  * The Siegel–Goldfeld positivity argument then gives `L(1,χ) ≫ 1/log q` with effective constants.
+  * Hence `h(D) ≫ √|D|/log|D|` effectively for imaginary quadratic fields.
+  * This is a major consequence of the external claims, but it says nothing about RH. The separate
+    Oct 1 determinant paper gives only the weaker logarithmic statement; read with the
+    manuscript's constants, `c ≈ 3·10⁻⁴`.
 * Least prime in a progression: a uniform zero-free half-plane `Re s > θ` gives `p ≪ q^{1/(1−θ)+ε}
   = q^{8+ε}`, weaker than Linnik with `L = 5`.
 * Robin: the repository's Robin packet has no Θ-graded statement, and its canonical reduction

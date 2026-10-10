@@ -114,6 +114,15 @@ improves continuously as the row/column ratio `ρ` falls below 1. That makes it 
    * The cited density lemma is in Khale–O'Kuhn–Panidapu–Sun–Zhang (JNT 2021). Its sketchy proof
      can be repaired by citing Hinz (1976).
    * [reviews/KINTALI_REVIEW.md](reviews/KINTALI_REVIEW.md)
+5a. **The third OpenAI paper (Oct 1, Landau–Siegel)** uses a completely different method:
+   interpolation determinants with Frobenius at inert primes
+   ([SIEGEL_DETERMINANT.md](SIEGEL_DETERMINANT.md)).
+   * Its budget is `1 − 3/4` (from `U³ = N⁴`), against prime bias and the archimedean cost.
+   * The method is intrinsically logarithmic-scale. It cannot see complex zeros or the middle strip,
+     so it gives nothing toward RH.
+   * It is effective in principle, with `c ≈ 3·10⁻⁴` if the manuscript is right.
+   * Either QRH claim implies it with `c = (log 3)/8`, effectively, and hence (conditionally)
+     effective class-number lower bounds.
 6. **Alternative probes.** A heuristic parity/budget rule says purely quadratic theta data never
    produce `μ`, so any theta-type probe has `σ0 ≥ 2/3`. Among cubic averaging patterns, 5/6 is
    minimal, and `m = 3` is forced for GL(2) covers. Quartic and sextic thetas could do better only

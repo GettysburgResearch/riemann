@@ -103,3 +103,11 @@ class (Thorner–Zaman); Bhargava–Ivanyos–Mittal–Saxena (only for Corollar
   it reuses [OAI]'s probe framework.
 * The Hecke family over `Q(sqrt(-3))` is essential to the argument; it is not a special case of a
   ζ-only argument.
+
+## Addendum: the third manuscript in the release
+
+OpenAI, "Uniform exclusion of Landau–Siegel zeros" (1 October 2026), is imported in PR 908 at
+`standalone/2026-10-07-openai-quasi-riemann-import/upstream/preprints/Uniform-exclusion-of-Landau-Siegel-zeros-October-1-2026/`.
+It claims an absolute `c > 0` with `(1−β) log q ≥ c` for every real zero of every primitive real
+Dirichlet `L`. Intake, budget and scope are in [SIEGEL_DETERMINANT.md](SIEGEL_DETERMINANT.md).
+

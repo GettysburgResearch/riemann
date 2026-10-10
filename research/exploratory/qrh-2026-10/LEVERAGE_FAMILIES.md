@@ -128,7 +128,7 @@ Hecke character. The same function without μ equals `−α(p)`, which is not on
 equals −1 at all but finitely many primes:
 * a finite-order Hecke character is 1 on the primes splitting completely in its class field, a set
   of positive density;
-* one of nonzero infinity type has equidistributed arguments.
+* a unitary Hecke character of infinite order has equidistributed values (Hecke).
 
 At squarefree `n` the identity extends through twisted multiplicativity
 `γ_j(ab) = γ_j(a)γ_j(b)χ_a(b)^jχ_b(a)^j`. The reciprocity factors go into `G` and `R`
@@ -145,11 +145,18 @@ At squarefree `n` the identity extends through twisted multiplicativity
 Let the row symbol be `χ^e`, of order `m`, so Poisson in the row produces `γ(χ^e)`. Suppose the
 absorbing coefficient is `τ(p) = (Hecke)·γ(χ'^a)`, with `χ'` of order `n`.
 
-* **Angle condition (necessary; PROPOSED, elementary).** Apply the automorphism `ζ_p ↦ ζ_p^c` of
-  `K(ζ_N, ζ_p)/K(ζ_N)`. Each `g(χ^b)` gets multiplied by `χ^{-b}(c)`. The Hecke values are fixed,
-  and `g(ρ)` gets multiplied by `ρ(c)`. So `μ(p)γ(χ^e) = Hecke · (1 or γ(ρ)) · τ(p)` forces
+* **Angle condition (necessary; PROPOSED, elementary).** First clear the normalizations, using
+  `α(p)|p| = p`. The identity becomes one between unnormalized Gauss sums, an *algebraic* Hecke
+  character (values in `K(ζ_N)`, such as `p ↦ p`) and an integral power of `q`. Every identity used
+  here has this form.
 
-      e/m − a/n ≡ 0 or 1/2 (mod 1)        (up to the sign convention for conjugates).
+  Now apply the automorphism `ζ_ℓ ↦ ζ_ℓ^c` of `K(ζ_N, ζ_ℓ)/K(ζ_N)`, where `ℓ` is the rational prime
+  under `p`. Each `g(χ^b)` gets multiplied by `χ^{-b}(c)`, while the algebraic Hecke values and `q`
+  are fixed. So `μ(p)g(χ^e) = Hecke · g(ρ)^s · g(χ'^a) · q^t` with `s ∈ {0, 1}` forces
+
+      e/m − a/n ≡ s/2 (mod 1)        (angles of the Poisson sum and of τ differ by 0 or 1/2).
+
+  Example: `g_1 = −(p/q) χ̄(4) g_3 g_4`, from §1.1, has `1/6 − 4/6 ≡ 1/2` with `s = 1`.
 
 * **Sign (the Möbius parity).** Given the angle condition, the quotient `γ_P/τ` is `±(Hecke)×(1 or
   γ(ρ))`. The sign is −1, so μ is absorbed, exactly when the reduction leaves an odd number of
@@ -209,7 +216,7 @@ compared:
 | single cubic `u ≤ H²` | `H^{2/3}` | `F^{1/3}` (c = 2/3) | no (§1.3) | — |
 | product `u_1u_2`, cubic each | `H^{2/3+o(1)}`: 152 844 at `H = 10⁶`; `log P/log F` falls 0.455 → 0.432 → 1/3 | `F^{1/3}` (c = 2/3) | **yes**: `μγ_2² = αγ_4` (S5) | `F ≥ D²` gives σ ≥ **7/6** |
 | quotient `u_1/u_2`, cubic or sextic | `≍ H`: `P/H` = 1.72 (cubic), 1.04 (sextic) at `H = 10⁶` | `F^{1/2}` (c = 1/2) | no: `μγγ̄ = μχ(−1)`, the Gauss sums cancel | σ ≥ **1** |
-| `χ(u)χ²(w)`, sextic × cubic | `H^{1/2+o(1)}` (by hand) | `F^{1/4}` (c = 3/4) | fully absorbed into GL(1): `μγ_1γ_2 = αG` | σ ≥ **5/4** |
+| `χ(u)χ²(w)`, sextic × cubic | `≈ H_u^{1/6} H_w^{1/3}` (by hand; dominated by `u` sixth powers, `w` cubes) | `F^{1/4}` at equal lengths (c = 3/4) | fully absorbed into GL(1): `μγ_1γ_2 = αG` | `log_D(F/P) = 5a/6 + 2b/3` with `a + b ≥ 2`, so σ ≥ **7/6** (5/4 at equal lengths) |
 | norm family `u ∈ O_L`, `χ(N_{L/F}u)`, `[L:F] = d` | `count^{1/m}` | c = 1 − 1/m | Hasse–Davenport lifting gives `g^d`, e.g. `d = 2, m = 3` absorbs | count ≥ `D^d` gives σ ≥ `(1 + d(1−1/m))/2` ≥ 1 for d ≥ 2 |
 
 The product and two-exponent families show that μ **can** be absorbed with lower-order symbols, by
@@ -334,7 +341,7 @@ Notation:
 | subsymbols over `Q(ζ_12)` (orders 2, 3, 4, 6) | — | — | — | reduce to the rows above (c depends only on m) | — | — | as above | PROPOSED |
 | product `u_1u_2`, cubic | 3 + 3 | 2/3 per size | ≥ 7/6 at threshold | **yes**, S5 | GL(2) cubic theta | **no**: post-reflection cubic, `j = 2` | **threshold** (Lemma A) + **LS** | PROPOSED + HEURISTIC |
 | quotient `u_1/u_2` | any | 1/2 per size | ≥ 1 at threshold | **no**: Gauss sums cancel | — | — | **A** + threshold | PROPOSED |
-| sextic × cubic, `χ(u)χ²(w)` | 6, 3 | 3/4 per size | ≥ 5/4 | **yes**, into GL(1) | GL(1) | — | **threshold** | PROPOSED |
+| sextic × cubic, `χ(u)χ²(w)` | 6, 3 | 3/4 per size | ≥ 7/6 | **yes**, into GL(1) | GL(1) | — | **threshold** | PROPOSED |
 | norm family, `[L:F] = d ≥ 2` | m | 1 − 1/m | ≥ 1 | possible via `g^d` | GL(2) | — | **threshold** (`count ≥ D^d`) | PROPOSED |
 | angular / Größen / Dirichlet-twisted rows | — | > c of base | > base | unchanged | — | — | **leverage** | PROPOSED |
 

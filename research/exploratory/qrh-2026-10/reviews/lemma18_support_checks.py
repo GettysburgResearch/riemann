@@ -436,6 +436,7 @@ def part_D(PR, H, cfgs, cut=36.0):
         Ma, Ga = gauss_table(af) if af else (None, None)
         Mb, Gb = gauss_table(bf) if bf else (None, None)
         rhs = 0.0 + 0.0j
+        terms = []
         for sub in itertools.product(range(2), repeat=len(comp)):
             efac = {q: 1 for q, s in zip(comp, sub) if s}
             e_el = elem(efac)
@@ -463,9 +464,21 @@ def part_D(PR, H, cfgs, cut=36.0):
                 gb = np.conj(Gb[Mb.idx(neg(h))]) if bf else 1.0
                 s += ker * gx * ga * gb
             rhs += scal * pref * tauC * np.conj(tauD) * Rbar * s
+            terms.append((len(efac), scal, pref, tauC, np.conj(tauD), Rbar, s, chi(rr, e_el)))
         dev = abs(lhs - rhs)
+        # negative controls: each mutation of the allocation data must be detected
+        muts = {
+            "only e=1 (no complementary-mask Moebius)": sum(t[1] * t[2] * t[3] * t[4] * t[5] * t[6] for t in terms if t[0] == 0),
+            "drop xi_r(e)": sum(t[1] / (t[7] if t[7] != 0 else 1) * t[2] * t[3] * t[4] * t[5] * t[6] for t in terms),
+            "drop conj R(a,b)": sum(t[1] * t[2] * t[3] * t[4] * t[6] for t in terms),
+            "1/(q_a q_b) instead of 1/sqrt(q_a q_b)": sum(t[1] * t[2] * t[3] * t[4] * t[5] * t[6] for t in terms)
+            / math.sqrt(q_a * q_b),
+        }
+        detected = [k for k, v in muts.items() if abs(v - lhs) > 1e-6 * max(1.0, abs(lhs))]
+        undetected = [k for k in muts if k not in detected]
         check("D bridge %s" % name, dev < 1e-8 * max(1.0, mass),
               "lhs=%.6f%+.6fi rhs=%.6f%+.6fi |dev|=%.1e mass=%.1f" % (lhs.real, lhs.imag, rhs.real, rhs.imag, dev, mass))
+        print("     negative controls detected: %s; not applicable/undetected: %s" % (detected, undetected))
 
 
 # ----------------------------------------------------------------------------------------------
@@ -681,6 +694,8 @@ def main():
          {p7: (1, 1), p13: (7, 1)}, {p19: 1}, {p7b: 2}),
         ("[inert (3,1)@5, (2,8)@7; a=p7'^2, b=p13 p13']",
          {q5: (3, 1), p7: (2, 8)}, {p7b: 2}, {p13: 1, p13b: 1}),
+        ("[(1,1)@13,(3,1)@7'; a=p19, b=p31 (R(a,b) = -1)]",
+         {p13: (1, 1), p7b: (3, 1)}, {p19: 1}, {p31: 1}),
     ]
     part_D(PR, 2500.0, cfgs)
     part_E(PR)

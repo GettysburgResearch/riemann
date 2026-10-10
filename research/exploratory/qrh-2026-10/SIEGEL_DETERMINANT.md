@@ -48,10 +48,10 @@ Smallest remaining gap:
   * (a) The scale is logarithmic and intrinsically so. Under ideal bias the paper's version cannot exceed `δ < (1 − ln 2)/2 ≈ 0.153`, and no variant can exceed `δ < 2`.
   * (b) More square roots raise the margin `1 − κ` from 1/4 towards 1/2, never past it. Beyond `n = 4` they need a new interpolation lemma, and they improve the rigorous constant by at most a factor 4.
   * (c) It is blind to the middle strip and to complex zeros beyond a disc of radius `O(1/log q)` at `s = 1`.
-  * (d) The proof is effective. Following the manuscript's own constants gives `c ≳ 3·10⁻⁴` for all `q ≥ 3` (conditional on the manuscript).
+  * (d) The proof is effective. Following the manuscript's own constants gives `c ≳ 3·10⁻⁴` for all `q ≥ 3`, `q ≠ 8` (conditional on the manuscript); `q = 8` is handled separately.
 * **EMPIRICAL.**
   * Exact `N = 2, 3` determinants satisfy Lemma 7's divisibility at every admissible prime. They fail it at the unusable class `τ` (e.g. `v₅ = 32 < 168`).
-  * Fields with long inert runs (`D = −163`, `−424708`) show inert shares above 3/4 only for `X ≤ q^{0.75}`. The comparison runs at `X ≈ q^{24}`.
+  * Fields with small `L(1,χ)` or long inert runs show inert shares above 3/4 only for `X ≤ q^{0.75}` (`D = −163`, `−67`, `−43`), or at no sampled scale (`D = −424708`: 0.73 at `q^{0.5}`). The comparison runs at `X ≈ q^{24}`.
 
 ## 1. Intake
 
@@ -61,7 +61,7 @@ Notation: `χ` is primitive, real and nonprincipal of conductor `q ≥ 3`. `β �
 
 | Item | Lines | Exact content and quantifiers |
 |---|---|---|
-| **Theorem 1** | 66–73 | `∃ c > 0` absolute `∀ q ≥ 3 ∀χ ∀β`: `(1−β) log q ≥ c`. |
+| **Theorem 1** | 66–73 | `∃ c > 0` absolute `∀ q ≥ 3 ∀χ` (primitive, real, nonprincipal, conductor `q`) `∀ β ∈ (0,1)` with `L(β,χ) = 0`: `(1−β) log q ≥ c`. |
 | **Lemma 2** (prime bias) | 181–244 | `∀ X ≥ 3`: (2.1) `Σ_{p≤X, χ(p)=1} log p/p ≪ ℓ + δ(log X)²/ℓ`. `∀` integer `H ≥ 2`: (2.2) `Σ_{H<p≤X, p∤2q, χ(p)=−1} log p/p ≥ log X − Cℓ − Cδ(log X)²/ℓ − C_H`, with `C` absolute and `C_H` depending only on `H`. Proof: Hadamard/functional-equation formula (2.3) at `s = 1 + 1/log X`, keeping only the `β` term (2.4), with Mertens. |
 | **Lemma 3** (interpolation) | 252–408 | Let `A: ℂ⁴→ℂ³` be surjective with `ker A = ℂc`, where `c` has four ℚ-independent coordinates. Let `N ≥ 1` and let integers `t_j ≥ 3(N−1)` satisfy `∏(t_j − 3(N−1) + 1) > (4N−3)⁴`. Then evaluation `P_t → ℂ^{E_N}` is surjective, where `E_N = {0..N−1}⁴`. There are no constants, and the result is uniform in `A`. |
 | **Corollary 4** | 410–432 | `1 ≤ H ≤ N`, `U = N^{4/3}`, `T1 = 32H^{2/3}U`, `T2 = T3 = 32H^{−1/3}U`. The monomial rows with `α_j ≤ T_j` span `ℂ^{E_N}`. |
@@ -182,7 +182,7 @@ The finite slack check in §4.2 is consistent with the balance.
 * **Rigorous share** (PROPOSED, from (★)): at `X = q^A` the inert share is at least `1 − (1+e/4)/A − (e/2)δA − O((log H)/(Aℓ))`. The best value over `A` is `1 − 2√((1+e/4)(e/2)δ)`. The comparison closes iff `δ < δ_M(ℓ)`, which tends to 0.0029–0.0098 depending on the constants (§2.2).
 * **Heuristic true share** (HEURISTIC; one real zero, explicit formula, other zeros ignored): `β` contributes `−(1−X^{β−1})/(1−β) = −(ℓ/δ)(1−e^{−x})` to `Σ_{p≤X} χ(p) log p/p`, where `x = δA`. So `φ₋(q^A) ≈ ½ + (1−e^{−δA})/(2δA)`.
   * The paper's inert-only comparison needs `1 − e^{−x} − x/2 > 2c_arch δ`.
-  * The supremum is `δ < (1 − ln 2)/(4c_arch)`: **0.153** for the paper's cube box and 0.307 for an anisotropic box. In the cube box `n2` and `n4` range to `N/√|d|`, so the house is about `N q^{1/4}` and `c_arch = 1/4`.
+  * The supremum is `δ < (1 − ln 2)/(4c_arch)`: **0.153** for the paper's cube box and 0.307 for an anisotropic box. In the anisotropic box `n2, n4 < N/√|d|`, so `M = N⁴/|d|`, the house is about `M^{1/4}q^{1/4}`, and effectively `c_arch = 1/4`. That box would need a box version of Lemma 3, which is not proved.
   * The rigorous version loses a factor of about 50 against this. The loss comes from Lemma 2's quadratic `δ(log X)²` (no saturation) and from the crude `C1`.
 * **Why `δ` must stay `O(1)`** (PROPOSED):
   * The zero's total bias in log-mass is at most `ℓ/δ`, so the extra usable mass is at most `ℓ/(2δ)`.
@@ -352,5 +352,5 @@ python3 -I siegel_budget.py                     # < 1 s, 17/17 checks
 python3 -I siegel_numerics.py consts            # ~ 5 s (mpmath)
 python3 -I siegel_numerics.py bias              # ~ 5 s (numpy)
 python3 -I siegel_numerics.py det 3 -1 2        # ~ 3 s; also det 3 -3 3, det 3 -163 2, det 2 5 2, ...
-python3 -I siegel_numerics.py rect 3 -1         # ~ 10 s
+python3 -I siegel_numerics.py rect 3 -1         # ~ 1 s
 ```
