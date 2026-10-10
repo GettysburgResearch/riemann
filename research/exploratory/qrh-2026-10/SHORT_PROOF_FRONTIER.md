@@ -33,7 +33,8 @@ What was actually run: scripts/short_proof_frontier.py (new):
 Smallest remaining gap: the frontier value 29/31 (Hinz) sits at lx = ly = 16/31 > 1/2, ell = 0. It
   needs the Part I high-expansion specializations ([OAI] Sec. 10.5-10.8, 11, [K] Sec. 4) re-run at
   h = 15/31, plus [OAI] Lemma 5.8 at row exponent 32/31 (stated for general bounded M, but not
-  specialized there). Neither was checked. Inside the manuscript's own range M + ell <= 1 the
+  specialized there), and the proof of Prop. 6.3, which is *stated* only at X = Y = Z^(1/2)
+  (Sep 30 paper.tex, prop:balanced-low), re-run at X = Y = Z^(16/31). None of these was checked. Inside the manuscript's own range M + ell <= 1 the
   value is 29/30, which is exactly Kintali's.
 ```
 
@@ -56,6 +57,9 @@ exponent `A`, the frontier is
 | `A = 3/2` (beyond full-family DH) | hypothetical | 2/3 | 19/21 ≈ 0.904762 | (10/21, 10/21, 1/21) | 19/21 |
 | `A = 18/17` at σ = 19/36 | hypothetical | 19/36 | **7/8** | (5/12, 5/12, 1/6) | 7/8 |
 | `A = 1` (= threshold_calculus `counts='DH'`) | hypothetical | 1/2 | 167/192 ≈ 0.869792 (floor bin) | (13/32, 13/32, 3/16) | 167/192 |
+
+(Height normalisation: THRESHOLD_CALCULUS.md §8 writes `N ≪ (Q²T)^{A(1−σ)}`. The two notes
+normalise the height differently; only the conductor exponent enters the frontier.)
 
 In closed form (`a* = 1 − 1/(2A)` for constant `A`):
 
@@ -255,8 +259,10 @@ The low side is the manuscript's, `energy='paper'`. That is the closed form of t
 
     E_B = max(M′, (2M′+1+3ℓ′)/4, 2M′+ℓ′−1),
 
-with the Lemma 15.1 hypothesis `M + ℓ = 1` lifted by the LP-verified third branch, plus the
-Prop. 15.2 Gram bound (THRESHOLD_CALCULUS.md Sec. 2). No other energy change was assumed.
+with the Lemma 15.1 hypothesis `M + ℓ = 1` replaced by the model's third branch (the LP-verified
+closed form of sup (14.14); Lemma 15.1 itself is proved only at `M + ℓ = 1`), plus the
+Prop. 15.2 Gram bound (THRESHOLD_CALCULUS.md Sec. 2). At `ℓ = 0` the branch is supplied instead by
+Part I Lemma 5.8 (below). No other energy change was assumed.
 
 At every classical frontier point (`A ≥ 2`) only the branch `E = 2M − 1` binds, together with
 `E = M` at `A = 2`. The reflected-kernel branch `(2M+1+3ℓ)/4` of Lemma 14.3 never binds, so

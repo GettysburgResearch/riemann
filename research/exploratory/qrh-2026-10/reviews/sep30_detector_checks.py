@@ -119,6 +119,16 @@ check("height in the L-argument: twist (3i+1)T1 + allowance T1/2 < (3i+2)T1",
       Fr(1) + Fr(1, 2) < 2)
 check("Prop 8.3 twist gamma - nu: 3i T1 + c T1 <= (3i+1) T1 iff c <= 1 (c is inside T1/2)",
       Fr(1, 2) <= 1)
+# eq:stage-height-allocation (6068-6077): |v_k| <= c_k T1, c_k = 1/(2m(1+max_j|a_jk|))
+#   => sum_k |a_jk||v_k| <= T1/2 for every row j (worst case: all |v_k| at their caps)
+ok = True
+for amat in ([[1, 0, 2], [3, 1, 0]], [[1]], [[0, 5, 1, 1], [2, 2, 2, 2], [7, 0, 0, 1]],
+             [[Fr(1, 3), 4], [Fr(-5, 2), 1]]):
+    mcols = len(amat[0])
+    caps = [Fr(1, 2 * mcols) / (1 + max(abs(Fr(row[k])) for row in amat)) for k in range(mcols)]
+    ok &= all(sum(abs(Fr(row[k])) * caps[k] for k in range(mcols)) <= Fr(1, 2) for row in amat)
+check("height allocation c_k = 1/(2m(1+max|a_jk|)) keeps every added height <= T1/2 (samples)", ok,
+      "proof: each of the m terms is <= T1/(2m)")
 
 # ---------------------------------------------------------------------------------------------
 # C. Prop 8.3

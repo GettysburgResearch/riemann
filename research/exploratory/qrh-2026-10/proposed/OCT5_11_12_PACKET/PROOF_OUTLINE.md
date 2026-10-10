@@ -253,7 +253,7 @@ This statement carries all of the automorphic content.
   (check E).
 * *Local twists.* The local Fourier analysis at active primes gives the factors `B_{p,j}`
   (eq:theta-local-factors, 1735). Here `B_{p,j} = χ_p^{−j−2}` for `j ≠ 0, 4`.
-  * For the active exponent `j = 1` this gives `B_{p,1} = χ_p³`, **a quadratic character** (1744).
+  * For the active exponent `j = 1` this gives `B_{p,1} = χ_p³`, **a quadratic character** (1745).
   * The sign of the exponent comes from the multiplier convention. Under the conjugate convention,
     `j = 1` would give `χ_p`, a sextic character (R3 §3; checks A, C).
 * *Archimedean part.* The angular factor `ᾱ` is produced by applying `∂_z̄` at `z = 0` (3307-3343).

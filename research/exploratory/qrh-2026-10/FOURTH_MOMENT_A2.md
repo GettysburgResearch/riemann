@@ -31,8 +31,8 @@ In the Oct 5 architecture, the 11/12 zero-free half-plane follows from the mean 
     Σ_{N u ≤ H} |A_u(D)|² ≪ D^{1+ε} H,   H = D^{1+θ},
     A_u(D) = Σ_n μ(n) ν(n) χ_n(u) W(N n / D),
 
-together with prime extraction from the sixth-power rows `u = p⁶`. PR 910 (Prop. 7.2, which the
-same PR's review found no error in) shows that diagonal-size `2k`-th moments would give
+together with prime extraction from the sixth-power rows `u = p⁶`. PR 910 (Prop. 7.2, not covered by
+the same PR's review) shows that diagonal-size `2k`-th moments would give
 `1/2 + 5(1+θ)/(12k)`. That is **17/24** at `k = 2`, and the exponent tends to 1/2 as `k → ∞`.
 
 This is the opposite of the Sep 30 architecture, whose barriers stall at 13/15
@@ -229,6 +229,8 @@ is needed.
 
 All progress must therefore come from the non-involutive step, the theta reflection. The
 second-step analysis above shows that a single `GL(2)` reflection reproduces a Möbius-type sum.
+(Note added: [Q_RHO_ANALYSIS.md](Q_RHO_ANALYSIS.md) shows that the theta reflection is also an
+involution, and (Q_ρ) ⟺ Mom(1, ρ); the "non-involutive" wording is superseded.)
 
 At these tiny scales the A2-structured dual mean square equals its diagonal within 4%. At `X = 60`,
 ρ stays at about 4.5 as the row range grows fourfold. This is *consistent with*, and not evidence

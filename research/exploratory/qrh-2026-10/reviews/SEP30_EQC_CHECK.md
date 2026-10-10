@@ -26,9 +26,10 @@ Exact sources or dependencies:
         cross-check the symbol tables (A0).
 What was actually run: reviews/sep30_eqc_check.py (written for this note), as
   `nice -n 10 python3 -I sep30_eqc_check.py --out <scratch>/full.json` and with `--quick`.
-  Script SHA-256 445f71c162c235940b0e48d49f6a6caae6554322935f46e172f0656cf50918c3.
-  * Full run: 50/50 checks pass in about 63 s. Log SHA-256 a22a5d20...a722, JSON 27371c1b...dcca
-    (scratch only). A second full run printed identical check lines.
+  Script SHA-256 d5e4ed995951e866e151450b6a508a22cddcf26d7591079b0671fb7072908e22.
+  * Full run: 50/50 checks pass in about 64 s. Log SHA-256 08a81ef8...c9f6, JSON 27371c1b...dcca
+    (scratch only). Three full runs printed identical check lines; the last two used only
+    comment-level edits of the script.
   * Quick run: 46/46 checks pass.
   * An earlier version of the script failed 2/50: the replay controls in a degenerate third
     configuration, where E = 1 and the masks killed all but 36 tuples. That configuration was
@@ -174,7 +175,8 @@ The zero cases include f meeting u_i, h meeting u_1u_2R_1, h = 0, and punctured 
 * The three configurations are:
   * f = 1, ν of order 6, puncture at 73a, empty mark;
   * f = 13a, ν of order 3, two slot lists;
-  * f = 7a, which meets b so that β is masked, trivial ν, puncture at 7b, one slot list.
+  * f = 7b, which meets b so that β(b,f) = 0 for b ∈ {7b, 7a·7b}, trivial ν, puncture at 103a, one slot list that includes 7a, so it is hit through b.
+  * An earlier third configuration (f = 7a, puncture 7b) left only 36 tuples, all with E = 1, so its replay controls could not fail. It was replaced.
 * The radial Gaussian is the case of Lemma 17.5, where every ψ_1 nontrivial on units vanishes on both sides.
 * The shifted Gaussian exp(−π|k−z_0|²/K) uses the general Poisson formula with ĝ(y) = e(−z_0y)(2/√3)K e^{−4πK|y|²/3}. It makes almost every tuple contribute.
 
@@ -213,7 +215,7 @@ relative error of the RHS under the two replay controls.
 | drop_xi | ξ removed | 242/613 | u_1=13a, u_2=1, 𝔅={7b} with row (1,1,0) |
 | drop_mu | μ(u) removed | 320/613 | u_1=1, u_2=7b, 𝔅=1 |
 
-At each minimal counterexample, RAW and the mutated value are distinct sixth roots of unity, or distinct unit-modulus values. The full values are in the JSON.
+At each minimal counterexample, RAW and the mutated value are distinct numbers of modulus 1. The full values are in the JSON (scratch).
 
 **Predicted insensitive:** xi_orient replaces ξ(u) by Π χ_p(u)^{e_p}. It fails on 0/613, as predicted in remark R2.
 

@@ -342,7 +342,8 @@ which is the dual off-diagonal at relative precision `H/L`. The DR mechanism app
   `(A + B)B` (§1.4). It is not the needed relative-precision asymptotic even conditionally.
 
 > **Coordinator note.** [Q_RHO_ANALYSIS.md](Q_RHO_ANALYSIS.md) shows that the theta reflection is
-> also an involution, so "non-involutive" below is incorrect. It also shows that (Q_ρ) is
+> also an involution, so the earlier "non-involutive" wording (here and in §0 item 5, now
+> corrected) was wrong. It also shows that (Q_ρ) is
 > equivalent to Mom(1, ρ) by Poisson in `h` (the manuscript's own lem:first-transfer).
 
 **Smallest statement that would unblock the route.**
