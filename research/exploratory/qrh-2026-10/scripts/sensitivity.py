@@ -18,6 +18,12 @@ SCENARIOS = {
     'S4_tmax2':             (11/12, Inputs(tmax=2.0)),
     'S5_z0_033':            (11/12, Inputs(z0=0.33)),
     'S6_dsel0':             (11/12, Inputs(d_sel=0.05)),
+    'H_joint_moment':       (11/12, Inputs(counts='joint')),
+    'H_joint_moment_t1':    (11/12, Inputs(counts='joint', tmax=1.0)),
+    'R_shift_0.005':        (11/12, Inputs(R_shift=0.005)),
+    'R_shift_0.01':         (11/12, Inputs(R_shift=0.01)),
+    'R_shift_0.02':         (11/12, Inputs(R_shift=0.02)),
+    'R_shift_0.05':         (11/12, Inputs(R_shift=0.05)),
 }
 
 if __name__ == '__main__':

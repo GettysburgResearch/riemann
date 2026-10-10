@@ -14,6 +14,39 @@ Smallest remaining gap: every geometry other than the manuscript's needs the lem
   about the true size of the probe.
 ```
 
+## 0. Relation to prior repository work (read first)
+
+This wave began without noticing that the same manuscripts had already been imported and analysed
+on draft PRs and branches. The following are **prior** and are not claimed here:
+
+* branch `claude/openai-math-riemann-analysis-w5copg`, `standalone/2026-10-07-openai-quasi-rh/`:
+  * an exponent model with `σ0 = 1 − h/6 + b/12`;
+  * the forced dual-length constraint and `σ0 = 11/12 − ℓ/4`;
+  * the method's own optimum ≈ 0.87497;
+  * "DH counts → 13/15";
+  * the floor `5/6` when the energy and dual-length constraints are dropped;
+  * "reaching 3/4 needs `h = 3/2`", i.e. ratios-type cross-row cancellation or a bilinear bound
+    beating Cauchy–Schwarz;
+* [PR 910](https://github.com/GettysburgResearch/riemann/pull/910): the exact envelope limit
+  `(1507−2√921)/1653 ≈ 0.874957`, the conditional `139999/160000`, the joint-moment target (6.6),
+  and the higher-moment route `1/2 + 5(1+θ)/(12k)` for the Oct 5 architecture;
+* [PR 908](https://github.com/GettysburgResearch/riemann/pull/908): the byte-exact import, the
+  conditional bridges, and "no bootstrap" for the repository's MHB32 energy map.
+
+Our numerical optimum (0.874961) independently agrees with PR 910's exact limit.
+
+**What this file adds:**
+
+1. Exact rational certificates for the barrier statements (Barrier 1, Section 2; Section 5 LPs).
+2. The floor-bin barrier as a function of the detector floor `a0`. It equals `167/192` at the
+   manuscript's `a0 = 51/100` *for any row-count input*, which reconciles our 0.8698 with w5copg's
+   13/15: their value corresponds to `a0 → 1/2`.
+3. Robustness of 13/15 under perfect energy, row-by-row GLH and contour flexibility.
+4. The quantitative bilinear-leverage law `13/15 − 4ϑ/5`.
+5. The non-iterability of the 7/8 bootstrap itself (scenarios B and C).
+6. A pricing of PR 910's joint moment (6.6) in this architecture: at most `7/8 − 167/192 = 1/192`.
+7. The Kintali closed form (Section 8).
+
 ## 1. The bookkeeping in one formula
 
 [OAI] Proposition 2.1 needs a probe with `|J| ≪ Z^{C(σ0)+ω}` and `|J − f| ≪ Z^{C(β*)−σ}`, where
@@ -109,6 +142,16 @@ So **both sides are tight at 7/8**:
 | D | density-hypothesis-quality counts `R = 1 − δ` | 0.869838 | floor bin (no zero right of 51/100) |
 | F | DH counts **and** large-sieve-diagonal energy | 0.869838 | floor bin |
 | G | trivial counts `R = 1` | infeasible below 11/12 | all bins |
+| H | PR 910 joint moment (6.6) taken at face value: `R = 1 − δ·t`, `t ≤ 3/2` (also `t = 1`) | 0.869838 | floor bin |
+
+Scenario H prices [PR 910](https://github.com/GettysburgResearch/riemann/pull/910)'s proposed
+joint common-frequency moment. Even granted on the whole detector range, it buys only
+`7/8 − 167/192 = 1/192 ≈ 0.0052` in this architecture. With
+the detector floor also lowered toward 1/2 it buys at most `7/8 − 13/15 = 1/120`. The binding
+constraint becomes the zero-free (floor) rows, which no zero-counting input can touch. By contrast,
+in the Oct 5 architecture (moments of the sextic Möbius family), PR 910 §7 shows that the moment
+hierarchy scales toward 1/2. That architecture is the one where new analytic input has unbounded
+leverage; see [SYNTHESIS.md](SYNTHESIS.md).
 
 Single-lemma sensitivities are in Section 6.
 
@@ -148,13 +191,54 @@ tight:
 * the dual-length branch `E_B ≥ 2M + ℓ − 1`.
 
 **So 13/15 is the barrier of this architecture even with perfect zero counting and a perfect
-reflected-energy bound.** Passing it requires at least one of:
+reflected-energy bound.**
+
+*Contour flexibility does not help.* For a bin with rightmost zero `a`, the central `w`-line can
+sit anywhere in `[1−a, a]` with `s` on `Re s = a`. Phragmén–Lindelöf interpolation of the numerator
+cost then makes the exponent affine in `Re w`, with slope `ly − d/2`, so an endpoint is optimal. At
+`a0 → 1/2` the interval collapses to `{1/2}`.
+
+At that limit the floor-bin cost is exactly "`U` rows, each of Lindelöf size". The 13/15 barrier
+therefore holds even granting the **Generalized Lindelöf Hypothesis row by row**, together with
+perfect zero counting and an optimal large sieve on the reflected side. It is a barrier for every
+*pointwise* (row-by-row) treatment of the Poisson side combined with a Cauchy–Schwarz separation of
+the reflected side.
+
+Passing it requires at least one of:
 
 1. **Cancellation across rows** for zero-free rows on the Poisson side. Their contribution is
    currently summed in absolute value. See [FLOOR_BIN_BARRIER.md](FLOOR_BIN_BARRIER.md).
 2. **Cancellation beyond Cauchy–Schwarz in the low separation.** Any method that bounds `|J|` by
    (row ℓ²) × (additive ℓ²) inherits `E_B ≥ M`.
 3. **A different probe.** The family floor is `5/6`; see [ALT_PROBES.md](ALT_PROBES.md).
+
+### Leverage of a bilinear saving on the reflected side (exact LP)
+
+The low estimate separates the probe as `Q^{-1/2} Σ_m A_m(Y) B_m(Z)`, where `A_m` is the additive
+Gauss-sum polynomial and `B_m` the completed theta row, and then applies Cauchy–Schwarz. Suppose a
+power saving `ϑ` beyond Cauchy–Schwarz were available uniformly in the geometry, with every
+Poisson-side constraint (floor bin, rows treated pointwise) unchanged. The barrier LP then gives:
+
+| ϑ | barrier, `a0 → 1/2` | barrier, `a0 = 51/100` |
+|---|---|---|
+| 0 | 13/15 ≈ 0.8667 | 167/192 ≈ 0.8698 |
+| 1/100 | 322/375 ≈ 0.8587 | ≈ 0.8617 |
+| 1/50 | 319/375 ≈ 0.8507 | ≈ 0.8537 |
+| 1/20 | 62/75 ≈ 0.8267 | ≈ 0.8296 |
+| 1/10 | 59/75 ≈ 0.7867 | ≈ 0.7893 |
+| 1/4 | **2/3** at `lx = ly = 1/2`, `ℓ = 0` | ≈ 0.6713 |
+
+The barrier is `13/15 − (4/5)ϑ` until the geometry degenerates to Part I. At `ϑ = 1/4` the only
+remaining obstruction is the Poisson-side floor bin of the *Part I* probe, which sits exactly at its
+signal offset `2/3`.
+
+The reflected-side bilinear form is therefore the single highest-leverage input. Each unit of
+saving there is worth `4/5` of a unit of boundary, whereas row-count improvements are capped by
+the floor bin. Note that `Σ_m A_m B_m` *is* the probe; Poisson summation in `m` is what produces
+the high side. A bilinear saving thus needs a genuinely intermediate treatment of the `m`-sum. For
+example, the large sieve could be applied to the product character
+`m ↦ χ_s(m) χ_{cn³}(m)` jointly, instead of separating `s` from `(c, n)`. (PROPOSED direction;
+no such estimate is claimed.)
 
 ## 6. Single-lemma sensitivities
 

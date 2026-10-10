@@ -16,6 +16,13 @@ Smallest remaining gap: every lemma of [OAI]/[K] (reflection, large sieves, mome
   combine to the stated margins.
 ```
 
+> **Prior import.** [PR 908](https://github.com/GettysburgResearch/riemann/pull/908) imported
+> openai/math@adc7f124 family 003 byte-exactly on 2026-10-07. That includes this 7/8 paper (same
+> sha256 prefix `8fe93046`), the Oct 5 11/12 companion, the Oct 1 Landau–Siegel paper, and the Lean
+> closure. [PR 909](https://github.com/GettysburgResearch/riemann/pull/909) and
+> [PR 910](https://github.com/GettysburgResearch/riemann/pull/910) build on it. This intake is an
+> independent reading; the Kintali paper has no prior repository coverage.
+
 **Nothing in this file is a repository result about RH.** The manuscripts claim a zero-free
 *half-plane* `Re s > 7/8`; RH asks for `Re s = 1/2`. Per the repository rules, any downstream use
 below must carry the imported hypothesis explicitly:

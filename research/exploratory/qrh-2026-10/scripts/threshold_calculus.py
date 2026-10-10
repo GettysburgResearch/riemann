@@ -36,7 +36,7 @@ TMIN, TMAX = 1.0, 1.5  # detector parameter range (Prop. 8.3)
 class Inputs:
     """Bundle of the lemma constants that the sensitivity study varies."""
     def __init__(self, alpha=ALPHA, plain_cap=6.0, inv_cap=2.0, tmax=TMAX, z0=Z0,
-                 energy='paper', counts='paper', d_sel=0.5, kappa_floor=0.75):
+                 energy='paper', counts='paper', d_sel=0.5, kappa_floor=0.75, R_shift=0.0):
         self.alpha = alpha            # amplification slope
         self.plain_cap = plain_cap    # Lemma 18.1 width condition 2m + plain_cap*kappa*z <= 1
         self.inv_cap = inv_cap        # Lemma 17.1 width condition r + inv_cap*z <= 1
@@ -46,6 +46,7 @@ class Inputs:
         self.counts = counts          # 'paper' (Prop. 19.2 machinery) or 'DH' (R = 1 - delta) or 'trivial'
         self.d_sel = d_sel            # selected prime slots used only for d >= d_sel (paper: 1/2)
         self.kappa_floor = kappa_floor  # Lemma 18.1 stated for kappa in [3/4,1]; None = extrapolate
+        self.R_shift = R_shift          # demand-curve experiment: R -> max(1 - delta, R - R_shift) off the floor bin
 
 PAPER = Inputs()
 
@@ -248,10 +249,19 @@ def R_bin(delta, x, d, kappa, ell, inp=PAPER):
         return 1 - delta                            # density-hypothesis-quality benchmark
     if inp.counts == 'trivial':
         return 1.0
+    if inp.counts == 'joint':
+        # PR 910 eq. (6.6)-(6.7): a common-frequency joint moment sum_u |M_u S_u|^2 << U^{1+eps} for r+m >= 1
+        # would give #rows << U^{1 - delta (r+m)}; the detector guarantees r + m >= t, t <= tmax (Prop. 8.3).
+        # Taken at face value on the whole detector range: R = 1 - delta*tmax (better than DH).
+        return 1 - delta*inp.tmax
     R_un = 1 - 2*delta/3                            # t = 1, no slots (Prop. 19.2 last clause)
     if d < inp.d_sel or ell <= 0:
-        return R_un
-    return min(R_un, R_fast(delta, x, kappa, ell/d, inp))
+        R = R_un
+    else:
+        R = min(R_un, R_fast(delta, x, kappa, ell/d, inp))
+    if inp.R_shift:
+        R = max(1 - delta, R - inp.R_shift)
+    return R
 
 # ----------------------------------------------------------------------------------------------
 # Low side (Lemma 14.3 -> Lemma 15.1, Prop. 15.2, Prop. 15.3)

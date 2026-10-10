@@ -11,6 +11,19 @@ What was actually run: no computation; proofs below are short adaptations, not r
 Smallest remaining gap: each RH-equivalent premise in the repo needs exponent 0; QRH-IMPORT gives 3/8.
 ```
 
+> **Prior work.** Most of Sections 1.3 and 3 already appear in branch
+> `claude/openai-math-riemann-analysis-w5copg`
+> (`standalone/2026-10-07-openai-quasi-rh/README.md` §§4–5) and in
+> [PR 908](https://github.com/GettysburgResearch/riemann/pull/908) `CONDITIONAL_BRIDGES.md`.
+> That includes the fixed-detector bound `N_F(Y) ≪ Y^{3/8+ε}`, the converse direction of Lemma G
+> below. Cite those for the overlapping items.
+>
+> New here:
+> * the *forward* graded implication (Lemma G: premise exponent θ ⇒ no zero right of `1/2 + θ`);
+> * the corrected de Bruijn–Newman normalization (`9/32`, a non-improvement);
+> * the Linnik non-improvement;
+> * the explicit μ(σ) convexity numbers.
+
 Throughout, `Θ = sup{Re ρ : ζ(ρ) = 0}` and **QRH-IMPORT** is the unreviewed external claim `Θ ≤ 7/8`
 (in fact claimed for all Dirichlet L-functions). Write `θ_* = Θ − 1/2 ≤ 3/8` for the "excess".
 
