@@ -1,0 +1,90 @@
+{
+  "CRT_cross_phase_zeta6_exponent": 4,
+  "assertions_by_category": {
+    "adversarial_crt_phase": 1,
+    "adversarial_local_zero": 2,
+    "adversarial_mobius_sign": 3,
+    "complete_native_ramanujan": 111,
+    "conjugate_cubic_gauss": 3,
+    "eisenstein_norms": 3,
+    "gauss_crt_phase": 1,
+    "local_euler_correction": 260,
+    "local_scalar_scaling": 1080,
+    "native_prime_ideals": 10,
+    "outer_quadratic_charge": 420,
+    "positive_sixth_power_zero": 2,
+    "present_j0_zero": 2,
+    "quadratic_divisor_mask": 218,
+    "ramanujan_energy": 3,
+    "ramanujan_mean_zero": 3
+  },
+  "assertions_total": 2122,
+  "gauss_panels": [
+    {
+      "cyclotomic_order": 42,
+      "degree": 12,
+      "norm": 7,
+      "unnormalized_G2_times_G4": 7
+    },
+    {
+      "cyclotomic_order": 78,
+      "degree": 24,
+      "norm": 13,
+      "unnormalized_G2_times_G4": 13
+    },
+    {
+      "cyclotomic_order": 546,
+      "degree": 144,
+      "norm": 91,
+      "unnormalized_G2_times_G4": 91
+    }
+  ],
+  "local_euler_correction": {
+    "formal_degree": 12,
+    "includes_tau_zero": true
+  },
+  "native_ideals": [
+    {
+      "generator": [
+        -2,
+        -3
+      ],
+      "omega": 4,
+      "q": 7
+    },
+    {
+      "generator": [
+        1,
+        -3
+      ],
+      "omega": 9,
+      "q": 13
+    }
+  ],
+  "ramanujan_panels": [
+    {
+      "N_times_phi": 42,
+      "complete_residue_count": 7,
+      "norm": 7,
+      "sum_ramanujan": 0,
+      "sum_ramanujan_squared": 42
+    },
+    {
+      "N_times_phi": 156,
+      "complete_residue_count": 13,
+      "norm": 13,
+      "sum_ramanujan": 0,
+      "sum_ramanujan_squared": 156
+    },
+    {
+      "N_times_phi": 6552,
+      "complete_residue_count": 91,
+      "norm": 91,
+      "sum_ramanujan": 0,
+      "sum_ramanujan_squared": 6552
+    }
+  ],
+  "scope": "Exact finite arithmetic only; no automorphy, convergence, zero-free region, or moment inequality is tested.",
+  "source_sha256": "aabf77a3f75f4a0ce7dc6af5784e2dda93804fa8089f02147d21344388d2c7f5",
+  "status": "PASS"
+}

@@ -1,0 +1,52 @@
+{
+  "arithmetic": "integers and fractions in Q(zeta_6); no floating point",
+  "base_cutoffs": [
+    1,
+    2,
+    3,
+    7,
+    13,
+    26,
+    49,
+    91,
+    128,
+    256,
+    512
+  ],
+  "checks": {
+    "cyclotomic_roots": 12,
+    "exact_replica_divisibility": 275,
+    "explicit_local_inverse": 476,
+    "finite_gram_hermitian": 54,
+    "finite_gram_positive": 18,
+    "finite_mode_separation": 12,
+    "independent_ideal_counts": 512,
+    "mean_operator_coefficients": 275,
+    "prime_ideal_embedding": 622,
+    "unit_invariant_masks": 3732
+  },
+  "finite_gram_determinants": {
+    "1": "0",
+    "13": "71325821548800/19635609037818885185653",
+    "256": "233476433979984808704/73120553605707801070723565375",
+    "512": "2036815354932752878848/590643655683279802546920125843",
+    "7": "0",
+    "91": "584405840548998/137449263264732196299571"
+  },
+  "ideal_count_at_cap": 311,
+  "ideal_norm_cap": 512,
+  "local_inverse_max_exponent": 16,
+  "scope": "Finite local inverses, actual ideal divisibility counts, and finite Gram matrices only; not an infinite moment or zero-free proof.",
+  "split_prime_ideals": [
+    {
+      "omega_residue": 2,
+      "rational_prime": 7
+    },
+    {
+      "omega_residue": 3,
+      "rational_prime": 13
+    }
+  ],
+  "status": "PASS",
+  "total_checks": 5988
+}

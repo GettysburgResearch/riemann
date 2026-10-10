@@ -75,6 +75,10 @@ The pages above describe reviewed components at their recorded sources, with lat
 
 [The generalized-moment packet](standalone/2026-10-10-generalized-inverse-moments/README.md) proves a general moment bound for long row ranges, an all-order prime-incidence decomposition, uniform removal of moving exclusions, and a single-test characterization of moment growth by the rightmost zero. It also gives counterexamples to arbitrary-coefficient shortcuts. The crucial short-row fourth and higher moments remain open; no new zero-free boundary or RH proof is claimed. The packet records complete proofs, scoped independent agent reviews, and exact finite character checks.
 
+## Follow-up research: oscillating overlaps and averaged moments
+
+[The next moment packet](standalone/2026-10-10-oscillating-overlaps-and-averaged-moments/README.md) proves a sharper cubic common-factor range in the fourth moment and specified higher moments, uniform weighted-energy equivalence for exact sixth-power replicas, and a scale-averaged moment criterion with the same conditional zero-free extraction. It also gives the factorwise theta reflection with its explicit reciprocal angular Hecke L-factor. The nearly coprime short-row moment remains open; this is proposed research with complete proofs, scoped reviews, and exact finite checks, not a new zero-free boundary.
+
 ## License
 
 Project code and original research materials are available under the [MIT License](LICENSE). Third-party material retains its existing terms and notices.

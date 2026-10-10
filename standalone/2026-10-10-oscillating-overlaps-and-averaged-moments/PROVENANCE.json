@@ -1,0 +1,386 @@
+{
+  "schema_version": 1,
+  "created_date_utc": "2026-10-10",
+  "status": "proposed standalone research; draft pull request",
+  "repository": "GettysburgResearch/riemann",
+  "packet_path": "standalone/2026-10-10-oscillating-overlaps-and-averaged-moments",
+  "publication": {
+    "base_pull_request": 912,
+    "base_branch": "research/generalized-inverse-moments-20261010",
+    "parent_commit": "6afd64e042ce7b59d550c3d76e9e2cca8b2c7379",
+    "parent_tree": "a4be03266ce104a09cd6a22935d806344ffa2bfa",
+    "proposed_branch": "research/oscillating-overlaps-averaged-moments-20261010",
+    "allowed_changes": [
+      "standalone/2026-10-10-oscillating-overlaps-and-averaged-moments/**",
+      "README.md"
+    ],
+    "self_reference_policy": "This manifest does not hash itself or contain the future publication commit. The commit and PR identify the complete snapshot."
+  },
+  "claim_boundaries": {
+    "classical_deductions": [
+      "Cubic all-row large sieve with original nonunit zero masks",
+      "Improved large-common-factor fourth-moment polynomial norm",
+      "Designated-incidence bounds and specified configurations in moments of order 4 ell"
+    ],
+    "unconditional_operator_deductions": [
+      "Uniform weighted energy equivalence for averaged exact removal operators",
+      "Moving-cutoff inversion with finite-interval control"
+    ],
+    "conditional_deductions": [
+      "Scale-averaged generalized moment estimate implies the stated fixed-twist zero-free region",
+      "Optional signed overlap extension assumes its displayed uniform moving-mask second-moment premise"
+    ],
+    "source_qualified_deductions": [
+      "Factorwise reflection assumes the pinned theta reflection formula; its local phases and Ramanujan algebra are independently checked"
+    ],
+    "not_claimed": [
+      "Full short-row fourth moment",
+      "Full generalized moment hierarchy",
+      "New zero-free half-plane",
+      "Riemann hypothesis or generalized Riemann hypothesis",
+      "Literature novelty",
+      "Human peer review",
+      "Lean formalization",
+      "Repository integration verdict"
+    ]
+  },
+  "dependencies": {
+    "predecessor_mellin_test": {
+      "pull_request": 912,
+      "commit": "6afd64e042ce7b59d550c3d76e9e2cca8b2c7379",
+      "repository_path": "standalone/2026-10-10-generalized-inverse-moments/MELLIN_AND_SPIKES.md",
+      "bytes": 19873,
+      "sha256": "f3bdeb168714d838a4b13347cd353675d9644b9629041cdf7def78dc496162e3",
+      "git_blob_sha1": "99f75ea589ae544d788d438b50a25eff2787822a"
+    },
+    "sibling_refined_sieve": {
+      "pull_request": 913,
+      "commit": "6498d6cc2eded03159c7332b25fd224ad07f89c1",
+      "repository_path": "standalone/2026-10-10-sextic-moment-descent/REFINED_ALL_ROW_SIEVE.md",
+      "bytes": 17097,
+      "sha256": "6879e094fb63969ddc88c637bf633cf46360d144d2b1615573647e734b4141e8",
+      "git_blob_sha1": "69589ba1350c1ed5bd62cf87b976c3ba2142f94e",
+      "incorporation": "Referenced at immutable commit; sibling branch not merged into this branch"
+    },
+    "imported_manuscripts": {
+      "upstream_repository": "OpenAI/math",
+      "upstream_commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+      "canonical_files": [
+        {
+          "repository_path": "standalone/2026-10-07-openai-quasi-riemann-import/upstream/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex",
+          "bytes": 169005,
+          "sha256": "d9a8f15aa770cf883d0eabd2b775fad694ce20b44cba7928f5c0c9a6d8750d4d",
+          "git_blob_sha1": "2000faddbbebac5de0ecfe0b962534ea61a852d5"
+        },
+        {
+          "repository_path": "standalone/2026-10-07-openai-quasi-riemann-import/upstream/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/build/paper.tex",
+          "bytes": 766316,
+          "sha256": "42a5ee0febca59fd1def55cfd6c6808c322ef4237d7726303ea52f711deac6a3",
+          "git_blob_sha1": "268c4e3206d460c617d3d2129742a72b831b3def"
+        }
+      ],
+      "scratch_copy_difference": "The theta author used canonical October 5 TeX plus exactly one trailing newline. All mathematical bytes agree; the execution record identifies both versions."
+    },
+    "classical_primary_sources": [
+      {
+        "authors": "Blomer, Goldmakher, Louvel",
+        "url": "https://arxiv.org/html/1112.1650v1",
+        "scope": "Theorem 1.3; squarefree Hecke character indices, with primitive-character conventions applied before the exact all-row reduction"
+      },
+      {
+        "authors": "Goldmakher, Louvel",
+        "url": "https://arxiv.org/html/1112.1642v2",
+        "scope": "Theorem 1.1 and Corollary 1.2; quadratic Hecke-family large sieve on squarefree indices"
+      }
+    ]
+  },
+  "proofs": [
+    {
+      "published_file": "OSCILLATING_OVERLAPS.md",
+      "working_file": "attack2_moment.md",
+      "bytes": 28553,
+      "sha256": "271f4f71bda533810ee49f6498f4ffbc42c3f0cb37c59151f9f703e715f58397",
+      "git_blob_sha1": "aa3137869abcee4b380bb0b621e56e93e2072d71",
+      "copies_byte_identical": true
+    },
+    {
+      "published_file": "AVERAGED_MASK_OPERATORS.md",
+      "working_file": "attack2_amplification.md",
+      "bytes": 34690,
+      "sha256": "1acb3ff591c6b53f1200418bc69b3f0f96d63d987f22cfd66e88c41017abe299",
+      "git_blob_sha1": "38227cd2670570da1074322b7cdf253dc4a65399",
+      "copies_byte_identical": true
+    },
+    {
+      "published_file": "SCALE_AVERAGED_CRITERION.md",
+      "working_file": "attack2_scale_criterion.md",
+      "bytes": 12654,
+      "sha256": "c6c543037312480fae6154f7a059248fe14658ecff6251aaecb80fe0fdbfd9c0",
+      "git_blob_sha1": "f683c09d6ed298aa07384e71ee56d69ebbb35d5f",
+      "copies_byte_identical": true
+    },
+    {
+      "published_file": "FACTORWISE_THETA_REFLECTION.md",
+      "working_file": "attack2_theta.md",
+      "bytes": 21370,
+      "sha256": "f4854894c797f9b9f92b6d52a24b61caa941e3aff2b15c4c5a460db8fff469ff",
+      "git_blob_sha1": "12e47dfbb2a078f8aad7b53587e9ff761a753463",
+      "copies_byte_identical": true
+    }
+  ],
+  "reviews": [
+    {
+      "file": "reviews/overlap_review.md",
+      "role": "independent AI-agent analytic review",
+      "scope": [
+        "OSCILLATING_OVERLAPS.md Sections 2-5"
+      ],
+      "outcome": "PASS"
+    },
+    {
+      "file": "reviews/operator_review.md",
+      "role": "independent AI-agent analytic review",
+      "scope": [
+        "AVERAGED_MASK_OPERATORS.md Sections 1-5",
+        "SCALE_AVERAGED_CRITERION.md complete"
+      ],
+      "outcome": "PASS"
+    },
+    {
+      "file": "reviews/scale_review.md",
+      "role": "independent AI-agent analytic review",
+      "scope": [
+        "SCALE_AVERAGED_CRITERION.md complete"
+      ],
+      "outcome": "PASS"
+    },
+    {
+      "file": "reviews/operator_checker_review.md",
+      "role": "independent AI-agent checker review and replay",
+      "scope": [
+        "checks/verify_operators.py",
+        "normal and optimized executions"
+      ],
+      "outcome": "PASS"
+    },
+    {
+      "file": "reviews/theta_execution.md",
+      "role": "author execution record, not an independent analytic review",
+      "scope": [
+        "checks/verify_theta.py",
+        "canonical source normalization"
+      ],
+      "outcome": "PASS"
+    },
+    {
+      "file": "REVIEW.md",
+      "role": "root analytic reconstruction and release audit",
+      "scope": [
+        "All four proof notes; exact limits described in the report",
+        "Localized all-even-degree corollary and optional signed-overlap section",
+        "Finite-mode and synthetic-model sections",
+        "Source-qualified theta calculation"
+      ],
+      "outcome": "PASS within stated scopes"
+    }
+  ],
+  "validation": {
+    "runtime": "3.12.14",
+    "arithmetic": "Python standard library; exact integers, rational numbers, finite algebraic quotients; no floating point acceptance tests",
+    "assertion_policy": "All released checkers use explicit exceptions. Python optimization does not remove any acceptance predicate.",
+    "operators": {
+      "script": "checks/verify_operators.py",
+      "result": "results/operators.json",
+      "exact_predicates": 5988,
+      "ideal_norm_cap": 512,
+      "actual_ideals": 311,
+      "base_cutoffs": [
+        1,
+        2,
+        3,
+        7,
+        13,
+        26,
+        49,
+        91,
+        128,
+        256,
+        512
+      ],
+      "local_inverse_degree": 16,
+      "independent_replay": "Author normal, independent normal and optimized; result bytes identical",
+      "gram_scope": "Two explicitly chosen split-prime local responses, eta zero at all other primes; finite evidence only"
+    },
+    "theta": {
+      "script": "checks/verify_theta.py",
+      "result": "results/theta.json",
+      "exact_predicates": 2122,
+      "native_ideal_norms": [
+        7,
+        13,
+        91
+      ],
+      "cyclotomic_orders": [
+        42,
+        78,
+        546
+      ],
+      "local_euler_degree": 12,
+      "independent_replay": "Author optimized and root normal; result bytes identical",
+      "scope": "Primitive finite-field normalizations and finite local algebra; imported automorphy is not independently proved"
+    },
+    "overlaps": {
+      "script": "checks/verify_overlaps.py",
+      "result": "results/overlaps.json",
+      "candidate_incidence_divisors": 415325,
+      "literal_cubic_row_identities": 104976,
+      "incidence_models": [
+        {
+          "formal_primes": 3,
+          "polynomial_degree": 2
+        },
+        {
+          "formal_primes": 3,
+          "polynomial_degree": 3
+        },
+        {
+          "formal_primes": 3,
+          "polynomial_degree": 4
+        },
+        {
+          "formal_primes": 2,
+          "polynomial_degree": 5
+        },
+        {
+          "formal_primes": 2,
+          "polynomial_degree": 6
+        }
+      ],
+      "row_valuations": [
+        0,
+        8
+      ],
+      "independent_replay": "Final author normal and optimized; root optimized from published-path copy; result bytes identical",
+      "correction": "An earlier optimized run disabled bare assertions and is excluded. Final source replaces every assertion with explicit exceptions.",
+      "scope": "Finite multiplicative ideal model and exact universal monomial/affine certificates; not arithmetic character-distribution evidence"
+    },
+    "reproduction": "See VALIDATION.md; commands run from repository root and write fresh outputs outside the packet."
+  },
+  "files": [
+    {
+      "repository_path": "standalone/2026-10-10-oscillating-overlaps-and-averaged-moments/AVERAGED_MASK_OPERATORS.md",
+      "bytes": 34690,
+      "sha256": "1acb3ff591c6b53f1200418bc69b3f0f96d63d987f22cfd66e88c41017abe299",
+      "git_blob_sha1": "38227cd2670570da1074322b7cdf253dc4a65399"
+    },
+    {
+      "repository_path": "standalone/2026-10-10-oscillating-overlaps-and-averaged-moments/FACTORWISE_THETA_REFLECTION.md",
+      "bytes": 21370,
+      "sha256": "f4854894c797f9b9f92b6d52a24b61caa941e3aff2b15c4c5a460db8fff469ff",
+      "git_blob_sha1": "12e47dfbb2a078f8aad7b53587e9ff761a753463"
+    },
+    {
+      "repository_path": "standalone/2026-10-10-oscillating-overlaps-and-averaged-moments/OSCILLATING_OVERLAPS.md",
+      "bytes": 28553,
+      "sha256": "271f4f71bda533810ee49f6498f4ffbc42c3f0cb37c59151f9f703e715f58397",
+      "git_blob_sha1": "aa3137869abcee4b380bb0b621e56e93e2072d71"
+    },
+    {
+      "repository_path": "standalone/2026-10-10-oscillating-overlaps-and-averaged-moments/README.md",
+      "bytes": 11218,
+      "sha256": "cf1ca0ce485d21a73f302aa7238fd064accc2fdde907296ecb327f590cde6d3a",
+      "git_blob_sha1": "069b70992cb033b8c52d4ea86d44643b53f4967b"
+    },
+    {
+      "repository_path": "standalone/2026-10-10-oscillating-overlaps-and-averaged-moments/REVIEW.md",
+      "bytes": 10886,
+      "sha256": "e8d3a06878455b4e63593efcb9b484701b21d90057224d041b0da0269754a54e",
+      "git_blob_sha1": "18550ca946f6c4efc9df9f6f71a66b1269cd4c17"
+    },
+    {
+      "repository_path": "standalone/2026-10-10-oscillating-overlaps-and-averaged-moments/SCALE_AVERAGED_CRITERION.md",
+      "bytes": 12654,
+      "sha256": "c6c543037312480fae6154f7a059248fe14658ecff6251aaecb80fe0fdbfd9c0",
+      "git_blob_sha1": "f683c09d6ed298aa07384e71ee56d69ebbb35d5f"
+    },
+    {
+      "repository_path": "standalone/2026-10-10-oscillating-overlaps-and-averaged-moments/VALIDATION.md",
+      "bytes": 8781,
+      "sha256": "c4c7c95f2cd06f10aca35c94978e66b9d56bbda53f5518110ef057903b60a060",
+      "git_blob_sha1": "80a3272ca18d53bb50e94a72b68881a47c54a714"
+    },
+    {
+      "repository_path": "standalone/2026-10-10-oscillating-overlaps-and-averaged-moments/checks/verify_operators.py",
+      "bytes": 8290,
+      "sha256": "da375b646729871e48130d9179b2153e97f3735502d60b274c1c170385e40332",
+      "git_blob_sha1": "d269d2f6468637283e0aa88bdb4604b1245f39ff"
+    },
+    {
+      "repository_path": "standalone/2026-10-10-oscillating-overlaps-and-averaged-moments/checks/verify_overlaps.py",
+      "bytes": 13015,
+      "sha256": "b20b521729b2f87b207ff263ecf4f2998b10c5fbecbfb98277e88c967eb37919",
+      "git_blob_sha1": "8ee862326f05928f0c917fc4e761ec7e2a2faa0c"
+    },
+    {
+      "repository_path": "standalone/2026-10-10-oscillating-overlaps-and-averaged-moments/checks/verify_theta.py",
+      "bytes": 13416,
+      "sha256": "aabf77a3f75f4a0ce7dc6af5784e2dda93804fa8089f02147d21344388d2c7f5",
+      "git_blob_sha1": "cb08d03e1139ae168840e0df5fde5499f79307ff"
+    },
+    {
+      "repository_path": "standalone/2026-10-10-oscillating-overlaps-and-averaged-moments/results/operators.json",
+      "bytes": 1295,
+      "sha256": "9a5ed4b551e6ed1d3c35d7c8dbf6ae16bd3dadf627bc32bd56814d5ef485b13d",
+      "git_blob_sha1": "11dd0f3fa1a3309538b55c4b669d2ec561c9536b"
+    },
+    {
+      "repository_path": "standalone/2026-10-10-oscillating-overlaps-and-averaged-moments/results/overlaps.json",
+      "bytes": 6828,
+      "sha256": "a36c55ab859cf3d0a86f6a184fc055fdcae71e732d13335bbfc68d02b84498c8",
+      "git_blob_sha1": "e1916799526d57a447cad13714a52d208623c0cf"
+    },
+    {
+      "repository_path": "standalone/2026-10-10-oscillating-overlaps-and-averaged-moments/results/theta.json",
+      "bytes": 2019,
+      "sha256": "3b0d17f7f6dd369668559c179e26babf6642a5b8b316cfc1a16ade2243edd619",
+      "git_blob_sha1": "a37afa58356a9b820154fa8b470e5e3199495b74"
+    },
+    {
+      "repository_path": "standalone/2026-10-10-oscillating-overlaps-and-averaged-moments/reviews/operator_checker_review.md",
+      "bytes": 5981,
+      "sha256": "49c8df911ca60c3911564b88165f48949a672b4efb72e2817f2fbb808c761fac",
+      "git_blob_sha1": "e2c900c0eeedd7003dce29c535776a444c303c65"
+    },
+    {
+      "repository_path": "standalone/2026-10-10-oscillating-overlaps-and-averaged-moments/reviews/operator_review.md",
+      "bytes": 9223,
+      "sha256": "0b147bc9b24924cb598e56b75d3338c9e560206bfac4da3bf590fa1b0e52604f",
+      "git_blob_sha1": "63d0c5361b7c9230c99ddc6f32c84101a0db4b28"
+    },
+    {
+      "repository_path": "standalone/2026-10-10-oscillating-overlaps-and-averaged-moments/reviews/overlap_review.md",
+      "bytes": 10631,
+      "sha256": "c6d3a27e373b1571f757f78d6cb5201551d0f058f164581d897100e09889adc4",
+      "git_blob_sha1": "9e0dbf28735fd51694d9e6ceb2bf020467984e60"
+    },
+    {
+      "repository_path": "standalone/2026-10-10-oscillating-overlaps-and-averaged-moments/reviews/scale_review.md",
+      "bytes": 7006,
+      "sha256": "7a672f58434895bfcd2538e75acdcddfd6d7f75a676904936dc1022a5fad4edc",
+      "git_blob_sha1": "6b0d1e3a91650891e820bd467a0a2fd808a1b49e"
+    },
+    {
+      "repository_path": "standalone/2026-10-10-oscillating-overlaps-and-averaged-moments/reviews/theta_execution.md",
+      "bytes": 5145,
+      "sha256": "1e43ce51529a2fbd2e77459559cdc9572766e947202e42d3960e410a2297caa2",
+      "git_blob_sha1": "3a2566392f888c6fd8b1006404a856bee9307bde"
+    }
+  ],
+  "navigation_file": {
+    "repository_path": "README.md",
+    "bytes": 9580,
+    "sha256": "f4e0d9c47a635691017add02b973b9b91ba3a1189f27e250f3e8c6f1a4eb563a",
+    "git_blob_sha1": "a180dc804d58e4cb8472fc8cb9a2034ea7e81edc",
+    "change": "Four-line standalone packet navigation addition; predecessor README otherwise preserved"
+  }
+}
