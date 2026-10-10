@@ -216,6 +216,7 @@ met).
 | wave `SiegelFromSevenEighths.json` (upstream `SiegelZeros` challenge module) | `OAI.QRHWave.SiegelFromSevenEighths` | **accepted**: "Lean default kernel accepts the solution", 1082 s, exit 0 ([results/comparator_SiegelFromSevenEighths.log](results/comparator_SiegelFromSevenEighths.log)). The challenge is the upstream Oct 1 statement, unchanged; the solution is this wave's corollary of the 7/8 Dirichlet theorem |
 | wave `QRHWaveStrip.json` (challenge written in this wave) | `OAI.QRHWave.ZetaZeroStrip` | **accepted**: "Lean default kernel accepts the solution", 1104 s, exit 0 ([results/comparator_QRHWaveStrip.log](results/comparator_QRHWaveStrip.log)). The challenge file (`../lean/comparator/QRHWaveStrip.lean`) imports only Mathlib and states the strip in the binder shape of Mathlib's `RiemannHypothesis` |
 | upstream `SiegelZeros.json` | `OAI.NumberTheory.SiegelZeros.Main` (Oct 1 route) | pending |
+| wave `QRHWaveDirichletStrip.json` (challenge written in this wave; Mathlib-only) | `OAI.QRHWave.DirichletZeroStrip` | queued after the nanoda run |
 | `QuasiRiemannHypothesisNanoda.json` (upstream zeta challenge with `enable_nanoda: true`) | `OAI.NumberTheory.DirichletL.Nonvanishing` | queued: a **second, independent kernel**. nanoda_lib 0.4.19 (ammkrn/nanoda_lib@3a24072) was built here with cargo 1.97.0 (`cargo build --release`, 32 s) and is passed to comparator through `COMPARATOR_NANODA` |
 
 ## 1. Verdict of the original attempt (superseded by Addendum A): PARTIAL
