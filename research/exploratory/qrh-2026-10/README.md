@@ -33,6 +33,7 @@ they are unreviewed.
 | File | Content |
 |---|---|
 | [SYNTHESIS.md](SYNTHESIS.md) | **start here**: the two architectures, what is new, where a breakthrough would have to come from |
+| [AGENDA.md](AGENDA.md) | bounded open problems with payoffs (moment ladder, 7/8 escape routes, verification, repo bridges) |
 | [INTAKE.md](INTAKE.md) | exact claimed statements, architecture, dependencies, what was verified |
 | [FOURTH_MOMENT_A2.md](FOURTH_MOMENT_A2.md) | the fourth-moment rung (to 17/24) has cubic GL(3)-metaplectic shape; nesting identity (a2/) |
 | [BRIDGE_MELLIN.md](BRIDGE_MELLIN.md) | QRH continuation vs the repo's Mellin–Landau premise; graded NRC32 identity; family-relative step |
