@@ -183,7 +183,7 @@ The finite slack check in §4.2 is consistent with the balance.
 * **Heuristic true share** (HEURISTIC; one real zero, explicit formula, other zeros ignored): `β` contributes `−(1−X^{β−1})/(1−β) = −(ℓ/δ)(1−e^{−x})` to `Σ_{p≤X} χ(p) log p/p`, where `x = δA`. So `φ₋(q^A) ≈ ½ + (1−e^{−δA})/(2δA)`.
   * The paper's inert-only comparison needs `1 − e^{−x} − x/2 > 2c_arch δ`.
   * The supremum is `δ < (1 − ln 2)/(4c_arch)`: **0.153** for the paper's cube box and 0.307 for an anisotropic box. In the anisotropic box `n2, n4 < N/√|d|`, so `M = N⁴/|d|`, the house is about `M^{1/4}q^{1/4}`, and effectively `c_arch = 1/4`. That box would need a box version of Lemma 3, which is not proved.
-  * The rigorous version loses a factor of about 50 against this. The loss comes from Lemma 2's quadratic `δ(log X)²` (no saturation) and from the crude `C1`.
+  * The proved version (from (★), conditional on the manuscript) loses a factor of about 50 against this. The loss comes from Lemma 2's quadratic `δ(log X)²` (no saturation) and from the crude `C1`.
 * **Why `δ` must stay `O(1)`** (PROPOSED):
   * The zero's total bias in log-mass is at most `ℓ/δ`, so the extra usable mass is at most `ℓ/(2δ)`.
   * Every variant must pay an Archimedean `c_arch·ℓ ≥ ℓ/4` per unit of degree. `N⁴` distinct elements of `ℤ[√d,√2]` must have house `≳ N|d|^{1/4}`, since the covolume is `≍ |d|`. That is HEURISTIC as a lower bound for what Hadamard can deliver.
@@ -215,7 +215,7 @@ The ideal ceiling is `δ < (1−2/n)/(2c_arch)`, using all usable classes includ
    * Within the codimension-1 family (`k = n − 1`), `κ = 1 − 1/n`, so `n = 4` is optimal.
    * Larger `n` needs a field-uniform multiplicity estimate with a higher-codimension kernel (Philippon-type). That is OPEN.
    * Quick obstruction count: the subfield sublattices `O_F` project to `1/2 + 1/f ≥ κ` dimensions per lattice dimension, so subfields give no obstruction (PROPOSED).
-3. **The rigorous gain is small.** `δ_max ∝ Γ²` gains at most `(1/2)²/(1/4)² = 4×`, i.e. 0.0053 → 0.021 with the crude Lemma 2. The bottleneck is Lemma 2, not the dimension count.
+3. **The proved gain is small.** `δ_max ∝ Γ²` gains at most `(1/2)²/(1/4)² = 4×`, i.e. 0.0053 → 0.021 with the crude Lemma 2. The bottleneck is Lemma 2, not the dimension count.
 4. The role of `√2` can be played by any fixed auxiliary quadratic field other than `ℚ(√d)`. That changes the excluded `d` and the constant `log 8`, nothing else.
 
 ### (c) Complex zeros and the middle strip: the exact obstruction
