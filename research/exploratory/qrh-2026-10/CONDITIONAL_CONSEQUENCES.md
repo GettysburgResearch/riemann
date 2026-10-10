@@ -37,8 +37,11 @@ in `Re s > 1` (Titchmarsh Sec. 14.2; the same argument is Lemma 5 of [K]). Hence
 
 **1.2 Convexity interpolation.** With `μ(1/2) ≤ 13/84` (Bourgain) and convexity of μ,
 QRH-IMPORT gives `μ(σ) ≤ (26/63)(7/8 − σ)` on `[1/2, 7/8]`; e.g. `μ(3/4) ≤ 13/252 ≈ 0.0516`
-versus `13/168 ≈ 0.0774` from convexity with `μ(1)=0`. *Novelty not assessed:* compare with current
-exponent-pair tables before using this as an improvement.
+versus `13/168 ≈ 0.0774` from convexity with `μ(1)=0`. *Superseded by a sharper envelope:*
+[ZERO_DENSITY_CONDITIONAL.md](ZERO_DENSITY_CONDITIONAL.md) computes the exact convex hull of all
+μ data in ANTEDB together with `(7/8, 0)`. The result is `μ_QRH(σ) ≈ 0.4088(7/8 − σ)` on
+`[0.5734, 7/8]`. It also shows that QRH-IMPORT does **not** improve the best zero-density exponents
+`A(σ)` on `[1/2, 7/8)`, nor the density-hypothesis range `σ ≥ 25/32`.
 
 **1.3 Prime and Möbius sums.** `ψ(x) = x + O(x^{7/8} log² x)` and `M(x) ≪ x^{7/8+ε}` (Perron with
 1.1). Note the repository's SHARP/critical-Taylor obstruction (`OPEN.ARITH.CV`) is a *sign*
