@@ -22,3 +22,13 @@
    control xi_u_noconj      maxdev=1.73 failing=1413/5844
    control tau_conj         maxdev=2 failing=2104/5844
    control nonprimary_s     maxdev=1.44e-09 failing=0/5844
+   control nonprimary_A     maxdev=2 failing=2104/5844
+   control F_e_conj         maxdev=2 failing=1039/5844
+   control gamma3_noconj    maxdev=2 failing=109/5844
+   control rho_sign         maxdev=1.73 failing=1246/5844
+   control drop_omega_ll    maxdev=2 failing=16/5844
+   control drop_omega_tk    maxdev=2 failing=71/5844
+   control gamma1_pos       maxdev=1.98 failing=1835/5844
+   ctrl_gen_minus_p: tuples=8352 maxdev=2 failures=4713
+   probe_e_conjugate: tuples=8352 maxdev=1.25e-12 failures=0
+   alt_bstar_unit_zeta: tuples=8352 nonzero=5247 maxdev=1.21e-12 FS=4.19e-12 failures=0
