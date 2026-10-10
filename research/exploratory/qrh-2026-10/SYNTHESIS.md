@@ -161,8 +161,11 @@ the critical line.
      ([proposed/CUBIC_FOURTH_MOMENT/](proposed/CUBIC_FOURTH_MOMENT/README.md)).
      * Its most likely failure point, the centred stage, survived one adversarial attack
        ([reviews/CUBIC_CENTRED_ATTACK.md](reviews/CUBIC_CENTRED_ATTACK.md)).
-     * One condition is left open: that every step acts identically on both rectangles.
-     * The route stays conditional.
+     * The condition it left open, that every step acts identically on both rectangles, is
+       closed at the level of the displayed steps
+       ([reviews/CUBIC_BOTH_RECTANGLES.md](reviews/CUBIC_BOTH_RECTANGLES.md)). The only split
+       is on non-Θ rows and costs nothing, and `n = 3` adds no asymmetry.
+     * The route stays PROPOSED and conditional on (H-A) and (H-B).
    * The 7/8 paper's Gauss/reciprocity helpers (Lemmas 4.2–4.4), which the sextic packet
      needs, had one bounded review: no wrong step found
      ([proposed/SEXTIC_FOURTH_MOMENT/](proposed/SEXTIC_FOURTH_MOMENT/README.md)).

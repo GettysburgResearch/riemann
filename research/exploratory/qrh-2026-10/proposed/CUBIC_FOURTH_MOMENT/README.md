@@ -101,3 +101,24 @@ Left open: whether every step of l. 13114-14310 acts identically on both rectang
 does not, the loss can be as large as `M/3`, which would exceed the tolerance.
 
 The route stays PROPOSED and CONDITIONAL on (H-A) and (H-B). No moment bound is proved.
+
+## Note added later the same day: the "both rectangles" condition
+
+[../../reviews/CUBIC_BOTH_RECTANGLES.md](../../reviews/CUBIC_BOTH_RECTANGLES.md) decides the
+condition that the centred-stage attack left open. Its verdict is **(a) closed at the level of the
+manuscript's displayed steps** (bounded, one agent).
+* The two rectangles are the two terms of `D_b`: the original product `S(X1)S(X2)` and the
+  comparison `S(Y1)S(Y2)`, with `X1X2 = Y1Y2`.
+* Every step before the Θ/non-Θ row split, and every Θ-row step, acts identically on both.
+* On non-Θ rows, l. 14119-14300 split them by the triangle inequality and clip each separately.
+  No cancellation is used there, so this costs `0·M`, at most `2θ_N` per edge.
+* For `n = 3`, Gauss sums, reciprocity and units act on whole columns, never on one rectangle.
+  The quadratic twist `χ_p³` is specific to the sextic case.
+* The stakes: a mismatch in the Θ branch would have cost `M/3`, which is `144/11` times the
+  tolerance. The manuscript keeps clipping out of that branch (l. 14086, 14703-14705, 14786).
+
+Runs: exact model 12/12. Float model 32/33 PASS, 23 uninformative, and 1 FAIL, a control that
+went undetected at the smallest geometry (a scale limit, recorded as FAIL).
+
+The route stays PROPOSED and CONDITIONAL on (H-A) and (H-B). The Fourier-measure lemmas remain
+imported, and no human has checked any of this.
