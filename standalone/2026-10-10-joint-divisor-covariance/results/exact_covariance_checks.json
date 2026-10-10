@@ -1,0 +1,101 @@
+{
+  "a2_norm_denominator_table": [
+    [
+      "7/4",
+      "7/4",
+      "5/2"
+    ],
+    [
+      "5/4",
+      "5/4",
+      "17/12"
+    ],
+    [
+      "11/6",
+      "11/6",
+      "11/6"
+    ],
+    [
+      "7/4",
+      "7/4",
+      "7/2"
+    ],
+    [
+      "3/2",
+      "3/2",
+      "17/6"
+    ]
+  ],
+  "arithmetic": "integers, rational numbers, and exact Z[omega]",
+  "checker_sha256": "0e6b41e2465a11eda7b23bbb405b163fec453b59ff76cb115765a7506859d16c",
+  "counts": {
+    "a2_absolute_summability": 15,
+    "a2_cartan_insertions": 3,
+    "a2_cutoff_domain": 4,
+    "a2_norm_weights": 5,
+    "actual_conductor_divisors": 325,
+    "affine_interval_dominance": 20,
+    "balanced_divisor_gain": 1,
+    "balanced_optimization_terms": 8,
+    "common_cutoff_obstruction": 1,
+    "cyclotomic_setup": 2,
+    "diagonal_range": 1,
+    "factor_support_fixtures": 2,
+    "formal_theta_identity": 1,
+    "greedy_divisor_bounds": 325,
+    "half_height_gain": 2,
+    "higher_incidence_convergence": 5251,
+    "incidence_double_conductor": 161,
+    "incidence_singletons": 42,
+    "joint_geometric_margins": 7,
+    "joint_tail_substitution": 28,
+    "joint_tail_threshold": 28,
+    "mixed_row_zero_identities": 16464,
+    "negative_controls": 9,
+    "new_sector_gain": 2,
+    "old_remainder_excess": 2,
+    "optimized_cutoff_endpoints": 4,
+    "optimized_junction": 1,
+    "separate_divisor_gain": 1,
+    "small_gcd_support": 2,
+    "subconvex_exponent": 1,
+    "theta_rational_fixtures": 18,
+    "unit_projection": 6,
+    "zero_residue_class": 1
+  },
+  "not_verified": [
+    "theta automorphy and all-scale completed mean square",
+    "uniform angular reciprocal estimate",
+    "classical large sieves and Hecke subconvexity proofs",
+    "full arithmetic moment or Riemann Hypothesis"
+  ],
+  "scope": "finite identities and exponent diagnostics only",
+  "signed_sector_fixtures": [
+    {
+      "complexity": "81/80",
+      "conductor": "137/80",
+      "double_product": "7/5",
+      "gcd_margin": "9/700",
+      "h": "101/100",
+      "matched_cross_separation": "249/320",
+      "name": "general",
+      "new_excess": "-869/204800",
+      "old_excess": "1/400",
+      "singleton_product": "5/16"
+    },
+    {
+      "complexity": "11/10",
+      "conductor": "9/5",
+      "double_product": "7/5",
+      "gcd_margin": "1/140",
+      "h": "21/20",
+      "matched_cross_separation": "4/5",
+      "name": "prime_bound",
+      "new_excess": "-1/120",
+      "old_excess": "1/20",
+      "singleton_product": "2/5"
+    }
+  ],
+  "status": "passed",
+  "total_successful_checks_including_negative_controls": 22743
+}
