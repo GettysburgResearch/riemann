@@ -89,13 +89,40 @@ characters differ contribute) is holomorphic and nonvanishing on `Re s > 0`. A z
 Prop. R is weaker than extraction for the principal row, where `a` improves to `1/2 + 5h/(12k)`.
 It is nontrivial exactly when `ρ < 1`.
 
-*Remark (all members get the extraction exponent; PROPOSED adaptation).* For fixed `u`, the rows
-`u π⁶` with `π ∤ 6u` have `χ_n(u π⁶) = ψ_u(n) 1_{π ∤ n}`. So every member occurs with the same
-multiplicity `≍ (D^h/N u)^{1/6}` as the principal character. PR 910's prime-removal recursion uses only
-the multiplicativity of `n ↦ μ(n)ν(n)ψ_u(n)`. It should therefore give `1/2 + 5h/(12k)` for every
-fixed member, with the conductor entering only through a factor `(N u)^{1/(12k)}`. This was not
-re-verified line by line. The ladder conclusions are family statements, like the imported 7/8 and
-11/12 claims.
+**Proposition R′ (every member gets the extraction exponent; PROPOSED, proof below).**
+Assume (7.1) of PR 910, i.e. Mom(k, h) with the rows `0 < N u ≤ D^h`, for every smooth `W`
+supported in `[1, 2]`. Then, for every fixed `u ≠ 0` and every `η > 0`,
+
+    A_u(D) ≪_{u,k,h,η} D^{1/2 + 5h/(12k) + η},
+
+and `L(s, ψ_u)` has no zero in `Re s > 1/2 + 5h/(12k)`.
+
+*Proof.* This is PR 910's proof of its Prop. 7.2 (reviewed there), with the target row `1`
+replaced by `u`.
+1. Put `Y = (D^h/N u)^{1/6}`, and let `𝒫` be the primes `𝔭 ∉ S`, `𝔭 ∤ u`, with
+   `Y/2 < N𝔭 ≤ Y`. There are `J ≍ Y/log Y` of them.
+2. The rows `u𝔭⁶` are distinct and have norm `≤ D^h`. Since
+   `χ_n(u𝔭⁶) = ψ_u(n) 1_{𝔭 ∤ n}`,
+
+       B_𝔭(x) := A_{u𝔭⁶}(x) = Σ_{(n,S)=1, 𝔭∤n} μ(n)ν(n)ψ_u(n) W(N n/x).
+
+3. Exact separation of the multiples of `𝔭`, using `μ(𝔭m) = −μ(m)` and the complete
+   multiplicativity of `νψ_u`, gives
+
+       A_u(x) = B_𝔭(x) − ν(𝔭)ψ_u(𝔭) B_𝔭(x/N𝔭),
+       B_𝔭(x) = Σ_{j≥0} (ν(𝔭)ψ_u(𝔭))^j A_u(x/N𝔭^j).
+
+   The second sum is finite by compact support, and `|ν(𝔭)ψ_u(𝔭)| = 1`.
+4. Average over `𝒫` exactly as in PR 910 (7.6). Hölder and Mom(k, h) bound the first term by
+   `(D^{k+h+ε}/J)^{1/(2k)} ≪ D^{(k + h − h/6)/(2k) + ε} (N u)^{1/(12k)} log D`.
+5. The second term is handled by the same dyadic induction (PR 910 (7.8)): every argument is at
+   most `2D/Y`, and the unimodular factors change nothing.
+6. The zero-free statement follows by the Mellin argument of Prop. R, with `a` replaced by
+   `1/2 + 5h/(12k)`. ∎
+
+So the ladder conclusions are family statements, like the imported 7/8 and 11/12 claims, and the
+principal character is not special. The conductor enters only through the constant
+`(N u)^{1/(12k)}`.
 
 **Corollary (the endpoints of the ladder).** Write Mom(1, ρ) for the second-moment hypothesis with
 `D^ρ` rows, for every smooth `W` on `[1, 2]`.
