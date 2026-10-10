@@ -29,12 +29,26 @@ they are unreviewed.
    diagonal on the reflected side, or a new probe.
 6. **For this repository,** every RH-equivalent subpower premise moves from the trivial exponent
    1/2 to 3/8 under the imported claim. RH needs exponent 0.
+7. **The Oct 5 (11/12) architecture has its own ceiling.** Its moment ladder depends only on the
+   row/column ratio `ρ`, with boundary `1/2 + 5ρ/12`. `ρ = 1` gives 11/12 at every moment order.
+   * `ρ < 1` (fewer rows than columns) is the whole difficulty. Row-blind large sieves cannot reach
+     it, and any input that does must contain an on-average GRH for the sextic family.
+   * The GL(3) cubic theta vanishes on the needed support.
+   * Numerically, the true moments are diagonal-sized at every tested `ρ ≥ 0.35`. What is missing is
+     a mechanism ([RUNG_STRENGTH.md](RUNG_STRENGTH.md), [A2_LITERATURE.md](A2_LITERATURE.md)).
+8. **Zero density:** the imported 7/8 half-plane does not improve `A(σ)` on `[1/2, 7/8)`
+   ([ZERO_DENSITY_CONDITIONAL.md](ZERO_DENSITY_CONDITIONAL.md)).
 
 | File | Content |
 |---|---|
 | [SYNTHESIS.md](SYNTHESIS.md) | **start here**: the two architectures, what is new, where a breakthrough would have to come from |
 | [AGENDA.md](AGENDA.md) | bounded open problems with payoffs (moment ladder, 7/8 escape routes, verification, repo bridges) |
 | [INTAKE.md](INTAKE.md) | exact claimed statements, architecture, dependencies, what was verified |
+| [RUNG_STRENGTH.md](RUNG_STRENGTH.md) | the moment ladder depends only on `ρ = h/k`; `ρ = 1` wall at 11/12; a single-row Prop. R; what any `ρ < 1` input must contain; sub-diagonal numerics |
+| [A2_LITERATURE.md](A2_LITERATURE.md) | literature check: exact A2 WMDS dictionary (plus an extra quadratic factor); GL(3) cubic theta vanishes on the support; the missing input is a dispersion asymptotic |
+| [moments/](moments/README.md) | actual sextic-family `M₂, M₄, M₆` at `H = D^{1+θ}` (and sub-diagonal `k = 1`): diagonal-sized up to `D = 64000` (finite) |
+| [ZERO_DENSITY_CONDITIONAL.md](ZERO_DENSITY_CONDITIONAL.md) | QRH-conditional zero density via ANTEDB: no `A(σ)` gain below 7/8; exact μ envelope |
+| [reviews/CONTOUR_LEMMAS_BELOW_7_8.md](reviews/CONTOUR_LEMMAS_BELOW_7_8.md) | Lemmas 10.3–10.6 remain valid at 139999/160000 with PR 910's substitutions (no gap found in the ranges read) |
 | [FOURTH_MOMENT_A2.md](FOURTH_MOMENT_A2.md) | the fourth-moment rung (to 17/24) has cubic GL(3)-metaplectic shape; nesting identity (a2/) |
 | [BRIDGE_MELLIN.md](BRIDGE_MELLIN.md) | QRH continuation vs the repo's Mellin–Landau premise; graded NRC32 identity; family-relative step |
 | [reports/REPO_RECENT_WORK.md](reports/REPO_RECENT_WORK.md) | digest of prior QRH work in PRs 908–910 and branches (read before extending) |

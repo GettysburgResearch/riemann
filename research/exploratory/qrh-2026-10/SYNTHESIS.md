@@ -27,12 +27,17 @@ methods *can* and *cannot* do, and where a push could move the constant.
 |---|---|---|
 | core object | cubic-theta probe with three scales and prime slots; Poisson rows binned by zeros | sextic Möbius family `A_u(D)`, mean square over rows `u`, extraction at `u = p⁶` |
 | what sets the constant | low (reflection) estimate `θ_low` | leverage of sixth-power rows (`c = 5/6`) times the moment order |
-| scaling with better inputs | **stalls**: 13/15 even with perfect zero counts, perfect energy and row-by-row GLH; 5/6 floor for the probe family | **tends to 1/2**: diagonal `2k`-th moments give `1/2 + 5(1+θ)/(12k)` (PR 910 Prop. 7.2) |
-| next rung | cross-row (ratios-type) cancellation, or a bilinear bound beating Cauchy–Schwarz | the fourth moment (PR 910 (3.5)), giving 17/24 |
+| scaling with better inputs | **stalls**: 13/15 even with perfect zero counts, perfect energy and row-by-row GLH; 5/6 floor for the probe family | **stalls at 11/12 for row-blind inputs**: the boundary is `1/2 + 5ρ/12` in the row/column ratio `ρ` alone, whatever the moment order; `ρ < 1` needs an on-average GRH for the family ([RUNG_STRENGTH.md](RUNG_STRENGTH.md)) |
+| next rung | cross-row (ratios-type) cancellation, or a bilinear bound beating Cauchy–Schwarz | any sub-diagonal mean square; the simplest is the second moment over `D^ρ` rows, `ρ < 1` (`ρ < 9/10` beats 7/8) |
 
-The Sep 30 architecture is the one that proves 7/8 today. The Oct 5 architecture is the one whose
-*structure* points toward the critical line. Every moment rung moves it, and only analytic input
-(moments of a specific automorphic family) is missing.
+The Sep 30 architecture is the one that proves 7/8 today. The Oct 5 architecture's conclusion
+improves continuously as the row/column ratio `ρ` falls below 1. That makes it look as if it
+"tends to 1/2", but `ρ < 1` is exactly where row-blind methods stop.
+* Any input reaching `ρ < 1` contains an on-average GRH for the sextic family.
+* The family has a fixed point at its own conclusion
+  ([RUNG_STRENGTH.md](RUNG_STRENGTH.md) §§3–4).
+* The true moments are diagonal-sized at every tested `ρ` (numerics, finite). What is missing is a
+  mechanism, not evidence.
 
 ## 2. What is new in this wave (all PROPOSED / EMPIRICAL; see files)
 
@@ -58,10 +63,19 @@ The Sep 30 architecture is the one that proves 7/8 today. The Oct 5 architecture
      of cubic `GL(3)` Eisenstein series.
    * An exact nesting identity reduces it to the second-moment column sum at rows `h·d⁴`. Both
      identities were checked with exact sextic symbols.
-   * Proposed programme: completion / `GL(3)` reflection / removal, one rank above the proved
-     `GL(2)` argument.
-   * [FOURTH_MOMENT_A2.md](FOURTH_MOMENT_A2.md), with a literature assessment in
-     [A2_LITERATURE.md](A2_LITERATURE.md).
+   * The literature check confirms the shape exactly: `N(de)^{-1/2} H(d,e; h,h)` times a quadratic
+     factor that lies outside every cubic WMDS. It also *closes* the reflection idea: the `GL(3)`
+     cubic theta has `τ(m,1) = 0` off cubes, so it vanishes on the needed support. The missing
+     input is an unconditional dispersion asymptotic, which is GRH-conditional even in `GL(2)`.
+   * [FOURTH_MOMENT_A2.md](FOURTH_MOMENT_A2.md), [A2_LITERATURE.md](A2_LITERATURE.md).
+3a. **The moment ladder is one statement** ([RUNG_STRENGTH.md](RUNG_STRENGTH.md)).
+   * PR 910's `2k`-th moment boundary depends only on `ρ = h/k`: `1/2 + 5ρ/12`.
+   * Row-blind bounds stop at `ρ = 1`, i.e. at 11/12.
+   * A rigorous single-row proposition: Mom(k,h) ⇒ every member `L(s, ψ_u)` is zero-free in
+     `Re s > 1/2 + h/(2k)`.
+   * Numerics: the actual sextic moments `M₂`, `M₄`, `M₆` are diagonal-sized for
+     `ρ ∈ [0.35, 2]`, `D ≤ 64000` ([moments/](moments/README.md)); the per-row statistics look
+     complex-Gaussian.
 4. **Bridges to this repository.** See [BRIDGE_MELLIN.md](BRIDGE_MELLIN.md) and
    [CONDITIONAL_CONSEQUENCES.md](CONDITIONAL_CONSEQUENCES.md).
    * Two-sided relative continuation (QRH) versus one-sided Landau (repo).
@@ -87,18 +101,14 @@ The Sep 30 architecture is the one that proves 7/8 today. The Oct 5 architecture
 
 ## 3. Where a breakthrough would have to come from (ranked)
 
-1. **Fourth moment of the sextic Möbius family (Oct 5 architecture).** This is the only identified
-   input with unbounded leverage toward 1/2. It needs a `GL(3)` analogue of the cubic theta
-   reflection and of the quadratic large sieve after reflection. Decisive first computation: the
-   local twist produced by the A2 functional equation at `p | h`. In `GL(2)` this was
-   `χ_p^{-1}χ_p^{-2} = χ_p³`, quadratic.
-   *Partial rungs already pay.* A fourth moment over `H = D^h` rows gives `1/2 + 5h/24`, which
-   beats 7/8 for `h < 1.8` and 11/12 for `h < 2`. A proof for some `h` strictly between 1 and 2
-   would therefore already be a new zero-free half-plane (conditional on the imported Oct 5
-   machinery).
-
-   *Naive nesting fails.* The nesting identity plus Cauchy–Schwarz loses the dual-diagonal
-   subtraction and fails by a power. The A2 structure must be used jointly.
+1. **A sub-diagonal mean square of the sextic Möbius family (Oct 5 architecture).** This is the
+   only identified input with unbounded leverage toward 1/2. The boundary is `1/2 + 5ρ/12`, so a
+   *second* moment over `D^{0.9}` rows already gives 7/8 and anything below beats it.
+   * The difficulty is the same at every moment order: an on-average GRH for the family, with
+     small-conductor rows at a fixed point ([RUNG_STRENGTH.md](RUNG_STRENGTH.md)).
+   * The `GL(3)` reflection idea is closed ([A2_LITERATURE.md](A2_LITERATURE.md)).
+   * The fourth moment's A2 / bilinear structure is worth pursuing only if it supplies a dispersion
+     asymptotic. No unconditional precedent exists even in `GL(2)`.
 2. **Cross-row cancellation for zero-free rows (Sep 30 architecture).** A ratios-type average of
    `L(w, χ_u)/L(s, ηχ_u)` over the sextic family. With DH-quality counts, a floor saving `θ` gives
    `σ = max(13/15, (167−225θ)/(192−225θ))`, reaching 13/15 at `θ = 1/50`. Going below 13/15 needs
@@ -125,6 +135,8 @@ The Sep 30 architecture is the one that proves 7/8 today. The Oct 5 architecture
 | [INTAKE.md](INTAKE.md) | statements, architecture, ledger | IMPORTED + EXACT ledger |
 | [THRESHOLD_CALCULUS.md](THRESHOLD_CALCULUS.md) | Sep 30 exponent model and barriers | PROPOSED + exact certificates |
 | [FOURTH_MOMENT_A2.md](FOURTH_MOMENT_A2.md) | Oct 5 fourth moment ↔ cubic GL(3) | PROPOSED + EMPIRICAL identities |
+| [RUNG_STRENGTH.md](RUNG_STRENGTH.md) | the ladder depends only on `ρ`; the `ρ = 1` wall; what `ρ < 1` must contain | PROPOSED + HEURISTIC barrier + EMPIRICAL |
+| [A2_LITERATURE.md](A2_LITERATURE.md) | literature check of the A2 route | SURVEY + PROPOSED assessment |
 | [BRIDGE_MELLIN.md](BRIDGE_MELLIN.md) | repo Mellin / NRC32 bridges | PROPOSED |
 | [CONDITIONAL_CONSEQUENCES.md](CONDITIONAL_CONSEQUENCES.md) | graded lemma, corollaries, non-improvements | PROPOSED / CONDITIONAL |
 | [reports/REPO_RECENT_WORK.md](reports/REPO_RECENT_WORK.md) | digest of PRs 901–910 and branches | SURVEY |

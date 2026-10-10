@@ -13,6 +13,19 @@ names its payoff *if* the imported, unreviewed manuscript machinery is correct.
 
 ## A. The moment ladder (Oct 5 architecture): the only route found that scales to 1/2
 
+> **Reframing ([RUNG_STRENGTH.md](RUNG_STRENGTH.md)).** Every rung's boundary is `1/2 + 5ρ/12` in
+> `ρ = h/k` alone. A1 is therefore one instance of the basic target, the **sub-diagonal second
+> moment**
+>
+>     Σ_{N u ≤ D^ρ} |A_u(D)|² ≪ D^{1+ρ+ε},   ρ < 1.
+>
+> * `ρ < 9/10` beats 7/8.
+> * Numerically it holds at `ρ ≥ 0.4` for `D ≤ 64000` (finite).
+> * Any proof must contain an on-average GRH for the sextic family, and row-blind large sieves
+>   cannot give it.
+>
+> The fourth moment below is worth pursuing only for its bilinear structure.
+
 **A1. Partial fourth-moment rung (PROPOSED target).** Prove a diagonal-size fourth moment over a
 row range *shorter than* `D²`: for some `h < 2`,
 
@@ -46,7 +59,11 @@ cubic `GL(3)` theta, with Kazhdan–Patterson's unique Whittaker model. In `GL(2
 * Quadratic again: A1 becomes a well-posed `GL(3)` analogue of the Oct 5 proof.
 * Cubic: the BGL extra term must be beaten.
 
-See [A2_LITERATURE.md](A2_LITERATURE.md) for what the literature already gives.
+**Status after the literature check: closed as proposed.** The cubic theta on `GL(3)` has
+`τ(m,1) = 0` unless `m` is a cube, so its coefficients vanish on every coprime squarefree pair.
+The A2 functional equations act only on Gauss-sum variables, keep the twist index, and lengthen
+the sums in the needed regime ([A2_LITERATURE.md](A2_LITERATURE.md) §§3, 6). What would be needed
+instead is an unconditional dispersion asymptotic for `Σ_h |C_h|²` with error `O(L^{2+ε})`.
 
 **A2′. Induction by alternating Poisson and reflection (SPECULATIVE).** One `GL(2)` reflection of
 the fourth-moment dual returns a Möbius sum in the second factor `e`, twisted by

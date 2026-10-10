@@ -326,3 +326,16 @@ input.
 | `balanced.py` | PR 910 (3.5) test |
 | `make_tables.py` | builds `results/tables.md` |
 | `results/` | `moments.json`, `diag.json`, `balanced.json`, `exact_diag1_D500_1000.json`, logs, run scripts |
+
+## Addendum (coordinator): sub-diagonal second moment, k = 1, ρ < 1
+
+Same code, run with negative θ, so the rows are `H = D^{1+θ} < D`:
+
+    python3 -I moments.py results/subdiag_k1.json --D 1000 2000 4000 8000 16000 32000 64000 \
+        --thetas -0.1 -0.2 -0.3 -0.4 -0.5 -0.6 --workers 2      (about 10 s; log in results/subdiag_k1.log)
+
+* `M₂/(#rows·Σw²)` lies in 0.82–1.00, against 0.91–0.94 at θ = 0.05.
+* There is no excess at any ρ = 1 + θ ∈ [0.4, 0.9].
+
+Interpretation and the table are in [../RUNG_STRENGTH.md](../RUNG_STRENGTH.md) §5. These are
+finite floating-point observations.
