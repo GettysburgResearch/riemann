@@ -127,5 +127,33 @@ computation. With a cubic twist, only the weaker Blomer–Goldmakher–Louvel la
   numerically with `a2/eis.py`.
 * Compute the local twist produced by the A2 functional equation at a prime `p | h`. This is the
   analogue of `χ_p^{-1}χ_p^{-2} = χ_p^3`.
-* Numerically compare `Σ_h |C_h(X)|²` with `X⁴` at small `X` (see [moments/](moments/) for the
-  direct fourth-moment numerics). A finite trend is not a theorem.
+* Numerically compare `Σ_h |C_h(X)|²` with `X⁴` at small `X`. See [moments/](moments/) for the
+  direct fourth-moment numerics. A finite trend is not a theorem.
+
+## 6. Dual off-diagonal reconnaissance (EMPIRICAL, tiny scale)
+
+**Correction to Section 4.** Exact duality subtracts the *dual diagonal*. The off-diagonal of the
+original moment is
+
+    (H/L) · (S_true − S_diag),   S_true = Σ_{N h ≤ 𝓗} |C_h|²,   S_diag = Σ_h Σ_r |c(r)|² 1_{(r,h)=1}.
+
+So generic dual behaviour (`S_true ≈ S_diag`) is exactly what a diagonal-sized fourth moment
+needs. The target is `ρ := (S_true − S_diag)/L² = O(1)`. The schematic Section 4 upper bound keeps
+`S_diag`, which is why a large sieve alone cannot reach it. What a proof needs is an *asymptotic*
+for the dual mean square with error `O(L²)`, i.e. control of the dual off-diagonal.
+
+Setup of `a2/dual_offdiag.py` (results in `a2/results/dual_offdiag.jsonl`):
+* columns `r = de` balanced in `(X, 2X]²`;
+* exact sextic symbols;
+* ray phases and the paper's unit/lattice conventions are ignored;
+* rows are all elements with `N h ≤ 𝓗`.
+
+| X | rows `N h ≤ 𝓗` | L | `S_true/S_diag` | ρ |
+|---|---|---|---|---|
+| 30 | 200 / 1000 / 3000 | 21 | 0.959 / 0.983 / 0.997 | −5.0 / −10.3 / −4.7 |
+| 60 | 500 / 3000 / 12000 | 151 | 0.976 / 1.017 / 1.004 | −1.0 / +4.4 / +4.5 |
+
+At these tiny scales the A2-structured dual mean square equals its diagonal within 4%. At `X = 60`,
+ρ stays at about 4.5 as the row range grows fourfold. This is *consistent with*, and not evidence
+for, a diagonal-sized fourth moment. Proving it would require exactly the dual off-diagonal control
+that the A2 reflection is proposed to supply.
