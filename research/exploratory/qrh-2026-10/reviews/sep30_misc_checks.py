@@ -594,8 +594,8 @@ def part_A4(rng):
     rec('A4', f'eq:initial-separated-identity before separation: direct = P_0 + child form (s-Moebius, extraction, '
         f'outer weight, priority-split marks, k=d\'h\', f=d\'s, rho_(t,j)) ({len(out)} runs)',
         max(o['errB'] for o in out) < TOL, f"max rel err {max(o['errB'] for o in out):.1e}")
-    rec('A4', 'non-vacuity: the nonzero-frequency part is a visible share of the LHS in every run',
-        min(o['nonzero_freq_share'] for o in out) > 1e-4,
+    rec('A4', 'non-vacuity: in every run the nonzero-frequency part exceeds 1e-5 of the LHS and 1e8 x the RHS_B error',
+        all(o['nonzero_freq_share'] > 1e-5 and o['nonzero_freq_share'] > 1e8 * o['errB'] for o in out),
         f"min share {min(o['nonzero_freq_share'] for o in out):.1e}")
     for vv in variants[1:]:
         per = [o['controls'][vv] for o in out]
@@ -665,11 +665,220 @@ def part_A6():
     ctrl('A6', '5 eta in place of 6 eta', badc > 0, f'{badc} violations')
 
 
+# ================================================================================================
+# B. Lemma 15.1: exponent algebra of the row proof (8124-8332) against E_ref of Lemma 14.3 (old-eq:4.4-4.7)
+# ================================================================================================
+def part_B():
+    import sympy as sp
+    from scipy.optimize import linprog
+    d, M, ell = sp.symbols('d M ell', real=True)
+    H, A0, za, N0, B0, S0, O, thN, DH = sp.symbols('H A0 za N0 B0 S0 O thetaN DeltaH', real=True)
+    geo = {M: sp.Rational(5, 6), ell: sp.Rational(1, 6)}
+    Mp, lp = M - 2 * d, ell - d
+    ok = []
+    ok.append(sp.simplify((Mp + lp - 1 + 3 * d).subs(geo)) == 0)                       # M' + l' - 1 = -3d
+    Td = 2 * H + 2 * A0 + 2 * za - 1 - lp - thN - N0 - 3 * B0
+    ok.append(sp.simplify((Td - (H - 3 * d) - (H - Mp + 2 * A0 + 2 * (za - lp) - N0 - 3 * B0 - thN)).subs(geo)) == 0)
+    Hsub = Mp - O - DH                                                                 # Delta_H = M' - O - H
+    lhs53 = (O / 2 + DH + S0 + B0 + Td / 4).subs(H, Hsub)
+    rhs53 = (2 * Mp + 2 * za - 1 - lp + 2 * DH - thN) / 4 + (2 * A0 - N0 + B0 + 4 * S0) / 4
+    ok.append(sp.simplify(lhs53 - rhs53) == 0)                                         # old-eq:5.3
+    br2 = Mp + za - rhs53 + (2 * A0 - N0 + B0 + 4 * S0) / 4                            # energy = M' + z_a - saving
+    ok.append(sp.simplify(br2.subs(za, lp) - (Mp + (1 + 3 * lp - 2 * Mp - 2 * DH + thN) / 4)) == 0)
+    ok.append(sp.simplify((1 + 3 * lp - 2 * Mp - (d - sp.Rational(1, 6))).subs(geo)) == 0)
+    rec('B', 'Lemma 15.1 displayed algebra: M\'+l\'-1=-3d; T_d-(H-3d); old-eq:5.3; branch-2 energy; '
+        '1+3l\'-2M\' = d-1/6 (exact sympy, geometry M=5/6, l=1/6)', all(ok), f'{sum(ok)}/{len(ok)}')
+
+    # LP: maximize E_ref - M' over all admissible data, branch by branch (u choice, max choice, (T_d-y)_+ sign)
+    names = ['d', 'O', 'H', 'A0', 'N0', 'S0', 'B0', 'za', 'v', 'lb', 'el', 'th']
+    ix = {n: i for i, n in enumerate(names)}
+
+    def lin(**kw):
+        a = np.zeros(len(names))
+        c0 = 0.0
+        for k, v in kw.items():
+            if k == 'const':
+                c0 += v
+            else:
+                a[ix[k]] += v
+        return a, c0
+
+    def solve(eps, variant=''):
+        best = -1e9
+        # M' = 5/6 - 2d (or 1 - 2d for the M=1 control), l' = 1/6 - d
+        Mc = 1.0 if variant == 'M_equals_1' else 5 / 6
+        for maxch in ('H', 'vl'):
+            for uch in ('v', 'za', 'third'):
+                for pos in (True, False):
+                    A_ub, b_ub = [], []
+
+                    def le(a, c0, rhs=0.0):            # a.x + c0 <= rhs
+                        A_ub.append(a)
+                        b_ub.append(rhs - c0)
+                    # T_d = 2H+2A0+2za-1-l'-th-N0-3B0, y = v+3lb+el
+                    Td = lin(H=2, A0=2, za=2, const=-1 - 1 / 6, d=1, th=-1, N0=-1, B0=-3)
+                    y = lin(v=1, lb=3, el=1)
+                    le(*lin(O=-1), eps)                                      # O >= -eps
+                    le(*lin(H=1, O=1, d=2, const=-Mc), eps)                   # H <= M' - O + eps
+                    if variant != 'drop_2A0_le_O':
+                        le(*lin(A0=2, O=-1), eps)                             # 2A0 <= O + eps
+                    le(*lin(N0=1, A0=-1))                                    # N0 <= A0
+                    le(*lin(N0=-1))
+                    le(*lin(A0=-1))
+                    le(*lin(S0=-1))
+                    le(*lin(B0=-1))
+                    le(*lin(za=-1))
+                    if variant != 'drop_za_le_lp':
+                        le(*lin(za=1, d=1, const=-1 / 6))                     # za <= l' = 1/6 - d
+                    for n in ('v', 'lb', 'el'):
+                        le(*lin(**{n: -1}), eps)                              # >= -eps
+                    le(*lin(th=1), eps)
+                    le(*lin(th=-1), eps)
+                    le(*lin(d=-1))
+                    le(*lin(d=1, const=-1 / 6))
+                    # retention y <= T_d + eps, and the sign branch of (T_d - y)_+
+                    a, c0 = y[0] - Td[0], y[1] - Td[1]
+                    le(a, c0, eps)
+                    if pos:
+                        le(a, c0)                                            # y <= T_d
+                    else:
+                        le(-a, -c0)                                          # y >= T_d
+                    # max choice must be the larger one, u choice must be the smaller one
+                    vl = lin(v=1, lb=1)
+                    if maxch == 'H':
+                        le(vl[0] - lin(H=1)[0], 0.0)
+                        mx = lin(H=1)
+                    else:
+                        le(lin(H=1)[0] - vl[0], 0.0)
+                        mx = vl
+                    us = {'v': lin(v=1), 'za': lin(za=1), 'third': lin(v=1 / 3, za=1 / 3)}
+                    for k, (ua, uc) in us.items():
+                        if k != uch:
+                            le(us[uch][0] - ua, us[uch][1] - uc)
+                    ua, uc = us[uch]
+                    # E - M' = O/2 + max - S0 - B0 + za - u - lb - 2el/3 - pos*(T_d - y)/2 - M'
+                    obj = 0.5 * lin(O=1)[0] + mx[0] - lin(S0=1)[0] - lin(B0=1)[0] + lin(za=1)[0] - ua \
+                        - lin(lb=1)[0] - (2 / 3) * lin(el=1)[0] + 2 * lin(d=1)[0]
+                    c_obj = mx[1] - uc - Mc
+                    if pos:
+                        obj = obj - 0.5 * (Td[0] - y[0])
+                        c_obj += -0.5 * (Td[1] - y[1])
+                    res = linprog(-obj, A_ub=np.array(A_ub), b_ub=np.array(b_ub),
+                                  bounds=[(-5, 5)] * len(names), method='highs')
+                    if res.status == 0:
+                        best = max(best, -res.fun + c_obj)
+        return best
+    m0 = solve(0.0)
+    m1 = solve(1e-3)
+    rec('B', 'LP over all admissible reflected-energy data (Lemma 14.3 formula, 12 branches, box [-5,5]): '
+        'max (E_ref - M\') = 0 at eps = 0 and = O(eps) at eps = 1e-3', abs(m0) < 1e-9 and m1 < 20e-3,
+        f'max at eps=0: {m0:.2e}; at eps=1e-3: {m1:.2e} (= {m1 / 1e-3:.2f} eps)')
+    for v in ('drop_za_le_lp', 'drop_2A0_le_O', 'M_equals_1'):
+        mv = solve(0.0, v)
+        ctrl('B', f'{v}: the LP maximum becomes positive', mv > 1e-6, f'max {mv:.4f}')
+    OUT['B'] = dict(max0=m0, max_eps=m1)
+
+
+# ================================================================================================
+# C. Lemma 20.1: exponent algebra
+# ================================================================================================
+def part_C():
+    import sympy as sp
+    dl, q, R, d = sp.symbols('delta q R d', real=True)
+    h, ell, ly = sp.Rational(13, 16), sp.Rational(1, 6), sp.Rational(23, 48)
+    a = (1 + dl) / 2
+    z0 = sp.Rational(17, 50)
+    C0 = sp.Rational(-1, 48)
+    line1 = a - sp.Rational(7, 8) + h * (z0 - sp.Rational(1, 6)) - a * ly - (1 - a) * ell - (dl / 2 - q) * ell \
+        + d * (R + dl / 2 - z0)
+    line2 = C0 + sp.Rational(2, 3) * dl + q / 6 - h * (1 - R) + (d - h) * (R + dl / 2 - z0)
+    stage = a - sp.Rational(7, 8) + h * (z0 - sp.Rational(1, 6)) - a * ly - ell / 2 + q * ell + d * (R + dl / 2 - z0)
+    ok = [sp.simplify(line1 - line2) == 0, sp.simplify(line1 - stage) == 0,
+          sp.simplify(-(1 - a) * ell - (dl / 2 - q) * ell - (-ell / 2 + q * ell)) == 0,
+          sp.simplify(sp.Rational(5, 6) - (ly + (1 + ell - h))) == 0]
+    rec('C', 'Lemma 20.1: eq:common-high-exponent line 1 = line 2 with C_0=-1/48; line 1 = eq:stage-high-exponent '
+        'at sigma_0=7/8, g=q*l; -(1-a)l-(delta/2-q)l = -l/2+ql (exact sympy)', all(ok), f'{sum(ok)}/{len(ok)}')
+    bad_g = sp.simplify(line1 - stage.subs(q * ell, d * q / 6)) != 0
+    ctrl('C', 'g = d q/6 (the misreading the text warns against) breaks the identity', bad_g)
+    bad_c0 = sp.simplify(line1 - (line2 - C0 + sp.Rational(-1, 24))) != 0
+    ctrl('C', 'C_0 = -1/24 breaks line 1 = line 2', bad_c0)
+    d0 = sp.Rational(1, 50)
+    Eh = line2.subs({dl: d0, R: 1, d: h, q: d0 / 2})
+    slope = 1 + d0 / 2 - z0
+    rec('C', 'eq:floor-bound: E(h) <= C_0 + 3 delta_0/4 = -7/1200 at R=1, q<=delta_0/2; slope R+delta_0/2-17/50 > 0',
+        Eh == sp.Rational(-7, 1200) and slope > 0, f'E(h) = {Eh}, slope = {slope}')
+    # monotonicity in q on [0, delta/2]: coefficient of q is 1/6 > 0, so q = delta/2 is the worst case
+    rec('C', 'E(d) is increasing in q (coefficient 1/6), so q = delta/2 is the worst main-slot mean',
+        sp.diff(line2, q) == sp.Rational(1, 6))
+
+
+# ================================================================================================
+# D. Prop 2.1 bookkeeping and the final contradiction (Thm 1.1)
+# ================================================================================================
+def part_D():
+    rng = random.Random(7)
+    bad = bad_c = 0
+    for _ in range(20000):
+        s0 = Fr(rng.randint(51, 99), 100)
+        beta = s0 + Fr(rng.randint(1, 1000), 10 ** 4)
+        if beta > 1:
+            continue
+        D0 = beta - s0
+        om = D0 * Fr(rng.randint(1, 99), 100)
+        sig = Fr(rng.randint(1, 1000), 10 ** 4)
+        c = Fr(rng.randint(-1000, 1000), 1000)
+        es = min(D0 - om, sig)
+
+        def C(x):
+            return x + c
+
+        def C2(x):
+            return x / 2 + c
+        ok = es > 0 and C(s0) + om <= C(beta) - es and C(beta) - sig <= C(beta) - es and beta - es > s0
+        bad += not ok
+        bad_c += not (C2(s0) + om <= C2(beta) - es)
+    rec('D', 'Prop 2.1: eps_* = min(Delta_0-omega, sigma) > 0, both contracts give Z^{C(beta_*)-eps_*} (slope one), '
+        'beta_* - eps_* > sigma_0 (20000 exact random instances)', bad == 0, f'{bad} failures')
+    ctrl('D', 'slope-1/2 C(s)=s/2+c: the low contract no longer implies the saving', bad_c > 0, f'{bad_c} failures')
+    # Part II instance
+    s0 = Fr(7, 8)
+    ok = True
+    for Dn in range(1, 101):
+        Dl = Fr(Dn, 2400)                                   # 0 < Delta <= 1/24
+        beta = s0 + Dl
+        om = Dl / 2
+        kap = 2 * beta - 1
+        ok &= 0 < om < Dl and kap == Fr(3, 4) + 2 * Dl and kap <= Fr(5, 6)
+    CII = lambda x: x - Fr(11, 16)                          # noqa: E731
+    ok &= CII(s0) == Fr(3, 16)
+    h, ly = Fr(13, 16), Fr(23, 48)
+    mw, mz = ly / 20, h / 600
+    e = Fr(1, 1000)
+    ok &= mw == Fr(23, 960) and mz == Fr(13, 9600) and (1 + h) * e < mw and e < mz
+    rec('D', 'Part II instance: omega = Delta/2 in (0, Delta) for 0 < Delta <= 1/24; kappa = 3/4+2Delta <= 5/6; '
+        'C_II(7/8) = 3/16; principal-interface margins m_w = 23/960, m_z = 13/9600 exceed (1+h)e and e for e <= 1/1000',
+        ok, f'm_z - e at e = 1/1000: {mz - e}')
+    ctrl('D', 'e = 1/500 would exceed m_z (the 10^-3 cap on e is load-bearing)', not (Fr(1, 500) < mz))
+    # Lemma 11.1: tau <= m/(4(A+1)) gives (1+T_1)^A <= 2^A Z^{m/4}; N with B - N tau < C(beta)-m/2 exists
+    ok = True
+    for _ in range(2000):
+        m = Fr(rng.randint(1, 1000), 10 ** 4)
+        A = Fr(rng.randint(0, 500), 10)
+        B = Fr(rng.randint(-50, 500), 10)
+        Cb = Fr(rng.randint(0, 2000), 1000)
+        tau = m / (4 * (A + 1))
+        ok &= tau * A <= m / 4
+        N = int((B - Cb + m / 2) / tau) + 1
+        ok &= B - N * tau < Cb - m / 2
+    rec('D', 'Lemma 11.1 (used in the final step): the choices tau <= m/(4(A+1)) and N > (B-C(beta)+m/2)/tau give '
+        'the saving m/2 (2000 exact instances)', ok)
+
+
 if __name__ == '__main__':
     rng = random.Random(20261010)
     print(f'sep30_misc_checks.py  quick={QUICK}', flush=True)
     parts = [('A1', lambda: part_A1(rng)), ('A2', lambda: part_A2(rng)), ('A3', part_A3), ('A5', part_A5),
-             ('A6', part_A6), ('A4', lambda: part_A4(rng))]
+             ('A6', part_A6), ('B', part_B), ('C', part_C), ('D', part_D), ('A4', lambda: part_A4(rng))]
     extra = [a for a in sys.argv[1:] if a.startswith('--only=')]
     if extra:
         want = extra[0][7:].split(',')
