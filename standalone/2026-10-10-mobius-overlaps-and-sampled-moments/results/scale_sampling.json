@@ -1,0 +1,123 @@
+{
+  "arithmetic": "EXACT_RATIONAL; complex numbers represented by pairs of Fractions",
+  "associated_math_note_sha256": "18bf2fdad438eb21ae3318eba7d42e9c03803b2dd1abc4d8f6448fb3b04499de",
+  "checks": {
+    "complex_polynomial_coefficient_recovery": 28,
+    "complex_polynomial_value_recovery": 168,
+    "complex_remainder_identity": 168,
+    "factorial_denominator_lower_bound": 112,
+    "factorial_exponential_absorption": 28,
+    "factorial_remainder_bound": 168,
+    "final_grid_block": 91,
+    "grid_basis_budget": 5160,
+    "grid_complex_endpoint_interpolation": 5160,
+    "grid_endpoint_distance": 4518,
+    "grid_factorial_denominator": 4518,
+    "grid_node_reuse_bound": 107,
+    "grid_stencil_coverage": 1032,
+    "integrated_retained_polynomial_bound": 28,
+    "negative_complex_mean_value_point": 1,
+    "negative_gap_bump_boundary_jets": 4,
+    "negative_moving_row_entry_interpolation": 1,
+    "negative_total_measure_only": 1,
+    "negative_unsampled_row_entry": 1,
+    "negative_unseparated_node_budget": 1,
+    "nonuniform_lagrange_basis_bound": 168,
+    "positive_integrated_polynomial_energy": 28,
+    "retained_node_count": 28,
+    "retained_node_membership": 112,
+    "retained_node_separation": 224,
+    "retained_set_measure": 4,
+    "upper_endpoint_inclusion": 91
+  },
+  "grid_intervals_range": [
+    1,
+    16
+  ],
+  "grid_panels": 107,
+  "maximum_grid_order": 8,
+  "maximum_observed_node_reuse": 14,
+  "negative_controls": {
+    "clustered_nodes_ratio": "523776",
+    "moving_row_actual_value": [
+      "0",
+      "0"
+    ],
+    "moving_row_entry": "3/4",
+    "moving_row_wrong_interpolated_value": [
+      "1/4",
+      "0"
+    ],
+    "unobserved_gap_full_squared_norm": "1/28254576262770",
+    "unobserved_gap_retained_measure": "2/3",
+    "unobserved_gap_retained_squared_norm": "0"
+  },
+  "retained_interpolation_cases": 28,
+  "retained_interpolation_orders": [
+    1,
+    7
+  ],
+  "retained_set_panels": [
+    {
+      "intervals": [
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "measure": "1"
+    },
+    {
+      "intervals": [
+        [
+          "0",
+          "1/16"
+        ],
+        [
+          "3/16",
+          "5/16"
+        ],
+        [
+          "9/16",
+          "7/8"
+        ]
+      ],
+      "measure": "1/2"
+    },
+    {
+      "intervals": [
+        [
+          "1/7",
+          "2/7"
+        ],
+        [
+          "5/7",
+          "11/14"
+        ]
+      ],
+      "measure": "3/14"
+    },
+    {
+      "intervals": [
+        [
+          "0",
+          "1/1024"
+        ],
+        [
+          "511/1024",
+          "513/1024"
+        ],
+        [
+          "1023/1024",
+          "1"
+        ]
+      ],
+      "measure": "1/256"
+    }
+  ],
+  "reused_final_block_panels": 75,
+  "scope": "Finite exact diagnostics for polynomial interpolation, separated nonuniform nodes, integrated retained polynomial values at p=2, endpoint grid reuse, and explicit countermodels to omitted hypotheses. The associated note hash binds a file, not its mathematical truth. No arbitrary-measurable-set theorem, infinite convolution, derivative asymptotic, native arithmetic moment, zero-free premise, or RH is tested. The gap and row-entry controls refute naive omission of local distribution or smooth fixed-row scope; they do not contradict the stated remainder-inclusive theorem.",
+  "source_sha256": "1d1133e4f920b0e5c350ffc661d37bd7f852e53609a0a13e9400dc09133bdbe5",
+  "status": "PASS",
+  "total_checks": 21950
+}

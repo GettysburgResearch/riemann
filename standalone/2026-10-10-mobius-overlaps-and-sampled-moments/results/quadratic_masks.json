@@ -1,0 +1,66 @@
+{
+  "arithmetic": "exact integers and fractions; primitive quadratic symbols over F_7 and F_13",
+  "checks": {
+    "adversarial_principal_mask": 2,
+    "degree_three_cutoff_certificate": 4,
+    "dyadic_switch_budget": 1377,
+    "geometric_diagonal_budget": 1377,
+    "literal_quadratic_square_masks": 1944,
+    "literal_square_factorization": 81,
+    "native_incidence_character_identity": 30940,
+    "native_prime_ideals": 6,
+    "units": 6
+  },
+  "complete_integer_residue_classes": 91,
+  "degree_three_affine_endpoint_certificates": [
+    {
+      "first_margin": "0",
+      "h": "1",
+      "second_margin": "5/136"
+    },
+    {
+      "first_margin": "0",
+      "h": "11/10",
+      "second_margin": "59/680"
+    }
+  ],
+  "dyadic_switch_locations": {
+    "above": 648,
+    "below": 344,
+    "inside": 385
+  },
+  "incidence_degrees": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "incidence_tuple_count": 340,
+  "native_prime_ideals": [
+    {
+      "generator": [
+        -2,
+        -3
+      ],
+      "norm": 7,
+      "omega": 4
+    },
+    {
+      "generator": [
+        1,
+        -3
+      ],
+      "norm": 13,
+      "omega": 9
+    }
+  ],
+  "row_valuation_range": [
+    0,
+    8
+  ],
+  "scope": "Finite primitive identities and exact exponent guards only. No pointwise cancellation, reciprocal-L premise, large sieve, infinite moment, or zero-free theorem is tested.",
+  "source_sha256": "622af30d6efd58eea1703b329799a9c6812568c12296e36d1d71eed682584ad0",
+  "square_mask_cases_with_overlapping_base": 1080,
+  "status": "PASS",
+  "total_checks": 35737
+}
