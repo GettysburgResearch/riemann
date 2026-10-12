@@ -1,0 +1,190 @@
+{
+  "analytic_infinite_CRT_or_moment_proof_checked": false,
+  "checker_sha256": "20f9c6364d9459ac84b96b7ca9c2bc0e7b7e63093ce7bddbf1ff40b0839c5734",
+  "checks": 501,
+  "helper_sha256": "e3dec86cc6b07d80bb6bb61aababf460eb8ccd3738852869837b8e1b8c50a1be",
+  "modulus_norm": 91,
+  "moments": [
+    [
+      {
+        "k": 1,
+        "unnormalized_exact_moment": 2311
+      },
+      {
+        "k": 2,
+        "unnormalized_exact_moment": 119551
+      },
+      {
+        "k": 3,
+        "unnormalized_exact_moment": 8076751
+      },
+      {
+        "k": 4,
+        "unnormalized_exact_moment": 612387199
+      },
+      {
+        "k": 5,
+        "unnormalized_exact_moment": 49384001551
+      },
+      {
+        "k": 6,
+        "unnormalized_exact_moment": 4148430536671
+      },
+      {
+        "k": 7,
+        "unnormalized_exact_moment": 359569812271951
+      },
+      {
+        "k": 8,
+        "unnormalized_exact_moment": 31979200993200319
+      }
+    ],
+    [
+      {
+        "k": 1,
+        "unnormalized_exact_moment": 9538
+      },
+      {
+        "k": 2,
+        "unnormalized_exact_moment": 1250662
+      },
+      {
+        "k": 3,
+        "unnormalized_exact_moment": 181090606
+      },
+      {
+        "k": 4,
+        "unnormalized_exact_moment": 27869836918
+      },
+      {
+        "k": 5,
+        "unnormalized_exact_moment": 4474640917678
+      },
+      {
+        "k": 6,
+        "unnormalized_exact_moment": 741307889125462
+      },
+      {
+        "k": 7,
+        "unnormalized_exact_moment": 125817487166401006
+      },
+      {
+        "k": 8,
+        "unnormalized_exact_moment": 21767375306633148598
+      }
+    ],
+    [
+      {
+        "k": 1,
+        "unnormalized_exact_moment": 28935
+      },
+      {
+        "k": 2,
+        "unnormalized_exact_moment": 11937519
+      },
+      {
+        "k": 3,
+        "unnormalized_exact_moment": 5438700639
+      },
+      {
+        "k": 4,
+        "unnormalized_exact_moment": 2627495734239
+      },
+      {
+        "k": 5,
+        "unnormalized_exact_moment": 1320483144041775
+      },
+      {
+        "k": 6,
+        "unnormalized_exact_moment": 682457409855976239
+      },
+      {
+        "k": 7,
+        "unnormalized_exact_moment": 359974885578218012799
+      },
+      {
+        "k": 8,
+        "unnormalized_exact_moment": 192774220313358754080639
+      }
+    ],
+    [
+      {
+        "k": 1,
+        "unnormalized_exact_moment": 60502
+      },
+      {
+        "k": 2,
+        "unnormalized_exact_moment": 54823894
+      },
+      {
+        "k": 3,
+        "unnormalized_exact_moment": 55891965238
+      },
+      {
+        "k": 4,
+        "unnormalized_exact_moment": 60872492430070
+      },
+      {
+        "k": 5,
+        "unnormalized_exact_moment": 69069906739660822
+      },
+      {
+        "k": 6,
+        "unnormalized_exact_moment": 80484960253706242774
+      },
+      {
+        "k": 7,
+        "unnormalized_exact_moment": 95473150081998533404918
+      },
+      {
+        "k": 8,
+        "unnormalized_exact_moment": 114649742367761721902037430
+      }
+    ],
+    [
+      {
+        "k": 1,
+        "unnormalized_exact_moment": 104239
+      },
+      {
+        "k": 2,
+        "unnormalized_exact_moment": 167548303
+      },
+      {
+        "k": 3,
+        "unnormalized_exact_moment": 305428742599
+      },
+      {
+        "k": 4,
+        "unnormalized_exact_moment": 595706496193951
+      },
+      {
+        "k": 5,
+        "unnormalized_exact_moment": 1209489178640481559
+      },
+      {
+        "k": 6,
+        "unnormalized_exact_moment": 2518435748904051683983
+      },
+      {
+        "k": 7,
+        "unnormalized_exact_moment": 5331217515871745397052519
+      },
+      {
+        "k": 8,
+        "unnormalized_exact_moment": 11412455930613219204317326591
+      }
+    ]
+  ],
+  "prime_ideal_norms": [
+    7,
+    13
+  ],
+  "profiles": 5,
+  "rh_proved": false,
+  "short_row_moment_proved": false,
+  "status": "PASS_EXACT_MOBIUS_CRT_TRANSLATION",
+  "translator": 34,
+  "translator_inverse": 83,
+  "weighted_fourth_moment_transport": 755870
+}

@@ -1,0 +1,29 @@
+{
+  "status": "DIRECTED_TRACE_PRICED_PHYSICAL_LENGTH_POSITIVITY_ACCEPT",
+  "native_bound": "q_ell(h,h)>=||G_ell h||\u00b2/12500000000 for every complex native h and every0<ell<=21/20",
+  "exact_length": "21/20",
+  "epsilon_exact": "1/20000000000",
+  "M_exact": "1/2500",
+  "K_exact": "57/100",
+  "kappa_exact": "1/2",
+  "radical_upper_exact": "11/1000",
+  "denominator_upper_exact": "6148000001/20000000000",
+  "delta_exact": "1/12500000000",
+  "complete_dual_trace_ball": "[0.00037192503233351354938198914222467307408919531522821214935758562267 +/- 5.19e-11]",
+  "complete_synthesis_trace_ball": "[0.56404002429815044767191707549966505459175022907590868247572165165 +/- 1.02e-19]",
+  "mixed_receipt_sha256": "2eee87a7648bce24e9e1cb611fe045d840501fd6dd732e6399cea474e32aba88",
+  "R_receipt_sha256": "cede53ceb2e0543060c65bcd456e17983bb8197dc7127c361f918dcd5cca5191",
+  "baseline_receipt_sha256": "07252fe714f1c4a079695d71931ccd123645a4cb5bb9eff31ae7dab30d6bbfe8",
+  "fresh_entire_mixed_gate_replayed": true,
+  "new_R_integration_performed": false,
+  "frozen_mixed_checker_sha256": "38ef6a1f5125adf72f037d625222eccae509f4a146037361ca02dd20f1e1a6f3",
+  "frozen_generic_completion_lemma_sha256": "350e7440de1363e02dfe075e2f204af08170471bcadd7ae7750de67de27df062",
+  "producer_sha256": "146be7aff381a3836f14d88d360e7dc2bec0b5ce5aebfb66e773eefeaa236548",
+  "not_proved": [
+    "independent second R integration",
+    "native L2 spectral gap",
+    "sign atlog3",
+    "all-window positivity",
+    "RH"
+  ]
+}

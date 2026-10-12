@@ -1,0 +1,77 @@
+{
+  "analytic_source_product_theta_or_column_theorem_authenticated_by_checker": false,
+  "arithmetic": "Arb/acb/acb_series directed ball arithmetic at256bits; exact dyadic endpoints and rational exclusion guards.",
+  "backend_binary_sha256": {
+    "acb.abi3.so": "0f02c1b41c78644cc831483b7539f3f93e84d9941a5a6015384d844f39ac5c75",
+    "acb_series.abi3.so": "96096a93d8b1a5ca6222690b3fbdd9ee8fc935aa281f8fcd8af14fdbadd84cb8",
+    "arb.abi3.so": "d011dc0db2d7aa13955d8fd7f7bff1a91bcfbc18e05b8087d456d425f8b10309",
+    "libflint-6839011d.so.24.0.0": "871a4132fd1e9f3638391b2208e07088f8e3e72a10e41d45f58b150a60c2a1a9",
+    "libgmp-e0c82b6b.so.10.5.0": "33d24e675b10f8b1ab93a8ad3fa2ed5012e1b0d89dcdb97273877c6c6b9450d8",
+    "libmpfr-be332c05.so.6.2.2": "c4dfcfc7c5c7ab71d427e15f2f9fae4ace88592a81d4596a918dcc02eadfc6e3"
+  },
+  "complete_strip_half_width": "1/2",
+  "complete_zero_count_routine_called_by_this_checker": false,
+  "different_arithmetic_implementation_used": false,
+  "exact_complete_remaining_source_angular_projection": "3256710589001912795192378157549567999/3256718702236431922569393314301952001",
+  "global_zero_free_disk_radius": "11/2",
+  "historical_Gram_Rosser_contract_used_by_this_theorem": false,
+  "imported_original_sign_receipt_also_contains_unused_count_claims": true,
+  "initial_full_list_uniqueness_or_completeness_assumed": false,
+  "lower_count_free_complete_simple_census_explicitly_imported": 2240,
+  "native_logarithmic_jet_degree_replayed": 10,
+  "normalization": "Xi(z)=xi(1/2+i*z)",
+  "published_large_zero_verification_used_by_this_theorem": false,
+  "recovered_domains": [
+    {
+      "all_lambda_positive": true,
+      "all_y_nonnegative": true,
+      "exclusion_ratio_upper": "34641473994373026886121966610891929475026592802284342608269657880603460078504766657613479947972918049425909590441412847533303125/35381528716300643603444525447024075252244517173679611015947674360291871250396097577289315841105610453780237537994542159734243328",
+      "height": 4064,
+      "maximum_derivative_order": 8125,
+      "recovered_complete_simple_positive_zero_count": 3540,
+      "strict_exclusion_margin": "740054721927616717322558836132145777217924371395268407678016479688411171891330919675835893132692404354327947553129312200940203/35381528716300643603444525447024075252244517173679611015947674360291871250396097577289315841105610453780237537994542159734243328",
+      "strict_horizontal_range": "abs(T)<4064-(r+2)/2"
+    },
+    {
+      "all_lambda_positive": true,
+      "all_y_nonnegative": true,
+      "exclusion_ratio_upper": "35329465201182663269452970429918019282670387141765781727085103223233110590106037945244713516472938474377786330601341061291279957/35381528716300643603444525447024075252244517173679611015947674360291871250396097577289315841105610453780237537994542159734243328",
+      "height": 4072,
+      "maximum_derivative_order": 8141,
+      "recovered_complete_simple_positive_zero_count": 3548,
+      "strict_exclusion_margin": "52063515117980333991555017106055969574130031913829288862571137058760660290059632044602324632671979402451207393201098442963371/35381528716300643603444525447024075252244517173679611015947674360291871250396097577289315841105610453780237537994542159734243328",
+      "strict_horizontal_range": "abs(T)<4072-(r+2)/2"
+    }
+  ],
+  "refined_bracket_width": "1/5192296858534827628530496329220096",
+  "refined_endpoint_signs_replayed": 1336,
+  "refined_prefix_count": 668,
+  "refined_prefix_cutoff": 1024,
+  "remaining_original_endpoint_signs_replayed_by_this_checker": false,
+  "remaining_original_sign_intervals_imported": 7381,
+  "remaining_source_root_real_part_lower": "abs(Re rho)>2240 after imported count-free census",
+  "residual_inverse_tenth_moment_interval": [
+    "24119771205879530545581830652658483228509385844064255/31828687130226345097944463881396533766429193651030253916189694521162207808802136034115584",
+    "25357146936375999026395085076385824931668814414741503/31828687130226345097944463881396533766429193651030253916189694521162207808802136034115584"
+  ],
+  "residual_inverse_tenth_moment_width": "221943387/5708990770823839524233143877797980545530986496",
+  "rh_proved": false,
+  "selected_interval_inverse_tenth_terms_replayed": 8049,
+  "source_sha256": {
+    "xi/outer-ray/CENSUS_FULL_COLUMN_SECTOR.md": "db662f2f7c57a61413ecf16d3f4760fd1d5d315f8328bed70984340083960c43",
+    "xi/outer-ray/CENSUS_LOCALIZATION.md": "39cf1735058b98ef0821600f545455bec3a4767267751e5d9aa0621630e7b9e1",
+    "xi/outer-ray/COUNT_FREE_CENSUS_RECOVERY.md": "8b05e1b47a7cc423083fed2817813a5f20586cafc9015626815adc095498b9ce",
+    "xi/outer-ray/HIGHER_MOMENT_CENSUS_RECOVERY.md": "efb3d7dffb2f3113884d9c154a901506c1454db10b475b46a1d6d3f87116e926",
+    "xi/outer-ray/NATIVE_SLAB_CERTIFICATE.md": "0cb56603222f874f9783404f691c32a5e409c2a8fe96c998d75ef6f39c8ef03e",
+    "xi/outer-ray/TENTH_MOMENT_CENSUS_RECOVERY.md": "d70b0eba32fcfcea32926108d7c504b63b23cf5f09e1c0c426517efae96adb12",
+    "xi/outer-ray/THEOREM.md": "2b35a58b119a6f924658a702769c401126e708e592738551e992403004cdfe6d",
+    "xi/outer-ray/check_tenth_moment_census.py": "3aa0dd48793b5e70ce65a440a8e867dc57d029bfbe43aa3dee1cd57ec6518b24",
+    "xi/outer-ray/count_free_census.json": "ce21c175914c1e1d3ad049a8b67e6528ae2f72baed309b4719c1ca8de48a7832",
+    "xi/outer-ray/native_candidates.json": "bbb7fe9adce4fa9581cbb23fb558c62abafec4e568cb69c4d9f0324443ad8c20",
+    "xi/outer-ray/native_slab_certificate.json": "43d7e2748c674d658398da5f50efd6728b115dfb798d023ae364fa4d35cf1490",
+    "xi/outer-ray/produce_tenth_prefix.py": "3ab52a5cc1be59cf405335bcbdc73738350f6843569e53d3b5c327009f760488",
+    "xi/outer-ray/tenth_prefix_candidates.json": "99c6d0a93afae1644760c8774be9680c8cfed574ab21a5d3e15fb1a281019c16"
+  },
+  "status": "PASS_DIRECTED_COUNT_FREE_TENTH_MOMENT_CENSUS",
+  "strict_native_xi_zero_seed_lower": "57562653509705337920631314817335313108380065669481645592601320626624450645443/115792089237316195423570985008687907853269984665640564039457584007913129639936"
+}

@@ -1,0 +1,53 @@
+{
+  "status": "DIRECTED_EXACT_PRIMITIVE_SYNTHESIS_ACCEPT",
+  "native_bound": "q_L(h)>=delta*||G_L h||_2^2 for every complex h and every0<L<=1; L1 also pays projectedE norm",
+  "baseline": {
+    "status": "DIRECTED_NATIVE_PRIMITIVE_NORM_ACCEPT",
+    "scope": "native complex L2 tests on every 0<L<=1, conditional inherited O1-O4",
+    "weighted_receipt_sha256": "98f3b7fc3ae64bc6c60e0cc12b0b9e10dfbc56889baa517f34d15b58ed9c4ffe",
+    "residual_receipt_sha256": "cba3fb5f17e71678b115c03813b97dda37ec45c19c24604bd302fd8baaf2ed19",
+    "reviewed_weighted_checker_sha256": "0ba57657eef0ea728134e846c2861f778793715c5d091c3c47090cc87f003f25",
+    "removed_sine_modes": 5,
+    "complement_dimension": 8,
+    "epsilon_exact": "1/100000000000",
+    "primitive_gap_exact": "1/6",
+    "residual_trace_upper_integer": 1,
+    "trial_primitive_synthesis_upper_integer": 47923878,
+    "theta_exact": "1/200000000001",
+    "delta_exact": "1/19169551400000000000",
+    "delta_decimal_for_display_only": 5.2166061642944863e-20,
+    "bound": "q_1(h)>=delta*(||Pi_E h||_2^2+||G_1 h||_2^2); q_L(h)>=delta*||G_L h||_2^2",
+    "G_definition": "G_L h(t)=integral_0^t cosh((t-u)/2)*h(u) du",
+    "producer_sha256": "a84255c51d8409fa33ab00ddbab42199e0e19a86a44bb066dcaf7740d657a5f0",
+    "proof_sha256": "a7c9dcbd4923dbbbe3172070c5bc4400b4465f3d90675020b936294133780251",
+    "limitations": [
+      "no uniform L2 spectral gap",
+      "no independent second full R integration",
+      "xi/Weil terminal identification remains separate",
+      "RH remains open"
+    ]
+  },
+  "exact_Gz_squared_norm_balls": [
+    "[0.31594140549725695829312003318568800283590803674823 +/- 1.88e-21]",
+    "[0.078764800165236768593885291493423479221115137610786 +/- 2.17e-21]",
+    "[0.035678420296761365110520038437960192754228077422160 +/- 1.85e-20]",
+    "[0.020092419496353739217632202364298832495881147144943 +/- 8.22e-20]",
+    "[0.012878121905445017406797365434988951544581120642439 +/- 6.91e-20]",
+    "[0.0094592738424701333415219540553493022885489546214122 +/- 1.78e-18]",
+    "[0.032076647895750081582933113206701261339890452709576 +/- 8.39e-21]",
+    "[0.00084752338892456247528460554710122962993877803262866 +/- 2.53e-17]"
+  ],
+  "synthesis_trace_ball": "[0.50573861248819862602169460372551125211009170493217 +/- 2.72e-17]",
+  "synthesis_upper_integer": 1,
+  "delta_exact": "1/2400000000012",
+  "delta_decimal_display_only": 4.1666666666458334e-13,
+  "full_weighted_replay_performed": true,
+  "new_R_integration_performed": false,
+  "producer_sha256": "009ae7df8ef5acdea2be122602d8c239eb0a36ac56563bf76640469926b8a011",
+  "proof_sha256": "1e1cd511a477cf5120b0b7ca0a9ebb36ce5b115d8c3faa063e76b6870733aac9",
+  "scope_limits": [
+    "No native L2 spectral gap",
+    "No signs atL>1",
+    "No RH claim"
+  ]
+}

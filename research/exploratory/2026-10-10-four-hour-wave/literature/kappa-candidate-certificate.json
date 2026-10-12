@@ -1,0 +1,60 @@
+{
+  "A_coefficients_ascending": [
+    "10659799777043/22497450000000",
+    "10218880536637/8436543750000",
+    "14655501492559/16873087500000",
+    "50051564/168730875"
+  ],
+  "crossing_gates": {
+    "D_lower": "1849745/899898",
+    "inverse_second_width_margin": "9/37",
+    "plain_capacity_below_inverse_supply": "5748929/49944339",
+    "plain_count_decreases_in_m": "699898/449949",
+    "positive_crossing_weights": "699898/449949",
+    "r_min_minus_23_over_37": "204/68440565"
+  },
+  "disc_coefficients_ascending": [
+    "560828536677742722737/2277608654261250000000000000",
+    "35901175407966243045805789/854103245347968750000000000",
+    "8144099191987306286578060511/40996955776702500000000000000",
+    "548782126028489426277511643/2049847788835125000000000000",
+    "31356189331663480042991519/409969557767025000000000000"
+  ],
+  "fourth_moment_extension_verification_scope": "written proof adapter independently reviewed; imported analysis not rebuilt",
+  "fourth_moment_extension_verified": true,
+  "geometry_gates": {
+    "analytic_lx_gt_b_plus_ell": "3231683/50000000",
+    "b_positive": "1542571/12500000",
+    "boundary_domain": "95703/100000000",
+    "ell_below_one_fifth": "2487109/75000000",
+    "ell_positive": "12512891/75000000",
+    "five_ell_gt_h": "3334811/150000000",
+    "floor_saving": "11023213/1875000000",
+    "intermediate_floor_saving": "3223390337/15000000000",
+    "intermediate_top_saving": "119614877/45000000000",
+    "lx_gt_ell": "9401967/50000000",
+    "ly_below_one": "15651493/30000000",
+    "ly_gt_ell": "15572251/50000000",
+    "one_minus_three_ell": "12487109/25000000",
+    "positive_gram_margin": "12780191/150000000",
+    "positive_low_exponent": "750891/4000000",
+    "prime_supply_above_seven_over_37": "73395241/4506381663",
+    "principal_h_saving": "40598033/30000000000",
+    "principal_y_saving": "14348507/600000000",
+    "small_row_saving": "196004839/2500000000",
+    "small_row_transport": "97948707/1250000000"
+  },
+  "imported_bound_independently_rebuilt": false,
+  "limiting_cubic": "1188*d^3-2160*d^2+171*d+190=0",
+  "new_zero_free_theorem_claimed": false,
+  "parameters": {
+    "B": "87495703/100000000",
+    "b": "1542571/12500000",
+    "ell": "12512891/75000000",
+    "kappa": "149983/200000"
+  },
+  "rh_proved": false,
+  "scope": "exact scalar certificate with separately reviewed source-qualified written adapter",
+  "status": "PASS_EXACT_KAPPA_SCALAR_CERTIFICATE",
+  "uniform_minus_E_lower_bound": "560828536677742722737/60751889795319776946000000000"
+}

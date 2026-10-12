@@ -1,0 +1,26 @@
+{
+  "status": "DIRECTED_NATIVE_PRIMITIVE_NORM_ACCEPT",
+  "scope": "native complex L2 tests on every 0<L<=1, conditional inherited O1-O4",
+  "weighted_receipt_sha256": "da0917e75a165b817c1ed7120dc17a467c88092a160f0f41da6b0b80a083b101",
+  "residual_receipt_sha256": "9213accb90caa99e17172f620c3946ab638542eaf0523dfba89ab8f870d2016a",
+  "reviewed_weighted_checker_sha256": "cc96f85d80d348bc3e2f11ab37e2b7f4c9d4eedfcda16b5a8533b32c1f1ce236",
+  "removed_sine_modes": 11,
+  "complement_dimension": 14,
+  "epsilon_exact": "1/100000000000",
+  "primitive_gap_exact": "6/5",
+  "residual_trace_upper_integer": 1,
+  "trial_primitive_synthesis_upper_integer": 2717696,
+  "theta_exact": "1/200000000001",
+  "delta_exact": "1/1087078600000000000",
+  "delta_decimal_for_display_only": 9.198966845635633e-19,
+  "bound": "q_1(h)>=delta*(||Pi_E h||_2^2+||G_1 h||_2^2); q_L(h)>=delta*||G_L h||_2^2",
+  "G_definition": "G_L h(t)=integral_0^t cosh((t-u)/2)*h(u) du",
+  "producer_sha256": "a84255c51d8409fa33ab00ddbab42199e0e19a86a44bb066dcaf7740d657a5f0",
+  "proof_sha256": "a7c9dcbd4923dbbbe3172070c5bc4400b4465f3d90675020b936294133780251",
+  "limitations": [
+    "no uniform L2 spectral gap",
+    "no independent second full R integration",
+    "xi/Weil terminal identification remains separate",
+    "RH remains open"
+  ]
+}

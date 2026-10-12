@@ -1,0 +1,56 @@
+{
+  "analytic_review_status": "Independent literature agent fully accepted the exact mathematical/source proof and independently replayed normal/optimized controls on2026-10-10. Owner preserves frozen proof/code bytes and records acceptance here.",
+  "asymptotic_counting_machine_proved": false,
+  "dependency_hashes": {
+    "CRT_SHORT_FOURIER.md": "1bec838317005962f86ab1940878242e7e83f5f67b566aa1a588598e1a7b9837",
+    "correlations/MOBIUS_CRT_TRANSLATION.md": "bde2f3a2c15aa514fdf51a5c0956691170633aa6d79427b7dc3a7f7ff6412710",
+    "correlations/probe_sextic_cumulants.py": "e3dec86cc6b07d80bb6bb61aababf460eb8ccd3738852869837b8e1b8c50a1be"
+  },
+  "exact_rational_exponent_guards": 9,
+  "execution_time_utc": "2026-10-10T15:00:26.653680+00:00",
+  "exit_codes": [
+    0,
+    0
+  ],
+  "explicit_manifest": [
+    "MASKED_CRT_NONRETURN.md",
+    "check_masked_crt_nonreturn.py",
+    "MASKED_CRT_EXECUTION.json",
+    "results/masked-crt.normal.json",
+    "results/masked-crt.optimized.json"
+  ],
+  "external_analytic_input": {
+    "PR": "https://github.com/GettysburgResearch/riemann/pull/912",
+    "commit": "6afd64e042ce7b59d550c3d76e9e2cca8b2c7379",
+    "contract": "Section5 full-family zero-free Re>B<1 plus uniform reciprocal, polynomial conductor and deleted-factor bounds imply |A_u(D;W)|<=C D^(B+delta) uniformly for0<Nu<=D^P.",
+    "source_path": "standalone/2026-10-10-generalized-inverse-moments/MELLIN_AND_SPIKES.md",
+    "source_sha256": "f3bdeb168714d838a4b13347cd353675d9644b9629041cdf7def78dc496162e3",
+    "verified_here": false
+  },
+  "finite_scale_panels": 5,
+  "independent_counting_control": "Actual Eisenstein lattice generators; split ideal-square Hensel lifts and inert ideal-square divisibility; six associates per ideal. Independent of recursive squarefree source-column construction.",
+  "independent_review": {
+    "control_receipt_path": "literature/masked-crt-variation-independent-controls.json",
+    "control_receipt_sha256": "7e8b0d5a28b5b83fa6daa14b9efeec74580d7362f08e60dd9d3424a66a016343",
+    "external_U_B_or_Mertens_hypotheses_verified": false,
+    "mathematical_source_proof_accepted": true,
+    "normal_optimized_runtime_replay_passed": true,
+    "path": "literature/MASKED_CRT_VARIATION_INDEPENDENT_REVIEW.md",
+    "sha256": "64f1e075e8f7c203b22dd4189c156cc35c537bf3383e19fa506759e34894091f"
+  },
+  "infinite_short_row_moment_upper_bound_proved": false,
+  "nonzero_base_panels": 25,
+  "normal_command": "python3 -B check_masked_crt_nonreturn.py --output /tmp/masked-crt.normal.json",
+  "normal_optimized_json_byte_identical": true,
+  "optimized_command": "python3 -B -O check_masked_crt_nonreturn.py --output /tmp/masked-crt.optimized.json",
+  "primitive_source": "actual nu=1 squarefree ideal sharp band D/2<Nn<=D, split and inert ideals, excluded primes over6",
+  "python_version": "3.12.14",
+  "rh_proved": false,
+  "source_hashes": {
+    "MASKED_CRT_NONRETURN.md": "be821d39b3c4da3a61ff32b9ceb2e154853be15fe5b5da28be33c6344888f1ba",
+    "check_masked_crt_nonreturn.py": "308e7d6a16e8247fb304beb8af9b6a5e377c4c108e4e11977716dbd07c0abb05",
+    "results/masked-crt.normal.json": "dc058c5113152b2ac462d7259d8b998219be98501ddbf26739276656621f2bfa",
+    "results/masked-crt.optimized.json": "dc058c5113152b2ac462d7259d8b998219be98501ddbf26739276656621f2bfa"
+  },
+  "status": "INDEPENDENTLY_REVIEWED_CONDITIONAL_MASKED_CRT_COMPONENT"
+}

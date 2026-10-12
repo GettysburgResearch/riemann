@@ -1,0 +1,57 @@
+{
+  "additional_files_sha256": {
+    "SIGNED_REMAINDER_CONTINUATION_SUPPLEMENT.md": "1b731298da6c5bc0e1e77bc82a436eee23325dc8f682a080cf700515e4ff574b",
+    "independent-fourier-compact-trace-normal.json": "fa2e817911ebaee9411f3b617149fa55ad98e9b7abc6e604dd6b3a1d6cc6aae8",
+    "independent-fourier-compact-trace-optimized.json": "fa2e817911ebaee9411f3b617149fa55ad98e9b7abc6e604dd6b3a1d6cc6aae8",
+    "independent-full-signed-compact-normal.json": "46e642fa1c4774f1d31166de547731762fa7f89ac3f0a3ce6b0c500f91571d93",
+    "independent-full-signed-compact-optimized.json": "46e642fa1c4774f1d31166de547731762fa7f89ac3f0a3ce6b0c500f91571d93"
+  },
+  "asymptotic_generalized_moment_proved": false,
+  "completed_claims": [
+    "Complete selected-sector kernels indefinite",
+    "Source-realizable negative finite critical and leading forms after paid genuine Schwartz smoothing"
+  ],
+  "full_moment_negative": false,
+  "git_mutation": false,
+  "independent_reviews_sha256": {
+    "../xi/cofinal-audit/collision-review/NEGATIVE_PROFILE_SIGNED_WITNESS_REVIEW.md": "e7e6066281522e8c2a9e66bb9251a86cbe2b570a1061c870a2804bb1b75bffdb",
+    "../xi/cofinal-audit/collision-review/SIGNED_SECTOR_KERNEL_INERTIA_REVIEW.md": "94d9d2d8f56dbb91526cb039ebca1e82c667770bbc05b9fff7a31969025a21c5",
+    "COFINAL_QUANTIFIER_GUARDS_INDEPENDENT_REVIEW.md": "08c95892d2575dc748901bf301fd137a57cf151a9c0ef008b092e31228971b7b"
+  },
+  "new_zero_free_boundary_proved": false,
+  "no_active_owned_native_worker": true,
+  "open_complement_contract": "COMPLEMENTARY_SHORT_TRACE_CONTRACT.md CT1",
+  "packets": [
+    {
+      "checker": "check_signed_sector_inertia.py",
+      "checker_sha256": "50773ad76433ef448d6233080411a3c8d452670b1a7ccee679280c23383bc1e2",
+      "normal_receipt": "/tmp/signed-sector-inertia-normal.json",
+      "optimized_receipt": "/tmp/signed-sector-inertia-optimized.json",
+      "proof": "SIGNED_SECTOR_KERNEL_INERTIA.md",
+      "proof_sha256": "07d578eb15e54e4b88dc93abc1f6e81b08b1a7e52f07c938b7ddc3122e830df0",
+      "receipt": "signed-sector-inertia-certificate.json",
+      "receipt_sha256": "fda297ed5fc3435058f55fb6dbcad34114353aa635c11a1aca426bb8111a26a5",
+      "status": "PASS_EXACT_SIGNED_SECTOR_KERNEL_INERTIA_CONTROLS",
+      "two_mode_bytes_identical": true
+    },
+    {
+      "checker": "check_negative_profile_signed.py",
+      "checker_sha256": "083b6ab601216364dd2068378d33dadae7e10a066db01ef31a638e83b3b1dd52",
+      "normal_receipt": "/tmp/negative-profile-signed-normal.json",
+      "optimized_receipt": "/tmp/negative-profile-signed-optimized.json",
+      "proof": "NEGATIVE_PROFILE_SIGNED_WITNESS.md",
+      "proof_sha256": "9c5c7b2dac0b2fe3a41f03e5f08cd1a66f433bf198164ba13060c04504ce7663",
+      "receipt": "negative-profile-signed-certificate.json",
+      "receipt_sha256": "eb3e1e356b44dcd4eb66c2f6dc429b0775fd6d031d641d8082cd8e1b85e28cd3",
+      "status": "PASS_EXACT_SOURCE_REALIZABLE_NEGATIVE_PROFILE_SIGNED_WITNESS",
+      "two_mode_bytes_identical": true
+    }
+  ],
+  "prior_four_hour_bytes_preserved": true,
+  "prior_route_manifest": "prime-slot-route-manifest.json",
+  "prior_route_manifest_sha256": "b3d3eb4e73aa0cb4bc4c5f540f83e450e5552f6aecad4de5c49335214b70e7fe",
+  "rh_proved": false,
+  "source_scope": "Literal nonnegative compact smooth norm profiles; complete fixed radial source; exact selected critical and leading sectors",
+  "status": "PASS_FROZEN_SIGNED_REMAINDER_SUPPLEMENT_BINDINGS",
+  "unconditional_cofinal_progress_proved": false
+}

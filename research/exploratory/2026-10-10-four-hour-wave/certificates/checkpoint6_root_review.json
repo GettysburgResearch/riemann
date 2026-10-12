@@ -1,0 +1,84 @@
+{
+  "RH_proved": false,
+  "components": {
+    "actual_xi_kernel_binding": {
+      "full_analytic_code_review": "ACCEPT",
+      "independent_receipt_sha256": "4e60a605947c3763df481586937317c474a4e1c1fc951ff6a366a8388a80cf32",
+      "normal_optimized_replay": true,
+      "proof": "operators/COMPLETE_XI_KERNEL_BINDING.md",
+      "proof_sha256": "e81a3c22d4ace8ab2af0b01bb6afcd64e176ca986aacca5da58e1a63617094e6",
+      "receipt": "/tmp/root-xi-kernel-normal.json"
+    },
+    "crt_fourier": {
+      "full_analytic_code_review": "ACCEPT",
+      "normal_optimized_replay": true,
+      "proof": "arithmetic/CRT_SHORT_FOURIER.md",
+      "proof_sha256": "1bec838317005962f86ab1940878242e7e83f5f67b566aa1a588598e1a7b9837"
+    },
+    "density900000": {
+      "full_analytic_code_review": "ACCEPT",
+      "independent_receipt_sha256": "7290b72c219fff5cf1364d9e9e2cca14f5d239061b4cc0d743e4dc5348873094",
+      "normal_optimized_replay": true,
+      "proof": "heights/DENSITY_RATIONAL_REFINEMENT.md",
+      "proof_sha256": "6369e6f0417b2f31772fc1a2c315f6ae67bc7a6cfb1cc1b28c9ce4d03e9deb29",
+      "receipt": "/tmp/root-density-normal.json"
+    },
+    "double_count1400000": {
+      "full_analytic_code_review": "ACCEPT",
+      "independent_receipt_sha256": "30ff247e3da1a532e8c8c15ce900795a71528d0d5bffb23f654d6d33f61e05b1",
+      "normal_optimized_replay": true,
+      "proof": "heights/DOUBLE_COUNT_PICK.md",
+      "proof_sha256": "23e67ff10510aa7b27b497cd58e7e8a6f1a874c1fe3a9099ba5b7651df7a74b0",
+      "receipt": "/tmp/root-double-count-normal.json"
+    },
+    "good_cutoff1142000": {
+      "full_analytic_code_review": "ACCEPT",
+      "independent_receipt_sha256": "5857dd9956fbfe11d31a959100b3ccd5b272a221a258c1ac992f05b961d1877e",
+      "normal_optimized_replay": true,
+      "proof": "heights/GOOD_CUTOFF_PICK.md",
+      "proof_sha256": "2fc4b6caf69a28eda0ebd2e6a5b0d9761efb0387155a93437706676ae540d34b",
+      "receipt": "/tmp/root-good-cutoff-normal.json"
+    },
+    "large_activation19over15": {
+      "full_analytic_engine_code_review": "ACCEPT",
+      "independent_small_controls_normal_optimized": "3 builder + 2 independent trial-factor source groups per mode PASS",
+      "owner_normal_optimized_byte_identical": true,
+      "proof": "arithmetic/LARGE_ACTIVATION_STITCH.md",
+      "proof_sha256": "919f9f0ae4126e5f09b9a1fa3b5dad7f558d42c8d78b9e40399157aa2cc54f6a",
+      "third_full_large_arithmetic_run": false
+    },
+    "quantitative_primitive": {
+      "complete_lower_sign_available": false,
+      "full_analytic_extractor_code_review": "ACCEPT_CONDITIONAL",
+      "proof": "operators/QUANTITATIVE_PRIMITIVE_COMPLETION.md",
+      "proof_sha256": "a7c9dcbd4923dbbbe3172070c5bc4400b4465f3d90675020b936294133780251"
+    },
+    "reunited_ramanujan_return": {
+      "full_analytic_source_code_review": "ACCEPT",
+      "independent_receipt_sha256": "5529196592ace12e403df1e62fe39afebb59447e89fbbb9b83f8c452f91c7042",
+      "normal_optimized_replay": true,
+      "proof": "literature/CUSP_RAMANUJAN_RETURN.md",
+      "proof_sha256": "eec0f770ed0ba1af9ed664390d0b9c264fcc2440261d59eb547ba64827703463",
+      "receipt": "/tmp/root-ramanujan-normal.json"
+    },
+    "sharp_causal": {
+      "full_analytic_code_review": "ACCEPT",
+      "normal_optimized_replay": "3 symbolic/rational groups per mode PASS",
+      "proof": "arithmetic/SHARP_CAUSAL_TRANSFER.md",
+      "proof_sha256": "ba5d6e4bd38411bf47b17653e6208066cf1b7dd1168e195bdb9cac27e5b6903d"
+    },
+    "whole_cusp_support": {
+      "full_analytic_source_code_review": "ACCEPT",
+      "independent_receipt_sha256": "c54cbd6fcb681ded2a65d874408409a852206b3ec560733ed7fffb4f649c5391",
+      "normal_optimized_replay": true,
+      "proof": "literature/CUSP_VECTOR_SUPPORT_RETURN.md",
+      "proof_sha256": "caf970c667eef9686de24b2611b44768cc2b2e0fd833f143c43a0f46a341a183",
+      "receipt": "/tmp/root-final-cusp-normal.json"
+    }
+  },
+  "date_utc": "2026-10-10",
+  "full_generalized_moment_proved": false,
+  "published_analytic_inputs_rebuilt": false,
+  "published_large_zero_verification_replayed": false,
+  "status": "COORDINATOR_SCOPED_REVIEW_CHECKPOINT6"
+}

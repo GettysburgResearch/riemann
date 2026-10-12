@@ -1,0 +1,41 @@
+{
+  "base_manifest": "FINAL_ARITHMETIC_MANIFEST.json",
+  "base_manifest_sha256": "40ccfbac7228bc4e78d720e8b09af107d5d3fd2b627b1b6283622cc3a11b9bb1",
+  "base_owned_files_current_and_unchanged": 114,
+  "bounded_native_conclusion": {
+    "all_lambda_positive": true,
+    "complete_simple_census_height": 5419,
+    "full_vertical_depth": true,
+    "maximum_finite_column_derivative_order": 10835,
+    "positive_zero_count": 4968,
+    "strict_horizontal_range": "abs(T)<5419-(r+2)/2"
+  },
+  "created_utc": "2026-10-10T15:54:23.879542+00:00",
+  "duplicate_native_primitive_replay_by_arithmetic_agent": false,
+  "explicit_lower_count_free_census_import": 2240,
+  "historical_count_contract_used": false,
+  "independent_arithmetic_agent_review_scope": "Full S16-1--S16-5 analytic proof and complete checker/source/provenance acceptance; all displayed direct source hashes current. S16-6 explicitly composes separately reviewed finite companion-column theorem.",
+  "independent_native_runtime_owner": "Literature reviewer records independent normal/optimized replay separately; this addendum does not claim my runtime replay.",
+  "new_external_direct_source_sha256": {
+    "xi/outer-ray/CENSUS_FULL_COLUMN_SECTOR.md": "db662f2f7c57a61413ecf16d3f4760fd1d5d315f8328bed70984340083960c43",
+    "xi/outer-ray/CENSUS_LOCALIZATION.md": "39cf1735058b98ef0821600f545455bec3a4767267751e5d9aa0621630e7b9e1",
+    "xi/outer-ray/COUNT_FREE_CENSUS_RECOVERY.md": "8b05e1b47a7cc423083fed2817813a5f20586cafc9015626815adc095498b9ce",
+    "xi/outer-ray/HIGHER_MOMENT_CENSUS_RECOVERY.md": "efb3d7dffb2f3113884d9c154a901506c1454db10b475b46a1d6d3f87116e926",
+    "xi/outer-ray/NATIVE_SLAB_CERTIFICATE.md": "0cb56603222f874f9783404f691c32a5e409c2a8fe96c998d75ef6f39c8ef03e",
+    "xi/outer-ray/SIXTEENTH_MOMENT_CENSUS_RECOVERY.md": "f897ae7c02eb1c912557c22bdd5fa3d2d89c61cdfecaf894d43f7c8943e070d4",
+    "xi/outer-ray/THEOREM.md": "2b35a58b119a6f924658a702769c401126e708e592738551e992403004cdfe6d",
+    "xi/outer-ray/check_sixteenth_moment_census.py": "88717519250cfd68f6c74398b5f7d16672250966c70d79cebbe016637586eae6",
+    "xi/outer-ray/count_free_census.json": "ce21c175914c1e1d3ad049a8b67e6528ae2f72baed309b4719c1ca8de48a7832",
+    "xi/outer-ray/native_candidates.json": "bbb7fe9adce4fa9581cbb23fb558c62abafec4e568cb69c4d9f0324443ad8c20",
+    "xi/outer-ray/native_slab_certificate.json": "43d7e2748c674d658398da5f50efd6728b115dfb798d023ae364fa4d35cf1490",
+    "xi/outer-ray/produce_sixteenth_prefix.py": "4ba9295d839163f2f57e8e4499fb690edeed41f6b5381521b1482cd570139001",
+    "xi/outer-ray/sixteenth_prefix_candidates.json": "2cb7d16f7ad8bd6e7a99cff1f7c94597f39dee01d6da86f078beed4d7657272d"
+  },
+  "new_owned_file_sha256": {
+    "SIXTEENTH_MOMENT_SOURCE_CROSS_REVIEW.md": "29d80af7ed847ba4c6e65f3299cefbc07cb9eca356b3294ad69fdc447b30f5a6"
+  },
+  "next_integer_5420_failed_predicate_is_not_a_zero_claim": true,
+  "official_owner_normal_receipt_sha256": "964f49cc79a61b354cd77fe1f077637e54bb46f39a5643e1455e87f60fabc4d6",
+  "rh_proved": false,
+  "status": "FROZEN_SOURCE_REVIEW_ADDENDUM_TO_UNCHANGED_ARITHMETIC_PACKET"
+}

@@ -1,0 +1,251 @@
+{
+  "full_axis_squared_coefficient": "n*(n+1)*(2*n+1)/6",
+  "input_sha256": {
+    "RATIONAL_DILATION.md": "868c1478be50c2808fafd758fe7fccec2a1b4cac64d40d1ce00bb452089cbacc",
+    "verify_rational_dilation.py": "92654ee844577317595fc9cc0c04af1659ad938bc093658632b590c51ec0ccfe"
+  },
+  "limitations": [
+    "finite arithmetic is separate from the analytic all-degree proof",
+    "a universal truncated-tail n^2 upper bound is not established",
+    "these lemmas do not upgrade the certified xi Pick order"
+  ],
+  "status": "PASS_EXACT_RATIONAL_DILATION_CONTROLS",
+  "tail_control_degrees": {
+    "first": 0,
+    "last": 32
+  },
+  "tail_controls": [
+    {
+      "degree": 0,
+      "dilation_ratio_squared_exact": "4",
+      "proved_ratio_lower_bound": "3/2",
+      "space_dimension": 2,
+      "weighted_norm_exact": "2/3"
+    },
+    {
+      "degree": 1,
+      "dilation_ratio_squared_exact": "323/11",
+      "proved_ratio_lower_bound": "9/2",
+      "space_dimension": 4,
+      "weighted_norm_exact": "352/105"
+    },
+    {
+      "degree": 2,
+      "dilation_ratio_squared_exact": "197196/1547",
+      "proved_ratio_lower_bound": "19/2",
+      "space_dimension": 6,
+      "weighted_norm_exact": "442/55"
+    },
+    {
+      "degree": 3,
+      "dilation_ratio_squared_exact": "98635/259",
+      "proved_ratio_lower_bound": "33/2",
+      "space_dimension": 8,
+      "weighted_norm_exact": "18944/1287"
+    },
+    {
+      "degree": 4,
+      "dilation_ratio_squared_exact": "6155977108/6809821",
+      "proved_ratio_lower_bound": "51/2",
+      "space_dimension": 10,
+      "weighted_norm_exact": "68098210/2909907"
+    },
+    {
+      "degree": 5,
+      "dilation_ratio_squared_exact": "2085994953/1131553",
+      "proved_ratio_lower_bound": "73/2",
+      "space_dimension": 12,
+      "weighted_norm_exact": "36209696/1062347"
+    },
+    {
+      "degree": 6,
+      "dilation_ratio_squared_exact": "899041142036/266157077",
+      "proved_ratio_lower_bound": "99/2",
+      "space_dimension": 14,
+      "weighted_norm_exact": "3726199078/79676025"
+    },
+    {
+      "degree": 7,
+      "dilation_ratio_squared_exact": "3072072440233/537294481",
+      "proved_ratio_lower_bound": "129/2",
+      "space_dimension": 16,
+      "weighted_norm_exact": "4401516388352/71628746475"
+    },
+    {
+      "degree": 8,
+      "dilation_ratio_squared_exact": "51472796311324/5652960983",
+      "proved_ratio_lower_bound": "163/2",
+      "space_dimension": 18,
+      "weighted_norm_exact": "33917765898/434113615"
+    },
+    {
+      "degree": 9,
+      "dilation_ratio_squared_exact": "18591883304797/1345700245",
+      "proved_ratio_lower_bound": "201/2",
+      "space_dimension": 20,
+      "weighted_norm_exact": "215312039200/2223997443"
+    },
+    {
+      "degree": 10,
+      "dilation_ratio_squared_exact": "2110276868707653076/104701623197197",
+      "proved_ratio_lower_bound": "243/2",
+      "space_dimension": 22,
+      "weighted_norm_exact": "2303435710338334/19604537460045"
+    },
+    {
+      "degree": 11,
+      "dilation_ratio_squared_exact": "11966784837770128119/420445622442383",
+      "proved_ratio_lower_bound": "289/2",
+      "space_dimension": 24,
+      "weighted_norm_exact": "215268158690500096/1535688767703525"
+    },
+    {
+      "degree": 12,
+      "dilation_ratio_squared_exact": "201601405305074815756/5155082976427867",
+      "proved_ratio_lower_bound": "339/2",
+      "space_dimension": 26,
+      "weighted_norm_exact": "3269077009442062/19829553671925"
+    },
+    {
+      "degree": 13,
+      "dilation_ratio_squared_exact": "29785798588898132837669/567422324433291293",
+      "proved_ratio_lower_bound": "393/2",
+      "space_dimension": 28,
+      "weighted_norm_exact": "18157514381865321376/94797164284004655"
+    },
+    {
+      "degree": 14,
+      "dilation_ratio_squared_exact": "69635667853491132456876/1008419042128692043",
+      "proved_ratio_lower_bound": "451/2",
+      "space_dimension": 30,
+      "weighted_norm_exact": "214557243006104690/974274700741419"
+    },
+    {
+      "degree": 15,
+      "dilation_ratio_squared_exact": "50111806905261243682147/561431400125956699",
+      "proved_ratio_lower_bound": "513/2",
+      "space_dimension": 32,
+      "weighted_norm_exact": "73587936477309396451328/293290784537693068665"
+    },
+    {
+      "degree": 16,
+      "dilation_ratio_squared_exact": "1210243981088708877386268355108/10653509802895193671365481",
+      "proved_ratio_lower_bound": "579/2",
+      "space_dimension": 34,
+      "weighted_norm_exact": "51745619042633797832346622/182468766665950473433725"
+    },
+    {
+      "degree": 17,
+      "dilation_ratio_squared_exact": "207138325265504355129376026731/1452433591328563331982067",
+      "proved_ratio_lower_bound": "649/2",
+      "space_dimension": 36,
+      "weighted_norm_exact": "19919089252506011410039776/62585905474794606829925"
+    },
+    {
+      "degree": 18,
+      "dilation_ratio_squared_exact": "6340115575166221498400682865508/35847756454483015696676705",
+      "proved_ratio_lower_bound": "723/2",
+      "space_dimension": 38,
+      "weighted_norm_exact": "1362214745270354596473714790/3837767723714405290811001"
+    },
+    {
+      "degree": 19,
+      "dilation_ratio_squared_exact": "131341007796390475070854927421/605431456676378664357317",
+      "proved_ratio_lower_bound": "801/2",
+      "space_dimension": 40,
+      "weighted_norm_exact": "1549904529091529380754731520/3937450002252441791871027"
+    },
+    {
+      "degree": 20,
+      "dilation_ratio_squared_exact": "890378918350301474228667788292924/3379457607223794170924023639",
+      "proved_ratio_lower_bound": "883/2",
+      "space_dimension": 42,
+      "weighted_norm_exact": "6758915214447588341848047278/15562302389854888986918821"
+    },
+    {
+      "degree": 21,
+      "dilation_ratio_squared_exact": "1234861232492828130395761821784819/3894095248242473725047271483",
+      "proved_ratio_lower_bound": "969/2",
+      "space_dimension": 44,
+      "weighted_norm_exact": "1370721527381350751216639562016/2873659630954238983618975395"
+    },
+    {
+      "degree": 22,
+      "dilation_ratio_squared_exact": "591229681256242859539225466591375348/1561794014930596470665430842861",
+      "proved_ratio_lower_bound": "1059/2",
+      "space_dimension": 46,
+      "weighted_norm_exact": "71842524686807437650609818771606/137714611544960837445740128545"
+    },
+    {
+      "degree": 23,
+      "dilation_ratio_squared_exact": "58369291788862606202813187452715/130134339384571274422764899",
+      "proved_ratio_lower_bound": "1153/2",
+      "space_dimension": 48,
+      "weighted_norm_exact": "21756336902824650613699796992/38279242474643492231278801"
+    },
+    {
+      "degree": 24,
+      "dilation_ratio_squared_exact": "3555108260998797782890143439309144036/6735905257113464236703724119497",
+      "proved_ratio_lower_bound": "1251/2",
+      "space_dimension": 50,
+      "weighted_norm_exact": "6873372711340269629289514407650/11139259560121256239302131091"
+    },
+    {
+      "degree": 25,
+      "dilation_ratio_squared_exact": "5624359022820369563496525342266403927071/9114092381520786753129654692078471",
+      "proved_ratio_lower_bound": "1353/2",
+      "space_dimension": 52,
+      "weighted_norm_exact": "3791462430712647289301936351904643936/5678204142993130004215543417243977"
+    },
+    {
+      "degree": 26,
+      "dilation_ratio_squared_exact": "4152957219693869921173072136722364414723012/5789606002683624220834234384891192009",
+      "proved_ratio_lower_bound": "1459/2",
+      "space_dimension": 54,
+      "weighted_norm_exact": "104212908048305235975016218928041456162/144659010309586883440729320391691795"
+    },
+    {
+      "degree": 27,
+      "dilation_ratio_squared_exact": "687832868642686561915010429074674662074247/829458067266445352446626139321579679",
+      "proved_ratio_lower_bound": "1569/2",
+      "space_dimension": 56,
+      "weighted_norm_exact": "10358110498546829767138355691040214528/13363827960608789213236224061046205"
+    },
+    {
+      "degree": 28,
+      "dilation_ratio_squared_exact": "27270201273776861902639318678181277566241245564/28590576480432781862557204927972783030775",
+      "proved_ratio_lower_bound": "1683/2",
+      "space_dimension": 58,
+      "weighted_norm_exact": "1658253435865101348028317885822421415784950/1993650601116316757682534319609431582033"
+    },
+    {
+      "degree": 29,
+      "dilation_ratio_squared_exact": "21617105189201802301440289096259575545580878663/19797454951385674230445240608920371251311",
+      "proved_ratio_lower_bound": "1801/2",
+      "space_dimension": 60,
+      "weighted_norm_exact": "3167592792221707876871238497427259400209760/3557298131403624018610012217342319097353"
+    },
+    {
+      "degree": 30,
+      "dilation_ratio_squared_exact": "113801291369055290296098855830370348294690556/91444202291534051616062306426046504319",
+      "proved_ratio_lower_bound": "1923/2",
+      "space_dimension": 62,
+      "weighted_norm_exact": "106101401573119938175094007541764244011274/111552903075374969224704215874846243471"
+    },
+    {
+      "degree": 31,
+      "dilation_ratio_squared_exact": "8464784413488999990266588004855287451124075417/5992670443658133646880808669793792877569",
+      "proved_ratio_lower_bound": "2049/2",
+      "space_dimension": 64,
+      "weighted_norm_exact": "38199212177077636151438850040958639272886272/37678773113225056094514455893897534363875"
+    },
+    {
+      "degree": 32,
+      "dilation_ratio_squared_exact": "3613706129395790560742336720483793169396641277008036/2262772134287889151688734164519869308927513577",
+      "proved_ratio_lower_bound": "2179/2",
+      "space_dimension": 66,
+      "weighted_norm_exact": "4525544268575778303377468329039738617855027154/4196169101826580601078755903284469854130875"
+    }
+  ],
+  "tail_ratio_all_even_n_lower_limit": "n^2/4+1/2"
+}

@@ -1,0 +1,102 @@
+{
+  "all_variable_logarithmic_reserve_coefficients_nonnegative": true,
+  "arbitrary_individual_displacements_retained": true,
+  "cases": [
+    {
+      "additional_uniform_strip_hypothesis": false,
+      "amplification_exact": "1531/1000",
+      "complete_displacement_bound": "1/2",
+      "endpoint_gap_decimal": 0.00011223509518772757,
+      "endpoint_gap_exact": "762345376598329967484512648703103327298527/6792397470000000000000000000000000000000000000",
+      "exponent_at_N0_exact": "45228603/106250000",
+      "exponent_upper_exact": "4257/10000",
+      "full_exponential_upper_exact": "65654455883863858352431880223927512394097/42892864000000000000000000000000000000000",
+      "global_order": 1414000,
+      "maximal_even_order_at_H0": 1414566,
+      "q0_exact": "667/1000",
+      "selectable_tail_examples": [
+        {
+          "even_order": 1414566,
+          "height": 3000000000000
+        },
+        {
+          "even_order": 8167006,
+          "height": 100000000000000
+        },
+        {
+          "even_order": 816700678,
+          "height": 1000000000000000000
+        },
+        {
+          "even_order": 816700679562,
+          "height": 1000000000000000000000000
+        },
+        {
+          "even_order": 816700679563816696,
+          "height": 1000000000000000000000000000000000000
+        }
+      ]
+    },
+    {
+      "additional_uniform_strip_hypothesis": true,
+      "amplification_exact": "71/50",
+      "complete_displacement_bound": "3/8",
+      "endpoint_gap_decimal": 0.002421188852163818,
+      "endpoint_gap_exact": "73091897928132099409751855017013608382087/30188433200000000000000000000000000000000000",
+      "exponent_at_N0_exact": "8747361/25000000",
+      "exponent_upper_exact": "7/20",
+      "full_exponential_upper_exact": "363467292461609881/256131072000000000",
+      "global_order": 1480000,
+      "maximal_even_order_at_H0": 1480878,
+      "q0_exact": "731/1000",
+      "selectable_tail_examples": [
+        {
+          "even_order": 1480878,
+          "height": 3000000000000
+        },
+        {
+          "even_order": 8549852,
+          "height": 100000000000000
+        },
+        {
+          "even_order": 854985378,
+          "height": 1000000000000000000
+        },
+        {
+          "even_order": 854985379990,
+          "height": 1000000000000000000000000
+        },
+        {
+          "even_order": 854985379991962200,
+          "height": 1000000000000000000000000000000000000
+        }
+      ]
+    }
+  ],
+  "constant_allowance_per_log_exact": "2067/28729",
+  "cutoff_computed": false,
+  "global_critical_census_used": true,
+  "minimum_height": 3000000000000,
+  "minimum_order": 850000,
+  "optimized_primitive_coefficient_exact": "3762011/28729000",
+  "optional_quasi_RH_strip_proof_or_formal_solution_replayed": false,
+  "published_Turing_integral_or_critical_census_replayed": false,
+  "quadrature_coefficient_exact": "306538772327579/718225000000000",
+  "rh_proved": false,
+  "source_sha256": {
+    "heights/ANNULAR_GLOBAL_PICK.md": "c04cdf51ad64972137ecd3f4aa2c835e82481d4984115bd7fadf9b8621311724",
+    "heights/DENSITY_RATIONAL_REFINEMENT.md": "6369e6f0417b2f31772fc1a2c315f6ae67bc7a6cfb1cc1b28c9ce4d03e9deb29",
+    "heights/DOUBLE_COUNT_PICK.md": "23e67ff10510aa7b27b497cd58e7e8a6f1a874c1fe3a9099ba5b7651df7a74b0",
+    "heights/GOOD_CUTOFF_PICK.md": "2fc4b6caf69a28eda0ebd2e6a5b0d9761efb0387155a93437706676ae540d34b",
+    "heights/VOLTERRA_RATIONAL_REFINEMENT.md": "a9cf619b13278b71ae7662f55aa25607f1fd8507970b6f8028922abad8e779c9",
+    "heights/WEIGHTED_RATIONAL_DILATION.md": "2ca7783dede49c9f9c382a92ad640e30e8803db506acd672581dfd4dc5ddb2cd",
+    "heights/final-review/OPTIMIZED_DOUBLE_COUNT.md": "4a760969f52d03199ce38fcd29ad787382d9c61e4009f6f3cd79dd7e19d9c5c9",
+    "heights/final-review/verify_optimized_double_count.py": "f6b681cbb261f34323e505acdc8611d3d40b253b6bccb8b8513eb10e234ed1f8",
+    "heights/verify_double_count.py": "e6e9f89e6a8019f989a9ae9fc299df87cb27630b1489f46431b4a028aa21a170",
+    "literature/PRIMARY_SOURCES.md": "4c9496a433d81d09745f858b1245dfff9ea0bec4d6aeedf45baed340a8309294",
+    "literature/TRUDGIAN_TURING_SOURCE_RECORD.md": "a603cd736d50be23062908b233c0e6a0e35ec265ac24b29edaeb1c4eada1bc52"
+  },
+  "status": "PASS_EXACT_OPTIMIZED_DOUBLE_COUNT_CONTROLS",
+  "tail_critical_census_used": false,
+  "theta_primitive_coefficient_exact": "1/141"
+}

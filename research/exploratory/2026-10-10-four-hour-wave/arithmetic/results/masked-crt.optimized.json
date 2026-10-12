@@ -1,0 +1,307 @@
+{
+  "arithmetic": "EXACT_INTEGER_RESIDUES_AND_RATIONAL_EXPONENT_GUARDS",
+  "asymptotic_counting_numerically_certified": false,
+  "checker_sha256": "308e7d6a16e8247fb304beb8af9b6a5e377c4c108e4e11977716dbd07c0abb05",
+  "exact_exponent_controls": 9,
+  "excluded_prime_ideals": "all prime ideals over 6",
+  "finite_profile": "literal sharp band D/2<Nn<=D, not smooth W",
+  "native_nu": 1,
+  "nonzero_base_panels": 25,
+  "primitive_source_sha256": "e3dec86cc6b07d80bb6bb61aababf460eb8ccd3738852869837b8e1b8c50a1be",
+  "rh_proved": false,
+  "scale_panels": [
+    {
+      "D": 32,
+      "base_panels": [
+        {
+          "base": [
+            1,
+            0
+          ],
+          "base_norm": 1,
+          "independent_lattice_ideal_count": 5,
+          "masked_prime_ideal_count": 0,
+          "positive_masked_source_sum": 5
+        },
+        {
+          "base": [
+            7,
+            0
+          ],
+          "base_norm": 49,
+          "independent_lattice_ideal_count": 5,
+          "masked_prime_ideal_count": 2,
+          "positive_masked_source_sum": 5
+        },
+        {
+          "base": [
+            5,
+            0
+          ],
+          "base_norm": 25,
+          "independent_lattice_ideal_count": 4,
+          "masked_prime_ideal_count": 1,
+          "positive_masked_source_sum": 4
+        },
+        {
+          "base": [
+            3,
+            1
+          ],
+          "base_norm": 7,
+          "independent_lattice_ideal_count": 5,
+          "masked_prime_ideal_count": 1,
+          "positive_masked_source_sum": 5
+        },
+        {
+          "base": [
+            2,
+            1
+          ],
+          "base_norm": 3,
+          "independent_lattice_ideal_count": 5,
+          "masked_prime_ideal_count": 0,
+          "positive_masked_source_sum": 5
+        }
+      ],
+      "prime_ideal_count": 9,
+      "squarefree_sharp_band_column_count": 5,
+      "translator_coordinate_modulus": "267995"
+    },
+    {
+      "D": 64,
+      "base_panels": [
+        {
+          "base": [
+            1,
+            0
+          ],
+          "base_norm": 1,
+          "independent_lattice_ideal_count": 7,
+          "masked_prime_ideal_count": 0,
+          "positive_masked_source_sum": 7
+        },
+        {
+          "base": [
+            7,
+            0
+          ],
+          "base_norm": 49,
+          "independent_lattice_ideal_count": 6,
+          "masked_prime_ideal_count": 2,
+          "positive_masked_source_sum": 6
+        },
+        {
+          "base": [
+            5,
+            0
+          ],
+          "base_norm": 25,
+          "independent_lattice_ideal_count": 7,
+          "masked_prime_ideal_count": 1,
+          "positive_masked_source_sum": 7
+        },
+        {
+          "base": [
+            3,
+            1
+          ],
+          "base_norm": 7,
+          "independent_lattice_ideal_count": 6,
+          "masked_prime_ideal_count": 1,
+          "positive_masked_source_sum": 6
+        },
+        {
+          "base": [
+            2,
+            1
+          ],
+          "base_norm": 3,
+          "independent_lattice_ideal_count": 7,
+          "masked_prime_ideal_count": 0,
+          "positive_masked_source_sum": 7
+        }
+      ],
+      "prime_ideal_count": 15,
+      "squarefree_sharp_band_column_count": 7,
+      "translator_coordinate_modulus": "26009182745"
+    },
+    {
+      "D": 128,
+      "base_panels": [
+        {
+          "base": [
+            1,
+            0
+          ],
+          "base_norm": 1,
+          "independent_lattice_ideal_count": 19,
+          "masked_prime_ideal_count": 0,
+          "positive_masked_source_sum": 19
+        },
+        {
+          "base": [
+            7,
+            0
+          ],
+          "base_norm": 49,
+          "independent_lattice_ideal_count": 15,
+          "masked_prime_ideal_count": 2,
+          "positive_masked_source_sum": 15
+        },
+        {
+          "base": [
+            5,
+            0
+          ],
+          "base_norm": 25,
+          "independent_lattice_ideal_count": 19,
+          "masked_prime_ideal_count": 1,
+          "positive_masked_source_sum": 19
+        },
+        {
+          "base": [
+            3,
+            1
+          ],
+          "base_norm": 7,
+          "independent_lattice_ideal_count": 17,
+          "masked_prime_ideal_count": 1,
+          "positive_masked_source_sum": 17
+        },
+        {
+          "base": [
+            2,
+            1
+          ],
+          "base_norm": 3,
+          "independent_lattice_ideal_count": 19,
+          "masked_prime_ideal_count": 0,
+          "positive_masked_source_sum": 19
+        }
+      ],
+      "prime_ideal_count": 30,
+      "squarefree_sharp_band_column_count": 19,
+      "translator_coordinate_modulus": "15289149357496133187183115"
+    },
+    {
+      "D": 256,
+      "base_panels": [
+        {
+          "base": [
+            1,
+            0
+          ],
+          "base_norm": 1,
+          "independent_lattice_ideal_count": 37,
+          "masked_prime_ideal_count": 0,
+          "positive_masked_source_sum": 37
+        },
+        {
+          "base": [
+            7,
+            0
+          ],
+          "base_norm": 49,
+          "independent_lattice_ideal_count": 27,
+          "masked_prime_ideal_count": 2,
+          "positive_masked_source_sum": 27
+        },
+        {
+          "base": [
+            5,
+            0
+          ],
+          "base_norm": 25,
+          "independent_lattice_ideal_count": 35,
+          "masked_prime_ideal_count": 1,
+          "positive_masked_source_sum": 35
+        },
+        {
+          "base": [
+            3,
+            1
+          ],
+          "base_norm": 7,
+          "independent_lattice_ideal_count": 32,
+          "masked_prime_ideal_count": 1,
+          "positive_masked_source_sum": 32
+        },
+        {
+          "base": [
+            2,
+            1
+          ],
+          "base_norm": 3,
+          "independent_lattice_ideal_count": 37,
+          "masked_prime_ideal_count": 0,
+          "positive_masked_source_sum": 37
+        }
+      ],
+      "prime_ideal_count": 52,
+      "squarefree_sharp_band_column_count": 37,
+      "translator_coordinate_modulus": "148248781052606192240804954865090618859086544871515"
+    },
+    {
+      "D": 512,
+      "base_panels": [
+        {
+          "base": [
+            1,
+            0
+          ],
+          "base_norm": 1,
+          "independent_lattice_ideal_count": 74,
+          "masked_prime_ideal_count": 0,
+          "positive_masked_source_sum": 74
+        },
+        {
+          "base": [
+            7,
+            0
+          ],
+          "base_norm": 49,
+          "independent_lattice_ideal_count": 54,
+          "masked_prime_ideal_count": 2,
+          "positive_masked_source_sum": 54
+        },
+        {
+          "base": [
+            5,
+            0
+          ],
+          "base_norm": 25,
+          "independent_lattice_ideal_count": 70,
+          "masked_prime_ideal_count": 1,
+          "positive_masked_source_sum": 70
+        },
+        {
+          "base": [
+            3,
+            1
+          ],
+          "base_norm": 7,
+          "independent_lattice_ideal_count": 64,
+          "masked_prime_ideal_count": 1,
+          "positive_masked_source_sum": 64
+        },
+        {
+          "base": [
+            2,
+            1
+          ],
+          "base_norm": 3,
+          "independent_lattice_ideal_count": 74,
+          "masked_prime_ideal_count": 0,
+          "positive_masked_source_sum": 74
+        }
+      ],
+      "prime_ideal_count": 93,
+      "squarefree_sharp_band_column_count": 74,
+      "translator_coordinate_modulus": "6942736997638615481964167611688480946836220941144762881728333670667004805223344161748907580781487406155"
+    }
+  ],
+  "short_row_moment_upper_bound_proved": false,
+  "status": "PASS_EXACT_MASKED_CRT_SOURCE_AND_INDEPENDENT_LATTICE_CONTROLS",
+  "uniform_full_twist_analytic_input_verified": false
+}

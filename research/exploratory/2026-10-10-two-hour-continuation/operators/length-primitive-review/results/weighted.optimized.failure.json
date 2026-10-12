@@ -1,0 +1,21 @@
+{
+  "status": "INDEPENDENT_PHYSICAL_BASELINE_WEIGHTED_ARITHMETIC_INCONCLUSIVE",
+  "command": [
+    "/workspace/.riemann-tools/python/bin/python3",
+    "-B",
+    "-O",
+    "research/exploratory/2026-10-10-two-hour-continuation/operators/enclose_length_weighted.py",
+    "research/exploratory/2026-10-10-two-hour-continuation/operators/directed_residual_length21over20_trial100.json",
+    "--out",
+    "/tmp/physical-length-weighted.independent.optimized.json"
+  ],
+  "cwd": "/workspace/riemann",
+  "exit_code": 1,
+  "guard_failure": "ArithmeticError: strict positive LDL pivot9: [+/-3.64e-4]",
+  "acceptance_receipt_created": false,
+  "R_sha256": "cede53ceb2e0543060c65bcd456e17983bb8197dc7127c361f918dcd5cca5191",
+  "weighted_checker_sha256": "aed3e21e0784f387fb371b871389514c60671bd4f29449b07791d97ab9b77b16",
+  "native_negative_form_proved": false,
+  "native_positive_form_proved": false,
+  "scope": "Exact same outward interval LDL fails in normal and optimized modes; this establishes neither sign of the exact native matrix. No guard was disabled and no source file was edited."
+}

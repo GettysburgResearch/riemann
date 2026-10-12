@@ -1,0 +1,379 @@
+{
+  "complex_amplification_upper": "5/4",
+  "condition": "6*n^2 <= T",
+  "endpoint_controls": [
+    {
+      "dimension": 1,
+      "endpoint_trace": 1
+    },
+    {
+      "dimension": 2,
+      "endpoint_trace": 4
+    },
+    {
+      "dimension": 3,
+      "endpoint_trace": 9
+    },
+    {
+      "dimension": 4,
+      "endpoint_trace": 16
+    },
+    {
+      "dimension": 5,
+      "endpoint_trace": 25
+    },
+    {
+      "dimension": 6,
+      "endpoint_trace": 36
+    },
+    {
+      "dimension": 7,
+      "endpoint_trace": 49
+    },
+    {
+      "dimension": 8,
+      "endpoint_trace": 64
+    },
+    {
+      "dimension": 9,
+      "endpoint_trace": 81
+    },
+    {
+      "dimension": 10,
+      "endpoint_trace": 100
+    },
+    {
+      "dimension": 11,
+      "endpoint_trace": 121
+    },
+    {
+      "dimension": 12,
+      "endpoint_trace": 144
+    },
+    {
+      "dimension": 13,
+      "endpoint_trace": 169
+    },
+    {
+      "dimension": 14,
+      "endpoint_trace": 196
+    },
+    {
+      "dimension": 15,
+      "endpoint_trace": 225
+    },
+    {
+      "dimension": 16,
+      "endpoint_trace": 256
+    },
+    {
+      "dimension": 17,
+      "endpoint_trace": 289
+    },
+    {
+      "dimension": 18,
+      "endpoint_trace": 324
+    },
+    {
+      "dimension": 19,
+      "endpoint_trace": 361
+    },
+    {
+      "dimension": 20,
+      "endpoint_trace": 400
+    },
+    {
+      "dimension": 21,
+      "endpoint_trace": 441
+    },
+    {
+      "dimension": 22,
+      "endpoint_trace": 484
+    },
+    {
+      "dimension": 23,
+      "endpoint_trace": 529
+    },
+    {
+      "dimension": 24,
+      "endpoint_trace": 576
+    },
+    {
+      "dimension": 25,
+      "endpoint_trace": 625
+    },
+    {
+      "dimension": 26,
+      "endpoint_trace": 676
+    },
+    {
+      "dimension": 27,
+      "endpoint_trace": 729
+    },
+    {
+      "dimension": 28,
+      "endpoint_trace": 784
+    },
+    {
+      "dimension": 29,
+      "endpoint_trace": 841
+    },
+    {
+      "dimension": 30,
+      "endpoint_trace": 900
+    },
+    {
+      "dimension": 31,
+      "endpoint_trace": 961
+    },
+    {
+      "dimension": 32,
+      "endpoint_trace": 1024
+    },
+    {
+      "dimension": 33,
+      "endpoint_trace": 1089
+    },
+    {
+      "dimension": 34,
+      "endpoint_trace": 1156
+    },
+    {
+      "dimension": 35,
+      "endpoint_trace": 1225
+    },
+    {
+      "dimension": 36,
+      "endpoint_trace": 1296
+    },
+    {
+      "dimension": 37,
+      "endpoint_trace": 1369
+    },
+    {
+      "dimension": 38,
+      "endpoint_trace": 1444
+    },
+    {
+      "dimension": 39,
+      "endpoint_trace": 1521
+    },
+    {
+      "dimension": 40,
+      "endpoint_trace": 1600
+    },
+    {
+      "dimension": 41,
+      "endpoint_trace": 1681
+    },
+    {
+      "dimension": 42,
+      "endpoint_trace": 1764
+    },
+    {
+      "dimension": 43,
+      "endpoint_trace": 1849
+    },
+    {
+      "dimension": 44,
+      "endpoint_trace": 1936
+    },
+    {
+      "dimension": 45,
+      "endpoint_trace": 2025
+    },
+    {
+      "dimension": 46,
+      "endpoint_trace": 2116
+    },
+    {
+      "dimension": 47,
+      "endpoint_trace": 2209
+    },
+    {
+      "dimension": 48,
+      "endpoint_trace": 2304
+    },
+    {
+      "dimension": 49,
+      "endpoint_trace": 2401
+    },
+    {
+      "dimension": 50,
+      "endpoint_trace": 2500
+    },
+    {
+      "dimension": 51,
+      "endpoint_trace": 2601
+    },
+    {
+      "dimension": 52,
+      "endpoint_trace": 2704
+    },
+    {
+      "dimension": 53,
+      "endpoint_trace": 2809
+    },
+    {
+      "dimension": 54,
+      "endpoint_trace": 2916
+    },
+    {
+      "dimension": 55,
+      "endpoint_trace": 3025
+    },
+    {
+      "dimension": 56,
+      "endpoint_trace": 3136
+    },
+    {
+      "dimension": 57,
+      "endpoint_trace": 3249
+    },
+    {
+      "dimension": 58,
+      "endpoint_trace": 3364
+    },
+    {
+      "dimension": 59,
+      "endpoint_trace": 3481
+    },
+    {
+      "dimension": 60,
+      "endpoint_trace": 3600
+    },
+    {
+      "dimension": 61,
+      "endpoint_trace": 3721
+    },
+    {
+      "dimension": 62,
+      "endpoint_trace": 3844
+    },
+    {
+      "dimension": 63,
+      "endpoint_trace": 3969
+    },
+    {
+      "dimension": 64,
+      "endpoint_trace": 4096
+    }
+  ],
+  "examples": [
+    {
+      "height": 3000000000000,
+      "tail_order": 707106
+    },
+    {
+      "height": 100000000000000,
+      "tail_order": 4082482
+    },
+    {
+      "height": 1000000000000000000,
+      "tail_order": 408248290
+    },
+    {
+      "height": 1000000000000000000000000,
+      "tail_order": 408248290462
+    },
+    {
+      "height": 1000000000000000000000000000000000000,
+      "tail_order": 408248290463863016
+    }
+  ],
+  "global_critical_census_used": true,
+  "global_rounded_gap_decimal": 0.014293651357323233,
+  "global_rounded_gap_exact": "3622583/253440000",
+  "global_rounded_order": 700000,
+  "global_rounded_q_exact": "49/300",
+  "input_sha256": {
+    "ANNULAR_GLOBAL_PICK.md": "c04cdf51ad64972137ecd3f4aa2c835e82481d4984115bd7fadf9b8621311724",
+    "GROWING_TAIL_ORDER.md": "51df9085d30cfc1841f541d4cce82bcbbe2fe098bb3b9c9dca4f0a2419ff4e03",
+    "RATIONAL_DILATION.md": "868c1478be50c2808fafd758fe7fccec2a1b4cac64d40d1ce00bb452089cbacc",
+    "WEIGHTED_RATIONAL_DILATION.md": "2ca7783dede49c9f9c382a92ad640e30e8803db506acd672581dfd4dc5ddb2cd",
+    "verify_weighted_rational.py": "b3f0829b290e4154e6f7a0352ca944fc95038de12976237ac2ebd79d318a4947"
+  },
+  "limitations": [
+    "analytic weighted and complex sampling proofs remain essential",
+    "the full kernel needs the imported finite critical-line census",
+    "increasing tail orders belong to changing kernels",
+    "RH remains unproved"
+  ],
+  "minimum_order": 256,
+  "pi_interval_exact": [
+    "240931279310479434562506860048186437270119759353340069129713066413477366442224219204/76690808095433789090413743740393929841870359095609637537803083094513416290283203125",
+    "2636194211744361035424790317757879357071655647554078081436653451212942592452239648/839126679498715326788897075291857743232243385703261908249626703560352325439453125"
+  ],
+  "published_inputs_replayed": false,
+  "status": "PASS_EXACT_WEIGHTED_RATIONAL_DILATION_GUARDS",
+  "tail_critical_census_used": false,
+  "threshold": 3000000000000,
+  "triangular_controls": [
+    {
+      "d_frobenius_squared": "0",
+      "dimension": 1
+    },
+    {
+      "d_frobenius_squared": "5",
+      "dimension": 2
+    },
+    {
+      "d_frobenius_squared": "289/16",
+      "dimension": 3
+    },
+    {
+      "d_frobenius_squared": "158161/3600",
+      "dimension": 4
+    },
+    {
+      "d_frobenius_squared": "62172181/705600",
+      "dimension": 5
+    },
+    {
+      "d_frobenius_squared": "110635157/705600",
+      "dimension": 6
+    },
+    {
+      "d_frobenius_squared": "98688333449/384199200",
+      "dimension": 7
+    },
+    {
+      "d_frobenius_squared": "25705397308433/64929664800",
+      "dimension": 8
+    },
+    {
+      "d_frobenius_squared": "302381412285361/519437318400",
+      "dimension": 9
+    },
+    {
+      "d_frobenius_squared": "123773534460779729/150117385017600",
+      "dimension": 10
+    },
+    {
+      "d_frobenius_squared": "1805323317204883601/1593893411510400",
+      "dimension": 11
+    },
+    {
+      "d_frobenius_squared": "41100766170665188417/27096187995676800",
+      "dimension": 12
+    },
+    {
+      "d_frobenius_squared": "999893386174649668703/502943278937299200",
+      "dimension": 13
+    },
+    {
+      "d_frobenius_squared": "611107180435656860790533/238898057495217120000",
+      "dimension": 14
+    },
+    {
+      "d_frobenius_squared": "580346035421155285484281/179173543121412840000",
+      "dimension": 15
+    },
+    {
+      "d_frobenius_squared": "19943443461529583127907763/4931507446858086494400",
+      "dimension": 16
+    }
+  ],
+  "uniform_gap_decimal": 0.007477114898989899,
+  "uniform_gap_exact": "379/50688"
+}

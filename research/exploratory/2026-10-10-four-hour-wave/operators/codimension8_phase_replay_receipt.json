@@ -1,0 +1,10 @@
+{
+  "status": "NORMAL_AND_OPTIMIZED_REPLAY_IDENTICAL",
+  "commands": [
+    "PYTHONPATH=/tmp/riemann-wave-python python -B check_codimension8_phase.py",
+    "PYTHONPATH=/tmp/riemann-wave-python python -O -B check_codimension8_phase.py"
+  ],
+  "certificate_sha256": "7997666ee7c4cb5bcbe9c377c58c68bb7881b89e65e7794f840bda85a04bb599",
+  "checker_sha256": "11f1662311aaa5cbd0f274790069c1cb88b49ff591c4d500c6a63cdbdac6e60f",
+  "trust_base": "python-flint0.8.0 outward Arb + Fraction; explicit require exceptions remain active under -O"
+}

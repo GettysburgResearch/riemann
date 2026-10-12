@@ -1,0 +1,54 @@
+{
+  "analytic_source_or_column_theorem_authenticated_by_checker": false,
+  "arithmetic": "Python Fraction exact rational arithmetic; primitive facts explicitly imported.",
+  "eighth_moment_native_receipt_explicitly_imported": true,
+  "global_zero_free_bootstrap_native_receipt_explicitly_imported": true,
+  "historical_count_or_published_large_verification_used": false,
+  "imported_native_backend_binary_sha256": {
+    "acb.abi3.so": "0f02c1b41c78644cc831483b7539f3f93e84d9941a5a6015384d844f39ac5c75",
+    "acb_series.abi3.so": "96096a93d8b1a5ca6222690b3fbdd9ee8fc935aa281f8fcd8af14fdbadd84cb8",
+    "arb.abi3.so": "d011dc0db2d7aa13955d8fd7f7bff1a91bcfbc18e05b8087d456d425f8b10309",
+    "libflint-6839011d.so.24.0.0": "871a4132fd1e9f3638391b2208e07088f8e3e72a10e41d45f58b150a60c2a1a9",
+    "libgmp-e0c82b6b.so.10.5.0": "33d24e675b10f8b1ab93a8ad3fa2ed5012e1b0d89dcdb97273877c6c6b9450d8",
+    "libmpfr-be332c05.so.6.2.2": "c4dfcfc7c5c7ab71d427e15f2f9fae4ace88592a81d4596a918dcc02eadfc6e3"
+  },
+  "imported_residual_inverse_eighth_upper": "31672878416595235715655202078382007235399333/441711766194596082395824375185729628956870974218904739530401550323154944",
+  "native_jet_or_Hardy_endpoint_replayed_by_this_checker": false,
+  "normalization": "Xi(z)=xi(1/2+i*z)",
+  "recovered_domains": [
+    {
+      "all_lambda_positive": true,
+      "all_y_nonnegative": true,
+      "exclusion_ratio_upper": "39664991664835901854328085290708292224551748153556146637142697079909699503970051953125/41200281096133077660393500411581204441661532880124462129412687316547520807132360343552",
+      "height": 3264,
+      "maximum_derivative_order": 6525,
+      "recovered_complete_simple_positive_zero_count": 2730,
+      "strict_exclusion_margin": "1535289431297175806065415120872912217109784726568315492269990236637821303162308390427/41200281096133077660393500411581204441661532880124462129412687316547520807132360343552",
+      "strict_horizontal_range": "abs(T)<3264-(r+2)/2"
+    },
+    {
+      "all_lambda_positive": true,
+      "all_y_nonnegative": true,
+      "exclusion_ratio_upper": "40449441217896681769665471289981507106748548577362190039896641153702626334402331633125/41200281096133077660393500411581204441661532880124462129412687316547520807132360343552",
+      "height": 3272,
+      "maximum_derivative_order": 6541,
+      "recovered_complete_simple_positive_zero_count": 2737,
+      "strict_exclusion_margin": "750839878236395890728029121599697334912984302762272089516046162844894472730028710427/41200281096133077660393500411581204441661532880124462129412687316547520807132360343552",
+      "strict_horizontal_range": "abs(T)<3272-(r+2)/2"
+    }
+  ],
+  "rh_proved": false,
+  "source_sha256": {
+    "heights/final-review/COMPLETE_MOMENT_ZERO_FREE_BOOTSTRAP.md": "007edf578da1ec50a28c0546227c7a550ed59250474098a58bd10e796db86f66",
+    "heights/final-review/complete_moment_bootstrap_normal.json": "b1074698a2529e98637ad8dc4554f4d89f55e063dbe44c1841e93ba5e620cec3",
+    "xi/outer-ray/CENSUS_FULL_COLUMN_SECTOR.md": "db662f2f7c57a61413ecf16d3f4760fd1d5d315f8328bed70984340083960c43",
+    "xi/outer-ray/EIGHTH_MOMENT_BOOTSTRAP_COMPOSITION.md": "a4598dee3d94e2cdf5f4de65ea324d990826e87a76adea1b5c7b74b5319fc30f",
+    "xi/outer-ray/EIGHTH_MOMENT_CENSUS_RECOVERY.md": "d5414e8f8de70b00f1b4dc4e66a091174a64552a0684b270d4c8fb3a539043dc",
+    "xi/outer-ray/check_eighth_bootstrap_composition.py": "34415801403308a3b2b7c41f608e98a60cb372ca5af07ccaf4766557ceb9dbea",
+    "xi/outer-ray/eighth_moment_census.json": "e224616d2497c0477146ccd0c712e3888c55a279e55c5fa27115310b7710a47f",
+    "xi/outer-ray/eighth_prefix_candidates.json": "1533a0bf8e58dffec479d06c1de79f089eeedc3cd5695a3f3f8055bb77c292d9",
+    "xi/outer-ray/native_candidates.json": "bbb7fe9adce4fa9581cbb23fb558c62abafec4e568cb69c4d9f0324443ad8c20"
+  },
+  "status": "PASS_EXACT_IMPORTED_EIGHTH_BOOTSTRAP_COMPOSITION",
+  "strengthened_global_inverse_eighth_projection": "364352073793/379733250625"
+}

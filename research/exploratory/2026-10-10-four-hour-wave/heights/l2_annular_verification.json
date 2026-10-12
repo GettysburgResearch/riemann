@@ -1,0 +1,238 @@
+{
+  "all_positive_node_scales": true,
+  "auxiliary_range_checked": {
+    "count": 1623,
+    "first": 256,
+    "last": 3500,
+    "step": 2
+  },
+  "depth": "1/2",
+  "external_theorems_replayed": false,
+  "finite_count_quadrature_controls": [
+    {
+      "degree": 1,
+      "discrepancy_exact": "149/40",
+      "error_to_derived_bound_exact": "15831/217540"
+    },
+    {
+      "degree": 2,
+      "discrepancy_exact": "149/40",
+      "error_to_derived_bound_exact": "25646771/320123520"
+    },
+    {
+      "degree": 3,
+      "discrepancy_exact": "149/40",
+      "error_to_derived_bound_exact": "2063863531/37838848000"
+    },
+    {
+      "degree": 4,
+      "discrepancy_exact": "149/40",
+      "error_to_derived_bound_exact": "5387631442229/201400320000000"
+    },
+    {
+      "degree": 5,
+      "discrepancy_exact": "149/40",
+      "error_to_derived_bound_exact": "689374546077937049/48863379456000000000"
+    },
+    {
+      "degree": 6,
+      "discrepancy_exact": "149/40",
+      "error_to_derived_bound_exact": "31198539388038145807/4723538132992000000000"
+    },
+    {
+      "degree": 7,
+      "discrepancy_exact": "149/40",
+      "error_to_derived_bound_exact": "2914086333503241174669/4519647772672000000000000"
+    },
+    {
+      "degree": 8,
+      "discrepancy_exact": "149/40",
+      "error_to_derived_bound_exact": "41237324168349740392132937/19153387329159168000000000000"
+    }
+  ],
+  "input_sha256": {
+    "ANNULAR_GLOBAL_PICK.md": "c04cdf51ad64972137ecd3f4aa2c835e82481d4984115bd7fadf9b8621311724",
+    "L2_ANNULAR_PICK.md": "6f44295912442e75913f8d979369049d72f04cca226ceb782069b5479680913c",
+    "verify_annular.py": "150341214b3a6a5fde8ad3b7e53da2d4631970b4c6291c1beab5fe6f422cedb0",
+    "verify_l2_annular.py": "0a8fd4e7a3c3cad885d9b3d18a1e3ffa1f78f10f1568abf23069dbcd60f43882"
+  },
+  "legendre_identity_controls": [
+    {
+      "degree": 0,
+      "derivative_frobenius_squared": "0",
+      "norm_squared": "2"
+    },
+    {
+      "degree": 1,
+      "derivative_frobenius_squared": "3",
+      "norm_squared": "2/3"
+    },
+    {
+      "degree": 2,
+      "derivative_frobenius_squared": "18",
+      "norm_squared": "2/5"
+    },
+    {
+      "degree": 3,
+      "derivative_frobenius_squared": "60",
+      "norm_squared": "2/7"
+    },
+    {
+      "degree": 4,
+      "derivative_frobenius_squared": "150",
+      "norm_squared": "2/9"
+    },
+    {
+      "degree": 5,
+      "derivative_frobenius_squared": "315",
+      "norm_squared": "2/11"
+    },
+    {
+      "degree": 6,
+      "derivative_frobenius_squared": "588",
+      "norm_squared": "2/13"
+    },
+    {
+      "degree": 7,
+      "derivative_frobenius_squared": "1008",
+      "norm_squared": "2/15"
+    },
+    {
+      "degree": 8,
+      "derivative_frobenius_squared": "1620",
+      "norm_squared": "2/17"
+    },
+    {
+      "degree": 9,
+      "derivative_frobenius_squared": "2475",
+      "norm_squared": "2/19"
+    },
+    {
+      "degree": 10,
+      "derivative_frobenius_squared": "3630",
+      "norm_squared": "2/21"
+    },
+    {
+      "degree": 11,
+      "derivative_frobenius_squared": "5148",
+      "norm_squared": "2/23"
+    },
+    {
+      "degree": 12,
+      "derivative_frobenius_squared": "7098",
+      "norm_squared": "2/25"
+    },
+    {
+      "degree": 13,
+      "derivative_frobenius_squared": "9555",
+      "norm_squared": "2/27"
+    },
+    {
+      "degree": 14,
+      "derivative_frobenius_squared": "12600",
+      "norm_squared": "2/29"
+    },
+    {
+      "degree": 15,
+      "derivative_frobenius_squared": "16320",
+      "norm_squared": "2/31"
+    },
+    {
+      "degree": 16,
+      "derivative_frobenius_squared": "20808",
+      "norm_squared": "2/33"
+    },
+    {
+      "degree": 17,
+      "derivative_frobenius_squared": "26163",
+      "norm_squared": "2/35"
+    },
+    {
+      "degree": 18,
+      "derivative_frobenius_squared": "32490",
+      "norm_squared": "2/37"
+    },
+    {
+      "degree": 19,
+      "derivative_frobenius_squared": "39900",
+      "norm_squared": "2/39"
+    },
+    {
+      "degree": 20,
+      "derivative_frobenius_squared": "48510",
+      "norm_squared": "2/41"
+    },
+    {
+      "degree": 21,
+      "derivative_frobenius_squared": "58443",
+      "norm_squared": "2/43"
+    },
+    {
+      "degree": 22,
+      "derivative_frobenius_squared": "69828",
+      "norm_squared": "2/45"
+    },
+    {
+      "degree": 23,
+      "derivative_frobenius_squared": "82800",
+      "norm_squared": "2/47"
+    },
+    {
+      "degree": 24,
+      "derivative_frobenius_squared": "97500",
+      "norm_squared": "2/49"
+    },
+    {
+      "degree": 25,
+      "derivative_frobenius_squared": "114075",
+      "norm_squared": "2/51"
+    },
+    {
+      "degree": 26,
+      "derivative_frobenius_squared": "132678",
+      "norm_squared": "2/53"
+    },
+    {
+      "degree": 27,
+      "derivative_frobenius_squared": "153468",
+      "norm_squared": "2/55"
+    },
+    {
+      "degree": 28,
+      "derivative_frobenius_squared": "176610",
+      "norm_squared": "2/57"
+    },
+    {
+      "degree": 29,
+      "derivative_frobenius_squared": "202275",
+      "norm_squared": "2/59"
+    },
+    {
+      "degree": 30,
+      "derivative_frobenius_squared": "230640",
+      "norm_squared": "2/61"
+    },
+    {
+      "degree": 31,
+      "derivative_frobenius_squared": "261888",
+      "norm_squared": "2/63"
+    },
+    {
+      "degree": 32,
+      "derivative_frobenius_squared": "296208",
+      "norm_squared": "2/65"
+    }
+  ],
+  "limitations": [
+    "finite algebra does not establish the all-height source by itself",
+    "S(T) bound and verified height are imported published inputs",
+    "complete Hadamard source is a classical analytic input",
+    "RH remains unproved"
+  ],
+  "packet_size": 3500,
+  "status": "PASS_EXACT_L2_ANNULAR_PICK_CONTROLS",
+  "sufficient_ratio_decimal": 0.9058536770296268,
+  "sufficient_ratio_exact": "144936588324740292828797/160000000000000000000000",
+  "sufficient_ratio_upper": "11/12",
+  "verified_height": 3000000000000
+}

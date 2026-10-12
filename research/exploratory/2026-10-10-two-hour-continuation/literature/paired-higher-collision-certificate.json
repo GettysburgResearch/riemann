@@ -1,0 +1,54 @@
+{
+  "actual_prime_norms": [
+    7,
+    13,
+    19,
+    31
+  ],
+  "arbitrary_ray_phase_bound_proved_by_finite_checker": false,
+  "checker_sha256": "aad48e729419b89fc63bc11c4c35c7a2836cc37721c052b6fc62ed77e5138b33",
+  "classical_reciprocal_zeta_proof_rebuilt": false,
+  "frozen_source_factorization_sha256": "d37ad696b46c7dda15a7faf314c46cda2d7d67e25ac8d3288c7f138aac373c13",
+  "generalized_moment_proved": false,
+  "independent_2k_frequency_trace_proved": false,
+  "orders": [
+    {
+      "cluster_log_exponent": -1,
+      "endpoint_positive_log_exponent": -1,
+      "exact_complete_pair_controls": 144,
+      "k": 1,
+      "moving_mask_loglog_exponent": 0,
+      "slots": 2
+    },
+    {
+      "cluster_log_exponent": -2,
+      "endpoint_positive_log_exponent": 0,
+      "exact_complete_pair_controls": 864,
+      "k": 2,
+      "moving_mask_loglog_exponent": 2,
+      "slots": 4
+    },
+    {
+      "cluster_log_exponent": -3,
+      "endpoint_positive_log_exponent": 3,
+      "exact_complete_pair_controls": 5184,
+      "k": 3,
+      "moving_mask_loglog_exponent": 6,
+      "slots": 6
+    },
+    {
+      "cluster_log_exponent": -4,
+      "endpoint_positive_log_exponent": 8,
+      "exact_complete_pair_controls": 31104,
+      "k": 4,
+      "moving_mask_loglog_exponent": 12,
+      "slots": 8
+    }
+  ],
+  "proof_sha256": "04c3a1ec1d82d977f6a7d9a0c86486fc87161f1d41d35ba389ab5e2ce94f35f6",
+  "rh_proved": false,
+  "sextic_phase_controls": 6,
+  "status": "PASS_EXACT_PAIRED_HIGHER_COLLISION_CONTROLS",
+  "strict_triangle_controls": 37008,
+  "total_exact_complete_pair_controls": 37296
+}

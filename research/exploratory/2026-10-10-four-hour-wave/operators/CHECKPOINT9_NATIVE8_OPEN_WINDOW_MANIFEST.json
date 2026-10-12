@@ -1,0 +1,61 @@
+{
+  "created_utc": "2026-10-10 15:45:59 UTC",
+  "scope": "Frozen completed independently accepted dimension8 weighted native certificate and exact primitive synthesis; independently accepted qualitative open-window propagation with no numericeta",
+  "files": [
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/directed_residual_codim8_trial100_taylor.json",
+      "sha256": "cba3fb5f17e71678b115c03813b97dda37ec45c19c24604bd302fd8baaf2ed19"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/directed_weighted_lower_codim8_trial100_taylor.json",
+      "sha256": "98f3b7fc3ae64bc6c60e0cc12b0b9e10dfbc56889baa517f34d15b58ed9c4ffe"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/directed_primitive_norm_codim8_trial100_taylor.json",
+      "sha256": "58138928e4483823ed28931d796da3e435073cf9b4e007959a80a383b8484d61"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/directed_exact_synthesis_codim8_trial100_taylor.json",
+      "sha256": "7aa239a063f4253eb3bfe94d04ad0d121d4525354e3013a95d922e35b5106d3e"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/NATIVE_CODIM8_FINAL_CERTIFICATE.md",
+      "sha256": "09fd28df15922f24687232fe8d7783f5afe826cd3d6d21f7dc8fb33e513fe0df"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/native_codim8_final_acceptance.json",
+      "sha256": "f81698b9de8be4a4c6da2d4b3b7fe61ad52169e077d11876e4a260e7442688bc"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/OPEN_WINDOW_PROPAGATION.md",
+      "sha256": "2ddf5a57e16c8b931b19299591cd2a9b99b280e8a13e3ebd0035d57630030d3c"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/open_window_propagation_acceptance.json",
+      "sha256": "f3c41c91b2d3a2bd76267a7884a87ad726e41fa324b859e32d20a41b26a573b1"
+    }
+  ],
+  "review_status": "Full source/producers/helpers reviewed beforeR. Completed weighted/primitive/source/matrix and exact five-sine synthesis reviewed and replayednormal/O. Qualitative nearby-window source derivative/domain continuity independentlyaccepted.",
+  "independent_audits_to_attach": [
+    "literature/COMPLETED_NATIVE_TAYLOR8_INDEPENDENT_REVIEW.md",
+    "literature/native-taylor8-independent-coverage.json",
+    "arithmetic/EXACT_TAYLOR8_SYNTHESIS_CROSS_REVIEW.md",
+    "arithmetic/results/exact-taylor8-synthesis-independent.normal.json",
+    "arithmetic/results/exact-taylor8-synthesis-independent.optimized.json",
+    "xi/outer-ray/OPEN_WINDOW_ANALYTIC_CROSS_REVIEW.md"
+  ],
+  "excluded": [
+    "still-active original-evaluator dimension8 R",
+    "all ordinary diagnostics"
+  ],
+  "dependencies_already_frozen": [
+    "operators/enclose_residual_phase8_taylor.py",
+    "operators/enclose_weighted_lower_taylor.py",
+    "operators/taylor_convolution_source.py",
+    "operators/EXACT_PRIMITIVE_SYNTHESIS.md",
+    "operators/enclose_exact_primitive_synthesis.py",
+    "operators/COMPLETE_XI_KERNEL_BINDING.md",
+    "operators/QUANTITATIVE_PRIMITIVE_COMPLETION.md",
+    "operators/NATIVE_WINDOW_CERTIFICATE_FRAME.md"
+  ]
+}

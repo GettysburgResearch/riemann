@@ -1,0 +1,274 @@
+{
+  "RH_proved": false,
+  "Turing_source_record_sha256": "a603cd736d50be23062908b233c0e6a0e35ec265ac24b29edaeb1c4eada1bc52",
+  "amplification_exact": "33/25",
+  "condition": "200*n^2 <= 87*T at Delta(T)=0",
+  "cutoff_computed": false,
+  "exponential_upper_exact": "637088872701738410689185630528388247/482648750000000000000000000000000000",
+  "generic_L29_contradiction_margin_exact": "38527/4000",
+  "global_critical_census_used": true,
+  "global_order": 1142000,
+  "good_cutoff_interval": [
+    3000000000000,
+    3000000000020
+  ],
+  "input_sha256": {
+    "DENSITY_RATIONAL_REFINEMENT.md": "6369e6f0417b2f31772fc1a2c315f6ae67bc7a6cfb1cc1b28c9ce4d03e9deb29",
+    "GOOD_CUTOFF_PICK.md": "2fc4b6caf69a28eda0ebd2e6a5b0d9761efb0387155a93437706676ae540d34b",
+    "VOLTERRA_RATIONAL_REFINEMENT.md": "a9cf619b13278b71ae7662f55aa25607f1fd8507970b6f8028922abad8e779c9",
+    "verify_good_cutoff.py": "c7ccf42e601860385482848ae5314be6c23c84ca12bd68a58d833bc4b190792c"
+  },
+  "maximal_even_order_at_H": 1142364,
+  "minimum_height": 3000000000000,
+  "minimum_order": 850000,
+  "pointwise_only_counterexample_period_mean": "1/2",
+  "published_inputs_replayed": false,
+  "quadrature_coefficient_exact": "92539/156250",
+  "status": "PASS_EXACT_GOOD_CUTOFF_PICK",
+  "strict_gap_decimal": 0.0016342521681510624,
+  "strict_gap_exact": "38543369070455868447007920769/23584713437500000000000000000000",
+  "tail_critical_census_used": false,
+  "ten_unit_integral_upper_exact": "3453300000001/900000000000",
+  "weighted_sawtooth_controls": [
+    {
+      "g_start": "1",
+      "integral_exact": "43/480",
+      "length": "1/4",
+      "start": "0"
+    },
+    {
+      "g_start": "3",
+      "integral_exact": "43/160",
+      "length": "1/4",
+      "start": "0"
+    },
+    {
+      "g_start": "1",
+      "integral_exact": "9/80",
+      "length": "3/2",
+      "start": "0"
+    },
+    {
+      "g_start": "3",
+      "integral_exact": "27/80",
+      "length": "3/2",
+      "start": "0"
+    },
+    {
+      "g_start": "1",
+      "integral_exact": "47/432",
+      "length": "7/2",
+      "start": "0"
+    },
+    {
+      "g_start": "3",
+      "integral_exact": "47/144",
+      "length": "7/2",
+      "start": "0"
+    },
+    {
+      "g_start": "1",
+      "integral_exact": "5/132",
+      "length": "10",
+      "start": "0"
+    },
+    {
+      "g_start": "3",
+      "integral_exact": "5/44",
+      "length": "10",
+      "start": "0"
+    },
+    {
+      "g_start": "1",
+      "integral_exact": "23/384",
+      "length": "1/4",
+      "start": "1/8"
+    },
+    {
+      "g_start": "3",
+      "integral_exact": "23/128",
+      "length": "1/4",
+      "start": "1/8"
+    },
+    {
+      "g_start": "1",
+      "integral_exact": "7/128",
+      "length": "3/2",
+      "start": "1/8"
+    },
+    {
+      "g_start": "3",
+      "integral_exact": "21/128",
+      "length": "3/2",
+      "start": "1/8"
+    },
+    {
+      "g_start": "1",
+      "integral_exact": "175/3456",
+      "length": "7/2",
+      "start": "1/8"
+    },
+    {
+      "g_start": "3",
+      "integral_exact": "175/1152",
+      "length": "7/2",
+      "start": "1/8"
+    },
+    {
+      "g_start": "1",
+      "integral_exact": "5/384",
+      "length": "10",
+      "start": "1/8"
+    },
+    {
+      "g_start": "3",
+      "integral_exact": "5/128",
+      "length": "10",
+      "start": "1/8"
+    },
+    {
+      "g_start": "1",
+      "integral_exact": "-7/240",
+      "length": "1/4",
+      "start": "1/2"
+    },
+    {
+      "g_start": "3",
+      "integral_exact": "-7/80",
+      "length": "1/4",
+      "start": "1/2"
+    },
+    {
+      "g_start": "1",
+      "integral_exact": "-1/10",
+      "length": "3/2",
+      "start": "1/2"
+    },
+    {
+      "g_start": "3",
+      "integral_exact": "-3/10",
+      "length": "3/2",
+      "start": "1/2"
+    },
+    {
+      "g_start": "1",
+      "integral_exact": "-5/54",
+      "length": "7/2",
+      "start": "1/2"
+    },
+    {
+      "g_start": "3",
+      "integral_exact": "-5/18",
+      "length": "7/2",
+      "start": "1/2"
+    },
+    {
+      "g_start": "1",
+      "integral_exact": "-5/264",
+      "length": "10",
+      "start": "1/2"
+    },
+    {
+      "g_start": "3",
+      "integral_exact": "-5/88",
+      "length": "10",
+      "start": "1/2"
+    },
+    {
+      "g_start": "1",
+      "integral_exact": "-1/384",
+      "length": "1/4",
+      "start": "7/8"
+    },
+    {
+      "g_start": "3",
+      "integral_exact": "-1/128",
+      "length": "1/4",
+      "start": "7/8"
+    },
+    {
+      "g_start": "1",
+      "integral_exact": "1/20",
+      "length": "3/2",
+      "start": "7/8"
+    },
+    {
+      "g_start": "3",
+      "integral_exact": "3/20",
+      "length": "3/2",
+      "start": "7/8"
+    },
+    {
+      "g_start": "1",
+      "integral_exact": "83/1728",
+      "length": "7/2",
+      "start": "7/8"
+    },
+    {
+      "g_start": "3",
+      "integral_exact": "83/576",
+      "length": "7/2",
+      "start": "7/8"
+    },
+    {
+      "g_start": "1",
+      "integral_exact": "5/384",
+      "length": "10",
+      "start": "7/8"
+    },
+    {
+      "g_start": "3",
+      "integral_exact": "5/128",
+      "length": "10",
+      "start": "7/8"
+    },
+    {
+      "g_start": "1",
+      "integral_exact": "1/96",
+      "length": "1/4",
+      "start": "7/3"
+    },
+    {
+      "g_start": "3",
+      "integral_exact": "1/32",
+      "length": "1/4",
+      "start": "7/3"
+    },
+    {
+      "g_start": "1",
+      "integral_exact": "-5/144",
+      "length": "3/2",
+      "start": "7/3"
+    },
+    {
+      "g_start": "3",
+      "integral_exact": "-5/48",
+      "length": "3/2",
+      "start": "7/3"
+    },
+    {
+      "g_start": "1",
+      "integral_exact": "-5/144",
+      "length": "7/2",
+      "start": "7/3"
+    },
+    {
+      "g_start": "3",
+      "integral_exact": "-5/48",
+      "length": "7/2",
+      "start": "7/3"
+    },
+    {
+      "g_start": "1",
+      "integral_exact": "-5/396",
+      "length": "10",
+      "start": "7/3"
+    },
+    {
+      "g_start": "3",
+      "integral_exact": "-5/132",
+      "length": "10",
+      "start": "7/3"
+    }
+  ]
+}

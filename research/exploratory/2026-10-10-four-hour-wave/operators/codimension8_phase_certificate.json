@@ -1,0 +1,38 @@
+{
+  "status": "DIRECTED_PHASE_COVERAGE_ACCEPT",
+  "scope": "literal L=1 source primitive gap on complement dimension8; no effective sign",
+  "arithmetic": "exact Fraction gamma floors and outward Arb cosine/root/log balls",
+  "python_flint_version": "0.8.0",
+  "precision_bits": 160,
+  "supporting_line": {
+    "alpha": "4/5",
+    "constant": 244
+  },
+  "removed_sine_modes": 5,
+  "complement_dimension": 8,
+  "gamma_last_index": 256,
+  "compact_cells": 4096,
+  "minimum_cell_margin": {
+    "cell": 331,
+    "lower": "[4.84550742648832500545557512327575980777109933 +/- 2.80e-45]"
+  },
+  "tail_v_lower": "210504802984478740971221621778721/158456325028528675187087900672000",
+  "kappa_lower": "1648682/9707235",
+  "reported_kappa": "1/6",
+  "residual_coefficient": "27/2",
+  "checker_sha256": "11f1662311aaa5cbd0f274790069c1cb88b49ff591c4d500c6a63cdbdac6e60f",
+  "helper_sha256": {
+    "check_coercivity.py": "921c74c4b0659c8f6c0d1602f16f218e71219b64e31250b457cce92a808f0f87",
+    "check_codimension14.py": "4263b37ca623e74aa8312d10b8bb98c2b75e72e61f7e501bd7329ea426b58351"
+  },
+  "classical_inputs": [
+    "Machin identity",
+    "gamma<H1024-log1024",
+    "digamma partial fractions"
+  ],
+  "not_proved": [
+    "eight-dimensional effective sign",
+    "all windows",
+    "RH"
+  ]
+}

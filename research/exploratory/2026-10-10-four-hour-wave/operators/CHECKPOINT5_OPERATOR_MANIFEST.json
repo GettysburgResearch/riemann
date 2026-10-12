@@ -1,0 +1,72 @@
+{
+  "created_utc": "2026-10-10 14:31 UTC",
+  "scope": "Explicit reviewed theorem/helper/control packets; excludes incomplete continuum R, ordinary sampled diagnostics, and unreviewed centered upper runtime. The native window theorem remains conditional until complete directed U-minus-weighted-residual receipt.",
+  "groups": {
+    "local_gamma_taylor": [
+      {
+        "path": "research/exploratory/2026-10-10-four-hour-wave/operators/LOCAL_GAMMA_TAYLOR_ENCLOSURE.md",
+        "sha256": "e28980ff704350db547dc2843bcf5551ffdad5d49a21a0f6483f0b0cf0765e52"
+      },
+      {
+        "path": "research/exploratory/2026-10-10-four-hour-wave/operators/taylor_convolution_source.py",
+        "sha256": "118e828d8bf4cb706fd94c9d179fb8d8de88319df8b20273c4e19284175af0da"
+      },
+      {
+        "path": "research/exploratory/2026-10-10-four-hour-wave/operators/check_local_gamma_taylor.py",
+        "sha256": "2f881c44b5b72e20f2777a5c9de0884c3217692789f05615283a5442898079e8"
+      },
+      {
+        "path": "research/exploratory/2026-10-10-four-hour-wave/operators/local_gamma_taylor_certificate.json",
+        "sha256": "f9756284bcbb4f82e5603715156da94a91abdf5f6f46e9cba0c37e626a84ea89"
+      },
+      {
+        "path": "research/exploratory/2026-10-10-four-hour-wave/operators/enclose_residual_phase8_taylor.py",
+        "sha256": "f10b2dad34ab16aa6f66f4693093be60657b5d395432bf29f1af33ede8bf3256"
+      },
+      {
+        "path": "research/exploratory/2026-10-10-four-hour-wave/operators/enclose_weighted_lower_taylor.py",
+        "sha256": "0ba57657eef0ea728134e846c2861f778793715c5d091c3c47090cc87f003f25"
+      },
+      {
+        "path": "research/exploratory/2026-10-10-four-hour-wave/operators/check_weighted_taylor_provenance.py",
+        "sha256": "f392d65160757e2f0318bcb3f1d2679e66168702b4658f2555e1b73d36ecc807"
+      },
+      {
+        "path": "research/exploratory/2026-10-10-four-hour-wave/operators/weighted_taylor_provenance_negative_control.json",
+        "sha256": "ed84f209e00f062a9cfbe5283b6e63a257ca18c0ce2810126135c135b29dacd8"
+      }
+    ],
+    "centered_reflection": [
+      {
+        "path": "research/exploratory/2026-10-10-four-hour-wave/operators/CENTERED_REFLECTION_REDUCTION.md",
+        "sha256": "b33c4f34776898a5e2f27912c5c478751b9551d5b5db4b0a50285a199986986b"
+      },
+      {
+        "path": "research/exploratory/2026-10-10-four-hour-wave/operators/check_centered_reflection.py",
+        "sha256": "d202df6e12b485f536af216f94926a1643fce7a1a62a558c0967873886dccbd8"
+      },
+      {
+        "path": "research/exploratory/2026-10-10-four-hour-wave/operators/centered_reflection_certificate.json",
+        "sha256": "c0fe4687be84037a8fa5b85971f1031407c27d5105d90a915b722a9a14581040"
+      }
+    ],
+    "conditional_window_frame": [
+      {
+        "path": "research/exploratory/2026-10-10-four-hour-wave/operators/NATIVE_WINDOW_CERTIFICATE_FRAME.md",
+        "sha256": "5c3dbb70dca1506ca7e8b63e27572b92d73a5573aff3298ce0a50267d7e0a20c"
+      }
+    ],
+    "independent_column_audit": [
+      {
+        "path": "research/exploratory/2026-10-10-four-hour-wave/operators/CENSUS_FULL_COLUMN_CROSS_REVIEW.md",
+        "sha256": "ccf3f1034bcaa16b185ef77c7cf546aa34053ff9c4a3def60ba507119a01a7b5"
+      }
+    ]
+  },
+  "review_status": {
+    "local_gamma_taylor": "Root full math/code review and independent literature child full audit ACCEPT; normal/-O helper/provenance controls match. Full continuum integration pending.",
+    "centered_reflection": "Root full mathematical/code review ACCEPT with normal/-O exact runtime byte-identical; independent review_setup algebra ACCEPT; owner normal/-O exact controls match. No sampled centered lower sign or centered finite Schur is certified.",
+    "conditional_window_frame": "Root full analytic ACCEPT, conditional on complete directed matrix hypothesis; terminal global Weil identification remains separate.",
+    "independent_column_audit": "Operators independent full analytic ACCEPT of frozen direct-column proof db662f2f7c57a61413ecf16d3f4760fd1d5d315f8328bed70984340083960c43; imported complete census not rerun."
+  }
+}

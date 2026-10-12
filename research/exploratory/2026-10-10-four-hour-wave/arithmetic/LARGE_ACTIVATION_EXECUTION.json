@@ -1,0 +1,79 @@
+{
+  "analytic_infinite_statements_machine_proved": false,
+  "analytic_review_status": "Root independently accepted the full LARGE_ACTIVATION_STITCH proof and engine/checker source on 2026-10-10, matching prior reviewed activation contracts and exact continuous coverage.",
+  "bernstein_leaf_count": 10,
+  "bounded_real_rectangle_count": 250,
+  "checker_dependencies": {
+    "activation_tail.py": "1122314fc57d4119c76a15a426dd1af13c6830a610fe09db34f1a05506d1c9d2",
+    "check_threshold_arb.py": "82013dad13521fd9b619e18b6e4efe23ea4a8f7f1d5632e930964f2f512c7615",
+    "exclusion_moments.py": "8ac22c96b7ac1edf03defc9e099fdefe2c17907f21f3c24f3fbd180a2824dc1c",
+    "exclusion_power_data.py": "8815a8db09189a56591ae74b9d9ddf50ab60aaec307a6e99d7a719dfb1035560",
+    "exclusion_tail.py": "79c8a5667fe2156fa593725ba012eda3e6635ec49898e80b82d8d7732442635c",
+    "polynomial_tail.py": "ae8ec2f91e8f00d286a7e8176d1f47bbe56a5013f22357d6dab52fa8ffb5e295",
+    "verify_exclusion_stitch.py": "393adee89aa073024f7093b4f0dc415abdd8c4cdb5e7e7d761a9e3646ac04b79",
+    "verify_four_label.py": "e07cd340f82fe61e39c864d2a91a944beb5211cd884a464e20baf2289ff707b6",
+    "verify_horizon_stitch.py": "8486059b8468ceb6cb59d34c4c16c61eeb72a8097583596e5253b934571e5104",
+    "verify_two_label.py": "9d58b1b9b2ef69e335ef64ff08a976a2a30051cc5e5cf23812369adf8aaf1212",
+    "verify_weighted_stitch.py": "14355093aed45e9a4378dc6a405ec251ea9c699c808cca4473983563776c85ab",
+    "weighted_moments.py": "715dae97b834735064aae0a9951c505750697ec003aacaafffa17c5975621677"
+  },
+  "complete_even_prime_count": 3001134,
+  "complete_prime_bin_count": 8444396,
+  "component": "Global SHARP positivity H_m(x)>0 for every real m>=19/15 and x>=1",
+  "control_errors": 0,
+  "control_failures": 0,
+  "control_groups_per_mode": {
+    "independent_integer_factor_source_oracle": 2,
+    "parameterized_builder": 3
+  },
+  "control_log_hashes": {
+    "/tmp/riemann-large-controls.normal": "01703e32274e760a684d8d03fc2a4abb333a8e33d60f1458e0142d4e8b26a756",
+    "/tmp/riemann-large-controls.optimized": "15af9a1e77391e49122e2e6b7f75b85e79696254aee76365dec077295c3f84ee",
+    "/tmp/riemann-large-oracle.normal": "b31db880d59d3653ad3335e4369abf8f5041d1e412c41e2c1e786563a27f1a4f",
+    "/tmp/riemann-large-oracle.optimized": "1c4743a0f9d9c94646ab80a99a1cc7898e07234de593417ffe62e660a535f242"
+  },
+  "control_scope": "Independent trial factors through 40000 reconstruct duplicate-67 multiplicities, ordinary/marked levels 2/4/6 and all seven moments at two powers; actual kernel endpoints include source beyond N/2. Finite controls do not machine-prove infinite analytic contracts.",
+  "control_skips": 0,
+  "controls_normal_exit_code": 0,
+  "controls_optimized_exit_code": 0,
+  "covered_power_interval": [
+    "19/15",
+    "9/7"
+  ],
+  "critical_power_one_proved": false,
+  "endpoint_cutoff": 100000000,
+  "execution_time_utc": "2026-10-10T14:55:32.018310+00:00",
+  "frozen_manifest": [
+    "LARGE_ACTIVATION_STITCH.md",
+    "exclusion_power_data.py",
+    "verify_large_activation_stitch.py",
+    "test_exclusion_power_data.py",
+    "test_large_source_oracle.py",
+    "LARGE_ACTIVATION_EXECUTION.json",
+    "results/large-activation-stitch.normal.json",
+    "results/large-activation-stitch.optimized.json"
+  ],
+  "independent_runtime_status": "Root independently replayed all three parameterized source controls and both independent integer-factor source-oracle groups in normal and optimized modes; all passed.",
+  "larger_power_input": "ACTIVATION_ENVELOPES.md A-PA1: all m>=9/7",
+  "normal_command": "python3 -B verify_large_activation_stitch.py --progress --output results/large-activation-stitch.normal.json",
+  "normal_exit_code": 0,
+  "normal_optimized_output_bytes_identical": true,
+  "optimized_command": "python3 -B -O verify_large_activation_stitch.py --progress --output results/large-activation-stitch.optimized.json",
+  "optimized_exit_code": 0,
+  "power_slab_count": 10,
+  "precision_bits": 192,
+  "python_flint_version": "0.9.0",
+  "python_version": "3.12.14",
+  "rh_proved": false,
+  "source_hashes": {
+    "LARGE_ACTIVATION_STITCH.md": "919f9f0ae4126e5f09b9a1fa3b5dad7f558d42c8d78b9e40399157aa2cc54f6a",
+    "exclusion_power_data.py": "8815a8db09189a56591ae74b9d9ddf50ab60aaec307a6e99d7a719dfb1035560",
+    "results/large-activation-stitch.normal.json": "75667457c8d6202d4afa09191f7620396948241a17a5ab21f31369a9b13cdf6a",
+    "results/large-activation-stitch.optimized.json": "75667457c8d6202d4afa09191f7620396948241a17a5ab21f31369a9b13cdf6a",
+    "test_exclusion_power_data.py": "99067e3dbccbc7c2e73a73a0f0cc3d383d87c084be5d14aebaae116705b07553",
+    "test_large_source_oracle.py": "f33f02d3f92891db23607f5e12aa899ebca57d067f88acaf6b9bce4037ebe55f",
+    "verify_large_activation_stitch.py": "36009391680551c51697dfe1acdd0150aa215a6ed81ea60a68e07211d257af3d"
+  },
+  "status": "ROOT_REVIEWED_COMPONENT_WITH_COMPLETED_DIRECTED_CERTIFICATES",
+  "whole_unbounded_tail_count": 10
+}

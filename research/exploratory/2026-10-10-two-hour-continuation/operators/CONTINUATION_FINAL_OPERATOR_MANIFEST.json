@@ -1,0 +1,834 @@
+{
+  "all_frozen_previous_bytes_preserved": true,
+  "excluded": [
+    "ordinary midpoint/eigenvalue diagnostics",
+    "ordinary supporting-line reconnaissance",
+    "incomplete two-panel preparation",
+    "progress logs",
+    "__pycache__",
+    "speculative signsatlog3"
+  ],
+  "external_bindings": [
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/heights/COARSE_ZERO_COUNT.md",
+      "sha256": "67725ad90c5caaad231c4e232b76f5c38c81a84efe5005fc8909342456afa726"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/literature/COMPLETED_NATIVE_LOWER_INDEPENDENT_REVIEW.md",
+      "sha256": "04eebe843815decf5f29fd11738a58c7778897b17beda168759ab15573632db9"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/literature/EXACT_PRIMITIVE_SYNTHESIS_INDEPENDENT_REVIEW.md",
+      "sha256": "40169287321c5d98206fb7cc0accc3a7228ba31bfba03d0c2c9e4a3b3a96794f"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/CODIMENSION_14_REFINEMENT.md",
+      "sha256": "99a43d0adb8f186a800286b2a4d405a3eae64fcc6693f240889ba391e48b5744"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/COMPLETE_XI_KERNEL_BINDING.md",
+      "sha256": "e81a3c22d4ace8ab2af0b01bb6afcd64e176ca986aacca5da58e1a63617094e6"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/EXACT_PRIMITIVE_SYNTHESIS.md",
+      "sha256": "1e1cd511a477cf5120b0b7ca0a9ebb36ce5b115d8c3faa063e76b6870733aac9"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/NATIVE_WINDOW_CERTIFICATE_FRAME.md",
+      "sha256": "5c3dbb70dca1506ca7e8b63e27572b92d73a5573aff3298ce0a50267d7e0a20c"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/NATIVE_WINDOW_FINAL_CERTIFICATE.md",
+      "sha256": "b0946a75a9f01b1c0ca22318ed00f66c5fb63ee524da5f1743d54df740b5f02d"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/OPEN_WINDOW_PROPAGATION.md",
+      "sha256": "2ddf5a57e16c8b931b19299591cd2a9b99b280e8a13e3ebd0035d57630030d3c"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/QUANTITATIVE_PRIMITIVE_COMPLETION.md",
+      "sha256": "a7c9dcbd4923dbbbe3172070c5bc4400b4465f3d90675020b936294133780251"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/WINDOW_FAMILY_TO_LOG3.md",
+      "sha256": "4141b356c805a99d2f9b535da5e808175ca3508d34f0534ff2ab5764cd322b2a"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/check_codimension14.py",
+      "sha256": "4263b37ca623e74aa8312d10b8bb98c2b75e72e61f7e501bd7329ea426b58351"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/check_codimension8_phase.py",
+      "sha256": "11f1662311aaa5cbd0f274790069c1cb88b49ff591c4d500c6a63cdbdac6e60f"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/check_coercivity.py",
+      "sha256": "921c74c4b0659c8f6c0d1602f16f218e71219b64e31250b457cce92a808f0f87"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/check_window_family_log3.py",
+      "sha256": "7bbef766664319616bf3b55ca653e07e925a1e699cdcaa930a127485b3bfd592"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/directed_exact_synthesis_codim14_trial100.json",
+      "sha256": "df598c783ec412941cfd13f3c07cb3054ae3ad32a613320318a5915ffcbe3551"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/directed_residual_codim14_trial100.json",
+      "sha256": "9213accb90caa99e17172f620c3946ab638542eaf0523dfba89ab8f870d2016a"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/enclose_analytic_upper.py",
+      "sha256": "b3832a0cddc8bc1e2603c40240b608d1f06a868bda9436d8e88a146393fe007b"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/enclose_exact_primitive_synthesis.py",
+      "sha256": "009ae7df8ef5acdea2be122602d8c239eb0a36ac56563bf76640469926b8a011"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/enclose_residual.py",
+      "sha256": "e03d92bb09c1250b4a93e485aba6cc85bf2a4309b00e6d9217dbfbd39887cc92"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/source_convolution.py",
+      "sha256": "d53aa6c4e9c0e33d26c2327305bc1aa0ae9adef035ea4437ccd2a19b23bbf014"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/taylor_convolution_source.py",
+      "sha256": "118e828d8bf4cb706fd94c9d179fb8d8de88319df8b20273c4e19284175af0da"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/xi/outer-ray/SIXTEENTH_MOMENT_CENSUS_RECOVERY.md",
+      "sha256": "f897ae7c02eb1c912557c22bdd5fa3d2d89c61cdfecaf894d43f7c8943e070d4"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/xi/outer-ray/THEOREM.md",
+      "sha256": "2b35a58b119a6f924658a702769c401126e708e592738551e992403004cdfe6d"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/xi/outer-ray/native_candidates.json",
+      "sha256": "bbb7fe9adce4fa9581cbb23fb558c62abafec4e568cb69c4d9f0324443ad8c20"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/xi/outer-ray/sixteenth_moment_census.json",
+      "sha256": "964f49cc79a61b354cd77fe1f077637e54bb46f39a5643e1455e87f60fabc4d6"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/literature/PHYSICAL_LENGTH_SOURCE_REVIEW.md",
+      "sha256": "34ba5e2ae29c661da5c982b166c336116964d71abee60238bf7655eb8ed59303"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/xi/COMPLETE_PRIME_HEAT_TRACE.md",
+      "sha256": "d48987c9143620d6b433163c080a89f3bc4966764d0880a83666a671fda3fb29"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/xi/FINITE_CENSUS_HEAT_DERIVATIVE_CONE.md",
+      "sha256": "d0679c63b57ffe755ad22853bc5d2d98c007d00d4a1c4941e2383a91e184fcc7"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/xi/GLOBAL_SCALAR_MOMENT_POSITIVITY.md",
+      "sha256": "bc0e85724fdd33ff1a0c5fe1a6e97d7f925823066847d2eff74435ab71db1826"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/xi/check_global_scalar_positivity.py",
+      "sha256": "acf8c360928d4a2c7987ecc0eca5d499f13581c35749b5af27e1b1575d65a3ca"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/xi/check_heat_derivative_cone.py",
+      "sha256": "784238e5caa98ec855a134fd5a077c949b8154c2844a63486c7323d23c556fd8"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/xi/cofinal-audit/ALL_ORDER_FOUR_BY_FOUR_REVIEW.md",
+      "sha256": "72192ed9b4e10f6ca74d2895000da0b00cb1815da3c59e1aee56dec133d2beab"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/xi/cofinal-audit/ALL_ORDER_TWO_BY_TWO_REVIEW.md",
+      "sha256": "8dd83bb0ec2897f85d2a88c97dcf519f0990b12a45fc2271a29cd224d0af4035"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/xi/cofinal-audit/COFINAL_MOMENT_OBSTRUCTION.md",
+      "sha256": "7588200870a048a52a9da84cb884e3062808d0e36f9b25a978d449340b3e8d35"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/xi/cofinal-audit/COFINAL_RESIDUAL_SCALAR_CRITERION.md",
+      "sha256": "a9471f13d2284d30a7456197fcb2292dd11defc4339729664ea011552df49550"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/xi/cofinal-audit/COMPOSED_CENSUS_MIXED_CONE.md",
+      "sha256": "b7806c753a002abae18d054c911e0dadbbbf61859c60c5bf12c8cf666061d168"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/xi/cofinal-audit/CONCAVE_SCHUR_MECHANISM_REVIEW.md",
+      "sha256": "655712ec4194511cc780e497625303c05bd9c371a5aec9e8cc58b77038372868"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/xi/cofinal-audit/HANKEL_MECHANISM_REVIEW.md",
+      "sha256": "2f52bc634a1ac6671d376f6f8126eb2a86671f337e99a4b9fdee09f50927a802"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/xi/cofinal-audit/HAUSDORFF_LOG_MOMENT_CRITERION.md",
+      "sha256": "4f72ef0b7685bd0346f9c0d61b54819a2c7462de78d9620473cf07383ec9c54f"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/xi/cofinal-audit/HEAT_POSITIVE_FOURIER_COUNTERMODEL.md",
+      "sha256": "7ca1093e7b239f3908ae5a4332b4b3432e05c50e3169abaf33424548a1307d24"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/xi/cofinal-audit/INFINITE_MIXED_CONE_REVIEW.md",
+      "sha256": "282959efde82c09705a1d38ccc630a7d2132de1ddb2381223cf82fc58af8fca3"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/xi/cofinal-audit/LAGUERRE_MIXED_HEAT_IDENTITY.md",
+      "sha256": "829e01b4521c7a7f63c6d49375c754342595ef5e5d62528572a0541081771aad"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/xi/cofinal-audit/SHIFTED_V2_DIRECT_NATIVE_REVIEW.md",
+      "sha256": "23ffd54ab7c71e27159b6bab5e51b542d5568790a88234304f2206ebf81613f6"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/xi/cofinal-audit/SMALL_SHIFT_MIXED_CONE_REVIEW.md",
+      "sha256": "b4bcd1f9aab82fe131ac2564c6d46b844e4a965b478d319c570b9b5575af5d51"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/xi/cofinal-audit/VARIABLE_SHIFT_HAUSDORFF_OBSTRUCTION.md",
+      "sha256": "d54e11772f00f4109fbe1f2969b388913b883bda5dc56025f143b2cc88e73dd3"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/xi/cofinal-audit/check_composed_mixed_cone.py",
+      "sha256": "987406eb3bfaa93f4dbf1af4e2d5001e788aa7ac69449fc064da379d3fd5acda"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/xi/cofinal-audit/check_hausdorff_countermodel.py",
+      "sha256": "bf7d200d2c3327d5abe5feaf340ed75222c23e4e4a8884c44c1cccd45f709baf"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/xi/cofinal-audit/composed_mixed_cone_normal.json",
+      "sha256": "34f1593c059a69d7e72854c90e7ed9f75656cc30002d7fd0caf642ee7fa49536"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/xi/cofinal-audit/fixed-size-countermodel/FIXED_DIMENSION_ALL_ROW_SHIFT_COUNTERMODEL.md",
+      "sha256": "8ecd23a243fdf939abb9e6c1d850221170976276437b1055227fbc1a0697f35b"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/xi/cofinal-audit/infinite_mixed_cone_normal.json",
+      "sha256": "bffb559967304c3ccb46c6a185d03bed376be5a46dd84394852c68bea39b427f"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/xi/heat_derivative_cone.json",
+      "sha256": "1708abc0dd320a35d8f753aa20b1330d5fda60c364a6ad678acf3122226a3bcd"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/xi/shifted_hierarchy_v2.json",
+      "sha256": "d6cf40e46dbe0292aff5a48dc5ebec357f378ffed4b2e3aefbfe4d848d517ba3"
+    }
+  ],
+  "files": [
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/ALL_ORDER_FOUR_BY_FOUR_HANKEL.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "5be9809ae8521de1cc1cb42a44f65d279c72c778a06d0f4195e2d2991f73fa97"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/ALL_ORDER_TWO_BY_TWO_HANKEL.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "f1a0ac4be55d892708980ae47e05391054e9cd6e30e1ecb907d2b2cfafd463c8"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/COMPLETE_HEAT_TRACE_INDEPENDENT_REVIEW.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "e9aef181cd35b2d7e65b77f9b6b109f87d4d90c3d64796efed42a74af8a025f5"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/COMPOSED_CENSUS_MIXED_CONE_INDEPENDENT_REVIEW.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "03ddc56b30d4d25577222731fd3aa829884a4fc44222be0a49a22a91a2f62905"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/CONCAVE_WEIGHTED_SCHUR_FAMILY.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "a10e8c47197f907a8ab07aed317cc77ba43d22aa03b1ae40554a1429c6690f37"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/CONSTRUCTIVE_HANKEL_WITNESS_INDEPENDENT_REVIEW.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "f975842a1b3d31682068b95bb190b73c5c795b235d22f606d13c3dce6b89d301"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/CONTINUATION_CHECKPOINT1_OPERATOR_MANIFEST.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "6c078026fbd926f32e4004e2554c8a8da95a361ac73a716c49e5c930fb1bc6bb"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/CONTINUATION_CHECKPOINT2_OPERATOR_MANIFEST.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "27846bc2ddde9e4c0f180e4a7d907ab1be4cc4000ecf5b8c42829dcdabeda665"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/DIRECTED_CONGRUENCE_GATE.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "df7f7a68de4c6864b262653d73863921ba1c785c3c81d05f9706c76c22c85705"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/EXPLICIT_ETA_INDEPENDENT_REVIEW.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "8bd6b410404a893868e96ecded97487b94fc51c699ff821e6d015827e18dc76a"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/FINAL_CERTIFICATE_PRECISION_NOTE.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "621f1f8f8d86f45a8577ebfeeb2d58fb42c640eeaf68851ccfb94b011b0fc8ee"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/FINITE_BERNSTEIN_CONVERSION_INDEPENDENT_REVIEW.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "753a4530a839c7a3254a8260165a8a0ae015cea14ee56023401999c5c4bf1581"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/FINITE_CENSUS_MIXED_MOMENT_CONE.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "b904361d5af54885d6cd9bb1cfd730f11fdd05e6a0f2c1557328a92b5a40f166"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/FIXED_DIMENSION_COUNTERMODEL_INDEPENDENT_REVIEW.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "e0001066e5fe8dd46b66b02b8419f2b15cfab7b2372d91404c5e39e217901878"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/FIXED_INVENTORY_BARRIER_INDEPENDENT_REVIEW.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "25d009763cc3b85772114378d218238e7efe3ae805b89545fd8c33acebb1fc10"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/GLOBAL_SCALAR_SOURCE_INDEPENDENT_REVIEW.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "754fe250cc6325b9e5de857564090936e58a6e7f5d7bf556104cfd49deb29575"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/HAUSDORFF_COFINAL_INDEPENDENT_REVIEW.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "ca156622c72cc80719173a96373290e71613f9c655cc47aad3ccdca26bac8b0d"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/HEAT_DERIVATIVE_CONE_INDEPENDENT_REVIEW.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "25dcb860d1e186dedb07b9c183f2676b4fb47f7164918b6d1eb819d98c829c75"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/LAGUERRE_MIXED_HEAT_INDEPENDENT_REVIEW.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "1ab6b7903f91ebb091fe3ad090d7822ffb330e5449f3a899dd5e4cee7c35e893"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/NATIVE_HANKEL_MECHANISM_CROSS_REVIEW.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "72134f010ad4464d62017eb12d25faa09a64c2ce3bfd50c919c7c2c5612525f5"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/NATIVE_LENGTH21OVER20_FINAL_CERTIFICATE.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "33336cc4556a53e6cce58122f827a819c8e56988f560c65df90bfc77b529e0df"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/PHYSICAL_LENGTH_CONTINUUM.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "c847f1c2072d822456bde8d4fb4490deea10dba59073eadf7a1bbabb6798704a"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/PHYSICAL_LENGTH_MIXED_COMPLETION.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "4baf47e9ab490f2d4fef5f8c103e58b9f70c5e0a769c4818d5619f6504b9a795"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/PHYSICAL_LENGTH_PRIMITIVE_COMPLETION.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "cdceae6052114119e13c5d9d6919847f339603a0109b279bb85a26bd989e7a7d"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/PHYSICAL_LENGTH_TRACE_PRICED_COMPLETION.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "32f8e19d8c13e0a7a16bd43c3cedf4cefd0b15c32cd178daa07a61b64d4c6c9f"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/README.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "dd1d8b47bc7e53b241002f7eba5a4ba3d51852909a0df97d760ef1e7aa6bfc9c"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/SMALL_SHIFT_MIXED_CONE.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "30a478c1983eb61f5f74de205ebf29e89de1498e2c470cfcd401f4c2539ad288"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/SUPPORTING_LINE_INTERPOLATION.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "e2dcc17887b80e7895eb451896cd0197ea511947a3d8ce1df40c75fa00780a34"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/TRACE_PRICED_COMPLETION_INDEPENDENT_REVIEW.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "1e48ac84f1f97df733d722b9b55c57f80b711348ce995cdc740ae1160a48fac0"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/VARIABLE_SHIFT_OBSTRUCTION_INDEPENDENT_REVIEW.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "8e2502752d5308bef83c84ff5ac725486d6ad319ccf4f982710b7c8526adb088"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/all_order_four_by_four_hankel.normal.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "484d15709dbb2826436e79b9d4c472ec2a36acdab822e7850c25843ffd13a214"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/all_order_four_by_four_hankel.optimized.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "484d15709dbb2826436e79b9d4c472ec2a36acdab822e7850c25843ffd13a214"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/all_order_two_by_two_hankel.normal.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "4c0d4237e0ef7158c9eec5d532b2d65042fe26474f9bdf097e2e220211b084bc"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/all_order_two_by_two_hankel.optimized.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "4c0d4237e0ef7158c9eec5d532b2d65042fe26474f9bdf097e2e220211b084bc"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/check_all_order_four_by_four_hankel.py",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "4e3ad96d34d74ca898e6e891626a023013e6b413266d9cdf032e0b0f7357147e"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/check_all_order_two_by_two_hankel.py",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "14e09f3581bba10f67d2a34f581fa677a0c65ce50f3da187e104023804786f28"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/check_finite_census_mixed_cone.py",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "d8a34554b671de540d7e326f0b354a8261698bdb789c1483af9b13e8aaa90973"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/check_native_hankel_countermodel.py",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "b873f04ef3b0064a5e911afae11aeff4f6708986dcc218c4b8138be08e67a879"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/check_physical_length_source.py",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "e02c09d8ead1e300969f09b9b7f426cba77447806b7bd86c46a410223afdaa73"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/check_small_shift_mixed_cone.py",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "85dc5969b1c5d43d60b1018063b0d51d3fde8a1eb5f74ae8414d3cb1d9e2e098"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/check_supporting_line_interpolation.py",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "daa6fad4267e1351566ebde45e9e1c4367742ca148b2d1f35e3f0a58ce8fc8d4"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/composed_mixed_cone_independent.normal.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "34f1593c059a69d7e72854c90e7ed9f75656cc30002d7fd0caf642ee7fa49536"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/composed_mixed_cone_independent.optimized.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "34f1593c059a69d7e72854c90e7ed9f75656cc30002d7fd0caf642ee7fa49536"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/directed_congruence_gate.py",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "e4e34814942001d1576f1c5d8a798d1c0fd968790becf9b829503173a4bf1f54"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/directed_residual_length21over20_trial100.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "cede53ceb2e0543060c65bcd456e17983bb8197dc7127c361f918dcd5cca5191"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/directed_robust_mixed_length21over20.normal.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "2eee87a7648bce24e9e1cb611fe045d840501fd6dd732e6399cea474e32aba88"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/directed_robust_mixed_length21over20.optimized.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "2eee87a7648bce24e9e1cb611fe045d840501fd6dd732e6399cea474e32aba88"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/directed_robust_primitive_length21over20.normal.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "660d9fe2ad65dcf95d0ecb1d1ee490a742ce684f38ec5f7af550c30a4e723857"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/directed_robust_primitive_length21over20.optimized.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "660d9fe2ad65dcf95d0ecb1d1ee490a742ce684f38ec5f7af550c30a4e723857"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/directed_robust_weighted_length21over20.normal.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "07252fe714f1c4a079695d71931ccd123645a4cb5bb9eff31ae7dab30d6bbfe8"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/directed_robust_weighted_length21over20.optimized.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "07252fe714f1c4a079695d71931ccd123645a4cb5bb9eff31ae7dab30d6bbfe8"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/directed_trace_priced_length21over20.normal.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "03b380350e174d47b7dd9baa5d011acae253f4bc6815aa41fdb2888ec18066f4"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/directed_trace_priced_length21over20.optimized.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "03b380350e174d47b7dd9baa5d011acae253f4bc6815aa41fdb2888ec18066f4"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/enclose_length_mixed.py",
+      "role": "frozen original formula/source dependency; original acceptance path inconclusive",
+      "sha256": "417dafc798e88a00c0b09806d96b8338ba86f5fa1ec7fd2f07e94d47fcbd3871"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/enclose_length_primitive.py",
+      "role": "frozen original formula/source dependency; original acceptance path inconclusive",
+      "sha256": "2fc80bfd130ea59bb413209cd8dd092a71e4de80cc7f387c14778626cc1e560a"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/enclose_length_residual.py",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "7da9c14f00654150acabd5815d49cd68ba577d3b4fc697d4f928a31a0893ecfb"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/enclose_length_robust_mixed.py",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "38ef6a1f5125adf72f037d625222eccae509f4a146037361ca02dd20f1e1a6f3"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/enclose_length_robust_primitive.py",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "07ceacf8bd3a942d71ccf633e378e26d178be155f8293472ea93411a32137d57"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/enclose_length_robust_weighted.py",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "9c774a1de5b0d0771764ffeeb7e56bfbf20620774f5a00466c3cd750a7f891d7"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/enclose_length_trace_priced.py",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "146be7aff381a3836f14d88d360e7dc2bec0b5ce5aebfb66e773eefeaa236548"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/enclose_length_weighted.py",
+      "role": "frozen original formula/source dependency; original acceptance path inconclusive",
+      "sha256": "aed3e21e0784f387fb371b871389514c60671bd4f29449b07791d97ab9b77b16"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/eta-review/ETA_EXECUTION.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "6f02dbf0ab395b09edba6f62089247fa2c43f2f2f024dfbf76712b1c1fe91a53"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/eta-review/ETA_FINAL_MANIFEST.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "db89ee1c67c1e28b890646f40e48f9b432a624d0fdd85ede982c258a237161b9"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/eta-review/EXPLICIT_ETA.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "55895ae36d87322cdc4ca3424027bcc63e5a020a0803650a7d2e21d215352ff8"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/eta-review/TRACE_PRICED_COMPLETION.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "350e7440de1363e02dfe075e2f204af08170471bcadd7ae7750de67de27df062"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/eta-review/check_eta.py",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "b056bc4411acec38a6e81b8c085b8c04d393acc26c1eed931da2b9e604909d70"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/eta-review/check_trace_priced_eta.py",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "56f8a2bbafc3244ea2738937a527ccd6ca6a5bef2f09926b2beb0d957fb29300"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/eta-review/results/eta.normal.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "08540515ea0b484bab3d26cb7fe0cda46a746135d3c8faea4977e5f40046ded4"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/eta-review/results/eta.optimized.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "08540515ea0b484bab3d26cb7fe0cda46a746135d3c8faea4977e5f40046ded4"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/eta-review/results/trace-priced.normal.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "1c1cc8345a5f8c173ecc7600f217983cb60888333e5eaef8c28ba8d8a2488105"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/eta-review/results/trace-priced.optimized.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "1c1cc8345a5f8c173ecc7600f217983cb60888333e5eaef8c28ba8d8a2488105"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/eta_independent.normal.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "08540515ea0b484bab3d26cb7fe0cda46a746135d3c8faea4977e5f40046ded4"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/eta_independent.optimized.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "08540515ea0b484bab3d26cb7fe0cda46a746135d3c8faea4977e5f40046ded4"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/finite_census_mixed_cone.normal.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "bffb559967304c3ccb46c6a185d03bed376be5a46dd84394852c68bea39b427f"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/finite_census_mixed_cone.optimized.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "bffb559967304c3ccb46c6a185d03bed376be5a46dd84394852c68bea39b427f"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/global_scalar_independent.normal.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "316a88278fc8854c3a649d39c478b43d6e35588160eae0bc325e9b983cb45ace"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/global_scalar_independent.optimized.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "316a88278fc8854c3a649d39c478b43d6e35588160eae0bc325e9b983cb45ace"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/hausdorff_independent.normal.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "9b995ef296ec46d19592abfbf3eb6c75279497d2d0d40318dadfd1460ec9edcc"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/hausdorff_independent.optimized.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "9b995ef296ec46d19592abfbf3eb6c75279497d2d0d40318dadfd1460ec9edcc"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/heat_cone_independent.normal.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "1708abc0dd320a35d8f753aa20b1330d5fda60c364a6ad678acf3122226a3bcd"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/heat_cone_independent.optimized.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "1708abc0dd320a35d8f753aa20b1330d5fda60c364a6ad678acf3122226a3bcd"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/legacy_original_taylor_comparison.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "3a18f080bddb4b4f2319f663d804222ac7ec3643c949164b6859b394eda7120f"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/legacy_original_weighted_lower.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "e2a4da516e6eaea7d19b48b4705358c45f7cd40c6e0bcab1201efdba9f5920f7"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/legacy_original_weighted_lower.optimized.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "e2a4da516e6eaea7d19b48b4705358c45f7cd40c6e0bcab1201efdba9f5920f7"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/length-primitive-review/COMPLETED_NATIVE_LENGTH_REVIEW.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "967f57eb6b1b469f0a2ea48626796d5cd187bc14adf880d226955a447306afe3"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/length-primitive-review/COMPLETED_PHYSICAL_REVIEW_MANIFEST.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "36075fb16f196cab51f5b07668f743cdfb0b0f840957c540fc4ed6710d37f853"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/length-primitive-review/PHYSICAL_PRIMITIVE_INDEPENDENT_REVIEW.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "0aa2ae5f0b1197735f8983d84be5a5508dce53215faf8d38c863c85642532cee"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/length-primitive-review/PHYSICAL_PRIMITIVE_REVIEW_MANIFEST.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "88a6def4694ac0d0ed4c4112235010ec8279a84e3866ca849bfcdb52b3e2810e"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/length-primitive-review/TRACE_PRICED_PHYSICAL_INDEPENDENT_REVIEW.md",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "30a888574e7ca767c5ee255a7881cffa62f2fa620068e26f450ca846ebe53a7c"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/length-primitive-review/check_congruence_fraction_oracle.py",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "020d7b259b27cbc607ad26e3ff2e3cfa4a6b41b9b1554463bf2495c979766c7b"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/length-primitive-review/check_physical_primitive_oracle.py",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "db7041952c6d811ab01256dbec8f9bf6ceb03c12b5ab859c6796e3a84ac07c44"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/length-primitive-review/results/congruence-oracle-baseline.normal.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "06f26e2c20c68d8947458def9df50a2760b7a84d44d229bef0909d88aa8370bc"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/length-primitive-review/results/congruence-oracle-baseline.optimized.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "06f26e2c20c68d8947458def9df50a2760b7a84d44d229bef0909d88aa8370bc"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/length-primitive-review/results/congruence-oracle-mixed.normal.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "67270a9fba070daff51594611e6d8521b73bbe20a7b0bb883025e3acf27b65c8"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/length-primitive-review/results/congruence-oracle-mixed.optimized.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "67270a9fba070daff51594611e6d8521b73bbe20a7b0bb883025e3acf27b65c8"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/length-primitive-review/results/primitive-oracle.normal.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "d7e64b7461417165fa6e5bed4cefbc75c34f268c120b23cbb4035c6241e93717"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/length-primitive-review/results/primitive-oracle.optimized.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "d7e64b7461417165fa6e5bed4cefbc75c34f268c120b23cbb4035c6241e93717"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/length-primitive-review/results/robust-mixed.normal.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "2eee87a7648bce24e9e1cb611fe045d840501fd6dd732e6399cea474e32aba88"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/length-primitive-review/results/robust-mixed.optimized.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "2eee87a7648bce24e9e1cb611fe045d840501fd6dd732e6399cea474e32aba88"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/length-primitive-review/results/robust-primitive.normal.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "660d9fe2ad65dcf95d0ecb1d1ee490a742ce684f38ec5f7af550c30a4e723857"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/length-primitive-review/results/robust-primitive.optimized.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "660d9fe2ad65dcf95d0ecb1d1ee490a742ce684f38ec5f7af550c30a4e723857"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/length-primitive-review/results/robust-weighted.normal.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "07252fe714f1c4a079695d71931ccd123645a4cb5bb9eff31ae7dab30d6bbfe8"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/length-primitive-review/results/robust-weighted.optimized.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "07252fe714f1c4a079695d71931ccd123645a4cb5bb9eff31ae7dab30d6bbfe8"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/length-primitive-review/results/trace-priced-physical.normal.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "03b380350e174d47b7dd9baa5d011acae253f4bc6815aa41fdb2888ec18066f4"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/length-primitive-review/results/trace-priced-physical.optimized.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "03b380350e174d47b7dd9baa5d011acae253f4bc6815aa41fdb2888ec18066f4"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/length-primitive-review/results/weighted.normal.failure.json",
+      "role": "preserved inconclusive interval-LDL execution; not accepted sign",
+      "sha256": "084c4a52a4dffb00a612c0a414f61c4923c4ef0174b615e157d080c63db90525"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/length-primitive-review/results/weighted.optimized.failure.json",
+      "role": "preserved inconclusive interval-LDL execution; not accepted sign",
+      "sha256": "d1673c48fae54becf9e75d9b3e827e5e2ae5300fdfeebff7588804c751dc5734"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/native_hankel_countermodel.normal.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "019cf31bc5d832e490fb2b54c16447a753ea54ffca9d254f5cee69724ea778d9"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/native_hankel_countermodel.optimized.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "019cf31bc5d832e490fb2b54c16447a753ea54ffca9d254f5cee69724ea778d9"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/physical_length_controls.normal.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "c650cdce831a678a081a15e82c85e32e46320af0d3035e67bd90c603419c6861"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/physical_length_controls.optimized.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "c650cdce831a678a081a15e82c85e32e46320af0d3035e67bd90c603419c6861"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/physical_length_source.py",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "b15da7904f2bdf4f4bc7e68b8dfe2f1de808bb0bac47a905d684c513dba24f1e"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/physical_length_synthesis_trace_only.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "cce80d0385368e37f06b788ffa4d1bca22f7353cc450bb82cb86a85aed4659b5"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/small_shift_mixed_cone.normal.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "ba1ded9839161033c2bc2e5e911dad90c32326925669ceee3382623834cdfa8e"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/small_shift_mixed_cone.optimized.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "ba1ded9839161033c2bc2e5e911dad90c32326925669ceee3382623834cdfa8e"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/supporting_line_interpolation.normal.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "924d5c664d2483b146f1725893a38324169438030aad0d869b419b7a3b62a225"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/supporting_line_interpolation.optimized.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "924d5c664d2483b146f1725893a38324169438030aad0d869b419b7a3b62a225"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/trace_priced_eta_independent.normal.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "1c1cc8345a5f8c173ecc7600f217983cb60888333e5eaef8c28ba8d8a2488105"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/trace_priced_eta_independent.optimized.json",
+      "role": "reviewed source, proof, exact checker, directed receipt or explicit reviewed manifest",
+      "sha256": "1c1cc8345a5f8c173ecc7600f217983cb60888333e5eaef8c28ba8d8a2488105"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/CONTINUATION_FINAL_EXECUTION_RECEIPT.json",
+      "role": "final source and completed execution receipt",
+      "sha256": "0e9ef2389bb07b1d4aa00fb6909d708ba31bea2a8c97ca0160fc933cd869c5ad"
+    }
+  ],
+  "freeze_utc": "2026-10-10 18:52:00 UTC",
+  "git_mutations_performed": false,
+  "inconclusive_failure_records_preserved": true,
+  "publication_state": "root recovery required; root-only Git authority",
+  "research_deadline_utc": "2026-10-10 19:00:12 UTC",
+  "source_and_execution_receipt_sha256": "0e9ef2389bb07b1d4aa00fb6909d708ba31bea2a8c97ca0160fc933cd869c5ad",
+  "status": "FROZEN_FINAL_COMPLETED_OPERATOR_CONTINUATION_MANIFEST"
+}

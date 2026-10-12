@@ -1,0 +1,41 @@
+{
+  "status": "FROZEN_INDEPENDENT_PHYSICAL_SYNTHESIS_REVIEW_ACCEPT_CONDITIONAL_NATIVE_GATE",
+  "date_utc": "2026-10-10",
+  "source_scope": "Exact physical L=21/20, native ten columns and all110 coefficient rows; K1 unconditional for those source-defined exact columns; native form consequence conditional on fresh completed weighted/R gate.",
+  "files": [
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/length-primitive-review/check_physical_primitive_oracle.py",
+      "sha256": "db7041952c6d811ab01256dbec8f9bf6ceb03c12b5ab859c6796e3a84ac07c44"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/length-primitive-review/PHYSICAL_PRIMITIVE_INDEPENDENT_REVIEW.md",
+      "sha256": "0aa2ae5f0b1197735f8983d84be5a5508dce53215faf8d38c863c85642532cee"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/length-primitive-review/results/primitive-oracle.normal.json",
+      "sha256": "d7e64b7461417165fa6e5bed4cefbc75c34f268c120b23cbb4035c6241e93717"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/length-primitive-review/results/primitive-oracle.optimized.json",
+      "sha256": "d7e64b7461417165fa6e5bed4cefbc75c34f268c120b23cbb4035c6241e93717"
+    }
+  ],
+  "reviewed_sources": {
+    "physical_length_source.py": "b15da7904f2bdf4f4bc7e68b8dfe2f1de808bb0bac47a905d684c513dba24f1e",
+    "enclose_length_primitive.py": "2fc80bfd130ea59bb413209cd8dd092a71e4de80cc7f387c14778626cc1e560a",
+    "PHYSICAL_LENGTH_PRIMITIVE_COMPLETION.md": "cdceae6052114119e13c5d9d6919847f339603a0109b279bb85a26bd989e7a7d",
+    "enclose_length_weighted.py": "aed3e21e0784f387fb371b871389514c60671bd4f29449b07791d97ab9b77b16"
+  },
+  "normal_and_optimized_exit_codes": [
+    0,
+    0
+  ],
+  "paired_outputs_byte_identical": true,
+  "source_coefficient_rebuild_performed": true,
+  "independent_complete_exponential_product_oracle_performed": true,
+  "R_integration_performed": false,
+  "completed_weighted_gate_performed": false,
+  "native_new_form_sign_claimed": false,
+  "git_mutation_performed": false,
+  "open_gate": "Owner636-panel R artifact and fresh full weighted gate are pending at this freeze; separate future receipt must bind any completed native consequence."
+}

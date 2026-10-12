@@ -1,0 +1,176 @@
+{
+  "checker_sha256": "150341214b3a6a5fde8ad3b7e53da2d4631970b4c6291c1beab5fe6f422cedb0",
+  "congruence_checks": [
+    {
+      "entry_checks": 1,
+      "full_determinant_checked": true,
+      "packet_size": 1,
+      "source_locations": 10,
+      "transform_determinant_checked": true
+    },
+    {
+      "entry_checks": 4,
+      "full_determinant_checked": true,
+      "packet_size": 2,
+      "source_locations": 10,
+      "transform_determinant_checked": true
+    },
+    {
+      "entry_checks": 9,
+      "full_determinant_checked": true,
+      "packet_size": 3,
+      "source_locations": 10,
+      "transform_determinant_checked": true
+    },
+    {
+      "entry_checks": 16,
+      "full_determinant_checked": true,
+      "packet_size": 4,
+      "source_locations": 10,
+      "transform_determinant_checked": true
+    },
+    {
+      "entry_checks": 25,
+      "full_determinant_checked": true,
+      "packet_size": 5,
+      "source_locations": 10,
+      "transform_determinant_checked": true
+    },
+    {
+      "entry_checks": 36,
+      "full_determinant_checked": true,
+      "packet_size": 6,
+      "source_locations": 10,
+      "transform_determinant_checked": true
+    },
+    {
+      "entry_checks": 49,
+      "full_determinant_checked": true,
+      "packet_size": 7,
+      "source_locations": 10,
+      "transform_determinant_checked": true
+    },
+    {
+      "entry_checks": 64,
+      "full_determinant_checked": true,
+      "packet_size": 8,
+      "source_locations": 10,
+      "transform_determinant_checked": true
+    },
+    {
+      "entry_checks": 81,
+      "full_determinant_checked": false,
+      "packet_size": 9,
+      "source_locations": 10,
+      "transform_determinant_checked": true
+    },
+    {
+      "entry_checks": 100,
+      "full_determinant_checked": false,
+      "packet_size": 10,
+      "source_locations": 10,
+      "transform_determinant_checked": true
+    },
+    {
+      "entry_checks": 121,
+      "full_determinant_checked": false,
+      "packet_size": 11,
+      "source_locations": 10,
+      "transform_determinant_checked": true
+    },
+    {
+      "entry_checks": 144,
+      "full_determinant_checked": false,
+      "packet_size": 12,
+      "source_locations": 10,
+      "transform_determinant_checked": true
+    }
+  ],
+  "constants": {
+    "H": 3000000000000,
+    "bands": [
+      [
+        "1035/1024",
+        "1043/1024"
+      ],
+      [
+        "81/64",
+        "163/128"
+      ],
+      [
+        "1513/1024",
+        "1521/1024"
+      ],
+      [
+        "851/512",
+        "855/512"
+      ],
+      [
+        "117/64",
+        "235/128"
+      ],
+      [
+        "2029/1024",
+        "2037/1024"
+      ]
+    ],
+    "frame_gamma_exact": "279225795966143511860848109837420624207627595777236427375299167753588206902528527840045711388683981504646235572400495759461906362951948084456477144538276212455260326941281/456854032565254434663894221433778085401809763114182560003741275999954289510798935710914380021702595037507991395025904068542104211446575971804052054806140052105969",
+    "margin_floor": 3,
+    "normalization": "u=s/(4L^2), phi=D/prod(rho+s/L^2)",
+    "packet_size": 12,
+    "projected_intervals": [
+      [
+        "133903/524288",
+        "1087849/4194304"
+      ],
+      [
+        "1679615/4194304",
+        "26569/65536"
+      ],
+      [
+        "143073/262144",
+        "2313441/4194304"
+      ],
+      [
+        "2896803/4194304",
+        "731025/1048576"
+      ],
+      [
+        "3504383/4194304",
+        "55225/65536"
+      ],
+      [
+        "514605/524288",
+        "4149369/4194304"
+      ]
+    ],
+    "published_inputs_replayed": false,
+    "sufficient_ratio_exact": "1171157872923979596372002670483532673796549255478845856285926800505546030564103014433615087460402778360863724446261688965894111705754807658428139913245470071005948210331122663424/3703364636234915442126370317637551999965079294653465042144585462569819889871397927801868658241722162073915411813469109137161145970626731643995707002498808329487549304962158203125",
+    "sufficient_ratio_upper": "1/3"
+  },
+  "limitations": [
+    "finite controls do not prove the analytic annular theorem",
+    "published S bound and verified height are imported",
+    "RH remains unproved"
+  ],
+  "pfaffian_checks": [
+    {
+      "generic_values": true,
+      "packet_size": 2
+    },
+    {
+      "generic_values": true,
+      "packet_size": 4
+    },
+    {
+      "generic_values": true,
+      "packet_size": 6
+    },
+    {
+      "generic_values": true,
+      "packet_size": 8
+    }
+  ],
+  "proof_sha256": "c04cdf51ad64972137ecd3f4aa2c835e82481d4984115bd7fadf9b8621311724",
+  "status": "PASS_EXACT_ANNULAR_GLOBAL_PICK_CONTROLS"
+}

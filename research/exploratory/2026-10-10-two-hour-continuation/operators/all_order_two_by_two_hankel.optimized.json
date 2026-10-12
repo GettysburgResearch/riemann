@@ -1,0 +1,60 @@
+{
+  "RH_proved": false,
+  "all_Hankel_sizes_proved": false,
+  "alpha": "3/117462247",
+  "complete_pair_determinant_fixture_count": 16,
+  "complete_real_head": 5419,
+  "coverage": "EVERY integern>=0 and EVERY complex2-vector; complete actual Xi source",
+  "exact_head_Vandermonde_gap": "1/750000",
+  "exact_low_order_negative_prices": [
+    "3/101291941944712792213924",
+    "135/95183830399549508071625928683648"
+  ],
+  "exact_uniform_n2_tail_head_upper_ratio": "27/84500",
+  "historical_zero_count_used": false,
+  "infinite_analytic_proof_imported": true,
+  "inherited_native_source_sha256": {
+    "2026-10-10-four-hour-wave/heights/COARSE_ZERO_COUNT.md": "67725ad90c5caaad231c4e232b76f5c38c81a84efe5005fc8909342456afa726",
+    "2026-10-10-four-hour-wave/xi/outer-ray/native_candidates.json": "bbb7fe9adce4fa9581cbb23fb558c62abafec4e568cb69c4d9f0324443ad8c20",
+    "2026-10-10-four-hour-wave/xi/outer-ray/sixteenth_moment_census.json": "964f49cc79a61b354cd77fe1f077637e54bb46f39a5643e1455e87f60fabc4d6",
+    "2026-10-10-two-hour-continuation/operators/FINITE_CENSUS_MIXED_MOMENT_CONE.md": "b904361d5af54885d6cd9bb1cfd730f11fdd05e6a0f2c1557328a92b5a40f166",
+    "2026-10-10-two-hour-continuation/operators/check_finite_census_mixed_cone.py": "d8a34554b671de540d7e326f0b354a8261698bdb789c1483af9b13e8aaa90973",
+    "2026-10-10-two-hour-continuation/xi/FINITE_CENSUS_HEAT_DERIVATIVE_CONE.md": "d0679c63b57ffe755ad22853bc5d2d98c007d00d4a1c4941e2383a91e184fcc7",
+    "2026-10-10-two-hour-continuation/xi/cofinal-audit/HAUSDORFF_LOG_MOMENT_CRITERION.md": "4f72ef0b7685bd0346f9c0d61b54819a2c7462de78d9620473cf07383ec9c54f",
+    "2026-10-10-two-hour-continuation/xi/cofinal-audit/LAGUERRE_MIXED_HEAT_IDENTITY.md": "829e01b4521c7a7f63c6d49375c754342595ef5e5d62528572a0541081771aad",
+    "2026-10-10-two-hour-continuation/xi/heat_derivative_cone.json": "1708abc0dd320a35d8f753aa20b1330d5fda60c364a6ad678acf3122226a3bcd"
+  },
+  "inherited_source_sha256": {
+    "2026-10-10-four-hour-wave/xi/outer-ray/native_candidates.json": "bbb7fe9adce4fa9581cbb23fb558c62abafec4e568cb69c4d9f0324443ad8c20",
+    "2026-10-10-two-hour-continuation/operators/FINITE_CENSUS_MIXED_MOMENT_CONE.md": "b904361d5af54885d6cd9bb1cfd730f11fdd05e6a0f2c1557328a92b5a40f166",
+    "2026-10-10-two-hour-continuation/operators/SMALL_SHIFT_MIXED_CONE.md": "30a478c1983eb61f5f74de205ebf29e89de1498e2c470cfcd401f4c2539ad288",
+    "2026-10-10-two-hour-continuation/operators/check_finite_census_mixed_cone.py": "d8a34554b671de540d7e326f0b354a8261698bdb789c1483af9b13e8aaa90973",
+    "2026-10-10-two-hour-continuation/operators/check_small_shift_mixed_cone.py": "85dc5969b1c5d43d60b1018063b0d51d3fde8a1eb5f74ae8414d3cb1d9e2e098",
+    "2026-10-10-two-hour-continuation/operators/finite_census_mixed_cone.normal.json": "bffb559967304c3ccb46c6a185d03bed376be5a46dd84394852c68bea39b427f"
+  },
+  "known_real_anchor_intervals": [
+    [
+      "141347/10000",
+      "35337/2500"
+    ],
+    [
+      "1051/50",
+      "2103/100"
+    ]
+  ],
+  "new_native_root_moment_or_quadrature_replay": false,
+  "normalization": "b_n=(3/4)^n C_(n+1)(1); H_n=[[b_n,b_n+1],[b_n+1,b_n+2]]",
+  "source_sha256": {
+    "2026-10-10-four-hour-wave/heights/COARSE_ZERO_COUNT.md": "67725ad90c5caaad231c4e232b76f5c38c81a84efe5005fc8909342456afa726",
+    "2026-10-10-four-hour-wave/xi/outer-ray/native_candidates.json": "bbb7fe9adce4fa9581cbb23fb558c62abafec4e568cb69c4d9f0324443ad8c20",
+    "2026-10-10-four-hour-wave/xi/outer-ray/sixteenth_moment_census.json": "964f49cc79a61b354cd77fe1f077637e54bb46f39a5643e1455e87f60fabc4d6",
+    "2026-10-10-two-hour-continuation/operators/ALL_ORDER_TWO_BY_TWO_HANKEL.md": "f1a0ac4be55d892708980ae47e05391054e9cd6e30e1ecb907d2b2cfafd463c8",
+    "2026-10-10-two-hour-continuation/operators/SMALL_SHIFT_MIXED_CONE.md": "30a478c1983eb61f5f74de205ebf29e89de1498e2c470cfcd401f4c2539ad288",
+    "2026-10-10-two-hour-continuation/operators/check_all_order_two_by_two_hankel.py": "14e09f3581bba10f67d2a34f581fa677a0c65ce50f3da187e104023804786f28",
+    "2026-10-10-two-hour-continuation/operators/small_shift_mixed_cone.normal.json": "ba1ded9839161033c2bc2e5e911dad90c32326925669ceee3382623834cdfa8e"
+  },
+  "status": "PASS_EXACT_ACTUAL_ALL_ORDER_TWO_BY_TWO_HANKEL_GUARDS",
+  "strict_Turan_coverage": "C_k(1)*C_(k+2)(1)>C_(k+1)(1)^2 for EVERY integerk>=1",
+  "uniform_lower_bound": "H_n>=I/(1125000*600^(n+1))",
+  "whole_unknown_complex_tail_retained": true
+}

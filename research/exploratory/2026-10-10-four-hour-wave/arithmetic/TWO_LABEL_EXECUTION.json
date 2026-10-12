@@ -1,0 +1,34 @@
+{
+  "analytic_infinite_statements_machine_proved": false,
+  "analytic_review_status": "Independent root review requested",
+  "bounded_intervals_per_power_slab": 15,
+  "complete_prime_count": 9592,
+  "complete_two_label_product_multiset_count": 23550,
+  "critical_power_one_proved": false,
+  "development_control_correction": "Initial removal-control test incorrectly required strictness at k=1. Corrected to equality because R=M1/M0 exactly; analytic proof already used the valid non-strict inequality.",
+  "execution_time_utc": "2026-10-10T12:49:07.969376+00:00",
+  "global_sufficient_power": "3/2",
+  "independent_controls": {
+    "errors": 0,
+    "failures": 0,
+    "normal_command": "python3 -B test_two_label.py",
+    "optimized_command": "python3 -B -O test_two_label.py",
+    "skips": 0,
+    "tests_per_mode": 4
+  },
+  "normal_command": "python3 -B verify_two_label.py --output results/two-label.normal.json",
+  "normal_optimized_json_byte_identical": true,
+  "optimized_command": "python3 -B -O verify_two_label.py --output results/two-label.optimized.json",
+  "power_slabs": 4,
+  "result": "PASS_GLOBAL_SHARP_TWO_LABEL_POSITIVITY",
+  "rh_proved": false,
+  "source_hashes": {
+    "TWO_LABEL.md": "3d8f05192841107bcf9b7904e212ebcb7db3afc8440cc813cc9b513479f5bd5d",
+    "check_threshold_arb.py": "82013dad13521fd9b619e18b6e4efe23ea4a8f7f1d5632e930964f2f512c7615",
+    "test_two_label.py": "ed921cbb565dae7d1fb414b353651c11f90478096a8004ae7dfc7254807b984e",
+    "verify_horizon_stitch.py": "8486059b8468ceb6cb59d34c4c16c61eeb72a8097583596e5253b934571e5104",
+    "verify_two_label.py": "9d58b1b9b2ef69e335ef64ff08a976a2a30051cc5e5cf23812369adf8aaf1212"
+  },
+  "status": "PROPOSED_GLOBAL_TWO_LABEL_POSITIVITY_WITH_EXECUTED_CERTIFICATES",
+  "unbounded_intervals_per_power_slab": 1
+}

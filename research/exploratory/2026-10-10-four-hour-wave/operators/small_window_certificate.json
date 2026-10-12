@@ -1,0 +1,26 @@
+{
+  "status": "EXACT_ARITHMETIC_ACCEPT",
+  "scope": "entire continuum L=1/20 positivity for literal source kernel",
+  "complete_prime_constant_upper": "722511528275603353921005750487/1267650600228229401496703205376",
+  "prime_constant_method": "zeta'(2) positive log series; convex trapezoid tail; zeta(2)=pi\u00b2/6",
+  "gamma_lower_prefix_terms": 64,
+  "W_endpoint_lower": "2601634531479083608973235561/633825300114114700748351602688",
+  "Wprime_endpoint_upper": "-218909637075084439506529738337/633825300114114700748351602688",
+  "Wsecond_complete_interval_lower": "10346794114276477556290309882455/1267650600228229401496703205376",
+  "strict_acceptance": {
+    "W_endpoint": "greater than1/250",
+    "Wprime": "less than-1/3",
+    "Wsecond": "greater than0"
+  },
+  "form_lower_coefficient": "b[-W'(L)]>1/2 multiplying the complete triangle form",
+  "checker_sha256": "6572aaa94813527f99ec4cea84b726d6c9886ebd55d9f12e22555bf6e7d451a1",
+  "helper_hashes": {
+    "check_coercivity.py": "921c74c4b0659c8f6c0d1602f16f218e71219b64e31250b457cce92a808f0f87",
+    "check_codimension14.py": "4263b37ca623e74aa8312d10b8bb98c2b75e72e61f7e501bd7329ea426b58351"
+  },
+  "not_proved": [
+    "positivity at L=1",
+    "xi/Weil terminal adapter",
+    "any all-window theorem"
+  ]
+}

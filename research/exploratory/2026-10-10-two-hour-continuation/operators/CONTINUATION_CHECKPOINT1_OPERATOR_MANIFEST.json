@@ -1,0 +1,151 @@
+{
+  "status": "FROZEN_SOURCE_AND_EXPLICIT_ETA_FIRST_CONTINUATION_CHECKPOINT",
+  "checkpoint_utc": "2026-10-10 17:37:28 UTC",
+  "operator_native_accepted_bound": "q_L(h,h)>=||G_Lh||\u00b2/800000000000 for every complex native h and every0<L<=1+10^-36, inherited complete-source/coupling scope",
+  "full_macroscopic_target": "L21/20 complete636-panel directed run active; no sign yet",
+  "source_line_interpolation": "exact positive primitive weights throughlog3; no effective sign from ordinary reconnaissance",
+  "native_hankel_criterion": "all-order complete native Hankel positivity iffRH; hierarchy notprovedforactualXi",
+  "synthetic_countermodel": "classical-strip paired roots15,100\u00b1i/2: ALL scalar powerspositive but exactquadratic Hankel=-2; notactualXi",
+  "legacy_original_run": "completed16:04:53afterpriorwave; all64RentriesoverlapTaylor andoriginalweightednormal/OreplayPASSat1e-11",
+  "files": [
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/physical_length_source.py",
+      "sha256": "b15da7904f2bdf4f4bc7e68b8dfe2f1de808bb0bac47a905d684c513dba24f1e"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/enclose_length_residual.py",
+      "sha256": "7da9c14f00654150acabd5815d49cd68ba577d3b4fc697d4f928a31a0893ecfb"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/enclose_length_weighted.py",
+      "sha256": "aed3e21e0784f387fb371b871389514c60671bd4f29449b07791d97ab9b77b16"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/PHYSICAL_LENGTH_CONTINUUM.md",
+      "sha256": "c847f1c2072d822456bde8d4fb4490deea10dba59073eadf7a1bbabb6798704a"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/check_physical_length_source.py",
+      "sha256": "e02c09d8ead1e300969f09b9b7f426cba77447806b7bd86c46a410223afdaa73"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/physical_length_controls.normal.json",
+      "sha256": "c650cdce831a678a081a15e82c85e32e46320af0d3035e67bd90c603419c6861"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/physical_length_controls.optimized.json",
+      "sha256": "c650cdce831a678a081a15e82c85e32e46320af0d3035e67bd90c603419c6861"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/enclose_length_primitive.py",
+      "sha256": "2fc80bfd130ea59bb413209cd8dd092a71e4de80cc7f387c14778626cc1e560a"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/PHYSICAL_LENGTH_PRIMITIVE_COMPLETION.md",
+      "sha256": "cdceae6052114119e13c5d9d6919847f339603a0109b279bb85a26bd989e7a7d"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/physical_length_synthesis_trace_only.json",
+      "sha256": "cce80d0385368e37f06b788ffa4d1bca22f7353cc450bb82cb86a85aed4659b5"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/legacy_original_taylor_comparison.json",
+      "sha256": "3a18f080bddb4b4f2319f663d804222ac7ec3643c949164b6859b394eda7120f"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/legacy_original_weighted_lower.json",
+      "sha256": "e2a4da516e6eaea7d19b48b4705358c45f7cd40c6e0bcab1201efdba9f5920f7"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/legacy_original_weighted_lower.optimized.json",
+      "sha256": "e2a4da516e6eaea7d19b48b4705358c45f7cd40c6e0bcab1201efdba9f5920f7"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/SUPPORTING_LINE_INTERPOLATION.md",
+      "sha256": "e2dcc17887b80e7895eb451896cd0197ea511947a3d8ce1df40c75fa00780a34"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/check_supporting_line_interpolation.py",
+      "sha256": "daa6fad4267e1351566ebde45e9e1c4367742ca148b2d1f35e3f0a58ce8fc8d4"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/supporting_line_interpolation.normal.json",
+      "sha256": "924d5c664d2483b146f1725893a38324169438030aad0d869b419b7a3b62a225"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/supporting_line_interpolation.optimized.json",
+      "sha256": "924d5c664d2483b146f1725893a38324169438030aad0d869b419b7a3b62a225"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/NATIVE_HANKEL_MECHANISM_CROSS_REVIEW.md",
+      "sha256": "72134f010ad4464d62017eb12d25faa09a64c2ce3bfd50c919c7c2c5612525f5"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/check_native_hankel_countermodel.py",
+      "sha256": "b873f04ef3b0064a5e911afae11aeff4f6708986dcc218c4b8138be08e67a879"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/native_hankel_countermodel.normal.json",
+      "sha256": "019cf31bc5d832e490fb2b54c16447a753ea54ffca9d254f5cee69724ea778d9"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/native_hankel_countermodel.optimized.json",
+      "sha256": "019cf31bc5d832e490fb2b54c16447a753ea54ffca9d254f5cee69724ea778d9"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/HAUSDORFF_COFINAL_INDEPENDENT_REVIEW.md",
+      "sha256": "ca156622c72cc80719173a96373290e71613f9c655cc47aad3ccdca26bac8b0d"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/hausdorff_independent.normal.json",
+      "sha256": "9b995ef296ec46d19592abfbf3eb6c75279497d2d0d40318dadfd1460ec9edcc"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/hausdorff_independent.optimized.json",
+      "sha256": "9b995ef296ec46d19592abfbf3eb6c75279497d2d0d40318dadfd1460ec9edcc"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/EXPLICIT_ETA_INDEPENDENT_REVIEW.md",
+      "sha256": "8bd6b410404a893868e96ecded97487b94fc51c699ff821e6d015827e18dc76a"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/eta_independent.normal.json",
+      "sha256": "08540515ea0b484bab3d26cb7fe0cda46a746135d3c8faea4977e5f40046ded4"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/eta_independent.optimized.json",
+      "sha256": "08540515ea0b484bab3d26cb7fe0cda46a746135d3c8faea4977e5f40046ded4"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/eta-review/EXPLICIT_ETA.md",
+      "sha256": "55895ae36d87322cdc4ca3424027bcc63e5a020a0803650a7d2e21d215352ff8"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/eta-review/check_eta.py",
+      "sha256": "b056bc4411acec38a6e81b8c085b8c04d393acc26c1eed931da2b9e604909d70"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/eta-review/results/eta.normal.json",
+      "sha256": "08540515ea0b484bab3d26cb7fe0cda46a746135d3c8faea4977e5f40046ded4"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/operators/eta-review/results/eta.optimized.json",
+      "sha256": "08540515ea0b484bab3d26cb7fe0cda46a746135d3c8faea4977e5f40046ded4"
+    }
+  ],
+  "exclude": [
+    "activeRreceipt",
+    "activeprogresslog",
+    "incomplete2paneldiagnostic",
+    "ordinary supporting-line reconnaissance",
+    "any speculative fullwindow sign"
+  ],
+  "git_mutations_performed": false,
+  "publication_state": "root disconnected again; pendingrootrecovery; no childGit authorization",
+  "not_proved": [
+    "macroscopic newlength positivity untilfullgate",
+    "all-window nativepositivity",
+    "RH"
+  ],
+  "scheduled_root_checkpoint_utc": "2026-10-10 17:40:00 UTC"
+}

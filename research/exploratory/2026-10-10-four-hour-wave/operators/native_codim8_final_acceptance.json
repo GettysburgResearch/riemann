@@ -1,0 +1,47 @@
+{
+  "status": "INDEPENDENTLY_ACCEPTED_COMPLETE_TAYLOR8_NATIVE_WINDOW",
+  "created_utc": "2026-10-10 15:45:59 UTC",
+  "full_R_panels": 636,
+  "order": 76,
+  "bits": 256,
+  "endpoint_scale": "2^-50",
+  "scalar_lower_status": "INCONCLUSIVE; failed scalar27/2 bound only, no negative native test",
+  "weighted_lower_status": "ACCEPT U-B128>=1e-11I",
+  "owner_weighted_primitive_synthesis_normal_optimized_each_byte_identical": true,
+  "independent_full_coverage_rational_matrix_weighted_primitive_accepted": true,
+  "independent_exact_synthesis_branch_accepted": true,
+  "complement_dimension": 8,
+  "removed_sines": 5,
+  "trial_sines": "6..105",
+  "M": 1,
+  "exact_synthesis_K": 1,
+  "exact_synthesis_delta": "1/2400000000012",
+  "native_scope": "every complexL2 test,every0<L<=1;compact injective G_L primitive norm, notnativeL2gap",
+  "same_scope_stronger_codim14_delta": "1/600000000000",
+  "new_all_window_or_RH_claimed": false,
+  "completed_matrix_review_sha256": "ee43afde5ba135d2957e8ae64591d074bd1a5b11b3d3cabeb18b0b99bdef2790",
+  "independent_coverage_and_rational_LDL_sha256": "cce4477d8cc2ddf25b60b7b11169967156dcf6628cc572d250f9209bcd4814fb",
+  "independent_synthesis_review_sha256": "9a76b0ed60cc930f6c0e74d0088e430de6b72ded29f8acc0a19c8ebdb5123122",
+  "owner_files": [
+    {
+      "path": "directed_residual_codim8_trial100_taylor.json",
+      "sha256": "cba3fb5f17e71678b115c03813b97dda37ec45c19c24604bd302fd8baaf2ed19"
+    },
+    {
+      "path": "directed_weighted_lower_codim8_trial100_taylor.json",
+      "sha256": "98f3b7fc3ae64bc6c60e0cc12b0b9e10dfbc56889baa517f34d15b58ed9c4ffe"
+    },
+    {
+      "path": "directed_primitive_norm_codim8_trial100_taylor.json",
+      "sha256": "58138928e4483823ed28931d796da3e435073cf9b4e007959a80a383b8484d61"
+    },
+    {
+      "path": "directed_exact_synthesis_codim8_trial100_taylor.json",
+      "sha256": "7aa239a063f4253eb3bfe94d04ad0d121d4525354e3013a95d922e35b5106d3e"
+    },
+    {
+      "path": "NATIVE_CODIM8_FINAL_CERTIFICATE.md",
+      "sha256": "09fd28df15922f24687232fe8d7783f5afe826cd3d6d21f7dc8fb33e513fe0df"
+    }
+  ]
+}

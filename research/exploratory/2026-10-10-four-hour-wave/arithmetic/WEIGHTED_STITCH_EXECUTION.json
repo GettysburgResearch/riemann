@@ -1,0 +1,62 @@
+{
+  "analytic_infinite_statements_machine_proved": false,
+  "analytic_review_status": "Root independently accepted analytic W1-W8/S-W1-S-W3, source and normal/optimized runtime on 2026-10-10",
+  "bounded_intervals_per_power_slab": 21,
+  "bounded_rectangle_certificates": 315,
+  "complete_prime_count": 348513,
+  "critical_power_one_proved": false,
+  "execution_time_utc": "2026-10-10T13:25:45.829916+00:00",
+  "global_sufficient_power": "33/25",
+  "independent_controls": {
+    "errors": 0,
+    "failures": 0,
+    "normal_command": "python3 -B test_weighted_moments.py",
+    "optimized_command": "python3 -B -O test_weighted_moments.py",
+    "skips": 0,
+    "tests_per_mode": 4
+  },
+  "moment_order": 6,
+  "normal_command": "python3 -B verify_weighted_stitch.py --progress --output results/weighted-stitch.normal.json",
+  "normal_optimized_json_byte_identical": true,
+  "optimized_command": "python3 -B -O verify_weighted_stitch.py --progress --output results/weighted-stitch.optimized.json",
+  "power_slabs": 15,
+  "result": "PASS_GLOBAL_SHARP_WEIGHTED_MOMENT_STITCH",
+  "result_hashes": {
+    "results/weighted-stitch.normal.json": "1f8172742b9af4999f358b647f52b30ca81560af93278ff087d28e2c2c74e9f5",
+    "results/weighted-stitch.optimized.json": "1f8172742b9af4999f358b647f52b30ca81560af93278ff087d28e2c2c74e9f5"
+  },
+  "review_status_updated_utc": "2026-10-10T13:58:37.137245+00:00",
+  "rh_proved": false,
+  "selected_product_cutoff": 10000000,
+  "source_hashes": {
+    "WEIGHTED_MOMENTS.md": "be05e986bc877a8017ba73a8d844b8d31edf492e2fbbcb90a8f5812066309f21",
+    "WEIGHTED_STITCH.md": "39d5ad957bc1ed30eca143e673b0dfa5eae66b77e9b1fad8ca483c2afbbd98f9",
+    "check_threshold_arb.py": "82013dad13521fd9b619e18b6e4efe23ea4a8f7f1d5632e930964f2f512c7615",
+    "polynomial_tail.py": "ae8ec2f91e8f00d286a7e8176d1f47bbe56a5013f22357d6dab52fa8ffb5e295",
+    "test_weighted_moments.py": "371ce71e17961aeb6e86f85a19097e6cabe7c5d13bd5316452270142e1f91c5c",
+    "verify_four_label.py": "e07cd340f82fe61e39c864d2a91a944beb5211cd884a464e20baf2289ff707b6",
+    "verify_horizon_stitch.py": "8486059b8468ceb6cb59d34c4c16c61eeb72a8097583596e5253b934571e5104",
+    "verify_two_label.py": "9d58b1b9b2ef69e335ef64ff08a976a2a30051cc5e5cf23812369adf8aaf1212",
+    "verify_weighted_stitch.py": "14355093aed45e9a4378dc6a405ec251ea9c699c808cca4473983563776c85ab",
+    "weighted_moments.py": "715dae97b834735064aae0a9951c505750697ec003aacaafffa17c5975621677"
+  },
+  "status": "ROOT_REVIEWED_COMPONENT_DEDUCTION_WITH_EXECUTED_CERTIFICATES",
+  "tail_leaf_counts": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "whole_unbounded_tail_certificates": 15
+}

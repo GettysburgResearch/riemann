@@ -1,0 +1,23 @@
+{
+  "analytic_review_status": "Root independently accepted analytic B-E1-B-E4, Bonferroni monotonicity, and source on 2026-10-10; parent scalar replay pending",
+  "critical_power_one_proved": false,
+  "iterations_per_bracket": 42,
+  "normal_command": "python3 -B verify_exclusion_barrier.py --output results/exclusion-barrier.normal.json",
+  "normal_optimized_json_byte_identical": true,
+  "optimized_command": "python3 -B -O verify_exclusion_barrier.py --output results/exclusion-barrier.optimized.json",
+  "result_hashes": {
+    "results/exclusion-barrier.normal.json": "553a3970f429e17687c70ea2b93aafa0c6a8124290e31b258d1355f73c3c16b4",
+    "results/exclusion-barrier.optimized.json": "553a3970f429e17687c70ea2b93aafa0c6a8124290e31b258d1355f73c3c16b4"
+  },
+  "review_status_updated_utc": "2026-10-10T13:58:37.141431+00:00",
+  "rh_proved": false,
+  "scalar_brackets": 4,
+  "source_hashes": {
+    "FIXED_PAIR_BARRIER.md": "baff7bdeac2c63a97b6757dfd23d3638a30478a7a63babb921529e396717280d",
+    "check_threshold_arb.py": "82013dad13521fd9b619e18b6e4efe23ea4a8f7f1d5632e930964f2f512c7615",
+    "verify_exclusion_barrier.py": "d28dc6eae28be1d07b92cca4da8ca3981ad387c7a53d90d4d90856c2d42b2cdb",
+    "verify_four_label.py": "e07cd340f82fe61e39c864d2a91a944beb5211cd884a464e20baf2289ff707b6"
+  },
+  "status": "ROOT_REVIEWED_COMPONENT_DEDUCTION_WITH_EXECUTED_CERTIFICATES",
+  "time_utc": "2026-10-10T13:53:25.149133+00:00"
+}

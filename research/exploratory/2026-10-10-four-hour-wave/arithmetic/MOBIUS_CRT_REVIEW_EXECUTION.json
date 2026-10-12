@@ -1,0 +1,58 @@
+{
+  "crt_exact_guard_count": 501,
+  "execution_time_utc": "2026-10-10T14:18:46.453272+00:00",
+  "full_family_zero_free_input_proved_here": false,
+  "independent_controls": "Complete trial-factor squarefree-ideal band census and real-coordinate covariance cumulants at D=128,256,512",
+  "replays": [
+    {
+      "byte_identical": true,
+      "exit_codes": [
+        0,
+        0
+      ],
+      "normal_command": "python3 -B check_mobius_translation.py --output /tmp/riemann-crt-audit.normal.json",
+      "optimized_command": "python3 -B -O check_mobius_translation.py --output /tmp/riemann-crt-audit.optimized.json",
+      "output_hashes": {
+        "/tmp/riemann-crt-audit.normal.json": "246bed1bb666c2fa01b91b812e981c90c1a6f53d8a8beae48b61f6ed507186f5",
+        "/tmp/riemann-crt-audit.optimized.json": "246bed1bb666c2fa01b91b812e981c90c1a6f53d8a8beae48b61f6ed507186f5"
+      }
+    },
+    {
+      "byte_identical": true,
+      "exit_codes": [
+        0,
+        0
+      ],
+      "normal_command": "python3 -B probe_sextic_cumulants.py --scales 128 256 512 --k 4 --output /tmp/riemann-cumulant-audit.normal.json",
+      "optimized_command": "python3 -B -O probe_sextic_cumulants.py --scales 128 256 512 --k 4 --output /tmp/riemann-cumulant-audit.optimized.json",
+      "output_hashes": {
+        "/tmp/riemann-cumulant-audit.normal.json": "f9af42849f56170dd7efbc8618f834e639c20f2e5c4bbc767a3c076afcafe507",
+        "/tmp/riemann-cumulant-audit.optimized.json": "f9af42849f56170dd7efbc8618f834e639c20f2e5c4bbc767a3c076afcafe507"
+      }
+    },
+    {
+      "byte_identical": true,
+      "exit_codes": [
+        0,
+        0
+      ],
+      "normal_command": "python3 -B check_crt_cross_review.py",
+      "optimized_command": "python3 -B -O check_crt_cross_review.py",
+      "output_hashes": {
+        "/tmp/riemann-crt-independent.normal.json": "fcd16387506659146ae06043d05c9a51792c85d1547088eec129524a201ad449",
+        "/tmp/riemann-crt-independent.optimized.json": "fcd16387506659146ae06043d05c9a51792c85d1547088eec129524a201ad449"
+      }
+    }
+  ],
+  "reviewer": "arithmetic-wave agent",
+  "rh_proved": false,
+  "short_row_moment_proved": false,
+  "source_hashes": {
+    "arithmetic/MOBIUS_CRT_CROSS_REVIEW.md": "b908828999a54bf0db20b2a15d850e3b0ef979e3d5c2581acd8fb1a5a9de0e49",
+    "arithmetic/check_crt_cross_review.py": "c09c7932068fcc222a481803b0f1cdb7ff09a43e4e2cd2b0cc753b106be7587c",
+    "correlations/MOBIUS_CRT_TRANSLATION.md": "bde2f3a2c15aa514fdf51a5c0956691170633aa6d79427b7dc3a7f7ff6412710",
+    "correlations/check_mobius_translation.py": "20f9c6364d9459ac84b96b7ca9c2bc0e7b7e63093ce7bddbf1ff40b0839c5734",
+    "correlations/probe_sextic_cumulants.py": "e3dec86cc6b07d80bb6bb61aababf460eb8ccd3738852869837b8e1b8c50a1be"
+  },
+  "status": "ACCEPT_SCOPED_ELEMENTARY_CRT_AND_CONDITIONAL_TRANSLATOR_COMPONENT"
+}

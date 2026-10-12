@@ -1,0 +1,48 @@
+{
+  "analytic_infinite_statements_machine_proved": false,
+  "analytic_review_status": "Root independently accepted the full M-A1--M-A9 proof on 2026-10-10, including inclusive endpoint identity, all-power transition error, convex constant 461/24, strict horizon 49, and critical constants 45/120.",
+  "component": "Signed Mertens-to-SHARP activation error and explicit horizons M-A1--M-A9",
+  "control_log_hashes": {
+    "/tmp/riemann-mertens-controls.normal": "f2298e92fda627a45fdb77807897ffa170239ce227ae56a9bf30c9b9d5cd8e8d",
+    "/tmp/riemann-mertens-controls.optimized": "21c7fbf1b83f2b9a2a506fc40d2ee14e3e6d4895f469d0451893cb03e0742899"
+  },
+  "critical_positivity_proved": false,
+  "execution_time_utc": "2026-10-10T14:14:19.687990+00:00",
+  "explicit_hypothesis": "|M(y)| <= C_M y^(7/8) for all real y >= 1; C_beta=C_M(1+67^(-7/8)) remains symbolic.",
+  "external_zero_free_input_verified_here": false,
+  "independent_controls": {
+    "development_correction": "Replaced unsupported Arb .abs() method by Python abs(); both final modes pass.",
+    "errors": 0,
+    "failures": 0,
+    "normal_command": "python3 -B test_mertens_activation.py",
+    "normal_exit_code": 0,
+    "optimized_command": "python3 -B -O test_mertens_activation.py",
+    "optimized_exit_code": 0,
+    "scope": "Exact rational scalar guards; independent literal-beta finite-source controls of the piecewise error; native jump/multiplicity guards. Finite-source tests do not certify an infinite native Mertens hypothesis.",
+    "skips": 0,
+    "tests_per_mode": 3
+  },
+  "prior_qualitative_result": {
+    "path": "standalone/2026-10-10-sextic-critical-core/POLYNOMIAL_CRITICAL_HORIZON.md",
+    "pull_request": "https://github.com/GettysburgResearch/riemann/pull/915",
+    "scope": "Qualitative uniform Mertens expansion, polynomial horizon, converse, and exact horizon infimum are inherited from PR915.",
+    "sha256": "664cffb7738fc9cce5d5bd81916e10e5760dff0072fefeb55a2d96317cf0c4a6"
+  },
+  "python_version": "3.12.14",
+  "quantitative_conclusions": {
+    "critical_F_bound": "|F(x)| <= 45 C_beta x^(3/8)",
+    "negative_mass_bound": "N(Y) <= 120 C_beta (Y^(3/8)-1)",
+    "strict_horizon": "x > (49 C_beta / (m-1))^8 for 1 < m <= 3/2",
+    "uniform_error_constant": "461/24"
+  },
+  "rh_proved": false,
+  "source_hashes": {
+    "MERTENS_ACTIVATION.md": "39dd190581d394b7a43907035996d69c0714cf449be9cbca88f89cc1613362b2",
+    "NEGATIVE_MASS.md": "11a0e48a094ce262ca60224942c9bffd2207380ff55cf83dee96d5561f8f3f16",
+    "POWER_THRESHOLD.md": "3934f90526577d873a3fb640672ab80825aed584d874ab3340aaab1fa823fed5",
+    "ZERO_FREE_MERTENS.md": "c056a3d26a45025bd37500b80bcde6a25856215fae6a69372b8fc0fd4dc8924e",
+    "test_mertens_activation.py": "f8e8ab8f2f93512e82b7a77b2e57cd6b9ca6ff9f32a86d29426d8fc6ff9c9405",
+    "verify_horizon_stitch.py": "8486059b8468ceb6cb59d34c4c16c61eeb72a8097583596e5253b934571e5104"
+  },
+  "status": "ROOT_REVIEWED_QUANTITATIVE_COMPONENT_DEDUCTION"
+}

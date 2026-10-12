@@ -1,0 +1,45 @@
+{
+  "actual_native_sharp_band_profile": false,
+  "analytic_review_status": "Root independently accepted C-P1--C-P4 on 2026-10-10: collision thresholds, exact cumulant and separate concavity, with finite-profile source scope retained; root runtime replay pending.",
+  "checker_arguments": "none; JSON emitted to stdout",
+  "complete_residue_rows": 1729,
+  "even_moment_orders_checked": [
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16
+  ],
+  "execution_time_utc": "2026-10-10T14:22:54.723733+00:00",
+  "exit_codes": [
+    0,
+    0
+  ],
+  "explicit_manifest": [
+    "CRT_PRODUCT_MOMENTS.md",
+    "check_crt_product_moments.py",
+    "CRT_PRODUCT_EXECUTION.json",
+    "results/crt-products.normal.json",
+    "results/crt-products.optimized.json"
+  ],
+  "infinite_short_row_upper_bound_proved": false,
+  "interpreter": "/workspace/.riemann-tools/python/bin/python3",
+  "normal_command": "python3 -B check_crt_product_moments.py",
+  "normal_optimized_json_byte_identical": true,
+  "optimized_command": "python3 -B -O check_crt_product_moments.py",
+  "rational_cube_vertices_checked": 8,
+  "result_hashes": {
+    "results/crt-products.normal.json": "7b59062e58fe4a59488d7ecc3337d0f61024ef014c2ed5b7ac6e635cc3ed83e2",
+    "results/crt-products.optimized.json": "7b59062e58fe4a59488d7ecc3337d0f61024ef014c2ed5b7ac6e635cc3ed83e2"
+  },
+  "rh_proved": false,
+  "source_hashes": {
+    "CRT_PRODUCT_MOMENTS.md": "fe5aa710f9bc7884981dc296534025b718fb05717ac5106c061ca52df6652482",
+    "check_crt_product_moments.py": "fab35477a802e7c17b6d36af5c016f9c0441ca83c89a078670c6e88906bec88b"
+  },
+  "status": "ROOT_REVIEWED_ELEMENTARY_PRODUCT_PROFILE_WITH_EXECUTED_EXACT_CONTROLS",
+  "working_directory": "research/exploratory/2026-10-10-four-hour-wave/arithmetic"
+}

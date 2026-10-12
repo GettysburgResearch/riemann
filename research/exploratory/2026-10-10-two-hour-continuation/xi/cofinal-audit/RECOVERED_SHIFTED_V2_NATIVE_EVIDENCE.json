@@ -1,0 +1,70 @@
+{
+  "attribution_support": "review_setup/kappa_proof_audit confirms completed parent independent SM_V2 receipts and logs in message at18:20UTC; additionally checked all11 source hashes",
+  "byte_identical_normal_optimized_official": true,
+  "cofinal_or_rh_claim": false,
+  "copied_runtime_evidence": [
+    {
+      "bytes": 771832,
+      "original_mtime_utc": "2026-10-10T17:49:04.302984+00:00",
+      "preserved_path": "research/exploratory/2026-10-10-two-hour-continuation/xi/cofinal-audit/recovered_shifted_v2_independent_normal.json",
+      "recovered_from": "/tmp/shifted-v2-independent-normal.json",
+      "sha256": "d6cf40e46dbe0292aff5a48dc5ebec357f378ffed4b2e3aefbfe4d848d517ba3"
+    },
+    {
+      "bytes": 771832,
+      "original_mtime_utc": "2026-10-10T17:49:51.302458+00:00",
+      "preserved_path": "research/exploratory/2026-10-10-two-hour-continuation/xi/cofinal-audit/recovered_shifted_v2_independent_optimized.json",
+      "recovered_from": "/tmp/shifted-v2-independent-optimized.json",
+      "sha256": "d6cf40e46dbe0292aff5a48dc5ebec357f378ffed4b2e3aefbfe4d848d517ba3"
+    },
+    {
+      "bytes": 1011,
+      "original_mtime_utc": "2026-10-10T17:49:04.302984+00:00",
+      "preserved_path": "research/exploratory/2026-10-10-two-hour-continuation/xi/cofinal-audit/recovered_shifted_v2_independent_normal.log",
+      "recovered_from": "/tmp/shifted-v2-independent-normal.log",
+      "sha256": "96f004c8739966bd1dbeeb9333112e76a0c06ab3099cbfcfecd2314619ea3158"
+    },
+    {
+      "bytes": 1011,
+      "original_mtime_utc": "2026-10-10T17:49:51.302458+00:00",
+      "preserved_path": "research/exploratory/2026-10-10-two-hour-continuation/xi/cofinal-audit/recovered_shifted_v2_independent_optimized.log",
+      "recovered_from": "/tmp/shifted-v2-independent-optimized.log",
+      "sha256": "96f004c8739966bd1dbeeb9333112e76a0c06ab3099cbfcfecd2314619ea3158"
+    }
+  ],
+  "current_native_binary_bindings_verified": {
+    "acb.abi3.so": "0f02c1b41c78644cc831483b7539f3f93e84d9941a5a6015384d844f39ac5c75",
+    "acb_series.abi3.so": "96096a93d8b1a5ca6222690b3fbdd9ee8fc935aa281f8fcd8af14fdbadd84cb8",
+    "arb.abi3.so": "d011dc0db2d7aa13955d8fd7f7bff1a91bcfbc18e05b8087d456d425f8b10309",
+    "libflint-6839011d.so.24.0.0": "871a4132fd1e9f3638391b2208e07088f8e3e72a10e41d45f58b150a60c2a1a9",
+    "libgmp-e0c82b6b.so.10.5.0": "33d24e675b10f8b1ab93a8ad3fa2ed5012e1b0d89dcdb97273877c6c6b9450d8",
+    "libmpfr-be332c05.so.6.2.2": "c4dfcfc7c5c7ab71d427e15f2f9fae4ace88592a81d4596a918dcc02eadfc6e3"
+  },
+  "current_source_bindings_verified": {
+    "2026-10-10-four-hour-wave/xi/outer-ray/CENSUS_FULL_COLUMN_SECTOR.md": "db662f2f7c57a61413ecf16d3f4760fd1d5d315f8328bed70984340083960c43",
+    "2026-10-10-four-hour-wave/xi/outer-ray/CENSUS_LOCALIZATION.md": "39cf1735058b98ef0821600f545455bec3a4767267751e5d9aa0621630e7b9e1",
+    "2026-10-10-four-hour-wave/xi/outer-ray/SIXTEENTH_MOMENT_CENSUS_RECOVERY.md": "f897ae7c02eb1c912557c22bdd5fa3d2d89c61cdfecaf894d43f7c8943e070d4",
+    "2026-10-10-four-hour-wave/xi/outer-ray/THEOREM.md": "2b35a58b119a6f924658a702769c401126e708e592738551e992403004cdfe6d",
+    "2026-10-10-four-hour-wave/xi/outer-ray/native_candidates.json": "bbb7fe9adce4fa9581cbb23fb558c62abafec4e568cb69c4d9f0324443ad8c20",
+    "2026-10-10-four-hour-wave/xi/outer-ray/native_slab_certificate.json": "43d7e2748c674d658398da5f50efd6728b115dfb798d023ae364fa4d35cf1490",
+    "2026-10-10-four-hour-wave/xi/outer-ray/sixteenth_moment_census.json": "964f49cc79a61b354cd77fe1f077637e54bb46f39a5643e1455e87f60fabc4d6",
+    "2026-10-10-two-hour-continuation/xi/SHIFTED_COMPLETE_MOMENTS_V2.md": "84dff8dd45a579649bf8c515ef273559147d0b3f4a12a158ce1d7fcad1e9505b",
+    "2026-10-10-two-hour-continuation/xi/check_shifted_hierarchy_v2.py": "83b310782d3c98d8cdc27dbac35d6021a5a3de72f76fa64b07b732b4cd6dda44",
+    "2026-10-10-two-hour-continuation/xi/continuation_prefix_candidates.json": "e60ea4bd85ee150bcd4ff00d535d5277266a9104c4f71217a0cc9a2cf3a59948",
+    "2026-10-10-two-hour-continuation/xi/produce_continuation_prefix.py": "d7fc0e858a4bc6f50d24f614eb7ab330a091097a4686890aee66631ad342698e"
+  },
+  "execution_attribution": "review_setup independent peer jobs; execution recovered by final_height_review, not newly executed by final_height_review",
+  "official_receipt_sha256": "d6cf40e46dbe0292aff5a48dc5ebec357f378ffed4b2e3aefbfe4d848d517ba3",
+  "own_complete_math_code_derived_review": "SHIFTED_MIXED_SOURCE_REVIEW.md SHA64856efa7d28022343f05b6f1204d1013779761da8b1f7fb4fc45cd143b685ad",
+  "scope": {
+    "all_inverse_power_interval_terms": 8049,
+    "analytic_infinite_hypotheses_authenticated_by_checker": false,
+    "complete_critical_jet_degree": 48,
+    "complete_shifted_jet_degree": 32,
+    "native_endpoint_signs": 11512,
+    "no_native_count_routine": true,
+    "old_strict_sign_imports": 2293,
+    "refined_intervals": 5756
+  },
+  "status": "PASS_RECOVERED_COMPLETED_INDEPENDENT_NATIVE_NORMAL_OPTIMIZED"
+}

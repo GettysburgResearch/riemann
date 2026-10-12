@@ -1,0 +1,517 @@
+{
+  "status": "PASS_EXACT_CONDITIONAL_REPLICA_PRICING",
+  "arithmetic": "exact rational scalar controls and exact integer divisor controls",
+  "target_kappa": "2/5",
+  "target_h": "18/23",
+  "conditional_half_plane": "20/23",
+  "open_source_moment_proved": false,
+  "rh_proved": false,
+  "checker_sha256": "a81ab38c7625e666d1802ae5595d9670409b6bf44631a6cb0409cc3ab59354a6",
+  "pricing_controls": [
+    {
+      "kappa": "0",
+      "optimal_h": "6/7",
+      "theta": "6/7"
+    },
+    {
+      "kappa": "1/200",
+      "optimal_h": "597/697",
+      "theta": "1195/1394"
+    },
+    {
+      "kappa": "1/100",
+      "optimal_h": "297/347",
+      "theta": "595/694"
+    },
+    {
+      "kappa": "3/200",
+      "optimal_h": "591/691",
+      "theta": "1185/1382"
+    },
+    {
+      "kappa": "1/50",
+      "optimal_h": "147/172",
+      "theta": "295/344"
+    },
+    {
+      "kappa": "1/40",
+      "optimal_h": "117/137",
+      "theta": "235/274"
+    },
+    {
+      "kappa": "3/100",
+      "optimal_h": "291/341",
+      "theta": "585/682"
+    },
+    {
+      "kappa": "7/200",
+      "optimal_h": "579/679",
+      "theta": "1165/1358"
+    },
+    {
+      "kappa": "1/25",
+      "optimal_h": "144/169",
+      "theta": "145/169"
+    },
+    {
+      "kappa": "9/200",
+      "optimal_h": "573/673",
+      "theta": "1155/1346"
+    },
+    {
+      "kappa": "1/20",
+      "optimal_h": "57/67",
+      "theta": "115/134"
+    },
+    {
+      "kappa": "11/200",
+      "optimal_h": "567/667",
+      "theta": "1145/1334"
+    },
+    {
+      "kappa": "3/50",
+      "optimal_h": "141/166",
+      "theta": "285/332"
+    },
+    {
+      "kappa": "13/200",
+      "optimal_h": "561/661",
+      "theta": "1135/1322"
+    },
+    {
+      "kappa": "7/100",
+      "optimal_h": "279/329",
+      "theta": "565/658"
+    },
+    {
+      "kappa": "3/40",
+      "optimal_h": "111/131",
+      "theta": "225/262"
+    },
+    {
+      "kappa": "2/25",
+      "optimal_h": "138/163",
+      "theta": "140/163"
+    },
+    {
+      "kappa": "17/200",
+      "optimal_h": "549/649",
+      "theta": "1115/1298"
+    },
+    {
+      "kappa": "9/100",
+      "optimal_h": "273/323",
+      "theta": "555/646"
+    },
+    {
+      "kappa": "19/200",
+      "optimal_h": "543/643",
+      "theta": "1105/1286"
+    },
+    {
+      "kappa": "1/10",
+      "optimal_h": "27/32",
+      "theta": "55/64"
+    },
+    {
+      "kappa": "21/200",
+      "optimal_h": "537/637",
+      "theta": "1095/1274"
+    },
+    {
+      "kappa": "11/100",
+      "optimal_h": "267/317",
+      "theta": "545/634"
+    },
+    {
+      "kappa": "23/200",
+      "optimal_h": "531/631",
+      "theta": "1085/1262"
+    },
+    {
+      "kappa": "3/25",
+      "optimal_h": "132/157",
+      "theta": "135/157"
+    },
+    {
+      "kappa": "1/8",
+      "optimal_h": "21/25",
+      "theta": "43/50"
+    },
+    {
+      "kappa": "13/100",
+      "optimal_h": "261/311",
+      "theta": "535/622"
+    },
+    {
+      "kappa": "27/200",
+      "optimal_h": "519/619",
+      "theta": "1065/1238"
+    },
+    {
+      "kappa": "7/50",
+      "optimal_h": "129/154",
+      "theta": "265/308"
+    },
+    {
+      "kappa": "29/200",
+      "optimal_h": "513/613",
+      "theta": "1055/1226"
+    },
+    {
+      "kappa": "3/20",
+      "optimal_h": "51/61",
+      "theta": "105/122"
+    },
+    {
+      "kappa": "31/200",
+      "optimal_h": "507/607",
+      "theta": "1045/1214"
+    },
+    {
+      "kappa": "4/25",
+      "optimal_h": "126/151",
+      "theta": "130/151"
+    },
+    {
+      "kappa": "33/200",
+      "optimal_h": "501/601",
+      "theta": "1035/1202"
+    },
+    {
+      "kappa": "17/100",
+      "optimal_h": "249/299",
+      "theta": "515/598"
+    },
+    {
+      "kappa": "7/40",
+      "optimal_h": "99/119",
+      "theta": "205/238"
+    },
+    {
+      "kappa": "9/50",
+      "optimal_h": "123/148",
+      "theta": "255/296"
+    },
+    {
+      "kappa": "37/200",
+      "optimal_h": "489/589",
+      "theta": "1015/1178"
+    },
+    {
+      "kappa": "19/100",
+      "optimal_h": "243/293",
+      "theta": "505/586"
+    },
+    {
+      "kappa": "39/200",
+      "optimal_h": "483/583",
+      "theta": "1005/1166"
+    },
+    {
+      "kappa": "1/5",
+      "optimal_h": "24/29",
+      "theta": "25/29"
+    },
+    {
+      "kappa": "41/200",
+      "optimal_h": "477/577",
+      "theta": "995/1154"
+    },
+    {
+      "kappa": "21/100",
+      "optimal_h": "237/287",
+      "theta": "495/574"
+    },
+    {
+      "kappa": "43/200",
+      "optimal_h": "471/571",
+      "theta": "985/1142"
+    },
+    {
+      "kappa": "11/50",
+      "optimal_h": "117/142",
+      "theta": "245/284"
+    },
+    {
+      "kappa": "9/40",
+      "optimal_h": "93/113",
+      "theta": "195/226"
+    },
+    {
+      "kappa": "23/100",
+      "optimal_h": "231/281",
+      "theta": "485/562"
+    },
+    {
+      "kappa": "47/200",
+      "optimal_h": "459/559",
+      "theta": "965/1118"
+    },
+    {
+      "kappa": "6/25",
+      "optimal_h": "114/139",
+      "theta": "120/139"
+    },
+    {
+      "kappa": "49/200",
+      "optimal_h": "453/553",
+      "theta": "955/1106"
+    },
+    {
+      "kappa": "1/4",
+      "optimal_h": "9/11",
+      "theta": "19/22"
+    },
+    {
+      "kappa": "51/200",
+      "optimal_h": "447/547",
+      "theta": "945/1094"
+    },
+    {
+      "kappa": "13/50",
+      "optimal_h": "111/136",
+      "theta": "235/272"
+    },
+    {
+      "kappa": "53/200",
+      "optimal_h": "441/541",
+      "theta": "935/1082"
+    },
+    {
+      "kappa": "27/100",
+      "optimal_h": "219/269",
+      "theta": "465/538"
+    },
+    {
+      "kappa": "11/40",
+      "optimal_h": "87/107",
+      "theta": "185/214"
+    },
+    {
+      "kappa": "7/25",
+      "optimal_h": "108/133",
+      "theta": "115/133"
+    },
+    {
+      "kappa": "57/200",
+      "optimal_h": "429/529",
+      "theta": "915/1058"
+    },
+    {
+      "kappa": "29/100",
+      "optimal_h": "213/263",
+      "theta": "455/526"
+    },
+    {
+      "kappa": "59/200",
+      "optimal_h": "423/523",
+      "theta": "905/1046"
+    },
+    {
+      "kappa": "3/10",
+      "optimal_h": "21/26",
+      "theta": "45/52"
+    },
+    {
+      "kappa": "61/200",
+      "optimal_h": "417/517",
+      "theta": "895/1034"
+    },
+    {
+      "kappa": "31/100",
+      "optimal_h": "207/257",
+      "theta": "445/514"
+    },
+    {
+      "kappa": "63/200",
+      "optimal_h": "411/511",
+      "theta": "885/1022"
+    },
+    {
+      "kappa": "8/25",
+      "optimal_h": "102/127",
+      "theta": "110/127"
+    },
+    {
+      "kappa": "13/40",
+      "optimal_h": "81/101",
+      "theta": "175/202"
+    },
+    {
+      "kappa": "33/100",
+      "optimal_h": "201/251",
+      "theta": "435/502"
+    },
+    {
+      "kappa": "67/200",
+      "optimal_h": "399/499",
+      "theta": "865/998"
+    },
+    {
+      "kappa": "17/50",
+      "optimal_h": "99/124",
+      "theta": "215/248"
+    },
+    {
+      "kappa": "69/200",
+      "optimal_h": "393/493",
+      "theta": "855/986"
+    },
+    {
+      "kappa": "7/20",
+      "optimal_h": "39/49",
+      "theta": "85/98"
+    },
+    {
+      "kappa": "71/200",
+      "optimal_h": "387/487",
+      "theta": "845/974"
+    },
+    {
+      "kappa": "9/25",
+      "optimal_h": "96/121",
+      "theta": "105/121"
+    },
+    {
+      "kappa": "73/200",
+      "optimal_h": "381/481",
+      "theta": "835/962"
+    },
+    {
+      "kappa": "37/100",
+      "optimal_h": "189/239",
+      "theta": "415/478"
+    },
+    {
+      "kappa": "3/8",
+      "optimal_h": "15/19",
+      "theta": "33/38"
+    },
+    {
+      "kappa": "19/50",
+      "optimal_h": "93/118",
+      "theta": "205/236"
+    },
+    {
+      "kappa": "77/200",
+      "optimal_h": "369/469",
+      "theta": "815/938"
+    },
+    {
+      "kappa": "39/100",
+      "optimal_h": "183/233",
+      "theta": "405/466"
+    },
+    {
+      "kappa": "79/200",
+      "optimal_h": "363/463",
+      "theta": "805/926"
+    },
+    {
+      "kappa": "2/5",
+      "optimal_h": "18/23",
+      "theta": "20/23"
+    },
+    {
+      "kappa": "81/200",
+      "optimal_h": "357/457",
+      "theta": "795/914"
+    },
+    {
+      "kappa": "41/100",
+      "optimal_h": "177/227",
+      "theta": "395/454"
+    },
+    {
+      "kappa": "83/200",
+      "optimal_h": "351/451",
+      "theta": "785/902"
+    },
+    {
+      "kappa": "21/50",
+      "optimal_h": "87/112",
+      "theta": "195/224"
+    },
+    {
+      "kappa": "17/40",
+      "optimal_h": "69/89",
+      "theta": "155/178"
+    },
+    {
+      "kappa": "43/100",
+      "optimal_h": "171/221",
+      "theta": "385/442"
+    },
+    {
+      "kappa": "87/200",
+      "optimal_h": "339/439",
+      "theta": "765/878"
+    },
+    {
+      "kappa": "11/25",
+      "optimal_h": "84/109",
+      "theta": "95/109"
+    },
+    {
+      "kappa": "89/200",
+      "optimal_h": "333/433",
+      "theta": "755/866"
+    },
+    {
+      "kappa": "9/20",
+      "optimal_h": "33/43",
+      "theta": "75/86"
+    },
+    {
+      "kappa": "91/200",
+      "optimal_h": "327/427",
+      "theta": "745/854"
+    },
+    {
+      "kappa": "23/50",
+      "optimal_h": "81/106",
+      "theta": "185/212"
+    },
+    {
+      "kappa": "93/200",
+      "optimal_h": "321/421",
+      "theta": "735/842"
+    },
+    {
+      "kappa": "47/100",
+      "optimal_h": "159/209",
+      "theta": "365/418"
+    },
+    {
+      "kappa": "19/40",
+      "optimal_h": "63/83",
+      "theta": "145/166"
+    },
+    {
+      "kappa": "12/25",
+      "optimal_h": "78/103",
+      "theta": "90/103"
+    },
+    {
+      "kappa": "97/200",
+      "optimal_h": "309/409",
+      "theta": "715/818"
+    },
+    {
+      "kappa": "49/100",
+      "optimal_h": "153/203",
+      "theta": "355/406"
+    },
+    {
+      "kappa": "99/200",
+      "optimal_h": "303/403",
+      "theta": "705/806"
+    },
+    {
+      "kappa": "1/2",
+      "optimal_h": "3/4",
+      "theta": "7/8"
+    }
+  ]
+}

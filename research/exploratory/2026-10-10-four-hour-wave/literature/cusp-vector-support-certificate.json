@@ -1,0 +1,25 @@
+{
+  "checker_sha256": "442fd0ce3d528be0542a88be58fb994f3e0361c5e5d8ed19de19f75c843db7ef",
+  "checks": {
+    "bezout_determinant": 1,
+    "complete_ramanujan_allocations": 32,
+    "local_fourier_and_exact_gauss": 168,
+    "mellin_scale_and_strip": 6,
+    "primitive_cusp_columns_mod3": 72,
+    "source_support_filter": 73,
+    "symbolic_cusp_matrix": 4,
+    "unit_conductor_normalization": 6
+  },
+  "full_generalized_moment_proved": false,
+  "imported_analysis_independently_rebuilt": false,
+  "manuscript_sha256": "caf970c667eef9686de24b2611b44768cc2b2e0fd833f143c43a0f46a341a183",
+  "rh_proved": false,
+  "source_sha256": {
+    "/workspace/.riemann-research/moment-sources/915/standalone/2026-10-10-sextic-critical-core/COUPLED_THETA_COMPLETION.md": "f3b57f69338e8736ffe4addd5a6e2ebf6d5f8976ee9d2fda5921c83ff484eb36",
+    "/workspace/.riemann-research/moment-sources/915/standalone/2026-10-10-sextic-critical-core/REFLECTION_SCALAR_AUDIT.md": "17bdce731735412cc463c50c944df9240736e5797282f2c5a4eed5a07b2e21e2",
+    "/workspace/.riemann-research/sources/qrh11-12.tex": "d9a8f15aa770cf883d0eabd2b775fad694ce20b44cba7928f5c0c9a6d8750d4d"
+  },
+  "status": "PASS_EXACT_CUSP_VECTOR_SUPPORT_CONTROLS",
+  "theta_automorphy_independently_rebuilt": false,
+  "written_adapter_independently_reviewed": true
+}

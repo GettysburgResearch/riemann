@@ -1,0 +1,114 @@
+{
+  "asymptotic_trace_contract_proved": false,
+  "checker_sha256": "5a874e80ce0e3edcd94efa26d862b0d9bf485af966fea997ea3aa45a94bab897",
+  "formal_controls": [
+    {
+      "all_pairs": 1,
+      "checked_nonzero_remainder_coefficients": 15,
+      "complete_cubic_terms": 2,
+      "degree": 6,
+      "omitted_pair_control_rejected": true,
+      "slots": 2
+    },
+    {
+      "all_pairs": 6,
+      "checked_nonzero_remainder_coefficients": 180,
+      "complete_cubic_terms": 16,
+      "degree": 6,
+      "omitted_pair_control_rejected": true,
+      "slots": 4
+    },
+    {
+      "all_pairs": 15,
+      "checked_nonzero_remainder_coefficients": 873,
+      "complete_cubic_terms": 50,
+      "degree": 6,
+      "omitted_pair_control_rejected": true,
+      "slots": 6
+    },
+    {
+      "all_pairs": 28,
+      "checked_nonzero_remainder_coefficients": 2927,
+      "complete_cubic_terms": 112,
+      "degree": 6,
+      "omitted_pair_control_rejected": true,
+      "slots": 8
+    }
+  ],
+  "generalized_moment_proved": false,
+  "native_controls": {
+    "actual_prime_ideals": [
+      [
+        7,
+        2
+      ],
+      [
+        7,
+        4
+      ],
+      [
+        13,
+        3
+      ],
+      [
+        13,
+        9
+      ],
+      [
+        19,
+        7
+      ],
+      [
+        19,
+        11
+      ],
+      [
+        31,
+        5
+      ],
+      [
+        31,
+        25
+      ]
+    ],
+    "exactly_unit_killed_tuples": 1448,
+    "full_fourth_moment": 16752,
+    "fully_distinct_ordered_tuples": 1680,
+    "leading_signed_kernel": [
+      456,
+      0
+    ],
+    "moving_mask_product_checks": 600,
+    "native_rows": 150,
+    "nonunit_symbol_zeros_exercised": 84,
+    "nonzero_surviving_tuple_kernels": 232,
+    "off_slice_growth_controls": 4,
+    "paired_critical_rational_inequalities": 192,
+    "quartic_row_identities": 150,
+    "unequal_local_factorization_checks": 3900,
+    "unit_charge_census": {
+      "0": 232,
+      "1": 320,
+      "2": 244,
+      "3": 320,
+      "4": 244,
+      "5": 320
+    },
+    "unit_orbit_symbol_checks": 1200,
+    "unit_surviving_tuples": 232
+  },
+  "power_saving_proved": false,
+  "proof_sha256": "d37ad696b46c7dda15a7faf314c46cda2d7d67e25ac8d3288c7f138aac373c13",
+  "rh_proved": false,
+  "sources": {
+    "/workspace/.riemann-research/moment-sources/914/standalone/2026-10-10-sextic-moment-conductor-core/CONDUCTOR_SECTORS.md": "c160bbb1b1d7c6bcc5514d496ad41f15fd17ea3d36206b0d05cfa0d7d6503983",
+    "/workspace/.riemann-research/moment-sources/914/standalone/2026-10-10-sextic-moment-conductor-core/INTERACTION_GRAPH.md": "46ac022dcbeee727689d1f2bc247ec22eae54850dd7e010ff2de35d42e1405c5",
+    "/workspace/.riemann-research/moment-sources/915/standalone/2026-10-10-sextic-critical-core/LOG_FREE_REPLICATED_SPIKES.md": "b59978c1c5d3b5cb904c7f22d675a67bb71b2af512db9f0577e568a04565a86b",
+    "/workspace/.riemann-research/moment-sources/915/standalone/2026-10-10-sextic-critical-core/REFLECTION_SCALAR_AUDIT.md": "17bdce731735412cc463c50c944df9240736e5797282f2c5a4eed5a07b2e21e2",
+    "/workspace/.riemann-research/moment-sources/916/standalone/2026-10-10-all-order-collision-removal/PROOF.md": "c67f2469e2d2dfce91cdf2b70220fa53978091c0756ffac9a676737e00792a3f",
+    "/workspace/.riemann-research/sources/qrh11-12.tex": "d9a8f15aa770cf883d0eabd2b775fad694ce20b44cba7928f5c0c9a6d8750d4d",
+    "/workspace/riemann/research/exploratory/2026-10-10-four-hour-wave/arithmetic/MASK_DENSITY_REFINEMENT.md": "ecddc2ee84fac81d6905663e3f08c7fbff62d54c08f2a01aa402f9e640b98d2c",
+    "/workspace/riemann/research/exploratory/2026-10-10-four-hour-wave/literature/GENERALIZED_MOMENT_ATTACK.md": "923fac6659314cff53319a80207d1aca7b58d90a154efec4f6de31844f21e94e"
+  },
+  "status": "PASS_EXACT_PRIME_SLOT_CANCELLATION_CONTROLS"
+}
