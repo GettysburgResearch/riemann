@@ -1,0 +1,230 @@
+{
+  "repository": "GettysburgResearch/riemann",
+  "packet": "2026-10-13-signed-moment-reassessment",
+  "base_commit": "97bf40329489992e9384c34d7595af6d01a40774",
+  "scope": "Pins authenticate historical source identity, not global correctness of all upstream claims. New proof scope and independent review are recorded in the packet.",
+  "repository_inputs": [
+    {
+      "commit": "2f8b6a3898a722d0602a91dea73bac344a3bb7dd",
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/literature/PRIME_SLOT_CANCELLATION.md",
+      "git_blob": "2318f310a096746e90c2a1966290e9245e733eae",
+      "sha256": "d37ad696b46c7dda15a7faf314c46cda2d7d67e25ac8d3288c7f138aac373c13",
+      "bytes": 17592,
+      "role": "Exact trace, real-scale quantifiers, incidence masks, filtered identity, and scoped tube bounds; CT1 is the refuted proposed contract."
+    },
+    {
+      "commit": "2f8b6a3898a722d0602a91dea73bac344a3bb7dd",
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/literature/SHORT_POLYNOMIAL_COLLISION_TRANSPORT.md",
+      "git_blob": "8c4e6ebd47380578f82ac1720ac4f83a3f1a053d",
+      "sha256": "c538719277b1e7de70a7e3f872fb2720668bd43ca57c9cffff6ff29b6766d5ac",
+      "bytes": 7257,
+      "role": "Exact trace, real-scale quantifiers, incidence masks, filtered identity, and scoped tube bounds; CT1 is the refuted proposed contract."
+    },
+    {
+      "commit": "2f8b6a3898a722d0602a91dea73bac344a3bb7dd",
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/literature/WIDE_SUBCRITICAL_TUBE.md",
+      "git_blob": "584714f5328350a7f33a0db5dea319444235be84",
+      "sha256": "53568631060432784811d8474e8d774257664826e8fb9fa59c0ba47959745f02",
+      "bytes": 3957,
+      "role": "Exact trace, real-scale quantifiers, incidence masks, filtered identity, and scoped tube bounds; CT1 is the refuted proposed contract."
+    },
+    {
+      "commit": "2f8b6a3898a722d0602a91dea73bac344a3bb7dd",
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/literature/COMPLEMENTARY_SHORT_TRACE_CONTRACT.md",
+      "git_blob": "34a04d5ac549264b6b620d0d52fe000e069da164",
+      "sha256": "968a2bee6d47f0a92fded0ab32c23963d31332f649dc0046604b7b568d48640c",
+      "bytes": 5882,
+      "role": "Exact trace, real-scale quantifiers, incidence masks, filtered identity, and scoped tube bounds; CT1 is the refuted proposed contract."
+    },
+    {
+      "commit": "2f8b6a3898a722d0602a91dea73bac344a3bb7dd",
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/literature/PRIME_SLOT_ROUTE_STATUS.md",
+      "git_blob": "17126bb5664d4c335a89409d45323462783ebc1f",
+      "sha256": "a03572f0f7be44bdd40befe2c86290095b54f84f2ba48f3e35a980f1e3a4fdde",
+      "bytes": 4672,
+      "role": "Exact trace, real-scale quantifiers, incidence masks, filtered identity, and scoped tube bounds; CT1 is the refuted proposed contract."
+    },
+    {
+      "commit": "2f8b6a3898a722d0602a91dea73bac344a3bb7dd",
+      "path": "research/exploratory/2026-10-10-two-hour-continuation/literature/SUBCRITICAL_RAPID_COLLISION_DECAY.md",
+      "git_blob": "c2024be6d2c41ef903f246c278b879787ecb4aac",
+      "sha256": "a41b84b54f0e4052e6700887bad5cd82552ab452744f29c1b5f70e68cbf0735e",
+      "bytes": 4808,
+      "role": "Exact trace, real-scale quantifiers, incidence masks, filtered identity, and scoped tube bounds; CT1 is the refuted proposed contract."
+    },
+    {
+      "commit": "2f8b6a3898a722d0602a91dea73bac344a3bb7dd",
+      "path": "research/exploratory/2026-10-10-four-hour-wave/literature/GENERALIZED_MOMENT_ATTACK.md",
+      "git_blob": "d95e747cff0092bbeb95f32665900512d6a6f5c2",
+      "sha256": "923fac6659314cff53319a80207d1aca7b58d90a154efec4f6de31844f21e94e",
+      "bytes": 12977,
+      "role": "Historical source-qualified comparison; no promotion of unreviewed upstream claims."
+    },
+    {
+      "commit": "2f8b6a3898a722d0602a91dea73bac344a3bb7dd",
+      "path": "research/exploratory/2026-10-10-four-hour-wave/arithmetic/ARITHMETIC_COMPLETION.md",
+      "git_blob": "55bc6974c31fe6ad6d6a707a6f3938d29fc71da3",
+      "sha256": "9b57b871a1c5d72097d793ff8773d5e8b9fc91c162979c97f3c32d2ef46d66e7",
+      "bytes": 8984,
+      "role": "Historical source-qualified comparison; no promotion of unreviewed upstream claims."
+    },
+    {
+      "commit": "2f8b6a3898a722d0602a91dea73bac344a3bb7dd",
+      "path": "research/exploratory/2026-10-10-four-hour-wave/correlations/MOBIUS_CRT_TRANSLATION.md",
+      "git_blob": "368665c7c47f10b65f72b36487d658ca7c4f0538",
+      "sha256": "bde2f3a2c15aa514fdf51a5c0956691170633aa6d79427b7dc3a7f7ff6412710",
+      "bytes": 6453,
+      "role": "Historical source-qualified comparison; no promotion of unreviewed upstream claims."
+    },
+    {
+      "commit": "2f8b6a3898a722d0602a91dea73bac344a3bb7dd",
+      "path": "research/exploratory/2026-10-10-four-hour-wave/arithmetic/CRT_SHORT_FOURIER.md",
+      "git_blob": "b5ce763b117d764173980ebe45a922c280a5faca",
+      "sha256": "1bec838317005962f86ab1940878242e7e83f5f67b566aa1a588598e1a7b9837",
+      "bytes": 6943,
+      "role": "Historical source-qualified comparison; no promotion of unreviewed upstream claims."
+    },
+    {
+      "commit": "dd70e580a5ffdbe5b140784ba6cebd173cb84792",
+      "path": "standalone/2026-10-10-all-order-collision-removal/PROOF.md",
+      "git_blob": "fd93d4424751a17cc89368039aecbd61e687ad81",
+      "sha256": "c67f2469e2d2dfce91cdf2b70220fa53978091c0756ffac9a676737e00792a3f",
+      "bytes": 18167,
+      "role": "Prior collision compression, exact kernel coefficients and mass, and remaining defect/moment hypotheses."
+    },
+    {
+      "commit": "dd70e580a5ffdbe5b140784ba6cebd173cb84792",
+      "path": "standalone/2026-10-10-all-order-collision-removal/MOMENT_FRONTIER.md",
+      "git_blob": "a120ffbc15140d47752a3716b3a895d763803243",
+      "sha256": "f4da10bd33acc50633353d2c038587ca474ea117cc2830f6c281dcd95ec6bc54",
+      "bytes": 10349,
+      "role": "Prior collision compression, exact kernel coefficients and mass, and remaining defect/moment hypotheses."
+    },
+    {
+      "commit": "dd70e580a5ffdbe5b140784ba6cebd173cb84792",
+      "path": "standalone/2026-10-10-all-order-collision-removal/continuation-balanced-closure/CYCLE_FACTORIZATION.md",
+      "git_blob": "6d0b1a48b6b5a05535efb63c99f6ce501e243e35",
+      "sha256": "c3d4e9bfd331e57d8d09ab5412c80979c02880696f38be1c85589a1e7e2e5411",
+      "bytes": 7144,
+      "role": "Prior collision compression, exact kernel coefficients and mass, and remaining defect/moment hypotheses."
+    },
+    {
+      "commit": "dd70e580a5ffdbe5b140784ba6cebd173cb84792",
+      "path": "standalone/2026-10-10-all-order-collision-removal/continuation-balanced-closure/DEFECT_BOOTSTRAP.md",
+      "git_blob": "74cec4f1355ed46c434172e5e65a43dfce07f48c",
+      "sha256": "af9d36269036af88a4f4a248abf85df76c2559054539e8b8c551547e953610fc",
+      "bytes": 4910,
+      "role": "Prior collision compression, exact kernel coefficients and mass, and remaining defect/moment hypotheses."
+    },
+    {
+      "commit": "97bf40329489992e9384c34d7595af6d01a40774",
+      "path": "standalone/2026-10-10-conductor-averages/GAUSSIAN_SAMPLED_MOMENTS.md",
+      "git_blob": "31c446ef6dce84a38cdf5d7024b75da56d1e9af2",
+      "sha256": "53625b2fc8da8162792bb40cbb329cd609ddf152d362f05fad32ac7b841d41d4",
+      "bytes": 22774,
+      "role": "Native Gaussian detector and exact primitive/Euler and causal replica conventions."
+    },
+    {
+      "commit": "6498d6cc2eded03159c7332b25fd224ad07f89c1",
+      "path": "standalone/2026-10-10-sextic-moment-descent/GENERAL_MOMENT_ATTACK.md",
+      "git_blob": "893d0e394041d16cf36d643794b544b7556303de",
+      "sha256": "a4ca15c0d731ef6000b19507b39b64a4786a7f8af9939864b3176221bf02b499",
+      "bytes": 27326,
+      "role": "Source moment extraction and sixth-power cardinality price."
+    },
+    {
+      "commit": "f9939c957f5aac6b2099b591e4988991700a152b",
+      "path": "standalone/2026-10-10-sextic-signed-reunion/MIXED_CUBIC_REPLICATION.md",
+      "git_blob": "b96fb331900830a49794cce1c98d5044de54ec9c",
+      "sha256": "fb32d3a63704950be1d30228ec03a0ee1f157f23d1c7b24a8793886160fbb30b",
+      "bytes": 19625,
+      "role": "Distinguish physical cubic polynomial copies from fixed primitive reciprocal replicas."
+    },
+    {
+      "commit": "93126fa9131ebfa93311c1874eeb4cbd93c97864",
+      "path": "standalone/2026-09-18-vasyunin-support-leakage/PROOF.md",
+      "git_blob": "fe7458c3da5bf17da5a2c146cc161a8fce43d7de",
+      "sha256": "4847f92d345a65e60306cdb1588d225dea97ea732480a21e38c10583d675ea0d",
+      "bytes": 15824,
+      "role": "Historical exact dual/support and Gram-direction audit."
+    },
+    {
+      "commit": "8c506696d8ad7772ccaf48fbb8678fcd889e8beb",
+      "path": "standalone/2026-09-21-mellin-hankel-bandwidth/PROOF.md",
+      "git_blob": "3061e23099d497d0464e84c8e8bf426d9f5280f7",
+      "sha256": "34ef314b8e6c42ddd36d21b541e644c221cdf992331e33c8536fb17d9183773e",
+      "bytes": 23469,
+      "role": "Historical source exponent map and its lack of contraction."
+    },
+    {
+      "commit": "0f82df3bf1d0bc669a1bbca09f8404b77c6fecde",
+      "path": "standalone/2026-09-21-native-covariance-compression/PROOF.md",
+      "git_blob": "d0c978936caecf5ab1532290f8fd92a2c0ce78b7",
+      "sha256": "f931ca91164e9b0a1d90b3c67c6580650fd3c2fa09b120ce8b0b7f8e96d34dcb",
+      "bytes": 14461,
+      "role": "Historical Newton compression and unresolved coarse energy."
+    },
+    {
+      "commit": "0f82df3bf1d0bc669a1bbca09f8404b77c6fecde",
+      "path": "standalone/2026-09-20-anchored-composite-covariance/MELLIN_DENSE.md",
+      "git_blob": "6ef0282f4e03af14dc3752549e5ad7f6cd1a61b9",
+      "sha256": "216dc7dd70116533beee28e4fd8148a2b77b5e661d3f9ee9765c092f4ea11696",
+      "bytes": 13855,
+      "role": "Historical Mellin covariance source."
+    },
+    {
+      "commit": "ddc25eafe85d637b6c7e8a7e276b39e4998fd648",
+      "path": "standalone/2026-09-21-completion-covariance-quotient/PROOF.md",
+      "git_blob": "889c992f1b7fc36c4a986c4fcd8dfd978b910eea",
+      "sha256": "c4f40fc4c4e9a4b7a8b2c4d0d82ec35ce94e5caa64a622566622a76f9ac75f5e",
+      "bytes": 15533,
+      "role": "Historical completion invariance and divisor-closed packet."
+    },
+    {
+      "commit": "aa725eebf89201fcbefbf7f5e209a22ec318ba5a",
+      "path": "standalone/2026-09-25-anchored-dephasing/PROOF.md",
+      "git_blob": "6f73b1face7807cc8ebf3ae83a7c8d0b39ab1b37",
+      "sha256": "f364b4fd1b86505f6723422f1b0ec42174fcd890cc4cf17f046f2e5b4b48e83e",
+      "bytes": 17212,
+      "role": "Historical dephasing range and principal-member obstruction."
+    },
+    {
+      "commit": "aa725eebf89201fcbefbf7f5e209a22ec318ba5a",
+      "path": "standalone/2026-09-25-completion-anchored-phase/PROOF.md",
+      "git_blob": "65d98e40f354fa4ebbad1aea52b37624323536ba",
+      "sha256": "6cec803fff524ffc89e188a38515ff2a9e5b41fffe8f2d679d61d9ed8c11060d",
+      "bytes": 16665,
+      "role": "Historical native cap transport and extraction cost."
+    },
+    {
+      "commit": "6498d6cc2eded03159c7332b25fd224ad07f89c1",
+      "path": "standalone/2026-10-10-sextic-moment-descent/FOURTH_MOMENT_ATTACK.md",
+      "git_blob": "ef01306bf9453d1dd41c9e4ca50793cddac0a6e7",
+      "sha256": "354e8f7f5f81d0f8821ea6e821f55546f9c9641ac0690def1ae373000b4b3d08",
+      "bytes": 37899,
+      "role": "Section 8.1 fixed-character lattice residue-cell cancellation and polynomial L growth only. Its imported quasi-Riemann premise and conductor-uniform improved reciprocal theorem are not used in this packet."
+    }
+  ],
+  "external_inputs": [
+    {
+      "author": "Sami Omar",
+      "title": "A note on the Prime Ideal Theorem",
+      "url": "https://www.wseas.us/e-library/conferences/corfu2004/papers/488-336.pdf",
+      "used": "Corollary 1, only the unconditional classical prime-ideal counting asymptotic. Root and signed/historical agents inspected the primary source; no GRH error term or conductor-uniform statement."
+    },
+    {
+      "author": "P. Stevenhagen",
+      "title": "Class Field Theory",
+      "version": "November 7, 2002",
+      "url": "https://websites.math.leidenuniv.nl/algebra/cft.pdf",
+      "used": "Theorem 3.1 and Proposition 3.10, Kummer duality and the unramified Artin power-residue symbol."
+    },
+    {
+      "author": "J. S. Milne",
+      "title": "Class Field Theory",
+      "version": "4.03, August 6, 2020",
+      "url": "https://www.jmilne.org/math/CourseNotes/CFT.pdf",
+      "used": "V.3.23 and VIII.7.4 Chebotarev; VIII.7.5 records the prime-counting form. Fixed fields and characters only."
+    }
+  ]
+}

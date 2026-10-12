@@ -95,6 +95,10 @@ The pages above describe reviewed components at their recorded sources, with lat
 
 [The conductor-average packet](standalone/2026-10-10-conductor-averages/README.md) averages the cubic double-prime conductor and combines it with rational-prime incidence to bound additional positive portions of every fixed even moment. It also enlarges the exact reflected function's continuation domain and proves recovery of a full Gaussian-test moment from a smaller prescribed scale grid. The notes preserve their precise external dependencies, distinguish tuplewise absolute accounting from earlier complete signed-block bounds, and include independent AI-agent reviews. The arithmetic sampled moment, large-singleton signed complement, full generalized hierarchy, and RH remain open.
 
+## Further research: reassessing the signed moment target
+
+[The October 13 reassessment](standalone/2026-10-13-signed-moment-reassessment/README.md) compares the earlier native reductions and proves that a proposed unfiltered complementary trace bound is false at every fixed order. It supplies a viable moving contour with a sharp factor-growth threshold, applies the existing finite norm-box repair, and classifies fixed causal replicas. A finite-group determinant model separates normalized random fluctuations from the invariant target reciprocal and gives a precisely scoped generalized-moment classification. The physical row moment and RH remain open; the probability model is not substituted for the native family. Exact sources and independent AI-agent reviews accompany the proposed proofs.
+
 ## License
 
 Project code and original research materials are available under the [MIT License](LICENSE). Third-party material retains its existing terms and notices.
