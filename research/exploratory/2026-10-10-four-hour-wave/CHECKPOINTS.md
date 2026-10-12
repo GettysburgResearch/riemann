@@ -1,6 +1,7 @@
 # Publication and review checkpoints
 
-Status: ongoing four-hour wave, 11:59:27–15:59:27 UTC on 10 October 2026.
+Status: archived four-hour wave, 11:59:27–15:59:27 UTC on 10 October 2026,
+with saved final artifacts published through the recovery request.
 
 The root coordinator owns publication. No accepted registry entry is changed.
 Scoped mathematical review below does not authenticate inherited source
@@ -146,3 +147,44 @@ Prepared around 14:40 UTC. Included work:
 The review record distinguishes full analytic audits, exact finite controls,
 directed native evaluations, serialized coverage audits and imported published
 or backend theorems. No global generalized-moment or RH result is asserted.
+
+Publication receipt: commit `814fd8c8ab4cc1df6c568c1d944d6da0de78a14c`
+pushed at approximately 14:42 UTC; remote branch verified.
+
+## Checkpoint 6: exact count cutoffs and a larger arithmetic certificate
+
+Prepared around 15:08 UTC. Included work:
+
+- Global kernel order 1400000, from a rigorously selected zero-discrepancy
+  cutoff within twenty height units, with no presumed pointwise argument
+  value. The complete integer-count lemma imports the unconditional Turing
+  integral theorem. A sharper native Gamma remainder and second integration
+  of the count error improve the single-integration order 1142000. The
+  published census includes the whole selection buffer.
+- A separate all-cutoff density refinement giving global order 900000.
+- All-real arithmetic positivity for m>=19/15, with complete identical
+  normal/optimized runs, 250 bounded rectangles and ten infinite tails;
+  independent small arithmetic reconstruction and serialized coverage audit.
+- The complete cusp-vector support return and exact reunited Ramanujan
+  cancellation, which leaves a genuine original-scale active branch;
+  exact short-norm-ball Fourier
+  transport, and the real-power critical-source causal convolution, each
+  retaining its explicit unresolved full-moment or critical-sign boundary.
+- Exact identification of the literal arithmetic continuum kernel with
+  the complete xi zero source and its all-window iff criterion. The necessary
+  all-window positivity is still open. A quantitative primitive-norm
+  consequence remains conditional on a complete finite lower certificate.
+
+Scoped reviews and source hashes distinguish native deductions, finite
+controls, complete owner arithmetic runs and imported analytic theorems.
+The growing tail kernels and bounded-window subfamilies do not establish RH.
+
+## Recovery publication of checkpoints 6 and later saved work
+
+Checkpoint 6 was prepared locally but was not committed or pushed before the
+coordinator's stream interruptions. The last confirmed earlier publication
+remained checkpoint 5 (`814fd8c`). The subsequent completed four-hour results
+and two-hour continuation are published together by the recovery commit.
+The [publication index](PUBLICATION_RECOVERY.md) identifies the frozen final
+manifests, review reports and saved exploratory artifacts. No historical
+checkpoint is retroactively described as having been pushed.

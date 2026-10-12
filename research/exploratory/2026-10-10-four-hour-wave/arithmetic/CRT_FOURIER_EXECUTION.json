@@ -1,0 +1,36 @@
+{
+  "analytic_review_status": "Root independently accepted C-F1--C-F5 on 2026-10-10: dual inverse direction, active principal versus inactive masks, local Gauss parity, full-q Parseval cost, norm-ball injectivity, and conditional vb^5 unit nonreturn. Root full checker source audit ACCEPT; root normal/optimized runtime replay PASS with byte-identical output.",
+  "checker_arguments": "none; JSON emitted to stdout",
+  "conditional_unit_nonreturn_external_input_verified_here": false,
+  "execution_time_utc": "2026-10-10T14:32:28.746571+00:00",
+  "exit_codes": [
+    0,
+    0
+  ],
+  "explicit_manifest": [
+    "CRT_SHORT_FOURIER.md",
+    "check_crt_short_fourier.py",
+    "CRT_FOURIER_EXECUTION.json",
+    "results/crt-fourier.normal.json",
+    "results/crt-fourier.optimized.json"
+  ],
+  "infinite_short_row_upper_bound_proved": false,
+  "local_gauss_and_mask_exact_guards": 130,
+  "native_sharp_band_profile_used": false,
+  "normal_command": "python3 -B check_crt_short_fourier.py",
+  "normal_optimized_json_byte_identical": true,
+  "optimized_command": "python3 -B -O check_crt_short_fourier.py",
+  "result_hashes": {
+    "results/crt-fourier.normal.json": "d7810dcc650d6df8bddfa81ef0e5dc142eb8976743e648b20171d6201c7540bb",
+    "results/crt-fourier.optimized.json": "d7810dcc650d6df8bddfa81ef0e5dc142eb8976743e648b20171d6201c7540bb"
+  },
+  "rh_proved": false,
+  "source_hashes": {
+    "CRT_SHORT_FOURIER.md": "1bec838317005962f86ab1940878242e7e83f5f67b566aa1a588598e1a7b9837",
+    "check_crt_product_moments.py": "fab35477a802e7c17b6d36af5c016f9c0441ca83c89a078670c6e88906bec88b",
+    "check_crt_short_fourier.py": "ce9c47b4ce3428dfdecad8ce1b74a763c7b0092c90d6bc43f113b47f3343dcbf"
+  },
+  "status": "ROOT_REVIEWED_SCOPED_FOURIER_COMPONENT_WITH_EXACT_EXECUTED_CONTROLS",
+  "whole_norm_ball_panels": 3,
+  "working_directory": "research/exploratory/2026-10-10-four-hour-wave/arithmetic"
+}

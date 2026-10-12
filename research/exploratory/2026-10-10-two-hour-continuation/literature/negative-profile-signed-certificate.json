@@ -1,0 +1,56 @@
+{
+  "D": 30,
+  "H": 40,
+  "actual_Schwartz_full_R2_strict_upper_bound": "-473.5",
+  "actual_Schwartz_leading_R2_strict_upper_bound": "-3",
+  "all_ordered_tuples": 256,
+  "asymptotic_cancellation_proved": false,
+  "auxiliary_spatial_full_critical_R2": [
+    -504,
+    0
+  ],
+  "auxiliary_spatial_full_fourth_moment": 2916,
+  "auxiliary_spatial_leading_R2": [
+    24,
+    0
+  ],
+  "auxiliary_spatial_rows": 150,
+  "checker_sha256": "083b6ab601216364dd2068378d33dadae7e10a066db01ef31a638e83b3b1dd52",
+  "complete_full_Schwartz_error_rational_upper_bound": "72126747/206640625",
+  "critical_groups": 54,
+  "critical_tuples": 168,
+  "full_compact_R2_approx": "-473.9436589264844",
+  "full_compact_R2_lower_exact": "-592429573658105477215246374841982807079207573417951469/1250000000000000000000000000000000000000000000000000",
+  "full_compact_R2_upper_exact": "-592429573658105477215246374841982807079207573417930531/1250000000000000000000000000000000000000000000000000",
+  "full_moment_negative": false,
+  "imported_complete_directed_row_traces": true,
+  "imported_source_sha256": {
+    "FOURIER_COMPACT_BALANCED_TRACE.md": "480cb96c363ddddf5d35306b0b25739c110b6f407e8101a43aaddae04605f120",
+    "FULL_SIGNED_COMPACT_WITNESS.md": "1c0a1718080e6f763a3531f9f9a8f8fcd31868c48d241290406fe4cef61644ca",
+    "FULL_SIGNED_COMPACT_WITNESS_INDEPENDENT_REVIEW.md": "5084650971b3af4d5dbb30ed169ecc5f30a4ce463f064edb6bcca3d5ce13d008",
+    "check_fourier_compact_trace.py": "dddf8f7c12fe022e54e19d9994da6092fd7a3a7e9da1d1d67b6daf6f5c27c598",
+    "check_full_signed_compact.py": "ace0ec9a10deef974d3cae842590bc46c2d048e65dfa5b14b659cbc7c380dc50",
+    "independent-fourier-compact-trace-normal.json": "fa2e817911ebaee9411f3b617149fa55ad98e9b7abc6e604dd6b3a1d6cc6aae8",
+    "independent-full-signed-compact-normal.json": "46e642fa1c4774f1d31166de547731762fa7f89ac3f0a3ce6b0c500f91571d93",
+    "independent-full-signed-compact-optimized.json": "46e642fa1c4774f1d31166de547731762fa7f89ac3f0a3ce6b0c500f91571d93"
+  },
+  "leading_compact_R2_approx": "-3.0512864983413936",
+  "leading_compact_R2_lower_exact": "-3814108122926742266993791921286692428805953931461789/1250000000000000000000000000000000000000000000000000",
+  "leading_compact_R2_upper_exact": "-3814108122926742266993791921286692428805953931460211/1250000000000000000000000000000000000000000000000000",
+  "leading_tuples": 24,
+  "literal_sector_source_sha256": "c160bbb1b1d7c6bcc5514d496ad41f15fd17ea3d36206b0d05cfa0d7d6503983",
+  "neutral_critical_tuples": 48,
+  "neutral_groups": 12,
+  "new_native_row_integration_performed": false,
+  "nonnegative_smooth_source_profile": true,
+  "proof_sha256": "9c5c7b2dac0b2fe3a41f03e5f08cd1a66f433bf198164ba13060c04504ce7663",
+  "rh_proved": false,
+  "source_norm_profile_samples": {
+    "13": 0,
+    "19": 1,
+    "31": 0,
+    "7": 1
+  },
+  "source_prime_columns": 4,
+  "status": "PASS_EXACT_SOURCE_REALIZABLE_NEGATIVE_PROFILE_SIGNED_WITNESS"
+}

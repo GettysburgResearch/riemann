@@ -1,0 +1,70 @@
+{
+  "actual_prime_norms": [
+    7,
+    13,
+    19,
+    31
+  ],
+  "arbitrary_ray_phase_bound_proved_by_finite_checker": false,
+  "checker_sha256": "ec0a7a1f53362f72702bae4d735942491ba89c60857179646eb75cec18d788f8",
+  "complementary_frequencies_bounded": false,
+  "continuum_tube_proved_by_finite_checker": false,
+  "generalized_moment_proved": false,
+  "orders": [
+    {
+      "certified_smaller_floor_exact": [
+        1,
+        2
+      ],
+      "corner_controls": 288,
+      "k": 1,
+      "positive_pair_floor_ball": "[0.5403023058681397174009366074429766037323 +/- 1.05e-41]",
+      "slots": 2,
+      "width_exact": "1/(2*sqrt(1))"
+    },
+    {
+      "certified_smaller_floor_exact": [
+        2,
+        2
+      ],
+      "corner_controls": 1152,
+      "k": 2,
+      "positive_pair_floor_ball": "[1.040978388302520605014188794493097578470 +/- 3.33e-40]",
+      "slots": 4,
+      "width_exact": "1/(2*sqrt(2))"
+    },
+    {
+      "certified_smaller_floor_exact": [
+        3,
+        2
+      ],
+      "corner_controls": 4608,
+      "k": 3,
+      "positive_pair_floor_ball": "[1.541206449254938209726037219554318418672 +/- 1.59e-40]",
+      "slots": 6,
+      "width_exact": "1/(2*sqrt(3))"
+    },
+    {
+      "certified_smaller_floor_exact": [
+        4,
+        2
+      ],
+      "corner_controls": 18432,
+      "k": 4,
+      "positive_pair_floor_ball": "[2.041320990245963457860505321661274431866 +/- 3.24e-40]",
+      "slots": 8,
+      "width_exact": "1/(2*sqrt(4))"
+    }
+  ],
+  "precision_bits": 192,
+  "proof_sha256": "53568631060432784811d8474e8d774257664826e8fb9fa59c0ba47959745f02",
+  "rh_proved": false,
+  "sextic_phase_count": 6,
+  "sigma_exact": [
+    2,
+    5
+  ],
+  "source_factorization_sha256": "d37ad696b46c7dda15a7faf314c46cda2d7d67e25ac8d3288c7f138aac373c13",
+  "status": "PASS_DIRECTED_WIDE_SUBCRITICAL_TUBE_CONTROLS",
+  "total_complete_pair_corner_controls": 24480
+}

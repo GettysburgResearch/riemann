@@ -1,0 +1,30 @@
+{
+  "Bernstein_N31_partition_and_all_32_factorial_moments_replayed": true,
+  "actual_Xi_or_theta_source_used": false,
+  "all_order_scalar_statements_supplied_by_the_analytic_norm_bound": true,
+  "all_order_shifted_scalar_positivity_structural_modulus_square": "16/425 < 1/25",
+  "all_order_unshifted_scalar_positivity_structural_modulus": "4/17",
+  "arithmetic": "Exact Python integer/Fraction Gaussian rational pairs; no floating predicate.",
+  "complete_strip_half_width": "1/2",
+  "exact_negative_witness": "-6004679265107767006650651555676929813388447192458246815450489249204270094465076941353107685879876182666267827/25425257148288529436449071153352845057564753264640000000000000000000000000000000000000000000000000000000000000000",
+  "finite_shifted_moments_replayed": 32,
+  "first_negative_index_in_n_zero_row": [
+    0,
+    31
+  ],
+  "infinite_inequality_hierarchy_replayed": false,
+  "mixed_node_and_binomial_formulas_compared": 32,
+  "negative_N31_weight_at_zero": "-6004679265107767006650651555676929813388447192458246815450489249204270094465076941353107685879876182666267827/25425257148288529436449071153352845057564753264640000000000000000000000000000000000000000000000000000000000000000",
+  "positive_Fourier_kernel_claimed_for_this_polynomial": false,
+  "rh_proved_or_refuted": false,
+  "scale_L": "4/3",
+  "shift_t": "1",
+  "source": "Declared finite even polynomial with simple paired zeros +/-1, +/-(2+i/2), +/-(2-i/2).",
+  "source_sha256": {
+    "COFINAL_MOMENT_OBSTRUCTION.md": "7588200870a048a52a9da84cb884e3062808d0e36f9b25a978d449340b3e8d35",
+    "HAUSDORFF_LOG_MOMENT_CRITERION.md": "4f72ef0b7685bd0346f9c0d61b54819a2c7462de78d9620473cf07383ec9c54f",
+    "check_hausdorff_countermodel.py": "bf7d200d2c3327d5abe5feaf340ed75222c23e4e4a8884c44c1cccd45f709baf"
+  },
+  "status": "PASS_EXACT_RATIONAL_HAUSDORFF_COUNTERMODEL",
+  "witness_upper_endpoint_is_strictly_negative": true
+}

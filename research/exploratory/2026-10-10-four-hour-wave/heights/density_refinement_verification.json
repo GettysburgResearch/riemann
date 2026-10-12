@@ -1,0 +1,56 @@
+{
+  "RH_proved": false,
+  "amplification_exact": "119/100",
+  "condition": "100*n^2 <= 27*T",
+  "count_base_exact": "1665293/7182250",
+  "count_constant_exact": "29/125",
+  "count_margin_exact": "989/7182250",
+  "elementary_guards": {
+    "log2pi_upper": "1838/1000",
+    "logH_lower": "28729/1000",
+    "logL0_upper": "3358/1000",
+    "pi_lower": "333/106",
+    "pi_upper": "355/113"
+  },
+  "examples": [
+    {
+      "height": 3000000000000,
+      "tail_order": 900000
+    },
+    {
+      "height": 100000000000000,
+      "tail_order": 5196152
+    },
+    {
+      "height": 1000000000000000000,
+      "tail_order": 519615242
+    },
+    {
+      "height": 1000000000000000000000000,
+      "tail_order": 519615242270
+    },
+    {
+      "height": 1000000000000000000000000000000000000,
+      "tail_order": 519615242270663188
+    }
+  ],
+  "exponential_upper_exact": "46898485222645304693697397/39448080000000000000000000",
+  "global_critical_census_used": true,
+  "global_order": 900000,
+  "input_sha256": {
+    "DENSITY_RATIONAL_REFINEMENT.md": "6369e6f0417b2f31772fc1a2c315f6ae67bc7a6cfb1cc1b28c9ce4d03e9deb29",
+    "VOLTERRA_RATIONAL_REFINEMENT.md": "a9cf619b13278b71ae7662f55aa25607f1fd8507970b6f8028922abad8e779c9",
+    "verify_density_refinement.py": "fa6eed87db72eead233a9d0532364d0a4ae52fe3f8717b370a78224a7c601d2c",
+    "verify_volterra_refinement.py": "793635294b003ec68d124390e08ba7225538d66788443704f228fa6fad12e59a"
+  },
+  "main_density_lower_exact": "3038683/10198795",
+  "main_density_upper_exact": "106/333",
+  "minimum_height": 3000000000000,
+  "minimum_order": 850000,
+  "published_inputs_replayed": false,
+  "quadrature_coefficient_exact": "165039/156250",
+  "status": "PASS_EXACT_DENSITY_RATIONAL_REFINEMENT",
+  "strict_gap_decimal": 6.654352096996152e-05,
+  "strict_gap_exact": "3138819746397629000531797841/47169426875000000000000000000000",
+  "tail_critical_census_used": false
+}

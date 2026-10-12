@@ -1,0 +1,43 @@
+{
+  "D": 30,
+  "H": 40,
+  "arithmetic": "integer Eisenstein pairs and exact prime residue fields",
+  "checker_sha256": "e5f577319fca28b115452781224fcd396c27c3255d1a040e5dfa32dd6eb6c154",
+  "columns": 8,
+  "controlled_exact_Eisenstein_pair": [
+    15576,
+    0
+  ],
+  "counts": {
+    "critical": 3696,
+    "critical_removed_by_product_diagonal": 0,
+    "leading_pairwise_coprime": 1680,
+    "nonzero_critical_row_kernels": 560,
+    "product_diagonal": 120,
+    "tuples": 4096
+  },
+  "critical_R_exact_Eisenstein_pair": [
+    1176,
+    0
+  ],
+  "full_native_fourth_moment": 16752,
+  "generalized_moment_estimate_proved": false,
+  "imported_controlled_sector_analysis_independently_rebuilt": false,
+  "leading_pairwise_coprime_R": [
+    456,
+    0
+  ],
+  "negative_controls_passed": 2,
+  "product_diagonal_exact_Eisenstein_pair": [
+    15564,
+    0
+  ],
+  "proof_sha256": "23e1f1075d49fa6d91e123b944cf5305cb7bbca8d2fc00660de567f92895b351",
+  "rh_proved": false,
+  "rows": 150,
+  "source_commit": "0cc0428fedbbfc340044c7451b3d392c1da9a103",
+  "source_hashes": {
+    "A2_COMPLETION.md": "d99eade56807077b07e5ec1325001f1592115db216e1e10e6a3906a3e01f0aad",
+    "CONDUCTOR_SECTORS.md": "c160bbb1b1d7c6bcc5514d496ad41f15fd17ea3d36206b0d05cfa0d7d6503983"
+  }
+}

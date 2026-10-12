@@ -1,0 +1,26 @@
+{
+  "status": "PASS_EXACT_XI_KERNEL_BINDING_ALGEBRA",
+  "sympy_version": "1.14.0",
+  "controls": [
+    "complete gamma partial fractions",
+    "digamma constant cancellation",
+    "two-sided prime Laplace splitting",
+    "literal archimedean numerator",
+    "complete xi Laplace identity",
+    "complete opposite-zero partial fractions",
+    "literal W(0) identity",
+    "altered Cb rejection",
+    "doubled prime rejection"
+  ],
+  "b_exact": "3/2",
+  "c_exact": "1/2",
+  "proof_sha256": "e81a3c22d4ace8ab2af0b01bb6afcd64e176ca986aacca5da58e1a63617094e6",
+  "reviewed_literal_source_sha256": "b3832a0cddc8bc1e2603c40240b608d1f06a868bda9436d8e88a146393fe007b",
+  "producer_sha256": "51c6f2f0f57dd81d6ac51bd14ed78f13558802ad03003eddd36bda86708ceeed",
+  "limitations": [
+    "analytic convergence and Laplace uniqueness require the independent proof",
+    "all-window sign is not established",
+    "RH remains open",
+    "no predecessor coefficient-trace criterion is authenticated"
+  ]
+}

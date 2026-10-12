@@ -1,0 +1,37 @@
+{
+  "arithmetic": "integer cyclotomic polynomial remainders; no floating acceptance",
+  "conditional_unit_nonreturn_analytic_input_verified_here": false,
+  "local_gauss_and_mask_guards": 130,
+  "modulus_norm": 91,
+  "native_sharp_band_profile_used": false,
+  "panels": [
+    {
+      "H": 16,
+      "exact_fourier_difference": -144,
+      "maximum_residue_multiplicity": 1,
+      "rows": 60,
+      "signed_fourth_sum": 1734,
+      "unsigned_fourth_sum": 1878
+    },
+    {
+      "H": 32,
+      "exact_fourier_difference": 144,
+      "maximum_residue_multiplicity": 2,
+      "rows": 120,
+      "signed_fourth_sum": 3666,
+      "unsigned_fourth_sum": 3522
+    },
+    {
+      "H": 64,
+      "exact_fourier_difference": 240,
+      "maximum_residue_multiplicity": 3,
+      "rows": 240,
+      "signed_fourth_sum": 7134,
+      "unsigned_fourth_sum": 6894
+    }
+  ],
+  "rh_proved": false,
+  "short_row_upper_bound_proved": false,
+  "status": "PASS_EXACT_SHORT_NORM_BALL_FOURIER_AND_GAUSS_MASKS",
+  "translator": 34
+}

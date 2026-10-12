@@ -1,0 +1,57 @@
+{
+  "RH_proved": false,
+  "Turing_source_record_sha256": "a603cd736d50be23062908b233c0e6a0e35ec265ac24b29edaeb1c4eada1bc52",
+  "amplification_exact": "38/25",
+  "condition": "200*n^2 <= 131*T at Delta(T)=0",
+  "cutoff_computed": false,
+  "examples": [
+    {
+      "height": 3000000000000,
+      "selectable_tail_order": 1401784
+    },
+    {
+      "height": 100000000000000,
+      "selectable_tail_order": 8093206
+    },
+    {
+      "height": 1000000000000000000,
+      "selectable_tail_order": 809320702
+    },
+    {
+      "height": 1000000000000000000000000,
+      "selectable_tail_order": 809320702810
+    },
+    {
+      "height": 1000000000000000000000000000000000000,
+      "selectable_tail_order": 809320702811932272
+    }
+  ],
+  "exponential_upper_exact": "580479800063744385434996572809661/382127760000000000000000000000000",
+  "global_critical_census_used": true,
+  "global_order": 1400000,
+  "input_sha256": {
+    "DENSITY_RATIONAL_REFINEMENT.md": "6369e6f0417b2f31772fc1a2c315f6ae67bc7a6cfb1cc1b28c9ce4d03e9deb29",
+    "DOUBLE_COUNT_PICK.md": "23e67ff10510aa7b27b497cd58e7e8a6f1a874c1fe3a9099ba5b7651df7a74b0",
+    "GOOD_CUTOFF_PICK.md": "2fc4b6caf69a28eda0ebd2e6a5b0d9761efb0387155a93437706676ae540d34b",
+    "VOLTERRA_RATIONAL_REFINEMENT.md": "a9cf619b13278b71ae7662f55aa25607f1fd8507970b6f8028922abad8e779c9",
+    "verify_double_count.py": "e6e9f89e6a8019f989a9ae9fc299df87cb27630b1489f46431b4a028aa21a170"
+  },
+  "maximal_even_order_at_H": 1401784,
+  "minimum_height": 3000000000000,
+  "minimum_order": 850000,
+  "native_bernoulli_controls": {
+    "cubic_remainder_explicit": "1/45",
+    "cubic_remainder_pi_coefficient": "1/60",
+    "explicit_gamma_coefficient": "-1/360",
+    "theta_bound": "0 < epsilon(t) < 1/(47*t), all t>=32",
+    "theta_lower_cubic_upper": "3743/40320",
+    "theta_upper_cubic_upper": "293/2520"
+  },
+  "primitive_coefficient_exact": "559172551/4050789000",
+  "published_inputs_replayed": false,
+  "quadrature_coefficient_exact": "45562883070469639/101269725000000000",
+  "status": "PASS_EXACT_DOUBLE_COUNT_PICK",
+  "strict_gap_decimal": 0.0016705289325330453,
+  "strict_gap_exact": "133326033815066275292957582984782363769/79810670272500000000000000000000000000000",
+  "tail_critical_census_used": false
+}

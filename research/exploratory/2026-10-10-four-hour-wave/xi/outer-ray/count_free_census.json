@@ -1,0 +1,70 @@
+{
+  "analytic_source_product_theta_or_column_theorem_authenticated_by_checker": false,
+  "arithmetic": "Arb/acb/acb_series directed ball arithmetic at224bits; exact rational final guards.",
+  "backend_binary_sha256": {
+    "acb.abi3.so": "0f02c1b41c78644cc831483b7539f3f93e84d9941a5a6015384d844f39ac5c75",
+    "acb_series.abi3.so": "96096a93d8b1a5ca6222690b3fbdd9ee8fc935aa281f8fcd8af14fdbadd84cb8",
+    "arb.abi3.so": "d011dc0db2d7aa13955d8fd7f7bff1a91bcfbc18e05b8087d456d425f8b10309",
+    "libflint-6839011d.so.24.0.0": "871a4132fd1e9f3638391b2208e07088f8e3e72a10e41d45f58b150a60c2a1a9",
+    "libgmp-e0c82b6b.so.10.5.0": "33d24e675b10f8b1ab93a8ad3fa2ed5012e1b0d89dcdb97273877c6c6b9450d8",
+    "libmpfr-be332c05.so.6.2.2": "c4dfcfc7c5c7ab71d427e15f2f9fae4ace88592a81d4596a918dcc02eadfc6e3"
+  },
+  "complete_root_real_part_lower": "sqrt(30)>5",
+  "complete_strip_half_width": "1/2",
+  "complete_zero_count_routine_called_by_this_checker": false,
+  "different_arithmetic_implementation_used": false,
+  "endpoint_signs_replayed_by_this_checker": false,
+  "exact_global_angular_projection": "851499/1030301",
+  "global_zero_free_disk_radius": "11/2",
+  "historical_Gram_Rosser_contract_used_by_this_theorem": false,
+  "imported_sign_receipts_also_contain_unused_count_claims": true,
+  "initial_root_uniqueness_or_completeness_assumed": false,
+  "native_logarithmic_jet_degree_replayed": 6,
+  "normalization": "Xi(z)=xi(1/2+i*z)",
+  "original_8049_strict_sign_facts_imported": true,
+  "published_large_zero_verification_used_by_this_theorem": false,
+  "recovered_domains": [
+    {
+      "all_lambda_positive": true,
+      "all_y_nonnegative": true,
+      "exclusion_ratio_upper": "1178406187048189440358222250653720575087760149449800239294841071519697071925368361/2054101004030947980978651461748182184357323722350172388313210277607375457818247168",
+      "height": 2048,
+      "maximum_derivative_order": 4093,
+      "recovered_complete_simple_positive_zero_count": 1561,
+      "strict_exclusion_margin": "875694816982758540620429211094461609269563572900372149018369206087678385892878807/2054101004030947980978651461748182184357323722350172388313210277607375457818247168",
+      "strict_horizontal_range": "abs(T)<2048-(r+2)/2"
+    },
+    {
+      "all_lambda_positive": true,
+      "all_y_nonnegative": true,
+      "exclusion_ratio_upper": "2017452868056328051437714723277568952746058564871971670470712023064174216075859497/2054101004030947980978651461748182184357323722350172388313210277607375457818247168",
+      "height": 2240,
+      "maximum_derivative_order": 4477,
+      "recovered_complete_simple_positive_zero_count": 1739,
+      "strict_exclusion_margin": "36648135974619929540936738470613231611265157478200717842498254543201241742387671/2054101004030947980978651461748182184357323722350172388313210277607375457818247168",
+      "strict_horizontal_range": "abs(T)<2240-(r+2)/2"
+    }
+  ],
+  "refined_222_strict_endpoint_sign_facts_imported": true,
+  "residual_inverse_sixth_moment_interval": [
+    "711728010499629058136857358546515747196640902318702583/113078212145816597093331040047546785012958969400039613319782796882727665664",
+    "726594961468948725165750129414933807558607176333311991/113078212145816597093331040047546785012958969400039613319782796882727665664"
+  ],
+  "rh_proved": false,
+  "selected_interval_inverse_sixth_terms_replayed": 8049,
+  "source_sha256": {
+    "xi/outer-ray/CENSUS_FULL_COLUMN_SECTOR.md": "db662f2f7c57a61413ecf16d3f4760fd1d5d315f8328bed70984340083960c43",
+    "xi/outer-ray/CENSUS_LOCALIZATION.md": "39cf1735058b98ef0821600f545455bec3a4767267751e5d9aa0621630e7b9e1",
+    "xi/outer-ray/COUNT_FREE_CENSUS_RECOVERY.md": "8b05e1b47a7cc423083fed2817813a5f20586cafc9015626815adc095498b9ce",
+    "xi/outer-ray/NATIVE_SLAB_CERTIFICATE.md": "0cb56603222f874f9783404f691c32a5e409c2a8fe96c998d75ef6f39c8ef03e",
+    "xi/outer-ray/REFINED_PREFIX_MOMENTS.md": "d2d26190cefca1a6fe0e5084ac3cfd0197b9059cedeb38f1a45bb242a344eaaa",
+    "xi/outer-ray/THEOREM.md": "2b35a58b119a6f924658a702769c401126e708e592738551e992403004cdfe6d",
+    "xi/outer-ray/check_count_free_census.py": "d559d6554b91307ef169e5cb1f501ae12791ea636c0e9fa32f89203622d3cf3e",
+    "xi/outer-ray/native_candidates.json": "bbb7fe9adce4fa9581cbb23fb558c62abafec4e568cb69c4d9f0324443ad8c20",
+    "xi/outer-ray/native_slab_certificate.json": "43d7e2748c674d658398da5f50efd6728b115dfb798d023ae364fa4d35cf1490",
+    "xi/outer-ray/refined_prefix_candidates.json": "cd8a4c8baa5a235823ebc546a7b92ab63b92113b6f1af7550a13e67b99c376b1",
+    "xi/outer-ray/refined_prefix_moments.json": "95204a030b6b86df781908aa7f472cf63edde02b226558b0713a1442177e08ba"
+  },
+  "status": "PASS_DIRECTED_COUNT_FREE_CENSUS_GUARDS",
+  "strict_native_xi_zero_seed_lower": "26804699334178742915685900867607124665929035129715523492824901187141/53919893334301279589334030174039261347274288845081144962207220498432"
+}

@@ -1,0 +1,95 @@
+{
+  "Mertens_hypothesis_independently_proved": false,
+  "U_B_independently_proved": false,
+  "asymptotic_counting_proof_reviewed": true,
+  "local_euler_product_controls": 3,
+  "pole_tail_controls": [
+    [
+      "1/10",
+      1,
+      "5/3"
+    ],
+    [
+      "1/10",
+      2,
+      "5/3"
+    ],
+    [
+      "1/10",
+      3,
+      "5/6"
+    ],
+    [
+      "1/10",
+      4,
+      "5/18"
+    ],
+    [
+      "1/10",
+      5,
+      "5/72"
+    ],
+    [
+      "3/8",
+      1,
+      "12/5"
+    ],
+    [
+      "3/8",
+      2,
+      "12/5"
+    ],
+    [
+      "3/8",
+      3,
+      "6/5"
+    ],
+    [
+      "3/8",
+      4,
+      "2/5"
+    ],
+    [
+      "3/8",
+      5,
+      "1/10"
+    ],
+    [
+      "49/100",
+      1,
+      "50/17"
+    ],
+    [
+      "49/100",
+      2,
+      "50/17"
+    ],
+    [
+      "49/100",
+      3,
+      "25/17"
+    ],
+    [
+      "49/100",
+      4,
+      "25/51"
+    ],
+    [
+      "49/100",
+      5,
+      "25/204"
+    ]
+  ],
+  "rh_proved": false,
+  "source_sha256": {
+    "/workspace/.riemann-research/moment-sources/912/standalone/2026-10-10-generalized-inverse-moments/MELLIN_AND_SPIKES.md": "f3bdeb168714d838a4b13347cd353675d9644b9629041cdf7def78dc496162e3",
+    "research/exploratory/2026-10-10-four-hour-wave/arithmetic/MASKED_CRT_NONRETURN.md": "be821d39b3c4da3a61ff32b9ceb2e154853be15fe5b5da28be33c6344888f1ba",
+    "research/exploratory/2026-10-10-four-hour-wave/arithmetic/NEGATIVE_MASS.md": "11a0e48a094ce262ca60224942c9bffd2207380ff55cf83dee96d5561f8f3f16",
+    "research/exploratory/2026-10-10-four-hour-wave/arithmetic/VARIATION_TAIL.md": "4e4306a66731a6e57721c88231bf02028b76bd88167e2892435a0ff55c3ce3a5",
+    "research/exploratory/2026-10-10-four-hour-wave/arithmetic/check_masked_crt_nonreturn.py": "308e7d6a16e8247fb304beb8af9b6a5e377c4c108e4e11977716dbd07c0abb05",
+    "research/exploratory/2026-10-10-four-hour-wave/arithmetic/test_variation_tail.py": "e943b0ff25653b6f3a342fb3bc6789a9dc05686d8e492658e2b60ef9800fccbd",
+    "research/exploratory/2026-10-10-four-hour-wave/correlations/probe_sextic_cumulants.py": "e3dec86cc6b07d80bb6bb61aababf460eb8ccd3738852869837b8e1b8c50a1be"
+  },
+  "status": "PASS_SCOPED_MATH_SOURCE_AND_FINITE_CONTROLS",
+  "symbolic_controls": 3
+}

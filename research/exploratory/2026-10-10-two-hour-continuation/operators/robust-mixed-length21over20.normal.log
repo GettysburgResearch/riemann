@@ -1,0 +1,45 @@
+{
+  "status": "DIRECTED_PHYSICAL_LENGTH_ROBUST_MIXED_PRIMITIVE_ACCEPT",
+  "native_bound": "q_ell(h,h)>=||G_ell h||\u00b2/160000000004 for every complex native h and every0<ell<=21/20",
+  "exact_length": "21/20",
+  "theta_exact": "39/40",
+  "alpha_exact": "103/80",
+  "constant_exact": "13967/20",
+  "R_receipt_sha256": "cede53ceb2e0543060c65bcd456e17983bb8197dc7127c361f918dcd5cca5191",
+  "baseline_weighted_receipt_sha256": "07252fe714f1c4a079695d71931ccd123645a4cb5bb9eff31ae7dab30d6bbfe8",
+  "fresh_full_baseline_replay_performed": true,
+  "new_R_integration_performed": false,
+  "physical_parseval_factor": "2/L",
+  "last_cosine_mode": 128,
+  "lambda8_ball": "[0.068588944097174884166622992131313913541921989104209006743281221341 +/- 1.20e-67]",
+  "tail_inverse_weight_ball": "[0.77953735504531525021486793972493094309374598038783866643413467248 +/- 3.15e-66]",
+  "epsilon_exact": "1/20000000000",
+  "dual_trace_ball": "[0.00037192503233351354938198914222467307408919531522821214935758562267 +/- 5.19e-11]",
+  "M_exact": "1",
+  "K_exact": "1",
+  "primitive_gap_exact": "1/2",
+  "synthesis_trace_ball": "[0.56404002429815044767191707549966505459175022907590868247572165165 +/- 1.02e-19]",
+  "young_theta_exact": "1/40000000001",
+  "delta_exact": "1/160000000004",
+  "frozen_dependencies": {
+    "enclose_length_robust_weighted.py": "9c774a1de5b0d0771764ffeeb7e56bfbf20620774f5a00466c3cd750a7f891d7",
+    "directed_congruence_gate.py": "e4e34814942001d1576f1c5d8a798d1c0fd968790becf9b829503173a4bf1f54",
+    "enclose_length_weighted.py": "aed3e21e0784f387fb371b871389514c60671bd4f29449b07791d97ab9b77b16",
+    "enclose_length_primitive.py": "2fc80bfd130ea59bb413209cd8dd092a71e4de80cc7f387c14778626cc1e560a",
+    "check_supporting_line_interpolation.py": "daa6fad4267e1351566ebde45e9e1c4367742ca148b2d1f35e3f0a58ce8fc8d4"
+  },
+  "frozen_source_lines": {
+    "check_coercivity.py": "921c74c4b0659c8f6c0d1602f16f218e71219b64e31250b457cce92a808f0f87",
+    "check_codimension14.py": "4263b37ca623e74aa8312d10b8bb98c2b75e72e61f7e501bd7329ea426b58351",
+    "check_codimension8_phase.py": "11f1662311aaa5cbd0f274790069c1cb88b49ff591c4d500c6a63cdbdac6e60f",
+    "check_window_family_log3.py": "7bbef766664319616bf3b55ca653e07e925a1e699cdcaa930a127485b3bfd592"
+  },
+  "producer_sha256": "38ef6a1f5125adf72f037d625222eccae509f4a146037361ca02dd20f1e1a6f3",
+  "not_proved": [
+    "independent second fullR integration",
+    "native L2 spectral gap",
+    "sign atlog3",
+    "all-window positivity",
+    "RH"
+  ]
+}

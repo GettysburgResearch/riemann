@@ -1,0 +1,54 @@
+{
+  "actual_Schwartz_full_form_lower_bound": 8852,
+  "actual_Schwartz_leading_form_lower_bound": 3916,
+  "actual_full_minimum_eigenvalue_strict_upper_bound": "-2213/1008",
+  "actual_leading_minimum_eigenvalue_strict_upper_bound": "-979/770",
+  "asymptotic_generalized_moment_proved": false,
+  "auxiliary_spatial_rows": 150,
+  "checker_sha256": "50773ad76433ef448d6233080411a3c8d452670b1a7ccee679280c23383bc1e2",
+  "complete_actual_Schwartz_kernel_numerically_recomputed": false,
+  "complete_full_Schwartz_error_rational_upper_bound": "72126747/206640625",
+  "critical_entries": 3696,
+  "exact_auxiliary_negative_minor": {
+    "determinant": -252,
+    "off_diagonal_Eisenstein_coefficients": [
+      -12,
+      -18
+    ],
+    "pair_indices": [
+      0,
+      39
+    ]
+  },
+  "exact_full_disk_form": [
+    1176,
+    0
+  ],
+  "exact_full_kernel_Hermitian": true,
+  "exact_full_kernel_diagonal_zero": true,
+  "exact_leading_disk_form": [
+    456,
+    0
+  ],
+  "full_moment_indefinite": false,
+  "full_pair_space_dimension": 64,
+  "generalized_moment_obstruction_proved": false,
+  "imported_compact_source_sha256": {
+    "FOURIER_COMPACT_BALANCED_TRACE.md": "480cb96c363ddddf5d35306b0b25739c110b6f407e8101a43aaddae04605f120",
+    "FULL_SIGNED_COMPACT_WITNESS.md": "1c0a1718080e6f763a3531f9f9a8f8fcd31868c48d241290406fe4cef61644ca",
+    "FULL_SIGNED_COMPACT_WITNESS_INDEPENDENT_REVIEW.md": "5084650971b3af4d5dbb30ed169ecc5f30a4ce463f064edb6bcca3d5ce13d008",
+    "check_fourier_compact_trace.py": "dddf8f7c12fe022e54e19d9994da6092fd7a3a7e9da1d1d67b6daf6f5c27c598",
+    "check_full_signed_compact.py": "ace0ec9a10deef974d3cae842590bc46c2d048e65dfa5b14b659cbc7c380dc50",
+    "independent-fourier-compact-trace-normal.json": "fa2e817911ebaee9411f3b617149fa55ad98e9b7abc6e604dd6b3a1d6cc6aae8",
+    "independent-fourier-compact-trace-optimized.json": "fa2e817911ebaee9411f3b617149fa55ad98e9b7abc6e604dd6b3a1d6cc6aae8",
+    "independent-full-signed-compact-normal.json": "46e642fa1c4774f1d31166de547731762fa7f89ac3f0a3ce6b0c500f91571d93",
+    "independent-full-signed-compact-optimized.json": "46e642fa1c4774f1d31166de547731762fa7f89ac3f0a3ce6b0c500f91571d93"
+  },
+  "leading_entries": 1680,
+  "leading_pair_space_dimension": 56,
+  "negative_eigenvector_source_factorization_claimed": false,
+  "proof_sha256": "07d578eb15e54e4b88dc93abc1f6e81b08b1a7e52f07c938b7ddc3122e830df0",
+  "rh_proved": false,
+  "source_prime_fields": 8,
+  "status": "PASS_EXACT_SIGNED_SECTOR_KERNEL_INERTIA_CONTROLS"
+}

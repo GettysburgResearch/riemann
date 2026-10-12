@@ -267,3 +267,57 @@ parity reduction passed independent and coordinator review and exact replay.
 The native window implication is accepted conditional on a complete directed
 U-minus-weighted-residual certificate; the pending integration supplies no
 accepted lower sign at this checkpoint.
+
+## Checkpoint 6 additions
+
+The density refinement and integer-count good-cutoff proof passed full
+coordinator and independent operator mathematical audits. Exact rational
+normal/optimized controls verify the uniform logarithmic constants, complete
+source payment and forty weighted sawtooth fixtures. The cutoff existence
+proof uses a primary-source-verified unconditional Turing integral theorem
+and the native positive-ordinate count convention. Its selected endpoint
+cost is exactly zero, including at a right-continuous count jump. The global
+order 1142000 imports the published critical-line census through 3000175332800;
+the selected cutoff itself was not numerically located.
+
+The twice-integrated refinement also passed both full analytic/code audits
+and exact normal/optimized replay. Two periodic Bernoulli integrations
+retain the explicit -1/(360z^3) term, giving the native theta remainder
+0<epsilon(t)<1/(47t) above height 32. The imported Turing theorem then
+bounds the primitive of the complete count discrepancy. Both integration
+boundaries and all continuous rational derivative norms are paid; the
+full variable-displacement argument yields global order 1400000 and
+selectable tail condition 200n^2<=131T. The same published census is imported.
+
+The larger arithmetic activation proof and complete engine passed coordinator
+and independent literature source/code audits. The full owner normal and
+optimized results are byte-identical: ten power slabs, 250 bounded rectangles
+and ten infinite tails. Independent coverage review recomputed all 390
+serialized Bernstein coefficients and checked all dyadic domains. Both
+reviewers independently reconstructed small arithmetic sources and marked
+moments; neither ran a third full 100-million raw-source computation. The
+critical power one remains open.
+
+The whole-cusp support return passed coordinator and height primary-source
+audits, with 362 exact controls replayed in both modes. Imported theta
+automorphy was not independently rebuilt. The surviving active same-scale
+branch and the full signed moment bound remain explicit. The Fourier and
+causal-transfer proofs passed coordinator mathematical/code review and
+normal/optimized exact controls; their method counterexamples use clearly
+labeled finite or modified sources.
+
+The reunited Ramanujan proof passed full coordinator source review and
+617 exact normal/optimized controls. Its finite Fourier factor has zero
+inactive coefficient. The signed split allocations cancel for every h>1;
+the active h=1 term returns at the original scale, with the standard
+face's gamma_2 orientation and all nonunit zeros retained. This prevents
+the component support vanishings from being promoted to a full moment gain.
+
+The complete literal continuum-to-xi identity and all-window criterion
+passed coordinator and independent literature full analytic review. A
+separate seven-identity symbolic oracle checks the gamma, prime and Laplace
+normalizations. No all-window positivity follows from that identification.
+The quantitative primitive-norm theorem and receipt extractor passed full
+coordinator and two independent reviews, conditional on the still-pending
+complete directed finite lower acceptance. They supply no new L2 spectral
+gap or lower-matrix sign.

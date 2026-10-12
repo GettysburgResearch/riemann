@@ -1,0 +1,32 @@
+{
+  "analytic_review_status": "Root independently accepted the full C-S1--C-S4 analytic proof and source controls, and replayed all three symbolic/rational control groups in normal and optimized modes; all passed.",
+  "control_scope": "Symbolic differential forcing and integer-power kernels; exact exponential convolution and horizon integral; rational two-atom nonnative method counterexample",
+  "development_correction": "Replaced unnecessary symbolic branch-case integral search by exact exponential integration and simplified differential forcing via z=e^(u/2); final controls pass both modes.",
+  "errors": 0,
+  "execution_time_utc": "2026-10-10T14:42:25.212243+00:00",
+  "exit_codes": [
+    0,
+    0
+  ],
+  "explicit_manifest": [
+    "SHARP_CAUSAL_TRANSFER.md",
+    "test_sharp_causal_transfer.py",
+    "SHARP_CAUSAL_EXECUTION.json"
+  ],
+  "failures": 0,
+  "native_critical_sign_proved": false,
+  "normal_command": "python3 -B test_sharp_causal_transfer.py",
+  "optimized_command": "python3 -B -O test_sharp_causal_transfer.py",
+  "prior_method_firewall": {
+    "path": "claims/refutations/R-99930-supercritical-positivity-does-not-cross-the-critical-carrier.md",
+    "sha256": "386ab3fd4d8fe8ff74f5095e303d62555bbe031ae9b06f69a5977bb9348dcf04"
+  },
+  "rh_proved": false,
+  "skips": 0,
+  "source_hashes": {
+    "SHARP_CAUSAL_TRANSFER.md": "ba5d6e4bd38411bf47b17653e6208066cf1b7dd1168e195bdb9cac27e5b6903d",
+    "test_sharp_causal_transfer.py": "a9845494470d52ed7f8c81d242c10150238f10f01edb28d11683784e428cfcbc"
+  },
+  "status": "ROOT_REVIEWED_SHARP_CAUSAL_COMPONENT_WITH_INDEPENDENT_EXECUTED_CONTROLS",
+  "tests_per_mode": 3
+}

@@ -1,0 +1,32 @@
+{
+  "all_unbounded_mixed_moment_signs_proved": false,
+  "complete_strip_half_width": "1/2",
+  "coverage": "Entire integer rectangle by two monotone extreme phase inequalities and complete analytic source proof.",
+  "difference_degree_range": [
+    0,
+    900000
+  ],
+  "first_phase_extreme": "8001/5419",
+  "historical_complete_zero_count_used": false,
+  "imported_count_free_real_head": 5419,
+  "individual_mixed_coefficient_enumeration": false,
+  "n_range": [
+    0,
+    8000
+  ],
+  "new_native_primitive_replay": false,
+  "normalization": "Xi(z)=xi(1/2+i*z)",
+  "pi_lower_bound": "pi>3, elementary analytic input",
+  "rh_proved": false,
+  "second_phase_extreme": "235929375000/159131975059",
+  "shift": "512",
+  "source_sha256": {
+    "2026-10-10-four-hour-wave/xi/outer-ray/SIXTEENTH_MOMENT_CENSUS_RECOVERY.md": "f897ae7c02eb1c912557c22bdd5fa3d2d89c61cdfecaf894d43f7c8943e070d4",
+    "2026-10-10-four-hour-wave/xi/outer-ray/THEOREM.md": "2b35a58b119a6f924658a702769c401126e708e592738551e992403004cdfe6d",
+    "2026-10-10-four-hour-wave/xi/outer-ray/sixteenth_moment_census.json": "964f49cc79a61b354cd77fe1f077637e54bb46f39a5643e1455e87f60fabc4d6",
+    "2026-10-10-two-hour-continuation/xi/MIXED_MOMENT_CONE_V2.md": "dd82159893091b776bf216cb42e20c72a0ba75894898249ce337763717344893",
+    "2026-10-10-two-hour-continuation/xi/SHIFTED_COMPLETE_MOMENTS_V2.md": "84dff8dd45a579649bf8c515ef273559147d0b3f4a12a158ce1d7fcad1e9505b",
+    "2026-10-10-two-hour-continuation/xi/check_mixed_cone_v2.py": "436d5b3f6bf98d6ebac4c5e4df126e3752a24de34bf4e95c370a89335b5e53b4"
+  },
+  "status": "PASS_EXACT_FINITE_MIXED_MOMENT_PHASE_RECTANGLE"
+}

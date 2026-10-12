@@ -1,0 +1,133 @@
+{
+  "additional_files_sha256": {
+    "COMPLEMENTARY_SHORT_TRACE_CONTRACT.md": "968a2bee6d47f0a92fded0ab32c23963d31332f649dc0046604b7b568d48640c",
+    "PRIME_SLOT_ROUTE_STATUS.md": "a03572f0f7be44bdd40befe2c86290095b54f84f2ba48f3e35a980f1e3a4fdde",
+    "independent-fourier-trace-crt-oracle-normal.json": "1289000dbfb4867215f897dd6d2ae074cd1b4c322c9f12ddc661fb680f82165c",
+    "independent-fourier-trace-crt-oracle-optimized.json": "1289000dbfb4867215f897dd6d2ae074cd1b4c322c9f12ddc661fb680f82165c",
+    "independent-masked-poisson-oracle-normal.json": "aa3fe719858af1ea8fb06ad49fdc8460aaadcf3b3afc82dc3c3fc6c3b0d30cd1",
+    "independent-masked-poisson-oracle-optimized.json": "aa3fe719858af1ea8fb06ad49fdc8460aaadcf3b3afc82dc3c3fc6c3b0d30cd1",
+    "independent-paired-frequency-normal.json": "43de0e1eae882ac93059e5e1b4503d207492bddef598d329eac07847ec12de0c",
+    "independent-paired-frequency-optimized.json": "43de0e1eae882ac93059e5e1b4503d207492bddef598d329eac07847ec12de0c",
+    "independent_fourier_trace_crt_oracle.py": "97a3884b024cfd7ddb5e0b6f70a1750af0d3a56792e77dd87ebc9838b3f9a564",
+    "independent_masked_poisson_oracle.py": "c2512b833c9232c2668797346db195b49efec4c78a212347d7987e5769730180"
+  },
+  "classical_global_paired_reciprocal_zeta_input": "Explicit imported theorem only; not rebuilt by these controls",
+  "completed_claim": "Arbitrary polynomial collision decay and negligible tube in an exact norm-filtered short representation",
+  "full_signed_moment_proved": false,
+  "git_mutation": false,
+  "imported_source_sha256": {
+    "/workspace/.riemann-research/moment-sources/914/standalone/2026-10-10-sextic-moment-conductor-core/A2_COMPLETION.md": "d99eade56807077b07e5ec1325001f1592115db216e1e10e6a3906a3e01f0aad",
+    "/workspace/.riemann-research/moment-sources/914/standalone/2026-10-10-sextic-moment-conductor-core/CONDUCTOR_SECTORS.md": "c160bbb1b1d7c6bcc5514d496ad41f15fd17ea3d36206b0d05cfa0d7d6503983",
+    "/workspace/.riemann-research/moment-sources/914/standalone/2026-10-10-sextic-moment-conductor-core/INTERACTION_GRAPH.md": "46ac022dcbeee727689d1f2bc247ec22eae54850dd7e010ff2de35d42e1405c5",
+    "/workspace/.riemann-research/moment-sources/915/standalone/2026-10-10-sextic-critical-core/LOG_FREE_REPLICATED_SPIKES.md": "b59978c1c5d3b5cb904c7f22d675a67bb71b2af512db9f0577e568a04565a86b",
+    "/workspace/.riemann-research/sources/qrh11-12.tex": "d9a8f15aa770cf883d0eabd2b775fad694ce20b44cba7928f5c0c9a6d8750d4d"
+  },
+  "independent_reviews_sha256": {
+    "../xi/cofinal-audit/COLLISION_SHORT_TRANSPORT_REVIEW.md": "a0801568b0a311052c3d7af23d4340eee2dfe154f5fe4bd03cbb06e683f1421e",
+    "../xi/cofinal-audit/collision-review/PAIRED_TUBE_COMPLEMENT_CONTRACT_REVIEW.md": "aaca6d0526094bc712d9af1057c05a8335a686162ac4adc556631598a9df3512",
+    "../xi/cofinal-audit/collision-review/UNIT_NEUTRAL_LOCAL_KERNEL_REVIEW.md": "40e66e21ca3f4fbf2694d2f4577f58e3d270c94fb83d8e3fe532951a67688ea7",
+    "FOURIER_COMPACT_BALANCED_TRACE_INDEPENDENT_REVIEW.md": "edae9fd20fbe7afcd29d2380628c17e59b1c5ba91e4fffb193135db4d9313680",
+    "FULL_SIGNED_COMPACT_WITNESS_INDEPENDENT_REVIEW.md": "5084650971b3af4d5dbb30ed169ecc5f30a4ce463f064edb6bcca3d5ce13d008",
+    "PAIRED_FREQUENCY_COLLISION_INDEPENDENT_REVIEW.md": "b2065ed859efad398f3727d5db3db813786370f1b7f7290736603fb2f5c0c6e9"
+  },
+  "new_zero_free_boundary_proved": false,
+  "norm37_example_eligibility": "Eligible in untwisted bad-set{2,3} source; omitted if a fixed ray excludes37",
+  "open_complement_contract": "COMPLEMENTARY_SHORT_TRACE_CONTRACT.md CT1",
+  "packets": [
+    {
+      "checker": "check_prime_slot_cancellation.py",
+      "checker_sha256": "5a874e80ce0e3edcd94efa26d862b0d9bf485af966fea997ea3aa45a94bab897",
+      "current_proof_checker_bindings_match": true,
+      "normal_receipt": "/tmp/prime-slot-cancellation-normal.json",
+      "optimized_receipt": "/tmp/prime-slot-cancellation-optimized.json",
+      "proof": "PRIME_SLOT_CANCELLATION.md",
+      "proof_sha256": "d37ad696b46c7dda15a7faf314c46cda2d7d67e25ac8d3288c7f138aac373c13",
+      "receipt": "prime-slot-cancellation-certificate.json",
+      "receipt_sha256": "6fe17911422bcc0c1b06b63512d1a23c42c4c92f4f92c1d7a29ae9066d93ec70",
+      "status": "PASS_EXACT_PRIME_SLOT_CANCELLATION_CONTROLS",
+      "two_mode_bytes_identical": true
+    },
+    {
+      "checker": "check_prime_slot_subcritical.py",
+      "checker_sha256": "aa682f1fe1bba6441d5367a30772c9c20f3f0583d61860e570461e93f2a63e1a",
+      "current_proof_checker_bindings_match": true,
+      "normal_receipt": "/tmp/prime-slot-subcritical-final-normal.json",
+      "optimized_receipt": "/tmp/prime-slot-subcritical-final-optimized.json",
+      "proof": "PRIME_SLOT_SUBCRITICAL_TUBE.md",
+      "proof_sha256": "5aca641b5c58e8d2efaf643c660d98cb5970235478bd9e0622e1d6014c4a1c28",
+      "receipt": "prime-slot-subcritical-certificate.json",
+      "receipt_sha256": "c1d2d7fba720270e13dce12bcf550bf6fa1c93b5a959a9bc6e580776190a6344",
+      "status": "PASS_DIRECTED_SOURCE_PRIME_SLOT_SUBCRITICAL_TUBE_CONTROLS",
+      "two_mode_bytes_identical": true
+    },
+    {
+      "checker": "check_paired_higher_collision.py",
+      "checker_sha256": "aad48e729419b89fc63bc11c4c35c7a2836cc37721c052b6fc62ed77e5138b33",
+      "current_proof_checker_bindings_match": true,
+      "normal_receipt": "/tmp/paired-higher-collision-normal.json",
+      "optimized_receipt": "/tmp/paired-higher-collision-optimized.json",
+      "proof": "PAIRED_HIGHER_MOMENT_COLLISION.md",
+      "proof_sha256": "04c3a1ec1d82d977f6a7d9a0c86486fc87161f1d41d35ba389ab5e2ce94f35f6",
+      "receipt": "paired-higher-collision-certificate.json",
+      "receipt_sha256": "b3c8828db0077187c596a07329b58f850f8d09ed862d8667f3f03fca7870f13d",
+      "status": "PASS_EXACT_PAIRED_HIGHER_COLLISION_CONTROLS",
+      "two_mode_bytes_identical": true
+    },
+    {
+      "checker": "check_subcritical_rapid.py",
+      "checker_sha256": "d36a0e94dd8bb4bb9cb4bd8a312064aebd86a391e36c749e3ecec0ccce28275a",
+      "current_proof_checker_bindings_match": true,
+      "normal_receipt": "/tmp/subcritical-rapid-normal.json",
+      "optimized_receipt": "/tmp/subcritical-rapid-optimized.json",
+      "proof": "SUBCRITICAL_RAPID_COLLISION_DECAY.md",
+      "proof_sha256": "a41b84b54f0e4052e6700887bad5cd82552ab452744f29c1b5f70e68cbf0735e",
+      "receipt": "subcritical-rapid-certificate.json",
+      "receipt_sha256": "c0a3421eb2a5e69656fbdc43fd7eefa4c47ff9e7326b2ebefc003df9296dabd3",
+      "status": "PASS_EXACT_SUBCRITICAL_RAPID_PRODUCT_CONTROLS",
+      "two_mode_bytes_identical": true
+    },
+    {
+      "checker": "check_short_collision_transport.py",
+      "checker_sha256": "99b8c49d91f7b64f35987fc896f15a87178286ed16ed54638bb146181f624747",
+      "current_proof_checker_bindings_match": true,
+      "normal_receipt": "/tmp/short-collision-transport-normal.json",
+      "optimized_receipt": "/tmp/short-collision-transport-optimized.json",
+      "proof": "SHORT_POLYNOMIAL_COLLISION_TRANSPORT.md",
+      "proof_sha256": "c538719277b1e7de70a7e3f872fb2720668bd43ca57c9cffff6ff29b6766d5ac",
+      "receipt": "short-collision-transport-certificate.json",
+      "receipt_sha256": "3fb645c5d26ab3aded7d27403f5805ee33e1895ec6769beb602ab64417299159",
+      "status": "PASS_EXACT_SHORT_POLYNOMIAL_COLLISION_TRANSPORT",
+      "two_mode_bytes_identical": true
+    },
+    {
+      "checker": "check_wide_subcritical_tube.py",
+      "checker_sha256": "ec0a7a1f53362f72702bae4d735942491ba89c60857179646eb75cec18d788f8",
+      "current_proof_checker_bindings_match": true,
+      "normal_receipt": "/tmp/wide-subcritical-normal.json",
+      "optimized_receipt": "/tmp/wide-subcritical-optimized.json",
+      "proof": "WIDE_SUBCRITICAL_TUBE.md",
+      "proof_sha256": "53568631060432784811d8474e8d774257664826e8fb9fa59c0ba47959745f02",
+      "receipt": "wide-subcritical-tube-certificate.json",
+      "receipt_sha256": "532ac5ce29403bb2c07902aadef8f992a4e65ff9812f84345614b0fe78d76838",
+      "status": "PASS_DIRECTED_WIDE_SUBCRITICAL_TUBE_CONTROLS",
+      "two_mode_bytes_identical": true
+    },
+    {
+      "checker": "check_unit_neutral_local_kernel.py",
+      "checker_sha256": "9738aabcfe92f61e7286ef72988cdf502241ee9cde6adf06a7249e4d668b598d",
+      "current_proof_checker_bindings_match": true,
+      "normal_receipt": "/tmp/unit-neutral-local-normal.json",
+      "optimized_receipt": "/tmp/unit-neutral-local-optimized.json",
+      "proof": "UNIT_NEUTRAL_LOCAL_KERNEL.md",
+      "proof_sha256": "676cdb524d9a7bb4dd1b5905f33c8cfb3432765e3a2147f3f416e95b3a035b82",
+      "receipt": "unit-neutral-local-kernel-certificate.json",
+      "receipt_sha256": "02d7658ff8dd1053b7157ad47b2b83f6a8e238698dac4e5b09aa38b4d76e528c",
+      "status": "PASS_EXACT_UNIT_NEUTRAL_LOCAL_KERNEL_CONTROLS",
+      "two_mode_bytes_identical": true
+    }
+  ],
+  "prior_four_hour_bytes_preserved": true,
+  "rh_proved": false,
+  "source_scope": "Literal finite-ray Hermitian source, exact moving exclusions, complete Schwartz rows and incidence labels",
+  "status": "PASS_FROZEN_PRIME_SLOT_ROUTE_BINDINGS_AND_TWO_MODE_RECEIPTS"
+}

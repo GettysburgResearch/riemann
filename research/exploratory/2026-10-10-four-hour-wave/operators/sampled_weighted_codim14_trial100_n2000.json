@@ -1,0 +1,28 @@
+{
+  "status": "EMPIRICAL_WEIGHTED_RESIDUAL_NOT_CERTIFIED",
+  "removed_sines": 11,
+  "last_cosine_mode": 128,
+  "source_R": "sampled_codim14_trial100_n2000.json",
+  "lower_eigenvalues": [
+    4.316532599018356e-10,
+    7.950280769987406e-08,
+    8.898198998087015e-06,
+    0.0002334369416579639,
+    0.00037031192155846356,
+    0.001220218039806564,
+    0.0015510463624299957,
+    0.0019356309515417866,
+    0.0026160563121805608,
+    0.002656667972831313,
+    0.0041340356262612385,
+    0.0042404609080893526,
+    0.00708865127647627,
+    0.008165964141676916
+  ],
+  "cost_operator_norm": 0.00015445159751353315,
+  "limitations": [
+    "ordinary sampledR",
+    "directed moments converted to float",
+    "no continuumFF acceptance"
+  ]
+}

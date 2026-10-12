@@ -1,0 +1,38 @@
+{
+  "created_utc": "2026-10-10 15:32 UTC",
+  "scope": "Frozen separately reviewed quantitative strengthening of completed native codim14 certificate to delta1/600000000000; no R mutation or integration",
+  "files": [
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/EXACT_PRIMITIVE_SYNTHESIS.md",
+      "sha256": "1e1cd511a477cf5120b0b7ca0a9ebb36ce5b115d8c3faa063e76b6870733aac9"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/enclose_exact_primitive_synthesis.py",
+      "sha256": "009ae7df8ef5acdea2be122602d8c239eb0a36ac56563bf76640469926b8a011"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/directed_exact_synthesis_codim14_trial100.json",
+      "sha256": "df598c783ec412941cfd13f3c07cb3054ae3ad32a613320318a5915ffcbe3551"
+    },
+    {
+      "path": "research/exploratory/2026-10-10-four-hour-wave/operators/exact_primitive_synthesis_acceptance.json",
+      "sha256": "90fa2d7b28b2e6e643f8cff4667fda538033ba4e2c8abab53302975fd76ec0a7"
+    }
+  ],
+  "independent_audits_to_attach": [
+    "arithmetic/EXACT_PRIMITIVE_SYNTHESIS_CROSS_REVIEW.md",
+    "arithmetic/results/exact-primitive-synthesis-independent.normal.json",
+    "arithmetic/results/exact-primitive-synthesis-independent.optimized.json"
+  ],
+  "excluded": [
+    "OPEN_WINDOW_PROPAGATION.md pending independent analytic review",
+    "all active dimension8 R receipts",
+    "all ordinary diagnostics"
+  ],
+  "dependencies": [
+    "CHECKPOINT7_NATIVE_OPERATOR_MANIFEST.json",
+    "COMPLETE_XI_KERNEL_BINDING.md",
+    "QUANTITATIVE_PRIMITIVE_COMPLETION.md",
+    "enclose_primitive_norm.py"
+  ]
+}

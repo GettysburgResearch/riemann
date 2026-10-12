@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/workspace/riemann/research/exploratory/2026-10-10-two-hour-continuation/operators/enclose_length_weighted.py", line 95, in <module>
+    a=p.parse_args();r=enclose(a.receipt);a.out.write_text(json.dumps(r,indent=2)+'\n')
+                       ^^^^^^^^^^^^^^^^^^
+  File "/workspace/riemann/research/exploratory/2026-10-10-two-hour-continuation/operators/enclose_length_weighted.py", line 80, in enclose
+    pivots=positive_ldl(lower,shift)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/riemann/research/exploratory/2026-10-10-four-hour-wave/operators/enclose_analytic_upper.py", line 56, in positive_ldl
+    require(di>0, ('strict positive LDL pivot',i,str(di)))
+  File "/workspace/riemann/research/exploratory/2026-10-10-four-hour-wave/operators/enclose_analytic_upper.py", line 21, in require
+    raise ArithmeticError(detail)
+ArithmeticError: ('strict positive LDL pivot', 9, '[+/- 3.64e-4]')

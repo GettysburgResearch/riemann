@@ -1,0 +1,64 @@
+{
+  "alpha_exact": [
+    4,
+    5
+  ],
+  "arbitrary_power_decay_proved_by_finite_checker": false,
+  "asymptotic_divisor_bound_proved_by_finite_checker": false,
+  "checker_sha256": "d36a0e94dd8bb4bb9cb4bd8a312064aebd86a391e36c749e3ecec0ccce28275a",
+  "complete_divisor_controls": 3002,
+  "cutoff": 31,
+  "distinct_prime_ideal_norms": [
+    7,
+    7,
+    13,
+    13,
+    19,
+    19,
+    25,
+    31,
+    31
+  ],
+  "frozen_source_tube_sha256": "5aca641b5c58e8d2efaf643c660d98cb5970235478bd9e0622e1d6014c4a1c28",
+  "generalized_moment_proved": false,
+  "individual_reciprocal_factors_bounded": false,
+  "orders": [
+    {
+      "distinct_product_ideals": 10,
+      "m": 1,
+      "maximum_restricted_multiplicity": 1,
+      "ordered_products": 10
+    },
+    {
+      "distinct_product_ideals": 55,
+      "m": 2,
+      "maximum_restricted_multiplicity": 2,
+      "ordered_products": 100
+    },
+    {
+      "distinct_product_ideals": 220,
+      "m": 3,
+      "maximum_restricted_multiplicity": 6,
+      "ordered_products": 1000
+    },
+    {
+      "distinct_product_ideals": 715,
+      "m": 4,
+      "maximum_restricted_multiplicity": 24,
+      "ordered_products": 10000
+    },
+    {
+      "distinct_product_ideals": 2002,
+      "m": 5,
+      "maximum_restricted_multiplicity": 120,
+      "ordered_products": 100000
+    }
+  ],
+  "positive_finite_Euler_ball": "[3.188575817834049348335758611595861576055 +/- 1.59e-40]",
+  "precision_bits": 192,
+  "proof_sha256": "a41b84b54f0e4052e6700887bad5cd82552ab452744f29c1b5f70e68cbf0735e",
+  "rh_proved": false,
+  "short_good_ideal_count": 10,
+  "status": "PASS_EXACT_SUBCRITICAL_RAPID_PRODUCT_CONTROLS",
+  "weighted_short_ideal_sum_ball": "[2.072659391970262957484610076017430033546 +/- 4.40e-40]"
+}

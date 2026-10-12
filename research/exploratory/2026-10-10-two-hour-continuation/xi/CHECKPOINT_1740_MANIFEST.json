@@ -1,0 +1,99 @@
+{
+  "cofinal_or_RH_result_claimed": false,
+  "deadline_UTC": "2026-10-10 19:00:12",
+  "git_and_publication_owner": "root only",
+  "independent_native_shifted_replay_complete": false,
+  "old_wave_bytes_preserved": true,
+  "paths": [
+    {
+      "path": "SHIFTED_COMPLETE_MOMENTS_V2.md",
+      "scope": "Analytic source mechanism; independent gate pending",
+      "sha256": "84dff8dd45a579649bf8c515ef273559147d0b3f4a12a158ce1d7fcad1e9505b"
+    },
+    {
+      "path": "check_shifted_hierarchy_v2.py",
+      "scope": "Owner normal/optimized primitive replay PASS; independent replay pending",
+      "sha256": "83b310782d3c98d8cdc27dbac35d6021a5a3de72f76fa64b07b732b4cd6dda44"
+    },
+    {
+      "path": "shifted_hierarchy_v2.json",
+      "scope": "Owner native receipt: H7570/count7343; finite only",
+      "sha256": "d6cf40e46dbe0292aff5a48dc5ebec357f378ffed4b2e3aefbfe4d848d517ba3"
+    },
+    {
+      "path": "produce_continuation_prefix.py",
+      "scope": "Untrusted candidate producer",
+      "sha256": "d7fc0e858a4bc6f50d24f614eb7ab330a091097a4686890aee66631ad342698e"
+    },
+    {
+      "path": "continuation_prefix_candidates.json",
+      "scope": "Candidates authenticated by full native checker",
+      "sha256": "e60ea4bd85ee150bcd4ff00d535d5277266a9104c4f71217a0cc9a2cf3a59948"
+    },
+    {
+      "path": "MIXED_MOMENT_CONE_V2.md",
+      "scope": "Analytic finite rectangle; independent gate pending",
+      "sha256": "dd82159893091b776bf216cb42e20c72a0ba75894898249ce337763717344893"
+    },
+    {
+      "path": "check_mixed_cone_v2.py",
+      "scope": "Exact rational coverage/source guards normal/optimized PASS",
+      "sha256": "436d5b3f6bf98d6ebac4c5e4df126e3752a24de34bf4e95c370a89335b5e53b4"
+    },
+    {
+      "path": "mixed_cone_v2.json",
+      "scope": "Exact finite rectangle receipt",
+      "sha256": "d7b25f57a33807e8d46e45755b7c962df1ccf8ad92540b6561fcfef7ad62d336"
+    },
+    {
+      "path": "COFINAL_HAUSDORFF_CROSS_REVIEW.md",
+      "scope": "Independent full CA/HC math/code plus exact normal/optimized replay ACCEPT",
+      "sha256": "f6385694c446ba318120cf19db41ca2864ff9f86240d0d97fee09739445fc93d"
+    },
+    {
+      "path": "ARCHIMEDEAN_PRIME_SHIFT_IDENTITY.md",
+      "scope": "Proposed analytic source identity; independent review pending",
+      "sha256": "cc70524e065919ae15dee63085c8ec357b2d32e782b8d78ac6db9c9d53811937"
+    },
+    {
+      "path": "README.md",
+      "scope": "Navigation only",
+      "sha256": "b4c058a1af736b3c5658457c80f32d5bcc0f2d68e771c7bfbd1a59cc5f978554"
+    },
+    {
+      "path": "cofinal-audit/COFINAL_MOMENT_OBSTRUCTION.md",
+      "scope": "Full analytic cofinal obstruction; independent outer-ray review ACCEPT",
+      "sha256": "7588200870a048a52a9da84cb884e3062808d0e36f9b25a978d449340b3e8d35"
+    },
+    {
+      "path": "cofinal-audit/HAUSDORFF_LOG_MOMENT_CRITERION.md",
+      "scope": "Full universal criterion; actual-source inequalities OPEN",
+      "sha256": "4f72ef0b7685bd0346f9c0d61b54819a2c7462de78d9620473cf07383ec9c54f"
+    },
+    {
+      "path": "cofinal-audit/check_hausdorff_countermodel.py",
+      "scope": "Independent exact normal/optimized replay PASS",
+      "sha256": "bf7d200d2c3327d5abe5feaf340ed75222c23e4e4a8884c44c1cccd45f709baf"
+    },
+    {
+      "path": "cofinal-audit/hausdorff_countermodel_normal.json",
+      "scope": "Exact different-source countermodel receipt",
+      "sha256": "9b995ef296ec46d19592abfbf3eb6c75279497d2d0d40318dadfd1460ec9edcc"
+    },
+    {
+      "path": "cofinal-audit/hausdorff_countermodel_optimized.json",
+      "scope": "Byte-identical exact receipt",
+      "sha256": "9b995ef296ec46d19592abfbf3eb6c75279497d2d0d40318dadfd1460ec9edcc"
+    }
+  ],
+  "status": "CHECKPOINT_1740_FROZEN_OWNER_PACKET_WITH_EXPLICIT_PENDING_INDEPENDENT_GATES",
+  "superseded_V1_preserved": [
+    "SHIFTED_COMPLETE_MOMENTS.md",
+    "check_shifted_hierarchy.py",
+    "shifted_hierarchy.json",
+    "MIXED_MOMENT_CONE.md",
+    "check_mixed_cone.py",
+    "mixed_cone.json"
+  ],
+  "wave_start_UTC": "2026-10-10 17:00:12"
+}

@@ -1,0 +1,215 @@
+{
+  "Turing_census_or_optional_narrower_strip_proof_replayed": false,
+  "cases": [
+    {
+      "additional_uniform_strip_hypothesis": false,
+      "amplification_exact": "1577/1000",
+      "complete_displacement_bound": "1/2",
+      "exponent_upper_exact": "4551/10000",
+      "full_exponential_upper_exact": "67405729846258949916381379133734467969271/42761152000000000000000000000000000000000",
+      "gap_exact": "4375993412166867933228645792648959018712823/6792397470000000000000000000000000000000000000",
+      "global_order": 1462000,
+      "maximal_even_order_at_H0": 1462532,
+      "q0_exact": "713/1000",
+      "selectable_tail_examples": [
+        {
+          "even_order": 1462532,
+          "height": 3000000000000
+        },
+        {
+          "even_order": 8443932,
+          "height": 100000000000000
+        },
+        {
+          "even_order": 844393272,
+          "height": 1000000000000000000
+        },
+        {
+          "even_order": 844393273302,
+          "height": 1000000000000000000000000
+        },
+        {
+          "even_order": 844393273303382018,
+          "height": 1000000000000000000000000000000000000
+        }
+      ]
+    },
+    {
+      "additional_uniform_strip_hypothesis": true,
+      "amplification_exact": "729/500",
+      "complete_displacement_bound": "3/8",
+      "exponent_upper_exact": "3767/10000",
+      "full_exponential_upper_exact": "5089625047520156107771998095918310947140247/3492103104000000000000000000000000000000000",
+      "gap_exact": "2707828754395387643273072991404578154931367/3018843320000000000000000000000000000000000000",
+      "global_order": 1536000,
+      "maximal_even_order_at_H0": 1536554,
+      "q0_exact": "787/1000",
+      "selectable_tail_examples": [
+        {
+          "even_order": 1536554,
+          "height": 3000000000000
+        },
+        {
+          "even_order": 8871302,
+          "height": 100000000000000
+        },
+        {
+          "even_order": 887130204,
+          "height": 1000000000000000000
+        },
+        {
+          "even_order": 887130204648,
+          "height": 1000000000000000000000000
+        },
+        {
+          "even_order": 887130204648675006,
+          "height": 1000000000000000000000000000000000000
+        }
+      ]
+    }
+  ],
+  "compression_controls": [
+    {
+      "dimension": 1,
+      "kind": "uniform",
+      "trace": "1"
+    },
+    {
+      "dimension": 1,
+      "kind": "unequal_with_zero",
+      "trace": "1"
+    },
+    {
+      "dimension": 2,
+      "kind": "uniform",
+      "trace": "2"
+    },
+    {
+      "dimension": 2,
+      "kind": "unequal_with_zero",
+      "trace": "5/4"
+    },
+    {
+      "dimension": 3,
+      "kind": "uniform",
+      "trace": "3"
+    },
+    {
+      "dimension": 3,
+      "kind": "unequal_with_zero",
+      "trace": "49/36"
+    },
+    {
+      "dimension": 4,
+      "kind": "uniform",
+      "trace": "4"
+    },
+    {
+      "dimension": 4,
+      "kind": "unequal_with_zero",
+      "trace": "49/36"
+    },
+    {
+      "dimension": 5,
+      "kind": "uniform",
+      "trace": "5"
+    },
+    {
+      "dimension": 5,
+      "kind": "unequal_with_zero",
+      "trace": "1261/900"
+    },
+    {
+      "dimension": 6,
+      "kind": "uniform",
+      "trace": "6"
+    },
+    {
+      "dimension": 6,
+      "kind": "unequal_with_zero",
+      "trace": "643/450"
+    },
+    {
+      "dimension": 7,
+      "kind": "uniform",
+      "trace": "7"
+    },
+    {
+      "dimension": 7,
+      "kind": "unequal_with_zero",
+      "trace": "31957/22050"
+    },
+    {
+      "dimension": 8,
+      "kind": "uniform",
+      "trace": "8"
+    },
+    {
+      "dimension": 8,
+      "kind": "unequal_with_zero",
+      "trace": "31957/22050"
+    },
+    {
+      "dimension": 9,
+      "kind": "uniform",
+      "trace": "9"
+    },
+    {
+      "dimension": 9,
+      "kind": "unequal_with_zero",
+      "trace": "290063/198450"
+    },
+    {
+      "dimension": 10,
+      "kind": "uniform",
+      "trace": "10"
+    },
+    {
+      "dimension": 10,
+      "kind": "unequal_with_zero",
+      "trace": "116819/79380"
+    },
+    {
+      "dimension": 11,
+      "kind": "uniform",
+      "trace": "11"
+    },
+    {
+      "dimension": 11,
+      "kind": "unequal_with_zero",
+      "trace": "14214479/9604980"
+    },
+    {
+      "dimension": 12,
+      "kind": "uniform",
+      "trace": "12"
+    },
+    {
+      "dimension": 12,
+      "kind": "unequal_with_zero",
+      "trace": "14214479/9604980"
+    }
+  ],
+  "cutoff_computed": false,
+  "dilation_square_endpoint_upper_exact": "87406467181318980836529359/300739258492400000000000000",
+  "dilation_square_uniform_constant": "2907/10000",
+  "full_operator_analytic_proof_authenticated_by_finite_controls": false,
+  "global_critical_census_used": true,
+  "minimum_height": 3000000000000,
+  "minimum_order": 850000,
+  "new_second_derivative_constant": "291/1000",
+  "normalized_small_matrix_bound_exact": "47636401/30940000000",
+  "quadrature_coefficient_exact": "262748964287579/718225000000000",
+  "rh_proved": false,
+  "source_sha256": {
+    "heights/DOUBLE_COUNT_PICK.md": "23e67ff10510aa7b27b497cd58e7e8a6f1a874c1fe3a9099ba5b7651df7a74b0",
+    "heights/VOLTERRA_RATIONAL_REFINEMENT.md": "a9cf619b13278b71ae7662f55aa25607f1fd8507970b6f8028922abad8e779c9",
+    "heights/WEIGHTED_RATIONAL_DILATION.md": "2ca7783dede49c9f9c382a92ad640e30e8803db506acd672581dfd4dc5ddb2cd",
+    "heights/final-review/OPTIMIZED_DOUBLE_COUNT.md": "4a760969f52d03199ce38fcd29ad787382d9c61e4009f6f3cd79dd7e19d9c5c9",
+    "heights/final-review/VOLTERRA_SQUARE_DOUBLE_COUNT.md": "f749951aa06421b4856d26ff795127f22649980371d16b619e4003df0dba6629",
+    "heights/final-review/verify_optimized_double_count.py": "f6b681cbb261f34323e505acdc8611d3d40b253b6bccb8b8513eb10e234ed1f8",
+    "heights/final-review/verify_volterra_square.py": "515a76589d1fc874105ab5f0102a189fb19fdfe3b92a2014eb6502b772a21050"
+  },
+  "status": "PASS_EXACT_VOLTERRA_SQUARE_COMPLETE_SOURCE_CONTROLS",
+  "tail_critical_census_used": false
+}

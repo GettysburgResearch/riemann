@@ -1,0 +1,114 @@
+{
+  "actual_prime_fields": 8,
+  "all_corner_tube_local_pair_controls": 24480,
+  "checker_sha256": "aa682f1fe1bba6441d5367a30772c9c20f3f0583d61860e570461e93f2a63e1a",
+  "common_slice_local_pair_controls": 288,
+  "complementary_Mellin_region_bounded": false,
+  "finite_positive_inverse_Euler_ball": "[3.188575817834049348335758611595861576055 +/- 1.59e-40]",
+  "generalized_moment_proved": false,
+  "included_short_ideal_sum_ball": "[2.072659391970262957484610076017430033546 +/- 4.40e-40]",
+  "independent_good_ideal_census_31": {
+    "1": 1,
+    "7": 2,
+    "13": 2,
+    "19": 2,
+    "25": 1,
+    "31": 2
+  },
+  "individual_reciprocal_factors_bounded": false,
+  "infinite_factor_bound_proved_by_finite_checker": false,
+  "native_sixth_phase_classes": 24,
+  "negative_controls": 20,
+  "precision_bits": 192,
+  "priced_regions": [
+    {
+      "common_saving_exponent_exact": [
+        1,
+        5
+      ],
+      "k": 1,
+      "lambda_exact": [
+        1,
+        2
+      ],
+      "sigma": "2/5",
+      "slots": 2,
+      "tube_kappa_exact": [
+        1,
+        4
+      ],
+      "tube_saving_exponent_exact": [
+        1,
+        10
+      ]
+    },
+    {
+      "common_saving_exponent_exact": [
+        2,
+        5
+      ],
+      "k": 2,
+      "lambda_exact": [
+        2,
+        2
+      ],
+      "sigma": "2/5",
+      "slots": 4,
+      "tube_kappa_exact": [
+        1,
+        12
+      ],
+      "tube_saving_exponent_exact": [
+        2,
+        10
+      ]
+    },
+    {
+      "common_saving_exponent_exact": [
+        3,
+        5
+      ],
+      "k": 3,
+      "lambda_exact": [
+        3,
+        2
+      ],
+      "sigma": "2/5",
+      "slots": 6,
+      "tube_kappa_exact": [
+        1,
+        20
+      ],
+      "tube_saving_exponent_exact": [
+        3,
+        10
+      ]
+    },
+    {
+      "common_saving_exponent_exact": [
+        4,
+        5
+      ],
+      "k": 4,
+      "lambda_exact": [
+        4,
+        2
+      ],
+      "sigma": "2/5",
+      "slots": 8,
+      "tube_kappa_exact": [
+        1,
+        28
+      ],
+      "tube_saving_exponent_exact": [
+        4,
+        10
+      ]
+    }
+  ],
+  "prior_pair_proof_sha256": "d37ad696b46c7dda15a7faf314c46cda2d7d67e25ac8d3288c7f138aac373c13",
+  "proof_sha256": "5aca641b5c58e8d2efaf643c660d98cb5970235478bd9e0622e1d6014c4a1c28",
+  "rh_proved": false,
+  "source_sha256": "d9a8f15aa770cf883d0eabd2b775fad694ce20b44cba7928f5c0c9a6d8750d4d",
+  "status": "PASS_DIRECTED_SOURCE_PRIME_SLOT_SUBCRITICAL_TUBE_CONTROLS"
+}

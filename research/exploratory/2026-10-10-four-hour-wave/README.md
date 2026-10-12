@@ -2,6 +2,11 @@
 
 Status: **PROPOSED / UNDER INDEPENDENT REVIEW**. RH remains open.
 
+The saved final packets and subsequent continuation are now included in the
+[recovery publication index](PUBLICATION_RECOVERY.md). The checkpoint narrative
+below preserves the earlier milestones; final component manifests and reviews
+record the later results and their exact scopes.
+
 Scope: original quantitative lemmas, exact obstruction models, source-qualified
 literature adapters, and reproducible experiments motivated by the October 2026
 quasi-RH manuscripts. No inherited reviewed claim is promoted or rewritten here.
@@ -40,7 +45,7 @@ estimates do not discharge it.
 |---|---|
 | `arithmetic/` | Critical negative-mass rates and a lower SHARP positivity threshold |
 | `xi/` | Quantitative derivative transport and exact obstruction models |
-| `heights/` | Height-versus-order mechanisms and global positivity through 700000 points |
+| `heights/` | Height-versus-order mechanisms and arbitrary-node finite kernel positivity |
 | `operators/` | Source-specific continuum coercivity and effective-matrix bounds |
 | `literature/` | Exact new-paper sources, admissibility audit, and exponent optimization |
 | `correlations/` | Quantitative correlation-to-arithmetic adapters with explicit uniformity |
@@ -122,3 +127,31 @@ compact-support threshold. The full signed moment remainder, other cusps
 and other allocations remain open. The continuum work adds a reviewed local
 gamma evaluator and exact centered parity reduction; its expensive residual
 integration still needs a completed lower-matrix certificate.
+
+The sixth checkpoint establishes global kernel order **1,400,000**. An
+integer-count sawtooth argument and the published unconditional Turing
+integral bound guarantee a common cutoff in [3*10^12,3*10^12+20] where the
+complete count discrepancy is exactly zero. Removing its endpoint cost,
+sharpening the native Gamma remainder and integrating the complete count
+error twice prove the result using the published verification through
+3000175332800. The earlier single-integration argument gives order 1142000.
+The cutoff is proved to exist; it has not been computed. A separate
+all-cutoff refinement gives order 900000 with the earlier inputs alone.
+
+The arithmetic theorem now covers **every real m>=19/15 and x>=1**.
+Both full directed runs agree on 250 continuous rectangles and ten entire
+infinite tails. Independent source controls and a separate complete
+serialized Bernstein audit supplement those runs; the large raw arithmetic
+computation was not independently repeated a third time.
+
+The generalized-moment work extends compact support return to the full
+cusp vector. Reuniting the signed Ramanujan allocations cancels every
+inactive branch exactly and restores an active branch at the original
+scale and cubic orientation. This identifies a barrier to obtaining a
+moment saving solely from these inverse transformations. The full
+moment estimate remains open. Exact short-ball Fourier identities and a
+positive real-power causal transfer expose where arithmetic cancellation
+must enter. A separate analytic derivation identifies the literal continuum
+kernel with the complete actual xi zero source and proves its precise
+all-window nonnegativity equivalence to RH. Its required all-window sign
+has not been proved; the finite-window lower integrations remain pending.

@@ -1,0 +1,41 @@
+{
+  "status": "EMPIRICAL_WEIGHTED_LENGTH_NOT_CERTIFIED",
+  "exact_length": "21/20",
+  "removed_sines": 7,
+  "last_cosine_mode": 128,
+  "weighted_lower_eigenvalues": [
+    4.988265166790199e-11,
+    1.7229229980050953e-08,
+    2.0238566642594243e-06,
+    9.71501187283373e-05,
+    0.000423465774295888,
+    0.0015817471763481233,
+    0.0024665977648801974,
+    0.004161211707780422,
+    0.007197473536818363,
+    0.00836022459642809
+  ],
+  "U_eigenvalues_ordinary": [
+    1.0581823892050404e-10,
+    2.9231019585673555e-08,
+    2.7432412155040726e-06,
+    0.00015233651053943507,
+    0.0006134963297000031,
+    0.0017222502401669588,
+    0.0025687165518631875,
+    0.0041740830967379365,
+    0.007259506332951018,
+    0.008360472503629144
+  ],
+  "quadrature_order": 2000,
+  "limitations": [
+    "Rordinarycuspquadrature",
+    "directedmomentsconvertedtofloat",
+    "generalizedformulasauditpending"
+  ],
+  "not_proved": [
+    "nativeeffective sign",
+    "lengthintervalsign",
+    "RH"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "RH_proved": false,
+  "actual_first_root_outer_interval": [
+    "141347/10000",
+    "35337/2500"
+  ],
+  "all_mixed_pairs_covered": false,
+  "complete_real_head": 5419,
+  "constants": {
+    "B": "1254953569/6250000",
+    "Q": "117462247/4",
+    "a": "20003974409/100000000",
+    "c": "3/4",
+    "r": "1254953569/183534760937500",
+    "s": "692388176/689792221"
+  },
+  "coverage": "EVERY integern,j>=0 satisfying j<=3100*(n-1)+1500; complete actual source",
+  "exact_base_exponent": 1500,
+  "exact_base_ratio_upper_bound": "4/5",
+  "exact_block_exponent": 3100,
+  "exact_block_ratio_upper_bound": "4/5",
+  "historical_zero_count_used": false,
+  "infinite_analytic_proof_imported": true,
+  "inherited_source_sha256": {
+    "2026-10-10-four-hour-wave/heights/COARSE_ZERO_COUNT.md": "67725ad90c5caaad231c4e232b76f5c38c81a84efe5005fc8909342456afa726",
+    "2026-10-10-four-hour-wave/xi/outer-ray/native_candidates.json": "bbb7fe9adce4fa9581cbb23fb558c62abafec4e568cb69c4d9f0324443ad8c20",
+    "2026-10-10-four-hour-wave/xi/outer-ray/sixteenth_moment_census.json": "964f49cc79a61b354cd77fe1f077637e54bb46f39a5643e1455e87f60fabc4d6",
+    "2026-10-10-two-hour-continuation/operators/FINITE_CENSUS_MIXED_MOMENT_CONE.md": "b904361d5af54885d6cd9bb1cfd730f11fdd05e6a0f2c1557328a92b5a40f166",
+    "2026-10-10-two-hour-continuation/operators/check_finite_census_mixed_cone.py": "d8a34554b671de540d7e326f0b354a8261698bdb789c1483af9b13e8aaa90973",
+    "2026-10-10-two-hour-continuation/xi/FINITE_CENSUS_HEAT_DERIVATIVE_CONE.md": "d0679c63b57ffe755ad22853bc5d2d98c007d00d4a1c4941e2383a91e184fcc7",
+    "2026-10-10-two-hour-continuation/xi/cofinal-audit/HAUSDORFF_LOG_MOMENT_CRITERION.md": "4f72ef0b7685bd0346f9c0d61b54819a2c7462de78d9620473cf07383ec9c54f",
+    "2026-10-10-two-hour-continuation/xi/cofinal-audit/LAGUERRE_MIXED_HEAT_IDENTITY.md": "829e01b4521c7a7f63c6d49375c754342595ef5e5d62528572a0541081771aad",
+    "2026-10-10-two-hour-continuation/xi/heat_derivative_cone.json": "1708abc0dd320a35d8f753aa20b1330d5fda60c364a6ad678acf3122226a3bcd"
+  },
+  "new_native_moment_root_or_quadrature_replay": false,
+  "normalization": "D_nj(1)=sum_h(-1)^h binom(j,h)(3/4)^(n+h) C_(n+h+1)(1)",
+  "physical_shift": "1",
+  "source_sha256": {
+    "2026-10-10-four-hour-wave/xi/outer-ray/native_candidates.json": "bbb7fe9adce4fa9581cbb23fb558c62abafec4e568cb69c4d9f0324443ad8c20",
+    "2026-10-10-two-hour-continuation/operators/FINITE_CENSUS_MIXED_MOMENT_CONE.md": "b904361d5af54885d6cd9bb1cfd730f11fdd05e6a0f2c1557328a92b5a40f166",
+    "2026-10-10-two-hour-continuation/operators/SMALL_SHIFT_MIXED_CONE.md": "30a478c1983eb61f5f74de205ebf29e89de1498e2c470cfcd401f4c2539ad288",
+    "2026-10-10-two-hour-continuation/operators/check_finite_census_mixed_cone.py": "d8a34554b671de540d7e326f0b354a8261698bdb789c1483af9b13e8aaa90973",
+    "2026-10-10-two-hour-continuation/operators/check_small_shift_mixed_cone.py": "85dc5969b1c5d43d60b1018063b0d51d3fde8a1eb5f74ae8414d3cb1d9e2e098",
+    "2026-10-10-two-hour-continuation/operators/finite_census_mixed_cone.normal.json": "bffb559967304c3ccb46c6a185d03bed376be5a46dd84394852c68bea39b427f"
+  },
+  "status": "PASS_EXACT_COMPLETE_SMALL_SHIFT_INFINITE_MIXED_CONE_GUARDS",
+  "strip_half_width": "1/2",
+  "uniform_tail_to_selected_head_ratio_bound": "(4/5)^n",
+  "whole_unknown_complex_tail_retained": true
+}

@@ -1,0 +1,43 @@
+{
+  "status": "ACCEPTED_COMPLETE_NATIVE_WINDOW_THROUGH_ONE",
+  "created_utc": "2026-10-10 15:20 UTC",
+  "native_definition": "q_L(h,h)=(3/2) double_integral conjugate(h(t))*W(t-u)*h(u), full literal native W bound to the complete actual Xi zero kernel",
+  "conclusion": "q_L(h,h)>=||G_L h||_2^2/1087078600000000000 for every complex h in L2(0,L), every0<L<=1; G_L h(t)=integral_0^t cosh((t-u)/2)h(u)du is injective",
+  "finite_reserve": "1/100000000000",
+  "M": 1,
+  "K": 2717696,
+  "theta": "1/200000000001",
+  "delta": "1/1087078600000000000",
+  "owner_normal_optimized_weighted_byte_identical": true,
+  "owner_normal_optimized_primitive_byte_identical": true,
+  "independent_completed_matrix_and_constant_accepted": true,
+  "independent_report_path": "research/exploratory/2026-10-10-four-hour-wave/literature/COMPLETED_NATIVE_LOWER_INDEPENDENT_REVIEW.md",
+  "independent_report_sha256": "04eebe843815decf5f29fd11738a58c7778897b17beda168759ab15573632db9",
+  "independent_coverage_ldl_oracle_sha256": "44df44fbd91df5d6446dd243197dbe9ac63970cc66a29020b5cc720dec08cd03",
+  "independent_continuum_integration_rerun": false,
+  "scope_limits": [
+    "No native L2 spectral gap",
+    "No missing signs L>1",
+    "No RH claim",
+    "No separate predecessor coefficient-trace authentication",
+    "Taylor dimension8 full residual still active; not required by this certificate"
+  ],
+  "receipts": [
+    {
+      "path": "directed_residual_codim14_trial100.json",
+      "sha256": "9213accb90caa99e17172f620c3946ab638542eaf0523dfba89ab8f870d2016a"
+    },
+    {
+      "path": "directed_weighted_lower_codim14_trial100.json",
+      "sha256": "da0917e75a165b817c1ed7120dc17a467c88092a160f0f41da6b0b80a083b101"
+    },
+    {
+      "path": "directed_primitive_norm_codim14_trial100.json",
+      "sha256": "ae6184c01dd29a107fce61eb0ab925dbfe00d5c7664b5e16106bd1a32a488e2e"
+    },
+    {
+      "path": "NATIVE_WINDOW_FINAL_CERTIFICATE.md",
+      "sha256": "b0946a75a9f01b1c0ca22318ed00f66c5fb63ee524da5f1743d54df740b5f02d"
+    }
+  ]
+}

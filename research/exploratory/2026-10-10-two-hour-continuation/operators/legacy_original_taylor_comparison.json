@@ -1,0 +1,15 @@
+{
+  "status": "ALL_64_DIRECTED_R_ENTRIES_OVERLAP",
+  "original_sha256": "91e2d386166a3c5726f98d7ae4c0e19efb27b77478623a53d0eb0262559a74fc",
+  "taylor_sha256": "cba3fb5f17e71678b115c03813b97dda37ec45c19c24604bd302fd8baaf2ed19",
+  "original_elapsed_seconds": 9746.927576145,
+  "taylor_elapsed_seconds": 4727.119403319999,
+  "original_scalar_status": "DIRECTED_LOWER_INCONCLUSIVE",
+  "taylor_scalar_status": "DIRECTED_LOWER_INCONCLUSIVE",
+  "count": 64,
+  "not_proved": [
+    "independent fullR replay",
+    "scalar Schur positivity",
+    "new window"
+  ]
+}

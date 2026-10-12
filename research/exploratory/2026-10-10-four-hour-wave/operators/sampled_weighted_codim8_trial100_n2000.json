@@ -1,0 +1,22 @@
+{
+  "status": "EMPIRICAL_WEIGHTED_RESIDUAL_NOT_CERTIFIED",
+  "removed_sines": 5,
+  "last_cosine_mode": 128,
+  "source_R": "sampled_codim8_trial100_n2000.json",
+  "lower_eigenvalues": [
+    3.4914188917567175e-10,
+    6.256213440470411e-08,
+    7.780241535460102e-06,
+    0.00028020745677793496,
+    0.0007362840710642461,
+    0.0023816405732649294,
+    0.006548073939589643,
+    0.007958182575569201
+  ],
+  "cost_operator_norm": 0.00030379818342804574,
+  "limitations": [
+    "ordinary sampledR",
+    "directed moments converted to float",
+    "no continuumFF acceptance"
+  ]
+}

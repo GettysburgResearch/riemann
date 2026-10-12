@@ -1,0 +1,36 @@
+{
+  "status": "INDEPENDENTLY_ACCEPTED_EXACT_NATIVE_PRIMITIVE_SYNTHESIS",
+  "created_utc": "2026-10-10 15:32 UTC",
+  "owner_normal_optimized_byte_identical": true,
+  "independent_full_analytic_code_and_normal_optimized_replay_accepted": true,
+  "independent_report": "arithmetic/EXACT_PRIMITIVE_SYNTHESIS_CROSS_REVIEW.md",
+  "independent_report_sha256": "aec1eb9a131fa59d1e57cca428336ae919d8f97a2a7fc0a658bcb618bd3db44a",
+  "independent_replay_sha256": "1e6eb716fc49da8860b69950304a52b7c86cea3521f906d2149ef56e045c851e",
+  "synthesis_trace_upper_less_than": "1",
+  "M": 1,
+  "K": 1,
+  "epsilon_exact": "1/100000000000",
+  "theta_exact": "1/200000000001",
+  "delta_exact": "1/600000000000",
+  "conclusion": "q_L(h,h)>=||G_L h||_2^2/600000000000 for every complex h in L2(0,L), every0<L<=1; atL1 sameconstant also pays ||Pi_E h||_2^2",
+  "G_L_definition": "integral_0^t cosh((t-u)/2)h(u)du",
+  "native_L2_spectral_gap_claimed": false,
+  "L_greater_than_one_sign_claimed": false,
+  "RH_claimed": false,
+  "new_residual_integration_performed": false,
+  "frozen_files": [
+    {
+      "path": "EXACT_PRIMITIVE_SYNTHESIS.md",
+      "sha256": "1e1cd511a477cf5120b0b7ca0a9ebb36ce5b115d8c3faa063e76b6870733aac9"
+    },
+    {
+      "path": "enclose_exact_primitive_synthesis.py",
+      "sha256": "009ae7df8ef5acdea2be122602d8c239eb0a36ac56563bf76640469926b8a011"
+    },
+    {
+      "path": "directed_exact_synthesis_codim14_trial100.json",
+      "sha256": "df598c783ec412941cfd13f3c07cb3054ae3ad32a613320318a5915ffcbe3551"
+    }
+  ],
+  "legacy_pending_header": "Proof/header froze before independent acceptance; this separate receipt records completed review without changing producer/proof hashes."
+}
