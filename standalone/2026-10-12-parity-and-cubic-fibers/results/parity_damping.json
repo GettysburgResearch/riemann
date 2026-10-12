@@ -1,0 +1,276 @@
+{
+  "arithmetic": {
+    "biased_cases_at_t_zero_and_one": 2184,
+    "crt_residue_rows_including_zero": 91,
+    "moment_orders": [
+      1,
+      2,
+      3
+    ],
+    "moving_exclusion_masks": 4,
+    "native_walsh_cases": 1092,
+    "pure_cubic_fibers": 192,
+    "rows_with_a_literal_zero_symbol": 19
+  },
+  "checker_sha256": "7a855e686be65379abe64e13ed0694ed3237dc9f2d3c9dc71270402f8bb46676",
+  "exponents": {
+    "finite_envelopes": [
+      {
+        "b": "3/5",
+        "delta_integer": "1/5",
+        "h": "21/20"
+      },
+      {
+        "b": "3/5",
+        "delta_integer": "1/5",
+        "h": "6/5"
+      },
+      {
+        "b": "3/5",
+        "delta_integer": "1/5",
+        "h": "4/3"
+      },
+      {
+        "b": "3/5",
+        "delta_integer": "1/5",
+        "h": "18/11"
+      },
+      {
+        "b": "3/5",
+        "delta_integer": "1/5",
+        "h": "7/4"
+      },
+      {
+        "b": "3/5",
+        "delta_integer": "1/5",
+        "h": "2"
+      },
+      {
+        "b": "3/5",
+        "delta_integer": "7/30",
+        "h": "7/2"
+      },
+      {
+        "b": "3/5",
+        "delta_integer": "4/5",
+        "h": "8"
+      },
+      {
+        "b": "3/4",
+        "delta_integer": "1/2",
+        "h": "21/20"
+      },
+      {
+        "b": "3/4",
+        "delta_integer": "1/2",
+        "h": "6/5"
+      },
+      {
+        "b": "3/4",
+        "delta_integer": "1/2",
+        "h": "4/3"
+      },
+      {
+        "b": "3/4",
+        "delta_integer": "1/2",
+        "h": "18/11"
+      },
+      {
+        "b": "3/4",
+        "delta_integer": "1/2",
+        "h": "7/4"
+      },
+      {
+        "b": "3/4",
+        "delta_integer": "1/2",
+        "h": "2"
+      },
+      {
+        "b": "3/4",
+        "delta_integer": "5/6",
+        "h": "7/2"
+      },
+      {
+        "b": "3/4",
+        "delta_integer": "2",
+        "h": "8"
+      },
+      {
+        "b": "5/6",
+        "delta_integer": "2/3",
+        "h": "21/20"
+      },
+      {
+        "b": "5/6",
+        "delta_integer": "2/3",
+        "h": "6/5"
+      },
+      {
+        "b": "5/6",
+        "delta_integer": "2/3",
+        "h": "4/3"
+      },
+      {
+        "b": "5/6",
+        "delta_integer": "2/3",
+        "h": "18/11"
+      },
+      {
+        "b": "5/6",
+        "delta_integer": "2/3",
+        "h": "7/4"
+      },
+      {
+        "b": "5/6",
+        "delta_integer": "2/3",
+        "h": "2"
+      },
+      {
+        "b": "5/6",
+        "delta_integer": "7/6",
+        "h": "7/2"
+      },
+      {
+        "b": "5/6",
+        "delta_integer": "8/3",
+        "h": "8"
+      },
+      {
+        "b": "7/8",
+        "delta_integer": "3/4",
+        "h": "21/20"
+      },
+      {
+        "b": "7/8",
+        "delta_integer": "3/4",
+        "h": "6/5"
+      },
+      {
+        "b": "7/8",
+        "delta_integer": "3/4",
+        "h": "4/3"
+      },
+      {
+        "b": "7/8",
+        "delta_integer": "3/4",
+        "h": "18/11"
+      },
+      {
+        "b": "7/8",
+        "delta_integer": "3/4",
+        "h": "7/4"
+      },
+      {
+        "b": "7/8",
+        "delta_integer": "11/12",
+        "h": "2"
+      },
+      {
+        "b": "7/8",
+        "delta_integer": "19/12",
+        "h": "7/2"
+      },
+      {
+        "b": "7/8",
+        "delta_integer": "11/3",
+        "h": "8"
+      },
+      {
+        "b": "1",
+        "delta_integer": "1",
+        "h": "21/20"
+      },
+      {
+        "b": "1",
+        "delta_integer": "1",
+        "h": "6/5"
+      },
+      {
+        "b": "1",
+        "delta_integer": "10/9",
+        "h": "4/3"
+      },
+      {
+        "b": "1",
+        "delta_integer": "15/11",
+        "h": "18/11"
+      },
+      {
+        "b": "1",
+        "delta_integer": "35/24",
+        "h": "7/4"
+      },
+      {
+        "b": "1",
+        "delta_integer": "5/3",
+        "h": "2"
+      },
+      {
+        "b": "1",
+        "delta_integer": "35/12",
+        "h": "7/2"
+      },
+      {
+        "b": "1",
+        "delta_integer": "20/3",
+        "h": "8"
+      }
+    ],
+    "integer_guard_degrees": [
+      1,
+      64
+    ],
+    "rational_parameter_pairs": 40
+  },
+  "guard_counts": {
+    "attained_norm_envelope": 200,
+    "biased_walsh_identity": 2184,
+    "centered_hypercontractive_guard": 2184,
+    "centered_polynomial_identity": 8736,
+    "common_spike_integer_bound": 2560,
+    "complete_crt_quadratic_cancellation": 36,
+    "counting_exact_envelope": 8,
+    "cyclotomic_embedding": 2,
+    "damped_diagonal_threshold": 480,
+    "eisenstein_residue_embedding": 3,
+    "finite_integer_envelope_guard": 40,
+    "full_residue_heatbath_is_identity": 3,
+    "heatbath_injectivity_norm_hypothesis": 3,
+    "inactive_walsh_coordinate": 2088,
+    "integer_envelope_row_budget": 40,
+    "literal_quadratic_range": 91,
+    "literal_residual_zero_mask": 1600,
+    "native_centered_cofactor": 8736,
+    "native_walsh_identity": 1092,
+    "nm2_refined_damping_exponent": 640,
+    "nonnegative_ring_power": 5225,
+    "one_sign_binomial_coefficient": 90,
+    "positive_walsh_baseline": 1092,
+    "primitive_embedding": 2,
+    "primitive_symbol_lookup": 180,
+    "purely_cubic_coefficient_fiber": 900,
+    "quadratic_cubic_factorization": 20,
+    "rare_event_cumulant_leading_term": 12,
+    "seven_eighths_exact_height_endpoint": 8,
+    "sextic_piecewise_exponent": 2560,
+    "uniform_sign_hypercontractive_guard": 1092,
+    "walsh_coefficient_domination": 1092,
+    "walsh_parseval": 1092
+  },
+  "portability": "Only normalized source name and byte hashes are recorded; no absolute paths or run timestamps.",
+  "scope": "Bounded exact algebra only; not PW_b, NM2_w, a sieve, an infinite moment theorem, or RH.",
+  "source_bytes": 38285,
+  "source_name": "PARITY_DAMPED_MOMENTS.md",
+  "source_sha256": "fed521f2865b428e5a0eebd1d6f36ae09cc6d51f513952547ba6087910d0d232",
+  "status": "PASS",
+  "structural_guards": {
+    "cumulant_orders": [
+      1,
+      12
+    ],
+    "eisenstein_row_height": 5,
+    "nonzero_eisenstein_rows": 18,
+    "resampling_coordinates": 3
+  },
+  "total_explicit_guards": 44091
+}
