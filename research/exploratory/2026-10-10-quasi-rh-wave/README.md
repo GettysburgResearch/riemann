@@ -4,8 +4,8 @@
 Status: EXPLORATORY / IMPORTED (external theorems) / PROPOSED (new statements)
 Scope: global for the imported zero-free half-planes; conditional/proposed for everything derived here
 Exact sources or dependencies: see "Sources" below (frozen copies of the four external manuscripts were read in full extract; nothing in this directory is a repository-reviewed theorem)
-What was actually run: reading of the primary manuscripts; a Python reconstruction of the Part II exponent system (scripts/); literature search; repo hypothesis audit
-Smallest remaining gap: every wall located in this wave is a sixth-power diagonal of the sextic family (FINDINGS.md section 0); the two constructions with a chance are a hybrid Möbius x plain second moment with r + m <= 5/4 (notes G, I, O) and breaking the direct-side diagonal by moving a selected prime into the additive variable (notes J, Q)
+What was actually run: reading of the primary manuscripts; a Python reconstruction of the Part II exponent system (scripts/); literature search; repo hypothesis audit; numerical experiments on half-integral-weight coefficients (scripts/shimura/) and on Eisenstein-integer Gauss sums, floor rows and the Gram term (scripts/cubic/); two adversarial referee passes (notes R, R2)
+Smallest remaining gap: every wall located in this wave is a sixth-power diagonal of the sextic family except the floor rows, which are a triangle-inequality loss (FINDINGS.md sections 0, 6, 10); the constructions carried to an identified failure point are listed in FINDINGS.md section 0 item 7; the one empirical lead is the floor-row cross sum, which cancels like U^{1/2} in the data (note V) but cannot be used because hypothetical zero rows must be bounded (notes N, U)
 ```
 
 **RH remains open.** Nothing in this directory proves or disproves RH, and nothing here is integrated. This is a three-hour reconnaissance wave on the October 2026 external development: a *uniform zero-free half-plane* for all Dirichlet $L$-functions and all finite-order Hecke $L$-functions over $\mathbb Q(\sqrt{-3})$.
