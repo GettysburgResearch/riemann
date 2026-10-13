@@ -1,0 +1,24 @@
+{
+  "checks": {
+    "all_ideal_norm_coverage": 256,
+    "complete_row_count": 1024,
+    "conjugate_ideals_retained": 1,
+    "independent_residue_symbol": 1110,
+    "literal_zero": 24,
+    "mask_inclusion_exclusion": 16,
+    "principal_direct_row_match": 24,
+    "reject_equal_norm_ideal_collapse": 1,
+    "reject_equal_product_only": 1,
+    "reject_universal_remainder_sign": 2,
+    "reject_unmasked_reference": 1,
+    "reject_zero_to_one_at_sixth_power": 1,
+    "scalar_vector_source_match": 936,
+    "small_row_count": 1,
+    "squarefree_norm_coverage": 256,
+    "squarefree_order_twelve_alias": 1,
+    "two_product_engines_match": 8
+  },
+  "scope": "finite exact arithmetic only; no infinite moment certification",
+  "status": "PASS",
+  "total_predicates": 3663
+}
