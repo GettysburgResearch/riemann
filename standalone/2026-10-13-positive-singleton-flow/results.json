@@ -1,0 +1,150 @@
+{
+  "atom_enumeration": {
+    "models": 192,
+    "predicates": 384,
+    "scope": "three real coordinates, all masks and frozen sets"
+  },
+  "censuses": [
+    {
+      "D": 64,
+      "H": 79,
+      "columns": 7,
+      "evaluated_product_pairs": 89,
+      "exact_predicates": 364,
+      "forward_dissipation": 1728,
+      "forward_injection": 2496,
+      "frozen_norm_cap": 17,
+      "golden_start": 25704,
+      "native_M4": 26472,
+      "pair_products": 28,
+      "prime_ideals": 15,
+      "reverse_dissipation": 1728,
+      "reverse_injection": 2496,
+      "rows": 294,
+      "smooth_singleton_sector": 23976,
+      "step_signs": {
+        "decreasing": {
+          "negative": 4,
+          "positive": 2,
+          "zero": 0
+        },
+        "increasing": {
+          "negative": 3,
+          "positive": 3,
+          "zero": 0
+        }
+      }
+    },
+    {
+      "D": 128,
+      "H": 164,
+      "columns": 19,
+      "evaluated_product_pairs": 3157,
+      "exact_predicates": 15013,
+      "forward_dissipation": 8820,
+      "forward_injection": -13392,
+      "frozen_norm_cap": 23,
+      "golden_start": 381876,
+      "native_M4": 359664,
+      "pair_products": 189,
+      "prime_ideals": 30,
+      "reverse_dissipation": 8820,
+      "reverse_injection": -13392,
+      "rows": 594,
+      "smooth_singleton_sector": 373056,
+      "step_signs": {
+        "decreasing": {
+          "negative": 8,
+          "positive": 7,
+          "zero": 0
+        },
+        "increasing": {
+          "negative": 9,
+          "positive": 6,
+          "zero": 0
+        }
+      }
+    },
+    {
+      "D": 256,
+      "H": 338,
+      "columns": 37,
+      "evaluated_product_pairs": 39915,
+      "exact_predicates": 197826,
+      "forward_dissipation": 38436,
+      "forward_injection": 106608,
+      "frozen_norm_cap": 30,
+      "golden_start": 2953074,
+      "native_M4": 3021246,
+      "pair_products": 688,
+      "prime_ideals": 52,
+      "reverse_dissipation": 38436,
+      "reverse_injection": 106608,
+      "rows": 1236,
+      "smooth_singleton_sector": 2914638,
+      "step_signs": {
+        "decreasing": {
+          "negative": 13,
+          "positive": 11,
+          "zero": 0
+        },
+        "increasing": {
+          "negative": 10,
+          "positive": 14,
+          "zero": 0
+        }
+      }
+    },
+    {
+      "D": 128,
+      "H": 164,
+      "columns": 19,
+      "evaluated_product_pairs": 3157,
+      "exact_predicates": 15013,
+      "forward_dissipation": 21288,
+      "forward_injection": -23400,
+      "frozen_norm_cap": 1,
+      "golden_start": 404352,
+      "native_M4": 359664,
+      "pair_products": 189,
+      "prime_ideals": 30,
+      "reverse_dissipation": 21336,
+      "reverse_injection": -23352,
+      "rows": 594,
+      "smooth_singleton_sector": 382968,
+      "step_signs": {
+        "decreasing": {
+          "negative": 11,
+          "positive": 8,
+          "zero": 0
+        },
+        "increasing": {
+          "negative": 13,
+          "positive": 6,
+          "zero": 0
+        }
+      }
+    }
+  ],
+  "local": {
+    "coercivity_cases": 5625,
+    "complex_pairs": 625,
+    "even_orders": [
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20
+    ],
+    "exact_predicates": 7066,
+    "kernel_grid_points": 121,
+    "law_moments_checked_through": 60,
+    "negative_controls": 4
+  },
+  "scope": "Exact finite algebra and complete hard-window native fourth-moment flow, not asymptotics",
+  "total_predicates": 235666
+}
