@@ -35,4 +35,4 @@ for path in sys.argv[1:]:
     for d in range(2, dmax + 1, 2):
         print(f'| {d} | ' + ' | '.join(f"{tab[f'{d},{m}']['max_over_qd']:.3g}" for m in range(2, mmax + 1)) + ' |')
     out[str(q) + '_m' + str(mmax)] = tab
-json.dump(out, open('/dev/stdout' if len(sys.argv) < 2 else sys.argv[1] + '.json', 'w'), indent=0)
+json.dump(out, open('results/tables.json', 'w'), indent=0)

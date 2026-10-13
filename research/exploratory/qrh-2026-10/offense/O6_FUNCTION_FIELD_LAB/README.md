@@ -22,8 +22,10 @@ What was actually run (single-threaded, shared 4-core machine, every run < 20 mi
   q=19 (deg<=4, d<=20), q=31, 37 (deg<=3, d<=20); validate_core.py (brute force, q=7, d<=4, rows deg<=3:
   all 16 cells equal); gauss_exact.py (Z[zeta_N] exact: q=7 all 343 squarefree n of deg<=3; q=13 93 n);
   leverage_check.py (q=7, d<=4); dual_energy.c (q=7 d=3,4,5; q=13 d=3,4; q=19 d=3); ledger.py (q=7 d=2
-  M=1..4, d=3 M=1..5); theta_series.c (q=7 d<=7, deg h<=2; q=13 d<=6, deg h<=1); pipeline_table.py,
-  tables.py. Outputs in results/ (about 0.2 MB).
+  M=1..4, d=3 M=1..5); theta_series.c (q=7 d<=8, deg h<=2; q=13 d<=6, deg h<=1); lab_sample.c
+  (random rows of one degree, exact per row: q=7 m=7 N=3000, plus the runs listed in §3.1);
+  dual_sample.c (random dual rows, exact per row, q=7 d=7); pipeline_table.py, tables.py,
+  sample_table.py, row_anatomy.py. Outputs in results/ (about 0.2 MB).
 Smallest remaining gap: no lab mechanism proves Mom(1, rho < 1) without the Riemann hypothesis for the
   family members (Weil). The one genuinely new lab input (Pellet: mu(n) = (-1)^deg n chi_2(disc n),
   which makes every Gauss sum and mu itself a character of a polynomial in the coefficients of n) has
@@ -50,7 +52,7 @@ Smallest remaining gap: no lab mechanism proves Mom(1, rho < 1) without the Riem
    (Pellet/Stickelberger): `μ(n) = (−1)^d χ₂(disc n)`, EXACT for all 2401 squarefree monic `n` of degree
    ≤ 4 over `F_7`.
 2. **Truth (EXACT integers), and a lab-specific degeneracy.** `M₂(d; m)/Diag` is *not* ≈ 1 in the lab
-   for row degree `m ≤ 6`. It is ≈ 1 only for rows of degree ≤ 2.
+   for row degree `m ≤ 6`. Among those rows it is ≈ 1 only for degree ≤ 2.
    * Rows of degree 3–6 are **CM members**. The `ψ`-eigenspace of `H¹(y⁶ = u)` has `h^{0,1} = ⌈m/6⌉ − 1 = 0`,
      hence finite monodromy (HEURISTIC, Deligne–Mostow-type count).
    * Their Frobenius angles lie in cosets `θ₀ + (1/N)Z`, and they have repeated roots. Census at q = 13,
@@ -68,7 +70,9 @@ Smallest remaining gap: no lab mechanism proves Mom(1, rho < 1) without the Riem
    * Poisson in `u`, the Gauss sums and the absorption lose **nothing**. The primal = dual identity was
      replayed in exact integers at q = 7, `d = 2` (M = 1..4) and `d = 3` (M = 1..5).
    * The dual mean square is **diagonal-sized** whenever the dual has more rows than columns:
-     `E/DD ∈ [0.949, 1.009]` over 12 cells (q = 7, d = 3, 4, 5; q = 13, d = 3; q = 19, d = 3).
+     `E/DD ∈ [0.949, 1.009]` over 12 exact cells (q = 7, d = 3, 4, 5; q = 13, d = 3; q = 19, d = 3).
+     Sampled at q = 7, d = 7, the values are `0.93 ± 0.06`, `1.08 ± 0.07` and `1.06 ± 0.08` at
+     deg h = 7, 8, 9.
    * Hence positivity costs **exactly the dual diagonal**, `P/Diag = q^{d−M}·(E/DD)`. Examples:
      * 350, 49.2, 7.07 against the predicted 343, 49, 7 (q = 7, d = 4, M = 1, 2, 3);
      * 6.93 against 7 (q = 7, d = 5, M = 4);
@@ -211,6 +215,9 @@ Exact integers for every `(d, m)` are in `results/core_q*.txt`, with columns
   * A definite unitary local system with integral structure has finite monodromy. So for every member of
     conductor degree ≤ 6 the Frobenius eigenvalues are a CM Weil number times roots of unity, and
     repeated roots occur with positive frequency, independent of `q`.
+  * Row anatomy (`row_anatomy.py`, q = 7, all 16 807 rows of degree 5, EXACT): the median of
+    `|A_u(d)|²/q^d` is exactly 0 or 1 at `d = 5, 7, 10, 12, 14`, and the top 10 % of rows carry 47–85 %
+    of `M₂` (`results/row_anatomy_q7_deg5.txt`).
   * Generic (Katz–Sarnak, `U(p, q')`) behaviour starts only at `deg u ≥ 7`, beyond every row range run
     here (q = 7 would need 823 543 rows of degree 7).
   * **There is no number-field analogue**: `L(s, ψ_u)` over `Q(ω)` is a GL(1) Hecke L-function, with no
@@ -317,6 +324,11 @@ Here `P = q^{M−d}E`, the `(e, f) = (1, 1)` block relaxed to a full mean square
 `L(x, ψ_u) = 1`. For `M > d` (not shown) `P` is not an upper bound for `Off`: there the off-diagonal sits
 in the blocks with `g ≠ 1` (see the block ledger above). `results/pipeline_table_q*.json` has all cells.
 
+**Larger d (sampled dual rows, each `B_h` exact; `dual_sample.c`, q = 7, d = 7, 705 894 squarefree
+columns, 250 random monic `h` per degree):** `E_k/DD_k` = 0.61 ± 0.05 (deg h = 6), 0.93 ± 0.06 (deg h = 7),
+1.08 ± 0.07 (deg h = 8), 1.06 ± 0.08 (deg h = 9). The sub-diagonal dual (deg h ≥ d) stays diagonal-sized at `D = 7⁷`
+(EMPIRICAL, Monte Carlo over `h`). Below `deg h = d` the theta suppression of item 4 sets in.
+
 Reading (EXACT on these cells; the trend is EMPIRICAL):
 * **The dual mean square is diagonal-sized** whenever the dual has more rows than columns
   (`E/DD ∈ [0.949, 1.010]`, 12 cells). This is the lab version of A2_LITERATURE §5 and DUAL_ANATOMY §4,
@@ -401,13 +413,17 @@ Reading (EXACT on these cells; the trend is EMPIRICAL):
 3. **Pellet's identity** (EXACT): `μ(n) = (−1)^{deg n}χ₂(disc n)`.
    * With it, `A_u(d) = (−1)^d Σ_{a ∈ F_q^d} χ0(disc(n_a)³·Res(n_a, u))` is one character sum over affine
      space.
-   * `M₂` is a character sum over a variety of dimension `2d + M`. Weil II gives it at
-     `q^{(2d+M)/2}·(Betti)`, far below `Diag ≈ q^{d+M}`, once `q` is large in terms of `d` (Katz-type
-     equidistribution). That is a proof of Mom(1, ρ) in the large-`q` limit **from Weil II**, which
-     contains RH for every member, so it is not RH-free.
-   * At fixed `q` the Betti numbers grow and this route needs the Sawin–Shusterman refinement (LIT,
-     abstract only): μ "mimicked by Dirichlet characters on special subspaces", giving a Möbius level of
-     distribution close to 1. That is beyond what pointwise RH gives.
+   * The off-diagonal of `M₂` is then a character sum over the `(2d + M)`-dimensional space of triples
+     `(n, n', u)`. A Deligne-type bound with total Betti number `B(d)` gives `|Off| ≤ B(d) q^{(2d+M)/2}`.
+     That is below `Diag ≈ q^{d+M}` iff `B(d) ≤ q^{M/2} = q^{ρd/2}` (HEURISTIC bookkeeping; the
+     degenerate locus `n = n'` must be removed first).
+   * General Betti bounds grow like `(Cd)^{2d+M}`. So this route proves nothing at fixed `q`. It works
+     only for `q` large in terms of `d`, and it rests on Weil II, which contains RH for every member: it is
+     not RH-free.
+   * The Sawin–Shusterman char-`p` refinement (LIT, abstract only) controls such Möbius sums at fixed `q`
+     in special situations: μ "mimicked by Dirichlet characters on special subspaces", giving a Möbius
+     level of distribution close to 1, beyond what pointwise RH gives. Whether it reaches this family
+     was not examined.
    * **Number-field analogue: none known to us.** Over Z there is no polynomial whose quadratic character
      is μ, and no `p`-th-power subspaces. This is the parity barrier in its sharpest form.
 4. **Answer to the prize question.** In the lab the sub-diagonal second moment is true, and the known proofs
@@ -449,7 +465,9 @@ Reading (EXACT on these cells; the trend is EMPIRICAL):
 | `leverage_check.py` | sixth-power rows and member rows `w v⁶` |
 | `dual_energy.c` | dual sums `B_h(d)` and their mean square, by `deg h` |
 | `ledger.py` | exact primal = dual identity, Ramanujan blocks, positivity ledger (small `d`) |
-| `tables.py`, `pipeline_table.py` | tables from the outputs |
+| `theta_series.c` | `B_h(d)` as a function of `d` for all monic `h` of small degree (theta structure) |
+| `lab_sample.c`, `dual_sample.c` | random rows (resp. dual rows) of one degree, exact per row (generic members) |
+| `tables.py`, `pipeline_table.py`, `sample_table.py`, `row_anatomy.py` | tables from the outputs |
 | `results/` | core outputs (`d k rows M2 Diag max`), dual energies, ledgers, identity checks |
 
 Reproduction: `gcc -O2 -o lab_core lab_core.c && ./lab_core 7 6 30 > results/core_q7_m6_d30.txt`

@@ -20,8 +20,9 @@ names its payoff *if* the imported, unreviewed manuscript machinery is correct.
 >   with the known cubic sieve.
 > * **A0″ (κ-law / Prop L):** a saving `δ > (1−ρ)/6` over the positivity bound at one `ρ < 1`.
 > * **A0‴ (AMP_t):** an amplified dual closing at `H ≥ D·L^t` with `t < 6/5`.
-> * **B0:** Sep 30 (NA) is likely circular (its diagonal is the probe's Möbius signal). Treat
->   926/1077 and 28/33 as restatements until that is settled.
+> * **B0:** Sep 30 (NA) is false as stated in the tested range: the bias component aligns with the
+>   cubic-theta row's constant row, a main term `≈ 1/L(1, ψη)` (offense/O3b_NA_TEST). Treat 926/1077 and 28/33
+>   as void unless the narrower (NA′) holds and that main term cancels against the high side.
 
 ## A. The moment ladder (Oct 5 architecture): the only route found that scales to 1/2
 
