@@ -1,0 +1,35 @@
+{
+  "arithmetic": "exact Z[omega]; integers only",
+  "coefficient_identities": {
+    "exponent_vectors": 292,
+    "forward_inverse_pairs": 36208,
+    "masks": 4,
+    "rows": 31,
+    "zero_phase_cases": 25965
+  },
+  "finite_ray_classification": {
+    "2": {
+      "accepted": 3,
+      "patterns": 49
+    },
+    "3": {
+      "accepted": 4,
+      "patterns": 343
+    },
+    "6": {
+      "accepted": 7,
+      "patterns": 117649
+    }
+  },
+  "negative_controls": {
+    "rejected_false_coprimality": true,
+    "rejected_unsigned_inverse": true,
+    "rejected_zero_as_unit": true
+  },
+  "scope": "finite algebra only; no asymptotic or independent review",
+  "status": "PASS",
+  "tensor_collapse": {
+    "prime_semigroup_columns": 10,
+    "tensor_equalities": 12
+  }
+}
