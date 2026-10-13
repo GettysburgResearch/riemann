@@ -62,7 +62,9 @@ Smallest remaining gap: no lab mechanism proves Mom(1, rho < 1) without the Riem
    * Generic members (infinite monodromy) start at row degree 7. Sampled with exact per-row arithmetic
      (§3.1; q = 7, `m = 7`, 3000 rows), they give `M₂/Diag = 0.91–0.96` for ρ ∈ [0.7, 1.17] and
      1.01–1.07 for ρ ∈ [0.39, 0.58]. That is the `Q(ω)` picture (0.88–0.95). The ratio drifts slowly up
-     as ρ → 0 (1.22 ± 0.08 at ρ = 0.29), as expected from heavy-tailed per-member constants (EMPIRICAL).
+     as ρ → 0 (1.22 ± 0.08 at ρ = 0.29), as expected from heavy-tailed per-member constants. At
+     `m = 8` (400 rows) the values are 1.05–1.13 for ρ ∈ [0.73, 1.14] and 1.3–1.5 (± 0.2) at
+     ρ = 0.5–0.67 (EMPIRICAL).
    * This is harmless for exponents (Mom(1, ρ) is a `q^{o(d)}` statement). It has no number-field
      analogue, since Hecke L-functions have no Hodge type, and it means the lab must be run at row
      degree ≥ 7 to say anything about generic members.
@@ -445,9 +447,9 @@ Reading (EXACT on these cells; the trend is EMPIRICAL):
 
 | quantity | lab (F_q[T], this note) | Q(ω) (moments/, a2/) |
 |---|---|---|
-| `M₂/Diag`, generic rows, ρ < 1 | 0.98–1.0 (rows deg ≤ 2); 0.98 (q = 7, d = 4, M = 3); 0.994 (q = 13, d = 3) | 0.88–0.95 (RUNG_STRENGTH §5), random-sign-like (DUAL_ANATOMY) |
+| `M₂/Diag`, ρ < 1 | generic members (row degree 7, sampled): 0.92–1.07 for ρ ∈ [0.39, 0.88]; row degree 8: 1.08–1.5 ± 0.2 for ρ ∈ [0.5, 0.89]; trivial members (degree ≤ 2): 0.98–1.0 | 0.88–0.95 (RUNG_STRENGTH §5, naive diagonal), random-sign-like (DUAL_ANATOMY) |
 | special members | every member of conductor degree 3–6 is CM (finite monodromy): polynomial excess in `d` | none possible in the same sense (GL(1) Hecke L-functions); none seen at `D ≤ 64000` |
-| dual mean square / its diagonal | 0.984–1.009 | 0.97–1.14 (A2_LITERATURE §5) |
+| dual mean square / its diagonal | 0.949–1.009 (exact, d ≤ 5); 0.93–1.08 ± 0.07 (sampled, d = 7, deg h ≥ d) | 0.97–1.14 (A2_LITERATURE §5) |
 | positivity cost | exactly `q^{d−M}` | `≈ 1.3 D/Y` (DUAL_ANATOMY §4) |
 | signed dual / diagonal | −1.8 %, −0.6 % | within random spread, `≤ 0.18` |
 | absorption | exact identity (HD + Pellet) | exact at primes; theta coefficient needed (S6 open for cubic) |
