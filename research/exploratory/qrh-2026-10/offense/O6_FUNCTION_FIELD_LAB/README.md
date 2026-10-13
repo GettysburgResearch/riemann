@@ -221,6 +221,33 @@ Exact integers for every `(d, m)` are in `results/core_q*.txt`, with columns
   * It does mean the lab cannot yet test "M₂ ≈ Diag" for generic members. The clean ratios 0.88–0.95
     over `Q(ω)` (RUNG_STRENGTH §5) have no lab counterpart below row degree 7.
   * (EXACT census and maxima; the trend in `d` is EMPIRICAL; uniformity in `d` is not proved here.)
+### 3.1 Generic members: row degree ≥ 7 (sampled rows, exact per row)
+
+`lab_sample.c` draws uniformly random monic rows `u` of one exact degree `m`. For each it computes
+`L(x, ψ_u)` exactly, from the complete character sums over monic `n` of degree `< m`, then
+`A_u(d)` for all `d ≤ d_max` in `Z[ω]`, and the exact coprime count. The row average is a Monte Carlo
+estimate (EMPIRICAL; standard errors from the sample variance). It was validated against the exhaustive
+run at q = 7, m = 4: the coprime fraction agrees to 4 digits, and `M₂/Diag` agrees within sampling error.
+
+q = 7, `m = 7`, N = 3000 rows (`results/samp_q7_m7.txt`):
+
+| d | 6 | 7 | 8 | 9 | 10 | 12 | 14 | 16 | 18 | 20 | 22 | 24 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| ρ = m/d | 1.17 | 1.00 | 0.88 | 0.78 | 0.70 | 0.58 | 0.50 | 0.44 | 0.39 | 0.35 | 0.32 | 0.29 |
+| `M₂/Diag` | 0.913 | 0.929 | 0.915 | 0.956 | 0.927 | 1.018 | 1.009 | 1.032 | 1.070 | 1.123 | 1.147 | 1.216 |
+| ± s.e. | 0.026 | 0.028 | 0.028 | 0.030 | 0.029 | 0.035 | 0.042 | 0.045 | 0.050 | 0.061 | 0.068 | 0.076 |
+| max `|A|²/q^d` | 17.6 | 14.2 | 21.6 | 24.3 | 17.4 | 18.5 | 30.6 | 28.2 | 30.5 | 37.9 | 45.5 | 47.7 |
+
+* **Once the members are generic the lab looks like `Q(ω)`.** `M₂/Diag` is 0.91–0.96 for
+  ρ ∈ [0.7, 1.17]. RUNG_STRENGTH §5 has 0.88–0.95 over `Q(ω)`, with the same naive-versus-exact-diagonal
+  caveat in reverse: here the diagonal is exact. There is no excess at ρ < 1 down to ρ ≈ 0.5.
+* Below ρ ≈ 0.45 a slow rise appears (1.07 at ρ = 0.39, 1.22 at ρ = 0.29), at 2–3 standard errors per
+  cell, in correlated cells (EMPIRICAL). At fixed `u`, `|A_u(d)|²/q^d` has the Cesàro mean
+  `Σ_j Π_{k≠j}|e^{iθ_j} − e^{iθ_k}|^{−2}`. That mean is 1 on Haar average but heavy-tailed, so a slow
+  drift toward the tail is expected as `d/m` grows. This is the lab form of the `D^ε` in Mom(1, ρ).
+* The per-row maximum grows roughly linearly in `d` (14 → 48). There are no CM-type `binom(d+N, N)²`
+  rows.
+
 * **What proves Mom(1, ρ) in the lab** (LIT-level standard argument, not re-derived here): Weil's RH for
   each `L(x, ψ_u)` plus the explicit formula with short prime sums (Altug–Tsimerman type) gives
   `|A_u(d)| ≤ q^{d/2 + O(d/ log_q d)}` uniformly for `deg u ≤ Cd`. Hence `M₂ ≤ q^{d(1+ρ) + o(d)}`. This is

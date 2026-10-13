@@ -28,6 +28,7 @@ What was actually run (single-threaded, shared machine):
      (about 7 min) and ... run_big.json 32000 45000 --rho 0.6 0.75 0.9 (about 10 min); outputs copied
      to results/signed_dual_{main,big}.{json,log}
   python3 -I make_table.py results/signed_dual_main.json results/signed_dual_big.json (table in section 4)
+  python3 -I o2_second_absorption.py results/o2_second_absorption.json (Round 2, section 8; about 30 s)
 Smallest remaining gap: (OD-g1) below: the coprime-pair dual (the g = 1 part of the exact signed
   dual, which carries no Moebius sign at all) at relative precision D^{-delta} below the full dual
   diagonal, with delta > (1 - rho)/6; by Prop. L this presupposes (via the principal rows) the principal member
@@ -49,6 +50,7 @@ resting on them is CONDITIONAL/IMPORTED below.
 | H | **HB00-type routes give δ = 0.** Type I via Pólya–Vinogradov on `μ(f)` reaches even the positivity level only for blocks `F ≥ D^{2/3}`; blocks `F < D^{2/3}` carry 57–60 % of the positivity bound, and the `f = 1` block alone (no Möbius variable) carries 22–31 %. Primal Type II is capped at `D²` (row-blind) and its principal rows return `A₁`. Dual pointwise HB00 savings cannot help a mean square at or below its diagonal. A conditional import-assisted variant reaches dual-column ranges `Z ≤ D^{(12ρ+1)/31}` only. | PROPOSED (exponent bookkeeping, sympy) + [EXACT/FLOAT] block shares | δ = 0 |
 | A | **Amplifier ledger (the construction attempted here).** Amplify the extraction rows by `B_u(L) = Σ_{ℓ∼L prime} μ(ℓ)χ_ℓ(u)` (Möbius signs are absorbable, and `|B_principal| = π_K(L)`). If the amplified dual closes at `H ≥ D·L^t`, then `σ = 11/12 + λ(5t − 6)/12`, `L = D^λ`. Gain iff `t < 6/5`. With reflected length `𝓗²L^s/X` per amplifier prime, `t = (3+s)/2`. The Oct 5 reflection (prop:R, `s = 1`) closes only at `t = 2` (σ = 11/12 + λ/3), even `s = 0` gives `t = 3/2`, and Cauchy–Schwarz over `ℓ` gives `t = 5/2`. A quadratic amplifier (`χ_p³`) has the same `t = 2`. **Lemma NRA**: no amplifier makes the amplified Gauss coefficients a finite-order modulation of theta coefficients of length `DL` (the natural route to `t = 1`). The reflectable quadratic slot (the cube variable of eq:T) carries an angular Größencharakter and never amplifies. | ledger PROPOSED; Lemma NRA PROVED-HERE; `t < 6/5` OPEN | `11/12 − λ/12` at `t = 1` (CONDITIONAL on (AMP₁)) |
 | E | **Numerics.** The signed dual `S = 𝓜_D − Z` is tiny: `|S|/H ≤ 0.71 %`, `|S| ≤ 9.1` for `D ≤ 45000`. It is consistent with an independent-row model, `|S| ≍ H^{1/2}`. Its ratio to the positivity proxy `P ≍ D log D` gives an empirical cancellation exponent `log(P/|S|)/log D ∈ [0.71, 1.59]`, against the `1 − ρ ∈ {0.1, 0.25, 0.4}` that Mom(1, ρ) needs and the `(1 − ρ)/6` that beats 11/12. HB00-type routes predict 0. | EMPIRICAL (floating point, finite) | — |
+| R2 | **Round 2 (section 8): second absorption on `μ(g)` is idempotent.** The surviving `μ(g)1_{g|k}` is the inclusion–exclusion of the primal row mask `(u, gcd(N₁,N₂)) = 1`, not the family's Möbius function. Absorbing it as `conj(αG)γ₁γ₂(g)` pairs with nothing: every nonprincipal Gauss sum of modulus `g` vanishes on `g | k`. The row carries only principal characters mod `g`, whose Gauss sum is the Ramanujan sum with `c_g(1) = μ(g)`. Poisson in `k` is lem:poisson backwards. No Hecke character is `−1` on almost all primes, so Pellet has no number-field version acting on `g` alone. | identities [EXACT/FLOAT] C5–C8 (eq:gj reproduced to 4e-13); reassembly PROPOSED | δ = 0 |
 
 **Best result.** No exponent moves. The precise outcome is a reduction with an exponent attached:
 
@@ -412,6 +414,111 @@ Rankin–Selberg-type product of the cubic theta with an Eisenstein series in `�
 such an object cannot be a finite-order modulation of the cubic theta itself. The angular remark says the
 quadratic slot inside the theta is the wrong one.
 
+## 8. Round 2: absorbing the dual Möbius variable a second time
+
+Coordinator prompt: O6 (offense/O6_FUNCTION_FIELD_LAB §0) finds that the lab's working mechanism is Pellet,
+`μ(n) = (−1)^{deg n} χ₂(disc n)`. That is a *character* of an invariant of `n` alone, so it can act on a dual
+Möbius variable by itself. Over `Z[ω]` the candidate substitute is the absorption identity
+`μ = conj(αG)·γ₁γ₂` (Oct 5 eq:gj). Apply it to the `μ(g)` of Prop. G and ask whether the `g`-sum
+reassembles into a Gauss or Ramanujan sum in the dual row `k` that a Poisson or theta step can use.
+
+**Answer: it collapses.** The second absorption is idempotent (it returns `μ(g)`), and Poisson in `k`
+returns the primal family. δ = 0. Details follow.
+
+### 8.1 What the dual Möbius variable is — PROVED-HERE (bookkeeping of the imported change of variables)
+
+In eq:initial-poisson-rows the original columns are `N_j = g_o z_j`, with `(z₁, z₂) = 1`. The row mask
+`1_{(u, g_o)=1} = Σ_{e | (u, g_o)} μ(e)` is Poisson-transformed, giving a frequency `h`. The manuscript then
+sets `b = g_o/e`, `f = ev` (with `v` the coprimality Möbius variable), and `k = eh`.
+
+Tracing these through Prop. G: for each `b`, its variables are `n_j = N_j/b` and `g = gcd(n₁, n₂) = e`. So the
+factor `μ(g) 1_{g|k}` is exactly the `e`-term of the **inclusion–exclusion of the primal row-coprimality mask**
+`(u, gcd(N₁, N₂)) = 1`, which comes from `χ_{N₁}(u) conj χ_{N₂}(u) = 1_{(u,g_o)=1} χ_{z₁}(u) conj χ_{z₂}(u)`.
+
+It is not the family's arithmetic Möbius function:
+* `μ(N_j)` was absorbed into `a(z_j)` by eq:convert2;
+* the column-coprimality Möbius `μ(v)` was absorbed by the collapse of Prop. G.
+
+### 8.2 The second absorption is idempotent — exact identities, checked with true symbols
+
+Script `o2_second_absorption.py`, output `results/o2_second_absorption.json`, about 30 s. All Gauss sums
+are computed directly over `O/g ≅ Z/N(g)` for `g` a product of split primes of distinct norms, using
+`e(z) = exp(4πi Im z/√3)`.
+
+* **C5 [FLOAT].** In our conventions `γ₁γ₂ = μαG` and `γ₂³ = μα` hold, with `G(n) = conj χ_n(4) γ₃(n)`.
+  37 moduli with 1–3 primes; maximum error 4.4e-13. This validates the imported eq:gj and our symbol
+  conventions. So `μ(g) = conj(α(g)G(g)) γ₁(g)γ₂(g)` (second absorption).
+* **C6 [EXACT].** `μ(g) 1_{g|k} = ∏_{p|g}(|χ_p(k)|² − 1) = Σ_{d|g} μ(g/d) χ_d(k)⁶`, where `χ_d(k)⁶` is the
+  principal character modulo `d`. 400 cases (110 with nontrivial `g | k`), 0 failures. The only
+  modulus-`g` structure that the row `k` carries is principal.
+* **C7 [FLOAT].** For `j = 1..5`, `Σ_{x mod g} χ_g(x)^j e(kx/g)` equals `conj χ_g(k)^j √N(g) γ_j(g)` when
+  `(k, g) = 1`, and `0` when `g | k`. 140 cases; maximum error 4.9e-12, maximum absolute value on `g | k`
+  4.7e-11. **Every nonprincipal Gauss sum of modulus `g` vanishes on the support of `1_{g|k}`.** So the
+  Gauss sums `γ₁(g)γ₂(g)` produced by the second absorption have nothing in the row to pair with.
+* **C8 [FLOAT].** The complete Fourier transform of the principal character is the Ramanujan sum,
+  `Σ_{x mod g, (x,g)=1} e(ux/g) = Σ_{e | (g,u)} μ(g/e) N(e)`. 66 cases; maximum error 5.6e-8 on sums of
+  size up to 3·10⁴. At `u = 1` it equals `μ(g) = conj(αG)(g) γ₁(g)γ₂(g)`; maximum error 5.1e-12.
+
+So the "Gauss sum in the row" that the `g`-structure generates is the Ramanujan sum `c_g(·)`. Its
+unit-frequency value is the same `μ(g)`, so the second absorption is idempotent. Pellet's mechanism needs `μ`
+to be a *character* of `g`; the absorption instead writes `μ(g)` as a product of Gauss sums, and these are
+twisted-multiplicative functions on `O/g`, not characters. They can act only through a multiplicative
+character of modulus `g` in a summed variable, and by C7 the dual has none.
+
+### 8.3 The involution — PROPOSED (assembled from C6–C8 and lem:poisson)
+
+The only step that sees the row structure is Poisson in `k`. By C6 the `k`-dependence of a Prop. G term is
+`Σ_{d|g} μ(g/d) χ_{0,d}(k) χ_{z₁}(k) conj χ_{z₂}(k)`, a character modulo `d z₁ z₂` that is principal at `d`.
+By CRT its complete sum against `e(ku/(dz₁z₂))` factorizes as
+
+    (Ramanujan sum c_d(u)) × (Gauss sum of χ_{z₁} conj χ_{z₂} at u).
+
+* The Gauss-sum factor turns `a(z₁) conj a(z₂)` back into `μ(z₁)μ(z₂)` (eq:convert1).
+* The Ramanujan factors, summed against `μ(g/d)`, rebuild the mask `1_{(u, g)=1}`. This is the
+  `Σ_{d | rad 𝔯} μ(d)χ(d)/N(d)` factor of lem:poisson read backwards.
+
+Poisson in `k` after the second absorption is therefore the inverse of eq:initial-poisson-rows: the primal
+Mom(1, ρ), with no exponent gained or lost. The `k`-reassembly was not replayed term by term. The local
+identities it uses (C6–C8) are checked.
+
+### 8.4 Cancellation beyond positivity? No — the `g`-sum is a bounded divisor weight on the row
+
+Fix `(b, z₁, z₂, k)` and Mellin-separate the weights. The `g`-sum of (G) is a finite Euler product over the
+primes of the dual row:
+
+    Σ_{g | k, (g, bz₁z₂)=1} μ(g) ψ(g) N(g)^{−s} = ∏_{p | k, p ∤ bz₁z₂} (1 − ψ(p) N(p)^{−s}),
+    ψ = χ_{z₁}⁴ conj χ_{z₂}⁴   (cubic, from a(gz₁) conj a(gz₂)).
+
+Its modulus lies between 0 and `2^{ω(k)}`, and it does not oscillate in any long variable. So it supplies no
+power saving.
+* For `z₁ = z₂ = 1` it is what removes the dual diagonal. With the actual `N(g)`-dependent weights it leaves
+  the principal Möbius sums of §1.2, i.e. `A₁` itself.
+* For `z₁ ≠ z₂` it is a bounded multiplicative weight on rows. Any bound for the weighted dual follows from
+  the unweighted one up to `D^ε`, so positivity loses nothing further, and nothing is gained either.
+
+### 8.5 Why Pellet has no number-field version acting on `g` alone
+
+*Fact (PROVED, standard).* No Hecke character `Ξ` of `K` satisfies `Ξ(p) = −1` for all but finitely many
+primes. Otherwise `Ξ²` would be trivial on almost all primes, hence trivial, so `Ξ` would be a quadratic
+(finite-order) character. Chebotarev equidistribution would then give `Ξ(p) = +1` for half the primes.
+
+The factor `(−1)^{deg n}` in Pellet is the vertical twist `s ↦ s + πi/log q`, which exists only because every
+norm is a power of `q`. Its would-be analogue `N(n)^{it}` with `N(p)^{it} = −1` for all `p` does not exist.
+The discriminant factor `χ₂(disc n)` corresponds over `Z[ω]` to the Gauss-sum product of eq:gj (O6 §0 item 1:
+Hasse–Davenport/Stickelberger), and by 8.2 that product is not a character of `g`. **So the number-field
+substitute for Pellet does not act on the dual Möbius variable alone. Applied there, it is idempotent.**
+
+### 8.6 Leverage consequence (Prop. L)
+
+The route gives δ = 0. The threshold for beating 11/12 at `H = D^ρ` stays `δ > (1 − ρ)/6`, and the smallest
+statements are unchanged:
+* (OD-g1), the coprime-pair dual, which carries no Möbius function at all;
+* on the construction side, (AMP_t) with reflected-length exponent `s < −3/5`.
+
+What Round 2 adds is precise. The Möbius sign left in the exact dual is the inclusion–exclusion of a
+*coprimality mask*, so it carries no arithmetic information about the family. Any saving must come from the
+Gauss-sum coefficients `a(z)` together with the row characters, i.e. from (OD-g1).
+
 ## Files
 
 * `README.md`: this note.
@@ -420,3 +527,4 @@ quadratic slot inside the theta is the wrong one.
 * `signed_dual_numerics.py`: signed dual, positivity proxy, principal-row share. Output:
   `results/signed_dual_{main,big}.{json,log}`.
 * `make_table.py`: table and fits of section 4 (`results/table_main.md`).
+* `o2_second_absorption.py`: Round 2 checks C5–C8 (section 8). Output: `results/o2_second_absorption.json`.
