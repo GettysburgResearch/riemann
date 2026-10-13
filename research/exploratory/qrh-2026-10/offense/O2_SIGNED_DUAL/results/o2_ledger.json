@@ -1,0 +1,114 @@
+{
+ "L1": {
+  "sigma": "-delta/2 - rho/12 + 1",
+  "threshold_11_12": "1/6 - rho/6",
+  "threshold_7_8": "1/4 - rho/6",
+  "general_threshold": "-rho/6 - 2*sigma_star + 2",
+  "table": [
+   {
+    "rho": "1/2",
+    "delta_beat_11_12": "1/12",
+    "delta_beat_7_8": "1/6",
+    "delta_full": "1/2",
+    "sigma_full": "17/24"
+   },
+   {
+    "rho": "3/5",
+    "delta_beat_11_12": "1/15",
+    "delta_beat_7_8": "3/20",
+    "delta_full": "2/5",
+    "sigma_full": "3/4"
+   },
+   {
+    "rho": "3/4",
+    "delta_beat_11_12": "1/24",
+    "delta_beat_7_8": "1/8",
+    "delta_full": "1/4",
+    "sigma_full": "13/16"
+   },
+   {
+    "rho": "9/10",
+    "delta_beat_11_12": "1/60",
+    "delta_beat_7_8": "1/10",
+    "delta_full": "1/10",
+    "sigma_full": "7/8"
+   },
+   {
+    "rho": "99/100",
+    "delta_beat_11_12": "1/600",
+    "delta_beat_7_8": "17/200",
+    "delta_full": "1/100",
+    "sigma_full": "73/80"
+   }
+  ]
+ },
+ "L2": {
+  "typeI_reaches_positivity_iff": "F >= D^(2/3)",
+  "phi_min": "2/3",
+  "note": "blocks with F < D^(2/3) (incl. f = 1, which has no Moebius variable) are untouched"
+ },
+ "L3": {
+  "a_CS_over_ell_plus_propR": {
+   "h": "5*lambda/2 + 1",
+   "sigma": "13*lambda/24 + 11/12",
+   "slope": "13/24"
+  },
+  "b_crossterms_free_propR_Nf": {
+   "h": "2*lambda + 1",
+   "sigma": "lambda/3 + 11/12",
+   "slope": "1/3"
+  },
+  "q_quadratic_amplifier_product": {
+   "h": "2*lambda + 1",
+   "sigma": "lambda/3 + 11/12",
+   "slope": "1/3"
+  },
+  "c_reflectable_length_DL": {
+   "h": "lambda + 1",
+   "sigma": "11/12 - lambda/12",
+   "slope": "-1/12"
+  },
+  "general_H_ge_D_L^t": {
+   "sigma_minus_11_12": "lambda*(5*t - 6)/12",
+   "gain_iff": "t < 6/5"
+  },
+  "lambda_for_7_8_in_variant_c": "1/2"
+ },
+ "L4": {
+  "bound_exponent": "31*z/12 - 1/12",
+  "z_max": "12*rho/31 + 1/31",
+  "z_max_at": {
+   "3/5": "41/155",
+   "3/4": "10/31",
+   "9/10": "59/155"
+  },
+  "note": "blocks with Z > z_max, including G = 1 (no Moebius variable), are not reached"
+ },
+ "C1": {
+  "cases": 400,
+  "cases_with_nontrivial_g_dividing_k": 82,
+  "max_abs_error": 1.5100665727558131e-15,
+  "note": "values are 6th roots of unity or 0; error is float rounding of exp(2 pi i e/6)"
+ },
+ "C2": "sum_{bfm=n} phi(m)/(Nb Nm) = 2^omega(n): 200 exact cases pass",
+ "C3": [
+  {
+   "D": 1000,
+   "P": 393.66644623145675,
+   "share_F_lt_D23": 0.5688875149728512,
+   "share_f_eq_1": 0.3136363389807531
+  },
+  {
+   "D": 10000,
+   "P": 4731.898158886977,
+   "share_F_lt_D23": 0.5894151666231787,
+   "share_f_eq_1": 0.2593288610461096
+  },
+  {
+   "D": 100000,
+   "P": 54631.81631477065,
+   "share_F_lt_D23": 0.6047784732985962,
+   "share_f_eq_1": 0.22408131370945628
+  }
+ ]
+}

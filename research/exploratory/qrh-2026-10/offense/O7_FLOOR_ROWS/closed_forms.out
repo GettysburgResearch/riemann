@@ -9,3 +9,4 @@ raised floor, kappa=1, active {L1,L3,kink,floor}: sigma0(delta0) = 2*(delta0 + 9
 a0 -> 1/2, NC(theta): sigma0(theta) = 2*(4*theta - 3)/(8*theta - 7) [2*(2*theta - 1)/(8*theta - 7), 4*(2*theta - 1)/(8*theta - 7), (-4*theta - 1)/(8*theta - 7)]
 a0 = 51/100, floor saving theta: sigma0(theta) = 2*(600*theta - 463)/(3*(400*theta - 359))
 general kappa: sigma0 = 2*(12*delta0*kappa - 13*delta0 - 9)/(3*(8*delta0*kappa - 9*delta0 - 7)) ; d sigma0/d delta0 at 0 = 20/147 - 8*kappa/49
+closed form vs LP at fixed delta0: 30/30 exact matches

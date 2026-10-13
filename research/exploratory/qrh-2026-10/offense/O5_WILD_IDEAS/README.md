@@ -16,6 +16,7 @@ What was actually run:
   python3 -I triage_exponents.py   (sympy, exact rationals, ~2 s; all asserts pass) -> triage_exponents.out
   python3 -I galois_cubic_checks.py (exact Z[omega] symbols + the moments/ C kernel, ~1 min)
     -> galois_cubic_checks.json
+  python3 -I kappa_window.py (moments/ C kernel, binary64, ~1 min) -> kappa_window.json
 Smallest remaining gap: a coefficient-specific bound at ONE sub-diagonal row range,
   sum_{N u <= D^(1-eta)} |A_u(D)|^2 << D^(2-(1-kappa) eta) with kappa < 5/6 (the kappa-law,
   ROW_REWEIGHTING_CLOSURE.md Sec. 3); it would give 11/12 - eta (5/6 - kappa)/2.
@@ -31,9 +32,16 @@ Smallest remaining gap: a coefficient-specific bound at ONE sub-diagonal row ran
      * `ζ_F ≠ 0` on `Re s > 7/8` for every field `F` contained in an abelian extension of
        `Q(√−3)`. This includes pure cubic fields, `Q(m^{1/6})` and ring class fields.
      * The least prime `p ≡ 1 (3)` with `m` a cubic non-residue is `≪ (log m)^{8+ε}`, effectively.
-  2. *The κ-law*, a minimal sufficient target strictly weaker than Mom(1, ρ). Saving any
-     `1/6`-fraction of the sub-diagonal gap already beats 11/12:
-     `σ = 11/12 − η(5/6 − κ)/2`.
+  2. *The κ-law* and *Prop. L*.
+     * The κ-law is a minimal sufficient target, strictly weaker than Mom(1, ρ):
+       `σ = 11/12 − η(5/6 − κ)/2`.
+     * New (PROPOSED, conditional on Oct 5 as stated): lifting rows by `p⁶` already *proves* the
+       sub-diagonal bound `Σ_{N u ≤ D^{1−η}} |A_u|² ≪ D^{2−η/6+ε}`, i.e. `κ = 5/6`, for every
+       `η < 6/11` (every `η < 1` under the all-`H` form of Oct 5).
+     * So the whole gap below 11/12 is the step from `κ = 5/6` to any `κ < 5/6` at a single `η`.
+       Lifting is a fixed point and cannot make that step.
+     * Numerically `κ̂ ∈ [−0.09, −0.02]` on single windows (`D ≤ 32000`), with μ inside the
+       random-sign spread.
   3. *A closure theorem* (Prop. W). No positive combination of Oct 5-type inputs over row ranges,
      scales, heights, angular twists, Mellin kernels or multiplicity-weighted density beats
      `min(σ₀, 11/12)`.
@@ -57,7 +65,7 @@ Smallest remaining gap: a coefficient-specific bound at ONE sub-diagonal row ran
 | 11 | repository criteria under 7/8 (seed 10) | Robin graded (done); dBN `Λ ≤ 9/32` (no gain); Li growth rate factor 3/4; NB none | CONDITIONAL, small | constant factors only; see §11 |
 | 12 | function-field truth table (seed 11, conceptual) | Stepanov's method has no number-field analogue at power scale | DEAD for power scale | Oct 1 determinants (the nearest analogue) are log-scale (SIEGEL_DETERMINANT) |
 | 13 | N-a diagonal-free cross-scale moment `Σ_u A_u(D) conj A_u(4D)` | no original or dual diagonal | DEAD | the principal part is not sign-definite; a Hermitian completion restores diagonals |
-| 14 | N-b κ-law partial sub-diagonal target | `σ = 11/12 − η(5/6−κ)/2`; the import gives `κ = 3/(4η)` | ALIVE (target) | needs coefficient-specific large values for generic rows |
+| 14 | N-b κ-law partial sub-diagonal target + Prop. L (lifting) | `σ = 11/12 − η(5/6−κ)/2`; Oct 5 ⇒ `κ = 5/6` for `η < 6/11` (PROPOSED); numerics `κ̂ ≈ −0.05` | ALIVE (target) | κ = 5/6 is a fixed point of lifting; `κ < 5/6` needs coefficient-specific large values for generic rows |
 | 15 | N-c row reweighting / structured rows (S-units, weights `N(u)^{−α}`) | best = 11/12 at range `x = 1` | DEAD | mediant inequality; leverage = principal ÷ average multiplicity, which is uniform on S-unit rows |
 | 16 | N-e Vaughan/Heath-Brown bilinear split of μ into short pieces | type II via Hölder needs `H ≥ max(A,B)² ≥ D` | DEAD | the principal class of `B_u²` gives `H^{1/6}A⁴`; principal-row type II sums have no oscillation |
 | 17 | N-f the 7/8 import as base case for the Oct 5 induction at `ρ < 1` | none | DEAD | the dual sums `B_h` have no Euler product, so zero-free regions do not bound them |
@@ -68,6 +76,12 @@ Two more mechanisms were examined inside the rows above:
   (AGENDA A1), with `c` unchanged;
 * the norm-form rows `u = N_{L/K}(x)`: principal for all columns only on sixth powers
   (Grunwald–Wang), so nothing new.
+* the anticyclotomic family `n ↦ χ_n(u/ū) = (u/N n)₆` (own idea).
+  * It looks like leverage `c = 1/2`: all rational `u` (`≍ √H` rows) are principal, and the
+    principal sum is still `Σ μ_K(n)W`.
+  * But `u ↦ u/ū` has fibres of size `≍ √H` for *every* member, so the multiplicity is uniform.
+    Leverage is principal multiplicity divided by typical multiplicity, which here is 1.
+  * Poisson gives `γ·γ̄`-type products, so absorption fails (LEVERAGE §2.2, quotient row). DEAD.
 
 ## Short notes per mechanism (≤ 1 page each)
 
@@ -161,7 +175,13 @@ off-diagonal = `D` for same-class pairs).
   inert primes), whose budget is intrinsically logarithmic (SIEGEL_DETERMINANT). DEAD for power-scale
   exponents.
 
-**14. κ-law.** See ROW_REWEIGHTING_CLOSURE §3. This is the cleanest minimal target identified.
+**14. κ-law and Prop. L.** See ROW_REWEIGHTING_CLOSURE §3.
+* Prop. L: for every row `u` and prime `p`,
+  `A_u(x) = A_{up⁶}(x) − νψ_u(p)A_{up⁶}(x/Np)`. Averaging over `≍ Y/log Y` primes with `Y⁶ = x^{1+θ}/R`
+  places the sub-diagonal rows inside the Oct 5 range and saves `Y = (x^{1+θ}/R)^{1/6}`.
+* This gives `κ = 5/6` at every `η < 6/11`, using Oct 5 only as stated (two fixed `ϑ ≤ 1/10`).
+* `kappa_window.py` (EMPIRICAL): on single windows the true family has `M/Diag ∈ [0.83, 0.96]`,
+  inside the random-sign spread, so `κ̂ ≈ 0`.
 
 **16. Bilinear split of μ.**
 * With Heath-Brown's identity, `A_u` becomes sums of products `B_u(A)C_u(B)` with `AB = D`. A type II
@@ -188,12 +208,20 @@ closed.
 3. **Detector–leverage coincidence** (EXACT). `f(σ) = 1/6 ⟺ σ = 11/12`. Both architectures meet
    the wall at the same point when counting with multiplicity.
 
-**Single most promising next step.** Test, and then attack, (Κ_{η,κ}) at small `η` with κ < 5/6:
-* numerically, measure the excess `log(M₂/Diag)` against `η` at `ρ = 1 − η` on the true family. It
-  is already ≈ 0 (RUNG §5), so the target is consistent;
-* theoretically, try to prove (Κ) for the *rows with `N u` in a short multiplicative window around
-  `D^{1−η}`* only. That is the minimal range where neither the Oct 5 induction (needs
-  `ρ ≥ 1`) nor positivity applies.
+**Single most promising next step.** Prove (Κ_{η,κ}) with some `κ < 5/6` for ONE small `η`, on ONE
+dyadic window `N u ∼ D^{1−η}`.
+* By Prop. L, Oct 5 already gives `κ = 5/6` there, and lifting propagates any improvement to the
+  whole ladder. The target is therefore a saving of `D^{δη}` over the *lifted* Oct 5 bound on one
+  window just below the `ρ = 1` wall.
+* That is the smallest statement whose truth would move 11/12. Numerically it holds with `κ ≈ 0`.
+* Caution, so as not to mislead: the lifted rows `up⁶` carry no new characters
+  (`ψ_{up⁶} = ψ_u` away from `p`), so "cancellation between `p`-lifts" is the window problem again.
+* The equivalent form worth attacking is a *restricted* Oct 5 mean square on the thin, structured
+  row set `S = {u p⁶ : N u ∼ D^{1−η}, N p ∼ Y}`, of density `D^{−5(η+θ)/6}` in the Oct 5 range:
+  `Σ_{u ∈ S} |A_u(D)|² ≪ D^{2+θ−δ}` for some `δ > 0`.
+* Oct 5 bounds this by the *full* range, which is exactly the `κ = 5/6` loss. Any restricted large
+  sieve that sees the thinness of `S` would do. Note that `S` is not a lattice region, so Poisson in
+  `u` does not apply directly.
 
 ## Files
 
@@ -204,3 +232,4 @@ closed.
 | [KUMMER_FIELD_COROLLARIES.md](KUMMER_FIELD_COROLLARIES.md) | developed idea 2: Props. K1, K2 | CONDITIONAL + PROPOSED + EMPIRICAL |
 | `triage_exponents.py`, `triage_exponents.out` | exact bookkeeping for every number above | PROPOSED (exact) |
 | `galois_cubic_checks.py`, `galois_cubic_checks.json` | Galois symbol identity, `A_ū = conj A_u`, least cubic non-residue primes | EMPIRICAL / exact integers |
+| `kappa_window.py`, `kappa_window.json` | κ-law on single dyadic row windows, μ vs random signs | EMPIRICAL (binary64) |

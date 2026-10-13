@@ -15,10 +15,13 @@ Exact sources or dependencies: RUNG_STRENGTH.md (leverage law, Prop. R, Prop. R'
   detector f(sigma)); LEVERAGE_FAMILIES.md Sec. 2.3; Oct 5 manuscript paper2.tex (IMPORTED,
   unreviewed): eq:intro-ms, eq:intro-extraction.
 What was actually run: python3 -I triage_exponents.py (sympy, exact rationals, ~2 s); output in
-  triage_exponents.out. No numerics.
+  triage_exponents.out. python3 -I kappa_window.py (moments/ C kernel, binary64, ~1 min; EMPIRICAL,
+  finite) -> kappa_window.json.
 Smallest remaining gap: a coefficient-specific bound at a SINGLE sub-diagonal row range,
   sum_{N u <= D^(1-eta)} |A_u(D)|^2 << D^(2 - (1-kappa) eta), with kappa < 5/6 for some eta > 0
-  (the kappa-law, Sec. 3). Nothing known supplies kappa < 1 except the import itself at eta > 9/10.
+  (the kappa-law, Sec. 3). Prop. L (Sec. 3, PROPOSED, conditional on Oct 5 as stated) shows that
+  lifting by p^6 already gives kappa = 5/6 for every eta < 6/11, and that kappa = 5/6 is a fixed
+  point of lifting; nothing known supplies kappa < 5/6.
 ```
 
 RH remains unproved. The 11/12 and 7/8 statements are external, unreviewed claims (the 7/8 Lean
@@ -113,16 +116,70 @@ Replace "diagonal size at `ρ < 1`" by a partial saving. Suppose that for some `
 
     (Κ_{η,κ})   Σ_{N u ≤ D^{1−η}} |A_u(D)|² ≪ D^{2 − (1−κ)η + ε}   for every smooth W.
 
-Positivity from the Oct 5 range gives `κ = 1`; Mom(1, 1−η) is `κ = 0`. Extraction gives (sympy)
+Positivity from the Oct 5 range gives `κ = 1`, Prop. L below gives `κ = 5/6`, and Mom(1, 1−η) is
+`κ = 0`. Extraction gives (sympy)
 
     σ(η, κ) = 11/12 − η (5/6 − κ)/2.
+
+**Prop. L (lifting gives κ = 5/6 for free; PROPOSED, proof below, conditional on Oct 5
+prop:ms, IMPORTED).** Assume the Oct 5 mean square as stated: for each fixed `ϑ ∈ (0, 1/10]` and smooth
+`W`, `Σ_{0<N u ≤ x^{1+ϑ}} |A_u(x)|² ≪_{ϑ,W,ε} x^{2+ϑ+ε}` for all large `x`.
+* (i) For every fixed `η ∈ (0, 6/11)` and `ε > 0`,
+
+      Σ_{0 < N u ≤ x^{1−η}} |A_u(x)|² ≪_{η,ε,W} x^{2 − η/6 + ε},
+
+  i.e. (Κ_{η, 5/6}). Extraction from it returns exactly 11/12.
+* (ii) The same holds for every `η ∈ (0, 1)` under (Oct5⁺): the bound `≪ x^{1+ε}H` for **all**
+  `H ≥ x^{1+ϑ}`. This is the natural all-`H` form; the manuscript states only `ϑ ≤ 1/10`.
+
+*Proof.* Let `R = x^{1−η}`, fix a small `θ > 0`, and put `Y = (x^{1+θ}/R)^{1/6} = x^{(η+θ)/6}`. Let `𝒫` be
+the `J ≍ Y/log Y` primary primes `p ∤ 6` with `Y/2 < N p ≤ Y`. The exact separation identity of
+Prop. R′ step 3 (it uses only `μ(pm) = −μ(m)` and `χ_n(p⁶) = 1_{p∤n}`) gives, for every row `u` and
+every `p`,
+
+    A_u(x) = A_{up⁶}(x) − ν(p)ψ_u(p) A_{up⁶}(x/N p),     |ν(p)ψ_u(p)| = 1.
+
+So `|A_u(x)|² ≤ 2|A_{up⁶}(x)|² + 2|A_{up⁶}(x/Np)|²`. Average over `p ∈ 𝒫` and sum over `N u ≤ R`.
+* The rows `up⁶` have norm `≤ R Y⁶ = x^{1+θ}`, and each arises from `≪ x^{ε}` pairs `(u, p)` (divisor
+  bound).
+* First term: by Oct 5 at scale `x` with `ϑ = θ`, it is `≪ J^{−1} x^{2+θ+ε}`.
+* Second term: the scales `x' ∈ [x/Y, 2x/Y]` satisfy `x^{1+θ} ≤ x'^{1+θ'}`, with
+  `θ' = (1+θ)/(1 − (η+θ)/6) − 1 + o(1)`. For `η < 6/11` and `θ` small, `θ' ≤ 1/10`, so positivity and
+  Oct 5 at scale `x'` with the fixed `ϑ = θ'` bound it by
+  `≪ J^{−1} x'^{2+θ'+ε} = J^{−1} x^{2+θ−(η+θ)/6+o(1)}`, smaller than the first term.
+  Under (Oct5⁺) the same bound holds for every `η < 1`.
+* Total: `≪ x^{2+θ+ε}/Y = x^{2 + θ − (η+θ)/6 + ε}`. Since `θ` is arbitrary, this gives
+  `x^{2−η/6+ε'}`. Extraction (W2) with `κ = 5/6` gives `σ(η, 5/6) = 11/12`. ∎
+
+*Remarks.*
+* Prop. L is strictly stronger than summing Prop. R′'s pointwise bounds `(N u)^{1/12} D^{11/12}` over
+  the window, which gives `D^{3 − 7η/6}`.
+* It is also stronger than positivity (`κ = 1`): the sub-diagonal mean squares are already
+  nontrivial at 5/6-strength, *conditionally on Oct 5*. The excess over diagonal is at most
+  `D^{5(1−ρ)/6}` at `ρ = 1 − η`, for `η < 6/11`.
+* **Lifting is a fixed point** (exponent bookkeeping; the scale condition of (i) is assumed to hold
+  at each step). Lifting from window `1 − η` into a window `1 − η'` that satisfies
+  (Κ_{η', κ'}) gives the exponent `2 − (η − η')/6 − (1 − κ')η'`. At `κ' = 5/6` this is `2 − η/6` again.
+  If some window had `κ₀ < 5/6` at `η₀`, lifting would propagate it: `κ(η) = 5/6 − (η₀/η)(5/6 − κ₀)`.
+  The resulting boundary `11/12 − η₀(5/6 − κ₀)/2` is the same as the κ-law at `η₀` directly. So one
+  window with `κ < 5/6` suffices, and the lifting machinery cannot manufacture it.
+
+**Numerics on one window (EMPIRICAL, binary64; `kappa_window.py`, `kappa_window.json`; ~1 min).**
+* Setup: `M_window / Diag_window` on `D^{1−η}/2 < N u ≤ D^{1−η}`, with
+  `D ∈ {2000, 8000, 32000}` and `η ∈ {0.1, 0.2, 0.3, 0.5}`.
+* μ gives 0.83–0.96. Three iid random-sign controls on the same columns give 0.84–1.01, and μ is
+  inside their spread.
+* The implied `κ̂ = log(M/Diag)/(η log D)` lies in `[−0.09, −0.02]`. It is negative only because
+  the naive diagonal ignores coprimality.
+* So in this finite range the window data are consistent with `κ ≈ 0`, far below 5/6. As everywhere
+  in this folder, finite data are not evidence of provability; what is missing is a mechanism.
 
 * **Any `κ < 5/6` at any `η > 0` beats 11/12.** One needs to save only a `1/6`-fraction of the
   sub-diagonal gap, not all of it.
 * The imported 7/8 bound used pointwise gives `κ = 3/(4η)`. That is `< 5/6` only for `η > 9/10`,
   and then `σ = 31/24 − 5η/12 ≥ 7/8`: the import reproduces itself, nothing more.
-* Every mechanism in the O5 triage that survives to a statement gives `κ = 1` (positivity) or is
-  equivalent to (Κ) (Poisson involution, Q_RHO_ANALYSIS). A proof of (Κ) with `κ < 5/6` still has to
+* Every mechanism in the O5 triage that survives to a statement gives `κ ≥ 5/6` (positivity: 1;
+  lifting, Prop. L: 5/6) or is equivalent to (Κ) (Poisson involution, Q_RHO_ANALYSIS). A proof of (Κ) with `κ < 5/6` still has to
   beat the single-row barrier of RUNG §3(a) at the conductor-graded level:
   `|A_w(D)| ≪ D^{1/2 + 5ρ/12 + ω/12}` for `N w = D^ω` (RUNG §4 item 2, heuristic extrapolation).
   At `ρ = 9/10` and `ω ≥ 0` this is *implied* by the 7/8 import. So the import already pays the
@@ -142,4 +199,4 @@ Positivity from the Oct 5 range gives `κ = 1`; Mom(1, 1−η) is `κ = 0`. Extr
 | Mellin-multiplier kernels | DEAD | same as changing `W` |
 | pointwise 7/8 bootstrap (seed 2b) | DEAD | `σ₁ − σ₀ = (11/12 − σ₀)/k > 0` for `σ₀ < 11/12` |
 | zero density with multiplicity (seed 6) | DEAD (circular) | `Q = 1` term: `H^{1/6} ≤ H^{A(1−σ)}` |
-| κ-law (Κ) with `κ < 5/6` | OPEN target | coefficient-specific large values for generic rows |
+| κ-law (Κ) with `κ < 5/6` | OPEN target (κ = 5/6 PROPOSED via Prop. L) | coefficient-specific large values for generic rows; a restricted mean square on the thin lifted set |

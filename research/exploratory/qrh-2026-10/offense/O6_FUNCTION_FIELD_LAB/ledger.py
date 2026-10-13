@@ -12,7 +12,7 @@ Ledger (all exact integers in Z[omega], printed as rational multiples of the pri
    T1      = sum_{e,f} |Block(e,f)|,  Block(e,f) = q^{M-d}|e| sum_{e|h} I(ef,h)      (positivity in f)
    T2      = sum_{e,f} q^{M-d}|e| sum_{e|h} |sum_a beta_h(a) chi_a(g)|^2            (drop (a,b)=1: mean square)
    T2diag  = the a = b part of T2 (the "dual diagonal")
-Usage: python3 ledger.py q d   (all M = 1..2d)
+Usage: python3 ledger.py q d [M1,M2,...]   (default all M = 1..2d)
 """
 import sys
 import json
@@ -84,7 +84,8 @@ def main():
     # primal truth for rows V_M
     res = {}
     cols = sq[d]
-    for M in range(1, 2 * d + 1):
+    Ms = [int(x) for x in sys.argv[3].split(',')] if len(sys.argv) > 3 else list(range(1, 2 * d + 1))
+    for M in Ms:
         rows = [u for u in allpolys_below(M, q) if u]
         Emat = np.array([[chi_e(n, u) for u in rows] for n in cols], dtype=np.int64)
         mu = np.array([mobius(n, q, primes) for n in cols], dtype=np.int64)
@@ -154,7 +155,7 @@ def main():
         print(f"q={q} d={d} M={M} rows={len(rows)}: M2={M2} Diag={Diag} Off/Diag={(M2-Diag)/Diag:+.4f} | "
               f"dual total={dual_total:.1f} (omega part {scale*tot_om:.1f}) dual zero-freq={scale*diag_dual:.1f} | "
               f"T1/Diag={r['T1']/Diag:.3f} T2/Diag={r['T2']/Diag:.3f} T2diag/Diag={r['T2diag']/Diag:.3f}", flush=True)
-    json.dump(res, open(f'results/ledger_q{q}_d{d}.json', 'w'), indent=1)
+    json.dump(res, open(f'results/ledger_q{q}_d{d}_M{"-".join(map(str, Ms))}.json', 'w'), indent=1)
 
 
 if __name__ == '__main__':

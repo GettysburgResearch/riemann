@@ -109,3 +109,4 @@ D=4000 L=499 randphase H=0.25DL n_u=1810134 #l=93 ratio_b=0.998 ratio_A=0.998 de
 D=4000 L=499 randphase H=1DL n_u=7240770 #l=93 ratio_b=1.000 ratio_A=0.999 decor=1.007 P_share=0.0000 P_pred=0.0000 6share=0.0000
 D=4000 L=499 randphase H=4DL n_u=28962708 #l=93 ratio_b=1.000 ratio_A=1.000 decor=1.007 P_share=0.0000 P_pred=0.0000 6share=0.0000
   D=4000 done in 293.9s |A1|=18.58
+# run stopped during D=8000 (20-minute rule); D=8000 rerun separately on a reduced grid -> amp_D8000.{json,log}
