@@ -21,8 +21,9 @@ What was actually run (single-threaded, shared 4-core machine, every run < 20 mi
   lab_core.c (C, exact Z[omega] with __int128): q=7 (rows deg<=6, d<=30), q=13 (deg<=4, d<=24),
   q=19 (deg<=4, d<=20), q=31, 37 (deg<=3, d<=20); validate_core.py (brute force, q=7, d<=4, rows deg<=3:
   all 16 cells equal); gauss_exact.py (Z[zeta_N] exact: q=7 all 343 squarefree n of deg<=3; q=13 93 n);
-  leverage_check.py (q=7, d<=4); dual_energy.c (q=7 d=4,5; q=13 d=3,4; q=19 d=3); ledger.py (q=7 d=2
-  all M, d=3 M=2..4); pipeline_table.py, tables.py. Outputs in results/.
+  leverage_check.py (q=7, d<=4); dual_energy.c (q=7 d=3,4,5; q=13 d=3,4; q=19 d=3); ledger.py (q=7 d=2
+  M=1..4, d=3 M=1..5); theta_series.c (q=7 d<=7, deg h<=2; q=13 d<=6, deg h<=1); pipeline_table.py,
+  tables.py. Outputs in results/ (about 0.2 MB).
 Smallest remaining gap: no lab mechanism proves Mom(1, rho < 1) without the Riemann hypothesis for the
   family members (Weil). The one genuinely new lab input (Pellet: mu(n) = (-1)^deg n chi_2(disc n),
   which makes every Gauss sum and mu itself a character of a polynomial in the coefficients of n) has
@@ -270,17 +271,19 @@ Reading (EXACT on these cells; the trend is EMPIRICAL):
 * **The signed dual is the truth.** It is small where the rows have `deg L ≤ 1` (−2.0 %, −1.8 %, −0.6 %,
   −0.3 %) and of order Diag where special degree-3 rows enter (+96 %, q = 7, d = 5, M = 4). The saving of
   the signed dual over positivity is `κ ≈ (1 − ρ_eff) + κ₀`, where `κ₀ = log(Diag/|Off|)/log q^d` is the
-  truth's own cancellation (0.4–0.65 on the trivial-member cells, 0 on the special-member cells).
+  truth's own cancellation (0.52–0.67 on the trivial-member cells, ≈ 0 on the special-member cells).
 * **Positivity is the only loss in Step 3.** Poisson, the Gauss sums and absorption are exact; the dual
   mean square is not larger than its diagonal. Steps 4–5 (reflection and quadratic large sieve) can only
   add the factor `𝓗/X` of DISPERSION_GRH_STEP §4, because:
 * **The reflection acts on the wrong rows.** The per-degree dual energies (`results/de_*.txt`) are:
 
-  | q, d | deg h = 0 (h unit) | 1 | 2 | 3 | 4 | 5 |
-  |---|---|---|---|---|---|---|
-  | 7, 4: `E_k/DD_k` | 294 (bias) | 0 | 0.023 | 1.24 | 0.86 | 1.0017 |
-  | 7, 5 | 0 | 0 | 0.0033 | 0.106 | 1.55 | (running) |
-  | 13, 3 | 156 (bias) | 0 | 0.083 | 0.988 | 0.983 | — |
+  | q, d: `E_k/DD_k` | deg h = 0 (h unit) | 1 | 2 | 3 | 4 | 5 | 6 |
+  |---|---|---|---|---|---|---|---|
+  | 7, 4 | 294 (bias) | 0 | 0.023 | 1.24 | 0.86 | 1.0017 | 1.0020 |
+  | 7, 5 | 0 | 0 | 0.0033 | 0.106 | 1.55 | 0.931 | — |
+  | 13, 3 | 156 (bias) | 0 | 0.083 | 0.988 | 0.983 | — | — |
+  | 13, 4 | 2028 (bias) | 0 | 0.0064 | 1.14 | — | — | — |
+  | 19, 3 | 342 (bias) | 0 | 0.055 | 0.994 | — | — | — |
 
   `B_h(d)` vanishes, or nearly vanishes, for `deg h ≤ d/2`. That is the region where the theta
   reflection (Hoffstein: rational Gauss-sum series, polar term = theta coefficient) leaves only the polar
