@@ -1,0 +1,28 @@
+{
+  "numpy": "2.3.5",
+  "pairs": [
+    {
+      "bytes": 19563,
+      "equal": true,
+      "name": "census",
+      "normal_sha256": "2116636bcd746d62651e9b56c476e95c6193d5c988244e0ce58d0d264ddc84a9",
+      "optimized_sha256": "2116636bcd746d62651e9b56c476e95c6193d5c988244e0ce58d0d264ddc84a9"
+    },
+    {
+      "bytes": 1400,
+      "equal": true,
+      "name": "checker",
+      "normal_sha256": "48d69a739dbe9f229a5254ff49702ffd3a7ebe17720eae4e54c907ef573f7b77",
+      "optimized_sha256": "48d69a739dbe9f229a5254ff49702ffd3a7ebe17720eae4e54c907ef573f7b77"
+    },
+    {
+      "bytes": 6560,
+      "equal": true,
+      "name": "parent_helper",
+      "normal_sha256": "6de0009bd08175b4c4467d0f2184ddcfa4f94e7712d2a5be288d69cda20168e0",
+      "optimized_sha256": "6de0009bd08175b4c4467d0f2184ddcfa4f94e7712d2a5be288d69cda20168e0"
+    }
+  ],
+  "python": "3.13.5",
+  "scope": "same-author actual executions, byte-exact normal/optimized pairs"
+}

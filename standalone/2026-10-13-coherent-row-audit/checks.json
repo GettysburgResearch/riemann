@@ -1,0 +1,42 @@
+{
+  "counts": {
+    "actual_sixth_power_rows": 1,
+    "all_column_coverage": 3,
+    "cauchy_profile": 24,
+    "direct_masked_principal": 2,
+    "exact_height": 299,
+    "exact_rank_one": 189,
+    "exact_roots": 8008,
+    "ideal_factorization_coverage": 136,
+    "literal_character_comparison": 2808,
+    "mask_convolution_bound": 72,
+    "mask_frobenius_bound": 72,
+    "mask_positive_coefficients": 72,
+    "mask_trace_bound": 72,
+    "negative_controls": 7,
+    "opposite_remainder_sign": 1,
+    "positive_profile": 24,
+    "published_exact_values": 15,
+    "published_full_case_control": 3,
+    "saved_coverage": 1,
+    "saved_gram_partition": 690,
+    "saved_rank_one": 345,
+    "saved_reference_difference": 27,
+    "saved_row_partition": 72,
+    "scalar_direct_gram": 567,
+    "scalar_direct_moment": 15,
+    "sixth_power_alias": 1
+  },
+  "negative_controls": [
+    "equal powers are not all sixth-charge aliases",
+    "norm perfect sixth power does not classify element rows",
+    "sixth-power row does not erase a good-prime zero",
+    "complement cross-degree need not be negative",
+    "principal-row degree Gram is not principal-tuple reference",
+    "one-unit corrupted census total",
+    "explicit int64 overflow guard"
+  ],
+  "predicates": 13526,
+  "scope": "exact finite algebra and small independent assemblies; shared primitive helper; not an asymptotic proof",
+  "status": "PASS"
+}
