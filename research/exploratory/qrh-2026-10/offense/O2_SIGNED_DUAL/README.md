@@ -43,7 +43,7 @@ resting on them is CONDITIONAL/IMPORTED below.
 | N | **No "μ against Gauss sums" exists in the signed dual.** In gcd form the surviving `μ(g)` multiplies the sextic character `conj χ_{z₁}(g) χ_{z₂}(g)`, i.e. an *original-family member* `A_{z₁⁵z₂}(G)` of conductor about `Z²`. So an HB00-type Type I/II argument (μ vs Gauss sums) has nothing to act on; the involution of Q_RHO_ANALYSIS is visible term by term. | PROVED-HERE (corollary of G) | — |
 | L | **Leverage law for partial savings.** A saving `D^δ` below the positivity (row-blind) bound at `H = D^ρ` gives `σ = 1 − δ/2 − ρ/12`. It beats 11/12 iff `δ > (1 − ρ)/6`, and beats 7/8 iff `δ > 1/4 − ρ/6` (only possible for `ρ ≤ 9/10`). Conversely the principal rows force `δ ≤ 2 − ρ/6 − 2σ₀` when `|A₁(D)| ≍ D^{σ₀}`, so `δ > (1 − ρ)/6` **is equivalent to** `σ₀ < 11/12` at the same scale. | PROVED-HERE (elementary, given the imported extraction law) | threshold `(1 − ρ)/6`, not `1 − ρ` |
 | H | **HB00-type routes give δ = 0.** Type I via Pólya–Vinogradov on `μ(f)` reaches even the positivity level only for blocks `F ≥ D^{2/3}`; blocks `F < D^{2/3}` carry 57–60 % of the positivity bound, and the `f = 1` block alone (no Möbius variable) carries 22–31 %. Primal Type II is capped at `D²` (row-blind) and its principal rows return `A₁`. Dual pointwise HB00 savings cannot help a mean square at or below its diagonal. A conditional import-assisted variant reaches dual-column ranges `Z ≤ D^{(12ρ+1)/31}` only. | PROPOSED (exponent bookkeeping, sympy) + [EXACT/FLOAT] block shares | δ = 0 |
-| A | **Amplifier ledger (the construction attempted here).** Amplify the extraction rows by `B_u(L) = Σ_{ℓ∼L} μ(ℓ)χ_ℓ(u)` (Möbius signs are absorbable, and `|B_principal| = π_K(L)`). If the amplified dual closes at `H ≥ D·L^t`, then `σ = 11/12 + λ(5t − 6)/12`, `L = D^λ`. Gain iff `t < 6/5`. The Oct 5 reflection (prop:R with its `N(f)` factor) closes only at `t = 2` (σ = 11/12 + λ/3), and Cauchy–Schwarz over `ℓ` gives `t = 5/2`. A quadratic amplifier (`χ_p³`) has the same `t = 2`. **Lemma NRA**: no amplifier makes the amplified Gauss coefficients a finite-order modulation of theta coefficients of length `DL`, which is what `t = 1` would need. | ledger PROPOSED; Lemma NRA PROVED-HERE; `t < 6/5` OPEN | `11/12 − λ/12` at `t = 1` (CONDITIONAL on (AMP₁)) |
+| A | **Amplifier ledger (the construction attempted here).** Amplify the extraction rows by `B_u(L) = Σ_{ℓ∼L prime} μ(ℓ)χ_ℓ(u)` (Möbius signs are absorbable, and `|B_principal| = π_K(L)`). If the amplified dual closes at `H ≥ D·L^t`, then `σ = 11/12 + λ(5t − 6)/12`, `L = D^λ`. Gain iff `t < 6/5`. The Oct 5 reflection (prop:R with its `N(f)` factor) closes only at `t = 2` (σ = 11/12 + λ/3), and Cauchy–Schwarz over `ℓ` gives `t = 5/2`. A quadratic amplifier (`χ_p³`) has the same `t = 2`. **Lemma NRA**: no amplifier makes the amplified Gauss coefficients a finite-order modulation of theta coefficients of length `DL`, which is what `t = 1` would need. | ledger PROPOSED; Lemma NRA PROVED-HERE; `t < 6/5` OPEN | `11/12 − λ/12` at `t = 1` (CONDITIONAL on (AMP₁)) |
 | E | **Numerics.** The signed dual `S = 𝓜_D − Z` is tiny: `|S|/H ≤ 0.7 %`, `|S| ≤ 6` for `D ≤ 24000`. Its ratio to the positivity proxy `P ≍ D log D` gives an empirical cancellation exponent `log(P/|S|)/log D ∈ [0.70, 1.59]`, against the `1 − ρ ∈ {0.1, 0.25, 0.4}` that Mom(1, ρ) needs and the `(1 − ρ)/6` that beats 11/12. HB00-type routes predict 0. | EMPIRICAL (floating point, finite) | — |
 
 **Best result.** No exponent moves. The precise outcome is a reduction with an exponent attached:
@@ -227,26 +227,37 @@ On the rows `u = v⁶` it is at least `H^{1/6}|A₁|²|Σβ|²`. If it has diago
 
 **Which β are absorbable.** Poisson in `u` produces `γ_{-1}(nℓ)`. For `n, ℓ` coprime and squarefree,
 `μ(n)β(ℓ)γ_{-1}(nℓ) ∝ a(nℓ)·μ(ℓ)β(ℓ)` (by eq:convert2 and twisted multiplicativity). So `β = μ` on primes is
-absorbable with weight 1. Note `|Σ_ℓ μ(ℓ)| = π_K(L)` on primes, so the "parity" sign costs nothing in amplitude.
+absorbable with weight 1. Note `|Σ_{ℓ∼L prime} μ(ℓ)| = #{prime ideals of norm ∼ L}`, so the "parity" sign costs nothing in amplitude.
 A quadratic amplifier `β(p)χ_p(u)³ = β(p)(u/p)₂` is also absorbable: the quadratic Gauss sum `γ₃(p)` is ray-class
 data. This is the `Q_p` factor of PR 930's `χ_p = Q_p C_p` split (unreviewed draft PR; not otherwise used).
 
-**Lemma NRA (no reflectable amplifier).** PROVED-HERE. Let `β ≢ 0` be supported on `Nℓ ∈ [L, 2L]`, `L ≥ 2`,
-and let `c = (μ W(·/D)) * β`. Then there is no finite family of ray-class characters `ξ`, constants `κ_ξ` and
-smooth `w` such that `μ(m)c(m) = Σ_ξ κ_ξ ξ(m) w(Nm/(DL))` for all squarefree `m` prime to `S`.
+**Lemma NRA (no reflectable amplifier).** PROVED-HERE. Let `β ≢ 0` be supported on squarefree ideals prime
+to `S` with `Nℓ ∈ [L, 2L]`, `L ≥ 2`, and let `c = (μ W(·/D)) * β`, with `W ≢ 0` smooth on `[1, 2]`. Fix a
+finite family of ray-class characters `ξ` modulo a fixed modulus, constants `κ_ξ`, and a smooth compactly
+supported `w` on `(0, ∞)`. Then for all `D ≥ D₀(w, W, modulus)` with `D > 4L`, the identity
 
-*Proof.* Suppose such an identity holds. Every squarefree `m` that has no divisor of norm in `[L, 2L]` has
-`c(m) = 0`; in particular this holds for every prime `m` with `Nm > 2L`. Hence
-`Σ_ξ κ_ξ ξ(m) w(Nm/(DL)) = 0` for all primes `m` with `Nm > 2L` in the support of `w`. Primes equidistribute
-in ray classes (Hecke), and every class contains such primes with `w(Nm/DL) ≠ 0` (if `w ≢ 0`). So
-`Σ_ξ κ_ξ ξ ≡ 0` on the ray class group, and the right side vanishes identically. Then `c(m) = 0` for all
-squarefree `m`. Take `m = n ℓ₀`, where `ℓ₀` is a prime with `β(ℓ₀) ≠ 0` (if `β` is supported only on
-composites, take `ℓ₀` a support point of minimal number of prime factors) and `n` is a prime of norm in
-`(D, 2D)` with `W(Nn/D) ≠ 0`, coprime to everything in the support of `β`. Its only factorization `n'ℓ` with
-`ℓ` in the support of `β` and `n'` in the support of `W(·/D)` is `n' = n`, `ℓ = ℓ₀`, for `D > 4L`. So
-`c(m) = μ(n)β(ℓ₀) ≠ 0`, a contradiction. ∎
+    μ(m) c(m) = Σ_ξ κ_ξ ξ(m) w(Nm/(DL))     for all squarefree m prime to S
 
-So any amplifier leaves a divisor-type weight `ν_β(m) = Σ_{ℓ|m} μβ(ℓ)…` on the dual theta coefficients.
+forces `β ≡ 0`. So there is no such identity.
+
+*Proof.* Suppose the identity holds.
+1. *The right side vanishes.* A prime `m` with `Nm > 2L` has only the factorizations `(m, 1)` and `(1, m)`.
+   `β(1) = 0` and `β(m) = 0`, since `Nm > 2L`. So `c(m) = 0`, and
+   `Σ_ξ κ_ξ ξ(m) w(Nm/(DL)) = 0` for all such primes.
+   * If `w ≢ 0`, pick an interval on which `w ≠ 0`. By the prime ideal theorem for ray classes, every ray
+     class contains primes of norm in `DL` times that interval once `D ≥ D₀`.
+   * Hence `Σ_ξ κ_ξ ξ ≡ 0` on the ray class group, and the right side vanishes identically.
+2. *So `c` vanishes on squarefree `m`.* It follows that `c(m) = 0` for every squarefree `m` prime to `S`.
+3. *A nonzero value.* Choose `ℓ₀` in the support of `β` of minimal norm. Choose a prime `n ∤ ℓ₀S` with
+   `W(Nn/D) ≠ 0`, so `Nn > D > 4L`.
+   * Any factorization `nℓ₀ = n'ℓ'` with `β(ℓ') ≠ 0` has `Nℓ' ≤ 2L < Nn`, so `n ∤ ℓ'`. Hence `ℓ' | ℓ₀`.
+   * Minimality of `Nℓ₀` then forces `ℓ' = ℓ₀`.
+   * So `c(nℓ₀) = μ(n)β(ℓ₀)W(Nn/D) ≠ 0`, while `nℓ₀` is squarefree and prime to `S`.
+
+This contradicts step 2. ∎
+
+So any amplifier leaves a divisor-type weight `ν_β(m) = Σ_{ℓ|m} μ(ℓ)β(ℓ)W(N(m/ℓ)/D)` on the dual theta
+coefficients (on squarefree `m`).
 The reflection must then be applied factor by factor, with `ℓ` acting as an `f`-type cubic shift `χ_n(ℓ)⁴`.
 
 **Ledger** (`o2_ledger.py` L3; sympy exact). If the amplified dual closes at `H ≥ D·L^t`, then
@@ -284,7 +295,37 @@ convenience.
 `Σ_ξ c_ξ𝓢_ξ`. `Off = 𝓜_D − Diag` uses the exact primal diagonal (with coprimality). `P` is the positivity
 proxy of §1.3. `e = log(P/|S|)/log D` is the empirical cancellation exponent relative to positivity.
 
-RESULTS_TABLE_PLACEHOLDER
+| D | ρ | H | 𝓜_D | Z | S = 𝓜_D − Z | Off/Diag | P (proxy) | Prin | \|A₁(D)\| | e = log(P/\|S\|)/log D | 1 − ρ | (1 − ρ)/6 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1000 | 0.60 | 63 | 5.193 | 5.639 | -0.4461 | -7.68e-02 | 394 | 0.321 | 6.3 | 0.982 | 0.40 | 0.067 |
+| 2000 | 0.60 | 96 | 8.565 | 8.560 | 0.0049 | 1.47e-03 | 874 | 1.384 | 7.3 | 1.590 | 0.40 | 0.067 |
+| 4000 | 0.60 | 145 | 12.860 | 12.874 | -0.0132 | -3.65e-04 | 1793 | 0.919 | 18.6 | 1.425 | 0.40 | 0.067 |
+| 8000 | 0.60 | 220 | 18.716 | 19.253 | -0.5370 | -2.75e-02 | 3621 | 0.928 | 21.8 | 0.981 | 0.40 | 0.067 |
+| 16000 | 0.60 | 333 | 28.721 | 29.342 | -0.6207 | -2.10e-02 | 7717 | 0.922 | 34.0 | 0.974 | 0.40 | 0.067 |
+| 24000 | 0.60 | 425 | 38.101 | 37.495 | 0.6061 | 1.63e-02 | 11977 | 0.995 | 51.1 | 0.981 | 0.40 | 0.067 |
+| 1000 | 0.75 | 178 | 15.343 | 15.892 | -0.5494 | -3.43e-02 | 394 | 0.332 | 6.3 | 0.952 | 0.25 | 0.042 |
+| 2000 | 0.75 | 299 | 25.169 | 26.769 | -1.5994 | -5.97e-02 | 874 | 1.416 | 7.3 | 0.829 | 0.25 | 0.042 |
+| 4000 | 0.75 | 503 | 43.919 | 44.669 | -0.7505 | -1.67e-02 | 1793 | 0.943 | 18.6 | 0.938 | 0.25 | 0.042 |
+| 8000 | 0.75 | 846 | 73.145 | 74.126 | -0.9819 | -1.32e-02 | 3621 | 1.001 | 21.8 | 0.914 | 0.25 | 0.042 |
+| 16000 | 0.75 | 1423 | 121.217 | 125.344 | -4.1268 | -3.29e-02 | 7717 | 1.114 | 34.0 | 0.778 | 0.25 | 0.042 |
+| 24000 | 0.75 | 1928 | 170.079 | 170.217 | -0.1373 | -7.95e-04 | 11977 | 1.301 | 51.1 | 1.128 | 0.25 | 0.042 |
+| 1000 | 0.90 | 501 | 44.233 | 44.790 | -0.5566 | -1.24e-02 | 394 | 0.339 | 6.3 | 0.950 | 0.10 | 0.017 |
+| 2000 | 0.90 | 935 | 79.627 | 83.711 | -4.0840 | -4.88e-02 | 874 | 1.549 | 7.3 | 0.706 | 0.10 | 0.017 |
+| 4000 | 0.90 | 1745 | 152.486 | 154.994 | -2.5080 | -1.62e-02 | 1793 | 1.190 | 18.6 | 0.792 | 0.10 | 0.017 |
+| 8000 | 0.90 | 3257 | 284.437 | 285.388 | -0.9517 | -3.34e-03 | 3621 | 1.425 | 21.8 | 0.917 | 0.10 | 0.017 |
+| 16000 | 0.90 | 6077 | 529.491 | 535.453 | -5.9618 | -1.11e-02 | 7717 | 1.680 | 34.0 | 0.740 | 0.10 | 0.017 |
+| 24000 | 0.90 | 8754 | 771.494 | 772.741 | -1.2464 | -1.61e-03 | 11977 | 1.995 | 51.1 | 0.909 | 0.10 | 0.017 |
+
+| ρ | fitted exponent of \|S\| in D (± s.e.) | of P | of H | fitted e(D) = log(P/\|S\|)/log D, mean |
+|---|---|---|---|---|
+| 0.60 | 2.17 ± 0.53 | 1.052 ± 0.009 | 0.60 | 1.19 |
+| 0.75 | -0.41 ± 0.67 | 1.052 ± 0.009 | 0.75 | 0.92 |
+| 0.90 | -0.21 ± 0.43 | 1.052 ± 0.009 | 0.90 | 0.81 |
+
+The `|S|` fits are dominated by sign changes of `S` (for example `S = 0.005` at `D = 2000, ρ = 0.6`), so no growth
+exponent of `|S|` is resolvable on this range. The robust statements are `max |S| = 5.96` over all 18 cells,
+and `P ∝ D^{1.05}` (that is, `D log D`).
+
 
 **Readings.**
 * `|S|` stays `O(1)`–`O(10)` while `H` grows to `6·10³`, and `|S|/H ≤ 0.7 %` throughout. So the signed dual

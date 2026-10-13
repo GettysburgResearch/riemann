@@ -3,9 +3,6 @@
 (floor_rows_scan.val, Gram 0, paper energy) on a grid.  Exact Fractions; prints mismatches."""
 from fractions import Fraction as Fr
 import floor_rows_scan as S
-def cf(d, k):
-    v = Fr(2)*(9 + 13*d - 12*k*d)/(3*(7 + 9*d - 8*k*d))
-    return min(v, Fr(6, 7)) if k < Fr(5, 6) else v      # for kappa < 5/6 the optimum is delta0 -> 0 (6/7)
 bad = 0; n = 0
 for k in (Fr(1, 4), Fr(1, 2), Fr(5, 6), Fr(9, 10), Fr(1)):
     for d in (Fr(1, 50), Fr(1, 10), Fr(1, 5), Fr(1, 3), Fr(9, 20), Fr(1, 2)):

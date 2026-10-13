@@ -57,3 +57,11 @@ involution on the pair (rows, columns) that preserves the deficit `1 - rho`
 * spectral input (Kuznetsov) on the cover (O5).
 
 Results are summarized here as each line reports.
+
+## Results so far (updated as lines report)
+
+| line | outcome | best number | label | sharpest remaining target |
+|---|---|---|---|---|
+| O3 | the Sep 30 Gram-loss sum (Prop 15.2) is a **squared cubic Gauss sum** family, not Moebius, so Oct 5 does not apply; the `P_a^{1/6}` loss is the sextic-bias (exceptional) component | `926/1077 ≈ 0.8598` if (NA) holds; any partial saving beats `0.874957` | CONDITIONAL on (NA) + Sep 30 lemmas; exact LP certificate | (NA): non-alignment of the sextic-bias component of `A_m` with the cubic-theta row `B_m`, saving `Z^{b/12}`. Circularity check pending in O3b (its diagonal may be the probe's own Moebius signal) |
+| O4 | amplification in the Oct 5 pipeline costs `kappa = 1` (break-even needs `kappa < 1/6`); with a prime amplifier the amplified dual is exactly the manuscript's `E(H, X, F)` with `f = l` inside the square; designs (a)-(f) tried, none below 1/6; amplified moments are diagonal-sized numerically (`[0.972, 1.024]`, 120 cells, `|kappa_emp| <= 0.004`) | break-even law PROVED-HERE: `|A_1| << D^{11/12 + lambda(kappa + 5 delta/6 − 1/6)/2}` | PROVED-HERE (ledger) + CONDITIONAL (Oct 5 lemmas) + EMPIRICAL | TM(eta, s): saving `N(l l')^{−eta}`, `eta > 5s/12`, in row-twisted mean squares; round 2 tests the `j = 4` channel, where the reflection makes the amplifier twist principal (a congruence condition) |
+| O5 | 18 mechanisms triaged: 14 DEAD with exact killing terms, 3 ALIVE as corollaries/target, 1 OPEN (Weil positivity) | kappa-law `11/12 − eta(5/6 − kappa)/2`; `p^6` lifting gives `kappa = 5/6` exactly (threshold); Kummer-field corollaries `zeta_F != 0` on `Re s > 7/8` for `F` in abelian extensions of `Q(sqrt(-3))` | PROPOSED / CONDITIONAL on Oct 5 resp. Hecke 7/8 | `kappa < 5/6` at one `eta > 0` (coefficient-specific large values on generic rows) |

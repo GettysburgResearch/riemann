@@ -1,0 +1,26 @@
+(i)  u = v^6, v=(1, 1), d=0: A_u(d) = (1, 0), predicted 1: OK
+(i)  u = v^6, v=(1, 1), d=1: A_u(d) = (-6, 0), predicted -6: OK
+(i)  u = v^6, v=(1, 1), d=2: A_u(d) = (-6, 0), predicted -6: OK
+(i)  u = v^6, v=(1, 1), d=3: A_u(d) = (-6, 0), predicted -6: OK
+(i)  u = v^6, v=(1, 1), d=4: A_u(d) = (-6, 0), predicted -6: OK
+(i)  u = v^6, v=(1, 0, 1), d=0: A_u(d) = (1, 0), predicted 1: OK
+(i)  u = v^6, v=(1, 0, 1), d=1: A_u(d) = (-7, 0), predicted -7: OK
+(i)  u = v^6, v=(1, 0, 1), d=2: A_u(d) = (1, 0), predicted 1: OK
+(i)  u = v^6, v=(1, 0, 1), d=3: A_u(d) = (-7, 0), predicted -7: OK
+(i)  u = v^6, v=(1, 0, 1), d=4: A_u(d) = (1, 0), predicted 1: OK
+(ii) w=(1, 0, 1), v=(2, 1), deg u=8, d=0: A_wv^6(d)=(1, 0), sum_j chi_v(w)^j A_w(d-j)=(1, 0), |A_w(d)|^2=1: OK
+(ii) w=(1, 0, 1), v=(2, 1), deg u=8, d=1: A_wv^6(d)=(-3, -3), sum_j chi_v(w)^j A_w(d-j)=(-3, -3), |A_w(d)|^2=7: OK
+(ii) w=(1, 0, 1), v=(2, 1), deg u=8, d=2: A_wv^6(d)=(2, 8), sum_j chi_v(w)^j A_w(d-j)=(2, 8), |A_w(d)|^2=49: OK
+(ii) w=(1, 0, 1), v=(2, 1), deg u=8, d=3: A_wv^6(d)=(9, -12), sum_j chi_v(w)^j A_w(d-j)=(9, -12), |A_w(d)|^2=343: OK
+(ii) w=(1, 0, 1), v=(2, 1), deg u=8, d=4: A_wv^6(d)=(-51, -5), sum_j chi_v(w)^j A_w(d-j)=(-51, -5), |A_w(d)|^2=2401: OK
+(ii) w=(3, 1, 0, 1), v=(5, 1), deg u=9, d=0: A_wv^6(d)=(1, 0), sum_j chi_v(w)^j A_w(d-j)=(1, 0), |A_w(d)|^2=1: OK
+(ii) w=(3, 1, 0, 1), v=(5, 1), deg u=9, d=1: A_wv^6(d)=(-3, 1), sum_j chi_v(w)^j A_w(d-j)=(-3, 1), |A_w(d)|^2=7: OK
+(ii) w=(3, 1, 0, 1), v=(5, 1), deg u=9, d=2: A_wv^6(d)=(3, -1), sum_j chi_v(w)^j A_w(d-j)=(3, -1), |A_w(d)|^2=0: OK
+(ii) w=(3, 1, 0, 1), v=(5, 1), deg u=9, d=3: A_wv^6(d)=(-2, -17), sum_j chi_v(w)^j A_w(d-j)=(-2, -17), |A_w(d)|^2=343: OK
+(ii) w=(3, 1, 0, 1), v=(5, 1), deg u=9, d=4: A_wv^6(d)=(18, 72), sum_j chi_v(w)^j A_w(d-j)=(18, 72), |A_w(d)|^2=2401: OK
+(ii) w=(2, 0, 1), v=(1, 1), deg u=8, d=0: A_wv^6(d)=(1, 0), sum_j chi_v(w)^j A_w(d-j)=(1, 0), |A_w(d)|^2=1: OK
+(ii) w=(2, 0, 1), v=(1, 1), deg u=8, d=1: A_wv^6(d)=(3, 0), sum_j chi_v(w)^j A_w(d-j)=(3, 0), |A_w(d)|^2=7: OK
+(ii) w=(2, 0, 1), v=(1, 1), deg u=8, d=2: A_wv^6(d)=(6, -2), sum_j chi_v(w)^j A_w(d-j)=(6, -2), |A_w(d)|^2=49: OK
+(ii) w=(2, 0, 1), v=(1, 1), deg u=8, d=3: A_wv^6(d)=(9, -12), sum_j chi_v(w)^j A_w(d-j)=(9, -12), |A_w(d)|^2=343: OK
+(ii) w=(2, 0, 1), v=(1, 1), deg u=8, d=4: A_wv^6(d)=(5, -46), sum_j chi_v(w)^j A_w(d-j)=(5, -46), |A_w(d)|^2=2401: OK
+ALL OK

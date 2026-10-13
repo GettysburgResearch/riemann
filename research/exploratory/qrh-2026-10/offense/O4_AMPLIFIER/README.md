@@ -75,12 +75,12 @@ Smallest remaining gap: TM(eta, s) of section 4: a power saving N(r)^(-eta) in t
    * With `H = D L^s`, a power saving `N(r)^{−η}` on the off-diagonal part gives
      **σ = 11/12 + λ(5s/6 − 2η)/2**, so amplification gains iff `η > 5s/12`.
    * At `s = 1` (no row deficit: the regime the Oct 5 toolbox can enter) this needs `η > 5/12`.
-     That is close to square-root cancellation in the twist conductor; GRH-random behaviour gives
-     `η` up to `1/(4λ)`.
+     That is close to square-root cancellation in the twist conductor (η = 1/2). GRH-random
+     behaviour gives η up to `h/(4λ)`, which exceeds 5/12 at `s = 1` exactly when `λ < 3/2`.
    * At `s → 0` any `η > 0` suffices, giving σ = `11/12 − λη`. But then the amplified polynomial has
      `D^λ` more columns than rows, which is the ρ = 1 wall again.
-   * Lemma A4 (PROVED-HERE) shows that the bounded part of `|A_u|²` is exactly orthogonal to the
-     amplifier when `L² ≤ H^{1−ε}`. Everything therefore sits in the large values, and the large-value
+   * Lemma A4 (PROVED-HERE) shows that the bounded part of `|A_u|²` is orthogonal to the amplifier,
+     up to `O(H^{−A})`, when `L² ≤ H^{1−ε}`. Everything therefore sits in the large values, and the large-value
      mass already contains the conclusion through the principal rows (a fixed point, as in
      RUNG_STRENGTH §4).
 5. **Numerics (EMPIRICAL, floating point, finite).** For the true sextic family the amplified moment
@@ -272,8 +272,8 @@ so amplification beats 11/12 **iff η > 5s/12**.
 | 0⁺ | `D^{1+θ}` | 0⁺ (any power saving) | σ = 11/12 − λη; sub-diagonal by `L` (the ρ = 1 wall in amplified form) |
 
 Context:
-* A GRH-random model gives `|T^off(r)| ≈ D√H`, i.e. η up to `h/(4λ)`. So TM is consistent with GRH
-  for all η ≤ 1/2 once `L ≤ H^{1/2}`.
+* A GRH-random model gives `|T^off(r)| ≈ D√H`, i.e. η up to `h/(4λ)` (`N(r) = L²`, `H = D^h`). So TM
+  is consistent with GRH for all η ≤ 1/2 once `L ≤ H^{1/2}`.
 * At `s = 1` and η = 5/12 + ε, TM gives σ = `11/12 − ελ`. Reaching 7/8 would need `λ(η − 5/12) ≥ 1/24`.
 * TM(η, 0⁺) with `L = D^λ` has the same conclusion as the sub-diagonal second moment Mom(1, ρ) with
   `5(1 − ρ)/12 = λη`. Neither is known to imply the other.

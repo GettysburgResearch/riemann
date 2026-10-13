@@ -301,8 +301,8 @@ retained rows with no zero of any presentation in `X_u` in `Re >= a0 + 2e`, `|Im
 
 An integrated form (against the Mellin weights over the retained box) suffices.
 
-**Consequence (PROPOSED, CONDITIONAL on ARCH, Gram 0 as in O3, DH-rows above `delta0`, and
-FB#(delta0, kappa)):** zero-freeness in `Re s > sigma0(delta0, kappa)` of the Sec. 1.4 formula.
+**Consequence (PROPOSED, CONDITIONAL on ARCH, Gram 0 as in O3, DH-rows above `delta0` (for
+delta0 = 1/3 the weaker linear count of Sec. 6 suffices), and FB#(delta0, kappa)):** zero-freeness in `Re s > sigma0(delta0, kappa)` of the Sec. 1.4 formula.
 In particular:
 
 * `kappa = 1`, `delta0 = 1/3`: **sigma0 = 28/33 = 0.848485**, geometry `(3/11, 6/11, 2/11)`;
@@ -344,12 +344,37 @@ Along Sec. 2, `kappa = min(kappa_I, kappa_II, kappa_III)`. Each needs strictly m
 
   Term III is therefore not the hard part. Term II is (Sec. 4).
 
-## 6. Full-model check with the manuscript's row counts (EMPIRICAL)
+## 6. Full-model checks (EMPIRICAL: float, finite grids, Nelder-Mead, 2e-5 slack)
 
-`scripts/full_model_floor.py` reruns the float model of `threshold_calculus.py` (imported unchanged;
-monkeypatched in memory) with Gram 0, the manuscript's row counts above the floor, a raised floor
-`delta0` and floor saving `theta_F`. Results are in `results/full_zero_paper.log`; see the README for
-the table. These are finite-grid Nelder-Mead values with a `2e-5` slack, not certificates.
+`scripts/full_model_floor.py` reruns the Part II model `threshold_calculus.py` with Gram 0, a raised
+floor delta0 and a floor saving theta_F. The model file is imported unchanged and monkeypatched in
+memory only.
+
+| counts above floor | delta0 | theta_F | sigma0 (model) | binding object | file |
+|---|---|---|---|---|---|
+| DH | 1/50 | 0 | 0.859811 | floor (delta 0.02, R = 1) | results/full_zero_DH.log |
+| DH | 1/3 | 1/3 | 0.848489 (LP 28/33 = 0.848485) | floor | results/full_zero_DH.log |
+| DH | 1/2 | 1/2 | 0.844448 (LP 38/45 = 0.844444) | floor | results/full_zero_DH.log |
+| manuscript | 1/50 | 0 | 0.859811 (LP 926/1077 = 0.859796) | floor | results/full_zero_paper.log |
+| manuscript | 1/50 | 1/50 | 0.858174 | witnessed bin delta 0.142, x = 0, R = 0.900 | results/full_zero_paper.log |
+| manuscript | 1/10 | 1/10 | 0.858156 | witnessed bin delta 0.143, R = 0.899 | results/full_zero_paper.log |
+| manuscript | 1/500 | 0 (floor lowered) | 0.858203 | witnessed bin delta 0.144 | results/full_zero_paper_lowfloor.log |
+| manuscript | 1/5, 1/4, 1/3 | = delta0 | not closed (sup F > 0 at 0.8579, 0.8574, 0.8563) | bins just above the raised floor | results/full_zero_paper*.log |
+
+Reading (EMPIRICAL model statements):
+
+* With the manuscript's own counts and Gram 0, the wall after the floor is the witnessed band
+  around `delta ~ 0.14`, at about **0.8582**. Lowering the floor (free, per
+  reviews/SEP30_DETECTOR_QUANTIFIERS.md) already reaches it. A floor input adds at most `3e-5`.
+* Raising the floor past that band does not help with manuscript counts. The bins just above the
+  raised floor then fail: the manuscript gives `R ~ 0.85, 0.81, 0.725` at
+  `delta ~ 0.20, 0.25, 0.335`.
+* The exact count requirement at the 28/33 geometry `(3/11, 6/11, 2/11)`, top dyad, is
+
+  `R(delta) <= 19/20 - 17 delta/20` for `delta in (1/3, 23/33]` (`counts_needed.out`).
+
+  This is DH at `delta = 1/3+` and slightly weaker above (`0.61` vs DH `0.60` at `2/5`; `0.525` vs
+  `0.5` at `1/2`). So **28/33 needs FB#(1/3, 1) plus this linear count**, not full DH.
 
 ## 7. Reproduction
 
