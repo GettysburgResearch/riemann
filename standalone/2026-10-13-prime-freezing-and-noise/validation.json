@@ -1,0 +1,108 @@
+{
+  "arithmetic": "exact fractions in Q(omega), omega^2+omega+1=0",
+  "checks": {
+    "all_rows_norm13": 1,
+    "centered_hypercontractivity_sample": 6,
+    "centered_noise_mean": 28,
+    "fourth_flux_formula": 5022,
+    "frozen_endpoint_native": 648,
+    "full_signed_telescoping": 648,
+    "independence_false_substitution_detected": 18,
+    "inverse_noise_mean": 28,
+    "literal_mobius_endpoint": 648,
+    "literal_zero_local": 5,
+    "local_coupled_deconvolution": 56,
+    "local_inverse_square_factor": 56,
+    "local_mean_times_noise": 56,
+    "local_noise_inverse": 56,
+    "odd_binomial_flux": 20088,
+    "one_prime_freeze_increment": 3240,
+    "sextic_residue_coverage": 30
+  },
+  "native": {
+    "column_norm_cap": 196,
+    "flux_signs": {
+      "negative": 1058,
+      "positive": 1084,
+      "zero": 1098
+    },
+    "mask_cases": [
+      null,
+      0,
+      4
+    ],
+    "moment_orders": [
+      2,
+      4,
+      6,
+      8
+    ],
+    "prime_ideals": [
+      {
+        "norm": 7,
+        "omega_root": 2,
+        "rational_prime": 7
+      },
+      {
+        "norm": 7,
+        "omega_root": 4,
+        "rational_prime": 7
+      },
+      {
+        "norm": 13,
+        "omega_root": 3,
+        "rational_prime": 13
+      },
+      {
+        "norm": 13,
+        "omega_root": 9,
+        "rational_prime": 13
+      },
+      {
+        "norm": 25,
+        "omega_root": null,
+        "rational_prime": 5
+      }
+    ],
+    "row_count": 54,
+    "squarefree_columns": 13,
+    "summed_native_freezing_trajectories": {
+      "1": [
+        "594",
+        "594",
+        "570",
+        "582",
+        "678",
+        "678"
+      ],
+      "2": [
+        "19998",
+        "19998",
+        "20934",
+        "19542",
+        "25518",
+        "29406"
+      ],
+      "3": [
+        "1184058",
+        "1184058",
+        "1478370",
+        "1039320",
+        "1441182",
+        "1942566"
+      ],
+      "4": [
+        "104351310",
+        "104351310",
+        "156757902",
+        "69048078",
+        "99381054",
+        "153682974"
+      ]
+    }
+  },
+  "radical_group_sample_ideals": 36,
+  "scope": "finite algebra only; no asymptotic, pole, or RH certification",
+  "status": "PASS",
+  "total_checks": 30634
+}
