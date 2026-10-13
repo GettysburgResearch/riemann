@@ -30,7 +30,27 @@ The explicit proof/report paths account for the checkers being stored in `checks
 
 ## 3. Analytic proofs and independent review
 
-The intended theorem files and hashes will be frozen in one source commit before requesting formal review. Independent reviewers will identify that exact commit and the file hashes they inspect in separate reports. A following commit may append those reports and update this validation record without changing the reviewed mathematical source bytes.
+The theorem files were frozen in source commit `ea94f3e40b2755de0ffb9ac7727faa820e0c4cd0`, tree `6622be6afbf5e293a07c71b2a9b556640557cc3f`, with parent `ab98878279cd5614fe79bb94aa916e97c9ee50b4`. Formal review was requested only after that actual GitHub commit existed and was fetched locally. Every receipt identifies the exact `git show` bytes it reviewed. A following commit appends review and replay records, this validation update, and the publication verifier without changing any reviewed theorem file.
+
+The review assignments are deliberately separated from authorship. The periodic, abelian, and native heat notes have a review by `signed_sector`; the bridge and literal short-factor extension have a review by `descent_synthesis` and a primary-agent review; the average, base collision theorem, and exact signed endpoint have a fresh review by `fresh_frozen_review`. The primary agent also checked the signed endpoint. The review by `descent_synthesis` discloses its contribution to that endpoint sharpening and authorship of the base collision dependency, so it is not presented as an independent check of those contributions. Each report records its own narrower scope and earlier collaboration.
+
+The reports and exact target hashes are indexed in [REVIEW_INDEX.json](REVIEW_INDEX.json), with the full receipts in `reviews/`. These are AI mathematical reviews within one collaboration. A separate-author check is not external peer review, proof-assistant verification, or a guarantee of correctness.
+
+The frozen bridge checker was independently rerun by `descent_synthesis`, including six original commit:path comparisons against packet snapshots; its report reproduces the committed result exactly. `signed_sector` extracted all three other frozen checkers and ran each under normal and optimized Python; all paired output reports were byte-identical. Its three explicit optimized-mode fault probes were rejected without changing source bytes. The supporting driver and extracted inputs are preserved in `reviews/frozen_review/`; its historical absolute scratch paths in extraction metadata are provenance, not needed by the relative-path replay driver. These are independent executions of the authors' checkers, not independently developed mathematical oracles.
+
+The source copy of `paper2.tex` retains its original trailing whitespace so that its hash matches the imported source. The whitespace check passes for the authored changes. The bridge manuscript's author-stage report name `zeta_bridge_capture_diagnostic.json` is published here as `results/zeta_bridge_capture.json`, whose bytes and hashes are recorded above.
+
+## 4. Publication integrity
+
+`SOURCE_FREEZE_MANIFEST.json` records the 43 source files present before review, excluding that manifest itself. `MANIFEST.json` records the final packet files, excluding itself. The sole changed file from the frozen packet is this validation record; the theorem, checker, source-snapshot and other frozen bytes remain unchanged. The root README navigation is also checked against the frozen source commit.
+
+From this directory, run:
+
+```bash
+python checks/verify_packet.py
+```
+
+The verifier checks the final file inventory, frozen source commit/tree/parent, original source-file hashes, unchanged reviewed bytes, all 21 source-snapshot hashes, report hashes and exact review targets, and at least one separate-author review for each of the eight proof notes. It checks publication integrity and the disclosed review coverage. It does not decide whether a mathematical proof or imported input is true.
 
 The elementary bridge, periodic and abelian transfer, capture implications, principal-average analysis, native finite heat identities, and collision lower bounds do not assume the imported OpenAI quasi-Riemann theorem. Their explicitly named classical inputs remain visible. The retrospective audit reports some older claims at their source-conditional scope; its discussion is not an independent certification of the imported theta foundation or the external conductor theorems.
 

@@ -1,0 +1,23 @@
+{
+  "reviewer": "/root",
+  "review_kind": "Primary AI-agent mathematical review; disclosed earlier collaboration; not external peer review or formalization",
+  "source_commit": "ea94f3e40b2755de0ffb9ac7727faa820e0c4cd0",
+  "source_tree": "6622be6afbf5e293a07c71b2a9b556640557cc3f",
+  "targets": [
+    {
+      "path": "EXACT_ZETA_BRIDGE_AND_SPARSE_CAPTURE.md",
+      "sha256": "a32df720f2d8b4229ac4bdfd18cbe9af18178aed7dfca25c6787632ab98ab9f9"
+    },
+    {
+      "path": "SIGN_QUANTILE_CAPTURE_FOLLOWUP.md",
+      "sha256": "653ddafdb9ba9a0ab03b92dd1e998de4674d30297d4ca008c39db44eb6cea5bd"
+    },
+    {
+      "path": "SHIFTED_COLLISION_AND_LITERAL_SHORT_FACTORS.md",
+      "sha256": "395bbba988ab81f89ab2cc922d6f1ac070ed05dcbd7efbbd0e7a89d9e4153d46"
+    }
+  ],
+  "verdict": "PASS at the written conditional and obstruction scopes; open arithmetic estimates are not established",
+  "report": "ROOT_BRIDGE_CAPTURE_AND_LITERAL_FACTORS.md",
+  "report_sha256": "1d2f9f630a41c7667ac2b65b0261674f9af32cb7c9557f373c93846139de7da7"
+}

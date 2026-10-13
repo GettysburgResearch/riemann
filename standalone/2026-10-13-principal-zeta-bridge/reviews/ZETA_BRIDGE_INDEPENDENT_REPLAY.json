@@ -1,0 +1,45 @@
+{
+  "arithmetic": "exact integers and fractions only",
+  "checker_sha256": "201ac23e4646b41ae6b05e12e32622024169ee49b0ebf22cb3a25cddbe1f717b",
+  "interpolation_and_incidence_checks": {
+    "constant_cases": 10880,
+    "coverage": "All good-node subsets for declared blocks q<=12; specified edge/spread patterns otherwise.",
+    "incidence_fraction_cases": 136,
+    "node_patterns": 11089,
+    "polynomial_reproduction_equalities": 103985,
+    "rational_evaluations": 55445,
+    "separation_equalities_or_inequalities": 9708
+  },
+  "local_and_replica_checks": {
+    "coefficient_equalities": 116640,
+    "ideal_status_assignments": 729,
+    "local_series_cases": 8,
+    "local_series_degree": 12,
+    "negative_controls_rejected": {
+      "collapsed_equal_norm_bad_ideals": true,
+      "collapsed_equal_norm_replica_ideals": true,
+      "omitted_finite_restoration": true,
+      "omitted_replica_prime_powers": true,
+      "replica_prime_already_in_S": true,
+      "unfiltered_ideal_mu_as_integer_mu": true
+    },
+    "restoration_only_cases": 64,
+    "truncation_n_le": 160
+  },
+  "manuscript_sha256": "a32df720f2d8b4229ac4bdfd18cbe9af18178aed7dfca25c6787632ab98ab9f9",
+  "not_certified": [
+    "all-order asymptotic regularity",
+    "an analytic bound from finite sampling",
+    "the arithmetic observation hypothesis (5.3)",
+    "any zero-free line or the Riemann hypothesis"
+  ],
+  "sources": {
+    "baseline_commit": "ab98878279cd5614fe79bb94aa916e97c9ee50b4",
+    "observed_sha256": {
+      "standalone/2026-10-10-sextic-critical-core/LOG_FREE_REPLICATED_SPIKES.md": "b59978c1c5d3b5cb904c7f22d675a67bb71b2af512db9f0577e568a04565a86b",
+      "standalone/2026-10-10-signed-graph-and-joint-descent/sources/pr926/SAMPLED_MOMENT_CRITERION.md": "18bf2fdad438eb21ae3318eba7d42e9c03803b2dd1abc4d8f6448fb3b04499de"
+    },
+    "replayed": true
+  },
+  "status": "PASS"
+}

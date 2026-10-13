@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "review_type": "independent_ai_mathematical_review",
+  "reviewer": "fresh_frozen_review",
+  "reviewed_at_utc": "2026-10-12T23:57:22Z",
+  "source_commit": "ea94f3e40b2755de0ffb9ac7727faa820e0c4cd0",
+  "source_tree": "6622be6afbf5e293a07c71b2a9b556640557cc3f",
+  "source_parent": "ab98878279cd5614fe79bb94aa916e97c9ee50b4",
+  "source_read_method": "git show <commit>:<path>; SHA-256 over unmodified stdout bytes",
+  "targets": [
+    {
+      "path": "standalone/2026-10-13-principal-zeta-bridge/PRINCIPAL_REPLICA_AVERAGES_AND_CONVERSE.md",
+      "sha256": "bbe44ee35ec252081a243b6ec8f4433777e401bc399f0fa93b9eb57487fa93d8",
+      "git_blob": "873769f256fe4025800f34eebbf0c21ca21d1517",
+      "bytes": 15645
+    },
+    {
+      "path": "standalone/2026-10-13-principal-zeta-bridge/ANTI_CONJUGATE_COLLISION_GROWTH.md",
+      "sha256": "384667530dc3987f9ea77da0bac67a723d6a57d4635748286a500dc6042c87fa",
+      "git_blob": "be393a0fde4a32dd050b367aa1431feb503f1077",
+      "bytes": 10292
+    },
+    {
+      "path": "standalone/2026-10-13-principal-zeta-bridge/SIGN_QUANTILE_CAPTURE_FOLLOWUP.md",
+      "sha256": "653ddafdb9ba9a0ab03b92dd1e998de4674d30297d4ca008c39db44eb6cea5bd",
+      "git_blob": "48b7a847489a26fc0021128d056ee294353f5736",
+      "bytes": 8013
+    }
+  ],
+  "verdict": "PASS",
+  "verdict_scope": "The stated exact identities, weighted causal operator estimates, conditional ordinary-RH converse, finite collision-factor obstruction, and signed-quantile implication at exact positive exponent.",
+  "independence": {
+    "independent_of_target_authorship": true,
+    "prior_verdicts_used_as_proof_evidence": false,
+    "fresh_endpoint_subreview": "fresh_frozen_review/quantile_challenge",
+    "external_peer_review": false,
+    "human_review": false,
+    "lean_or_formal_verification": false,
+    "note": "Fresh AI proof reconstruction; additional AI agreement is not proof or a guarantee of independent error modes."
+  },
+  "source_authentication": {
+    "local_commit_tree_and_blobs_verified": true,
+    "live_remote_contacted": false,
+    "remote_freeze_authentication_repeated": false,
+    "working_tree_used_as_review_source": false,
+    "source_byte_receipt": "SOURCE_BYTE_VERIFICATION.json",
+    "dependency_replays": 9,
+    "all_dependency_replays_pass": true
+  },
+  "findings": [
+    {
+      "id": "P1",
+      "target": "PRINCIPAL_REPLICA_AVERAGES_AND_CONVERSE.md",
+      "sections": [
+        "Theorem 2.1",
+        "Section 4"
+      ],
+      "status": "PASS",
+      "finding": "Exact rough-annulus weights, duplicate prime-ideal labels, uniform two-regime coefficient error, and fixed-Q dominated mean are valid."
+    },
+    {
+      "id": "P2",
+      "target": "PRINCIPAL_REPLICA_AVERAGES_AND_CONVERSE.md",
+      "sections": [
+        "Theorem 3.1"
+      ],
+      "status": "PASS",
+      "finding": "The coefficient-norm inverse is bounded on causal weighted spaces; measurable moving cutoff is invertible on a sufficiently late zero-extended tail without using an unavailable denominator or assuming unknown tail integrability."
+    },
+    {
+      "id": "P3",
+      "target": "PRINCIPAL_REPLICA_AVERAGES_AND_CONVERSE.md",
+      "sections": [
+        "Corollary 3.2",
+        "Theorem 5.1",
+        "Corollary 5.2"
+      ],
+      "status": "PASS",
+      "finding": "The limiting Mellin multiplier and reciprocal are holomorphic/nonzero for Re s>0; ordinary RH supplies polynomially bounded principal replicas for each fixed alpha>1/2 with explicit sigma and eta margin; cofinal equivalence has the stated ordinary-zeta scope."
+    },
+    {
+      "id": "C1",
+      "target": "ANTI_CONJUGATE_COLLISION_GROWTH.md",
+      "sections": [
+        "Section 2"
+      ],
+      "status": "PASS",
+      "finding": "The complete pair sum, including same-side terms, has the stated uniform negative sign at balanced independent frequencies for all fixed k>=2."
+    },
+    {
+      "id": "C2",
+      "target": "ANTI_CONJUGATE_COLLISION_GROWTH.md",
+      "sections": [
+        "Theorem 3.1"
+      ],
+      "status": "PASS",
+      "finding": "Summable cubic errors, fixed-field prime supply, O(1) final-annulus deletions under polynomial norm budgets, and the lower-prime bound establish stretched-exponential growth."
+    },
+    {
+      "id": "C3",
+      "target": "ANTI_CONJUGATE_COLLISION_GROWTH.md",
+      "sections": [
+        "Theorem 3.1",
+        "Section 4"
+      ],
+      "status": "PASS",
+      "finding": "Small-prime limiting zeros have exact (log Y)^(-2) lower control uniformly over finitely many source phases; the claim remains a collision-factor modulus theorem, not a signed trace/moment lower bound."
+    },
+    {
+      "id": "S1",
+      "target": "SIGN_QUANTILE_CAPTURE_FOLLOWUP.md",
+      "sections": [
+        "Lemma 2.1",
+        "Section 3"
+      ],
+      "status": "PASS",
+      "finding": "Exact alpha-records exist, and the positive principal recurrence gives the required past row envelope and sign without differentiating the record envelope."
+    },
+    {
+      "id": "S2",
+      "target": "SIGN_QUANTILE_CAPTURE_FOLLOWUP.md",
+      "sections": [
+        "Lemma 2.1"
+      ],
+      "status": "PASS",
+      "finding": "Taylor remainder is O(X^-2); real Markov yields the endpoint m^2 factor; row-uniform derivatives cover preceding intervals crossing a dyadic boundary."
+    },
+    {
+      "id": "S3",
+      "target": "SIGN_QUANTILE_CAPTURE_FOLLOWUP.md",
+      "sections": [
+        "Theorem 1.1",
+        "Section 3"
+      ],
+      "status": "PASS",
+      "finding": "The denser grid makes the preceding-node error o(A); the same contractive majority contradicts the matching signed quantile at one common node, giving exact O(D^alpha) for alpha>0."
+    }
+  ],
+  "material_gaps_found": [],
+  "required_corrections": [],
+  "dependency_scope": {
+    "companion": {
+      "path": "standalone/2026-10-13-principal-zeta-bridge/EXACT_ZETA_BRIDGE_AND_SPARSE_CAPTURE.md",
+      "sha256": "a32df720f2d8b4229ac4bdfd18cbe9af18178aed7dfca25c6787632ab98ab9f9",
+      "git_blob": "c9cfe13be391b7c05fccc69f22ef9a594f049adb",
+      "bytes": 20884
+    },
+    "snapshot_replays": [
+      {
+        "commit": "2f8b6a3898a722d0602a91dea73bac344a3bb7dd",
+        "source_path": "research/exploratory/2026-10-10-two-hour-continuation/literature/PRIME_SLOT_CANCELLATION.md",
+        "snapshot_path": "sources/pr911/PRIME_SLOT_CANCELLATION.md",
+        "sha256": "d37ad696b46c7dda15a7faf314c46cda2d7d67e25ac8d3288c7f138aac373c13",
+        "repository": "GettysburgResearch/riemann",
+        "commit_url": "https://github.com/GettysburgResearch/riemann/blob/2f8b6a3898a722d0602a91dea73bac344a3bb7dd/research/exploratory/2026-10-10-two-hour-continuation/literature/PRIME_SLOT_CANCELLATION.md",
+        "snapshot_sha256": "d37ad696b46c7dda15a7faf314c46cda2d7d67e25ac8d3288c7f138aac373c13",
+        "original_sha256": "d37ad696b46c7dda15a7faf314c46cda2d7d67e25ac8d3288c7f138aac373c13",
+        "snapshot_bytes": 17592,
+        "match": true
+      },
+      {
+        "commit": "2f8b6a3898a722d0602a91dea73bac344a3bb7dd",
+        "source_path": "research/exploratory/2026-10-10-two-hour-continuation/literature/WIDE_SUBCRITICAL_TUBE.md",
+        "snapshot_path": "sources/pr911/WIDE_SUBCRITICAL_TUBE.md",
+        "sha256": "53568631060432784811d8474e8d774257664826e8fb9fa59c0ba47959745f02",
+        "repository": "GettysburgResearch/riemann",
+        "commit_url": "https://github.com/GettysburgResearch/riemann/blob/2f8b6a3898a722d0602a91dea73bac344a3bb7dd/research/exploratory/2026-10-10-two-hour-continuation/literature/WIDE_SUBCRITICAL_TUBE.md",
+        "snapshot_sha256": "53568631060432784811d8474e8d774257664826e8fb9fa59c0ba47959745f02",
+        "original_sha256": "53568631060432784811d8474e8d774257664826e8fb9fa59c0ba47959745f02",
+        "snapshot_bytes": 3957,
+        "match": true
+      },
+      {
+        "commit": "2f8b6a3898a722d0602a91dea73bac344a3bb7dd",
+        "source_path": "research/exploratory/2026-10-10-two-hour-continuation/literature/SHORT_POLYNOMIAL_COLLISION_TRANSPORT.md",
+        "snapshot_path": "sources/pr911/SHORT_POLYNOMIAL_COLLISION_TRANSPORT.md",
+        "sha256": "c538719277b1e7de70a7e3f872fb2720668bd43ca57c9cffff6ff29b6766d5ac",
+        "repository": "GettysburgResearch/riemann",
+        "commit_url": "https://github.com/GettysburgResearch/riemann/blob/2f8b6a3898a722d0602a91dea73bac344a3bb7dd/research/exploratory/2026-10-10-two-hour-continuation/literature/SHORT_POLYNOMIAL_COLLISION_TRANSPORT.md",
+        "snapshot_sha256": "c538719277b1e7de70a7e3f872fb2720668bd43ca57c9cffff6ff29b6766d5ac",
+        "original_sha256": "c538719277b1e7de70a7e3f872fb2720668bd43ca57c9cffff6ff29b6766d5ac",
+        "snapshot_bytes": 7257,
+        "match": true
+      },
+      {
+        "commit": "2f8b6a3898a722d0602a91dea73bac344a3bb7dd",
+        "source_path": "research/exploratory/2026-10-10-two-hour-continuation/literature/COMPLEMENTARY_SHORT_TRACE_CONTRACT.md",
+        "snapshot_path": "sources/pr911/COMPLEMENTARY_SHORT_TRACE_CONTRACT.md",
+        "sha256": "968a2bee6d47f0a92fded0ab32c23963d31332f649dc0046604b7b568d48640c",
+        "repository": "GettysburgResearch/riemann",
+        "commit_url": "https://github.com/GettysburgResearch/riemann/blob/2f8b6a3898a722d0602a91dea73bac344a3bb7dd/research/exploratory/2026-10-10-two-hour-continuation/literature/COMPLEMENTARY_SHORT_TRACE_CONTRACT.md",
+        "snapshot_sha256": "968a2bee6d47f0a92fded0ab32c23963d31332f649dc0046604b7b568d48640c",
+        "original_sha256": "968a2bee6d47f0a92fded0ab32c23963d31332f649dc0046604b7b568d48640c",
+        "snapshot_bytes": 5882,
+        "match": true
+      },
+      {
+        "commit": "6498d6cc2eded03159c7332b25fd224ad07f89c1",
+        "source_path": "standalone/2026-10-10-sextic-moment-descent/FOURTH_MOMENT_ATTACK.md",
+        "snapshot_path": "sources/pr913/FOURTH_MOMENT_ATTACK.md",
+        "sha256": "354e8f7f5f81d0f8821ea6e821f55546f9c9641ac0690def1ae373000b4b3d08",
+        "repository": "GettysburgResearch/riemann",
+        "commit_url": "https://github.com/GettysburgResearch/riemann/blob/6498d6cc2eded03159c7332b25fd224ad07f89c1/standalone/2026-10-10-sextic-moment-descent/FOURTH_MOMENT_ATTACK.md",
+        "snapshot_sha256": "354e8f7f5f81d0f8821ea6e821f55546f9c9641ac0690def1ae373000b4b3d08",
+        "original_sha256": "354e8f7f5f81d0f8821ea6e821f55546f9c9641ac0690def1ae373000b4b3d08",
+        "snapshot_bytes": 37899,
+        "match": true
+      },
+      {
+        "commit": "6b4723042b3d250024eef45cb1924f88f28e902c",
+        "source_path": "standalone/2026-10-10-oscillating-overlaps-and-averaged-moments/SCALE_AVERAGED_CRITERION.md",
+        "snapshot_path": "sources/pr917/SCALE_AVERAGED_CRITERION.md",
+        "sha256": "c6c543037312480fae6154f7a059248fe14658ecff6251aaecb80fe0fdbfd9c0",
+        "repository": "GettysburgResearch/riemann",
+        "commit_url": "https://github.com/GettysburgResearch/riemann/blob/6b4723042b3d250024eef45cb1924f88f28e902c/standalone/2026-10-10-oscillating-overlaps-and-averaged-moments/SCALE_AVERAGED_CRITERION.md",
+        "snapshot_sha256": "c6c543037312480fae6154f7a059248fe14658ecff6251aaecb80fe0fdbfd9c0",
+        "original_sha256": "c6c543037312480fae6154f7a059248fe14658ecff6251aaecb80fe0fdbfd9c0",
+        "snapshot_bytes": 12654,
+        "match": true
+      },
+      {
+        "commit": "ab98878279cd5614fe79bb94aa916e97c9ee50b4",
+        "source_path": "standalone/2026-10-07-openai-quasi-riemann-import/upstream/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex",
+        "snapshot_path": "sources/openai/paper2.tex",
+        "sha256": "d9a8f15aa770cf883d0eabd2b775fad694ce20b44cba7928f5c0c9a6d8750d4d",
+        "upstream_repository": "openai/math",
+        "upstream_commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+        "upstream_path": "preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex",
+        "repository": "GettysburgResearch/riemann",
+        "commit_url": "https://github.com/GettysburgResearch/riemann/blob/ab98878279cd5614fe79bb94aa916e97c9ee50b4/standalone/2026-10-07-openai-quasi-riemann-import/upstream/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex",
+        "snapshot_sha256": "d9a8f15aa770cf883d0eabd2b775fad694ce20b44cba7928f5c0c9a6d8750d4d",
+        "original_sha256": "d9a8f15aa770cf883d0eabd2b775fad694ce20b44cba7928f5c0c9a6d8750d4d",
+        "snapshot_bytes": 169005,
+        "match": true
+      },
+      {
+        "commit": "ab98878279cd5614fe79bb94aa916e97c9ee50b4",
+        "source_path": "standalone/2026-10-10-sextic-critical-core/LOG_FREE_REPLICATED_SPIKES.md",
+        "snapshot_path": "sources/pr915/LOG_FREE_REPLICATED_SPIKES.md",
+        "sha256": "b59978c1c5d3b5cb904c7f22d675a67bb71b2af512db9f0577e568a04565a86b",
+        "repository": "GettysburgResearch/riemann",
+        "commit_url": "https://github.com/GettysburgResearch/riemann/blob/ab98878279cd5614fe79bb94aa916e97c9ee50b4/standalone/2026-10-10-sextic-critical-core/LOG_FREE_REPLICATED_SPIKES.md",
+        "snapshot_sha256": "b59978c1c5d3b5cb904c7f22d675a67bb71b2af512db9f0577e568a04565a86b",
+        "original_sha256": "b59978c1c5d3b5cb904c7f22d675a67bb71b2af512db9f0577e568a04565a86b",
+        "snapshot_bytes": 11753,
+        "match": true
+      },
+      {
+        "commit": "ab98878279cd5614fe79bb94aa916e97c9ee50b4",
+        "source_path": "standalone/2026-10-10-signed-graph-and-joint-descent/sources/pr926/SAMPLED_MOMENT_CRITERION.md",
+        "snapshot_path": "sources/pr926/SAMPLED_MOMENT_CRITERION.md",
+        "sha256": "18bf2fdad438eb21ae3318eba7d42e9c03803b2dd1abc4d8f6448fb3b04499de",
+        "repository": "GettysburgResearch/riemann",
+        "commit_url": "https://github.com/GettysburgResearch/riemann/blob/ab98878279cd5614fe79bb94aa916e97c9ee50b4/standalone/2026-10-10-signed-graph-and-joint-descent/sources/pr926/SAMPLED_MOMENT_CRITERION.md",
+        "snapshot_sha256": "18bf2fdad438eb21ae3318eba7d42e9c03803b2dd1abc4d8f6448fb3b04499de",
+        "original_sha256": "18bf2fdad438eb21ae3318eba7d42e9c03803b2dd1abc4d8f6448fb3b04499de",
+        "snapshot_bytes": 28877,
+        "match": true
+      }
+    ],
+    "note": "Relevant load-bearing sections were read; this is not a blanket fresh review of all claims in every imported manuscript."
+  },
+  "standard_inputs_retained": [
+    "Fixed Eisenstein ideal count",
+    "Fixed-field prime ideal theorem",
+    "Ordinary zeta continuation and functional equation",
+    "Borel-Caratheodory inequality",
+    "Mellin inversion and contour shifting for a fixed compact smooth test",
+    "Real-polynomial Markov inequality",
+    "Frozen universal-window construction and explicit all-order derivative bound"
+  ],
+  "what_was_run": [
+    "Read-only git show of frozen targets and source dependencies",
+    "git rev-parse of source commit tree, parent and target blobs",
+    "Python hashlib SHA-256 over unmodified git-show bytes",
+    "Nine original-commit:path versus frozen-snapshot byte comparisons"
+  ],
+  "not_run": [
+    "Repository checker scripts",
+    "Arithmetic numerical diagnostics",
+    "External web or GitHub requests",
+    "Lean or any formal proof checker"
+  ],
+  "repository_mutations_by_reviewer": false,
+  "publication_actions": false,
+  "open_arithmetic_inputs": [
+    "Actual restored principal-replica capture inequality at the intended exponent",
+    "Actual signed-quantile inequalities (1.3a-b)",
+    "The relevant signed physical covariance or complementary trace bound"
+  ],
+  "not_proved": [
+    "Full fourth or higher moment",
+    "Arithmetic 17/24 bound",
+    "Improved unconditional zero-free boundary",
+    "Complementary trace contract or its failure",
+    "Ordinary RH",
+    "GRH for the full Hecke family"
+  ],
+  "report": "FRESH_FROZEN_REVIEW.md"
+}
