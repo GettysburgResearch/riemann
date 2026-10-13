@@ -56,25 +56,38 @@ Smallest remaining gap: no lab mechanism proves Mom(1, rho < 1) without the Riem
    harmless for exponents (Mom(1, ρ) is a `q^{o(d)}` statement) but it is a real **secondary term from
    small-conductor members**, the lab analogue of polylog factors. (EMPIRICAL on exact data; the
    finite-monodromy explanation is HEURISTIC.)
-3. **Where the pipeline loses (EXACT ledger at small d).**
-   * Poisson in `u` + Gauss sums + absorption: **no loss** (exact identity; replayed term by term at q = 7,
-     d = 2 for all M, and d = 3 for M = 2..4, see §3).
-   * The dual mean square is **diagonal-sized** at every sub-diagonal cell measured:
-     `E/DD = 1.0028, 1.0094` (q = 7, d = 4, ρ_eff = M/d = 1/2, 3/4), `0.984, 0.988, 0.994` (q = 13, d = 3).
-   * Hence positivity costs **exactly the dual diagonal**, `P/Diag = q^{d−M}·(E/DD)`: 49.2 and 7.07 against
-     the predicted 49 and 7 (q = 7, d = 4), 167, 12.8, 0.994 against 169, 13, 1 (q = 13, d = 3).
-   * The signed dual (= the truth, by the exact identity) is tiny: `Off/Diag = −0.0176` (q = 7, d = 4,
-     M = 3) and `−0.0059` (q = 13, d = 3, M = 3). Signed saving over positivity: `κ = 0.77` and `0.67` in
-     units of `log q^d`.
-   * So **positivity is the first and dominant loss, and it is exactly `D^{1−ρ}`**: nothing else in Step 3
-     loses at ρ < 1. The reflection cannot recover it (§4): the dual rows that matter have `deg h > d`,
-     where the theta reflection lengthens the sum.
-4. **Theta structure of the dual (EXACT data, LIT context).** The dual sums
-   `B_h(d) = Σ_n χ0(Res(n,n')) conj χ_n(h)` vanish identically for `deg h = 1` and are 100×–300× below their
-   diagonal at `deg h = 2` (q = 7, 13, 19); at the unit row `h = 1` they carry a large "Patterson" bias
-   (`|B_1(4)|² = 36·7⁵` against 2058 columns at q = 7). This is Hoffstein's mechanism (LIT, read): over
-   `F_q(T)` the Gauss-sum Dirichlet series are rational, and the theta coefficients come from the
-   numerator. It acts only where `deg h ≲ d/2`, i.e. on the super-diagonal side.
+3. **Where the pipeline loses (EXACT ledger at small d; §4).**
+   * Poisson in `u`, the Gauss sums and the absorption lose **nothing**. The primal = dual identity was
+     replayed in exact integers at q = 7, `d = 2` (M = 1..4) and `d = 3` (M = 1..5).
+   * The dual mean square is **diagonal-sized** whenever the dual has more rows than columns:
+     `E/DD ∈ [0.949, 1.009]` over 11 cells (q = 7, d = 3, 4, 5; q = 13, d = 3; q = 19, d = 3).
+   * Hence positivity costs **exactly the dual diagonal**, `P/Diag = q^{d−M}·(E/DD)`. Examples:
+     * 350, 49.2, 7.07 against the predicted 343, 49, 7 (q = 7, d = 4, M = 1, 2, 3);
+     * 6.93 against 7 (q = 7, d = 5, M = 4);
+     * 167, 12.8 against 169, 13 (q = 13, d = 3).
+   * The block ledger at q = 7, `d = 3` separates two stages. Taking `|μ(f)|` over the Ramanujan blocks
+     costs `T1/Diag` = 9.9, 1.24, 0.11 at ρ_eff = M/d = 1/3, 2/3, 1. Relaxing to mean squares then costs
+     `T2/Diag` = 63.7, 7.8, 1.14, essentially all of it dual diagonal (64.7, 8.9, 1.26). The truths are
+     `Off/Diag = −1, −1, −0.020`.
+   * So **positivity is the first and dominant loss, and it is exactly `D^{1−ρ}`**. Nothing else in Step 3
+     loses at ρ < 1. The reflection cannot recover it (item 4): the dual rows that matter have
+     `deg h > d`, where the theta reflection lengthens the sum.
+   * Caveat: at the accessible sub-diagonal sizes the lab truth is carried by degenerate members. Rows of
+     degree ≤ 1 have `L ≡ 1`, so `M₂ = 0` and `Off = −Diag`. Rows of degree 2 have `|A_u|² = q^d`
+     exactly. Rows of degree 3 are special (item 2). So "the signed dual is small" is exact but **not yet
+     a test on generic members**.
+4. **Theta structure of the dual (EXACT data; LIT context).** The dual sums are
+   `B_h(d) = Σ_n χ0(Res(n,n')) conj χ_n(h)` (`theta_series.c`).
+   * They **vanish identically for `deg h = 1`**: every `d ≤ 7` at q = 7, every `d ≤ 6` at q = 13.
+   * At `deg h = 2`, `Σ_h |B_h(d)|² = 6q², 6q³, 6q³, 6q³, 6q⁴, 6q⁴` for `d = 1..6` (q = 7). Against the
+     diagonal `≈ q^{d+2}` this is bounded, not `q^{d/2}`-sized.
+   * At the unit row, `|B_1(d)|² = (q−1)² q^{e(d)}` with `e = 3, 5, 8, 10` at `d = 3, 4, 6, 7`, and
+     `B_1(d) = 0` at `d = 2, 5`. This holds identically at q = 7 and q = 13. So `|B_1(d)| ≍ q^{5d/6}`:
+     **the Patterson cubic-theta bias exponent 5/6**, as it must be, since absorption turned the sextic
+     Möbius dual into cubic Gauss sums.
+   * This is Hoffstein's mechanism (LIT, read): over `F_q(T)` the Gauss-sum Dirichlet series are rational,
+     and the theta coefficients come from the numerator. It acts only where `deg h ≲ d/2`, i.e. on the
+     super-diagonal side.
 5. **Mechanism search (§6).** No lab mechanism proves Mom(1, ρ < 1) without RH for the members.
    * The exact degree-generating series (`Σ_d A_u(d) x^d = 1/L(x, ψ_u)`) only restate the problem: the
      growth rate of `M₂` in `d` is the location of the inverse roots.
@@ -199,26 +212,54 @@ reciprocity), all Gauss sums and all μ's cancel into
     I(g, h) = Σ_{(a,b)=1} β_h(a)χ_a(g) · conj(β_h(b)χ_b(g)),     β_h(a) = χ0(Res(a, a')) conj χ_a(h),
 
 where `c_g(h) = Σ_{e | (g,h)} μ(g/e)|e|` is the Ramanujan sum and `f = g/e` is the Oct 5 Möbius variable.
-`ledger.py` evaluates both sides exactly. Primal = dual at q = 7, d = 2 for all M = 1..4, and at d = 3
-for M = 2, 3, 4 (see `results/ledger_q7_d*.log`). The `ω`-part of the dual total is 0, as it must be.
+`ledger.py` evaluates both sides exactly. Primal = dual at q = 7, `d = 2` for all M = 1..4, and at
+`d = 3` for all M = 1..5 (`results/ledger_q7_d*.log`). The `ω`-part of the dual total is 0, as it must be.
+
+**Block ledger** (q = 7, `d = 3`, EXACT). The quantities, all in units of `Diag`:
+* `T1 = Σ_{e,f}|Block(e, f)|`: positivity in the Möbius variable `f`, with coprime pairs `(a, b)`;
+* `T2 = Σ_{e,f} q^{M−d}|e| Σ_{e|h} |Σ_a β_h(a)χ_a(ef)|²`: the Oct 5-type mean square;
+* `T2diag`: its `a = b` part (the dual diagonal).
+
+| M | ρ_eff = M/d | rows | truth Off/Diag | T1/Diag | T2/Diag | T2diag/Diag | q^{d−M} |
+|---|---|---|---|---|---|---|---|
+| 1 | 1/3 | 6 | −1 (M₂ = 0) | 9.86 | 63.7 | 64.7 | 49 |
+| 2 | 2/3 | 48 | −1 (M₂ = 0) | 1.24 | 7.82 | 8.94 | 7 |
+| 3 | 1 | 342 | −0.0200 | 0.106 | 1.14 | 1.26 | 1 |
+| 4 | 4/3 | 2400 | +0.680 | 0.680 | 0.840 | 0.160 | 1/7 |
+| 5 | 5/3 | 16806 | +0.720 | 0.720 | 0.840 | 0.020 | 1/49 |
+
+At ρ > 1 one block carries everything (`T1 = |Off|`) and the dual diagonal is negligible. At ρ ≤ 1 the
+mean square is its own dual diagonal (`T2 ≈ T2diag ≈ 1.3 q^{d−M}`, the same `1.3` as DUAL_ANATOMY's
+`DD ≈ 1.3(D/Y)Diag` over Q(ω); the coincidence of constants is not explained here). The signed sums cancel
+it.
 
 **4.2 Positivity and the dual mean square.** The Oct 5 positivity step (eq:weighted) bounds the blocks by
 the full dual mean square, here `E(K) = Σ_{h ∈ V_K}|B_h|²` with `B_h = Σ_n β_h(n)` and `K = 2d − M`.
 `DD(K)` is its diagonal. `dual_energy.c` computes both exactly; `pipeline_table.py` combines them with the
 truth.
 
-| q | d | M | rows q^M | ρ_eff = M/d | Off/Diag (truth = signed dual) | P/Diag (after positivity) | q^{d−M} | E/DD | κ |
+| q | d | M | rows q^M (deg u ≤ M−1) | ρ_eff = M/d | Off/Diag (truth = signed dual) | P/Diag (after positivity) | q^{d−M} | E/DD | κ |
 |---|---|---|---|---|---|---|---|---|---|
-| 7 | 4 | 2 | 49 | 0.50 | −1 (all rows have `L ≡ 1`) | 49.16 | 49 | 1.0028 | 0.50 |
+| 7 | 3 | 1 | 7 | 0.33 | −1 (`L ≡ 1`) | 47.4 | 49 | 0.949 | 0.66 |
+| 7 | 3 | 2 | 49 | 0.67 | −1 (`L ≡ 1`) | 6.72 | 7 | 0.960 | 0.33 |
+| 7 | 3 | 3 | 343 | 1.00 | −0.0200 | 0.980 | 1 | 0.980 | 0.67 |
+| 7 | 4 | 1 | 7 | 0.25 | −1 (`L ≡ 1`) | 349.9 | 343 | 1.0021 | 0.75 |
+| 7 | 4 | 2 | 49 | 0.50 | −1 (`L ≡ 1`) | 49.16 | 49 | 1.0028 | 0.50 |
 | 7 | 4 | 3 | 343 | 0.75 | **−0.0176** | **7.07** | 7 | **1.0094** | 0.77 |
 | 7 | 4 | 4 | 2401 | 1.00 | +1.386 (special rows) | 1.90 | 1 | 1.905 | 0.04 |
+| 7 | 5 | 4 | 2401 | 0.80 | **+0.963** (special rows) | **6.93** | 7 | **0.9905** | 0.20 |
 | 7 | 5 | 5 | 16807 | 1.00 | +1.104 | 1.35 | 1 | 1.346 | 0.02 |
 | 13 | 3 | 1 | 13 | 0.33 | −1 (`L ≡ 1`) | 167.2 | 169 | 0.984 | 0.67 |
 | 13 | 3 | 2 | 169 | 0.67 | −1 (`L ≡ 1`) | 12.85 | 13 | 0.988 | 0.33 |
 | 13 | 3 | 3 | 2197 | 1.00 | **−0.0059** | **0.994** | 1 | **0.994** | 0.67 |
+| 13 | 4 | 4 | 28561 | 1.00 | +1.678 (special rows) | 1.97 | 1 | 1.971 | 0.02 |
+| 19 | 3 | 2 | 361 | 0.67 | −1 (`L ≡ 1`) | 18.9 | 19 | 0.9945 | 0.33 |
+| 19 | 3 | 3 | 6859 | 1.00 | −0.0028 | 0.997 | 1 | 0.9972 | 0.67 |
 
-Here `P = q^{M−d}E` and `κ = log(P/|Off|)/log q^d`. Rows with `−1` have `M₂ = 0` exactly: every row of
-degree ≤ 1 has `L(x, ψ_u) = 1`.
+Here `P = q^{M−d}E`, the `(e, f) = (1, 1)` block relaxed to a full mean square, and
+`κ = log(P/|Off|)/log q^d`. Rows with `−1` have `M₂ = 0` exactly: every row of degree ≤ 1 has
+`L(x, ψ_u) = 1`. For `M > d` (not shown) `P` is not an upper bound for `Off`: there the off-diagonal sits
+in the blocks with `g ≠ 1` (see the block ledger above). `results/pipeline_table_q*.json` has all cells.
 
 Reading (EXACT on these cells; the trend is EMPIRICAL):
 * **The dual mean square is diagonal-sized** whenever the dual has more rows than columns

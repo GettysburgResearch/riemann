@@ -1,0 +1,17 @@
+Q=1024 Z=2896 primes=921 sf=2047 t=4.3
+ball 3696, exp table built t=4.6
+#c=2047 t=4.9
+  P_a=1 Y'=32 ns=7 excess=-0.008 nexc=0 frac_exc=0.000 t=4.9
+  P_a=4 Y'=64 ns=19 excess=-0.015 nexc=0 frac_exc=0.000 t=4.9
+  P_a=16 Y'=128 ns=37 excess=0.013 nexc=0 frac_exc=0.000 t=5.0
+  P_a=64 Y'=256 ns=74 excess=0.010 nexc=0 frac_exc=0.000 t=5.3
+  P_a=256 Y'=512 ns=139 excess=0.053 nexc=0 frac_exc=0.000 t=5.8
+  P_a=1024 Y'=1024 ns=294 excess=0.073 nexc=1 frac_exc=0.004 t=7.0
+B pass done t=9.0
+P_a=    1 Y'=   32 exc=-0.008 nexc=0 fexc=0.000 R_full=0.0126 R_exc=0.0000 R_rest=0.0126 base_m=0.0130 base_c=0.0093 Rdiag=1.02e-19 R_noxi=0.0005 Rdiag_noxi=0.0006 Rmu1=0.0142 Rmu1_noxi=0.0162 pm1=0.0111 pm1_noxi=0.0405 top1=0.0048
+P_a=    4 Y'=   64 exc=-0.015 nexc=0 fexc=0.000 R_full=0.0001 R_exc=0.0000 R_rest=0.0001 base_m=0.0150 base_c=0.0129 Rdiag=7.39e-20 R_noxi=0.0501 Rdiag_noxi=0.0421 Rmu1=0.0038 Rmu1_noxi=0.0216 pm1=0.0118 pm1_noxi=0.0292 top1=0.0010
+P_a=   16 Y'=  128 exc=0.013 nexc=0 fexc=0.000 R_full=0.0168 R_exc=0.0000 R_rest=0.0168 base_m=0.0168 base_c=0.0167 Rdiag=5.73e-20 R_noxi=0.0018 Rdiag_noxi=0.0198 Rmu1=0.0075 Rmu1_noxi=0.0219 pm1=0.0143 pm1_noxi=0.0238 top1=0.0098
+P_a=   64 Y'=  256 exc=0.010 nexc=0 fexc=0.000 R_full=0.0547 R_exc=0.0000 R_rest=0.0547 base_m=0.0136 base_c=0.0507 Rdiag=5.84e-20 R_noxi=0.0201 Rdiag_noxi=0.0301 Rmu1=0.0593 Rmu1_noxi=0.0351 pm1=0.0538 pm1_noxi=0.0195 top1=0.0251
+P_a=  256 Y'=  512 exc=0.053 nexc=0 fexc=0.000 R_full=0.0494 R_exc=0.0000 R_rest=0.0494 base_m=0.0177 base_c=0.0448 Rdiag=1.68e-21 R_noxi=0.0077 Rdiag_noxi=0.0069 Rmu1=0.0405 Rmu1_noxi=0.0005 pm1=0.0456 pm1_noxi=0.0132 top1=0.0053
+P_a= 1024 Y'= 1024 exc=0.073 nexc=1 fexc=0.004 R_full=0.0332 R_exc=0.0219 R_rest=0.0319 base_m=0.0128 base_c=0.0555 Rdiag=1.34e-20 R_noxi=0.0126 Rdiag_noxi=0.0034 Rmu1=0.0620 Rmu1_noxi=0.0095 pm1=0.0578 pm1_noxi=0.0143 top1=0.0219
+done 9.5s
