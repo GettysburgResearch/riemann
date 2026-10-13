@@ -1,0 +1,132 @@
+{
+  "cases": [
+    {
+      "B4_denominator_power_of_two": 96,
+      "B4_lower_numerator": 6433679791763767939147031340137,
+      "B4_upper_numerator": 6433679791763767939147031340165,
+      "D": 64,
+      "distinct_pair_products": 28,
+      "good_prime_ideals": 15,
+      "physical": [
+        {
+          "H": 64,
+          "principal_fourth": 19290,
+          "rows": 240
+        },
+        {
+          "H": 79,
+          "principal_fourth": 24204,
+          "rows": 294
+        }
+      ],
+      "squarefree_columns": 7
+    },
+    {
+      "B4_denominator_power_of_two": 96,
+      "B4_lower_numerator": 50539552364545315281225606103186,
+      "B4_upper_numerator": 50539552364545315281225606103375,
+      "D": 128,
+      "distinct_pair_products": 189,
+      "good_prime_ideals": 30,
+      "physical": [
+        {
+          "H": 128,
+          "principal_fourth": 295296,
+          "rows": 462
+        },
+        {
+          "H": 164,
+          "principal_fourth": 380292,
+          "rows": 594
+        }
+      ],
+      "squarefree_columns": 19
+    },
+    {
+      "B4_denominator_power_of_two": 96,
+      "B4_lower_numerator": 193148316883757767486641918997298,
+      "B4_upper_numerator": 193148316883757767486641918997986,
+      "D": 256,
+      "distinct_pair_products": 688,
+      "good_prime_ideals": 52,
+      "physical": [
+        {
+          "H": 256,
+          "principal_fourth": 2268108,
+          "rows": 930
+        },
+        {
+          "H": 338,
+          "principal_fourth": 3034482,
+          "rows": 1236
+        }
+      ],
+      "squarefree_columns": 37
+    },
+    {
+      "B4_denominator_power_of_two": 96,
+      "B4_lower_numerator": 788528003700411706282972107883302,
+      "B4_upper_numerator": 788528003700411706282972107886018,
+      "D": 512,
+      "distinct_pair_products": 2716,
+      "good_prime_ideals": 93,
+      "physical": [
+        {
+          "H": 512,
+          "principal_fourth": 18564120,
+          "rows": 1866
+        },
+        {
+          "H": 700,
+          "principal_fourth": 25257168,
+          "rows": 2538
+        }
+      ],
+      "squarefree_columns": 74
+    },
+    {
+      "B4_denominator_power_of_two": 96,
+      "B4_lower_numerator": 2795731322786203624549129538035450,
+      "B4_upper_numerator": 2795731322786203624549129538045021,
+      "D": 1024,
+      "distinct_pair_products": 9571,
+      "good_prime_ideals": 169,
+      "physical": [
+        {
+          "H": 1024,
+          "principal_fourth": 130607694,
+          "rows": 3696
+        },
+        {
+          "H": 1449,
+          "principal_fourth": 185268672,
+          "rows": 5250
+        }
+      ],
+      "squarefree_columns": 139
+    },
+    {
+      "B4_denominator_power_of_two": 96,
+      "B4_lower_numerator": 12645036756010861596255445732666892,
+      "B4_upper_numerator": 12645036756010861596255445732709191,
+      "D": 2048,
+      "distinct_pair_products": 42299,
+      "good_prime_ideals": 308,
+      "physical": [
+        {
+          "H": 2048,
+          "principal_fourth": 1187985282,
+          "rows": 7446
+        },
+        {
+          "H": 2999,
+          "principal_fourth": 1737230958,
+          "rows": 10890
+        }
+      ],
+      "squarefree_columns": 294
+    }
+  ],
+  "scope": "Hard annular columns, all good ideals; exact sharp principal sums, not full physical moments. No asymptotic inference.",
+  "status": "FINITE_EXACT_REFERENCE_CALIBRATION"
+}

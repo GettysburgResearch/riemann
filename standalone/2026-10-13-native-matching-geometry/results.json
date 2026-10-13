@@ -1,0 +1,195 @@
+{
+  "arithmetic_cases": [
+    {
+      "D": 16,
+      "H": 1,
+      "columns": 2,
+      "principal_fourth": 36,
+      "rows": 6
+    },
+    {
+      "D": 16,
+      "H": 7,
+      "columns": 2,
+      "principal_fourth": 180,
+      "rows": 30
+    },
+    {
+      "D": 16,
+      "H": 13,
+      "columns": 2,
+      "principal_fourth": 264,
+      "rows": 54
+    },
+    {
+      "D": 16,
+      "H": 31,
+      "columns": 2,
+      "principal_fourth": 660,
+      "rows": 120
+    },
+    {
+      "D": 16,
+      "H": 64,
+      "columns": 2,
+      "principal_fourth": 1260,
+      "rows": 240
+    },
+    {
+      "D": 32,
+      "H": 1,
+      "columns": 5,
+      "principal_fourth": 270,
+      "rows": 6
+    },
+    {
+      "D": 32,
+      "H": 7,
+      "columns": 5,
+      "principal_fourth": 1350,
+      "rows": 30
+    },
+    {
+      "D": 32,
+      "H": 13,
+      "columns": 5,
+      "principal_fourth": 2430,
+      "rows": 54
+    },
+    {
+      "D": 32,
+      "H": 31,
+      "columns": 5,
+      "principal_fourth": 4890,
+      "rows": 120
+    },
+    {
+      "D": 32,
+      "H": 64,
+      "columns": 5,
+      "principal_fourth": 10086,
+      "rows": 240
+    },
+    {
+      "D": 64,
+      "H": 1,
+      "columns": 7,
+      "principal_fourth": 546,
+      "rows": 6
+    },
+    {
+      "D": 64,
+      "H": 7,
+      "columns": 7,
+      "principal_fourth": 2430,
+      "rows": 30
+    },
+    {
+      "D": 64,
+      "H": 13,
+      "columns": 7,
+      "principal_fourth": 4614,
+      "rows": 54
+    },
+    {
+      "D": 64,
+      "H": 31,
+      "columns": 7,
+      "principal_fourth": 10020,
+      "rows": 120
+    },
+    {
+      "D": 64,
+      "H": 64,
+      "columns": 7,
+      "principal_fourth": 19290,
+      "rows": 240
+    }
+  ],
+  "counts": {
+    "K22_fiber": 9,
+    "K33_fiber": 9,
+    "K4_fiber": 9,
+    "alias_isolation_algebra": 4096,
+    "degree_energy_identity": 1062,
+    "dyadic_sum_bound": 16,
+    "fiber_dimension_bound": 905,
+    "higher_incidence_summability": 87300,
+    "independent_density_reconstruction": 230,
+    "literal_mask_inclusion_exclusion": 230,
+    "literal_zero_probability": 3,
+    "local_reference_positivity": 8,
+    "negative_control_all_principal_alias_terms_not_nonnegative": 1,
+    "negative_control_erasing_nonunit_mask_changes_reference": 1,
+    "negative_control_ordinary_cycle_rank_wrong_for_triangle": 1,
+    "negative_control_sixth_charge_not_equal_product": 1,
+    "no_early_alias": 350,
+    "no_singleton_dimension": 8,
+    "nonnegative_nullity": 1099,
+    "order_twelve_phase_witness": 1,
+    "physical_principal_reconstruction": 15,
+    "principal_decoder_reconstruction": 17846,
+    "principal_dimension": 8,
+    "principal_mobius_parity": 17846,
+    "principal_norm_cost": 17846,
+    "quartic_principal_condition": 15210,
+    "six_slot_group": 270,
+    "source_binding": 1,
+    "split_ideal_identity": 1,
+    "unsigned_rank": 1099,
+    "weighted_local_density": 96
+  },
+  "graphs_rank_checked": 1099,
+  "logarithmic_profiles": [
+    {
+      "k": 1,
+      "no_singleton_log_power": 0,
+      "principal_log_power": 0
+    },
+    {
+      "k": 2,
+      "no_singleton_log_power": 2,
+      "principal_log_power": 1
+    },
+    {
+      "k": 3,
+      "no_singleton_log_power": 9,
+      "principal_log_power": 4
+    },
+    {
+      "k": 4,
+      "no_singleton_log_power": 20,
+      "principal_log_power": 9
+    },
+    {
+      "k": 5,
+      "no_singleton_log_power": 35,
+      "principal_log_power": 16
+    },
+    {
+      "k": 6,
+      "no_singleton_log_power": 54,
+      "principal_log_power": 25
+    },
+    {
+      "k": 7,
+      "no_singleton_log_power": 77,
+      "principal_log_power": 36
+    },
+    {
+      "k": 8,
+      "no_singleton_log_power": 104,
+      "principal_log_power": 49
+    }
+  ],
+  "negative_controls": {
+    "all_principal_alias_terms_not_nonnegative": true,
+    "erasing_nonunit_mask_changes_reference": true,
+    "ordinary_cycle_rank_wrong_for_triangle": true,
+    "sixth_charge_not_equal_product": true
+  },
+  "predicates_including_setup": 165577,
+  "principal_local_patterns": 17846,
+  "scope": "Exact finite graph, local-algebra and small full-column mask checks. Not an asymptotic proof.",
+  "status": "PASS_FINITE_DIAGNOSTICS_ONLY"
+}
