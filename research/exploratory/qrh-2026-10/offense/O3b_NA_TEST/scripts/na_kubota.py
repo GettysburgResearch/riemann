@@ -35,7 +35,8 @@ def chi_row(fac):
 B2L = (2, -2)
 # ---- B variants
 Bv = np.zeros((nM, 4), complex)   # 0: theta = mu conj g2^2 ; 1: mu -> 1 ; 2: mu -> random +-1 ; 3: theta -> random phase
-cl = [t for t in sf if t[1] <= CMAX]
+CMIN = float(os.environ.get('CMIN_FRAC', '0')) * Z
+cl = [t for t in sf if CMIN <= t[1] <= CMAX]
 CH = 400
 for st in range(0, len(cl), CH):
     ch = cl[st:st + CH]
@@ -87,7 +88,7 @@ for st in range(0, len(sl), CH):
                 gram=G, gram_randcol=Gr, gram_diag=diagE))
             ci += 1
     if st // CH % 5 == 0: print(f'  s up to N={ch[-1][1]} t={time.time()-t0:.1f}', flush=True)
-out = dict(Q=Q, Z=Z, nM=nM, SMAX=SMAX, normB=[float(v) for v in nB],
+out = dict(Q=Q, Z=Z, CMIN=CMIN, nM=nM, SMAX=SMAX, normB=[float(v) for v in nB],
            variants=['theta=mu*conj(g2)^2', 'mu->1', 'mu->random +-1', 'theta->random phase', '|B| random m-phase'],
            recs=recs, secs=time.time() - t0)
 json.dump(out, open(OUT, 'w'), indent=1)
