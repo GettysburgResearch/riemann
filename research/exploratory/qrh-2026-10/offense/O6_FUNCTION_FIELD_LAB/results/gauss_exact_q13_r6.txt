@@ -1,0 +1,22 @@
+d=1: 13 squarefree n checked
+d=2: 40 squarefree n checked
+d=3: 40 squarefree n checked
+q=13 r=6 N=78 g=2
+  HD j=1: 93/93
+  HD j=1 control(no mu; mu=-1 only): 56/56
+  HD j=2: 93/93
+  HD j=2 control(no mu; mu=-1 only): 56/56
+  HD j=3: 93/93
+  HD j=3 control(no mu; mu=-1 only): 56/56
+  HD j=4: 93/93
+  HD j=4 control(no mu; mu=-1 only): 56/56
+  HD j=5: 93/93
+  HD j=5 control(no mu; mu=-1 only): 56/56
+  gj: g(1)g(2) = mu (-J)^d conj(chi_n(4)) g(3): 93/93
+  gj control (no mu; mu=-1 only): 56/56
+  S6: mu g(2)/g(5) depends on d only: 90/90
+  S6 control (no mu; mu!=mu0 only): 41/41
+
+real	0m17.148s
+user	0m5.036s
+sys	0m0.162s

@@ -1,0 +1,61 @@
+{
+ "galois_symbol_identity": {
+  "pass": 979,
+  "fail": 0,
+  "rational_rows_trivial": 1508
+ },
+ "conj_rows": {
+  "D": 1000.0,
+  "H": 1500,
+  "rows": 5436,
+  "max|A_conj(u)-conj(A_u)|": 1.3359632472723714e-14,
+  "max|Im A_u| on rational rows": 5.983393679514021e-15,
+  "rms|A_u|": 8.66649498758319
+ },
+ "least_cubic_nonresidue_prime": {
+  "MMAX": 200000,
+  "record_holders(m,p)": [
+   [
+    2,
+    7
+   ],
+   [
+    6,
+    13
+   ],
+   [
+    13,
+    19
+   ],
+   [
+    57,
+    31
+   ],
+   [
+    77,
+    37
+   ],
+   [
+    714,
+    43
+   ],
+   [
+    806,
+    61
+   ],
+   [
+    2478,
+    73
+   ],
+   [
+    30659,
+    79
+   ]
+  ],
+  "max p/(log m)^2": 14.569582867039255,
+  "argmax": [
+   2,
+   7
+  ]
+ }
+}
