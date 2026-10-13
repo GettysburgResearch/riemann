@@ -4,14 +4,20 @@
 Status: EXPLORATORY index. Each subfolder carries its own labels (PROVED-HERE / PROPOSED /
   CONDITIONAL / HEURISTIC / EMPIRICAL / OPEN). Nothing here proves RH or any zero-free region.
   The OpenAI manuscripts (Sep 30 "7/8", Oct 5 "11/12") remain external, unreviewed imports.
-Scope: six parallel constructive attacks on the two walls identified by the qrh-2026-10 wave:
-  the rho = 1 wall of the Oct 5 ladder (boundary 1/2 + c*rho/2, c = 5/6), and the 13/15-167/192
-  walls of the Sep 30 architecture.
+Scope: eight constructive lines (O1-O7, O3b), four round-2 follow-ups and one adversarial review
+  (REDTEAM.md), run on 12-13 Oct 2026 against the two walls identified by the qrh-2026-10 wave: the
+  rho = 1 wall of the Oct 5 ladder (boundary 1/2 + c*rho/2, c = 5/6), and the 13/15-167/192 walls
+  of the Sep 30 architecture.
 Exact sources or dependencies: ../RUNG_STRENGTH.md, ../LEVERAGE_FAMILIES.md,
   ../DISPERSION_GRH_STEP.md, ../Q_RHO_ANALYSIS.md, ../THRESHOLD_CALCULUS.md, ../FLOOR_BIN_BARRIER.md;
-  Oct 5 paper2.tex and Sep 30 paper.tex at pr908 = 31c706bbb3dce49a7ebabbe71cd7cbacdaa6cbb6.
-What was actually run: see each subfolder.
-Smallest remaining gap: see each subfolder; summary table below is updated as results land.
+  Oct 5 paper2.tex and Sep 30 paper.tex at pr908 = 31c706bbb3dce49a7ebabbe71cd7cbacdaa6cbb6;
+  draft PR 930 (origin/research/parity-and-cubic-fibers-20261012, c07b9f653) as an unreviewed pointer.
+What was actually run: see each subfolder (exact-rational ledgers, exact Z[omega] and F_q[T]
+  arithmetic, floating-point numerics up to D = 45000, X = 10^5).
+Smallest remaining gap: no exponent moved. The ranked open statements are in the Synthesis table:
+  (LS*_kappa) for the single sequence mu*gamma_2*xi (kappa = 1/2 gives 5/6); Statement B
+  (a conductor-N(h)^2 summation formula, 8/9 with the known cubic sieve); (AMP_t); the kappa-law
+  saving delta > (1 - rho)/6. Sep 30's (NA) is circular.
 ```
 
 RH remains unproved.
@@ -114,7 +120,7 @@ architecture, except conditionally on statements listed below. RH remains unprov
 | kappa-law / Prop L | saving `delta > (1−rho)/6` over positivity at one `rho < 1` | any such `delta` beats 11/12 | needs coefficient-specific large values for generic rows | O2, O5 |
 | (NA) + FB#(1/3, 1) | Sep 30: non-alignment of the bias component, plus a signed floor-row saving | 926/1077; then 28/33 only with additionally DH-strength row counts for bins above `delta = 1/3`, which O7 calls beyond current technology (with the manuscript's own counts: about 0.8582) | **(NA) is circular** (O3b round 2): the exceptional pairing is the target signal `c_S A_eta f_eta + E`, so bounding it is the conclusion. (NA′) holds at noise level but does no work. Both payoffs are void | O3, O3b, O7 |
 
-## Results so far (updated as lines report)
+## Results by line
 
 | line | outcome | best number | label | sharpest remaining target |
 |---|---|---|---|---|
