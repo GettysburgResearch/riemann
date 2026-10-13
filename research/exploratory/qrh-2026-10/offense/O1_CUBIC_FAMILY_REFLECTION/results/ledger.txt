@@ -1,0 +1,23 @@
+pipeline                                                                       c     rho    sigma  label
+cubic: direct cubic LS on absorbed dual, BGL/HB kappa=2/3                    2/3     3/2        1  PROPOSED (bookkeeping)
+cubic: 6-fold Kubota FE (row conductor N(h)^4) + BGL                         2/3     3/2        1  PROPOSED (imports Kubota FE)
+cubic: 6-fold Kubota FE, then optimal LS only after it                       2/3     3/2        1  PROPOSED (model)
+cubic: Rankin-Selberg over index k=h^4 (positivity)                          2/3     7/4    13/12  PROPOSED
+cubic: primal Heath-Brown cubic LS on mu-coefficients                        2/3       2      7/6  PROPOSED (bookkeeping)
+cubic: hypothetical conductor-N(h)^2 reflection keeping cubic twist + BGL    2/3     7/6      8/9  HEURISTIC (no such reflection known)
+cubic: (S6) sextic theta, quadratic post-twist, optimal LS                   2/3       1      5/6  CONDITIONAL on (S6) (LEVERAGE sec.5)
+cubic: LS_kappa=1/2 for absorbed coefficients (no reflection)                2/3       1      5/6  CONDITIONAL on LS_1/2
+quartic: direct quartic LS (BGL)                                             3/4     3/2    17/16  PROPOSED
+quartic: 4-fold Kubota FE (row conductor N(h)^3) + BGL                       3/4    11/8    65/64  PROPOSED (imports Kubota FE)
+quartic: 4-fold Kubota FE, then optimal LS only after it                     3/4     4/3        1  PROPOSED (model)
+quartic: hypothetical GL(2) quartic theta, quadratic post-twist              3/4       1      7/8  CONDITIONAL (EP shape contradicts)
+sextic (Oct 5): cubic theta, quadratic twist, optimal LS                     5/6       1    11/12  IMPORTED (Oct 5)
+
+cubic family, direct pipeline: sigma(kappa) = (9*kappa - 2)/(6*kappa)
+  sigma = 5/6  needs kappa = 1/2
+  sigma = 7/8  needs kappa = 8/15
+  sigma = 11/12  needs kappa = 4/7
+  sigma = 1  needs kappa = 2/3
+Kubota row-conductor exponent a(n) under absorption: {4: 3, 6: 4, 10: 6}
+degree tax (reflect a, optimal LS): rho >= max(1, 2 - 2/a): {2: 1, 3: 4/3, 4: 3/2, 6: 5/3}
+all asserts passed
