@@ -127,7 +127,9 @@ Gram exponent `g in {0, b/6, 2b - ly}` (Gram b/12) or `g in {0, 2b - ly}` (Gram 
   bin binding).
 * Gram 0, floor saving theta at a0 = 51/100 with the `delta -> delta0+` DH limit bin included:
   `sigma0 = (926 - 1200 theta)/(1077 - 1200 theta)` on `[0, 1/50]`, then flat at 902/1053.
-  The limit bin `R = 1 - delta0` takes over.
+  The limit bin `R = 1 - delta0` takes over. The `(cert?)` entries in `floor_rows_lp.out` are
+  grid artifacts of the same effect: that script has no exact limit bin. `floor_rows_scan.out`
+  certifies the values.
 * Gram 0, a0 -> 1/2: a floor-only saving gains **nothing** (6/7 for every theta). The bins
   `delta -> 0+` have `R -> 1`.
 * Gram b/12: reproduces 167/192, 13/15 and `(167-225 theta)/(192-225 theta)`

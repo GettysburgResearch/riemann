@@ -42,7 +42,7 @@ resting on them is CONDITIONAL/IMPORTED below.
 |---|---|---|---|
 | G | **gcd-collapse form of the signed dual** (section 1.2): after the exact Poisson step, the Möbius variable `f` of eq:weighted sums out exactly; the only Möbius value left is `μ(g)` on `g = gcd(n₁, n₂)`, forced to divide the dual row `k`. Its Gauss-sum factors appear only as `|a(g)|² = 1`. | PROVED-HERE (given the imported identity eq:initial-column-output); identity checked [EXACT] on 400 cases with true sextic symbols | — |
 | N | **No "μ against Gauss sums" exists in the signed dual.** In gcd form the surviving `μ(g)` multiplies the sextic character `conj χ_{z₁}(g) χ_{z₂}(g)`, i.e. an *original-family member* `A_{z₁⁵z₂}(G)` of conductor about `Z²`. So an HB00-type Type I/II argument (μ vs Gauss sums) has nothing to act on; the involution of Q_RHO_ANALYSIS is visible term by term. | PROVED-HERE (corollary of G) | — |
-| L | **Leverage law for partial savings.** A saving `D^δ` below the positivity (row-blind) bound at `H = D^ρ` gives `σ = 1 − δ/2 − ρ/12`. It beats 11/12 iff `δ > (1 − ρ)/6`, and beats 7/8 iff `δ > 1/4 − ρ/6` (only possible for `ρ ≤ 9/10`). Conversely the principal rows force `δ ≤ 2 − ρ/6 − 2σ₀` when `|A₁(D)| ≍ D^{σ₀}`, so `δ > (1 − ρ)/6` **is equivalent to** `σ₀ < 11/12` at the same scale. | PROVED-HERE (elementary, given the imported extraction law) | threshold `(1 − ρ)/6`, not `1 − ρ` |
+| L | **Leverage law for partial savings.** A saving `D^δ` below the positivity (row-blind) bound at `H = D^ρ` gives `σ = 1 − δ/2 − ρ/12`. It beats 11/12 iff `δ > (1 − ρ)/6`, and beats 7/8 iff `δ > 1/4 − ρ/6` (only possible for `ρ ≤ 9/10`). Conversely the principal rows force `δ ≤ 2 − ρ/6 − 2σ₀` when `|A₁(D)| ≍ D^{σ₀}`, i.e. `σ₀ ≤ 1 − δ/2 − ρ/12`: the necessary condition on `A₁` is *identical* to the conclusion. So the leverage is exactly tight, and `δ > (1 − ρ)/6` already requires `σ₀ < 11/12` at the same scale. | PROVED-HERE (elementary, given the imported extraction law) | threshold `(1 − ρ)/6`, not `1 − ρ` |
 | H | **HB00-type routes give δ = 0.** Type I via Pólya–Vinogradov on `μ(f)` reaches even the positivity level only for blocks `F ≥ D^{2/3}`; blocks `F < D^{2/3}` carry 57–60 % of the positivity bound, and the `f = 1` block alone (no Möbius variable) carries 22–31 %. Primal Type II is capped at `D²` (row-blind) and its principal rows return `A₁`. Dual pointwise HB00 savings cannot help a mean square at or below its diagonal. A conditional import-assisted variant reaches dual-column ranges `Z ≤ D^{(12ρ+1)/31}` only. | PROPOSED (exponent bookkeeping, sympy) + [EXACT/FLOAT] block shares | δ = 0 |
 | A | **Amplifier ledger (the construction attempted here).** Amplify the extraction rows by `B_u(L) = Σ_{ℓ∼L prime} μ(ℓ)χ_ℓ(u)` (Möbius signs are absorbable, and `|B_principal| = π_K(L)`). If the amplified dual closes at `H ≥ D·L^t`, then `σ = 11/12 + λ(5t − 6)/12`, `L = D^λ`. Gain iff `t < 6/5`. The Oct 5 reflection (prop:R with its `N(f)` factor) closes only at `t = 2` (σ = 11/12 + λ/3), and Cauchy–Schwarz over `ℓ` gives `t = 5/2`. A quadratic amplifier (`χ_p³`) has the same `t = 2`. **Lemma NRA**: no amplifier makes the amplified Gauss coefficients a finite-order modulation of theta coefficients of length `DL`, which is what `t = 1` would need. | ledger PROPOSED; Lemma NRA PROVED-HERE; `t < 6/5` OPEN | `11/12 − λ/12` at `t = 1` (CONDITIONAL on (AMP₁)) |
 | E | **Numerics.** The signed dual `S = 𝓜_D − Z` is tiny: `|S|/H ≤ 0.71 %`, `|S| ≤ 6` for `D ≤ 24000`. It is consistent with an independent-row model, `|S| ≍ H^{1/2}`. Its ratio to the positivity proxy `P ≍ D log D` gives an empirical cancellation exponent `log(P/|S|)/log D ∈ [0.70, 1.59]`, against the `1 − ρ ∈ {0.1, 0.25, 0.4}` that Mom(1, ρ) needs and the `(1 − ρ)/6` that beats 11/12. HB00-type routes predict 0. | EMPIRICAL (floating point, finite) | — |
@@ -54,7 +54,7 @@ resting on them is CONDITIONAL/IMPORTED below.
       (OD-g1)   (H/D²) Σ_{k≠0} Σ_{(z₁,z₂)=1} a(z₁) conj a(z₂) χ_{z₁}(k) conj χ_{z₂}(k) W₀ W₀ Φ̂  ≪  D^{1−δ},
 
   together with the analogous bound for the `g > 1` terms. (OD-g1) contains no Möbius function, and the
-  required `δ` is exactly what the principal member's distance below 11/12 supplies. The beat-11/12 threshold
+  required `δ` presupposes exactly the bound on the principal member that it would yield (Prop. L). The beat-11/12 threshold
   is therefore `(1 − ρ)/6`, six times smaller than the `1 − ρ` stated in DISPERSION_GRH_STEP §4. This is a
   correction of the "required saving", not of its conclusion.
 * (A) The one construction that is not visibly an involution is amplification of the extraction rows. It moves
@@ -162,8 +162,9 @@ Let `H = D^ρ`, `0 < ρ < 1`.
 | 9/10 | 1/60 | 1/10 (= full) | 1/10 (7/8) |
 | 99/100 | 1/600 | unreachable | 1/100 (73/80) |
 
-**What this shows.** Near `ρ = 1` the needed saving is tiny, `(1 − ρ)/6`. But item 2 shows the saving is
-*exactly* the principal member's margin below 11/12. Any partial-saving mechanism for the signed dual is
+**What this shows.** Near `ρ = 1` the needed saving is tiny, `(1 − ρ)/6`. But items 1 and 2 together say that
+the conclusion `σ₀ ≤ 1 − δ/2 − ρ/12` is also a *necessary* condition for the saving `δ`: there is no slack
+between what a partial saving gives for `A₁` and what it presupposes about `A₁`. Any partial-saving mechanism for the signed dual is
 therefore a mechanism for `A₁(D)` itself; at the 11/12 boundary the principal rows saturate the bound. This is
 the fixed point of RUNG_STRENGTH §4 item 2, now stated at the level of partial savings: the threshold is `δ*(ρ) = (1−ρ)/6`.
 

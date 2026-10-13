@@ -156,17 +156,18 @@ the quartic one. The binding question in the lab is never absorption. It is the 
 
 `R(d; m) = M₂/Diag` over monic rows of degree ≤ m (`results/tables.md`; selected cells):
 
-| q | m | d = m (ρ = 1) | ρ ≈ 3/4 | ρ ≈ 1/2 | ρ ≈ 1/4 | d = 30 or 24 or 20 |
+| q | m | ρ = 1 (d = m) | ρ ≈ 3/4 | ρ = 1/2 | ρ = 1/4 | largest d |
 |---|---|---|---|---|---|---|
-| 7 | 2 | 1.000 | 0.982 (d=3) | 0.982 (d=4) | 0.982 (d=8) | 0.982 |
-| 7 | 5 | 1.000 (d=5) | 3.535 (d=10)... see table | — | — | 20.5 |
-| 7 | 6 | 2.12 (d=6) | 2.84 (d=8) | 6.53 (d=12) | 37.0 (d=24) | 74.6 |
-| 13 | 4 | 2.51 (d=4) | 4.87 (d=6)* | 8.09 (d=8) | 51.5 (d=16) | 190.6 |
-| 19 | 4 | 2.65 (d=4) | — | 9.71 (d=8) | 70.9 (d=16) | 147.0 (d=20) |
-| 37 | 3 | 2.89 (d=4) | — | 4.73 (d=6) | 13.9 (d=12) | 34.1 (d=20) |
+| 7 | 2 | 1.000 | 0.980 (d=3) | 0.982 (d=4) | 0.982 (d=8) | 0.982 (d=30) |
+| 7 | 5 | 1.397 | 1.883 (d=7) | 3.535 (d=10) | 10.21 (d=20) | 20.45 (d=30) |
+| 7 | 6 | 2.122 | 2.843 (d=8) | 6.525 (d=12) | 37.01 (d=24) | 74.62 (d=30) |
+| 13 | 4 | 2.507 | 2.842 (d=5, ρ=0.8) | 8.085 (d=8) | 51.50 (d=16) | 190.6 (d=24) |
+| 19 | 4 | 2.652 | 3.174 (d=5, ρ=0.8) | 9.714 (d=8) | 70.86 (d=16) | 147.0 (d=20) |
+| 31 | 3 | 1.933 | 2.868 (d=4) | 4.673 (d=6) | 13.70 (d=12) | 33.48 (d=20) |
+| 37 | 3 | 1.945 | 2.890 (d=4) | 4.726 (d=6) | 13.91 (d=12) | 34.06 (d=20) |
 
-(*`d = 6` is ρ = 2/3.) Exact integers for every `(d, m)` are in `results/core_q*.txt`, columns
-`d k rows M2_k Diag_k max_k`.
+Exact integers for every `(d, m)` are in `results/core_q*.txt`, with columns
+`d k rows M2_k Diag_k max_k` (rows of exact degree `k`). `results/tables.md` has the full grids.
 
 * **Rows of degree ≤ 2 are diagonal-sized** (ratio 0.98–1.0). Their `L` has degree ≤ 1.
 * **Rows of degree 3 and 4 are special.** At q = 13, every degree-3 row has `|A_u(8)|²/q⁸ ∈ {0, 1, 81}`
