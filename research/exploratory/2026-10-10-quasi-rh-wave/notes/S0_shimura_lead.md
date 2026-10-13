@@ -1,7 +1,7 @@
 # Note S0 (lead): the Shimura-lift Möbius generator — first exponent pass
 
 ```text
-Status: PROPOSED (lead derivation, 12 Oct; to be compared with the agent construction in note S and the numerics in note T)
+Status: PROPOSED (lead derivation, 12 Oct; tested numerically in note T; the separate architecture write-up planned as note S was not produced)
 Scope: a quadratic-family analogue of the common-signal architecture, Part I level
 Exact sources: Shimura (1973) / Kohnen (1980): a_g(dn^2) = a_g(d) sum_{m|n} mu(m) chi_d(m) m^{k-1} lambda_f(n/m); OpenAI Prop. 2.1 (slope-one remark, line ~381-383); Kintali's T_{m,s,eta}(t) (q_c^{-1/2-t} q_n^{-1-3t})
 What was actually run: nothing (hand derivation)
@@ -22,7 +22,7 @@ $$f_\eta(Z)=\tilde a(1)\frac1{4\pi i}\int Z^{\,u/2-1/4}\,\tilde V\!\Big(\tfrac{u
 
 ## 3. What would be needed, and why thin probes are circular
 
-Restricting the probe to $N=dn^2$ with $d\le X$ small makes the direct side thin, but any bound for that thin sum uses the Hecke/Shimura structure (the thin-set indicator $1[n^2\mid N]$ is realized by $T(n^2)$), so it is the Shimura side again — circular. An additional averaging variable (as the cubic probe's $m$ and $s$ averages) acts on the $N$-variable or on a twist, not on the $n$-variable alone, so it rescales both sides equally. The only way to restore slope one is a coefficient structure in which the reciprocal is attached to a variable entering the index linearly — i.e. a *squarefree-part* reciprocal — which is exactly the Hasse–Davenport sign of the sextic/cubic pairing. In that sense the quadratic (N=2) route is closed for a reason different from note C's: not the triviality of Jacobi's theta but the squared variable of the Shimura completion. The agent construction (note S) should confirm or refute this with the Kubota $E^{(2)}(w)$ variant, where the reciprocal sits at $2w-1$ for the same reason.
+Restricting the probe to $N=dn^2$ with $d\le X$ small makes the direct side thin, but any bound for that thin sum uses the Hecke/Shimura structure (the thin-set indicator $1[n^2\mid N]$ is realized by $T(n^2)$), so it is the Shimura side again — circular. An additional averaging variable (as the cubic probe's $m$ and $s$ averages) acts on the $N$-variable or on a twist, not on the $n$-variable alone, so it rescales both sides equally. The only way to restore slope one is a coefficient structure in which the reciprocal is attached to a variable entering the index linearly — i.e. a *squarefree-part* reciprocal — which is exactly the Hasse–Davenport sign of the sextic/cubic pairing. In that sense the quadratic (N=2) route is closed for a reason different from note C's: not the triviality of Jacobi's theta but the squared variable of the Shimura completion. A Kubota $E^{(2)}(w)$ variant, where the reciprocal sits at $2w-1$ for the same reason, was not written up; note T's data support the slope obstruction.
 
 ## 4. Why the extraction tax is intrinsic (bookkeeping remark)
 
