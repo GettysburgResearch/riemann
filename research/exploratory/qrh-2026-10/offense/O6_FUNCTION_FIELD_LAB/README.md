@@ -79,11 +79,12 @@ Smallest remaining gap: no lab mechanism proves Mom(1, rho < 1) without the Riem
      a test on generic members**.
 4. **Theta structure of the dual (EXACT data; LIT context).** The dual sums are
    `B_h(d) = Σ_n χ0(Res(n,n')) conj χ_n(h)` (`theta_series.c`).
-   * They **vanish identically for `deg h = 1`**: every `d ≤ 7` at q = 7, every `d ≤ 6` at q = 13.
-   * At `deg h = 2`, `Σ_h |B_h(d)|² = 6q², 6q³, 6q³, 6q³, 6q⁴, 6q⁴` for `d = 1..6` (q = 7). Against the
-     diagonal `≈ q^{d+2}` this is bounded, not `q^{d/2}`-sized.
-   * At the unit row, `|B_1(d)|² = (q−1)² q^{e(d)}` with `e = 3, 5, 8, 10` at `d = 3, 4, 6, 7`, and
-     `B_1(d) = 0` at `d = 2, 5`. This holds identically at q = 7 and q = 13. So `|B_1(d)| ≍ q^{5d/6}`:
+   * They **vanish identically for `deg h = 1`**: every `d ≤ 8` at q = 7, every `d ≤ 6` at q = 13.
+   * At `deg h = 2` (q = 7), `Σ_h |B_h(d)|² = 6q^{2+⌊d/3⌋}` for `d = 1..8`. Against the diagonal
+     `≈ q^{d+2}` this is a vanishing fraction.
+   * At the unit row, `|B_1(d)|² = (q−1)² q^{e(d)}` with `e = 3, 5, 8, 10` at `d = 3, 4, 6, 7`
+     (`|B_1(1)|² = q²`), and `B_1(d) = 0` at `d = 2, 5, 8`. This is identical at q = 7 (d ≤ 8) and
+     q = 13 (d ≤ 6). So `|B_1(d)| ≍ q^{5d/6}`:
      **the Patterson cubic-theta bias exponent 5/6**, as it must be, since absorption turned the sextic
      Möbius dual into cubic Gauss sums.
    * This is Hoffstein's mechanism (LIT, read): over `F_q(T)` the Gauss-sum Dirichlet series are rational,
@@ -184,19 +185,33 @@ Exact integers for every `(d, m)` are in `results/core_q*.txt`, with columns
 `d k rows M2_k Diag_k max_k` (rows of exact degree `k`). `results/tables.md` has the full grids.
 
 * **Rows of degree ≤ 2 are diagonal-sized** (ratio 0.98–1.0). Their `L` has degree ≤ 1.
-* **Rows of degree 3 and 4 are special.** At q = 13, every degree-3 row has `|A_u(8)|²/q⁸ ∈ {0, 1, 81}`
-  (130 rows with 81 = (d+1)², 702 with 1, 1365 with 0). At q = 7, 13, 19, 31, 37 the maximum over
-  degree-3 rows is exactly `(d+1)² q^d`: `L(x, ψ_u) = (1 − αx)²` for some members. For degree-4 rows
-  the maximum is `binom(d+2, 2)² q^d` at q = 13, 19 (triple root) and `(d+1)² q^d` at q = 7.
-  HEURISTIC reading: the rank-2 (resp. 3) sextic Kummer local systems of `y⁶ = u(T)` with `deg u = 3, 4`
-  have finite (hypergeometric) monodromy, so their Frobenius eigenvalues are `√q` times roots of unity
-  times a fixed angle. Random-matrix (Katz–Sarnak) behaviour is not available at these degrees.
-* **Consequence.** At fixed row degree the ratio grows like a power of `d`. It does not decrease with `q`
-  (q = 31, 37 at m = 3 match q = 13). The lab "truth" is diagonal-sized only up to factors polynomial in
-  `d`, i.e. `q^{o(d)}`, carried by a few small-conductor members. That is exactly the precision in which
-  Mom(1, ρ) is stated, so this does not contradict it. It does mean the clean `M₂ ≈ Diag` seen over
-  `Q(ω)` (RUNG_STRENGTH §5, ratios 0.88–0.95) is **not** a law of the family. It is what the family
-  looks like when no member has clustered zeros. (EMPIRICAL; uniformity in `d` is not proved here.)
+* **Every row of degree 3 to 6 is a CM member (finite monodromy).**
+  * EXACT census: at q = 13, every degree-3 row has `|A_u(8)|²/q⁸ ∈ {0, 1, 81}`: 130 rows give
+    `81 = (d+1)²`, 702 give 1, and 1365 give 0.
+  * At q = 7, 13, 19, 31, 37 the maximum over degree-3 rows is exactly `(d+1)² q^d`, i.e.
+    `L(x, ψ_u) = (1 − αx)²`. Over degree-4 rows the maximum is `binom(d+2, 2)² q^d` at q = 13, 19
+    (a triple root).
+  * EMPIRICAL (13 random squarefree rows of degree 4–5 at q = 7, 13, 19, roots computed from exact
+    character sums): every inverse root is `√q·e^{2πiθ}` with `θ ∈ θ₀ + (1/N)Z`. Examples:
+    `N = 3, 5, 6, 9`; `θ₀` recurs across rows, e.g. −0.4275 and 0.1281 at q = 13.
+  * Explanation (HEURISTIC; the Chevalley–Weil / Deligne–Mostow Hodge count, not re-derived in
+    detail): the `ψ`-eigenspace of `H¹` of `y⁶ = u(T)`, `deg u = m`, has local exponent 1/6 at the `m`
+    roots and `{−m/6}` at ∞. Hence `h^{0,1} = ⌈m/6⌉ − 1`, which is **0 for m ≤ 6**.
+  * A definite unitary local system with integral structure has finite monodromy. So for every member of
+    conductor degree ≤ 6 the Frobenius eigenvalues are a CM Weil number times roots of unity, and
+    repeated roots occur with positive frequency, independent of `q`.
+  * Generic (Katz–Sarnak, `U(p, q')`) behaviour starts only at `deg u ≥ 7`, beyond every row range run
+    here (q = 7 would need 823 543 rows of degree 7).
+  * **There is no number-field analogue**: `L(s, ψ_u)` over `Q(ω)` is a GL(1) Hecke L-function, with no
+    rank and no Hodge type. So the lab at row degree ≤ 6 is *more* degenerate than the Q-side family.
+* **Consequence.** At fixed row degree the ratio grows like a power of `d` and does not decrease with `q`
+  (q = 31, 37 at m = 3 match q = 13).
+  * The lab "truth" in the accessible range is diagonal-sized only up to factors polynomial in `d`
+    (`q^{o(d)}`), carried by CM members with clustered Frobenius angles.
+  * That is the precision in which Mom(1, ρ) is stated, so this does not contradict it.
+  * It does mean the lab cannot yet test "M₂ ≈ Diag" for generic members. The clean ratios 0.88–0.95
+    over `Q(ω)` (RUNG_STRENGTH §5) have no lab counterpart below row degree 7.
+  * (EXACT census and maxima; the trend in `d` is EMPIRICAL; uniformity in `d` is not proved here.)
 * **What proves Mom(1, ρ) in the lab** (LIT-level standard argument, not re-derived here): Weil's RH for
   each `L(x, ψ_u)` plus the explicit formula with short prime sums (Altug–Tsimerman type) gives
   `|A_u(d)| ≤ q^{d/2 + O(d/ log_q d)}` uniformly for `deg u ≤ Cd`. Hence `M₂ ≤ q^{d(1+ρ) + o(d)}`. This is

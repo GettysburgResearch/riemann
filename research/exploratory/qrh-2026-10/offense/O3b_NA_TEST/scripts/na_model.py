@@ -66,9 +66,17 @@ class Prime:
                 if zk == t: k0 = k; break
                 zk = zk * z % p
             assert k0 is not None
-            ind = np.zeros(p, dtype=np.int64); x = 1
-            for j in range(p - 1):
-                ind[x] = j; x = x * g % p
+            ind = np.zeros(p, dtype=np.int64)
+            Bk = int(math.isqrt(p)) + 1
+            base = np.empty(Bk, dtype=np.int64); v = 1
+            for j in range(Bk): base[j] = v; v = v * g % p
+            gB = pow(g, Bk, p); mult = 1
+            for i in range(0, p - 1, Bk):
+                vals = base * mult % p
+                js = np.arange(i, i + Bk)
+                keep = js < p - 1
+                ind[vals[keep]] = js[keep]
+                mult = mult * gB % p
             e = (k0 * (ind % 6)) % 6
             e[0] = -1
             self.tab = e.astype(np.int8)

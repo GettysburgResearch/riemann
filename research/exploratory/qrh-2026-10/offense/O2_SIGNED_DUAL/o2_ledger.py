@@ -92,6 +92,14 @@ t = sp.symbols("t", positive=True)
 gen = sp.simplify(sig_amp(1 + t * lam) - sp.Rational(11, 12))
 assert sp.simplify(gen - lam * (5 * t - 6) / 12) == 0
 amp["general_H_ge_D_L^t"] = dict(sigma_minus_11_12=str(gen), gain_iff="t < 6/5")
+# reflected length per amplifier prime 𝓗^2 L^s / X (s = 1: prop:R's N(f); s = 0: no growth; s = -1: ell reflected
+# together with n at total length X L).  Cross terms free: need 𝓗 <= X L^((1-s)/2), i.e. t = (3 + s)/2.
+s_ = sp.symbols("s", real=True)
+t_of_s = (3 + s_) / 2
+assert t_of_s.subs(s_, 1) == 2 and t_of_s.subs(s_, -1) == 1
+s_crit = sp.solve(sp.Eq(t_of_s, sp.Rational(6, 5)), s_)[0]
+assert s_crit == sp.Rational(-3, 5)
+amp["reflected_length_growth"] = dict(t_of_s=str(t_of_s), gain_iff="s < -3/5", s_eq_0_gives_t=str(t_of_s.subs(s_, 0)))
 amp["lambda_for_7_8_in_variant_c"] = str(sp.solve(sp.Eq(sp.Rational(11, 12) - lam / 12, sp.Rational(7, 8)), lam)[0])
 out["L3"] = amp
 

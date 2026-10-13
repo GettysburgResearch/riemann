@@ -72,6 +72,11 @@
    "sigma_minus_11_12": "lambda*(5*t - 6)/12",
    "gain_iff": "t < 6/5"
   },
+  "reflected_length_growth": {
+   "t_of_s": "s/2 + 3/2",
+   "gain_iff": "s < -3/5",
+   "s_eq_0_gives_t": "3/2"
+  },
   "lambda_for_7_8_in_variant_c": "1/2"
  },
  "L4": {

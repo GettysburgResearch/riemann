@@ -25,12 +25,15 @@ Exact sources or dependencies:
 What was actually run (single-threaded, shared machine):
   python3 -I o2_ledger.py results/o2_ledger.json      (about 12 s; sympy exact rationals + exact checks)
   python3 -I signed_dual_numerics.py run_main.json 1000 2000 4000 8000 16000 24000 --rho 0.6 0.75 0.9
-     (about 10 min; output copied to results/signed_dual_main.json)
+     (about 7 min) and ... run_big.json 32000 45000 --rho 0.6 0.75 0.9 (about 10 min); outputs copied
+     to results/signed_dual_{main,big}.{json,log}
+  python3 -I make_table.py results/signed_dual_main.json results/signed_dual_big.json (table in section 4)
 Smallest remaining gap: (OD-g1) below: the coprime-pair dual (the g = 1 part of the exact signed
   dual, which carries no Moebius sign at all) at relative precision D^{-delta} below the full dual
-  diagonal, with delta > (1 - rho)/6. Equivalently (via the principal rows) the principal member
-  below 11/12. On the amplifier side: the amplified dual must close at H >= D L^t with t < 6/5;
-  the Oct 5 reflection closes it only at t = 2.
+  diagonal, with delta > (1 - rho)/6; by Prop. L this presupposes (via the principal rows) the principal member
+  below 11/12. On the amplifier side: the amplified dual must close at H >= D L^t with t < 6/5,
+  i.e. reflected length per amplifier prime Hd^2 L^s / X with s < -3/5; the Oct 5 reflection has
+  s = 1 (t = 2).
 ```
 
 RH remains unproved. The Oct 5 and Sep 30 manuscripts are external, unreviewed imports; anything
@@ -44,8 +47,8 @@ resting on them is CONDITIONAL/IMPORTED below.
 | N | **No "μ against Gauss sums" exists in the signed dual.** In gcd form the surviving `μ(g)` multiplies the sextic character `conj χ_{z₁}(g) χ_{z₂}(g)`, i.e. an *original-family member* `A_{z₁⁵z₂}(G)` of conductor about `Z²`. So an HB00-type Type I/II argument (μ vs Gauss sums) has nothing to act on; the involution of Q_RHO_ANALYSIS is visible term by term. | PROVED-HERE (corollary of G) | — |
 | L | **Leverage law for partial savings.** A saving `D^δ` below the positivity (row-blind) bound at `H = D^ρ` gives `σ = 1 − δ/2 − ρ/12`. It beats 11/12 iff `δ > (1 − ρ)/6`, and beats 7/8 iff `δ > 1/4 − ρ/6` (only possible for `ρ ≤ 9/10`). Conversely the principal rows force `δ ≤ 2 − ρ/6 − 2σ₀` when `|A₁(D)| ≍ D^{σ₀}`, i.e. `σ₀ ≤ 1 − δ/2 − ρ/12`: the necessary condition on `A₁` is *identical* to the conclusion. So the leverage is exactly tight, and `δ > (1 − ρ)/6` already requires `σ₀ < 11/12` at the same scale. | PROVED-HERE (elementary, given the imported extraction law) | threshold `(1 − ρ)/6`, not `1 − ρ` |
 | H | **HB00-type routes give δ = 0.** Type I via Pólya–Vinogradov on `μ(f)` reaches even the positivity level only for blocks `F ≥ D^{2/3}`; blocks `F < D^{2/3}` carry 57–60 % of the positivity bound, and the `f = 1` block alone (no Möbius variable) carries 22–31 %. Primal Type II is capped at `D²` (row-blind) and its principal rows return `A₁`. Dual pointwise HB00 savings cannot help a mean square at or below its diagonal. A conditional import-assisted variant reaches dual-column ranges `Z ≤ D^{(12ρ+1)/31}` only. | PROPOSED (exponent bookkeeping, sympy) + [EXACT/FLOAT] block shares | δ = 0 |
-| A | **Amplifier ledger (the construction attempted here).** Amplify the extraction rows by `B_u(L) = Σ_{ℓ∼L prime} μ(ℓ)χ_ℓ(u)` (Möbius signs are absorbable, and `|B_principal| = π_K(L)`). If the amplified dual closes at `H ≥ D·L^t`, then `σ = 11/12 + λ(5t − 6)/12`, `L = D^λ`. Gain iff `t < 6/5`. The Oct 5 reflection (prop:R with its `N(f)` factor) closes only at `t = 2` (σ = 11/12 + λ/3), and Cauchy–Schwarz over `ℓ` gives `t = 5/2`. A quadratic amplifier (`χ_p³`) has the same `t = 2`. **Lemma NRA**: no amplifier makes the amplified Gauss coefficients a finite-order modulation of theta coefficients of length `DL`, which is what `t = 1` would need. | ledger PROPOSED; Lemma NRA PROVED-HERE; `t < 6/5` OPEN | `11/12 − λ/12` at `t = 1` (CONDITIONAL on (AMP₁)) |
-| E | **Numerics.** The signed dual `S = 𝓜_D − Z` is tiny: `|S|/H ≤ 0.71 %`, `|S| ≤ 6` for `D ≤ 24000`. It is consistent with an independent-row model, `|S| ≍ H^{1/2}`. Its ratio to the positivity proxy `P ≍ D log D` gives an empirical cancellation exponent `log(P/|S|)/log D ∈ [0.70, 1.59]`, against the `1 − ρ ∈ {0.1, 0.25, 0.4}` that Mom(1, ρ) needs and the `(1 − ρ)/6` that beats 11/12. HB00-type routes predict 0. | EMPIRICAL (floating point, finite) | — |
+| A | **Amplifier ledger (the construction attempted here).** Amplify the extraction rows by `B_u(L) = Σ_{ℓ∼L prime} μ(ℓ)χ_ℓ(u)` (Möbius signs are absorbable, and `|B_principal| = π_K(L)`). If the amplified dual closes at `H ≥ D·L^t`, then `σ = 11/12 + λ(5t − 6)/12`, `L = D^λ`. Gain iff `t < 6/5`. With reflected length `𝓗²L^s/X` per amplifier prime, `t = (3+s)/2`. The Oct 5 reflection (prop:R, `s = 1`) closes only at `t = 2` (σ = 11/12 + λ/3), even `s = 0` gives `t = 3/2`, and Cauchy–Schwarz over `ℓ` gives `t = 5/2`. A quadratic amplifier (`χ_p³`) has the same `t = 2`. **Lemma NRA**: no amplifier makes the amplified Gauss coefficients a finite-order modulation of theta coefficients of length `DL` (the natural route to `t = 1`). The reflectable quadratic slot (the cube variable of eq:T) carries an angular Größencharakter and never amplifies. | ledger PROPOSED; Lemma NRA PROVED-HERE; `t < 6/5` OPEN | `11/12 − λ/12` at `t = 1` (CONDITIONAL on (AMP₁)) |
+| E | **Numerics.** The signed dual `S = 𝓜_D − Z` is tiny: `|S|/H ≤ 0.71 %`, `|S| ≤ 9.1` for `D ≤ 45000`. It is consistent with an independent-row model, `|S| ≍ H^{1/2}`. Its ratio to the positivity proxy `P ≍ D log D` gives an empirical cancellation exponent `log(P/|S|)/log D ∈ [0.71, 1.59]`, against the `1 − ρ ∈ {0.1, 0.25, 0.4}` that Mom(1, ρ) needs and the `(1 − ρ)/6` that beats 11/12. HB00-type routes predict 0. | EMPIRICAL (floating point, finite) | — |
 
 **Best result.** No exponent moves. The precise outcome is a reduction with an exponent attached:
 
@@ -60,8 +63,11 @@ resting on them is CONDITIONAL/IMPORTED below.
 * (A) The one construction that is not visibly an involution is amplification of the extraction rows. It moves
   the exponent to `11/12 − λ/12` **iff** the amplified dual closes at `H ≥ D L^{t}` with `t < 6/5` (exact law
   `σ = 11/12 + λ(5t − 6)/12`). With the manuscript's own reflection it closes at `t = 2`. The blocking term is
-  the factor `N(f)` in Oct 5 prop:R: the reflected length `𝓗² N(f)/X` grows with the cubic shift `ℓ⁴` that
-  twisted multiplicativity of Gauss sums attaches to every amplifier prime.
+  that the amplifier prime is *not reflected together with* `n`. If the reflected length per amplifier prime is
+  `𝓗² L^s/X`, then `t = (3 + s)/2`. Prop:R has `s = 1` (its factor `N(f)`, from the cubic shift `ℓ⁴`). Even
+  `s = 0` (no growth) gives only `t = 3/2`. A gain needs `s < −3/5`, i.e. the amplifier must shorten the
+  reflected sum, as it would if `ℓ` were part of a theta column of length `XL`. Lemma NRA and the angular
+  remark (§3) show that neither the sextic nor the quadratic slot provides that.
 
 ## 1. The exact signed dual at ρ < 1
 
@@ -282,7 +288,8 @@ the theta length `D`, while the dual row count scales as `(DL)²`.
 **Remark (the reflectable quadratic amplifier is already inside the theta, and it is angular).** PROPOSED.
 The completed sum eq:T is `Σ_{n,b} a(n) ᾱ(b)³ Ψ(b)³ / (√N(n) N(b)) · V_*(N(n)N(b)³/X)`, with
 `Ψ_k(b)³ = χ_b(k)³ = (k/b)₂`. So the cube variable `b` *is* a quadratic amplifier, and it is reflected
-together with `n` at total length `X` (reflected length `𝓗²/X`, no growth). This is the `t = 1` behaviour.
+together with `n` at total length `X` (reflected length `𝓗²/X`, no growth in `b`). That is the behaviour `t = 1`
+would need.
 Its weights are forced to be `ᾱ(b)³/N(b)`, and `ᾱ(b)³ = (b̄/b)^{3/2}` is a Größencharakter of infinite order. So
 `Σ_{Nb∼P} ᾱ(b)³ ξ(b) = o(P/log P)` for every finite-order `ξ` (Hecke's prime ideal theorem for
 Größencharaktere): it never amplifies the principal rows. A primal quadratic amplifier with a nonzero mean
@@ -294,13 +301,15 @@ Lemma NRA is the precise obstruction in the sextic slot.
 **The exact smallest statement (AMP_t), OPEN, with exponent.** For some fixed `t < 6/5` and all
 `1 ≤ L ≤ D^{λ₀}`:
 
-    Σ_{F≤N f<2F}^* Σ_{0<N k ≲ 𝓗} | Σ_{ℓ ∼ L} μ(ℓ) a(ℓ) χ_ℓ(k) Σ*_n a(n) χ_n(k f⁴ ℓ⁴) W(Nn/X) |²  ≪ D^ε (XFL)²
-    whenever 𝓗 ≤ X F · L^{2−t}  (X = D/(BF) as in eq:initial-scales).
+    Σ_{F≤N f<2F}^* Σ_{0<N k ≲ 𝓗} | Σ_{ℓ ∼ L prime} a(ℓ) χ_ℓ(k) Σ*_n a(n) χ_n(k f⁴ ℓ⁴) W(Nn/X) |²  ≪ D^ε (XFL)²
+    whenever 𝓗 ≤ X F · L^{2−t}  (X = D/(BF) as in eq:initial-scales; this is the amplified dual for
+    β = μ on primes, whose dual coefficient at nℓ is a(nℓ) = a(ℓ)a(n)χ_n(ℓ)⁴ by eq:crt-a).
 
 Under (AMP_t) and the imports, the zero-free half-plane is `Re s > 11/12 − λ₀(6 − 5t)/12`. `t = 1, λ₀ = 1/2`
 already gives 7/8. (AMP_t) has rows ≤ columns (`𝓗 ≤ XFL^{2−t} < XFL`), so it is **not** blocked by the
-row-blind barrier or by the orbit invariant of Q_RHO_ANALYSIS. Its obstruction is different: the `N(f)` factor
-in prop:R, i.e. the level growth of the cubic theta under the shift `ℓ⁴`. Caveat: (AMP_t) for large `λ₀`
+row-blind barrier or by the orbit invariant of Q_RHO_ANALYSIS. Its obstruction is different: with reflected length `𝓗²L^s/X` per amplifier prime,
+`t = (3+s)/2` (ledger L3), so a gain needs `s < −3/5`. Prop:R has `s = 1`, from the level growth of the cubic
+theta under the shift `ℓ⁴`. Caveat: (AMP_t) for large `λ₀`
 contradicts `A₁(D) = Ω(D^{1/2})`. At `t = 1` it must fail for `λ₀ > 5`, so it is a genuine constraint, not a
 convenience.
 
@@ -320,43 +329,49 @@ proxy of §1.3. `e = log(P/|S|)/log D` is the empirical cancellation exponent re
 | 8000 | 0.60 | 220 | 18.716 | 19.253 | -0.5370 | -2.75e-02 | 0.63 | 3621 | 0.928 | 21.8 | 0.981 | 0.40 | 0.067 |
 | 16000 | 0.60 | 333 | 28.721 | 29.342 | -0.6207 | -2.10e-02 | 0.59 | 7717 | 0.922 | 34.0 | 0.974 | 0.40 | 0.067 |
 | 24000 | 0.60 | 425 | 38.101 | 37.495 | 0.6061 | 1.63e-02 | 0.51 | 11977 | 0.995 | 51.1 | 0.981 | 0.40 | 0.067 |
+| 32000 | 0.60 | 505 | 46.623 | 44.726 | 1.8974 | 4.25e-02 | 1.45 | 16348 | 1.107 | 5.9 | 0.874 | 0.40 | 0.067 |
+| 45000 | 0.60 | 619 | 52.505 | 54.875 | -2.3698 | -4.31e-02 | 1.63 | 23547 | 1.920 | 47.2 | 0.859 | 0.40 | 0.067 |
 | 1000 | 0.75 | 178 | 15.343 | 15.892 | -0.5494 | -3.43e-02 | 0.70 | 394 | 0.332 | 6.3 | 0.952 | 0.25 | 0.042 |
 | 2000 | 0.75 | 299 | 25.169 | 26.769 | -1.5994 | -5.97e-02 | 1.57 | 874 | 1.416 | 7.3 | 0.829 | 0.25 | 0.042 |
 | 4000 | 0.75 | 503 | 43.919 | 44.669 | -0.7505 | -1.67e-02 | 0.57 | 1793 | 0.943 | 18.6 | 0.938 | 0.25 | 0.042 |
 | 8000 | 0.75 | 846 | 73.145 | 74.126 | -0.9819 | -1.32e-02 | 0.59 | 3621 | 1.001 | 21.8 | 0.914 | 0.25 | 0.042 |
 | 16000 | 0.75 | 1423 | 121.217 | 125.344 | -4.1268 | -3.29e-02 | 1.89 | 7717 | 1.114 | 34.0 | 0.778 | 0.25 | 0.042 |
 | 24000 | 0.75 | 1928 | 170.079 | 170.217 | -0.1373 | -7.95e-04 | 0.05 | 11977 | 1.301 | 51.1 | 1.128 | 0.25 | 0.042 |
+| 32000 | 0.75 | 2393 | 218.204 | 211.998 | 6.2063 | 2.93e-02 | 2.18 | 16348 | 1.528 | 5.9 | 0.759 | 0.25 | 0.042 |
+| 45000 | 0.75 | 3090 | 267.847 | 273.752 | -5.9049 | -2.16e-02 | 1.82 | 23547 | 2.808 | 47.2 | 0.774 | 0.25 | 0.042 |
 | 1000 | 0.90 | 501 | 44.233 | 44.790 | -0.5566 | -1.24e-02 | 0.42 | 394 | 0.339 | 6.3 | 0.950 | 0.10 | 0.017 |
 | 2000 | 0.90 | 935 | 79.627 | 83.711 | -4.0840 | -4.88e-02 | 2.27 | 874 | 1.549 | 7.3 | 0.706 | 0.10 | 0.017 |
 | 4000 | 0.90 | 1745 | 152.486 | 154.994 | -2.5080 | -1.62e-02 | 1.03 | 1793 | 1.190 | 18.6 | 0.792 | 0.10 | 0.017 |
 | 8000 | 0.90 | 3257 | 284.437 | 285.388 | -0.9517 | -3.34e-03 | 0.29 | 3621 | 1.425 | 21.8 | 0.917 | 0.10 | 0.017 |
 | 16000 | 0.90 | 6077 | 529.491 | 535.453 | -5.9618 | -1.11e-02 | 1.32 | 7717 | 1.680 | 34.0 | 0.740 | 0.10 | 0.017 |
 | 24000 | 0.90 | 8754 | 771.494 | 772.741 | -1.2464 | -1.61e-03 | 0.23 | 11977 | 1.995 | 51.1 | 0.909 | 0.10 | 0.017 |
+| 32000 | 0.90 | 11341 | 1013.893 | 1004.855 | 9.0380 | 8.99e-03 | 1.46 | 16348 | 2.356 | 5.9 | 0.723 | 0.10 | 0.017 |
+| 45000 | 0.90 | 15413 | 1365.024 | 1365.650 | -0.6267 | -4.60e-04 | 0.09 | 23547 | 4.323 | 47.2 | 0.983 | 0.10 | 0.017 |
 
 | ρ | fitted exponent of \|S\| in D (± s.e.) | of P | of H | fitted e(D) = log(P/\|S\|)/log D, mean |
 |---|---|---|---|---|
-| 0.60 | 2.17 ± 0.53 | 1.052 ± 0.009 | 0.60 | 1.19 |
-| 0.75 | -0.41 ± 0.67 | 1.052 ± 0.009 | 0.75 | 0.92 |
-| 0.90 | -0.21 ± 0.43 | 1.052 ± 0.009 | 0.90 | 0.81 |
+| 0.60 | 2.01 ± 0.31 | 1.060 ± 0.006 | 0.60 | 1.10 |
+| 0.75 | 0.34 ± 0.51 | 1.060 ± 0.006 | 0.75 | 0.87 |
+| 0.90 | -0.16 ± 0.38 | 1.060 ± 0.006 | 0.90 | 0.82 |
 
 The `|S|` fits are dominated by sign changes of `S` (for example `S = 0.005` at `D = 2000, ρ = 0.6`), so no growth
-exponent of `|S|` is resolvable on this range. The robust statements are `max |S| = 5.96` over all 18 cells,
-and `P ∝ D^{1.05}` (that is, `D log D`).
+exponent of `|S|` is resolvable on this range. The robust statements are `max |S| = 9.04` over all 24 cells,
+and `P ∝ D^{1.06}` (that is, `D log D`).
 
 
 **Readings.**
-* `|S|` stays below 6 while `H` grows to `9·10³`; `|S|/H ≤ 0.71 %` throughout. So the signed dual is far below
+* `|S|` stays below 10 while `H` grows to `1.5·10⁴`; `|S|/H ≤ 0.71 %` throughout. So the signed dual is far below
   its target `H`.
 * `|S|` is the size of an **independent-row model**: if the `|A_u|²/D` were independent exponentials with the
   observed mean, `S` would fluctuate by `s_rand = Diag·(Σφ²)^{1/2}/Σφ ≈ 0.66·Diag/H^{1/2} ≍ H^{1/2}`. The
-  observed `|S|/s_rand` lies in `[0.01, 2.27]` with median about 0.6. Under that model
-  `e → 1 − ρ/2` (0.70 / 0.625 / 0.55). The finite values `e = 0.70–1.59` are inflated by the logarithms in `P`.
+  observed `|S|/s_rand` lies in `[0.01, 2.27]` with median 0.70. Under that model
+  `e → 1 − ρ/2` (0.70 / 0.625 / 0.55). The finite values `e = 0.71–1.59` are inflated by the logarithms in `P`.
   Both exceed `1 − ρ` (needed for Mom(1, ρ)) and `(1 − ρ)/6` (needed to beat 11/12). HB00-type routes (§2)
   predict `e = 0`. The actual cancellation is the generic random-sign cancellation of RUNG_STRENGTH §5;
   nothing Möbius-specific is visible at this scale.
-* `S < 0` in most cells: the coprimality-corrected `Z` slightly exceeds `𝓜_D`. The sixth-power rows contribute
-  `Prin ≈ 0.3–2`. That is about what 18 rows of average size give, so there is no excess on the principal
-  rows at this scale (`|A₁(D)| = 51 ≈ D^{0.39}` at `D = 24000`).
+* `S` has both signs. At this scale the sixth-power rows are `u ∈ {ε, ελ⁶, ε2⁶}` (18 rows), and on them
+  `A_u = A_ε` exactly, because `n` is prime to 6. So `Prin ≈ (1 + e^{−729π/H} + e^{−4096π/H})·Σ_ε|A_ε|²/D`,
+  which is 0.3–4.3 here. `|A₁(D)| ≤ 51`, i.e. at most `D^{0.39}`. There is no principal-row excess at this scale.
 * Block shares of `P` (ledger C3, exact enumeration): `N f < D^{2/3}` carries 0.569 / 0.589 / 0.605, and
   `f = 1` carries 0.314 / 0.259 / 0.224, at `D = 10³ / 10⁴ / 10⁵`.
 
@@ -381,17 +396,21 @@ and `P ∝ D^{1.05}` (that is, `D log D`).
   the `F`-range are not tracked. Variant (q) assumes the quadratic large sieve applies to the product columns
   `(r, p)` after reflection, which was not checked against the reflected weights.
 * R4 rests on an unestablished uniformity of the import in the row.
-* Numerics: `D ≤ 24000`, one `W`, one `Φ`, `ν = 1`. `P` is the diagonal main term of the positivity bound,
+* Numerics: `D ≤ 45000`, one `W`, one `Φ`, `ν = 1`. `P` is the diagonal main term of the positivity bound,
   not the bound itself. Floating point, finite.
 
 ## 7. Single most promising next step
 
-Attack (AMP_t) at its blocking term. Prove a version of Oct 5 prop:R for the *sum over* `ℓ` of `f`-shifted
-completed sums, `Σ_k |Σ_{ℓ∼L} μ(ℓ)a(ℓ)χ_ℓ(k) T(X; k, ℓ)|²`, with reflected length growing slower than
-`N(ℓ)` per prime. In exponent terms, the dual must close at `H ≥ D L^t`, `t < 6/5` (the payoff is
-`λ(6−5t)/12`). The concrete question: after Patterson's transformation, does the cubic shift `ℓ⁴` cost the
-full level factor `N(ℓ)` in the reflected length (prop:R's `N(f)`), or only `N(ℓ)^{1/5}`? The former is what
-the manuscript proves.
+Attack (AMP_t) at its blocking term: find a transformation under which the amplifier variable is reflected
+*together with* the theta variable, so that the reflected length per amplifier prime is `𝓗²L^s/X` with
+`s < −3/5` (ledger L3: `t = (3+s)/2`, payoff `λ(6 − 5t)/12`). The manuscript's prop:R has `s = 1`.
+
+Concretely, take the f-shifted completed sums `T(X; k, ℓ)` of eq:completed-twist, summed against `a(ℓ)χ_ℓ(k)`
+over primes `ℓ ∼ L`. Is there a GL(2)-metaplectic object, for example a theta series on a larger cover or a
+Rankin–Selberg-type product of the cubic theta with an Eisenstein series in `ℓ`, whose Fourier coefficients are
+`a(nℓ)` with the Möbius-compatible weight and a functional equation of conductor `≍ (𝓗²/(XL))`? Lemma NRA says
+such an object cannot be a finite-order modulation of the cubic theta itself. The angular remark says the
+quadratic slot inside the theta is the wrong one.
 
 ## Files
 
@@ -399,4 +418,5 @@ the manuscript proves.
 * `o2_ledger.py`: sympy ledger (L1–L4) and exact checks (C1 collapse identity, C2 weight identity, C3 block
   shares). Output: `results/o2_ledger.json`.
 * `signed_dual_numerics.py`: signed dual, positivity proxy, principal-row share. Output:
-  `results/signed_dual_main.json`, `results/signed_dual_main.log`.
+  `results/signed_dual_{main,big}.{json,log}`.
+* `make_table.py`: table and fits of section 4 (`results/table_main.md`).
