@@ -247,12 +247,22 @@ q = 7, `m = 7`, N = 3000 rows (`results/samp_q7_m7.txt`):
 | ± s.e. | 0.026 | 0.028 | 0.028 | 0.030 | 0.029 | 0.035 | 0.042 | 0.045 | 0.050 | 0.061 | 0.068 | 0.076 |
 | max `|A|²/q^d` | 17.6 | 14.2 | 21.6 | 24.3 | 17.4 | 18.5 | 30.6 | 28.2 | 30.5 | 37.9 | 45.5 | 47.7 |
 
+q = 7, `m = 8`, N = 400 rows (`results/samp_q7_m8.txt`; larger error bars):
+
+| d | 7 | 8 | 9 | 10 | 11 | 12 | 14 | 16 | 18 | 20 | 24 |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| ρ = m/d | 1.14 | 1.00 | 0.89 | 0.80 | 0.73 | 0.67 | 0.57 | 0.50 | 0.44 | 0.40 | 0.33 |
+| `M₂/Diag` | 1.05 | 1.06 | 1.08 | 1.13 | 1.10 | 1.33 | 1.37 | 1.53 | 1.69 | 1.80 | 2.08 |
+| ± s.e. | 0.10 | 0.11 | 0.11 | 0.13 | 0.13 | 0.17 | 0.21 | 0.23 | 0.31 | 0.36 | 0.48 |
+
 * **Once the members are generic the lab looks like `Q(ω)`.** `M₂/Diag` is 0.91–0.96 for
   ρ ∈ [0.7, 1.17]. RUNG_STRENGTH §5 has 0.88–0.95 over `Q(ω)` against a naive diagonal; ours is exact,
   which lowers the diagonal and raises the ratio by a few percent. There is no excess at ρ < 1 down to
   ρ ≈ 0.5.
-* Below ρ ≈ 0.45 a slow rise appears (1.07 at ρ = 0.39, 1.22 at ρ = 0.29), at 2–3 standard errors per
-  cell, in correlated cells (EMPIRICAL). At fixed `u`, `|A_u(d)|²/q^d` has the Cesàro mean
+* Below ρ ≈ 0.45 (m = 7), resp. ρ ≈ 0.7 (m = 8), a slow rise appears: 1.07 at ρ = 0.39 and 1.22 at
+  ρ = 0.29 for m = 7; 1.33–1.53 at ρ = 0.5–0.67 and 2.1 ± 0.5 at ρ = 0.33 for m = 8. Each cell is at
+  1–3 standard errors and the cells are correlated (EMPIRICAL). With 400 rows the m = 8 tail is not
+  resolved. At fixed `u`, `|A_u(d)|²/q^d` has the Cesàro mean
   `Σ_j Π_{k≠j}|e^{iθ_j} − e^{iθ_k}|^{−2}`. That mean is 1 on Haar average but heavy-tailed, so a slow
   drift toward the tail is expected as `d/m` grows. This is the lab form of the `D^ε` in Mom(1, ρ).
 * The per-row maximum grows roughly linearly in `d` (14 → 48). There are no CM-type `binom(d+N, N)²`

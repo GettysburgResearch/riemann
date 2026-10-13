@@ -26,10 +26,11 @@ methods *can* and *cannot* do, and where a push could move the constant.
 
 > **Update, 12-13 Oct 2026: constructive "offense" wave.** Eight lines tried to break the walls
 > rather than map them ([offense/README.md](offense/README.md)). No exponent moved; RH remains
-> unproved. The wave found that every remaining wall sits on the conclusion's own object (the
-> principal rows on the Oct 5 side; on the Sep 30 side, a principal-row main term ≈ 1/L(1, ψη) aligned with the bias component, which falsifies the hoped-for non-alignment (NA) as stated). It also ranked
+> unproved. The wave's PROPOSED reading is that every wall it examined sits on the principal member or on a
+> principal-row main term: the principal rows on the Oct 5 side; on the Sep 30 side, a main term ≈ 1/L(1, ψη)
+> aligned with the bias component, which falsifies the hoped-for non-alignment (NA) as stated (finite tests). It also ranked
 > the sharpest open statements by payoff:
-> * a cubic large sieve for the single sequence `μγ₂ξ` (`κ = 1/2` gives 5/6; numerics show no
+> * a cubic large sieve for the single sequence `μγ₂ξ` (`κ = 1/2` gives 5/6; finite numerics show no
 >   BGL excess);
 > * a conductor-`N(h)²` summation formula for that sequence (8/9 with the known cubic sieve);
 > * an amplified dual (AMP_t);
