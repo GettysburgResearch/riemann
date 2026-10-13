@@ -1,0 +1,31 @@
+{
+  "arithmetic": "exact Fraction arithmetic in Q(sqrt(-3)); exact finite-field powers",
+  "checker_sha256": "468688f0810ad4541dcfea44ab8992418220a6cfaf9ecd3dd31055b66d8417b5",
+  "counts": {
+    "explicit_collision_inequalities": 171,
+    "moment_threshold_rational_cases": 10368,
+    "partition_identity_vectors": 57,
+    "partition_total_absolute_weights": 4,
+    "prime_rooting_coefficient_cases": 31,
+    "real_distinct_polynomials": 57,
+    "sixth_power_finite_field_masks": 150,
+    "zero_entries_retained": 27
+  },
+  "negative_controls": {
+    "distinct_polynomial_need_not_be_positive": true,
+    "nonunit_zero_replaced_by_one_detected": true,
+    "omitted_partition_factorial_detected": true,
+    "prime_rooting_missing_minus_detected": true
+  },
+  "not_certified": [
+    "prime ideal theorem",
+    "infinite asymptotic lower bounds",
+    "Dedekind zeta continuation",
+    "native composite singleton bound",
+    "RH"
+  ],
+  "proof_bytes": 22934,
+  "proof_sha256": "2290ce3d8d24f832259b3d701607beb125ceb5111f86b39d82be200eea1c27fb",
+  "scope": "finite partition identities, explicit constants, literal zero masks, rooting signs, exponent algebra",
+  "status": "PASS"
+}

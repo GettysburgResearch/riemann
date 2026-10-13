@@ -1,0 +1,224 @@
+{
+  "base_branch": "research/sextic-signed-reunion-20261010",
+  "branch": "research/sextic-structural-strike-20261013",
+  "computational_scope": "Exact finite algebra, exponent bookkeeping, source transport and artifact integrity; no computational inference of an infinite theorem.",
+  "frontier_context": [
+    {
+      "commit": "2f8b6a3898a722d0602a91dea73bac344a3bb7dd",
+      "pr": 911,
+      "scope": "Exact open trace contracts audited; copies preserved"
+    },
+    {
+      "commit": "506e3808d2f1e86a31a6d1f70cc7da58367c9918",
+      "pr": 925,
+      "scope": "Positive divisor/conductor bounds as context, not blanket revalidation"
+    },
+    {
+      "commit": "086bf0560c0c2679a1fe41418f583d2c5ca743c3",
+      "pr": 926,
+      "scope": "Signed overlaps and sparse sampling; no arithmetic moment premise inferred"
+    },
+    {
+      "commit": "f9939c957f5aac6b2099b591e4988991700a152b",
+      "pr": 927,
+      "scope": "Parent signed-reunion packet, retained source boundaries"
+    },
+    {
+      "commit": "ab98878279cd5614fe79bb94aa916e97c9ee50b4",
+      "pr": 928,
+      "scope": "Signed graph descent, centered covariance and cube alias analysis"
+    },
+    {
+      "commit": "97bf40329489992e9384c34d7595af6d01a40774",
+      "pr": 929,
+      "scope": "Cubic conductor adapter and explicit one-sign profile; exact copies preserved"
+    }
+  ],
+  "not_proved": [
+    "Full native fourth moment",
+    "Generalized native diagonal moment hierarchy",
+    "A new zero-free exponent",
+    "RH or GRH",
+    "A universal conductor second mean for every sextic local exponent pattern"
+  ],
+  "observed_main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "parent_commit": "f9939c957f5aac6b2099b591e4988991700a152b",
+  "parent_tree": "e1ad0b4069c4a62d283d41874921762d1d05beba",
+  "primary_analytic_inputs": [
+    {
+      "author": "Alexandre de Faveri",
+      "scope": "Named imported analytic theorems, primary source read; complete external proofs not re-certified here",
+      "title": "Optimal large sieve for fixed order characters",
+      "url": "https://arxiv.org/html/2610.04045v1",
+      "used": "Theorem 1.1; Lemmas 2.4, 3.1, 3.3; Proposition 8.1 reduction; Section 9 comparison",
+      "version": "arXiv:2610.04045v1"
+    },
+    {
+      "author": "Alex Burgin",
+      "scope": "Named classical prime-distribution input; no effective threshold claimed",
+      "title": "A New Elementary Proof of Landau's Prime Ideal Theorem, and Associated Results",
+      "url": "https://arxiv.org/html/2406.08565v2",
+      "used": "Classical fixed-field prime ideal theorem, Theorem 1 and Lemma 1",
+      "version": "arXiv:2406.08565v2"
+    },
+    {
+      "author": "Pieter Moree",
+      "scope": "Classical combinatorial identity credited; elementary proof included in new application",
+      "title": "The formal series Witt transform",
+      "url": "https://arxiv.org/html/math/0311194v2",
+      "used": "Section 2 equations (1)-(3) and multivariate denominator identity",
+      "version": "arXiv:math/0311194v2"
+    }
+  ],
+  "proof_files": [
+    {
+      "bytes": 10757,
+      "path": "EULER_TRACE_RESONANCE.md",
+      "sha256": "c8931a93f3fc47805143ab4074ca4e315656a87e58abd5e0e7ba59c03079fb10"
+    },
+    {
+      "bytes": 14564,
+      "path": "RESONANT_SHORT_TRACE.md",
+      "sha256": "1c043c4650e72d9c78daef4111a3a2485c6f5d285a1ca2afee62283c9286a70f"
+    },
+    {
+      "bytes": 13252,
+      "path": "SHORT_FACTOR_NONSMALLNESS.md",
+      "sha256": "0af49f68a90bc19253e6543abd2e8d8af295a2bb133c5ebb59686e516655a935"
+    },
+    {
+      "bytes": 20252,
+      "path": "HORIZON_NECKLACE_FACTORIZATION.md",
+      "sha256": "a6aa7ab8925eac3f1f514b6e4138baa87735e3902fa3c5a78679480c7cf925ab"
+    },
+    {
+      "bytes": 22931,
+      "path": "CONJUGATE_PAIR_CONDUCTOR_SIEVE.md",
+      "sha256": "220d767a03ed6c61b8e5a3ea34b48a0a2adae92607047fbfa0bb96e5be876ef2"
+    },
+    {
+      "bytes": 8872,
+      "path": "CONDUCTOR_COROLLARIES.md",
+      "sha256": "49d471154fbfb2b8589742a70343f9abfa8e407172648b73f33a14d5f3e3031d"
+    },
+    {
+      "bytes": 22934,
+      "path": "PRIME_DEGREE_COHERENCE.md",
+      "sha256": "2290ce3d8d24f832259b3d701607beb125ceb5111f86b39d82be200eea1c27fb"
+    }
+  ],
+  "publication_commit_binding": "PUBLICATION_RECEIPTS.md records the frozen content commit; it is not an analytic certificate",
+  "repository": "GettysburgResearch/riemann",
+  "review_scope": "Same-team mathematical reconstruction with authorship overlap disclosed. No external expert certification or formalization.",
+  "schema": "riemann-standalone-research-provenance-v1",
+  "source_transports": [
+    {
+      "bytes": 17592,
+      "commit": "2f8b6a3898a722d0602a91dea73bac344a3bb7dd",
+      "git_blob": "2318f310a096746e90c2a1966290e9245e733eae",
+      "name": "PRIME_SLOT_CANCELLATION.md",
+      "path": "sources/pr911/PRIME_SLOT_CANCELLATION.md",
+      "sha256": "d37ad696b46c7dda15a7faf314c46cda2d7d67e25ac8d3288c7f138aac373c13",
+      "source_path": "research/exploratory/2026-10-10-two-hour-continuation/literature/PRIME_SLOT_CANCELLATION.md",
+      "url": "https://github.com/GettysburgResearch/riemann/blob/2f8b6a3898a722d0602a91dea73bac344a3bb7dd/research/exploratory/2026-10-10-two-hour-continuation/literature/PRIME_SLOT_CANCELLATION.md"
+    },
+    {
+      "bytes": 7257,
+      "commit": "2f8b6a3898a722d0602a91dea73bac344a3bb7dd",
+      "git_blob": "8c4e6ebd47380578f82ac1720ac4f83a3f1a053d",
+      "name": "SHORT_POLYNOMIAL_COLLISION_TRANSPORT.md",
+      "path": "sources/pr911/SHORT_POLYNOMIAL_COLLISION_TRANSPORT.md",
+      "sha256": "c538719277b1e7de70a7e3f872fb2720668bd43ca57c9cffff6ff29b6766d5ac",
+      "source_path": "research/exploratory/2026-10-10-two-hour-continuation/literature/SHORT_POLYNOMIAL_COLLISION_TRANSPORT.md",
+      "url": "https://github.com/GettysburgResearch/riemann/blob/2f8b6a3898a722d0602a91dea73bac344a3bb7dd/research/exploratory/2026-10-10-two-hour-continuation/literature/SHORT_POLYNOMIAL_COLLISION_TRANSPORT.md"
+    },
+    {
+      "bytes": 3957,
+      "commit": "2f8b6a3898a722d0602a91dea73bac344a3bb7dd",
+      "git_blob": "584714f5328350a7f33a0db5dea319444235be84",
+      "name": "WIDE_SUBCRITICAL_TUBE.md",
+      "path": "sources/pr911/WIDE_SUBCRITICAL_TUBE.md",
+      "sha256": "53568631060432784811d8474e8d774257664826e8fb9fa59c0ba47959745f02",
+      "source_path": "research/exploratory/2026-10-10-two-hour-continuation/literature/WIDE_SUBCRITICAL_TUBE.md",
+      "url": "https://github.com/GettysburgResearch/riemann/blob/2f8b6a3898a722d0602a91dea73bac344a3bb7dd/research/exploratory/2026-10-10-two-hour-continuation/literature/WIDE_SUBCRITICAL_TUBE.md"
+    },
+    {
+      "bytes": 5882,
+      "commit": "2f8b6a3898a722d0602a91dea73bac344a3bb7dd",
+      "git_blob": "34a04d5ac549264b6b620d0d52fe000e069da164",
+      "name": "COMPLEMENTARY_SHORT_TRACE_CONTRACT.md",
+      "path": "sources/pr911/COMPLEMENTARY_SHORT_TRACE_CONTRACT.md",
+      "sha256": "968a2bee6d47f0a92fded0ab32c23963d31332f649dc0046604b7b568d48640c",
+      "source_path": "research/exploratory/2026-10-10-two-hour-continuation/literature/COMPLEMENTARY_SHORT_TRACE_CONTRACT.md",
+      "url": "https://github.com/GettysburgResearch/riemann/blob/2f8b6a3898a722d0602a91dea73bac344a3bb7dd/research/exploratory/2026-10-10-two-hour-continuation/literature/COMPLEMENTARY_SHORT_TRACE_CONTRACT.md"
+    },
+    {
+      "bytes": 5236,
+      "commit": "2f8b6a3898a722d0602a91dea73bac344a3bb7dd",
+      "git_blob": "c8c2b2b11494d45f1868cdf046013c1afc149a95",
+      "name": "PAIRED_HIGHER_MOMENT_COLLISION.md",
+      "path": "sources/pr911/PAIRED_HIGHER_MOMENT_COLLISION.md",
+      "sha256": "04c3a1ec1d82d977f6a7d9a0c86486fc87161f1d41d35ba389ab5e2ce94f35f6",
+      "source_path": "research/exploratory/2026-10-10-two-hour-continuation/literature/PAIRED_HIGHER_MOMENT_COLLISION.md",
+      "url": "https://github.com/GettysburgResearch/riemann/blob/2f8b6a3898a722d0602a91dea73bac344a3bb7dd/research/exploratory/2026-10-10-two-hour-continuation/literature/PAIRED_HIGHER_MOMENT_COLLISION.md"
+    },
+    {
+      "bytes": 4672,
+      "commit": "2f8b6a3898a722d0602a91dea73bac344a3bb7dd",
+      "git_blob": "17126bb5664d4c335a89409d45323462783ebc1f",
+      "name": "PRIME_SLOT_ROUTE_STATUS.md",
+      "path": "sources/pr911/PRIME_SLOT_ROUTE_STATUS.md",
+      "sha256": "a03572f0f7be44bdd40befe2c86290095b54f84f2ba48f3e35a980f1e3a4fdde",
+      "source_path": "research/exploratory/2026-10-10-two-hour-continuation/literature/PRIME_SLOT_ROUTE_STATUS.md",
+      "url": "https://github.com/GettysburgResearch/riemann/blob/2f8b6a3898a722d0602a91dea73bac344a3bb7dd/research/exploratory/2026-10-10-two-hour-continuation/literature/PRIME_SLOT_ROUTE_STATUS.md"
+    },
+    {
+      "bytes": 3566,
+      "commit": "2f8b6a3898a722d0602a91dea73bac344a3bb7dd",
+      "git_blob": "b8182c182d135684c96747e8f12405659225458a",
+      "name": "SIGNED_REMAINDER_CONTINUATION_SUPPLEMENT.md",
+      "path": "sources/pr911/SIGNED_REMAINDER_CONTINUATION_SUPPLEMENT.md",
+      "sha256": "1b731298da6c5bc0e1e77bc82a436eee23325dc8f682a080cf700515e4ff574b",
+      "source_path": "research/exploratory/2026-10-10-two-hour-continuation/literature/SIGNED_REMAINDER_CONTINUATION_SUPPLEMENT.md",
+      "url": "https://github.com/GettysburgResearch/riemann/blob/2f8b6a3898a722d0602a91dea73bac344a3bb7dd/research/exploratory/2026-10-10-two-hour-continuation/literature/SIGNED_REMAINDER_CONTINUATION_SUPPLEMENT.md"
+    },
+    {
+      "bytes": 24307,
+      "commit": "97bf40329489992e9384c34d7595af6d01a40774",
+      "git_blob": "ce56a368ec623da97a1977e5bd72750e8b6ab148",
+      "path": "sources/pr929/CUBIC_CONDUCTOR_AVERAGE.md",
+      "sha256": "74d9063bd36128d2b510a11d96dda8055539bd7c7a2f2d07f5cc3a105223ea61",
+      "source_path": "standalone/2026-10-10-conductor-averages/CUBIC_CONDUCTOR_AVERAGE.md",
+      "url": "https://github.com/GettysburgResearch/riemann/blob/97bf40329489992e9384c34d7595af6d01a40774/standalone/2026-10-10-conductor-averages/CUBIC_CONDUCTOR_AVERAGE.md"
+    },
+    {
+      "bytes": 8517,
+      "commit": "97bf40329489992e9384c34d7595af6d01a40774",
+      "git_blob": "e7ad36ce77f6414f0931cdb5a6168348d0d9be36",
+      "path": "sources/pr929/EXPLORATION_SINGLETON_SIEVE.md",
+      "sha256": "448a711f232d6a001769aa9849cf3331045e99ce2a4dfe47d8f4ca4a190f79aa",
+      "source_path": "standalone/2026-10-10-conductor-averages/EXPLORATION_SINGLETON_SIEVE.md",
+      "url": "https://github.com/GettysburgResearch/riemann/blob/97bf40329489992e9384c34d7595af6d01a40774/standalone/2026-10-10-conductor-averages/EXPLORATION_SINGLETON_SIEVE.md"
+    },
+    {
+      "bytes": 31027,
+      "commit": "6498d6cc2eded03159c7332b25fd224ad07f89c1",
+      "git_blob": "a3bfa63cb6398d6b1ced163602f32a5fb052bf75",
+      "path": "sources/pr913/MOMENT_OBSTRUCTIONS.md",
+      "sha256": "663c6ac878eb0fdd865389ac066ff5a23dbb33016e7061384a83fd186be3fd9b",
+      "source_path": "standalone/2026-10-10-sextic-moment-descent/MOMENT_OBSTRUCTIONS.md",
+      "url": "https://github.com/GettysburgResearch/riemann/blob/6498d6cc2eded03159c7332b25fd224ad07f89c1/standalone/2026-10-10-sextic-moment-descent/MOMENT_OBSTRUCTIONS.md"
+    },
+    {
+      "bytes": 24272,
+      "commit": "0cc0428fedbbfc340044c7451b3d392c1da9a103",
+      "git_blob": "30c359bf54b91e640786114d7946fd4df39b526c",
+      "name": "CONDUCTOR_SECTORS.md",
+      "path": "sources/pr914/CONDUCTOR_SECTORS.md",
+      "sha256": "c160bbb1b1d7c6bcc5514d496ad41f15fd17ea3d36206b0d05cfa0d7d6503983",
+      "source_path": "standalone/2026-10-10-sextic-moment-conductor-core/CONDUCTOR_SECTORS.md",
+      "url": "https://github.com/GettysburgResearch/riemann/blob/0cc0428fedbbfc340044c7451b3d392c1da9a103/standalone/2026-10-10-sextic-moment-conductor-core/CONDUCTOR_SECTORS.md"
+    }
+  ],
+  "status": "PROPOSED_STANDALONE_RESEARCH_NOT_INTEGRATED"
+}

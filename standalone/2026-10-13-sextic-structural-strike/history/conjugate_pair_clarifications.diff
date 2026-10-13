@@ -1,0 +1,55 @@
+--- pass3_bilinear_attack_0dd707c8181160a8.md
++++ pass3_bilinear_attack.md
+@@ -20,7 +20,7 @@
+ 
+ For \(n=6\), the pair is \(a b^5\), not \(a b^2\). These are the two signs of the native singleton conductor. Averaging them jointly avoids treating the entire opposite sign as part of a frozen moving background.
+ 
+-This distinction does not extend automatically to all order-\(n\) characters ordered by conductor: their prime exponents may occupy every residue \(1,\ldots,n-1\), whereas the family here uses only \(1\) and \(n-1\). For \(n=3\) these are all the nonzero residues; for \(n\geq4\) they are a strict subfamily.
++This distinction does not extend automatically to all order-\(n\) characters ordered by conductor: their prime exponents may occupy every residue \(1,\ldots,n-1\), whereas the family here uses only \(1\) and \(n-1\). For \(n=3\) these are all the nonzero residues; for \(n\geq4\) they are a strict subfamily. There is a useful finer distinction: among \(n\geq3\), the residues \(\pm1\) are all the locally exact-order-\(n\) powers precisely for \(n=3,4,6\), since these are precisely the cases \(\varphi(n)=2\). Thus the sextic pair covers all fully sextic local types in the standard family, while omitting ramified local components of orders two and three. The separate conductor corollary keeps this distinction explicit.
+ 
+ ## 2. The all-row norm supplied by the fixed-order sieve
+ 
+@@ -111,14 +111,23 @@
+ \chi_{h_i}(a)\chi_{h_i}(e)=\chi_{h_i}(ae),
+ \tag{3.6}
+ \]
+-including zeros. The common \(d\)-mask in (3.3) is still retained until a nonnegative square is available.
++including zeros. The common \(d\)-mask in (3.3) is still retained until nonnegative quadratic norms are available.
+ 
+ Dyadically localize \(Nd\asymp\Delta,\ Nr\asymp P,\ Ne\asymp E\). The rapid decay of the reflected smooth transform permits
+ \[
+ E\ll (ABQ)^\eta\frac{Q^2P}{B\Delta^2 Ns}.
+ \tag{3.7}
+ \]
+-Mellin separation contributes only an arbitrarily small power. Remove \((h_1,h_2)=1\) by its exact Möbius divisor \(g\) before taking the nonnegative square. The new coefficients are still independent of \(a,e\). The factor \(1/Ng\) from the two norm denominators combines with their shorter length \(Q/N(dg)\); the total normalization is \(B\Delta/(QP)\). The sum over \(g\), the divisors \(r\), the bad-prime labels \(s\), and the dyadic ranges costs an arbitrarily small power: the first two are divisor sums, and the third has only a fixed number of prime generators.
++Mellin separation contributes only an arbitrarily small power. Remove \((h_1,h_2)=1\) by its exact Möbius divisor \(g\). The new coefficients are still independent of \(a,e\). Mellin inversion can leave two different coefficient vectors, so the resulting bilinear expression is not assumed to be a square. For each separated term, apply Cauchy--Schwarz in \((a,e)\), with the absolute value of its bounded dyadic weight and the original common mask retained. Writing \(F_\alpha(u)=\sum_h\alpha_h\chi_h(u)\), and similarly for \(\beta\), this gives
++\[
++\left|\sum_{a,e}w(a,e)F_\alpha(ae)\overline{F_\beta(ae)}\right|
++\leq
++\left(\sum_{a,e}|w(a,e)||F_\alpha(ae)|^2\right)^{1/2}
++\left(\sum_{a,e}|w(a,e)||F_\beta(ae)|^2\right)^{1/2}.
++\]
++The two coefficient vectors differ from the corresponding restrictions of \(\lambda\) only by the separated phases, masks, and already displayed norm factors. Both have the same squared-norm bound, up to the small Mellin loss. Each factor can therefore be bounded by the same all-row quadratic norm; only at this stage may the common mask be discarded in an upper bound.
++
++The factor \(1/Ng\) from the two norm denominators combines with their shorter length \(Q/N(dg)\); the total normalization is \(B\Delta/(QP)\). The sum over \(g\), the divisors \(r\), the bad-prime labels \(s\), and the dyadic ranges costs an arbitrarily small power: the first two are divisor sums, and the third has only a fixed number of prime generators.
+ 
+ Combine \(a,e\) into \(u=ae\). The number of decompositions is at most \(\tau(u)\), so the resulting nonnegative expression is bounded by the all-row norm (2.1), with
+ \[
+@@ -165,7 +174,7 @@
+ 
+ ## 4. Uniform moving-background \(L\)-means
+ 
+-Specialize to the Eisenstein field and the sixth-order family. Let \(\psi\) be a finite-order Hecke character of trivial infinity type, whose good conductor \(\mathfrak r\) has norm \(R\). Its local data at \(S\) belong to a fixed finite family. Restrict \(a,b\) to squarefree coprime good ideals and impose \((ab,\mathfrak r)=1\). Write
++Specialize to the Eisenstein field and the sixth-order family. Let \(\psi\) be a primitive finite-order Hecke character of trivial infinity type, whose good conductor \(\mathfrak r\) has norm \(R\). If a background is initially presented with an imprimitive modulus, \(\psi\) here denotes its primitive associate, extended by zero at its actual conductor; any additional principal exclusions belong to separate masks. Its local data at \(S\) belong to a fixed finite family. Restrict \(a,b\) to squarefree coprime good ideals and impose \((ab,\mathfrak r)=1\). Write
+ \[
+ \xi_{a,b}=(\psi\chi_{a b^5})^{\mathrm{prim}}.
+ \]
+@@ -238,7 +247,7 @@
+ 
+ ## 5. Native all-order accounting with both singleton signs
+ 
+-Fix \(k\), a support constant, the native bad and ray data, and a smooth nonnegative radial majorant of the sharp element-row ball. Let
++Fix \(k\), a support constant, the native bad and ray data, and a fixed nonnegative radial \(\Phi\in C_c^\infty(\mathbb C)\) with \(\Phi(z)\geq1\) on the unit disk. This is the source's smooth majorant of the sharp element-row ball after scaling by \(\sqrt H\). Let
+ \[
+ A_u=\sum_{n\text{ good squarefree}}c_n\chi_n(u),\qquad
+ |c_n|\leq1,\quad Nn\ll D.
