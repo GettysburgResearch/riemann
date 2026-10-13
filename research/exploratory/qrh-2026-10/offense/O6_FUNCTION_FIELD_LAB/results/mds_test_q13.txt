@@ -1,0 +1,18 @@
+q=13, row degrees k<=kmax=4, column degrees d<=dmax=30 (terms available: 31)
+| k (y-degree) | rows | BM order of s_k(d)=sum|[x^d]1/L|^2 | certified? | BM order of Re/omega parts of f_k(d)=sum [x^d]1/L | control: sum|[x^e]L|^2 nonzero only for e < k |
+|---|---|---|---|---|---|
+| 0 | 1 | 2 | yes | 2, 0 | [] |
+|   | denominator C(t) (t = x1 x2 on the diagonal): ['1', '0', '0'] |  |  |  |
+| 1 | 13 | 1 | yes | 1, 0 | [13] |
+|   | denominator C(t) (t = x1 x2 on the diagonal): ['1', '0'] |  |  |  |
+| 2 | 169 | 2 | yes | 7, 6 | [169, 2028] |
+|   | denominator C(t) (t = x1 x2 on the diagonal): ['1', '-13', '0'] |  |  |  |
+| 3 | 2197 | 24 | no (needs 50 terms) | 16, 16 | [2197, 26364, 342732] |
+| 4 | 28561 | 16 | no (needs 34 terms) | 16, 16 | [28561, 342732, 4455516, 57921708] |
+
+y-direction at fixed column degree d: s_k(d)/q^k for k = 0..kmax
+d=0: 1, 1, 1, 1, 1
+d=1: 169, 0, 12, 12, 12
+d=2: 0, 0, 156, 144, 144
+d=3: 0, 0, 2028, 3588, 3480
+d=4: 0, 0, 26364, 68952, 60996

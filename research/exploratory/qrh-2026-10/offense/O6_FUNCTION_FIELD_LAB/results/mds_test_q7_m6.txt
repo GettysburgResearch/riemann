@@ -1,0 +1,21 @@
+q=7, row degrees k<=kmax=6, column degrees d<=dmax=30 (terms available: 31)
+| k (y-degree) | rows | BM order of s_k(d)=sum|[x^d]1/L|^2 | certified? | BM order of Re/omega parts of f_k(d)=sum [x^d]1/L | control: sum|[x^e]L|^2 nonzero only for e < k |
+|---|---|---|---|---|---|
+| 0 | 1 | 2 | yes | 2, 0 | [] |
+|   | denominator C(t) (t = x1 x2 on the diagonal): ['1', '0', '0'] |  |  |  |
+| 1 | 7 | 1 | yes | 1, 0 | [7] |
+|   | denominator C(t) (t = x1 x2 on the diagonal): ['1', '0'] |  |  |  |
+| 2 | 49 | 2 | yes | 7, 6 | [49, 294] |
+|   | denominator C(t) (t = x1 x2 on the diagonal): ['1', '-7', '0'] |  |  |  |
+| 3 | 343 | 7 | yes | 16, 16 | [343, 2058, 14406] |
+|   | denominator C(t) (t = x1 x2 on the diagonal): ['1', '-7', '-49', '0', '2401', '16807', '-117649', '0'] |  |  |  |
+| 4 | 2401 | 14 | yes | 16, 16 | [2401, 14406, 100842, 705894] |
+| 5 | 16807 | 16 | no (needs 34 terms) | 18, 18 | [16807, 100842, 705894, 4941258, 34588806] |
+| 6 | 117649 | 16 | no (needs 34 terms) | 16, 16 | [117642, 705642, 4928910, 33983754, 212474094, 242121642] |
+
+y-direction at fixed column degree d: s_k(d)/q^k for k = 0..kmax
+d=0: 1, 1, 1, 1, 1, 1, 1
+d=1: 49, 0, 6, 6, 6, 6, 6
+d=2: 0, 0, 42, 36, 36, 36, 36
+d=3: 0, 0, 294, 462, 444, 1584/7, 1800/7
+d=4: 0, 0, 2058, 4704, 3822, 3000, 21996/7

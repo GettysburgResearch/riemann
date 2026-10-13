@@ -25,7 +25,8 @@ What was actually run (single-threaded, shared 4-core machine, every run < 20 mi
   M=1..4, d=3 M=1..5); theta_series.c (q=7 d<=8, deg h<=2; q=13 d<=6, deg h<=1); lab_sample.c
   (random rows of one degree, exact per row: q=7 m=7 N=3000, m=8 N=400, m=9 N=80; q=13 m=7 N=150);
   dual_sample.c (random dual rows, exact per row, q=7 d=7); pipeline_table.py, tables.py,
-  sample_table.py, row_anatomy.py. Outputs in results/ (about 0.2 MB).
+  sample_table.py, row_anatomy.py; Round 2 (§8): lab_mds.c (q=7, deg u<=5, d<=38), mds_test.py,
+  pole_census.py (deg u = 3..6), 16 random degree-7 rows. Outputs in results/ (about 0.25 MB).
 Smallest remaining gap: no lab mechanism proves Mom(1, rho < 1) without the Riemann hypothesis for the
   family members (Weil). The one genuinely new lab input (Pellet: mu(n) = (-1)^deg n chi_2(disc n),
   which makes every Gauss sum and mu itself a character of a polynomial in the coefficients of n) has
@@ -112,6 +113,11 @@ Smallest remaining gap: no lab mechanism proves Mom(1, rho < 1) without the Riem
      geometric mechanism with no number-field analogue known to us (OPEN / HEURISTIC).
    * The Sawin–Shusterman char-`p` refinement (μ mimicked by Dirichlet characters on special subspaces)
      is the strongest version (LIT, abstract only). It too has no Z-analogue.
+   * **Round 2 (§8): no finite-group multiple Dirichlet series for the second moment of 1/L.** The `y^k`
+     coefficients of `Σ_u y^{deg u}/(L(x₁,ψ_u)L(x₂,conj ψ_u))` have `x`-denominators of exact recurrence
+     order 1, 2, 7, 14 and ≥ 20 for `k = 1..5`, with new cyclotomic poles at each `k`. Members of degree 7
+     have generic (non-torsion) pole angles. The control (moments of `L`) is rational with two polar lines
+     on the same slice.
 
 **Most promising next step.**
 1. Run the Step 3 ledger (`ledger.py`, ported to C) on **generic members**: row degree ≥ 7, so
@@ -431,9 +437,10 @@ Reading (EXACT on these cells; the trend is EMPIRICAL):
    * Whether the group generated is finite (which would make `Z` rational with computable denominator,
      DGH/Bucur–Diaconu style, **and would evaluate `M₂` at ρ < 1 exactly without RH for individual
      members**) is OPEN.
-   * This is the single concrete lab question whose positive answer would be a new mechanism. Its
-     number-field analogue would be a multiple Dirichlet series for the *second moment of `1/L`* over the
-     sextic family.
+   * This was the single concrete lab question whose positive answer would have been a new mechanism.
+     **Settled negatively in §8**: the `y^k` coefficients have `x`-poles at the members' zeros, a set that
+     is not contained in any fixed finite set (EXACT recurrence orders 1, 2, 7, 14, ≥ 20 for `k = 1..5`;
+     generic angles at `k = 7`).
 3. **Pellet's identity** (EXACT): `μ(n) = (−1)^{deg n}χ₂(disc n)`.
    * With it, `A_u(d) = (−1)^d Σ_{a ∈ F_q^d} χ0(disc(n_a)³·Res(n_a, u))` is one character sum over affine
      space.
@@ -452,8 +459,8 @@ Reading (EXACT on these cells; the trend is EMPIRICAL):
      is μ, and no `p`-th-power subspaces. This is the parity barrier in its sharpest form.
 4. **Answer to the prize question.** In the lab the sub-diagonal second moment is true, and the known proofs
    all go through RH for the members (Weil, or Weil II on the Pellet variety). No exact identity,
-   rationality, or degree functional equation found here proves Mom(1, ρ < 1) by itself. The one open lab
-   avenue is the finite-group question in item 2.
+   rationality, or degree functional equation found here proves Mom(1, ρ < 1) by itself. The finite-group
+   question of item 2 is answered negatively in §8.
 
 ## 7. Comparison with the Q side, and what was not done
 
@@ -478,6 +485,89 @@ Reading (EXACT on these cells; the trend is EMPIRICAL):
 * A sextic-family check of the `q = 7` coincidence `6 = q − 1` (`χ0` is the Teichmüller character). The CM
   phenomenon also appears at q = 13 and 19, so it is not caused by that coincidence.
 
+## 8. Round 2: is there a finite-group "multiple Dirichlet series" for the second moment of 1/L?
+
+```text
+Status: EXPLORATION; EXACT (integer / rational Berlekamp-Massey) + FLOAT root census (numpy roots of exact
+  integer polynomials) + HEURISTIC structural reading.
+Scope: Z(x1, x2, y) = sum_{u monic} y^{deg u} / (L(x1, psi_u) L(x2, conj psi_u)) over F_7[T] (and the
+  control W(x1, x2, y) = sum_u y^{deg u} L(x1, psi_u) L(x2, conj psi_u)); y-degree k <= 6, x-degrees <= 38.
+Exact sources or dependencies: §1 lab; lab_mds.c (lab_core + first moments + control sums), mds_test.py
+  (BM over Q), pole_census.py, lab_sample.c (degree-7 rows). No literature re-read for this section.
+What was actually run: lab_mds 7 5 38 (all 19 608 monic u, deg u <= 5; exact); lab_core dump for deg u <= 6
+  (137 257 rows) reused; pole_census.py on k = 3..6; 12 + 4 random rows of degree 7 (q = 7, 13).
+Smallest remaining gap: the 2-variable functional-equation group itself was not computed. What is shown
+  is that the y^k-coefficients of Z have x-poles outside any fixed finite set, which rules out a
+  rational Z (hence the DGH/Bucur-Diaconu finite-group mechanism) under the no-cancellation assumption
+  stated in item 4.
+```
+
+**Verdict: NO SECOND FE IN THE TESTED RANGE, and a structural obstruction to a finite group.**
+
+The test object is the diagonal slice of `Z`. Write `t = x₁x₂`, so the `y^k t^d` coefficient is
+`s_k(d) = Σ_{deg u = k} |[x^d] 1/L(x, ψ_u)|²` (exact integers, `results/mds_q7_m5_d38.txt`). A rational
+`Z = P/Q` would force every `y^k` coefficient to have its poles in the fixed finite set `{Q(x₁, x₂, 0) = 0}`.
+
+1. **Control (moments of L) behaves like a finite-polar-divisor object (EXACT, 15 cells, k ≤ 5,
+   e ≤ 4).** `Σ_{deg u = k} |[x^e] L(x, ψ_u)|² = q^k (q^e − q^{e−1})` for every `k > e`, and the
+   coefficient is 0 for `e ≥ k` (L is a polynomial). So the control diagonal is the rational function
+   `q y (1 − q t y) / ((1 − q y)(1 − q² t y))`, with two polar lines. This is consistent with the finite-group
+   picture. The full 2-variable group for sextic *positive* moments was **not** reconstructed.
+   Background, not re-read: for order-`n` twists the finite-group (Weyl group) series of
+   Brubaker–Bump–Friedberg–Hoffstein carry `n`-th order Gauss-sum weights.
+2. **Reciprocal case: the x-denominators of the `y^k` coefficients grow with `k` (EXACT, Berlekamp–Massey
+   over Q, 39 terms; certified when `2·order + 2 ≤ 39`).** In `u = q t`:
+
+   | k | rows | minimal recurrence order of `s_k(d)` | reduced denominator |
+   |---|---|---|---|
+   | 2 | 49 | 2 | `(1 − u)`, plus a transient |
+   | 3 | 343 | 7 | `(1 − u)³(1 + u)(1 + u + u²)` |
+   | 4 | 2401 | 14 | `(1 − u)³(1 + u)²(1 + u²)(1 − u + u²)(1 + u + u²)²` |
+   | 5 | 16807 | **≥ 20** (39 terms cannot certify more) | — |
+   | 6 | 117649 | ≥ 16 (31 terms) | — |
+
+   At q = 13 (31 terms): orders 1, 2 for `k = 1, 2`, and ≥ 16 for `k = 3, 4` (`results/mds_test_q13.txt`).
+   The control closed form of item 1 also holds exactly at q = 13 (`k ≤ 4`, 10 cells).
+
+   The y-direction at fixed `d` is harmless. `s_k(d)/q^k` is constant from `k = 2` for `d = 1` (value 6)
+   and from `k = 3` for `d = 2` (value 36). So each fixed-`d` y-series is a polynomial plus a `(1 − qy)` geometric tail: orthogonality in `u`.
+3. **Pole census (FLOAT roots of exact integer `L`-polynomials, `results/pole_census_q7.txt`).** Poles of
+   the `y^k` coefficient on `|t| = 1/q` are at `t = 1/(α_i conj α_j)`, `α_i conj α_j = q·e^{2πiφ}`. The
+   orders of the roots of unity `e^{2πiφ}` are:
+   * k = 3: {1, 2, 3} and k = 4: {1, 2, 3, 4, 6}. These match the exact factorizations above.
+   * k = 5: {1, 2, 3, 4, 5, 6, 9, 12}. k = 6: the same set on `|t| = 1/q`.
+   * At k = 6 the even members (trivial zero `1 − x`) add poles on `|t| = q^{−1/2}` at the irrational
+     CM angle `θ₀`. So the polar set grows with `k`.
+4. **Generic members (k = 7) destroy finiteness (FLOAT census, 12 random rows at q = 7, 4 at q = 13;
+   `results/generic_L_q*_deg7.txt`).**
+   * The pair angles `φ = arg(α_i conj α_j)/2π` are non-torsion: 0–5 of 30 per row are rational with
+     denominator ≤ 60, and the rest vary from row to row.
+   * A sum of rational functions has every pole of its summands unless residues cancel at coinciding
+     poles. Here the poles are row-dependent and continuously distributed (HEURISTIC: no cancellation
+     across the ≈ 10⁵ distinct members).
+   * So the `y⁷` coefficient has of order `(#members)·30` distinct poles. `Z` is not rational and has
+     no finite set of polar divisors.
+5. **Candidate transformations (b).**
+   * Per member, the x-FE `(x₁, x₂, y) ↦ (1/(q x₂), 1/(q x₁), y/(q x₁x₂))` (with `y ↦ χ0(−1)y`) holds for
+     primitive odd `ψ_u` as an identity of rational functions. The root numbers cancel
+     (`ε(ψ)ε(conj ψ) = ψ(−1)`).
+   * It gives no coefficient identity for `1/L`: the power series at `x = 0` and `x = ∞` differ. It is
+     also broken at family level by imprimitive members. Even the control fails it at family level without
+     correction weights: `Σ_{deg u=3}|c_u(0)|² = 343` but `q^{−2}Σ|c_u(2)|² = 294`.
+   * The only y-direction FE is Poisson in `u` (§4.1). It maps the `μ(n₁)μ(n₂)` weights to the dual
+     weights `χ0(D_{n₁}) conj χ0(D_{n₂})` (the `B_h` family). That is a different series, so **Z has no
+     second FE onto itself**.
+6. **Reading.**
+   * For moments of `L`, every `y^k` coefficient is a polynomial in `x`. All poles of the series come
+     from the `y`-summation, which is why a finite group can close up.
+   * For moments of `1/L`, every member contributes its own zeros as `x`-poles already at fixed `k`.
+   * In the CM range (`k ≤ 6`) these collapse onto a slowly growing cyclotomic set. That is a lab
+     artifact. From `k = 7` on they are generic.
+   * So the Diaconu–Goldfeld–Hoffstein / Bucur–Diaconu rationality mechanism does not apply to the
+     sub-diagonal second moment of `1/L` in the lab. This removes the one open lab avenue of §6, item 2.
+   * Number-field analogue: the same statement holds a fortiori. The `y`-coefficients of
+     `Σ_u y^{deg u}/(L L)` have poles at all zeros of all members.
+
 ## Files
 
 | file | role |
@@ -491,6 +581,7 @@ Reading (EXACT on these cells; the trend is EMPIRICAL):
 | `ledger.py` | exact primal = dual identity, Ramanujan blocks, positivity ledger (small `d`) |
 | `theta_series.c` | `B_h(d)` as a function of `d` for all monic `h` of small degree (theta structure) |
 | `lab_sample.c`, `dual_sample.c` | random rows (resp. dual rows) of one degree, exact per row (generic members) |
+| `lab_mds.c`, `mds_test.py`, `pole_census.py` | §8: first moments and control sums, exact Berlekamp–Massey, pole census |
 | `tables.py`, `pipeline_table.py`, `sample_table.py`, `row_anatomy.py` | tables from the outputs |
 | `results/` | core outputs (`d k rows M2 Diag max`), dual energies, ledgers, identity checks |
 
