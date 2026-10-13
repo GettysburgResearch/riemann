@@ -49,14 +49,19 @@ Smallest remaining gap: no lab mechanism proves Mom(1, rho < 1) without the Riem
    `(−1)^{deg P − 1}` per prime, and **μ itself is a quadratic character of the discriminant**
    (Pellet/Stickelberger): `μ(n) = (−1)^d χ₂(disc n)`, EXACT for all 2401 squarefree monic `n` of degree
    ≤ 4 over `F_7`.
-2. **Truth (EXACT integers).** `M₂(d; m) / Diag` is *not* ≈ 1 in the lab at small `q`. It is ≈ 1 only for
-   rows of degree ≤ 2. Rows of degree 3–4 are **special members** whose Frobenius eigenvalues are
-   repeated (`|A_u(d)|²/q^d ∈ {0, 1, (d+1)²}` for every degree-3 row over `F_13`), and they make the ratio
-   grow polynomially in `d` at fixed row degree (e.g. q = 7, m = 6: ratio 2.1 at ρ = 1, 6.5 at ρ = 1/2,
-   75 at ρ = 0.2). The excess does not shrink with `q` (q = 13, 19, 31, 37 all show it). This is
-   harmless for exponents (Mom(1, ρ) is a `q^{o(d)}` statement) but it is a real **secondary term from
-   small-conductor members**, the lab analogue of polylog factors. (EMPIRICAL on exact data; the
-   finite-monodromy explanation is HEURISTIC.)
+2. **Truth (EXACT integers), and a lab-specific degeneracy.** `M₂(d; m)/Diag` is *not* ≈ 1 in the lab
+   for row degree `m ≤ 6`. It is ≈ 1 only for rows of degree ≤ 2.
+   * Rows of degree 3–6 are **CM members**. The `ψ`-eigenspace of `H¹(y⁶ = u)` has `h^{0,1} = ⌈m/6⌉ − 1 = 0`,
+     hence finite monodromy (HEURISTIC, Deligne–Mostow-type count).
+   * Their Frobenius angles lie in cosets `θ₀ + (1/N)Z`, and they have repeated roots. Census at q = 13,
+     degree 3: `|A_u(8)|²/q⁸ ∈ {0, 1, 81}` (EXACT).
+   * They make the ratio grow polynomially in `d` and do not fade as `q` grows. Examples at q = 7, m = 6:
+     2.1 at ρ = 1, 6.5 at ρ = 1/2, 75 at ρ = 0.2.
+   * Generic members (infinite monodromy) start at row degree 7. They were sampled with exact per-row
+     arithmetic in §3.1.
+   * This is harmless for exponents (Mom(1, ρ) is a `q^{o(d)}` statement). It has no number-field
+     analogue, since Hecke L-functions have no Hodge type, and it means the lab must be run at row
+     degree ≥ 7 to say anything about generic members.
 3. **Where the pipeline loses (EXACT ledger at small d; §4).**
    * Poisson in `u`, the Gauss sums and the absorption lose **nothing**. The primal = dual identity was
      replayed in exact integers at q = 7, `d = 2` (M = 1..4) and `d = 3` (M = 1..5).

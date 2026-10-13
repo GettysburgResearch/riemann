@@ -5,7 +5,8 @@ Status: PROPOSED (Lemmas 1-3, Props 4-5: elementary proofs written here, not rev
   the Kubota/CG10 functional equation) + HEURISTIC (the pipeline bookkeeping of Sections 3-6, the
   "isometry" model of a reflection) + CONDITIONAL (Section 7: sigma = 5/6, 7/8, 8/9 under named
   large-sieve / summation-formula inputs) + EMPIRICAL (Section 6 and the identity checks; floating
-  point, finite). No zero-free region is proved. RH remains unproved. Nothing below beats 11/12
+  point, finite). Round 2 (Section 8A): (S6) is LOCALLY CONSISTENT at every unramified prime
+  (PROPOSED; imports the KP/Hoffstein Hecke relations). No zero-free region is proved. RH remains unproved. Nothing below beats 11/12
   unconditionally; the Oct 5 11/12 claim itself is an external, unreviewed import.
 Scope: the cubic Kummer family A_u(D) = sum_n mu(n) nu(n) chi_n(u)^2 W(N n/D) over K = Q(omega),
   rows N u <= H = D^rho (leverage c = 2/3, boundary 1/2 + rho/3); its dual after Poisson in u and
@@ -30,6 +31,7 @@ Exact sources or dependencies:
 What was actually run (Python 3.13 + numpy + sympy, single process, nice 5):
   python3 ledger.py                          -> results/ledger.txt (exact rationals, asserts pass)
   python3 kubota_mobius_check.py 250 OUT     -> results/kubota_mobius_check.json (about 2 min)
+  python3 local_hecke_check.py OUT           -> results/local_hecke_check.json (H3, H6; under 1 min)
   python3 dual_ms.py X H1,...,Hk OUT         for X in {4000, 20000, 50000, 100000}
                                              -> results/dual_ms_X*.json/.log (1.5 s, 24 s, 86 s, 440 s)
 Smallest remaining gap: (LS*_kappa) of Section 7: a cubic large sieve for the ONE coefficient
@@ -84,6 +86,13 @@ without independent proof here.
 7. **Quartic test bed:** the mechanism does **not** reproduce 7/8. The 4-fold Kubota numerator is
    `h³` (conductor `N(h)³`, Lemma 1 general form), which gives σ = 65/64 with BGL. 7/8 needs a GL(2)
    quartic theta with single-Gauss-sum coefficients, which the Eckhardt–Patterson shape contradicts.
+
+8. **Round 2 (§8A): (S6) is LOCALLY CONSISTENT (PROPOSED).**
+   * The Kazhdan–Patterson/Hoffstein relations reproduce the known cases: n = 3 determined
+     (Patterson) and n = 4 free with a quadratic support condition (Suzuki).
+   * For n = 6 they leave `τ(p)` free at each `p`.
+   * (S6) is equivalent to `τ(mp³)/τ(m) = μ(p)·c(η/α)(p)χ_p(16)G(p)·ε`. What remains is global:
+     (S6-glob), contradicted by [BH]'s numerics for one theta and open for the rest.
 
 Best result: no unconditional improvement. The sharpest new statements are the exact obstruction
 (conductor exponent 4, parity of the numerator class) and the reduction of 5/6 / 7/8 / 8/9 to the
@@ -424,6 +433,98 @@ vector make the index-`p` coefficient proportional to `γ₋₁(p)` with a Hecke
   known automorphic inputs.
 * If one does, the pipeline gives 8/9 with the known cubic sieve.
 
+## 8A. Round 2: is (S6) locally consistent at a prime? (the local half of the §8 test)
+
+**Verdict: LOCALLY CONSISTENT.**
+* *Label:* PROPOSED. It imports the Kazhdan–Patterson periodicity and the KP/Hoffstein Hecke
+  relations exactly as stated in [BH] §1 and [CFH] (2.5), via SEXTIC_THETA_S6 §1. KP84 and Hoffstein
+  1993 were not re-read.
+* At an unramified prime `p`, the local data leave the index-`p` coordinate of the 6-fold theta
+  free. They put no constraint on its angle, its sign or its absolute value.
+* **Local data therefore do not close the cubic-family 5/6 route via (S6).** It is equivalent to the
+  global statement (S6-glob) below.
+  * For the one representative set computed by [BH], (S6-glob) is contradicted by their numerics.
+  * For the rest of the 216-dimensional theta space it is open.
+
+**Method.** For the `n`-fold theta on GL(2), take `p ∤ mS`. The unramified local relations are:
+* (P) `τ(m p^{j+n}) = N(p)^{1/2} τ(m p^j)`;
+* (H) `τ(m p^j) = G_{j+1}(m,p) τ(m p^{n−2−j})` for `0 ≤ j ≤ n−2`, and `τ(m p^{n−1}) = 0`.
+
+Here `G_k(m,p)` is the normalized Gauss sum of the `k`-th power of the `n`-th power symbol, with
+numerator `m`. (H) pairs the classes `j ↔ n − 2 − j`. That gives three kinds of orbit:
+* the orbit `{0, n−2}` is tied to `τ(m)` itself, so it is determined;
+* each other pair `{j, n−2−j}` carries one free coordinate;
+* a self-paired class `j = (n−2)/2` gives a support condition `G_{n/2}(m,p) = 1` and a free value.
+
+This is the Whittaker-dimension count: 1 for n = 3 (unique model), 2 for n = 4, 3 for n = 6. It
+matches [DDHL]'s `n/2 − 1` undetermined classes.
+
+| n | orbits | index-`p` data from (H) | literature | reproduced? |
+|---|---|---|---|---|
+| 3 | `{0,1}`; `{2}` → 0 | **determined:** `τ(mp)/τ(m) = conj G₁(m,p) = χ_p(m)² conj γ₂(p)` | Patterson (unique model): `τ₃(p)/τ₃(1) = conj γ₂(p)` | **yes**, see note (a) |
+| 4 | `{0,2}`; `{1}` self; `{3}` → 0 | `τ(mp²) = conj G₁(m,p) τ(m)` determined; `τ(mp)` **free**, subject to `G₂(m,p) = 1`; `τ(mp³) = 0` | Suzuki 1983 (via [DDHL]): `τ₄(a²) ∝ conj g̃₄(a)`, a quadratic support condition, `ψ(m³ν) = 0`, "nothing about ψ(π)". The Eckhardt–Patterson √Gauss shape is a global conjecture | **yes**, literature-level only; no `Z[i]` numerics |
+| 6 | `{0,4}`; `{1,3}`; `{2}` self; `{5}` → 0 | `τ(mp⁴) = G₅ τ(m)` determined; `τ(mp)` **free** with `τ(mp³) = τ(mp)/G₂(m,p)`; `τ(mp²)` **free**, subject to `G₃(m,p) = 1` | [BH] §1; [DDHL]: 2 free classes per prime | 2 free coordinates per `p` |
+
+Note (a): Patterson's composite shape `T(n) = conj γ₂(n)` obeys (H) at 108 `(m, p)` pairs, with
+deviation 2.3e-15 (H3, `local_hecke_check.py`). The cubic control of SEXTIC_THETA_S6 §5 measured
+the same value numerically, with no extra root of unity.
+
+**The n = 6 index-`p` coordinate against the (S6) shape `c·η(p)γ₋₁(p)`.**
+* *Angle.* (H) imposes no angle on `τ(mp)`; it only links it to `τ(mp³)`. `γ₋₁` has the sextic
+  angle, and [BH]'s data show the sextic angle mod 1/2 (SEXTIC_THETA_S6 §3.3).
+* *Sign and absolute value.* The coefficients of (H) are unimodular Gauss sums, so neither `|τ(mp)|`
+  nor its sign is constrained locally.
+* *Hecke relation.* (S6) forces the cube-index coordinate. Check H6: 108 cases, deviation 3.4e-15.
+
+      (S6) at p  ⟺  τ(m p³)/τ(m) = μ(p) · c (η/α)(p) · χ_p(16) G(p) · ε(m, p),   ε = χ_p(m) conj χ_m(p) ∈ {±1},
+
+  with `G(p) = conj χ_p(4) γ₃(p)` the quadratic Gauss sum. So (S6) says the following: at cube
+  indices, the 6-fold theta coefficient is `μ(p)` × a Hecke character of infinity type `α^{−1}η` ×
+  a quadratic Gauss sum, twisted-multiplicative with the exact reciprocity sign. No local relation
+  sees the factor `μ(p) = −1`.
+
+**The global statement that remains (S6-glob).** There exist
+* a vector `v` in the finite-dimensional space of 6-fold theta functions over `Q(ω)` (the 216
+  residue classes of [BH] Lemma 2.2),
+* a constant `c ≠ 0`, and
+* a Hecke character `η`,
+
+such that `Σ_η v_η ρ(p, η) = c η(p) γ₋₁(p) Σ_η v_η ρ(1, η)` for every prime `p ∉ S`, and the
+coefficients are twisted-multiplicative on squarefree indices. Equivalently, that theta's global
+Whittaker functional is a pure tensor `⊗_p ℓ_p` on the squarefree support, with the `ℓ_p` of the
+display.
+
+* *Local consistency.* Every `ℓ_p` exists locally. With non-unique local models (Deligne, KP), no
+  theorem forces or forbids factorization of the residue's functional. (S6-glob) asks infinitely
+  many conditions (one per `p`) of a vector in a 216-dimensional space, so it is overdetermined and
+  generically false. This is a count, not a proof.
+* *Global evidence against* (imported numerics, [BH] Conj. 5.7, one `V`):
+  * `|τ(π)/τ(1)|² ∈ {1, 7/3}` is not constant.
+  * In cube-index language, [BH]'s shape gives `τ(π³)² ∝ conj γ₂(π)² · (cubic Gauss sum) · (small
+    algebraic)`. If their cubic Gauss sum is `γ₄`, then `τ(π³)² ∝ γ₄³ = −ᾱ`, so `τ(π³)` has
+    half-integral infinity type. The display above needs the integral type `α^{−1}η`. This is
+    [INF]: the conventions caveat of SEXTIC_THETA_S6 §3 applies.
+* *HEURISTIC (not evidence).* CFH ties the square indices of the 6-fold theta to the cubic theta
+  and cubic Gauss sums. By analogy, cube indices would be tied to the double-cover theta and
+  quadratic Gauss sums. Such an object supplies `G(p)` but has no source for `μ(p)·(α^{−1}η)(p)`, so
+  (S6-glob) would fail, and fail exactly in the Möbius sign. No cube-index statement of CFH type was
+  found in the sources read.
+
+**The Eisenstein-at-general-s half of the §8 test (HEURISTIC).** By Lemma 3,
+`ψ(mp, s) = ψ^{(p)}(mp, s) + G₂(m,p) q^{1/2−2s} ψ^{(p)}(mp³, s)`. The first term,
+`Σ_{p∤c} conj χ_c(p) g̃(m,c) N(c)^{−s}`, depends on `p` through a character of conductor `p`, not
+through a Gauss sum at `p`. Only at the residue does the Hecke relation make the second structure
+rigid. So no non-residual Eisenstein vector is expected to have index-`p` coefficients
+`∝ γ₋₁(p)`. Statement B of §7 (any conductor-`N(h)²` summation formula) asks less than
+(S6-glob) and is untouched by this test.
+
+**Bottom line for the cubic family.** The 5/6 route via (S6) is **not locally obstructed**. It is
+equivalent to (S6-glob):
+* contradicted for the one theta whose prime coefficients have been computed ([BH]);
+* open for the other theta functions;
+* the decisive test is the cluster-scale residue-vector computation (SEXTIC_THETA_S6 §6 item 1,
+  [BH] Algorithm 4.1, split `π` with `Nπ ≤ 100`).
+
 ## 9. Not done
 
 * No direct numerical test of the load-bearing imported claim (Lemma 2: row conductor `N(r)`, so
@@ -445,6 +546,7 @@ vector make the index-`p` coefficient proportional to `γ₋₁(p)` with a Hecke
 cd research/exploratory/qrh-2026-10/offense/O1_CUBIC_FAMILY_REFLECTION
 python3 ledger.py                                    # exact ledger, asserts
 python3 kubota_mobius_check.py 250 out.json          # K1-K3, ~2 min
+python3 local_hecke_check.py out.json                # H3, H6 (round 2)
 python3 dual_ms.py check                             # gamma_2 / symbol self-check
 python3 dual_ms.py 50000 3125,6250,12500,25000,50000,100000 out.json   # ~90 s
 python3 dual_ms.py 100000 6250,12500,25000,50000,100000,200000 out.json

@@ -84,53 +84,24 @@ int main(int argc, char **argv) {
     /* character sums c_k for k < m, and degrees of prime factors (via linear/small factor detection: gcd test with each monic n of deg <= m/2 that is irreducible is costly; instead use L itself) */
     for (int k = 0; k < m; k++) { L[k].a = L[k].b = 0; }
     L[0].a = 1;
-    int zero_lin = 0;
+    int zero_lin = 0; long long NK[64]; NK[0] = 1;
     for (int k = 1; k < m; k++) { ll t = 1; for (int i = 0; i < k; i++) t *= q; ll cnt[6] = {0,0,0,0,0,0};
       for (ll j = 0; j < t; j++) { poly n; decode(j, k, &n); int r = resultant(&u, &n); if (!r) continue; cnt[dlog6[r]]++; }
       zw acc = {0, 0}; for (int e = 0; e < 6; e++) { acc.a += (i128)cnt[e] * Z6[e].a; acc.b += (i128)cnt[e] * Z6[e].b; }
-      L[k] = acc; (void)zero_lin; }
+      L[k] = acc; (void)zero_lin; NK[k] = cnt[0]+cnt[1]+cnt[2]+cnt[3]+cnt[4]+cnt[5]; }
     /* squarefree test for the coprime count: we need prod over P|u (1+x^{deg P})^{-1}; get prime-factor
        degrees from the factorization by trial division with monic irreducibles found on the fly is costly,
        so we compute the coprime-squarefree count directly from the Euler-free identity
        #{n sqfree deg d,(n,u)=1} = [x^d] (1-qx^2)/(1-qx) / prod_{P|u}(1+x^{deg P}); prime factor degrees
        are obtained by distinct-degree factorization: deg-j part = gcd(u, T^{q^j} - T). */
-    int fdeg[32], nf = 0;
-    { /* distinct-degree factorization */
-      poly f = u; poly x; memset(&x, 0, sizeof x); x.deg = 1; x.c[1] = 1; poly h = x; /* h = T^{q^j} mod f */
-      for (int j = 1; 2 * j <= f.deg || (f.deg > 0 && j <= f.deg); j++) {
-        if (f.deg <= 0) break;
-        /* h = h^q mod f */
-        poly r; memset(&r, 0, sizeof r); r.deg = 0; r.c[0] = 1; poly b = h; int e = q;
-        while (e) { if (e & 1) { poly z; memset(&z, 0, sizeof z); z.deg = r.deg + b.deg; for (int i = 0; i <= r.deg; i++) for (int k2 = 0; k2 <= b.deg; k2++) z.c[i + k2] = (z.c[i + k2] + r.c[i] * b.c[k2]) % q;
-              /* reduce z mod f */ for (int i = z.deg; i >= f.deg; i--) { int c = z.c[i] * inv_[f.c[f.deg]] % q; if (c) for (int k2 = 0; k2 <= f.deg; k2++) { z.c[i - f.deg + k2] = (z.c[i - f.deg + k2] - c * f.c[k2]) % q; if (z.c[i - f.deg + k2] < 0) z.c[i - f.deg + k2] += q; } }
-              int dd = f.deg - 1; while (dd >= 0 && z.c[dd] == 0) dd--; z.deg = dd < 0 ? 0 : dd; r = z; }
-          e >>= 1; if (!e) break;
-          poly z; memset(&z, 0, sizeof z); z.deg = 2 * b.deg; for (int i = 0; i <= b.deg; i++) for (int k2 = 0; k2 <= b.deg; k2++) z.c[i + k2] = (z.c[i + k2] + b.c[i] * b.c[k2]) % q;
-          for (int i = z.deg; i >= f.deg; i--) { int c = z.c[i] * inv_[f.c[f.deg]] % q; if (c) for (int k2 = 0; k2 <= f.deg; k2++) { z.c[i - f.deg + k2] = (z.c[i - f.deg + k2] - c * f.c[k2]) % q; if (z.c[i - f.deg + k2] < 0) z.c[i - f.deg + k2] += q; } }
-          int dd = f.deg - 1; while (dd >= 0 && z.c[dd] == 0) dd--; z.deg = dd < 0 ? 0 : dd; b = z; }
-        h = r;
-        /* g = gcd(f, h - T) */
-        poly hm = h; if (hm.deg < 1) { for (int i = hm.deg + 1; i <= 1; i++) hm.c[i] = 0; hm.deg = 1; } hm.c[1] = (hm.c[1] - 1 + q) % q;
-        { int dd = hm.deg; while (dd >= 0 && hm.c[dd] == 0) dd--; hm.deg = dd; }
-        poly A = f, B = hm;
-        while (B.deg >= 0) { /* A mod B */
-          poly R = A; int ilc = inv_[B.c[B.deg]];
-          for (int i = R.deg; i >= B.deg; i--) { int c = R.c[i] * ilc % q; if (!c) continue; for (int k2 = 0; k2 <= B.deg; k2++) { R.c[i - B.deg + k2] = (R.c[i - B.deg + k2] - c * B.c[k2]) % q; if (R.c[i - B.deg + k2] < 0) R.c[i - B.deg + k2] += q; } }
-          int dd = (R.deg < B.deg ? R.deg : B.deg - 1); while (dd >= 0 && R.c[dd] == 0) dd--; R.deg = dd; A = B; B = R; }
-        int gdeg = A.deg; /* gcd degree */
-        if (gdeg > 0) { int cntp = gdeg / j; for (int t2 = 0; t2 < cntp; t2++) fdeg[nf++] = j;
-          /* f = f / gcd: divide f by monic A */
-          int ilc = inv_[A.c[A.deg]]; poly Q2; memset(&Q2, 0, sizeof Q2); Q2.deg = f.deg - A.deg; poly R = f;
-          for (int i = R.deg; i >= A.deg; i--) { int c = R.c[i] * ilc % q; Q2.c[i - A.deg] = c; if (!c) continue; for (int k2 = 0; k2 <= A.deg; k2++) { R.c[i - A.deg + k2] = (R.c[i - A.deg + k2] - c * A.c[k2]) % q; if (R.c[i - A.deg + k2] < 0) R.c[i - A.deg + k2] += q; } }
-          f = Q2; /* h stays T^{q^j} mod old f; reduce mod new f */
-          for (int i = h.deg; i >= f.deg && f.deg > 0; i--) { int c = h.c[i] * inv_[f.c[f.deg]] % q; if (c) for (int k2 = 0; k2 <= f.deg; k2++) { h.c[i - f.deg + k2] = (h.c[i - f.deg + k2] - c * f.c[k2]) % q; if (h.c[i - f.deg + k2] < 0) h.c[i - f.deg + k2] += q; } }
-          { int dd = f.deg - 1; if (dd < 0) dd = 0; while (dd > 0 && h.c[dd] == 0) dd--; h.deg = dd; }
-          /* repeated factors: keep dividing while gcd persists is not needed for the coprime count (only the set of primes matters),
-             but f may still contain the same primes; remove them by repeated gcd at the same j */
-          j--; continue;
-        }
-      }
-      if (f.deg > 0) fdeg[nf++] = f.deg;
+    int fdeg[64], nf = 0;
+    { /* distinct prime-factor degrees from the coprime counts N_k (k < m):
+         sum_k N_k x^k = prod_{P|u}(1 - x^{deg P}) / (1 - qx)  =>  F = (1 - qx) sum N_k x^k mod x^m,
+         then peel factors (1 - x^k) from F; no factor found means u is irreducible of degree m. */
+      long long F[64]; for (int k = 0; k < m; k++) F[k] = NK[k] - (k ? (long long)q * NK[k - 1] : 0);
+      for (int k = 1; k < m; k++) while (F[k] != 0) { fdeg[nf++] = k; for (int i = m - 1; i >= k; i--) { long long acc = 0; /* divide by (1-x^k): G[i] = F[i] + G[i-k] */ (void)acc; }
+          for (int i = k; i < m; i++) F[i] += F[i - k]; }
+      if (nf == 0) fdeg[nf++] = m;
     }
     /* sixth power check not needed for m not divisible by 6 (u = v^6 impossible); for 6|m test directly */
     int is6 = 0; if (m % 6 == 0) { int kv = m / 6; ll tv = 1; for (int i = 0; i < kv; i++) tv *= q;

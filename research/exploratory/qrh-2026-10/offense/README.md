@@ -58,6 +58,43 @@ involution on the pair (rows, columns) that preserves the deficit `1 - rho`
 
 Results are summarized here as each line reports.
 
+## Synthesis (coordinator; PROPOSED reading of the line reports, not reviewed)
+
+**No exponent moved.** No line produced a half-plane below 7/8, or below 11/12 in the Oct 5
+architecture, except conditionally on statements listed below. RH remains unproved.
+
+**What the wave established.** Every remaining wall sits on the conclusion's own object:
+* *Oct 5 side.*
+  * The `rho < 1` dual has no diagonal: Q_RHO_ANALYSIS, and O2 Prop G, which collapses the dual
+    Moebius variable to `mu(gcd)` times sextic characters.
+  * What remains is a coefficient-specific saving `delta > (1 − rho)/6` (O2 Prop L), the same as
+    `kappa < 5/6` in O5's kappa-law.
+  * Its principal rows force the identical inequality on `A_1`, so there is no slack to borrow.
+  * Amplifiers cost `kappa = 1`, because the reflected column count grows (O4, both rounds).
+  * The cubic family needs a summation formula or a large sieve for the single sequence
+    `mu gamma_2 xi` (O1). By Poisson that is the cubic family's own moment.
+* *Sep 30 side.* The Gram loss `P_a^{1/6}` sits on the sextic-bias (exceptional) component of the
+  additive polynomial (O3). On the `m`-diagonal of the low pairing, the coefficient product is
+  `gamma_1 gamma_2 conj(alpha) eta = mu G eta` (coordinator's derivation from Sep 30 eq:signal and
+  Stickelberger; numerical check in O3b), i.e. the probe's own Moebius signal. If O3b confirms it,
+  (NA) is the improved low estimate restated, not an easier input.
+* *Numerically, every needed statement holds with a large margin*:
+  * the signed dual's cancellation exponent is 0.71-1.59 against the needed `(1−rho)/6` (O2);
+  * `mu gamma_2 xi` shows no BGL excess (O1);
+  * amplified moments are diagonal-sized (O4);
+  * the sub-diagonal moments are diagonal-sized (RUNG_STRENGTH §5).
+  What is missing is a mechanism, not truth.
+
+**The sharpest open statements, ranked by payoff per unit of plausibility.**
+
+| statement | what it asks | payoff | why it is not obviously circular | source |
+|---|---|---|---|---|
+| (LS*_kappa) | cubic large sieve for the single sequence `mu gamma_2 xi` with excess `(H X)^kappa` | `kappa < 4/7` beats 11/12; `8/15` gives 7/8; `1/2` gives 5/6 | the only known obstruction to an optimal cubic sieve (Gauss-sum bias, dFDH/DR) is provably harmless for this sequence (O1 Prop 5); numerics show `kappa = 1/2` behaviour. It is still equivalent to the cubic family's own moment, so it needs `mu`-specific input | O1 §7 |
+| Statement B | a summation formula with row conductor `N(h)^2` for `n -> mu gamma_2 xi` against cubic characters | **8/9** with the known (BGL) cubic sieve; 5/6 with a quadratic post-twist | a GL(2)-type object on the 6-fold cover would supply it via (S6). O1 round 2: (S6) is **locally consistent** at every unramified prime (the KP/Hecke relations leave `tau(mp)` free; both known cases n = 3, 4 are reproduced), but its global form (S6-glob) is overdetermined and is contradicted by the published numerics for the one sextic theta computed ([BH]). Statement B asks for less than (S6-glob) | O1 §§7, 8A |
+| (AMP_t) | amplified dual closing at `H >= D L^t` | `t = 1`: 7/8 at `lambda = 1/2` | rows <= columns, so neither the row-blind nor the orbit-invariance barrier applies | O2 |
+| kappa-law / Prop L | saving `delta > (1−rho)/6` over positivity at one `rho < 1` | any such `delta` beats 11/12 | needs coefficient-specific large values for generic rows | O2, O5 |
+| (NA) + FB#(1/3, 1) | Sep 30: non-alignment of the bias component, plus a signed floor-row saving | 926/1077, then 28/33 | **likely circular** (see above); pending O3b | O3, O7 |
+
 ## Results so far (updated as lines report)
 
 | line | outcome | best number | label | sharpest remaining target |
