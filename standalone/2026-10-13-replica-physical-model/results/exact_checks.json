@@ -1,0 +1,187 @@
+{
+  "arithmetic": "fractions.Fraction; explicit predicates active under -O",
+  "density_diagnostics": [
+    {
+      "D": 24,
+      "Y": 16,
+      "base_count": 3,
+      "moments": {
+        "1": {
+          "defect": "3596/5187",
+          "model": "-3504/1729",
+          "physical": "-4/3"
+        },
+        "2": {
+          "defect": "-7753894/2989441",
+          "model": "13732776/2989441",
+          "physical": "2"
+        },
+        "3": {
+          "defect": "70978598/8968323",
+          "model": "-33624336/2989441",
+          "physical": "-10/3"
+        },
+        "4": {
+          "defect": "-70275522/2989441",
+          "model": "88212168/2989441",
+          "physical": "6"
+        }
+      }
+    },
+    {
+      "D": 24,
+      "Y": 32,
+      "base_count": 7,
+      "moments": {
+        "1": {
+          "defect": "46/1729",
+          "model": "-3504/1729",
+          "physical": "-2"
+        },
+        "2": {
+          "defect": "-66760/2989441",
+          "model": "13732776/2989441",
+          "physical": "32/7"
+        },
+        "3": {
+          "defect": "-540704/2989441",
+          "model": "-33624336/2989441",
+          "physical": "-80/7"
+        },
+        "4": {
+          "defect": "2325188/2989441",
+          "model": "88212168/2989441",
+          "physical": "212/7"
+        }
+      }
+    },
+    {
+      "D": 24,
+      "Y": 64,
+      "base_count": 12,
+      "moments": {
+        "1": {
+          "defect": "-1453/10374",
+          "model": "-3504/1729",
+          "physical": "-13/6"
+        },
+        "2": {
+          "defect": "6632728/8968323",
+          "model": "13732776/2989441",
+          "physical": "16/3"
+        },
+        "3": {
+          "defect": "-30662396/8968323",
+          "model": "-33624336/2989441",
+          "physical": "-44/3"
+        },
+        "4": {
+          "defect": "132959149/8968323",
+          "model": "88212168/2989441",
+          "physical": "133/3"
+        }
+      }
+    },
+    {
+      "D": 24,
+      "Y": 128,
+      "base_count": 26,
+      "moments": {
+        "1": {
+          "defect": "46/1729",
+          "model": "-3504/1729",
+          "physical": "-2"
+        },
+        "2": {
+          "defect": "-1315098/2989441",
+          "model": "13732776/2989441",
+          "physical": "54/13"
+        },
+        "3": {
+          "defect": "6949324/2989441",
+          "model": "-33624336/2989441",
+          "physical": "-116/13"
+        },
+        "4": {
+          "defect": "-28883262/2989441",
+          "model": "88212168/2989441",
+          "physical": "258/13"
+        }
+      }
+    },
+    {
+      "D": 24,
+      "Y": 512,
+      "base_count": 106,
+      "moments": {
+        "1": {
+          "defect": "-6207/91637",
+          "model": "-3504/1729",
+          "physical": "-111/53"
+        },
+        "2": {
+          "defect": "43438650/158440373",
+          "model": "13732776/2989441",
+          "physical": "258/53"
+        },
+        "3": {
+          "defect": "-155067960/158440373",
+          "model": "-33624336/2989441",
+          "physical": "-648/53"
+        },
+        "4": {
+          "defect": "526382436/158440373",
+          "model": "88212168/2989441",
+          "physical": "1740/53"
+        }
+      }
+    }
+  ],
+  "finite_prime_decomposition": {
+    "Mertens": {
+      "D": 256,
+      "coherent_square": "1",
+      "fourth_moment": "325866731118521727451548355/2885313181383450205093888",
+      "innovation_energy": "13052501263203/4494128644096",
+      "mean": "-1",
+      "second_moment": "17546629907299/4494128644096"
+    },
+    "positive_growth": {
+      "D": 256,
+      "coherent_square": "65536",
+      "fourth_moment": "14432368914417876786667055316869299/2885313181383450205093888",
+      "innovation_energy": "7158230363101947/4494128644096",
+      "mean": "256",
+      "second_moment": "301685445182577403/4494128644096"
+    },
+    "signed_rational": {
+      "D": 256,
+      "coherent_square": "4",
+      "fourth_moment": "43576891876132052009435672254171/259678186324510518458449920000",
+      "innovation_energy": "277172223341509/64201837772800",
+      "mean": "2",
+      "second_moment": "533979574432709/64201837772800"
+    }
+  },
+  "predicate_counts": {
+    "Bernoulli_basis_orthogonality": 768,
+    "Eisenstein_ideal_count_by_norm": 512,
+    "Jensen_fourth_moment_lower_bound": 24,
+    "annulus_divisibility_count_identity": 495,
+    "causal_mean_inverse": 771,
+    "centered_operator_factorization": 12336,
+    "coherent_mean_exact": 24,
+    "exact_r_linear_discrepancy": 20,
+    "high_radical_physical_probability_zero": 29956,
+    "independent_joint_moment_expansion": 20,
+    "model_probability_total": 1,
+    "nonempty_physical_annulus": 5,
+    "orthogonal_energy_exact": 24,
+    "physical_joint_moment_expansion": 20,
+    "reject_collapsed_equal_norm_masks": 1,
+    "reject_independent_prime_power_masks": 1,
+    "split_prime_norms_kept_separate": 1
+  },
+  "scope": "exact finite algebra only; no asymptotic or RH verification",
+  "total_exact_predicates": 44979
+}
