@@ -87,6 +87,10 @@ The pages above describe reviewed components at their recorded sources, with lat
 
 [The signed-reunion packet](standalone/2026-10-10-sextic-signed-reunion/README.md) collapses the complete signed initial auxiliary sum for every primitive off-diagonal pair and proves a quantitative reunited-divisor tail at every fixed moment order. It supplies the moving-column exclusion in the positive theta and A2 norms, combines both inverse Möbius scalars with sixth-power stratification to sharpen the full A2 energy, retains an all-row canonical spectral baseline, and improves higher-moment regions with physical cubic products and mixed integer replications. Exact finite diagnostics and scoped mathematical reviews by separate agents accompany the source-qualified proofs. The small-divisor balanced primitive core, full fourth moment, unbounded moment hierarchy, and RH remain open.
 
+## Follow-up research: structural trace audit and a finite-horizon repair
+
+[The structural-strike packet](standalone/2026-10-13-sextic-structural-strike/README.md) gives explicit asymptotic refutations of the unfiltered Euler and short-collision trace contracts in PR #911, and constructs a different exact representation using primitive necklaces and the physical column norm limits. It extends the conjugate-pair conductor sieve to every fixed order n≥3 over fixed fields containing the relevant roots of unity, gives a conductor-size mean for the specified conjugate sextic local type with fixed background, and improves a feasible native fourth-moment sector. It also proves that the complete signed all-distinct prime-column contribution can exceed the diagonal moment scale, isolating why the composite Möbius completion must remain intact. Source hashes, complete proposed proofs, scoped reviews and exact finite diagnostics accompany the work. The full fourth moment, generalized hierarchy, and RH remain open.
+
 ## License
 
 Project code and original research materials are available under the [MIT License](LICENSE). Third-party material retains its existing terms and notices.

@@ -1,0 +1,31 @@
+--- f80d42_original
++++ 2290ce_revised
+@@ -329,8 +329,8 @@
+ multiplicative twists from inheriting the native theorem. Theorem 3.1 is
+ stronger in a different direction: **with the original coefficients on
+ every retained column, the complete signed all-distinct prime subfamily
+-is itself too large**. An algebraic diagonal subtraction or a connected
+-tuple restriction does not eliminate the coherent sixth-power spikes.
++is itself too large**. Removing every repeated column does not eliminate
++the coherent sixth-power spikes.
+ 
+ Consequently a proof of the full native singleton theorem cannot be stable
+ under every arithmetic column selector. In particular, a prime-by-prime
+@@ -588,10 +588,13 @@
+ \]
+ 
+ This identity applies to the native nonlinear test on the right; it does
+-not grant an arbitrary-test dual norm. The m=1 part of (6.2) is exactly
+-the large prime piece (1.2). Every m>1 term is its required composite
+-companion. Taking a norm of the m=1 part first loses the possible
+-cancellation certified as necessary by Theorem 3.1.
++not grant an arbitrary-test dual norm. For \(\nu=1\), the m=1 part of
++(6.2) is exactly the large prime piece (1.2). For general \(\nu\), it
++also retains the factor \(\nu(p)\); Theorem 3.1 does not claim the same
++lower bound for that arbitrary fixed twist. Every m>1 term is the
++corresponding prime piece's composite companion. In the principal-twist
++case, taking a norm of the m=1 part first loses the possible cancellation
++certified as necessary by Theorem 3.1.
+ 
+ An equivalent logarithmically weighted identity is
+ 

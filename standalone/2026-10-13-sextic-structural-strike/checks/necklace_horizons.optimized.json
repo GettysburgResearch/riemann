@@ -1,0 +1,276 @@
+{
+  "checker_sha256": "97d5c362cb7c8ccbff19e0aaff7415a3c3b9852406c3dd05a609c7c8db19e628",
+  "counts": {
+    "local_remainder_checks": 16,
+    "multiindices_in_local_checks": 421,
+    "primitive_copies_in_local_checks": 487,
+    "primitive_cyclic_orbits": 1183,
+    "primitive_orbit_multiindices": 319
+  },
+  "negative_controls": {
+    "one_copy_instead_of_two_for_three_distinct_letters": true,
+    "overly_small_physical_cap": true,
+    "restored_principal_nonunit_zero": true,
+    "spurious_repeated_singleton_factor": true
+  },
+  "not_certified": [
+    "infinite Euler-product normal convergence",
+    "analytic moment estimates",
+    "native moment hypothesis",
+    "RH"
+  ],
+  "physical_cases": [
+    {
+      "cutoff": 2,
+      "discarded_squarefree_factor_terms": 10,
+      "horizons": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "literal_zero_slots": 0,
+      "primes": [
+        7,
+        13
+      ],
+      "primitive_factor_copies": 10,
+      "remainder_coefficient_count": 72,
+      "retained_squarefree_factor_terms": 30,
+      "reunion_coefficient_count": 21,
+      "slot_values": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "smaller_cap_negative_detected": false,
+      "target_coefficient_count": 21
+    },
+    {
+      "cutoff": 3,
+      "discarded_squarefree_factor_terms": 32,
+      "horizons": [
+        49,
+        91,
+        169,
+        49
+      ],
+      "literal_zero_slots": 0,
+      "primes": [
+        7,
+        13
+      ],
+      "primitive_factor_copies": 30,
+      "remainder_coefficient_count": 56,
+      "retained_squarefree_factor_terms": 72,
+      "reunion_coefficient_count": 23,
+      "slot_values": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "smaller_cap_negative_detected": true,
+      "target_coefficient_count": 23
+    },
+    {
+      "cutoff": 3,
+      "discarded_squarefree_factor_terms": 12,
+      "horizons": [
+        49,
+        91,
+        49,
+        91
+      ],
+      "literal_zero_slots": 0,
+      "primes": [
+        7,
+        7
+      ],
+      "primitive_factor_copies": 30,
+      "remainder_coefficient_count": 120,
+      "retained_squarefree_factor_terms": 92,
+      "reunion_coefficient_count": 25,
+      "slot_values": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "smaller_cap_negative_detected": true,
+      "target_coefficient_count": 25
+    },
+    {
+      "cutoff": 3,
+      "discarded_squarefree_factor_terms": 12,
+      "horizons": [
+        343,
+        361
+      ],
+      "literal_zero_slots": 0,
+      "primes": [
+        7,
+        13,
+        19
+      ],
+      "primitive_factor_copies": 5,
+      "remainder_coefficient_count": 8,
+      "retained_squarefree_factor_terms": 28,
+      "reunion_coefficient_count": 25,
+      "slot_values": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "smaller_cap_negative_detected": true,
+      "target_coefficient_count": 25
+    },
+    {
+      "cutoff": 3,
+      "discarded_squarefree_factor_terms": 66,
+      "horizons": [
+        1,
+        49,
+        7,
+        13
+      ],
+      "literal_zero_slots": 0,
+      "primes": [
+        7,
+        13
+      ],
+      "primitive_factor_copies": 30,
+      "remainder_coefficient_count": 2,
+      "retained_squarefree_factor_terms": 38,
+      "reunion_coefficient_count": 10,
+      "slot_values": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "smaller_cap_negative_detected": true,
+      "target_coefficient_count": 10
+    },
+    {
+      "cutoff": 3,
+      "discarded_squarefree_factor_terms": 93,
+      "horizons": [
+        49,
+        91,
+        169,
+        49
+      ],
+      "literal_zero_slots": 4,
+      "primes": [
+        7,
+        7,
+        13
+      ],
+      "primitive_factor_copies": 30,
+      "remainder_coefficient_count": 56,
+      "retained_squarefree_factor_terms": 115,
+      "reunion_coefficient_count": 23,
+      "slot_values": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          -1,
+          1,
+          -1
+        ],
+        [
+          -1,
+          1,
+          -1,
+          1
+        ]
+      ],
+      "smaller_cap_negative_detected": true,
+      "target_coefficient_count": 23
+    },
+    {
+      "cutoff": 2,
+      "discarded_squarefree_factor_terms": 5,
+      "horizons": [
+        49,
+        91,
+        49
+      ],
+      "literal_zero_slots": 2,
+      "primes": [
+        7,
+        13
+      ],
+      "primitive_factor_copies": 6,
+      "remainder_coefficient_count": 4,
+      "retained_squarefree_factor_terms": 19,
+      "reunion_coefficient_count": 8,
+      "slot_values": [
+        [
+          0,
+          1,
+          -1
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "smaller_cap_negative_detected": false,
+      "target_coefficient_count": 8
+    }
+  ],
+  "proof_bytes": 20252,
+  "proof_sha256": "a6aa7ab8925eac3f1f514b6e4138baa87735e3902fa3c5a78679480c7cf925ab",
+  "scope": "exact integer primitive-necklace counts and literal squarefree coefficient reunion in physical norm rectangles",
+  "status": "PASS"
+}
