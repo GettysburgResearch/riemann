@@ -1,0 +1,55 @@
+{
+  "status": "PROPOSED standalone component; no independent review",
+  "base_commit": "c63b5aaa5d53dd183abb20299cea4628f0ab57b7",
+  "recovery_commit": "10ef39727235755854ac049a284be09963658120",
+  "files": [
+    {
+      "path": "MATHEMATICS.md",
+      "bytes": 15398,
+      "sha256": "c6332a8898018a38a2376f6c440cb4cc87abf2db4a5f4356ad584ec04e146a4e",
+      "git_blob": "92483bf74ebd47d16c900c0c93c688495dd6c51f"
+    },
+    {
+      "path": "PUBLICATION.md",
+      "bytes": 1715,
+      "sha256": "f88a6443e96bedb4a309bba9554893837a197076333fffc4bcd17726e57de8fb",
+      "git_blob": "d66b663538f79babb6615496d8816807a9e66248"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4035,
+      "sha256": "ea03d861136dc8912e7221be9cbf2a20ff2c9115719a6e190b35c3e792f2a648",
+      "git_blob": "a80a7a56681c3997865dfa47c965d49886c26b51"
+    },
+    {
+      "path": "VALIDATION.md",
+      "bytes": 4616,
+      "sha256": "2d201e196ad64b9f7733fad5f57c32c3d60af0699ddec29a3d107031aba34f21",
+      "git_blob": "33f1c22159273d8790b6bb23fa361dbad31dd01f"
+    },
+    {
+      "path": "checks/check_singletons.py",
+      "bytes": 9984,
+      "sha256": "8be45973cbf3830234866a78e0d5fc50794a54fcc2ad1b86623e443308e8dfa6",
+      "git_blob": "dfd96a84474b6a545d4c5d3dfed9b6fe14522019"
+    },
+    {
+      "path": "checks/verify_manifest.py",
+      "bytes": 850,
+      "sha256": "5f7353976969b1e03eebe3212ee307ea123fa1b8804bbcd457697859cfc27756",
+      "git_blob": "9168a909a139015291a38755f10143466df68fe4"
+    },
+    {
+      "path": "results/checks.json",
+      "bytes": 13705,
+      "sha256": "fa5fc59e0ed5d34fd147104f0f52af614e8a278bd985b4215ec2b681f83ea0f4",
+      "git_blob": "11d1b5f19d50ac6c299e3811f1bfabbc6b5be286"
+    },
+    {
+      "path": "results/checks_optimized.json",
+      "bytes": 13705,
+      "sha256": "fa5fc59e0ed5d34fd147104f0f52af614e8a278bd985b4215ec2b681f83ea0f4",
+      "git_blob": "11d1b5f19d50ac6c299e3811f1bfabbc6b5be286"
+    }
+  ]
+}
