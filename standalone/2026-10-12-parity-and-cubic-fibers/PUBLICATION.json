@@ -1,0 +1,130 @@
+{
+  "schema": "riemann.research-publication.v1",
+  "repository": "GettysburgResearch/riemann",
+  "pull_request": 930,
+  "url": "https://github.com/GettysburgResearch/riemann/pull/930",
+  "branch": "research/parity-and-cubic-fibers-20261012",
+  "source_commit": "c07b9f653b8d0eb82d9f056d935a4ecef6770f56",
+  "source_tree": "0f72b503dc11e229e674db1f4d99e8559e8658b3",
+  "parent_commit": "086bf0560c0c2679a1fe41418f583d2c5ca743c3",
+  "parent_tree": "45b1de6138270a914b0311a604293bd16218898c",
+  "observed_at_utc": "2026-10-12 23:54:39 UTC",
+  "source_diff": {
+    "commits": 1,
+    "added_files": 17,
+    "modified_existing_files": 0,
+    "deleted_files": 0
+  },
+  "verification": {
+    "all_source_files_refetched_at_source_commit": true,
+    "committed_text_equal_to_submitted_utf8": true,
+    "all_git_blob_hashes_recomputed_and_matched": true,
+    "commit_parent_and_tree_verified": true,
+    "source_diff_verified": true
+  },
+  "scope": "Publication and byte identity only; not proof truth, an analytic theorem, human peer review, or integration. Later review metadata does not change this frozen mathematical source.",
+  "source_files": [
+    {
+      "path": "standalone/2026-10-12-parity-and-cubic-fibers/ARITHMETIC_PARITY_OBSTRUCTION.md",
+      "bytes": 20193,
+      "sha256": "b18d210c8aac21e477ad031a89a9432c9eeb86a60917d06624a4081b603ab6ff",
+      "git_blob": "d90f394a8026eb983da28edb82a5fba8fa91bb29"
+    },
+    {
+      "path": "standalone/2026-10-12-parity-and-cubic-fibers/BESSEL_CHANNELS_AND_LEAKAGE.md",
+      "bytes": 38165,
+      "sha256": "c97e7c1befc3c1099de6a0b30a03c81ecb08b1acfe3ff42467c0b58901498579",
+      "git_blob": "a8aaee5cb912d74da6f96bdae10a3f96488fe88f"
+    },
+    {
+      "path": "standalone/2026-10-12-parity-and-cubic-fibers/CUBIC_FIBERS_AND_RIESZ_PRODUCTS.md",
+      "bytes": 25697,
+      "sha256": "026d1a3d6f458b872128fa77fbe683a35cc38a799e822d29760dbc566c2bd91e",
+      "git_blob": "f8824c18f1ba54f0ab863f2a4b0fc92a55bc01e9"
+    },
+    {
+      "path": "standalone/2026-10-12-parity-and-cubic-fibers/PARITY_DAMPED_MOMENTS.md",
+      "bytes": 38285,
+      "sha256": "fed521f2865b428e5a0eebd1d6f36ae09cc6d51f513952547ba6087910d0d232",
+      "git_blob": "dbc13956b5eb5f3b5b2028dc9ebcd81a7c48a8c3"
+    },
+    {
+      "path": "standalone/2026-10-12-parity-and-cubic-fibers/README.md",
+      "bytes": 13477,
+      "sha256": "54fc1389b5fb2b4bc625dc2c4a364af67fc02211bb22a7e07786d4164ee5718b",
+      "git_blob": "b0521476c95d4cfa30561489530dff2fa02bc03a"
+    },
+    {
+      "path": "standalone/2026-10-12-parity-and-cubic-fibers/SOURCE_MANIFEST.json",
+      "bytes": 3636,
+      "sha256": "855df054e19f394d9d1d08ac7b4fbdd72f85aba92f7a0582439ca9bdf8b60ad2",
+      "git_blob": "9f6d8fd01615ce895633363a9eb3a2d9c579c240"
+    },
+    {
+      "path": "standalone/2026-10-12-parity-and-cubic-fibers/VALIDATION.md",
+      "bytes": 8061,
+      "sha256": "59dec1cac077dc3b8ebdb9433bb8b233a7ccf61b5fef11110b28ef710a996108",
+      "git_blob": "6177d044fe938670d1c89302d9c8758ab7b9f4b8"
+    },
+    {
+      "path": "standalone/2026-10-12-parity-and-cubic-fibers/checks/verify_bessel_channels.py",
+      "bytes": 21881,
+      "sha256": "416f54154aa9b02261a0c07fbfba5fc9d84e414ab195d87c2944f22ce1c88da6",
+      "git_blob": "049e24f19146bd5d2b2f381f117f09644d1619af"
+    },
+    {
+      "path": "standalone/2026-10-12-parity-and-cubic-fibers/checks/verify_cubic_fibers.py",
+      "bytes": 23564,
+      "sha256": "3c600e421b0664654830e09429108ff0798db94061d1f5684ccbe6ccde228114",
+      "git_blob": "a337db59569e4ec14464a0fcea96bea6606d354e"
+    },
+    {
+      "path": "standalone/2026-10-12-parity-and-cubic-fibers/checks/verify_parity_damping.py",
+      "bytes": 14661,
+      "sha256": "7a855e686be65379abe64e13ed0694ed3237dc9f2d3c9dc71270402f8bb46676",
+      "git_blob": "7c60663318107292f112930d6a2aa210bc5a31c2"
+    },
+    {
+      "path": "standalone/2026-10-12-parity-and-cubic-fibers/results/bessel_channels.json",
+      "bytes": 4639,
+      "sha256": "db88a9ab641e11c13686f4aac00339906ce23e2965a36ee4e99e7a6abd9cd943",
+      "git_blob": "3c7f09eadc76f5dca162ea0855831072f40c1ba1"
+    },
+    {
+      "path": "standalone/2026-10-12-parity-and-cubic-fibers/results/bessel_channels_optimized.json",
+      "bytes": 4639,
+      "sha256": "db88a9ab641e11c13686f4aac00339906ce23e2965a36ee4e99e7a6abd9cd943",
+      "git_blob": "3c7f09eadc76f5dca162ea0855831072f40c1ba1"
+    },
+    {
+      "path": "standalone/2026-10-12-parity-and-cubic-fibers/results/cubic_fibers.json",
+      "bytes": 8538,
+      "sha256": "68c4c47d5c1389ec2c63f6546b01ede6a9e25d6b161b996913a3a837c34df64e",
+      "git_blob": "5724cfbc17d1f082ae2553a571598788c71d4da3"
+    },
+    {
+      "path": "standalone/2026-10-12-parity-and-cubic-fibers/results/cubic_fibers_optimized.json",
+      "bytes": 8538,
+      "sha256": "68c4c47d5c1389ec2c63f6546b01ede6a9e25d6b161b996913a3a837c34df64e",
+      "git_blob": "5724cfbc17d1f082ae2553a571598788c71d4da3"
+    },
+    {
+      "path": "standalone/2026-10-12-parity-and-cubic-fibers/results/parity_damping.json",
+      "bytes": 5980,
+      "sha256": "2d11b779c54f6710a5a3a439fd3f9493d955b44602b482d307ecf2d38e3c7253",
+      "git_blob": "b7654d598cd62b0e256d17c5ad29a4a59bfafe61"
+    },
+    {
+      "path": "standalone/2026-10-12-parity-and-cubic-fibers/results/parity_damping_optimized.json",
+      "bytes": 5980,
+      "sha256": "2d11b779c54f6710a5a3a439fd3f9493d955b44602b482d307ecf2d38e3c7253",
+      "git_blob": "b7654d598cd62b0e256d17c5ad29a4a59bfafe61"
+    },
+    {
+      "path": "standalone/2026-10-12-parity-and-cubic-fibers/sources/repository_sources.json",
+      "bytes": 23563,
+      "sha256": "e13e0ebabd9b734906187d2f676ce6c9fc3dd815caccfbc801069f4887d902e6",
+      "git_blob": "bb7b724c4b051c25d213070d72eaff130aeb7671"
+    }
+  ]
+}
