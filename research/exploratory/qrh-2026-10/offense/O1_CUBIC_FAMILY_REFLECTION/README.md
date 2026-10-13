@@ -30,7 +30,7 @@ What was actually run (Python 3.13 + numpy + sympy, single process, nice 5):
   python3 ledger.py                          -> results/ledger.txt (exact rationals, asserts pass)
   python3 kubota_mobius_check.py 250 OUT     -> results/kubota_mobius_check.json (about 2 min)
   python3 dual_ms.py X H1,...,Hk OUT         for X in {4000, 20000, 50000, 100000}
-                                             -> results/dual_ms_X*.json/.log (1.5 s, 24 s, 86 s, see log)
+                                             -> results/dual_ms_X*.json/.log (1.5 s, 24 s, 86 s, 440 s)
 Smallest remaining gap: (LS*_kappa) of Section 7: a cubic large sieve for the ONE coefficient
   sequence b_n = mu(n) gamma_2(n) xi(n) (= Hecke x ray x sextic Gauss sum), with excess (calH X)^kappa,
   kappa < 4/7 (beats 11/12), kappa = 8/15 (7/8), kappa = 1/2 (5/6). Equivalently, at the structural
@@ -323,19 +323,29 @@ X = 50 000 (6663 columns):
 | 50000 | 20159 | 0.931 (0.700, 0.065) | **3.39** (2.55, 0.236) | 0.938 | 0.940 |
 | 100000 | 40315 | 0.933 (0.801, 0.081) | **2.86** (2.46, 0.249) | 0.941 | 0.938 |
 
-X = 100 000: see `results/dual_ms_X100000.log` (appended in §6.1 if finished).
+X = 100 000 (13 320 columns; 440 s):
+
+| H | rows | `μγ₂` | `γ₂` | random | `μ`·sign |
+|---|---|---|---|---|---|
+| 6250 | 2521 | 0.932 (0.148, 0.020) | **8.31** (1.32, 0.175) | 0.952 | 0.919 |
+| 25000 | 10080 | 0.948 (0.408, 0.033) | **5.70** (2.45, 0.201) | 0.940 | 0.935 |
+| 100000 | 40315 | 0.940 (0.707, 0.053) | **4.02** (3.02, 0.227) | 0.943 | 0.943 |
+| 200000 | 80622 | 0.937 (0.804, 0.066) | **3.38** (2.90, 0.238) | 0.943 | 0.943 |
 
 Readings.
 * **`μγ₂` has no excess.** At every cell, `M ≤ 0.97 rows·‖b‖²`, within ~5 % of random phases. In
   particular, with fewer rows than columns, `M` is *below* the `(rows+cols)` sieve and far below BGL
   (ratio ≤ 0.08 at X = 5·10⁴).
 * **`γ₂` shows the Gauss-sum excess with the predicted law.** At `H = X`, `(ratio − 1)/X^{1/3}` is
-  0.065, 0.063, 0.065 for X = 4·10³, 2·10⁴, 5·10⁴. At `H = X/16`, `(ratio − 1)/(X²/H)^{1/3}` is
-  0.056, 0.058, 0.062. This is the `X^{5/3}H^{2/3}` Kubota-pole term of the cubic numerator-`h`
+  0.065, 0.063, 0.065, 0.065 for X = 4·10³, 2·10⁴, 5·10⁴, 10⁵. At `H = X/16`,
+  `(ratio − 1)/(X²/H)^{1/3}` is 0.056, 0.058, 0.062, 0.062. The excess over BGL's own scale stays
+  at a fixed fraction (BGL-normalized ratio 0.16–0.24): the `(HX)^{2/3}` term is attained. This is the `X^{5/3}H^{2/3}` Kubota-pole term of the cubic numerator-`h`
   series, i.e. the BGL/HB extremizer mechanism of DR/dFDH, seen at finite size.
-* Fitting `c′(X²/H)^{1/3}` to the `μγ₂` excess gives `c′ ≤ 0`. At `X = 5·10⁴`, `H = 3125`, the
-  `μγ₂` ratio is 0.849 against 0.944 for random phases. Any BGL-type component is below 1 % of the
-  `γ₂` control's constant.
+* Fitting `c′(X²/H)^{1/3}` to the `μγ₂` excess gives `c′ ≤ 0`. At `X = 10⁵`, `H = 6250`, the
+  `μγ₂` ratio is 0.932 against 0.952 for random phases, with `(X²/H)^{1/3} = 117`. Any BGL-type
+  component is below about 1 % of the `γ₂` control's constant 0.062. The BGL-normalized ratio of
+  `μγ₂` *falls* with X, from 0.043 to 0.022 to 0.020 at `H = X/16`. For `γ₂` it stays flat at
+  0.16–0.18.
 * Caveats:
   * split primes only;
   * primary rows only;
@@ -412,7 +422,12 @@ vector make the index-`p` coefficient proportional to `γ₋₁(p)` with a Hecke
 
 ## 9. Not done
 
-* The `X = 10⁵` row of §6 is pending at the time of writing (see the log).
+* No direct numerical test of the load-bearing imported claim (Lemma 2: row conductor `N(r)`, so
+  `N(h)⁴` for the cubic family). A finite test is feasible: the transition scale of the smoothed
+  `Σ_n μγ₂ conj χ_n(h)² U(N n/X)` (all moduli, inert primes included) for one small prime `h`, at
+  `X ≈ N(h)⁴` versus `N(h)²`. It needs moduli up to about `30X` and was not run. The `γ₂` control of
+  §6 reproduces the cubic Kubota residue bookkeeping (`X^{5/3}H^{2/3}`), which is indirect support
+  only.
 * G2-type WMDS for the quartic test bed (§5) was not checked.
 * `Q(ζ₁₂)`, `Q(ζ₉)` were not examined.
 * dFDH: abstract only; its operator-norm conjecture was not read.

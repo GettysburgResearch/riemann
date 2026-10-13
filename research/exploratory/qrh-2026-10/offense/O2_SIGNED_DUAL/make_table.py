@@ -11,11 +11,13 @@ rows = []
 for p in sys.argv[1:]:
     rows += json.load(open(p))
 rows.sort(key=lambda r: (r["rho"], r["D"]))
-print("| D | ρ | H | 𝓜_D | Z | S = 𝓜_D − Z | Off/Diag | P (proxy) | Prin | \\|A₁(D)\\| | e = log(P/\\|S\\|)/log D | 1 − ρ | (1 − ρ)/6 |")
-print("|---|---|---|---|---|---|---|---|---|---|---|---|---|")
+print("| D | ρ | H | 𝓜_D | Z | S = 𝓜_D − Z | Off/Diag | \\|S\\|/s_rand | P (proxy) | Prin | \\|A₁(D)\\| | e = log(P/\\|S\\|)/log D | 1 − ρ | (1 − ρ)/6 |")
+print("|---|---|---|---|---|---|---|---|---|---|---|---|---|---|")
 for r in rows:
-    print("| %d | %.2f | %.0f | %.3f | %.3f | %.4f | %.2e | %.0f | %.3f | %.1f | %.3f | %.2f | %.3f |" % (
-        r["D"], r["rho"], r["H"], r["M"], r["Z"], r["S"], r["offdiag_rel"], r["P"], r["Prin"], r["A1"],
+    # independent-exponential row model: s_rand = Diag * sqrt(sum phi^2)/sum phi ~ 0.658 Diag / sqrt(H)
+    srand = r["Diag"] * math.sqrt((1 / math.sqrt(3)) * r["H"]) / ((2 / math.sqrt(3)) * r["H"])
+    print("| %d | %.2f | %.0f | %.3f | %.3f | %.4f | %.2e | %.2f | %.0f | %.3f | %.1f | %.3f | %.2f | %.3f |" % (
+        r["D"], r["rho"], r["H"], r["M"], r["Z"], r["S"], r["offdiag_rel"], abs(r["S"]) / srand, r["P"], r["Prin"], r["A1"],
         r["saving_exp"], 1 - r["rho"], (1 - r["rho"]) / 6))
 
 
