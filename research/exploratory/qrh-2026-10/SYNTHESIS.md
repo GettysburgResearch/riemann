@@ -27,8 +27,8 @@ methods *can* and *cannot* do, and where a push could move the constant.
 > **Update, 12-13 Oct 2026: constructive "offense" wave.** Eight lines tried to break the walls
 > rather than map them ([offense/README.md](offense/README.md)). No exponent moved; RH remains
 > unproved. The wave's PROPOSED reading is that every wall it examined sits on the principal member or on a
-> principal-row main term: the principal rows on the Oct 5 side; on the Sep 30 side, a main term ≈ 1/L(1, ψη)
-> aligned with the bias component, which falsifies the hoped-for non-alignment (NA) as stated (finite tests). It also ranked
+> principal-row main term: the principal rows on the Oct 5 side; on the Sep 30 side, the bias component's pairing is the
+> probe's own target signal, so the hoped-for non-alignment (NA) is circular. It also ranked
 > the sharpest open statements by payoff:
 > * a cubic large sieve for the single sequence `μγ₂ξ` (`κ = 1/2` gives 5/6; finite numerics show no
 >   BGL excess);

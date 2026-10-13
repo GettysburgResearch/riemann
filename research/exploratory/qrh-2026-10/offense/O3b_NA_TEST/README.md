@@ -4,7 +4,8 @@
 Status: EXPLORATION, OFFENSE/EXPERIMENTAL. Round 2 (Section 8) supersedes the round-1 verdict.
   The round-1 "falsifying pattern" (principal-row alignment, Sections 0, 5.1-5.2, 6-7) is an
   ARTIFACT of the toy row weight exp(-x^2). With [S30]'s log-Gaussian W_G it disappears: R_exc sits
-  at the noise floor, and only the mu -> 1 control shows a residue, which is the Moebius signature.
+  at the noise floor (Q = 256, 1024, 4096). Only the mu -> 1 control shows a residue, with
+  signal/noise 2.4, 3.6, 7.1: the Moebius signature.
   Round-2 verdict (PROPOSED): the main term of <A^exc, B> is the target signal c_S A_eta f_eta itself
   (same eta, same s). It DOES NOT CANCEL usefully: subtracting it from both sides empties the
   contradiction, so (NA') gives no sigma0, and (NA) is circular. No half-plane below 7/8 is obtained.
@@ -23,7 +24,7 @@ Exact sources or dependencies: [S30] = OpenAI "Quasi-RH ... 7/8" (30 Sep 2026), 
   ../../SEXTIC_THETA_S6.md (sextic residue A_1 ~ 0.22 at norm <= 3e5). Gauss-sum conventions follow
   ../../a2/eis.py and ../../a2/s6_gauss.c (read, not modified; eis.py imported read-only by
   scripts/validate.py).
-What was actually run (single-threaded numpy, about 25 CPU-minutes in total; no run over 6 minutes):
+What was actually run (single-threaded numpy, about 35 CPU-minutes in total; no run over 6.5 minutes):
   scripts/validate.py: the toy's Gauss sums and characters against eis.py brute force. 216 Gauss
     sums and the residue symbols agree to 1e-8. Identity O3.1 holds to 1e-15.
   scripts/na_run.py Q: the annulus grid, with P_a = 1 ... 1024, 24 random baselines each.
@@ -411,17 +412,22 @@ Rerun with `W_G` (`VMODE=loggauss`; rows up to the stated `CMAX`; everything els
 |---|---|---|---|---|---|---|---|---|---|
 | 256 | 588 | `136 Z` | 0.0013 | 0.053 | 0.037 | 0.040 | 0.068 | 0.029 | 0.04 / 2.38 |
 | 1024 | 2 896 | `27.6 Z` | 0.0091 | 0.043 | 0.006 | 0.011 | 0.018 | 0.016 | 0.57 / 3.58 |
-| 4096 | 14 263 | `11.2 Z` | (run with rows to `1.6·10⁵` still in progress at write time; see results/kublg_Q4096.log) | | | | | | |
+| 4096 | 14 263 | `11.2 Z` | 0.0017 | 0.046 | 0.008 | 0.006 | 0.011 | 0.009 | 0.19 / 7.09 |
 
-(These are the final checkpoint, `q_s ≤ 8·10⁴`. Over the six checkpoints `Y = 1.4·10⁴ … 8·10⁴` at
-`Q = 1024`, `θ` stays at `0.005–0.052`, at or below about 2× the floor, while `μ → 1` stays at
-signal/noise `2.6–3.6`. In the `ξ`-free control, `μ → 1` reaches signal/noise `8–12` at `Q = 1024`
-and `θ` stays `≤ 1.5`.)
+(These are the final checkpoint, `q_s ≤ 8·10⁴`.)
+* Over the checkpoints `Y = 10⁴ … 8·10⁴`:
+  * at `Q = 1024`, `θ` stays at `0.005–0.052`, at or below about 2× the floor, while `μ → 1` stays at
+    signal/noise `2.6–3.6`;
+  * at `Q = 4096`, `θ` stays `≤ 2.1×` the floor, while `μ → 1` stays at signal/noise `5.0–7.1`.
+* `R(μ → 1)` is roughly flat in `Q` (`0.053, 0.043, 0.046`), while the floor falls (`0.029, 0.016,
+  0.009`).
+* In the `ξ`-free control, `μ → 1` reaches signal/noise `8–12` (`Q = 1024`) and `13–25`
+  (`Q = 4096`), while `θ` stays `≤ 1.9`.
 
 * With the [S30] weight, the actual coefficients `θ = μ conj γ₂²` give `R_exc` **at or below the
   noise floor**.
-* **Removing `μ` alone** (`μ → 1`) gives a persistent excess: signal/noise `2.4–3.6`, at every
-  checkpoint.
+* **Removing `μ` alone** (`μ → 1`) gives a persistent excess at every checkpoint, with signal/noise
+  rising with `Q`: `2.4`, `3.6`, `7.1` at `Q = 256`, `1024`, `4096`.
 * Random signs or phases in place of `μ` stay at noise (signal/noise `≤ 1.6`). The `m`-phase
   baseline at `Q = 256` is `2.3×` its floor, a small-`#m` effect (`#m = 930`).
 * This is the Möbius signature (EMPIRICAL): the part of `⟨A^exc, B⟩` that is not noise is a
@@ -509,4 +515,5 @@ and `θ` stays `≤ 1.5`.)
 
 Files for round 2:
 * `scripts/na_kubota.py`: new `VMODE=loggauss` and `CMAX` options.
+* `scripts/summarize_lg.py`: tables for §8.1.
 * Outputs: `results/kublg_Q{256,1024,4096}.json` and `.log`.

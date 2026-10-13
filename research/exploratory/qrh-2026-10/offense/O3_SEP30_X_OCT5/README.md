@@ -22,6 +22,12 @@ Smallest remaining gap: the non-alignment statement (NA) of Section 2.3: a savin
   with the cubic-theta row. (NA) is NOT an instance of any Oct 5 mean square.
 ```
 
+> **Coordinator erratum (13 Oct 2026, after O3b round 2).** (NA) turned out to be **circular**: the
+> exceptional pairing it bounds is the probe's own target signal `c_S A_eta f_eta + E`
+> ([../O3b_NA_TEST/README.md](../O3b_NA_TEST/README.md) §8). So the CONDITIONAL value 926/1077 below rests on a
+> statement equivalent to the zero-free conclusion, and is void as a reduction. The rest of this note
+> (Prop. O3.1, Prop. O3.2, the floor and Lemma 18.1 findings) is unaffected.
+
 RH remains unproved. Both manuscripts are external and unreviewed.
 
 ## 0. Bottom line

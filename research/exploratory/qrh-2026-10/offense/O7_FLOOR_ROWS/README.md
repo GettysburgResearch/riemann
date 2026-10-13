@@ -21,6 +21,11 @@ Smallest remaining gap: FB#(delta0, kappa) (FLOOR_ROWS.md Sec. 5.1) with kappa >
   capped at kappa <= 1/2 (PROPOSED/HEURISTIC).
 ```
 
+> **Coordinator erratum (13 Oct 2026).** Every "Gram 0" value below (926/1077, 28/33, 38/45) assumes
+> O3's (NA). O3b round 2 found (NA) circular ([../O3b_NA_TEST/README.md](../O3b_NA_TEST/README.md) §8). Those values are
+> void as reductions. The floor-row closed form, the kappa = 1/4 result for the all-rows route and the class
+> barrier are unaffected.
+
 RH remains unproved. "sigma0" is the boundary one external architecture would deliver under the
 stated hypotheses.
 
