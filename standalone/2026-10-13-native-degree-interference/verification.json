@@ -1,0 +1,54 @@
+{
+  "checks": {
+    "direct_algebraic_phase_value": 1,
+    "direct_mobius_value": 1,
+    "discarding_degree_interference_changes_source": 1,
+    "integer_real_gram": 68,
+    "largest_degree_diagonal": 1,
+    "literal_unit_action": 2328,
+    "negative_singleton_sector": 1,
+    "ordered_quartets_reconstructed": 3026,
+    "parent_largest_moment_agreement": 1,
+    "phase_witness_rationality": 1,
+    "positive_singleton_sector": 1,
+    "resource_or_type_guard_rejection": 5,
+    "saved_case_full_reconstruction": 1,
+    "singleton_matrix_not_positive_semidefinite": 1,
+    "strict_finite_phase_improvement": 1,
+    "tuple_versus_degree_gram": 2,
+    "tuple_versus_product_singleton_gram": 2,
+    "witness_degree_cap": 45732
+  },
+  "phase_witness": {
+    "D": 256,
+    "H": 338,
+    "native": 3021246,
+    "other_phase_moment": [
+      8892106,
+      3
+    ],
+    "phase": "(-2+i sqrt(5))/3",
+    "saving": [
+      171632,
+      3
+    ]
+  },
+  "scope": "Independent tuple/grade/product assemblies sharing one authenticated arithmetic helper; not independent mathematical review.",
+  "small_cases": [
+    {
+      "D": 32,
+      "H": 13,
+      "columns": 5,
+      "rows": 54,
+      "singleton": 1080
+    },
+    {
+      "D": 64,
+      "H": 79,
+      "columns": 7,
+      "rows": 294,
+      "singleton": 2496
+    }
+  ],
+  "status": "PASS_FINITE_GLOBAL_RECONSTRUCTIONS"
+}

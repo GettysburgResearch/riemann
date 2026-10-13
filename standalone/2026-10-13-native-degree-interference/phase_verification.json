@@ -1,0 +1,34 @@
+{
+  "checks": {
+    "arithmetic_source_binding": 1,
+    "copy_imaginary_deletion_identity": 160,
+    "gamma_native_derivative": 13,
+    "gamma_polynomial_identity": 39,
+    "gamma_reciprocal_recurrence": 12,
+    "gamma_zero_at_native_parameter": 13,
+    "imaginary_prime_degree_bound": 640,
+    "literal_sixth_copy_mask": 2720,
+    "moment_excess_identity": 800,
+    "phase_conjugation": 640,
+    "phase_difference_factor": 640,
+    "positive_count_domination": 160,
+    "quartic_logarithmic_denominator": 1,
+    "quartic_phase_excess": 1,
+    "quartic_phase_threshold": 1,
+    "rational_unit_phase": 20,
+    "sixth_copy_physical_height": 8,
+    "strict_phase_obstruction_condition": 800,
+    "theta_proportional_mask_bound": 160
+  },
+  "example": {
+    "critical_phase_exponent": "9/32",
+    "h": "21/20",
+    "k": 2,
+    "logarithmic_denominator_power": 9,
+    "lower_power_excess": "1/8",
+    "phase_exponent": "1/4"
+  },
+  "predicates_including_setup": 6829,
+  "scope": "Exact Gamma numerator recurrences, rational phase algebra, complete small hard-window ideal columns, sixth-copy masks and exponent identities. No analytic asymptotic or prime-ideal theorem is tested.",
+  "status": "PASS_FINITE_PHASE_CONTROLS_ONLY"
+}
