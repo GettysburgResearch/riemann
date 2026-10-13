@@ -103,6 +103,33 @@ rec("gap |cols-rows| for amplified family", simplify(abs(1 + lam - h)))
 #    D^{1+h/2} <= H D N(r)^(-eta) iff eta <= h/(4 lam) (N(r) = L^2)
 rec("TM_eta GRH-consistent range (h=1, N(r)=L^2)", "eta <= 1/(4 lam)")
 
+# 10. Round 2: the j = 4 design (plain prime amplifier e = 1; R3 law B_{p,4} = Ramanujan, cost N(l)).
+#     Post-reflection, rows k <= Hd = D L^(1-delta) (H = D L^(1+delta)), P-normalised target D L^(1+kappa).
+#     Column counts J (base-L exponents above D): per-l reflected length qY = L Hd^2/D, l in [1, L].
+from sympy import Piecewise, minimum, Interval, oo
+dl = symbols("delta_", nonnegative=True)
+def best_sigma(kappa_expr, name):
+    f = kappa_expr + R(5, 6) * dl          # sigma = 11/12 + lam*(f - 1/6)/2
+    cands = [R(k, 120) for k in range(0, 721)]
+    vals = [(f.subs(dl, c), c) for c in cands]
+    m, at = min(vals, key=lambda t: t[0])
+    rec(f"{name}: min over delta of kappa+5delta/6 = {m} at delta = {at}; sigma = 11/12 + lam*({m - R(1, 6)})/2", "")
+    return m, at
+# (i) C-S over l + QLS per l (Prop. R with j=4 cost):  L Hd + L^2 Hd^2/D  ->  kappa = max(0, 1-delta, 3-2delta)
+mi, _ = best_sigma(Max(0, 1 - dl, 3 - 2 * dl), "J4 (i) C-S + QLS per l")
+# (ii) optimal row-blind joint sieve over (k; l, n'): Hd + L^2 Hd^2/D -> kappa = max(0, -delta, 3-2delta)
+mii, _ = best_sigma(Max(0, -dl, 3 - 2 * dl), "J4 (ii) optimal joint sieve, rows+columns")
+# (ii') same, if the j=4 congruence were free and no phase survived: Hd + L Hd^2/D
+mfree, _ = best_sigma(Max(0, -dl, 2 - 2 * dl), "J4 (ii') cost-free congruence, no phase")
+# ideal: single smooth column m of length D L (not available): Hd + Hd^2/(D L)
+mid, _ = best_sigma(Max(0, -dl, -2 * dl), "ideal single-variable reflection (not available)")
+assert mi == R(5, 4) and mii == R(5, 4) and mfree == R(5, 6) and mid == 0
+assert mi > R(1, 6) and mii > R(1, 6) and mfree > R(1, 6) and mid < R(1, 6)
+# Infeasibility: no delta >= 0 with max(0, 3 - 2 delta) + 5 delta/6 < 1/6 (any row-blind joint sieve has norm >= #columns)
+# branch delta >= 3/2: 5 delta/6 < 1/6 => delta < 1/5 (contradiction); branch delta < 3/2: 3 - 7 delta/6 < 1/6 => delta > 17/7 (contradiction)
+assert solve(R(5, 6) * dl - R(1, 6), dl) == [R(1, 5)] and solve(3 - R(7, 6) * dl - R(1, 6), dl) == [R(17, 7)]
+rec("J4 required saving below the column count at delta=0 (base L)", R(4) - (1 + R(1, 6)))
+
 with open(__import__("os").path.join(__import__("os").path.dirname(__import__("os").path.abspath(__file__)),
                                       "results", "amp_ledger.out"), "w") as fh:
     for n, v in out:

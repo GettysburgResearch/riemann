@@ -18,3 +18,8 @@ Design (d) trivial off-diagonal: sigma: 5*h/12 + 1/2
 Twist table (e, own exp, own order, partner exp, partner order): [(1, 2, 3, 0, 1), (2, 3, 2, 5, 6), (3, 4, 3, 4, 3), (4, 5, 6, 3, 2), (5, 0, 1, 2, 3)]
 gap |cols-rows| for amplified family: Abs(-h + lam + 1)
 TM_eta GRH-consistent range (h=1, N(r)=L^2): eta <= 1/(4 lam)
+J4 (i) C-S + QLS per l: min over delta of kappa+5delta/6 = 5/4 at delta = 3/2; sigma = 11/12 + lam*(13/12)/2: 
+J4 (ii) optimal joint sieve, rows+columns: min over delta of kappa+5delta/6 = 5/4 at delta = 3/2; sigma = 11/12 + lam*(13/12)/2: 
+J4 (ii') cost-free congruence, no phase: min over delta of kappa+5delta/6 = 5/6 at delta = 1; sigma = 11/12 + lam*(2/3)/2: 
+ideal single-variable reflection (not available): min over delta of kappa+5delta/6 = 0 at delta = 0; sigma = 11/12 + lam*(-1/6)/2: 
+J4 required saving below the column count at delta=0 (base L): 17/6
