@@ -38,7 +38,7 @@ def norm2(re, om):
 def main():
     q, d = int(sys.argv[1]), int(sys.argv[2])
     g0, dl = dlog_table(q)
-    primes = primes_upto(2 * d + 2, q)
+    primes = primes_upto(d, q)
     sq = {k: [n for n in monics(k, q) if mobius(n, q, primes) != 0] for k in range(0, d + 1)}
     sq[0] = [(1,)]
 

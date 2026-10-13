@@ -22,10 +22,13 @@ What was actually run:
                              optimal} x floor {51/100, 1/2} x saving (floor only / every bin).
   scripts/floor_rows_scan.py same model with the exact delta -> delta0+ limit bin, and raised floors
                              a0 = (1+delta0)/2 with floor saving kappa*delta0.
-  scripts/closed_forms.py    sympy closed forms on the LP active sets (checked against the LP).
+  scripts/closed_forms.py    sympy closed forms on the LP active sets; check_closed_vs_lp.py
+                             compares them with the exact LP (30/30 exact matches).
+  scripts/counts_needed.py   exact row-count requirement above the raised floor.
   scripts/full_model_floor.py  full Part II float model (threshold_calculus imported unchanged and
-                             monkeypatched in memory) with paper row counts; EMPIRICAL model values.
-  Outputs: floor_rows_lp.out, floor_rows_scan.out, closed_forms.out, results/*.log|json.
+                             monkeypatched in memory) with manuscript or DH row counts; EMPIRICAL.
+  Outputs: floor_rows_lp.out, floor_rows_scan.out, closed_forms.out, counts_needed.out,
+  results/*.log|json.
 Smallest remaining gap: the signed raised-floor estimate FB#(delta0, kappa) of Sec. 5 with
   kappa > 5/6 (any gain over 6/7 with Gram 0); kappa = 1 at delta0 = 1/3 gives 28/33. The constructed
   all-rows-minus-non-floor route reaches only kappa = 1/4 (CONDITIONAL), and every
@@ -38,9 +41,10 @@ would deliver under the stated hypotheses. It is not a theorem.
 
 ## 0. Results
 
-All values are exact LP optima with verified rational dual certificates (PROPOSED: they are exact
-statements about the exponent model, which itself transcribes the manuscript's stated lemma
-outputs; see hypothesis ARCH in FLOOR_BIN_BARRIER.md Sec. 4). "Gram 0" follows O3: the
+All values are exact LP optima with verified rational dual certificates. As statements about the
+LP model they are PROVED-HERE (exact duality, checked in Fractions). As statements about the
+manuscript they are PROPOSED: the model transcribes the manuscript's stated lemma outputs
+(hypothesis ARCH in FLOOR_BIN_BARRIER.md Sec. 4). "Gram 0" follows O3: the
 `P_a^{1/6}` branch `b/6` of Prop. 15.2 is removed and the `P_a^2/Y'` branch `2b - ly` is kept.
 Unless stated otherwise the energy lemma is the manuscript's and witnessed bins above the floor have
 density-hypothesis counts `R = 1 - delta` ("DH-rows").
@@ -76,7 +80,7 @@ Main findings.
    Sec. 2). Its bottleneck is the mollifier remainder on the floor rows. Every scheme of the form
    "approximate `1/L` by a family-structured Dirichlet polynomial of length at most the conductor,
    bound the remainder absolutely" is capped at kappa <= 1/2 (Sec. 4; PROPOSED, with a HEURISTIC
-   lower bound for the approximation error). Seven repairs were tried (Sec. 3). None reaches 5/6.
+   lower bound for the approximation error). Nine repairs were tried (Sec. 3, R0-R8). None reaches 5/6.
 4. **Smallest statement (OPEN):** FB#(delta0, kappa) with kappa > 5/6; kappa = 1 gives
    `sigma0 = 2(9+delta0)/(3(7+delta0))`. Ratios-recipe heuristics with a sextic Gauss-sum bias of
    size `U^{2/3}` make it plausible exactly up to delta0 = 1/3, which gives **28/33** (HEURISTIC).
@@ -259,12 +263,13 @@ the scheme's saving is proportional to the distance of the contour from the crit
 |---|---|---|---|
 | R0 | subtract on the *global* line `Re s = beta* + 20e` (where all rows are holomorphic) via the manuscript's own probe identity | Through the contour lemma, `S_F(central) = S_all(global) - sum_{a > a0} S_a(central_a)`. This is the architecture's own bin decomposition read backwards: `S_all(global)` is the high-side quantity the bins were introduced to bound, so the route is circular. Evaluating the non-floor rows on the global line instead costs `(beta* - a)(1 - ly)` per bin, about `0.15` in the Z-exponent for the near-floor bins | PROPOSED |
 | R1 | longer / unbalanced mollifier (front length X, dual U/X, mollifier V, `XV <= U`) | `max(V^{-delta0}, X^{-delta0}) >= U^{-delta0/2}`: mu = 1/2. Length beyond U leaves the diagonal range. Ideal mu <= 1 | PROPOSED (exact for this AFE) |
-| R2 | detach the reciprocal contour (s at `a1 > a0`, smaller remainder `U^{-delta1/4}`; or w held at 1/2) | Re s costs `1` per unit when w is held, or `(1 - ly + h + ell)/2` per unit of delta1 at the endpoint. The remainder gains `h mu delta1/2`. Net loss for every geometry with `h <= 1` (THRESHOLD_CALCULUS "contour flexibility": affine, endpoint optimal) | PROPOSED |
+| R2 | detach the reciprocal contour (s at `a1 > a0`, smaller remainder `U^{-delta1/4}`; or w held at 1/2) | Re s costs `1` per unit when w is held, or `(1 - ly + h + ell)/2` per unit of delta1 at the endpoint. The remainder gains `h mu delta1/2`. Net loss, since `mu <= 1 <= (1 - ly + h + ell)/h` and `h mu < 1` (cf. THRESHOLD_CALCULUS "contour flexibility": affine, endpoint optimal) | PROPOSED |
 | R3 | second-order (Neumann) approximant `M(2 - LM)`, remainder `(1-LM)^2/L` | `kappa_II = nu/2` if **(MS4_nu)** `sum_u |1 - L M|^4 << U^{1 - nu delta0}`. With the mollifier of R1, `nu <= 2 mu = 1`, so kappa <= 1/2. Needs nu > 5/3, and a twisted *mollified second moment* `sum_all xi L(w) L(s) M^2` over all rows (length `U V^2 > U`; not negligible by Poisson) | PROPOSED; inputs OPEN |
 | R4 | Hoelder with the Oct 5 second moment of `1/L` and Lemma 18.1 | absolute values: theta = 0 (no-gain remark, FLOOR_BIN_BARRIER Sec. 3.3) | PROPOSED |
 | R5 | smooth the floor indicator by a Montgomery zero-detecting polynomial | `1_NF <= sum_rho |D_u(rho)|^{2k}` is a nonnegative weight. It only bounds III (improves c) and cannot carry a sign. Term II is untouched | PROPOSED |
 | R6 | large values (Halasz-Montgomery-Huxley) over the family | improves the NF count `c` only. `c = 2/3` (Ingham-type, from a fourth moment) or 1 (DH) gives `kappa_III <= c/2`. Not the bottleneck | PROPOSED |
 | R7 | attack the dual part directly: `S_F^dual = U^{delta0/2} sum_{B_F} xi W(chi_u) B_u(1-w) H / L(s)` | kappa = 1 iff this signed sum is `<< U^{1 - delta0}`. That is Gauss-sum equidistribution against floor-row weights, i.e. (G_1) plus the restriction to `B_F`. Same subtraction problem, with the same remainder II | OPEN |
+| R8 | enlarge the family in the height aspect (hybrid large sieve over `u ~ U`, `|t| <= T`) to allow longer mollifiers at diagonal size | Everything scales with the analytic conductor `Q = U T`: the mollifier gain is `Q^{-delta0/4}`, but the reflected numerator's exact modulus becomes `Q^{delta0/2}`, so kappa relative to Q stays 1/4. In addition, the manuscript's Mellin tests decay rapidly, so the effective height family is `O(Z^eps)` | PROPOSED |
 
 Also checked: raising the floor to make the mollifier remainder smaller (`mu delta0/2` grows with
 delta0) does not help, because the threshold is a *ratio*: kappa_II = mu/2 is independent of delta0,
@@ -301,8 +306,19 @@ retained rows with no zero of any presentation in `X_u` in `Re >= a0 + 2e`, `|Im
 
 An integrated form (against the Mellin weights over the retained box) suffices.
 
+*Dyad grading (PROPOSED, exact in the model).* The saving is needed only on the top dyads. At dyad
+`d` the floor row has slope `1 + delta0/2 - z0`, so the needed saving is
+
+  `theta(d) = max(0, (1 + delta0/2 - z0) - (h/d)(1 + delta0/2 - z0 - kappa delta0))`.
+
+For kappa = 1 and delta0 = 1/3 (`h = 10/11`) this is zero for
+`d <= h (1 - delta0/2 - z0)/(1 + delta0/2 - z0) = (37/62) h ~ 0.5425`. It rises to `delta0 = 1/3` at
+`d = h`, and to slightly more on `(h, h + zeta]`.
+
 **Consequence (PROPOSED, CONDITIONAL on ARCH, Gram 0 as in O3, DH-rows above `delta0` (for
-delta0 = 1/3 the weaker linear count of Sec. 6 suffices), and FB#(delta0, kappa)):** zero-freeness in `Re s > sigma0(delta0, kappa)` of the Sec. 1.4 formula.
+delta0 = 1/3 the weaker linear count of Sec. 6 suffices), and FB#(delta0, kappa)):** the
+architecture would give zero-freeness in `Re s > sigma0(delta0, kappa)`, with sigma0 from the
+Sec. 1.4 formula.
 In particular:
 
 * `kappa = 1`, `delta0 = 1/3`: **sigma0 = 28/33 = 0.848485**, geometry `(3/11, 6/11, 2/11)`;
@@ -365,7 +381,8 @@ Reading (EMPIRICAL model statements):
 
 * With the manuscript's own counts and Gram 0, the wall after the floor is the witnessed band
   around `delta ~ 0.14`, at about **0.8582**. Lowering the floor (free, per
-  reviews/SEP30_DETECTOR_QUANTIFIERS.md) already reaches it. A floor input adds at most `3e-5`.
+  ../../reviews/SEP30_DETECTOR_QUANTIFIERS.md) already reaches it. A floor input changes the value
+  by `3e-5`, which is inside the model's slack.
 * Raising the floor past that band does not help with manuscript counts. The bins just above the
   raised floor then fail: the manuscript gives `R ~ 0.85, 0.81, 0.725` at
   `delta ~ 0.20, 0.25, 0.335`.
@@ -382,6 +399,11 @@ Reading (EMPIRICAL model statements):
 cd research/exploratory/qrh-2026-10/offense/O7_FLOOR_ROWS/scripts
 python3 floor_rows_lp.py      # ~1 min, exact certificates
 python3 floor_rows_scan.py    # ~2 min
-python3 closed_forms.py       # seconds (sympy)
-python3 full_model_floor.py zero paper 1/50 0 1/50 1/50 1/10 1/10 1/3 1/3   # ~1 min per point
+python3 closed_forms.py; python3 check_closed_vs_lp.py; python3 counts_needed.py
+python3 full_model_floor.py zero paper 1/50 0 1/50 1/50 1/10 1/10 1/3 1/3   # ~1-2 min per point
+python3 full_model_floor.py zero DH 1/3 1/3 1/2 1/2 1/50 0
+python3 full_model_floor.py zero paper 1/500 0
+python3 full_model_floor.py zero paper 1/5 1/5 1/4 1/4 1/3 1/3
+# each full_model run writes results/full_<gram>_<counts>.json (last run wins; copies are kept
+# as full_zero_paper_{raised,lowfloor,raised2}.json)
 ```

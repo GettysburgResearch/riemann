@@ -23,8 +23,9 @@ Exact sources or dependencies:
   scratchpad paper2.tex lines 301-660 (Steps 3-5) read.
   External, abstract only: de Faveri, Dunn, Hoffstein, arXiv:2607.07911 "Non-orthogonality of the
   cubic and quartic large sieves via Rankin-Selberg" (abs page fetched 2026-10-13 from
-  export.arxiv.org, sha256 b2923dd49e63efda...; the paper body and its conjecture were NOT read). Kubota 1969, Patterson 1977, Kazhdan-Patterson 1984
-  (Hecke relations tau(m p^j) = G_{j+1} tau(m p^{n-2-j})): known only through the repository notes above.
+  export.arxiv.org, sha256 b2923dd49e63efda...; the paper body and its conjecture were NOT read).
+  Kubota 1969, Patterson 1977, Kazhdan-Patterson 1984 (Hecke relations tau(m p^j) =
+  G_{j+1} tau(m p^{n-2-j})): known only through the repository notes above.
   Not consulted: draft PR 930 BESSEL_CHANNELS_AND_LEAKAGE.md (pointer received, no time).
 What was actually run (Python 3.13 + numpy + sympy, single process, nice 5):
   python3 ledger.py                          -> results/ledger.txt (exact rationals, asserts pass)
@@ -73,7 +74,7 @@ without independent proof here.
    **EMPIRICAL:** the absorbed coefficients `μγ₂` show no `(HX)^{2/3}` excess on a grid with
    `X ≤ 10⁵` columns-norm and `H ≤ 2X`. Their mean square sits at the diagonal, `0.85–0.97 ×
    rows·‖b‖²`, like random phases. The control `γ₂` (no μ) shows the predicted excess
-   `≈ 0.065 (X²/H)^{1/3}`, with stable constant over `X = 4·10³ … 5·10⁴`.
+   `≈ 0.06 (X²/H)^{1/3}`, with constant 0.056–0.065 stable over `X = 4·10³ … 10⁵`.
 6. **Exponent ledger (exact; `ledger.py`).** σ(κ) = (9κ − 2)/(6κ) for the direct pipeline with
    large-sieve excess `(𝓗X)^κ`. That gives 5/6 at κ = 1/2, 7/8 at κ = 8/15, 11/12 at κ = 4/7, and
    1 at κ = 2/3. **Coordinator benchmark corrected:** a conductor-`N(h)²` reflection that keeps a
@@ -134,7 +135,8 @@ The Eisenstein series therefore gives, unconditionally, meromorphic continuation
 equation for **Möbius-weighted cubic Gauss sums times the Hecke character α**. (Meromorphy and the
 functional equation are imported from Kubota/Patterson.) It also gives a pole at `s = 7/12` with
 residue `∝ τ₆(1)`. The residue was measured as ≈ 0.22 in SEXTIC_THETA_S6.md §5 (EMPIRICAL). Hence
-`Σ_{N c ≤ X} μ(c)α(c)G(c)conj γ₂(c) ≈ C X^{7/12}`: a Patterson-type bias created by μ.
+`Σ_{N c ≤ X} μ(c)α(c)G(c)conj γ₂(c) ≈ C X^{7/12}` (CONDITIONAL on `τ₆(1) ≠ 0` for this representative
+set; supported only by that finite measurement): a Patterson-type bias created by μ.
 
 Without μ, the α-twisted cubic series has no pole (R3 §5). This is the precise sense in which the
 6-fold cover "absorbs" μ. It does not help ζ, because the oscillating Gauss sum stays.
@@ -166,7 +168,8 @@ reflected sum is *longer* than the original (`X′ > X`), so reflecting never he
 the ladder is therefore 1 − 5/6 = 1/6 of boundary, and Kubota recovers none of it.
 
 The Kubota functional equation does give a pointwise bound. Smoothed, with no main term (angular
-twist), shifting to `Re s = −ε` gives `|B_h| ≪ N(h)^{2+ε}`. That is nontrivial only for
+twist), shifting to `Re s = −ε` gives `|B_h| ≪ N(h)^{2+ε}` (PROPOSED, given Lemma 2 and polynomial
+growth in `|t|`). That is nontrivial only for
 `N h < X^{1/2}`, which is again the same range.
 
 **Lemma 3 (local class move; PROPOSED, proof here).** Let `p ∤ m`, `0 ≤ j ≤ n − 2`, and let
@@ -204,13 +207,14 @@ Gauss-sum weight `γ_j(1, h)` (free, since `|γ_j(1, h)| = 1` for squarefree `h`
 
 * The `n`-functional equation has shift `w ↦ w + 4(s − 1/2)`, i.e. `a = 4` (Lemma 2).
 * The `h`-functional equation has shift `s ↦ s + b(w − 1/2)`, where `b` is the conductor exponent
-  of `h ↦ ω(h)χ_h(n)²`:
-  * `j = 0` (no Gauss sum): `L(w, χ_n²)`, `b = 1`;
-  * `j = 4`: a cubic Kubota series with numerator `n`, `b = 1`;
-  * `j = 2`: `b = 2`;
-  * `j = −1`: `b = 2`;
-  * `j = 1`: `b = 4`;
-  * `j = 3`: impossible, since the twist is cubic and the Gauss sum quadratic.
+  of `h ↦ ω(h)·χ_n(h)⁴`. By sextic reciprocity `χ_n(h)⁴ = ε·χ_h(n)⁴`, with `ε` ray class. Write
+  `ω(h)χ_h(n)⁴ = γ_j(r, h)` and solve for the numerator `r`:
+  * `j = 0` (no Gauss sum): `L(w, χ_·(n)⁴)`, a cubic character of conductor `n`, `b = 1`;
+  * `j = 2`: cubic Kubota series with numerator `r ≡ n` (mod cubes), `b = 1`;
+  * `j = 4`: `r ≡ n²` (mod cubes), `b = 2`;
+  * `j = 1`: `r ≡ n²`, `b = 2`;
+  * `j = −1`: `r ≡ n⁴`, `b = 4`;
+  * `j = 3`: impossible, since a quadratic Gauss sum cannot carry a cubic twist.
 * Hence `a·b ∈ {4, 8, 16}`.
 
 The two reflections generate a finite group only when `a·b ≤ 3` (A1×A1, A2, B2, G2), so here the

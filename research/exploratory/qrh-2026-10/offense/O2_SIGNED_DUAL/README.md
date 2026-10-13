@@ -19,8 +19,9 @@ Exact sources or dependencies:
   PR 930 draft (origin/research/parity-and-cubic-fibers-20261012, head c07b9f653, unreviewed): only
     its chi_p = Q_p C_p split is mentioned in section 3; nothing is taken from it.
   Literature named in the task (HB00, HBP79, Dunn25, DR24) is used only at the level of the
-    mechanism "twisted multiplicativity of Gauss sums -> cubic large sieve"; no statement of those
-    papers is relied on for any claim below.
+    mechanism "twisted multiplicativity of Gauss sums -> cubic large sieve". HB00's X^{5/6+eps}
+    bound and the cubic large sieve are quoted from DR24 arXiv v3 section 1 (local untrusted TeX copy,
+    read as data); no claim below relies on them.
 What was actually run (single-threaded, shared machine):
   python3 -I o2_ledger.py results/o2_ledger.json      (about 12 s; sympy exact rationals + exact checks)
   python3 -I signed_dual_numerics.py run_main.json 1000 2000 4000 8000 16000 24000 --rho 0.6 0.75 0.9
@@ -118,7 +119,8 @@ used up entirely by eq:convert2, which is how `a` was created.
 
 Two further readings of (G):
 * **No dual diagonal.** The terms `z₁ = z₂ = 1` (i.e. `n₁ = n₂ = g`) carry `μ(g) 1_{g|k}`. For `b = 1` they
-  equal `(H/D²)Σ_g μ(g)|W₀|²Σ_{k≠0, g|k}Φ̂ ≈ Φ(0)·D^{-1}Σ_g μ(g) x|W(x)|²|_{x = Ng/D}`, a *principal Möbius sum*.
+  equal `(H/D²)Σ_g μ(g)|W₀(Ng/D)|²Σ_{k≠0, g|k}Φ̂ = Φ(0)·D^{-1}Σ_g μ(g)|W(Ng/D)|² + O(H/D)` (Poisson in
+  `k' = k/g`, using `N(g) ≍ D > H`). This is a *principal Möbius sum*.
   Individual `b`-blocks therefore contain `A₁`-type sums that cancel only across `b` (they are the Ramanujan
   terms of the lattice count of `u` coprime to `g`). A blockwise bound must control `A₁` itself.
 * **The g = 1 part has no sign at all.** It is the coprime-pair dual (OD-g1). Its diagonal is empty, and the
@@ -199,8 +201,10 @@ Blocking term: Type II with both factors shorter than `H` does not exist when `�
 give `A₁`. **δ = 0**, and by Prop. L any `δ > 0` here would already be a statement about `A₁`.
 
 **R3. HB00 pointwise in the dual.** The dual rows `B_h(X) = Σ a(n)χ_n(h)W` are "μ against sextic Gauss
-sums" in disguise (eq:convert2), so HB00-type Type I/II gives pointwise savings `|B_h| ≪ X^{1−η}`. A mean
-square needs `|B_h| ≈ X^{1/2}`. Pointwise `X^{5/6}` gives `Σ_h |B_h|² ≤ 𝓗X^{5/3}`, above the diagonal `𝓗X`.
+sums" in disguise (eq:convert2), so HB00-type Type I/II gives pointwise savings `|B_h| ≪ X^{1−η}`. For
+comparison, HB00's bound for primes is `Σ_{Nϖ≤X} g̃(ϖ) ≪ X^{5/6+ε}`, via the cubic large sieve
+`A + B + (AB)^{2/3}`. Both are quoted from DR24 v3 §1 (eq:hb, HBinitstate) and were not read in HB00 itself.
+A mean square needs `|B_h| ≈ X^{1/2}`. Pointwise `X^{5/6}` gives `Σ_h |B_h|² ≤ 𝓗X^{5/3}`, above the diagonal `𝓗X`.
 The theta reflection gives `|B_h| ≪ X^{1/2+ε}` only for `N(h) ≲ X^{1/2}`, but the dual rows run up to
 `𝓗 = D^{2−ρ} > X`. **δ = 0.**
 
@@ -274,6 +278,18 @@ The reflection must then be applied factor by factor, with `ℓ` acting as an `f
 For (b): the requirement `𝓗 + 𝓗²L/X ≲ XL` with `X = D` forces `𝓗 = (DL)²/H ≤ D`. The reflection "sees" only
 the theta length `D`, while the dual row count scales as `(DL)²`.
 
+**Remark (the reflectable quadratic amplifier is already inside the theta, and it is angular).** PROPOSED.
+The completed sum eq:T is `Σ_{n,b} a(n) ᾱ(b)³ Ψ(b)³ / (√N(n) N(b)) · V_*(N(n)N(b)³/X)`, with
+`Ψ_k(b)³ = χ_b(k)³ = (k/b)₂`. So the cube variable `b` *is* a quadratic amplifier, and it is reflected
+together with `n` at total length `X` (reflected length `𝓗²/X`, no growth). This is the `t = 1` behaviour.
+Its weights are forced to be `ᾱ(b)³/N(b)`, and `ᾱ(b)³ = (b̄/b)^{3/2}` is a Größencharakter of infinite order. So
+`Σ_{Nb∼P} ᾱ(b)³ ξ(b) = o(P/log P)` for every finite-order `ξ` (Hecke's prime ideal theorem for
+Größencharaktere): it never amplifies the principal rows. A primal quadratic amplifier with a nonzero mean
+(variant (q)) has instead the weights `γ₃(p) w(Np/P)`, which do not match the theta coupling
+`V_*(N(n)N(b)³/X)`. Its `p` must then ride outside the reflection, and the reflection closes only at `t = 2`.
+The trade-off "reflectable ⇔ angular ⇔ no amplification" is the precise obstruction in the quadratic slot.
+Lemma NRA is the precise obstruction in the sextic slot.
+
 **The exact smallest statement (AMP_t), OPEN, with exponent.** For some fixed `t < 6/5` and all
 `1 ≤ L ≤ D^{λ₀}`:
 
@@ -337,8 +353,9 @@ and `P ∝ D^{1.05}` (that is, `D log D`).
   Both exceed `1 − ρ` (needed for Mom(1, ρ)) and `(1 − ρ)/6` (needed to beat 11/12). HB00-type routes (§2)
   predict `e = 0`. The actual cancellation is the generic random-sign cancellation of RUNG_STRENGTH §5;
   nothing Möbius-specific is visible at this scale.
-* `S < 0` in most cells: the coprimality-corrected `Z` slightly exceeds `𝓜_D`. The sixth-power rows (`Prin`)
-  are of the same order as `|S|` here, consistent with Prop. L item 2 being the controlling term at this scale.
+* `S < 0` in most cells: the coprimality-corrected `Z` slightly exceeds `𝓜_D`. The sixth-power rows contribute
+  `Prin ≈ 0.3–2`. That is about what 18 rows of average size give, so there is no excess on the principal
+  rows at this scale (`|A₁(D)| = 51 ≈ D^{0.39}` at `D = 24000`).
 * Block shares of `P` (ledger C3, exact enumeration): `N f < D^{2/3}` carries 0.569 / 0.589 / 0.605, and
   `f = 1` carries 0.314 / 0.259 / 0.224, at `D = 10³ / 10⁴ / 10⁵`.
 
