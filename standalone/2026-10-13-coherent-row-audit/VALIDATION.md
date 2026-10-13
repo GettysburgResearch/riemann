@@ -83,3 +83,12 @@ Only the new standalone/2026-10-13-coherent-row-audit directory is to be added.
 No inherited proof or integrated status is modified. Publication uses connected
 GitHub actions and remote blob identities, not an asserted clean local clone.
 MANIFEST.json authenticates bytes and scope; it does not certify the proofs.
+
+### Final same-author notation correction
+
+After initial publication at e4bf96114d2f4b13043f51e4e2f88e6789251738, the
+relative trace error in PROOF.md (4.4) was made explicitly S-dependent, as
+required by its positive-density denominator. S was already fixed throughout;
+no moving-prime dependence, exponent, algorithm, or result JSON changed. The
+final manifest binds the corrected proof and this note. No independent review
+is implied by this correction.

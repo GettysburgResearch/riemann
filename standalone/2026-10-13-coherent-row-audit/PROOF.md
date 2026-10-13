@@ -194,7 +194,7 @@ All implied constants are independent of the moving primes and row set.
 The difference in (4.3) is NOT asserted positive or negative semidefinite.
 If P>=D^delta for fixed delta>0 and R>0, then
 
-    trace(G_Pset)=R ||V||_2^2[1+O_{k,K,W}((kJ+1)/P)],       (4.4)
+    trace(G_Pset)=R ||V||_2^2[1+O_{k,K,S,W}((kJ+1)/P)],       (4.4)
     M_Pset/trace(G_Pset) <<_{k,K,S,W,delta,B} log^(-B)(2D)  (4.5)
 
 for every B>0 and large enough D.
@@ -204,7 +204,8 @@ Proof. Write d_p=V-V_p. Since ||V||_2<=U^k=O(D^k) and (4.2) implies
 operator-norm difference by 2||V||_2||d_p||_2+||d_p||_2^2
 =O(D^(2k)/Np). Sum with the stated weights. The same bound for the trace
 follows directly from the difference of the two squared norms, WITHOUT
-multiplying (4.3) by the dimension. Apply (3.2) to obtain (4.4).
+multiplying (4.3) by the dimension. Apply (3.2) to obtain (4.4); its
+relative constant depends on the fixed S through the positive density c_{S,W}.
 At z=-1 the polynomial difference is at most Delta_p. Hence
 |c_p(-1)|<=|c(-1)|+C D/P. Use Lemma 3.1 and P>=D^delta, sum its 2k-th power,
 and divide by (4.4) and (3.2). This proves (4.5). QED.
