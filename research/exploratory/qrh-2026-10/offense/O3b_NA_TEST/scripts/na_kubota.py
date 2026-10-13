@@ -16,7 +16,13 @@ import numpy as np
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import na_model as M
 Q = int(sys.argv[1]); SMAX = int(sys.argv[2]); OUT = sys.argv[3]
-Z = int(round(Q ** 1.15)); CMAX = int(2.5 * Z); XMAX = max(CMAX, SMAX)
+Z = int(round(Q ** 1.15)); CMAX = int(2.5 * Z)
+VMODE = os.environ.get('VMODE', 'gauss')          # 'gauss': exp(-x^2) (round 1); 'loggauss': [S30] W_G
+if VMODE == 'loggauss': CMAX = int(os.environ.get('CMAX', '80000'))
+XMAX = max(CMAX, SMAX)
+def Vw(x):
+    if VMODE == 'loggauss': return math.exp(-0.25 * math.log(x) ** 2) / (2 * math.sqrt(math.pi))
+    return math.exp(-x * x)
 t0 = time.time(); rng = np.random.default_rng(777 + Q)
 primes = M.make_primes(XMAX); sf = [t for t in M.sf_elements(primes, XMAX)]
 sf.sort(key=lambda t: t[1])
@@ -45,7 +51,7 @@ for st in range(0, len(cl), CH):
         Ech[:, k] = chi_row(fac)
         g2 = M.gamma_sf(primes, fac, 2); mu = (-1) ** len(fac)
         Xi = M.xi_el(el) * M.ZETA[M.chi_exp_el(primes, fac, B2L)]
-        base = np.conj(g2) ** 2 * np.conj(Xi) * math.exp(-(N / Z) ** 2) / math.sqrt(N)
+        base = np.conj(g2) ** 2 * np.conj(Xi) * Vw(N / Z) / math.sqrt(N)
         co[k] = (mu * base, base, rng.choice([-1, 1]) * base, abs(base) * np.exp(2j * np.pi * rng.random()))
     Bv += Ech @ co
 Bm = np.abs(Bv[:, 0]) * np.exp(2j * np.pi * rng.random(nM))   # 4: |B| with random m-phases
@@ -88,7 +94,7 @@ for st in range(0, len(sl), CH):
                 gram=G, gram_randcol=Gr, gram_diag=diagE))
             ci += 1
     if st // CH % 5 == 0: print(f'  s up to N={ch[-1][1]} t={time.time()-t0:.1f}', flush=True)
-out = dict(Q=Q, Z=Z, CMIN=CMIN, nM=nM, SMAX=SMAX, normB=[float(v) for v in nB],
+out = dict(Q=Q, Z=Z, CMIN=CMIN, VMODE=VMODE, CMAX=CMAX, nM=nM, SMAX=SMAX, normB=[float(v) for v in nB],
            variants=['theta=mu*conj(g2)^2', 'mu->1', 'mu->random +-1', 'theta->random phase', '|B| random m-phase'],
            recs=recs, secs=time.time() - t0)
 json.dump(out, open(OUT, 'w'), indent=1)
