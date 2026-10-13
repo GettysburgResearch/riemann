@@ -58,7 +58,7 @@ cpos = {j: k for k, j in enumerate(cidx)}
 mus = np.array([(-1) ** len(sf[j][2]) for j in cidx])
 print(f'#c={len(cidx)} t={time.time()-t0:.1f}', flush=True)
 # ------------- A vectors per Y'
-Avecs = []; recs = []
+Avecs = []; recs = []; cols_by = []; topv = []
 for P_a, Yp in zip(PAS, YS):
     cols = [j for j, (el, N, fac) in enumerate(sf) if Yp <= N <= 2 * Yp]
     U = np.empty((nM, len(cols)), complex); ap = np.empty(len(cols), complex)
@@ -101,6 +101,9 @@ for P_a, Yp in zip(PAS, YS):
         rec['diag_xi_' + name] = complex((av[ok] * bc[bidx[ok], 0] * Kxi[ok]).sum())
         rec['diag_noxi_' + name] = complex((av[ok] * bc[bidx[ok], 0] * Kab[ok]).sum())
     Avecs += [A, A_exc, A_rest]
+    cols_by.append(cols)
+    rec['R_top'] = {}
+    topv.append([U @ proj(min(r, len(cols))) for r in (1, 4, 16)])
     recs.append(rec)
     print(f"  P_a={P_a} Y'={Yp} ns={len(cols)} excess={rec['excess']:.3f} nexc={nexc} frac_exc={rec['frac_exc']:.3f} t={time.time()-t0:.1f}", flush=True)
     del U, G
@@ -141,6 +144,10 @@ for ip, rec in enumerate(recs):
         rec['Roff_noxi_' + name] = abs(pna - rec['diag_noxi_' + name]) / (nA * nB)
         # variants of B: untwisted gamma_2 (no conj alpha)
         rec['R_Bu_' + name] = abs(complex((Yx[:, v] * bc[:, 2]).sum())) / (nA * math.sqrt(nB2[2]))
+        # mu -> 1 control (removes the Moebius factor of theta(c) = mu conj(gamma_2)^2): with xi and without
+        rec['R_mu1_' + name] = abs(complex((Yx[:, v] * bc[:, 1]).sum())) / (nA * math.sqrt(nB2[1]))
+        rec['R_mu1_noxi_' + name] = abs(complex((Ya[:, v] * bc[:, 1]).sum())) / (nA * math.sqrt(nB2[1]))
+
         # baseline (i): |B_m| with random phases
         r1 = []
         for t in range(NT):
@@ -158,6 +165,12 @@ for ip, rec in enumerate(recs):
         rec['base_cphase_' + name] = [float(np.mean(r2)), float(np.percentile(r2, 90))]
         rec['ctrl_mu_pm1_' + name] = [float(np.mean(r3)), float(np.percentile(r3, 90))]
         rec['ctrl_mu_pm1_noxi_' + name] = [float(np.mean(r3a)), float(np.percentile(r3a, 90))]
+for ip, rec in enumerate(recs):
+    for r, Av_ in zip((1, 4, 16), topv[ip]):
+        nA = math.sqrt(float((Om * abs(Av_) ** 2).sum()))
+        rec['R_top'][str(r)] = dict(R=abs(complex((w_xi * Av_ * B).sum())) / (nA * math.sqrt(nB2[0])),
+            R_noxi=abs(complex((w_abs * Av_ * B).sum())) / (nA * math.sqrt(nB2[0])),
+            frac=float(nA ** 2 / rec['gram_A']))
 out = dict(Q=Q, Z=Z, nM=nM, nc=len(cidx), normB2=nB2, expB2=expB2, sumOmega=float(Om.sum()),
            recs=recs, secs=time.time() - t0)
 def enc(o):
@@ -170,5 +183,6 @@ for rec in recs:
     print(f"P_a={rec['P_a']:5d} Y'={rec['Yp']:5d} exc={rec['excess']:.3f} nexc={rec['nexc']} fexc={rec['frac_exc']:.3f} "
           f"R_full={rec['R_full']:.4f} R_exc={rec.get('R_exc') or 0:.4f} R_rest={rec.get('R_rest') or 0:.4f} "
           f"base_m={rec['base_mphase_full'][0]:.4f} base_c={rec['base_cphase_full'][0]:.4f} "
-          f"Rdiag={rec['Rdiag_full']:.2e} R_noxi={rec['R_noxi_full']:.4f} Rdiag_noxi={rec['Rdiag_noxi_full']:.4f}")
+          f"Rdiag={rec['Rdiag_full']:.2e} R_noxi={rec['R_noxi_full']:.4f} Rdiag_noxi={rec['Rdiag_noxi_full']:.4f} "
+          f"Rmu1={rec['R_mu1_full']:.4f} Rmu1_noxi={rec['R_mu1_noxi_full']:.4f} pm1={rec['ctrl_mu_pm1_full'][0]:.4f} pm1_noxi={rec['ctrl_mu_pm1_noxi_full'][0]:.4f} top1={rec['R_top']['1']['R']:.4f}")
 print(f'done {time.time()-t0:.1f}s')

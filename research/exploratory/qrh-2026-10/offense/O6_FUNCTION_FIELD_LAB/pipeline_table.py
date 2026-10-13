@@ -53,7 +53,7 @@ def main():
         q, d, E = read_de(p)
         assert q == qc
         mmax = max(k for _, k in core)
-        print(f'\n### q = {q}, d = {d} (columns: {sum(1 for _ in [0])} squarefree n of degree {d})')
+        print(f'\n### q = {q}, d = {d}')
         print('| M | m | rho=m/d | dual rows deg h < K | Off/Diag (truth) | P/Diag (after positivity) | q^(d-M) | E/DD (dual vs its diagonal) | kappa |')
         print('|---|---|---|---|---|---|---|---|---|')
         for M in range(1, 2 * d + 1):

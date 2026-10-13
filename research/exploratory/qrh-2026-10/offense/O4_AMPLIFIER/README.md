@@ -30,7 +30,8 @@ What was actually run (single thread each, shared 4-core machine):
   python3 -I tm_twisted.py results/tm_theta01.json --D 1000 2000 4000 8000 16000 32000 --theta 0.1 --Lmax 211
   python3 -I tm_twisted.py results/tm_theta05.json --D 1000 2000 4000 8000 --theta 0.5 --Lmax 211
   Script sha256 prefixes: amp_moments.py 22fbf1503a14, tm_twisted.py 9a91dcae62d9,
-  amp_ledger.py dda2d4e59f89, make_tables.py 89742e6e85ee, collision_rms.py 4d37970171d8
+  amp_ledger.py bdafab92c130 (round 2 version), make_tables.py 89742e6e85ee, collision_rms.py 4d37970171d8,
+  j4_check.py 58734f4a2cff.  Round 2 (section 7): python3 -I j4_check.py results/j4_check.json (~20 s)
 Smallest remaining gap: TM(eta, s) of section 4: a power saving N(r)^(-eta) in the row-twisted
   mean square T^off(r) = sum_{N u <= D L^s} chi_r(u) |A_u(D)|^2 (minus its explicit collision term),
   for twists of conductor N(r) <= L^2. Amplification beats 11/12 iff eta > 5s/12; the exponent is
@@ -370,3 +371,123 @@ amplified polynomial). The control `randphase` uses `x_ℓ` = fixed random unimo
 | `amp_D8000.json`, `amp_D8000.log` (in `results/`) | the `D = 8000` amplified run on a reduced grid |
 | `make_tables.py`, `results/tables.md` | the tables of §5 |
 | `collision_rms.py`, `results/collision_rms.out` | HEURISTIC size of the explicit collision term in `T(ℓℓ'^5)` |
+| `j4_check.py`, `results/j4_check.json` | round 2 (§7): checks J1 (eq:crt-a exponent 4), J2 (j = 4 Ramanujan identity), J3/J3b (surviving cubic row phase) |
+
+## 7. Round 2: the j = 4 amplifier (coordinator request; appended 2026-10-13)
+
+```text
+Status: PROPOSED (exponent ledger; the design analysis) + CONDITIONAL (on the Oct 5 reflection
+  prop:R / eq:theta-local-factors and its j = 4 reindexing identity, paper2.tex lines 1733-1741 and
+  2036-2091, reviewed only in the bounded R3 review) + PROVED-HERE (the row-blind lower bound below)
+  + finite checks (j4_check.py: exact symbols, floating-point Gauss sums).
+Scope: whether an amplifier whose twist reaches the reflected variable as chi_n(l)^4 (R3 law
+  B_{p,j} = chi_p^{-j-2}: j = 4 gives Ramanujan sums, no character) lets l enter only through
+  congruences after reflection, and the resulting kappa.
+Exact sources or dependencies: paper2.tex eq:theta-local-factors, the j = 4 local identity and cost
+  table (lines 2036-2091); reviews/OCT5_R3_THETA_REFLECTION.md (items 11-12, j = 4 identity);
+  sections 2.1-2.3 above; a2/eis.py (imported unchanged). The PR 930 note
+  BESSEL_CHANNELS_AND_LEAKAGE.md was NOT consulted (time).
+What was actually run: python3 -I j4_check.py results/j4_check.json (about 20 s);
+  python3 -I amp_ledger.py (section 10 of the ledger; all asserts pass).
+Smallest remaining gap: a coefficient-specific (not row-blind) bound for the reflected amplified
+  family, below its own column count by L^{17/6} at H = DL (exact exponent below); equivalently TM(5/12, 1).
+```
+
+### 7.1 Which amplifier has j = 4, and what reflection does to it
+
+* **The j = 4 amplifier is the plain prime amplifier `Amp_u = Σ_ℓ x_ℓ χ_ℓ(u)` (e = 1), and it is the
+  only one.**
+  * In the manuscript's dual convention (after absorption, coefficients `a_ξ`), an amplifier character
+    `χ_ℓ(u)^e` twists the dual `n`-sum by `χ_n(ℓ)^{−(1+e)}`. So `j_ℓ = 4` iff `e ≡ 1 (mod 6)`.
+  * §2.3's table lists the same twist before conjugation (`χ_n(ℓ)²` for e = 1).
+  * This is the `f = ℓ` twist `χ_n(f)⁴` of eq:energy, i.e. the object of Lemma A3.
+  * **Check J1 (floating point, finite):** `γ₂(ℓn) = γ₂(ℓ)γ₂(n)χ_n(ℓ)⁴` on 89 coprime prime pairs,
+    max deviation 5.0e-15. This is the twisted multiplicativity behind eq:crt-a.
+* **Reflection at `ℓ` (CONDITIONAL; check J2).** By eq:theta-local-factors,
+  `B_{ℓ,4}(x) = N(ℓ)^{−1/2}(−1 + N(ℓ)·1_{ℓ|x})`: a Ramanujan factor with no character.
+  * **Check J2:** the finite-field identity behind it,
+    `Σ_{v mod p, p∤v} χ_p(v)^{j+2} e(xv/p) = −1 + N(p)·1_{p|x}` exactly when `j = 4`, and of
+    modulus `√N(p)·|χ_p(x)|` otherwise. It holds at 10 primes (split and inert), all `x`, max deviation
+    4.4e-15.
+  * This replays the local identity only, not the reflection.
+  * The manuscript's cost table gives the three reindexed pieces
+    `(a², Y) ↦ (a²/q, q²Y), (a², qY), (a²/q, Y/q)`, with `q = N(ℓ)`. So the reflected length grows by
+    `N(ℓ)`, not `N(ℓ)²`.
+* **But ℓ does not enter only through congruences: a cubic row character survives (refutation;
+  checks J3, J3b, exact symbols).** After reflection, the dominant reindexed piece `n = ℓn'` carries
+  two phases:
+  * the Poisson/CRT phase `χ_ℓ(k)` of Lemma A3, from the outer amplifier factor;
+  * the reindexing phase `χ_k(ℓ)³`, inherited from the quadratic twist `χ_k(n)³ = χ_k(ℓ)³χ_k(n')³` of
+    the reflected variable (the manuscript's displayed `χ_{k₀}(p)³`).
+
+  Their product is
+
+      χ_ℓ(k)·χ_k(ℓ)³ = χ_ℓ(k)⁴ · ε(k mod 4, ℓ),
+
+  where `ε` is a sign. J3 and J3b, for 8 primes ℓ (7 split, 1 inert; N ≤ 31) against 58 prime rows `k`, show:
+  * the phase takes all six values;
+  * its cube is ±1;
+  * the sign is a function of `k mod 4` (12 classes, consistent).
+
+  So a **cubic character of the row `k` modulo `ℓ`** survives. The post-reflection mean square is over
+  the mixed family `k ↦ χ_ℓ(k)⁴ (k/n')₂`, not a quadratic one. The amplifier coefficients cannot
+  remove it, because it depends on `k`.
+  * The γ₋₁ ratios (before absorption) are not pure powers of `χ_n(ℓ)`: sextic-reciprocity
+    unit and sign factors appear. This is recorded in `results/j4_check.json` as data.
+
+### 7.2 κ for the j = 4 design (exact ledger, section 10)
+
+Normalisation as in §2.1: `H = DL^{1+δ}`, dual rows `𝓗 = DL^{1−δ}`, target `Σ_k |P^b_k|² ≲ DL^{1+κ}`.
+The resulting exponent is σ = `11/12 + λ(κ + 5δ/6 − 1/6)/2`. Per amplifier prime `ℓ`, the reflected
+length is `qY = L𝓗²/D`.
+
+| route | bound for `Σ_k \|P^b_k\|²` | κ(δ) | best `κ + 5δ/6` | σ | label |
+|---|---|---|---|---|---|
+| (i) QLS over `k` alone, after splitting `k` into the 3 cubic classes mod `ℓ` (one `ℓ` at a time, i.e. Cauchy–Schwarz over `ℓ`) | `L𝓗 + L²𝓗²/D` | `max(0, 1−δ, 3−2δ)` | 5/4 at δ = 3/2 | **11/12 + 13λ/24** | CONDITIONAL (prop:R) |
+| (i′) the same, with the transfer recursion (Prop. canonical, `ℓ` outside) | `DL²` (from `Σ_ℓ Σ_k \|C\|² ≲ (DL)²`) | 1 at δ = 0 | 1 | 11/12 + 5λ/12 | CONDITIONAL (§2.1) |
+| (ii) hypothetical optimal **joint** row-blind sieve over `(k; ℓ, n')`, rows + columns | `𝓗 + L·L𝓗²/D` | `max(0, 3−2δ)` | 5/4 at δ = 3/2 | **11/12 + 13λ/24** | PROPOSED |
+| (ii′) as (ii), but the congruence costing nothing and no phase surviving (better than reality) | `𝓗 + L𝓗²/D` | `max(0, 2−2δ)` | 5/6 at δ = 1 | 11/12 + λ/3 | PROPOSED |
+| ideal: one smooth column `m = ℓn` of length `DL` (not available, §3 (a3)) | `𝓗 + 𝓗²/(DL)` | 0 at δ = 0 | 0 | 11/12 − λ/12 | — |
+
+The joint sieve improves only the rows term. The binding term is the **reflected column count**
+`J = L·(L𝓗²/D)` (pairs `(ℓ, n')`). It exceeds the ideal one by `L³`:
+* one `L` from reflecting the length-`D` variable `n` instead of the length-`DL` product;
+* one `L` from the `L` choices of `ℓ`;
+* one `L` from the j = 4 cost `N(ℓ)`.
+
+**What joint large sieve would give κ < 1/6, and why none can be row-blind (PROVED-HERE, ledger
+item 10).**
+* κ < 1/6 needs `Σ_{k ≤ 𝓗} |Σ_{ℓ,n'} c_{ℓ,n'} χ_ℓ(k)⁴(k/n')₂|² ≪ D^ε DL^{1+κ}‖c‖²` with
+  `κ + 5δ/6 < 1/6`.
+* Any inequality valid for all coefficient vectors has operator norm ≥ max(rows, columns) =
+  `max(𝓗, J)`. Align the phases at one row `k₀` (RUNG_STRENGTH §3(a)).
+* With `J = DL^{4−2δ}`, the condition `max(0, 3−2δ) + 5δ/6 < 1/6` has no solution δ ≥ 0:
+  * δ ≥ 3/2 forces δ < 1/5;
+  * δ < 3/2 forces δ > 17/7.
+* At `H = DL` the needed bound lies **`L^{17/6}` below the column count** of the reflected family.
+  So it must use the specific theta coefficients `d(ℓn')`: it is a sub-diagonal (more columns than
+  rows) statement for the reflected family, i.e. the ρ = 1 wall again. Through Poisson/reflection
+  (Q_RHO §2) it is equivalent to TM(5/12, 1) of §4.
+
+**Known results (survey level, from the sources already read for Q_RHO and LEVERAGE_FAMILIES; nothing
+new was read).**
+* Heath-Brown's quadratic large sieve and its Goldmakher–Louvel number-field form have the shape
+  `(K + N)(KN)^ε`. They are sharp up to `ε`, and restricting the rows `k` to congruence classes mod `ℓ`
+  shrinks only the `K` term.
+* Sparse-moduli large sieves (square moduli and similar) and the n-th order large sieve of BGL
+  (`K + N + (KN)^{2/3}`) also cannot go below `N‖c‖²`, by the same duality lower bound.
+* So no known result supplies the needed inequality, and no row-blind one can.
+
+### 7.3 Verdict of round 2
+
+* **Confirmed:** j = 4 at the amplifier prime (J1, J2). The reflection turns the amplifier's twist into
+  a Ramanujan sum / congruence with reflected-length cost `N(ℓ)` instead of `N(ℓ)²` (CONDITIONAL on
+  the Oct 5 local identity).
+* **Refuted:** "ℓ then enters only through congruences". The Poisson CRT phase and the reindexing
+  phase combine into `χ_ℓ(k)⁴` (times a sign mod 4), a cubic character of the row (J3, J3b).
+* **Exponent:** best σ for the j = 4 design is `11/12 + 13λ/24` (route (i), and also route (ii)
+  with an optimal joint sieve). With the transfer recursion it is `11/12 + 5λ/12`. Even a cost-free
+  congruence with no surviving phase gives `11/12 + λ/3`. All are worse than 11/12.
+* **Smallest statement:** a coefficient-specific mean-square bound for the reflected amplified
+  family, `L^{17/6}` below its column count at `H = DL`. It is equivalent, through the exact moves, to
+  TM(η > 5/12, s = 1) of §4. The next concrete object is that statement, not a better large sieve.
