@@ -263,13 +263,14 @@ in the blocks with `g ≠ 1` (see the block ledger above). `results/pipeline_tab
 
 Reading (EXACT on these cells; the trend is EMPIRICAL):
 * **The dual mean square is diagonal-sized** whenever the dual has more rows than columns
-  (`E/DD ∈ [0.984, 1.010]`). This is the lab version of A2_LITERATURE §5 and DUAL_ANATOMY §4, where the
-  Q-side gives `DD ≈ 1.3(D/Y)Diag`.
+  (`E/DD ∈ [0.949, 1.010]`, 11 cells). This is the lab version of A2_LITERATURE §5 and DUAL_ANATOMY §4,
+  where the Q-side gives `DD ≈ 1.3(D/Y)Diag`.
 * **Positivity therefore costs exactly `q^{d−M}`**, i.e. `D^{1−ρ}`: the dual diagonal, which the exact
   identity does not contain (§4.1 has `(a, b) = 1`).
-* **The signed dual is the truth**, and the truth is tiny wherever the rows are generic (−1.8 %, −0.6 %).
-  The saving of the signed dual over positivity is `κ ≈ (1 − ρ) + κ₀`, where `κ₀` is the truth's own
-  random-type cancellation (≈ 0.5 here).
+* **The signed dual is the truth.** It is small where the rows have `deg L ≤ 1` (−2.0 %, −1.8 %, −0.6 %,
+  −0.3 %) and of order Diag where special degree-3 rows enter (+96 %, q = 7, d = 5, M = 4). The saving of
+  the signed dual over positivity is `κ ≈ (1 − ρ_eff) + κ₀`, where `κ₀ = log(Diag/|Off|)/log q^d` is the
+  truth's own cancellation (0.4–0.65 on the trivial-member cells, 0 on the special-member cells).
 * **Positivity is the only loss in Step 3.** Poisson, the Gauss sums and absorption are exact; the dual
   mean square is not larger than its diagonal. Steps 4–5 (reflection and quadratic large sieve) can only
   add the factor `𝓗/X` of DISPERSION_GRH_STEP §4, because:
