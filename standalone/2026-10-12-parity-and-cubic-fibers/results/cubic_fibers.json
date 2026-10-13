@@ -1,0 +1,466 @@
+{
+  "adversarial_guards": 8,
+  "arithmetic": "EXACT_INTEGER_AND_RATIONAL",
+  "checker_sha256": "3c600e421b0664654830e09429108ff0798db94061d1f5684ccbe6ccde228114",
+  "crt_modulus_norm": 1729,
+  "crt_unit_classes": 1296,
+  "exponent_fixtures": [
+    {
+      "comparison_cost": "1",
+      "k": 1,
+      "s": "0"
+    },
+    {
+      "comparison_cost": "2",
+      "k": 2,
+      "s": "0"
+    },
+    {
+      "comparison_cost": "3",
+      "k": 3,
+      "s": "0"
+    },
+    {
+      "comparison_cost": "4",
+      "k": 4,
+      "s": "0"
+    },
+    {
+      "comparison_cost": "5",
+      "k": 5,
+      "s": "0"
+    },
+    {
+      "comparison_cost": "6",
+      "k": 6,
+      "s": "0"
+    },
+    {
+      "comparison_cost": "7",
+      "k": 7,
+      "s": "0"
+    },
+    {
+      "comparison_cost": "8",
+      "k": 8,
+      "s": "0"
+    },
+    {
+      "comparison_cost": "1/2",
+      "k": 1,
+      "s": "1/4"
+    },
+    {
+      "comparison_cost": "1",
+      "k": 2,
+      "s": "1/4"
+    },
+    {
+      "comparison_cost": "3/2",
+      "k": 3,
+      "s": "1/4"
+    },
+    {
+      "comparison_cost": "2",
+      "k": 4,
+      "s": "1/4"
+    },
+    {
+      "comparison_cost": "5/2",
+      "k": 5,
+      "s": "1/4"
+    },
+    {
+      "comparison_cost": "3",
+      "k": 6,
+      "s": "1/4"
+    },
+    {
+      "comparison_cost": "7/2",
+      "k": 7,
+      "s": "1/4"
+    },
+    {
+      "comparison_cost": "4",
+      "k": 8,
+      "s": "1/4"
+    },
+    {
+      "comparison_cost": "1/4",
+      "k": 1,
+      "s": "3/8"
+    },
+    {
+      "comparison_cost": "1/2",
+      "k": 2,
+      "s": "3/8"
+    },
+    {
+      "comparison_cost": "3/4",
+      "k": 3,
+      "s": "3/8"
+    },
+    {
+      "comparison_cost": "1",
+      "k": 4,
+      "s": "3/8"
+    },
+    {
+      "comparison_cost": "5/4",
+      "k": 5,
+      "s": "3/8"
+    },
+    {
+      "comparison_cost": "3/2",
+      "k": 6,
+      "s": "3/8"
+    },
+    {
+      "comparison_cost": "7/4",
+      "k": 7,
+      "s": "3/8"
+    },
+    {
+      "comparison_cost": "2",
+      "k": 8,
+      "s": "3/8"
+    },
+    {
+      "comparison_cost": "0",
+      "k": 1,
+      "s": "1/2"
+    },
+    {
+      "comparison_cost": "0",
+      "k": 2,
+      "s": "1/2"
+    },
+    {
+      "comparison_cost": "0",
+      "k": 3,
+      "s": "1/2"
+    },
+    {
+      "comparison_cost": "0",
+      "k": 4,
+      "s": "1/2"
+    },
+    {
+      "comparison_cost": "0",
+      "k": 5,
+      "s": "1/2"
+    },
+    {
+      "comparison_cost": "0",
+      "k": 6,
+      "s": "1/2"
+    },
+    {
+      "comparison_cost": "0",
+      "k": 7,
+      "s": "1/2"
+    },
+    {
+      "comparison_cost": "0",
+      "k": 8,
+      "s": "1/2"
+    },
+    {
+      "comparison_cost": "0",
+      "k": 1,
+      "s": "2/3"
+    },
+    {
+      "comparison_cost": "0",
+      "k": 2,
+      "s": "2/3"
+    },
+    {
+      "comparison_cost": "0",
+      "k": 3,
+      "s": "2/3"
+    },
+    {
+      "comparison_cost": "0",
+      "k": 4,
+      "s": "2/3"
+    },
+    {
+      "comparison_cost": "0",
+      "k": 5,
+      "s": "2/3"
+    },
+    {
+      "comparison_cost": "0",
+      "k": 6,
+      "s": "2/3"
+    },
+    {
+      "comparison_cost": "0",
+      "k": 7,
+      "s": "2/3"
+    },
+    {
+      "comparison_cost": "0",
+      "k": 8,
+      "s": "2/3"
+    }
+  ],
+  "native_ring_box": {
+    "coordinate_max": 3,
+    "coordinate_min": -3
+  },
+  "not_verified": [
+    "infinite moment estimates or an RH/zero-free conclusion",
+    "the infinite product-measure dichotomy by finite enumeration",
+    "asymptotic prime-count subsequences or the Mellin analytic argument",
+    "uniform pointwise PW_B or any imported analytic theorem",
+    "an incomplete physical row average approximating a complete residue system",
+    "optimality on the special nonnegative Mobius moment cone"
+  ],
+  "note_sha256": "026d1a3d6f458b872128fa77fbe683a35cc38a799e822d29760dbc566c2bd91e",
+  "physical_test_rows": 6,
+  "predicates_by_section": {
+    "adversarial_guards": 8,
+    "centered_basis": 192,
+    "exponent_algebra": 40,
+    "likelihood": 54,
+    "moment_frequency": 170,
+    "native_crt": 5414,
+    "native_cube_masks": 21609,
+    "native_field_setup": 66,
+    "native_ring": 2499,
+    "prime_floor": 41,
+    "projection": 600,
+    "riesz_native_law": 36,
+    "riesz_native_moment": 7848
+  },
+  "prime_ideals": [
+    {
+      "norm": 7,
+      "omega_residue": 2,
+      "rational_prime": 7
+    },
+    {
+      "norm": 13,
+      "omega_residue": 3,
+      "rational_prime": 13
+    },
+    {
+      "norm": 19,
+      "omega_residue": 7,
+      "rational_prime": 19
+    }
+  ],
+  "projection_fixtures": [
+    {
+      "K_squared": "1",
+      "cutoff": 1,
+      "dimension": 1,
+      "pair": 0
+    },
+    {
+      "K_squared": "7/4",
+      "cutoff": 7,
+      "dimension": 2,
+      "pair": 0
+    },
+    {
+      "K_squared": "7/4",
+      "cutoff": 10,
+      "dimension": 2,
+      "pair": 0
+    },
+    {
+      "K_squared": "73/28",
+      "cutoff": 13,
+      "dimension": 3,
+      "pair": 0
+    },
+    {
+      "K_squared": "491/140",
+      "cutoff": 19,
+      "dimension": 4,
+      "pair": 0
+    },
+    {
+      "K_squared": "491/140",
+      "cutoff": 50,
+      "dimension": 4,
+      "pair": 0
+    },
+    {
+      "K_squared": "83/20",
+      "cutoff": 91,
+      "dimension": 5,
+      "pair": 0
+    },
+    {
+      "K_squared": "193/40",
+      "cutoff": 133,
+      "dimension": 6,
+      "pair": 0
+    },
+    {
+      "K_squared": "1567/280",
+      "cutoff": 247,
+      "dimension": 7,
+      "pair": 0
+    },
+    {
+      "K_squared": "1567/280",
+      "cutoff": 400,
+      "dimension": 7,
+      "pair": 0
+    },
+    {
+      "K_squared": "247/40",
+      "cutoff": 1729,
+      "dimension": 8,
+      "pair": 0
+    },
+    {
+      "K_squared": "1",
+      "cutoff": 1,
+      "dimension": 1,
+      "pair": 1
+    },
+    {
+      "K_squared": "203/200",
+      "cutoff": 7,
+      "dimension": 2,
+      "pair": 1
+    },
+    {
+      "K_squared": "203/200",
+      "cutoff": 10,
+      "dimension": 2,
+      "pair": 1
+    },
+    {
+      "K_squared": "24277/23800",
+      "cutoff": 13,
+      "dimension": 3,
+      "pair": 1
+    },
+    {
+      "K_squared": "4404847/4307800",
+      "cutoff": 19,
+      "dimension": 4,
+      "pair": 1
+    },
+    {
+      "K_squared": "4404847/4307800",
+      "cutoff": 50,
+      "dimension": 4,
+      "pair": 1
+    },
+    {
+      "K_squared": "393319/384625",
+      "cutoff": 91,
+      "dimension": 5,
+      "pair": 1
+    },
+    {
+      "K_squared": "12586667/12308000",
+      "cutoff": 133,
+      "dimension": 6,
+      "pair": 1
+    },
+    {
+      "K_squared": "88107749/86156000",
+      "cutoff": 247,
+      "dimension": 7,
+      "pair": 1
+    },
+    {
+      "K_squared": "88107749/86156000",
+      "cutoff": 400,
+      "dimension": 7,
+      "pair": 1
+    },
+    {
+      "K_squared": "31467059/30770000",
+      "cutoff": 1729,
+      "dimension": 8,
+      "pair": 1
+    },
+    {
+      "K_squared": "1",
+      "cutoff": 1,
+      "dimension": 1,
+      "pair": 2
+    },
+    {
+      "K_squared": "35/32",
+      "cutoff": 7,
+      "dimension": 2,
+      "pair": 2
+    },
+    {
+      "K_squared": "35/32",
+      "cutoff": 10,
+      "dimension": 2,
+      "pair": 2
+    },
+    {
+      "K_squared": "1187/864",
+      "cutoff": 13,
+      "dimension": 3,
+      "pair": 2
+    },
+    {
+      "K_squared": "31309/17280",
+      "cutoff": 19,
+      "dimension": 4,
+      "pair": 2
+    },
+    {
+      "K_squared": "31309/17280",
+      "cutoff": 50,
+      "dimension": 4,
+      "pair": 2
+    },
+    {
+      "K_squared": "127051/69120",
+      "cutoff": 91,
+      "dimension": 5,
+      "pair": 2
+    },
+    {
+      "K_squared": "207823/110592",
+      "cutoff": 133,
+      "dimension": 6,
+      "pair": 2
+    },
+    {
+      "K_squared": "3320867/1658880",
+      "cutoff": 247,
+      "dimension": 7,
+      "pair": 2
+    },
+    {
+      "K_squared": "3320867/1658880",
+      "cutoff": 400,
+      "dimension": 7,
+      "pair": 2
+    },
+    {
+      "K_squared": "10687831/5308416",
+      "cutoff": 1729,
+      "dimension": 8,
+      "pair": 2
+    }
+  ],
+  "scope": [
+    "Eisenstein ring and conjugation arithmetic on the displayed finite box",
+    "actual sextic/quadratic/cubic values modulo the three stated prime ideals",
+    "complete CRT enumeration, including native zero-mask guards",
+    "positive Riesz representation of finite polynomial moments",
+    "exact finite Radon-Nikodym products and centered-chaos projections",
+    "upper-support prime variance floor and doubled-order reverse inequality",
+    "finite rational exponent identities and explicit adversarial guards"
+  ],
+  "status": "PASS",
+  "total_predicates": 38577
+}

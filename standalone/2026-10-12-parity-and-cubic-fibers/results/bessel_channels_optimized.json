@@ -1,0 +1,228 @@
+{
+  "arithmetic": "exact integers in cyclotomic quotient rings and exact rationals",
+  "checker_sha256": "416f54154aa9b02261a0c07fbfba5fc9d84e414ab195d87c2944f22ce1c88da6",
+  "checks": 11562,
+  "finite_field_cases": [
+    {
+      "characteristic": 7,
+      "coverage": "every row, column, and intermediate residue in K^2",
+      "cyclotomic_degree": 12,
+      "cyclotomic_order": 42,
+      "label": "pi7",
+      "literal_zero_and_active_j0": true,
+      "normalized_spectrum": {
+        "minus": 2,
+        "plus": 4,
+        "zero": 1
+      },
+      "omega_residue": 4,
+      "q": 7
+    },
+    {
+      "characteristic": 7,
+      "coverage": "every row, column, and intermediate residue in K^2",
+      "cyclotomic_degree": 12,
+      "cyclotomic_order": 42,
+      "label": "bar_pi7",
+      "literal_zero_and_active_j0": true,
+      "normalized_spectrum": {
+        "minus": 2,
+        "plus": 4,
+        "zero": 1
+      },
+      "omega_residue": 2,
+      "q": 7
+    },
+    {
+      "characteristic": 13,
+      "coverage": "every row, column, and intermediate residue in K^2",
+      "cyclotomic_degree": 24,
+      "cyclotomic_order": 78,
+      "label": "pi13",
+      "literal_zero_and_active_j0": true,
+      "normalized_spectrum": {
+        "minus": 5,
+        "plus": 7,
+        "zero": 1
+      },
+      "omega_residue": 9,
+      "q": 13
+    },
+    {
+      "characteristic": 13,
+      "coverage": "every row, column, and intermediate residue in K^2",
+      "cyclotomic_degree": 24,
+      "cyclotomic_order": 78,
+      "label": "bar_pi13",
+      "literal_zero_and_active_j0": true,
+      "normalized_spectrum": {
+        "minus": 5,
+        "plus": 7,
+        "zero": 1
+      },
+      "omega_residue": 3,
+      "q": 13
+    },
+    {
+      "characteristic": 5,
+      "coverage": "every row, column, and intermediate residue in K^2",
+      "cyclotomic_degree": 8,
+      "cyclotomic_order": 30,
+      "label": "inert_5",
+      "literal_zero_and_active_j0": true,
+      "normalized_spectrum": {
+        "minus": 11,
+        "plus": 13,
+        "zero": 1
+      },
+      "omega_residue": 5,
+      "q": 25
+    }
+  ],
+  "native_unit_example": {
+    "actual_unit_row_sum": 12,
+    "bessel_compression": 0,
+    "height_13_pair_sum": 30,
+    "height_13_row_count": 54,
+    "height_13_shell_table": [
+      [
+        1,
+        6,
+        12
+      ],
+      [
+        3,
+        6,
+        6
+      ],
+      [
+        4,
+        6,
+        12
+      ],
+      [
+        7,
+        12,
+        0
+      ],
+      [
+        9,
+        6,
+        -6
+      ],
+      [
+        12,
+        6,
+        6
+      ],
+      [
+        13,
+        12,
+        0
+      ]
+    ],
+    "left_product_generator": [
+      -11,
+      -6
+    ],
+    "product_norm": 91,
+    "right_product_generator": [
+      -5,
+      6
+    ],
+    "rows": [
+      {
+        "hermitian_pair_value": 2,
+        "phi_exponent_mod_6": 0,
+        "unit": [
+          1,
+          0
+        ]
+      },
+      {
+        "hermitian_pair_value": 2,
+        "phi_exponent_mod_6": 0,
+        "unit": [
+          1,
+          1
+        ]
+      },
+      {
+        "hermitian_pair_value": 2,
+        "phi_exponent_mod_6": 0,
+        "unit": [
+          0,
+          1
+        ]
+      },
+      {
+        "hermitian_pair_value": 2,
+        "phi_exponent_mod_6": 0,
+        "unit": [
+          -1,
+          0
+        ]
+      },
+      {
+        "hermitian_pair_value": 2,
+        "phi_exponent_mod_6": 0,
+        "unit": [
+          -1,
+          -1
+        ]
+      },
+      {
+        "hermitian_pair_value": 2,
+        "phi_exponent_mod_6": 0,
+        "unit": [
+          0,
+          -1
+        ]
+      }
+    ],
+    "squarefree_conductor_norm": 8281,
+    "tuple_mobius_product": 1
+  },
+  "not_checked": [
+    "truth of imported analytic or zero-free assertions",
+    "an identity from native covariance to Bessel compression",
+    "uniform growing-conductor or short-row analytic estimates",
+    "the full generalized moment hypothesis or RH"
+  ],
+  "optimistic_quadratic_comparison": {
+    "b": "7/8",
+    "bound_exponent": "17/4",
+    "excess_exponent": "5/4",
+    "height_exponent": 1,
+    "k": 2,
+    "target_exponent": 3
+  },
+  "proof_note_sha256": "c97e7c1befc3c1099de6a0b30a03c81ecb08b1acfe3ff42467c0b58901498579",
+  "scope": "finite diagnostics only; no physical covariance or moment estimate",
+  "status": "PASS",
+  "tensor_cases": {
+    "mixed_complement_pairs": 247,
+    "native_words": 510,
+    "prime_counts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "walk_powers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  }
+}
