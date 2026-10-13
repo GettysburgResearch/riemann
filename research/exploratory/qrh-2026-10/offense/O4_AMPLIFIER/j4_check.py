@@ -94,7 +94,22 @@ def main(out):
             ph = (a + 3 * b) % 6
             vals.add(ph)
             cubes.add((3 * ph) % 6)
-        J3.append(dict(l=list(l), N=norm(l), phase_values=sorted(vals), cube_values=sorted(cubes)))
+        # J3b: phase / chi_l(k)^4 = (chi_k(l)/chi_l(k))^3 is a sign; test that it depends only on k mod 4
+        cls, consistent = {}, True
+        for k in P[:60]:
+            if k == l:
+                continue
+            a = sym_prime(k, l); b = sym_prime(l, k)
+            if a is None or b is None:
+                continue
+            sign = (3 * (b - a)) % 6
+            key = eis.reduce_mod(k, (4, 0))
+            if key in cls and cls[key] != sign:
+                consistent = False
+            cls[key] = sign
+        J3.append(dict(l=list(l), N=norm(l), phase_values=sorted(vals), cube_values=sorted(cubes),
+                       sign_is_function_of_k_mod_4=consistent, n_classes=len(cls)))
+        print(f"J3b: l={l}: phase = chi_l(k)^4 * sign, sign a function of k mod 4: {consistent} ({len(cls)} classes)")
         print(f"J3: l={l} N={norm(l)}: phase chi_l(k)chi_k(l)^3 takes exponents {sorted(vals)} "
               f"(cube exponents {sorted(cubes)})")
     res["J3"] = J3
