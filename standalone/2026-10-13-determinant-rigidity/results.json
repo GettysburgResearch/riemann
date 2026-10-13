@@ -1,0 +1,69 @@
+{
+  "arithmetic": "exact integers, Fractions and Z[omega]",
+  "explicit_predicates_including_setup": 20535,
+  "finite_character_classification": {
+    "C2": {
+      "accepted": 10,
+      "bounded_alphabet_size": 7,
+      "patterns": 49
+    },
+    "C3": {
+      "accepted": 10,
+      "bounded_alphabet_size": 19,
+      "patterns": 6859
+    },
+    "S3": {
+      "accepted": 13,
+      "bound": 3,
+      "class_sizes": [
+        1,
+        3,
+        2
+      ],
+      "integer_patterns": 343
+    }
+  },
+  "local_euler_series": {
+    "eigenvalue_lists": 1555,
+    "rank_range_majorants": [
+      1,
+      16
+    ],
+    "rational_majorant_points": 1040,
+    "series_degree": 12
+  },
+  "negative_controls": {
+    "false_coprimality_rejected": true,
+    "missing_nonabelian_probes_rejected": true,
+    "missing_small_prime_gate_rejected": true,
+    "unsigned_inverse_rejected": true
+  },
+  "physical_sum_identities": {
+    "annular_scales": [
+      31,
+      128,
+      512
+    ],
+    "column_norm_cap": 512,
+    "coverage": "All nonzero Eisenstein element rows in the stated ball; columns only in the five-prime semigroup.",
+    "forward_inverse_pairs": 1944,
+    "masks": 4,
+    "prime_norms": [
+      7,
+      7,
+      13,
+      19,
+      25
+    ],
+    "representations": [
+      "rank1",
+      "rank2_norm4",
+      "rank3_norm9"
+    ],
+    "row_ball_norm": 13,
+    "rows": 54,
+    "semigroup_ideal_columns": 24
+  },
+  "scope": "finite algebra only; no analytic input or asymptotic moment certified",
+  "status": "PASS"
+}

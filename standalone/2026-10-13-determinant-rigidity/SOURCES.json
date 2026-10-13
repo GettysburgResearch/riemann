@@ -1,0 +1,63 @@
+{
+  "authenticated_parent_files_read": [
+    {
+      "bytes": 16078,
+      "git_blob": "1db6b95e8ed87195541bf025b6d83af0d0a0468d",
+      "path": "standalone/2026-10-13-liouville-ray-rigidity/MATHEMATICS.md",
+      "sha256": "c360f7c4cba12eae6a66cf8734443d83f497b81e28b6dd0eeb643d4cb8418a37"
+    },
+    {
+      "bytes": 7821,
+      "git_blob": "0d9761a46520ae14e8e60150c5aa27e2b7219a9c",
+      "path": "standalone/2026-10-13-liouville-ray-rigidity/verify.py",
+      "sha256": "8339094021731a292ac01fb9bb57cc3a28a51fb27f2ba662db332fba0daffc24"
+    }
+  ],
+  "base_commit": "a7a7fad2c5fa1929c7e04570cde4188e3191b071",
+  "base_pr": 935,
+  "base_tree": "f811d1abd46821885e978654b7a5e4131082651d",
+  "classical_inputs": [
+    "Fixed-field ideal counting and prime ideal theorem",
+    "Finite-order Hecke L-functions at s=1",
+    "Finite-group character theory, Brauer induction and Artin formalism"
+  ],
+  "external_sources": [
+    {
+      "scope": "Divisor-sum/convolution background",
+      "url": "https://dlmf.nist.gov/27.6"
+    },
+    {
+      "scope": "Abstract read for prior context; no theorem imported",
+      "title": "Magic squares, the symmetric group and Mobius randomness",
+      "url": "https://arxiv.org/abs/2102.11966"
+    },
+    {
+      "scope": "Introduction and Section 6 Euler comparison; classical Artin/Brauer framework, not its global research theorems",
+      "title": "On holomorphy and non-vanishing of Artin L-functions",
+      "url": "https://link.springer.com/article/10.1007/s00605-025-02060-7"
+    }
+  ],
+  "not_claimed": [
+    "Exhaustive priority search",
+    "Independent reconstruction of classical inputs",
+    "Native moment improvement",
+    "Independent mathematical review"
+  ],
+  "repository_context": [
+    {
+      "pr": 931,
+      "scope": "PR description only; Haar determinant result credited, not imported"
+    },
+    {
+      "commit": "eb8d23decc003d36ded287dc98868308192cc889",
+      "path": "standalone/2026-10-13-rough-conductor-localization/PROOF.md",
+      "pr": 936,
+      "scope": "Sections 1-4 and beginning of Section 5 read; no analytic premise imported"
+    },
+    {
+      "pr": 937,
+      "reported_frozen_commit": "9f3250198a9b0551f42eb73dfd74a265c2a66854",
+      "scope": "PR description only; randomized endpoint not treated as native"
+    }
+  ]
+}
