@@ -681,3 +681,142 @@ The full generalized native moment hierarchy and RH remain open. All proof-byte 
 
 <!-- END ORIGINAL RECEIPT: bilinear -->
 
+
+## Late source-credit and concurrent-work addendum
+
+**Scope:** bibliographic and theorem-scope comparison after the initial
+publication freeze. This addendum changes no proof, diagnostic,
+manifest entry, or integrated status. The original content commit and
+the exact three reviewer receipts above remain immutable records of
+what was checked before these additional sources were inspected.
+There is no claim of priority for results shared with earlier or
+concurrent drafts.
+
+### Earlier collision and necklace work: PR #916
+
+The final freshness check led back to PR #916, frozen at
+[dd70e580a5ffdbe5b140784ba6cebd173cb84792](https://github.com/GettysburgResearch/riemann/commit/dd70e580a5ffdbe5b140784ba6cebd173cb84792).
+The root and bilinear lane read its actual
+[PROOF.md](https://github.com/GettysburgResearch/riemann/blob/dd70e580a5ffdbe5b140784ba6cebd173cb84792/standalone/2026-10-10-all-order-collision-removal/PROOF.md)
+and
+[CYCLE_FACTORIZATION.md](https://github.com/GettysburgResearch/riemann/blob/dd70e580a5ffdbe5b140784ba6cebd173cb84792/standalone/2026-10-10-all-order-collision-removal/continuation-balanced-closure/CYCLE_FACTORIZATION.md).
+Their Git blobs are fd93d4424751a17cc89368039aecbd61e687ad81 and
+6d0b1a48b6b5a05535efb63c99f6ce501e243e35, respectively.
+
+That packet already contains:
+
+- the full multivariate primitive-necklace formula, with its proof;
+- every fixed-degree factorization and the remainder threshold
+  \(\min_i\Re s_i>1/(J+1)\);
+- forward and inverse finite convolution with independently shortened
+  factor scales and literal row zeros;
+- the critical absolute kernel cost
+  \((1+\log Z)^{\binom r2}\).
+
+Those are **not new results of this packet**. Its explicit additional
+construction is
+\(\mathcal R_J\prod_\alpha
+T_{\alpha,X_\alpha}^{w_\alpha}\), with every copy shortened separately
+at \(X_\alpha=\min_{\alpha_i>0}Y_i^{1/\alpha_i}\) and the absolutely
+convergent remainder left unshortened. It spells out the exact
+coefficient transport for the physical source. Mixed Hermitian phases
+and unequal windows are explicit in this construction, but the earlier
+formal-variable and rectangular-convolution arguments already preserve
+that geometry.
+
+The original finite exclusion is retained here because only the
+remainder's upper and absolute-coefficient bounds are needed: it is
+allowed to vanish. The earlier cycle theorem enlarged the fixed
+exclusion to control both the remainder and its reciprocal and to
+establish nonvanishing. These are different stated scopes, not a
+contradiction.
+
+### Concurrent finite repair and stronger CT1 scope: PR #931
+
+PR #931, at content commit
+[3968d1b7135900e6130412f58a39bc67e73d4ecb](https://github.com/GettysburgResearch/riemann/commit/3968d1b7135900e6130412f58a39bc67e73d4ecb),
+explicitly credits and applies #916 in
+[HISTORICAL_CONNECTIONS.md, HC1--HC6](https://github.com/GettysburgResearch/riemann/blob/3968d1b7135900e6130412f58a39bc67e73d4ecb/standalone/2026-10-13-signed-moment-reassessment/HISTORICAL_CONNECTIONS.md).
+Its whole-kernel norm-box truncation already gives a polynomial
+all-frequency repair. At equal horizons on the critical line, its
+collision bound times the short-factor majorants gives the same
+\(HY^k(1+\log Y)^{k(2k-1)}\) trace majorant as this packet.
+The per-factor construction here is therefore an alternative
+implementation, **not the first polynomial repair or an improved
+critical bound**. Below one half, its displayed bound need not improve
+HC6 either.
+
+The same concurrent packet's
+[SIGNED_TRACE_OBSTRUCTION.md](https://github.com/GettysburgResearch/riemann/blob/3968d1b7135900e6130412f58a39bc67e73d4ecb/standalone/2026-10-13-signed-moment-reassessment/SIGNED_TRACE_OBSTRUCTION.md)
+gives a different complete-row CT1 refutation, for every fixed
+\(k\ge1\) and every fixed finite-order datum, along an unbounded
+sequence of permitted real cutoffs. Its two-slot analytic propagation
+and higher-slot maximum-principle argument cover a broader twist/order
+scope. This packet's CT1 theorem instead uses the trivial datum,
+\(k\ge2\), a positive paired trace, explicitly small frequency clusters,
+and every sufficiently large cutoff. Its separate first-order P13
+Euler-trace refutation is a different target.
+
+Both packets retain the complete norm-filtered identity and leave the
+physical native moment open. No partial-tube estimate is transferred
+between their representations without proof. The root read #931's
+trace, moving-contour and historical comparison notes; this credit
+check is not a full independent mathematical review of that packet.
+
+### Concurrent prime-face and deformation work: PR #930
+
+PR #930, at content commit
+[c07b9f653b8d0eb82d9f056d935a4ecef6770f56](https://github.com/GettysburgResearch/riemann/commit/c07b9f653b8d0eb82d9f056d935a4ecef6770f56),
+already contains the whole signed all-distinct prime-face obstruction
+and the neighboring prime-count/deformation and
+\(\mu_K\omega_K\) tangent barriers in
+[ARITHMETIC_PARITY_OBSTRUCTION.md](https://github.com/GettysburgResearch/riemann/blob/c07b9f653b8d0eb82d9f056d935a4ecef6770f56/standalone/2026-10-12-parity-and-cubic-fibers/ARITHMETIC_PARITY_OBSTRUCTION.md),
+Git blob d90f394a8026eb983da28edb82a5fba8fa91bb29.
+The root and native lane read that actual proof.
+
+Its prime-face theorem holds on arbitrarily large scales for
+\(0<h<6/5\). The relative collision inequality in this packet improves
+the error after absorption to \(O(H(D/\log D)^k)\), yielding
+\(0<h<6k/5\). The named prime ideal theorem gives the stronger
+all-sufficiently-large-scale conclusion and explicit logarithmic
+denominator here. In the intended range \(h>1\) close to one, #930
+already establishes the qualitative obstruction and its exponent
+price.
+
+The deformation conclusions overlap after the parameter substitution
+\(w=-z\) between the two coefficient conventions. This packet supplies
+an alternative amplification argument and a larger stated parameter
+disk; it does not newly discover the strategically relevant
+deformation barrier. The #930 proof has the advantage of requiring
+only its elementary lattice and Mellin arguments.
+
+The native lane also read #930's
+[PARITY_DAMPED_MOMENTS.md](https://github.com/GettysburgResearch/riemann/blob/c07b9f653b8d0eb82d9f056d935a4ecef6770f56/standalone/2026-10-12-parity-and-cubic-fibers/PARITY_DAMPED_MOMENTS.md)
+and the cube-fiber comparison. Its complete positive damped hierarchy
+is a substantive complementary result with its stated pointwise and
+second-moment premises. The elementary unconditional threshold is
+\(t=1/2\); the exact inverse comparison costs \(D^{2kt}\).
+Thus the proved damping threshold does not close the undamped
+native moment. This is a bounded overlap and scope check, not a
+full independent review of every #930 theorem.
+
+### What remains distinct and what remains open
+
+The conjugate-pair conductor deduction, its moving-background native
+sector application, the explicit relative finite collision inequality,
+and the stated source-contract resonance constructions should be
+assessed from their exact proofs. Shared classical identities and
+overlapping obstructions are credited above. The per-factor horizon
+construction is useful as an exact analytic interface, but its
+existence does not constitute a new moment saving.
+
+PR #932 was also noticed in the final frontier check, at head
+c63b5aaa5d53dd183abb20299cea4628f0ab57b7. Its PR description reports an
+ordinary-zeta bridge and still-open arithmetic capture estimates.
+Only that metadata was inspected for this addendum; none of its
+theorems is imported or independently certified here.
+
+The complete physical undamped moment, including its long signed
+prime/composite singleton contribution, remains the unresolved
+arithmetic target. The bibliography and comparison update does not
+alter any prior proof's mathematical conclusion.
