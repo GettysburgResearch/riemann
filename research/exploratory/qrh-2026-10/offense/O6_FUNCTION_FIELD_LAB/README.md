@@ -23,7 +23,7 @@ What was actually run (single-threaded, shared 4-core machine, every run < 20 mi
   all 16 cells equal); gauss_exact.py (Z[zeta_N] exact: q=7 all 343 squarefree n of deg<=3; q=13 93 n);
   leverage_check.py (q=7, d<=4); dual_energy.c (q=7 d=3,4,5; q=13 d=3,4; q=19 d=3); ledger.py (q=7 d=2
   M=1..4, d=3 M=1..5); theta_series.c (q=7 d<=8, deg h<=2; q=13 d<=6, deg h<=1); lab_sample.c
-  (random rows of one degree, exact per row: q=7 m=7 N=3000, plus the runs listed in §3.1);
+  (random rows of one degree, exact per row: q=7 m=7 N=3000, m=8 N=400, m=9 N=80; q=13 m=7 N=150);
   dual_sample.c (random dual rows, exact per row, q=7 d=7); pipeline_table.py, tables.py,
   sample_table.py, row_anatomy.py. Outputs in results/ (about 0.2 MB).
 Smallest remaining gap: no lab mechanism proves Mom(1, rho < 1) without the Riemann hypothesis for the
@@ -158,7 +158,7 @@ EXACT check (`gauss_exact.py`, `Z[ζ_N]` reduced mod `Φ_N`): 343/343 (q = 7), 9
 **2.2 Absorption.** From (HD) and the Hasse–Davenport product formula over `F_q`:
 * `g_n(χ)g_n(χ²) = μ(n)(−J)^{deg n} conj(χ_n(4)) g_n(χ³)`, `J = J(χ0², χ0²)`. EXACT: 343/343 and 93/93.
   Normalized, this is the Oct 5 eq:gj `γ₁γ₂ = μαG`, with `α(n) = (−J/√q)^{deg n}`. The `−J` equals the
-  primary `π | q` (the classical Jacobi-sum sign `J = −π`), so **α is the Frobenius angle of the CM curve,
+  primary `π | q` (the classical Jacobi-sum sign `J = −π`; classical, not re-checked here), so **α is the Frobenius angle of the CM curve,
   raised to the degree**: an unramified, infinite-order Hecke character.
 * **Pellet**: `χ0³(Res(n, n')) = χ₂(Res(n, n')) = (−1)^d μ(n) χ₂(−1)^{d(d−1)/2}`, i.e.
   `μ(n) = (−1)^d χ₂(disc n)`. EXACT: 2401 squarefree monic `n` of degree ≤ 4 over `F_7`. The quadratic
@@ -202,7 +202,8 @@ Exact integers for every `(d, m)` are in `results/core_q*.txt`, with columns
 `d k rows M2_k Diag_k max_k` (rows of exact degree `k`). `results/tables.md` has the full grids.
 
 * **Rows of degree ≤ 2 are diagonal-sized** (ratio 0.98–1.0). Their `L` has degree ≤ 1.
-* **Every row of degree 3 to 6 is a CM member (finite monodromy).**
+* **Every row of degree 3 to 6 is a CM member (finite monodromy)** (EXACT census at degree 3, q = 13;
+  root census at degree 4–5; HEURISTIC in general).
   * EXACT census: at q = 13, every degree-3 row has `|A_u(8)|²/q⁸ ∈ {0, 1, 81}`: 130 rows give
     `81 = (d+1)²`, 702 give 1, and 1365 give 0.
   * At q = 7, 13, 19, 31, 37 the maximum over degree-3 rows is exactly `(d+1)² q^d`, i.e.
@@ -220,8 +221,8 @@ Exact integers for every `(d, m)` are in `results/core_q*.txt`, with columns
   * Row anatomy (`row_anatomy.py`, q = 7, all 16 807 rows of degree 5, EXACT): the median of
     `|A_u(d)|²/q^d` is exactly 0 or 1 at `d = 5, 7, 10, 12, 14`, and the top 10 % of rows carry 47–85 %
     of `M₂` (`results/row_anatomy_q7_deg5.txt`).
-  * Generic (Katz–Sarnak, `U(p, q')`) behaviour starts only at `deg u ≥ 7`, beyond every row range run
-    here (q = 7 would need 823 543 rows of degree 7).
+  * Generic (Katz–Sarnak, `U(p, q')`) behaviour starts only at `deg u ≥ 7`. That is beyond the
+    exhaustive runs (q = 7 would need 823 543 rows of degree 7); §3.1 samples it.
   * **There is no number-field analogue**: `L(s, ψ_u)` over `Q(ω)` is a GL(1) Hecke L-function, with no
     rank and no Hodge type. So the lab at row degree ≤ 6 is *more* degenerate than the Q-side family.
 * **Consequence.** At fixed row degree the ratio grows like a power of `d` and does not decrease with `q`
@@ -229,9 +230,11 @@ Exact integers for every `(d, m)` are in `results/core_q*.txt`, with columns
   * The lab "truth" in the accessible range is diagonal-sized only up to factors polynomial in `d`
     (`q^{o(d)}`), carried by CM members with clustered Frobenius angles.
   * That is the precision in which Mom(1, ρ) is stated, so this does not contradict it.
-  * It does mean the lab cannot yet test "M₂ ≈ Diag" for generic members. The clean ratios 0.88–0.95
-    over `Q(ω)` (RUNG_STRENGTH §5) have no lab counterpart below row degree 7.
+  * It does mean the exhaustive runs cannot test "M₂ ≈ Diag" for generic members. The clean ratios
+    0.88–0.95 over `Q(ω)` (RUNG_STRENGTH §5) have no lab counterpart below row degree 7; §3.1 supplies
+    one by sampling.
   * (EXACT census and maxima; the trend in `d` is EMPIRICAL; uniformity in `d` is not proved here.)
+
 ### 3.1 Generic members: row degree ≥ 7 (sampled rows, exact per row)
 
 `lab_sample.c` draws uniformly random monic rows `u` of one exact degree `m`. For each it computes
@@ -256,6 +259,15 @@ q = 7, `m = 8`, N = 400 rows (`results/samp_q7_m8.txt`; larger error bars):
 | ρ = m/d | 1.14 | 1.00 | 0.89 | 0.80 | 0.73 | 0.67 | 0.57 | 0.50 | 0.44 | 0.40 | 0.33 |
 | `M₂/Diag` | 1.05 | 1.06 | 1.08 | 1.13 | 1.10 | 1.33 | 1.37 | 1.53 | 1.69 | 1.80 | 2.08 |
 | ± s.e. | 0.10 | 0.11 | 0.11 | 0.13 | 0.13 | 0.17 | 0.21 | 0.23 | 0.31 | 0.36 | 0.48 |
+
+Two smaller runs (`results/samp_q13_m7.txt`, `results/samp_q7_m9.txt`; all cells in
+`results/samples_table.md`):
+* q = 13, `m = 7`, N = 150: `M₂/Diag` = 1.09–1.21 (± 0.14–0.19) for ρ ∈ [0.7, 1.17], and 1.07–1.31
+  (± 0.17–0.24) for ρ ∈ [0.5, 0.64].
+* q = 7, `m = 9`, N = 80: 1.15–1.28 (± 0.27–0.30) for ρ ∈ [0.75, 1.12], and 1.25–1.51 (± 0.33–0.59) for
+  ρ ∈ [0.5, 0.69].
+
+Both are consistent with diagonal size within 1–2 standard errors. Neither resolves the drift.
 
 * **Once the members are generic the lab looks like `Q(ω)`.** `M₂/Diag` is 0.91–0.96 for
   ρ ∈ [0.7, 1.17]. RUNG_STRENGTH §5 has 0.88–0.95 over `Q(ω)` against a naive diagonal; ours is exact,

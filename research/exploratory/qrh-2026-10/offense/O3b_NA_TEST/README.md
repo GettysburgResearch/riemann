@@ -1,12 +1,14 @@
 # O3b: numerical and structural test of the non-alignment statement (NA)
 
 ```text
-Status: EXPLORATION, OFFENSE/EXPERIMENTAL. Verdict on (NA): DOES NOT SUPPORT. The data show the
-  falsifying pattern: persistent alignment of A^exc with B's principal row, r_1 ~ 0.25 flat in Q.
-  The structural reading (PROPOSED) is that (NA)'s main term is the probe's own principal-row term,
-  of size ~ 1/L(1, target), not small; so (NA) is false for generic targets and in any case not a
-  non-circular input. No half-plane below 7/8 is obtained. Labels per claim: PROVED-HERE (short algebra written out, resting on IMPORTED
-  identities of an unreviewed manuscript), EMPIRICAL (floating point, finite), HEURISTIC, PROPOSED, OPEN.
+Status: EXPLORATION, OFFENSE/EXPERIMENTAL. Round 2 (Section 8) supersedes the round-1 verdict.
+  The round-1 "falsifying pattern" (principal-row alignment, Sections 0, 5.1-5.2, 6-7) is an
+  ARTIFACT of the toy row weight exp(-x^2). With [S30]'s log-Gaussian W_G it disappears: R_exc sits
+  at the noise floor, and only the mu -> 1 control shows a residue, which is the Moebius signature.
+  Round-2 verdict (PROPOSED): the main term of <A^exc, B> is the target signal c_S A_eta f_eta itself
+  (same eta, same s). It DOES NOT CANCEL usefully: subtracting it from both sides empties the
+  contradiction, so (NA') gives no sigma0, and (NA) is circular. No half-plane below 7/8 is obtained.
+  Labels: PROVED-HERE, EMPIRICAL (floating point, finite), HEURISTIC, PROPOSED, OPEN.
   RH and every quasi-RH half-plane remain unproved.
 Scope: (NA) of ../O3_SEP30_X_OCT5/README.md Section 2.3: a Z^{b/12} saving beyond Cauchy-Schwarz in
   the pairing of the exceptional (sextic Patterson-bias) component A^exc of the additive polynomial
@@ -31,13 +33,19 @@ What was actually run (single-threaded numpy, about 25 CPU-minutes in total; no 
     norm >= Z/4: results/kubhi_Q{1024,4096}.json.
   scripts/diag_c.py Q 80000: alignment row by row. Output: results/diagc_Q{256,1024,4096,8192}.json.
   scripts/analyze.py writes the tables to results/analysis.md and results/fits.json.
-Smallest remaining gap: (NA) is not a gap that numerics can close. Its leading part is carried by
-  B's principal row (c = 1, constant in m; for B^J, the minimal marked row). By the O3 Section 2.2 law
-  "signal proportional to the exceptional mean", that row is the probe's own signal term (PROPOSED,
-  Section 6). The smallest OPEN statement is therefore (NA') in Section 7: non-alignment of A^exc with
-  B minus its principal or signal rows. Even if (NA') holds, it does not feed the contradiction
-  argument unless the signal is re-booked on the high side. That re-booking is exactly the missing step.
+  Round 2: VMODE=loggauss scripts/na_kubota.py Q 80000 with CMAX = 80000 (Q = 256, 1024) and
+    160000 (Q = 4096). Output: results/kublg_Q*.json.
+Smallest remaining gap (round 2): a low-side bound for the signal-carrying pairing <A^exc, B> that
+  neither goes through ||A^exc|| (Cauchy-Schwarz, the source of the Z^{b/12} loss) nor uses the size
+  of f_eta (circular). It is OPEN and no candidate was found (Section 8.3). (NA) is circular; (NA')
+  is vacuous for the contradiction.
 ```
+
+> **Round-2 correction (about 00:50 UTC).** Sections 0, 5.1, 5.2, 6 and 7 below are the round-1 text and
+> are kept for the record. Their principal-row (`c = 1`) alignment and their `1/L(1, ψη)` reading come
+> from the M0 row weight `V = e^{−x²}`. [S30]'s row weight is `W_G(q_A/Z) = (2√π)^{−1}e^{−(log(q_A/Z))²/4}`,
+> under which the `c = 1` row is super-polynomially small. Read Section 8 for the corrected numerics
+> and the cancellation analysis.
 
 RH remains unproved. [S30] is an external, unreviewed import. Nothing here moves the imported
 best value `σ0 = 0.874957…`.
@@ -127,7 +135,7 @@ At the paper geometry, `Q = Z^{M′}` with `M′ ≈ 0.87` and `b ≈ 0.29`, the
 | `S`, `b_*`, `ξ` | `S = {2, λ}`, `b_* = 2λ`; `ξ = ξ_λ·ξ_2`, quadratic mod `λ` × cubic mod 2, order 6, nonprincipal at both | none in kind (`P_0` small) |
 | `m`-range, `Ω` | all `m ≠ 0` in `O`, `q_m ≤ Q`, `Ω = (1 − q_m/Q)³₊` | `Ω` is `C²`, not `C^∞` |
 | `A_{m,σ,v}(Y′)` | `Y′^{−1} Σ_s W₁(r_s) r_s^{−1/2} c(s)·q_s^{−1/2} g_{χ_s}(s,−m)`, `s` squarefree primary, `2 ∤ s`, `W₁ = sin²(π(r−1))` on `[1,2]` | `v = 0`. `c(s) = χ_s(b_*) conj ξ(s)` (the paper's `c_σ` without `1_{s∈σ}` and without `τ`). Squarefree `s` only, so `q^{−1/2}g = conj χ_s(−m)γ₁(s)` exactly (O3.1) |
-| `B_{m,σ}(Z)` | `Σ_c θ(c) conj Ξ(c) χ_c(m) V(q_c/Z) q_c^{−1/2}`, `θ = γ₂ conj α = μ conj γ₂²`, `Ξ = ξ·χ_•(b_*)`, `V(x) = e^{−x²}`, `q_c ≤ 2.5Z` | `η = 1`; `R(·, s_σ)` and the `a_θ` (`conj G`) correction dropped; cube part `n > 1` dropped; Mellin `t → 0`; no slot marks (`J^c = ∅`) |
+| `B_{m,σ}(Z)` | `Σ_c θ(c) conj Ξ(c) χ_c(m) V(q_c/Z) q_c^{−1/2}`, `θ = γ₂ conj α = μ conj γ₂²`, `Ξ = ξ·χ_•(b_*)`, `V(x) = e^{−x²}`, `q_c ≤ 2.5Z` | **round 1 used `V = e^{−x²}`, not [S30]'s `W_G` (log-Gaussian); corrected in §8**. `η = 1`; `R(·, s_σ)` and the `a_θ` (`conj G`) correction dropped; cube part `n > 1` dropped; Mellin `t → 0`; no slot marks (`J^c = ∅`) |
 | pairing | `⟨A, B⟩ = Σ_m Ω ξ(m) A_m B_m` (bilinear) | none |
 | `Z` vs `Q` | `Z = Q^{1.15}` (paper: `Q = Z^{M′}`, `M′ ≈ 0.87`) | — |
 
@@ -377,3 +385,128 @@ This matches O3 §2.2, where the signal is proportional to the exceptional mean 
 
 Reproduce, e.g. `OMP_NUM_THREADS=1 python3 scripts/na_kubota.py 4096 80000 results/kub_Q4096.json`
 (about 3.5 min on a loaded 4-core machine). All randomness is seeded.
+
+## 8. Round 2: does the main term cancel between the two sides? (appended 2026-10-13, about 00:50 UTC)
+
+**Verdict: DOES NOT CANCEL (usefully).** The term that would be subtracted is the target signal
+`c_S A_η(Z) f_η(Z)` itself. Subtracting it from both sides removes the only appearance of `1/L` from
+the contradiction. (NA′) is therefore not a usable input, and nothing moves below `0.874957`. Labels:
+PROPOSED (reading of [S30]), EMPIRICAL (M0 numerics), OPEN where stated.
+
+### 8.1 Correction to round 1 (EMPIRICAL; it retracts the "falsifying pattern")
+
+Round 1's M0 used the row weight `V(x) = e^{−x²}`, which gives every row `c ≤ Z` weight about 1.
+[S30]'s row weight is different: the Mellin integral `(1/2πi)∫_{(4)} Z^tΦ(t)…dt` with `Φ = e^{t²}`
+produces the log-Gaussian `W_G(q_A/Z) = (2√π)^{−1}exp(−(log(q_A/Z))²/4)` (Lemma gaussian-annular,
+l. 1288; used as `V = W_G` in Lemma 15.1, l. 8128ff).
+* The constant row `c = 1` therefore has weight `W_G(1/Z) = (2√π)^{−1}e^{−(log Z)²/4}`. That is
+  super-polynomially small, for example `≈ 3·10⁻¹¹` at `Z = 1.4·10⁴`.
+* The rows that matter have `q_c ≍ Z` within a factor `e^{O(1)}`.
+* So the principal-row alignment of §§5.1–5.2, `r₁ ≈ 0.25`, and the `1/L(1, ψη)` reading of §6 are
+  **artifacts of the M0 row weight**. They are not features of [S30]'s pairing.
+
+Rerun with `W_G` (`VMODE=loggauss`; rows up to the stated `CMAX`; everything else as in §2):
+
+| `Q` | `Z` | rows up to | `R_exc`, `θ` (actual, with `μ`) | `μ → 1` | `μ → ±1` | `θ →` random phase | `m`-phase | noise floor | signal/noise: `θ` / `μ→1` |
+|---|---|---|---|---|---|---|---|---|---|
+| 256 | 588 | `136 Z` | 0.0013 | 0.053 | 0.037 | 0.040 | 0.068 | 0.029 | 0.04 / 2.38 |
+| 1024 | 2 896 | `27.6 Z` | 0.0091 | 0.043 | 0.006 | 0.011 | 0.018 | 0.016 | 0.57 / 3.58 |
+| 4096 | 14 263 | `11.2 Z` | (run with rows to `1.6·10⁵` still in progress at write time; see results/kublg_Q4096.log) | | | | | | |
+
+(These are the final checkpoint, `q_s ≤ 8·10⁴`. Over the six checkpoints `Y = 1.4·10⁴ … 8·10⁴` at
+`Q = 1024`, `θ` stays at `0.005–0.052`, at or below about 2× the floor, while `μ → 1` stays at
+signal/noise `2.6–3.6`. In the `ξ`-free control, `μ → 1` reaches signal/noise `8–12` at `Q = 1024`
+and `θ` stays `≤ 1.5`.)
+
+* With the [S30] weight, the actual coefficients `θ = μ conj γ₂²` give `R_exc` **at or below the
+  noise floor**.
+* **Removing `μ` alone** (`μ → 1`) gives a persistent excess: signal/noise `2.4–3.6`, at every
+  checkpoint.
+* Random signs or phases in place of `μ` stay at noise (signal/noise `≤ 1.6`). The `m`-phase
+  baseline at `Q = 256` is `2.3×` its floor, a small-`#m` effect (`#m = 930`).
+* This is the Möbius signature (EMPIRICAL): the part of `⟨A^exc, B⟩` that is not noise is a
+  Möbius-weighted sum over rows `q_c ≍ Z`. With `η = 1` its Möbius cancellation is GRH-like in
+  practice. Removing `μ` turns `1/L` into `L`, which no longer cancels.
+
+* The earlier diagnostics already pointed this way. Rows with `N(c) ≥ Z/4` gave `R` at the noise
+  floor (kubhi, §5.1). Per-row overlaps for `N(c) ≥ 512` sit at `#m^{−1/2}` (§5.2).
+* With the faithful weight, the M0 numerics are **consistent with (NA)** at noise level.
+* They cannot test the part of `⟨A^exc, B⟩` that matters, for the reason in §8.2: in M0 (`η = 1`,
+  zeros GRH-like in practice) the signal part is tiny.
+
+### 8.2 Where the main term sits on the high side (PROPOSED reading of [S30])
+
+* **The high side.** [S30] writes the stage identity `J = Σ_u (rows)` (eq:stage-high-identity). The
+  principal row `u = 1` is the only principal numerator row (§"The principal row and the
+  normalization", l. 5500–5512).
+  * Lemma "Extraction of the principal signal" (l. 6174ff) crosses two scalar poles in that row: the
+    additive variable at `w = 1` and the slot variable at `z = 1/6`.
+  * It gives `𝒫_η(Z) = c_S A_η(Z)·f_η(Z) + O(Z^{C(β_*)−…})`, where
+    `f_η(Z) = (2πi)^{−1}∫_{(2)} Z^{C(s)}e^{(s−5/6)²}H_η(s)/L_F^S(s, η) ds` and
+    `c_S = Ŵ₁(1)M(1/6)(Res ζ_F^S)²/6` (l. 5521).
+* **Same object, same character, same variable.** The `w = 1` pole is the pole of the plain dual
+  column sum, which produces the `Y^{w−1}` signal (O3 §2.2 and l. 3990–4005). On the direct side it
+  is exactly the exceptional (Kubota-bias) mass of the additive variable, i.e. `A^exc`.
+  * The `a`-sum carries `μ(a)η(a)` at the target `η` itself: the correction `conj G(A)`, the `c_σ`
+    normalization and `Ξ` are calibrated so that no residual ray character survives (l. 3373–3380,
+    verified coefficientwise in [S30] §local-euler; my reading is that the `ψ` of §6 is trivial in
+    [S30], PROPOSED).
+  * Its Mellin variable is the `s` of `f_η`, with `C(s) = s − 11/16` in Part II. It is not an
+    evaluation at `s = 1`.
+  * The sixth-power exceptional frequencies `k = a₁⁶e` (O3 Prop. O3.2) are the replicas that the
+    local Euler factor `H_η(s) = ℋ_{η,1}(s, 1, 1/6)` absorbs. So the whole exceptional pairing,
+    not only `a₁ = 1`, is part of `c_S A_η f_η` up to the error terms of Lemma lem:principal-residue-interface.
+  * Hence (PROPOSED; the exact identity is OPEN):
+
+        ⟨A^exc, B⟩  =  c_S A_η(Z) f_η(Z)  +  E,     E = exceptional-pairing remainder.
+
+* **Where a subtraction would act.** The contradiction is Prop. "Continuation from a common signal"
+  (l. 400ff). Its only use of the two inputs is the triangle inequality behind eq:uniform-saving:
+
+        |f_η| ≤ |J| + |J − f_η|   (normalized by c_S A_η),
+
+  with the low input `|J| ≪ Z^{C(σ0)+ω}` (eq:low-probe-contract) and the high input
+  `|J − f_η| ≪ Z^{C(β_*)−σ}` (eq:high-probe-contract).
+  * Subtracting `M₀ = c_S A_η f_η` from `J` on the low side turns the low input into a bound for
+    `J − f_η = ⟨A^rest, B⟩ + E`. That is the **same quantity** the high input bounds.
+  * The triangle inequality becomes `|f_η − f_η| ≤ …`, which is vacuous. No information on
+    `1/L_F^S(s, η)` remains, and the Mellin continuation step (l. 458ff) has nothing to continue.
+* So **the main term does appear identically on both sides**: same `η`, same `s`, same `H_η`. But
+  cancelling it is exactly what the contradiction must not do. The low side has to bound `J`, signal
+  included, without knowing where the zeros are. [S30] does this by Cauchy–Schwarz, and the price is
+  `‖A^exc‖`, i.e. the `P_a^{1/12} = Z^{b/12}` loss.
+
+### 8.3 Consequences for (NA) and (NA′)
+
+* **(NA′)**, defined as `|⟨A^exc, B⟩ − c_S A_η f_η| ≪ ‖A^exc‖‖B‖P_a^{−1/12}Z^ε` (equivalently
+  `|E| ≪ (Q/Y′)^{1/2}‖B‖Z^ε`, or with B's signal-carrying part removed):
+  * EMPIRICAL status: consistent at noise level in M0 (§8.1 table).
+  * Usefulness: none. It only bounds a piece of `J − f_η`, which the high side already controls. It
+    gives **no σ0 at all**. The O3 model value `926/1077` does **not** follow from (NA′).
+* **(NA)** itself, `|⟨A^exc, B⟩| ≪ (Q/Y′)^{1/2}‖B‖Z^ε`:
+  * If `E` is small (as M0 suggests), (NA) is equivalent, up to the high-side errors, to
+    `|f_η(Z)| ≪ Z^{C(σ′)+ω}` at the improved exponent. By the continuation criterion that is the
+    zero-free statement itself, so (NA) is **circular** (PROPOSED).
+  * Granting it still gives the CONDITIONAL `926/1077` of O3 §5, but only as a restatement of the
+    conclusion.
+* **Net.** Within this probe, the `Z^{b/12}` Gram loss is the price of bounding the signal-carrying
+  component without zero information. Any Cauchy–Schwarz split that removes it either keeps the
+  signal on the low side, which is circular, or cancels it, which is vacuous.
+  * A way below `0.874957` along this line needs a **low-side bound for the signal-carrying
+    pairing that does not go through `‖A^exc‖` and does not use the size of `f_η`**.
+  * The visible gap is this:
+    * `‖A^exc‖²` counts the `≍ K^{1/6}` sixth-power replicas `k = a₁⁶e` with equal ℓ²-mass, which
+      is the `P_a^{1/6}`.
+    * In the pairing the same replicas enter with the convergent local weights that `H_η` absorbs.
+  * Smallest statement (OPEN, HEURISTIC formulation): a replica-wise bound
+    `Σ_{a₁}|⟨A^{exc,a₁}, B⟩| ≪ (Q/Y′)^{1/2}‖B‖Z^ε`, proved without zero information.
+    * It is non-circular only if the per-replica pairings can be bounded by norms that decay in
+      `N(a₁)`.
+    * Each replica pairs with all rows of B (the conditions `conj χ_a(a₁⁶) = 1` are automatic), so
+      no such decay is visible; I found no candidate.
+    * Since `H_η − 1` is a fixed, `Z`-independent factor, the replica sum is itself a fixed multiple
+      of the signal. A replica-wise bound that uses its size is again circular.
+
+Files for round 2:
+* `scripts/na_kubota.py`: new `VMODE=loggauss` and `CMAX` options.
+* Outputs: `results/kublg_Q{256,1024,4096}.json` and `.log`.
