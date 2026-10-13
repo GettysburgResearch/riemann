@@ -1,0 +1,432 @@
+{
+  "arithmetic": "exact integers, fractions, and Z[zeta_6] pairs",
+  "euler": {
+    "inverse_coefficient_cap": 400,
+    "norm_fixtures": [
+      [],
+      [
+        7
+      ],
+      [
+        7,
+        7
+      ],
+      [
+        7,
+        7,
+        13,
+        13
+      ],
+      [
+        7,
+        7,
+        13,
+        13,
+        19,
+        19,
+        25
+      ],
+      [
+        7,
+        13,
+        13,
+        25,
+        31
+      ]
+    ],
+    "step_test": "W=1_[1,2] used only for finite rational Mellin algebra"
+  },
+  "exponents": {
+    "fourth_example": {
+      "A": "4",
+      "alpha": "47/64",
+      "beta": "23/32",
+      "delta": "1/16",
+      "h": "21/20",
+      "sigma": "95/128"
+    },
+    "h_equals_one_thresholds": {
+      "2": "24/7",
+      "3": "36/13",
+      "4": "48/19",
+      "8": "96/43"
+    }
+  },
+  "helper_git_blob": "64d21a7f400f5bf5654fd67735743ff1befab067",
+  "native": {
+    "nonunit_example": {
+      "D": 32,
+      "incorrect_unmasked_mean": 1,
+      "masked_mean": [
+        0,
+        0
+      ],
+      "row": [
+        -3,
+        -2
+      ],
+      "y": 7
+    },
+    "principal_table": [
+      {
+        "D": 8,
+        "column_count": 2,
+        "native_fourth": 16,
+        "native_sum": -2,
+        "projected_fourth": 6,
+        "smooth_mean_fourth": 0,
+        "smooth_mobius_sum": 0,
+        "y": 3
+      },
+      {
+        "D": 8,
+        "column_count": 2,
+        "native_fourth": 16,
+        "native_sum": -2,
+        "projected_fourth": 6,
+        "smooth_mean_fourth": 0,
+        "smooth_mobius_sum": 0,
+        "y": 7
+      },
+      {
+        "D": 8,
+        "column_count": 2,
+        "native_fourth": 16,
+        "native_sum": -2,
+        "projected_fourth": 16,
+        "smooth_mean_fourth": 16,
+        "smooth_mobius_sum": -2,
+        "y": 13
+      },
+      {
+        "D": 8,
+        "column_count": 2,
+        "native_fourth": 16,
+        "native_sum": -2,
+        "projected_fourth": 16,
+        "smooth_mean_fourth": 16,
+        "smooth_mobius_sum": -2,
+        "y": 19
+      },
+      {
+        "D": 8,
+        "column_count": 2,
+        "native_fourth": 16,
+        "native_sum": -2,
+        "projected_fourth": 16,
+        "smooth_mean_fourth": 16,
+        "smooth_mobius_sum": -2,
+        "y": 25
+      },
+      {
+        "D": 8,
+        "column_count": 2,
+        "native_fourth": 16,
+        "native_sum": -2,
+        "projected_fourth": 16,
+        "smooth_mean_fourth": 16,
+        "smooth_mobius_sum": -2,
+        "y": 43
+      },
+      {
+        "D": 16,
+        "column_count": 5,
+        "native_fourth": 625,
+        "native_sum": -5,
+        "projected_fourth": 45,
+        "smooth_mean_fourth": 0,
+        "smooth_mobius_sum": 0,
+        "y": 3
+      },
+      {
+        "D": 16,
+        "column_count": 5,
+        "native_fourth": 625,
+        "native_sum": -5,
+        "projected_fourth": 45,
+        "smooth_mean_fourth": 0,
+        "smooth_mobius_sum": 0,
+        "y": 7
+      },
+      {
+        "D": 16,
+        "column_count": 5,
+        "native_fourth": 625,
+        "native_sum": -5,
+        "projected_fourth": 45,
+        "smooth_mean_fourth": 0,
+        "smooth_mobius_sum": 0,
+        "y": 13
+      },
+      {
+        "D": 16,
+        "column_count": 5,
+        "native_fourth": 625,
+        "native_sum": -5,
+        "projected_fourth": 79,
+        "smooth_mean_fourth": 16,
+        "smooth_mobius_sum": -2,
+        "y": 19
+      },
+      {
+        "D": 16,
+        "column_count": 5,
+        "native_fourth": 625,
+        "native_sum": -5,
+        "projected_fourth": 159,
+        "smooth_mean_fourth": 81,
+        "smooth_mobius_sum": -3,
+        "y": 25
+      },
+      {
+        "D": 16,
+        "column_count": 5,
+        "native_fourth": 625,
+        "native_sum": -5,
+        "projected_fourth": 625,
+        "smooth_mean_fourth": 625,
+        "smooth_mobius_sum": -5,
+        "y": 43
+      },
+      {
+        "D": 32,
+        "column_count": 7,
+        "native_fourth": 625,
+        "native_sum": -5,
+        "projected_fourth": 91,
+        "smooth_mean_fourth": 0,
+        "smooth_mobius_sum": 0,
+        "y": 3
+      },
+      {
+        "D": 32,
+        "column_count": 7,
+        "native_fourth": 625,
+        "native_sum": -5,
+        "projected_fourth": 91,
+        "smooth_mean_fourth": 1,
+        "smooth_mobius_sum": 1,
+        "y": 7
+      },
+      {
+        "D": 32,
+        "column_count": 7,
+        "native_fourth": 625,
+        "native_sum": -5,
+        "projected_fourth": 91,
+        "smooth_mean_fourth": 1,
+        "smooth_mobius_sum": 1,
+        "y": 13
+      },
+      {
+        "D": 32,
+        "column_count": 7,
+        "native_fourth": 625,
+        "native_sum": -5,
+        "projected_fourth": 91,
+        "smooth_mean_fourth": 1,
+        "smooth_mobius_sum": 1,
+        "y": 19
+      },
+      {
+        "D": 32,
+        "column_count": 7,
+        "native_fourth": 625,
+        "native_sum": -5,
+        "projected_fourth": 91,
+        "smooth_mean_fourth": 1,
+        "smooth_mobius_sum": 1,
+        "y": 25
+      },
+      {
+        "D": 32,
+        "column_count": 7,
+        "native_fourth": 625,
+        "native_sum": -5,
+        "projected_fourth": 159,
+        "smooth_mean_fourth": 81,
+        "smooth_mobius_sum": -3,
+        "y": 43
+      },
+      {
+        "D": 64,
+        "column_count": 19,
+        "native_fourth": 14641,
+        "native_sum": -11,
+        "projected_fourth": 711,
+        "smooth_mean_fourth": 0,
+        "smooth_mobius_sum": 0,
+        "y": 3
+      },
+      {
+        "D": 64,
+        "column_count": 19,
+        "native_fourth": 14641,
+        "native_sum": -11,
+        "projected_fourth": 1011,
+        "smooth_mean_fourth": 0,
+        "smooth_mobius_sum": 0,
+        "y": 7
+      },
+      {
+        "D": 64,
+        "column_count": 19,
+        "native_fourth": 14641,
+        "native_sum": -11,
+        "projected_fourth": 1651,
+        "smooth_mean_fourth": 256,
+        "smooth_mobius_sum": 4,
+        "y": 13
+      },
+      {
+        "D": 64,
+        "column_count": 19,
+        "native_fourth": 14641,
+        "native_sum": -11,
+        "projected_fourth": 1651,
+        "smooth_mean_fourth": 256,
+        "smooth_mobius_sum": 4,
+        "y": 19
+      },
+      {
+        "D": 64,
+        "column_count": 19,
+        "native_fourth": 14641,
+        "native_sum": -11,
+        "projected_fourth": 1651,
+        "smooth_mean_fourth": 256,
+        "smooth_mobius_sum": 4,
+        "y": 25
+      },
+      {
+        "D": 64,
+        "column_count": 19,
+        "native_fourth": 14641,
+        "native_sum": -11,
+        "projected_fourth": 1651,
+        "smooth_mean_fourth": 256,
+        "smooth_mobius_sum": 4,
+        "y": 43
+      },
+      {
+        "D": 128,
+        "column_count": 37,
+        "native_fourth": 2401,
+        "native_sum": -7,
+        "projected_fourth": 2821,
+        "smooth_mean_fourth": 0,
+        "smooth_mobius_sum": 0,
+        "y": 3
+      },
+      {
+        "D": 128,
+        "column_count": 37,
+        "native_fourth": 2401,
+        "native_sum": -7,
+        "projected_fourth": 4383,
+        "smooth_mean_fourth": 0,
+        "smooth_mobius_sum": 0,
+        "y": 7
+      },
+      {
+        "D": 128,
+        "column_count": 37,
+        "native_fourth": 2401,
+        "native_sum": -7,
+        "projected_fourth": 8395,
+        "smooth_mean_fourth": 1,
+        "smooth_mobius_sum": 1,
+        "y": 13
+      },
+      {
+        "D": 128,
+        "column_count": 37,
+        "native_fourth": 2401,
+        "native_sum": -7,
+        "projected_fourth": 19819,
+        "smooth_mean_fourth": 6561,
+        "smooth_mobius_sum": 9,
+        "y": 19
+      },
+      {
+        "D": 128,
+        "column_count": 37,
+        "native_fourth": 2401,
+        "native_sum": -7,
+        "projected_fourth": 30907,
+        "smooth_mean_fourth": 14641,
+        "smooth_mobius_sum": 11,
+        "y": 25
+      },
+      {
+        "D": 128,
+        "column_count": 37,
+        "native_fourth": 2401,
+        "native_sum": -7,
+        "projected_fourth": 71371,
+        "smooth_mean_fourth": 50625,
+        "smooth_mobius_sum": 15,
+        "y": 43
+      }
+    ],
+    "scope": "all squarefree good ideal columns D<=Nn<=2D at the listed D; hard window only",
+    "signed_examples": {
+      "negative": {
+        "D": 8,
+        "Nu": 16,
+        "difference": -5,
+        "native": 1,
+        "projected": 6,
+        "u": [
+          -4,
+          -4
+        ],
+        "y": 3
+      },
+      "positive": {
+        "D": 8,
+        "Nu": 12,
+        "difference": 10,
+        "native": 16,
+        "projected": 6,
+        "u": [
+          -4,
+          -2
+        ],
+        "y": 3
+      }
+    }
+  },
+  "predicate_counts": {
+    "actual_character_phase_enumeration": 12,
+    "concrete_beta": 1,
+    "concrete_contour": 1,
+    "concrete_delta": 1,
+    "concrete_strict_cutoff": 1,
+    "cutoff_threshold_identity": 79,
+    "exact_compact_step_mellin_fixture": 18,
+    "exact_forward_operator_mass": 18,
+    "exact_principal_jensen": 120,
+    "finite_euler_subset_identity": 6,
+    "finite_inverse_coefficients": 2400,
+    "finite_signed_dirichlet_product": 18,
+    "frozen_prime_zero_mask": 25,
+    "native_sixth_row_conditional_mean": 60,
+    "negative_control_do_not_merge_split_primes": 1,
+    "negative_control_inert_norm_not_rational_prime": 1,
+    "negative_control_no_endpoint_substitution": 1,
+    "negative_control_no_native_projection_monotonicity": 1,
+    "negative_control_no_unmasked_principal_formula": 1,
+    "negative_control_retain_sixth_aliases": 1,
+    "norm_grouped_absolute_mass": 93,
+    "pinned_helper_blob": 1,
+    "quadratic_norm_fiber_sign": 93,
+    "replica_exponent_identity": 79,
+    "sixth_power_norm": 30,
+    "strict_mellin_window": 79,
+    "strict_positive_gaps": 79
+  },
+  "scope": "finite diagnostic identities, not infinite analytic certification",
+  "status": "PASS",
+  "total_predicates": 3220
+}
