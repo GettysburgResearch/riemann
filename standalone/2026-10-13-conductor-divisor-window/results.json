@@ -1,0 +1,72 @@
+{
+  "annular_witness": {
+    "D": 16384,
+    "H": 2097152,
+    "active_conductor_norm": 49,
+    "column_norms": [
+      12607,
+      12007,
+      12607,
+      12007
+    ],
+    "delta": "1/8",
+    "neutral_radical_norm": 21624607,
+    "sharp_active_sum_at_H49": [
+      -6,
+      0
+    ],
+    "total_radical_norm": 1059605743
+  },
+  "complete_quartet_domain": {
+    "D": 64,
+    "H": 13,
+    "columns": 7,
+    "ordered_tuples": 2401,
+    "rows": 54,
+    "window": "32<Nn<=64"
+  },
+  "counts": {
+    "block_gap_implication": 21870,
+    "complete_domain": 1,
+    "complete_quartet_mask": 129654,
+    "conductor_mask_partition": 2401,
+    "convolution_support_partial": 128,
+    "dilation_norm": 8748,
+    "disk_fourier_cutoff": 845,
+    "dual_gap_squared": 624,
+    "explicit_ideal_count": 256,
+    "generator_norm": 15,
+    "growing_active_exponents": 1,
+    "helper_binding": 1,
+    "negative_control_active_conductor_omitted": 1,
+    "negative_control_deleted_neutral_zero": 1,
+    "negative_control_equal_norm_divisors_merged": 1,
+    "negative_control_sharp_substitution": 1,
+    "negative_control_sixth_zero_as_one": 1,
+    "negative_control_squared_norm_dilation": 1,
+    "neutral_support_budget": 2401,
+    "nonvacuous_gap_tests": 1,
+    "physical_mask_reunion": 1728,
+    "sixth_alias_zero": 12960,
+    "stretched_tail_separation": 1089,
+    "uniform_order_log_budget": 512,
+    "witness_annulus": 1,
+    "witness_beyond_old_cutoff": 1,
+    "witness_gap": 1,
+    "witness_primality": 3,
+    "witness_unit_trivial": 6
+  },
+  "gap_valid_parameter_cases": 11,
+  "independent_mathematical_review": false,
+  "negative_controls": {
+    "active_conductor_omitted": true,
+    "deleted_neutral_zero": true,
+    "equal_norm_divisors_merged": true,
+    "sharp_substitution": true,
+    "sixth_zero_as_one": true,
+    "squared_norm_dilation": true
+  },
+  "scope": "Exact finite algebra and norm inequalities only; no infinite Schwartz evaluation.",
+  "status": "PASS_FINITE_CONDUCTOR_DIVISOR_WINDOW",
+  "total_predicates": 183253
+}
