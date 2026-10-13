@@ -1,0 +1,26 @@
+{
+  "arithmetic": "exact Python integers; no floating-point tolerance",
+  "case_sha256": "5332ddf9877272a92420cc7ee850948ed07069bf04ae64317de6991bcb8aaec8",
+  "coefficient_comparisons": 7200,
+  "companion_characters": [
+    "chi_-3",
+    "chi_-4",
+    "chi_12"
+  ],
+  "deduplicated_norm_negative_controls": 4,
+  "field": "Q(zeta_12), degree 4",
+  "maximum_integer_norm": 1200,
+  "observed_prefix_bounds": [
+    1,
+    1,
+    1
+  ],
+  "restoration_mask_cases": 6,
+  "scope": "finite coefficient identities; no native moment, growing-field uniformity, or RH inference",
+  "splitting_prime_cases": {
+    "fully_split": 44,
+    "ramified_degree_two": 2,
+    "two_degree_two": 150
+  },
+  "status": "PASS"
+}

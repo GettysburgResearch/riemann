@@ -1,0 +1,240 @@
+{
+  "driver_sha256": "0379f3d3a1891354ae733e7f6b0a648095a9d6bc30973f0f25bde7bb4b8e8735",
+  "normal_optimized_byte_identical": true,
+  "runs": [
+    {
+      "checker_sha256": "3f5a8f9d939e754f75e7b705fadedb1a49ea93edf025f6398ea043f3d8697da3",
+      "kind": "periodic_transfer",
+      "mode": "normal",
+      "report": "periodic_transfer_normal.json",
+      "report_sha256": "fc18dc464ed9bfb866ac7d5603e205bf82d513e25151c939f74c879e54bcb9d6",
+      "result": {
+        "abel_and_inequality_cases": 1916,
+        "arithmetic": "exact fractions; no floating-point tolerance",
+        "case_sha256": "82182387966d616f9637c35fae4a74e0520c54d261caa292c683534a590aa8ca",
+        "distinct_scales": 479,
+        "negative_outputs": 891,
+        "positive_outputs": 952,
+        "prefix_cases": 10000,
+        "primitive_sources": 4,
+        "scope": "finite endpoint/sign control; not a proof of a native moment or infinite transfer theorem",
+        "status": "PASS"
+      }
+    },
+    {
+      "checker_sha256": "3f5a8f9d939e754f75e7b705fadedb1a49ea93edf025f6398ea043f3d8697da3",
+      "kind": "periodic_transfer",
+      "mode": "optimized",
+      "report": "periodic_transfer_optimized.json",
+      "report_sha256": "fc18dc464ed9bfb866ac7d5603e205bf82d513e25151c939f74c879e54bcb9d6",
+      "result": {
+        "abel_and_inequality_cases": 1916,
+        "arithmetic": "exact fractions; no floating-point tolerance",
+        "case_sha256": "82182387966d616f9637c35fae4a74e0520c54d261caa292c683534a590aa8ca",
+        "distinct_scales": 479,
+        "negative_outputs": 891,
+        "positive_outputs": 952,
+        "prefix_cases": 10000,
+        "primitive_sources": 4,
+        "scope": "finite endpoint/sign control; not a proof of a native moment or infinite transfer theorem",
+        "status": "PASS"
+      }
+    },
+    {
+      "checker_sha256": "17bccc0d07e366ac76346d3439b75df03a97ad6bb5fd2078bc72c5387380d231",
+      "kind": "abelian_companions",
+      "mode": "normal",
+      "report": "abelian_companions_normal.json",
+      "report_sha256": "bd0f006f890fd84cbc8a6610a8942565904477a4b9863155c2378e94f60907fa",
+      "result": {
+        "arithmetic": "exact Python integers; no floating-point tolerance",
+        "case_sha256": "5332ddf9877272a92420cc7ee850948ed07069bf04ae64317de6991bcb8aaec8",
+        "coefficient_comparisons": 7200,
+        "companion_characters": [
+          "chi_-3",
+          "chi_-4",
+          "chi_12"
+        ],
+        "deduplicated_norm_negative_controls": 4,
+        "field": "Q(zeta_12), degree 4",
+        "maximum_integer_norm": 1200,
+        "observed_prefix_bounds": [
+          1,
+          1,
+          1
+        ],
+        "restoration_mask_cases": 6,
+        "scope": "finite coefficient identities; no native moment, growing-field uniformity, or RH inference",
+        "splitting_prime_cases": {
+          "fully_split": 44,
+          "ramified_degree_two": 2,
+          "two_degree_two": 150
+        },
+        "status": "PASS"
+      }
+    },
+    {
+      "checker_sha256": "17bccc0d07e366ac76346d3439b75df03a97ad6bb5fd2078bc72c5387380d231",
+      "kind": "abelian_companions",
+      "mode": "optimized",
+      "report": "abelian_companions_optimized.json",
+      "report_sha256": "bd0f006f890fd84cbc8a6610a8942565904477a4b9863155c2378e94f60907fa",
+      "result": {
+        "arithmetic": "exact Python integers; no floating-point tolerance",
+        "case_sha256": "5332ddf9877272a92420cc7ee850948ed07069bf04ae64317de6991bcb8aaec8",
+        "coefficient_comparisons": 7200,
+        "companion_characters": [
+          "chi_-3",
+          "chi_-4",
+          "chi_12"
+        ],
+        "deduplicated_norm_negative_controls": 4,
+        "field": "Q(zeta_12), degree 4",
+        "maximum_integer_norm": 1200,
+        "observed_prefix_bounds": [
+          1,
+          1,
+          1
+        ],
+        "restoration_mask_cases": 6,
+        "scope": "finite coefficient identities; no native moment, growing-field uniformity, or RH inference",
+        "splitting_prime_cases": {
+          "fully_split": 44,
+          "ramified_degree_two": 2,
+          "two_degree_two": 150
+        },
+        "status": "PASS"
+      }
+    },
+    {
+      "checker_sha256": "411337c393509979c6eb619b3736b3d9107c33b6c66099a68ce74a733f9d33d9",
+      "kind": "native_heat_defect",
+      "mode": "normal",
+      "report": "native_heat_defect_normal.json",
+      "report_sha256": "39b06fdac71ea0f279f05fda48ec2dcb8527096de3dde167c3658d6ec9d585be",
+      "result": {
+        "arithmetic": "Exact integers and fractions in Q(zeta_6), zeta_6^2=zeta_6-1",
+        "checker_sha256": "411337c393509979c6eb619b3736b3d9107c33b6c66099a68ce74a733f9d33d9",
+        "coverage": {
+          "common_factor_mask_checks": 2401,
+          "coprime_defect_checks": 4802,
+          "heat_intertwining_checks": 2401,
+          "local_character_patterns": 2401,
+          "local_decomposition_checks": 9604,
+          "mobius_gauge_checks": 2401,
+          "weighted_heat_checks": 4802
+        },
+        "generator_weights_checked": [
+          [
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            3,
+            4
+          ]
+        ],
+        "native_model": "Squarefree two-factor convolution of four singleton prime coefficients",
+        "not_proved": [
+          "Transfer from complete CRT rows to the original Schwartz physical rows",
+          "Any asymptotic native moment, signed comparison saving, or zero-free improvement",
+          "Authenticated primitive replay of the imported signed auxiliary and Poisson identities"
+        ],
+        "prime_norms": [
+          73,
+          109,
+          181,
+          277
+        ],
+        "proof_sha256": "9b351724607c7057a987e62835d9e4b4fe7a78f3b5e56b989a2af938b7689198",
+        "status": "PASS",
+        "unit_tuple": {
+          "coprime_off_product_covariance": 24,
+          "coprime_physical_defect": 96,
+          "coprime_positive_innovation": 0,
+          "energy": 144,
+          "physical_defect_energy": {
+            "denominator": 398940109,
+            "numerator": 115354444032
+          },
+          "polynomial_value": 12,
+          "positive_innovation_energy": {
+            "denominator": 398940109,
+            "numerator": 114435058752
+          }
+        }
+      }
+    },
+    {
+      "checker_sha256": "411337c393509979c6eb619b3736b3d9107c33b6c66099a68ce74a733f9d33d9",
+      "kind": "native_heat_defect",
+      "mode": "optimized",
+      "report": "native_heat_defect_optimized.json",
+      "report_sha256": "39b06fdac71ea0f279f05fda48ec2dcb8527096de3dde167c3658d6ec9d585be",
+      "result": {
+        "arithmetic": "Exact integers and fractions in Q(zeta_6), zeta_6^2=zeta_6-1",
+        "checker_sha256": "411337c393509979c6eb619b3736b3d9107c33b6c66099a68ce74a733f9d33d9",
+        "coverage": {
+          "common_factor_mask_checks": 2401,
+          "coprime_defect_checks": 4802,
+          "heat_intertwining_checks": 2401,
+          "local_character_patterns": 2401,
+          "local_decomposition_checks": 9604,
+          "mobius_gauge_checks": 2401,
+          "weighted_heat_checks": 4802
+        },
+        "generator_weights_checked": [
+          [
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            3,
+            4
+          ]
+        ],
+        "native_model": "Squarefree two-factor convolution of four singleton prime coefficients",
+        "not_proved": [
+          "Transfer from complete CRT rows to the original Schwartz physical rows",
+          "Any asymptotic native moment, signed comparison saving, or zero-free improvement",
+          "Authenticated primitive replay of the imported signed auxiliary and Poisson identities"
+        ],
+        "prime_norms": [
+          73,
+          109,
+          181,
+          277
+        ],
+        "proof_sha256": "9b351724607c7057a987e62835d9e4b4fe7a78f3b5e56b989a2af938b7689198",
+        "status": "PASS",
+        "unit_tuple": {
+          "coprime_off_product_covariance": 24,
+          "coprime_physical_defect": 96,
+          "coprime_positive_innovation": 0,
+          "energy": 144,
+          "physical_defect_energy": {
+            "denominator": 398940109,
+            "numerator": 115354444032
+          },
+          "polynomial_value": 12,
+          "positive_innovation_energy": {
+            "denominator": 398940109,
+            "numerator": 114435058752
+          }
+        }
+      }
+    }
+  ],
+  "scope": "Independent execution of author finite checkers; not an analytic proof or external peer review.",
+  "source_commit": "ea94f3e40b2755de0ffb9ac7727faa820e0c4cd0",
+  "source_tree": "6622be6afbf5e293a07c71b2a9b556640557cc3f",
+  "status": "PASS"
+}

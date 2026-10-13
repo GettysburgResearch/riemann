@@ -99,6 +99,10 @@ The pages above describe reviewed components at their recorded sources, with lat
 
 [The signed-graph and joint-descent packet](standalone/2026-10-10-signed-graph-and-joint-descent/README.md) gives source-conditional bounds for whole overlapping cross-gcd graph sectors at every fixed even order, extends the fourth-moment union estimate to its full cutoff range, and proves a stronger dense-sector bound. Joint summation continues the exact reunited Gauss family across `v=1` for `Re s<1/5`. A separate two-column analysis bounds the principal cube-inverse tail by `D^epsilon/R` and prunes a specified part of the strict A2 covariance. Exact source pins, scoped independent reviews and finite diagnostics are included. The oscillating signed remainder, full fourth moment, `17/24`, cofinal hierarchy and further zero-free improvement remain open.
 
+## Further research: ordinary-zeta bridge and sparse principal capture
+
+[The principal-zeta bridge packet](standalone/2026-10-13-principal-zeta-bridge/README.md) steps back from the full Hecke-family hierarchy. A fixed periodic filter and exact Euler restoration turn the principal Eisenstein source into ordinary integer Möbius sums; a derivative-space estimate preserves every positive power exponent through this transformation. New capture theorems require only a positive fraction of bounded principal sixth-power replicas, or two signed quantiles on a slightly denser grid. The packet also gives a fixed abelian-field extension, an invertible principal-average formula, and an independent-frequency obstruction that survives the actual short Möbius polynomials. The arithmetic fraction estimates remain open. No new full moment, `17/24` boundary, height-dependent shrinking band, or RH theorem is claimed.
+
 ## License
 
 Project code and original research materials are available under the [MIT License](LICENSE). Third-party material retains its existing terms and notices.

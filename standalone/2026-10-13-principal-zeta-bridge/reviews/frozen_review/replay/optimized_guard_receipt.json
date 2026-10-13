@@ -1,0 +1,33 @@
+{
+  "cases": [
+    {
+      "checker": "periodic_transfer",
+      "checker_sha256": "3f5a8f9d939e754f75e7b705fadedb1a49ea93edf025f6398ea043f3d8697da3",
+      "fault": "in-memory wrong prefix C(t)=2",
+      "optimized_python": true,
+      "reason": "Abel identity failure: 0, 12/11",
+      "rejected": true,
+      "source_bytes_unchanged": true
+    },
+    {
+      "checker": "abelian_companions",
+      "checker_sha256": "17bccc0d07e366ac76346d3439b75df03a97ad6bb5fd2078bc72c5387380d231",
+      "fault": "in-memory zero replacement for chi_-3",
+      "optimized_python": true,
+      "reason": "Abelian coefficient restoration failed: []",
+      "rejected": true,
+      "source_bytes_unchanged": true
+    },
+    {
+      "checker": "native_heat_defect",
+      "checker_sha256": "411337c393509979c6eb619b3736b3d9107c33b6c66099a68ce74a733f9d33d9",
+      "fault": "direct false explicit gate",
+      "optimized_python": true,
+      "reason": "intentional RuntimeError guard probe",
+      "rejected": true,
+      "source_bytes_unchanged": true
+    }
+  ],
+  "scope": "Fault injection verifies explicit rejection gates survive python -O; no analytic theorem is certified.",
+  "status": "PASS"
+}
