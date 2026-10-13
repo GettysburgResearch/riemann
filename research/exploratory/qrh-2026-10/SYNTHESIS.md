@@ -24,6 +24,19 @@ a Landau–Siegel exclusion (Oct 1). None has had a human review. The Lean state
 zeta claim is machine-checked (§0, item 1). This wave asked what those
 methods *can* and *cannot* do, and where a push could move the constant.
 
+> **Update, 12-13 Oct 2026: constructive "offense" wave.** Eight lines tried to break the walls
+> rather than map them ([offense/README.md](offense/README.md)). No exponent moved; RH remains
+> unproved. The wave found that every remaining wall sits on the conclusion's own object (the
+> principal rows on the Oct 5 side; the probe's Möbius signal on the Sep 30 side). It also ranked
+> the sharpest open statements by payoff:
+> * a cubic large sieve for the single sequence `μγ₂ξ` (`κ = 1/2` gives 5/6; numerics show no
+>   BGL excess);
+> * a conductor-`N(h)²` summation formula for that sequence (8/9 with the known cubic sieve);
+> * an amplified dual (AMP_t);
+> * the κ-law saving `δ > (1 − ρ)/6`.
+>
+> It also adds conditional Kummer-field corollaries of the Hecke 7/8 statement.
+
 ## 0. Executive summary (end of the 10-hour wave, 10 Oct 2026)
 
 Every statement below is labelled in its source file. None is an RH claim, and none is a human or

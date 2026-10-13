@@ -66,7 +66,7 @@ Smallest remaining gap: no lab mechanism proves Mom(1, rho < 1) without the Riem
    * Poisson in `u`, the Gauss sums and the absorption lose **nothing**. The primal = dual identity was
      replayed in exact integers at q = 7, `d = 2` (M = 1..4) and `d = 3` (M = 1..5).
    * The dual mean square is **diagonal-sized** whenever the dual has more rows than columns:
-     `E/DD ∈ [0.949, 1.009]` over 11 cells (q = 7, d = 3, 4, 5; q = 13, d = 3; q = 19, d = 3).
+     `E/DD ∈ [0.949, 1.009]` over 12 cells (q = 7, d = 3, 4, 5; q = 13, d = 3; q = 19, d = 3).
    * Hence positivity costs **exactly the dual diagonal**, `P/Diag = q^{d−M}·(E/DD)`. Examples:
      * 350, 49.2, 7.07 against the predicted 343, 49, 7 (q = 7, d = 4, M = 1, 2, 3);
      * 6.93 against 7 (q = 7, d = 5, M = 4);
@@ -105,11 +105,15 @@ Smallest remaining gap: no lab mechanism proves Mom(1, rho < 1) without the Riem
    * The Sawin–Shusterman char-`p` refinement (μ mimicked by Dirichlet characters on special subspaces)
      is the strongest version (LIT, abstract only). It too has no Z-analogue.
 
-**Most promising next step.** Measure, in the lab, the *block-signed* dual
-`Σ_f μ(f)·Block(e, f)` at ρ < 1 for `d = 4, 5` (ledger.py is ready; it needs a C port), and test whether
-the cancellation between Möbius blocks is carried by the Pellet character `χ₂(disc)`. If it is, the
-number-field question becomes concrete: find a substitute for "μ is a quadratic character of a
-discriminant" acting on the dual Möbius variable `f` only.
+**Most promising next step.**
+1. Run the Step 3 ledger (`ledger.py`, ported to C) on **generic members**: row degree ≥ 7, so
+   `d ≥ 8` at ρ < 1.
+2. Measure there the block-signed dual `Σ_f μ(f)·Block(e, f)` against the Pellet character `χ₂(disc)`.
+
+Every sub-diagonal cell in this note has CM or trivial members on the row side. Only generic members can
+show whether the Möbius-block cancellation has a structured carrier. If it is carried by
+`μ = (−1)^d χ₂(disc)`, the number-field question becomes concrete: find a substitute for "μ is a quadratic
+character of a discriminant" that acts on the dual Möbius variable `f` alone.
 
 ## 1. The lab
 
@@ -274,6 +278,7 @@ truth.
 | 13 | 3 | 2 | 169 | 0.67 | −1 (`L ≡ 1`) | 12.85 | 13 | 0.988 | 0.33 |
 | 13 | 3 | 3 | 2197 | 1.00 | **−0.0059** | **0.994** | 1 | **0.994** | 0.67 |
 | 13 | 4 | 4 | 28561 | 1.00 | +1.678 (special rows) | 1.97 | 1 | 1.971 | 0.02 |
+| 19 | 3 | 1 | 19 | 0.33 | −1 (`L ≡ 1`) | 359.2 | 361 | 0.9921 | 0.67 |
 | 19 | 3 | 2 | 361 | 0.67 | −1 (`L ≡ 1`) | 18.9 | 19 | 0.9945 | 0.33 |
 | 19 | 3 | 3 | 6859 | 1.00 | −0.0028 | 0.997 | 1 | 0.9972 | 0.67 |
 
@@ -284,7 +289,7 @@ in the blocks with `g ≠ 1` (see the block ledger above). `results/pipeline_tab
 
 Reading (EXACT on these cells; the trend is EMPIRICAL):
 * **The dual mean square is diagonal-sized** whenever the dual has more rows than columns
-  (`E/DD ∈ [0.949, 1.010]`, 11 cells). This is the lab version of A2_LITERATURE §5 and DUAL_ANATOMY §4,
+  (`E/DD ∈ [0.949, 1.010]`, 12 cells). This is the lab version of A2_LITERATURE §5 and DUAL_ANATOMY §4,
   where the Q-side gives `DD ≈ 1.3(D/Y)Diag`.
 * **Positivity therefore costs exactly `q^{d−M}`**, i.e. `D^{1−ρ}`: the dual diagonal, which the exact
   identity does not contain (§4.1 has `(a, b) = 1`).
@@ -303,7 +308,7 @@ Reading (EXACT on these cells; the trend is EMPIRICAL):
   | 7, 5 | 0 | 0 | 0.0033 | 0.106 | 1.55 | 0.931 | — |
   | 13, 3 | 156 (bias) | 0 | 0.083 | 0.988 | 0.983 | — | — |
   | 13, 4 | 2028 (bias) | 0 | 0.0064 | 1.14 | — | — | — |
-  | 19, 3 | 342 (bias) | 0 | 0.055 | 0.994 | — | — | — |
+  | 19, 3 | 342 (bias) | 0 | 0.055 | 0.994 | 0.992 | — | — |
 
   `B_h(d)` vanishes, or nearly vanishes, for `deg h ≤ d/2`. That is the region where the theta
   reflection (Hoffstein: rational Gauss-sum series, polar term = theta coefficient) leaves only the polar
@@ -385,7 +390,7 @@ Reading (EXACT on these cells; the trend is EMPIRICAL):
 | quantity | lab (F_q[T], this note) | Q(ω) (moments/, a2/) |
 |---|---|---|
 | `M₂/Diag`, generic rows, ρ < 1 | 0.98–1.0 (rows deg ≤ 2); 0.98 (q = 7, d = 4, M = 3); 0.994 (q = 13, d = 3) | 0.88–0.95 (RUNG_STRENGTH §5), random-sign-like (DUAL_ANATOMY) |
-| special members | finite-monodromy rows, polynomial excess in `d` | none seen at `D ≤ 64000` |
+| special members | every member of conductor degree 3–6 is CM (finite monodromy): polynomial excess in `d` | none possible in the same sense (GL(1) Hecke L-functions); none seen at `D ≤ 64000` |
 | dual mean square / its diagonal | 0.984–1.009 | 0.97–1.14 (A2_LITERATURE §5) |
 | positivity cost | exactly `q^{d−M}` | `≈ 1.3 D/Y` (DUAL_ANATOMY §4) |
 | signed dual / diagonal | −1.8 %, −0.6 % | within random spread, `≤ 0.18` |
@@ -397,8 +402,11 @@ Reading (EXACT on these cells; the trend is EMPIRICAL):
   post-reflection twist in `h`.
 * Hoffstein §§1–5 and his `n = 6` corollary.
 * The multiple-Dirichlet-series group of §6.2.
-* Rows of degree ≥ 7 at q = 7, where Katz–Sarnak behaviour should take over. These are needed to separate
-  special-member effects from genuine sub-diagonal behaviour at fixed ρ.
+* Exhaustive rows of degree ≥ 7. They were only sampled (§3.1), and the dual side was not run there.
+* A proof of the Hodge count `h^{0,1} = ⌈m/6⌉ − 1` and of finite monodromy for `m ≤ 6`. It is used
+  heuristically and is supported only by the root census.
+* A sextic-family check of the `q = 7` coincidence `6 = q − 1` (`χ0` is the Teichmüller character). The CM
+  phenomenon also appears at q = 13 and 19, so it is not caused by that coincidence.
 
 ## Files
 

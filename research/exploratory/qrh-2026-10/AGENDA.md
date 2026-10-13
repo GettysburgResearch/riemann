@@ -11,6 +11,18 @@ Smallest remaining gap: n/a
 RH remains unproved. Items are ordered by leverage toward the critical line, not by ease. Each one
 names its payoff *if* the imported, unreviewed manuscript machinery is correct.
 
+> **Added 13 Oct 2026 ([offense/README.md](offense/README.md), Synthesis table).** Sharper targets
+> from the constructive wave. Each is OPEN and stated with its payoff.
+> * **A0 (LS*_κ):** a cubic large sieve for the single sequence `μγ₂ξ` (cubic row family,
+>   `c = 2/3`). `κ < 4/7` beats 11/12, `κ = 8/15` gives 7/8, `κ = 1/2` gives 5/6. By Poisson it is
+>   equivalent to the cubic family's own moment.
+> * **A0′ (Statement B):** a summation formula with row conductor `N(h)²` for `μγ₂ξ`. It gives 8/9
+>   with the known cubic sieve.
+> * **A0″ (κ-law / Prop L):** a saving `δ > (1−ρ)/6` over the positivity bound at one `ρ < 1`.
+> * **A0‴ (AMP_t):** an amplified dual closing at `H ≥ D·L^t` with `t < 6/5`.
+> * **B0:** Sep 30 (NA) is likely circular (its diagonal is the probe's Möbius signal). Treat
+>   926/1077 and 28/33 as restatements until that is settled.
+
 ## A. The moment ladder (Oct 5 architecture): the only route found that scales to 1/2
 
 > **Reframing ([RUNG_STRENGTH.md](RUNG_STRENGTH.md)).** Every rung's boundary is `1/2 + 5ρ/12` in
