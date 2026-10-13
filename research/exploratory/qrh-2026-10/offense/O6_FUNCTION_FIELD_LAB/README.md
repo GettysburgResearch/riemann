@@ -57,8 +57,10 @@ Smallest remaining gap: no lab mechanism proves Mom(1, rho < 1) without the Riem
      degree 3: `|A_u(8)|²/q⁸ ∈ {0, 1, 81}` (EXACT).
    * They make the ratio grow polynomially in `d` and do not fade as `q` grows. Examples at q = 7, m = 6:
      2.1 at ρ = 1, 6.5 at ρ = 1/2, 75 at ρ = 0.2.
-   * Generic members (infinite monodromy) start at row degree 7. They were sampled with exact per-row
-     arithmetic in §3.1.
+   * Generic members (infinite monodromy) start at row degree 7. Sampled with exact per-row arithmetic
+     (§3.1; q = 7, `m = 7`, 3000 rows), they give `M₂/Diag = 0.91–0.96` for ρ ∈ [0.7, 1.17] and
+     1.01–1.07 for ρ ∈ [0.39, 0.58]. That is the `Q(ω)` picture (0.88–0.95). The ratio drifts slowly up
+     as ρ → 0 (1.22 ± 0.08 at ρ = 0.29), as expected from heavy-tailed per-member constants (EMPIRICAL).
    * This is harmless for exponents (Mom(1, ρ) is a `q^{o(d)}` statement). It has no number-field
      analogue, since Hecke L-functions have no Hodge type, and it means the lab must be run at row
      degree ≥ 7 to say anything about generic members.
@@ -239,8 +241,9 @@ q = 7, `m = 7`, N = 3000 rows (`results/samp_q7_m7.txt`):
 | max `|A|²/q^d` | 17.6 | 14.2 | 21.6 | 24.3 | 17.4 | 18.5 | 30.6 | 28.2 | 30.5 | 37.9 | 45.5 | 47.7 |
 
 * **Once the members are generic the lab looks like `Q(ω)`.** `M₂/Diag` is 0.91–0.96 for
-  ρ ∈ [0.7, 1.17]. RUNG_STRENGTH §5 has 0.88–0.95 over `Q(ω)`, with the same naive-versus-exact-diagonal
-  caveat in reverse: here the diagonal is exact. There is no excess at ρ < 1 down to ρ ≈ 0.5.
+  ρ ∈ [0.7, 1.17]. RUNG_STRENGTH §5 has 0.88–0.95 over `Q(ω)` against a naive diagonal; ours is exact,
+  which lowers the diagonal and raises the ratio by a few percent. There is no excess at ρ < 1 down to
+  ρ ≈ 0.5.
 * Below ρ ≈ 0.45 a slow rise appears (1.07 at ρ = 0.39, 1.22 at ρ = 0.29), at 2–3 standard errors per
   cell, in correlated cells (EMPIRICAL). At fixed `u`, `|A_u(d)|²/q^d` has the Cesàro mean
   `Σ_j Π_{k≠j}|e^{iθ_j} − e^{iθ_k}|^{−2}`. That mean is 1 on Haar average but heavy-tailed, so a slow
