@@ -1,7 +1,7 @@
 # Note U: the floor rows as a Rankin–Selberg / ratios / second-Poisson object — four routes, exact stopping points
 
 ```text
-Status: DERIVED (exponent bookkeeping at the paper's contour; one rigorous obstruction, Prop. U.1) + LITERATURE (fetched today)
+Status: DERIVED (exponent bookkeeping at the paper's contour; the ceiling (U.4) and the §3 dual-family inequality are bookkeeping, not theorems; Prop. U.1 is rigorous but only about uniform absolute convergence at a common contour — see §7 errata after notes R2 and X) + LITERATURE (fetched today)
 Scope: the floor-row sum of (7.5)/(10.5) at frequency U = Z^h, h = 13/16, contour (10.11): Re x = a0+16e, Re w = 1-a0-6e,
        Re z = z0 = 17/50, a0 = 51/100, delta0 = 1/50. Attack: represent L(w,chi_u)/L(x,eta chi_u) EXACTLY and average over u.
 Exact sources: qrh_main.txt (7.5) 3085-3088; xi 2698-2713; Poisson 3000-3016; (4.7) 814; Lemma 8.1 3417-3446; (10.11) 4509;
@@ -43,7 +43,7 @@ Three facts fix the landscape; everything below is a corollary of them.
     and de Faveri–Dunn–Hoffstein Thm 1.1 (dfdh.txt l.152) proves this (AB)^{2/3} loss is *sharp* for general coefficients.
     Consequence: as far as the proof knows, the floor rows may be a density-zero subset of the dyad; "floor = all − zero
     rows" with a mean value over all rows cannot bound the floor sum by anything smaller than the zero-row sum, which is
-    U^{R(δ0+)} rows each of size ≥ U^{-z0+δ0/2}: **cap f ≤ 1 − R(δ0+) = 0 with (9.16)**, ≤ δ0 = 0.02 under density-hypothesis
+    U^{R(δ0+)} rows each bounded only by U^{-z0+δ0/2}: **cap f ≤ 1 − R(δ0+) = 0 with (9.16)**, ≤ δ0 = 0.02 under density-hypothesis
     counts, and +0.0012 (Z-exponent; 0.0003 in B) after the far-class constraint of note N (N.3).
 
 **Prop. U.1 (route-2/3 wall, rigorous).** Fix U, the dyad's finite family F_U = {ηχ_•(u) : u ≍ U sixth-power-free}, and a
@@ -51,12 +51,13 @@ line Re x = σ with 1/2 < σ < 1. Let d_U = min over ψ ∈ F_U and zeros ρ of 
 (ψ_0, ρ_0). Then
     Σ_{u ≍ U} ∫_{|Im x| ≤ T1} |L(w,χ_u)/L(x,ηχ_u)| |dx| ≥ c · |L(w,χ_{u_0})| · log(1/d_U) / |L'(ρ_0,ψ_0)| ·(1+o(1)),
 and no lower bound for d_U or for |L'(ρ_0)| is known (there is no theorem repelling zeros of a sextic twist from a given
-line, nor bounding |L'| below at a zero). Hence no estimate Σ_{all u ≍ U} (ratio) ≪ U^{A} holds for any A as a theorem about
-the contour Re x = σ; the row-restricted statement with a buffer (Lemma 8.1) is the only one available, and the restriction
-is analytic. In MDS language (§2): for Re z > 1 + (1−Re w)/2, the function x ↦ Σ_u ξ(u)q_u^{-z}L(w,χ_u)/L(x,ηχ_u) is
+line, nor bounding |L'| below at a zero). Hence the integrand of the all-row sum at Re x = σ is not bounded row by row by any U^A: any cross-row estimate must act
+on the signed row integrals (equivalently, by (U.2), on the smoothed Möbius sums of length Z plus the residues of the zero rows),
+never on |ratio|; the signed all-row sum itself is well defined and trivially ≪ UZ^{1+ε}. The row-restricted statement with a
+buffer (Lemma 8.1) is the only *row-wise* bound available, and the restriction is analytic. In MDS language (§2): for Re z > 1 + (1−Re w)/2, the function x ↦ Σ_u ξ(u)q_u^{-z}L(w,χ_u)/L(x,ηχ_u) is
 holomorphic exactly on Re x > β_sup := sup{Re ρ : ρ zero of some L(·, ηχ_u), u in the sum} (the u = 1 term alone contributes the
-zeros of L(·,η), the target); under GRH for the family β_sup = 1/2 and the line Re x = 1/2 is a natural boundary (the poles of
-the family are dense on it). Continuing the series to Re x = a0 = 0.51 presupposes a zero-free half-plane Re x > 0.51 for the
+zeros of L(·,η), the target); under GRH for the family β_sup = 1/2; for the infinite u-sum the poles accumulate on Re x = 1/2 (heuristically a natural
+boundary), while for a fixed dyad the sum is meromorphic. Continuing the series to Re x = a0 = 0.51 presupposes a zero-free half-plane Re x > 0.51 for the
 whole family, including η itself — far more than the 7/8 (or 13/15) being proved. This is where Čech's unconditional-looking
 method needs GRH: cech.txt l.765-771, region (3.4) "Re(z) > 1/2" is obtained from (2.21) 1/L ≪ n^ε under GRH, and his
 Theorem 1.2 (l.158) holds only for Re β > ε (denominator strictly right of 1/2) with error X^{max(1−2Re α, 1−2Re β, …)}.
@@ -189,7 +190,7 @@ and the dual m-sum needs the dual family's zero-freeness (U.3): for conductors k
 (a) **Zero-row cap (general).** Any argument that reaches the floor set writes 1_floor = 1 − 1_{zero rows} (there is no
     arithmetic expression for the floor indicator: by the resolution principle, (N.1), a polynomial of length U^R resolves
     the zeros of a row only to U^{-R·dist}, and dist ≥ 16e is the paper's buffer, so a saving of U^{-16Re} per row at most),
-    and must bound the zero-row sum, which has U^{R(δ0+)} terms each ≥ U^{-z0+δ0/2}·U^{-ε}. Hence
+    and must bound the zero-row sum, which has U^{R(δ0+)} terms each bounded only by U^{-z0+δ0/2}·U^{-ε}. Hence
         f ≤ 1 − R(δ0+)                                                                                           (U.4)
     for every mechanism of this type. With (9.16): f = 0. Under density-hypothesis counts: f ≤ δ0 = 0.02, and the far-class
     constraint of (N.3) reduces the realised gain to +0.0012 (Z-exponent), 0.0003 in B. The dial-table value f = 0.1 → 0.857
@@ -259,3 +260,10 @@ constraint. A Selberg-type density near the floor (DIPP's second moment plus a m
 
 Best justified f: 0. Boundary 0.874957 unchanged; ceiling of every floor-row mechanism 0.8746 (current counts) / 0.8695
 (ideal counts). f = 0.1 (→ 0.857) would need fewer than U^{0.9} rows with a zero above 0.51, beyond the density hypothesis.
+
+## 7. Errata after the referee pass (note R2) and note X
+
+* **Prop. U.1 proves less than §0 and §2 use it for.** It lower-bounds Σ_u ∫|L/L| |dx| (absolute value inside), which diverges like log(1/d_U); the floor-row object is the *signed* integral ∫Z^{x+z−1}ΦH_u/L(x,ηχ_u)dx, which stays bounded as a simple zero approaches the line (principal value ± iπ·Res) and equals, by (U.2), a smoothed Möbius sum of length Z plus residues, ≪ Z^{1+ε} with no hypothesis on zeros. So Prop. U.1 shows only that no row-by-row bound at a common contour exists; it is not an independent wall. The verdict f = 0 rests on (U.4) and §3, which are bookkeeping.
+* **(U.4) was read with the envelope (9.16), not with the count the proof uses** (note X). For every bin 1/50 < δ ≤ 5/6 Section 20 uses the witness count R* of Prop. 19.2/(20.8), and R*(δ0+) = 0.984–0.987 already, with slope −0.68 to −0.81 in δ: Prop. 19.2 *is* a family zero-density theorem near the floor, stronger than anything a Montgomery/Selberg argument with DIPP's mollifier (length U^{1/11}, giving 1 − δ/11) can supply. Hence §4(b)'s "provable, new, small, worth ≤ 0.0003" is wrong: the item is redundant and worth 0; the ceiling reads f ≤ 1 − R*(δ0+) = 0.016, and the far-class cost (N.3) kills every floor-row mechanism before that ceiling matters.
+* **Where a cross-row saving must live** (note W): a saving U^{−f} restricted to classes δ ≤ 0.2 changes nothing (0.874956); up to δ ≤ 0.4 it is worth 0.0002; on all classes it gives 13/15. The binding rows are the zero rows of class 0.39 ≤ δ ≤ 0.83 at their own bin contours, not the floor.
+

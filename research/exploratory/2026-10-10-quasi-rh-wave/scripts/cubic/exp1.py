@@ -1,5 +1,6 @@
 """Experiment 1: Patterson bias of cubic Gauss sums gamma_2(c) over primary squarefree c, and twisted sums."""
-import eis, numpy as np, time, sys, pickle
+import os, sys; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import eis, numpy as np, time, pickle
 X = int(sys.argv[1]) if len(sys.argv) > 1 else 100000
 t0 = time.time()
 prs = eis.primary_primes(X)          # primary primes N <= X incl. inert (and -2)

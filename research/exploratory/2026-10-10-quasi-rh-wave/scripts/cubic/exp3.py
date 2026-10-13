@@ -1,5 +1,6 @@
 """Experiment 3: direct-side Gram term.  A_m = Y^{-3/2} sum_{s primary odd squarefree, Y/2 < N s <= Y} c(s) g(s,-m)."""
-import eis, numpy as np, time, sys, pickle
+import os, sys; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import eis, numpy as np, time, pickle
 Qmax = int(sys.argv[1]) if len(sys.argv) > 1 else 250000
 Ys = [int(v) for v in sys.argv[2].split(',')] if len(sys.argv) > 2 else [500, 1000, 2000]
 t0 = time.time()

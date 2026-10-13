@@ -1,0 +1,34 @@
+== 1. slope of the paper's own near-floor count R*(delta,x) at delta=delta0 (Prop 19.2) ==
+  x=0.00: R*(delta0+)=0.98656, dR*/ddelta=-0.6775  (c_delta=0.677; per unit sigma: c_sigma=1.355); small-delta limit 1-delta(1-Px/2Dx): c=0.667
+  x=0.25: R*(delta0+)=0.98521, dR*/ddelta=-0.7431  (c_delta=0.743; per unit sigma: c_sigma=1.486); small-delta limit 1-delta(1-Px/2Dx): c=0.736
+  x=0.50: R*(delta0+)=0.98375, dR*/ddelta=-0.8143  (c_delta=0.814; per unit sigma: c_sigma=1.629); small-delta limit 1-delta(1-Px/2Dx): c=0.811
+
+== 2. density-type count 1 - theta*delta vs the paper's R* (both valid; the paper uses the smaller) ==
+  delta=0.020: R*(x=0)=0.9866 R*(x=1/2)=0.9837 | DIPP theta=1/11: 0.9982  best large-sieve theta=1/2: 0.9900  density hypothesis (theta=1): 0.9800
+  delta=0.050: R*(x=0)=0.9660 R*(x=1/2)=0.9592 | DIPP theta=1/11: 0.9955  best large-sieve theta=1/2: 0.9750  density hypothesis (theta=1): 0.9500
+  delta=0.100: R*(x=0)=0.9306 R*(x=1/2)=0.9180 | DIPP theta=1/11: 0.9909  best large-sieve theta=1/2: 0.9500  density hypothesis (theta=1): 0.9000
+  delta=0.200: R*(x=0)=0.8551 R*(x=1/2)=0.8338 | DIPP theta=1/11: 0.9818  best large-sieve theta=1/2: 0.9000  density hypothesis (theta=1): 0.8000
+  delta=0.389: R*(x=0)=0.6929 R*(x=1/2)=0.6663 | DIPP theta=1/11: 0.9646  best large-sieve theta=1/2: 0.8055  density hypothesis (theta=1): 0.6110
+  delta=0.600: R*(x=0)=0.4737 R*(x=1/2)=0.4575 | DIPP theta=1/11: 0.9455  best large-sieve theta=1/2: 0.7000  density hypothesis (theta=1): 0.4000
+  delta=0.833: R*(x=0)=0.1667 R*(x=1/2)=0.1667 | DIPP theta=1/11: 0.9242  best large-sieve theta=1/2: 0.5833  density hypothesis (theta=1): 0.1667
+
+== 3. endpoint optimum (quick_E model) with the row count replaced by min(R*, 1 - theta*delta) ==
+  Liu's point: b=0.123405 ell=0.166838 B=0.874957070
+  baseline (paper's R*)                               : b=0.125000 ell=0.166839 B=0.874957 active(delta=0.386, x=0.500) Emax=+9.30e-07
+  +DIPP density theta=1/11, all delta                 : b=0.125000 ell=0.166839 B=0.874957 active(delta=0.386, x=0.500) Emax=+9.30e-07
+  +density theta=1/2, all delta                       : b=0.125000 ell=0.166839 B=0.874957 active(delta=0.386, x=0.500) Emax=+9.30e-07
+  +density hypothesis 1-delta, all delta              : b=0.000000 ell=0.200000 B=0.866667 active(delta=0.349, x=0.500) Emax=-2.27e-14
+  +density hypothesis, near floor only (delta<=0.1)   : b=0.125000 ell=0.166839 B=0.874957 active(delta=0.386, x=0.500) Emax=+9.30e-07
+  +density hypothesis, near floor only (delta<=0.3)   : b=0.125000 ell=0.166839 B=0.874957 active(delta=0.386, x=0.500) Emax=+9.30e-07
+
+== 4. note N's (N.3) ceiling with the subtracted near-floor bins counted by min(R*, 1-theta*delta); f=inf ==
+  (b,l)=(0.1250,0.1667) baseline (paper's R*)                   : max floor-exponent gain +0.00000 at r=1.00, eta=0.000  (dB ~ -0.00000)
+  (b,l)=(0.1250,0.1667) +DIPP density theta=1/11, all delta     : max floor-exponent gain +0.00000 at r=1.00, eta=0.000  (dB ~ -0.00000)
+  (b,l)=(0.1250,0.1667) +density theta=1/2, all delta           : max floor-exponent gain +0.00000 at r=1.00, eta=0.000  (dB ~ -0.00000)
+  (b,l)=(0.1250,0.1667) +density hypothesis 1-delta, all delta  : max floor-exponent gain +0.00115 at r=1.32, eta=0.015  (dB ~ -0.00030)
+   cap 1-R(delta0+): paper x=1/2 0.0163, x=0 0.0134; DIPP 0.0018; theta=1/2 0.0100; ideal 0.0200
+  (b,l)=(0.1234,0.1668) baseline (paper's R*)                   : max floor-exponent gain +0.00000 at r=1.00, eta=0.000  (dB ~ -0.00000)
+  (b,l)=(0.1234,0.1668) +DIPP density theta=1/11, all delta     : max floor-exponent gain +0.00000 at r=1.00, eta=0.000  (dB ~ -0.00000)
+  (b,l)=(0.1234,0.1668) +density theta=1/2, all delta           : max floor-exponent gain +0.00000 at r=1.00, eta=0.000  (dB ~ -0.00000)
+  (b,l)=(0.1234,0.1668) +density hypothesis 1-delta, all delta  : max floor-exponent gain +0.00114 at r=1.32, eta=0.015  (dB ~ -0.00030)
+   cap 1-R(delta0+): paper x=1/2 0.0163, x=0 0.0134; DIPP 0.0018; theta=1/2 0.0100; ideal 0.0200

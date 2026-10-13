@@ -1,5 +1,6 @@
 """Experiment 2: floor-row cross-row cancellation with finite Dirichlet polynomials of sextic symbols."""
-import eis, numpy as np, time, sys, pickle
+import os, sys; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import eis, numpy as np, time, pickle
 U = int(sys.argv[1]) if len(sys.argv) > 1 else 100000
 t0 = time.time()
 x, y, N = eis.primary_elements(U)

@@ -1,6 +1,14 @@
 # Numerical test of the "Möbius generator" / Shimura-lift common-signal idea
 
-Scripts: `scratchpad/exp/coeffs.py` (coefficients), `taskA.py` (Shimura identity + Möbius detector),
+```text
+Status: EMPIRICAL (floating point; r_3(N) for N <= 10^7 exact by FFT, Hurwitz H(N) for N <= 10^6; fitted exponents carry +-0.03-0.05)
+Scope: the Shimura-lift "Möbius generator" of note S0 tested on theta^3 and the Hurwitz series (non-cuspidal g; the conclusion that a smooth direct side vanishes because L(s, g x eta) is entire transfers to cuspidal g)
+Exact sources: Shimura (1973)/Kohnen (1980) relation; Cohen-Eisenstein/Hurwitz coefficients; note S0 section 2
+What was actually run: ../scripts/shimura/coeffs.py (writes r3.npy, H.npy; XMAX = 10^7 hard-coded), taskA.py, taskBC.py, taskBC2.py; logs not committed
+Smallest remaining gap: no test with a cuspidal half-integral-weight g; only q <= 13, |D| <= 47
+```
+
+Scripts (in `../scripts/shimura/`): `coeffs.py` (coefficients), `taskA.py` (Shimura identity + Möbius detector),
 `taskBC.py`, `taskBC2.py` (direct side, cutoffs, principal row). Logs: `taskA.log`, `taskBC_r3.log`,
 `taskBC_H.log`, `taskBC2.log`. Data: r_3(N) for N ≤ 10^7 (FFT convolution of θ, max rounding error 6e-11),
 Hurwitz H(N) for N ≤ 10^6 (direct enumeration of reduced forms (a,b,c), weights 1, 1/2, 1/3).
@@ -151,3 +159,5 @@ the O(1) ratio for H vs O(10^{−2}–10^{−1}) for θ³ is only the normalisat
 Limitations: Z ≤ 10^7 (θ³) and 10^6 (H); exponents carry log factors (dyadic-RMS slopes 0.53–0.55
 instead of 0.50); only conductors q ≤ 13 and |D| ≤ 47; fitted exponents have ±0.03–0.05 scatter;
 H-series secondary terms were only fitted, not derived.
+
+Qualification (referee pass R2): note S0 §1 says a cuspidal $g$ is required, while the tests above use non-cuspidal $g$ only; the refutation transfers because it uses only that $L(s,g\otimes\eta)$ is entire, which holds for cuspidal $g$ as well.
