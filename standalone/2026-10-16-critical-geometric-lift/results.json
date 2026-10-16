@@ -1,0 +1,109 @@
+{
+  "arithmetic": "exact Fraction, Q(omega), Q(omega,sqrt(5))",
+  "cases": [
+    {
+      "G_I_D_M": [
+        "1731424377293870767889184/8381701070096437890625",
+        "-231614395679806837056/2520812351908703125",
+        "502735102145435542484592/8381701070096437890625",
+        "458571409513077492193392/8381701070096437890625"
+      ],
+      "cap": 128,
+      "restoration_signs": [
+        -1,
+        0,
+        1
+      ],
+      "rows_for_flow": 7,
+      "rows_for_masks_and_cofactors": 54,
+      "semigroup_columns_under_cap": 9,
+      "window": "cap/8 < Nn <= cap"
+    },
+    {
+      "G_I_D_M": [
+        "219171082419994828987431270432/1676340214019287578125",
+        "9593966592/6175",
+        "62639209157955103931413265856/1676340214019287578125",
+        "159136367514691899156126804576/1676340214019287578125"
+      ],
+      "cap": 1000000,
+      "restoration_signs": [
+        -1,
+        0,
+        1
+      ],
+      "rows_for_flow": 7,
+      "rows_for_masks_and_cofactors": 54,
+      "semigroup_columns_under_cap": 34,
+      "window": "cap/8 < Nn <= cap"
+    },
+    {
+      "G_I_D_M": [
+        "20926017169550887042013184/1453944562890625",
+        "226464228176084043264/47091321875",
+        "7789809478081391808539904/1453944562890625",
+        "4025658147281218013849856/290788912578125"
+      ],
+      "cap": 100000000,
+      "restoration_signs": [
+        -1,
+        0,
+        1
+      ],
+      "rows_for_flow": 7,
+      "rows_for_masks_and_cofactors": 54,
+      "semigroup_columns_under_cap": 45,
+      "window": "cap/8 < Nn <= cap"
+    }
+  ],
+  "predicates_by_group": {
+    "coefficient_majorants": 5952,
+    "coverage": 22,
+    "critical_mass": 4,
+    "field_setup": 861,
+    "fourth_compensation_exact": 25,
+    "geometric_mass": 950,
+    "homothety_euler_ratio": 18,
+    "inherited_all_order_coercivity": 125,
+    "lifted_flow": 84,
+    "literal_radical_masks": 4752,
+    "local_series": 192,
+    "mellin_scaling": 64,
+    "negative_Y_dilation": 1,
+    "negative_Z_only": 1,
+    "negative_fixed_scale_comparison": 1,
+    "negative_missing_lift": 1,
+    "negative_old_stripping_weight": 1,
+    "negative_row_mask_freezing": 1,
+    "negative_support_power": 1,
+    "order_reunion": 21,
+    "physical_cofactor": 810,
+    "radical_lift": 176,
+    "rational_descent": 503
+  },
+  "prime_ideals": [
+    {
+      "norm": 7,
+      "omega_root": 2
+    },
+    {
+      "norm": 7,
+      "omega_root": 4
+    },
+    {
+      "norm": 13,
+      "omega_root": 3
+    },
+    {
+      "norm": 19,
+      "omega_root": 7
+    },
+    {
+      "norm": 25,
+      "omega_root": null
+    }
+  ],
+  "scope": "Only this five-prime semigroup; not a full native ideal census.",
+  "status": "finite identities only; no RH or asymptotic certificate",
+  "total_predicates": 14566
+}
