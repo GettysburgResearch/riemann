@@ -1,0 +1,68 @@
+{
+  "directory": "standalone/2026-10-16-coupled-critical-flow",
+  "files": [
+    {
+      "bytes": 5059,
+      "git_blob": "56e23681b35ebb55412ff515f43e100ba503837b",
+      "path": "ATTACK_STATUS.md",
+      "sha256": "c8372c0d0e1082a0165a3e5e274c324b322cec38923836e16ea972db6d550fd4"
+    },
+    {
+      "bytes": 3550,
+      "git_blob": "7b7228fa35d36c8949c6129e020ef17cf0ede316",
+      "path": "CHECKS.json",
+      "sha256": "b1ee9bc68e628afa4f39420d20c3182a30ab81b9010085bf3019e483efb2e4df"
+    },
+    {
+      "bytes": 12911,
+      "git_blob": "49ccae539b44bcab7046292caa9dad9ee33d0c22",
+      "path": "COUPLED_PRIME_FLOW.md",
+      "sha256": "5ca2f7857b1369d01d5944f313bc042bffca66c64b03698449ba5ef7ba099ce9"
+    },
+    {
+      "bytes": 15542,
+      "git_blob": "b9741eddafd9ea9f72e6d730044a7ce7d7f7c267",
+      "path": "CRITICAL_FACTOR_AND_GAUSSIAN.md",
+      "sha256": "83c1714a95c0a142ab25e96ba85e7ae709548648797654cf8a7ece544f20c175"
+    },
+    {
+      "bytes": 3798,
+      "git_blob": "4d6b16256770f3aec521b8939d10087bb8656a61",
+      "path": "README.md",
+      "sha256": "4c1380ee4d32fef284350568442fe625d8461430a070a7d46b0835a67744f535"
+    },
+    {
+      "bytes": 4349,
+      "git_blob": "3dfe09f94e4ba161facdae2fb404cfae9bca57ee",
+      "path": "SOURCES.md",
+      "sha256": "6860f43ceaa3993af224efc85cb2d020a6d117409b893cb2328f01880af5dc1a"
+    },
+    {
+      "bytes": 3412,
+      "git_blob": "ff047e825158f6aad007940167cec0e9cefbc7ce",
+      "path": "VALIDATION.md",
+      "sha256": "d6116d0c6abcdde5d57b8d560a9ba7dd83f5f11b9d7abee83d31ab91c2e15bc7"
+    },
+    {
+      "bytes": 13367,
+      "git_blob": "35b4e7992ff36aebaf88c44fbd82905236f10e94",
+      "path": "checks/check_packet.py",
+      "sha256": "2b21ebf07e3e2ba00125adcb0098ae7c431351a1614904fd9905a8a05c3eea85"
+    },
+    {
+      "bytes": 13240,
+      "git_blob": "64d21a7f400f5bf5654fd67735743ff1befab067",
+      "path": "checks/eisenstein_source.py",
+      "sha256": "c82b016a86bcfba2105558db3fec5cbc60a564b6354d94b0cc367ad1a3879833"
+    },
+    {
+      "bytes": 642,
+      "git_blob": "c0875372d0ee47b06d31a90efa8ad9030ca5adb4",
+      "path": "checks/verify_manifest.py",
+      "sha256": "ddf60272f70638b14c8c978e89de5df901499d8ff53d1af215e80c6dabe98367"
+    }
+  ],
+  "independent_review": false,
+  "parent": "cdb0666fc48d5166f5edd81f394b13e2001a6b5d",
+  "status": "PROPOSED component mathematics; RH and the native signed bound remain unproved"
+}
