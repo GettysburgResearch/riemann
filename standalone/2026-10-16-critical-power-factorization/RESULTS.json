@@ -1,0 +1,96 @@
+{
+  "counts": {
+    "P_equals_Q_times_U": 450,
+    "Q_equals_P_times_V": 450,
+    "U_inverse_identity": 450,
+    "actual_prime_ideal_norms": 1,
+    "all_declared_rows": 1,
+    "continuation_tail_exponents": 99,
+    "critical_five_bound": 28,
+    "critical_mass_formula": 28,
+    "critical_two_masses_equal": 28,
+    "forward_coefficient_majorant": 11250,
+    "gaussian_completion_of_square": 12,
+    "ideal_convolution_with_shared_primes": 74,
+    "independent_literal_divisibility_masks": 11988,
+    "inverse_coefficient_majorant": 11250,
+    "literal_masked_physical_dilations": 486,
+    "majorants_nonnegative": 11250,
+    "primitive_helper_blob": 1,
+    "reject_correction_region_relabelled_as_critical_target": 1,
+    "reject_dropping_shared_prime_degree_seven": 1,
+    "reject_erasing_power_column_nonunit_zero": 1,
+    "reject_q_cubed_instead_of_q_squared": 1,
+    "reject_unexcluded_prime_two_continuation": 1,
+    "reject_wrong_inverse_Mobius_sign": 1,
+    "reject_wrong_physical_dilation_weight": 1,
+    "series_unit_denominator": 1824,
+    "summability_threshold": 99,
+    "uniform_local_nonvanishing_margin": 1
+  },
+  "local": {
+    "analytic_theorems_certified_by_finite_checks": false,
+    "coefficient_degree_per_case": "2m+8",
+    "complex_phase_configurations": 450,
+    "critical_mass_rational_cases": 28,
+    "even_powers": [
+      2,
+      4,
+      6,
+      8,
+      12,
+      16
+    ]
+  },
+  "negative_controls": [
+    "q_cubed_instead_of_q_squared",
+    "dropping_shared_prime_degree_seven",
+    "erasing_power_column_nonunit_zero",
+    "wrong_inverse_Mobius_sign",
+    "unexcluded_prime_two_continuation",
+    "wrong_physical_dilation_weight",
+    "correction_region_relabelled_as_critical_target"
+  ],
+  "physical": {
+    "additional_masks": [
+      null,
+      0,
+      2
+    ],
+    "all_native_ideals_below_cap": false,
+    "field": "Q(omega)",
+    "fixture_scope": "All powers/products under the cap of exactly these three prime ideals.",
+    "generators": [
+      [
+        -3,
+        -2
+      ],
+      [
+        -3,
+        -1
+      ],
+      [
+        -5,
+        0
+      ]
+    ],
+    "hard_windows_D": [
+      128,
+      4096,
+      823543
+    ],
+    "masked_column_evaluations": 5922,
+    "norm_cap": 823543,
+    "physical_equalities": 972,
+    "prime_ideal_norms": [
+      7,
+      7,
+      25
+    ],
+    "row_norm_cap": 13,
+    "rows": 54,
+    "semigroup_ideals": 74
+  },
+  "scope": "Finite algebra and transport only. Not independent review or an RH proof.",
+  "total_explicit_predicates": 49777
+}
