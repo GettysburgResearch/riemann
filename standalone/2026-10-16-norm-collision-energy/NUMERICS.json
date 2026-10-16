@@ -1,0 +1,67 @@
+{
+  "dps": 55,
+  "finite_gaussian_energy_cases": [
+    {
+      "D": 8,
+      "energy": "0.112073189865992956",
+      "error_below_1e_minus_40": true,
+      "ideal_diagonal": "0.251586857854211875",
+      "ideals": 19,
+      "m": 2,
+      "norm_diagonal": "0.273267370187834301",
+      "profile": "unit",
+      "tau": "0"
+    },
+    {
+      "D": 64,
+      "energy": "1.14675729162336531",
+      "error_below_1e_minus_40": true,
+      "ideal_diagonal": "0.36833954971436612",
+      "ideals": 17,
+      "m": 6,
+      "norm_diagonal": "0.481102835583891294",
+      "profile": "conjugate",
+      "tau": "0.3333333333333333333333333333333333333333333333333333333"
+    },
+    {
+      "D": 64,
+      "energy": "0.325195625274624538",
+      "error_below_1e_minus_40": true,
+      "ideal_diagonal": "0.344595805424256714",
+      "ideals": 16,
+      "m": 2,
+      "norm_diagonal": "0.280933124496763481",
+      "profile": "mask",
+      "tau": "-0.5"
+    }
+  ],
+  "independent_fourier_quadratures": 4,
+  "limitations": "Finite coefficients only; mpmath quadrature is not directed rounding, an infinite ideal sum, or independent mathematical review.",
+  "schur_partial_sum_checks": [
+    {
+      "N": 1,
+      "T": 1,
+      "finite_sum": "2.98061090490533059",
+      "infinite_upper_bound": "4.13273135412249294"
+    },
+    {
+      "N": 7,
+      "T": 1,
+      "finite_sum": "27.9317490923339724",
+      "infinite_upper_bound": "28.9291194788574506"
+    },
+    {
+      "N": 7,
+      "T": 8,
+      "finite_sum": "1.21054692615453603",
+      "infinite_upper_bound": "2.21050200336819211"
+    },
+    {
+      "N": 64,
+      "T": 32,
+      "finite_sum": "4.01570502616047877",
+      "infinite_upper_bound": "5.01570502616047877"
+    }
+  ],
+  "status": "PASS: ordinary high precision, NOT certified intervals"
+}

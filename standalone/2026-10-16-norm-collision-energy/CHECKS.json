@@ -1,0 +1,86 @@
+{
+  "complete_ideal_censuses": [
+    {
+      "aggregation_sha256": "1f4f2492c712abe067dd6c34d8e150e6c310bf03fc2c188f476e2f6fd0ba01f5",
+      "cap": 4096,
+      "m": 2,
+      "native": false,
+      "nonzero_norm_coefficients": 462,
+      "profile": "unit",
+      "supported_ideals": 1233
+    },
+    {
+      "aggregation_sha256": "81f570805c36a2112cb43fd5e0b46369b65bee333093c6d80400cdd9bd5870e7",
+      "cap": 4096,
+      "m": 4,
+      "native": false,
+      "nonzero_norm_coefficients": 459,
+      "profile": "unit",
+      "supported_ideals": 1165
+    },
+    {
+      "aggregation_sha256": "2b1ac99bffce4c77961f0469e1430245bdd37fd7be1857851b4a6e9125f960fe",
+      "cap": 4096,
+      "m": 6,
+      "native": false,
+      "nonzero_norm_coefficients": 458,
+      "profile": "conjugate",
+      "supported_ideals": 1163
+    },
+    {
+      "aggregation_sha256": "83987a960c7aa384a1d63f3f10370b6a8c199e20966ce2b6b826a9290e380c1b",
+      "cap": 4096,
+      "m": 6,
+      "native": false,
+      "nonzero_norm_coefficients": 24,
+      "profile": "mask",
+      "supported_ideals": 1018
+    },
+    {
+      "aggregation_sha256": "bcad813f15af6bf38a766206caaa756475f9b93195cbc21c336ee66d9aa83ff2",
+      "cap": 8192,
+      "m": 6,
+      "native": true,
+      "nonzero_norm_coefficients": 871,
+      "profile": "unit",
+      "supported_ideals": 2308
+    },
+    {
+      "aggregation_sha256": "d5d3e0a4c2266203bbd6cbbd4b9ff9557dea89505ee1cb2e83b97e4378cb051d",
+      "cap": 131072,
+      "m": 6,
+      "native": false,
+      "nonzero_norm_coefficients": 12207,
+      "profile": "unit",
+      "supported_ideals": 37001
+    }
+  ],
+  "limitations": "Same-author implementations; full ideal caps but algebraic phase profiles. No analytic/asymptotic certification or theta-row census.",
+  "local_splitting_m_prime_cases": 928,
+  "negative_controls": 9,
+  "predicates": {
+    "complete_norm_fiber": 155648,
+    "critical_inverse_tensor_mass": 928,
+    "critical_l1_tail": 928,
+    "critical_l2_tail": 928,
+    "distinct_equal_norm_guard": 6,
+    "first_coefficient": 928,
+    "gaussian_square_completion": 108,
+    "graph_schur": 35,
+    "m_independent_constant": 189,
+    "negative_graph_degree": 1,
+    "negative_inert_as_split": 1,
+    "negative_m2_overlap": 1,
+    "negative_mask_power_branch": 1,
+    "negative_missing_conjugate": 1,
+    "negative_power_twist": 1,
+    "negative_square_before_group": 1,
+    "negative_twist_kills_norm_collision": 1,
+    "negative_wrong_power": 1,
+    "quadratic_factor_rationality": 191,
+    "tensor_degree": 29,
+    "tensor_first_coefficient": 29
+  },
+  "status": "PASS: finite algebra only",
+  "total_predicates": 159956
+}
