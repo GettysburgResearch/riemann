@@ -1,0 +1,21 @@
+{
+  "process_mutations": {
+    "wrong_cdf_shift": {
+      "exit_code": 1,
+      "last_stderr_line": "RuntimeError: gaussian_kernel_square_completion",
+      "rejected": true
+    },
+    "wrong_critical_jacobian": {
+      "exit_code": 1,
+      "last_stderr_line": "RuntimeError: critical_energy_dilation",
+      "rejected": true
+    },
+    "wrong_root_basis": {
+      "exit_code": 1,
+      "last_stderr_line": "RuntimeError: wrong primitive sixth-root embedding",
+      "rejected": true
+    }
+  },
+  "scope": "Executed negative-control processes; not mathematical review.",
+  "source_sha256": "58cdd3542595e7b9dae3b26617c4cd101e30b5ae5b405136a6bb1e091b4d78f5"
+}
