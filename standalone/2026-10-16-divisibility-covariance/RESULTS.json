@@ -1,0 +1,115 @@
+{
+  "complete_norm_census": [
+    {
+      "all_norms_through": 200000,
+      "m": 3,
+      "nonzero_norm_fibers": 18395,
+      "scaled_integer_sha256": "ef2d46e53b527f2ac03de22f9d75d8e867e7bd85faf4f972c6c5d99281aef3f6",
+      "squarefree_power_factors": 15
+    },
+    {
+      "all_norms_through": 200000,
+      "m": 4,
+      "nonzero_norm_fibers": 18312,
+      "scaled_integer_sha256": "553f6eea671004bb36acec79f36ff97693759fd2bd3c90178011d469270b5ebe",
+      "squarefree_power_factors": 7
+    },
+    {
+      "all_norms_through": 200000,
+      "m": 6,
+      "nonzero_norm_fibers": 18298,
+      "scaled_integer_sha256": "9f4c26aeb611e72e74d0bccd2b15ed084f74d35b157bdd859352af06c184bf4e",
+      "squarefree_power_factors": 3
+    },
+    {
+      "all_norms_through": 200000,
+      "m": 8,
+      "nonzero_norm_fibers": 18297,
+      "scaled_integer_sha256": "af66b7c92442c3897c01f2e3f1e2fd2f5b21b92861c7105ca090f98e074e5227",
+      "squarefree_power_factors": 1
+    }
+  ],
+  "m4_m8_rows": "first seven enumerated rows plus (1,0)",
+  "m6_pair_column_set": "all 27 exponent-0/1/6 ideals in the three-prime semigroup; not all K-ideals below a common cap",
+  "physical_rows": 54,
+  "predicate_counts": {
+    "complete_finite_gcd_pairs": 51030,
+    "complete_norm_fiber_reconstruction": 4,
+    "complete_small_row_count": 1,
+    "conjugate_ideals_distinct": 1,
+    "density_independent_degree": 40,
+    "even_fixture_degree": 5686,
+    "first_powerful_conjugate_fiber": 1,
+    "forced_positive_remainder_margin": 1,
+    "four_prime_exponential_bounds": 2,
+    "four_prime_log_bounds": 2,
+    "four_prime_square_root_bounds": 1,
+    "full_local_support": 985,
+    "literal_character_order": 150,
+    "literal_local_mask": 162,
+    "masked_channels": 16,
+    "pole_contour_gap": 40,
+    "prime_quotient_pairs": 1890,
+    "principal_negative_sign": 9,
+    "residue_derivative_factor": 80,
+    "secondary_pole_location": 40,
+    "sixth_root_basis": 6,
+    "two_pole_euler_polynomial": 1,
+    "uniform_normalized_core": 40,
+    "unit_norm": 6
+  },
+  "prime_ideal_norms": [
+    7,
+    7,
+    25
+  ],
+  "principal_prime_sign_samples": [
+    [
+      4,
+      "7a",
+      "-6/7"
+    ],
+    [
+      4,
+      "7b",
+      "-6/7"
+    ],
+    [
+      4,
+      "25",
+      "-24/25"
+    ],
+    [
+      6,
+      "7a",
+      "-6/7"
+    ],
+    [
+      6,
+      "7b",
+      "-6/7"
+    ],
+    [
+      6,
+      "25",
+      "-24/25"
+    ],
+    [
+      8,
+      "7a",
+      "-6/7"
+    ],
+    [
+      8,
+      "7b",
+      "-6/7"
+    ],
+    [
+      8,
+      "25",
+      "-24/25"
+    ]
+  ],
+  "scope": "Finite exact algebra and full stated norm-fiber reconstructions, not analytic certification",
+  "status": "PASS"
+}

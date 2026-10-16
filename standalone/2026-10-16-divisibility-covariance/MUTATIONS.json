@@ -1,0 +1,22 @@
+[
+  {
+    "mutation": "wrong-prime-sign",
+    "returncode": 1,
+    "last_stderr_line": "ValueError: FAIL complete_finite_gcd_pairs: (4, (-4, -3), (0, 0, 0), (0, 0, 1))"
+  },
+  {
+    "mutation": "drop-middle-channel",
+    "returncode": 1,
+    "last_stderr_line": "ValueError: FAIL complete_finite_gcd_pairs: (4, (-4, -3), (0, 0, 1), (0, 0, 4))"
+  },
+  {
+    "mutation": "erase-mask",
+    "returncode": 1,
+    "last_stderr_line": "ValueError: FAIL masked_channels: (4, (-3, -2), 0)"
+  },
+  {
+    "mutation": "wrong-power-weight",
+    "returncode": 1,
+    "last_stderr_line": "ValueError: FAIL complete_finite_gcd_pairs: (4, (-4, -3), (0, 0, 0), (0, 0, 4))"
+  }
+]
