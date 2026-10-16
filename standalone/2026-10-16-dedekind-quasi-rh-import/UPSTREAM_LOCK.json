@@ -1,0 +1,114 @@
+{
+  "repository": "AxiomMath/DedekindZetaZeroFree",
+  "commit": "09afbb4ce6570c1615d58509dc197fc9f0956b7d",
+  "tree": "1bf2926b595f39b95fbdc331421a0dc8118ad973",
+  "retrieved_on": "2026-10-16",
+  "license": "Apache-2.0",
+  "scope": "Selected unmodified source files; not the full transitive Lean development.",
+  "files": [
+    {
+      "path": "upstream/LICENSE",
+      "upstream_path": "LICENSE",
+      "git_blob": "57bc88a15a0ee8266c259b2667e64608d3f7e292",
+      "sha256": "c95bae1d1ce0235ecccd3560b772ec1efb97f348a79f0fbe0a634f0c2ccefe2c",
+      "bytes": 11358,
+      "source_url": "https://github.com/AxiomMath/DedekindZetaZeroFree/blob/09afbb4ce6570c1615d58509dc197fc9f0956b7d/LICENSE"
+    },
+    {
+      "path": "upstream/lean-toolchain",
+      "upstream_path": "lean-toolchain",
+      "git_blob": "f0e00b3338bac0d6f050d9a64e277314a9f7830f",
+      "sha256": "bc84812c94489d1e3e191baa1dc10d5eb684382d7fe9d2a5ab085e72c1c67e47",
+      "bytes": 29,
+      "source_url": "https://github.com/AxiomMath/DedekindZetaZeroFree/blob/09afbb4ce6570c1615d58509dc197fc9f0956b7d/lean-toolchain"
+    },
+    {
+      "path": "upstream/comparator.json",
+      "upstream_path": "comparator.json",
+      "git_blob": "21556e80167dc4371c08c6435d63c995d16ef200",
+      "sha256": "9810aca52283ea51b6fb4591dffefb2138120a341669b037b4b436234f13381f",
+      "bytes": 281,
+      "source_url": "https://github.com/AxiomMath/DedekindZetaZeroFree/blob/09afbb4ce6570c1615d58509dc197fc9f0956b7d/comparator.json"
+    },
+    {
+      "path": "upstream/lakefile.toml",
+      "upstream_path": "lakefile.toml",
+      "git_blob": "523531e9b825bc2ed29dc2169ec1f32bf38a36b9",
+      "sha256": "61ad80d39cdaacffa39d15b2cc18d9bffd2603d5993be3a32230dc648cc96bea",
+      "bytes": 770,
+      "source_url": "https://github.com/AxiomMath/DedekindZetaZeroFree/blob/09afbb4ce6570c1615d58509dc197fc9f0956b7d/lakefile.toml"
+    },
+    {
+      "path": "upstream/DedekindZetaZeroFree/Main.lean",
+      "upstream_path": "DedekindZetaZeroFree/Main.lean",
+      "git_blob": "c6889afaa224757d712d8d97594628cbfb860c2e",
+      "sha256": "832d4396b54bcda18eb310e8de4f9c8ff1dd2a2d8b3e328d123ea69bee7c075b",
+      "bytes": 533,
+      "source_url": "https://github.com/AxiomMath/DedekindZetaZeroFree/blob/09afbb4ce6570c1615d58509dc197fc9f0956b7d/DedekindZetaZeroFree/Main.lean"
+    },
+    {
+      "path": "upstream/DedekindZetaZeroFree/HeckeCorollary.lean",
+      "upstream_path": "DedekindZetaZeroFree/HeckeCorollary.lean",
+      "git_blob": "0e90a98fc52f305cfdcd5ed9086d8b1b12c0c148",
+      "sha256": "08e93bd22557d8968aa54abef1b5dd013220b1576cd67e2b2c7a916c7c39664a",
+      "bytes": 1186,
+      "source_url": "https://github.com/AxiomMath/DedekindZetaZeroFree/blob/09afbb4ce6570c1615d58509dc197fc9f0956b7d/DedekindZetaZeroFree/HeckeCorollary.lean"
+    },
+    {
+      "path": "upstream/Challenge/DedekindZetaChallenge.lean",
+      "upstream_path": "Challenge/DedekindZetaChallenge.lean",
+      "git_blob": "98daca8451aa04c30b9a8fc50ef60b3b075899cb",
+      "sha256": "dd2562c814caa29860c48c78532e452e8f086c1e80eebfe2b03efbc1c7d762be",
+      "bytes": 1875,
+      "source_url": "https://github.com/AxiomMath/DedekindZetaZeroFree/blob/09afbb4ce6570c1615d58509dc197fc9f0956b7d/Challenge/DedekindZetaChallenge.lean"
+    },
+    {
+      "path": "upstream/Solution/DedekindZetaSolution.lean",
+      "upstream_path": "Solution/DedekindZetaSolution.lean",
+      "git_blob": "16e98688137243e7822e0cee5529b29945c2684a",
+      "sha256": "cea97922704d55edc4bcf75bad181dfe9f200bd274437115a23730eb2820c5d1",
+      "bytes": 985,
+      "source_url": "https://github.com/AxiomMath/DedekindZetaZeroFree/blob/09afbb4ce6570c1615d58509dc197fc9f0956b7d/Solution/DedekindZetaSolution.lean"
+    },
+    {
+      "path": "upstream/DedekindZetaZeroFree/Moments/Probes/Poisson/Scales.lean",
+      "upstream_path": "DedekindZetaZeroFree/Moments/Probes/Poisson/Scales.lean",
+      "git_blob": "a9ad776773d51c85bc77bf0662f8270217220968",
+      "sha256": "03eea55976e3ba07691d2dd8cc4015d10e8fd4ad42c8068f7439e6a905e773a1",
+      "bytes": 1266,
+      "source_url": "https://github.com/AxiomMath/DedekindZetaZeroFree/blob/09afbb4ce6570c1615d58509dc197fc9f0956b7d/DedekindZetaZeroFree/Moments/Probes/Poisson/Scales.lean"
+    },
+    {
+      "path": "upstream/DedekindZetaZeroFree/Nonvanishing/Mellin/Quantitative/DedekindZetaNonvanishing.lean",
+      "upstream_path": "DedekindZetaZeroFree/Nonvanishing/Mellin/Quantitative/DedekindZetaNonvanishing.lean",
+      "git_blob": "c82ebe140e8fdf9ddfc5cfe8944d798ebd9aa22d",
+      "sha256": "744bdffb2a90ba3f13225ee28a54f7d02a56c007c7ee46ceae478625806c1efa",
+      "bytes": 1011,
+      "source_url": "https://github.com/AxiomMath/DedekindZetaZeroFree/blob/09afbb4ce6570c1615d58509dc197fc9f0956b7d/DedekindZetaZeroFree/Nonvanishing/Mellin/Quantitative/DedekindZetaNonvanishing.lean"
+    },
+    {
+      "path": "upstream/DedekindZetaZeroFree/Nonvanishing/Mellin/Quantitative/Growth.lean",
+      "upstream_path": "DedekindZetaZeroFree/Nonvanishing/Mellin/Quantitative/Growth.lean",
+      "git_blob": "50a7f57dd028ad5c98b8702bf40f5cbfa8b94890",
+      "sha256": "bfe74af4ad99958acd81edebf697329d6989fd4a776030e5854de677d92fc990",
+      "bytes": 2653,
+      "source_url": "https://github.com/AxiomMath/DedekindZetaZeroFree/blob/09afbb4ce6570c1615d58509dc197fc9f0956b7d/DedekindZetaZeroFree/Nonvanishing/Mellin/Quantitative/Growth.lean"
+    },
+    {
+      "path": "upstream/DedekindZetaZeroFree/Moments/Principal/EulerCorrectionAlgebra.lean",
+      "upstream_path": "DedekindZetaZeroFree/Moments/Principal/EulerCorrectionAlgebra.lean",
+      "git_blob": "bd11d01dcc9ae22c07b65bc5d3641d26dea781c3",
+      "sha256": "42a11b485ba8e2e7bb2e0630276a780dfcc0a3f11b396f0038dba7949ad003a4",
+      "bytes": 2340,
+      "source_url": "https://github.com/AxiomMath/DedekindZetaZeroFree/blob/09afbb4ce6570c1615d58509dc197fc9f0956b7d/DedekindZetaZeroFree/Moments/Principal/EulerCorrectionAlgebra.lean"
+    },
+    {
+      "path": "upstream/DedekindZetaZeroFree/Nonvanishing/Mellin/NormalizedProbeArithmeticData.lean",
+      "upstream_path": "DedekindZetaZeroFree/Nonvanishing/Mellin/NormalizedProbeArithmeticData.lean",
+      "git_blob": "b89b6fdcbf16c7d142c18aacc14c71fde9bc41cf",
+      "sha256": "221c13191ce060b600221fa2de73e205468b9c0af864bd10015aaa1a93120c48",
+      "bytes": 2606,
+      "source_url": "https://github.com/AxiomMath/DedekindZetaZeroFree/blob/09afbb4ce6570c1615d58509dc197fc9f0956b7d/DedekindZetaZeroFree/Nonvanishing/Mellin/NormalizedProbeArithmeticData.lean"
+    }
+  ]
+}
