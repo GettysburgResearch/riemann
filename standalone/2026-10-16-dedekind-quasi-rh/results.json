@@ -1,0 +1,41 @@
+{
+  "checks_by_group": {
+    "contour_domains": 10,
+    "euler_series_identities": 96,
+    "kernel_absolute_budgets": 128,
+    "literal_prime_mask_recursion": 144,
+    "negative_controls": 5,
+    "paper_table_reconstruction": 7,
+    "restricted_cauchy_ceiling": 380,
+    "scalar_exponent_bootstrap": 17,
+    "version_and_loss_arithmetic": 4
+  },
+  "conditional_moment_boundaries_h_to_1": {
+    "12": "41/72",
+    "2": "11/12",
+    "24": "77/144",
+    "4": "17/24",
+    "48": "149/288",
+    "6": "23/36"
+  },
+  "limitations": [
+    "Same author as proofs; not independent mathematical review.",
+    "Rational polynomial checks are not number-field moment censuses.",
+    "Prime-mask tests use integer ideals and a character modulo 5, not general-field sextic rows.",
+    "Hard/polynomial finite tests are not the analytic smooth-test hypothesis.",
+    "No Lean build or upstream analytic theorem replay."
+  ],
+  "local_series_cases": 32,
+  "local_series_max_degree": 36,
+  "paper_table_savings": {
+    "exceptional": "2617/80000",
+    "good": "7949/250000",
+    "large": "1481/2500",
+    "principal_w": "37749867/1000000000",
+    "principal_z": "384999/10000000",
+    "small": "471999/10000000",
+    "theta": "1/32"
+  },
+  "status": "PASS: finite identities only; no asymptotic or formal certification",
+  "total_checks": 791
+}
