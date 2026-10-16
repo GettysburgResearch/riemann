@@ -1,0 +1,181 @@
+{
+  "arithmetic": "exact integers, fractions and cyclotomic polynomial reduction",
+  "gauss_coverage": [
+    {
+      "all_residues": 7,
+      "exponent": 1,
+      "prime": 7
+    },
+    {
+      "all_residues": 49,
+      "exponent": 2,
+      "prime": 7
+    },
+    {
+      "all_residues": 343,
+      "exponent": 3,
+      "prime": 7
+    },
+    {
+      "all_residues": 13,
+      "exponent": 1,
+      "prime": 13
+    },
+    {
+      "all_residues": 169,
+      "exponent": 2,
+      "prime": 13
+    },
+    {
+      "exponent": 6,
+      "prime": 7,
+      "sample_rows": [
+        0,
+        1,
+        2401,
+        16807,
+        33614,
+        117649
+      ]
+    },
+    {
+      "all_residues": 25,
+      "exponent": 1,
+      "residue_characteristic": 5,
+      "residue_norm": 25
+    },
+    {
+      "all_residues": 625,
+      "exponent": 2,
+      "residue_characteristic": 5,
+      "residue_norm": 25
+    }
+  ],
+  "groups": {
+    "active_support": 1231,
+    "complete_shared_energy_budget": 20,
+    "conjugate_norm_control": 1,
+    "critical_active_geometric_mass": 192,
+    "critical_operator_sharpness": 12,
+    "exact_active_shell_energy": 20,
+    "finite_field_gauss_norm": 10,
+    "finite_probe_reindexing": 10,
+    "fixture_setup": 1,
+    "full_coprime_shared_factorization": 5,
+    "identity_channel_survives": 12,
+    "inert_complete_gauss": 650,
+    "negative_controls": 9,
+    "neutral_gauss_samples": 6,
+    "neutral_ramanujan": 6,
+    "nonadverse_ray_budget": 16,
+    "physical_active_support": 414,
+    "ray_endpoint_terms": 1,
+    "signed_local_multiplier": 216,
+    "split_complete_gauss": 581,
+    "uniform_active_majorant": 16,
+    "unnormalized_active_energy": 10,
+    "unnormalized_squared_mass": 240
+  },
+  "negative_controls": [
+    "neutral_gauss_is_not_supported_only_on_units",
+    "zero_extended_principal_is_not_constant_one",
+    "aliasing_conjugate_ideals_by_norm",
+    "neutral_shared_terms_are_not_disjoint",
+    "omitting_critical_D_cubed_prefactor",
+    "freezing_theta_column_scale",
+    "replacing_divided_row_by_undivided_row",
+    "infinite_endpoint_mass_converges",
+    "universal_power_saving_from_shared_operator"
+  ],
+  "not_claimed": [
+    "native ideal census",
+    "infinite theta or Gaussian evaluation",
+    "asymptotic proof",
+    "independent mathematical review",
+    "Lean build"
+  ],
+  "predicates": 3679,
+  "row_fixtures": [
+    {
+      "denominator_prime_exponents": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "dilation_ideals": 8,
+      "moments": [
+        2,
+        4
+      ],
+      "nonzero_output_rows": 328,
+      "row_norm_cap": 43929866604736328125,
+      "seed_rows": 54
+    },
+    {
+      "denominator_prime_exponents": [
+        2,
+        0,
+        1,
+        0
+      ],
+      "dilation_ideals": 8,
+      "moments": [
+        2,
+        4
+      ],
+      "nonzero_output_rows": 376,
+      "row_norm_cap": 307509066233154296875,
+      "seed_rows": 54
+    },
+    {
+      "denominator_prime_exponents": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "dilation_ideals": 8,
+      "moments": [
+        2,
+        4
+      ],
+      "nonzero_output_rows": 376,
+      "row_norm_cap": 1802319403450439453125,
+      "seed_rows": 54
+    },
+    {
+      "denominator_prime_exponents": [
+        6,
+        0,
+        0,
+        0
+      ],
+      "dilation_ideals": 4,
+      "moments": [
+        2,
+        4
+      ],
+      "nonzero_output_rows": 512,
+      "row_norm_cap": 2490556007947363387213,
+      "seed_rows": 156
+    },
+    {
+      "denominator_prime_exponents": [
+        1,
+        6,
+        0,
+        0
+      ],
+      "dilation_ideals": 8,
+      "moments": [
+        2,
+        4
+      ],
+      "nonzero_output_rows": 892,
+      "row_norm_cap": 608045900377774264456298828125,
+      "seed_rows": 156
+    }
+  ],
+  "status": "PASS: finite algebra and finite-support fixtures only"
+}
