@@ -1,0 +1,23 @@
+{
+  "independent_mathematical_review": false,
+  "ordinary_optimized_identical": true,
+  "process_mutations": {
+    "erased_masks": {
+      "exit_code": 1,
+      "last_stderr_line": "RuntimeError: independent_literal_divisibility_masks: failed case 77",
+      "rejected": true
+    },
+    "wrong_inverse": {
+      "exit_code": 1,
+      "last_stderr_line": "RuntimeError: Q_equals_P_times_V: failed case 6",
+      "rejected": true
+    },
+    "wrong_sixth_weight": {
+      "exit_code": 1,
+      "last_stderr_line": "RuntimeError: forward_coefficient_majorant: failed case 16",
+      "rejected": true
+    }
+  },
+  "results_sha256": "a486e5c419264404ac0a058c4b6a45e3ffe0ba94364021a8e20750f69df2efeb",
+  "source_authorship": "same author as proofs and checker"
+}

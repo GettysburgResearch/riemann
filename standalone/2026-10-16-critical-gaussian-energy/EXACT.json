@@ -1,0 +1,54 @@
+{
+  "coefficient_counts": [
+    {
+      "allowed_ideals": 13163,
+      "first_majorant_mass": 13163,
+      "m": 2,
+      "norm_cap": 40000,
+      "powerful_ideals": 1008,
+      "second_majorant_mass": 13163
+    },
+    {
+      "allowed_ideals": 12177,
+      "first_majorant_mass": 12287,
+      "m": 4,
+      "norm_cap": 40000,
+      "powerful_ideals": 22,
+      "second_majorant_mass": 13041
+    },
+    {
+      "allowed_ideals": 12156,
+      "first_majorant_mass": 12180,
+      "m": 6,
+      "norm_cap": 40000,
+      "powerful_ideals": 1,
+      "second_majorant_mass": 12780
+    },
+    {
+      "allowed_ideals": 12155,
+      "first_majorant_mass": 12155,
+      "m": 8,
+      "norm_cap": 40000,
+      "powerful_ideals": 0,
+      "second_majorant_mass": 12155
+    }
+  ],
+  "counts": {
+    "channel_critical_weight": 99,
+    "complete_prefix_mass_bound": 160000,
+    "critical_energy_dilation": 27,
+    "first_mass_uniform_degree": 99,
+    "gaussian_kernel_square_completion": 375,
+    "reject_discarding_equal_norm_cross_terms": 1,
+    "reject_gram_diagonal_as_full_energy": 1,
+    "reject_missing_normal_cdf_shift": 1,
+    "reject_mobius_inverse_sign": 1,
+    "reject_neutral_power_mask_erasure": 1,
+    "reject_tail_diagonal_only_error": 1,
+    "reject_wrong_energy_jacobian": 1,
+    "second_mass_power_cancellation": 99,
+    "unique_occupied_decomposition": 49651
+  },
+  "scope": "Finite rational algebra and complete rational-ideal prefix majorants. No analytic certification.",
+  "total_predicates_including_prefix_guards": 210357
+}
