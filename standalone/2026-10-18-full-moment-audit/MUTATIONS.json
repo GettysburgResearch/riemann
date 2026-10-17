@@ -1,0 +1,45 @@
+{
+  "cases": [
+    {
+      "exit_code": 1,
+      "mutation": "drop-square-mask",
+      "rejected_by": "quadratic-square-removal"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "impose-coprimality",
+      "rejected_by": "quadratic-square-removal"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "collapse-product-length",
+      "rejected_by": "ordered-products"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "omit-row-sixth-copies",
+      "rejected_by": "native-complete-rows"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "substitute-conductor",
+      "rejected_by": "dual-conductor-identity"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "drop-holder-cost",
+      "rejected_by": "Holder-support-price"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "false-critical-anchor",
+      "rejected_by": "diagonal-anchor"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "drop-subunit-tail",
+      "rejected_by": "subunit-tail"
+    }
+  ],
+  "status": "all eight separately executed corruptions rejected"
+}
