@@ -1,0 +1,35 @@
+{
+  "cases": [
+    {
+      "D": 64,
+      "finite_kernel": "0.07337118752274865566018955",
+      "finite_quadrature": "0.07337118752274865566018955",
+      "m": 4,
+      "nonzero_common_core_terms": 27,
+      "profile": "unit",
+      "relative_discrepancy_below_1e_40": true
+    },
+    {
+      "D": 4096,
+      "finite_kernel": "0.1090147061778849976965511",
+      "finite_quadrature": "0.1090147061778849976965511",
+      "m": 4,
+      "nonzero_common_core_terms": 27,
+      "profile": "complex",
+      "relative_discrepancy_below_1e_40": true
+    },
+    {
+      "D": 100000,
+      "finite_kernel": "0.1104632474181807165589634",
+      "finite_quadrature": "0.1104632474181807165589634",
+      "m": 6,
+      "nonzero_common_core_terms": 27,
+      "profile": "complex",
+      "relative_discrepancy_below_1e_40": true
+    }
+  ],
+  "certified_intervals": false,
+  "precision_digits": 55,
+  "scope": "Finite common-core fixtures only; no infinite tail or asymptotic validation.",
+  "status": "PASS"
+}

@@ -1,0 +1,30 @@
+{
+  "separate_processes": [
+    {
+      "last_stderr_line": "RuntimeError: rejected: complete_norm_constructor_agreement",
+      "mutation": "drop_split_conjugate",
+      "returncode": 1
+    },
+    {
+      "last_stderr_line": "RuntimeError: rejected: local_consecutive_identity",
+      "mutation": "omit_shared_power",
+      "returncode": 1
+    },
+    {
+      "last_stderr_line": "RuntimeError: rejected: local_consecutive_identity",
+      "mutation": "no_conjugation",
+      "returncode": 1
+    },
+    {
+      "last_stderr_line": "RuntimeError: rejected: false_m3_extension",
+      "mutation": "allow_m3",
+      "returncode": 1
+    },
+    {
+      "last_stderr_line": "RuntimeError: rejected: gaussian_square_completion",
+      "mutation": "wrong_cdf_shift",
+      "returncode": 1
+    }
+  ],
+  "status": "PASS"
+}
