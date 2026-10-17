@@ -1,0 +1,74 @@
+{
+  "checks_by_kind": {
+    "complete_norm_constructor_agreement": 4,
+    "four_ideal_norm_fiber": 216,
+    "full_prefix_exchange_identity": 527760,
+    "full_prefix_exchange_sign": 527760,
+    "gaussian_square_completion": 108,
+    "inert_even_norm_exponents": 3,
+    "laurent_residue_polynomial": 2,
+    "local_consecutive_identity": 720,
+    "local_sign": 720,
+    "m3_counterexample": 1,
+    "masked_norm_fiber_majorant": 1352,
+    "masked_pair_absolute_majorant": 200,
+    "native_local_identity": 12,
+    "odd_degree_exact_local_identity": 405,
+    "prime_pair_pigeonhole": 24,
+    "reject_full_energy_ge_positive_sector": 1,
+    "selberg_coefficient_bound": 25,
+    "selberg_exact_quadratic_form": 25,
+    "selberg_interval_remainder": 100,
+    "selberg_mobius_inverse": 325,
+    "selberg_unit_constraint": 25,
+    "shared_power_exchange_sign": 54,
+    "small_linear_term_retained": 48,
+    "unit_phase_exact_modulus": 3264
+  },
+  "infinite_theorem_proved_by_checker": false,
+  "norm_censuses": [
+    {
+      "first_power_fiber_7m_included": false,
+      "m": 0,
+      "native": true,
+      "nonzero_norm_fibers": 12206,
+      "norm_cap": 131072,
+      "ordered_prime_pair_common_core_cases": 131940,
+      "profile": "unit",
+      "supported_ideal_records": 36999
+    },
+    {
+      "first_power_fiber_7m_included": true,
+      "m": 4,
+      "native": false,
+      "nonzero_norm_fibers": 12216,
+      "norm_cap": 131072,
+      "ordered_prime_pair_common_core_cases": 131940,
+      "profile": "complex",
+      "supported_ideal_records": 37029
+    },
+    {
+      "first_power_fiber_7m_included": true,
+      "m": 6,
+      "native": false,
+      "nonzero_norm_fibers": 12207,
+      "norm_cap": 131072,
+      "ordered_prime_pair_common_core_cases": 131940,
+      "profile": "unit",
+      "supported_ideal_records": 37001
+    },
+    {
+      "first_power_fiber_7m_included": true,
+      "m": 6,
+      "native": false,
+      "nonzero_norm_fibers": 12207,
+      "norm_cap": 131072,
+      "ordered_prime_pair_common_core_cases": 131940,
+      "profile": "complex",
+      "supported_ideal_records": 37001
+    }
+  ],
+  "rh_proved": false,
+  "scope": "Exact finite identities; not an asymptotic or independent proof certificate.",
+  "status": "PASS"
+}

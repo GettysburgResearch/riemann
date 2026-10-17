@@ -1,0 +1,22 @@
+[
+  {
+    "failure": "RuntimeError: FAILED: complete-coefficient-comparison",
+    "mutation": "erase-mask",
+    "returncode": 1
+  },
+  {
+    "failure": "RuntimeError: FAILED: complete-coefficient-comparison",
+    "mutation": "power-weight",
+    "returncode": 1
+  },
+  {
+    "failure": "RuntimeError: FAILED: complete-coefficient-comparison",
+    "mutation": "delete-shared",
+    "returncode": 1
+  },
+  {
+    "failure": "RuntimeError: FAILED: affine-determinant",
+    "mutation": "determinant",
+    "returncode": 1
+  }
+]
