@@ -1,0 +1,446 @@
+{
+  "arithmetic": {
+    "all_good_squarefree_ideals_through_512": 147,
+    "all_ideal_generated_sixth_rows_through_generator_norm_32": 20,
+    "complete_rectangles": [
+      {
+        "B": 4,
+        "X": 16,
+        "columns": 2,
+        "coprime_pairs": 6,
+        "sixth_rows": 3
+      },
+      {
+        "B": 8,
+        "X": 16,
+        "columns": 2,
+        "coprime_pairs": 10,
+        "sixth_rows": 5
+      },
+      {
+        "B": 16,
+        "X": 16,
+        "columns": 2,
+        "coprime_pairs": 18,
+        "sixth_rows": 10
+      },
+      {
+        "B": 32,
+        "X": 16,
+        "columns": 2,
+        "coprime_pairs": 38,
+        "sixth_rows": 20
+      },
+      {
+        "B": 4,
+        "X": 32,
+        "columns": 5,
+        "coprime_pairs": 15,
+        "sixth_rows": 3
+      },
+      {
+        "B": 8,
+        "X": 32,
+        "columns": 5,
+        "coprime_pairs": 25,
+        "sixth_rows": 5
+      },
+      {
+        "B": 16,
+        "X": 32,
+        "columns": 5,
+        "coprime_pairs": 50,
+        "sixth_rows": 10
+      },
+      {
+        "B": 32,
+        "X": 32,
+        "columns": 5,
+        "coprime_pairs": 95,
+        "sixth_rows": 20
+      },
+      {
+        "B": 4,
+        "X": 64,
+        "columns": 7,
+        "coprime_pairs": 21,
+        "sixth_rows": 3
+      },
+      {
+        "B": 8,
+        "X": 64,
+        "columns": 7,
+        "coprime_pairs": 33,
+        "sixth_rows": 5
+      },
+      {
+        "B": 16,
+        "X": 64,
+        "columns": 7,
+        "coprime_pairs": 68,
+        "sixth_rows": 10
+      },
+      {
+        "B": 32,
+        "X": 64,
+        "columns": 7,
+        "coprime_pairs": 134,
+        "sixth_rows": 20
+      },
+      {
+        "B": 4,
+        "X": 128,
+        "columns": 19,
+        "coprime_pairs": 57,
+        "sixth_rows": 3
+      },
+      {
+        "B": 8,
+        "X": 128,
+        "columns": 19,
+        "coprime_pairs": 91,
+        "sixth_rows": 5
+      },
+      {
+        "B": 16,
+        "X": 128,
+        "columns": 19,
+        "coprime_pairs": 182,
+        "sixth_rows": 10
+      },
+      {
+        "B": 32,
+        "X": 128,
+        "columns": 19,
+        "coprime_pairs": 364,
+        "sixth_rows": 20
+      },
+      {
+        "B": 4,
+        "X": 256,
+        "columns": 37,
+        "coprime_pairs": 111,
+        "sixth_rows": 3
+      },
+      {
+        "B": 8,
+        "X": 256,
+        "columns": 37,
+        "coprime_pairs": 175,
+        "sixth_rows": 5
+      },
+      {
+        "B": 16,
+        "X": 256,
+        "columns": 37,
+        "coprime_pairs": 354,
+        "sixth_rows": 10
+      },
+      {
+        "B": 32,
+        "X": 256,
+        "columns": 37,
+        "coprime_pairs": 690,
+        "sixth_rows": 20
+      }
+    ],
+    "row_records": [
+      {
+        "generator": [
+          -1,
+          -1
+        ],
+        "ideal_norm": 1,
+        "row": [
+          1,
+          0
+        ],
+        "row_norm": 1
+      },
+      {
+        "generator": [
+          -2,
+          -1
+        ],
+        "ideal_norm": 3,
+        "row": [
+          -27,
+          0
+        ],
+        "row_norm": 729
+      },
+      {
+        "generator": [
+          -2,
+          -2
+        ],
+        "ideal_norm": 4,
+        "row": [
+          64,
+          0
+        ],
+        "row_norm": 4096
+      },
+      {
+        "generator": [
+          -3,
+          -2
+        ],
+        "ideal_norm": 7,
+        "row": [
+          -323,
+          -360
+        ],
+        "row_norm": 117649
+      },
+      {
+        "generator": [
+          -3,
+          -1
+        ],
+        "ideal_norm": 7,
+        "row": [
+          37,
+          360
+        ],
+        "row_norm": 117649
+      },
+      {
+        "generator": [
+          -3,
+          -3
+        ],
+        "ideal_norm": 9,
+        "row": [
+          729,
+          0
+        ],
+        "row_norm": 531441
+      },
+      {
+        "generator": [
+          -4,
+          -2
+        ],
+        "ideal_norm": 12,
+        "row": [
+          -1728,
+          0
+        ],
+        "row_norm": 2985984
+      },
+      {
+        "generator": [
+          -4,
+          -3
+        ],
+        "ideal_norm": 13,
+        "row": [
+          -1007,
+          -2520
+        ],
+        "row_norm": 4826809
+      },
+      {
+        "generator": [
+          -4,
+          -1
+        ],
+        "ideal_norm": 13,
+        "row": [
+          1513,
+          2520
+        ],
+        "row_norm": 4826809
+      },
+      {
+        "generator": [
+          -4,
+          -4
+        ],
+        "ideal_norm": 16,
+        "row": [
+          4096,
+          0
+        ],
+        "row_norm": 16777216
+      },
+      {
+        "generator": [
+          -5,
+          -3
+        ],
+        "ideal_norm": 19,
+        "row": [
+          -7811,
+          -5040
+        ],
+        "row_norm": 47045881
+      },
+      {
+        "generator": [
+          -5,
+          -2
+        ],
+        "ideal_norm": 19,
+        "row": [
+          -2771,
+          5040
+        ],
+        "row_norm": 47045881
+      },
+      {
+        "generator": [
+          -5,
+          -4
+        ],
+        "ideal_norm": 21,
+        "row": [
+          -999,
+          -9720
+        ],
+        "row_norm": 85766121
+      },
+      {
+        "generator": [
+          -5,
+          -1
+        ],
+        "ideal_norm": 21,
+        "row": [
+          8721,
+          9720
+        ],
+        "row_norm": 85766121
+      },
+      {
+        "generator": [
+          -5,
+          -5
+        ],
+        "ideal_norm": 25,
+        "row": [
+          15625,
+          0
+        ],
+        "row_norm": 244140625
+      },
+      {
+        "generator": [
+          -6,
+          -3
+        ],
+        "ideal_norm": 27,
+        "row": [
+          -19683,
+          0
+        ],
+        "row_norm": 387420489
+      },
+      {
+        "generator": [
+          -6,
+          -4
+        ],
+        "ideal_norm": 28,
+        "row": [
+          -20672,
+          -23040
+        ],
+        "row_norm": 481890304
+      },
+      {
+        "generator": [
+          -6,
+          -2
+        ],
+        "ideal_norm": 28,
+        "row": [
+          2368,
+          23040
+        ],
+        "row_norm": 481890304
+      },
+      {
+        "generator": [
+          -6,
+          -5
+        ],
+        "ideal_norm": 31,
+        "row": [
+          3781,
+          -27720
+        ],
+        "row_norm": 887503681
+      },
+      {
+        "generator": [
+          -6,
+          -1
+        ],
+        "ideal_norm": 31,
+        "row": [
+          31501,
+          27720
+        ],
+        "row_norm": 887503681
+      }
+    ]
+  },
+  "compatibility_cases": 258,
+  "counts": {
+    "actual_nonunit_zero": 600,
+    "bump_absolute_mass": 8,
+    "bump_constant_lower_bound": 8,
+    "certified_angle_reduction": 3,
+    "complete_native_lattice_census": 1,
+    "complete_peak_window": 1,
+    "complete_prime_factorization": 311,
+    "composite_sixth_row_mask": 720,
+    "distinct_native_ideals": 1,
+    "effective_mean_error": 24,
+    "exact_replica_jensen": 60,
+    "frequency_separation_integer_step": 342,
+    "integer_frequency_height": 343,
+    "integer_frequency_noncollision": 343,
+    "local_pair_density": 5,
+    "native_and_unsigned_peak_values": 1,
+    "native_phase_alignment": 147,
+    "non_galois_1_2_control": 1,
+    "norm_matches_ideal": 147,
+    "peak_below_unsigned_maximum": 1,
+    "physical_width_h1": 1,
+    "physical_width_h21_20": 1,
+    "prime_splitting": 50,
+    "residue_degree_criterion": 258,
+    "rigorous_actual_native_peak": 1,
+    "sixth_power_inert_value": 40,
+    "sixth_power_split_value": 560,
+    "sixth_row_injection": 20,
+    "sixth_row_physical_norm": 20,
+    "tensor_constant_coefficient": 24,
+    "unit_independent_sixth_row": 120
+  },
+  "finite_bump_cases": 24,
+  "limits": [
+    "Not a proof of an infinite asymptotic or RH.",
+    "The row set is the complete stated sixth-power subset, not a complete large physical ball.",
+    "The actual peak does not certify the whole prime-phase approximation box.",
+    "Same-author written proof and checker; no independent referee or proof assistant."
+  ],
+  "peak_certificate": {
+    "anchor_norm": 49,
+    "column_cap": 64,
+    "method": "Exact Fraction logarithm/atan series, Machin pi, certified angle reduction, cosine Taylor remainder.",
+    "native_at_zero": -5,
+    "proven_real_part_interval": [
+      "6.999890106922709531522815",
+      "6.999890106922709531522816"
+    ],
+    "threshold": "6999/1000",
+    "twist_center_integer": 842800609,
+    "unsigned_maximum": 7
+  },
+  "status": "PASS: finite algebra, arithmetic, and rational peak certificate",
+  "total_predicates": 4162
+}
