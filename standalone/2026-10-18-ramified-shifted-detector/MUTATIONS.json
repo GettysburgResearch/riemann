@@ -1,0 +1,45 @@
+{
+  "cases": [
+    {
+      "mutation": "erased_nonunit_zero",
+      "returncode": 1,
+      "stderr": "FAIL: nonunit mask in zeroth Gauss character"
+    },
+    {
+      "mutation": "omitted_j5_boundary",
+      "returncode": 1,
+      "stderr": "FAIL: ramified rational numerator j=5"
+    },
+    {
+      "mutation": "decoupled_valuation_support",
+      "returncode": 1,
+      "stderr": "FAIL: unramified exact-series coefficient"
+    },
+    {
+      "mutation": "erased_ramified_unit_phase",
+      "returncode": 1,
+      "stderr": "FAIL: ramified rational numerator j=1"
+    },
+    {
+      "mutation": "old_B_exponent",
+      "returncode": 1,
+      "stderr": "FAIL: shifted detection first exponent"
+    },
+    {
+      "mutation": "old_mollifier_weight",
+      "returncode": 1,
+      "stderr": "FAIL: same-line mollifier mass"
+    },
+    {
+      "mutation": "omitted_dual_conductor",
+      "returncode": 1,
+      "stderr": "FAIL: actual dual conductor cancellation"
+    },
+    {
+      "mutation": "wrong_count_exponent",
+      "returncode": 1,
+      "stderr": "FAIL: unknown-count elimination"
+    }
+  ],
+  "status": "PASS: eight separate corrupted optimized processes rejected"
+}
