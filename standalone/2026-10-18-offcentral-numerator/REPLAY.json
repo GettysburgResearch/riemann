@@ -1,0 +1,56 @@
+{
+  "checker_sha256": "c4f66c043ad85f1e9f22c7923423693136fcd4597407326bbbb6e58dd01def5e",
+  "checks_sha256": "c4c89e5c1b154e8dd2f4d92a1938e4cefe705ebbc79dd497f4117c1b8ebde173",
+  "formal_build": false,
+  "independent_review": false,
+  "mutations": [
+    {
+      "error": "ValueError: REJECT: class_power_interval",
+      "mutation": "central",
+      "returncode": 1
+    },
+    {
+      "error": "ValueError: REJECT: dual_AFE_vertices",
+      "mutation": "dual",
+      "returncode": 1
+    },
+    {
+      "error": "ValueError: REJECT: sixth_power_masks_and_shared_primes",
+      "mutation": "mask",
+      "returncode": 1
+    },
+    {
+      "error": "ValueError: REJECT: sixth_power_masks_and_shared_primes",
+      "mutation": "coprime",
+      "returncode": 1
+    },
+    {
+      "error": "ValueError: REJECT: lower_threshold_count",
+      "mutation": "upper_count",
+      "returncode": 1
+    },
+    {
+      "error": "ValueError: REJECT: disjoint_exhaustive_classes",
+      "mutation": "last_class",
+      "returncode": 1
+    },
+    {
+      "error": "ValueError: REJECT: true_principal_Mellin_shift",
+      "mutation": "shift",
+      "returncode": 1
+    },
+    {
+      "error": "ValueError: REJECT: large_frequencies",
+      "mutation": "large_gap",
+      "returncode": 1
+    }
+  ],
+  "normal_and_optimized_match": true,
+  "recovery_audit": {
+    "files": 11,
+    "git_tree": "e68e2b6f5f680d89a1bfff1bd8dce1bd97fd5dcd",
+    "old_checker_rerun": false,
+    "packet": "riemann-growing-shift-maximal.zip",
+    "published_pr": 960
+  }
+}
