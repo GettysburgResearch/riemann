@@ -1,0 +1,41 @@
+{
+  "checker_sha256": "9c432b418152b55a7a19e05031c5fdac7ec19b6c4788b529c37c992b57be4f42",
+  "imported_checker_sha256": "d2c77035fd5cfa7ceea2217d3fc51cc99bcec44b74220073efaf1df11a72fc98",
+  "mutations": [
+    {
+      "exit_code": 1,
+      "failure": "ValueError: central-budgets: middle-421",
+      "mutation": "old-second-mean"
+    },
+    {
+      "exit_code": 1,
+      "failure": "ValueError: identities: fourth conductor cost",
+      "mutation": "omit-conductor"
+    },
+    {
+      "exit_code": 1,
+      "failure": "ValueError: partition-count: 0",
+      "mutation": "upper-count"
+    },
+    {
+      "exit_code": 1,
+      "failure": "ValueError: identities: small rows",
+      "mutation": "old-small-line"
+    },
+    {
+      "exit_code": 1,
+      "failure": "ValueError: identities: shift",
+      "mutation": "old-shift"
+    },
+    {
+      "exit_code": 1,
+      "failure": "ValueError: tail-gap: positive",
+      "mutation": "zero-tail-gap"
+    }
+  ],
+  "normal_optimized_identical": true,
+  "proof_sha256": "ce87e3d482cd0b4fa806c55adf266a2a76a4ef46ea68f9dbd0c319a27a168d95",
+  "report_sha256": "2e5c293c23854661ad6b2f6ab75aaa9760caa7e64c283dc57727bd7ba85e6654",
+  "scope": "Finite rational bookkeeping; analytic input and contour proofs require mathematical review.",
+  "status": "PASS"
+}

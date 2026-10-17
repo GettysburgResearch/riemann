@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "exact_checks": 1161,
+  "proof_sha256": "42a501853f5ded88ef3d2f601306a4a377d0995974c5a65452537fab884f8f78",
+  "checker_sha256": "2f8130097b533a4860cafb08f93403fe4e30e7dfba65e3e510162274c84a10e2",
+  "coverage": [
+    "all 20 surviving boundary/interior branch first terms",
+    "their common period and universal exponent identity",
+    "all j=0,...,5 assembled numerators",
+    "finite support representatives",
+    "three native negative controls"
+  ],
+  "not_verified": [
+    "metaplectic foundation",
+    "global Poisson identity",
+    "future contour comparison"
+  ]
+}

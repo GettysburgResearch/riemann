@@ -1,0 +1,51 @@
+{
+  "schema": "LY-tree-edge.sources.v1",
+  "repository": "GettysburgResearch/riemann",
+  "inherited_sources": [
+    {
+      "pull_request": 886,
+      "commit": "d998605c0718e332ac503baf078704b862f8250e",
+      "repository_path": "standalone/2026-09-13-astra-theta-degree-sixteen/primitive.py",
+      "local_path": "pr886_primitive.py",
+      "git_blob_sha": "712bb0f0114cbba85e8082c3130ebf09b53e8936",
+      "sha256": "2eba75b7fc82617342c20f6a06270462b6d82f1e7162f66847c029e7e5a9fa55",
+      "scope": "Unmodified directed integer interval and Taylor primitives; same backend, not independent arithmetic"
+    },
+    {
+      "pull_request": 886,
+      "commit": "d998605c0718e332ac503baf078704b862f8250e",
+      "repository_path": "standalone/2026-09-13-astra-theta-degree-sixteen/parameters.json",
+      "local_path": "pr886_parameters.json",
+      "git_blob_sha": "1d3cc0065dec352ad9eb01420775194f53140080",
+      "sha256": "20202a816a85ccbdd543ae77532b79990bf8fdffb9186f0798c968d2f797c608",
+      "scope": "Exact old D16 box and fixed coordinates, used to identify the compensated-edge source root"
+    }
+  ],
+  "imported_mathematics": [
+    {
+      "name": "Classical theta Fourier representation",
+      "normalization": "Phi as in PROOF.md; normalized transform Xi(z)/Xi(0)=xi(1/2+iz)/xi(1/2)",
+      "repository_source": "https://github.com/GettysburgResearch/riemann/blob/d998605c0718e332ac503baf078704b862f8250e/standalone/2026-09-13-astra-theta-degree-sixteen/PROOF.md"
+    },
+    {
+      "name": "Finite weighted ferromagnetic Lee-Yang theorem",
+      "source": "Charles M. Newman and Wei Wu, Constants of de Bruijn-Newman type in analytic number theory and statistical physics",
+      "version": "arXiv:1901.06596v2",
+      "location": "Section 2.5, equation (21) and following display",
+      "url": "https://arxiv.org/html/1901.06596v2#S2.SS5",
+      "hypotheses_used": "Finite zero-field Ising graph; nonnegative real couplings and nonnegative real observable weights"
+    },
+    {
+      "name": "Banach contraction theorem, analytic implicit function theorem, Hurwitz theorem",
+      "scope": "Standard local existence and zero-free limit arguments with hypotheses proved explicitly in PROOF.md"
+    }
+  ],
+  "claims_not_made": [
+    "A degree-18 realization",
+    "A global continuation interval reaching the next target",
+    "A cofinal all-order Ising moment realization",
+    "An RH proof",
+    "A separating inequality inferred from failed numerical searches",
+    "An independent second transcendental backend"
+  ]
+}
