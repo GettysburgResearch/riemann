@@ -1,0 +1,45 @@
+{
+  "reports": [
+    {
+      "runs": [
+        {
+          "optimized": false,
+          "report_sha256": "d5038de472adcdc1b6760b9c2b2695330caa7dba153c8dcd76e3ffe75b084cf2"
+        },
+        {
+          "optimized": true,
+          "report_sha256": "d5038de472adcdc1b6760b9c2b2695330caa7dba153c8dcd76e3ffe75b084cf2"
+        }
+      ],
+      "script": "check_direct_identity.py"
+    },
+    {
+      "runs": [
+        {
+          "optimized": false,
+          "report_sha256": "ecd1a515172cde7faeae3fbc0a6a59a18bce8699a79333f80a16f64361b2cdb1"
+        },
+        {
+          "optimized": true,
+          "report_sha256": "ecd1a515172cde7faeae3fbc0a6a59a18bce8699a79333f80a16f64361b2cdb1"
+        }
+      ],
+      "script": "check_native_angular_rays.py"
+    },
+    {
+      "runs": [
+        {
+          "optimized": false,
+          "report_sha256": "0eed88e181ca96d23f7db667b958d88d36fa70a6607ec0189b2c6e80220ea4d0"
+        },
+        {
+          "optimized": true,
+          "report_sha256": "0eed88e181ca96d23f7db667b958d88d36fa70a6607ec0189b2c6e80220ea4d0"
+        }
+      ],
+      "script": "check_capped_norm_transfer.py"
+    }
+  ],
+  "scope": "Finite archived reports and file bytes only",
+  "status": "PASS"
+}

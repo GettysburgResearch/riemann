@@ -1,0 +1,147 @@
+{
+  "angular_hull_fixture": {
+    "Q": 6,
+    "coefficients_checked_exactly_through": 200000,
+    "density_samples_not_asymptotic_certificates": [
+      {
+        "Y": 100,
+        "density_observed": 0.27,
+        "density_predicted": 0.251375833172,
+        "error_divided_by_sqrtY_log3Y_squared": 0.005724676427,
+        "exact_signed_cumulative_hull": 27
+      },
+      {
+        "Y": 1000,
+        "density_observed": 0.248,
+        "density_predicted": 0.251375833172,
+        "error_divided_by_sqrtY_log3Y_squared": -0.001665366896,
+        "exact_signed_cumulative_hull": 248
+      },
+      {
+        "Y": 10000,
+        "density_observed": 0.2535,
+        "density_predicted": 0.251375833172,
+        "error_divided_by_sqrtY_log3Y_squared": 0.001998754856,
+        "exact_signed_cumulative_hull": 2535
+      },
+      {
+        "Y": 100000,
+        "density_observed": 0.25138,
+        "density_predicted": 0.251375833172,
+        "error_divided_by_sqrtY_log3Y_squared": 8.284561e-06,
+        "exact_signed_cumulative_hull": 25138
+      },
+      {
+        "Y": 200000,
+        "density_observed": 0.25135,
+        "density_predicted": 0.251375833172,
+        "error_divided_by_sqrtY_log3Y_squared": -6.526548e-05,
+        "exact_signed_cumulative_hull": 50270
+      }
+    ],
+    "direct_split_inert_Euler_factors_equal_quotient_convolution": true
+  },
+  "native_ideal_fixture": {
+    "Q": 6,
+    "all_ideals_enumerated_modulo_six_units": 616,
+    "determinant_bound_3sqrt3": 5.196152422707,
+    "exact_Fraction_angular_phase_checked": true,
+    "finite_gaussian_replay": [
+      {
+        "X": 512,
+        "absolute_difference": 0.0,
+        "angular_center": 0,
+        "exact_ray_diagonal": 72,
+        "finite_angular_sum_8_sigma": 62.923206218119,
+        "periodized_kernel_5_images": 62.923206218119,
+        "radial_parameter": 0,
+        "width_R": 4
+      },
+      {
+        "X": 512,
+        "absolute_difference": 4e-14,
+        "angular_center": 0,
+        "exact_ray_diagonal": 72,
+        "finite_angular_sum_8_sigma": 82.169648005127,
+        "periodized_kernel_5_images": 82.169648005127,
+        "radial_parameter": 0,
+        "width_R": 32
+      },
+      {
+        "X": 512,
+        "absolute_difference": 4e-14,
+        "angular_center": 0,
+        "exact_ray_diagonal": 72,
+        "finite_angular_sum_8_sigma": 72.000000029983,
+        "periodized_kernel_5_images": 72.000000029983,
+        "radial_parameter": 0,
+        "width_R": 512
+      },
+      {
+        "X": 512,
+        "absolute_difference": 6e-14,
+        "angular_center": 7,
+        "exact_ray_diagonal": 72,
+        "finite_angular_sum_8_sigma": 82.146232560359,
+        "periodized_kernel_5_images": 82.146232560359,
+        "radial_parameter": 0,
+        "width_R": 32
+      }
+    ],
+    "good_ideals_checked_including_nonsquarefree": 307,
+    "hard_window_fixtures": [
+      {
+        "X": 64,
+        "native_diagonal_divided_by_X": 0.109375,
+        "native_ray_diagonal_exact": 7,
+        "nonzero_squarefree_ideals_in_window": 7,
+        "rays_present_before_cancellation": 7,
+        "rays_with_nonzero_native_sum": 7,
+        "unsigned_ray_diagonal_exact": 7
+      },
+      {
+        "X": 128,
+        "native_diagonal_divided_by_X": 0.1484375,
+        "native_ray_diagonal_exact": 19,
+        "nonzero_squarefree_ideals_in_window": 19,
+        "rays_present_before_cancellation": 19,
+        "rays_with_nonzero_native_sum": 19,
+        "unsigned_ray_diagonal_exact": 19
+      },
+      {
+        "X": 256,
+        "native_diagonal_divided_by_X": 0.14453125,
+        "native_ray_diagonal_exact": 37,
+        "nonzero_squarefree_ideals_in_window": 37,
+        "rays_present_before_cancellation": 37,
+        "rays_with_nonzero_native_sum": 37,
+        "unsigned_ray_diagonal_exact": 37
+      },
+      {
+        "X": 512,
+        "native_diagonal_divided_by_X": 0.140625,
+        "native_ray_diagonal_exact": 72,
+        "nonzero_squarefree_ideals_in_window": 74,
+        "rays_present_before_cancellation": 73,
+        "rays_with_nonzero_native_sum": 72,
+        "unsigned_ray_diagonal_exact": 76
+      },
+      {
+        "X": 1024,
+        "native_diagonal_divided_by_X": 0.1337890625,
+        "native_ray_diagonal_exact": 137,
+        "nonzero_squarefree_ideals_in_window": 139,
+        "rays_present_before_cancellation": 137,
+        "rays_with_nonzero_native_sum": 137,
+        "unsigned_ray_diagonal_exact": 145
+      }
+    ],
+    "independent_prime_ideal_factorization": true,
+    "largest_raw_grouped_float_error": 0.0,
+    "maximum_ideal_norm": 1024,
+    "minimum_core_angle_gap_times_X_at_X512": 6.025881377725,
+    "primitive_angle_collision_classes_checked": true
+  },
+  "scope": "finite source fixtures; no numerical proof of asymptotics or RH",
+  "status": "all exact finite checks and floating normalization replays passed"
+}
