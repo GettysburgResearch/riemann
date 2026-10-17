@@ -1,0 +1,32 @@
+[
+  {
+    "mutation": "split",
+    "rejection": "RuntimeError: REJECT: complete_ideal_norm_census",
+    "returncode": 1
+  },
+  {
+    "mutation": "power",
+    "rejection": "RuntimeError: REJECT: complete_ideal_norm_census",
+    "returncode": 1
+  },
+  {
+    "mutation": "exclusion",
+    "rejection": "RuntimeError: REJECT: complete_ideal_norm_census",
+    "returncode": 1
+  },
+  {
+    "mutation": "owner",
+    "rejection": "RuntimeError: REJECT: unique_largest_owner_capped_tensor",
+    "returncode": 1
+  },
+  {
+    "mutation": "progression",
+    "rejection": "RuntimeError: REJECT: progression_preimage",
+    "returncode": 1
+  },
+  {
+    "mutation": "jacobian",
+    "rejection": "RuntimeError: REJECT: critical_dilation_jacobian",
+    "returncode": 1
+  }
+]
