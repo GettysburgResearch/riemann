@@ -1,0 +1,59 @@
+{
+  "counts": {
+    "complete_source_coefficient": 46656,
+    "component_critical_jacobian_weight": 608,
+    "component_normalized_short_weight": 608,
+    "endpoint_maximal_heavy_light_bound": 227,
+    "exact_dilation_Jacobian": 64,
+    "integrated_window_Cauchy": 60,
+    "literal_nonunit_zero": 15552,
+    "microscopic_window_count_bound": 64,
+    "mixed_Fourier_full_window_identity": 60,
+    "mixed_Parseval_identity": 60,
+    "partition_grid_count": 226,
+    "partition_heavy_count": 226,
+    "partition_light_mass": 280,
+    "physical_window_energy_real_positive": 128,
+    "power_tail_guard": 186624,
+    "square_prefix_guard": 46656,
+    "strict_nonpretentious_exponent_budget": 1,
+    "unique_component_support": 64,
+    "window_frequency_mass": 60
+  },
+  "scope": {
+    "MRT_reproved": false,
+    "RH_proved": false,
+    "arithmetic": "rational integers; Gaussian-rational coefficients",
+    "full_native_asymptotic_verified": false,
+    "independent_review": false,
+    "odd_m_fixture": "powerful phase attenuated by p^(-1/2)"
+  },
+  "source_case_count": 64,
+  "source_cases_sha256": "932781a6b22e61d4f77f8677f4419c7ff54629cafa3f3c30d2f905bd1951403f",
+  "source_parameters": {
+    "cap": 729,
+    "completed_degrees": [
+      2,
+      3,
+      4,
+      6,
+      10
+    ],
+    "families": [
+      "native",
+      "coupled",
+      "two-channel",
+      "geometric"
+    ],
+    "masks": [
+      1,
+      6
+    ],
+    "native_degree": 2,
+    "profiles": [
+      0,
+      1
+    ]
+  },
+  "status": "PASS_EXACT_FINITE_DIAGNOSTICS"
+}
