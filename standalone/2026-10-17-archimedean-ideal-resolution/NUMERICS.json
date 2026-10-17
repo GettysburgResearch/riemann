@@ -1,0 +1,70 @@
+{
+  "finite_joint_averages": [
+    {
+      "R": "1.0",
+      "complete_finite_M4_average": "274.4520010585623952374543",
+      "maximum_offdiagonal_kernel_row_sum": "11.30282776374223073998265"
+    },
+    {
+      "R": "8.0",
+      "complete_finite_M4_average": "78.89101234681950437195075",
+      "maximum_offdiagonal_kernel_row_sum": "1.321491464678434952601394"
+    },
+    {
+      "R": "64.0",
+      "complete_finite_M4_average": "90.99999999935289357417696",
+      "maximum_offdiagonal_kernel_row_sum": "4.044850602798724138761174e-11"
+    },
+    {
+      "R": "128.0",
+      "complete_finite_M4_average": "91.0",
+      "maximum_offdiagonal_kernel_row_sum": "2.676763132405177943269548e-42"
+    }
+  ],
+  "fourier_pairs": 20,
+  "geometry_ideal_cap": 64,
+  "geometry_ideal_count": 40,
+  "largest_distance_ratio": "0.9986327577467917206404192",
+  "max_fourier_error": "2.26391976970667809187728e-71",
+  "numerical_predicates": 3149,
+  "pair_quadratures": [
+    {
+      "D": 16,
+      "absolute_error": "2.8298997121333476148466e-73",
+      "kernel": "0.02005558227836862333037753",
+      "v": 7,
+      "z": 7
+    },
+    {
+      "D": 64,
+      "absolute_error": "1.4149498560666738074233e-73",
+      "kernel": "0.01258761320081155925842093",
+      "v": 7,
+      "z": 25
+    },
+    {
+      "D": 4,
+      "absolute_error": "5.250790481497422332234902e-75",
+      "kernel": "0.00001537579169669068009251416",
+      "v": 25,
+      "z": 49
+    },
+    {
+      "D": 128,
+      "absolute_error": "3.53737464016668451855825e-74",
+      "kernel": "0.002595233909803835660288729",
+      "v": 49,
+      "z": 61
+    }
+  ],
+  "scalar_native_hard_window": {
+    "columns": 7,
+    "lower_exclusive": 32,
+    "native_t0_l0_M4": "625",
+    "product_ideal_diagonal": "91",
+    "product_ideals": 28,
+    "product_norm_diagonal": "289",
+    "upper_inclusive": 64
+  },
+  "status": "ordinary 70-digit approximations, NOT certified intervals or asymptotic evidence"
+}
