@@ -1,0 +1,55 @@
+{
+  "schema": "riemann.dedekind-density-upgrade.v1",
+  "base_commit": "6d3d69c7896e3a5d61d1f67e4627125257398ec7",
+  "scope": "Integrity only; not analytic theorem certification.",
+  "files": [
+    {
+      "path": "CHECKS.json",
+      "bytes": 6312,
+      "sha256": "f761a380d1649f84924bcdc860d1fe8ab248aa5ee65cbb3b72f4953c41865771",
+      "git_blob": "31908ce123e4582d9fc37f2610440803699efd4c"
+    },
+    {
+      "path": "PROOF.md",
+      "bytes": 18134,
+      "sha256": "ccd2b20a4174e56e93d4d5d3a5a90996b08c56172e98a9c9319c0337560990e0",
+      "git_blob": "3bc7cf80bdbfe1dbba84081bd1e8096ccc13987f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3898,
+      "sha256": "564a9720a3a5021d7fc02ac4071211e700c8a659960f235f44e9135f5434fe3f",
+      "git_blob": "85b2cd4b11fba2442f279dafafbcdc769863a597"
+    },
+    {
+      "path": "SOURCES.md",
+      "bytes": 4626,
+      "sha256": "11cebcbf9fe4bb9aca6e2787d54a17fc75b04787801b11841269651c5f24fefd",
+      "git_blob": "7e70fce038eb540c2dcc677d0dfccacef00ef49d"
+    },
+    {
+      "path": "VALIDATION.md",
+      "bytes": 4295,
+      "sha256": "f4b27656b301877c6395571ed0c1c40661e9f0f198e27e093d634a4607360c70",
+      "git_blob": "57453a62df4e0b0574f92dfb4a0fb767e1b83314"
+    },
+    {
+      "path": "parameters.json",
+      "bytes": 420,
+      "sha256": "fdc05dadf53d7a1e1be9224506568a1d744e8998adf37af3d6ef9f0ff58531f1",
+      "git_blob": "ef2ac11934bc5e9b2d7020af3859b3e301d05920"
+    },
+    {
+      "path": "test_verify.py",
+      "bytes": 3909,
+      "sha256": "bc2c186ddcee8f0767afaa5f46f32a524dda9c219dcf37ca646338caa2b797de",
+      "git_blob": "87f1fdbefa7e43344fb03b27514ae89902843bc1"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 7004,
+      "sha256": "278ef0e5442e9bb8d4f50042656e1a823ec930e78f527262afa671b793bac6ae",
+      "git_blob": "bfc06fe5ef0dcba753bf7d3de88e9d5e87ac1c3d"
+    }
+  ]
+}
