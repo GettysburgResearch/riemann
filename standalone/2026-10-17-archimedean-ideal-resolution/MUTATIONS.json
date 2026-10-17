@@ -1,0 +1,32 @@
+[
+  {
+    "error": "ArithmeticError: prior complete native census D64 H79",
+    "exit_code": 1,
+    "mode": "python -O",
+    "mutation": "erase-mask"
+  },
+  {
+    "error": "ArithmeticError: angular separation of conjugate ideals",
+    "exit_code": 1,
+    "mode": "python -O",
+    "mutation": "erase-angle"
+  },
+  {
+    "error": "ArithmeticError: unit-independent character",
+    "exit_code": 1,
+    "mode": "python -O",
+    "mutation": "omit-unit-power"
+  },
+  {
+    "error": "ArithmeticError: product keys must retain ideal identity",
+    "exit_code": 1,
+    "mode": "python -O",
+    "mutation": "collapse-norm"
+  },
+  {
+    "error": "ArithmeticError: strict near-isometry constant",
+    "exit_code": 1,
+    "mode": "python -O",
+    "mutation": "false-isometry-constant"
+  }
+]
