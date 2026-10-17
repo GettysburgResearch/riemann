@@ -1,0 +1,89 @@
+{
+  "native_rows": {
+    "integer_row_caps": [
+      64,
+      128,
+      256
+    ],
+    "named_columns": [
+      1,
+      7,
+      13,
+      91
+    ],
+    "orders": [
+      2,
+      4,
+      6,
+      8
+    ],
+    "scope": "Complete stated integer rows, fixed two-prime sextic fixtures; not full ideal columns."
+  },
+  "numerator_exponents": {
+    "central_exponents": [
+      "1",
+      "7/6",
+      "19/12",
+      "2",
+      "5/2",
+      "3",
+      "7/2",
+      "4"
+    ],
+    "proof_boundary": "The written arguments, not this finite grid, handle every fixed integer order.",
+    "r_checked": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ]
+  },
+  "predicates_by_group": {
+    "Holder-support-price": 960,
+    "asymmetric-AFE": 480,
+    "diagonal-anchor": 16,
+    "dual-conductor-identity": 2816,
+    "finite-anchors": 26,
+    "full-strip-conductor": 4224,
+    "literal-nonunit": 4,
+    "moment-support-threshold": 12,
+    "native-complete-rows": 12,
+    "optimistic-budget-dual": 121,
+    "ordered-products": 22,
+    "powerful-factorization": 512,
+    "powerful-moment-exponents": 720,
+    "quadratic-square-removal": 286,
+    "sixth-row-factorization": 260,
+    "sixth-row-mask": 1560,
+    "subunit-tail": 9
+  },
+  "quadratic": {
+    "column_weight": "mu(c)/c; bounded by 1/sqrt(c)",
+    "complete_rational_dyads": 22,
+    "distinct_product_columns_total": 325,
+    "rows": "all odd squarefree d<=31",
+    "scope": "Actual rational quadratic fixtures, not CT theta values."
+  },
+  "status": "PASS: finite exact diagnostics; no analytic certification",
+  "theta_geometry": {
+    "fourth_example": {
+      "N_exponent": "2/3",
+      "new_exponent": "2/3",
+      "second_plus_sup_exponent": "1"
+    },
+    "subunit_tail_scope": "Exact geometric majorant model only; no infinite theta computation."
+  },
+  "total_finite_predicates": 12040
+}
