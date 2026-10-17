@@ -1,0 +1,35 @@
+{
+  "results": [
+    {
+      "mutation": "convexity-instead",
+      "optimized": true,
+      "reason": "ArithmeticError: exact_exponent: good",
+      "rejected": true
+    },
+    {
+      "mutation": "wrong-bin",
+      "optimized": true,
+      "reason": "ArithmeticError: lower_count_upper_contour: ((0, 0, 0, 1), 1)",
+      "rejected": true
+    },
+    {
+      "mutation": "omit-good",
+      "optimized": true,
+      "reason": "ArithmeticError: synthetic_partition: (0, 0, 0, 0)",
+      "rejected": true
+    },
+    {
+      "mutation": "endpoint-M",
+      "optimized": true,
+      "reason": "ArithmeticError: legal_M: M=1 is inadmissible",
+      "rejected": true
+    },
+    {
+      "mutation": "old-shift",
+      "optimized": true,
+      "reason": "ArithmeticError: normalization: wrong detector/Mellin shift",
+      "rejected": true
+    }
+  ],
+  "scope": "Five separately executed corrupted parameter/classification models; not formal proof mutation."
+}
