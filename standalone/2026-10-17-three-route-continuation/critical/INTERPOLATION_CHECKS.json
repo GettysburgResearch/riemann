@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "proof_sha256": "0d0d55185ca1a674313b89b01752c1224e44f8a7f1117b5ea3db44479ed2a457",
+  "checker_sha256": "3e7e753525df04f08870c23c1bbecba7e06a6bd96fee1218fa28e6b938b65dea",
+  "rational_instances": 100,
+  "negative_controls": [
+    "dependent-subset Holder saturation",
+    "omitted conductor factor"
+  ],
+  "not_verified": [
+    "actual central family mean",
+    "primitive functional equation",
+    "full contour comparison"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "Mellin_shift": "37/54",
+  "a": "4/9",
+  "checks": {
+    "central-budgets": 1642,
+    "contour-domain": 36212,
+    "density-domains": 1641,
+    "density-formula": 1641,
+    "density-height-monomials": 16410,
+    "density-norm-monomials": 16410,
+    "fourth-interpolation": 12,
+    "identities": 40,
+    "interpolation-lines": 2280,
+    "middle-strict-margin": 1640,
+    "other-budgets": 4,
+    "partition-count": 1641,
+    "partition-grid": 1640,
+    "reciprocal-disks": 6564,
+    "row-exponents": 1642,
+    "tail-gap": 2
+  },
+  "class_count": 1642,
+  "e_interval": "0 < e <= 1/1000000",
+  "method_counts": {
+    "convexity": 1,
+    "fourth": 500,
+    "fourth-interpolated": 1140,
+    "second": 1
+  },
+  "minimum_middle_constant_margin": {
+    "constant_margin": "118384121/35223109200",
+    "growth": [
+      "7708973479/35223109200",
+      "1837711531/863311500",
+      "-2243892001/19568394000",
+      "-1/2"
+    ],
+    "lower": "4801/6000",
+    "method": "fourth-interpolated",
+    "name": "middle-801",
+    "nu": [
+      "4179697/6522798",
+      "1"
+    ],
+    "upper": "2401/3000",
+    "x": [
+      "2401/3000",
+      "1"
+    ],
+    "y": [
+      "599/3000",
+      "1"
+    ]
+  },
+  "proposed_boundary": "49/54",
+  "small_norm_cutoff": "1/1000",
+  "small_z_line": "1/3",
+  "status": "EXACT_RATIONAL finite bookkeeping; analytic fourth-moment extension proposed",
+  "support": "8/9",
+  "theta": "2/9",
+  "threshold_count": 1641
+}

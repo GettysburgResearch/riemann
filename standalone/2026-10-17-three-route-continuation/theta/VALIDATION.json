@@ -1,0 +1,40 @@
+{
+  "checker_sha256": "d2c77035fd5cfa7ceea2217d3fc51cc99bcec44b74220073efaf1df11a72fc98",
+  "mutations": [
+    {
+      "exit_code": 1,
+      "failure": "ValueError: central-budgets: middle-172",
+      "mutation": "old-numerator"
+    },
+    {
+      "exit_code": 1,
+      "failure": "ValueError: identities: functional-equation cost",
+      "mutation": "omit-conductor"
+    },
+    {
+      "exit_code": 1,
+      "failure": "ValueError: partition-count: 0",
+      "mutation": "upper-count"
+    },
+    {
+      "exit_code": 1,
+      "failure": "ValueError: identities: small rows constant",
+      "mutation": "old-small-cutoff"
+    },
+    {
+      "exit_code": 1,
+      "failure": "ValueError: identities: shift",
+      "mutation": "old-shift"
+    },
+    {
+      "exit_code": 1,
+      "failure": "ValueError: tail-gap: positive",
+      "mutation": "zero-tail-gap"
+    }
+  ],
+  "normal_optimized_identical": true,
+  "proof_sha256": "8b9aaed9e48a596d7cb9f71bef72a93928d8efa83866a599d83179684f478201",
+  "report_sha256": "80c1393cfe05c5ae294c8244a29018b528f97efb8b4e6615e37be223ff2266c2",
+  "scope": "Finite rational bookkeeping; analytic input and contour proofs require mathematical review.",
+  "status": "PASS"
+}

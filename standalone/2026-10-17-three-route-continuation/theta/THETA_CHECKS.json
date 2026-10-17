@@ -1,0 +1,61 @@
+{
+  "Mellin_shift": "3419/5000",
+  "a": "2243/5000",
+  "checks": {
+    "central-budgets": 2674,
+    "contour-domain": 58905,
+    "density-domains": 2673,
+    "density-formula": 2673,
+    "density-height-monomials": 26730,
+    "density-norm-monomials": 26730,
+    "identities": 21,
+    "interpolation": 12,
+    "interpolation-lines": 3400,
+    "middle-strict-margin": 2672,
+    "other-budgets": 4,
+    "partition-count": 2673,
+    "partition-grid": 2672,
+    "reciprocal-disks": 10692,
+    "row-exponents": 2674,
+    "scales": 1,
+    "tail-gap": 2
+  },
+  "class_count": 2674,
+  "e_interval": "0 < e <= 1/1000000",
+  "method_counts": {
+    "convexity": 801,
+    "interpolated": 1700,
+    "mean": 173
+  },
+  "minimum_middle_constant_margin": {
+    "constant_margin": "20321474869/416197180000000",
+    "growth": [
+      "93332705999131/416197180000000",
+      "2242386652871381/1040492950000000",
+      "-76347867793/208098590000",
+      "-1"
+    ],
+    "lower": "4043/5000",
+    "method": "interpolated",
+    "name": "middle-1358",
+    "nu": [
+      "25978327/41619718",
+      "1"
+    ],
+    "upper": "8087/10000",
+    "x": [
+      "8087/10000",
+      "1"
+    ],
+    "y": [
+      "1913/10000",
+      "1"
+    ]
+  },
+  "proposed_boundary": "9081/10000",
+  "small_norm_cutoff": "1/1000",
+  "status": "EXACT_RATIONAL finite bookkeeping; analytic composition proposed",
+  "support": "2243/2500",
+  "theta": "2243/10000",
+  "threshold_count": 2673
+}
