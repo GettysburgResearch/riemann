@@ -1,0 +1,44 @@
+[
+  {
+    "expected_failure": "complete_source_coefficient",
+    "last_error": "ArithmeticError: complete_source_coefficient",
+    "mutation": "mask",
+    "returncode": 1
+  },
+  {
+    "expected_failure": "complete_source_coefficient",
+    "last_error": "ArithmeticError: complete_source_coefficient",
+    "mutation": "power",
+    "returncode": 1
+  },
+  {
+    "expected_failure": "complete_source_coefficient",
+    "last_error": "ArithmeticError: complete_source_coefficient",
+    "mutation": "geometric",
+    "returncode": 1
+  },
+  {
+    "expected_failure": "mixed_Fourier_full_window_identity",
+    "last_error": "ArithmeticError: mixed_Fourier_full_window_identity",
+    "mutation": "conjugation",
+    "returncode": 1
+  },
+  {
+    "expected_failure": "mixed_Fourier_full_window_identity",
+    "last_error": "ArithmeticError: mixed_Fourier_full_window_identity",
+    "mutation": "overlap",
+    "returncode": 1
+  },
+  {
+    "expected_failure": "exact_dilation_Jacobian",
+    "last_error": "ArithmeticError: exact_dilation_Jacobian",
+    "mutation": "jacobian",
+    "returncode": 1
+  },
+  {
+    "expected_failure": "endpoint_maximal_heavy_light_bound",
+    "last_error": "ArithmeticError: endpoint_maximal_heavy_light_bound",
+    "mutation": "heavy",
+    "returncode": 1
+  }
+]
