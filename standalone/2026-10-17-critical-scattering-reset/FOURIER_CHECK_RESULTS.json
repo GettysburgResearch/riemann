@@ -1,0 +1,40 @@
+{
+  "case_digest_sha256": "8f9f1dfc9ac8455360395b7c4d99148c31c9731ce5d4b434bfe79d2301b6d13c",
+  "checks": {
+    "complete-Fejer-filter-identity": 51,
+    "complete-signed-all-shift-identity": 17,
+    "conductor-primes-excluded": 5090,
+    "dilation-of-Fourier-phase": 480,
+    "exact-Parseval-cross-correlation": 17,
+    "exact-local-inverse": 5184,
+    "exact-local-ratio": 5184,
+    "full-geometric-local-tail-retained": 1,
+    "global-forward-convolution": 96,
+    "global-inverse-convolution": 96,
+    "independent-support-formula": 24480,
+    "negative-control-diagonal-only": 1,
+    "negative-control-discard-correlation-signs": 1,
+    "negative-control-drop-one-orientation": 1,
+    "negative-control-undilated-phase": 2,
+    "shared-prime-powers-retained": 1,
+    "unit-constant-term": 10368
+  },
+  "coefficient_cases": 96,
+  "covariance_cap": 48,
+  "integer_cap": 256,
+  "local_coefficient_degree": 20,
+  "scope": {
+    "asymptotic_or_infinite_product_verified_by_code": false,
+    "complex_profiles_in_theorem": "covered analytically, not by this finite fixture",
+    "davenport_proof_rebuilt": false,
+    "even_degrees_checked": [
+      2,
+      4,
+      6
+    ],
+    "floating_point_used": false,
+    "profiles_checked": "real rational phases 0, +/-1, +/-1/2",
+    "rh_proved": false
+  },
+  "status": "PASS_EXACT_FINITE_IDENTITIES"
+}

@@ -1,0 +1,15 @@
+{
+  "arithmetic": "fractions.Fraction; no floating-point arithmetic",
+  "checks_use_assert": false,
+  "local_identities_per_substitution": 2,
+  "local_poisson_substitutions": 48,
+  "not_certified": [
+    "An infinite Euler product or its analytic continuation",
+    "The Hecke functional equation or Hadamard factorization",
+    "Hardy membership of the actual unlocalized arithmetic source",
+    "A new zero-free region, RH, or GRH"
+  ],
+  "paired_inner_substitutions": 27,
+  "scope": "Finite exact regression checks complement the written general proofs.",
+  "status": "passed"
+}

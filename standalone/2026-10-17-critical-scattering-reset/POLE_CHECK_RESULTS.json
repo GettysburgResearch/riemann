@@ -1,0 +1,171 @@
+{
+  "claims_not_checked": [
+    "RH",
+    "infinite native energy bounds",
+    "actual zero locations or derivatives",
+    "Hecke analytic theory",
+    "Kummer number fields"
+  ],
+  "exact_gram_cases": [
+    {
+      "critical_unit_constant": "1",
+      "epsilon": "1/3",
+      "m": 1,
+      "modal_energy": "307273/21984",
+      "positive_pivots": [
+        "3/2",
+        "27/20",
+        "10935/7786"
+      ]
+    },
+    {
+      "critical_unit_constant": "1",
+      "epsilon": "1/5",
+      "m": 1,
+      "modal_energy": "13807382125/539289504",
+      "positive_pivots": [
+        "5/2",
+        "125/52",
+        "703125/288082"
+      ]
+    },
+    {
+      "critical_unit_constant": "1/3",
+      "epsilon": "1/3",
+      "m": 2,
+      "modal_energy": "437983620683079/5552956513600",
+      "positive_pivots": [
+        "27/4",
+        "26973/4000",
+        "58934617067835/8732024117636"
+      ]
+    },
+    {
+      "critical_unit_constant": "1/3",
+      "epsilon": "1/5",
+      "m": 2,
+      "modal_energy": "1357189318518525844305625/3781907685280076219712",
+      "positive_pivots": [
+        "125/4",
+        "2196875/70304",
+        "7097731489318359375/227128679323829996"
+      ]
+    },
+    {
+      "critical_unit_constant": "1/20",
+      "epsilon": "1/3",
+      "m": 3,
+      "modal_energy": "4373279365974771035196027/8415754924108260640000",
+      "positive_pivots": [
+        "729/4",
+        "72899271/400000",
+        "176652072462480227356275/969284573384168919212"
+      ]
+    },
+    {
+      "critical_unit_constant": "1/20",
+      "epsilon": "1/5",
+      "m": 3,
+      "modal_energy": "118325866914911768388715905344309171875/17681073132821444071108252414381824",
+      "positive_pivots": [
+        "9375/4",
+        "111387890625/47525504",
+        "55253348799236898903277182861328125/23574762192917316989812606725004"
+      ]
+    },
+    {
+      "critical_unit_constant": "1/252",
+      "epsilon": "1/3",
+      "m": 4,
+      "modal_energy": "2489562361706798213775072146680407/637722722744108073041136800000",
+      "positive_pivots": [
+        "98415/8",
+        "196829980317/16000000",
+        "1481868170361527548509142076861007525/120458724472457873074617793667416"
+      ]
+    },
+    {
+      "critical_unit_constant": "1/252",
+      "epsilon": "1/5",
+      "m": 4,
+      "modal_energy": "810503743484041496167799267621970463993505240234375/5812177341875632198889703277623316738441954344",
+      "positive_pivots": [
+        "3515625/8",
+        "28236832646484375/64254481408",
+        "1453044335287275389109569428242151298008978271484375/3306483109633130632277196464380774321518380536"
+      ]
+    }
+  ],
+  "finite_character_actions": {
+    "records": [
+      {
+        "critical_energy_log_degree_at_least": 7,
+        "forced_multiplicity_at_least": 4,
+        "prime": 5
+      },
+      {
+        "critical_energy_log_degree_at_least": 11,
+        "forced_multiplicity_at_least": 6,
+        "prime": 7
+      },
+      {
+        "critical_energy_log_degree_at_least": 19,
+        "forced_multiplicity_at_least": 10,
+        "prime": 11
+      }
+    ],
+    "scope": "Finite cyclic character actions only; no algebraic-number-field computation."
+  },
+  "gaussian_normalizations": {
+    "finite_prefix_norm_cap": 30,
+    "floating_point_scope": "Binary64 Simpson quadrature; not certified intervals.",
+    "height_100_squared_attenuation_log10": -8685.889638065035,
+    "quadrature": [
+      {
+        "a": 0.7,
+        "energy_abs_error": 4.107827257186167e-15,
+        "finite_energy": 0.5235124230004707,
+        "fixed_height": 1.3,
+        "transform_abs_error": 1.191874962812805e-14
+      },
+      {
+        "a": 1.0,
+        "energy_abs_error": 8.326672684688674e-17,
+        "finite_energy": 0.21332456925288146,
+        "fixed_height": 0.0,
+        "transform_abs_error": 1.023066902786268e-14
+      }
+    ],
+    "shift_abs_errors": [
+      1.734723475976807e-18,
+      0.0,
+      2.7755575615628914e-17,
+      5.551115123125783e-17
+    ]
+  },
+  "prime_detector_normalizations": {
+    "complete_prime_power_norm_cap": 30,
+    "records": [
+      {
+        "a": 1.0,
+        "continuum_abs_errors": [
+          3.885780586188048e-15,
+          8.43769498715119e-15,
+          2.3092638912203256e-14
+        ],
+        "finite_transform_abs_error": 5.644985303864651e-15
+      },
+      {
+        "a": 0.01,
+        "continuum_abs_errors": [
+          2.4776073175325576e-20,
+          1.1727285809115529e-12,
+          4.440892098500626e-15
+        ],
+        "finite_transform_abs_error": 8.589173538689256e-15
+      }
+    ],
+    "scope": "Finite prime-power polynomial minus the exact infinite continuum; no zeta zero sum tested."
+  },
+  "status": "PASS"
+}
