@@ -1,0 +1,42 @@
+[
+  {
+    "mutation": "old-mean",
+    "returncode": 1,
+    "last_error": "ValueError: class-budgets: middle-1"
+  },
+  {
+    "mutation": "squarefree-only",
+    "returncode": 1,
+    "last_error": "ValueError: sixth-power-mask: 1/1"
+  },
+  {
+    "mutation": "drop-sixth-mask",
+    "returncode": 1,
+    "last_error": "ValueError: sixth-power-mask: 0/1"
+  },
+  {
+    "mutation": "extra-coprimality",
+    "returncode": 1,
+    "last_error": "ValueError: sixth-power-mask: 1/1"
+  },
+  {
+    "mutation": "upper-count",
+    "returncode": 1,
+    "last_error": "ValueError: class-partition: lower-count 0"
+  },
+  {
+    "mutation": "old-shift",
+    "returncode": 1,
+    "last_error": "ValueError: normalization: Mellin shift"
+  },
+  {
+    "mutation": "omit-last",
+    "returncode": 1,
+    "last_error": "ValueError: class-partition: complete number"
+  },
+  {
+    "mutation": "zero-tail-gap",
+    "returncode": 1,
+    "last_error": "ValueError: tail-gap: positive gap"
+  }
+]
