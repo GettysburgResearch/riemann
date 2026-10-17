@@ -1,0 +1,28 @@
+{
+  "arithmetic": "exact integers and fractions; no floating point",
+  "counts": {
+    "bv_atomic_tensor_terms": 9,
+    "bv_coefficients_checked": 96,
+    "complete_cap_cases": 3,
+    "complete_cap_coefficients_checked": 288,
+    "complete_norm_cases": 40,
+    "complete_norm_coefficients_checked": 10240,
+    "correction_norm_tuples_checked": 228,
+    "exact_exponent_cases": 6,
+    "full_shift_quadratic_expansions": 51,
+    "ideal_local_coefficients_checked": 2380,
+    "largest_factor_cases": 3,
+    "largest_factor_tuples_checked": 1086,
+    "maximal_endpoint_inequalities_checked": 384,
+    "maximal_partition_cases": 24,
+    "maximal_residual_prefixes_checked": 408,
+    "rejected_negative_controls": 3,
+    "shared_prime_tuples_retained": 437,
+    "tie_tuples_retained": 156
+  },
+  "exact_stream_sha256": "41fbd30d115f3424ef91db154801d4039bbab6e51843597cc357ad25d5be15fe",
+  "norm_cutoff": 256,
+  "scope": "finite coefficient, cap, BV, and maximal-partition fixtures only; not a proof of the imported strip or an asymptotic power bound",
+  "status": "PASS",
+  "tensor_cutoff": 96
+}

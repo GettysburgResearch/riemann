@@ -1,0 +1,234 @@
+{
+  "complete_norm_coefficients_through": 2048,
+  "exact_exponent_cases": [
+    "1/3",
+    "1/4",
+    "1/5",
+    "1/6",
+    "1/7",
+    "1/8",
+    "1/9",
+    "1/10",
+    "1/11",
+    "1/12",
+    "1/13",
+    "1/14",
+    "1/15",
+    "1/16",
+    "1/17",
+    "1/18",
+    "1/19",
+    "1/20",
+    "1/21",
+    "1/22",
+    "1/23",
+    "1/24",
+    "1/25",
+    "1/26",
+    "1/27",
+    "1/28",
+    "1/29",
+    "1/30",
+    "1/31",
+    "1/32",
+    "1/33",
+    "1/34",
+    "1/35",
+    "1/36",
+    "1/37",
+    "1/38",
+    "1/39",
+    "1/40",
+    "1/41",
+    "1/42",
+    "1/43",
+    "1/44",
+    "1/45",
+    "1/46",
+    "1/47",
+    "1/48",
+    "1/49",
+    "1/50",
+    "1/51",
+    "1/52",
+    "1/53",
+    "1/54",
+    "1/55",
+    "1/56",
+    "1/57",
+    "1/58",
+    "1/59",
+    "1/60",
+    "1/61",
+    "1/62",
+    "1/63",
+    "1/64"
+  ],
+  "full_cofactor_cases": 25536,
+  "inverse_coefficient_comparisons": 32768,
+  "inverse_identity_cases": [
+    {
+      "J": 2,
+      "U": 46,
+      "moduli": [
+        1
+      ],
+      "through": 2048
+    },
+    {
+      "J": 3,
+      "U": 13,
+      "moduli": [
+        1
+      ],
+      "through": 2048
+    },
+    {
+      "J": 5,
+      "U": 5,
+      "moduli": [
+        1
+      ],
+      "through": 2048
+    },
+    {
+      "J": 8,
+      "U": 3,
+      "moduli": [
+        1
+      ],
+      "through": 2048
+    },
+    {
+      "J": 2,
+      "U": 46,
+      "moduli": [
+        1,
+        3
+      ],
+      "through": 2048
+    },
+    {
+      "J": 3,
+      "U": 13,
+      "moduli": [
+        1,
+        3
+      ],
+      "through": 2048
+    },
+    {
+      "J": 5,
+      "U": 5,
+      "moduli": [
+        1,
+        3
+      ],
+      "through": 2048
+    },
+    {
+      "J": 8,
+      "U": 3,
+      "moduli": [
+        1,
+        3
+      ],
+      "through": 2048
+    },
+    {
+      "J": 2,
+      "U": 46,
+      "moduli": [
+        3,
+        4,
+        6
+      ],
+      "through": 2048
+    },
+    {
+      "J": 3,
+      "U": 13,
+      "moduli": [
+        3,
+        4,
+        6
+      ],
+      "through": 2048
+    },
+    {
+      "J": 5,
+      "U": 5,
+      "moduli": [
+        3,
+        4,
+        6
+      ],
+      "through": 2048
+    },
+    {
+      "J": 8,
+      "U": 3,
+      "moduli": [
+        3,
+        4,
+        6
+      ],
+      "through": 2048
+    },
+    {
+      "J": 2,
+      "U": 46,
+      "moduli": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "through": 2048
+    },
+    {
+      "J": 3,
+      "U": 13,
+      "moduli": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "through": 2048
+    },
+    {
+      "J": 5,
+      "U": 5,
+      "moduli": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "through": 2048
+    },
+    {
+      "J": 8,
+      "U": 3,
+      "moduli": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "through": 2048
+    }
+  ],
+  "negative_controls": {
+    "dropped_final_inverse_term": true,
+    "erased_ramified_character_zero": true,
+    "gcd_instead_of_q_infinity": true,
+    "incorrect_closed_support_endpoint": true,
+    "one_bounded_native_prime": true
+  },
+  "norm_coefficients_sha256": "f332646d077e2a2ad72124fe1834b4484c02ec9ef666b6595b0c38e5eb157b0b",
+  "reduced_phase_cases": 51072,
+  "scope": "Exact finite coefficient, source, cofactor and exponent regressions only; no analytic theorem certification",
+  "status": "PASS"
+}
