@@ -1,0 +1,36 @@
+{
+  "optimized": true,
+  "results": [
+    {
+      "failure": "ValueError: new-budget: contribution 0",
+      "mutation": "individual-numerator",
+      "returncode": 1
+    },
+    {
+      "failure": "ValueError: new-budget: contribution 5",
+      "mutation": "unmoved-principal",
+      "returncode": 1
+    },
+    {
+      "failure": "ValueError: domains: strict M>1",
+      "mutation": "endpoint-M",
+      "returncode": 1
+    },
+    {
+      "failure": "ValueError: identities: high-powerful tail saving",
+      "mutation": "double-tail-saving",
+      "returncode": 1
+    },
+    {
+      "failure": "ValueError: geometric-reciprocal: one convolution is not reciprocal",
+      "mutation": "single-mobius-is-reciprocal",
+      "returncode": 1
+    },
+    {
+      "failure": "ValueError: applications: 31/32 loglog factor",
+      "mutation": "lost-loglog",
+      "returncode": 1
+    }
+  ],
+  "status": "ALL_CORRUPTED_MODELS_REJECTED"
+}
