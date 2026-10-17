@@ -1,0 +1,37 @@
+{
+  "cases": [
+    {
+      "error": "FAIL: unpaid fourth-moment exponent",
+      "exit_code": 1,
+      "name": "diagonal-fourth-moment"
+    },
+    {
+      "error": "FAIL: wrong self-selected Holder elimination",
+      "exit_code": 1,
+      "name": "missing-self-selection-power"
+    },
+    {
+      "error": "FAIL: incorrect small-frequency threshold",
+      "exit_code": 1,
+      "name": "old-small-cutoff"
+    },
+    {
+      "error": "FAIL: wrong principal Mellin normalization",
+      "exit_code": 1,
+      "name": "old-Mellin-shift"
+    },
+    {
+      "error": "FAIL: missing row class",
+      "exit_code": 1,
+      "name": "missing-stratum"
+    },
+    {
+      "error": "FAIL: unproved exceptional-count exponent",
+      "exit_code": 1,
+      "name": "upper-threshold-count"
+    }
+  ],
+  "executed_optimized_processes": 6,
+  "scope": "deliberately corrupted finite models, not analytic refutations",
+  "status": "PASS"
+}
