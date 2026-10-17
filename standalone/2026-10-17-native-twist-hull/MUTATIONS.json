@@ -1,0 +1,26 @@
+[
+  {
+    "command": "python -O verify.py --mutation inert_phase",
+    "error": "RuntimeError: native_phase_alignment: (25, -1, Fraction(2, 1))",
+    "mutation": "inert_phase",
+    "returncode": 1
+  },
+  {
+    "command": "python -O verify.py --mutation collapse_conjugates",
+    "error": "RuntimeError: complete_native_lattice_census: None",
+    "mutation": "collapse_conjugates",
+    "returncode": 1
+  },
+  {
+    "command": "python -O verify.py --mutation erase_mask",
+    "error": "RuntimeError: composite_sixth_row_mask: ((-3, -2), (-3, -2))",
+    "mutation": "erase_mask",
+    "returncode": 1
+  },
+  {
+    "command": "python -O verify.py --mutation fake_peak",
+    "error": "RuntimeError: rigorous_actual_native_peak: ['-5.000000000000000000000000', '-5.000000000000000000000000']",
+    "mutation": "fake_peak",
+    "returncode": 1
+  }
+]
