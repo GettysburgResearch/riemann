@@ -1,0 +1,79 @@
+{
+  "correction_domain": {
+    "critical_face_point": [
+      "1/2",
+      "3/4",
+      "1/2"
+    ],
+    "new_interior_point": [
+      "3/5",
+      "1/2",
+      "2/5"
+    ],
+    "second_correction_moment_threshold": "1/3",
+    "weighted_moment_exponents": 380
+  },
+  "density": {
+    "A_exponent": "65/92",
+    "B_exponent": "211/184",
+    "conductor_monomials": 252,
+    "density_exponent": "395/552",
+    "first_exponent": "395/736",
+    "gain_over_966": "1/920",
+    "kappa4": "71/66",
+    "lambda": "6/11",
+    "mollifier_monomials": [
+      "1",
+      "947/1012",
+      "325/506",
+      "1525/1518",
+      "5209/6072"
+    ],
+    "other_exponents": [
+      "211/368",
+      "119/184",
+      "157/276",
+      "395/552",
+      "395/552",
+      "709/1104"
+    ],
+    "sigma": "3/4"
+  },
+  "finite_local_rings": [
+    {
+      "characteristic": 13,
+      "complete_residue_sum_cases": 50,
+      "max_t_plus_k": 4,
+      "primitive_generator": [
+        2
+      ],
+      "residue_norm": 13,
+      "unramified_degree": 1
+    },
+    {
+      "characteristic": 37,
+      "complete_residue_sum_cases": 16,
+      "max_t_plus_k": 2,
+      "primitive_generator": [
+        2
+      ],
+      "residue_norm": 37,
+      "unramified_degree": 1
+    },
+    {
+      "characteristic": 5,
+      "complete_residue_sum_cases": 30,
+      "max_t_plus_k": 3,
+      "primitive_generator": [
+        1,
+        2
+      ],
+      "residue_norm": 25,
+      "unramified_degree": 2
+    }
+  ],
+  "formal_series_coefficients": 468,
+  "formal_series_scope": "rational formal Gauss-symbol fixtures, coefficients through v^12; not actual L-values",
+  "predicates": 1507,
+  "status": "PASS: exact finite algebra; not an analytic or independent proof certificate"
+}
