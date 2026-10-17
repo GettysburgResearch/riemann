@@ -1,0 +1,34 @@
+{
+  "convex-numerator": {
+    "expected_error": "central class budget",
+    "rejected": true
+  },
+  "lost-tail-gap": {
+    "expected_error": "large-frequency negative power",
+    "rejected": true
+  },
+  "missing-terminal": {
+    "expected_error": "all 37 classes including terminal",
+    "rejected": true
+  },
+  "old-domain": {
+    "expected_error": "old ramified domain",
+    "rejected": true
+  },
+  "reverse-fe-power": {
+    "expected_error": "functional equation conductor power",
+    "rejected": true
+  },
+  "upper-count": {
+    "expected_error": "count at lower threshold",
+    "rejected": true
+  },
+  "wrong-character": {
+    "expected_error": "functional-equation character matches denominator",
+    "rejected": true
+  },
+  "wrong-mellin-shift": {
+    "expected_error": "wrong borrowed Mellin shift",
+    "rejected": true
+  }
+}
