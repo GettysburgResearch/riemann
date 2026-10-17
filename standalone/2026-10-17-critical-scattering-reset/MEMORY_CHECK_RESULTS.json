@@ -1,0 +1,21 @@
+{
+  "binary64_gaussian_points": [
+    -2.0,
+    0.0,
+    1.0,
+    3.0,
+    4.1588830833596715,
+    5.545177444479562
+  ],
+  "binary64_max_finite_identity_residual": 2.4424906541753444e-15,
+  "complete_integer_prefix": 512,
+  "exact_integer_prime_log_checks": 1033,
+  "exact_rational_allpass_checks": 20,
+  "limitations": "Exact finite algebra and separate non-directed binary64 normalization only; no infinite tail computation, zeta zero census, or RH-strength upper estimate.",
+  "negative_controls": [
+    "reversed Mobius convolution sign",
+    "discarded negative-time boundary energy",
+    "reversed Gaussian memory sign"
+  ],
+  "status": "PASS"
+}
