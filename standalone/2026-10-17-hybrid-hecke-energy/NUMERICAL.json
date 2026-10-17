@@ -1,0 +1,109 @@
+{
+  "coverage_warning": "Panels are complete FINITE ideal polynomials under their caps; none evaluates the infinite Gaussian source or certifies an asymptotic theorem.",
+  "digits": 60,
+  "gaussian_pair_cases": 6,
+  "heat_cases": 15,
+  "largest_heat_error": "9.337957e-61",
+  "largest_kernel_error": "1.9446923e-62",
+  "largest_radial_error": "7.7787691e-62",
+  "panels": [
+    {
+      "D": "16.0",
+      "R": "4.0",
+      "absolute_averaged_off_diagonal": "0.00015718741480893008333646",
+      "cap": 32,
+      "diagonal": "0.292077552872609761041153",
+      "full_finite_mean": "0.292234740287418691124489",
+      "ideals": 20,
+      "m": 2,
+      "native": false,
+      "nonzero_columns": 10
+    },
+    {
+      "D": "16.0",
+      "R": "8.0",
+      "absolute_averaged_off_diagonal": "1.2023872674659351198975e-11",
+      "cap": 32,
+      "diagonal": "0.292077552872609761041153",
+      "full_finite_mean": "0.292077552884633633715812",
+      "ideals": 20,
+      "m": 2,
+      "native": false,
+      "nonzero_columns": 10
+    },
+    {
+      "D": "32.0",
+      "R": "5.65685424949238",
+      "absolute_averaged_off_diagonal": "0.000906699971162880699993018",
+      "cap": 64,
+      "diagonal": "0.33431656906963634681124",
+      "full_finite_mean": "0.335220080191662568337254",
+      "ideals": 40,
+      "m": 2,
+      "native": false,
+      "nonzero_columns": 19
+    },
+    {
+      "D": "32.0",
+      "R": "11.31370849898476",
+      "absolute_averaged_off_diagonal": "0.00000156663354175863248834896",
+      "cap": 64,
+      "diagonal": "0.33431656906963634681124",
+      "full_finite_mean": "0.334318135703177001759799",
+      "ideals": 40,
+      "m": 2,
+      "native": false,
+      "nonzero_columns": 19
+    },
+    {
+      "D": "32.0",
+      "R": "5.65685424949238",
+      "absolute_averaged_off_diagonal": "0.000754297344126857924406688",
+      "cap": 64,
+      "diagonal": "0.332921032729713314863561",
+      "full_finite_mean": "0.333672141224703513613988",
+      "ideals": 40,
+      "m": 6,
+      "native": false,
+      "nonzero_columns": 17
+    },
+    {
+      "D": "32.0",
+      "R": "11.31370849898476",
+      "absolute_averaged_off_diagonal": "0.00000156199819337136606552295",
+      "cap": 64,
+      "diagonal": "0.332921032729713314863561",
+      "full_finite_mean": "0.332922594727905582545697",
+      "ideals": 40,
+      "m": 6,
+      "native": false,
+      "nonzero_columns": 17
+    },
+    {
+      "D": "64.0",
+      "R": "8.0",
+      "absolute_averaged_off_diagonal": "0.000913262196563728395006915",
+      "cap": 128,
+      "diagonal": "0.403568274262407477243882",
+      "full_finite_mean": "0.403469468629150176705044",
+      "ideals": 77,
+      "m": 6,
+      "native": true,
+      "nonzero_columns": 36
+    },
+    {
+      "D": "64.0",
+      "R": "16.0",
+      "absolute_averaged_off_diagonal": "0.00000276857266078407967304681",
+      "cap": 128,
+      "diagonal": "0.403568274262407477243882",
+      "full_finite_mean": "0.403565798729895131703869",
+      "ideals": 77,
+      "m": 6,
+      "native": true,
+      "nonzero_columns": 36
+    }
+  ],
+  "radial_fourier_cases": 4,
+  "status": "PASS non-interval finite numerical diagnostics"
+}
