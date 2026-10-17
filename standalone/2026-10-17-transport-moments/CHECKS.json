@@ -1,0 +1,173 @@
+{
+  "local_cases": 80,
+  "native": {
+    "all_good_squarefree_ideals": 286,
+    "cap": 1024,
+    "cases": [
+      {
+        "X": 32,
+        "ideals": 5,
+        "norm_block": 9,
+        "norms": 3,
+        "order": 2,
+        "principal_fixed_twist_moment": 25,
+        "product_norms": 3
+      },
+      {
+        "X": 32,
+        "ideals": 5,
+        "norm_block": 129,
+        "norms": 3,
+        "order": 4,
+        "principal_fixed_twist_moment": 625,
+        "product_norms": 6
+      },
+      {
+        "X": 32,
+        "ideals": 5,
+        "norm_block": 2217,
+        "norms": 3,
+        "order": 6,
+        "principal_fixed_twist_moment": 15625,
+        "product_norms": 10
+      },
+      {
+        "X": 64,
+        "ideals": 7,
+        "norm_block": 13,
+        "norms": 4,
+        "order": 2,
+        "principal_fixed_twist_moment": 25,
+        "product_norms": 4
+      },
+      {
+        "X": 64,
+        "ideals": 7,
+        "norm_block": 289,
+        "norms": 4,
+        "order": 4,
+        "principal_fixed_twist_moment": 625,
+        "product_norms": 10
+      },
+      {
+        "X": 64,
+        "ideals": 7,
+        "norm_block": 8221,
+        "norms": 4,
+        "order": 6,
+        "principal_fixed_twist_moment": 15625,
+        "product_norms": 20
+      },
+      {
+        "X": 128,
+        "ideals": 19,
+        "norm_block": 45,
+        "norms": 9,
+        "order": 2,
+        "principal_fixed_twist_moment": 121,
+        "product_norms": 9
+      },
+      {
+        "X": 128,
+        "ideals": 19,
+        "norm_block": 3681,
+        "norms": 9,
+        "order": 4,
+        "principal_fixed_twist_moment": 14641,
+        "product_norms": 45
+      },
+      {
+        "X": 128,
+        "ideals": 19,
+        "norm_block": 415485,
+        "norms": 9,
+        "order": 6,
+        "principal_fixed_twist_moment": 1771561,
+        "product_norms": 165
+      },
+      {
+        "X": 256,
+        "ideals": 37,
+        "norm_block": 97,
+        "norms": 16,
+        "order": 2,
+        "principal_fixed_twist_moment": 49,
+        "product_norms": 16
+      },
+      {
+        "X": 256,
+        "ideals": 37,
+        "norm_block": 17857,
+        "norms": 16,
+        "order": 4,
+        "principal_fixed_twist_moment": 2401,
+        "product_norms": 136
+      },
+      {
+        "X": 512,
+        "ideals": 74,
+        "norm_block": 202,
+        "norms": 31,
+        "order": 2,
+        "principal_fixed_twist_moment": 64,
+        "product_norms": 31
+      },
+      {
+        "X": 512,
+        "ideals": 74,
+        "norm_block": 79462,
+        "norms": 31,
+        "order": 4,
+        "principal_fixed_twist_moment": 4096,
+        "product_norms": 496
+      },
+      {
+        "X": 1024,
+        "ideals": 139,
+        "norm_block": 379,
+        "norms": 58,
+        "order": 2,
+        "principal_fixed_twist_moment": 441,
+        "product_norms": 58
+      },
+      {
+        "X": 1024,
+        "ideals": 139,
+        "norm_block": 284303,
+        "norms": 58,
+        "order": 4,
+        "principal_fixed_twist_moment": 194481,
+        "product_norms": 1709
+      }
+    ],
+    "coprime_transport_arrays": 501
+  },
+  "predicates": {
+    "all_order_product_norm_sign": 15,
+    "cancelled_first_degree": 1316,
+    "complete_native_fiber": 1024,
+    "coprime_transport_injection": 501,
+    "coprime_transport_recovery": 501,
+    "direct_ideal_tuple_reconstruction": 6,
+    "formal_square_norm": 144,
+    "gaussian_gram_rational_constant": 1,
+    "local_balance": 1316,
+    "local_exact_factorization": 80,
+    "local_native_tuple_sign": 13968,
+    "lower_box_interior": 84,
+    "lower_box_margins": 84,
+    "no_native_fiber_cancellation": 1024,
+    "norm_determines_sign": 1024,
+    "tensor_degree_one": 200,
+    "transport_count_bound": 831,
+    "transport_deficit": 6718,
+    "transport_injection": 6718
+  },
+  "scope": "Exact finite algebra and native principal arithmetic; not analytic certification.",
+  "status": "PASS",
+  "total_predicates": 35555,
+  "transport": {
+    "caps": 262,
+    "feasible_matrices": 6718
+  }
+}

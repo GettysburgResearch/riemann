@@ -1,0 +1,17 @@
+[
+  {
+    "mutation": "tensor",
+    "returncode": 1,
+    "last_error_line": "RuntimeError: cancelled_first_degree: (49, (1, 1), 2, 1, (1, 1), Fraction(1, 49))"
+  },
+  {
+    "mutation": "dimension",
+    "returncode": 1,
+    "last_error_line": "RuntimeError: transport_injection: ((1, 1), (1, 1), (2, (0,), (0,)))"
+  },
+  {
+    "mutation": "inert_sign",
+    "returncode": 1,
+    "last_error_line": "RuntimeError: complete_native_fiber: (25, [-1], 1)"
+  }
+]
