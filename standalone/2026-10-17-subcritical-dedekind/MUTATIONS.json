@@ -1,0 +1,41 @@
+{
+  "results": [
+    {
+      "failure": "ValueError: dyadic-envelope: 1/4,0",
+      "mutation": "drop-diagonal",
+      "returncode": 1
+    },
+    {
+      "failure": "ValueError: central-budgets: good",
+      "mutation": "individual-numerator",
+      "returncode": 1
+    },
+    {
+      "failure": "ValueError: partition: count of middle 0",
+      "mutation": "upper-count",
+      "returncode": 1
+    },
+    {
+      "failure": "ValueError: identities: principal shift",
+      "mutation": "old-shift",
+      "returncode": 1
+    },
+    {
+      "failure": "ValueError: large-tail: strict cutoff gap",
+      "mutation": "zero-tail-gap",
+      "returncode": 1
+    },
+    {
+      "failure": "ValueError: profile-tail: retain C=1 when T<1",
+      "mutation": "delete-subunit-profile",
+      "returncode": 1
+    },
+    {
+      "failure": "ValueError: identities: local S0 5",
+      "mutation": "wrong-beta",
+      "returncode": 1
+    }
+  ],
+  "scope": "not analytic or proof-assistant certification",
+  "status": "PASS: all seven corrupted finite models rejected"
+}
