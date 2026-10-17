@@ -1,0 +1,32 @@
+[
+  {
+    "mutation": "wrong_zeta_direction",
+    "exit_code": 1,
+    "last_error_line": "RuntimeError: mixed_cancellation: exact equality failed"
+  },
+  {
+    "mutation": "lost_phase_relation",
+    "exit_code": 1,
+    "last_error_line": "RuntimeError: resonant_unit_relation: exact equality failed"
+  },
+  {
+    "mutation": "wrong_fe_sign",
+    "exit_code": 1,
+    "last_error_line": "RuntimeError: finite_part_formula: exact equality failed"
+  },
+  {
+    "mutation": "delete_normal_derivative",
+    "exit_code": 1,
+    "last_error_line": "RuntimeError: compensated_jet: exact equality failed"
+  },
+  {
+    "mutation": "lose_multiplicity",
+    "exit_code": 1,
+    "last_error_line": "RuntimeError: multiplicity_weight: exact equality failed"
+  },
+  {
+    "mutation": "wrong_derivative_direction",
+    "exit_code": 1,
+    "last_error_line": "RuntimeError: transverse_not_tangent: exact equality failed"
+  }
+]
