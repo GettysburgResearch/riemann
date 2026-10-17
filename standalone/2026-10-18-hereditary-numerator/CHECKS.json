@@ -1,0 +1,56 @@
+{
+  "actual_L_values_computed": false,
+  "boundary": "633/700",
+  "classes": 113,
+  "density_at_three_quarters": "5/7",
+  "density_methods": {
+    "DF": 11,
+    "H": 101
+  },
+  "e_interval": [
+    "0 excluded",
+    "1/1000000000"
+  ],
+  "first_threshold": "447/700",
+  "groups": {
+    "actual_conductor": 1296,
+    "all_density_monomials": 1625,
+    "constant_margins": 111,
+    "coverage": 227,
+    "crossing_formula": 261,
+    "density_domains": 224,
+    "finite_block_diagnostics": 1260,
+    "finite_lipschitz_diagnostics": 160,
+    "height_tails": 2,
+    "holder_elimination": 918,
+    "large_tail": 3,
+    "lower_count_upper_contour": 111,
+    "moment_domains": 111,
+    "new_specializations": 8,
+    "normalization": 5,
+    "rational_contract": 224,
+    "reciprocal_disks": 224,
+    "sixth_power_masks": 148,
+    "small_frequency": 1,
+    "strict_contour_domains": 1856,
+    "terminal_class": 2,
+    "top_dyad_signs": 112,
+    "whole_interval_budgets": 348
+  },
+  "independent_analytic_review": false,
+  "mellin_shift": "121/175",
+  "middle_moment_orders": {
+    "2": 13,
+    "3": 75,
+    "4": 23
+  },
+  "minimum_middle_margin": "62985667611961/1068883733358000000",
+  "minimum_middle_row_power": "51554322240447337/167094079230000000",
+  "predicates": 9237,
+  "status": "finite exact checks only; analytic composition remains proposed",
+  "strata_sha256": "31c442df725040fcdcaf95e7b0e3e5d22e0fb3ebe1e52f3b13e218ca24908ab8",
+  "terminal_threshold": "19/20",
+  "theta_exponent": "149/700",
+  "thresholds": 112,
+  "uses_floating_point": false
+}

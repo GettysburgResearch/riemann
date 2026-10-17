@@ -1,0 +1,51 @@
+{
+  "analytic_proof_perturbed": false,
+  "rejected": [
+    {
+      "failure": "ValueError: constant_margins: class 1",
+      "mutation": "full_family",
+      "returncode": 1
+    },
+    {
+      "failure": "ValueError: mutation_gate: dual prefactor is indispensable",
+      "mutation": "lost_dual",
+      "returncode": 1
+    },
+    {
+      "failure": "ValueError: lower_count_upper_contour: class 0",
+      "mutation": "upper_count",
+      "returncode": 1
+    },
+    {
+      "failure": "ValueError: coverage: all middle classes plus good and terminal",
+      "mutation": "omit_class",
+      "returncode": 1
+    },
+    {
+      "failure": "ValueError: normalization: actual Mellin shift",
+      "mutation": "old_shift",
+      "returncode": 1
+    },
+    {
+      "failure": "ValueError: mutation_gate: coefficient square weight",
+      "mutation": "wrong_block_weight",
+      "returncode": 1
+    },
+    {
+      "failure": "ValueError: mutation_gate: full mollifier loses new density",
+      "mutation": "full_mollifier",
+      "returncode": 1
+    },
+    {
+      "failure": "ValueError: large_tail: strict positive cutoff gap",
+      "mutation": "zero_tail_gap",
+      "returncode": 1
+    },
+    {
+      "failure": "ValueError: sixth_power_masks: complete column identity",
+      "mutation": "erased_mask",
+      "returncode": 1
+    }
+  ],
+  "separate_optimized_processes": 9
+}
