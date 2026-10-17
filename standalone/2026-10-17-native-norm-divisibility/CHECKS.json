@@ -1,0 +1,96 @@
+{
+  "finite_checks": {
+    "complete_good_squarefree_ideals_through_1024": 286,
+    "complete_good_squarefree_ideals_through_512": 147,
+    "distinct_norm_pair_keys": 96,
+    "gaussian_square_completions": 300,
+    "incomparable_ideal_witness": {
+      "larger_norm": 91,
+      "smaller_norm": 7
+    },
+    "interval_log_exp_identity_checks": 10,
+    "norm_coefficients_checked": 4096,
+    "normalized_ratio_coefficients_checked": 4096,
+    "rational_kernel_checks": 2,
+    "selected_one_orientation_ideal_pairs": 346,
+    "shared_factor_reconstruction_terms": 96
+  },
+  "infinite_constant_certificate": {
+    "C2_bound": {
+      "decimal_outward": [
+        "15.4882769641431583",
+        "15.5176113160626648"
+      ],
+      "denominator_power_two": 112,
+      "lower_numerator": "80419731825037858456333913929129839",
+      "upper_numerator": "80572044488356666557828361062105152"
+    },
+    "Lambda_zero": {
+      "decimal_outward": [
+        "2.1533394320086571",
+        "2.1542699672498351"
+      ],
+      "denominator_power_two": 112,
+      "lower_numerator": "11180777568177720793645598414261506",
+      "upper_numerator": "11185609183387244609981100372032768"
+    },
+    "absolute_S_tail_bound": {
+      "decimal_outward": [
+        "0.0002326338102944",
+        "0.0002326338102945"
+      ],
+      "denominator_power_two": 112,
+      "lower_numerator": "1207903802380954083875489431230",
+      "upper_numerator": "1207903802380954083875489431235"
+    },
+    "absolute_log_second_moment_tail_bound": {
+      "decimal_outward": [
+        "0.0293343519195063",
+        "0.0293343519195064"
+      ],
+      "denominator_power_two": 112,
+      "lower_numerator": "152312663318808101494447130585449",
+      "upper_numerator": "152312663318808101494447130585999"
+    },
+    "cap": 65536,
+    "exp_squarings": 5,
+    "exp_taylor_degree": 40,
+    "finite_S": {
+      "decimal_outward": [
+        "-0.0769023498146231",
+        "-0.0769023498146230"
+      ],
+      "denominator_power_two": 112,
+      "lower_numerator": "-399299829356413722376178367365053",
+      "upper_numerator": "-399299829356413722376178367341892"
+    },
+    "finite_absolute_log_second_moment": {
+      "decimal_outward": [
+        "15.4882769641431583",
+        "15.4882769641431584"
+      ],
+      "denominator_power_two": 112,
+      "lower_numerator": "80419731825037858456333913929129839",
+      "upper_numerator": "80419731825037858456333913931519153"
+    },
+    "interval_arithmetic": "integer dyadic intervals, 112 fractional bits",
+    "log_series_terms": 40,
+    "lower_bound_expression_Lambda0_minus_C2_over_400": {
+      "decimal_outward": [
+        "2.1145454037185005",
+        "2.1155492748394772"
+      ],
+      "denominator_power_two": 112,
+      "lower_numerator": "10979347456956829127251027511606231",
+      "upper_numerator": "10984559853824649963840265587209948"
+    },
+    "nonzero_rational_ratio_coefficients": 6293,
+    "proved_rational_conclusions": [
+      "2153/1000 < Lambda(0) < 2155/1000",
+      "C2 < 16",
+      "Lambda(t) > 21/10 for every |t| <= 1/20"
+    ],
+    "scope": "infinite-constant enclosure uses the written global ideal-count tail theorem; finite coefficient enumeration does not independently certify that theorem"
+  },
+  "status": "PASS"
+}

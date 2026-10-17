@@ -1,0 +1,90 @@
+{
+  "cases": [
+    {
+      "D": 20,
+      "absolute_graph_sum": "0.422987071018312585111352884501545286242704278",
+      "actual_max_neighbor_count": 2,
+      "all_good_ideal_columns": 5,
+      "column_cap": 13,
+      "complete_ordered_k_tuples": 5,
+      "energy_quadrature": "0.158067396386149974043120466178111716873202989",
+      "k": 1,
+      "kernel_relative_error": "2.9673649e-67",
+      "moment_order": 2,
+      "nonzero_row_coefficients": 5,
+      "norm_block": "0.370226181793123267992302442535335908940359853",
+      "norm_gap_R": 12,
+      "pointwise_relative_errors": [
+        "5.9347298e-67",
+        "1.186946e-66",
+        "0.0"
+      ],
+      "product_norm_fibers": 3,
+      "row": [
+        1,
+        0
+      ],
+      "row_norm": 1
+    },
+    {
+      "D": 20,
+      "absolute_graph_sum": "0.0345340687167672475001832348276926803447103426",
+      "actual_max_neighbor_count": 2,
+      "all_good_ideal_columns": 5,
+      "column_cap": 13,
+      "complete_ordered_k_tuples": 25,
+      "energy_quadrature": "0.0817927159028054050040539195851481644102256712",
+      "k": 2,
+      "kernel_relative_error": "2.9692174e-67",
+      "moment_order": 4,
+      "nonzero_row_coefficients": 5,
+      "norm_block": "0.0332326434482481312001525231138175849903039083",
+      "norm_gap_R": 12,
+      "pointwise_relative_errors": [
+        "1.3270459e-66",
+        "3.2377898e-66",
+        "5.9460712e-66"
+      ],
+      "product_norm_fibers": 6,
+      "row": [
+        2,
+        1
+      ],
+      "row_norm": 3
+    },
+    {
+      "D": 20,
+      "absolute_graph_sum": "0.00331184515510478735226355815239208017933973332",
+      "actual_max_neighbor_count": 2,
+      "all_good_ideal_columns": 5,
+      "column_cap": 13,
+      "complete_ordered_k_tuples": 125,
+      "energy_quadrature": "0.000631645619758627139421249535932427935894004423",
+      "k": 3,
+      "kernel_relative_error": "1.1566574e-70",
+      "moment_order": 6,
+      "nonzero_row_coefficients": 4,
+      "norm_block": "0.00274269484626174344574038021850455362493076302",
+      "norm_gap_R": 12,
+      "pointwise_relative_errors": [
+        "1.6337112e-67",
+        "3.3732497e-66",
+        "2.111534e-66"
+      ],
+      "product_norm_fibers": 10,
+      "row": [
+        3,
+        1
+      ],
+      "row_norm": 7
+    }
+  ],
+  "decimal_precision": 65,
+  "limits": [
+    "Same-author finite checks; no asymptotic evidence.",
+    "Only complete good columns through norm 13, not the infinite source.",
+    "Ordinary arbitrary-precision arithmetic, not directed rounding.",
+    "Kernel and quadrature share source coefficients but use different energy assemblies."
+  ],
+  "status": "PASS: finite floating-point checks, NOT certified intervals"
+}

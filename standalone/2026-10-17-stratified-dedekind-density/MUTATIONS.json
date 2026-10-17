@@ -1,0 +1,25 @@
+{
+  "reports": [
+    {
+      "error": "ArithmeticError: exact_stratum_saving_polynomial",
+      "mutation": "wrong-stratum-count",
+      "returncode": 1
+    },
+    {
+      "error": "ArithmeticError: complete_five_classes",
+      "mutation": "omit-good-class",
+      "returncode": 1
+    },
+    {
+      "error": "ArithmeticError: incorrect_old_principal_normalization",
+      "mutation": "wrong-principal-shift",
+      "returncode": 1
+    },
+    {
+      "error": "ArithmeticError: inadmissible_M_equals_one",
+      "mutation": "use_closed_endpoint",
+      "returncode": 1
+    }
+  ],
+  "status": "PASS: four executed corrupted optimized processes rejected"
+}

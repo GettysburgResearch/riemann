@@ -1,0 +1,25 @@
+{
+  "actually_executed_mutations": [
+    {
+      "last_error": "ArithmeticError: native norm coefficients differ from mu*(chi*mu)",
+      "name": "collapse_split_conjugates",
+      "returncode": 1
+    },
+    {
+      "last_error": "ArithmeticError: native norm coefficients differ from mu*(chi*mu)",
+      "name": "erase_inert_mobius_sign",
+      "returncode": 1
+    },
+    {
+      "last_error": "ArithmeticError: normalized ratio coefficient mismatch at 7",
+      "name": "omit_split_shared_prime_branch",
+      "returncode": 1
+    },
+    {
+      "last_error": "ArithmeticError: normalized ratio coefficient mismatch at 7",
+      "name": "omit_shared_factor_from_normalized_constant",
+      "returncode": 1
+    }
+  ],
+  "status": "PASS"
+}

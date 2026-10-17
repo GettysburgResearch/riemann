@@ -1,0 +1,30 @@
+{
+  "mutations": [
+    {
+      "mutation": "drop-conjugate",
+      "reason": "RuntimeError: complete_ideal_norm_counts: finite predicate 519 failed",
+      "returncode": 1
+    },
+    {
+      "mutation": "wrong-tensor",
+      "reason": "RuntimeError: tensor_degree_one: finite predicate 2 failed",
+      "returncode": 1
+    },
+    {
+      "mutation": "wrong-jacobian",
+      "reason": "RuntimeError: higher_order_jacobian: finite predicate 2 failed",
+      "returncode": 1
+    },
+    {
+      "mutation": "erase-mask",
+      "reason": "RuntimeError: literal_masks: finite predicate 1 failed",
+      "returncode": 1
+    },
+    {
+      "mutation": "ideal-is-norm",
+      "reason": "RuntimeError: distinguish_ideal_and_norm: finite predicate 1 failed",
+      "returncode": 1
+    }
+  ],
+  "status": "PASS: all five actual mutated -O processes rejected"
+}
