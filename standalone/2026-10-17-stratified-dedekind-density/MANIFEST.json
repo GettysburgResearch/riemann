@@ -1,0 +1,58 @@
+{
+  "analytic_adapter_source": "ec54cb6b0029aedd8a99e6016a42a1426a0223a2",
+  "base_commit": "cec073b584a9e305fd09f6d31361d0f3f77cadb0",
+  "files": {
+    "CHECKS.json": {
+      "bytes": 11487,
+      "git_blob": "1fedf073d09a3bbd10745c43122dca72f350a976",
+      "sha256": "27d07fb123213f4f20cc0a117d5d5e6ebc681e7705e0a096365fcd036eaabd23"
+    },
+    "CONTRACTS.md": {
+      "bytes": 6410,
+      "git_blob": "3ab34cd2a464617dc240b47f0ff0460ba6b816f2",
+      "sha256": "2771ddd0de7387615f2f6e357510e6a43eb0af1b90ac2c9b6ba87462bac501e5"
+    },
+    "MUTATIONS.json": {
+      "bytes": 656,
+      "git_blob": "44272a32933c588b8889f999b5fe8178314117b2",
+      "sha256": "0c929cf20cbb981fedafab185efdd623d1c1d0124c56784772b741c96c4478d5"
+    },
+    "PROOF.md": {
+      "bytes": 17831,
+      "git_blob": "7bdd1f6c7ca60e7621fae25b117e389d6d54ebc4",
+      "sha256": "7b9b0bd74965c13f200927398ad83fb83d8004531944a826274c37126fbddd80"
+    },
+    "README.md": {
+      "bytes": 4146,
+      "git_blob": "073fef4a088ea4cba6d421355637e33955f2fd8d",
+      "sha256": "ee2f4869bfeb1566ef6e0a0d70e7a87488bc262dc03d4e7626ef7f1890de5aef"
+    },
+    "SOURCES.md": {
+      "bytes": 4688,
+      "git_blob": "9575088fbbda3633e1c860c6de03cfb4671e9f38",
+      "sha256": "dab14c63817430206e7667dc82b46e2fb402e32439d8a5cb2e78a947628d0f7d"
+    },
+    "VALIDATION.md": {
+      "bytes": 4814,
+      "git_blob": "27a6bb5ee3ee222ef7f27e1e037c6a4c1693f59b",
+      "sha256": "991ec60cdf4c2f0aeb31fa8c422db1d3a0d52b28125f3eece4ba896285ec1c92"
+    },
+    "run_mutations.py": {
+      "bytes": 927,
+      "git_blob": "710c54538d690892aba2fb21d5f9d3ad67dec75e",
+      "sha256": "3eda2c8d38e5a76271d3b0aa9c892684197c745cb2c62421bd78f14f1743803f"
+    },
+    "verify.py": {
+      "bytes": 13318,
+      "git_blob": "b9c8fd3d80d18b6a37fca44298c332fc65d1988f",
+      "sha256": "37a5d257f8d85535f65a258a4ba76bcb5a0e7fe9c054520fffbe1a71c2fcda70"
+    },
+    "verify_manifest.py": {
+      "bytes": 811,
+      "git_blob": "dd5ee88489d97e1fee02c69f99e09721df76459b",
+      "sha256": "bdd19b877c91ee04ff36f5ced7f4f2e4e747e03355b7450f16e5ced4ffc898e0"
+    }
+  },
+  "schema": "stratified-dedekind-source-composition-v1",
+  "status": "PROPOSED; input fidelity and independent review required"
+}
