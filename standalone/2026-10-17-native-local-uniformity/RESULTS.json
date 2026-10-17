@@ -1,0 +1,211 @@
+{
+  "census": [
+    {
+      "cap": 4096,
+      "family": "native",
+      "ideals": 1163,
+      "m": 2,
+      "profile": 0
+    },
+    {
+      "cap": 4096,
+      "family": "native",
+      "ideals": 1018,
+      "m": 2,
+      "profile": 1
+    },
+    {
+      "cap": 4096,
+      "family": "native",
+      "ideals": 1163,
+      "m": 3,
+      "profile": 0
+    },
+    {
+      "cap": 4096,
+      "family": "native",
+      "ideals": 1018,
+      "m": 3,
+      "profile": 1
+    },
+    {
+      "cap": 4096,
+      "family": "native",
+      "ideals": 1163,
+      "m": 6,
+      "profile": 0
+    },
+    {
+      "cap": 4096,
+      "family": "native",
+      "ideals": 1018,
+      "m": 6,
+      "profile": 1
+    },
+    {
+      "cap": 4096,
+      "family": "coupled",
+      "ideals": 1233,
+      "m": 2,
+      "profile": 0
+    },
+    {
+      "cap": 4096,
+      "family": "coupled",
+      "ideals": 1061,
+      "m": 2,
+      "profile": 1
+    },
+    {
+      "cap": 4096,
+      "family": "coupled",
+      "ideals": 1169,
+      "m": 3,
+      "profile": 0
+    },
+    {
+      "cap": 4096,
+      "family": "coupled",
+      "ideals": 1021,
+      "m": 3,
+      "profile": 1
+    },
+    {
+      "cap": 4096,
+      "family": "coupled",
+      "ideals": 1163,
+      "m": 6,
+      "profile": 0
+    },
+    {
+      "cap": 4096,
+      "family": "coupled",
+      "ideals": 1018,
+      "m": 6,
+      "profile": 1
+    },
+    {
+      "cap": 4096,
+      "family": "two",
+      "ideals": 1239,
+      "m": 2,
+      "profile": 0
+    },
+    {
+      "cap": 4096,
+      "family": "two",
+      "ideals": 1064,
+      "m": 2,
+      "profile": 1
+    },
+    {
+      "cap": 4096,
+      "family": "two",
+      "ideals": 1171,
+      "m": 3,
+      "profile": 0
+    },
+    {
+      "cap": 4096,
+      "family": "two",
+      "ideals": 1022,
+      "m": 3,
+      "profile": 1
+    },
+    {
+      "cap": 4096,
+      "family": "two",
+      "ideals": 1163,
+      "m": 6,
+      "profile": 0
+    },
+    {
+      "cap": 4096,
+      "family": "two",
+      "ideals": 1018,
+      "m": 6,
+      "profile": 1
+    },
+    {
+      "cap": 4096,
+      "family": "geometric",
+      "ideals": 1169,
+      "m": 2,
+      "profile": 0
+    },
+    {
+      "cap": 4096,
+      "family": "geometric",
+      "ideals": 1021,
+      "m": 2,
+      "profile": 1
+    },
+    {
+      "cap": 4096,
+      "family": "geometric",
+      "ideals": 1165,
+      "m": 3,
+      "profile": 0
+    },
+    {
+      "cap": 4096,
+      "family": "geometric",
+      "ideals": 1019,
+      "m": 3,
+      "profile": 1
+    },
+    {
+      "cap": 4096,
+      "family": "geometric",
+      "ideals": 1163,
+      "m": 6,
+      "profile": 0
+    },
+    {
+      "cap": 4096,
+      "family": "geometric",
+      "ideals": 1018,
+      "m": 6,
+      "profile": 1
+    },
+    {
+      "cap": 131072,
+      "family": "native",
+      "ideals": 36999,
+      "m": 6,
+      "profile": 0
+    },
+    {
+      "cap": 131072,
+      "family": "coupled",
+      "ideals": 37001,
+      "m": 6,
+      "profile": 0
+    }
+  ],
+  "counts": {
+    "complete_ideal_norm_census": 26,
+    "critical_dilation_jacobian": 800,
+    "critical_local_mass": 5,
+    "first_sixth_power_both_conjugates": 1,
+    "formal_completion_full_shared_factors": 108,
+    "hyperbola_lower_margin": 64,
+    "hyperbola_upper_margin": 64,
+    "integer_fixture": 38084,
+    "progression_preimage": 858,
+    "small_norm_rational_gate": 1,
+    "three_quarter_local_mass": 18,
+    "unique_largest_owner_capped_tensor": 12,
+    "unmasked_mu_convolution_all_norms": 1
+  },
+  "scope": {
+    "RH_proved": false,
+    "imported_MRSTT_reproved": false,
+    "independent_mathematical_review": false,
+    "large_census_cap": 131072,
+    "local_mass_q": "square/fourth-power algebra fixtures; not a list of prime ideals",
+    "native_norm_identity_cap": 20000,
+    "odd_m_profiles": "b_p is attenuated by q^(-1/2) to give exact rational fixtures"
+  },
+  "status": "PASS_FINITE_DIAGNOSTICS_NOT_ANALYTIC_CERTIFICATION"
+}
