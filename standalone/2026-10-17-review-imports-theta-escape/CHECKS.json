@@ -1,0 +1,79 @@
+{
+  "applications": [
+    {
+      "boundary": "31/32",
+      "delta": "1/32",
+      "log_D_power": "32",
+      "loglog_D_power": "64"
+    },
+    {
+      "boundary": "23/24",
+      "delta": "1/24",
+      "log_D_power": "24",
+      "loglog_D_power": "48"
+    },
+    {
+      "boundary": "25/27",
+      "delta": "2/27",
+      "log_D_power": "27/2",
+      "loglog_D_power": "27"
+    },
+    {
+      "boundary": "11/12",
+      "delta": "1/12",
+      "log_D_power": "12",
+      "loglog_D_power": "24"
+    }
+  ],
+  "arithmetic": "exact rational; whole e interval via Bernstein",
+  "conditional_boundary": "2747/3000",
+  "e_interval": "0 < e <= 1/100000",
+  "groups": {
+    "applications": 4,
+    "barrier": 3,
+    "density": 88,
+    "domain-warning": 1,
+    "domains": 188,
+    "geometric-density": 88,
+    "geometric-reciprocal": 2,
+    "identities": 16,
+    "indexing": 6,
+    "new-budget": 9,
+    "old-budget": 4,
+    "reciprocal-disks": 16,
+    "scope": 1,
+    "ties": 1
+  },
+  "new_central_polynomials": [
+    [
+      "31/125",
+      "11/10"
+    ],
+    [
+      "522101/2129575",
+      "37/20"
+    ],
+    [
+      "85111/353840",
+      "37/20"
+    ],
+    [
+      "11/94",
+      "37/20"
+    ]
+  ],
+  "new_principal_polynomials": [
+    [
+      "5/96",
+      "11/6",
+      "-1"
+    ],
+    [
+      "179/800",
+      "149/100"
+    ]
+  ],
+  "predicates": 427,
+  "scope": "Finite identities and sufficient inequalities only. No L-values, independent referee, Lean, or new global zero-free theorem.",
+  "status": "PASS"
+}
