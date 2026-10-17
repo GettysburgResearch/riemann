@@ -8,13 +8,19 @@ bounds as premises. The sources below fix their mathematical context.
 ## 1. Repository state
 
 Repository: [GettysburgResearch/riemann](https://github.com/GettysburgResearch/riemann).
-The newest research PR found in both the opening and closing inventories was
+The opening research inventory and the base of this packet identified
 [#959](https://github.com/GettysburgResearch/riemann/pull/959), still draft/open.
 Its exact head was `7b845294207d96b883c1fa95028663082267804f` on
 `research/dedekind-numerator-mean-20261017`; root tree
 `b93445b2021ecadd032ef8a48214f8bcdcf8fe05`. It proposes the all-field strict
 `Re(s)>11/12` boundary, with finite-order Hecke descent. It does not claim
 RH or a theorem for the infinite-order angular character.
+
+The final scan after our initial publication also found concurrent #960 at
+`c127f4f22d08585b699ccd59faa4eedd9bb001ae` and #961 at
+`7bd275b44261fff93bb565a9342c44b7c66526f6`. Their compatibility read and the
+additional FSW/BV primary-source checks are in CONCURRENT_UPDATES.md. They are
+separate proposed branches, not silently inherited analytic premises.
 
 | Earlier work | Frozen source | Relevance |
 |---|---|---|

@@ -22,11 +22,19 @@ The optional probe is rerun in ordinary binary64 and compared with its
 archived sample. The two commands are alternatives; it is enough to run the
 second to include everything.
 
-All eight component executions and the optional probe passed on the frozen
-local packet in this session. Normal and optimized component outputs were
+All eight component executions and the optional probe passed on the original
+computational freeze, commit `af9b849404a336e043e87d2419274ce4271931a2`.
+Normal and optimized component outputs were
 byte-identical to their archived reports. Independent agent execution preceded
 the main agent's final replay. No remote CI or whole-repository test result is
 claimed.
+
+The subsequent concurrent-source update adds the source-compatibility note
+and updates explanatory documents and the manifest. Every original component
+proof, script and archived numeric report
+is byte-identical to that tested freeze. The final manifest and remote Git
+objects were checked again; unchanged numerical computations were not rerun
+solely for this documentation update.
 
 The first aggregate replay found a formatting-only difference in the Fourier
 archive: one array had been placed on a single line. Its parsed JSON, all

@@ -7,10 +7,16 @@ for external mathematical review. No claim is promoted to integrated status.
 
 This is a research reset after the proposed all-field `Re(s)>11/12` refinement
 in [#959](https://github.com/GettysburgResearch/riemann/pull/959). Its frozen
-parent is `7b845294207d96b883c1fa95028663082267804f`, root tree
+base is `7b845294207d96b883c1fa95028663082267804f`, root tree
 `b93445b2021ecadd032ef8a48214f8bcdcf8fe05`. Only this new standalone directory
 is added. The existing theta/Cauchy estimate and its exponent ceiling are taken
 seriously: the work here changes the mathematical object being estimated.
+
+After the initial publication, the closing scan found concurrent #960 and
+#961. [CONCURRENT_UPDATES.md](CONCURRENT_UPDATES.md) records their growing-shift
+theorem, three-way endpoint tie, conditional theta escape and geometric route.
+These additions refine the research priorities without changing the component
+proofs or supplying their missing arithmetic estimates.
 
 ## What the packet establishes
 

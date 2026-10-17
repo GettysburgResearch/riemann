@@ -38,6 +38,13 @@ same ceiling. Another density partition can refine a nonbinding error while
 leaving this term intact. That observation is a limitation of those estimates,
 not an arithmetic lower bound or a no-go theorem for other approaches.
 
+The concurrent #961 sharpens this diagnosis: the old theta estimate, the good
+Poisson class and the principal z remainder all tie at growth exponent 1/4.
+Improving theta alone while leaving the others unchanged would not improve
+the conclusion. Its retuned comparison removes the other two ties but still
+requires an open signed low-powerful-row estimate. See CONCURRENT_UPDATES.md
+for the exact source and its relation to the different projections below.
+
 The existing repository already contains Euler stripping, geometric
 coefficient lifts, critical Gaussian energy, full norm-fiber covariance,
 long-twist moments and fixed-affine transfers. Rephrasing them alone would
