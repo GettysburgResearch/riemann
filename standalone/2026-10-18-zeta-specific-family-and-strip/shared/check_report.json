@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "arithmetic_contract": "exact integers and fractions; no tolerances",
+  "inverse_coefficients": {
+    "fields": 10,
+    "all_integer_indices_through": 240,
+    "includes": [
+      "ramification at 2",
+      "odd ramification",
+      "split p^2",
+      "inert p^2"
+    ]
+  },
+  "native_mean_covariance_energy": {
+    "finite_prime_model": [
+      3,
+      5,
+      7
+    ],
+    "states": 27,
+    "all_native_means_through": 10,
+    "covariance_points": [
+      3,
+      6,
+      10
+    ],
+    "ordinary_critical_energy": "101/105",
+    "family_critical_energy": "681/560",
+    "retained_dilation_multiplier": "37/24"
+  },
+  "full_residual_and_debiasing": {
+    "finite_prime_model": [
+      3,
+      5,
+      7
+    ],
+    "states": 27,
+    "cutoffs": [
+      1,
+      3,
+      8,
+      15,
+      30
+    ],
+    "arithmetic": "complex rational",
+    "checked": [
+      "mean with ramified square aliases",
+      "all nonnegative variance components",
+      "zero common scalar",
+      "explicit de-biased mollifier",
+      "causal inverse"
+    ]
+  },
+  "actual_discriminant_observations": {
+    "scope": "finite observations, not a proof of a limiting rate",
+    "horizon": 20,
+    "limiting_critical_diagonal": "3703819489/2327925600",
+    "table": [
+      {
+        "Q": 100,
+        "actual_fields": 40,
+        "mean_A_20_minus_M_20": "9/40",
+        "critical_energy_minus_limiting_diagonal": "-3052799/58198140"
+      },
+      {
+        "Q": 1000,
+        "actual_fields": 407,
+        "mean_A_20_minus_M_20": "1/407",
+        "critical_energy_minus_limiting_diagonal": "-2398398263/947465719200"
+      },
+      {
+        "Q": 10000,
+        "actual_fields": 4048,
+        "mean_A_20_minus_M_20": "-1/368",
+        "critical_energy_minus_limiting_diagonal": "-12633821/30203342400"
+      }
+    ]
+  },
+  "not_certified": [
+    "infinite products",
+    "analytic family limits",
+    "approximate functional equation",
+    "all-horizon upper cancellation",
+    "zero-free strip",
+    "RH"
+  ]
+}
