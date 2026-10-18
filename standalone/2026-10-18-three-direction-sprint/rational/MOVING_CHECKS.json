@@ -1,0 +1,152 @@
+{
+  "arithmetic": "EXACT_RATIONAL_AND_FORMAL_LOGARITHMS",
+  "cases": [
+    {
+      "Y": 24,
+      "all_support_change_endpoints_checked": true,
+      "all_window_cells": true,
+      "checked_cells": 216,
+      "maximum_middle_weight": {
+        "den": 96577,
+        "num": 492624
+      },
+      "physical_window": [
+        48,
+        263
+      ]
+    },
+    {
+      "Y": 32,
+      "all_support_change_endpoints_checked": true,
+      "all_window_cells": true,
+      "checked_cells": 352,
+      "maximum_middle_weight": {
+        "den": 6678671,
+        "num": 38492714
+      },
+      "physical_window": [
+        64,
+        415
+      ]
+    },
+    {
+      "Y": 48,
+      "all_support_change_endpoints_checked": true,
+      "all_window_cells": false,
+      "checked_cells": 27,
+      "maximum_middle_weight": {
+        "den": 2756205443,
+        "num": 20626788792
+      },
+      "physical_window": [
+        96,
+        1103
+      ]
+    },
+    {
+      "Y": 64,
+      "all_support_change_endpoints_checked": true,
+      "all_window_cells": false,
+      "checked_cells": 34,
+      "maximum_middle_weight": {
+        "den": 584803025179,
+        "num": 5371961068258
+      },
+      "physical_window": [
+        128,
+        1983
+      ]
+    },
+    {
+      "Y": 96,
+      "all_support_change_endpoints_checked": true,
+      "all_window_cells": false,
+      "checked_cells": 43,
+      "maximum_middle_weight": {
+        "den": 38655288426304091,
+        "num": 475497625769905822
+      },
+      "physical_window": [
+        288,
+        4511
+      ]
+    },
+    {
+      "Y": 128,
+      "all_support_change_endpoints_checked": true,
+      "all_window_cells": false,
+      "checked_cells": 52,
+      "maximum_middle_weight": {
+        "den": 34227405074603836560875299,
+        "num": 600528576404775553385847482
+      },
+      "physical_window": [
+        512,
+        7807
+      ]
+    }
+  ],
+  "checks_by_gate": {
+    "active_stratum_nonempty": 724,
+    "all_shared_square_coefficients": 8269,
+    "all_target_pairs_retained": 11539,
+    "annular_cutoff_lower": 724,
+    "annular_cutoff_upper": 724,
+    "complete_cell_active_support": 724,
+    "complete_exceptional_prime_cost": 1665,
+    "complete_low_denominator_incidence": 1713,
+    "complete_mask_partition": 724,
+    "complete_moving_source_identity": 724,
+    "exact_native_annulus": 724,
+    "harmonic_mass_budget": 724,
+    "moving_common_profile": 724,
+    "small_core_unique_squared_prime": 8269,
+    "square_correction_pointwise_resource": 724,
+    "two_nonempty_strata": 6
+  },
+  "mutations": [
+    {
+      "gate": "complete_cell_active_support",
+      "mutation": "freeze_middle_support",
+      "status": "REJECTED"
+    },
+    {
+      "gate": "moving_common_profile",
+      "mutation": "omit_renormalization",
+      "status": "REJECTED"
+    },
+    {
+      "gate": "all_target_pairs_retained",
+      "mutation": "replace_incidence_by_owner",
+      "status": "REJECTED"
+    },
+    {
+      "gate": "all_shared_square_coefficients",
+      "mutation": "drop_shared_square",
+      "status": "REJECTED"
+    },
+    {
+      "gate": "active_stratum_nonempty",
+      "mutation": "admit_empty_active_cell",
+      "status": "REJECTED"
+    },
+    {
+      "gate": "complete_exceptional_prime_cost",
+      "mutation": "erase_exceptional_prime_cost",
+      "status": "REJECTED"
+    },
+    {
+      "gate": "annular_cutoff_upper",
+      "mutation": "lower_annular_cutoff",
+      "status": "REJECTED"
+    }
+  ],
+  "not_checked": [
+    "infinite norm inequalities",
+    "PNT",
+    "full rough-core bound",
+    "RH"
+  ],
+  "status": "PASS",
+  "total_checks_including_guards": 38701
+}

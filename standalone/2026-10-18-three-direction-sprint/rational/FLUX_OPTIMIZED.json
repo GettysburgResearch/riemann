@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "arithmetic": "EXACT_RATIONAL_AND_FORMAL_PRIME_LOGS",
+  "Y": 256,
+  "product_block": [
+    4096,
+    8192
+  ],
+  "finite_H": 16,
+  "targets": 1244,
+  "negative_targets": 613,
+  "reference_pairs": 192,
+  "shared_reference_edges": 802,
+  "minimum_good_references": 3,
+  "actual_max_gap": 690,
+  "complete_native_cells": 65792,
+  "total_checks_including_guards": 80840,
+  "gates": {
+    "complete_signed_old_product": 1244,
+    "finite_squarefree_reference_exists": 1244,
+    "actual_squarefree_old_inputs": 6274,
+    "nonzero_actual_input_sign": 6274,
+    "exact_zero_total_transport_mass": 1,
+    "signed_target_fixture": 1,
+    "shared_reference_primes_retained": 1,
+    "compact_flux_right_endpoint": 1,
+    "absolute_flux_variation_resource": 1,
+    "integer_localization_sup_resource": 1,
+    "complete_compact_flux_energy_resource": 1,
+    "exact_mellin_derivative_sign_and_power": 4,
+    "formal_log_moment_integration_by_parts": 1,
+    "every_native_cell_flux_kernel_identity": 65792
+  },
+  "not_certified": [
+    "unbounded squarefree density",
+    "Weyl bound proof",
+    "infinite fractional Sobolev bound",
+    "complete balanced contraction",
+    "RH"
+  ]
+}

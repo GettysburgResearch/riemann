@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "arithmetic": "EXACT_RATIONAL_POLYNOMIALS",
+  "shared_h_fixtures": 208,
+  "source_digest": "c2b8ab2e48fe57b93dce48c85084937bd75ccff184be42618aaf5a927f0ab5ff",
+  "guards": {
+    "all_product_support": 993,
+    "central_normalization": 1331,
+    "complete_old_product_polynomial": 4,
+    "genuine_h_shared_with_new_column": 1,
+    "masked_inverse_euler_identity": 1280,
+    "mobius_factorization": 1331,
+    "negative_control_rejected": 4,
+    "positive_gcd_projector_coefficient": 4
+  },
+  "total_guards": 4948,
+  "not_proved": [
+    "asymptotic inverse moment input",
+    "full coherent mixed bound",
+    "RH"
+  ],
+  "mutations": [
+    {
+      "mutation": "extra_mu_ell",
+      "status": "REJECTED",
+      "gate": "positive_gcd_projector_coefficient"
+    },
+    {
+      "mutation": "impose_h_coprime",
+      "status": "REJECTED",
+      "gate": "complete_old_product_polynomial"
+    },
+    {
+      "mutation": "drop_row_power",
+      "status": "REJECTED",
+      "gate": "complete_old_product_polynomial"
+    },
+    {
+      "mutation": "drop_input_mask",
+      "status": "REJECTED",
+      "gate": "complete_old_product_polynomial"
+    }
+  ]
+}

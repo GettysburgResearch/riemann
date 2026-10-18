@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "scope": "first20 census and global heat-sign margins",
+  "primitive": "xi(s)=s(s-1)pi^(-s/2)Gamma(s/2)zeta(s)/2",
+  "arithmetic": "python-flint 0.9.0 acb/arb, outward rectangular balls",
+  "bits": 256,
+  "checker_sha256": "1ca301f2dd6292feb2448f53b703eb4b371996936569744a87877f6d7d078793",
+  "first20_contour": {
+    "winding": 1,
+    "segments": 892,
+    "maximum_bisection_depth": 10,
+    "minimum_output_coordinate_distance": "[7.815530612513059169420465273902366045974858129201383945654850919585551188995e-7 +/- 1.63e-83]"
+  },
+  "empty10_control": {
+    "winding": 0,
+    "segments": 540,
+    "maximum_bisection_depth": 9,
+    "minimum_output_coordinate_distance": "[0.0005610538107201261736152884626040556411594248405079132567369135947066128458935 +/- 1.04e-81]"
+  },
+  "first_real_zero_bracket": [
+    {
+      "height": "1413/100",
+      "real_enclosure": "[6.55145756264763142188756280362660605830439148799063995380359643359401523e-6 +/- 6.66e-78]",
+      "sign": 1
+    },
+    {
+      "height": "707/50",
+      "real_enclosure": "[-7.2713743229269317320693410436271526277448700806870782888590181949797350e-6 +/- 2.98e-77]",
+      "sign": -1
+    }
+  ],
+  "small_y_multiplied_kernel_lower": "[0.009193770043983073708682186561978586616637807221455482465659279726113557923 +/- 4.51e-76]",
+  "small_y_monotonicity_bracket": "[-0.0596733852729082454105744084914004140571106537265941279230967074734319437770 +/- 6.00e-77]",
+  "large_y_complete_tail_to_first_ratio": "[0.640028163231121480226313675698315288189269765459187239290609079879671033454 +/- 5.10e-76]",
+  "not_proved": [
+    "complete monotonicity",
+    "all polynomial quadratic forms",
+    "RH",
+    "an improved zeta zero-free strip"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "negative_controls": [
+    {
+      "gate": "independent_all_cell_event_coverage",
+      "mutation": "omit_primitive_event",
+      "status": "REJECTED"
+    },
+    {
+      "gate": "independent_all_cell_event_coverage",
+      "mutation": "flip_primitive_event",
+      "status": "REJECTED"
+    },
+    {
+      "gate": "exact_prefix_enclosure",
+      "mutation": "corrupt_directed_prefix",
+      "status": "REJECTED"
+    },
+    {
+      "gate": "independent_nuisance_equation_residual",
+      "mutation": "erase_defect_rhs",
+      "status": "REJECTED"
+    },
+    {
+      "gate": "rank_one_coefficient_budget",
+      "mutation": "budget_one",
+      "status": "REJECTED"
+    }
+  ],
+  "status": "PASS"
+}

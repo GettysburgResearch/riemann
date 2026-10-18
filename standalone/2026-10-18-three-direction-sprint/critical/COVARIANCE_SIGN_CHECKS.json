@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "scope": "Complete finite original mixed covariance signs only; no asymptotic refutation or exponent bound.",
+  "arithmetic": "Exact integer ideals/phases/conductors; outward Arb/acb transcendental profiles and finite sums.",
+  "python_flint": "0.9.0",
+  "bits": 192,
+  "U": 1024,
+  "D": 1024,
+  "N": 32,
+  "profile": "W(x)=exp(4-1/((x-1)(2-x))) for 1<x<2, else0",
+  "common_height_factor": "(Na)^(-it) in both original input factors",
+  "complete_good_ideal_inventory": 619,
+  "complete_sixthfree_physical_rows": 312,
+  "inverse_terms": 294,
+  "plain_terms": 9,
+  "original_input_pairs": 2646,
+  "collapsed_products": 2514,
+  "exact_cutoff": 2435,
+  "upper_triangular_selected_pairs": 13818,
+  "pair_conductor_stream_sha256": "de440cb40a46f55bf0a69cc1ebd9948fbd0e02d6d1ad33476ff36a8646979a38",
+  "character_stream_sha256": "d46a9c229a0f0c6ba68636d4dbd9c19328897b2dde0b5ff4e0451474593c722f",
+  "source_sha256": "207dc814bead4398e0aa4bef8b3743ce7871e710852244a37db63cac29351c3f",
+  "runs": [
+    {
+      "height": 0,
+      "E": "[0.372903334926482298897790588619902795657320045752880431 +/- 5.05e-55]",
+      "ED": "[0.4038557512647931072584223842568068094766624187611364380 +/- 7.48e-56]",
+      "EN": "[0.3738921260226123696087967966602708058451933648306936334 +/- 6.71e-56]",
+      "EDN": "[0.4228482840438760797394525508151202740206489519125393396 +/- 4.25e-56]",
+      "complete_both_different": "[0.018003741682952901770023958517945454356113214073589700 +/- 5.40e-55]",
+      "complete_C_at_most_U_9_8": "[0.0310947897023880192235301635714755552001022229874834084 +/- 4.56e-56]",
+      "complete_C_greater_U_9_8": "[-0.013091048019435117453506205053530100843989008913893709 +/- 4.48e-55]",
+      "sign": -1
+    },
+    {
+      "height": 10,
+      "E": "[0.437636433987423443785760199441731971350395616046950484 +/- 8.92e-55]",
+      "ED": "[0.416773036072339163820769995763493917422604544506459490 +/- 1.46e-55]",
+      "EN": "[0.389598650443267272497844562409514805499873548001953070 +/- 6.93e-55]",
+      "EDN": "[0.4228482840438760797394525508151202740206489519125393396 +/- 6.56e-56]",
+      "complete_both_different": "[0.05411303151569308720659819208384352244856647545107726 +/- 4.53e-54]",
+      "complete_C_at_most_U_9_8": "[0.035278189319932292593872512077455459796383730350808227 +/- 6.21e-55]",
+      "complete_C_greater_U_9_8": "[0.01883484219576079461272568000638806265218274510026904 +/- 4.06e-54]",
+      "sign": 1
+    }
+  ],
+  "not_proved": [
+    "asymptotic one-sign failure",
+    "complete U^(6/5) mean",
+    "RH",
+    "new zero-free region"
+  ]
+}

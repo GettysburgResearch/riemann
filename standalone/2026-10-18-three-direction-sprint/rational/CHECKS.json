@@ -1,0 +1,179 @@
+{
+  "arithmetic": "EXACT_RATIONAL_AND_FORMAL_LOGARITHMS",
+  "cases": [
+    {
+      "Y": 2,
+      "cells": 6,
+      "large_primes": 1,
+      "nonzero_denominators": 3
+    },
+    {
+      "Y": 3,
+      "cells": 12,
+      "large_primes": 2,
+      "nonzero_denominators": 6
+    },
+    {
+      "Y": 4,
+      "cells": 20,
+      "large_primes": 1,
+      "nonzero_denominators": 6
+    },
+    {
+      "Y": 5,
+      "cells": 30,
+      "large_primes": 2,
+      "nonzero_denominators": 10
+    },
+    {
+      "Y": 6,
+      "cells": 42,
+      "large_primes": 2,
+      "nonzero_denominators": 14
+    },
+    {
+      "Y": 7,
+      "cells": 56,
+      "large_primes": 3,
+      "nonzero_denominators": 20
+    },
+    {
+      "Y": 8,
+      "cells": 72,
+      "large_primes": 3,
+      "nonzero_denominators": 20
+    },
+    {
+      "Y": 9,
+      "cells": 90,
+      "large_primes": 2,
+      "nonzero_denominators": 20
+    },
+    {
+      "Y": 10,
+      "cells": 19,
+      "large_primes": 2,
+      "nonzero_denominators": 25
+    },
+    {
+      "Y": 11,
+      "cells": 21,
+      "large_primes": 3,
+      "nonzero_denominators": 33
+    },
+    {
+      "Y": 12,
+      "cells": 22,
+      "large_primes": 3,
+      "nonzero_denominators": 33
+    },
+    {
+      "Y": 13,
+      "cells": 24,
+      "large_primes": 4,
+      "nonzero_denominators": 42
+    },
+    {
+      "Y": 14,
+      "cells": 25,
+      "large_primes": 4,
+      "nonzero_denominators": 49
+    },
+    {
+      "Y": 15,
+      "cells": 26,
+      "large_primes": 4,
+      "nonzero_denominators": 58
+    },
+    {
+      "Y": 16,
+      "cells": 26,
+      "large_primes": 4,
+      "nonzero_denominators": 58
+    },
+    {
+      "Y": 20,
+      "cells": 32,
+      "large_primes": 6,
+      "nonzero_denominators": 83
+    },
+    {
+      "Y": 24,
+      "cells": 36,
+      "large_primes": 7,
+      "nonzero_denominators": 120
+    },
+    {
+      "Y": 32,
+      "cells": 41,
+      "large_primes": 8,
+      "nonzero_denominators": 182
+    },
+    {
+      "Y": 48,
+      "cells": 54,
+      "large_primes": 12,
+      "nonzero_denominators": 414
+    },
+    {
+      "Y": 64,
+      "cells": 63,
+      "large_primes": 14,
+      "nonzero_denominators": 646
+    },
+    {
+      "Y": 80,
+      "cells": 75,
+      "large_primes": 18,
+      "nonzero_denominators": 1039
+    },
+    {
+      "Y": 96,
+      "cells": 81,
+      "large_primes": 20,
+      "nonzero_denominators": 1462
+    }
+  ],
+  "checks_by_gate": {
+    "active_prefix_support": 437,
+    "bounded_weights": 437,
+    "capture_obstruction": 3,
+    "complete_coefficient_cap": 4321,
+    "complete_incidence_identity": 6601,
+    "complete_q1": 22,
+    "cube_free_support": 4343,
+    "dyadic_prefix_count": 2144,
+    "dyadic_prefix_coverage": 2144,
+    "exact_prime_pair": 152,
+    "exact_prime_square": 72,
+    "first_balance": 437,
+    "independent_mu": 22,
+    "kernel_rank_two": 437,
+    "lower_sector_cell_count": 5,
+    "mode_lower_constant": 5,
+    "moving_strata_budget": 1,
+    "nontrivial_normalization": 312,
+    "nonvacuous_probe_cases": 1,
+    "ordered_pair_coefficient_replay": 6048,
+    "pair_target": 3,
+    "prime_incidence_resource": 4343,
+    "rho_domain": 1,
+    "second_balance": 437,
+    "seventh_divisor_resource": 4321,
+    "short_double_inverse": 3695,
+    "short_single_inverse": 5894,
+    "strict_output_endpoints": 22,
+    "vanishing_low_denominator_power": 1,
+    "weighted_native_reduction": 312
+  },
+  "nonzero_weight_cases": 312,
+  "not_checked": [
+    "infinite large-sieve and maximal proofs",
+    "PNT",
+    "global zero-free estimates",
+    "RH",
+    "complete target capture"
+  ],
+  "status": "PASS",
+  "total_checks_including_guards": 46973
+}

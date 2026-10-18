@@ -1,0 +1,79 @@
+{
+  "FLINT": "3.6.0",
+  "angular_characters": [
+    "alpha_I/sqrt(NI)",
+    "chi_minus4(NI)*alpha_I/sqrt(NI)"
+  ],
+  "arithmetic": "EXACT_PRIMARY_LATTICE_PLUS_DIRECTED_INTERVAL",
+  "cases": [
+    {
+      "Z": 64,
+      "complete_c_tail_bound": "[3.5563922064783372352336198342239875406345106607040797284117499625e-7 +/- 4.30e-63]",
+      "complete_n_tail_bound": "[9.5212859436572857622639291929974896758048233450598355300461156452e-37 +/- 5.55e-92]",
+      "complete_norm_squared": "[0.057065616867858133540701606252179195503827381749048759521381344724 +/- 3.56e-7]",
+      "integer_total_norm_pairs_evaluated": 1724,
+      "theta_1_chi_minus4_norm_overlap_real": "[0.0043180463248952815719058303580554528431682042264647443354236265551 +/- 3.56e-7]",
+      "theta_1_chi_minus4_normalized_overlap": "[0.075668091652914881706237792968750000000000000000000000000000000000 +/- 6.71e-6]",
+      "theta_1_normalized_overlap": "[0.045112993509974330663681030273437500000000000000000000000000000000 +/- 6.52e-6]",
+      "theta_1_overlap_real": "[0.0025744008013277969180986696152466070375071241730526809957807944442 +/- 3.56e-7]"
+    },
+    {
+      "Z": 256,
+      "complete_c_tail_bound": "[3.5563922064783372352336198342239875406345106607040797284117499625e-7 +/- 4.30e-63]",
+      "complete_n_tail_bound": "[1.1942091871083113204908900205345548034236577148438385900219797894e-29 +/- 5.20e-85]",
+      "complete_norm_squared": "[0.059647339742688106664881619368149512638629423522706797242022027809 +/- 3.56e-7]",
+      "integer_total_norm_pairs_evaluated": 6358,
+      "theta_1_chi_minus4_norm_overlap_real": "[-0.0014586883337125394234226718744016504783193956153865042026954453389 +/- 3.56e-7]",
+      "theta_1_chi_minus4_normalized_overlap": "[-0.024455211969325318932533264160156250000000000000000000000000000000 +/- 6.11e-6]",
+      "theta_1_normalized_overlap": "[0.036726715828990563750267028808593750000000000000000000000000000000 +/- 6.19e-6]",
+      "theta_1_overlap_real": "[0.0021906508944401844679183821422651183727241650858523222106325110308 +/- 3.56e-7]"
+    },
+    {
+      "Z": 1024,
+      "complete_c_tail_bound": "[3.5563922064783372352336198342239875406345106607040797284117499625e-7 +/- 4.30e-63]",
+      "complete_n_tail_bound": "[2.1974785520195027051151551793892309395120782882435597092266631693e-23 +/- 8.63e-79]",
+      "complete_norm_squared": "[0.059789703836785383493190209817611838309731051281692579080298281671 +/- 3.56e-7]",
+      "integer_total_norm_pairs_evaluated": 23863,
+      "theta_1_chi_minus4_norm_overlap_real": "[-0.0011501963126530259119996516450173957383427374969156668026365721651 +/- 3.56e-7]",
+      "theta_1_chi_minus4_normalized_overlap": "[-0.019237364293076097965240478515625000000000000000000000000000000000 +/- 6.07e-6]",
+      "theta_1_normalized_overlap": "[0.0053094687355041969567537307739257812500000000000000000000000000000 +/- 5.98e-6]",
+      "theta_1_overlap_real": "[0.00031745156108630873737480685132057133762244643432807857901009043556 +/- 3.56e-7]"
+    },
+    {
+      "Z": 4096,
+      "complete_c_tail_bound": "[3.5563922064783372352336198342239875406345106607040797284117499625e-7 +/- 4.30e-63]",
+      "complete_n_tail_bound": "[5.9394345028968082957914126074018283495094182904923227120843236736e-18 +/- 2.08e-73]",
+      "complete_norm_squared": "[0.060018928460776807505636316669639147343955304145464198444879922313 +/- 3.56e-7]",
+      "integer_total_norm_pairs_evaluated": 90399,
+      "theta_1_chi_minus4_norm_overlap_real": "[-0.0012369266818413700031872571251226586659528156235431661834750373964 +/- 3.56e-7]",
+      "theta_1_chi_minus4_normalized_overlap": "[-0.020608943144907243549823760986328125000000000000000000000000000000 +/- 6.05e-6]",
+      "theta_1_normalized_overlap": "[-0.0057930311959353275597095489501953125000000000000000000000000000000 +/- 5.96e-6]",
+      "theta_1_overlap_real": "[-0.00034769152286392528320416596083705684595982289828902240508519438192 +/- 3.56e-7]"
+    }
+  ],
+  "checker_sha256": "c0d4f44b510c0bd540df4d826f54c397ec6b4f64186f7368513ace0278ed26d3",
+  "coverage": {
+    "complete_exterior_primary_ideals": 316987,
+    "complete_primary_norm_cap": 1048576,
+    "complete_squarefree_ideals": 295963,
+    "full_cube_divisor_norm_cap": 256,
+    "independent_complete_HNF_prefix": 256,
+    "integer_primitive_stream_sha256": "51fae98ae632459f5cd7e55c96e12c14bc9ffbaa2e4fc537d2b18a8cf50e5452"
+  },
+  "exact_imaginary_overlap": "0 by conjugation on full primitive source",
+  "parameters": {
+    "all_n_ideal_norm_cap": 256,
+    "c_cutoff_ratio": 256,
+    "scales": [
+      64,
+      256,
+      1024,
+      4096
+    ]
+  },
+  "precision_bits": 192,
+  "proved_asymptotic_norm_limit": "[0.060300104546522304946917885607566313989342407898712160581347838791 +/- 6.15e-59]",
+  "python_flint": "0.9.0",
+  "source": "Complete c squarefree,n unrestricted exterior ideals; c and n may share primes.",
+  "status": "FINITE_DIRECTED_COMPLETE_SOURCE_FIXTURES; NO_ASYMPTOTIC_INFERENCE"
+}

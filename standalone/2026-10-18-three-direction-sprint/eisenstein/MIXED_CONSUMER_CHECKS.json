@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "conditional_open_mixed_input": "sum |M(D)S(N)|^2 << U(UDN)^epsilon",
+  "B": "104387/120000",
+  "B_decimal": 0.8698916666666666,
+  "ell": "3/16",
+  "x": "13/32",
+  "y": "13/32",
+  "h": "25/32",
+  "delta_domain": [
+    "1/50",
+    "3/4"
+  ],
+  "amplitude_ratio_domain": [
+    "0",
+    "1/2"
+  ],
+  "nonfloor_frequency_h_upper": "-1883/80000",
+  "floor_frequency_h_upper": "-1/10000",
+  "frequency_zero_upper": "-38141/160000",
+  "small_row_upper_dmin_1_100": "-6613/120000",
+  "supply_margin": "47/925",
+  "low_signal_margin": "1/10000",
+  "whole_cell_candidate_envelope_checks": 151,
+  "aggregate_tuple_checks": 20301,
+  "correction": "U+D^(2/3)N gives max(3/2-2delta,7/6-3delta/2); it does not give the second branch alone.",
+  "scope": "Exact algebra only. The arithmetic mixed row-size estimate remains unproved."
+}

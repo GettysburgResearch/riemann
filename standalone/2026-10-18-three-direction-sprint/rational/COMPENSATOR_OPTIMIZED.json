@@ -1,0 +1,94 @@
+{
+  "arithmetic": "EXACT_RATIONAL_AND_FORMAL_LOGARITHMS",
+  "cases": [
+    {
+      "Y": 24,
+      "checked_cells": 46,
+      "complete_witness_window_cells": 12,
+      "lambda": {
+        "den": 96577,
+        "num": -492624
+      },
+      "middle_primes": 1,
+      "top_primes": 4
+    },
+    {
+      "Y": 32,
+      "checked_cells": 70,
+      "complete_witness_window_cells": 32,
+      "lambda": {
+        "den": 80144052,
+        "num": -211709927
+      },
+      "middle_primes": 2,
+      "top_primes": 5
+    },
+    {
+      "Y": 48,
+      "checked_cells": 122,
+      "complete_witness_window_cells": 73,
+      "lambda": {
+        "den": 3172392464893,
+        "num": -6662452779816
+      },
+      "middle_primes": 3,
+      "top_primes": 6
+    },
+    {
+      "Y": 64,
+      "checked_cells": 187,
+      "complete_witness_window_cells": 129,
+      "lambda": {
+        "den": 1332766094382941,
+        "num": -3583098032528086
+      },
+      "middle_primes": 3,
+      "top_primes": 7
+    },
+    {
+      "Y": 80,
+      "checked_cells": 77,
+      "complete_witness_window_cells": null,
+      "lambda": {
+        "den": 1352403742999417336387,
+        "num": -5091278950619796000924
+      },
+      "middle_primes": 3,
+      "top_primes": 10
+    },
+    {
+      "Y": 96,
+      "checked_cells": 83,
+      "complete_witness_window_cells": null,
+      "lambda": {
+        "den": 5685574442894510920644,
+        "num": -15508592813298363337441
+      },
+      "middle_primes": 4,
+      "top_primes": 9
+    }
+  ],
+  "checks_by_gate": {
+    "complete_small_core_support": 89,
+    "cross_stratum_common_profile": 6,
+    "global_compensator_identity": 585,
+    "logarithmic_profile_identity": 6,
+    "middle_square_coefficient": 16,
+    "middle_stratum_nonempty": 6,
+    "obstruction_window_has_no_transition": 135,
+    "rectangular_inverse_transition": 5768,
+    "rectangular_strict_source_range": 5768,
+    "shared_two_coefficient": 16,
+    "square_four_coefficient": 16,
+    "target_prime_pairs_retained": 133,
+    "top_square_coefficient": 41
+  },
+  "not_checked": [
+    "PNT asymptotics",
+    "infinite L2 estimates",
+    "uniform adaptive conditioning",
+    "RH"
+  ],
+  "status": "PASS",
+  "total_checks_including_guards": 12585
+}

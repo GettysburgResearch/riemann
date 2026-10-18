@@ -1,0 +1,100 @@
+{
+  "arithmetic": "EXACT_RATIONAL_DIRICHLET_POLYNOMIALS",
+  "cases": [
+    {
+      "Y": 24,
+      "middle_prime": 11,
+      "surviving_dilation_count": 24,
+      "top_prime_count": 4
+    },
+    {
+      "Y": 32,
+      "middle_prime": 11,
+      "surviving_dilation_count": 29,
+      "top_prime_count": 5
+    },
+    {
+      "Y": 32,
+      "middle_prime": 13,
+      "surviving_dilation_count": 29,
+      "top_prime_count": 5
+    },
+    {
+      "Y": 48,
+      "middle_prime": 17,
+      "surviving_dilation_count": 34,
+      "top_prime_count": 6
+    },
+    {
+      "Y": 48,
+      "middle_prime": 19,
+      "surviving_dilation_count": 34,
+      "top_prime_count": 6
+    },
+    {
+      "Y": 48,
+      "middle_prime": 23,
+      "surviving_dilation_count": 34,
+      "top_prime_count": 6
+    },
+    {
+      "Y": 64,
+      "middle_prime": 23,
+      "surviving_dilation_count": 39,
+      "top_prime_count": 7
+    },
+    {
+      "Y": 64,
+      "middle_prime": 29,
+      "surviving_dilation_count": 39,
+      "top_prime_count": 7
+    },
+    {
+      "Y": 64,
+      "middle_prime": 31,
+      "surviving_dilation_count": 39,
+      "top_prime_count": 7
+    },
+    {
+      "Y": 96,
+      "middle_prime": 37,
+      "surviving_dilation_count": 49,
+      "top_prime_count": 9
+    },
+    {
+      "Y": 96,
+      "middle_prime": 41,
+      "surviving_dilation_count": 49,
+      "top_prime_count": 9
+    },
+    {
+      "Y": 96,
+      "middle_prime": 43,
+      "surviving_dilation_count": 49,
+      "top_prime_count": 9
+    },
+    {
+      "Y": 96,
+      "middle_prime": 47,
+      "surviving_dilation_count": 49,
+      "top_prime_count": 9
+    }
+  ],
+  "checks_by_gate": {
+    "cleared_global_filter_identity": 13,
+    "filtered_target_cancellation": 278,
+    "finite_filtered_middle_identity": 13,
+    "global_target_response_zero": 278,
+    "literal_middle_incidence_polynomial": 13,
+    "literal_top_incidence_polynomial": 31,
+    "unfiltered_target_response": 278
+  },
+  "claim": "The global filtered cancellation is exact and has zero response on every distinct top-prime pair.",
+  "not_checked": [
+    "operator series convergence",
+    "asymptotic PNT norm bound",
+    "RH"
+  ],
+  "status": "PASS",
+  "total_checks_including_guards": 904
+}

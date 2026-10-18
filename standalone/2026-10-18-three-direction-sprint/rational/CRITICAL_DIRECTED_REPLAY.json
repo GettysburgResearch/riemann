@@ -1,0 +1,133 @@
+{
+  "status": "PASS",
+  "arithmetic": "DIRECTED_INTERVAL",
+  "python_flint": "0.9.0",
+  "precision_bits": 192,
+  "source_numerator_sha256": "99f7aa5dcdf8761cf3e9df3a9f57908fb37c886aebc36c10c165a6d7aa230c5f",
+  "complete_infinite_sectors": [
+    {
+      "small_cutoff": 1,
+      "finite_ratio_cutoff": 16384,
+      "complete_coefficient_ball": "[-1.757272629013521299034594980978542724059350619194664188 +/- 9.69e-4]",
+      "whole_omitted_ratio_tail_upper": "[0.0009682373037229504890068352617286404481652620709887542893 +/- 5.45e-59]",
+      "strict_rational_gate": [
+        "-9/5",
+        "-17/10"
+      ]
+    },
+    {
+      "small_cutoff": 2,
+      "finite_ratio_cutoff": 16384,
+      "complete_coefficient_ball": "[-0.7643578568495849507572038935892743385308335850946471523 +/- 2.39e-3]",
+      "whole_omitted_ratio_tail_upper": "[0.002381088027791715728414783103681036182828741550954756875 +/- 1.69e-58]",
+      "strict_rational_gate": [
+        "-4/5",
+        "-7/10"
+      ]
+    },
+    {
+      "small_cutoff": 3,
+      "finite_ratio_cutoff": 16384,
+      "complete_coefficient_ball": "[0.3841092419522601553547043092870690825539961405026519338 +/- 6.61e-3]",
+      "whole_omitted_ratio_tail_upper": "[0.006602008060879144020726095068904719648401403235072359950 +/- 3.33e-58]",
+      "strict_rational_gate": [
+        "3/10",
+        "1/2"
+      ]
+    }
+  ],
+  "complete_prime_rays": [
+    {
+      "primes": [
+        5,
+        7
+      ],
+      "horizon": 64,
+      "common_factor_cutoff": 16384,
+      "complete_ray_ball": "[0.03127420349596377123472285162663966203411939249811625211 +/- 5.61e-16]",
+      "whole_omitted_d_tail_upper": "[5.609351156738350767349803809075252042810046276760864386e-16 +/- 1.68e-71]"
+    },
+    {
+      "primes": [
+        5,
+        7
+      ],
+      "horizon": 256,
+      "common_factor_cutoff": 16384,
+      "complete_ray_ball": "[0.03881836302970721411081201351902486475395879280603415370 +/- 8.37e-12]",
+      "whole_omitted_d_tail_upper": "[8.369191192569089181089264122996188405315339670006609873e-12 +/- 3.27e-67]"
+    },
+    {
+      "primes": [
+        5,
+        7
+      ],
+      "horizon": 1024,
+      "common_factor_cutoff": 16384,
+      "complete_ray_ball": "[0.04724976596704140963082358819054287510127787308188592671 +/- 2.05e-8]",
+      "whole_omitted_d_tail_upper": "[2.044217859366333499009262018877461496631506582982979546e-8 +/- 4.14e-63]"
+    },
+    {
+      "primes": [
+        11,
+        13
+      ],
+      "horizon": 64,
+      "common_factor_cutoff": 16384,
+      "complete_ray_ball": "[0.01845867812122442474724877633167563852051409519742962733 +/- 1.06e-18]",
+      "whole_omitted_d_tail_upper": "[1.053294515238099888948117386736579363035859175101689823e-18 +/- 2.32e-73]"
+    },
+    {
+      "primes": [
+        11,
+        13
+      ],
+      "horizon": 256,
+      "common_factor_cutoff": 16384,
+      "complete_ray_ball": "[0.02392220954093096428640832459117993805221207124241520149 +/- 4.01e-14]",
+      "whole_omitted_d_tail_upper": "[4.003274100571035047336488748493473955956794676054758215e-14 +/- 5.72e-69]"
+    },
+    {
+      "primes": [
+        11,
+        13
+      ],
+      "horizon": 1024,
+      "common_factor_cutoff": 16384,
+      "complete_ray_ball": "[0.02929239006383474918484403834807339523002603561813802785 +/- 2.44e-10]",
+      "whole_omitted_d_tail_upper": "[2.434195739052622241304075175946485077510470921180237482e-10 +/- 3.36e-65]"
+    },
+    {
+      "primes": [
+        17,
+        19
+      ],
+      "horizon": 64,
+      "common_factor_cutoff": 16384,
+      "complete_ray_ball": "[0.01171131923977719783626116023750281975405156032013417969 +/- 2.23e-20]",
+      "whole_omitted_d_tail_upper": "[2.224547399574122669836036207314997052301498439323772811e-20 +/- 4.59e-75]"
+    },
+    {
+      "primes": [
+        17,
+        19
+      ],
+      "horizon": 256,
+      "common_factor_cutoff": 16384,
+      "complete_ray_ball": "[0.01641573165814231473186940186566788155633094671006779172 +/- 1.46e-15]",
+      "whole_omitted_d_tail_upper": "[1.457717016131353600819736148585025096211874674852329318e-15 +/- 1.70e-70]"
+    },
+    {
+      "primes": [
+        17,
+        19
+      ],
+      "horizon": 1024,
+      "common_factor_cutoff": 16384,
+      "complete_ray_ball": "[0.02036447706872071882233492211264007896755283561626987700 +/- 1.52e-11]",
+      "whole_omitted_d_tail_upper": "[1.512679069785273323871196709975126844098010733601966129e-11 +/- 2.97e-66]"
+    }
+  ],
+  "uniform_analytic_theorems_certified_by_this_script": false,
+  "elapsed_seconds": 4.312999999965541
+}
