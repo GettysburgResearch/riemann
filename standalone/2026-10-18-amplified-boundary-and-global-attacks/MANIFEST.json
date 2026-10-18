@@ -1,0 +1,147 @@
+{
+  "arithmetic": "exact integers and rationals; two independent polynomial implementations; no floating-point acceptance",
+  "base_commit": "669b6a01f4d4858ae1ef806b07547be95c08c935",
+  "boundary": "43744333/50000000",
+  "claim_id": "AMPLIFIED-BOUNDARY-87488666-20261018",
+  "files": {
+    "README.md": {
+      "bytes": 12121,
+      "git_blob_sha1": "125e081a87a76deba97b9511bc2f5cfa57c44509",
+      "sha256": "6d1c9cb3ea9b315a1754550e9f09dcf6573d6c09f357983ea9b41bb29be4ee36"
+    },
+    "VALIDATION.md": {
+      "bytes": 5458,
+      "git_blob_sha1": "f5caefb6baf2a197830e4898dfb1a7babe6fb134",
+      "sha256": "5f0ebeea723575d3a09d29c02d4ea6853ea5427a318b3502b88116de28caf105"
+    },
+    "correlated/DIRECT_ESTIMATE_FLOOR.md": {
+      "bytes": 5449,
+      "git_blob_sha1": "0d9bfd582fe9e53361708f100fb2a78042e6e326",
+      "sha256": "aaa1e14bcd08e364b85a3dd5ebc52759962906330284f2d0f0958907226099f6"
+    },
+    "correlated/UNIFORM_BOUNDARY.md": {
+      "bytes": 11015,
+      "git_blob_sha1": "2877f29d1cfb8b226239d43fad3724a0df5888e3",
+      "sha256": "61149bdf31f4e12541da5d7543a2cb0311fd93878f1c5e034e2e1b0e4a24a385"
+    },
+    "correlated/XU_FIXED_KAPPA_LIMIT.md": {
+      "bytes": 3826,
+      "git_blob_sha1": "1cb3a89f4636032ffa83dd01cc282b796f0da63d",
+      "sha256": "dbf992e2e6d5926a5a41281c5c132cbf4584ffd10a642af5352b26a3719727b3"
+    },
+    "correlated/certificate.json": {
+      "bytes": 3309,
+      "git_blob_sha1": "708492a15ff70b5c5eedb09e9aff985e9ea96807",
+      "sha256": "c3cbac1ea1b98e1227757189c3958b616235ab69701fe69e51d710e8d1145d2f"
+    },
+    "correlated/certify_boundary.py": {
+      "bytes": 5947,
+      "git_blob_sha1": "7c18d0f18aede8af180ecbcb8f9e964bad47a82c",
+      "sha256": "79a1519c18ed8f8caf014acc4637147f1eb1c6e1f2f73cad227cf6160694afbf"
+    },
+    "correlated/rational_polynomial.py": {
+      "bytes": 1139,
+      "git_blob_sha1": "cfd3478570add2817f028e714954aefacbc6252a",
+      "sha256": "e9d3966ae6ace7e3bcab042e739e548e7389ba1ace0172aeb1243ce62f350133"
+    },
+    "field/PRINCIPAL_CORRELATIONS_AND_QUARTIC.md": {
+      "bytes": 17256,
+      "git_blob_sha1": "a2b9b84a6596cc6236b0f7d6705c357772b40db2",
+      "sha256": "f67d4c44d512bdc87620cafb6e61a81b6d472917744ed72e929c1c9218b90774"
+    },
+    "field/QUADRATIC_PROBES.md": {
+      "bytes": 11963,
+      "git_blob_sha1": "7c7f4e5d8674c90e90d44d5714f65c610149c4a2",
+      "sha256": "3eeee16681c63412c770662711cebfef1ddd2fbc1406118148ad5e74322a97dc"
+    },
+    "native/JOINT_NUMERATOR_CLOSURE.md": {
+      "bytes": 9124,
+      "git_blob_sha1": "e6a8fe2fd44eb0e33e13312cb1be28f0b55d7acb",
+      "sha256": "aa854ac365a480523bd26295c8a1e17359ba51963711fe86f45fbd02e23a12ce"
+    },
+    "native/MOBIUS_CLOSURE_ATTEMPT.md": {
+      "bytes": 13942,
+      "git_blob_sha1": "397983f2d0a97e16953640e4b42378316eedf0f3",
+      "sha256": "ecb78edf41a1632c8b9ef06a3edb7e8e11ecef605df924b5d9fc893f5935b457"
+    },
+    "native/REVIEW_AND_FREEZE.md": {
+      "bytes": 3258,
+      "git_blob_sha1": "3efa1888fbcf234659f005d0be0164934732c253",
+      "sha256": "1499f41f80458bc91562e2e58df38ed1b77a549bd27973efe39f4df17a9d5802"
+    },
+    "review/COORDINATOR_MATHEMATICAL_REVIEW.md": {
+      "bytes": 7127,
+      "git_blob_sha1": "6f626d4414d2006d9861a364166abce254efb655",
+      "sha256": "c2fcc45a1fd3471735fe9f6625fad5c0f54e5f16ce617e6bf1a7095c719d26d1"
+    },
+    "review/JOINT_NUMERATOR_INDEPENDENT_REVIEW.md": {
+      "bytes": 2552,
+      "git_blob_sha1": "4840105a3525b2c199b47e48d301c41043c8135f",
+      "sha256": "234faec992a6423072301c42ec979aa7d47a15309db5f40858ee2c154c5fa65b"
+    },
+    "review/PRINCIPAL_QUARTIC_REVIEW.md": {
+      "bytes": 4059,
+      "git_blob_sha1": "c4b6513cecc81adbc0ac3da31af447547040e901",
+      "sha256": "ac9f9cb03370e65db6489c8dc980b7183d23463e5479211786702302a960bf55"
+    },
+    "review/UNIFORM_BOUNDARY_FINAL_REVIEW.md": {
+      "bytes": 5908,
+      "git_blob_sha1": "95ffb6df55fd4ca0e1046fe35e3b1c83b0bddc03",
+      "sha256": "bd7f6a42af35c22a6e32cbe0af30aed9f21e4688524bd8696b290f60b817ae54"
+    },
+    "review/XU_ANALYTIC_INTERFACE_REVIEW.md": {
+      "bytes": 8663,
+      "git_blob_sha1": "ff2af29c45ee607f879602cadbb480c38f5606a4",
+      "sha256": "81e86d86f7135f8b6ecd25ba305f78eda826d4819a1a8b99b6061cbfff4b0d29"
+    },
+    "review/XU_PARAMETER_INDEPENDENT_REVIEW.md": {
+      "bytes": 6407,
+      "git_blob_sha1": "e66235a065836ca75c375387660efdf1db20d98d",
+      "sha256": "b56506f30e6dcebc371bd59ecf19a987492158593fde9eb8607a5771a2726888"
+    },
+    "review/check_xu_candidate_independent.py": {
+      "bytes": 6611,
+      "git_blob_sha1": "f3d2bd2e521abfbf7eb325b60021e741ce8cce8c",
+      "sha256": "3073b30e1d5e0223b424d95789d107b1ff59e810aa6f824fddcf5061da23fdbb"
+    },
+    "review/xu_candidate_independent_root_params.json": {
+      "bytes": 2755,
+      "git_blob_sha1": "cb107bc891b557238019103b507791f5f88dc396",
+      "sha256": "c4e7acaeaaa0f3e35725509631549ebfcd53f27a16f2bfa28337794a1171e4e3"
+    },
+    "theta/KERNEL_STRIP_INSTABILITY.md": {
+      "bytes": 10876,
+      "git_blob_sha1": "4a8a5a0c71576824084c72a7413a3829dc6b9ee0",
+      "sha256": "3b371c1ad43671a0e18a43e586d0cad59c667f26c9121f4d2a16bed61732d07b"
+    },
+    "theta/MODULAR_POSITIVITY_TRANSFER.md": {
+      "bytes": 5866,
+      "git_blob_sha1": "85c055043d9c7e78f8c43ff811cb48e962b6d851",
+      "sha256": "e32d9bbda4949133c12d861aa4f6657b89471143b02622247e18004a889edbc1"
+    },
+    "theta/NO_REVERSE_HEAT_STRIP.md": {
+      "bytes": 3790,
+      "git_blob_sha1": "ccaa18cc4218cdca65e346ebed5e81976687f3be",
+      "sha256": "94b877ad8d34197b172bd20dcd128738f6d55deb2d2b888deca69849c39d0aa8"
+    },
+    "verify_packet.py": {
+      "bytes": 6066,
+      "git_blob_sha1": "f31f31f5fb74e3e90f40221ac7cd87fda67de0d6",
+      "sha256": "8e6758eb9995101133763bc5decf686a79b191cba3b3c315f1c3f06e9f56f86d"
+    }
+  },
+  "packet": "2026-10-18-amplified-boundary-and-global-attacks",
+  "schema": "riemann-standalone-manifest-v1",
+  "scope": "global parameter corollary conditional on the analytic hypotheses stipulated in Xu--Sang v2; no native verification of upstream analytic theorems; no RH result",
+  "source_interfaces": [
+    {
+      "role": "equations (21),(28), Section6.2, first-stage license, general Lemma8.1 and its analytic hypotheses",
+      "url": "https://arxiv.org/html/2610.15291v2",
+      "version": "15 October 2026"
+    },
+    {
+      "role": "free-geometry direct exponent recipe for the separate 13/15 floor",
+      "url": "https://arxiv.org/html/2610.12234v2#S22"
+    }
+  ]
+}
