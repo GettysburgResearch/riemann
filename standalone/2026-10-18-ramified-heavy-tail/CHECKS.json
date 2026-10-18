@@ -1,0 +1,59 @@
+{
+  "abstract_local_configurations": 128,
+  "coverage": {
+    "critical_endpoint_log": 1,
+    "exact_valuation_reconstruction": 8053,
+    "gauss_norm_relations": 128,
+    "higher_branch_summability": 121,
+    "leading_critical_weights": 121,
+    "sharp_example_exponents": 1,
+    "signed_quotient_convolution": 40960,
+    "slot_coprimality": 8053,
+    "source_phase_relation": 128,
+    "square_branch_dominance": 128,
+    "third_branch_summability": 121,
+    "two_zeta_coefficient_arrays": 5,
+    "unramified_error_fixture": 128,
+    "valuation_five_majorant": 128,
+    "valuation_four_majorant": 128,
+    "valuation_one_error_fixture": 128,
+    "valuation_three_majorant": 128,
+    "weak_tail_other_slot_exponents": 1,
+    "weighted_square_prefix_identity": 40
+  },
+  "integer_census_limit": 8192,
+  "moment_example_x": "1/4",
+  "moment_exponents": {
+    "1": {
+      "log_power": 0,
+      "power": "1"
+    },
+    "2": {
+      "log_power": 0,
+      "power": "5/4"
+    },
+    "4": {
+      "log_power": 0,
+      "power": "2"
+    },
+    "4/3": {
+      "log_power": 1,
+      "power": "1"
+    },
+    "8": {
+      "log_power": 0,
+      "power": "7/2"
+    }
+  },
+  "predicate_total": 58501,
+  "scope": "Finite rational local fixtures and complete integer counting identities only. No actual Gauss sum, complete ideal census, or analytic certification.",
+  "sixth_free_integer_count": 8053,
+  "status": "PASS",
+  "two_zeta_array_sha256": {
+    "0": "be946f1252106e00ef54f3fc819efed6b3686b524ce756d2203483ad9abc6a0f",
+    "1": "f749195a8a8b874055a50788da40344c4ccdefa9c09c709921c81b8de41b8119",
+    "2": "77fba188748e43ec2df5f36b28ed8a70ec67b5e8fe6630f1c3ff1f71c7a69165",
+    "3": "7fd6f3e349ca6b8600c8c37bcc45cd01792432cdb51f6253d1c6365b585a1470",
+    "4": "c769462e4e7f82e27d3aef53a66827ea907cb014e69284c5837bf5eee7b38119"
+  }
+}

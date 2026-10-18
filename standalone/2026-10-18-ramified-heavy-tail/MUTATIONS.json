@@ -1,0 +1,22 @@
+[
+  {
+    "mutation": "ramified-zero",
+    "exit_code": 1,
+    "last_error": "CheckFailure: square_branch_dominance"
+  },
+  {
+    "mutation": "drop-square-branch",
+    "exit_code": 1,
+    "last_error": "CheckFailure: square_branch_dominance"
+  },
+  {
+    "mutation": "wrong-moment-exponent",
+    "exit_code": 1,
+    "last_error": "CheckFailure: sharp_example_exponents"
+  },
+  {
+    "mutation": "erase-second-zeta",
+    "exit_code": 1,
+    "last_error": "CheckFailure: signed_quotient_convolution"
+  }
+]
