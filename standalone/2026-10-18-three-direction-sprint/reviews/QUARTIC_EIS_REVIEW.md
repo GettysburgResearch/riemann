@@ -19,8 +19,7 @@ authorship independence.
    [arXiv:2306.11875v2](https://arxiv.org/html/2306.11875v2), equations
    (3.2)--(3.11), (4.6), (4.12)--(4.22), the constant-term table immediately
    after (4.22), and (4.34)--(4.38).
-2. Suzuki, *Some results on the coefficients of the biquadratic theta
-   series*, J. Reine Angew. Math. 340 (1983), 70--117, original scanned
+2. Suzuki, *The biquadratic theta series*, J. Reine Angew. Math. 340 (1983), 70--117, original scanned
    pages [103](https://gdz.sub.uni-goettingen.de/content/PPN243919689_0340/1000/0/00000107.jpg)
    and [114](https://gdz.sub.uni-goettingen.de/content/PPN243919689_0340/1000/0/00000118.jpg),
    viewed as pixels, with the surrounding OCR read for context. The page
