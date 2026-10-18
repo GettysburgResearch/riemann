@@ -1,0 +1,55 @@
+{
+  "archive": {
+    "bytes": 60400,
+    "parts": 8,
+    "sha256": "9e105eed5a7b87861dcc34c24c682a6ad611877a51619e0f5607c851eb172a0d"
+  },
+  "base_commit": "b586b518a8de634444c1e987a0bba03c593198f0",
+  "format": 1,
+  "original_zip_sha256": {
+    "riemann-circle-prime-brackets-20261018.zip": "4c118af7242fa93b839d3f2aa420d6f7975e8eb6768256a8a19f268fb96c0ce2",
+    "riemann-degree20-attempt-and-pending-20261018.zip": "c30462499d5b6cf85e4f83d923f30efc37cb23f09257a5eff5fa14a6f765ec79"
+  },
+  "packets": {
+    "standalone/2026-10-18-circle-prime-bracketing": {
+      "bytes": 60933,
+      "files": 13,
+      "names": [
+        "CHECKS.json",
+        "EXPLORATION.md",
+        "MANIFEST.json",
+        "MUTATIONS.json",
+        "NUMERIC_DIAGNOSTIC.json",
+        "PROOF.md",
+        "PUBLICATION.md",
+        "README.md",
+        "SOURCES.md",
+        "VALIDATION.md",
+        "numeric_probe.py",
+        "replay.py",
+        "verify.py"
+      ],
+      "tree_sha": "45a5b3b3743c2083a68d6b08f3c57f694f166b1f"
+    },
+    "standalone/2026-10-18-degree20-continuation-attempt": {
+      "bytes": 122231,
+      "files": 13,
+      "names": [
+        "MANIFEST.json",
+        "README.md",
+        "RESULTS.json",
+        "SOURCES.json",
+        "baseline_parameters.json",
+        "diagnose.py",
+        "manifold_face.py",
+        "manifold_search.py",
+        "search_state.json",
+        "source24.json",
+        "spin_model.py",
+        "tangent_scan.json",
+        "theta_source24.py"
+      ],
+      "tree_sha": "fe8b5af4d603d6a5dca6fb43008a3e77c739c5fb"
+    }
+  }
+}

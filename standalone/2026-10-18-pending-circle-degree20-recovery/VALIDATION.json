@@ -1,0 +1,53 @@
+{
+  "circle": [
+    {
+      "exit_code": 0,
+      "optimized": false,
+      "stdout_sha256": "a2ef03475c690867c7d46ee1c3a465176329856a7a42b18fdae5dfd3d88c20d8"
+    },
+    {
+      "exit_code": 0,
+      "optimized": true,
+      "stdout_sha256": "a2ef03475c690867c7d46ee1c3a465176329856a7a42b18fdae5dfd3d88c20d8"
+    }
+  ],
+  "circle_negative_controls_rejected": 13,
+  "circle_nondirected_numeric_both_modes": true,
+  "degree20": [
+    {
+      "exit_code": 0,
+      "optimized": false,
+      "stdout_sha256": "cf102b62ccab40a4ddc2749d44f5c09d47164daf472b40bea1b63b4a66b90519"
+    },
+    {
+      "exit_code": 0,
+      "optimized": true,
+      "stdout_sha256": "cf102b62ccab40a4ddc2749d44f5c09d47164daf472b40bea1b63b4a66b90519"
+    }
+  ],
+  "earlier_unsuccessful_runs": "An initial replay was interrupted by an unrelated automatic artifact-tool startup and a child timeout. The first isolated recheck encountered ANSI-colored tracebacks incompatible with its exact expected-error test. Neither failed run is counted as a pass. Disabling site startup and traceback colors allowed the original computations to complete.",
+  "environment": "Fresh subprocesses used -S, PYTHONPATH for mpmath, PYTHONDONTWRITEBYTECODE=1, PYTHON_COLORS=0, NO_COLOR=1 and TERM=dumb. No original source was edited.",
+  "not_claimed": [
+    "independent analytic review",
+    "certified degree-20 root",
+    "RH proof",
+    "Lean build",
+    "repository-wide CI"
+  ],
+  "not_rerun": [
+    "degree-20 optimizer/manifold search",
+    "tangent scan generation"
+  ],
+  "publication_scope": "Recovery of 26 original files; no new mathematics or approval.",
+  "python_version": "3.13.5",
+  "recovery_checks": [
+    "all original manifest entries match SHA-256 and byte lengths",
+    "both original Git directory trees reconstructed",
+    "archive includes exactly 26 original regular files",
+    "fresh restore reproduces all 26 original files byte-for-byte",
+    "verify-only mode succeeds",
+    "existing output path is rejected"
+  ],
+  "scope": "Original finite checks and degree20 diagnostic; no analytic review",
+  "site_startup_disabled": true
+}
