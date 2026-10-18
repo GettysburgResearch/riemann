@@ -1,0 +1,34 @@
+{
+  "collapse_conjugates": {
+    "rejected_at": "split_conjugates_must_not_collapse",
+    "returncode": 1
+  },
+  "dual_sign": {
+    "rejected_at": "actual_conductor_dual",
+    "returncode": 1
+  },
+  "equality_diagonal": {
+    "rejected_at": "finite_field_root_and_zero_moment",
+    "returncode": 1
+  },
+  "erase_mask": {
+    "rejected_at": "power_removal_nonunit_mask",
+    "returncode": 1
+  },
+  "impose_coprimality": {
+    "rejected_at": "false_coprimality_gate",
+    "returncode": 1
+  },
+  "large_cap": {
+    "rejected_at": "bad_capped_mass",
+    "returncode": 1
+  },
+  "no_unit_subtraction": {
+    "rejected_at": "literal_flat_cutoff_highpass",
+    "returncode": 1
+  },
+  "replace_omega": {
+    "rejected_at": "finite_field_root_and_zero_moment",
+    "returncode": 1
+  }
+}

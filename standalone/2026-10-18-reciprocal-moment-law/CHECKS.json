@@ -1,0 +1,72 @@
+{
+  "analytic_proof_verified": false,
+  "counts": {
+    "actual_conductor_dual": 2394,
+    "all_needed_polynomial_moments": 608,
+    "bad_capped_mass": 608,
+    "complete_capped_ideal_tuple_diagonal": 3,
+    "complete_compressed_valuation_census": 6,
+    "complete_eisenstein_norm_census": 128,
+    "complete_integer_mobius_census": 1023,
+    "complete_power_decomposition": 3072,
+    "density_625": 1,
+    "dual_mollifier_cost": 798,
+    "finite_field_root_and_zero_moment": 39,
+    "first_genuine_modular_alias": 6,
+    "full_power_root_sum_converges": 62,
+    "ideal_not_norm_diagonal": 200,
+    "literal_character_multiplicativity": 2048,
+    "literal_flat_cutoff_highpass": 4112,
+    "low_order_root_reduction": 27,
+    "main_full_breakpoints": 798,
+    "moment_parameter_domain": 608,
+    "nfree_local_unit_probability": 6,
+    "power_removal_nonunit_mask": 512,
+    "sextic_common_powered_cap": 32,
+    "sextic_error_rate": 32,
+    "split_conjugates_must_not_collapse": 1,
+    "symbolic_main_margin_coefficient": 62,
+    "transfer_margin": 608
+  },
+  "ideal_census": {
+    "all_allowed_ideals": 38,
+    "all_ideals_cap": 128,
+    "squarefree_columns_cap_32": 10,
+    "tuple_cases": 3
+  },
+  "local_law_cases": [
+    {
+      "compressed_residues": 342,
+      "order": 3,
+      "residue_prime": 7
+    },
+    {
+      "compressed_residues": 624,
+      "order": 4,
+      "residue_prime": 5
+    },
+    {
+      "compressed_residues": 161050,
+      "order": 5,
+      "residue_prime": 11
+    },
+    {
+      "compressed_residues": 117648,
+      "order": 6,
+      "residue_prime": 7
+    },
+    {
+      "compressed_residues": 17249876308,
+      "order": 7,
+      "residue_prime": 29
+    },
+    {
+      "compressed_residues": 6975757440,
+      "order": 8,
+      "residue_prime": 17
+    }
+  ],
+  "predicates": 17794,
+  "rh_proved": false,
+  "status": "PASS_FINITE_ALGEBRA_ONLY"
+}
