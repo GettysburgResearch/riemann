@@ -1,0 +1,43 @@
+{
+  "claim_limit": "Finite real-zero entire approximants; neither cofinal construction nor a new zeta zero-free boundary is proved.",
+  "file_sha256": {
+    "audit/THETA_GAUSSIAN_AUDIT.md": "5b87ff3d304ba7d2e4aa05ff345ea759be6c0e381ce85bf3c1e1c84337e19da0",
+    "audit/theta_gaussian_final_replay.json": "6277f3aadcac04b130ec066c9432a9f77b31db209b253f61c5327e7be8fd6c3a",
+    "audit/theta_gaussian_optimized_replay.json": "6277f3aadcac04b130ec066c9432a9f77b31db209b253f61c5327e7be8fd6c3a",
+    "theta/PROOF_GAUSSIAN.md": "3fd8c9824cf7673545dd45dd7ed2e631c128c93beed8e646b29dd80f2d9e0210",
+    "theta/SOURCE26.md": "1fc72169a397865b3ac9ddb1cc016acaf3dee2534524aa54b7101cd667af977e",
+    "theta/WEIGHTED_CANONICAL.md": "787105a0dbab8dcc045a31b92b4b08bc1fc4ba999c03320814f92fb6c7f61f0b",
+    "theta/check_gaussian.py": "711f4edc1bbb262001dd87c0cf60396d5e194b32c47c42f9d7a76ee4239012aa",
+    "theta/gaussian_certificate.json": "6277f3aadcac04b130ec066c9432a9f77b31db209b253f61c5327e7be8fd6c3a",
+    "theta/gaussian_parameters.json": "0f83bb1e5006b10400ca1ebc693af55065e8bf8090b4880380c5367425208f41",
+    "theta/source26.py": "2e609acb85dc39b4a3571cb91e20f2e00dabec5ea36c1de9a50dcbcea280d7ec",
+    "theta/theta26_source.json": "c171903e4f60c189a929ccfcce36f7db034508e9ca10c85ed766338625558dcf"
+  },
+  "full_source_rebuild_byte_matches_canonical": true,
+  "independent_interval_implementation": false,
+  "matched_orders": [
+    22,
+    24,
+    26
+  ],
+  "no_blocking_defect_found": true,
+  "optimized_python_byte_matches_canonical": true,
+  "primitive_git_blob": "c32015f110d10186538ffabcb4689ba5bbc060d0",
+  "primitive_sha256": "2eba75b7fc82617342c20f6a06270462b6d82f1e7162f66847c029e7e5a9fa55",
+  "reviewed_mathematical_components": [
+    "actual xi theta density and physical versus variance-one Fourier scaling",
+    "directed primitive operations, Machin and exponential remainders",
+    "all density Taylor, time and omitted-index integration remainders",
+    "full moment-to-cumulant-to-power-sum normalization",
+    "complete active rational cube and all finite nodes in Jacobian evaluation",
+    "strict node positivity and Gaussian sum budget on full cube",
+    "preconditioner invertibility, contraction and exact equation solution",
+    "global real zeros and uniform entire-plane envelope",
+    "conditional cofinal Montel and Hurwitz implication",
+    "canonical-factor quartic envelope removes Gaussian reserve from cofinal implication",
+    "positive fractional canonical factors on common open half-planes; global logarithm remainder; no common node support or integer multiplicity assumed"
+  ],
+  "reviewer": "independent arithmetic-route agent",
+  "schema": "theta.gaussian.independent-audit.v1",
+  "status": "PASS_FINITE_EXISTENCE_CLAIMS"
+}

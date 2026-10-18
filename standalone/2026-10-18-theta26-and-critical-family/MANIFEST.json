@@ -1,0 +1,403 @@
+{
+  "files": [
+    {
+      "bytes": 14998,
+      "git_blob": "ffd220b646fda94b045c8b6fad6fae044be0f9cb",
+      "path": "README.md",
+      "sha256": "e7d06e565e2c5d971f9dc1fa304012c98654c8efbc9146ff26efa3c7433067a4"
+    },
+    {
+      "bytes": 9527,
+      "git_blob": "4660e51b3de0dfde2f6b137355573c3841741487",
+      "path": "VALIDATION.md",
+      "sha256": "7255187e7ffdb5d6ad7d0242bfc398035439be9d311ea052ee35023139654e3a"
+    },
+    {
+      "bytes": 13992,
+      "git_blob": "3c2c9b9f885c571a62874a399cc7eab247732f30",
+      "path": "analytic/NEGATIVE_COUPLING_STRIP.md",
+      "sha256": "b63af0d5f9fdf3fbe95c3d772e8e0e7a3d0cc8447c279fe82b57ccb682c959c4"
+    },
+    {
+      "bytes": 4889,
+      "git_blob": "a54d7011efb7e681bcbb8b29aff4b9ea138dea77",
+      "path": "analytic/check_negative_coupling.py",
+      "sha256": "9ed5ca62e3fcb9f08e07f84b72800a754b31e182a85b3b0a588b676945d1a3bf"
+    },
+    {
+      "bytes": 1278,
+      "git_blob": "0a3be0704c9e3aa0886cff7cd23e20cc1cffe3b5",
+      "path": "analytic/negative_coupling_certificate.json",
+      "sha256": "b17fd3f29ba78b139228b159c5f2623e1846b0bd4851434269ddcfcad2b88adb"
+    },
+    {
+      "bytes": 16823,
+      "git_blob": "6e3378b0be284c0e10f7d721ecde0e296b2bd4be",
+      "path": "arithmetic/LOW_FREQUENCY_ATTACK.md",
+      "sha256": "cc11e3456b5c77a4414fc31d1c684ac4c6d7dd2be483d0695b5bfcab8a8c3b0a"
+    },
+    {
+      "bytes": 11833,
+      "git_blob": "567c2e8c3a0b0b316b57511102b09021f587a800",
+      "path": "arithmetic/NATIVE_FREQUENCY_TAIL.md",
+      "sha256": "5020e35082d9e4e67a6919744c5b84692c264eb2e271e0b07d443b826b72cb07"
+    },
+    {
+      "bytes": 26119,
+      "git_blob": "fdbcd1b38e163ca47d600a473bc5d5c5239efa5a",
+      "path": "arithmetic/PROOF.md",
+      "sha256": "aecac636f02150fbf03e37ae1945605b5f128d7820226596da77eab83a44cc82"
+    },
+    {
+      "bytes": 3815,
+      "git_blob": "4777d0f0bdfb4e76bc91fc06f06d30c358edc1ff",
+      "path": "arithmetic/README.md",
+      "sha256": "b43f124141719b1fee2eb9b7f147b4c65b9bd075a9e8b7946483aa522da84ff3"
+    },
+    {
+      "bytes": 13464,
+      "git_blob": "b70df78065afc721d8940950db2a0f05bff56b95",
+      "path": "arithmetic/check_arithmetic.py",
+      "sha256": "c8abdcd0cb7eb6cfcfa183c216aa3fd62e6faaaf48c7444f82624f9354d09373"
+    },
+    {
+      "bytes": 4307,
+      "git_blob": "6d19dbd7122d3cd4fd868353f8e9484a071add60",
+      "path": "arithmetic/check_report.json",
+      "sha256": "7beff1b4a6fd3654ebc17b95a327ee37f6c8f8ef0c1745809123ed4a0d0aa20a"
+    },
+    {
+      "bytes": 8985,
+      "git_blob": "cd59a225f812e27967311ac3800eba5df309de99",
+      "path": "audit/ARITHMETIC_AUDIT.md",
+      "sha256": "5fea66f942ee595c7a16818efc2efc8f0bb2b3f83088bd63c9f872b38bb9dcd1"
+    },
+    {
+      "bytes": 15670,
+      "git_blob": "db88e63b49b5048e5f06657542086688dd958477",
+      "path": "audit/INCREMENTAL_AND_POWER_EXTENSION_REVIEW.md",
+      "sha256": "c2a893702e8e08d20efe7cfa29b4b1f4e18fdae35b99af8dad0010ecbe2e5b20"
+    },
+    {
+      "bytes": 5407,
+      "git_blob": "4b301a7eb9459982d2945ef39697f888ffc7f3e5",
+      "path": "audit/LOW_FREQUENCY_AUDIT.md",
+      "sha256": "04d3dba8ff69a6b08277d9483201692744fb60d4c6dbeb802e136aef6e94623b"
+    },
+    {
+      "bytes": 4256,
+      "git_blob": "84931073f12377093a17aa109f9acae238396c52",
+      "path": "audit/NEGATIVE_COUPLING_INDEPENDENT_REVIEW.md",
+      "sha256": "5787a96d63f68d355da693c9e8a3fd53625cd89deb09c1633aa6167862754f77"
+    },
+    {
+      "bytes": 10931,
+      "git_blob": "8695bd6005ebf2d12bdfc211f90bd8f23a1a3249",
+      "path": "audit/THETA_GAUSSIAN_AUDIT.md",
+      "sha256": "5b87ff3d304ba7d2e4aa05ff345ea759be6c0e381ce85bf3c1e1c84337e19da0"
+    },
+    {
+      "bytes": 3806,
+      "git_blob": "ba68b01cea99ae3a9a8e107d3cf97e186db1f52c",
+      "path": "audit/WEIGHTED_CANONICAL_AUDIT.md",
+      "sha256": "09b3622b483b39d48fd7990130b7dcf779a63ce36e8f4ba40d1b8a5fff60af19"
+    },
+    {
+      "bytes": 2756,
+      "git_blob": "63e4e2c2fb7656872f8152bdb928ee0833b046be",
+      "path": "audit/theta_gaussian_audit.json",
+      "sha256": "e47bcbe71dc336933444c108446a6fbd640ab75661ce79b4b24db400e57694a1"
+    },
+    {
+      "bytes": 6419,
+      "git_blob": "781421c150f5a706770b0e2f7d25931e8a729209",
+      "path": "theta/EXPERIMENTS.md",
+      "sha256": "a3d4fd757da0a90cad3bb8d2a3f9727c5905a9a460ce7316d9c4c51cd553c03e"
+    },
+    {
+      "bytes": 11060,
+      "git_blob": "4b3053451232e1c680f9e493e918cd8fce75ceea",
+      "path": "theta/PROOF_GAUSSIAN.md",
+      "sha256": "3fd8c9824cf7673545dd45dd7ed2e631c128c93beed8e646b29dd80f2d9e0210"
+    },
+    {
+      "bytes": 6673,
+      "git_blob": "e8dec7210cb2ad73e9db61f086e5b595032e2767",
+      "path": "theta/PROOF_INCREMENTAL.md",
+      "sha256": "194e14b421df650d44daab6b1cf9a099ef5383f1f654b1d029652a12896ca148"
+    },
+    {
+      "bytes": 8285,
+      "git_blob": "37eaf2cf4cef248def637108d52a2f543a273d50",
+      "path": "theta/README.md",
+      "sha256": "da1c9f7e9688736819ffbc0120f7c85d6ed59832113dce321d857803450e4099"
+    },
+    {
+      "bytes": 6284,
+      "git_blob": "899426beeedeeab4ed470678ebaa6a0362fe7e6d",
+      "path": "theta/SOURCE26.md",
+      "sha256": "1fc72169a397865b3ac9ddb1cc016acaf3dee2534524aa54b7101cd667af977e"
+    },
+    {
+      "bytes": 7570,
+      "git_blob": "6ccf3a011370b07884e4c5e7b5e99253fbb1b917",
+      "path": "theta/WEIGHTED_CANONICAL.md",
+      "sha256": "787105a0dbab8dcc045a31b92b4b08bc1fc4ba999c03320814f92fb6c7f61f0b"
+    },
+    {
+      "bytes": 6662,
+      "git_blob": "441641f45b90eb422eb3b72549fad116cf0b6eb7",
+      "path": "theta/best_cycle22_seed.json",
+      "sha256": "dfb72bee2c41ddfe332281888402ec206a33df09cc32584dfc55d874ba76423e"
+    },
+    {
+      "bytes": 6588,
+      "git_blob": "598b0d9c387b08390aee99283a3ba8ac2b955351",
+      "path": "theta/check_gaussian.py",
+      "sha256": "711f4edc1bbb262001dd87c0cf60396d5e194b32c47c42f9d7a76ee4239012aa"
+    },
+    {
+      "bytes": 3179,
+      "git_blob": "1e35db5b331db6fcc29ba98539130fda6aa3a203",
+      "path": "theta/check_incremental.py",
+      "sha256": "c3ad5b30c43707248499eca83c32e9c4ffe8449ceb4aac7a994f81e3d9d0f10d"
+    },
+    {
+      "bytes": 4655,
+      "git_blob": "85f6bdac5a2fa46ad031cc2912be1cab0aa337d6",
+      "path": "theta/continue_cycle.py",
+      "sha256": "3f08fb83b21c62be1690e38521073c50b5cc56cc3508c8101aa19f52f6f9edde"
+    },
+    {
+      "bytes": 21687,
+      "git_blob": "5aa97d08509c560919f9e4b12c018cd54f452dd2",
+      "path": "theta/extension/POWER_SUM_EXTENSION.md",
+      "sha256": "73367329eb9389cd33686b1fc25738945e14319998140838c8ba408f9ea96f9f"
+    },
+    {
+      "bytes": 13557,
+      "git_blob": "a7a167e3742f9fec81e730d3fcabb000bf758238",
+      "path": "theta/extension/PROOF_EXTENSION.md",
+      "sha256": "b0188399d7cd62e92cd35c9b5b7b936ff1d74102548c1da86b03a9896905a57b"
+    },
+    {
+      "bytes": 3857,
+      "git_blob": "b45984ecb336777faa9d19e2c5b7923ebb0d14c8",
+      "path": "theta/extension/check_extension.py",
+      "sha256": "1111f31c7ab5327dad3138b7952dc49f20deae5a3aec6e0b45ed84236f60c51f"
+    },
+    {
+      "bytes": 6866,
+      "git_blob": "7671b8537b63302272cad3b41f33755b0d5bf594",
+      "path": "theta/extension/check_power_extension.py",
+      "sha256": "8bd2281586a80f3171aabd63d2da7cd516f1f9433e84ee6ba5c77f73553cbb75"
+    },
+    {
+      "bytes": 5503,
+      "git_blob": "355d7e73263b8a22fd7dd5d063b7cfbab5488696",
+      "path": "theta/extension/continue_conjugate_pair.py",
+      "sha256": "37fb5aafa156b3c9bb57da4e32fbc69242f5ed3d9cad4b4fabe16b8cb6e66e6d"
+    },
+    {
+      "bytes": 3824,
+      "git_blob": "ffcb04fe865d41594e720c11953e8612f5358361",
+      "path": "theta/extension/curate_extension_experiments.py",
+      "sha256": "f60edd1a2c3b03a023758bb7f5d4fb1d154bb696c219c3d993a966349aae8fab"
+    },
+    {
+      "bytes": 3044,
+      "git_blob": "935c44fb8d8355a1aee1d2b10df96f09e081c4e9",
+      "path": "theta/extension/curate_power_extensions.py",
+      "sha256": "9208abe9c9eaeb29625d262dcb2e21aeb6541a062e83f271fa510a97fa07fb17"
+    },
+    {
+      "bytes": 2298,
+      "git_blob": "49cd9d2398cea417aec15657437d1c22f2c18abe",
+      "path": "theta/extension/exact_polynomial.py",
+      "sha256": "48e887a4158450ba63fbc7944d23f4f42812013af82751a21402b2590f5ae5f0"
+    },
+    {
+      "bytes": 5681,
+      "git_blob": "01c20d3d1bf675c2253091afdefa9f298a670ae9",
+      "path": "theta/extension/explore_added_edge.py",
+      "sha256": "148bcbcc155fe1bb250035074bfb74a6da34a68a9027d873ada2ca4ee6ec0c5c"
+    },
+    {
+      "bytes": 7756,
+      "git_blob": "1a0f1a45f68dcb4025e1b1788f707880c25b9614",
+      "path": "theta/extension/extend_power_sums.py",
+      "sha256": "9bdab8771ea90f72a5094459f3b9d934d56200af9b155ddf14e15adf961aaf93"
+    },
+    {
+      "bytes": 1838,
+      "git_blob": "409c88d9c819a22877aa97d29a01c339623717ae",
+      "path": "theta/extension/extension_certificate.json",
+      "sha256": "ddc2e2396795fb9c548c534e49d0b42632a91dd3711c01726cad532b12715c14"
+    },
+    {
+      "bytes": 11222,
+      "git_blob": "d5419fb26be9b0560c0f79ba073c92a25e884e94",
+      "path": "theta/extension/extension_experiments.json",
+      "sha256": "27967c2efc369d7f6c8277b5a67991e10d7b120824631478433feefe7c8e83af"
+    },
+    {
+      "bytes": 50858,
+      "git_blob": "2a75c629e1b0c73961934f21a4e9f59e24b1511b",
+      "path": "theta/extension/power_extension26_candidates.json",
+      "sha256": "726bdf8fdb387322bc72fee372716406b7cc81581389c454b482424574b2cce6"
+    },
+    {
+      "bytes": 56769,
+      "git_blob": "91ff23c042234d1eee03e6e17c55df543a793e3a",
+      "path": "theta/extension/power_extension_candidates.json",
+      "sha256": "45ef1c6cfc0db513b1d5be9246494aaa99695d66219257a7486d0252cf6e024f"
+    },
+    {
+      "bytes": 9021,
+      "git_blob": "237516e8e95804acce0504bec014589e6a69ef9b",
+      "path": "theta/extension/power_extension_certificate.json",
+      "sha256": "8e34bd2ab464adf01fc5ca3f42d412df0ab0c84382d628b570921c77a0d50697"
+    },
+    {
+      "bytes": 887,
+      "git_blob": "0b9c3bcb44ad8f6531d189f6c8a7d2f9e46352ba",
+      "path": "theta/extension/power_source.py",
+      "sha256": "abfb1f58ce102afd69df04796b57b53db9513333fee5e412f2c22aff0df18cd0"
+    },
+    {
+      "bytes": 1798,
+      "git_blob": "4cdd95be75d0134a0dc56a6e531b6746d69f1425",
+      "path": "theta/extension/triangle_model.py",
+      "sha256": "71958ba1cd813875bdc3dd7d1b381325122323951fdf46cde5d624f92d04303f"
+    },
+    {
+      "bytes": 68011,
+      "git_blob": "a1148685122ef4005a302405b1f5a1abbe692acd",
+      "path": "theta/gaussian_candidates.json",
+      "sha256": "f0541baabd3dbf6b63b517b6a5e14994863c79540332f901ec0dc69da6b70ca1"
+    },
+    {
+      "bytes": 18493,
+      "git_blob": "613b59dd3ae2f7e8d0f9da40dc493b22c427f4be",
+      "path": "theta/gaussian_certificate.json",
+      "sha256": "6277f3aadcac04b130ec066c9432a9f77b31db209b253f61c5327e7be8fd6c3a"
+    },
+    {
+      "bytes": 116223,
+      "git_blob": "432904733cb860eddec4ad82f9c1add9de13e37f",
+      "path": "theta/gaussian_parameters.json",
+      "sha256": "0f83bb1e5006b10400ca1ebc693af55065e8bf8090b4880380c5367425208f41"
+    },
+    {
+      "bytes": 62095,
+      "git_blob": "d4994719e1f95c79762061a73e6dd0faf6a08e0a",
+      "path": "theta/graph_experiments.json",
+      "sha256": "7c32b4704cbe0f78be2bf8fd76bcaf25f44babf50108aabdaf0eea03c9fe2043"
+    },
+    {
+      "bytes": 13516,
+      "git_blob": "d016e279e1b2dff8bae3391c9dd3ff4a02819076",
+      "path": "theta/incremental_certificate.json",
+      "sha256": "8e90e9b681e5e12015eb9d5edaec4957c1e1fd0d36dcd3eae5b6543622ec5599"
+    },
+    {
+      "bytes": 79349,
+      "git_blob": "005d08a04a46afe21183111d021e790130d32084",
+      "path": "theta/incremental_parameters.json",
+      "sha256": "b124d0b05780c57c3f753732e02b7b6a21ada63170c3f6f3961fa9c74551bc77"
+    },
+    {
+      "bytes": 6519,
+      "git_blob": "c8a7f0074c86c6243ea0f09d3b68fe74a04d4a34",
+      "path": "theta/initial_zero_guesses.json",
+      "sha256": "3cf5d84b4a7a0be3aa1d0138b688f8f783e86b17ea3bbd41f4eda698b67cd51b"
+    },
+    {
+      "bytes": 2552,
+      "git_blob": "1ecb7430d709834fae1b6a90dc99e761dabeb852",
+      "path": "theta/optimize_cycle_manifold.py",
+      "sha256": "8260d6a0bbe305c6d0cfd64c0b86cd018a2d18dd98500e35b8946e4057de7577"
+    },
+    {
+      "bytes": 2400,
+      "git_blob": "f31695070fb2b3dd2530caf1d64efa5851baf547",
+      "path": "theta/produce_gaussian_certificate.py",
+      "sha256": "ad8f6e2d75d7a127e2eb4d879bdaa717a59640dd77968c74169ed2aa11860290"
+    },
+    {
+      "bytes": 2598,
+      "git_blob": "449d19f1db85ca8e28ac26fbec09e0fa76d4eb53",
+      "path": "theta/produce_incremental_certificate.py",
+      "sha256": "0a8415e4164168c5ef156906a7d1360505323643f578e153179a2f6d96301f64"
+    },
+    {
+      "bytes": 8116,
+      "git_blob": "f6a945364c3622895f28bee584e8988ae8ed1694",
+      "path": "theta/search_full.py",
+      "sha256": "475102cac34d686b9be96f1c574d9d249418a2387aa199e6cd44bd86ab3e91a1"
+    },
+    {
+      "bytes": 6595,
+      "git_blob": "adf320c35cd24e8f35f0ea1ca44c5267422cb53d",
+      "path": "theta/search_gaussian_polynomial.py",
+      "sha256": "134f082fb555677b6128bd27ece7243e70e286a24d725415ae4616e4bfb19f5b"
+    },
+    {
+      "bytes": 4913,
+      "git_blob": "d6d115d60d439af9166216eb695ddf4c68671efb",
+      "path": "theta/source26.py",
+      "sha256": "2e609acb85dc39b4a3571cb91e20f2e00dabec5ea36c1de9a50dcbcea280d7ec"
+    },
+    {
+      "bytes": 15593,
+      "git_blob": "f1da9a6a79f5be4aa4ac7680a87ba680feee2358",
+      "path": "theta/theta26_source.json",
+      "sha256": "c171903e4f60c189a929ccfcce36f7db034508e9ca10c85ed766338625558dcf"
+    },
+    {
+      "bytes": 6833,
+      "git_blob": "3a26e88eee259a945b7a610564c0ee7811e0aad4",
+      "path": "verify_packet.py",
+      "sha256": "5aeb8619388e138c69ea10dd8507dc3ff4c91644058ac25c3cfc2d698217627e"
+    }
+  ],
+  "replays": [
+    {
+      "expected": "arithmetic/check_report.json",
+      "name": "arithmetic",
+      "output_flag": "--report",
+      "script": "arithmetic/check_arithmetic.py"
+    },
+    {
+      "expected": "analytic/negative_coupling_certificate.json",
+      "name": "negative_coupling",
+      "output_flag": "--report",
+      "script": "analytic/check_negative_coupling.py"
+    },
+    {
+      "complete_source": true,
+      "expected": "theta/gaussian_certificate.json",
+      "name": "gaussian",
+      "script": "theta/check_gaussian.py"
+    },
+    {
+      "expected": "theta/incremental_certificate.json",
+      "name": "incremental",
+      "script": "theta/check_incremental.py"
+    },
+    {
+      "expected": "theta/extension/power_extension_certificate.json",
+      "name": "power_extension",
+      "script": "theta/extension/check_power_extension.py"
+    },
+    {
+      "expected": "theta/extension/extension_certificate.json",
+      "name": "graph_extension",
+      "script": "theta/extension/check_extension.py"
+    }
+  ],
+  "schema": "riemann.theta26-critical-family.manifest.v1",
+  "sole_parent": "f6beb3774ae7ff5eca4cb046786eae10e4f88abc",
+  "source_parent": "c93ca65a510b6acaf167f929b9bf7e67d742b05a",
+  "status": "proposed components; no new zeta boundary or RH proof"
+}

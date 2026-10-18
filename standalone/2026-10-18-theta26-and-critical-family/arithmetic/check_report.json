@@ -1,0 +1,178 @@
+{
+  "analytic_proof_certified_by_computation": false,
+  "claims_certified": "finite exact identities only",
+  "local_moments": {
+    "arithmetic": "exact Gaussian rationals",
+    "cases": 9
+  },
+  "native_frequency_consumer": {
+    "analytic_tail_bound_certified_by_samples": false,
+    "classical_moment_cutoff": "6/5",
+    "endpoint_defects": [
+      {
+        "Y": 2,
+        "weighted_defect": "1/9"
+      },
+      {
+        "Y": 3,
+        "weighted_defect": "0"
+      },
+      {
+        "Y": 4,
+        "weighted_defect": "1/25"
+      },
+      {
+        "Y": 5,
+        "weighted_defect": "1/36"
+      },
+      {
+        "Y": 6,
+        "weighted_defect": "1/49"
+      },
+      {
+        "Y": 7,
+        "weighted_defect": "0"
+      },
+      {
+        "Y": 8,
+        "weighted_defect": "0"
+      },
+      {
+        "Y": 9,
+        "weighted_defect": "1/100"
+      },
+      {
+        "Y": 10,
+        "weighted_defect": "1/121"
+      }
+    ],
+    "exact_square_steps_Y": [
+      2,
+      10
+    ],
+    "native_crossings_in_test": [
+      5,
+      6,
+      7,
+      10
+    ],
+    "pointwise_cutoff": "84/71",
+    "recent_source_qualified_moment_cutoff": "890242/741955"
+  },
+  "new_zeta_zero_free_bound": false,
+  "optimal_projection": {
+    "scenarios": [
+      {
+        "condition_at_3": null,
+        "nonconstant_perturbation": false,
+        "variance_gap": "0"
+      },
+      {
+        "condition_at_3": null,
+        "nonconstant_perturbation": true,
+        "variance_gap": "853884964621/4650615019008"
+      },
+      {
+        "condition_at_3": 0,
+        "nonconstant_perturbation": false,
+        "variance_gap": "0"
+      },
+      {
+        "condition_at_3": 0,
+        "nonconstant_perturbation": true,
+        "variance_gap": "853884964621/4650615019008"
+      },
+      {
+        "condition_at_3": 1,
+        "nonconstant_perturbation": false,
+        "variance_gap": "0"
+      },
+      {
+        "condition_at_3": 1,
+        "nonconstant_perturbation": true,
+        "variance_gap": "853884964621/4650615019008"
+      },
+      {
+        "condition_at_3": -1,
+        "nonconstant_perturbation": false,
+        "variance_gap": "0"
+      },
+      {
+        "condition_at_3": -1,
+        "nonconstant_perturbation": true,
+        "variance_gap": "853884964621/4650615019008"
+      }
+    ],
+    "states_before_conditioning": 27
+  },
+  "parameter_balances": {
+    "analytic_inequalities_proved_by_samples": false,
+    "exact_samples": [
+      {
+        "root_delta_at_half_range": "1/600",
+        "root_eta_upper": "1/148",
+        "sigma": "51/100",
+        "square_delta_at_half_range": "1/596",
+        "square_eta_upper": "25/7326"
+      },
+      {
+        "root_delta_at_half_range": "1/60",
+        "root_eta_upper": "1/13",
+        "sigma": "3/5",
+        "square_delta_at_half_range": "1/56",
+        "square_eta_upper": "5/117"
+      },
+      {
+        "root_delta_at_half_range": "1/24",
+        "root_eta_upper": "1/4",
+        "sigma": "3/4",
+        "square_delta_at_half_range": "1/20",
+        "square_eta_upper": "1/6"
+      },
+      {
+        "root_delta_at_half_range": "1/18",
+        "root_eta_upper": "2/5",
+        "sigma": "5/6",
+        "square_delta_at_half_range": "1/14",
+        "square_eta_upper": "3/10"
+      },
+      {
+        "root_delta_at_half_range": "1874785097/30000000000",
+        "root_eta_upper": "1874785097/3750429806",
+        "sigma": "4374785097/5000000000",
+        "square_delta_at_half_range": "1874785097/22500859612",
+        "square_eta_upper": "2343481371250000000/5860449561183299409"
+      },
+      {
+        "root_delta_at_half_range": "1/15",
+        "root_eta_upper": "4/7",
+        "sigma": "9/10",
+        "square_delta_at_half_range": "1/11",
+        "square_eta_upper": "10/21"
+      },
+      {
+        "root_delta_at_half_range": "49/600",
+        "root_eta_upper": "49/52",
+        "sigma": "99/100",
+        "square_delta_at_half_range": "49/404",
+        "square_eta_upper": "1225/1326"
+      }
+    ]
+  },
+  "square_part_masks": {
+    "finite_euler_primorial": 105,
+    "odd_columns_through": 301,
+    "odd_squarefree_rows_through": 41,
+    "omitting_mask_changes_cases": 80,
+    "row_count": 18,
+    "shared_prime_columns": [
+      27,
+      125,
+      135,
+      189,
+      243,
+      297
+    ]
+  },
+  "status": "PASS"
+}
