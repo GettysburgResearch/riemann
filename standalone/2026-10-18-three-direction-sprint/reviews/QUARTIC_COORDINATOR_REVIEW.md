@@ -7,7 +7,7 @@ this is an explicit final reconstruction, not blind authorship independence.
 Reviewed raw sources:
 
 - quartic/ALL_SQUARE_INDICES.md:
-  cb75e0939efa1d8e51892e65477c562e383dd9fee359aa13997a92e9a2a935c3
+  b6fdd7d7a57d3feb6d35270f88f22a62d68c05654556c344da344cbaf3d912a6
 - quartic/COFINAL_HILBERT_FILTER.md:
   142fe3cfe5695c270de015f80b798daca17d18a86d651c0018be94b0d84f4f73
 - quartic/SQUARECLASS_PROJECTION_OBSTRUCTION.md:
@@ -89,3 +89,12 @@ that Hilbert norm vanishes.
 No blocking issue was found at these declared scopes. No RH proof,
 new zero-free region, complete weighted period, or fixed-level
 automorphy of the cofinal limits is accepted by this review.
+
+Final conductor qualification (18 October 2026): the general character
+in (9) is unramified outside the deleted set S; otherwise S must include
+every conductor prime and all sums must be prime to that enlarged S.
+This prevents chi^2 from restoring an Euler factor when its primitive
+conductor shrinks. Both reviewing agents and the rational agent
+confirmed this restriction. The actual target characters already
+satisfy the stated S/S_a condition; (10), (10a), and the damped target
+are unchanged. The raw source binding above includes this correction.

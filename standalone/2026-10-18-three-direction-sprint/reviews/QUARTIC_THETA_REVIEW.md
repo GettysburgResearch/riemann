@@ -3,7 +3,7 @@
 Reviewed 18 October 2026 by the theta research agent, independently of the draft author and the root review. This is an internal mathematical reconstruction, not external referee acceptance.
 
 Source: workspace `QUARTIC_SQUARE_PERIOD_LATE_DRAFT.md`, intended publication name `quartic/ALL_SQUARE_INDICES.md`, actual-byte SHA256
-`cb75e0939efa1d8e51892e65477c562e383dd9fee359aa13997a92e9a2a935c3`.
+`b6fdd7d7a57d3feb6d35270f88f22a62d68c05654556c344da344cbaf3d912a6`.
 
 I read the complete draft, rebuilt its identities, and checked the imported formulas against the primary David--Dunn--Hamieh--Lin article, arXiv:2306.11875v2 (10 May 2025), especially (3.4)--(3.12), (4.34)--(4.38), and the diagonal constant-term formula following (4.22). I also independently viewed Suzuki's original 1983 printed page 114: Theorem 3 states full fourth-power periodicity without a coprimality hypothesis, whereas the immediately following Theorem 4 explicitly imposes one. The draft correctly attributes periodicity as classical.
 
@@ -22,3 +22,12 @@ I read the complete draft, rebuilt its identities, and checked the imported form
 No blocking error was found at the stated arithmetic and Fourier-mode Mellin scope. The draft explicitly leaves squareclass selection, all ramified and unit classes, global cusp regularization, a legal angular adapter, a complete analytic estimate, and numerator cancellation open. Torus orthogonality selects all equal indices rather than squares. The zero inheritance statement is conditional on controlling the actual reciprocal target; the extra Hecke numerator may cancel a zeta zero. Square summability of formal replica coefficients does not establish a bounded operator.
 
 This review does not certify a new zero-free region, a Riemann-hypothesis proof, a full global unfolding, or global norm bounds for an infinite squarefree Fourier filter. The primary-source full periodicity also does not by itself identify a single adelic right translate or control a regularized period on growing levels.
+
+Final conductor qualification (18 October 2026): the general character
+in (9) is unramified outside the deleted set S; otherwise S must include
+every conductor prime and all sums must be prime to that enlarged S.
+This prevents chi^2 from restoring an Euler factor when its primitive
+conductor shrinks. Both reviewing agents and the rational agent
+confirmed this restriction. The actual target characters already
+satisfy the stated S/S_a condition; (10), (10a), and the damped target
+are unchanged. The raw source binding above includes this correction.

@@ -161,12 +161,18 @@ Equations (1), (2), (7) imply exactly
 
 Thus no m-dependent matrix is needed: a FIXED finite collection of
 bilinear cusp pairings, with a fixed finite character, suffices.
-For any fixed unitary Hecke character chi, absolute convergence for
-Re(s)>1 and the independent d,r factorization give
+For any fixed unitary Hecke character chi unramified outside S, absolute
+convergence for Re(s)>1 and the independent d,r factorization give
 
-    sum_(m primary) chi(m) (Nm)^(1/2-s) Q_B(f(m^2))
+    sum_(m primary, (m,S)=1) chi(m) (Nm)^(1/2-s) Q_B(f(m^2))
        =Q_B(v0) L_F^S(2s-1,chi^2)
                     /L_F^S(s,chi*conjugate(epsilon)*delta_kappa). (9)
+
+For a character ramified at further primes, first enlarge S to include
+all its conductor primes and restrict m, d and r to be prime to this
+enlarged set. All L-functions in (9) have these same Euler deletions,
+even when chi^2 has smaller primitive conductor. The target character
+epsilon*delta_kappa below is already unramified outside the original S.
 
 Indeed Nm=(Nd)^2 Nr; the d sum is L(2s-1,chi^2), while the squarefree
 r sum is the reciprocal L-function. Shared primes between d and r

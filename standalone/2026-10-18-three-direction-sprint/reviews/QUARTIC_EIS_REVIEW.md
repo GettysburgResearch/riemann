@@ -3,7 +3,7 @@
 Reviewed publication target: `quartic/ALL_SQUARE_INDICES.md`.
 
 Reviewed final raw SHA256:
-`cb75e0939efa1d8e51892e65477c562e383dd9fee359aa13997a92e9a2a935c3`.
+`b6fdd7d7a57d3feb6d35270f88f22a62d68c05654556c344da344cbaf3d912a6`.
 
 **Verdict: no blocking issue found at the stated arithmetic and scalar-Mellin
 scope.** No global square-index period, weighted automorphic filter,
@@ -104,3 +104,12 @@ An integral type k twist in nu restricts to type 2k in m on nu=nu_a*m^2,
 while the squared quartic coefficient contributes type -1. Therefore this
 simple twist cannot make the denominator principal; this does not rule out
 a genuine descent or Weil kernel whose root variable is m.
+
+Final conductor qualification (18 October 2026): the general character
+in (9) is unramified outside the deleted set S; otherwise S must include
+every conductor prime and all sums must be prime to that enlarged S.
+This prevents chi^2 from restoring an Euler factor when its primitive
+conductor shrinks. Both reviewing agents and the rational agent
+confirmed this restriction. The actual target characters already
+satisfy the stated S/S_a condition; (10), (10a), and the damped target
+are unchanged. The raw source binding above includes this correction.
