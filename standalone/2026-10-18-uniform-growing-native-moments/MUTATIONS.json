@@ -1,0 +1,52 @@
+{
+  "models": [
+    {
+      "diagnostic": "ValueError: replica_floor: H^(1/6) repeated family was deleted",
+      "mutation": "lost_replica_floor",
+      "returncode": 1
+    },
+    {
+      "diagnostic": "ValueError: selected_count: a middle class is counted at its LOWER threshold",
+      "mutation": "upper_threshold_count",
+      "returncode": 1
+    },
+    {
+      "diagnostic": "ValueError: fixed_quantifiers: uncontrolled density constant at eta/p",
+      "mutation": "moving_density_loss",
+      "returncode": 1
+    },
+    {
+      "diagnostic": "ValueError: asymptotic_algebra: large-core reciprocal loss fails to vanish uniformly",
+      "mutation": "insufficient_line_buffer",
+      "returncode": 1
+    },
+    {
+      "diagnostic": "ValueError: disc_intervals: disc margin 1 fails on the whole delta interval",
+      "mutation": "touching_log_boundary",
+      "returncode": 1
+    },
+    {
+      "diagnostic": "ValueError: coverage: small fixed cores cannot be discarded",
+      "mutation": "omit_small_cores",
+      "returncode": 1
+    },
+    {
+      "diagnostic": "ValueError: nonunit_mask: original nonunit zero lost",
+      "mutation": "erased_nonunit_mask",
+      "returncode": 1
+    },
+    {
+      "diagnostic": "ValueError: tail_contract: constant-height tail cannot absorb log(D)",
+      "mutation": "zero_tail_height",
+      "returncode": 1
+    },
+    {
+      "diagnostic": "ValueError: quantifier_countermodel: exp(exp(p^2)) becomes D, not D^o(1), on the moving diagonal",
+      "mutation": "fixed_order_substitution",
+      "returncode": 1
+    }
+  ],
+  "rejected_models": 9,
+  "scope": "Corrupted finite models, not proof-assistant perturbations.",
+  "status": "PASS"
+}
