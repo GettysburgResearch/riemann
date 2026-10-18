@@ -1,0 +1,46 @@
+{
+  "qualification": "The full-row-mollifier control is a valid weaker bound that fails the NEW 5/7 certificate; it is not a refutation of the old bound.",
+  "runs": [
+    {
+      "mutation": "wrong_crossing",
+      "rejected_at": "selected_envelope",
+      "returncode": 1
+    },
+    {
+      "mutation": "min_to_max",
+      "rejected_at": "selected_envelope",
+      "returncode": 1
+    },
+    {
+      "mutation": "dual_sign",
+      "rejected_at": "actual_dual_conductor",
+      "returncode": 1
+    },
+    {
+      "mutation": "erased_mask",
+      "rejected_at": "literal_power_mask",
+      "returncode": 1
+    },
+    {
+      "mutation": "false_coprimality",
+      "rejected_at": "literal_power_mask",
+      "returncode": 1
+    },
+    {
+      "mutation": "full_row_mollifier",
+      "rejected_at": "complete_detector_budget",
+      "returncode": 1
+    },
+    {
+      "mutation": "wrong_holder",
+      "rejected_at": "selected_holder_power",
+      "returncode": 1
+    },
+    {
+      "mutation": "duplicated_interval",
+      "rejected_at": "prefix_disjointness",
+      "returncode": 1
+    }
+  ],
+  "status": "PASS_ALL_EIGHT_REJECTED"
+}
