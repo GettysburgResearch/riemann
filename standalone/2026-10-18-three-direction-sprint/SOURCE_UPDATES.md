@@ -125,3 +125,20 @@ before our exact transport. It is not reapplied to a replacement kernel.
 The source-qualified original Eisenstein physical framework and the
 general-field CT framework have different legal fields; no substitution
 between them is assumed merely because one field has smaller degree.
+
+## Late quartic source reconciliation
+
+The quartic starting point is #1005's field/PRINCIPAL_CORRELATIONS_AND_QUARTIC.md
+at d3b3d19573b8dc47ac6e37abd108d54982e9e5f1 (Git blob
+a2b9b84a6596cc6236b0f7d6705c357772b40db2). The primary DDHL v2
+formulas and Suzuki 1983 printed page114 were read directly. Suzuki's
+Theorem3 states FULL fourth-power periodicity without a coprimality
+condition; the narrower DDHL quotation is a valid weaker interface.
+The all-power reconstruction in quartic/ALL_SQUARE_INDICES.md is
+explicitly credited as a derivation of classical periodicity.
+
+The new common-cover norm and multiplier-intersection proofs use the
+actual quartic character and full coefficient normalization. They do
+not import Suzuki1991's function-field Rankin--Selberg theorem as a
+number-field result. Root-index angular realization and the full
+weighted period are still separate open analytic gates.

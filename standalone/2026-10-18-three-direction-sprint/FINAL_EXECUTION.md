@@ -127,3 +127,14 @@ uniform over the specified robust witness polygon and its masks/heights.
 For the native 5/6 target it is the complete balanced contraction with
 a=1/3 and p=3/2. For the weighted-canonical RH route it is positive
 weighted feasibility at unbounded orders. None was proved here.
+
+## Late quartic addenda
+
+Three further analytic components were completed and cross-reviewed after
+the first frozen publication: the full square-index Euler completion,
+the nonzero cofinal common-cover Hilbert filter/damping, and the vanishing
+norm of the naive squareclass projection. Their exact sources and scopes
+are in quartic/ and reviews/QUARTIC_*. These are mathematical derivations
+from their credited classical inputs, not additional executable finite
+certificates. The existing accepting code and data remain unchanged.
+The complete squareclass/angular weighted-period estimate remains open.

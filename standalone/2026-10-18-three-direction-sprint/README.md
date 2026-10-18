@@ -127,6 +127,38 @@ relationship to these conditional targets is recorded in
 [SOURCE_UPDATES.md](SOURCE_UPDATES.md). The earlier work below preserves
 the complete arguments and provenance for the other attempted routes.
 
+## Late fixed-Gaussian-field construction and its sharp limit
+
+The latest quartic work in #1005 led to three further complete component
+arguments. [All square indices](quartic/ALL_SQUARE_INDICES.md) retains
+every repeated/shared prime and replaces an unproved first-coefficient
+normalization by a proved fixed nonzero squareclass. The signed series
+is an explicit Hecke-L numerator divided by zeta_F(s). The required
+root angular character and global squareclass adapter remain open.
+
+The [cofinal Hilbert filter](quartic/COFINAL_HILBERT_FILTER.md) constructs
+actual finite-cover theta functions with an exact all-prime norm. The
+hard fourth-power filter has retained squared norm 1/zeta_F^S(3);
+positive damping has ratio zeta_F^S(3+2eta)/zeta_F^S(3). Both have
+nonzero cofinal limits, and the particular Fourier sequence has an
+independently proved local smooth limit. Applying eta/2 to both factors
+moves the arithmetic numerator to L(2s-1+eta,epsilon^2). Thus eta=1
+prevents it from hiding any target zero right of 1/2. More generally,
+eta>=2-2B suffices right of B; eta=63/250 covers the conditional .874
+target. These are exact pole-retention statements, not zero exclusion.
+
+The [squareclass projection obstruction](quartic/SQUARECLASS_PROJECTION_OBSTRUCTION.md)
+then proves why the simplest missing selector does not complete the
+argument: its necessary quadratic-residue tests have EXACT retained
+norm product product_p (Np+1)/(2Np), tending to zero. This is a direct
+classical Kubota-character proof on the actual vector, without a random
+phase model. It does not rule out another descent/kernel. Together with
+the explicit unbounded cusp trace and radial scaling tests, it separates
+the paid replica filter from the still-unpaid squareclass/angular and
+weighted-period construction. No new strip follows from these results.
+The [coordinator review](reviews/QUARTIC_COORDINATOR_REVIEW.md) and the
+independent track receipts bind the exact source bytes.
+
 ## 1. A complete native-source reduction with no power loss
 
 Start with [MASKED_COMPRESSION.md](rational/MASKED_COMPRESSION.md) and

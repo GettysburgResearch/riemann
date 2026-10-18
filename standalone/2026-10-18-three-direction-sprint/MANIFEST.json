@@ -2,8 +2,8 @@
   "schema": "riemann-three-direction-packet.v1",
   "status": "PROPOSED; NO RH PROOF OR NEW ZERO-FREE REGION",
   "base_commit": "e9ce2d171fba2bcca4cb4d8c6e78dc97f69613e9",
-  "file_count": 322,
-  "payload_bytes": 2505991,
+  "file_count": 332,
+  "payload_bytes": 2580240,
   "serialization": "Raw file bytes; MANIFEST.json excludes itself.",
   "files": [
     {
@@ -44,9 +44,9 @@
     },
     {
       "path": "FINAL_EXECUTION.md",
-      "bytes": 8107,
-      "sha256": "5bb59dfc817701ffde1e17eaa7a966d8fca2854ce8f7727f98035322b52fc571",
-      "git_blob_sha1": "c55e976a2f75fc73182b3335cb11a091daa8696a"
+      "bytes": 8711,
+      "sha256": "5409622c6bb9e8697bf938ea08ce16ad60c3b253b4310a285a4d53cf41ec1da9",
+      "git_blob_sha1": "aff8f42b2c2b2bcd8c4a511a5c940e14eb25e31b"
     },
     {
       "path": "MIXED_SIGN_STRIP.md",
@@ -68,15 +68,15 @@
     },
     {
       "path": "README.md",
-      "bytes": 19579,
-      "sha256": "3fe631e715ea87f35b64d6ca999f95131059641533d9516b0bc92e53128530fe",
-      "git_blob_sha1": "8c3e822504d8f747aad7b0ed8928deb4721f8065"
+      "bytes": 21543,
+      "sha256": "516e33cce7f61e5a2fd93ae279a445c076c2eded8be06c49e4bd180209e79408",
+      "git_blob_sha1": "741a70a3ba0721e6f34d1af8b6b1098dd641a2cb"
     },
     {
       "path": "SOURCE_UPDATES.md",
-      "bytes": 6872,
-      "sha256": "8c82a0f7441dda38fdfedba0d4985879bc839d20869ce846eef3b04915188774",
-      "git_blob_sha1": "92522a99e5dc94201ee034194976659aa8207570"
+      "bytes": 7772,
+      "sha256": "0ec6b59f713e3f1926eaf77d3d4a9357069185f75ba02f8c01d8414d2483e867",
+      "git_blob_sha1": "7b18777354e869730b5aebae9e14a8b744c071eb"
     },
     {
       "path": "critical/COVARIANCE_SIGN.md",
@@ -593,6 +593,24 @@
       "bytes": 12323,
       "sha256": "78361ab69d6efe9352d4f995f48b1de924758b55333f0e22191c981116514ef0",
       "git_blob_sha1": "05a6bfc3d3e4ae84214c929cf47d59ce05dda9ea"
+    },
+    {
+      "path": "quartic/ALL_SQUARE_INDICES.md",
+      "bytes": 16329,
+      "sha256": "cb75e0939efa1d8e51892e65477c562e383dd9fee359aa13997a92e9a2a935c3",
+      "git_blob_sha1": "fbeb0ffa9ac77161338ca9a90fe3e47ff024e5b0"
+    },
+    {
+      "path": "quartic/COFINAL_HILBERT_FILTER.md",
+      "bytes": 18187,
+      "sha256": "142fe3cfe5695c270de015f80b798daca17d18a86d651c0018be94b0d84f4f73",
+      "git_blob_sha1": "20f7c4fc6ab849c6fe77ecca17bceb0445f1d439"
+    },
+    {
+      "path": "quartic/SQUARECLASS_PROJECTION_OBSTRUCTION.md",
+      "bytes": 7760,
+      "sha256": "7769a60d2f513c49ae4219199e664eaa7d91ef37d2585d1c317315972d857853",
+      "git_blob_sha1": "4fc3d48a5e615fa08c02f16d3157ece86984d388"
     },
     {
       "path": "rational/.gitignore",
@@ -1187,6 +1205,48 @@
       "bytes": 7010,
       "sha256": "c822fb333fa1bd03c47180ef61b8e1906afe72f105f640e72db9e534209c1485",
       "git_blob_sha1": "afb9964e3f21fada6cfecf3337476ca8783cae65"
+    },
+    {
+      "path": "reviews/QUARTIC_COORDINATOR_REVIEW.md",
+      "bytes": 4583,
+      "sha256": "4ed929d5dc5ea537aef3eb33e94d6af82cafafc36d9b15a2739a35bde2234ef4",
+      "git_blob_sha1": "375231f4ad7abd4cdfc73122afab2e772ae6f612"
+    },
+    {
+      "path": "reviews/QUARTIC_EIS_REVIEW.md",
+      "bytes": 5960,
+      "sha256": "6bf421f1530d29fe830c7f6505e1c27f3ff9d30067984b82ce5aa21c6eba3749",
+      "git_blob_sha1": "86726b9b3827f8227e3bb07bf8602a50613f86df"
+    },
+    {
+      "path": "reviews/QUARTIC_HILBERT_EIS_REVIEW.md",
+      "bytes": 3700,
+      "sha256": "df5fae313738191e2973a9e87839ee6112d01a5a947c2a61404f8e0920c4ec1f",
+      "git_blob_sha1": "8eaf114ea72647bce9e6c03b8fadbc1c8c9d6a8e"
+    },
+    {
+      "path": "reviews/QUARTIC_HILBERT_RATIONAL_REVIEW.md",
+      "bytes": 3859,
+      "sha256": "3e9a732a983bbb34fc86cd06f8e8c1d758aaf78eaecb70d110dfc3c9172f429b",
+      "git_blob_sha1": "5e232432a25d4bf8d9ac5325d8294be9053818a7"
+    },
+    {
+      "path": "reviews/QUARTIC_SELECTOR_RATIONAL_REVIEW.md",
+      "bytes": 3045,
+      "sha256": "c391c5870d8e147cb75986708cdc85dc3ebc3677ad8acf8697f9f1cd7ecc1b5f",
+      "git_blob_sha1": "6a6a5d834f7c99a625283f52f09e35dee9055b07"
+    },
+    {
+      "path": "reviews/QUARTIC_SELECTOR_THETA_REVIEW.md",
+      "bytes": 2965,
+      "sha256": "f1046097186806d746027e8aa0574d0df1e4e0aa2bf35f6ba631c3149c0ce27d",
+      "git_blob_sha1": "9e042c7db71602d5fd4acca579b1f41bc54a859d"
+    },
+    {
+      "path": "reviews/QUARTIC_THETA_REVIEW.md",
+      "bytes": 4393,
+      "sha256": "02340649ba419d85aedf14a833ac0d6424e73d2c828bad2ff4293bf37f0a5c5c",
+      "git_blob_sha1": "79fe7687fb2bc5deab8c7ea8f264e33e497453a4"
     },
     {
       "path": "reviews/TAIL_COUNT_AND_COMPLETION_REVIEW.md",
