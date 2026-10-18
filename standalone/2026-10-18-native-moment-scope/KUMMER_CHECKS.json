@@ -1,0 +1,81 @@
+{
+  "S": "all prime ideals above 2 and 3",
+  "compact_native_moment_fixtures": [
+    {
+      "D": 7,
+      "orders": {
+        "16": "11883532",
+        "2": "52",
+        "4": "220",
+        "8": "6412"
+      }
+    },
+    {
+      "D": 13,
+      "orders": {
+        "16": "4470370063",
+        "2": "115",
+        "4": "943",
+        "8": "105103"
+      }
+    },
+    {
+      "D": 25,
+      "orders": {
+        "16": "2898668427154",
+        "2": "190",
+        "4": "3202",
+        "8": "2174674"
+      }
+    },
+    {
+      "D": 64,
+      "orders": {
+        "16": "665640993276598984",
+        "2": "508",
+        "4": "39544",
+        "8": "839567464"
+      }
+    },
+    {
+      "D": 128,
+      "orders": {
+        "16": "12116575231366930126734",
+        "2": "978",
+        "4": "347502",
+        "8": "110115520974"
+      }
+    },
+    {
+      "D": 256,
+      "orders": {
+        "16": "727426972518364006635089",
+        "2": "1733",
+        "4": "1015553",
+        "8": "855715962929"
+      }
+    }
+  ],
+  "complete_coverage": {
+    "column_ideal_norm_cap": 256,
+    "columns": 77,
+    "prime_ideal_residue_fields": 52,
+    "row_ideal_norm_cap": 64,
+    "rows": 19
+  },
+  "family": "chi_u(n)=(alpha_u/n)_6; alpha_u=1 mod (3)",
+  "field": "Q(w), w^2+w+1=0",
+  "predicates_by_group": {
+    "complete-native-norm-source": 19,
+    "complete-principal-sixth-power-copy": 1463,
+    "complete-residue-field-character-distribution": 52,
+    "exact-sixth-root-or-nonunit": 1463,
+    "independent-local-repeated-multiplication": 6052,
+    "independent-prime-ideal-roots": 52,
+    "literal-native-character-zero": 1463,
+    "literal-primary-generator": 19,
+    "multiplicative-primary-generator": 361
+  },
+  "scope": "W=1_(0,1] only. Every declared ideal and residue occurs. No Gaussian, theta value, zero census, infinite bound or GRH verdict.",
+  "status": "PASS: complete finite ideal and residue-field algebra; no analytic conclusion"
+}

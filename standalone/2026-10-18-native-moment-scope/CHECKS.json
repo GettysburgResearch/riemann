@@ -1,0 +1,185 @@
+{
+  "S": "all prime ideals above 2 and 3",
+  "boundary": "Compact rational fixtures only. No nonprincipal L-values, CT theta rows, zero census, Gaussian evaluation, or infinite sign theorem.",
+  "coverage": {
+    "all_integral_ideal_b_cap": 64,
+    "all_integral_ideal_column_cap": 256,
+    "distinct_principal_mask_signatures": 10,
+    "exterior_ideal_columns": 77,
+    "exterior_mask_ideals": 19,
+    "integral_ideals_including_S": 155
+  },
+  "field": "Q(w), w^2+w+1=0",
+  "finite_mask_mass_sigma_1_r_2": "28411129/1270080",
+  "finite_moment_samples": [
+    {
+      "D": 7,
+      "complete_b_cap": 64,
+      "exact_moment": "15",
+      "k": 1,
+      "rows": 19
+    },
+    {
+      "D": 7,
+      "complete_b_cap": 64,
+      "exact_moment": "15",
+      "k": 2,
+      "rows": 19
+    },
+    {
+      "D": 7,
+      "complete_b_cap": 64,
+      "exact_moment": "15",
+      "k": 4,
+      "rows": 19
+    },
+    {
+      "D": 13,
+      "complete_b_cap": 64,
+      "exact_moment": "133",
+      "k": 1,
+      "rows": 19
+    },
+    {
+      "D": 13,
+      "complete_b_cap": 64,
+      "exact_moment": "1069",
+      "k": 2,
+      "rows": 19
+    },
+    {
+      "D": 13,
+      "complete_b_cap": 64,
+      "exact_moment": "80269",
+      "k": 4,
+      "rows": 19
+    },
+    {
+      "D": 25,
+      "complete_b_cap": 64,
+      "exact_moment": "565",
+      "k": 1,
+      "rows": 19
+    },
+    {
+      "D": 25,
+      "complete_b_cap": 64,
+      "exact_moment": "17545",
+      "k": 2,
+      "rows": 19
+    },
+    {
+      "D": 25,
+      "complete_b_cap": 64,
+      "exact_moment": "18697705",
+      "k": 4,
+      "rows": 19
+    },
+    {
+      "D": 49,
+      "complete_b_cap": 64,
+      "exact_moment": "2047",
+      "k": 1,
+      "rows": 19
+    },
+    {
+      "D": 49,
+      "complete_b_cap": 64,
+      "exact_moment": "222487",
+      "k": 2,
+      "rows": 19
+    },
+    {
+      "D": 49,
+      "complete_b_cap": 64,
+      "exact_moment": "2700512167",
+      "k": 4,
+      "rows": 19
+    },
+    {
+      "D": 64,
+      "complete_b_cap": 64,
+      "exact_moment": "2861",
+      "k": 1,
+      "rows": 19
+    },
+    {
+      "D": 64,
+      "complete_b_cap": 64,
+      "exact_moment": "433109",
+      "k": 2,
+      "rows": 19
+    },
+    {
+      "D": 64,
+      "complete_b_cap": 64,
+      "exact_moment": "10098397349",
+      "k": 4,
+      "rows": 19
+    },
+    {
+      "D": 128,
+      "complete_b_cap": 64,
+      "exact_moment": "11078",
+      "k": 1,
+      "rows": 19
+    },
+    {
+      "D": 128,
+      "complete_b_cap": 64,
+      "exact_moment": "6550622",
+      "k": 2,
+      "rows": 19
+    },
+    {
+      "D": 128,
+      "complete_b_cap": 64,
+      "exact_moment": "2394409728302",
+      "k": 4,
+      "rows": 19
+    },
+    {
+      "D": 256,
+      "complete_b_cap": 64,
+      "exact_moment": "21907",
+      "k": 1,
+      "rows": 19
+    },
+    {
+      "D": 256,
+      "complete_b_cap": 64,
+      "exact_moment": "26691811",
+      "k": 2,
+      "rows": 19
+    },
+    {
+      "D": 256,
+      "complete_b_cap": 64,
+      "exact_moment": "47602756691011",
+      "k": 4,
+      "rows": 19
+    }
+  ],
+  "predicates_by_group": {
+    "complete-HNF": 156,
+    "complete-principal-mask": 19,
+    "finite-mask-inverse": 10,
+    "fixed-row-family-extraction": 24,
+    "ideal-norm": 155,
+    "independent-Mobius-source": 1,
+    "independent-ideal-count": 256,
+    "inert-prime": 1,
+    "infinite-mask-convolution": 10,
+    "linear-average-mask-cost": 1,
+    "literal-sixth-mask": 1463,
+    "maximal-mask-transfer": 133,
+    "positive-mask-divisor-identity": 1,
+    "principal-replica-count": 24,
+    "ramified-prime": 1,
+    "replica-moment-transfer": 21,
+    "sixth-power-rows": 10,
+    "split-ideal-distinction": 3
+  },
+  "source_norm_coefficients_sha256": "184f90907f043b2ae2d89ef53b9951c9df854653a946656ab45206b538747dc7",
+  "status": "PASS: finite exact algebra; analytic theorems not certified"
+}

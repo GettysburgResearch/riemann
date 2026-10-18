@@ -1,0 +1,39 @@
+{
+  "axioms": {
+    "NativeMaskFinite.average_mask_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NativeMaskFinite.cofinal_exponent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NativeMaskFinite.cofinal_fixed_order_extraction": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NativeMaskFinite.divisor_double_count": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NativeMaskFinite.moment_transfer": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "boundary": "Finite counting, finite moment transfer and abstract cofinal fixed-order quantifiers only. No native source estimate, Gaussian analytic transform, infinite Euler product or RH theorem formalized.",
+  "command": "lake env lean --root=<packet> <packet>/NativeMaskFinite.lean",
+  "context": "Pinned primary CT Lake environment; same Mathlib revision as the standalone lakefile.",
+  "exit_code": 0,
+  "lean_commit": "470d5ce1400764999581fd26d5d72b00d990b0f4",
+  "lean_version": "4.35.0-rc3",
+  "mathlib_commit": "0493595ecd5da8ef14742febab99728f98e948e8",
+  "source": "NativeMaskFinite.lean",
+  "source_sha256": "16ef9b57d36db15f9654007e0e95314bc727513db76ea7bd5116a704db7ae183",
+  "status": "PASS: five scoped Lean lemmas typechecked"
+}

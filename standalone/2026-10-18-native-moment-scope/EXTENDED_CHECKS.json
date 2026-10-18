@@ -1,0 +1,185 @@
+{
+  "S": "all prime ideals above 2 and 3",
+  "boundary": "Compact rational fixtures only. No nonprincipal L-values, CT theta rows, zero census, Gaussian evaluation, or infinite sign theorem.",
+  "coverage": {
+    "all_integral_ideal_b_cap": 512,
+    "all_integral_ideal_column_cap": 4096,
+    "distinct_principal_mask_signatures": 66,
+    "exterior_ideal_columns": 1241,
+    "exterior_mask_ideals": 157,
+    "integral_ideals_including_S": 2474
+  },
+  "field": "Q(w), w^2+w+1=0",
+  "finite_mask_mass_sigma_1_r_2": "257438728497188756675298082400127523187086865141179/1395505366672005137166982412274367553365873920000",
+  "finite_moment_samples": [
+    {
+      "D": 7,
+      "complete_b_cap": 512,
+      "exact_moment": "117",
+      "k": 1,
+      "rows": 157
+    },
+    {
+      "D": 7,
+      "complete_b_cap": 512,
+      "exact_moment": "117",
+      "k": 2,
+      "rows": 157
+    },
+    {
+      "D": 7,
+      "complete_b_cap": 512,
+      "exact_moment": "117",
+      "k": 4,
+      "rows": 157
+    },
+    {
+      "D": 13,
+      "complete_b_cap": 512,
+      "exact_moment": "1079",
+      "k": 1,
+      "rows": 157
+    },
+    {
+      "D": 13,
+      "complete_b_cap": 512,
+      "exact_moment": "8567",
+      "k": 2,
+      "rows": 157
+    },
+    {
+      "D": 13,
+      "complete_b_cap": 512,
+      "exact_moment": "637127",
+      "k": 4,
+      "rows": 157
+    },
+    {
+      "D": 25,
+      "complete_b_cap": 512,
+      "exact_moment": "4675",
+      "k": 1,
+      "rows": 157
+    },
+    {
+      "D": 25,
+      "complete_b_cap": 512,
+      "exact_moment": "148015",
+      "k": 2,
+      "rows": 157
+    },
+    {
+      "D": 25,
+      "complete_b_cap": 512,
+      "exact_moment": "165993295",
+      "k": 4,
+      "rows": 157
+    },
+    {
+      "D": 49,
+      "complete_b_cap": 512,
+      "exact_moment": "17437",
+      "k": 1,
+      "rows": 157
+    },
+    {
+      "D": 49,
+      "complete_b_cap": 512,
+      "exact_moment": "1967557",
+      "k": 2,
+      "rows": 157
+    },
+    {
+      "D": 49,
+      "complete_b_cap": 512,
+      "exact_moment": "25996370197",
+      "k": 4,
+      "rows": 157
+    },
+    {
+      "D": 64,
+      "complete_b_cap": 512,
+      "exact_moment": "24519",
+      "k": 1,
+      "rows": 157
+    },
+    {
+      "D": 64,
+      "complete_b_cap": 512,
+      "exact_moment": "3873567",
+      "k": 2,
+      "rows": 157
+    },
+    {
+      "D": 64,
+      "complete_b_cap": 512,
+      "exact_moment": "99500574927",
+      "k": 4,
+      "rows": 157
+    },
+    {
+      "D": 128,
+      "complete_b_cap": 512,
+      "exact_moment": "92065",
+      "k": 1,
+      "rows": 157
+    },
+    {
+      "D": 128,
+      "complete_b_cap": 512,
+      "exact_moment": "54319153",
+      "k": 2,
+      "rows": 157
+    },
+    {
+      "D": 128,
+      "complete_b_cap": 512,
+      "exact_moment": "19275584315233",
+      "k": 4,
+      "rows": 157
+    },
+    {
+      "D": 256,
+      "complete_b_cap": 512,
+      "exact_moment": "178437",
+      "k": 1,
+      "rows": 157
+    },
+    {
+      "D": 256,
+      "complete_b_cap": 512,
+      "exact_moment": "213283869",
+      "k": 2,
+      "rows": 157
+    },
+    {
+      "D": 256,
+      "complete_b_cap": 512,
+      "exact_moment": "356688577424109",
+      "k": 4,
+      "rows": 157
+    }
+  ],
+  "predicates_by_group": {
+    "complete-HNF": 2475,
+    "complete-principal-mask": 157,
+    "finite-mask-inverse": 66,
+    "fixed-row-family-extraction": 24,
+    "ideal-norm": 2474,
+    "independent-Mobius-source": 1,
+    "independent-ideal-count": 4096,
+    "inert-prime": 1,
+    "infinite-mask-convolution": 66,
+    "linear-average-mask-cost": 1,
+    "literal-sixth-mask": 194837,
+    "maximal-mask-transfer": 1099,
+    "positive-mask-divisor-identity": 1,
+    "principal-replica-count": 24,
+    "ramified-prime": 1,
+    "replica-moment-transfer": 21,
+    "sixth-power-rows": 40,
+    "split-ideal-distinction": 3
+  },
+  "source_norm_coefficients_sha256": "3252588770b4e09ba0369df47a71461ba3cb41f2b2b6562c8542e3175400aa57",
+  "status": "PASS: finite exact algebra; analytic theorems not certified"
+}

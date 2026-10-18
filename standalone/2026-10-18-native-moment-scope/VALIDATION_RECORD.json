@@ -1,0 +1,57 @@
+{
+  "boundary": "No infinite analytic theorem, global sign, RH proof or independent referee acceptance is certified.",
+  "executed": [
+    {
+      "optimized": false,
+      "status": "PASS",
+      "test": "exact and corruption suite"
+    },
+    {
+      "optimized": false,
+      "report": "EXTENDED_CHECKS.json",
+      "sha256": "d79b729e6f82e5cf8556529d9e340cc0643cf71c680f92076b86a0a87345b661",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "status": "PASS",
+      "test": "exact and corruption suite"
+    },
+    {
+      "optimized": true,
+      "report": "EXTENDED_CHECKS.json",
+      "sha256": "d79b729e6f82e5cf8556529d9e340cc0643cf71c680f92076b86a0a87345b661",
+      "status": "PASS"
+    },
+    {
+      "status": "PASS",
+      "test": "pinned primary CT TeX source in both modes"
+    },
+    {
+      "optimized": false,
+      "status": "PASS",
+      "test": "directed primitive and corruption suite"
+    },
+    {
+      "optimized": true,
+      "status": "PASS",
+      "test": "directed primitive and corruption suite"
+    },
+    {
+      "optimized": true,
+      "report": "GAUSSIAN_REPLAY.json",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "report": "NATIVE_GAUSSIAN_REPLAY.json",
+      "status": "PASS"
+    },
+    {
+      "common_scales": 9,
+      "status": "PASS",
+      "test": "principal-source agreement between independent coefficient producers"
+    }
+  ],
+  "status": "PASS: declared finite replay only"
+}
