@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "conditional_open_input": "COMPLETE robust mixed mean << U^(6/5+epsilon)",
+  "boundary": "437/500",
+  "boundary_decimal": 0.874,
+  "ell": "6/35",
+  "x": "29/70",
+  "y": "29/70",
+  "h": "53/70",
+  "closed_delta_interval": [
+    "1/50",
+    "3/4"
+  ],
+  "closed_amplitude_interval": [
+    "0",
+    "1/2"
+  ],
+  "interval_cover_leaves": 6281,
+  "maximum_depth": 29,
+  "leaf_stream_sha256": "0577e2765721374612492a2bf6ee474a02a40004a09a34137738f7b30bd3c487",
+  "minimum_nonfloor_margin": "707909/704643072000",
+  "reserved_nonfloor_margin": "1/1000000",
+  "low_signal_margin": "1/5250",
+  "floor_frequency_h_upper": "-109/5250",
+  "frequency_zero_upper": "-10571/42000",
+  "small_row_upper_dmin_1_100": "-6647/105000",
+  "prime_supply_margin": "73/1961",
+  "old_source_only_positive_regression": "166669/28140000",
+  "scope": "Exact exponent algebra; the complete arithmetic mean remains OPEN."
+}

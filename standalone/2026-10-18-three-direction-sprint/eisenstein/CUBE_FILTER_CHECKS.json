@@ -1,0 +1,22 @@
+{
+  "checker_sha256": "4184c963949fbda2f448bb637347d4f1090bff4f9219af9b970bc737abff8601",
+  "directed": {
+    "FLINT": "3.6.0",
+    "critical_margin_and_resource_cases": 56,
+    "precision_bits": 256,
+    "python_flint": "0.9.0"
+  },
+  "exact": {
+    "complete_principal_shell_support_cases": 7688,
+    "complete_rational_Jacobi_pairs": 2496,
+    "complete_rational_Jacobi_rows": 26,
+    "exact_exponent_budget_inequalities": 504,
+    "exact_local_filter_and_inverse_coefficients": 4500,
+    "nonzero_even_shell_cases": 736,
+    "principal_Euler_specializations": 20,
+    "scope": "Exact algebra and rational Jacobi mask controls; no analytic exponent certification.",
+    "squarefree_c_norm_cap": 64,
+    "unrestricted_n_norm_cap": 64
+  },
+  "status": "PASS_FINITE_CUBE_FILTER_COMPONENT_CONTROLS"
+}

@@ -1,0 +1,49 @@
+{
+  "status": "PASS_EXACT_FINITE_CONTROLS",
+  "checks": 110,
+  "fixtures": [
+    {
+      "types": [
+        0,
+        1
+      ],
+      "vertices": [
+        "root",
+        "root"
+      ],
+      "spins": 7,
+      "configurations": 128,
+      "degree": 10
+    },
+    {
+      "types": [
+        1,
+        2
+      ],
+      "vertices": [
+        "child",
+        "root"
+      ],
+      "spins": 7,
+      "configurations": 128,
+      "degree": 10
+    },
+    {
+      "types": [
+        1,
+        1
+      ],
+      "vertices": [
+        "root",
+        "child"
+      ],
+      "spins": 7,
+      "configurations": 128,
+      "degree": 10
+    }
+  ],
+  "complete_tree_boundary_degree": 24,
+  "model_sha256": "85836b00824f402e67e1aa164f4baced4851094d17404d62a7b70a540ee7f7db",
+  "elapsed_seconds": 0.875,
+  "moment_matching_existence_proved": false
+}

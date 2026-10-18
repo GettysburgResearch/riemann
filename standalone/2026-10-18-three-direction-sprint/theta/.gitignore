@@ -1,0 +1,32 @@
+_packages/
+adversarial/
+__pycache__/
+inherited/__pycache__/
+
+# Retained on disk only: ordinary exploratory solvers/prototype models.
+*_scout.py
+scout.py
+refine*.py
+beta*.py
+append_general.py
+add_preconditioner.py
+certify_tree.py
+cluster_model.py
+quartet_model.py
+split_model.py
+tilt_model.py
+
+# Ordinary continuation histories/candidates are not proof dependencies.
+*_continuation*.json
+*_responses*.json
+*bracket*.json
+scout22.json
+beta22*.json
+bulk_pair24*.json
+free_fiber26.json
+hermite24.json
+homotopy24*.json
+merge_predictor26.json
+preconditioned22*.json
+strip_append24.json
+suzuki_sign_scout.json

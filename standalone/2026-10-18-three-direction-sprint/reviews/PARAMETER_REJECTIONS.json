@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "actual_rejections": [
+    {
+      "mutation": "missing_order22",
+      "rejected": true,
+      "exception": "ValueError",
+      "reason": "exact degree22 schema"
+    },
+    {
+      "mutation": "lost_dimer_multiplicity",
+      "rejected": true,
+      "exception": "ValueError",
+      "reason": "complete17component multiplicity list"
+    },
+    {
+      "mutation": "lost_parameter",
+      "rejected": true,
+      "exception": "ValueError",
+      "reason": "complete17component multiplicity list"
+    },
+    {
+      "mutation": "duplicate_active_coordinate",
+      "rejected": true,
+      "exception": "ValueError",
+      "reason": "exact eleven-coordinate chart"
+    },
+    {
+      "mutation": "deleted_hub_edges",
+      "rejected": true,
+      "exception": "ValueError",
+      "reason": "exact hub and cube"
+    },
+    {
+      "mutation": "changed_proof_cube",
+      "rejected": true,
+      "exception": "ValueError",
+      "reason": "exact hub and cube"
+    },
+    {
+      "mutation": "nonpositive_dimer_coupling",
+      "rejected": true,
+      "exception": "ValueError",
+      "reason": "strict finite positive dimer coupling on full cube"
+    },
+    {
+      "mutation": "nonpositive_observable_weight",
+      "rejected": true,
+      "exception": "ValueError",
+      "reason": "both dimer observable weights positive on full cube"
+    },
+    {
+      "mutation": "floating_parameter",
+      "rejected": true,
+      "exception": "ValueError",
+      "reason": "floating or nonfinite input in proof data"
+    },
+    {
+      "mutation": "nonfinite_parameter",
+      "rejected": true,
+      "exception": "ValueError",
+      "reason": "floating or nonfinite input in proof data"
+    },
+    {
+      "mutation": "duplicate_json_key",
+      "rejected": true,
+      "exception": "ValueError",
+      "reason": "duplicate JSON key"
+    }
+  ],
+  "degree22_parameter_sha256": "e44fd75cdcb0289a411103cc2b4f82146bd94a971a358d4c00eab7e1ccba57f4",
+  "certifier_sha256": "7b510087e1726c55ee8c0bf51a3bdc575c89695410d1e95ec695f4d49443c8fc",
+  "fresh_source_or_model_existence_proved_by_this_check": false
+}

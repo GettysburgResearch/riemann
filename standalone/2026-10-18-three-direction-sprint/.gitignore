@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+theta/_packages/
+*.whl
+reviews/_scratch/
+
+# Ordinary optimizer traces and unused higher-degree prototypes stay local.
+reviews/*SCOUT.json
+reviews/CYCLIC26_CONTINUATION.json
+reviews/CYCLIC26_FIBER_REFINED.json
+reviews/CYCLIC26_REFINED.json
+reviews/MULTI28_*.json
+reviews/MULTI_CYCLE_CONTROLS.json
+reviews/*scout.py
+reviews/continue_cyclic.py
+reviews/refine_cyclic_fiber.py
+reviews/solve_cyclic.py
+reviews/prepare_cyclic_witness.py
+reviews/multi_cycle_driver.py
+reviews/multi_cycle_model.py
+reviews/check_multi_cycle_model.py
