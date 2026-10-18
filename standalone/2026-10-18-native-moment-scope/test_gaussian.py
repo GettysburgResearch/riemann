@@ -87,6 +87,8 @@ class DirectedPrimitiveTests(unittest.TestCase):
         def authenticate():
             A, B = G.exterior_counting_constants()
             for x, exact in counts.items():
+                I.require(I.exterior_ideal_count(x) == exact,
+                          'Hyperbola boundary count differs from the independent full divisor sum.')
                 I.require(A*x+B*arb(x).sqrt() >= exact,
                           'Exact exterior ideal count exceeds its proposed envelope.')
 
@@ -97,6 +99,21 @@ class DirectedPrimitiveTests(unittest.TestCase):
         with patch.object(G, 'exterior_counting_constants', return_value=(A*2/3, B)):
             with self.assertRaisesRegex(ValueError, 'Exact exterior ideal count'):
                 authenticate()
+
+        correct_count = I.exterior_ideal_count
+        with patch.object(I, 'exterior_ideal_count', side_effect=lambda x: correct_count(x)+1):
+            with self.assertRaisesRegex(ValueError, 'Hyperbola boundary count'):
+                authenticate()
+
+    def test_boundary_count_matches_every_small_hnf_prefix(self):
+        by_norm = [0]*513
+        for ideal in I.ideals_up_to(512):
+            if I.exterior(ideal):
+                by_norm[I.norm(ideal)] += 1
+        total = 0
+        for x, number in enumerate(by_norm):
+            total += number
+            self.assertEqual(I.exterior_ideal_count(x), total)
 
     def test_integer_powers_cover_zero_crossings_and_negative_values(self):
         zero_crossing = arb(0, 1)

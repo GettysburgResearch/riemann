@@ -51,13 +51,14 @@ with tau=1. They do not use the reflected theta source.
 | NATIVE_GAUSSIAN.json | Every ideal row Nu<=64 in the explicitly specified sextic Kummer family; all 19 complex rows; 11 scales D=2^j, 0<=j<=10 | 4096D, up to 4,194,304 | 8192D, up to 8,388,608; 384 rather than 256 bits |
 
 There is no lower truncation. Every omitted upper ideal column is covered
-by the proved absolute tail majorants (G2) and (G3c), evaluated with directed Arb
+by the proved absolute tail majorants (G2), (G3c), and the exact-boundary
+refinement (G4), evaluated with directed Arb
 operations. Exact norm-coefficient arrays are regenerated from the
 primitive field, source and local factors, with portable signed-int32 hashes.
 Actual ideal rows, generators and mask multiplicities are authenticated.
 On all thirteen principal production scales, a fresh 256-bit directed
-comparison gives a tail-budget ratio greater than 4.6 relative to (G2)
-alone. The endpoint ratios enclose 4.64242358 at D=1 and 6.57229171 at
+comparison gives a tail-budget ratio greater than 10 relative to (G2)
+alone. The endpoint ratios enclose 10.08973221 at D=1 and 27.68552291 at
 D=4096. Both bounds cover the same complete infinite source.
 
 The deposited principal enclosures contain all 195 corresponding longer
@@ -81,6 +82,11 @@ ideal counts at eight specified caps through 1,048,576. Treating the inert
 prime above two as norm two produces a wrong leading density and is rejected
 by those large counts. Actual HNF ideal enumeration has the separate 4,096
 cap stated above. The all-x count and tail proofs remain paper arguments.
+The exact hyperbola boundary count is additionally compared with actual
+HNF ideal counts at every integer cap from zero through 512, and with the
+separate full divisor sum at the same eight large caps. Enlarging that
+count by one is rejected. All eight directed-test methods run in both
+ordinary and optimized Python modes in the combined replay.
 
 The interval implementation is python-flint 0.9.0 / FLINT 3.6.0. Its directed
 arithmetic contract is an assumption. The longer replay is a fresh execution
@@ -99,6 +105,11 @@ FORMAL_RECEIPT.json; FORMAL.md states the finite and logical scope.
 The complete standalone Lake project was built from a fresh directory.
 The sixth lemma checks only the geometric exponent bootstrap, with the
 arithmetic prime-replica inequality supplied as an explicit premise.
+The exceptional-core counts, conditional maximal/vertical transfers, and
+sparse-exception criterion in
+PROOF.md §§9–9b are paper deductions, outside those six Lean lemmas. Reading
+the pinned related proposal is a scope comparison, not an independent
+review or a replay of its analytic proof.
 
 This is not a Lean proof of the infinite mask-average theorem, native
 Gaussian estimate, Hecke zero-free equivalence, growth-abscissa theorem,
@@ -120,7 +131,7 @@ sealed payload and the complete top-level inventory. The manifest is
 authenticated by the frozen Git commit, not by a self-reference.
 
 The complete 43-file snapshot was freshly extracted from a ZIP with SHA-256
-`bf50d71ac4528814c22338e59b300258c713eb6bd6575c5e734f62a80d022fa3`.
+`66fd76e4921802e0fe5efb0229c3dfd90e5332c77eb742c324a5f8e565f45bef`.
 Every extracted byte matched the snapshot, and its normal/optimized manifest
 checks passed. The full combined replay then passed in that fresh directory.
 Its emitted ten-stage execution record was copied back before final sealing;
@@ -136,3 +147,9 @@ The existing upstream CT compile-job status was read separately, at its
 exact pinned commit, and is typed as an external observation in the build
 receipt. Its separate Palomar preflight was skipped; no comparator success
 or new-packet verification is inferred from that observation.
+The local external Solution build did not complete: three dependency
+artifacts reported failed-to-create-file errors on long Windows paths.
+The remaining optional build was intentionally stopped after about two
+hours, with its cache preserved and tracked source unchanged. No local
+external theorem axiom closure is claimed. The independently completed
+six-lemma standalone build above has its own receipt.

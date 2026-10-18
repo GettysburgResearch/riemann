@@ -152,7 +152,37 @@ rationals, directed pi and square roots occur in A,B and U_(1/2); no
 floating approximation is used for the half exponent or field constants.
 The count proof, not a finite norm sample, justifies the infinite tail.
 
-The producer evaluates the right side of (G2) by Arb ball arithmetic and
+### Restore the exact negative boundary at an integer cutoff
+
+For an integer Y>=1 the hyperbola formula above computes I_F(Y) exactly
+using O(sqrt(Y)) integer operations. Apply it also at floor(Y/3),
+floor(Y/4), and floor(Y/12), to obtain the exact integer N_Y=I_F^S(Y).
+The routine exterior_ideal_count in ideals.py uses precisely these four
+hyperbola counts. It retains every ideal, rather than only the squarefree
+or unmasked ones.
+
+First dominate the absolute omitted source by the sum of W over ALL
+S-free ideals of norm greater than Y. For that larger positive sum the
+Stieltjes identity has its exact negative boundary term, giving
+
+    sum_(Nn>Y, n prime to S) |mu_F(n)chi_u(n)W(Nn/D)|
+       <= A U_1(Y,D)+B U_(1/2)(Y,D)-N_Y W(Y/D).           (G4)
+
+Indeed the larger sum equals -N_Y W(Y/D) plus the integral of I_F^S(t)
+against the nonnegative measure -dW(t/D). Bound only that integral by
+(G3a). This proves (G4), with no finite-tail assumption and no subtraction
+of a guessed signed-source count. The earlier proof of the hyperbola
+formula and inclusion-exclusion supplies the exact boundary count.
+
+The implementation retains (G2) and (G3c) and selects (G4) only when
+directed arithmetic proves it finite, positive, and strictly smaller than
+the current bound. Noninteger cutoffs keep the preceding bounds. The exact
+boundary count is checked at every integer cap from zero through 512
+against actual HNF ideal enumeration, and at eight caps through 1,048,576
+against the separate full divisor sum. A corrupted count enlarged by one
+is rejected by that independent gate.
+
+The producer evaluates the selected right side by Arb ball arithmetic and
 adds a symmetric radius at least its upper endpoint to each signed finite
 sum. Positivity, finite values and the decreasing-profile premise are
 strict acceptance gates. All normalizing constants, logarithms, exponentials,

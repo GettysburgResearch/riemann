@@ -91,6 +91,25 @@ concerns the separately pinned version-2 TeX. These are distinct source
 objects; a formal check of the exported 31/32 statements is not a claim
 that every version-2 lemma or this new packet has been formalized.
 
+## Related reciprocal-moment proposal: scope comparison only
+
+PR #984, *Research: actual reciprocal-moment asymptotics via a signed
+mollified approximation*, was read at the fixed commit
+`b6a29037a2be358294401d71d7305b0f402c2eea`:
+<https://github.com/GettysburgResearch/riemann/blob/b6a29037a2be358294401d71d7305b0f402c2eea/standalone/2026-10-18-reciprocal-moment-law/RECIPROCAL_MOMENTS.md>.
+The complete raw Markdown source was obtained and read; its SHA-256 is
+`b693fa123ce6b5e509d84db3785f9a95638f35d0026be87923b04458665aa238`.
+Its fixed-s good-family inverse-L law, common exceptional set, complete-
+family capped law, and final stated limitations were compared with the
+native target. No correctness verdict on its analytic proof is given and
+none of its analytic results is an input here. PROOF.md §§9–9b supply a
+separate elementary count of the lifted exceptional rows and a sufficient
+vertical reciprocal-moment adapter from the literal Mellin integral and
+Jensen's inequality, with the contour hypothesis still supplied. They
+preserve the distinct core and unrestricted-mask probability spaces.
+The sparse-full-row criterion reuses the native prime-replica bootstrap,
+with the number of surviving primes explicitly retained.
+
 ## Numerical arithmetic contract
 
 FLINT/Arb, accessed via python-flint 0.9.0, FLINT 3.6.0:

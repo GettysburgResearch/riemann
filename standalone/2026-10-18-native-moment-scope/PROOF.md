@@ -586,3 +586,183 @@ not improve that boundary or approach 1/2. Reusing (21) to claim an
 independent proof of CT-31/32 would be circular. The unconditional mask
 identities, average-mask lemma and exact abscissa classification above
 do not use CT-31/32 at all.
+
+## 9. How exceptional core rows lift to the complete native family
+
+The new reciprocal-moment proposal #984 concerns fixed-s inverse L-values
+on good sixth-power-free core rows, and capped values on the complete core
+family. Its own final section retains the exceptional-member and uncapping
+gaps. The following elementary count makes one part of that distinction
+quantitative. No analytic estimate from #984 is adopted here.
+
+Let E be ANY set of R distinct sixth-power-free ideals a with q(a)<=H,
+H>=1. It may depend on H. Let L_H(E) consist of all original rows
+u=a b^6 with q(u)<=H and a in E, including shared primes between a and b.
+Then
+
+    |L_H(E)| <= (6/5) C_F^(7/6) H^(1/6) R^(5/6).          (24)
+
+The right side is zero when R=0. For R>=1, list the core norms in increasing
+order, retaining ties as different ideals: q_1<=...<=q_R. Ideal counting
+gives j<=I_F(q_j)<=C_F q_j, hence q_j^(-1/6)<=C_F^(1/6)j^(-1/6).
+Unique sixth-power decomposition and the same ideal count therefore give
+
+    |L_H(E)| = sum_(a in E) I_F^S((H/q(a))^(1/6))
+             <= C_F H^(1/6) sum_(j=1)^R q_j^(-1/6)
+             <= C_F^(7/6) H^(1/6) sum_(j=1)^R j^(-1/6).
+
+The last sum is at most (6/5)R^(5/6), by the integral bound. This proves
+(24) without a prime-independence model or an extra coprimality condition.
+In particular, a bad-core count R=O(H^(1-eta)), with fixed 0<eta<=1, lifts to
+at most O(H^(1-5eta/6)) complete native rows. This is a count of rows only;
+it does not bound their possibly large contribution to an uncapped moment.
+
+For a SINGLE fixed core a_0, the exact count has the asymptotic
+
+    #{u: q(u)<=H, core(u)=a_0}
+             ~ kappa_F^S q(a_0)^(-1/6) H^(1/6).           (25)
+
+This follows directly from I_F^S(x)~kappa_F^S x. Thus an exceptional budget
+O(H^(1-eta)) in the FULL row family can contain every replica of any one
+fixed core whenever 0<eta<=5/6. In a core-family exceptional budget even that
+one core costs only one row. A density-one statement with such a budget
+alone supplies no control of the principal member. This is a quantifier
+observation, not a claimed error in #984, which states that limitation.
+
+There is a useful positive transfer if its stronger native premise is
+actually supplied. For fixed sigma>0 and k>=1, suppose a set G of flat
+cores at height H satisfies E_sigma(a;D)<=M for every a in G. Then (10)
+and partial summation of I_F(x)<=C_F x imply
+
+    sum_(q(u)<=H, core(u) in G) |A_u(D)|^(2k)
+                          <= C_(F,S,sigma,k) H D^(2k sigma) M^(2k). (26)
+
+Indeed sum_(q(a)<=H) q(a)^(-1/6)<=(6/5)C_F H^(5/6), and the restricted
+version of (10) is proved by the same separate b-sum for each a in G.
+The set G may depend on H,D; the hypothesis is a bound for the native
+MAXIMAL envelope at every retained core. Neither a moment law for 1/L at
+one fixed s nor a cap on that inverse value is this premise. Transferring
+such information to the entire Gaussian contour and scale supremum, and
+controlling the omitted cores in an uncapped sum, remain separate tasks.
+
+The exceptional contribution can also be retained explicitly, using a
+weaker bound instead of a cap. Absolute ideal counting, |chi_u(n)|<=1,
+and the fixed Gaussian give |A_u(D)|<=C_(F,S,c,tau) D for ALL u and D>=2.
+For example, partial summation against I_F(x)<=C_F x bounds the absolute
+sum by C_F D times the finite integral of y |W'_(c,tau)(y)| over y>0.
+Combining this row-uniform bound, (24), and (26), if E is the complement
+of G among all flat cores through H, gives the COMPLETE native estimate
+
+    sum_(q(u)<=H) |A_u(D)|^(2k)
+       <= C [H D^(2k sigma) M^(2k)
+                       + H^(1/6) R^(5/6) D^(2k)].        (27)
+
+In particular, if R=O(H^(1-eta)) and H=D^h, the second term is
+D^(h(1-5eta/6)+2k). This term is present even if the supplied good-core
+maximal envelope M is bounded. Equation (27) is a conditional transfer
+with the exceptional rows included, rather than an all-member inference
+from a density-one law. Its surviving error is an upper-bound limitation
+of this argument, not a lower-bound obstruction to other methods.
+
+Finally, #984's local coprimality probability specialized to a sixth-power-free core
+family is (1-1/q)/(1-q^(-6)). The mask mean (8) averages unrestricted b and
+uses the divisor probability 1/q instead. These are different populations
+and different observables. Their Euler constants cannot be substituted
+for one another without a further source-specific argument.
+
+### 9a. A weighted vertical reciprocal moment is a sufficient native adapter
+
+The preceding maximal premise can be replaced by an averaged vertical one,
+with its contour hypothesis kept explicit. Fix sigma>0 and p=2k, k>=1.
+Let G be a set of flat cores with q(a)<=H. For EVERY retained a, assume a
+zero-free boundary strictly to the left of sigma and the analytic contract
+of ANALYTIC_ADAPTER.md. Thus the literal Gaussian Mellin integral (2)
+shifts to Re s=sigma without residues, and its reciprocal integral below
+is absolutely convergent. These are additional hypotheses, not conclusions
+of a fixed-s good-family moment law.
+
+Put
+
+    dnu_tau(t) = sqrt(tau/pi) exp(-tau t^2) dt,
+    K = exp(tau(sigma-c)^2)/sqrt(4 pi tau),
+    J_p(G,H;sigma)
+      = integral_R sum_(a in G) q(a)^(-1/6)
+                       |1/L^S(sigma+it,chi_a)|^p dnu_tau(t).         (28)
+
+The measure nu_tau has total mass one. The full vertical line, the actual
+S-deleted reciprocal and the flat-core weight all occur in (28). Then
+
+    sum_(q(u)<=H, core(u) in G) |A_u(D)|^p
+       <= C_F C_sigma(p) K^p H^(1/6) D^(p sigma)
+                                             J_p(G,H;sigma).        (29)
+
+Here C_sigma(p) is precisely (8), and D>0. To prove this, write the shifted
+Mellin integral for an arbitrary physical scale x>0. The remaining phase
+has modulus one, so
+
+    x^(-sigma)|A_a(x)|
+       <= K integral_R |1/L^S(sigma+it,chi_a)| dnu_tau(t).
+
+Taking the supremum over ALL x>0 and applying Jensen at p>=1 gives
+
+    E_sigma(a;infinity)^p
+       <= K^p integral_R |1/L^S(sigma+it,chi_a)|^p dnu_tau(t).
+
+Apply the exact mask mean (7) separately at
+B=(H/q(a))^(1/6), sum over G, and use the nonnegative finite sum under
+the integral. This proves (29). If J_p<=C H^(5/6), it yields the natural
+good-core bound C' H D^(p sigma) without requiring a separate pointwise
+envelope for every core. For D>=2 the bad rows still contribute at most
+C'' H^(1/6)R^(5/6)D^p, by (24) and the absolute row bound used in (27).
+
+This supplies a precise sufficient adapter, not a proof of its hypotheses.
+Moments at one fixed t do not bound the full integral (28); a truncated
+vertical interval needs its complement controlled. A good set for each t
+need not be one common G, and zeros crossed by a contour shift would add
+residues. None of those steps is removed by inserting a cap. No result
+from #984 is silently substituted into (28) or (29).
+
+### 9b. The cofinal native criterion tolerates a small full-row exception set
+
+There is a positive refinement of Theorem A, beyond merely counting what
+an almost-all statement can omit. Fix h>0. Let K be an unbounded set of
+integer orders, and let e_k>=0 satisfy e_k/k->0 along K. Suppose for each
+fixed k in K there are sets B_(k,D) of actual rows u with q(u)<=D^h such that
+
+    |B_(k,D)| = o_k(D^(h/6)/log D),                    (D->infinity),
+    sum_(q(u)<=D^h, u not in B_(k,D)) |A_u(D)|^(2k)
+                       <<_(k,epsilon) D^(h+k+e_k+epsilon)
+                                      for EVERY epsilon>0.           (30)
+
+Then GRH holds for every represented primitive Hecke member. Conversely
+that GRH hypothesis gives (30), with e_k=0 and empty exception sets, by
+Theorem A. Thus the sparse-exception version is another equivalent open
+criterion. The retained native values in (30) are UNCAPPED.
+
+For the forward proof, fix any core a. Its prime replicas a p^6 at height
+D^h, with q(p) in (B/2,B] and B=(D^h/q(a))^(1/6), number at least
+c_a D^(h/6)/log D for all large D. Omit the finitely many p|a or p in S.
+For each fixed k, the first hypothesis in (30) leaves at least half of
+these replicas in the retained set, once D is sufficiently large. No
+uniformity in a or k is needed for this assertion. Dividing the second
+hypothesis by that surviving count, and absorbing log D into an arbitrary
+power, bounds their 2k-th mean at exponent
+
+    alpha_k = 1/2 + (5h/6+e_k)/(2k).
+
+The prime-replica convolution error is uniformly O_a(D^theta/B^theta)
+whenever the fixed row has the global O_a(x^theta) bound, theta>0.
+Use the same Minkowski inequality and finite bootstrap as in (20b), now
+over the surviving primes. Starting from the unconditional O_a(x) bound
+gives A_a(D)=O_(a,k,delta)(D^(alpha_k+delta)) for every delta>0.
+Since alpha_k->1/2, choose k after any desired positive exponent buffer.
+The Mellin argument (2) then excludes zeros in Re s>1/2 for this fixed
+member. The core was arbitrary, so this proves the forward implication.
+
+Likewise, Theorem B1's one-fixed-p principal criterion survives deleting
+o(D^b0/log D) masking ideals b at each D: a positive proportion of the
+prime ideals in its proof still remain. These are thresholds for the
+specified replica argument, not claimed necessary thresholds for every
+method. A single omitted CORE, in contrast, lifts to about H^(1/6) full
+rows by (25), which exceeds the allowance in (30). No good-core law from
+#984 is thereby promoted to this sparse-full-row premise.

@@ -218,6 +218,26 @@ def norm_mobius_coefficients(limit, signature=(), *, excluded=(2, 3), compact=Fa
     return out
 
 
+def exterior_ideal_count(cap):
+    """Exact number of ALL integral ideals prime to S through an integer cap.
+
+    This hyperbola path uses chi_-3 and O(sqrt(cap)) integer operations;
+    it does not enumerate HNF ideals or use Mobius coefficients.
+    """
+    require(isinstance(cap, int) and cap >= 0, 'Nonnegative integer ideal-count cap required.')
+
+    def total(x):
+        if x < 1:
+            return 0
+        y = isqrt(x)
+        first = sum(1 if (x//a) % 3 == 1 else 0 for a in range(1, y+1))
+        second = sum((1 if b % 3 == 1 else -1 if b % 3 == 2 else 0)*(x//b)
+                     for b in range(1, y+1))
+        return first+second-y*(1 if y % 3 == 1 else 0)
+
+    return total(cap)-total(cap//3)-total(cap//4)+total(cap//12)
+
+
 def mask_coefficients_from_principal(principal, signature):
     """Exact Euler-deletion recurrence, reusing one complete primitive source.
 

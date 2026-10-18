@@ -41,12 +41,24 @@ native Möbius moment target. This continuation advances the native side:
    At h=1,k=32 this improves #976's displayed S6 exponent from 385/6 to 63,
    a power gain of 7/6 in the complete native 64th moment. It recovers its
    input boundary, and is not an independent proof or improvement of it.
+5. **An explicit exceptional-core count.** If R flat cores are omitted at
+   height H, their full sixth-power replicas occupy at most
+   `O(H^(1/6) R^(5/6))` rows. A single fixed core has asymptotically a
+   positive constant times H^(1/6) replicas. PROOF.md §9 quantifies the
+   remaining distinction from #984's good-family and capped inverse-L
+   moments, and states the maximal native premise that would permit a
+   deterministic transfer with the exceptional contribution retained.
+   A second adapter gives the exact weighted vertical reciprocal moment
+   sufficient for that transfer, with the contour hypothesis explicit.
+   The cofinal native criterion also tolerates deletion of
+   `o(D^(h/6)/log D)` actual full rows; core exceptions have a different cost.
+   No analytic input from that proposal is used.
 
 Read [PROOF.md](PROOF.md) for the exact statements and complete deductions,
 and [ANALYTIC_ADAPTER.md](ANALYTIC_ADAPTER.md) for the conductor-uniform
 reciprocal lemma. The unconditional identities, mask-average lemma and
-abscissa classification do not assume CT's zero-free theorem. The last
-numerical-exponent corollary explicitly does.
+abscissa classification do not assume CT's zero-free theorem. The numerical
+native bound in PROOF.md §8 explicitly assumes that theorem.
 
 ## The latest theta source was checked directly
 
@@ -90,8 +102,9 @@ The deposited [GAUSSIAN.json](GAUSSIAN.json) encloses the actual tau=1,c=0
 native Gaussian at D=1,2,...,4096 along the powers of two, over EVERY
 principal masking ideal Nb<=64. It computes all norm coefficients through
 16,777,216 and adds a directed bound for the complete infinite upper tail.
-An explicit S-deleted ideal-count envelope sharpens that tail; the coarser
-bound is retained as a fallback and a wrong inert-prime density is rejected.
+An explicit S-deleted ideal-count envelope and exact Stieltjes boundary
+count sharpen that tail. The coarser bounds remain as fallbacks; a wrong
+inert-prime density or an overstated boundary count is rejected.
 The replay doubles that cutoff and raises precision from 256 to 384 bits.
 Individual-ideal low-scale sums are a separate source check. Deliberately
 omitting the tail, removing both conjugate primes instead of one, or losing

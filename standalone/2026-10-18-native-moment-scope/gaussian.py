@@ -80,6 +80,13 @@ def tail_bound(Y, D, c=0, tau=1):
     # Each expression is independently a full-tail majorant. A strict
     # directed comparison chooses the refinement only when certified smaller.
     bound = refined if refined < coarse else coarse
+    if isinstance(Y, int):
+        # First dominate the absolute source by ALL S-free ideals. Their
+        # exact tail has the negative Stieltjes boundary -I_F^S(Y)*W(Y/D).
+        # Restoring it sharpens G3 without truncating any omitted column.
+        boundary_refined = refined-I.exterior_ideal_count(Y)*w
+        if boundary_refined.is_finite() and boundary_refined > 0 and boundary_refined < bound:
+            bound = boundary_refined
     I.require(bound.is_finite() and bound > 0, 'Positive finite complete-tail bound required.')
     return bound
 

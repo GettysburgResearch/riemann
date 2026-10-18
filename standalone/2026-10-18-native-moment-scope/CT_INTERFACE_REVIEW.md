@@ -100,16 +100,28 @@ bound follows from source authentication.
 The AxiomMath/DedekindZetaZeroFree repository was located at commit
 `09afbb4ce6570c1615d58509dc197fc9f0956b7d`, and its public statement and
 file inventory were inspected. A local external build was then started;
-CT_BUILD_RECEIPT.json records its actual status. The existing public compile
+it did not complete. Three dependency artifacts reported failed-to-create-
+file errors on long Windows paths; the remaining build was intentionally
+stopped after about two hours, with its cache preserved. The tracked source
+remained unchanged. CT_BUILD_RECEIPT.json pins the diagnostics and final log.
+The existing public compile
 job at that exact upstream commit was also read and reported success;
 the separate Palomar preflight job was skipped. The receipt links the job
 and records this read-only observation. No completed LOCAL external
 theorem build or successful comparator run is claimed by this comparison,
 and it does not formally verify our new mathematics.
 
+An additional static source check compared both exported theorem signatures,
+the RayClassCharacter structure, and its IsPrincipal definition with the
+Challenge, exactly after whitespace normalization. All four agree; their
+source and normalized-block hashes are in the build receipt. This is a
+source-text result only, distinct from elaboration, kernel axiom inspection,
+or an accepted sandboxed-comparator verdict. Any completed local build or
+axiom inspection is reported separately in that receipt.
+
 The native moment theorems in PROOF.md depend on the standard Hecke source
 and the nonvanishing Gaussian Mellin multiplier. They do not assume CT's
-theta theorem. Its final, separately labeled §8 DOES adopt CT's printed
+theta theorem. Its separately labeled §8 DOES adopt CT's printed
 31/32 finite-order Hecke theorem as an additional input, to derive an
 explicit native high-moment improvement. That input is absent from §§1–7;
 the distinction is part of the theorem ledger, not an implicit dependency.
