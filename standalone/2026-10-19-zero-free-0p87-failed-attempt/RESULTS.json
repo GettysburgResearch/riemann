@@ -1,0 +1,55 @@
+{
+  "candidate_boundary": "87/100",
+  "cases": [
+    {
+      "R": "2363/3546",
+      "error_at_b_one_eighth": "37487/1418400",
+      "error_at_b_zero": "521/19700",
+      "error_b_slope": "-1/7092",
+      "error_ell_slope": "640/591",
+      "kappa": "3/4",
+      "m": "161/394",
+      "minimum_error": "7003/265950",
+      "missing_count_saving_at_b_one_eighth": "37487/1195002",
+      "r": "141/197",
+      "required_count_at_b_one_eighth": "214/337",
+      "t": "443/394",
+      "zM": "28/197",
+      "zS": "8/197"
+    },
+    {
+      "R": "2075/3114",
+      "error_at_b_one_eighth": "32879/1245600",
+      "error_at_b_zero": "457/17300",
+      "error_b_slope": "-1/6228",
+      "error_ell_slope": "562/519",
+      "kappa": "37/50",
+      "m": "989/2422",
+      "minimum_error": "6139/233550",
+      "missing_count_saving_at_b_one_eighth": "32879/1049418",
+      "r": "867/1211",
+      "required_count_at_b_one_eighth": "214/337",
+      "t": "389/346",
+      "zM": "172/1211",
+      "zS": "50/1211"
+    }
+  ],
+  "delta": "7/18",
+  "minimum_prime_length": "14/75",
+  "new_zero_free_region_proved": false,
+  "prime_amplitude_ratio": "1/2",
+  "raw_sieve_diagnostic": {
+    "at_v": "1",
+    "minimum": "7/9",
+    "warning": "A diagnostic of this raw kernel only; it does not rule out signed improvements or other estimates"
+  },
+  "remote_publication": "No new remote commit or PR created in this pass",
+  "reported_external_benchmark_interval": [
+    "866217617311048912841695763593823/990011621239586940331608185993823",
+    "108277202163881114105211970449229/123751452654948367541451023249229"
+  ],
+  "rh_proved": false,
+  "row_zero_real_part": "25/36",
+  "scope": "Exact sufficient-estimate arithmetic, not an arithmetic lower bound or analytic certification",
+  "status": "FAILED_NEW_REGION_ATTEMPT"
+}
