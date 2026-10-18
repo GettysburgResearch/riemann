@@ -1,0 +1,52 @@
+[
+  {
+    "gate": "three_quarters_exact",
+    "mutation": "pointwise_mollifier",
+    "rejected": true
+  },
+  {
+    "gate": "nearline_ceiling",
+    "mutation": "floor_order",
+    "rejected": true
+  },
+  {
+    "gate": "literal_nonunit_zero",
+    "mutation": "erase_masks",
+    "rejected": true
+  },
+  {
+    "gate": "mixed_character_ratio_identity",
+    "mutation": "same_character_dual",
+    "rejected": true
+  },
+  {
+    "gate": "power_removal_shared_primes",
+    "mutation": "extra_coprimality",
+    "rejected": true
+  },
+  {
+    "gate": "full_flat_convolution",
+    "mutation": "retain_unit_error",
+    "rejected": true
+  },
+  {
+    "gate": "negative_conductor_identity",
+    "mutation": "replace_negative_conductor",
+    "rejected": true
+  },
+  {
+    "gate": "principal_polar_term_separate",
+    "mutation": "principal_in_dual",
+    "rejected": true
+  },
+  {
+    "gate": "mixed_holder_fourth_factor",
+    "mutation": "omit_fourth_moment",
+    "rejected": true
+  },
+  {
+    "gate": "zero_member_cost_not_deleted",
+    "mutation": "delete_zero_member",
+    "rejected": true
+  }
+]

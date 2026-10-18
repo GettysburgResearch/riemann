@@ -1,0 +1,116 @@
+{
+  "coverage": {
+    "character_profiles": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        0
+      ]
+    ],
+    "computed_L_values": false,
+    "computed_zeta_zeros": false,
+    "convolution_cutoffs": [
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        8,
+        8
+      ]
+    ],
+    "cutoff_note": "Flat piecewise rational fixture checks algebra, not C-infinity analytic decay.",
+    "field_note": "Actual residue characters modulo 7 and 13; NOT the entire number-field L family.",
+    "finite_character_moduli": [
+      7,
+      13
+    ],
+    "independent_referee": false,
+    "mixed_ratio_columns": [
+      1,
+      25
+    ],
+    "power_removal_c_d": [
+      1,
+      15
+    ]
+  },
+  "groups": {
+    "actual_conductor_main": 936,
+    "all_fixed_residual_orders": 16,
+    "comparison_not_zero_free": 1,
+    "finite_convex_endpoint_samples": 1188,
+    "fractional_powering_rejected": 1,
+    "full_flat_convolution": 736,
+    "literal_nonunit_zero": 4,
+    "low_coefficients_cancel": 60,
+    "mixed_character_ratio_identity": 2500,
+    "mixed_holder_fourth_factor": 1,
+    "mixed_holder_integer_arrays": 420,
+    "nearline_branch": 400,
+    "nearline_ceiling": 400,
+    "nearline_complete": 400,
+    "nearline_main": 400,
+    "nearline_mixed": 400,
+    "negative_conductor_identity": 1,
+    "positive_mean_bound_allows_one_error": 16,
+    "power_removal_shared_primes": 900,
+    "powered_error_support": 404,
+    "principal_polar_term_separate": 1,
+    "subunit_dual_tail": 1332,
+    "three_quarters_exact": 7,
+    "zero_member_cost_not_deleted": 16
+  },
+  "nearline_examples": [
+    {
+      "a": "3/200",
+      "exponent": "19997/20000",
+      "p": 35,
+      "sigma": "101/200"
+    },
+    {
+      "a": "3/40",
+      "exponent": "797/800",
+      "p": 8,
+      "sigma": "21/40"
+    },
+    {
+      "a": "3/20",
+      "exponent": "197/200",
+      "p": 5,
+      "sigma": "11/20"
+    },
+    {
+      "a": "1/5",
+      "exponent": "73/75",
+      "p": 5,
+      "sigma": "17/30"
+    }
+  ],
+  "status": "PASS; finite algebra only, not an analytic proof",
+  "three_quarters": {
+    "dual_high": "1/2",
+    "dual_low": "7/10",
+    "main": "11/15",
+    "mixed": "11/15",
+    "mollifier": "1",
+    "principal": "3/10",
+    "total": "11/15"
+  },
+  "total_finite_predicates": 10540
+}
