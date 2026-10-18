@@ -1,0 +1,290 @@
+{
+  "counts": {
+    "actual_determinant_valuation": 18,
+    "balanced_parameters": 76,
+    "collapsed_grid_control": 1,
+    "common_zero_residue": 25,
+    "factorial_profile": 15,
+    "factorial_quotient": 31,
+    "full_row_divisibility": 57456,
+    "full_row_identity": 57456,
+    "gram_congruence": 18,
+    "hermite_determinant": 15,
+    "integer_mesh": 21,
+    "lcm_identity": 2279,
+    "mellin_ramp": 20,
+    "mobius_inverse": 128,
+    "one_sided_continuum": 20,
+    "ordinary_derivatives": 38,
+    "phase_gram_control": 3,
+    "prime_sum_coefficient": 1,
+    "primitive_integer": 2279,
+    "quadratic_gram": 30,
+    "rank_parameters": 15,
+    "resultant_fixture": 40,
+    "second_difference": 1372,
+    "slack_control": 1,
+    "split_inert_residues": 25,
+    "valuation_lower_bound": 1600,
+    "valuation_template": 3200,
+    "zero_multiplicity": 24
+  },
+  "quadratic_cases": [
+    {
+      "J": 5,
+      "R": 5,
+      "S": 3,
+      "a": 4,
+      "b": 4,
+      "d": -3,
+      "det_sha256": "47bde5b259b35910a9db2512b97923d5d3cdd2e26b67aa8eda421280e7523692",
+      "inert": []
+    },
+    {
+      "J": 6,
+      "R": 6,
+      "S": 2,
+      "a": 6,
+      "b": 3,
+      "d": -3,
+      "det_sha256": "3f491ef3ebcc44ccd60e249c83503d17f3a846e4d5ddef57a42e8cbac1cfe6f1",
+      "inert": [
+        {
+          "lower_template": 2,
+          "p": 5,
+          "valuation": 2
+        }
+      ]
+    },
+    {
+      "J": 8,
+      "R": 8,
+      "S": 4,
+      "a": 5,
+      "b": 4,
+      "d": -3,
+      "det_sha256": "4321c13b0c37a42eb6f98078fa6fb142585c516312d35d5fd55825fdafe4e360",
+      "inert": [
+        {
+          "lower_template": 18,
+          "p": 5,
+          "valuation": 19
+        }
+      ]
+    },
+    {
+      "J": 5,
+      "R": 5,
+      "S": 3,
+      "a": 4,
+      "b": 4,
+      "d": -1,
+      "det_sha256": "0760714d3d7f145460950db0c9c90b5d40bb3c74fa63fbce66878b348476cd6c",
+      "inert": [
+        {
+          "lower_template": 8,
+          "p": 3,
+          "valuation": 9
+        }
+      ]
+    },
+    {
+      "J": 6,
+      "R": 6,
+      "S": 2,
+      "a": 6,
+      "b": 3,
+      "d": -1,
+      "det_sha256": "8300cc31d80b175535c00af05f0ce53748883f50f28efe669efd71c6a47f5867",
+      "inert": [
+        {
+          "lower_template": 6,
+          "p": 3,
+          "valuation": 7
+        }
+      ]
+    },
+    {
+      "J": 8,
+      "R": 8,
+      "S": 4,
+      "a": 5,
+      "b": 4,
+      "d": -1,
+      "det_sha256": "687b1f9b6004a6145fd893591f34c61faf7681066a31a7773926292828b6abd5",
+      "inert": [
+        {
+          "lower_template": 38,
+          "p": 3,
+          "valuation": 38
+        },
+        {
+          "lower_template": 6,
+          "p": 7,
+          "valuation": 7
+        }
+      ]
+    },
+    {
+      "J": 5,
+      "R": 5,
+      "S": 3,
+      "a": 4,
+      "b": 4,
+      "d": 2,
+      "det_sha256": "bc3f01d8114d9758b5a93db529cbac9cc5a6dfbf98aa70f643a1087d4f47b497",
+      "inert": [
+        {
+          "lower_template": 8,
+          "p": 3,
+          "valuation": 10
+        }
+      ]
+    },
+    {
+      "J": 6,
+      "R": 6,
+      "S": 2,
+      "a": 6,
+      "b": 3,
+      "d": 2,
+      "det_sha256": "04e44e433fb9276e925f0312501ee0908c46efcc56fee3a3065e9869ab2ebd79",
+      "inert": [
+        {
+          "lower_template": 6,
+          "p": 3,
+          "valuation": 10
+        },
+        {
+          "lower_template": 2,
+          "p": 5,
+          "valuation": 2
+        }
+      ]
+    },
+    {
+      "J": 8,
+      "R": 8,
+      "S": 4,
+      "a": 5,
+      "b": 4,
+      "d": 2,
+      "det_sha256": "2950cafb09645184933f149dcd126f0bb3674ee0dd782c6673233208f2d4eb89",
+      "inert": [
+        {
+          "lower_template": 38,
+          "p": 3,
+          "valuation": 39
+        },
+        {
+          "lower_template": 18,
+          "p": 5,
+          "valuation": 18
+        }
+      ]
+    },
+    {
+      "J": 5,
+      "R": 5,
+      "S": 3,
+      "a": 4,
+      "b": 4,
+      "d": 5,
+      "det_sha256": "39141326652f9d48c63352a584de45adf18ec608d0a94d8e3facad1b053c5c32",
+      "inert": [
+        {
+          "lower_template": 8,
+          "p": 3,
+          "valuation": 8
+        }
+      ]
+    },
+    {
+      "J": 6,
+      "R": 6,
+      "S": 2,
+      "a": 6,
+      "b": 3,
+      "d": 5,
+      "det_sha256": "94b27317312bf6fdc263112bb18710cacee18fb3579fd8e3bffb9598605475c2",
+      "inert": [
+        {
+          "lower_template": 6,
+          "p": 3,
+          "valuation": 6
+        }
+      ]
+    },
+    {
+      "J": 8,
+      "R": 8,
+      "S": 4,
+      "a": 5,
+      "b": 4,
+      "d": 5,
+      "det_sha256": "8448a2188bfe5420587606c4a2f766a10ec316804bbe322b758ffb0d90dfb9f5",
+      "inert": [
+        {
+          "lower_template": 38,
+          "p": 3,
+          "valuation": 40
+        },
+        {
+          "lower_template": 6,
+          "p": 7,
+          "valuation": 7
+        }
+      ]
+    },
+    {
+      "J": 5,
+      "R": 5,
+      "S": 3,
+      "a": 4,
+      "b": 4,
+      "d": 13,
+      "det_sha256": "164c556b7a003b4eaeca260f2066a41d80162f4ef8ef9a55a07543ab8274de34",
+      "inert": []
+    },
+    {
+      "J": 6,
+      "R": 6,
+      "S": 2,
+      "a": 6,
+      "b": 3,
+      "d": 13,
+      "det_sha256": "9db6ee4f48d7c2d3c891936487646c84eae48c87bad54e3f7ff0f7e06bdcbacc",
+      "inert": [
+        {
+          "lower_template": 2,
+          "p": 5,
+          "valuation": 2
+        }
+      ]
+    },
+    {
+      "J": 8,
+      "R": 8,
+      "S": 4,
+      "a": 5,
+      "b": 4,
+      "d": 13,
+      "det_sha256": "f9bf76e9da7d7d6ce3720692951ce8d6aa51b95e0bec6d8134fe66c4f83509cf",
+      "inert": [
+        {
+          "lower_template": 18,
+          "p": 5,
+          "valuation": 20
+        },
+        {
+          "lower_template": 6,
+          "p": 7,
+          "valuation": 6
+        }
+      ]
+    }
+  ],
+  "scope": "15 complete quadratic grids; 15 rational Hermite matrices; declared finite integer ranges. No analytic certification, L-values or real zero data.",
+  "status": "PASS_FINITE_ONLY",
+  "total_predicates": 126207
+}
