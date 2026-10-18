@@ -1,0 +1,81 @@
+{
+  "center_moments_inside_source_intervals": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "checker_sha256": "9ecfb99250d2c2fad5c5bfc6002d84a2d8755738d32437c3b33bee88166d788c",
+  "complete_raw_moments_checked": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "edges": 280,
+  "enumerated_small_graph_configurations": 128,
+  "input_sha256": {
+    "chain_exact.py": "97700436cea54899ce14027bbd9a0a02dcd0a98da7cac382d903b5d600eb189c",
+    "chain_parameters.json": "69b4684910551e1dd6330253516e3ac6e8399cff634e55f1b6fcda4dbe2f8f92",
+    "theta_tight.json": "206cc313744e3ef24796f24e07e6232d8645ea77eb0235047a1730898da41a58"
+  },
+  "negative_controls": [
+    "deleting the strong edge changes variance",
+    "deleting the twelve weak edges changes variance"
+  ],
+  "normalization_and_symmetry": "PASS",
+  "not_proved": [
+    "existence of the nearby exact root",
+    "independent transcendental source bounds",
+    "an all-order approximation or RH"
+  ],
+  "role": "Independent exact graph-encoding check, not a contraction certificate",
+  "small_graph_raw_moments_checked": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "status": "PASS",
+  "vertices": 281
+}
