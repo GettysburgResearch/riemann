@@ -1,0 +1,64 @@
+{
+  "imported_theorem": {
+    "authors": "Charles M. Newman and Wei Wu",
+    "location": "Section2.5, equation21 and the following display",
+    "scope": "Finite zero-field ferromagnetic Ising, nonnegative real observable weights, real Fourier zeros; zero-weight hub also justified by positive-weight approximation and Hurwitz.",
+    "source": "https://arxiv.org/html/1901.06596v2#S2.SS5",
+    "title": "Constants of de Bruijn\u2013Newman type in analytic number theory and statistical physics"
+  },
+  "inherited_primitive": {
+    "commit": "d998605c0718e332ac503baf078704b862f8250e",
+    "exact_difference": "The local copy has one additional trailing newline. Removing exactly its last byte reproduces the source Git blob. Implementation unchanged.",
+    "local_bytes": 6534,
+    "local_path": "pr886_primitive.py",
+    "local_sha256": "2eba75b7fc82617342c20f6a06270462b6d82f1e7162f66847c029e7e5a9fa55",
+    "pull_request": 886,
+    "repository": "GettysburgResearch/riemann",
+    "source_bytes": 6533,
+    "source_git_blob": "712bb0f0114cbba85e8082c3130ebf09b53e8936",
+    "source_path": "standalone/2026-09-13-astra-theta-degree-sixteen/primitive.py",
+    "source_sha256": "c1b49fa5837546ab7521426b1dc7c1a1ab970c76863797880e3b3987118fb923"
+  },
+  "inherited_tree_core": {
+    "commit": "89c37b6707cb77fc5a86143ea98d8756759fdcbc",
+    "local_sha256": "edab764577f7c4a1553d1dfb3f19b838f536ff48273aba8cf91acb4289a8577a",
+    "pull_request": 974,
+    "role": "Generic exact forward differentiation, cumulant recurrence, and fair-sign cumulants. The new chain model is separate.",
+    "source_path": "standalone/2026-10-17-three-route-continuation/lee_yang/tree_core.py"
+  },
+  "new_certificate": {
+    "edges": 280,
+    "matched_even_orders": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18
+    ],
+    "name": "T18C",
+    "receipt_sha256": "df51d1773b151b6f89b316faa84416507b90cebb6d068ad6bd4947d1ddaac964",
+    "spins": 281,
+    "state": "proposed finite component; local replay passed; repository integration not asserted"
+  },
+  "schema": "T18C.sources.v1",
+  "scope": "original theta moments through18; complete source replay through20; no RH claim",
+  "six_index_source_predecessor": {
+    "change": "Extend even moment lists and cumulant arrays through20; same six explicit indices and98cells; all remainder formulas are proved through20 in PROOF.md.",
+    "commit": "89c37b6707cb77fc5a86143ea98d8756759fdcbc",
+    "pull_request": 974,
+    "source_path": "standalone/2026-10-17-three-route-continuation/lee_yang/theta_source.py"
+  },
+  "theta_replay": {
+    "bits": 320,
+    "cached_receipt_used_for_acceptance": false,
+    "cells": 98,
+    "degree": 120,
+    "explicit_indices": 6,
+    "maximum_moment_order": 20,
+    "receipt_sha256": "206cc313744e3ef24796f24e07e6232d8645ea77eb0235047a1730898da41a58"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "acceptance": "Every explicit predicate must pass; active under Python -O",
+  "arithmetic": "Exact integers and fractions; formal prime logarithms and gamma",
+  "checker_sha256": "fa7d06cd7d3657761079f7bfe3b77099ba7be97086b09183520bd9f5b1071220",
+  "checks": {
+    "coarse-coordinate": 392,
+    "coefficient-mass": 38,
+    "complete-native-cells": 7,
+    "farey-spacing": 82,
+    "grouped-source": 4203,
+    "integer-root": 20,
+    "native-balance": 14,
+    "native-balanced-reconstruction": 446,
+    "native-coefficient": 14,
+    "native-cutoff": 19,
+    "native-filtered-reconstruction": 446,
+    "native-prefix": 7,
+    "negative-control": 27,
+    "pair-sector": 4184,
+    "period-mean": 135,
+    "primitive-wave": 120,
+    "wave-covariance": 210
+  },
+  "larger_pair_coverage": {
+    "D": 2438,
+    "Y": 512,
+    "complete_included_ordered_pairs": 4080,
+    "removed_small_index_threshold": 4,
+    "scope": "source tuple inclusion only; no large energy replay",
+    "top_annulus": 262656
+  },
+  "native_cases": [
+    {
+      "Y": 1,
+      "cells": 2,
+      "complete_blocks": 2,
+      "detected_above_output_deletions": 0,
+      "detected_balance_deletions": 2,
+      "excluded_endpoint_defect": 1,
+      "low_high_tuple_checks": 1,
+      "strict_endpoint": 3
+    },
+    {
+      "Y": 2,
+      "cells": 6,
+      "complete_blocks": 4,
+      "detected_above_output_deletions": 1,
+      "detected_balance_deletions": 6,
+      "excluded_endpoint_defect": 1,
+      "low_high_tuple_checks": 3,
+      "strict_endpoint": 8
+    },
+    {
+      "Y": 3,
+      "cells": 12,
+      "complete_blocks": 7,
+      "detected_above_output_deletions": 5,
+      "detected_balance_deletions": 12,
+      "excluded_endpoint_defect": 0,
+      "low_high_tuple_checks": 5,
+      "strict_endpoint": 15
+    },
+    {
+      "Y": 4,
+      "cells": 20,
+      "complete_blocks": 10,
+      "detected_above_output_deletions": 4,
+      "detected_balance_deletions": 20,
+      "excluded_endpoint_defect": 1,
+      "low_high_tuple_checks": 14,
+      "strict_endpoint": 24
+    },
+    {
+      "Y": 7,
+      "cells": 56,
+      "complete_blocks": 25,
+      "detected_above_output_deletions": 41,
+      "detected_balance_deletions": 56,
+      "excluded_endpoint_defect": 0,
+      "low_high_tuple_checks": 13,
+      "strict_endpoint": 63
+    },
+    {
+      "Y": 10,
+      "cells": 110,
+      "complete_blocks": 48,
+      "detected_above_output_deletions": 89,
+      "detected_balance_deletions": 110,
+      "excluded_endpoint_defect": 1,
+      "low_high_tuple_checks": 38,
+      "strict_endpoint": 120
+    },
+    {
+      "Y": 15,
+      "cells": 240,
+      "complete_blocks": 100,
+      "detected_above_output_deletions": 209,
+      "detected_balance_deletions": 240,
+      "excluded_endpoint_defect": 0,
+      "low_high_tuple_checks": 29,
+      "strict_endpoint": 255
+    }
+  ],
+  "not_verified": [
+    "Infinite harmonic remainder inequality or asymptotic frequency estimate by computation",
+    "Any bound on the remaining high-product native amplitude",
+    "Any subquadratic coarse-energy recurrence or RH conclusion",
+    "An independent mathematical review or transcendental implementation"
+  ],
+  "periodic_replay": {
+    "complete_period_cells": 4203,
+    "denominator_range": "1 through 15 for primitive waves; 1 through 8 for complete source periods",
+    "source_stream_sha256": "fae8bb2ed44e376b8b7cb8eb23302b81c6cf5e941429d0d81fe16fbbc245ba58"
+  },
+  "proof_sha256": "9f79dd54fb7e8ff26723c1bc8853c4a220d852b32c8b900c71ba9d9e15b6e6c1",
+  "status": "PASS",
+  "total_checks": 10364
+}

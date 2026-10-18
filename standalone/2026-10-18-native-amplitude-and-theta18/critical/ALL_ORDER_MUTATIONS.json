@@ -1,0 +1,54 @@
+{
+  "checker_sha256": "8b313f466a1c28f580b5b4fa21c44c0b65bfc1577879f37c55802211a2e1f704",
+  "mutations": [
+    {
+      "gate": "CheckFailure: positive supporting-plane certificate",
+      "mutation": "wrong_plane_weight",
+      "returncode": 1
+    },
+    {
+      "gate": "CheckFailure: fourth reflected conductor exponent",
+      "mutation": "wrong_fe_sign",
+      "returncode": 1
+    },
+    {
+      "gate": "CheckFailure: retained native Type-II constant",
+      "mutation": "drop_type_ii_cross",
+      "returncode": 1
+    },
+    {
+      "gate": "CheckFailure: actual dense selected fourth-mean exponent",
+      "mutation": "dense_subset_lindelof",
+      "returncode": 1
+    },
+    {
+      "gate": "CheckFailure: complete two-term physical norm",
+      "mutation": "omit_diagonal_term",
+      "returncode": 1
+    },
+    {
+      "gate": "CheckFailure: actual scale-dependent principal shift",
+      "mutation": "old_mellin_shift",
+      "returncode": 1
+    },
+    {
+      "gate": "CheckFailure: full phase/mask identity base=7, power=6",
+      "mutation": "erase_power_mask",
+      "returncode": 1
+    },
+    {
+      "gate": "CheckFailure: full phase/mask identity base=2, power=7",
+      "mutation": "add_coprimality",
+      "returncode": 1
+    },
+    {
+      "gate": "CheckFailure: full phase/mask identity base=2, power=6",
+      "mutation": "erase_fixed_twist",
+      "returncode": 1
+    }
+  ],
+  "proof_sha256": "18ef9e2f04a6bc5a49fad26768916ca05152a6e513ae56bd12fabed5f4650191",
+  "runner_sha256": "faafadb4a7fa0f4def5d2ac8ad911d7e96bac5f801b5a6acaf967796280c4823",
+  "scope": "Nine separate optimized negative-control executions; not arithmetic counterexamples",
+  "status": "PASS"
+}
