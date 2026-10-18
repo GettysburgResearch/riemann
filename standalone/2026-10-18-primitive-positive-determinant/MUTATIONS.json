@@ -1,0 +1,34 @@
+{
+  "drop_prime_powers": {
+    "gate": "complete_prime_power_height",
+    "returncode": 2
+  },
+  "erase_projection": {
+    "gate": "primitive_projection",
+    "returncode": 2
+  },
+  "gram_factor": {
+    "gate": "gram_valuation_layers",
+    "returncode": 2
+  },
+  "lose_conjugate": {
+    "gate": "conjugate_disk_identity",
+    "returncode": 2
+  },
+  "omit_unit": {
+    "gate": "complete_unit_corrected_regrouping",
+    "returncode": 2
+  },
+  "unsigned_mobius": {
+    "gate": "complete_unit_corrected_regrouping",
+    "returncode": 2
+  },
+  "wrong_continuum": {
+    "gate": "one_sided_continuum",
+    "returncode": 2
+  },
+  "wrong_mass": {
+    "gate": "matrix_polynomial_identity",
+    "returncode": 2
+  }
+}
