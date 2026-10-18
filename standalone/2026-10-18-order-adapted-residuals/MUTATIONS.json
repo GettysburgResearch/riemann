@@ -1,0 +1,34 @@
+{
+  "erase-mask": {
+    "exit_code": 1,
+    "gate": "ValueError: local-masks: full sixth-power identity"
+  },
+  "false-all-orders": {
+    "exit_code": 1,
+    "gate": "ValueError: line-threshold: closed formula"
+  },
+  "force-coprime": {
+    "exit_code": 1,
+    "gate": "ValueError: local-masks: full sixth-power identity"
+  },
+  "missing-low-end": {
+    "exit_code": 1,
+    "gate": "ValueError: endpoint-guards: low main block is not deleted"
+  },
+  "old-length": {
+    "exit_code": 1,
+    "gate": "ValueError: specializations: complete exponent 2"
+  },
+  "omit-dual-high": {
+    "exit_code": 1,
+    "gate": "ValueError: specializations: mixed exponent 1"
+  },
+  "principal-as-dual": {
+    "exit_code": 1,
+    "gate": "ValueError: principal: pole contribution retained separately"
+  },
+  "wrong-conjugate": {
+    "exit_code": 1,
+    "gate": "ValueError: mixed-character: dual conjugation not collapsed"
+  }
+}
