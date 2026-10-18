@@ -1,0 +1,52 @@
+{
+  "files": {
+    "CHECKS.json": {
+      "bytes": 1497,
+      "git_blob": "2305d5ad4abc8bd21804e680f88c788d45df8cf1",
+      "sha256": "a1088a2d3348d43892dcb0029309eadd90ace99f70085cea6929528e11a2dcf5"
+    },
+    "CRITICAL_TRANSFER.md": {
+      "bytes": 10245,
+      "git_blob": "142d76adfbf0febd8426a522a9571c0c06525de7",
+      "sha256": "aa7abae0b9b55d20e409bbe389e62b31ea8d7814007bb19ebdb8525e7305f4f5"
+    },
+    "FINITE_TRANSLATIONS.md": {
+      "bytes": 7350,
+      "git_blob": "805d1f17e56cc7a098b0f2968d0123947221a271",
+      "sha256": "947c04befe25aae79c57e34a69774e0ca78900cf973d08473811374239dd916b"
+    },
+    "MUTATIONS.json": {
+      "bytes": 1534,
+      "git_blob": "fd4a6870a3d15181229af89614a5d8f406156eef",
+      "sha256": "fecdf8f83f01f998b6b3e0c5a4e17b3b46b297226c39a18fd8c228c919810677"
+    },
+    "README.md": {
+      "bytes": 3969,
+      "git_blob": "710f35e12ad844a0a5e32c780d17def216d0cb71",
+      "sha256": "5cb0d0bc65d689b226f16b25793d837492ccaaf1501a2f6db693ca313a63e750"
+    },
+    "SOURCES_AND_VALIDATION.md": {
+      "bytes": 7846,
+      "git_blob": "738f61707fa9e480508696c98e930a1003b7e25e",
+      "sha256": "17644de7ea21ad7004bd09142cfd44742eac891c88126820d9af1e6946720768"
+    },
+    "replay.py": {
+      "bytes": 1265,
+      "git_blob": "d302cfe580a5a729987c78e6d8fa31082e074d92",
+      "sha256": "c96a42b4b0cc8bd8ea6caee2850cb0bad3bf9de9cc9c840b735377549fca334f"
+    },
+    "run_mutations.py": {
+      "bytes": 2527,
+      "git_blob": "b685b78a597afd209d430a92693bebd5b3341f35",
+      "sha256": "a3390ed41c9873fcc96012f98147f90ae6a6e6ca6c4e293e973e0be742f91092"
+    },
+    "verify.py": {
+      "bytes": 9387,
+      "git_blob": "8e70e045fb3d619bcf54e99a649d3e6a49e87656",
+      "sha256": "71881258753b70d49cf487ddd9474decb1c5a0ee4757b6ee4c5abfeeaa0b76e7"
+    }
+  },
+  "parent_commit": "5fb1aa5b52065369bdb04c12d40333d99aa27387",
+  "schema": "critical-finite-translations-v1",
+  "status": "PROPOSED: no critical upper bound proved"
+}

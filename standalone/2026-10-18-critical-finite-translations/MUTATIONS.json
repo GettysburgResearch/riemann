@@ -1,0 +1,66 @@
+{
+  "results": [
+    {
+      "exit_code": 1,
+      "gate": "complete_convolution",
+      "mutation": "wrong_local_sign",
+      "result": "REJECTED"
+    },
+    {
+      "exit_code": 1,
+      "gate": "complete_convolution",
+      "mutation": "wrong_prime_power_tail",
+      "result": "REJECTED"
+    },
+    {
+      "exit_code": 1,
+      "gate": "unit_subtraction",
+      "mutation": "erased_unit_subtraction",
+      "result": "REJECTED"
+    },
+    {
+      "exit_code": 1,
+      "gate": "translation_cocycle",
+      "mutation": "lost_translation_weight",
+      "result": "REJECTED"
+    },
+    {
+      "exit_code": 1,
+      "gate": "complete_convolution",
+      "mutation": "false_coprimality",
+      "result": "REJECTED"
+    },
+    {
+      "exit_code": 1,
+      "gate": "stencil_constant",
+      "mutation": "wrong_stencil_sign",
+      "result": "REJECTED"
+    },
+    {
+      "exit_code": 1,
+      "gate": "shifted_pole_centering",
+      "mutation": "unsubtracted_shifted_pole",
+      "result": "REJECTED"
+    },
+    {
+      "exit_code": 1,
+      "gate": "exact_continuum_square",
+      "mutation": "wrong_continuum_shift",
+      "result": "REJECTED"
+    },
+    {
+      "exit_code": 1,
+      "gate": "critical_jacobian",
+      "mutation": "wrong_critical_jacobian",
+      "result": "REJECTED"
+    },
+    {
+      "exit_code": 1,
+      "gate": "same_norm_not_prime_power",
+      "mutation": "collapsed_ideal_prime_support",
+      "result": "REJECTED"
+    }
+  ],
+  "scope": "ten actual optimized corrupted subprocesses",
+  "status": "PASS"
+}
