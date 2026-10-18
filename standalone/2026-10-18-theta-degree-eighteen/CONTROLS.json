@@ -1,0 +1,26 @@
+{
+  "arithmetic_checks": 1250,
+  "exact_moment_equalities": 19,
+  "explicit_predicates": 1397,
+  "rejected_mutations": [
+    {
+      "mutation": "old-sign",
+      "rejected_by": "Jacobian contraction"
+    },
+    {
+      "mutation": "zero-preconditioner",
+      "rejected_by": "Jacobian contraction"
+    },
+    {
+      "mutation": "moved-amplitude",
+      "rejected_by": "Jacobian contraction"
+    },
+    {
+      "mutation": "antiferromagnetic",
+      "rejected_by": "Jacobian contraction"
+    }
+  ],
+  "same_author_and_backend": true,
+  "seven_spin_states": 128,
+  "status": "finite controls only"
+}
