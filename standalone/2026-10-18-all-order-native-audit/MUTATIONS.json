@@ -1,0 +1,60 @@
+{
+  "results": [
+    {
+      "exit_code": 1,
+      "gate": "full_sixth_power_masks",
+      "mutation": "erased_sixth_power_mask",
+      "result": "REJECTED"
+    },
+    {
+      "exit_code": 1,
+      "gate": "full_sixth_power_masks",
+      "mutation": "false_coprimality",
+      "result": "REJECTED"
+    },
+    {
+      "exit_code": 1,
+      "gate": "distinct_prime_characters",
+      "mutation": "collapsed_conjugate_prime",
+      "result": "REJECTED"
+    },
+    {
+      "exit_code": 1,
+      "gate": "central_known_values",
+      "mutation": "erased_product_length_term",
+      "result": "REJECTED"
+    },
+    {
+      "exit_code": 1,
+      "gate": "dual_endpoint_identity",
+      "mutation": "lost_dual_conductor",
+      "result": "REJECTED"
+    },
+    {
+      "exit_code": 1,
+      "gate": "native_excess_identity",
+      "mutation": "erased_full_row_length_term",
+      "result": "REJECTED"
+    },
+    {
+      "exit_code": 1,
+      "gate": "native_excess_identity",
+      "mutation": "falsely_bounded_native_excess",
+      "result": "REJECTED"
+    },
+    {
+      "exit_code": 1,
+      "gate": "symmetric_model_floor",
+      "mutation": "wrong_principal_mellin_shift",
+      "result": "REJECTED"
+    },
+    {
+      "exit_code": 1,
+      "gate": "complete_product_coefficients",
+      "mutation": "removed_native_product_sign",
+      "result": "REJECTED"
+    }
+  ],
+  "scope": "nine actual optimized corrupted subprocesses",
+  "status": "PASS"
+}

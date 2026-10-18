@@ -1,0 +1,114 @@
+{
+  "complete_squarefree_good_ideals_through_256": 73,
+  "counts": {
+    "all_character_orders_saturate": 396,
+    "balanced_endpoint_reconstruction": 288,
+    "below_diagonal_line": 48,
+    "central_known_values": 5,
+    "column_window": 1,
+    "complete_norm_fibers": 256,
+    "complete_product_coefficients": 1286,
+    "distinct_prime_characters": 1,
+    "dual_endpoint_identity": 5760,
+    "full_good_class_floor": 833,
+    "full_sixth_power_masks": 56160,
+    "functional_equation_exponents": 240,
+    "general_diagonal_line": 48,
+    "ideal_support_sign": 73,
+    "long_row_diagonal_corollary": 288,
+    "native_excess_identity": 96,
+    "native_moment_identity": 432,
+    "native_power_identity": 432,
+    "offcentral_known_values": 4,
+    "physical_row_census": 1,
+    "prime_conjugates": 1,
+    "principal_extraction_loss": 96,
+    "product_sign": 1286,
+    "product_support_count": 8,
+    "sublinear_excess_quantifiers": 3,
+    "symmetric_model_balance": 1,
+    "symmetric_model_floor": 119,
+    "unbalanced_model_no_gain": 1440
+  },
+  "exponent_diagnostics": {
+    "central_exponents": {
+      "1": "1",
+      "2": "7/6",
+      "3": "19/12",
+      "4": "2",
+      "8": "4"
+    },
+    "fixed_C_examples": [
+      {
+        "delta": "1/10",
+        "fixed_order_k": 111,
+        "root_excess": "11/222"
+      },
+      {
+        "delta": "1/100",
+        "fixed_order_k": 1101,
+        "root_excess": "11/2202"
+      },
+      {
+        "delta": "1/1000",
+        "fixed_order_k": 11001,
+        "root_excess": "11/22002"
+      }
+    ]
+  },
+  "not_computed": [
+    "L-values",
+    "zeros",
+    "infinite native moment",
+    "theta projection",
+    "RH proof"
+  ],
+  "physical_fixture": {
+    "column_ideals": 5,
+    "orders": [
+      {
+        "exact_full_54_row_moment": 252,
+        "k": 1,
+        "product_ideal_count": 5
+      },
+      {
+        "exact_full_54_row_moment": 2364,
+        "k": 2,
+        "product_ideal_count": 15
+      },
+      {
+        "exact_full_54_row_moment": 29772,
+        "k": 3,
+        "product_ideal_count": 35
+      },
+      {
+        "exact_full_54_row_moment": 436188,
+        "k": 4,
+        "product_ideal_count": 70
+      },
+      {
+        "exact_full_54_row_moment": 6977292,
+        "k": 5,
+        "product_ideal_count": 126
+      },
+      {
+        "exact_full_54_row_moment": 118118844,
+        "k": 6,
+        "product_ideal_count": 210
+      },
+      {
+        "exact_full_54_row_moment": 2077617612,
+        "k": 7,
+        "product_ideal_count": 330
+      },
+      {
+        "exact_full_54_row_moment": 37503305628,
+        "k": 8,
+        "product_ideal_count": 495
+      }
+    ],
+    "physical_rows": 54
+  },
+  "status": "PASS: exact finite algebra only; no analytic theorem certification",
+  "total_predicates_including_repeated_guards": 69602
+}
