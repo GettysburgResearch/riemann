@@ -99,3 +99,24 @@ A possible technical direction is to investigate the signed correlations of b(n)
 A finite exact rational-prime enumerator is included as check_primitive_euler.py. For K=Q(sqrt(-3)), Q=6, it verifies (6) at EVERY n<=3000, with 9000 exact integer predicates and ordinary/optimized matching output. Those finite identities do not certify the infinite Euler products or the classical RH-to-Mobius implication.
 
 No use is made of the proposed quasi-RH results, Dedekind 11/12 refinements, or an unproved 2k-native moment. The only external number-theoretic standard input in (9)'s converse is the classical equivalence of a fixed Dedekind zeta RH with square-root ideal Mobius cancellation. This note is meant to reveal a zero-preserving arithmetic target, not announce a proof of it.
+
+
+## 6. No-loss transfer of uniform additive and polynomial-phase bounds
+
+The same inverse Euler correction yields a useful, **unconditional implication between estimates**, not only an RH criterion. Fix beta>1/2. Suppose for all epsilon>0,
+
+    sup_(alpha in R) |sum_(n<=X)a_K(n)e(alpha*n)|
+                          <<_(epsilon) X^(beta+epsilon).  (10)
+
+Then b_K=a_K*v and (5), with any epsilon' smaller than epsilon but beta+epsilon'>1/2, give
+
+    sum_(n<=X)b_K(n)e(alpha*n)
+       =sum_(d<=X)v(d) sum_(m<=X/d)a_K(m)e(alpha*d*m)
+       << X^(beta+epsilon') sum_d |v(d)|d^(-beta-epsilon')
+       << X^(beta+epsilon'), uniformly in alpha.         (11)
+
+The reverse implication is IDENTICAL using w, because a_K=b_K*w. Therefore (10) is equivalent to the corresponding bound for b_K, at every fixed exponent beta>1/2 with the usual arbitrary epsilon loss. No exponent deterioration is caused by adding or removing the prime-power correction.
+
+More generally, the SAME implication and converse hold with e(P(n)) and the supremum over real polynomials of any fixed degree: for each d the phase P(dm) is another polynomial of that degree. This is a transfer conditional only on having the chosen uniform phase bound for one of the sequences. It does **not** manufacture that cancellation from the Euler identity.
+
+In particular, if #972's proposed uniform additive theorem for a_K is validated, its \`15/16+epsilon\` exponent under the imported common Dirichlet \`7/8\` strip transfers to the simple rational b_K at **exactly 15/16+epsilon**. This statement inherits all qualifications of the imported source and is **not** an improved zero-free boundary. It gives a concrete bridge for source-faithful experiments and polynomial-phase comparisons without treating b_K as a one-bounded multiplicative function.
