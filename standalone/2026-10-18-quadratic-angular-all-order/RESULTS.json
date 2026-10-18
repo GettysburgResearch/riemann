@@ -1,0 +1,89 @@
+{
+  "checks": [
+    {
+      "X": 20,
+      "allowed": 4,
+      "angular_indices": 21,
+      "chi_checks": 4,
+      "k": 1,
+      "maximum_relative_error": 0,
+      "moment": 4.00142076,
+      "output_ideals": 4,
+      "rays": 4,
+      "signed_coefficients": 4
+    },
+    {
+      "X": 20,
+      "allowed": 4,
+      "angular_indices": 21,
+      "chi_checks": 10,
+      "k": 2,
+      "maximum_relative_error": 0,
+      "moment": 39.66525205,
+      "output_ideals": 10,
+      "rays": 9,
+      "signed_coefficients": 10
+    },
+    {
+      "X": 20,
+      "allowed": 4,
+      "angular_indices": 21,
+      "chi_checks": 20,
+      "k": 3,
+      "maximum_relative_error": 1e-13,
+      "moment": 513.80858748,
+      "output_ideals": 20,
+      "rays": 16,
+      "signed_coefficients": 20
+    },
+    {
+      "X": 40,
+      "allowed": 5,
+      "angular_indices": 21,
+      "chi_checks": 5,
+      "k": 1,
+      "maximum_relative_error": 0,
+      "moment": 5.00437699,
+      "output_ideals": 5,
+      "rays": 5,
+      "signed_coefficients": 5
+    },
+    {
+      "X": 40,
+      "allowed": 5,
+      "angular_indices": 21,
+      "chi_checks": 15,
+      "k": 2,
+      "maximum_relative_error": 0,
+      "moment": 91.4464963,
+      "output_ideals": 15,
+      "rays": 13,
+      "signed_coefficients": 15
+    },
+    {
+      "X": 70,
+      "allowed": 9,
+      "angular_indices": 21,
+      "chi_checks": 9,
+      "k": 1,
+      "maximum_relative_error": 0,
+      "moment": 13.24753021,
+      "output_ideals": 9,
+      "rays": 9,
+      "signed_coefficients": 9
+    },
+    {
+      "X": 70,
+      "allowed": 9,
+      "angular_indices": 21,
+      "chi_checks": 45,
+      "k": 2,
+      "maximum_relative_error": 0,
+      "moment": 377.29600465,
+      "output_ideals": 45,
+      "rays": 41,
+      "signed_coefficients": 45
+    }
+  ],
+  "scope": "finite exact monoid and floating angular identity; not the infinite moment bound"
+}
