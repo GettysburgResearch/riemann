@@ -74,6 +74,24 @@ def phase_ideal(exps,data):
     return z
 
 
+
+def lambda_integer(n):
+    sign=1; d=2
+    while d*d<=n:
+        while n%d==0: sign=-sign; n//=d
+        d+=1
+    return -sign if n>1 else sign
+
+def primitive_generator(j,data):
+    z=1.+0j
+    for e,(p,q,side,phase) in zip(j,data):
+        if not e:continue
+        assert side!='0'
+        alpha=split_generator(p)
+        if side=='-':alpha=alpha.conjugate()
+        z*=alpha**e
+    return z
+
 def convolutions(allowed,k,mu=True):
     z={tuple([0]*len(allowed[0])):(1,1)}
     # Store integer coefficients, and count of signed-free decomposition paths
@@ -95,7 +113,7 @@ def experiment(X,k):
     if not allowed:return {'X':X,'k':k,'empty':True}
     coeff=convolutions(allowed,k)
     rays=defaultdict(complex)
-    nonzero=0;testedsigns=0; testchi=0
+    nonzero=0;testedsigns=0; testchi=0; overlaps=0
     for e,(w,c) in coeff.items():
         n=1
         for x,(_,q,_,_) in zip(e,data):n*=q**x
@@ -105,8 +123,23 @@ def experiment(X,k):
         assert n==a*a*__import__('functools').reduce(lambda acc,z:acc*z[1][1]**z[0],zip(j,data),1)
         assert lambda_ideal(e)==lambda_ideal(j)*chi3(a),('radial sign',e,a,j)
         testchi+=1
+        overlaps+=int(__import__("math").gcd(a, n//(a*a))>1 and c>0)
         rays[j]+=w
         nonzero+=int(w!=0)
+    # Quadratic-form Liouville sign for EVERY pair of primitive output rays.
+    det_pairs=0
+    entries=[]
+    for j in rays:
+        alpha=primitive_generator(j,data)
+        norm=round(alpha.real**2+alpha.imag**2)
+        entries.append((j,alpha,norm))
+    for j,alpha,n1 in entries:
+        for jj,beta,n2 in entries:
+            gamma=alpha*beta.conjugate()
+            T=round(2*gamma.real);h=round(2*gamma.imag/(3**.5))
+            assert T*T+3*h*h==4*n1*n2,(X,k,j,jj,T,h,n1,n2)
+            assert lambda_ideal(j)*lambda_ideal(jj)==lambda_integer(T*T+3*h*h)
+            det_pairs+=1
     # Equalities A_l(X)^k=sum_J B_J psi_l(J) for integer l, and
     # the Gaussian angular even moment equals its complete ray Gram expansion.
     checked=0;err=0.
@@ -123,9 +156,9 @@ def experiment(X,k):
     direct=sum(w*abs(sum(mu_ideal(e)*phase_ideal(e,data)**ell for e in allowed))**(2*k) for ell,w in zip(range(-L,L+1),ws))/zsum
     gram=sum(w*abs(sum(b*phase_ideal(j,data)**ell for j,b in rays.items()))**2 for ell,w in zip(range(-L,L+1),ws))/zsum
     assert abs(direct-gram)<1e-7*max(1,direct), (direct,gram)
-    return {'X':X,'k':k,'allowed':len(allowed),'output_ideals':len(coeff),'rays':len(rays),'signed_coefficients':testedsigns,'chi_checks':testchi,'angular_indices':checked,'maximum_relative_error':round(err,13),'moment':round(direct,8)}
+    return {'X':X,'k':k,'allowed':len(allowed),'output_ideals':len(coeff),'rays':len(rays),'signed_coefficients':testedsigns,'chi_checks':testchi,'overlap_witnesses':overlaps,'determinant_pairs':det_pairs,'angular_indices':checked,'maximum_relative_error':round(err,13),'moment':round(direct,8)}
 
 if __name__=='__main__':
-    cases=[(20,1),(20,2),(20,3),(40,1),(40,2),(70,1),(70,2)]
+    cases=[(20,1),(20,2),(20,3),(40,1),(40,2),(70,1),(70,2),(100,2)]
     out={'scope':'finite exact monoid and floating angular identity; not the infinite moment bound','checks':[experiment(*x) for x in cases]}
     print(json.dumps(out,sort_keys=True,indent=2))
