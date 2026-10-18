@@ -25,3 +25,11 @@ Stacked directly on [#972](https://github.com/GettysburgResearch/riemann/pull/97
 Read [PROOF.md](PROOF.md), [SIGNED_DETERMINANT.md](SIGNED_DETERMINANT.md), and [VALIDATION.md](VALIDATION.md).
 
 **What is new relative to the inherited work:** the complete class-group adapter, all-fixed-order/rectangular angular theorem with source-faithful caps and full Gaussian tails, and the exact high-order Liouville ray formula. The k=1 Eisenstein theorem and rational-ray idea are inherited from #972; the preceding higher CT theta moments are credited to #976. These estimates are not published as a solution to RH.
+
+
+## Stronger fixed-principal reduction: an unaveraged rational Euler source
+
+[PRIMITIVE_CORE_EQUIVALENCE.md](PRIMITIVE_CORE_EQUIVALENCE.md) proves a zero-preserving alternative target. For every fixed imaginary quadratic K (exclude rational primes 2,3 and those ramified), define
+\`b_K(n)=mu(n)2^omega(n)\` when n is squarefree and every prime factor splits in K, and 0 otherwise. Its Dirichlet series \`B(s)=prod_(p split)(1-2p^(-s))\` differs from \`1/zeta_K^S(s)\` by an Euler factor \`V\` for which BOTH V and 1/V are absolutely Dirichlet-summable on every \`Re s>1/2+delta\`. Explicit split and inert local factors are in the proof. Thus \`sum_(n<=X)b_K(n)<<_epsilon X^(1/2+epsilon)\` for all epsilon is **equivalent to RH for zeta_K**.
+
+This is a fully fixed rational sequence, with no angular average or class-group representatives. It is a **newly isolated criterion**, NOT a proof of square-root cancellation or a claim of literature priority. The companion finite checker validates 9,000 exact convolution identities in ordinary/optimized Python. The still-open target is printed explicitly. For K=Q(sqrt(-3)), the sum uses ONLY squarefree n whose primes are 1 mod 3, with weight mu(n)2^omega(n).
