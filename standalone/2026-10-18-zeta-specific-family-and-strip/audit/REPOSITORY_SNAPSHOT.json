@@ -1,0 +1,85 @@
+{
+  "observed_utc": "2026-10-18T19:28:20Z",
+  "repository": "GettysburgResearch/riemann",
+  "main_sha": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "main_scientific_baseline": "2026-09-06 reviewed consolidation; later PRs remain proposals",
+  "selected_prs": [
+    {
+      "number": 1000,
+      "title": "Recovery: publish primitive positive determinants and short-conductor zero budgets",
+      "head_sha": "6c4d5309d64978b420c2b897977d6db2ea01ce03",
+      "base_sha": "5569defd8d77f1f8f3586b326577aacb384ffb23",
+      "branch": "research/primitive-positive-determinant-20261018",
+      "base": "research/green-determinant-single-zero-20261018",
+      "status": "open",
+      "draft": true,
+      "url": "https://github.com/GettysburgResearch/riemann/pull/1000"
+    },
+    {
+      "number": 998,
+      "title": "Research: full-density signed replica capture with a uniform finite-horizon inverse",
+      "head_sha": "65a0e7e4016aad5aeb099973c0d079c6059a6c76",
+      "base_sha": "0162599b1373341b0b1622d1273c075da0f147b5",
+      "branch": "research/full-density-causal-capture-20261018",
+      "base": "research/joint-mollifier-recovery-continuation-20261018",
+      "status": "open",
+      "draft": true,
+      "url": "https://github.com/GettysburgResearch/riemann/pull/998"
+    },
+    {
+      "number": 996,
+      "title": "Research: recover native angular all-order moments, imaginary-quadratic second energy, and signed determinant targets",
+      "head_sha": "56ec8747ccf75d7fc19c2395a6523a664938b9f6",
+      "base_sha": "4fe7aea61e8bfd3a8ae14fd4daaf1292b4392e32",
+      "branch": "research/quadratic-angular-all-order-rebuild-20261018",
+      "base": "research/dirichlet-power-and-ray-cancellation-20261017",
+      "status": "open",
+      "draft": true,
+      "url": "https://github.com/GettysburgResearch/riemann/pull/996"
+    },
+    {
+      "number": 994,
+      "title": "Research: theta degree 20, complete native denominator bounds, and signed critical correlations",
+      "head_sha": "c93ca65a510b6acaf167f929b9bf7e67d742b05a",
+      "base_sha": "86c156baa3f10296a26e066f5f4d276776b79c27",
+      "branch": "research/theta20-native-cancellation-20261018",
+      "base": "research/native-amplitude-and-theta18-20261018",
+      "status": "open",
+      "draft": true,
+      "url": "https://github.com/GettysburgResearch/riemann/pull/994"
+    },
+    {
+      "number": 989,
+      "title": "Research: recover joint mollifier packet and prove density-free capped reciprocal laws",
+      "head_sha": "0162599b1373341b0b1622d1273c075da0f147b5",
+      "base_sha": "b6a29037a2be358294401d71d7305b0f402c2eea",
+      "branch": "research/joint-mollifier-recovery-continuation-20261018",
+      "base": "research/reciprocal-moment-law-20261018",
+      "status": "open",
+      "draft": true,
+      "url": "https://github.com/GettysburgResearch/riemann/pull/989"
+    },
+    {
+      "number": 986,
+      "title": "Research: stronger full-family signed residuals via mixed mollifier-dual moments",
+      "head_sha": "5b9a4ae1426938d02d469a6082793efedc4f8e21",
+      "base_sha": "b6a29037a2be358294401d71d7305b0f402c2eea",
+      "branch": "research/mixed-mollifier-residual-20261018",
+      "base": "research/reciprocal-moment-law-20261018",
+      "status": "open",
+      "draft": true,
+      "url": "https://github.com/GettysburgResearch/riemann/pull/986"
+    },
+    {
+      "number": 977,
+      "title": "Research: reuse zero-free selection to control reflected numerators",
+      "head_sha": "1b473843c920b004994a3ffb7e9b6b7f9ce54c05",
+      "base_sha": "3f1d2a07631eb6cca1f2716be01f64e874667639",
+      "branch": "research/zero-free-reflected-numerator-20261018",
+      "base": "research/ramified-domain-composition-20261018",
+      "status": "open",
+      "draft": true,
+      "url": "https://github.com/GettysburgResearch/riemann/pull/977"
+    }
+  ]
+}
