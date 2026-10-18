@@ -1,0 +1,45 @@
+{
+  "results": [
+    {
+      "mutation": "erase_zero_cap",
+      "rejected_at": "zero_receives_cap",
+      "returncode": 1
+    },
+    {
+      "mutation": "omit_bad_cap_cost",
+      "rejected_at": "explicit_large_cap_error",
+      "returncode": 1
+    },
+    {
+      "mutation": "unsquared_cauchy_gain",
+      "rejected_at": "cauchy_half_saving",
+      "returncode": 1
+    },
+    {
+      "mutation": "use_short_for_bad_count",
+      "rejected_at": "long_and_short_roles",
+      "returncode": 1
+    },
+    {
+      "mutation": "cap_inactive_on_good",
+      "rejected_at": "cap_can_be_active_on_good_row",
+      "returncode": 1
+    },
+    {
+      "mutation": "wrong_nfree_probability",
+      "rejected_at": "nfree_local_probability",
+      "returncode": 1
+    },
+    {
+      "mutation": "drop_sextic_aliases",
+      "rejected_at": "complete_cyclotomic_euler_moment",
+      "returncode": 1
+    },
+    {
+      "mutation": "lost_zero_multiplicity",
+      "rejected_at": "vertical_monomial_full_tail",
+      "returncode": 1
+    }
+  ],
+  "separate_optimized_processes": 8
+}
