@@ -1,0 +1,98 @@
+{
+  "OPEN_H_proved": false,
+  "actual_zeta_values_computed": false,
+  "coverage": {
+    "arithmetic": {
+      "complete_exterior_ideals": 157,
+      "field": "Q(sqrt(-3)), primes above 2 and 3 excluded",
+      "formal_h_orders": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "norm_cap": 512,
+      "prime_ideal_labels": 93,
+      "prime_power_ideals": 101
+    },
+    "pole": {
+      "single_shift_cancellation_controls": 1,
+      "synthetic_zero_multiplicities": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    "polynomial": {
+      "max_polynomial_degree": 48,
+      "orders": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "rational_analytic_fixtures": 96
+    }
+  },
+  "finite_only": true,
+  "groups": {
+    "all_p_error_exponent": 64,
+    "census_total": 1,
+    "cocycle": 156,
+    "discrete_norm": 24,
+    "endpoint_derivative": 24,
+    "endpoint_reproduction": 300,
+    "energy_constant_positive": 24,
+    "energy_constant_stationary": 24,
+    "formal_log_coefficients": 1092,
+    "ideal_census": 512,
+    "kernel_extremizer": 24,
+    "kernel_norm": 24,
+    "local_pole_normalizer": 128,
+    "markov_cost": 24,
+    "nonzero_shift_pole": 128,
+    "one_shift_cancellation": 1,
+    "pole_cancellation": 128,
+    "prime_power_derivative": 156,
+    "rational_error": 96,
+    "rational_interpolant": 96,
+    "rational_root_match": 96,
+    "root_quadrature": 600,
+    "scalar_mode_calibration": 24,
+    "shift_visibility": 1,
+    "simple_pole_constant": 1,
+    "unit_subtraction": 1,
+    "weight_identity": 24
+  },
+  "infinite_analytic_proofs_certified": false,
+  "predicate_count": 3773,
+  "status": "PASS"
+}

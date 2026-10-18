@@ -1,0 +1,62 @@
+[
+  {
+    "gate": "endpoint_reproduction",
+    "mutation": "endpoint",
+    "rejected": true,
+    "returncode": 2
+  },
+  {
+    "gate": "root_quadrature",
+    "mutation": "quadrature",
+    "rejected": true,
+    "returncode": 2
+  },
+  {
+    "gate": "kernel_norm",
+    "mutation": "kernel_norm",
+    "rejected": true,
+    "returncode": 2
+  },
+  {
+    "gate": "markov_cost",
+    "mutation": "raw_cost",
+    "rejected": true,
+    "returncode": 2
+  },
+  {
+    "gate": "unit_subtraction",
+    "mutation": "unit",
+    "rejected": true,
+    "returncode": 2
+  },
+  {
+    "gate": "prime_power_derivative",
+    "mutation": "mobius",
+    "rejected": true,
+    "returncode": 2
+  },
+  {
+    "gate": "cocycle",
+    "mutation": "shared_divisor",
+    "rejected": true,
+    "returncode": 2
+  },
+  {
+    "gate": "ideal_census",
+    "mutation": "conjugates",
+    "rejected": true,
+    "returncode": 2
+  },
+  {
+    "gate": "pole_cancellation",
+    "mutation": "continuum",
+    "rejected": true,
+    "returncode": 2
+  },
+  {
+    "gate": "shift_visibility",
+    "mutation": "single_shift",
+    "rejected": true,
+    "returncode": 2
+  }
+]
