@@ -1,0 +1,142 @@
+{
+  "general_order": [
+    {
+      "a": "3/5",
+      "error_exponent": "11/15",
+      "n": 6
+    },
+    {
+      "a": "5/8",
+      "error_exponent": "23/32",
+      "n": 8
+    },
+    {
+      "a": "7/11",
+      "error_exponent": "39/55",
+      "n": 10
+    },
+    {
+      "a": "9/14",
+      "error_exponent": "59/84",
+      "n": 12
+    },
+    {
+      "a": "29/44",
+      "error_exponent": "479/704",
+      "n": 32
+    },
+    {
+      "a": "61/92",
+      "error_exponent": "1983/2944",
+      "n": 64
+    }
+  ],
+  "groups": {
+    "actual-conductors": 192,
+    "convex-endpoints": 96,
+    "endpoint-guards": 1,
+    "fourth-floor": 2325,
+    "general-order": 472,
+    "integer-source": 558,
+    "line-threshold": 465,
+    "local-masks": 196,
+    "mixed-character": 1,
+    "mixed-holder": 264,
+    "principal": 1,
+    "specializations": 15
+  },
+  "predicate_count": 4586,
+  "scope": "Complete declared finite integer convolutions, local root masks, exact Holder and exponent algebra. No real L-values or zeros. General theorems use written proofs, not finite grids.",
+  "sextic_thresholds": [
+    {
+      "r": 1,
+      "sigma_threshold": "1/2"
+    },
+    {
+      "r": 2,
+      "sigma_threshold": "7/12"
+    },
+    {
+      "r": 3,
+      "sigma_threshold": "25/36"
+    },
+    {
+      "r": 4,
+      "sigma_threshold": "3/4"
+    },
+    {
+      "r": 5,
+      "sigma_threshold": "4/5"
+    },
+    {
+      "r": 6,
+      "sigma_threshold": "5/6"
+    },
+    {
+      "r": 7,
+      "sigma_threshold": "6/7"
+    },
+    {
+      "r": 8,
+      "sigma_threshold": "7/8"
+    },
+    {
+      "r": 9,
+      "sigma_threshold": "8/9"
+    },
+    {
+      "r": 10,
+      "sigma_threshold": "9/10"
+    },
+    {
+      "r": 11,
+      "sigma_threshold": "10/11"
+    },
+    {
+      "r": 12,
+      "sigma_threshold": "11/12"
+    }
+  ],
+  "specializations": [
+    {
+      "G": "11/15",
+      "a": "3/5",
+      "b": "7/10",
+      "c": "1/2",
+      "hi": "11/15",
+      "lo": "11/15",
+      "m": "1",
+      "mixed": "11/15",
+      "p": 3,
+      "r": 1,
+      "x": "3/5"
+    },
+    {
+      "G": "4/5",
+      "a": "1/5",
+      "b": "2/3",
+      "c": "1",
+      "hi": "4/5",
+      "lo": "4/5",
+      "m": "1",
+      "mixed": "4/5",
+      "p": 5,
+      "r": 2,
+      "x": "1/2"
+    },
+    {
+      "G": "175/194",
+      "a": "19/291",
+      "b": "159/194",
+      "c": "285/194",
+      "hi": "175/194",
+      "lo": "175/194",
+      "m": "209/194",
+      "mixed": "175/194",
+      "p": 11,
+      "r": 3,
+      "x": "293/582"
+    }
+  ],
+  "status": "FINITE ALGEBRA ONLY; proposed analytic deductions require independent review"
+}
