@@ -1,0 +1,74 @@
+{
+  "files": {
+    "EXPLORATION20.md": {
+      "bytes": 4116,
+      "sha256": "b1942789869532ce40947c480b3aaa206642616c7691f81d7994a3c74a1049dd"
+    },
+    "PROOF20.md": {
+      "bytes": 16423,
+      "sha256": "ddf054aa7915699ea923f21ff703ecb06ebad9eb8cebe4cd49862d688a833e22"
+    },
+    "README.md": {
+      "bytes": 3289,
+      "sha256": "a85aea84d827a08f2bb356950a6cf9ce01277c4760ca11bf0400f1b2e5e9d97d"
+    },
+    "SOURCES.json": {
+      "bytes": 5836,
+      "sha256": "b23dac99595f120303defb4f40e1a13404a88e38111d7ee7e22ad963f4ceb204"
+    },
+    "VALIDATION20.md": {
+      "bytes": 4023,
+      "sha256": "6d6afd8511a94e8bce79822042c98f58fc63b6f2da48502c1f9d61b0ba46df6e"
+    },
+    "certificate20.json": {
+      "bytes": 14253,
+      "sha256": "0cf3307c9493dc6b6c813e2aa0b18a6e1a637ab89ce6f3ffaf5719f161ddcc0c"
+    },
+    "certify20.py": {
+      "bytes": 5730,
+      "sha256": "7125cfc48903320b247bb7326794d0d41880b198613b89c0a5258693dbc6ac7c"
+    },
+    "check_connected.py": {
+      "bytes": 3679,
+      "sha256": "40bc152a27094745fd7973ab291bf4e5ba752cd4b45d37b04eb7de3a68182fab"
+    },
+    "connected_blocks.py": {
+      "bytes": 1515,
+      "sha256": "b376526980faf4e98fc9060695befa65e1a1c7c3b1f143b52b3c7dafa7c95978"
+    },
+    "finite_checks20.json": {
+      "bytes": 427,
+      "sha256": "d1eb1c3957d709a76560adc391db3fffe3b2cb6b9c322ffdefcabbf7e0684531"
+    },
+    "parameters20.json": {
+      "bytes": 4428,
+      "sha256": "2bfeb0b5ff376e2fb2b1f3773b726f4679af15dd01af0037ac2b10fa87db8bd4"
+    },
+    "pr886_primitive.py": {
+      "bytes": 6534,
+      "sha256": "2eba75b7fc82617342c20f6a06270462b6d82f1e7162f66847c029e7e5a9fa55"
+    },
+    "produce_center.py": {
+      "bytes": 2071,
+      "sha256": "54f4c663c9ab3dd054c2a24c8d32e724d5737c5c9c5b6b5fbe34216c13465215"
+    },
+    "replay.py": {
+      "bytes": 2853,
+      "sha256": "3bfea3db65118feb4ad2f24043a023fe961ac2070a88a4fd4935ff6cdc708e01"
+    },
+    "seed20.json": {
+      "bytes": 3778,
+      "sha256": "0c69b966f1ea95c72d1b0d6aa8954c35fb68b27956cb996acfdd387900039b22"
+    },
+    "theta_source.py": {
+      "bytes": 2731,
+      "sha256": "75a239c2724afbd6d5ab343a00c1f3c4d1e7062eaab9ff99b0379eecde27e92d"
+    },
+    "tree_core.py": {
+      "bytes": 3065,
+      "sha256": "edab764577f7c4a1553d1dfb3f19b838f536ff48273aba8cf91acb4289a8577a"
+    }
+  },
+  "schema": "T20D.payload-manifest.v1",
+  "scope": "Every listed payload is authenticated before accepting and corrupted subprocess replays. Manifest itself is bound by the separate replay receipt."
+}

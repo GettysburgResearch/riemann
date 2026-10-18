@@ -1,0 +1,307 @@
+{
+  "arithmetic": "Exact rational and formal prime-log/Euler-gamma coefficients",
+  "crossings_through_63": [
+    5,
+    6,
+    7,
+    10,
+    11,
+    15,
+    19,
+    22,
+    23,
+    26,
+    30,
+    35,
+    37,
+    38,
+    43,
+    46,
+    47,
+    57,
+    61,
+    62
+  ],
+  "gates": {
+    "centered_mode_real_identity": 552,
+    "complete_coefficient_cap": 29874,
+    "complete_coefficient_mass": 29874,
+    "complete_cyclotomic_centering": 27,
+    "complete_denominator_native_reconstruction": 30602,
+    "complete_error_cauchy_mass": 128,
+    "complete_mask_factorization": 29874,
+    "complete_ordered_product_fibers": 29874,
+    "complete_rough_core_native_reconstruction": 30602,
+    "complete_square_step_cell_count": 27,
+    "complete_strict_native_coefficients": 31330,
+    "exact_five_eighth_cutoff": 128,
+    "exact_positive_square_coefficient": 479,
+    "first_excluded_coefficient_defect": 27,
+    "independent_native_prefix": 728,
+    "jordan_polynomial_complete_coefficients": 174588,
+    "jordan_three_sector_complete_coefficients": 174588,
+    "linear_balance_reconstruction": 27,
+    "masked_reciprocal_cap": 316928,
+    "native_crossing_endpoint_cap": 20,
+    "old_low_product_annihilation": 3627,
+    "prime_cube_coefficient_vanishing": 4982,
+    "quadratic_log_balance": 27,
+    "ramanujan_independent_integer_formula": 552,
+    "three_sector_complete_centering": 128,
+    "unique_squarefree_core_decomposition": 24892,
+    "whole_integer_cell_floor": 1992,
+    "whole_integer_cell_mode": 552,
+    "zero_denominator_coefficient": 27
+  },
+  "panels": [
+    {
+      "Y": 2,
+      "annuli": 2,
+      "cells": 6,
+      "crossing": false,
+      "denominators": 4,
+      "products": 4,
+      "squarefree_core_cutoff": 1
+    },
+    {
+      "Y": 3,
+      "annuli": 2,
+      "cells": 12,
+      "crossing": false,
+      "denominators": 9,
+      "products": 9,
+      "squarefree_core_cutoff": 1
+    },
+    {
+      "Y": 4,
+      "annuli": 3,
+      "cells": 20,
+      "crossing": false,
+      "denominators": 16,
+      "products": 16,
+      "squarefree_core_cutoff": 2
+    },
+    {
+      "Y": 5,
+      "annuli": 3,
+      "cells": 30,
+      "crossing": true,
+      "denominators": 25,
+      "products": 25,
+      "squarefree_core_cutoff": 2
+    },
+    {
+      "Y": 6,
+      "annuli": 3,
+      "cells": 42,
+      "crossing": true,
+      "denominators": 36,
+      "products": 36,
+      "squarefree_core_cutoff": 2
+    },
+    {
+      "Y": 7,
+      "annuli": 3,
+      "cells": 56,
+      "crossing": true,
+      "denominators": 49,
+      "products": 49,
+      "squarefree_core_cutoff": 2
+    },
+    {
+      "Y": 8,
+      "annuli": 4,
+      "cells": 72,
+      "crossing": false,
+      "denominators": 64,
+      "products": 64,
+      "squarefree_core_cutoff": 3
+    },
+    {
+      "Y": 10,
+      "annuli": 4,
+      "cells": 110,
+      "crossing": true,
+      "denominators": 100,
+      "products": 100,
+      "squarefree_core_cutoff": 3
+    },
+    {
+      "Y": 11,
+      "annuli": 4,
+      "cells": 132,
+      "crossing": true,
+      "denominators": 121,
+      "products": 121,
+      "squarefree_core_cutoff": 3
+    },
+    {
+      "Y": 15,
+      "annuli": 4,
+      "cells": 240,
+      "crossing": true,
+      "denominators": 225,
+      "products": 225,
+      "squarefree_core_cutoff": 3
+    },
+    {
+      "Y": 16,
+      "annuli": 5,
+      "cells": 272,
+      "crossing": false,
+      "denominators": 256,
+      "products": 256,
+      "squarefree_core_cutoff": 4
+    },
+    {
+      "Y": 19,
+      "annuli": 5,
+      "cells": 380,
+      "crossing": true,
+      "denominators": 361,
+      "products": 361,
+      "squarefree_core_cutoff": 4
+    },
+    {
+      "Y": 22,
+      "annuli": 5,
+      "cells": 506,
+      "crossing": true,
+      "denominators": 484,
+      "products": 484,
+      "squarefree_core_cutoff": 4
+    },
+    {
+      "Y": 23,
+      "annuli": 5,
+      "cells": 552,
+      "crossing": true,
+      "denominators": 529,
+      "products": 529,
+      "squarefree_core_cutoff": 4
+    },
+    {
+      "Y": 26,
+      "annuli": 5,
+      "cells": 702,
+      "crossing": true,
+      "denominators": 676,
+      "products": 676,
+      "squarefree_core_cutoff": 4
+    },
+    {
+      "Y": 30,
+      "annuli": 5,
+      "cells": 930,
+      "crossing": true,
+      "denominators": 900,
+      "products": 900,
+      "squarefree_core_cutoff": 4
+    },
+    {
+      "Y": 32,
+      "annuli": 6,
+      "cells": 1056,
+      "crossing": false,
+      "denominators": 1024,
+      "products": 1024,
+      "squarefree_core_cutoff": 5
+    },
+    {
+      "Y": 35,
+      "annuli": 6,
+      "cells": 1260,
+      "crossing": true,
+      "denominators": 1225,
+      "products": 1225,
+      "squarefree_core_cutoff": 5
+    },
+    {
+      "Y": 37,
+      "annuli": 6,
+      "cells": 1406,
+      "crossing": true,
+      "denominators": 1369,
+      "products": 1369,
+      "squarefree_core_cutoff": 5
+    },
+    {
+      "Y": 38,
+      "annuli": 6,
+      "cells": 1482,
+      "crossing": true,
+      "denominators": 1444,
+      "products": 1444,
+      "squarefree_core_cutoff": 5
+    },
+    {
+      "Y": 43,
+      "annuli": 6,
+      "cells": 1892,
+      "crossing": true,
+      "denominators": 1849,
+      "products": 1849,
+      "squarefree_core_cutoff": 5
+    },
+    {
+      "Y": 46,
+      "annuli": 6,
+      "cells": 2162,
+      "crossing": true,
+      "denominators": 2116,
+      "products": 2116,
+      "squarefree_core_cutoff": 5
+    },
+    {
+      "Y": 47,
+      "annuli": 6,
+      "cells": 2256,
+      "crossing": true,
+      "denominators": 2209,
+      "products": 2209,
+      "squarefree_core_cutoff": 5
+    },
+    {
+      "Y": 57,
+      "annuli": 6,
+      "cells": 3306,
+      "crossing": true,
+      "denominators": 3249,
+      "products": 3249,
+      "squarefree_core_cutoff": 5
+    },
+    {
+      "Y": 61,
+      "annuli": 6,
+      "cells": 3782,
+      "crossing": true,
+      "denominators": 3721,
+      "products": 3721,
+      "squarefree_core_cutoff": 5
+    },
+    {
+      "Y": 62,
+      "annuli": 6,
+      "cells": 3906,
+      "crossing": true,
+      "denominators": 3844,
+      "products": 3844,
+      "squarefree_core_cutoff": 5
+    },
+    {
+      "Y": 63,
+      "annuli": 6,
+      "cells": 4032,
+      "crossing": false,
+      "denominators": 3969,
+      "products": 3969,
+      "squarefree_core_cutoff": 5
+    }
+  ],
+  "predicates": 917056,
+  "rho": "5/8",
+  "scope": "Finite algebra and complete declared cells; no analytic integral or asymptotic upper-bound certification",
+  "squarefree_core_schedule": "max(1, floor(log_2 Y))",
+  "status": "PASS",
+  "total_cells": 30602
+}

@@ -1,0 +1,91 @@
+{
+  "classical_inputs": [
+    {
+      "authors": "Charles M. Newman and Wei Wu",
+      "title": "Constants of de Bruijn-Newman type in analytic number theory and statistical physics",
+      "url": "https://arxiv.org/html/1901.06596v2",
+      "used_for": "Original theta Fourier identity, Section 2.1; weighted finite Ising Lee-Yang theorem, Section 2.5."
+    },
+    {
+      "authors": "Charles M. Newman and Wei Wu",
+      "title": "Lee-Yang Property and Gaussian Multiplicative Chaos",
+      "url": "https://link.springer.com/article/10.1007/s00220-019-03453-0",
+      "used_for": "Weighted finite Ising formulation and classical closure/product bounds for the conditional cofinal discussion."
+    }
+  ],
+  "read_date_utc": "2026-10-18",
+  "repository": "GettysburgResearch/riemann",
+  "review_scope": "Author checks alone do not establish independent review. Root reviewer receipts must identify the exact frozen payload hashes or commit.",
+  "roles": {
+    "certify20.py": "Fresh full source reconstruction, exact inverse, whole-box Jacobian, strict contraction; emit produces certificate, check reproduces it.",
+    "check_connected.py": "Independent full finite-center generating-polynomial assembly and direct 128-state fixture; not a second source backend.",
+    "parameters20.json": "Exact finite rational witness center; root equality is proved separately.",
+    "produce_center.py": "Standard-library Decimal producer; not acceptance arithmetic.",
+    "seed20.json": "Finite rational starting data for optional nondirected producer.",
+    "tree_core.py": "Only Dual, cumulants, UNIT and producer linear_solve are imported. Old helper graph definitions in inherited file are not used."
+  },
+  "schema": "T20D.sources.v1",
+  "scope": "Proposed finite degree-20 theta moment realization; no infinite feasibility or RH claim.",
+  "upstream": [
+    {
+      "git_blob_sha1": "c32015f110d10186538ffabcb4689ba5bbc060d0",
+      "head": "86c156baa3f10296a26e066f5f4d276776b79c27",
+      "path": "standalone/2026-10-18-native-amplitude-and-theta18/lee_yang/pr886_primitive.py",
+      "pr": 988,
+      "role": "Inherited unchanged; complete source/backend or generic exact dual/cumulant utilities.",
+      "sha256": "2eba75b7fc82617342c20f6a06270462b6d82f1e7162f66847c029e7e5a9fa55",
+      "url": "https://github.com/GettysburgResearch/riemann/blob/86c156baa3f10296a26e066f5f4d276776b79c27/standalone/2026-10-18-native-amplitude-and-theta18/lee_yang/pr886_primitive.py"
+    },
+    {
+      "git_blob_sha1": "fc51d49fe2bdbbde3fcb3928f1d82fd8baffbf53",
+      "head": "86c156baa3f10296a26e066f5f4d276776b79c27",
+      "path": "standalone/2026-10-18-native-amplitude-and-theta18/lee_yang/theta_source.py",
+      "pr": 988,
+      "role": "Inherited unchanged; complete source/backend or generic exact dual/cumulant utilities.",
+      "sha256": "75a239c2724afbd6d5ab343a00c1f3c4d1e7062eaab9ff99b0379eecde27e92d",
+      "url": "https://github.com/GettysburgResearch/riemann/blob/86c156baa3f10296a26e066f5f4d276776b79c27/standalone/2026-10-18-native-amplitude-and-theta18/lee_yang/theta_source.py"
+    },
+    {
+      "git_blob_sha1": "fefac86e70bff53266818c25035d8869dcdffdcc",
+      "head": "86c156baa3f10296a26e066f5f4d276776b79c27",
+      "path": "standalone/2026-10-18-native-amplitude-and-theta18/lee_yang/tree_core.py",
+      "pr": 988,
+      "role": "Inherited unchanged; complete source/backend or generic exact dual/cumulant utilities.",
+      "sha256": "edab764577f7c4a1553d1dfb3f19b838f536ff48273aba8cf91acb4289a8577a",
+      "url": "https://github.com/GettysburgResearch/riemann/blob/86c156baa3f10296a26e066f5f4d276776b79c27/standalone/2026-10-18-native-amplitude-and-theta18/lee_yang/tree_core.py"
+    },
+    {
+      "git_blob_sha1": "712bb0f0114cbba85e8082c3130ebf09b53e8936",
+      "head": "d998605c0718e332ac503baf078704b862f8250e",
+      "path": "standalone/2026-09-13-astra-theta-degree-sixteen/primitive.py",
+      "pr": 886,
+      "role": "Original primitive. The inherited #988 copy has exactly one extra final newline; algorithm unchanged.",
+      "sha256": "c1b49fa5837546ab7521426b1dc7c1a1ab970c76863797880e3b3987118fb923",
+      "url": "https://github.com/GettysburgResearch/riemann/blob/d998605c0718e332ac503baf078704b862f8250e/standalone/2026-09-13-astra-theta-degree-sixteen/primitive.py"
+    },
+    {
+      "git_blob_sha1": "1776cf95eb52e021503dc17e6027d420f769583d",
+      "head": "cf41f3f94a0f1df2bb503d22ab384bfc69288f33",
+      "path": "standalone/2026-10-18-theta-degree-eighteen/COFINAL_COMPACTNESS.md",
+      "pr": 981,
+      "role": "Classical conditional cofinal consumer; no cofinal feasibility premise is proved here.",
+      "url": "https://github.com/GettysburgResearch/riemann/blob/cf41f3f94a0f1df2bb503d22ab384bfc69288f33/standalone/2026-10-18-theta-degree-eighteen/COFINAL_COMPACTNESS.md"
+    },
+    {
+      "git_blob_sha1": "33132dd6754dc624c7c35ce36393f18990b0699e",
+      "head": "b586b518a8de634444c1e987a0bba03c593198f0",
+      "path": "standalone/2026-10-18-positive-loop-continuation/PROOF.md",
+      "pr": 992,
+      "role": "Read full local positive-loop proof; comparison and search inspiration, not a theorem dependency.",
+      "url": "https://github.com/GettysburgResearch/riemann/blob/b586b518a8de634444c1e987a0bba03c593198f0/standalone/2026-10-18-positive-loop-continuation/PROOF.md"
+    },
+    {
+      "git_blob_sha1": "79a9bd57dcdc4ab476ab3a1338240e5ce12f1ca8",
+      "head": "b586b518a8de634444c1e987a0bba03c593198f0",
+      "path": "standalone/2026-10-18-positive-loop-continuation/loop_model.py",
+      "pr": 992,
+      "role": "Read exact normalized loop model; comparison and search inspiration.",
+      "url": "https://github.com/GettysburgResearch/riemann/blob/b586b518a8de634444c1e987a0bba03c593198f0/standalone/2026-10-18-positive-loop-continuation/loop_model.py"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "complete_cells": 30602,
+  "normal_optimized_identical": true,
+  "predicates": 917056,
+  "report_sha256": "0da354dbc2a4ddf5a30169c0619584698f9c7b87e614ae2486b843c271a616fc",
+  "scope": "Exact finite source algebra and declared coverage, not infinite analytic certification",
+  "separately_executed_optimized_corruptions": [
+    {
+      "exit_code": 1,
+      "expected_gate": "complete_mask_factorization",
+      "mutation": "omit_overlap_assignment",
+      "rejected": true
+    },
+    {
+      "exit_code": 1,
+      "expected_gate": "centered_mode_real_identity",
+      "mutation": "drop_mode_center",
+      "rejected": true
+    },
+    {
+      "exit_code": 1,
+      "expected_gate": "linear_balance_reconstruction",
+      "mutation": "drop_balance_gamma",
+      "rejected": true
+    },
+    {
+      "exit_code": 1,
+      "expected_gate": "strict_square_endpoint",
+      "mutation": "include_square_endpoint",
+      "rejected": true
+    },
+    {
+      "exit_code": 1,
+      "expected_gate": "complete_denominator_native_reconstruction",
+      "mutation": "drop_q1_mode",
+      "rejected": true
+    },
+    {
+      "exit_code": 1,
+      "expected_gate": "above_output_product_retention",
+      "mutation": "delete_above_output_products",
+      "rejected": true
+    },
+    {
+      "exit_code": 1,
+      "expected_gate": "complete_ordered_product_fibers",
+      "mutation": "impose_coprime_inputs",
+      "rejected": true
+    },
+    {
+      "exit_code": 1,
+      "expected_gate": "complete_square_step_cell_count",
+      "mutation": "omit_final_cell",
+      "rejected": true
+    },
+    {
+      "exit_code": 1,
+      "expected_gate": "three_sector_complete_centering",
+      "mutation": "duplicate_core_sector",
+      "rejected": true
+    }
+  ],
+  "status": "PASS"
+}
