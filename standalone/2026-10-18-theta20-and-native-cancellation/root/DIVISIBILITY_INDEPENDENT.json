@@ -1,0 +1,25 @@
+{
+  "acceptance": "-9/5 < L_div < -17/10",
+  "bits": 100,
+  "cutoff": 4096,
+  "denominator": 1267650600228229401496703205376,
+  "exp_method": "positive Taylor sum, full geometric tail, reciprocal",
+  "exponential_terms": 160,
+  "finite_interval_integer": [
+    -2227625522553845036434679323200,
+    -2227613342644210875118020163760
+  ],
+  "full_interval_decimal_display": [
+    -1.7715054494689935,
+    -1.7430583147069783
+  ],
+  "full_interval_integer": [
+    -2245649946326949009971032972049,
+    -2209588918871106901581666514911
+  ],
+  "log_method": "convex midpoint/trapezoid rational integrals",
+  "panels": 512,
+  "scope": "infinite L_div constant only; not the energy asymptotic",
+  "status": "PASS",
+  "tail_upper_integer": 18024423773103973536353648849
+}

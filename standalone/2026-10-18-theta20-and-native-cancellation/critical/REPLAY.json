@@ -1,0 +1,26 @@
+{
+  "explicit_predicates": 2573,
+  "normal_optimized_identical": true,
+  "report_sha256": "8a314267209f9fe2b62dd6035ef2ff2dbb7ebad92bdf257fceda6dfa0e30628c",
+  "separately_executed_optimized_corruptions": [
+    {
+      "exit_code": 1,
+      "expected_gate": "ray beta constant",
+      "mutation": "wrong_beta",
+      "rejected": true
+    },
+    {
+      "exit_code": 1,
+      "expected_gate": "complete coefficient convolution",
+      "mutation": "drop_prime_powers",
+      "rejected": true
+    },
+    {
+      "exit_code": 1,
+      "expected_gate": "finite Gaussian kernel quadrature",
+      "mutation": "wrong_gaussian",
+      "rejected": true
+    }
+  ],
+  "status": "PASS"
+}

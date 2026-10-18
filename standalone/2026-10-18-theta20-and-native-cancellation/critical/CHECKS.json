@@ -1,0 +1,46 @@
+{
+  "explicit_predicates": 2573,
+  "finite_numerical_crosscheck": {
+    "arithmetic": "ordinary binary64 adaptive Simpson; not a directed certificate",
+    "cases": 8,
+    "integration_windows": "[-40,log T] for finite kernels; [-40,40] for continuum",
+    "max_absolute_difference": 2.1593837828959295e-14,
+    "scope": "finite Gaussian integrations only; no zeta or asymptotic test"
+  },
+  "not_checked": [
+    "Tao's analytic theorem",
+    "infinite zeta contour arguments",
+    "uniform growing additive offsets",
+    "complete critical energy upper bound"
+  ],
+  "sign_certificate": {
+    "complete_absolute_tail_upper": {
+      "decimal_approx_hi": 0.3295092122120277,
+      "decimal_approx_lo": 0.3295092122120277,
+      "denominator_power_of_two": 128,
+      "hi_numerator": "112126174653762586045618965144695691547",
+      "lo_numerator": "112126174653762586045618965144689515866"
+    },
+    "finite_partial": {
+      "decimal_approx_hi": -1.755474397042567,
+      "decimal_approx_lo": -1.755474397042567,
+      "denominator_power_of_two": 128,
+      "hi_numerator": "-597356982894751990818308725138413220013",
+      "lo_numerator": "-597356982894751990818308725138467753229"
+    },
+    "infinite_bracket": {
+      "decimal_approx_hi": -1.4259651848305392,
+      "decimal_approx_lo": -2.0849836092545946,
+      "denominator_power_of_two": 128,
+      "hi_numerator": "-485230808240989404772689759993717528466",
+      "lo_numerator": "-709483157548514576863927690283163444776"
+    },
+    "rounding": "outward dyadic integer intervals; exact rational tail bounds",
+    "strict_certified_bounds": [
+      "-21/10",
+      "-7/5"
+    ],
+    "terms_through": 512
+  },
+  "status": "PASS"
+}
