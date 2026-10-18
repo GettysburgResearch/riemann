@@ -766,3 +766,175 @@ specified replica argument, not claimed necessary thresholds for every
 method. A single omitted CORE, in contrast, lifts to about H^(1/6) full
 rows by (25), which exceeds the allowance in (30). No good-core law from
 #984 is thereby promoted to this sparse-full-row premise.
+
+## 10. Zero-density mixing further sharpens the imported-input native bound
+
+This additional SOURCE-QUALIFIED corollary is restricted to the UNTWISTED
+sextic family, with precisely the ideal indexing and character choices in
+de Faveri, arXiv:2610.04045v1, Corollary 1.5. No assertion about arbitrary
+fixed twists or other unspecified generator choices is imported. In
+addition to CT-31/32 from §8, adopt the following specialization of that
+printed primary zero-density theorem. Fix 11/12<=beta<31/32 and put
+
+    delta=(8 beta^2-10 beta+3)/(1-24(1-beta)^2),
+    g=1-delta,       A=1+d(1-beta)/(3-2beta),       d=[F:Q].
+
+The imported statement in this range is
+
+    DF-ZD: sum_(q(a)<=U)^flat N(beta,T,a)
+       <<_zeta U^(g+zeta) T^(A+zeta),
+                         U,T>=2, EVERY zeta>0.                       (31)
+
+Here N counts the actual L(s,chi_a) zeros with Re s>=beta and
+|Im s|<=T, with multiplicity. The source's upper real bound of one is
+harmless by Euler nonvanishing to its right. These are exactly the
+third-range norm and height exponents of Corollary 1.5. The fixed beta
+does not vary with D. The statement is for sixth-power-free ideal
+indices, not only squarefree ideals. This uses Corollary 1.5, not the
+separate mu_12 assumption of its second-moment Theorem 1.4. The relevant
+primary statement and proof were freshly read; the whole large-sieve
+proof is not independently reconstructed. No analytic theorem from #984
+is used as an input.
+The common bounded-height good-set strategy is also used in #984. The
+additional steps here transfer it to the literal Gaussian, keep its
+contour tails, and use density at every partial core cap in the weighted
+lifting.
+
+Under these TWO explicit inputs, for every fixed h>0, k>=1, epsilon>0,
+the complete original native Gaussian moment satisfies
+
+    sum_(q(u)<=D^h) |A_u(D)|^(2k)
+      << D^(h+2k beta+epsilon)
+           +D^(h max(g,1/6)+31k/16+epsilon),             D>=2.        (32)
+
+Both terms retain all ideal rows and the same fixed c,tau in (1).
+
+### 10a. A finite-height zero-free rectangle controls the native envelope
+
+Use one COMMON height T=H^rho for every partial norm cap U<=H. Let
+R_H(U) count exceptional cores of norm at most U having a zero in
+Re s>=beta, |Im s|<=4T. Include the unit core among the exceptions.
+By (31), uniformly for 1<=U<=H,
+
+    R_H(U) <= C [1+H^(rho(A+zeta)) U^(g+zeta)].                      (33)
+
+For U<2 a fixed finite count supplies this bound. By the exact conductor
+formula in DF §2.5.1, any other sixth-power-free exterior core has a prime
+in its primitive conductor outside S, and hence is nonprincipal.
+Finite Euler omissions have zeros only
+on Re s=0, so the same positive-real-part zero-free rectangle applies
+to the literal L^S used in (2).
+
+For every eta>0 choose rho,zeta>0 sufficiently small. Partial summation
+of (33), not merely its value at U=H, then gives
+
+    sum_(a exceptional, q(a)<=H) q(a)^(-1/6)
+                         <<_eta H^(max(g-1/6,0)+eta).                (33a)
+
+Indeed the sum equals H^(-1/6)R_H(H) plus
+(1/6) integral_1^H R_H(U)U^(-7/6)dU. The constant part is bounded.
+The other part is bounded by H^(rho(A+zeta)) times
+O(1+H^(max(g+zeta-1/6,0))(1+log H)). Taking rho,zeta small and absorbing
+the logarithm proves (33a). The same height must be kept in every use
+of (31). The resulting improvement over the arbitrary-set bound (24)
+uses the density theorem at EVERY partial core height.
+
+For any FIXED xi>0 with beta+xi<1, any lambda>0 and M>0, every retained
+core a with q(a)<=H satisfies
+
+    E_(beta+xi)(a;D) <<_(xi,lambda,M) H^lambda,
+                             2<=D<=H^M.                            (34)
+
+Here is the finite-height argument; no global zero-free assertion about
+that core is made. The analytic-log proof in ANALYTIC_ADAPTER.md applies
+on fixed-radius discs centered at 2+it for |t|<=2T, wholly inside the
+zero-free rectangle after taking its fixed margin. The Euler logarithm
+is bounded on the inner disc in Re s>1. Polynomial conductor/height
+bounds, Q_a<=C H and T=H^rho give O(log H) on the outer disc after
+Borel--Caratheodory. Three-circles, with target strictly inside, gives
+O((log H)^v), v<1, for log L. Hence
+
+    |1/L^S(s,chi_a)| << H^lambda
+            (beta+xi<=Re s<=2, |Im s|<=2T),
+
+uniformly in all retained a. The constants may depend on xi and rho.
+This is a bounded-height version of the same standard analytic-log
+argument; the inverse is not presumed small at a zero or outside the
+rectangle.
+
+For ANY physical x with 0<x<=D, shift the Gaussian integral from Re s=2
+to Re s=beta+xi only between heights -T and T. There are no poles of the
+reciprocal inside this rectangle. Keep BOTH horizontal pieces and BOTH
+infinite tails on Re s=2. The Gaussian bounds their total, after division
+by x^(beta+xi), by
+
+    C H^lambda max(1,D^(2-beta-xi)) exp(-c_tau T^2).
+
+The remaining vertical integral is at most C H^lambda in that same
+normalization. The displayed error is bounded for D<=H^M because
+T=H^rho, rho>0. Taking the supremum over 0<x<=D proves (34). In particular
+zeros above height 4T have not been ignored by an unjustified infinite
+contour shift. Their part of the source is retained on the original line.
+
+### 10b. Retain the exceptional cores with their CT envelope
+
+For every core through H, including the exceptional ones, CT-31/32 and
+ANALYTIC_ADAPTER.md give
+
+    E_(31/32+xi)(a;infinity) <<_(xi,lambda) H^lambda,
+
+with xi chosen also below 1/32. Split the literal lifting estimate (10)
+into the good and exceptional cores. The good weighted core count is
+O(H^(5/6)); the exceptional weighted count is bounded by (33a).
+Apply the mask mean at its respective contour exponent
+in each part. This gives
+
+    M_(2k)(D,H)
+      <= C H^(1+2k lambda) D^(2k(beta+xi))
+        +C H^(1/6+max(g-1/6,0)+eta+2k lambda) D^(2k(31/32+xi)).
+
+The exceptional height exponent, before the arbitrary small losses, is
+
+    1/6 + max(g-1/6,0) = max(g,1/6).
+
+Set H=D^h and M=1/h in (34). Choose xi, lambda and eta after the desired
+epsilon, so that their total exponent loss is less than epsilon. All
+parameters remain fixed as D tends to infinity. This proves (32), with
+constants allowed to depend on beta,h,k,epsilon,F,S,c,tau and the two inputs.
+The bounded remaining D interval is absorbed by enlarging the constant;
+it contains only finitely many row ideals and continuous Gaussian values.
+All repeated rows, all shared-prime masks and both Gaussian tails remain.
+
+For an explicit specialization take beta=61/64. Then delta=377/485,
+g=108/485>1/6, and (32) becomes
+
+    M_(2k)(D,D^h) << D^(h+61k/32+epsilon)
+                            +D^(108h/485+31k/16+epsilon).           (35)
+
+For the original tau=1 test, h=1,k=32, the first exponent is 62 and the
+second is 30178/485. Thus the complete 64th moment has upper exponent
+30178/485+epsilon, saving 377/485 over §8's CT-only exponent 63 and
+5657/2910 over #976's displayed S6 exponent 385/6.
+
+There is also a clean fixed-high-order consequence. Choose beta=325/336.
+Then delta=11461/13749>5/6 and g=2288/13749<1/6. Its strict inequality
+follows from 6*11461-5*13749=21>0. Since 31/32-beta=1/672, (32) implies
+
+    M_(2k)(D,D^h) << D^(h/6+31k/16+epsilon)
+                       for each FIXED pair k>=280h, h>0.            (36)
+
+Indeed h+2k beta <= h/6+31k/16 exactly when k>=280h. The height cost
+is the natural H^(1/6) replica count, with an arbitrary epsilon retained.
+For tau=1, comparison with #976's S6 exponent h/6+2k in this range gives
+a saving of k/16.
+Take the minimum with S6 whenever it is stronger. These are complete
+native improvements at the stated family scope, with no claim of the
+best historical bound.
+
+For fixed h, the displayed fixed-order exponents have limiting excess
+rate 15/16 as k tends to infinity. No simultaneous growing-k uniformity
+is claimed. The exceptional term retains the input boundary 31/32. A
+fixed principal core can remain exceptional at every H. Consequently no
+new memberwise zero-free fraction, principal critical estimate, RH proof
+or signed theta-to-native projection follows. The finite numerical and
+six-lemma formal checks do not certify this new analytic deduction.

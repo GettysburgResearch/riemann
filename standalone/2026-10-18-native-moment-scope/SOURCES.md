@@ -38,6 +38,26 @@ reconstruct the large-sieve proof. The S6 high-order envelope compared in
 PROOF.md §8 is the separately pinned #976 deduction, not a newly printed
 theorem attributed to de Faveri.
 
+Corollary 1.5 and its full final proof were also freshly read directly in
+the primary version-1 HTML. The obtained 1,039,449-byte HTML source has
+SHA-256 `7639be04b4023701377a4a339f2392994afdada8624b8f39e863fab7cbae91d4`.
+PROOF.md §10 explicitly adopts its UNTWISTED sixth-power-free zero-density
+estimate in the third range, retaining its complete height factor. The
+two explicit norm exponents are 108/485 at beta=61/64 and 2288/13749 at
+beta=325/336. The estimate is used at every partial norm cap with one
+common polynomial height, before weighted partial summation. The
+conductors in §2.5.1 show that the unit is the only potentially principal
+core. The fixed S and exact character choices of that theorem remain in
+scope; no arbitrary twist or generator change is presumed to have the
+same density theorem. This input is combined with CT-31/32 through a
+written finite-height Gaussian contour argument and the exact exceptional-
+core lifting estimate. Neither primary deep proof is independently rebuilt,
+and the six Lean lemmas and finite data do not certify this analytic
+corollary. The separate second-moment Theorem 1.4 is not used.
+The common bounded-height good-set construction is also used in #984;
+the additional native contour and weighted exceptional-core calculation
+are written out here, rather than claiming that strategy as a discovery.
+
 Dean Cureton and Jesse Thorner, *A quasi-Riemann hypothesis for Dedekind
 zeta functions*, Hexagon 2610.00200v2:
 
@@ -54,6 +74,7 @@ formulas, quadratic-family check and localized Fourier proof were read.
 CT_INTERFACE_REVIEW.md gives the exact limited verdict. PROOF.md §§1–7
 do not use CT's zero-free conclusion. Its §8 explicitly imports the printed
 31/32 finite-order Hecke theorem and proves the displayed native consequence.
+Section 10 retains that input and adds the named primary DF density estimate.
 Neither CT's complete deep proof nor the cited upstream local theory was
 independently reconstructed for that deduction.
 

@@ -41,6 +41,14 @@ native Möbius moment target. This continuation advances the native side:
    At h=1,k=32 this improves #976's displayed S6 exponent from 385/6 to 63,
    a power gain of 7/6 in the complete native 64th moment. It recovers its
    input boundary, and is not an independent proof or improvement of it.
+   PROOF.md §10 then mixes the primary DF zero-density theorem with that
+   CT envelope, for the exact untwisted DF sextic family. It further gives
+   `D^(h+61k/32+epsilon) + D^(108h/485+31k/16+epsilon)`.
+   At h=1,k=32 the exponent is 30178/485, a gain of 5657/2910 over #976's
+   displayed S6 exponent. For each fixed k>=280h it also gives
+   `D^(h/6+31k/16+epsilon)`, retaining the natural replica height cost.
+   Both imported inputs, every partial core height and the finite-height
+   contour argument are explicit; every exceptional core is retained.
 5. **An explicit exceptional-core count.** If R flat cores are omitted at
    height H, their full sixth-power replicas occupy at most
    `O(H^(1/6) R^(5/6))` rows. A single fixed core has asymptotically a
@@ -58,7 +66,8 @@ Read [PROOF.md](PROOF.md) for the exact statements and complete deductions,
 and [ANALYTIC_ADAPTER.md](ANALYTIC_ADAPTER.md) for the conductor-uniform
 reciprocal lemma. The unconditional identities, mask-average lemma and
 abscissa classification do not assume CT's zero-free theorem. The numerical
-native bound in PROOF.md §8 explicitly assumes that theorem.
+native bounds in PROOF.md §§8,10 explicitly assume that theorem; §10 also
+adopts the separately stated primary DF zero-density estimate.
 
 ## The latest theta source was checked directly
 

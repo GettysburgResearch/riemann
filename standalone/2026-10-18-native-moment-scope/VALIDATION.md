@@ -110,6 +110,11 @@ sparse-exception criterion in
 PROOF.md §§9–9b are paper deductions, outside those six Lean lemmas. Reading
 the pinned related proposal is a scope comparison, not an independent
 review or a replay of its analytic proof.
+The additional source-qualified bound in PROOF.md §10 is also a PAPER
+deduction. Its freshly read primary DF density theorem, finite-height
+contour argument and mixing with CT-31/32 are outside the computational
+and Lean checks. It was added after the numerical replay; all computational
+payloads remain byte-identical to that tested extraction.
 
 This is not a Lean proof of the infinite mask-average theorem, native
 Gaussian estimate, Hecke zero-free equivalence, growth-abscissa theorem,
