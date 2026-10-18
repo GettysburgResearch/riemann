@@ -1,0 +1,169 @@
+\section{Source-qualified boundary proposals and an exact failed comparison}\label{sec:boundaries}
+
+The components above must be distinguished from a zero-free theorem. This section records the strongest relevant broad-field proposal, the separate quadratic prime-bias proposal, and the failed ordinary-$0.87$ comparison. Their scopes are not interchangeable. In particular, a proposed boundary for every number field need not improve an already reported, narrower ordinary-zeta boundary.
+
+\subsection{The proposed all-number-field comparison}
+The frozen composition \cite{R977} proposes nonvanishing for every Dedekind zeta function on
+\begin{equation}\label{eq:271}
+ \Re s>271/300,\qquad s\ne1,
+\end{equation}
+and the same strict region for finite-order Hecke $L$-functions. It explicitly depends on new analytic adapters in preceding research branches. This manuscript does not independently reconstruct those adapters, and therefore records the conclusion as source-qualified rather than as a newly certified theorem.
+
+The main physical input is the proposed short-support reflection estimate
+\begin{equation}\label{eq:short-reflection-contract}
+ \abs{I(X,Y,Z)}\ll_\eta Z^\eta
+       \left[(XY+(XY)^2/Z)(X^{-1}+Y^{-1})\right]^{1/2}.
+\end{equation}
+It retains the diagonal $XY$, the full cube variable, all local auxiliary ideals, and effective lengths below one. Its use is not justified by substituting new parameters into a long-support corollary. The other main adapter is an enlarged holomorphy domain for the exact correction factor in the Poisson expansion
+\[
+ X^{1/2-z}Z^{\xi+z-1}Y^{w-1}q_u^{-z}\zeta_F^S(6z)
+          \frac{L_F^S(w,\chi_u)H_u(\xi,w,z)}{L_F^S(\xi,\overline\chi_u)}.
+\]
+For $x=\Re\xi$, $y=\Re w$, the adopted domain is
+\begin{gather}\label{eq:correction-domain}
+ x,y,z>0,\quad x\ge1/2,\quad 6z+y>1,\quad x+6z>1,\quad x+y>1,\notag\\
+ x+y+6z>2,\qquad 6x+6z>5.
+\end{gather}
+The finite-$S$, ramified, and full-norm character conventions are essential. The source also adopts a complete second numerator moment and selected-character density estimates with polynomial height dependence. None is an estimate for an unrestricted reciprocal moment.
+
+The new use of these inputs is to reflect a numerator into the \emph{same} selected zero-free rectangle already used for its denominator. At a selected threshold $\tau$, the contour is $x=\tau+3e$, $y=1-\tau-e$, $z=1/3$. The functional equation changes the numerator to $L(\tau+e-\ii t,\overline\chi_u)$. Both signs of its analytic logarithm are then controlled in the buffered rectangle. The numerator ordinates and denominator ordinates are separately truncated; the claim does not extend this bound to arbitrary height tails.
+
+For the exact exponent comparison, take
+\[
+ a=21/50,\qquad h=1-a=29/50,\qquad \vartheta=a/2=21/100,
+ \qquad X=Y=Z^a.
+\]
+There are 851 thresholds $\sigma_j=63/100+j/2500$, $0\le j\le850$. A middle class has density at $\sigma_j$ and zero-freeness at $\tau=\sigma_{j+1}$. Its central exponent, before the reserved small losses, is
+\begin{equation}\label{eq:middle-exponent}
+ c_j=h(2\tau+g_j)+a-3/2.
+\end{equation}
+On $7/10\le\sigma\le9/10$, the adopted selected-fourth density is
+\[
+ g_4(\sigma)=\frac{468\sigma^2-741\sigma+271}
+                  {6(36\sigma^2-75\sigma+31)}.
+\]
+Elsewhere the source uses $g_{\mathrm{DF}}=1-\delta_{\mathrm{DF}}$, with $q=2\sigma-1$ and
+\[
+ \delta_{\mathrm{DF}}=\begin{cases}
+ q/(4-6q),&\sigma\le2/3,\\
+ \dfrac{q\{36q-6(6\sigma-2)+3\}}
+ {36q(3-2\sigma)-24\sigma+2},&2/3\le\sigma\le11/12,\\[3pt]
+ \dfrac{8\sigma^2-10\sigma+3}{1-24(1-\sigma)^2},&\sigma\ge11/12.
+ \end{cases}
+\]
+These are the exact analytic contracts and rational formulas in \cite[\texttt{DENSITY.md}]{R977}, not independently improved density results here. Their 850 middle-class instances give
+\begin{equation}\label{eq:271-margin}
+ \min_{0\le j<850}(\vartheta-c_j)
+     =\frac{96266833}{858608062500}>0.
+\end{equation}
+The minimum occurs at $j=411$, $\sigma_j=993/1250$. The manuscript's exact-arithmetic check independently reproduces these finite substitutions; it does not prove the analytic density bounds.
+
+The source fixes all selected sets and the common height exponent before allocating contour losses, separately treats the good and terminal classes, retains horizontal connectors, and sums the infinite frequency tail on its original absolute-convergence lines. Its principal detector is
+\[
+ f_a(Z)=\frac1{2\pi\ii}\int_{(2)}
+ Z^{s-b_a}e^{(s-5/6)^2}\frac{H(s)}{\zeta_F^S(s)}\dd s,
+ \qquad b_a=5/6-a/3,
+\]
+with inherited $H$ holomorphic and nonzero on $\Re s>2/3$. The complete proposed comparison is
+\[
+ I(Z^a,Z^a,Z)=c_0f_a(Z)+O_e(Z^{\vartheta+8e}),\qquad c_0\ne0.
+\]
+Together with \eqref{eq:short-reflection-contract}, it gives the stated detector growth and hence the boundary
+\[
+ b_a+\vartheta=\frac56+\frac a6=\frac{271}{300}.
+\]
+This last Mellin deduction is straightforward once the full comparison is valid. The substantive review obligations lie in the short-support reflection, correction domain, selected-family adapters, and complete contour accounting. Passing from $F=K(\mu_{12})$ to $K$, and then to finite-order Hecke factors, uses the corresponding abelian factorizations. Infinite-order angular characters are not included.
+
+The lower-input variant in the same source gives $19/21$ using the original density and second numerator moment. These broad-field proposals are not a new ordinary-zeta improvement in this manuscript. The project's external benchmark record \cite{R1002} reports Liu's value approximately $0.874957019420098946$, which is numerically below $271/300$. That reported external theorem is not an analytic premise of Sections~\ref{sec:quadratic}--\ref{sec:detectors}.
+
+\subsection{Independent-jet prime bias: a separate proposed consequence}
+The determinant packet \cite{R993} gives a different proposed arithmetic statement. For a primitive nonprincipal real character $\chi$ of conductor $q$, it states
+\begin{equation}\label{eq:inert-bias}
+ \sum_{p\le R,\ \chi(p)=-1}\frac{\log p}{p}
+ \le\frac12\log R+\frac14\log q+O(1+\log\log(3R)),
+ \qquad R\ge\max(q,R_0),
+\end{equation}
+with absolute constants. The derivative depth and grid side length are independent parameters, rather than being identified as in the imported note. Its rank condition for $n$ points with an incidence bound $M\deg F$ is
+\[
+ Jn>M(R+S)+2RS+(J-M)_+S.
+\]
+A discriminant-balanced quadratic rectangle and $J=S=\lfloor R/\lceil\log(2R)\rceil\rfloor$ then balance the integral Gram height against inert-prime divisibility. Ordinary derivatives are essential: the $p!$ factors preserve divisibility even when the derivative order reaches $p$. Hasse derivatives cannot be substituted.
+
+The companion in \cite{R1000} extends the stated range to
+\[
+ R\ge64\sqrt q\,\lceil\log(2R)\rceil^2
+\]
+with an explicit error $4\log\lceil\log(2R)\rceil+30$, retaining the discriminant version of the leading terms. The source gives a positive Hadamard zero budget at conductor-scaled low heights. These are not fixed all-height complex zero-free half-planes.
+
+The real-zero implication of \eqref{eq:inert-bias} illustrates its distinct scope. Put $\ell=\log q$. Its Laplace transfer, retaining small primes, ramified primes, and all higher prime powers, gives
+\[
+ -\frac{L'}L(1+t,\chi)
+ \ge-\ell/2-O\bigl(t\ell^2+\log(2+1/t)+\log(2+\ell)\bigr).
+\]
+The positive Hadamard zero sum gives, at a real zero $\beta$,
+\[
+ -\frac{L'}L(1+t,\chi)\le\ell/2-\frac1{t+1-\beta}+O(1).
+\]
+Taking $t=\ell^{-2}$ yields the proposed asymptotic consequence
+\[
+ (1-\beta)\log q\ge1-O\left(\frac{\log\log q}{\log q}\right).
+\]
+This implication is recorded subject to the determinant and transfer proof in \cite{R993}; no numerical conductor threshold or independently reviewed absolute constant is supplied here. It is not used in the preceding sections. The circulated motivating note is attributed in the source to Ben Green but its provenance remains unauthenticated; the printed identifier is \texttt{hexagon:2610.00311v1}, not an arXiv identifier. We do not list it as an authenticated public paper or reproduce its PDF.
+
+\subsection{An exact obstruction inside the attempted 0.87 estimate system}
+The failed comparison in \cite{R1004} is useful precisely because it identifies an error in sufficient estimates without asserting an error in the target conjecture. Adopt the balanced comparison and witness-capacity formulas of the earlier audit \cite{R934}. Set
+\[
+ B=87/100,\quad \ell_0=14/75,\quad\delta=7/18,\quad x=1/2,
+ \quad\alpha=5/6,\quad a=(1+\delta)/2=25/36.
+\]
+The auxiliary zero class $a$ is not the location of an asserted actual zero. The relaxed direct requirement $11/12-\ell/4\le B$ forces $\ell\ge\ell_0$. Allow the larger triangle $b\ge0$, $b+\ell\le1$, and set
+$\ell_y=(1+b-\ell)/2$, $h=(1+b+3\ell)/2$.
+
+For a moment parameter $\kappa$, define
+\begin{gather*}
+ c=2/(3\kappa),\quad D=3-(1+c)x,\quad P=(2-cx)(1-x),\quad
+ J=(\alpha-\delta)D+\delta P,\\
+ t=1+\delta P/(2J),\quad
+ r=\{(2-cx)t-x(1-c/2)\}/D,\quad m=t-r,\\
+ z_M=(1-r)/2,\quad z_S=(1-2m)/(6\kappa),\quad
+ R=1-\delta+\frac{(\alpha-\delta)\delta P}{2J}.
+\end{gather*}
+The raw endpoint exponent relative to the fixed target is
+\begin{equation}\label{eq:failed-E}
+ E=a-a\ell_y-\ell/2+x\delta\ell
+                     +h(R+\delta/2-1/6)-B.
+\end{equation}
+At $\kappa=3/4$, exact arithmetic gives
+\begin{gather*}
+ t=443/394,\quad r=141/197,\quad m=161/394,\\
+ z_M=28/197,\quad z_S=8/197,\quad R=2363/3546.
+\end{gather*}
+At $\ell=\ell_0$,
+\[
+ E=521/19700-b/7092\ge7003/265950>1/40.
+\]
+This is a certificate on the entire enlarged triangle, not merely its bottom edge. Put $v=\ell-\ell_0\ge0$ and $u=1-\ell-b\ge0$. Then
+\[
+ E=E_{\min}+(E_\ell-E_b)v-E_bu,
+ \qquad E_\ell=640/591,\quad E_b=-1/7092,
+\]
+and both added coefficients are nonnegative.
+
+Even granting the more favorable parameter $\kappa=37/50$ gives
+\begin{equation}\label{eq:failed-positive-gap}
+ R=2075/3114,\quad E(\ell_0,b)=457/17300-b/6228,
+ \quad E_{\min}=6139/233550>1/40.
+\end{equation}
+Within this formula $R$ increases with $\kappa$. At $b=1/8$, the same class would need $R\le214/337$, leaving the exact count-exponent shortfall
+\[
+ \frac{2075}{3114}-\frac{214}{337}
+ =\frac{32879}{1049418}.
+\]
+The raw sextic-kernel diagnostic is also exact: for
+$k(v)=\max(1,v,5/6+v/3,1/3+5v/6)$,
+\[
+ \min_{v\ge0}\{k(v)-(7/18)v\}=7/9,
+\]
+attained at $v=1$. This isolated calculation is not an impossibility theorem for every application of the sieve.
+
+Equations~\eqref{eq:failed-E}--\eqref{eq:failed-positive-gap} concern upper-estimate budgets. Extra side constraints can only restrict the parameter triangle, and logarithmic improvements cannot absorb its positive power gap. A different signed physical estimate could change the comparison. The computation supplies no lower bound on the actual arithmetic residual and no evidence for an off-critical zero.

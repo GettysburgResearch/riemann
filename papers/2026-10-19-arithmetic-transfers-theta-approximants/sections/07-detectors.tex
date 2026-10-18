@@ -1,0 +1,200 @@
+\section{Fixed-source filters and primitive positive determinants}\label{sec:detectors}
+
+This section brings together two constructions from \cite{R993,R1000,R1002}. Their common requirement is exact retention of target poles. Neither a scalar main-term subtraction nor positive definiteness is itself the missing arithmetic upper bound.
+
+\subsection{Two scale differences without a common nonreal blind spot}
+For real $\lambda$ and $h>0$, define
+\[
+ \Delta_{\lambda,h}F(X)=F(X)-e^{-\lambda h}F(e^hX).
+\]
+Its $m$th power is the complete finite combination
+\begin{equation}\label{eq:scale-difference}
+ \Delta_{\lambda,h}^mF(X)=\sum_{j=0}^m(-1)^j\binom mj
+                                   e^{-\lambda hj}F(e^{jh}X).
+\end{equation}
+It annihilates $X^\lambda P(\log X)$ whenever $\deg P<m$, by the ordinary finite-difference identity. For a convergent source $F(X)=\sum_n a_nW(n/X)$, the operation keeps every coefficient and changes the profile to
+$\sum_{j=0}^m(-1)^j\binom mj e^{-\lambda hj}W(e^{-jh}x)$. Ideal norms can replace $n$ without changing this identity.
+
+With Mellin convention $\mathcal MF(s)=\int_0^\infty F(X)X^{-s}\dd X/X$, substitution gives, on an initial convergence strip,
+\begin{equation}\label{eq:notch-multiplier}
+ \mathcal M(\Delta_{\lambda,h}^mF)(s)
+ =[1-e^{h(s-\lambda)}]^m\mathcal MF(s).
+\end{equation}
+One multiplier vanishes on the vertical lattice $\lambda+2\pi\ii\Z/h$. Taking $h=1$ and $h=\sqrt2$ leaves only $s=\lambda$ in their common zero set.
+
+\begin{proposition}[Joint preservation and polynomial height cost]\label{prop:paired-notches}
+Suppose a fixed-source Mellin transform is $H(s)/\zeta(s)$, or $H(s)[-\zeta'(s)/\zeta(s)]$, up to a holomorphic term, and $H$ is nonzero at every target zero. Fix $\lambda\in(0,1)$ and $m\ge1$. If both transforms in \eqref{eq:notch-multiplier}, at $h=1,\sqrt2$, are holomorphic on $\Re s>\theta$, then there is no nontrivial zeta zero there. On $\abs{\Re s-\lambda}\le A$, $\abs{\Im s}\ge2\pi$,
+\begin{equation}\label{eq:paired-lower}
+ \max_{h\in\{1,\sqrt2\}}\abs{1-e^{h(s-\lambda)}}
+ \ge\frac{e^{-\sqrt2 A/2}}{3(1+\abs{\Im s})}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+At any nonreal zero, at least one multiplier is nonzero and preserves the reciprocal pole order, or the logarithmic-derivative residue with its multiplicity. The common real point is not a zeta zero: for $0<s<1$, the alternating eta series is positive while $1-2^{1-s}<0$.
+
+For the quantitative bound, put $u=\Im s/(2\pi)$, and choose nearest integers $n$ to $u$ and $k$ to $\sqrt2u$. With $e=\max(\norm u_{\R/\Z},\norm{\sqrt2u}_{\R/\Z})$ and $\abs u\ge1$, $n\ne0$ and
+\[
+ 1\le\abs{2n^2-k^2}
+ \le(\sqrt2+1)e\{2\sqrt2\abs u+(\sqrt2+1)/2\}
+ \le12e(1+\abs u).
+\]
+Combine this with $\abs{1-e^{2\pi\ii v}}\ge4\norm v_{\R/\Z}$ and
+\[
+ \abs{1-e^{a+\ii b}}^2=(e^a-1)^2+e^a\abs{1-e^{\ii b}}^2.
+\]
+The real-part range costs at most $e^{-\sqrt2 A/2}$, proving \eqref{eq:paired-lower}. For the $m$th differences raise the bound to the power $m$.
+\end{proof}
+
+The same real-point argument applies to the \emph{principal} Dedekind zeta functions of $\Q(\sqrt{-3})$ and $\Q(\ii)$. Indeed, for every real $s>0$,
+\[
+ L(s,\chi_{-3})=\sum_{n\ge0}[(3n+1)^{-s}-(3n+2)^{-s}]>0,
+\]
+\[
+ L(s,\chi_{-4})=\sum_{n\ge0}[(4n+1)^{-s}-(4n+3)^{-s}]>0.
+\]
+The paired series converge normally on $\Re s>0$ by the mean-value estimate on each difference, and agree with the Dirichlet series initially. Equation~\eqref{eq:quadratic-factorization} proves the required real nonvanishing. This does not supply such a sign argument for every quadratic field or every auxiliary character.
+
+Applying \eqref{eq:scale-difference} to a full physical theta expression still requires checking its linked rescalings and every remainder. The old triangle bounds reproduce the old exponent. In particular, removing a real term in a first Gauss-sum mean does not remove the whole exceptional-frequency covariance in its squared norm.
+
+\subsection{A rational positive matrix for an exact prime-power integer}
+Let $S_n$ be the cyclic permutation matrix, $L_n=2I-S_n-S_n^{\mathsf T}$, and let
+\[
+ (P_n)_{ij}=\frac{c_n(i-j)}n,\qquad 0\le i,j<n.
+\]
+Finite Fourier inversion identifies $P_n$ with the rational orthogonal projector onto all primitive $n$th Fourier modes. It commutes with $L_n$, and its rank is $\phi(n)$. Define
+\begin{equation}\label{eq:positive-matrix}
+ H_n(t)=I-P_n+P_n(L_n+tI),\qquad
+ H_N(t)=\bigoplus_{n=2}^N H_n(t)^{\oplus(N-n)},
+ \qquad V_N(t)=\tfrac12\log\det H_N(t).
+\end{equation}
+An empty direct sum has determinant one. Complementary modes have eigenvalue one, while the primitive modes have eigenvalues
+$t+4\sin^2(\pi a/n)$, $(a,n)=1$. All these matrices are positive definite for $t\ge0$, and have rational entries for rational $t$.
+
+\begin{proposition}\label{prop:exact-det}
+For $n\ge2$,
+\[
+ D_n(t):=\det H_n(t)
+ =\operatorname{Res}_x(\Phi_n(x),x^2-(2+t)x+1)\in\Z[t],
+\]
+and
+\begin{equation}\label{eq:prime-det}
+ D_n(0)=\Phi_n(1)^2=e^{2\Lambda(n)},\qquad
+ \det H_N(0)=A_N^2,
+ \quad A_N=\prod_{p^j\le N}p^{N-p^j}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Evaluate the quadratic at each primitive root of unity. The product of the factors $-\zeta$ is one, leaving exactly the product of the primitive eigenvalues. The resultant is integral and its polynomial factors in $t$ all have positive constant terms. The classical identity
+$\Phi_n(1)=\prod_{d\mid n}d^{\mu(n/d)}=e^{\Lambda(n)}$
+includes every prime power; see, for example, the cyclotomic discussion in \cite{AK22}. Multiplying with the complete multiplicities $N-n$ gives \eqref{eq:prime-det}.
+\end{proof}
+
+Write
+\[
+ C(x)=\sum_{n\le x}(x-n)\Lambda(n),\qquad C(N)=\log A_N.
+\]
+This is also $\log\prod_{r<N}\operatorname{lcm}(1,\ldots,r)$ at integer $N$. The identity is a classical Riesz-mean quantity in a matrix representation; it is not a spectrum of Riemann zeros.
+
+\subsection{A complete all-mass regularization comparison}
+Continuously at zero, put
+\[
+ f(u)=\log\frac{\sinh(u/2)}{u/2},\quad
+ F(v)=\int_0^1(1-y)f(vy)\dd y,\quad
+ \mathcal B(b)=\sum_{m\ge1}\frac{\mu(m)}mF(b/m).
+\]
+Euler's product for $\sinh$ gives, for every $u\ge0$,
+\[
+ 0\le f(u)\le u^2/24,\quad 0\le f'(u)\le u/12,\quad f''(u)\ge0.
+\]
+Thus the series is absolutely convergent, with complete tail at $m>K$ bounded by $b^2/(576K^2)$. Rearranging the positive logarithmic product gives
+\begin{equation}\label{eq:B-positive}
+ \mathcal B(b)=\sum_{a\ge1}\frac{\phi(a)}a
+ \int_0^1(1-y)\log\left(1+\frac{b^2y^2}{4\pi^2a^2}\right)\dd y.
+\end{equation}
+The identity $\sum_{m\mid a}\mu(m)/m=\phi(a)/a$ supplies the coefficient. Absolute convergence under the quadratic majorant justifies the rearrangement.
+
+\begin{theorem}[Every-mass comparison]\label{thm:all-mass}
+For every integer $N\ge2$ and every real $b\ge0$,
+\begin{equation}\label{eq:all-mass}
+ \left|V_N\bigl(2(\cosh(b/N)-1)\bigr)-C(N)-N^2\mathcal B(b)\right|
+ \le b^2\left(\frac{h_N}{72}+\frac1{24N}+\frac1{576}\right).
+\end{equation}
+Equivalently, at any mass $t\ge0$ the exact counterterm uses $b=N\arcosh(1+t/2)$.
+\end{theorem}
+\begin{proof}
+With $h=b/N$, the complete cyclotomic divisor identity and
+$\log(1-e^{-u})=\log u-u/2+f(u)$ give
+\[
+ V_N\bigl(2(\cosh h-1)\bigr)-C(N)
+ =\sum_{n=2}^N(N-n)\sum_{d\mid n}\mu(n/d)f(hd).
+\]
+Set $g_m(x)=(N-mx)f(bx/N)$ on $[0,N/m]$ and extend by zero. Reindexing the preceding expression gives
+\[
+ \sum_{m\le N}\mu(m)\sum_{d\in\Z}g_m(d)-(N-1)f(b/N).
+\]
+The last term removes the unit $n=1$, and
+$\int_\R g_m(x)\dd x=N^2F(b/m)/m$.
+
+The endpoint derivative jump at $N/m$ must be included. The total variation of the second distributional derivative is bounded by
+\[
+ \operatorname{TV}(\mathrm dg_m')\le4m f(b/m)\le\frac{b^2}{6m}.
+\]
+Indeed the two interior absolute contributions integrate to $2mf(b/m)$ and $mf(b/m)$, while the endpoint jump contributes a further $mf(b/m)$. Twice integrating the periodic Bernoulli polynomial, whose bound is $\abs{B_2(\{x\})}\le1/6$, gives
+\[
+ \left|\sum_{d\in\Z}g_m(d)-\int_\R g_m(x)\dd x\right|
+ \le\frac1{12}\operatorname{TV}(\mathrm dg_m')\le\frac{b^2}{72m}.
+\]
+Sum with $\abs{\mu(m)}\le1$, pay the full $m>N$ tail by $b^2/576$, and use $(N-1)f(b/N)\le b^2/(24N)$. This proves \eqref{eq:all-mass}. No step requires $b\le1$.
+\end{proof}
+
+The earlier small rational-mass statement in \cite{R1000} follows, for $0\le c\le1$, by setting $b=2N\arsinh(c/(2N))$ and comparing $b$ with $c$:
+\[
+ \abs{V_N(c^2/N^2)-C(N)-N^2\mathcal B(c)}
+ \le\frac{c^2(1+\log N)}{24}.
+\]
+For a growing regularizer, retaining the exact $b$ avoids an additional, inadequately small-parameter correction.
+
+Fix $1/2\le\theta<1$ and choose
+\[
+ c_N=\lceil N^{(1+\theta)/2}\rceil,\quad
+ t_N=c_N^2/N^2,\quad b_N=2N\arsinh(c_N/(2N)).
+\]
+Then $N^{\theta-1}\le t_N\le1$. For $N\ge3$, all eigenvalues of $H_N(t_N)$ lie in $[t_N,5]$, so
+\begin{equation}\label{eq:conditioning}
+ \cond(H_N(t_N))\le5N^{1-\theta},\qquad
+ V_N(t_N)=C(N)+N^2\mathcal B(b_N)+O(N^{1+\theta}\log(2N)).
+\end{equation}
+At the RH-calibrated scale the condition-number bound is $O(N^{1/2})$, and at the scale calibrated to $5/6$ it is $O(N^{1/6})$. Neither exponent is an achieved zeta boundary.
+
+The larger regularization also creates a larger bulk. Since $f(u)/u\to1/2$ and $0\le f(u)\le u/2$, dominated convergence gives
+\[
+ \frac{\mathcal B(b)}b\longrightarrow\frac1{12\zeta(2)}.
+\]
+Thus $N^2\mathcal B(b_N)$ has order $N^{(5+\theta)/2}$, larger than the prime main term. Its leading linear asymptotic has not been shown sufficiently accurate for a zero-free deduction; the exact counterterm in \eqref{eq:conditioning} remains necessary.
+
+If $D_N$ is the matrix dimension, $D_N\le N^3/6$, and the eigenvalue form of Frullani's identity yields
+\[
+ V_N(t)=\frac12\int_0^\infty
+       \{D_Ne^{-u}-\Tr(e^{-uH_N(t)})\}\frac{\dd u}{u}.
+\]
+For $0<t\le1$, the absolute tail after $T$ is at most $D_Ne^{-tT}/(tT)$. Taking $T=K\log N/t_N$ pays the entire longer-time tail by
+$N^{3-K}/(6K\log N)$ and uses only $T\le K N^{1-\theta}\log N$. The centered short-time trace estimate remains unproved.
+
+\subsection{The one-sided height estimate that would exclude zeros}
+Let $E(x)=C(x)-(x-1)^2/2$. Direct integration on $\Re s>1$ gives
+\begin{equation}\label{eq:det-Mellin}
+ \int_1^\infty E(x)x^{-s-2}\dd x
+ =\frac{-\zeta'(s)/\zeta(s)-1/(s-1)}{s(s+1)}.
+\end{equation}
+At each nontrivial zero $\rho$, the right side has residue $-m_\rho/[\rho(\rho+1)]\ne0$. It is holomorphic at every real $s>0$; the apparent pole at one has been removed.
+
+If the additional one-sided estimate
+\begin{equation}\label{eq:open-height}
+ V_N(t_N)\le\frac{(N-1)^2}{2}+N^2\mathcal B(b_N)
+                          +O_\eps(N^{1+\theta+\eps})
+\end{equation}
+were proved for every $\eps>0$ and all integers $N$, then \eqref{eq:conditioning} would give $E(N)\ll_\eps N^{1+\theta+\eps}$. Linear interpolation of $C$ shows that $E(x)$ exceeds its endpoint interpolation by at most $1/8$, so the estimate extends to real $x$.
+
+For completeness, the one-sided implication is not an unjustified absolute-value bound. Beyond a fixed initial interval, $Kx^{1+\theta+\eps}-E(x)$ is nonnegative. Landau's positivity lemma says that a finite convergence abscissa of its Laplace transform is a singularity at the real abscissa. The meromorphic expression from \eqref{eq:det-Mellin} is analytic at every real $s>\theta+\eps$, so the convergence abscissa is at most $\theta+\eps$. Subtracting the explicit $K$ term then makes \eqref{eq:det-Mellin} holomorphic throughout that half-plane. Its nonzero zero residues exclude every zero there. Choosing $\eps$ separately at each point proves exclusion to the right of $\theta$.
+
+The positivity lemma follows directly by expanding about a point just to the right of an allegedly regular real abscissa: the Taylor coefficients of the translated Laplace transform are nonnegative weighted moments, so monotone convergence would extend convergence to its left, a contradiction. No rightmost-zero or simplicity assumption is needed. At $\theta=1/2$, the classical RH bound for $\psi(x)-x$, followed by integration, supplies the converse; the missing estimate is therefore RH-strength. Positive definiteness of \eqref{eq:positive-matrix} does not prove \eqref{eq:open-height}.

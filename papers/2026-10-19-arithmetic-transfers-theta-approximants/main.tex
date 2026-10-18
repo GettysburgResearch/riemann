@@ -1,0 +1,76 @@
+\documentclass[11pt,reqno]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=28mm,headheight=14pt]{geometry}
+\usepackage{amsmath,amssymb,mathtools,booktabs,longtable,array,microtype}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage{url}
+\emergencystretch=2em
+\allowdisplaybreaks[2]
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{certificate}[theorem]{Finite certificate}
+\newtheorem{reported}[theorem]{Source-qualified statement}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{problem}[theorem]{Open problem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\E}{\mathbb E}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\ind}{\mathbf 1}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\cond}{cond}
+\DeclareMathOperator{\arcosh}{arcosh}
+\DeclareMathOperator{\arsinh}{arsinh}
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\git}[2]{\href{https://github.com/GettysburgResearch/riemann/blob/#1/#2}{\texttt{#1}}}
+\title[Arithmetic transfers and finite theta approximants]{Arithmetic transfers, finite theta approximants,\texorpdfstring{\\}{ }and obstruction estimates for zeta functions}
+\author{Gideon Freund}
+\address{Gettysburg Research}
+\date{19 October 2026}
+\subjclass[2020]{Primary 11M26; Secondary 11M06, 11M41, 11N37, 30D15, 82B20}
+\keywords{Riemann zeta function, quadratic characters, M\"obius function, mollifiers, theta moments, canonical products, determinant regularization}
+\thanks{This draft consolidates research and computational material developed with substantial AI assistance. Its provenance, verification scope, and remaining author-review obligations are recorded in Section~\ref{sec:verification} and the accompanying source ledger.}
+\hypersetup{
+ pdftitle={Arithmetic transfers, finite theta approximants, and obstruction estimates for zeta functions},
+ pdfauthor={Gideon Freund},
+ pdfsubject={Source-grounded mathematical preprint draft; no RH proof or new ordinary zero-free region claimed},
+ pdfkeywords={zeta function, quadratic characters, Mobius, theta moments, canonical products}
+}
+\begin{document}
+\begin{abstract}
+We present a source-grounded account of recent arithmetic and approximation results in the Gettysburg Research Riemann repository. The common objective is to preserve the contribution of a fixed zeta zero while changing the arithmetic representation in which it must be estimated. We give a conductor-uniform comparison between primitive quadratic-field reciprocal coefficients and ordinary M\"obius coefficients, with an explicit finite-family error. For actual quadratic characters, a mean-square approximation above the critical line yields quantitative full-residual transfer and an exact optimization that removes auxiliary local variance without removing the ordinary zeta factor. We also present a two-mollifier transfer theorem for capped reciprocal moments, complete native denominator and frequency-sector bounds, and positive cycle determinants with explicitly controlled regularization. On the approximation side, the frozen computational sources provide five directed certificates of real-zero entire functions matching the normalized theta expansion through orders 22, 24, and 26. A positive weighted canonical-moment criterion removes several unnecessary restrictions from the remaining all-order construction. We explain a compactness obstruction for strip-confined probability laws, give a corrected strip-transfer theorem and a finite-graph extension admitting controlled negative couplings, and preserve an exact failed comparison for the proposed boundary $0.87$. The manuscript distinguishes proved component arguments, source-qualified analytic deductions, finite certificates, and unproved sufficient estimates. It claims neither the Riemann hypothesis nor a new global zero-free region for the ordinary zeta function.
+\end{abstract}
+\maketitle
+\tableofcontents
+\input{sections/01-introduction}
+\input{sections/02-quadratic}
+\input{sections/03-residuals}
+\input{sections/04-native}
+\input{sections/05-theta}
+\input{sections/06-strips}
+\input{sections/07-detectors}
+\input{sections/08-boundaries}
+\input{sections/09-verification}
+\appendix
+\input{sections/10-provenance}
+\input{main.bbl}
+\end{document}

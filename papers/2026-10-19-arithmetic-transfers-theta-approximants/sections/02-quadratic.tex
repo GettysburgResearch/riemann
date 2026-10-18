@@ -1,0 +1,157 @@
+\section{Quadratic-field coefficients and a uniform signed average}\label{sec:quadratic}
+
+This section develops the fixed-field primitive-core comparison of \cite{R996} and its ramification-preserving, conductor-uniform extension in \cite{R1002}. The averaging family in this section is different from the dyadic family used in Section~\ref{sec:residuals}; the two are not interchanged.
+
+\subsection{An invertible primitive-core correction}
+Put $\mu_6(n)=\mu(n)\ind_{(n,6)=1}$. For a negative fundamental discriminant $\Delta$, let $\chi_\Delta$ be the associated primitive quadratic character. Define
+\begin{equation}\label{eq:primitive-sequences}
+ a_\Delta=\mu_6*(\mu_6\chi_\Delta),\qquad
+ b_\Delta(n)=\mu_6(n)\prod_{p\mid n}(1+\chi_\Delta(p)),
+\end{equation}
+where $*$ denotes Dirichlet convolution. Thus $b_\Delta$ is supported on squarefree integers coprime to $6$. In particular a ramified prime $p\ge5$ has coefficient $-1$, not zero. Write $\zeta_6$ and $L_6$ for deletion of the Euler factors at $2,3$.
+
+\begin{theorem}[Uniform primitive-core comparison]\label{thm:primitive}
+On $\Re s>1$, let
+\[
+ A_\Delta(s)=\sum_n a_\Delta(n)n^{-s}
+ =\frac1{\zeta_6(s)L_6(s,\chi_\Delta)},\qquad
+ B_\Delta(s)=\sum_n b_\Delta(n)n^{-s}.
+\]
+There are Dirichlet series $V_\Delta,W_\Delta$ such that
+\begin{equation}\label{eq:primitive-inverse}
+ B_\Delta=A_\Delta V_\Delta,\qquad
+ A_\Delta=B_\Delta W_\Delta,\qquad V_\Delta W_\Delta=1.
+\end{equation}
+For every fixed $\sigma>1/2$, their coefficients satisfy
+\[
+ \sum_n\frac{\abs{v_\Delta(n)}}{n^\sigma}\le C_V(\sigma),\qquad
+ \sum_n\frac{\abs{w_\Delta(n)}}{n^\sigma}\le C_W(\sigma),
+\]
+with constants independent of $\Delta$. Both functions are holomorphic and nonvanishing on $\Re s>1/2$.
+\end{theorem}
+\begin{proof}
+At $p\ge5$ put $x=p^{-s}$. At a split prime the local factors are
+\begin{align*}
+ A_p(x)&=(1-x)^2,& B_p(x)&=1-2x,\\
+ V_p(x)&=\frac{1-2x}{(1-x)^2}
+       =1-\sum_{j\ge2}(j-1)x^j,&
+ W_p(x)&=\frac{(1-x)^2}{1-2x}
+       =1+\sum_{j\ge2}2^{j-2}x^j.
+\end{align*}
+At an inert prime they are
+\[
+ A_p=1-x^2,\quad B_p=1,\quad
+ V_p=(1-x^2)^{-1},\quad W_p=1-x^2.
+\]
+At a ramified prime $A_p=B_p=1-x$, so $V_p=W_p=1$. All factors at $2,3$ are one. These are identities of complete power series; the higher prime powers are not discarded.
+
+Since $2p^{-\sigma}<1$ for $p\ge5$ and $\sigma>1/2$, the products
+\begin{align*}
+ C_V(\sigma)&=\prod_{p\ge5}
+  \left(1+\frac{p^{-2\sigma}}{(1-p^{-\sigma})^2}\right),\\
+ C_W(\sigma)&=\prod_{p\ge5}
+  \left(1+\frac{p^{-2\sigma}}{1-2p^{-\sigma}}\right)
+\end{align*}
+converge. They dominate the corresponding local absolute coefficient sums in every splitting case. This proves the uniform bounds and normal convergence on smaller half-planes. The local inverse identities pass to the products, proving nonvanishing and \eqref{eq:primitive-inverse}.
+\end{proof}
+
+\begin{corollary}[No loss in a fixed power exponent]\label{cor:primitive-power}
+Fix $\beta>1/2$. A bound
+\[
+ \sum_{n\le X}a_\Delta(n)\ll_{\Delta,\eps}X^{\beta+\eps}
+\]
+for every $\eps>0$ is equivalent to the same bound with $b_\Delta$ in place of $a_\Delta$. The same equivalence holds for estimates uniform over additive phases, or over all real polynomial phases of any one fixed degree.
+\end{corollary}
+\begin{proof}
+For example, $b_\Delta=a_\Delta*v_\Delta$ gives
+\[
+ \sum_{n\le X}b_\Delta(n)
+ =\sum_{d\le X}v_\Delta(d)\sum_{m\le X/d}a_\Delta(m).
+\]
+Apply the hypothesized bound with a smaller positive loss and sum $\abs{v_\Delta(d)}d^{-\beta-\eps'}$. The inverse uses $W_\Delta$. For a polynomial phase $e^{2\pi\ii P(n)}$, the inner phase becomes $P(dm)$, which is still a polynomial of the same degree. No estimate for either sequence is manufactured by this equivalence.
+\end{proof}
+
+At the all-$\eps$ square-root exponent, this reproduces the fixed-field reciprocal criterion described in \cite{R996}. For $K=\Q(\sqrt{-3})$, the unramified primitive sequence is simply $\mu(n)2^{\omega(n)}$ on squarefree integers all of whose prime factors are $1\bmod3$. Its fixed-field square-root estimate is stronger than ordinary RH alone, because it also controls the factor $L(s,\chi_{-3})$.
+
+\subsection{An elementary actual-family character mean}
+For $Q\ge2^{16}$ define
+\[
+ \mathcal D(Q)=\{d\le Q:d>0,\ d\text{ squarefree},\ d\equiv3\pmod4\},
+ \qquad N_Q=\abs{\mathcal D(Q)}.
+\]
+Every $-d$ is a fundamental discriminant. We average uniformly over this complete set.
+
+\begin{lemma}\label{lem:quadratic-mean}
+One has $N_Q\ge Q/8$. For every odd squarefree $r>1$,
+\begin{align}
+ \left|\frac1{N_Q}\sum_{d\in\mathcal D(Q)}\chi_{-d}(r)\right|
+ &\le24\sqrt{r/Q},\label{eq:mean-trivial}\\
+ \left|\frac1{N_Q}\sum_{d\in\mathcal D(Q)}\chi_{-d}(r)\right|
+ &\le\frac{24r^{1/4}\sqrt{1+\log r}}{\sqrt Q}.
+ \label{eq:mean-pv}
+\end{align}
+\end{lemma}
+\begin{proof}
+There are at least $Q/4-1$ integers $3\bmod4$ up to $Q$. For each odd prime $p\le\sqrt Q$, at most $Q/(4p^2)+1$ are divisible by $p^2$. Using $\sum_{p\ge3}p^{-2}\le\sum_{n\ge3}n^{-2}\le4/9$ gives
+\[
+ N_Q\ge\frac{5Q}{36}-\sqrt Q-1\ge\frac Q8.
+\]
+
+Expand $\mu^2(d)=\sum_{a^2\mid d}\mu(a)$. Terms with $(a,r)>1$ vanish and are retained as zero terms. For the remaining odd $a$, the inner character sum is over a progression $4j+3$ of length at most $Q/a^2$. The Jacobi character modulo the odd squarefree integer $r$ is primitive and nonprincipal. Its complete mean is zero, so the inner sum is at most $\min(r,Q/a^2)$ in modulus. More generally, any bound $T$ for its incomplete sums gives
+\[
+ \sum_{a\le\sqrt Q}\min(T,Q/a^2)\le3\sqrt{QT}.
+\]
+This follows by splitting at $\sqrt{Q/T}$; when that point is below one, the bound follows directly from $\sum a^{-2}<2$ and $T>Q$.
+
+Taking $T=r$ and dividing by $N_Q$ proves \eqref{eq:mean-trivial}. For \eqref{eq:mean-pv}, primitive Gauss-sum Fourier inversion and
+$\abs{1-e^{2\pi\ii a/r}}\ge4\norm{a/r}_{\R/\Z}$ give the elementary P\'olya--Vinogradov bound
+\[
+ T\le\sqrt r\,h_{\lfloor r/2\rfloor}
+ \le\sqrt r(1+\log r).
+\]
+The fixed invertible change of residue induced by $4j+3$ has no effect on that bound. Substituting this $T$ completes the proof. No ramified value of a character has been replaced by a unit-modulus value.
+\end{proof}
+
+\begin{theorem}[Uniform weighted finite-family comparison]\label{thm:field-average}
+For $X\ge1$, $Q\ge2^{16}$, and every common complex array $\abs{u_n}\le1$,
+\begin{align}
+ &\left|\frac1{N_Q}\sum_{d\in\mathcal D(Q)}
+       \sum_{n\le X}b_{-d}(n)u_n
+       -\sum_{n\le X}\mu_6(n)u_n\right|
+ \le\frac{48X^{3/2}}{\sqrt Q},\label{eq:field-average-weak}\\
+ &\left|\frac1{N_Q}\sum_{d\in\mathcal D(Q)}
+       \sum_{n\le X}b_{-d}(n)u_n
+       -\sum_{n\le X}\mu_6(n)u_n\right|
+ \le\frac{96X^{5/4}\sqrt{1+\log X}}{\sqrt Q}.
+ \label{eq:field-average}
+\end{align}
+\end{theorem}
+\begin{proof}
+For squarefree $n$,
+\[
+ \prod_{p\mid n}(1+\chi_{-d}(p))=\sum_{r\mid n}\chi_{-d}(r).
+\]
+The term $r=1$ is exactly the common M\"obius term in the theorem. It is canceled algebraically before taking absolute values. Every other divisor is squarefree and odd, so \eqref{eq:mean-trivial} bounds the remaining expression by
+\[
+ \frac{24}{\sqrt Q}\sum_{n\le X}\sum_{\substack{r\mid n\\r>1}}\sqrt r
+ \le\frac{24X}{\sqrt Q}\sum_{r\le X}r^{-1/2}
+ \le\frac{48X^{3/2}}{\sqrt Q}.
+\]
+Using \eqref{eq:mean-pv} instead gives
+\[
+ \frac{24X\sqrt{1+\log X}}{\sqrt Q}\sum_{r\le X}r^{-3/4}
+ \le\frac{96X^{5/4}\sqrt{1+\log X}}{\sqrt Q}.
+\]
+Squarefreeness and coprimality were relaxed only in these positive upper sums, not in the original observable.
+\end{proof}
+
+Theorem~\ref{thm:field-average} is a quantitative arithmetic comparison, not a cancellation estimate for its first term. If $\theta>1/2$ and $Q=X^q$ with $q\ge5/2-2\theta$, its error fits $X^{\theta+\eps}$. Thus a signed average bound at that power would imply the same bound for $\sum_{n\le X}\mu_6(n)$, and hence ordinary zero exclusion to the right of $\theta$ by Abel summation. The schedules $Q=X^{5/6}$ and $Q=X^{3/2}$ correspond, respectively, to the still-open $5/6$ and square-root targets. They are not achieved zero-free boundaries.
+
+The order of this deduction matters. The finite-family comparison is first applied at each $X$ to recover a \emph{fixed} coefficient sequence. One does not take a Mellin transform while treating a family whose size depends on $X$ as though it were a fixed Dirichlet series. Similarly, arbitrary signed combinations of individual reciprocal residues need not preserve those residues. The theorem supplies a specific coefficient comparison, not a blanket noncancellation assertion.
+
+Finally, deletion of an exceptional set must be paid. Uniformly in $d$,
+\[
+ \left|\sum_{n\le X}b_{-d}(n)u_n\right|
+ \le\sum_{n\le X}2^{\omega(n)}\le X(1+\log X).
+\]
+Removing $E$ rows while retaining normalization $N_Q$ therefore costs at most $(E/N_Q)X(1+\log X)$. At $Q=X^{5/6}$, an exceptional proportion $Q^{-\delta}$ requires $\delta\ge1/5$ merely to fit an $X^{5/6+\eps}$ allowance. An assertion about almost every auxiliary factor is not a bound for the shared ordinary source.

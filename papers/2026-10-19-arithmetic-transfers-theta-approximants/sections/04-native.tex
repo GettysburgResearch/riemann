@@ -1,0 +1,261 @@
+\section{Complete native denominator and frequency sectors}\label{sec:native}
+
+The native arguments of \cite{R994} keep the literal old M\"obius prefix, rather than replacing it by an arbitrary coefficient family. This distinction remains important even after its harmless sectors have been removed.
+
+\subsection{An exact strict-square-step identity}
+Fix an integer $Y\ge2$, put $b=Y+1$, and define
+\[
+ g_Y(n)=\mu(n)\ind_{n\le Y},\qquad z_Y=g_Y*g_Y,\qquad
+ G_Y(s)=\sum_{n\le Y}\mu(n)n^{-s}.
+\]
+The complete reduced-denominator coefficient is
+\begin{equation}\label{eq:CY}
+ C_Y(q)=\sum_{\substack{d\le Y^2\\q\mid d}}\frac{z_Y(d)}d.
+\end{equation}
+Products above the eventual output variable are included in this definition. Put
+\[
+ R(x)=h_{\lfloor x\rfloor}-\log x-\gamma,\qquad h_0=0,
+\]
+and, for $q\ge2$,
+\begin{equation}\label{eq:Sq}
+ S_q(x)=\sum_{n\le x}\frac{c_q(n)}n+\Lambda(q)
+       =\sum_{d\mid q}\mu(q/d)R(x/d),
+\end{equation}
+where $c_q$ is the Ramanujan sum. The equality follows from
+$c_q(n)=\sum_{d\mid(q,n)}d\mu(q/d)$ and
+$\sum_{d\mid q}\mu(q/d)\log d=\Lambda(q)$. In particular the logarithmic and constant terms cancel, so $S_q$ is constant on complete integer cells.
+
+Let
+\[
+ M_Y=m(Y),\quad L_Y=\sum_{n\le Y}\frac{\mu(n)\log n}{n},\quad
+ B_Y=1+L_Y-(\log Y+\gamma/2)M_Y,
+\]
+and $A_Y(x)=2M_YB_Y+M_Y^2\log(Y^2/x)$. Then
+\begin{equation}\label{eq:Newton-exact}
+ m(k)=A_Y(k)-M_Y^2R(k)-\sum_{q=2}^{Y^2}C_Y(q)S_q(k),
+ \qquad b\le k<b^2.
+\end{equation}
+Indeed the Dirichlet-convolution identity
+\[
+ \mu-(2g_Y-\mathbf1*g_Y*g_Y)
+ =\mu*(\delta-\mathbf1*g_Y)* (\delta-\mathbf1*g_Y)
+\]
+has right side supported on $n\ge b^2$, since each factor $\delta-\mathbf1*g_Y$ vanishes below $b$. Here $\mathbf1(n)=1$ and $\delta$ is the convolution unit. Weighted summation gives
+$m(k)=2M_Y-\sum_d z_Y(d)h_{\lfloor k/d\rfloor}/d$. Grouping the reduced rational frequencies gives \eqref{eq:Newton-exact}. The first possible coefficient defect at $b^2$ is $\mu(b)^2$, so the endpoint is strict.
+
+\subsection{Complete coefficient factorization}
+For $d\ge1$ put $m_d(x)=\sum_{n\le x,(n,d)=1}\mu(n)/n$, with value zero for $x<1$. We use Tao's elementary bound \cite{Tao10}
+\begin{equation}\label{eq:masked-m}
+ \abs{m_d(x)}\le1.
+\end{equation}
+For completeness, at integral $x$ let $A$ count integers at most $x$ coprime to $d$, and let $B$ count those whose prime factors all divide $d$. Divisor inversion gives
+$B=\sum_{n\le x,(n,d)=1}\mu(n)\lfloor x/n\rfloor$. Since $\{x/n\}\le1-1/n$,
+\[
+ \abs{xm_d(x)}\le B+A-\sum_{n\le x,(n,d)=1}\frac1n\le x.
+\]
+The two counted sets intersect only at one. Real $x$ follows by taking its integer part.
+
+\begin{proposition}[Complete denominator coefficients]\label{prop:denominator}
+If $q$ has a prime cube factor, $C_Y(q)=0$. Otherwise write uniquely $q=r^2s$, with $r,s$ coprime and squarefree. Then
+\begin{equation}\label{eq:coefficient-factorization}
+ C_Y(r^2s)=\frac{\mu(s)}{r^2s}
+ \sum_{\substack{uvw=s\\u,v,w\text{ pairwise coprime}}}
+ \frac{m_{ruw}(Y/(ruw))\,m_{rvw}(Y/(rvw))}{w}.
+\end{equation}
+Consequently
+\begin{equation}\label{eq:coefficient-bounds}
+ \abs{qC_Y(q)}\le\prod_{p\mid s}(2+1/p),\qquad
+ \sum_{q\le Q}q^2\abs{C_Y(q)}^2\le32Q(1+\log Q)^3.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Both old inputs are squarefree, so their product is cubefree. For squarefree $d$ define
+$T(d)=\sum_{a\le Y,d\mid a}\mu(a)/a=\mu(d)m_d(Y/d)/d$. Every prime of $r$ must divide both inputs. For $p\mid s$ expand
+\[
+ \ind_{p\mid ac}=\ind_{p\mid a}+\ind_{p\mid c}
+                  -\ind_{p\mid a}\ind_{p\mid c}.
+\]
+Assigning these three possibilities to $u,v,w$ gives
+$C_Y(r^2s)=\sum_{uvw=s}(-1)^{\omega(w)}T(ruw)T(rvw)$. Each prefactor has sign $\mu(s)$ and denominator $r^2sw$, proving \eqref{eq:coefficient-factorization}. Bound both masked sums by \eqref{eq:masked-m} to obtain the first inequality.
+
+For the second, let $a(q)$ be the square of the first majorant, zero off cubefree integers. Locally, $a(p)=(2+1/p)^2$ and $a(p^2)=1$. Thus
+\[
+ a(q)\le d_4(q)\prod_{p\mid q}\left(1+\frac1p+\frac1{4p^2}\right).
+\]
+Expand the positive squarefree divisor product and use
+$d_4(ab)\le d_4(a)d_4(b)$ and $\sum_{n\le x}d_4(n)\le x(1+\log x)^3$. The remaining Euler constant is
+\[
+ \prod_p(1+4p^{-2}+p^{-3})<32.
+\]
+Indeed its logarithm is at most $4\sum_{n\ge2}n^{-2}+\sum_{n\ge2}n^{-3}\le13/4$, using integral upper bounds, and $e^{13/4}<32$. This pays the full infinite prime tail.
+\end{proof}
+
+The rectangular factorization \eqref{eq:coefficient-factorization} relies on all products in \eqref{eq:CY}. An additional cutoff $d\le k$ inside that sum would destroy the factorization, and is not part of this theorem.
+
+\subsection{Small denominators and complete small-core sectors}
+The low-denominator estimate of \cite[native proof, Lemma 3]{R994} is
+\begin{equation}\label{eq:low-denominator}
+ \sum_{K\le k<2K}\left|\sum_{2\le q\le Q}C_Y(q)S_q(k)\right|^2
+ \le64(1+\log Q)^4\left(\frac QK+\frac{Q^3}{K^2}\right),
+ \quad 1\le Q\le K.
+\end{equation}
+Here the square is taken after the full sum. To indicate its proof and the normalization, for $0<\vartheta<1$ write
+\[
+ Z_\vartheta(k)=\sum_{n\le k}\frac{e^{2\pi\ii n\vartheta}}n
+                      +\log(1-e^{2\pi\ii\vartheta}).
+\]
+Abel summation gives
+\[
+ Z_\vartheta(k)=
+ \frac{e^{2\pi\ii k\vartheta}}{(k+1)(1-e^{-2\pi\ii\vartheta})}
+ +E_\vartheta(k),\qquad
+ \abs{E_\vartheta(k)}\le\frac{2}{k^2\abs{1-e^{2\pi\ii\vartheta}}^2}.
+\]
+Summing primitive fractions of denominator $q$ recovers $S_q$. The distinct fractions with denominator at most $Q$ are $Q^{-2}$-separated. Their complete Gram row bound is $K+2Q^2(1+\log Q)$, while their squared coefficient mass is at most $\tfrac14\sum_{q\le Q}q^2\abs{C_Y(q)}^2$. Equation~\eqref{eq:coefficient-bounds} and the entire Abel remainder yield \eqref{eq:low-denominator}. In particular neither same-frequency aliases nor cross-denominator terms are dropped.
+
+Choose $1/2<\rho<2/3$, put $\alpha=2-3\rho$, and partition $[b,b^2)$ into dyadic intervals $I_j=[X_j,U_j)$ with $X_j=2^jb$, $U_j=\min(2X_j,b^2)$. On the integer cells in $I_j$ set
+\[
+ V_{Y,\rho}(k)=-\sum_{X_j^\rho<q\le Y^2}C_Y(q)S_q(k).
+\]
+Summing \eqref{eq:low-denominator} over these complete intervals gives
+\begin{equation}\label{eq:native-error}
+ \norm{m-A_Y+M_Y^2R-V_{Y,\rho}}_2^2
+ \le\frac{2048}{1-2^{-\alpha}}b^{-\alpha}(1+\log b)^4.
+\end{equation}
+The norm is over $b,\ldots,b^2-1$. A shortened last interval is paid by its full positive dyadic bound.
+
+The large-denominator sector can also be reduced without assuming cancellation between different denominators.
+
+\begin{theorem}[Complete small-core bound]\label{thm:small-core}
+Let $\omega_q(x)$ be arbitrary measurable functions with $\abs{\omega_q(x)}\le1$. Uniformly for integers $Y\ge2$ and $S\ge1$,
+\begin{align}
+ \left\|\sum_{\substack{2\le r\le Y\\r\text{ squarefree}}}
+       \omega_{r^2}C_Y(r^2)S_{r^2}\right\|_{L^2(0,\infty)}
+ &\le3\sqrt3\,h_Y,\label{eq:square-sector}\\
+ \left\|\sum_{\substack{2\le q\le Y^2\\q\text{ cubefree}\\
+                    \mathrm{core}(q)\le S}}
+       \omega_q C_Y(q)S_q\right\|_{L^2(0,\infty)}
+ &\le12h_Y\sqrt S\,h_S^3.
+ \label{eq:core-sector}
+\end{align}
+Here $\mathrm{core}(r^2s)=s$ for coprime squarefree $r,s$.
+\end{theorem}
+\begin{proof}
+One has $\int_0^\infty R(x)^2\dd x\le3$: on $x\ge1$ use $\abs{R(x)}\le1/x$, and on $(0,1)$ integrate $(-\log x-\gamma)^2$. Dilation in \eqref{eq:Sq} gives
+\[
+ \norm{S_q}_2\le\sqrt{3q}\,\beta(q),\qquad
+ \beta(q)=\prod_{p\mid q}(1+p^{-1/2}).
+\]
+For a square denominator, \eqref{eq:coefficient-factorization} gives
+$C_Y(r^2)=m_r(Y/r)^2/r^2\ge0$. Expanding $\beta(r)$ on squarefree $r$ yields
+\[
+ \sum_{\substack{r\le Y\\r\text{ squarefree}}}\frac{\beta(r)}r
+ \le\sum_{e\le Y}e^{-3/2}h_{\lfloor Y/e\rfloor}
+ \le3h_Y.
+\]
+The triangle inequality proves \eqref{eq:square-sector}, and multiplication by $\omega_q$ contracts every individual norm.
+
+For $q=r^2s$, put $a(s)=\prod_{p\mid s}(2+1/p)$. The corresponding norm is at most
+$\sqrt3\,a(s)\beta(s)\beta(r)/(r\sqrt s)$. Sum over $r$ first. For squarefree $s$, one has $a(s)\beta(s)\le(9/8)d_4(s)$: the local factor is below four at every $p\ge3$, and below $9/2$ at $p=2$. Partial summation and the divisor bound give
+\[
+ \sum_{s\le S}\frac{d_4(s)}{\sqrt s}\le2\sqrt S\,h_S^3.
+\]
+The resulting constant is $27\sqrt3/4<12$. No diagonalization of the coherent sum was used.
+\end{proof}
+
+At the literal reciprocal sign crossings
+\[
+ \mathcal X=\{Y\ge2:\mu(Y)\ne0,\ m(Y-1)m(Y)\le0\},
+\]
+one has $\abs{M_Y}\le1/Y$. This set is unbounded by the classical Landau argument applied to
+$\int_1^\infty m(x)x^{-z-1}\dd x=1/[z\zeta(z+1)]$: eventual one-sidedness would force a real singularity, whereas this expression is analytic at every real $z>-1$ and has nonreal poles there. No bound on gaps between crossings is used.
+
+The elementary identity
+\[
+ B_Y=(\gamma/2)M_Y+\sum_{n\le Y}\frac{\mu(n)}nR(Y/n)
+\]
+gives $\abs{B_Y}\le1+(\gamma/2)\abs{M_Y}$. Moreover $B_Y\to0$ by the prime number theorem: split the last sum at $\eta Y$, bound the first part by $\eta$, and apply partial summation with $M(x)=o(x)$ to the bounded-variation function $R(1/u)/u$ on $[\eta,1]$. Combining this with \eqref{eq:native-error} proves, on $\mathcal X$,
+\begin{equation}\label{eq:crossing-comparison}
+ \left|\sqrt{F_{b^2-1}-F_Y}-\norm{V_{Y,\rho}}_2\right|
+ \le\eta_Y,\qquad \eta_Y\longrightarrow0.
+\end{equation}
+If $V^{\mathrm{rough}}_{Y,\rho,S}$ retains only cores greater than $S$, Theorem~\ref{thm:small-core} permits the actual annular masks in one norm and gives
+\begin{equation}\label{eq:rough-comparison}
+ \left|\sqrt{F_{b^2-1}-F_Y}-\norm{V^{\mathrm{rough}}_{Y,\rho,S}}_2\right|
+ \le\eta_Y+12h_Y\sqrt S\,h_S^3.
+\end{equation}
+There is no additional count of annuli. For $\log S=o(\log Y)$ the squared removed cost is subpower, not necessarily vanishing.
+
+\subsection{A completely paid frequency tail}
+The additional result of \cite[arithmetic frequency-tail proof]{R1003} has a short direct derivation. Let
+\[
+ Z_Y(x)=\sum_{d\le Y^2}\frac{z_Y(d)}dR(x/d),\qquad
+ a_Y(u)=e^{u/2}Z_Y(e^u).
+\]
+With Fourier convention $\widehat a(t)=\int_\R a(u)e^{-\ii tu}\dd u$, the exact Mellin identity is
+\begin{equation}\label{eq:native-Fourier}
+ \widehat a_Y(t)=\Phi_Y(t)
+ :=\frac{\zeta(1/2+\ii t)G_Y(1/2+\ii t)^2}{-1/2+\ii t}.
+\end{equation}
+It follows by applying the Mellin transform to $R$ and then to the finite dilation sum. The original products and both square factors of $G_Y$ are retained.
+
+\begin{proposition}[High-frequency removal]\label{prop:frequency-tail}
+Suppose $\abs{\zeta(1/2+\ii t)}\ll_\eps(1+\abs t)^{\vartheta+\eps}$ for a fixed $0\le\vartheta<1/2$. Then, for $T\ge1$,
+\begin{equation}\label{eq:frequency-tail-general}
+ \int_{\abs t>T}\abs{\Phi_Y(t)}^2\dd t
+ \ll_\eps (YT)^\eps T^{-2+2\vartheta}(T+Y^2).
+\end{equation}
+With the published exponent $\vartheta=13/84$ of Bourgain \cite{Bourgain17}, this becomes
+\[
+ \int_{\abs t>T}\abs{\Phi_Y(t)}^2\dd t
+ \ll_\eps(YT)^\eps T^{-71/42}(T+Y^2),
+\]
+and the entire tail at $T=Y^{84/71}$ has squared norm $O_\eps(Y^\eps)$.
+\end{proposition}
+\begin{proof}
+Expanding $G_Y^j$ gives coefficients bounded by $d_j(n)$ on $n\le Y^j$. The time Gram matrix on $[T,2T]$ has row bound $O(T+Y^j\log(2Y))$. Also $d_j(n)^2\le d_{j^2}(n)$, as seen locally by counting nonnegative $j$ by $j$ matrices with prescribed row and column sums. Thus
+\[
+ \int_T^{2T}\abs{G_Y(1/2+\ii t)}^{2j}\dd t
+ \ll_j(T+Y^j)(\log(2Y))^{j^2+1}.
+\]
+Apply this with $j=2$ and bound the zeta factor and denominator pointwise. Each dyad contributes
+$O_\eps((YU)^\eps U^{-2+2\vartheta}(U+Y^2))$. Both powers sum geometrically for a sufficiently small preliminary loss, proving \eqref{eq:frequency-tail-general}.
+\end{proof}
+
+Frequency projection precedes physical restriction. If $a_{Y,\le T}$ is the inverse Fourier transform of $\ind_{\abs t\le T}\Phi_Y(t)$ and $W_Y=\ind_{[\log b,2\log b)}$, Plancherel gives
+\[
+ \norm{W_Y(a_Y-a_{Y,\le T})}_2^2
+ \le\frac1{2\pi}\int_{\abs t>T}\abs{\Phi_Y(t)}^2\dd t.
+\]
+At the crossings, the complete strict-square-step identity therefore implies
+\[
+ \left|\sqrt{F_{b^2-1}-F_Y}-\norm{W_Ya_{Y,\le T}}_2\right|
+ \ll1+\left(\int_{\abs t>T}\abs{\Phi_Y(t)}^2\dd t\right)^{1/2}.
+\]
+After multiplication by $W_Y$, the low-frequency component is not band-limited; its Fourier transform is a convolution. The bound above handles all mixed terms through a root-norm comparison.
+
+\subsection{What an intermediate contraction would require}
+The energy-adaptive cutoff of \cite{R1002} permits spending a specified error allowance $G_Y>0$ on a larger core sector. Set
+\[
+ S_Y=\min\left(Y^2,\left\lfloor
+       \frac{G_Y}{2304h_Y^2h_{Y^2}^6}\right\rfloor\right).
+\]
+The value zero removes no core. Equation~\eqref{eq:core-sector} gives exactly
+$\norm{V_{Y,\rho}-V^{\mathrm{rough}}_{Y,\rho,S_Y}}_2\le\sqrt{G_Y}/4$.
+For $G_Y=Y^a(1+F_Y)^p$, this leaves an energy-dependent high-core target. It does not estimate that target.
+
+A separate, elementary conditional statement explains the numerical goal. If a nonnegative nondecreasing sequence $F$ has a polynomial upper bound and satisfies, for \emph{every sufficiently large integer} $Y$,
+\begin{equation}\label{eq:recurrence}
+ 1+F_{(Y+1)^2-1}\le C Y^a(1+F_Y)^p,
+ \qquad a\ge0,\quad 1\le p<2,
+\end{equation}
+then $F_X\ll_\eps X^{a/(2-p)+\eps}$. Indeed an input exponent $\kappa$ is replaced by $(a+p\kappa)/2$; after $j$ fixed iterations it is
+\[
+ \frac a{2-p}+\left(\frac p2\right)^j
+                   \left(\kappa_0-\frac a{2-p}\right).
+\]
+For each desired loss choose a sufficiently large fixed $j$, then the earlier losses. For the actual $m$, dyadic Cauchy--Schwarz makes its Mellin transform holomorphic on $\Re z>(\kappa-1)/2$ when $F_X\ll X^{\kappa+\eps}$. This excludes zeta zeros to the right of $(1+\kappa)/2$.
+
+Thus $(a,p)=(1/3,3/2)$ would give $5/6$, and $(1/4,3/2)$ would give $3/4$. Neither recurrence is established here. In particular, \eqref{eq:crossing-comparison} on a sparse cofinal set is not itself the all-$Y$ premise \eqref{eq:recurrence}. The separate all-prefix growth consumer invoked in \cite{R994} must be checked at its own scope before using a weaker cofinal formulation.
+
+The low-frequency counterexample in \cite[\texttt{LOW\_FREQUENCY\_ATTACK.md}]{R1003} further distinguishes the arithmetic task from a generic operator inequality. It constructs bounded squarefree-supported coefficient arrays with first coefficient one and both smooth balance coordinates zero, but with old energy of order $Y^\kappa$ and output energy of order $Y^{2\kappa}$. Those arrays do not obey M\"obius inversion. The result rules out obtaining the advertised contraction from that larger coefficient class alone; it is not a counterexample for the actual M\"obius coefficients.

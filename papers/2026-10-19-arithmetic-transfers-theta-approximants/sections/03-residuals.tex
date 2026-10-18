@@ -1,0 +1,338 @@
+\section{Actual quadratic families and optimal auxiliary-variance removal}\label{sec:residuals}
+
+We now use the dyadic family from \cite{R1001,R1003},
+\[
+ \mathcal U(Q)=\{u:Q<u\le2Q,\ u\text{ odd and squarefree}\},
+ \qquad \chi_u=\chi_{-8u}.
+\]
+These are primitive odd characters of conductor $q=8u$ and root number one. Write $\E_Q$ for the uniform family average. The cardinality is $(4/\pi^2)Q+O(\sqrt Q)$. We retain all ramified values.
+
+\subsection{The character mean and the random square kernel}
+The elementary squarefree-character calculation in \cite[shared proof]{R1001}, restated in \cite[arithmetic proof, (1.1)]{R1003}, is
+\begin{equation}\label{eq:dyadic-character-mean}
+ \E_Q\chi_u(n)=\ind_{n=\square}g(n)
+   +O\bigl(Q^{-1/2}n^{1/4}\log(2n)\bigr),\qquad
+ g(n)=\prod_{p\mid n}\frac p{p+1},
+\end{equation}
+for odd $n$. For even $n$ both the actual and limiting characters vanish. The calculation expands the squarefree indicator and applies primitive character completion below a square-divisor cutoff; the square case retains the coprimality probability $g(n)$. We use precisely this stated finite-family estimate, not a zero-density assertion.
+
+Let the independent variables at odd primes have distribution
+\begin{equation}\label{eq:local-law}
+ \Pr(X_p=0)=\frac1{p+1},\qquad
+ \Pr(X_p=1)=\Pr(X_p=-1)=\frac p{2(p+1)},\qquad X_2=0,
+\end{equation}
+and extend them completely multiplicatively. Then $\E X(n)=\ind_{n=\square}g(n)$ for odd $n$. Prescribing finitely many local states is permitted, provided their limiting probability is positive. The indicator of one such prescription is a finite product of the polynomials $1-X_p^2$ and $(X_p^2\pm X_p)/2$. Expanding it in \eqref{eq:dyadic-character-mean} proves the same mean estimate under conditioning, with a constant depending on the fixed set of primes. Neither a growing set of prescribed states nor uniformity as its probability tends to zero is asserted.
+
+A useful exact consequence concerns the inverse Dedekind coefficients. Define
+\[
+ a_u=\mu*(\mu\chi_u),\qquad A_u(x)=\sum_{n\le x}a_u(n).
+\]
+For fixed $x,y$, expanding the finite sums in \eqref{eq:dyadic-character-mean} gives
+\begin{align}
+ \lim_{Q\to\infty}\E_Q A_u(x)&=M(x),\label{eq:mean-Mertens}\\
+ \lim_{Q\to\infty}\E_Q[A_u(x)A_u(y)]
+ &=\sum_{\substack{m\le\min(x,y)\\m\text{ odd squarefree}}}
+       g(m)M(x/m)M(y/m).\label{eq:cov-Mertens}
+\end{align}
+Indeed $A_u(x)=\sum_{m\le x}\mu(m)\chi_u(m)M(x/m)$, and two squarefree indices have square product exactly when they are equal. The term $m=1$ is the original ordinary covariance. The additional diagonal weights are ramification probabilities, not independent copies of the original source. These fixed-cutoff limits alone do not authorize a growing-cutoff interchange.
+
+\subsection{Mean-square approximation of the complete \texorpdfstring{$L$}{L}-value}
+Fix a compact set $\mathcal K\subset\{s:1/2<\Re s<1\}$. All heights below are bounded by this compact set. Write
+\[
+ \sigma=\Re s,\qquad h=\sigma-\tfrac12,\qquad
+ \lambda=\tfrac54-\sigma,\qquad \sigma_0=\min_{s\in\mathcal K}\Re s.
+\]
+The external analytic input is Heath-Brown's quadratic large sieve \cite{HB95}; see also the statement in \cite[Theorem 2.4]{SY10}:
+\begin{equation}\label{eq:quadratic-LS}
+ \sum_{\substack{u\le U\\u\text{ odd squarefree}}}
+ \left|\sum_{\substack{a\le V\\a\text{ odd squarefree}}}
+        c_a\left(\frac au\right)\right|^2
+ \ll_\eps (UV)^\eps(U+V)\sum_a\abs{c_a}^2.
+\end{equation}
+Quadratic reciprocity and fixed residue-class decompositions give the corresponding inequality for $\chi_u(a)$.
+
+\begin{lemma}[All square parts retained]\label{lem:full-column-LS}
+Let $V\ge1$, $\abs{c_n}\le n^{-\beta}$ on $V<n\le2V$, with $\beta$ in a fixed bounded interval. Suppose the row-dependent weights $W_u(n)$ have uniformly bounded supremum and total variation on this interval. Then
+\begin{equation}\label{eq:full-column-LS}
+ \E_Q\left|\sum_{V<n\le2V}c_n\chi_u(n)W_u(n)\right|^2
+ \ll_\eps (QV)^\eps(1+V/Q)V^{1-2\beta}.
+\end{equation}
+A partial dyadic endpoint and any fixed positive-density local condition are allowed.
+\end{lemma}
+\begin{proof}
+Write uniquely $n=ab^2$, with $a$ odd squarefree and $b$ odd; there is no condition $(a,b)=1$. Exactly,
+\[
+ \chi_u(ab^2)=\chi_u(a)\ind_{(u,b)=1}.
+\]
+For each fixed $b$, keep the row restriction before enlarging the nonnegative row sum in \eqref{eq:quadratic-LS}.
+
+The maximal initial-segment form of that inequality costs at most two logarithmic factors: decompose each initial segment into binary intervals, apply Cauchy--Schwarz on each row, and then sum the large-sieve estimates for all binary intervals. A coefficient is counted at most logarithmically many times. Abel summation now permits the stated row-dependent weights. For fixed $b$, the coefficient square mass is $O(V^{1-2\beta}/b^2)$, including a last interval with $V/b^2$ between $1/2$ and $1$. Its normalized row norm is at most
+\[
+ (QV)^\eps(1+V/Q)^{1/2}V^{1/2-\beta}/b.
+\]
+Minkowski and $\sum_{b\le\sqrt{2V}}b^{-1}\ll\log(2V)$ prove the assertion after shrinking the preliminary losses. The harmonic square-part cost has not been replaced by a convergent sum.
+\end{proof}
+
+\begin{theorem}[Full-$L$ tail estimate]\label{thm:L-tail}
+For $1\le K\le Q$, $s\in\mathcal K$, and every $\eps>0$,
+\begin{equation}\label{eq:L-tail}
+ \E_Q\left|L(s,\chi_u)-\sum_{n\le K}\chi_u(n)n^{-s}\right|^2
+ \ll_{\mathcal K,\eps} Q^\eps K^{1-2\sigma}.
+\end{equation}
+The same estimate holds under any fixed local condition of positive limiting probability. No family member is removed.
+\end{theorem}
+\begin{proof}
+Choose a smooth real $V$ equal to one on $(0,1]$ and zero on $[2,\infty)$, and put $P_K(s,u)=\sum_n\chi_u(n)n^{-s}V(n/K)$. Its Mellin transform $\widehat V(w)$ has a simple pole of residue one at $w=0$ and rapid decay on fixed vertical lines. Mellin inversion, a shift from $\Re(s+w)>1$ to $\Re(s+w)<0$, and the primitive functional equation give the exact identity
+\begin{equation}\label{eq:flat-FE}
+ L(s,\chi_u)-P_K(s,u)
+ =(q/\pi)^{1/2-s}\sum_{n\ge1}\chi_u(n)n^{s-1}
+                   W_s(\pi nK/q),
+\end{equation}
+where
+\[
+ W_s(y)=-\frac1{2\pi\ii}\int_{(-c)}\widehat V(w)
+   \frac{\Gamma((2-s-w)/2)}{\Gamma((s+w+1)/2)}y^w\dd w.
+\]
+The only crossed pole in the first shift is $w=0$, since the characters are nonprincipal. The minus sign in the dual formula and the conductor factor are retained.
+
+Moving the line defining $W_s$ left gives arbitrary polynomial decay for large $y$. Moving it to a sufficiently small positive line crosses only $w=0$, because the first numerator gamma pole has real part $2-\sigma>1$. Thus $W_s$ and its logarithmic derivative are bounded at zero. On a dyad $n\asymp V$, their supremum and variation are
+\[
+ \ll_J\min\{1,(VK/Q)^{-J}\},
+\]
+uniformly for $Q<u\le2Q$ and $s\in\mathcal K$.
+
+Apply Lemma~\ref{lem:full-column-LS} to the dual with $\beta=1-\sigma$. The row norm of a dyad is at most
+\[
+ Q^{-h}(QV)^\eps(1+V/Q)^{1/2}V^h
+                   \min\{1,(VK/Q)^{-J}\}.
+\]
+For $V\le Q/K$, dyadic Minkowski sums this to $O(Q^\eps K^{-h})$, since $h>0$. The dual unit has norm $O(Q^{-h})$ and also fits. Every dyad $V>Q/K$ is retained using $J>h+1$; this also pays those with $V>Q$. Finally, $P_K$ differs from the sharp initial segment only on $K<n\le2K$, where Lemma~\ref{lem:full-column-LS} with $\beta=\sigma$ gives the same row norm. Squaring proves \eqref{eq:L-tail}.
+\end{proof}
+
+A holomorphic submean argument gives the compact-supremum variant
+\[
+ \E_Q\sup_{s\in\mathcal K}
+ \left|L(s,\chi_u)-\sum_{n\le K}\chi_u(n)n^{-s}\right|^2
+ \ll_{\mathcal K,\eps}Q^\eps K^{1-2\sigma_0}.
+\]
+One uses a finite disc cover inside a slightly larger compact set with left edge $\sigma_0-\tau>1/2$, and absorbs $K^{2\tau}\le Q^{2\tau}$ after choosing preliminary losses. This asserts neither growing-height uniformity nor a critical-line endpoint.
+
+\subsection{The limiting Euler object and a master residual comparison}
+The random product
+\[
+ \mathcal L(s)=\prod_{p\text{ odd}}(1-X_pp^{-s})^{-1}
+\]
+exists as a locally holomorphic $L^2$-valued function on $\Re s>1/2$. In fact
+\begin{equation}\label{eq:random-tail}
+ \left\|\mathcal L(s)-\sum_{n\le K}X(n)n^{-s}\right\|_{L^2}
+ \ll_{\mathcal K}K^{1/2-\sigma}\sqrt{\log(2K)}.
+\end{equation}
+To see the tail estimate, the absolute square kernel on one dyad is
+\[
+ \sum_{\substack{V<n,m\le2V\\nm=\square}}(nm)^{-\sigma}
+ \ll V^{1-2\sigma}\log(2V).
+\]
+Write $n=ra^2,m=rb^2$ with common squarefree $r$, and use the resulting harmonic $r$-sum. Dyadic Minkowski gives \eqref{eq:random-tail}. Independently, the local means and second moments of the Euler factors are $1+O(p^{-2\sigma})$, so independence makes their products Cauchy in $L^2$ locally. Agreement with the series on $\Re s>1$ identifies the two continuations. Square aliases are essential to this argument.
+
+Let $A_u(s)=\sum_{n\le X}c_n(s)\chi_u(n)$, with coefficients common to the rows, and let $A(s,X_\bullet)$ be its random counterpart. Define actual coefficient masses
+\[
+ B=\sum_{n\le X}\abs{c_n(s)},\qquad
+ D=\sum_{n\le X}n^{1/4}\abs{c_n(s)}.
+\]
+For a bounded scalar $z=z(s)$ put
+\[
+ R_Q=\E_Q\abs{zL(s,\chi_u)A_u(s)-1}^2,\qquad
+ R_\infty=\E\abs{z\mathcal L(s)A(s,X_\bullet)-1}^2.
+\]
+
+\begin{theorem}[Quantitative full-residual transfer]\label{thm:residual-transfer}
+For $1\le K\le Q$,
+\begin{align}
+ \abs{\sqrt{R_Q}-\sqrt{R_\infty}}
+ &\ll Q^\eps\abs z B K^{-h}
+  +Q^{-1/4}\sqrt{\log(2KX)}(1+\abs z D K^\lambda),
+ \label{eq:root-transfer}\\
+ \abs{R_Q-R_\infty}
+ &\ll Q^\eps(1+\abs z B)\abs z B K^{-h}
+  +Q^{-1/2}\log(2KX)(1+\abs z D K^\lambda)^2.
+ \label{eq:square-transfer}
+\end{align}
+The fixed-compact and fixed-local-conditioning conventions above apply.
+\end{theorem}
+\begin{proof}
+Replacing the actual and random $L$-values by initial segments changes their residual norms by at most $O(Q^\eps\abs z B K^{-h})$, by \eqref{eq:L-tail} and \eqref{eq:random-tail}. Expand the truncated residual as a finite character polynomial $\sum_\ell b_\ell\chi_u(\ell)$, or its random analogue. Its support is at most $KX$, and
+\[
+ \sum_\ell\ell^{1/4}\abs{b_\ell}
+ \le1+\abs z D\sum_{a\le K}a^{1/4-\sigma}
+ \ll1+\abs z D K^\lambda.
+\]
+The complete square expansion and \eqref{eq:dyadic-character-mean} therefore bound the difference of truncated squared norms by
+\[
+ O\bigl(Q^{-1/2}\log(2KX)(1+\abs z D K^\lambda)^2\bigr).
+\]
+Use $\abs{\sqrt a-\sqrt b}\le\sqrt{\abs{a-b}}$ for nonnegative $a,b$ to obtain \eqref{eq:root-transfer}.
+
+For \eqref{eq:square-transfer}, the actual full $L$ second moment is uniformly bounded on the compact set. This follows already from \eqref{eq:root-transfer} with $A=1,z=1,K=Q^{1/3}$ and the bounded random moment; it is not an input to that proof. Thus full residual norms are $O(1+\abs z B)$. The truncated $L$ norm is also $O(Q^{\eps'})$ by the tail estimate. Consequently the change of squared norms due to truncation is bounded by the first term of \eqref{eq:square-transfer}, after allocating the preliminary loss. Add the finite polynomial comparison. This argument never divides by $z$ or by any $L$-value.
+\end{proof}
+
+For the triangular inverse-Dedekind mollifier
+\[
+ \mathcal M_{u,X}(s)=\sum_{mn\le X}\mu(m)\mu(n)\chi_u(n)(mn)^{-s},
+\]
+the masses satisfy $B\ll X^{1-\sigma}\log(2X)$ and $D\ll X^{5/4-\sigma}$. Substitution in Theorem~\ref{thm:residual-transfer} gives the following strict ranges for $X\le Q^\eta$:
+\begin{align}
+ \eta&<\frac{\sigma_0-1/2}{5/2-2\sigma_0},&
+ \delta_1&=\frac{\sigma_0-1/2-\eta(5/2-2\sigma_0)}3,
+ \label{eq:root-range}\\
+ \eta&<\frac{\sigma_0-1/2}{(5-4\sigma_0)(3/2-\sigma_0)},&
+ \delta_2&=\frac{\sigma_0-1/2-\eta(5-4\sigma_0)(3/2-\sigma_0)}{4-2\sigma_0}.
+ \label{eq:square-range}
+\end{align}
+The respective errors are $O(Q^{-\delta_1+\eps})$ for root residuals and $O(Q^{-\delta_2+\eps})$ for squared residuals. The choices are $K=Q^{(1-\eta)/3}$ and $K=Q^{(1-\eta)/(4-2\sigma_0)}$. At $\sigma_0=3/4$, these permit $\eta<1/4$ and $\eta<1/6$; at $5/6$, they permit $\eta<2/5$ and $\eta<3/10$. These fractions describe family approximation and mollifier lengths, not zero locations.
+
+\subsection{Exact local optimization}
+For $y\ge3$ let
+\[
+ E_y(s,X_\bullet)=\prod_{3\le p\le y}(1-X_pp^{-s}),\qquad
+ \mathcal L=\mathcal L_{\le y}\mathcal T_y,
+\]
+and set $C_y=\E\mathcal T_y$, $H_y=\E\abs{\mathcal T_y}^2$. With $g_p=p/(p+1)$,
+\begin{equation}\label{eq:Cy}
+ C_y(s)=\prod_{p>y}\frac{1-(1-g_p)p^{-2s}}{1-p^{-2s}}.
+\end{equation}
+It is holomorphic and nonzero on $\Re s>1/2$.
+
+\begin{theorem}[Optimal correction at a prescribed mean]\label{thm:variance}
+Fix a scalar $m=m(s)$. Among all complex functions $N$ of the states $X_p$, $3\le p\le y$, subject to $\E[\mathcal L N]=m$, the residual satisfies
+\begin{equation}\label{eq:variance-min}
+ \min_N\E\abs{z\mathcal L N-1}^2
+ =\abs{zm-1}^2+\abs{zm}^2\left(\frac{H_y}{\abs{C_y}^2}-1\right).
+\end{equation}
+The minimum is attained by $N_*=mE_y/C_y$. It is unique almost surely if $z\ne0$. If $z=0$, every residual is one and uniqueness is not asserted.
+\end{theorem}
+\begin{proof}
+Put $A=\mathcal L_{\le y}N$. This is an invertible change of finite-state variables, and $\E A=m/C_y$. Independence of the tail gives exactly
+\begin{align*}
+ \E\abs{z\mathcal L N-1}^2
+  =\abs{zm-1}^2
+   +\abs{zm}^2\left(\frac{H_y}{\abs{C_y}^2}-1\right)
+   +\abs z^2 H_y\E\abs{A-\E A}^2.
+\end{align*}
+The final term vanishes precisely when $A$ is constant, except for the stated degenerate case.
+\end{proof}
+
+This optimization is over the full finite local state space, not a selected linear subspace. Its remaining tail variance is explicit. For $x=p^{-s}$,
+\[
+ v_p(s)=\frac{g_p\abs x^2(1+(1-g_p)\abs x^2)}
+                  {\abs{1-(1-g_p)x^2}^2},\qquad
+ \frac{H_y}{\abs{C_y}^2}=\prod_{p>y}(1+v_p).
+\]
+Consequently
+\begin{equation}\label{eq:variance-tail}
+ 0\le H_y/\abs{C_y}^2-1\ll_{\mathcal K}y^{1-2\sigma}.
+\end{equation}
+The last estimate only uses comparison of $\sum_{p>y}p^{-2\sigma}$ with the integer sum.
+
+The correction also transfers to actual growing families. Put $P_y=\prod_{3\le p\le y}p$. Its coefficient masses are
+\[
+ B_y=\prod_{3\le p\le y}(1+p^{-\sigma}),\qquad
+ D_y=\prod_{3\le p\le y}(1+p^{1/4-\sigma}).
+\]
+If $y=(\log Q)^\nu$ with $0<\nu<(5/4-\sigma_0)^{-1}$, then $B_y,D_y=Q^{o(1)}$ and $\log(2KP_y)=Q^{o(1)}$. This remains true even when $P_y$ exceeds every fixed power of $Q$; the master estimate uses the actual masses, not a small-support assertion. Taking $K=Q^{1/3}$ in \eqref{eq:root-transfer} yields
+\begin{equation}\label{eq:actual-variance-removal}
+ \E_Q\left|L(s,\chi_u)\frac{E_y(s,\chi_u)}{C_y(s)}-1\right|^2
+ \ll y^{1-2\sigma}+Q^{-2(\sigma_0-1/2)/3+\eps}.
+\end{equation}
+For a fixed ordinary mollifier $M_Z(s)=\sum_{n\le Z}\mu(n)n^{-s}$, the complete common-factor residual therefore has limit
+\begin{equation}\label{eq:remaining-scalar}
+ \lim_{Q\to\infty}\E_Q\left|
+ \zeta(s)L(s,\chi_u)M_Z(s)\frac{E_y(s,\chi_u)}{C_y(s)}-1
+ \right|^2=\abs{\zeta(s)M_Z(s)-1}^2.
+\end{equation}
+The normalizer contains no inverse zeta factor. At an ordinary zero, both sides of \eqref{eq:remaining-scalar} equal one. Thus the auxiliary variance is removed, but the decisive strict-below-one scalar bound has not been proved.
+
+\section{Two mollifiers and capped reciprocal moments}\label{sec:capped}
+
+The following transfer, from \cite{R989}, is independent of the particular arithmetic family. It makes explicit why one polynomial need not perform both the control and leading-term tasks.
+
+\begin{theorem}[Two-mollifier transfer]\label{thm:two-mollifier}
+Let $L_i,P_i,Q_i$ be finite complex arrays, with bounded nonnegative weights $w_i$ of total mass $O(U)$. Fix positive integers $k,r$. Suppose, with arbitrarily small positive losses,
+\begin{align*}
+ \sum_iw_i(\abs{P_i}^{4k}+\abs{Q_i}^{4k})&\ll U^{1+\eps},\\
+ \sum_iw_i\abs{L_iP_i-1}^{2r}&\ll U^{1-\delta+\eps},\\
+ \sum_iw_i\abs{L_iQ_i-1}^{2}&\ll U^{1-\lambda+\eps},\\
+ \sum_iw_i\abs{Q_i}^{2k}&=cU+O(U^{1-\tau+\eps}),
+\end{align*}
+where $\delta,\lambda,\tau>0$ are fixed. For $0<\theta<\delta$,
+\begin{equation}\label{eq:two-mollifier}
+ \sum_iw_i\min\{\abs{L_i}^{-2k},U^\theta\}
+ =cU+O(U^{1-\eta+\eps}),\quad
+ \eta=\min(\lambda/2,\tau,\delta/2,\theta,\delta-\theta).
+\end{equation}
+At $L_i=0$, the summand is defined to be the cap $U^\theta$.
+\end{theorem}
+\begin{proof}
+Let $B=\{i:\abs{L_iP_i-1}>1/2\}$ and $G=B^c$. Markov gives $\sum_Bw_i\ll U^{1-\delta+\eps}$. Every zero of $L_i$ is in $B$. On $G$, $I_i=1/L_i$ exists and $\abs{I_i}\le2\abs{P_i}$. Put $F_i=L_iQ_i-1$. Since $I_i-Q_i=-I_iF_i$, the elementary power difference and Young inequalities give
+\[
+ \bigl|\abs{I_i}^{2k}-\abs{Q_i}^{2k}\bigr|
+ \le C_k\abs{F_i}(\abs{P_i}^{2k}+\abs{Q_i}^{2k}).
+\]
+Cauchy--Schwarz bounds its weighted sum by $O(U^{1-\lambda/2+\eps})$. The missing $Q$ mass on $B$ is $O(U^{1-\delta/2+\eps})$, again by Cauchy--Schwarz.
+
+The cap is not assumed inactive on $G$. Its complete loss is at most
+\[
+ U^{-\theta}\sum_Gw_i\abs{I_i}^{4k}\ll U^{1-\theta+\eps}.
+\]
+The capped contribution of $B$ is at most $U^\theta\sum_Bw_i\ll U^{1-\delta+\theta+\eps}$. Add these four errors to the short-polynomial moment asymptotic. There is no independence hypothesis between either polynomial and the family.
+\end{proof}
+
+\subsection{Source-qualified character-family application}
+To state the scope of the arithmetic application, fix a field containing the $n$th roots of unity, $n\ge3$, admissible finite local data $S$, and one allowed fixed finite-order twist $\psi$. Rows are the actual $n$th-power-free exterior integral ideals, ordered by their full norms. Character values at nonunits are zero. Let
+\[
+ L_{\mathfrak a}(s)=L_F^S(s,\psi\chi_{\mathfrak a}),\qquad
+ M_A(s,\mathfrak a)=\sum_{N\mathfrak d\le A}
+ \frac{\mu_F(\mathfrak d)\psi(\mathfrak d)\chi_{\mathfrak a}(\mathfrak d)}{(N\mathfrak d)^s}.
+\]
+The application in \cite{R989} adopts the precise large-sieve, flat-cutoff functional-equation, full-residual, and arithmetic character-mean contracts from its pinned predecessors. In particular, its large-sieve kernel is
+\begin{equation}\label{eq:n-sieve-contract}
+ K_n(U,V)=U+V+U^{1-1/n}V^{2/n}+U^{2/n}V^{1-1/n},
+\end{equation}
+with power-free indices on both sides. Full columns $\mathfrak c=\mathfrak e\mathfrak f^n$ retain the exact mask
+$\chi_{\mathfrak a}(\mathfrak c)=\chi_{\mathfrak a}(\mathfrak e)\ind_{(\mathfrak a,\mathfrak f)=1}$, without an extra condition $(\mathfrak e,\mathfrak f)=1$. The complete conjugate dual and its actual conductor are part of the functional-equation contract. These analytic contracts are not independently reconstructed in this manuscript; the next statement is explicitly conditional on them.
+
+For a nonnegative smooth $W$ supported in $(1,2)$, put
+\[
+ c_W=\frac{\Res_{z=1}\zeta_F^S(z)}{\zeta_F^S(n)}\int_0^\infty W(x)\dd x,
+ \qquad w_p=\frac{1-q^{-1}}{1-q^{-n}},\quad q=Np,
+\]
+and
+\begin{equation}\label{eq:reciprocal-constant}
+ C_k(s)=\prod_{p\notin S}\left[
+ 1-w_p+\frac{w_p}{n}\sum_{\omega^n=1}
+               \abs{1-\psi(p)\omega q^{-s}}^{2k}\right].
+\end{equation}
+All neutral aliases for $k\ge n$ occur in this positive local average.
+
+\begin{reported}[Capped fixed-order laws of \cite{R989}]\label{prop:all-capped}
+Under the named source contracts, at $n=6$, $s=3/4+\ii t$, fixed $k\ge1$ and fixed compact $t$-range, define
+\[
+ e_k=\frac1{8k+2},\qquad
+ \delta_k=\begin{cases}
+ 4/15,&k=1,\\1/4,&k=2,\\1/5,&3\le k\le5,\\
+ 1/k,&6\le k\le10,\\19/194,&11\le k\le15,\\3/(2k),&k\ge16.
+ \end{cases}
+\]
+For every fixed $0<\theta<\delta_k$,
+\begin{align}\label{eq:capped-application}
+ \sum_{\mathfrak a}W(N\mathfrak a/U)
+ \min\{\abs{L_{\mathfrak a}(s)}^{-2k},U^\theta\}
+ =c_W C_k(s)U
+ +O\left(U^{1-\min(e_k,\theta,\delta_k-\theta)+\eps}\right).
+\end{align}
+More generally, on every fixed line $1/2<\sigma<1$, put $d=2\sigma-1$, $a=\min(d/2,1/(4k))$, and $\Delta=da$. The corresponding source-qualified cap and error are $U^{3\Delta/4}$ and $O(U^{1-\Delta/4+\eps})$.
+\end{reported}
+
+The arithmetic leading term is obtained by expanding a short polynomial before averaging. Nonprincipal tuples cost
+$U^{1/2+\eps}B^{k(5/2-2\sigma)+\eps}$, while the omitted neutral-tuple tail costs $UB^{-d/2}$. The long polynomial is chosen using the predecessor's complete residual estimate. Theorem~\ref{thm:two-mollifier} then supplies the displayed transfer, including the cap loss on the good set. This explanation identifies the operation contributed by \cite{R989}; it is not a substitute for its deep source contracts.
+
+At $k=1$, the two useful choices are cap $U^{1/6}$ with error $U^{9/10+\eps}$ and cap $U^{1/4}$ with error $U^{59/60+\eps}$. Every statement is for fixed order. The constants are not controlled for an unbounded-order limit, and the cap exponent at large $k$ is not uniformly superior to every earlier fixed cap. At a zero, the cap remains compatible with the family error. This is an all-fixed-moments result of a capped kind, not an uncapped moment theorem or a zero-free half-plane.

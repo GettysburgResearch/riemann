@@ -1,0 +1,159 @@
+\section{Strip-confined models: compactness and controlled negative couplings}\label{sec:strips}
+
+The Lee--Yang real-zero class has strong closure properties; see \cite{LY52,NW19}. Merely replacing real zeros by a common horizontal strip does not preserve those properties. The counterexample and repair in \cite{R1002} are therefore part of the mathematical result, not optional cautions about numerical fitting.
+
+\subsection{A moment-convergence counterexample}
+For $a\ge0,w>0$,
+\[
+ f_{a,w}(z)=\frac{a+\cos(wz)}{a+1}
+\]
+is the characteristic function of a symmetric three-point law. If $0\le a\le1$ all its zeros are real. If $a>1$, the zeros are
+\[
+ \frac{(2j+1)\pi\pm\ii\arcosh(a)}{w},\qquad j\in\Z.
+\]
+Fix $b>0$, set $a_n=\cosh(bn)$ and $v_n=n^2/(1+a_n)$, and, for large $n$, define
+\begin{equation}\label{eq:rare-jump}
+ f_n(z)=\cos(\sqrt{1-v_n}\,z)\,
+          \frac{a_n+\cos(nz)}{1+a_n}.
+\end{equation}
+These are symmetric characteristic functions of variance exactly one. All their zeros lie in $\abs{\Im z}\le b$. Every fixed moment converges to the corresponding moment of the fair sign law: the rare-jump contribution to the $2k$th moment is $n^{2k}/(1+\cosh(bn))\to0$, and $v_n\to0$. Yet, for every $y>b$,
+\[
+ f_n(\ii y)\ge\frac{\cosh(bn)+\cosh(ny)}{1+\cosh(bn)}\longrightarrow\infty.
+\]
+Thus even convergence of every fixed moment does not give local boundedness in the region where zero exclusion would be transferred.
+
+\begin{theorem}[One exponential budget suffices]\label{thm:strip-transfer}
+Let $\nu$ be the actual theta probability law with characteristic function $F_\theta(z)=\Xi(z)/\Xi(0)$. Let $\nu_m$ be symmetric probability measures with entire characteristic functions $f_m$. Suppose, for fixed $0\le b<1/2<R$ and $C<\infty$, that all zeros of $f_m$ lie in $\abs{\Im z}\le b$, that
+\begin{equation}\label{eq:one-exp-budget}
+ \int e^{R\abs x}\dd\nu_m(x)\le C,
+\end{equation}
+and that every fixed moment converges to the corresponding theta moment. Then $\Xi$ has no zeros with $\abs{\Im z}>b$. Hence ordinary zeta has no nontrivial zero with $\Re\rho>1/2+b$.
+\end{theorem}
+\begin{proof}
+For $\abs{\Im z}<R$, $\abs{f_m(z)}\le C$, so the functions form a normal family on this connected strip. Every subsequential limit has at zero the prescribed derivatives, since local uniform convergence permits differentiation. It therefore equals $F_\theta$ near zero, and then on the strip by analytic uniqueness. This identifies every subsequential limit and proves local uniform convergence of the sequence. Hurwitz applies on each of $b<\Im z<R$ and $-R<\Im z<-b$. The limit is not identically zero because its value at zero is one. All possible nontrivial zeta zeros already correspond to $\abs{\Im z}<1/2<R$, which proves the conclusion at every height.
+\end{proof}
+
+It suffices to certify the zero exclusion on expanding horizontal windows inside $\abs{\Im z}<R$, because each compact eventually lies in such a window. If the first $L$ moments match exactly and both measures satisfy the exponential budget $C$, the elementary Taylor-tail estimate is
+\[
+ \sup_{\abs z\le r}\abs{f_m(z)-F_\theta(z)}
+ \le2C(r/R)^{L+1},\qquad r<R.
+\]
+Moment mismatches add their explicit finite Taylor sum. This is a disc estimate, not a uniform assertion on an unbounded horizontal strip.
+
+The finite three-point factors above describe a test class and the counterexample, not a successful cofinal theta construction. The separate product obstruction in \cite[strip proof]{R1001} further warns against treating products of such elementary laws as a universal approximation class. The correlated graph construction below has different hypotheses and is not excluded by that product argument.
+
+\subsection{A finite-graph strip theorem}
+Consider a finite graph without self-loops, with finite real pair couplings $J_e$ and real fields $h_i$. Under the probability law proportional to
+\[
+ \exp\left(\sum_{e=\{i,j\}}J_e\sigma_i\sigma_j+\sum_i h_i\sigma_i\right),
+ \qquad \sigma_i\in\{-1,1\},
+\]
+let $Y=\sum_iw_i\sigma_i$, $w_i\ge0$, and $\varphi(z)=\E e^{\ii zY}$. Parallel edges may first be combined. The following result is the controlled-negative-coupling extension in \cite{R1003}; its proof gives the needed disk form of the classical contraction argument directly.
+
+\begin{theorem}[Allocatable negative-edge budget]\label{thm:negative-strip}
+For each negative edge $e=\{i,j\}$, choose nonnegative endpoint budgets $\alpha_{e,i},\alpha_{e,j}$ satisfying
+\begin{equation}\label{eq:edge-budget}
+ \tanh\alpha_{e,i}\tanh\alpha_{e,j}\ge\tanh\abs{J_e}.
+\end{equation}
+Suppose, at each vertex,
+\begin{equation}\label{eq:vertex-budget}
+ \abs{h_i}+\sum_{e\ni i,\ J_e<0}\alpha_{e,i}\le b w_i.
+\end{equation}
+Then every zero of the complete characteristic function $\varphi$ lies in $\abs{\Im z}\le b$. There is no restriction on the number of vertices, cycles, or positive couplings.
+\end{theorem}
+\begin{proof}
+For an edge put $c=e^{-2J}>0$. Its two-variable polynomial, up to a nonzero positive constant, is
+\[
+ p_c(x,y)=1+c(x+y)+xy.
+\]
+If $c\le1$, it is nonzero when $\abs x,\abs y<1$. For $c<1$, the possible root $y=-(1+cx)/(c+x)$ has modulus greater than one, since
+$\abs{1+cx}^2-\abs{c+x}^2=(1-c^2)(1-\abs x^2)>0$; the case $c=1$ factors.
+
+If $c>1$, choose $r_i,r_j\in(0,1)$ with
+$1+r_ir_j\ge c(r_i+r_j)$. This implies $r_i,r_j<1/c$. Minimization on a circle gives, for $\abs x\le r_i$,
+\[
+ \left|\frac{1+cx}{c+x}\right|
+ \ge\frac{1-c\abs x}{c-\abs x}
+ \ge\frac{1-cr_i}{c-r_i}\ge r_j.
+\]
+Thus the edge polynomial is nonzero in the open bidisk. With $r_i=e^{-2\alpha_i}$ and $r_j=e^{-2\alpha_j}$, the radius condition is equivalent to \eqref{eq:edge-budget}, because
+\[
+ \frac{1+r_ir_j}{r_i+r_j}
+ =\frac{1+\tanh\alpha_i\tanh\alpha_j}
+        {1-\tanh\alpha_i\tanh\alpha_j}.
+\]
+
+The disk contraction step is elementary. If $P(x,y)=A+Bx+Cy+Dxy$ is nonzero on $\abs x<r_1,\abs y<r_2$, then $A+Dz$ is nonzero for $\abs z<r_1r_2$. Indeed $A\ne0$, and the roots of $P(r_1t,r_2t)$ have modulus at least one. Their product gives $\abs D r_1r_2\le\abs A$; if $D=0$ the conclusion is immediate. Other variables can be held fixed throughout, so the contraction can be iterated.
+
+Assign separate variables to edge incidences, multiply all edge polynomials, and contract the incidences at each vertex. An isolated vertex supplies $1+z_i$. The result is exactly the graph subset polynomial
+\[
+ \mathcal Z(\boldsymbol z)
+ =\sum_{S\subseteq V}
+  \left(\prod_{e:\,\abs{e\cap S}=1}e^{-2J_e}\right)\prod_{i\in S}z_i.
+\]
+Every physical spin configuration remains. The contraction removes only inconsistent incidence assignments introduced in the factorization. It proves nonvanishing when all $\abs{z_i}<R_i$, where
+$R_i=\exp(-2\sum_{e\ni i,J_e<0}\alpha_{e,i})$. Spin reversal gives nonvanishing also when all $\abs{z_i}>1/R_i$.
+
+Set $z_i=e^{2h_i+2\ii zw_i}$. For positive weights, \eqref{eq:vertex-budget} puts these activities strictly inside the respective disks when $\Im z>b$, and strictly outside the reciprocal disks when $\Im z<-b$. The additional exponential and normalizing factors are nonzero. A zero-weight vertex has zero field and no incident negative edge. Replacing those zero weights by positive $\eps$ and then letting $\eps\downarrow0$ gives the result by Hurwitz; the finite entire limit has value one at zero and is not identically zero.
+\end{proof}
+
+A simple symmetric allocation is
+\[
+ \alpha_{e,i}=\alpha_{e,j}
+ =\tfrac12\arcosh(e^{2\abs{J_e}}),
+\]
+but asymmetric allocations are allowed. Thus a larger observable weight can pay a larger share of an incident negative-edge cost. This theorem does not assign the ordinary Lee--Yang real-zero property to an antiferromagnet; it pays an explicit nonzero strip width.
+
+\subsection{A reference-variance bound and its continuous barrier}
+Let the positive reference model have zero fields and couplings $J_e^+=\max(J_e,0)$. Put
+\[
+ C_{ij}=\E_+(\sigma_i\sigma_j),\qquad V_+=w^{\mathsf T}Cw,
+ \qquad K_-=\sum_{J_e<0}\abs{J_e}.
+\]
+The correlation matrix is positive semidefinite, has diagonal one, and has nonnegative entries. The zero-field ferromagnetic Gaussian estimate is
+\begin{equation}\label{eq:ferro-Gaussian}
+ \E_+e^{\sum_i q_i\sigma_i}\le e^{q^{\mathsf T}Cq/2},\qquad q_i\ge0.
+\end{equation}
+This is the classical Lee--Yang consequence used in \cite[strip theorem]{R1001}. For example, apply the real-zero product to the finite weighted observable $\sum_iq_i\sigma_i$ and use $\log(1+x)\le x$ on its moment generating product. Arbitrary field signs can be replaced by absolute values on the right, by the nonnegative zero-field spin correlations.
+
+\begin{proposition}[Reference variance and entire growth]\label{prop:reference-variance}
+Under \eqref{eq:edge-budget}--\eqref{eq:vertex-budget}, let $v=\E Y^2$. Then
+\begin{align}
+ v&\ge V_+e^{-b^2V_+},\label{eq:variance-barrier}\\
+ \abs{\varphi(z)}&\le
+ \exp\left[V_+\left(b^2+b\abs{\Im z}+\tfrac12\abs{\Im z}^2\right)\right].
+ \label{eq:graph-envelope}
+\end{align}
+Here $v$ is a second moment; no centering is needed for these inequalities.
+\end{proposition}
+\begin{proof}
+Write $d_i=\sum_{e\ni i,J_e<0}\alpha_{e,i}$ and $q_i=\abs{h_i}$. The edge condition implies
+\[
+ \abs{J_e}\le\tfrac12\{
+ \log\cosh(\alpha_{e,i}+\alpha_{e,j})
+ -\log\cosh(\alpha_{e,i}-\alpha_{e,j})\}
+ \le\alpha_{e,i}\alpha_{e,j},
+\]
+where the last bound integrates $\tanh t\le t$. Hence
+\[
+ 2K_-\le\sum_i d_i^2\le d^{\mathsf T}Cd,
+ \qquad 2K_-+\tfrac12q^{\mathsf T}Cq\le b^2V_+.
+\]
+For the second inequality use $d+q\le bw$ componentwise and nonnegative entries of $C$.
+
+Let $A=\sum_{J_e<0}J_e\sigma_i\sigma_j$ and $H=\sum_i h_i\sigma_i$. Global spin reversal of the reference law gives
+$\E_+[Y^2e^{A+H}]=\E_+[Y^2e^A\cosh H]\ge e^{-K_-}V_+$. Its normalizer is at most $e^{K_-+q^{\mathsf T}Cq/2}$ by \eqref{eq:ferro-Gaussian}. Division proves \eqref{eq:variance-barrier}.
+
+The normalizer is also at least $e^{-K_-}\E_+e^H\ge e^{-K_-}$. With $y=\abs{\Im z}$, the absolute numerator is at most
+$e^{K_-}\exp((q+yw)^{\mathsf T}C(q+yw)/2)$. Use the previous budget and $q\le bw$ to obtain \eqref{eq:graph-envelope}.
+\end{proof}
+
+A continuous deformation preserving $v$, the band budget $b$, and continuity of $V_+$ cannot escape its small-reference-variance component when it begins at a zero-field ferromagnet. If $b^2v<1/e$, the inequality $v\ge V_+e^{-b^2V_+}$ excludes the open interval between the two roots of $Ve^{-b^2V}=v$. Continuity prevents crossing that interval.
+
+For the physical theta normalization, take $b=1/3$ and use $v_\theta<4621/100000$. The explicit barrier $r=2323/50000=0.04646$ satisfies
+\[
+ r-r^2/9-4621/100000=\frac{228671}{22500000000}>0.
+\]
+Since $e^{-x}\ge1-x$, a first crossing $V_+=r$ would contradict \eqref{eq:variance-barrier}. Thus $V_+<r$ throughout such a continuous component. Graph changes are allowed when they preserve this continuity, for example the insertion of zero edges or zero-weight vertices.
+
+A cofinal sequence of \emph{symmetric}, theta-matching models in this component would have the common entire envelope \eqref{eq:graph-envelope}. Montel, coefficient identification, and Hurwitz would then give the ordinary $5/6$ boundary. No such cofinal sequence, or negative-coupling theta-matching finite model, is supplied by \cite{R1003}. The contribution is an enlarged admissible class with a paid strip and compactness budget, not an achieved zero-free region.

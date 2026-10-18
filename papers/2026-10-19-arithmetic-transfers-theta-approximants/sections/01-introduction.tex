@@ -1,0 +1,55 @@
+\section{Introduction and scope}\label{sec:introduction}
+
+An averaged estimate, a finite real-zero construction, and a bound for a fixed zeta function are different mathematical statements. Much of the recent work considered here concerns the operations needed to pass between them without discarding the original arithmetic source. The point of this manuscript is to state the resulting contributions in conventional mathematical form, with their dependencies and quantifiers intact.
+
+Our source window is the research developed on 17--19 October 2026, together with the earlier arguments on which those packets explicitly depend. The principal sources are the frozen contributions \cite{R977,R989,R993,R994,R996,R998,R1000,R1001,R1002,R1003,R1004}. These are research-branch publications, not a single integrated proof. In particular, the latest source \cite{R1003} supersedes the earlier order-20 frontier for \emph{finite Taylor matching}, but does not supply an unbounded construction. Recoveries of unchanged files are not counted as additional discoveries.
+
+\subsection{The contributions in this account}
+The arithmetic part begins with a primitive rational sequence associated with an imaginary quadratic field. Its local factors distinguish split, inert, and ramified primes. An absolutely summable invertible correction compares this sequence with the complete reciprocal Dedekind source. Averaging over actual fundamental discriminants then gives an explicit approximation to ordinary M\"obius, uniformly for bounded common weights. The comparison preserves the common M\"obius term rather than using character orthogonality to remove it.
+
+A second family argument concerns analytically continued quadratic $L$-values on fixed compact subsets of $1/2<\Re s<1$. Starting from the classical quadratic large sieve, one retains square parts, conductor-dependent weights, and the complete dual expression in a flat-cutoff functional equation. This gives a quantitative transfer of full mollified residuals to a random Euler model. A finite-state minimization then identifies the optimal local correction at a prescribed mean. The auxiliary variance tends to zero, but the rational residual $\abs{\zeta(s)M_Z(s)-1}^2$ remains.
+
+The two-mollifier argument has a different purpose: one polynomial controls large reciprocal values while another computes the leading term. Its abstract transfer theorem is independent of the deep character-family inputs. Applications to every fixed reciprocal moment order retain an essential cap. The cap, its size, and the loss of uniformity as the moment order grows are part of the conclusion, not removable technicalities.
+
+For the native rational M\"obius source, the complete denominator decomposition pays sectors that earlier product cutoffs retained. The small-core estimate includes all coherent cross terms and arbitrary bounded denominator-dependent masks. A separate Fourier estimate removes the entire high-frequency tail at a specified power cutoff. These estimates leave a concrete low-frequency or large-core arithmetic remainder, rather than an unspecified error term.
+
+The approximation part has both finite and all-order components. The sources provide directed existence certificates for functions
+\[
+ P(z)=e^{-az^2}\prod_{j=1}^N(1-b_jz^2),\qquad a,b_j>0,
+\]
+matching the actual standardized theta expansion through order 26. They also establish a conditional canonical-product theorem with positive \emph{real weights}, not only integer root multiplicities. A separate strip programme admits finite Ising models with controlled fields and negative couplings. None of these all-order criteria is supplied with its unbounded feasibility premise.
+
+Finally, positive primitive-cycle determinants realize the exact integer
+\[
+ A_N=\prod_{p^j\le N}p^{N-p^j}.
+\]
+Their regularization error is explicitly bounded, including a larger-mass regime with improved conditioning. The missing estimate is the centered logarithmic height, not positive definiteness. An exact exponent audit records why the attempted $0.87$ comparison did not follow from the available sufficient estimates.
+
+\subsection{Claim discipline and the role of the sources}
+The self-contained arguments below are written as lemmas and theorems. Their inclusion records the mathematical claims and proofs being offered for review; it is not an independent referee verdict. Results involving deep analytic inputs state those inputs explicitly. The finite certificates are identified by their exact source data and acceptance rules; the compilation of this manuscript is not described as a fresh execution of every source checker. Source-qualified zero-free proposals are separated in Section~\ref{sec:boundaries}, and are not premises of the elementary quadratic comparison, canonical-factor, or determinant arguments.
+
+The manuscript does not silently repair a source, infer a missing analytic estimate from a finite test, or identify a new representation with a solution of its remaining bound. In particular, neither an $L^2$ average over many characters nor a finite sequence of matching orders rules out a prescribed exceptional zero. We make no claim of exhaustive novelty against the literature. Classical ingredients are credited where they enter; the proposed repository contributions consist of the displayed constructions, quantitative comparisons, scoped applications, and explicit obstruction calculations.
+
+\subsection{Notation and elementary zero retention}
+We write $\mu$ and $\Lambda$ for the M\"obius and von Mangoldt functions, and
+\[
+ M(x)=\sum_{n\le x}\mu(n),\qquad
+ m(x)=\sum_{n\le x}\frac{\mu(n)}n,\qquad
+ F_X=\sum_{k\le X}\abs{m(k)}^2.
+\]
+The harmonic number is $h_N=\sum_{j\le N}j^{-1}$. For a number field, $N\mathfrak a$ denotes the absolute ideal norm. Superscript $S$ denotes removal of the stated finite Euler factors. Every occurrence of $O_\eps$ or $\ll_\eps$ allows dependence on the explicitly fixed data. Moment orders are fixed unless uniformity is expressly stated.
+
+For a quadratic discriminant $\Delta$, the factorization
+\begin{equation}\label{eq:quadratic-factorization}
+ \zeta_{\Q(\sqrt\Delta)}(s)=\zeta(s)L(s,\chi_\Delta)
+\end{equation}
+is used in its usual meromorphic sense; here and below $\Q$ denotes $\mathbb Q$. The nonprincipal Dirichlet factor is entire. Thus a nontrivial ordinary zeta zero is a zero of every such full Dedekind product. This observation is lost if one instead studies only the quotient by $\zeta$.
+
+For Fourier arguments we use
+\[
+ \Xi(z)=\xi(1/2+\ii z),\qquad
+ \xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s).
+\]
+A zero $\rho=\beta+\ii\gamma$ corresponds to $z=\gamma-\ii(\beta-1/2)$. Hence confinement of all zeros of $\Xi$ to $\abs{\Im z}\le b$ implies $\Re\rho\le 1/2+b$. A standardized theta variable changes this band by its scale factor; Section~\ref{sec:theta} fixes that normalization explicitly.
+
+Two elementary warnings recur. If $L(\rho)=0$ and $M$ is finite at $\rho$, then $L(\rho)M(\rho)-1=-1$. Its squared residual contributes one, not infinity. Conversely, if a fixed-source Mellin transform has a nonremovable pole at every target zero, proving holomorphy of that transform in a region really does exclude those zeros. The issue is to prove the required bound on the same source.
