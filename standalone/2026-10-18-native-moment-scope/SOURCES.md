@@ -62,6 +62,20 @@ The modern Cai–Fan–She reference was also freshly read at
 scope and the distinct tame-recursion restriction are recorded in the
 source-interface review.
 
+Kazhdan--Patterson's published correction was freshly rendered from the
+primary Numdam PDF:
+<https://www.numdam.org/item/PMIHES_1985__62__203_0.pdf>.
+Its full one-page body and the CT citation were compared at the limited
+scope and exact PDF hash recorded in CT_INTERFACE_REVIEW.md.
+
+The directly cited primitive-root manuscript was then obtained at a
+fixed OpenAI mathematics commit:
+<https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Primitive-roots-for-every-admissible-integer-base-October-4-2026/primitive-roots-all-integer-bases.pdf>.
+Appendix A.1--A.2 was rendered and read for its global normalization and
+explicit treatment of the correction. The exact PDF hash and limited
+finding are in CT_INTERFACE_REVIEW.md; the whole upstream proof was not
+rebuilt from this partial read.
+
 The primary AxiomMath/DedekindZetaZeroFree repository was located at
 `09afbb4ce6570c1615d58509dc197fc9f0956b7d`:
 <https://github.com/AxiomMath/DedekindZetaZeroFree>
@@ -71,6 +85,11 @@ of an analytic continuation agreeing with Mathlib's Dedekind zeta on Re>1
 is a genuine source lock, not an arbitrary identically-one replacement.
 See the separately recorded build receipt for the outcome of any local
 compilation attempt; a source inspection alone is not a successful build.
+Its formalization metadata explicitly targets version 1 (12 October 2026),
+Theorem 1.1 and Corollary 1.2. The fresh reflection/interface read above
+concerns the separately pinned version-2 TeX. These are distinct source
+objects; a formal check of the exported 31/32 statements is not a claim
+that every version-2 lemma or this new packet has been formalized.
 
 ## Numerical arithmetic contract
 
@@ -88,6 +107,22 @@ an assumption; this is not a second implementation of Arb.
 
 ## Classical inputs and novelty
 
+For the prime-replica bootstrap and sharp mask-order refinement, the classical NATURAL prime ideal
+count pi_F(x)~x/log x was checked in Lagarias--Odlyzko, *Effective versions
+of the Chebotarev density theorem* (1977), §1, equation (1.1) and the
+following trivial-extension paragraph. The accessible copy is a modern
+retypesetting of that primary paper:
+<https://aareyanmanzoor.github.io/assets/articles/lagarias-odlyzko.pdf>.
+The downloaded 594,676-byte PDF has SHA-256
+`9e04f95d089e1c132408b7c3fc7e91520d620b2502fb193d39c25e8575d470d6`.
+Its unconditional Theorem 1.3 was also read; the conditional Theorem 1.1 is
+not used. For a fixed field any possible fixed exceptional zero is strictly
+below one, so its term is lower order. No explicit uniform field error from
+that theorem is needed. MASK_ASYMPTOTICS.md supplies all subsequent local,
+small-prime, and infinite-tail estimates, rather than attributing its new
+Euler-product asymptotic to the reference. Classical ideal counting gives
+the exact fixed-order mean by dominated convergence.
+
 Hecke continuation, the functional equation, Euler convergence, polynomial
 strip bounds, Borel–Carathéodory, three-lines, ideal counting and uniqueness
 of Mellin continuation are classical. The two zero-free equivalences and
@@ -96,7 +131,8 @@ contracts. The mask identities and nonnegative divisor expansion are
 classical Euler algebra, specialized here to the exact native source and
 all its repeated rows. No worldwide priority claim is made.
 
-The claimed contribution is a precise, reviewable source adapter and
+The claimed contribution is a precise, reviewable source adapter,
+fixed-order principal criterion, sharp mask-order/tail deductions and
 target classification for the latest packet, a separately typed imported-
 input native power bound, an actual primary-source transcription check,
 and a reproducible directed experiment with complete finite ideal coverage.

@@ -29,7 +29,7 @@ For fixed c in R and tau>0 define
 Every ideal n occurs. The Gaussian, its two infinite tails, and the original
 coprimality zeros stay in (1). Tau=1 is exactly the normalization in #976.
 Allowing any other fixed tau>0 changes the test, not the logical statements
-below; the numerical companion explicitly uses tau=1/16.
+below; both numerical companions explicitly use tau=1 and c=0.
 
 Absolute ideal counting proves, on Re s>1,
 
@@ -145,6 +145,75 @@ The unique decomposition u=a b^6, with a sixth-power-free and no imposed
 No row is omitted or counted twice. Formula (10) is useful if a genuine
 maximal estimate for the actual flat core rows becomes available. A bound
 for A_a at one scale does not automatically bound E_sigma(a;D).
+
+### 3a. An explicit mask constant, uniform in the moment order
+
+The Euler-mask part admits more uniformity than an unspecified fixed-order
+constant. This subsection supplies it explicitly; it does not estimate the
+native envelope E_sigma(a;D).
+
+Fix 0<sigma<1, put c_sigma=(1-2^(-sigma))^(-1), and retain the counting
+constant C_F from I_F(x)<=C_F x. For EVERY real r>=1 the product in (8)
+satisfies
+
+    log C_(F,S,sigma,r)
+      <= C_F (c_sigma r)^(1/sigma)/(1-sigma)
+                              +2 C_F(1+sigma)/sigma.       (U1)
+
+Proof. Set L=c_sigma r and X=L^(1/sigma). Since sigma<1 and r>=1,
+L>2 and X>2. For q=q(p), put a(q)=-log(1-q^(-sigma)); then
+0<a(q)<=c_sigma q^(-sigma). At q<=X,
+
+    log[1+(exp(r a(q))-1)/q] <= r a(q) <= L q^(-sigma).
+
+Summing even over ALL ideals, partial summation and I_F(t)<=C_F t give
+sum_(q(p)<=X) q(p)^(-sigma)<=C_F X^(1-sigma)/(1-sigma).
+This part is at most C_F L^(1/sigma)/(1-sigma). At q>X,
+r a(q)<=L q^(-sigma)<1. The inequality exp(v)-1<=2v for 0<=v<=1 gives
+
+    log[1+(exp(r a(q))-1)/q] <= 2L q^(-1-sigma).
+
+The complete ideal tail is at most
+C_F(1+sigma)X^(-sigma)/sigma, again by partial summation. Its contribution
+is therefore at most 2C_F(1+sigma)/sigma. Both estimates retain every prime
+ideal, including distinct primes of the same norm, and prove (U1). QED.
+
+Combining (9) and (U1), simultaneously for ALL integers k>=1 and B,D>=1,
+
+    sum_(q(b)<=B) |A_(a b^6)(D)|^(2k)
+      <= C_F B [D^sigma E_sigma(a;D)]^(2k)
+         * exp[C_F(2c_sigma k)^(1/sigma)/(1-sigma)
+                              +2C_F(1+sigma)/sigma].       (U2)
+
+The dependence on k is now explicit. At sigma=1/2 the mask factor is
+exp(O_F(k^2)); it is not a uniform constant in k. If sigma is FIXED and
+E_sigma(a;infinity)<infinity is supplied, (U2) yields, for every sequence
+of integer orders with k(D)^(1/sigma)=o(log D),
+
+    sum_(q(b)<=B) |A_(a b^6)(D)|^(2k(D))
+                          <= B D^(2k(D)sigma+o(1)),        (U3)
+
+uniformly in every B>=1. If the supplied envelope is zero, this is trivial.
+Otherwise the logarithm of the entire prefactor is
+O_(F,S,sigma,a)(k(D)^(1/sigma)+k(D)+1)=o(log D). Thus this is a valid
+growing-order statement for the repeated rows of ONE controlled native
+source. A zero-free line strictly left of sigma supplies that source
+envelope through ANALYTIC_ADAPTER.md; field RH supplies it for a=1 and
+every fixed sigma>1/2. The estimate at sigma=1/2 itself is still unknown.
+Sigma is not allowed to move toward 1/2 with D in (U3), and no estimate
+for the varying flat cores in (10) has been obtained.
+
+For completeness, at sigma=1 the same split at X=2r gives
+log C_(F,S,1,r)<=2C_F r[1+log(2r)]+4C_F. For sigma>1 each Euler factor
+in (8) is at most (1-q^(-sigma))^(-r), so
+C_(F,S,sigma,r)<=zeta_F^S(sigma)^r. These endpoint variants are not used
+to infer a critical native bound.
+
+MASK_ASYMPTOTICS.md sharpens (U1) using the classical prime ideal theorem:
+`log C_sigma(r) ~ [sigma/(1-sigma)] * (sigma r/log r)^(1/sigma)`.
+It also proves the exact fixed-order mean and the corresponding stronger
+growing-order transfer. The fully explicit elementary bound (U1) remains
+valid independently of that asymptotic refinement.
 
 ## 4. The full #976 target forces each fixed Hecke member
 
@@ -268,6 +337,80 @@ ZF(F) by the same extraction. In the original row coordinate H=D^h,
 the complete principal sector has b0=h/6 and natural row factor H^(1/6),
 rather than H. Shared primes and EVERY sixth-power replica remain present.
 
+There is a stronger fixed-order version of this last assertion. The prime
+replicas carry substantially more information than the single b=1 term.
+
+**Theorem B1 (one fixed order at any polynomial replica height).**
+Fix ANY b0>0 and ANY ONE integer k>=1. Field RH is equivalent to
+
+    sum_(q(b)<=D^b0) |A_(b^6)(D)|^(2k)
+                                  <<_epsilon D^(b0+k+epsilon)        (18a)
+
+for every epsilon>0 and all real D>=2. In particular, the complete
+principal SECOND moment at B=D^b0 is already an equivalent open target;
+cofinal orders are unnecessary for this restricted family. This statement
+does not replace the full-family target (12) by its principal sector.
+
+Proof. Field RH implies (18a) by (17). For the converse, absolute ideal
+counting and the fixed Gaussian give a global bound |A_1(t)|<=C t for
+all t>0. For example, integrate the absolute derivative of W against
+I_F(x)<=C_F x; the finite constant is C_F integral_0^infinity y|W'(y)|dy.
+The boundary terms vanish by the Gaussian at both endpoints. The same
+argument works for every fixed c,tau in (1).
+
+Suppose at some stage |A_1(t)|<=C_theta t^theta for all t>0, theta>0.
+Let B=D^b0. The classical prime ideal theorem gives at least c B/log B
+prime ideals p outside S with B/2<q(p)<=B, for all sufficiently large D.
+For each of these prime replicas, the EXACT identity (4) gives
+
+    |A_(p^6)(D)-A_1(D)|
+        <= C_theta D^theta sum_(j>=1) q(p)^(-j theta)
+        <<_theta D^((1-b0)theta).                       (18b)
+
+No prime-power tail is removed; its geometric sum is included. The
+triangle inequality in the finite l^(2k) norm on these prime rows and
+(18a) therefore imply, for every eta>0,
+
+    |A_1(D)| <<_(theta,eta) D^(1/2+eta)
+                                  + D^((1-b0)theta).   (18c)
+
+Here the prime-row count cancels B from (18a). Its log B factor is
+absorbed into eta, choosing the preliminary epsilon after eta and the
+fixed k. Using a subset of prime replicas for this LOWER extraction
+does not change the hypothesis: (18a) is still over ALL ideals b in
+the complete cap, with repeated powers and shared primes retained.
+
+Put lambda=max(0,1-b0)<1. For a fixed eta>0, (18c) improves the global
+growth exponent theta to max(1/2+eta,lambda theta). The compact initial
+D interval is absorbed into the constant, and Gaussian flatness handles
+0<t<2. Starting with theta=1, finitely many iterations give exponent
+1/2+eta, since lambda^n eventually falls below that positive number.
+All constants may depend on this finite iteration count; there is no
+growing-order or uniform-in-eta assumption. Let eta be arbitrary and
+apply (2), exactly as in Theorem B. This proves field RH. QED.
+
+This bootstrap is an unconditional implication from the displayed open
+moment premise. It uses the classical prime ideal theorem, not CT-31/32
+or a conjectural prime-ideal distribution in short intervals: (B/2,B]
+is a fixed-ratio interval. At original height H=D^h, it applies with
+b0=h/6 for EVERY h>0, still only to the complete principal sector with
+its natural H^(1/6) normalization.
+
+The restriction to even orders is unnecessary for this principal criterion.
+For ANY ONE fixed real p>0, field RH is likewise equivalent to
+
+    sum_(q(b)<=D^b0) |A_(b^6)(D)|^p
+                                 <<_epsilon D^(b0+p/2+epsilon).     (18d)
+
+For p>=1 use the same finite l^p triangle inequality. For 0<p<1 use
+|x+y|^p<=|x|^p+|y|^p before averaging the prime rows, then take the
+fixed p-th root; its fixed constants do not change any exponent. The
+resulting recurrence is still (18c), and the same finite bootstrap applies.
+Conversely field RH supplies E_sigma(1;infinity)<infinity, and (6)--(7)
+at r=p give (18d), taking sigma>1/2 sufficiently close. Thus even the
+FIRST ABSOLUTE moment is an equivalent open target here. This is not a
+signed first-moment assertion, and p does not tend to zero with D.
+
 Theorems A and B separate two objectives that should not be conflated:
 the full growing family asks for the represented family GRH; the principal
 replica sector asks for field RH. Neither target is established here.
@@ -322,10 +465,72 @@ ON its boundary line, or exclusion of zeros ON that line is inferred.
 Every displayed moment estimate retains its arbitrary epsilon loss.
 Equality of the infima with 1/2 is equivalent to the corresponding open
 zero-free half-plane, without asserting endpoint Mellin convergence.
-No value of either unknown supremum is estimated in this packet. Formula
+These identities do not evaluate the unknown suprema; §8 separately uses
+an imported upper boundary. Formula
 (20) explains precisely why a proved source-specific improvement in the
 native all-order exponent would be substantive arithmetic progress, and
 why the theta or positive-numerator envelope cannot simply be substituted.
+
+### 7a. The principal growth abscissa needs only ONE fixed order
+
+The prime-replica bootstrap sharpens the principal part of Theorem C.
+For fixed b0>0 and k>=1 let Gamma^P_(b0,k) be the infimum of real gamma
+for which, for every epsilon>0,
+
+    sum_(q(b)<=D^b0) |A_(b^6)(D)|^(2k) << D^(gamma+epsilon)
+
+holds for all real D>=2. Then
+
+    Gamma^P_(b0,k) = b0 + 2k Theta_F.                    (20a)
+
+In particular, its infimum over k or a cofinal-order limit is unnecessary.
+The principal SECOND moment's exponent already encodes the same rightmost
+zeta-zero supremum, after subtracting its true row count and dividing by two.
+This is an identity of unknown growth abscissas, not an evaluation of one.
+
+For the upper bound, take any sigma>Theta_F, apply the fixed-principal
+reciprocal adapter and the linear mask transfer (9), then let sigma
+decrease to Theta_F in the infimum. The case Theta_F=1 uses absolute
+Euler convergence just as in Theorem C.
+
+For the lower bound, Theorem B1's proof works with ANY fixed alpha>0
+in place of 1/2: the premise D^(b0+2k alpha+epsilon) gives the recurrence
+theta -> max(alpha+eta,lambda theta), and hence A_1(D)=O(D^(alpha+eta))
+for every eta>0. Its Mellin transform excludes zeta zeros in Re s>alpha.
+If Gamma^P_(b0,k)<b0+2k Theta_F, choose a gamma strictly between these
+values with gamma>b0. Such a gamma is an admissible upper exponent by
+the defining infimum and upward closure. The bootstrap with
+alpha=(gamma-b0)/(2k)>0 contradicts the definition of Theta_F. QED.
+
+There is also a useful finite-order enclosure for the FULL family. If
+Gamma_(h,k) is the analogous infimum for q(u)<=D^h, then
+
+    h/6 + 2k Theta_fam <= Gamma_(h,k) <= h + 2k Theta_fam. (20b)
+
+The upper bound is the uniform adapter. For the lower bound, fix ANY
+core row a and use the prime replicas a p^6 with
+q(p) in (B/2,B], B=(D^h/q(a))^(1/6), omitting the finitely many p|a.
+There are at least c_a D^(h/6)/log D such rows for large D. Identity (4),
+now with coefficients chi_a(p)^j of modulus one, gives the error in
+(18b) with b0=h/6, up to a fixed a-dependent factor. The same finite
+bootstrap shows that a full-family exponent gamma forces EVERY fixed
+member to be zero-free to the right of
+
+    alpha=(gamma-h/6)/(2k), whenever alpha>0.
+
+Every fixed row starts with its unconditional O(t) bound. Constants may
+depend on that row, which is sufficient for this zero-exclusion implication.
+If the lower inequality in (20b) failed, choose gamma between the two
+relevant values with gamma>h/6 and reach a contradiction as above. This
+does not claim equality at either end of (20b), or reduce the full-family
+moment premise to the principal-sector one.
+
+For example, when 0<h<=k the displayed S6 exponent from #976 simplifies
+to h/6+2k exactly. A genuine power saving Delta in that COMPLETE native
+moment, 0<Delta<2k, would therefore force
+Theta_fam<=1-Delta/(2k) by (20b). This is a source-specific implication
+explaining the arithmetic content of such a saving; it is not a claim
+that every proof strategy must obey a positive-envelope obstruction.
 
 ## 8. An explicit native power improvement using a separately named input
 
@@ -336,7 +541,8 @@ clarification. Here the external input must stay visible:
     2610.00200v2, cor:Hecke (following thm:dedekind), is adopted as stated.
 
 The primary statement and relevant source were freshly read and hash-pinned;
-its complete deep proof and Lean project were not independently rebuilt.
+its complete deep proof was not independently reconstructed. The separate
+CT_BUILD_RECEIPT.json gives the actual external Lean build/CI observations.
 This corollary is a SOURCE-QUALIFIED DEDUCTION from that printed theorem,
 not a new proof or independent acceptance of CT-31/32.
 

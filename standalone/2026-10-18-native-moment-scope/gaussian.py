@@ -48,19 +48,38 @@ def square_ball(ball):
     return (ball*ball).nonnegative_part()
 
 
-def weight(n, D, c=4, tau=1):
+def weight(n, D, c=0, tau=1):
     y = arb(n)/D
     log_y = y.log()
     return (-c*log_y-log_y*log_y/(4*tau)).exp()/(4*arb.pi()*tau).sqrt()
 
 
-def tail_bound(Y, D, c=4, tau=1):
+def exterior_counting_constants():
+    """A,B in the unconditional I_F^S(x)<=A*x+B*sqrt(x), S over 2,3."""
+    sqrt3 = arb(3).sqrt()
+    return arb.pi()/(6*sqrt3), 6+2*sqrt3
+
+
+def tail_bound(Y, D, c=0, tau=1):
     I.require(Y >= 1 and D > 0 and tau > 0, 'Invalid Gaussian tail domain.')
     log_R = (arb(Y)/D).log()
     I.require(c+log_R/(2*tau) > 0, 'Tail profile must be strictly decreasing.')
-    bound = (2*Y*weight(Y, D, c, tau)
+    w = weight(Y, D, c, tau)
+    coarse = (2*Y*w
              + D*(arb(tau)*(1-c)**2).exp()
              * ((log_R-2*tau*(1-c))/(2*arb(tau).sqrt())).erfc())
+    # I_F^S(x) <= A*x+B*sqrt(x), proved by the exact chi_-3 hyperbola
+    # formula and inclusion-exclusion at the ideal norms 3 and 4.
+    A, B = exterior_counting_constants()
+    half_delta = arb(1)/2-c
+    refined = (A*(Y*w + arb(D)/2*(arb(tau)*(1-c)**2).exp()
+                  * ((log_R-2*tau*(1-c))/(2*arb(tau).sqrt())).erfc())
+               + B*(arb(Y).sqrt()*w
+                    + arb(D).sqrt()/4*(tau*half_delta*half_delta).exp()
+                    * ((log_R-2*tau*half_delta)/(2*arb(tau).sqrt())).erfc()))
+    # Each expression is independently a full-tail majorant. A strict
+    # directed comparison chooses the refinement only when certified smaller.
+    bound = refined if refined < coarse else coarse
     I.require(bound.is_finite() and bound > 0, 'Positive finite complete-tail bound required.')
     return bound
 
@@ -82,7 +101,7 @@ def principal_masks(B):
     return dict(sorted(by_signature.items()))
 
 
-def produce(max_power=10, B=64, ratio=4096, precision=256, progress=False):
+def produce(max_power=12, B=64, ratio=4096, precision=256, progress=False):
     I.require(0 <= max_power <= 12, 'max_power must be in [0,12].')
     I.require(7 <= B <= 256 and 16 <= ratio <= 8192, 'Finite coverage limits exceeded.')
     I.require(precision >= 192, 'At least 192 bits are required.')
@@ -130,8 +149,9 @@ def produce(max_power=10, B=64, ratio=4096, precision=256, progress=False):
                       for s, bs in signatures.items()]
         moments = {}
         for k in (1, 2, 4, 8, 16):
-            moment = sum((len(signatures[s])*integer_power(v, 2*k)
+            moment = sum((len(signatures[s])*integer_power(v, 2*k).nonnegative_part()
                           for s, v in enclosed.items()), arb(0))
+            moment = moment.nonnegative_part()
             I.require(moment >= 0, 'A nonnegative moment lost its sign enclosure.')
             moments[str(2*k)] = render(moment)
         all_values.append({'D': D, 'complete_norm_cutoff': Y,
@@ -141,7 +161,7 @@ def produce(max_power=10, B=64, ratio=4096, precision=256, progress=False):
     return {'status': 'DIRECTED FINITE ENCLOSURES; no asymptotic or RH conclusion',
             'field': 'Q(w), w^2+w+1=0', 'S': 'prime ideals above 2 and 3',
             'source': 'mu_F(n) times literal principal mask 1_((n,b)=1)',
-            'normalization': {'c': 4, 'tau': 1, 'weight': 'y^-4 exp[-log(y)^2/4]/sqrt(4 pi)'},
+            'normalization': {'c': 0, 'tau': 1, 'weight': 'exp[-log(y)^2/4]/sqrt(4 pi)'},
             'parameters': {'max_power': max_power, 'all_b_norm_cap': B,
                            'cutoff_ratio': ratio, 'precision_bits': precision},
             'arithmetic': {'python_flint': flint.__version__, 'FLINT': flint.__FLINT_VERSION__,
@@ -154,7 +174,7 @@ def produce(max_power=10, B=64, ratio=4096, precision=256, progress=False):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--max-power', type=int, default=10)
+    parser.add_argument('--max-power', type=int, default=12)
     parser.add_argument('--b-cap', type=int, default=64)
     parser.add_argument('--ratio', type=int, default=4096)
     parser.add_argument('--precision', type=int, default=256)

@@ -1,8 +1,14 @@
 module
 
 public import Mathlib.Algebra.BigOperators.Group.Finset.Piecewise
+public import Mathlib.Algebra.BigOperators.Group.Finset.Sigma
+public import Mathlib.Algebra.BigOperators.Ring.Finset
+public import Mathlib.Algebra.Order.BigOperators.Group.Finset
+public import Mathlib.Algebra.Order.Archimedean.Real.Basic
 public import Mathlib.Basic.Real.Basic
-public import Mathlib.Tactic
+public import Mathlib.Tactic.FieldSimp
+public import Mathlib.Tactic.Linarith
+public import Mathlib.Tactic.Ring
 
 @[expose] public section
 
@@ -92,9 +98,9 @@ theorem cofinal_exponent
   have hNk : N ≤ k := le_trans (le_max_left N (M+1)) hk
   have hMk : M+1 ≤ k := le_trans (le_max_right N (M+1)) hk
   have hkposNat : 0 < k := lt_of_lt_of_le (Nat.zero_lt_succ M) hMk
-  have hkpos : (0 : ℝ) < k := by exact_mod_cast hkposNat
+  have hkpos : (0 : ℝ) < k := Nat.cast_pos.mpr hkposNat
   have hMkReal : (M : ℝ) < k := by
-    exact_mod_cast lt_of_lt_of_le (Nat.lt_succ_self M) hMk
+    exact Nat.cast_lt.mpr (lt_of_lt_of_le (Nat.lt_succ_self M) hMk)
   have hh : h/δ < (k : ℝ) := lt_trans hM hMkReal
   have hhk : h/(k : ℝ) < δ := by
     apply (div_lt_iff₀ hkpos).2
@@ -130,5 +136,33 @@ theorem cofinal_fixed_order_extraction
 #print axioms moment_transfer
 #print axioms cofinal_exponent
 #print axioms cofinal_fixed_order_extraction
+
+/-- A fixed positive target exponent is reached after finitely many
+geometric bootstrap steps. The arithmetic prime-replica inequality
+supplying hstep is NOT proved here. -/
+theorem geometric_exponent_bootstrap
+    (P : ℝ → Prop) (a r : ℝ) (ha : 0 < a) (hr1 : r < 1)
+    (hmono : ∀ x y : ℝ, x ≤ y → P x → P y)
+    (hbase : P 1)
+    (hstep : ∀ x : ℝ, P x → P (max a (r*x))) : P a := by
+  have hiter : ∀ n : ℕ, P (max a (r^n)) := by
+    intro n
+    induction n with
+    | zero => exact hmono 1 _ (le_max_right _ _) hbase
+    | succ n ih =>
+      apply hmono _ _ ?_ (hstep _ ih)
+      apply max_le
+      · exact le_max_left _ _
+      · rcases le_total a (r^n) with h | h
+        · rw [max_eq_right h, pow_succ']
+          exact le_max_right _ _
+        · rw [max_eq_left h]
+          have hra : r*a ≤ a := by
+            simpa only [one_mul] using mul_le_mul_of_nonneg_right hr1.le ha.le
+          exact le_trans hra (le_max_left _ _)
+  obtain ⟨n, hn⟩ := exists_pow_lt_of_lt_one ha hr1
+  simpa only [max_eq_left hn.le] using hiter n
+
+#print axioms geometric_exponent_bootstrap
 
 end NativeMaskFinite

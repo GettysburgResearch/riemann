@@ -76,7 +76,7 @@ hashes. Their support is contained in the full principal Mobius norm
 support: this follows immediately from the displayed local degrees and
 the inert parity restriction, and justifies the producer's shared zero skip.
 
-`gaussian_native.py` uses the SAME fixed tau=1,c=4 Gaussian as the principal
+`gaussian_native.py` uses the SAME fixed tau=1,c=0 Gaussian as the principal
 experiment. It reconstructs every row ideal with Nu<=64, evaluates every
 norm up to the declared cutoff, and adds the proven complete complex tail
 bound (G2). A complex tail of modulus <=T has both coordinates in [-T,T];

@@ -18,7 +18,7 @@ def replay(path, progress=False):
     recorded = json.loads(path.read_text(encoding='utf-8'))
     p = recorded['parameters']
     I.require(recorded['normalization'] == {
-        'c': 4, 'tau': 1, 'weight': 'y^-4 exp[-log(y)^2/4]/sqrt(4 pi)'},
+        'c': 0, 'tau': 1, 'weight': 'exp[-log(y)^2/4]/sqrt(4 pi)'},
         'Wrong fixed Gaussian normalization.')
     # Authenticate the literal B cap independently of the producer's
     # grouping function. A self-consistent omission of a repeated or

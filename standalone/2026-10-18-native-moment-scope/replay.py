@@ -63,7 +63,7 @@ def main():
         for a, b in zip(principal['values'], native['values']):
             if a['D'] != b['D'] or a['rows'][0]['enclosure'] != b['all_native_rows'][0]['real']:
                 raise ValueError('The two primitive principal sources disagreed.')
-        executed.append({'test': 'principal-source agreement between independent coefficient producers',
+        executed.append({'test': 'principal-source agreement between distinct local coefficient paths with a shared support sieve',
                          'common_scales': len(native['values']), 'status': 'PASS'})
     report = {'status': 'PASS: declared finite replay only', 'executed': executed,
               'boundary': 'No infinite analytic theorem, global sign, RH proof or independent referee acceptance is certified.'}

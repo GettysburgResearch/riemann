@@ -19,7 +19,7 @@ HERE = Path(__file__).resolve().parent
 class DirectedPrimitiveTests(unittest.TestCase):
     def write_fixture(self, directory):
         p = Path(directory)/'fixture.json'
-        p.write_text(G.serial(G.produce(max_power=0, B=7, ratio=64, precision=192)),
+        p.write_text(G.serial(G.produce(max_power=0, B=7, ratio=4096, precision=192)),
                      encoding='utf-8', newline='\n')
         return p
 
@@ -74,6 +74,29 @@ class DirectedPrimitiveTests(unittest.TestCase):
     def test_tail_domain_requires_the_decreasing_profile(self):
         with self.assertRaisesRegex(ValueError, 'strictly decreasing'):
             G.tail_bound(1, 2**64)
+
+    def test_refined_counting_bound_and_wrong_inert_norm_are_distinguished(self):
+        def total(x):
+            # Independent exact scalar coefficients of zeta(s)L(s,chi_-3).
+            return sum((1 if d % 3 == 1 else -1 if d % 3 == 2 else 0)*(x//d)
+                       for d in range(1, x+1))
+
+        counts = {x: total(x)-total(x//3)-total(x//4)+total(x//12)
+                  for x in (1, 3, 4, 12, 512, 4096, 65536, 1048576)}
+
+        def authenticate():
+            A, B = G.exterior_counting_constants()
+            for x, exact in counts.items():
+                I.require(A*x+B*arb(x).sqrt() >= exact,
+                          'Exact exterior ideal count exceeds its proposed envelope.')
+
+        authenticate()
+        A, B = G.exterior_counting_constants()
+        # Treating the inert prime over 2 as norm 2 changes the leading
+        # density from kappa/2 to kappa/3. Large exact counts reject it.
+        with patch.object(G, 'exterior_counting_constants', return_value=(A*2/3, B)):
+            with self.assertRaisesRegex(ValueError, 'Exact exterior ideal count'):
+                authenticate()
 
     def test_integer_powers_cover_zero_crossings_and_negative_values(self):
         zero_crossing = arb(0, 1)

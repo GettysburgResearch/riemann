@@ -1,7 +1,24 @@
 {
-  "boundary": "This optional external source build does not certify the new paper deductions or RH. The five scoped local Lean lemmas have a separate completed receipt.",
+  "boundary": "This optional external source build does not certify the new paper deductions or RH. The six scoped local Lean lemmas have a separate completed standalone receipt.",
   "command": "lake build DedekindZetaSolution",
+  "formalization_target": "The pinned formalization.yaml identifies version 1 (12 October 2026), Theorem 1.1 and Corollary 1.2. The version-2 TeX source-interface audit is a separate pinned read.",
   "mathlib_commit": "0493595ecd5da8ef14742febab99728f98e948e8",
+  "local_comparator": {
+    "status": "UNAVAILABLE_ON_HOST",
+    "reason": "Official lake help comparator requires bubblewrap; bwrap is absent from PATH and COMPARATOR_BWRAP is unset on this Windows host.",
+    "scope": "No accepted comparator verdict is claimed."
+  },
+  "observed_upstream_ci": {
+    "checked_utc": "2026-10-18 01:29 UTC",
+    "compile_job_conclusion": "success",
+    "compile_job_name": "Compile library, Challenge, and Solution",
+    "compile_job_url": "https://github.com/AxiomMath/DedekindZetaZeroFree/actions/runs/38381604779/job/115243377043",
+    "head_sha": "09afbb4ce6570c1615d58509dc197fc9f0956b7d",
+    "palomar_preflight_job_conclusion": "skipped",
+    "read_only_observation": true,
+    "scope": "Existing public upstream compile status only. No CI was triggered and no comparator or axiom-closure result is inferred from this job.",
+    "workflow_at_commit": ".github/workflows/lean.yml"
+  },
   "source_commit": "09afbb4ce6570c1615d58509dc197fc9f0956b7d",
   "source_repository": "https://github.com/AxiomMath/DedekindZetaZeroFree",
   "status": "IN_PROGRESS; no completed external theorem build claimed",

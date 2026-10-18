@@ -10,11 +10,14 @@ All nonzero integral ideals are indexed separately, including conjugate
 ideals of equal rational norm. For EVERY ideal b outside S with Nb<=64,
 the observable is the actual masked principal Gaussian
 
-    A_(b^6)(D)=sum_n mu_F(n) 1_((n,b)=1) W_(4,1)(Nn/D),
-    W_(4,1)(y)=y^(-4) exp[-(log y)^2/4]/sqrt(4 pi).
+    A_(b^6)(D)=sum_n mu_F(n) 1_((n,b)=1) W_(0,1)(Nn/D),
+    W_(0,1)(y)=exp[-(log y)^2/4]/sqrt(4 pi).
 
-Thus tau=1 agrees with the Gaussian normalization of #976; c=4 is fixed
+Thus tau=1 agrees with the Gaussian normalization of #976; c=0 is fixed
 before evaluation. The generalized tau in PROOF.md is not required here.
+The peak is at Nn=D, within the sampled arithmetic range. This avoids
+letting the first source coefficient dominate the whole declared grid.
+No exponent fit or asymptotic deduction is made from the resulting values.
 All b, including their repeated-prime powers, are included. Signatures
 only combine rows proven identical at this principal source; their exact
 ideal multiplicities remain in every reported moment.
@@ -43,7 +46,7 @@ portable little-endian signed-int32 SHA-256 in the numerical report.
 
 The principal producer reuses one complete primitive array and applies the
 exact Euler-deletion recurrence from PROOF.md §2. Removing a prime ideal
-of norm q divides the norm series by (1-X^q): at multiples of q, in ascending
+of norm q divides the Dirichlet series by (1-q^(-s)): at multiples of q, in ascending
 order, set `out[n] = in[n] + out[n/q]`. Two split conjugates require two
 separate factors. This avoids rebuilding and factoring every integer for
 every mask. The fast arrays are checked against the independent local-factor
@@ -85,6 +88,69 @@ discarding the negative boundary and using I_F(t)<=2t yields
 evaluates the integral and proves (G2). This covers infinitely many ideal
 columns beyond Y. No lower tail is truncated: all norms 1<=n<=Y occur in
 the integer coefficient arrays.
+
+### A tighter fixed-field bound, with the S exclusions retained
+
+The actual production also uses the following independently valid
+improvement. Let chi be the real Dirichlet character modulo three, with
+values 1,-1,0 in its three successive residue slots. Euler factors give
+
+    I_F(x) = sum_(ab<=x) chi(b),
+    C(t) = sum_(b<=t) chi(b) in {0,1},
+    kappa = L(1,chi) = pi/(3 sqrt(3)).
+
+The last value follows by integrating 1/(1+t+t^2) from zero to one:
+its power-series integral is sum_m [1/(3m+1)-1/(3m+2)]. For x>=1 put
+y=floor(sqrt(x)). The exact hyperbola formula is
+
+    I_F(x) = sum_(a<=y) C(x/a)
+             + sum_(b<=y) chi(b) floor(x/b) - y C(y).
+
+The first and last terms together have absolute value at most y.
+Replacing each floor by x/b costs at most y. Partial summation gives
+
+    L(1,chi)-sum_(b<=y) chi(b)/b
+                          = -C(y)/y+integral_y^infinity C(t)dt/t^2,
+
+whose absolute value is at most 1/y because C takes values in [0,1].
+Consequently
+
+    |I_F(x)-kappa x| <= 2y+x/y <=4 sqrt(x)       (x>=1),
+
+since sqrt(x)/2<=y<=sqrt(x).
+
+For 0<x<1 the same error bound holds since I_F(x)=0 and kappa<1.
+There is one prime ideal over two, of norm FOUR, and one over three,
+of norm three. Thus exact ideal-divisibility inclusion-exclusion gives
+
+    I_F^S(x) = I_F(x)-I_F(x/3)-I_F(x/4)+I_F(x/12)
+             <= A x+B sqrt(x)                    (every x>0),
+    A=pi/(6 sqrt(3)),   B=6+2sqrt(3).                     (G3a)
+
+All ideals, including conjugates, repeated prime powers and non-squarefree
+ideals, are counted here. This is an unconditional envelope for the larger
+absolute source, rather than a sign or cancellation estimate.
+
+For a>0 define the explicitly evaluated decreasing-profile envelope
+
+    U_a(Y,D)=Y^a W_(c,tau)(Y/D)
+       +(a D^a/2) exp[tau(a-c)^2]
+          erfc((log(Y/D)-2tau(a-c))/(2sqrt(tau))).        (G3b)
+
+Indeed U_a=Y^a W(Y/D)+a integral_Y^infinity t^(a-1)W(t/D)dt.
+Stieltjes partial summation with (G3a), dropping the negative boundary
+term exactly as above, proves the sharper complete-source tail bound
+
+    sum_(Nn>Y, n prime to S) |mu_F(n)chi_u(n)W(Nn/D)|
+                           <= A U_1(Y,D)+B U_(1/2)(Y,D). (G3c)
+
+This covers every row in BOTH numerical experiments since |chi_u(n)|<=1
+and all their columns are outside S. The producer evaluates (G2) and
+(G3c) separately using directed balls, choosing (G3c) only when a strict
+directed comparison proves it smaller. Either choice is valid. Only exact
+rationals, directed pi and square roots occur in A,B and U_(1/2); no
+floating approximation is used for the half exponent or field constants.
+The count proof, not a finite norm sample, justifies the infinite tail.
 
 The producer evaluates the right side of (G2) by Arb ball arithmetic and
 adds a symmetric radius at least its upper endpoint to each signed finite

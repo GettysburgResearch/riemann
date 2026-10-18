@@ -52,6 +52,34 @@ The following explicit coefficient recursion assumes |3|=1; it is not a
 wild-place formula. CT uses the dimension statement here. This confirms
 that citation boundary; the deep proof remains outside this partial review.
 
+The complete one-page body of the published
+[Kazhdan--Patterson correction](https://www.numdam.org/item/PMIHES_1985__62__203_0.pdf)
+was also rendered and read. Its catalog page is 203 (the scan prints 419).
+The 157,152-byte PDF has SHA-256
+`4f6eb1ed12f8bd25ff54349bfd2cbd778b36d5c0fbb8ff6ddd763a0d1868e77d`.
+The correction withdraws the auxiliary spherical-functional vanishing and
+changes the global normalization in Theorems II.2.2, II.2.3 and the page-130
+discussion. Its corrected product formula includes T(S)^(-1), with the
+coefficient normalization defined by a stabilizing limit. CT explicitly
+excludes the withdrawn assertion and fixes a scalar using a nonzero global
+coefficient. This is consistent at statement scope; it does not verify
+that every upstream normalization has been propagated. That further check
+would require following the corrected constants through the full global
+realization, not merely citing the erratum.
+
+I then followed this particular issue into the cited primitive-root
+manuscript, pinned at OpenAI mathematics commit
+`1581d4cbdd69a0faf34b2089614fe2a814316a6a`. Its 891,737-byte PDF has SHA-256
+`671ac4b3ece879f614ed8f4b782e61a07805e533f385a694fe4d7afbda3c9365`.
+Appendix A.1--A.2 (printed pages 85--87) was rendered and read. A.2
+explicitly includes the corrected rank-two T(S) and proves the exterior
+product by normalizing a nonzero global functional on a pure tensor,
+then varying finitely many components using local uniqueness. Thus the
+correction is accounted for in the cited normalization argument, beyond
+the presence of a bibliography entry. This check does not reconstruct
+the original residual representation, all local calculations, or CT's
+smooth-global-realization estimate.
+
 ## Remaining mathematical boundary
 
 CT itself imports the local coefficient normalization, reflection and
@@ -71,8 +99,13 @@ bound follows from source authentication.
 
 The AxiomMath/DedekindZetaZeroFree repository was located at commit
 `09afbb4ce6570c1615d58509dc197fc9f0956b7d`, and its public statement and
-file inventory were inspected only. No Lean theorem or comparator was built,
-and this review makes no claim of formal verification of our new mathematics.
+file inventory were inspected. A local external build was then started;
+CT_BUILD_RECEIPT.json records its actual status. The existing public compile
+job at that exact upstream commit was also read and reported success;
+the separate Palomar preflight job was skipped. The receipt links the job
+and records this read-only observation. No completed LOCAL external
+theorem build or successful comparator run is claimed by this comparison,
+and it does not formally verify our new mathematics.
 
 The native moment theorems in PROOF.md depend on the standard Hecke source
 and the nonvanishing Gaussian Mellin multiplier. They do not assume CT's

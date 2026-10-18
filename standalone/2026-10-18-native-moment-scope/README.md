@@ -14,6 +14,13 @@ native Möbius moment target. This continuation advances the native side:
    convolution of that same native source; the finite inverse is explicit.
    The average of the resulting Euler-mask mass over Nb<=B costs O(B),
    with an explicit convergent Euler-product constant and no B^epsilon loss.
+   Its sharp order dependence is also identified: for fixed 0<sigma<1,
+   `log C_sigma(r) ~ [sigma/(1-sigma)] * (sigma r/log r)^(1/sigma)`.
+   This saves logarithmic factors in the stated growing-order transfer,
+   when the native source envelope is supplied. The fixed-order mean has
+   an exact leading constant; large masks have a sharp logarithmic tail,
+   with the lower bound's family-size range explicit. See
+   [MASK_ASYMPTOTICS.md](MASK_ASYMPTOTICS.md).
 2. **The full target's exact strength.** #976's stated growing-family target
    is equivalent to GRH for every primitive Hecke member represented by
    that fixed family. A logarithmically growing second-moment target has
@@ -22,7 +29,12 @@ native Möbius moment target. This continuation advances the native side:
    with their original masks and repetitions retained, need only field RH.
    Their natural row count is H^(1/6) at original height H. The exact native
    all-order growth abscissa equals the corresponding rightmost-zero
-   supremum, both for the full family and for the principal sector.
+   supremum. More strongly, the complete principal FIRST ABSOLUTE moment at
+   ANY positive polynomial replica height already has field-RH strength,
+   by a finite prime-replica bootstrap. Any one fixed positive moment order
+   suffices. At each fixed even order its growth exponent
+   is exactly b0+2k Theta_F. The full family has the separate finite-order
+   enclosure in PROOF.md (20b).
 4. **An explicit high-order native bound from a named external input.** Taking
    CT v2's printed 31/32 finite-order Hecke theorem as an explicit input gives
    `sum_(Nu<=D^h)|A_u(D)|^(2k) << D^(h+31k/16+epsilon)`.
@@ -74,10 +86,12 @@ python replay_gaussian.py
 python -m unittest -v test_gaussian
 ```
 
-The deposited [GAUSSIAN.json](GAUSSIAN.json) encloses the actual tau=1,c=4
-native Gaussian at D=1,2,...,1024 along the powers of two, over EVERY
+The deposited [GAUSSIAN.json](GAUSSIAN.json) encloses the actual tau=1,c=0
+native Gaussian at D=1,2,...,4096 along the powers of two, over EVERY
 principal masking ideal Nb<=64. It computes all norm coefficients through
-4,194,304 and adds a directed bound for the complete infinite upper tail.
+16,777,216 and adds a directed bound for the complete infinite upper tail.
+An explicit S-deleted ideal-count envelope sharpens that tail; the coarser
+bound is retained as a fallback and a wrong inert-prime density is rejected.
 The replay doubles that cutoff and raises precision from 256 to 384 bits.
 Individual-ideal low-scale sums are a separate source check. Deliberately
 omitting the tail, removing both conjugate primes instead of one, or losing
@@ -102,5 +116,6 @@ They supply no all-scale evidence for either open critical estimate.
 
 For the combined finite reproduction use `python replay.py --intervals`.
 An optional `--ct-source <downloaded-TeX>` authenticates the primary input.
-Five isolated Lean lemmas also check the finite mask algebra and fixed-order
-quantifiers; [FORMAL.md](FORMAL.md) states exactly what was typechecked.
+Six isolated Lean lemmas also check the finite mask algebra, fixed-order
+quantifiers and geometric exponent bootstrap; [FORMAL.md](FORMAL.md)
+states exactly what was typechecked.

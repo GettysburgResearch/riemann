@@ -14,7 +14,7 @@ import ideals as I
 import kummer as K
 
 
-def produce(max_power=8, H=64, ratio=4096, precision=256, progress=False):
+def produce(max_power=10, H=64, ratio=4096, precision=256, progress=False):
     I.require(0 <= max_power <= 10 and 7 <= H <= 64 and 16 <= ratio <= 8192,
               'Declared finite native coverage limits exceeded.')
     I.require(precision >= 192, 'Directed native replay requires at least 192 bits.')
@@ -62,7 +62,8 @@ def produce(max_power=8, H=64, ratio=4096, precision=256, progress=False):
             squares.append(squared)
             entries.append({'ideal_HNF': list(u), 'real': G.render(real),
                             'imag': G.render(imag), 'absolute_squared': G.render(squared)})
-        moments = {str(2*k): G.render(sum((G.integer_power(v, k) for v in squares), arb(0)))
+        moments = {str(2*k): G.render(sum((G.integer_power(v, k).nonnegative_part()
+                                         for v in squares), arb(0)).nonnegative_part())
                    for k in (1, 2, 4, 8, 16)}
         values.append({'D': D, 'complete_norm_cutoff': Y,
                        'complete_complex_tail_modulus_bound': G.render(tail),
@@ -70,7 +71,7 @@ def produce(max_power=8, H=64, ratio=4096, precision=256, progress=False):
     return {'status': 'DIRECTED FINITE FULL-ROW EXPERIMENT; no asymptotic or RH conclusion',
             'field': 'Q(w), w^2+w+1=0', 'S': 'prime ideals above 2 and 3',
             'family': 'chi_u(n)=(alpha_u/n)_6; unique alpha_u=1 mod (3)',
-            'normalization': {'c': 4, 'tau': 1},
+            'normalization': {'c': 0, 'tau': 1},
             'parameters': {'max_power': max_power, 'all_u_norm_cap': H,
                            'cutoff_ratio': ratio, 'precision_bits': precision},
             'complete_source_coverage': {'all_norms_through': cap, 'rows': coverage},
@@ -131,7 +132,7 @@ def replay(path, progress=False):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--max-power', type=int, default=8)
+    parser.add_argument('--max-power', type=int, default=10)
     parser.add_argument('--replay', type=Path)
     parser.add_argument('--output', type=Path)
     parser.add_argument('--progress', action='store_true')
