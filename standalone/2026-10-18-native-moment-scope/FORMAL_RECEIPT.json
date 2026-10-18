@@ -1,0 +1,48 @@
+{
+  "axioms": {
+    "NativeMaskFinite.average_mask_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NativeMaskFinite.cofinal_exponent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NativeMaskFinite.cofinal_fixed_order_extraction": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NativeMaskFinite.divisor_double_count": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NativeMaskFinite.geometric_exponent_bootstrap": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NativeMaskFinite.moment_transfer": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "boundary": "Finite counting and moments, abstract cofinal fixed-order quantifiers and geometric exponent bootstrap only. No native prime-replica inequality, analytic estimate, infinite Euler product or RH theorem formalized.",
+  "build_log_sha256": "847f3b515b023c3e13999b609fd318badd9a884937536f7b5c9547a36ff3aa55",
+  "command": "lake update; lake build",
+  "context": "Fresh standalone project resolved from the deposited lakefile; Mathlib cache obtained by its post-update hook; no CT library imported.",
+  "dependency_lock_sha256": "1fe01ee7b231c77fc8573a5014baa18138a3c27574adb0fc097c5dd1e25d63fb",
+  "exit_code": 0,
+  "lean_commit": "470d5ce1400764999581fd26d5d72b00d990b0f4",
+  "lean_version": "4.35.0-rc3",
+  "mathlib_commit": "0493595ecd5da8ef14742febab99728f98e948e8",
+  "no_warnings_in_final_build": true,
+  "source": "NativeMaskFinite.lean",
+  "source_sha256": "de2ee17fe57a3f97ffe8af68a667286b83104aa67aa591360d40c1282b0d9e83",
+  "standalone_lake_build": true,
+  "status": "PASS: six scoped Lean lemmas; fresh standalone Lake build"
+}

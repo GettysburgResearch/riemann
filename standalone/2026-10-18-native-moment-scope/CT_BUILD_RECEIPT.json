@@ -1,0 +1,84 @@
+{
+  "boundary": "This optional external source build does not certify the new paper deductions or RH. The six scoped local Lean lemmas have a separate completed standalone receipt.",
+  "command": "lake build DedekindZetaSolution",
+  "formalization_target": "The pinned formalization.yaml identifies version 1 (12 October 2026), Theorem 1.1 and Corollary 1.2. The version-2 TeX source-interface audit is a separate pinned read.",
+  "local_build": {
+    "artifact_creation_failures": [
+      {
+        "diagnostic": "failed to write artifact: failed to create file",
+        "observed_absolute_path_characters": 255,
+        "path_relative_to_source": "vendor/class-field-theory/.lake/build/lib/lean/ClassFieldTheory/GlobalClassFieldTheory/ClassFieldAxiom/IdeleClassPowerLocalUnitQuotient/FinitePlaceCompletionInstances.olean"
+      },
+      {
+        "diagnostic": "failed to write artifact: failed to create file",
+        "observed_absolute_path_characters": 255,
+        "path_relative_to_source": "vendor/class-field-theory/.lake/build/lib/lean/ClassFieldTheory/AbstractClassFieldTheory/Reciprocity/Construction/MainMultiplicativity/FrobeniusActionRemainder.olean.server"
+      },
+      {
+        "diagnostic": "failed to write artifact: failed to create file",
+        "observed_absolute_path_characters": 251,
+        "path_relative_to_source": "vendor/class-field-theory/.lake/build/lib/lean/ClassFieldTheory/LubinTate/EqualCharacteristic/CompletedLevel/CompletedFrobeniusFixedFieldCoefficientDescent.olean.server"
+      }
+    ],
+    "boundary": "No completed local external Solution build or theorem axiom-closure check is claimed. An intentional time limit is not a mathematical refutation.",
+    "cache_preserved": true,
+    "elapsed_seconds": 7266.261,
+    "intentional_stop": true,
+    "last_completed_job_line": "\u26a0 [10744/10951] Built DedekindZetaZeroFree.Nonvanishing.Mellin.PuncturedHalfPlane (109s)",
+    "log_sha256": "a0c808ff08432f2890609377ce532bc137b94eaab4840b7aa1a727d97338f4ed",
+    "reason": "Dependency jobs reported failed-to-create-file errors on Windows artifact paths. The remaining optional cold build was intentionally stopped after about two hours to reserve the rest of the three-hour research run for the new packet's complete finite replay and publication.",
+    "source_tracked_files_unchanged": true,
+    "started_utc": "2026-10-18 00:33:22 UTC",
+    "stop_time_measurement": "Time of verified post-stop observation, rather than the exact instant of process termination.",
+    "stopped_utc": "2026-10-18 02:34:28 UTC"
+  },
+  "local_comparator": {
+    "reason": "Official lake help comparator requires bubblewrap; bwrap is absent from PATH and COMPARATOR_BWRAP is unset on this Windows host.",
+    "scope": "No accepted comparator verdict is claimed.",
+    "status": "UNAVAILABLE_ON_HOST"
+  },
+  "local_public_theorem_check": {
+    "boundary": "No closure is inferred from a static grep, statement comparison, or upstream compile job.",
+    "intended_checks": [
+      "#check DedekindZetaZeroFree.main",
+      "#check DedekindZetaZeroFree.heckeCorollary",
+      "#print axioms DedekindZetaZeroFree.main",
+      "#print axioms DedekindZetaZeroFree.heckeCorollary"
+    ],
+    "status": "NOT_RUN_TARGET_UNBUILT"
+  },
+  "mathlib_commit": "0493595ecd5da8ef14742febab99728f98e948e8",
+  "observed_upstream_ci": {
+    "checked_utc": "2026-10-18 01:29 UTC",
+    "compile_job_conclusion": "success",
+    "compile_job_name": "Compile library, Challenge, and Solution",
+    "compile_job_url": "https://github.com/AxiomMath/DedekindZetaZeroFree/actions/runs/38381604779/job/115243377043",
+    "head_sha": "09afbb4ce6570c1615d58509dc197fc9f0956b7d",
+    "palomar_preflight_job_conclusion": "skipped",
+    "read_only_observation": true,
+    "scope": "Existing public upstream compile status only. No CI was triggered and no comparator or axiom-closure result is inferred from this job.",
+    "workflow_at_commit": ".github/workflows/lean.yml"
+  },
+  "source_commit": "09afbb4ce6570c1615d58509dc197fc9f0956b7d",
+  "source_repository": "https://github.com/AxiomMath/DedekindZetaZeroFree",
+  "source_statement_comparison": {
+    "boundary": "Static source comparison only. This is not Lean typechecking, kernel axiom inspection, or the unavailable sandboxed comparator.",
+    "canonical_git_blob_sha256": {
+      "challenge": "dd2562c814caa29860c48c78532e452e8f086c1e80eebfe2b03efbc1c7d762be",
+      "character": "0094c75c3b45837570aa4728f4547943f7bfa5cc2d64fcf9b75b0a88bd0dba79",
+      "solution": "cea97922704d55edc4bcf75bad181dfe9f200bd274437115a23730eb2820c5d1"
+    },
+    "method": "Exact Unicode text after whitespace normalization of the two theorem signatures, character structure and principal-character definition.",
+    "normalized_block_sha256": {
+      "RayClassCharacter": "18b89c0fd0176b1f9ebb9a701b3b6a77a515e333fab27e19a2aa3129e670c47e",
+      "RayClassCharacter.IsPrincipal": "7f04c160cf68ca2bcf75e2475b3244af5ad9d5736e4ec448cc8d9fe8034e1282",
+      "heckeCorollary": "5e0022198e37dee010a7d88751e38a3c002ba27c0f2bcb505dfdd84e786b8b5e",
+      "main": "0e62512fc4b7dd454fcc4308d84e4cdcfe56dc21f22162197e3d492d87f39a24"
+    },
+    "source_commit": "09afbb4ce6570c1615d58509dc197fc9f0956b7d",
+    "status": "PASS_SOURCE_TEXT_COMPARISON"
+  },
+  "status": "NOT_COMPLETED_LOCAL_ARTIFACT_FILE_CREATION_ERRORS",
+  "toolchain": "leanprover/lean4:v4.35.0-rc3",
+  "toolchain_asset_sha256": "57921b8f3fd2d345759b5db4596dd01aa45844c8ebab1cf9aa8c56d439e8a082"
+}

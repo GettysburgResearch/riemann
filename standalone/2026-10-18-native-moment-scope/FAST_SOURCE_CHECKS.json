@@ -1,0 +1,95 @@
+{
+  "arithmetic": "exact integers; portable little-endian SHA-256",
+  "boundary": "Complete finite coefficient arrays only; no analytic estimate or timing claim.",
+  "checks": [
+    {
+      "sha256": "b6216c906386ff3e780464afc2c236acc5d6d2f6095fc4bf2d3600b6bcdfd996",
+      "signature": []
+    },
+    {
+      "sha256": "4fe823bd1c03469aa6a90c0548a4469f3e004d6ef189f645d48e96e720d9ac6d",
+      "signature": [
+        [
+          5,
+          1
+        ]
+      ]
+    },
+    {
+      "sha256": "ab8660443790e1a133b454df91d75451ccc1da4cbfe0fac7fa492ce66a8b3f13",
+      "signature": [
+        [
+          7,
+          1
+        ]
+      ]
+    },
+    {
+      "sha256": "20da4f61b41302965b5392ccee377c4186ca6768b3e0b6615589c19b7dcc0b3f",
+      "signature": [
+        [
+          7,
+          2
+        ]
+      ]
+    },
+    {
+      "sha256": "0512ce5fcba58b1c420c66cd318673dd306d4775a1564efe1597ec4fa8240aed",
+      "signature": [
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "sha256": "54aefb1a7c8c7971bbee171f23f2289177b3351ad2f1c9d4bbd080859907f78f",
+      "signature": [
+        [
+          19,
+          1
+        ]
+      ]
+    },
+    {
+      "sha256": "1ce41aedd3226d10dedc3dfa0e9cbcc983e45933e32e93bc00f3a8198edd818b",
+      "signature": [
+        [
+          31,
+          1
+        ]
+      ]
+    },
+    {
+      "sha256": "1c788ed180602ce4a7aad6f012fb5a307c89e5a49ed5023c271cb3250fb384a7",
+      "signature": [
+        [
+          37,
+          1
+        ]
+      ]
+    },
+    {
+      "sha256": "bf0972872c16aaa6920fbee9c0d88cc00f021ce798237780c9bf9c6296051ebf",
+      "signature": [
+        [
+          43,
+          1
+        ]
+      ]
+    },
+    {
+      "sha256": "73fda02d8aaf28bc71c2a348b89f17c25cae1759c008b635e0221e482fec47fa",
+      "signature": [
+        [
+          61,
+          1
+        ]
+      ]
+    }
+  ],
+  "complete_norm_cap": 4194304,
+  "signed_int32_entries_per_array": 4194305,
+  "source_arrays_checked": 10,
+  "status": "PASS: fast Euler-deletion arrays equal the independently produced original arrays"
+}

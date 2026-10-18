@@ -1,0 +1,207 @@
+# Directed primitive Gaussian replay
+
+Status: finite directed enclosures of a specified native source. No finite
+value or moment is used as evidence for the infinite critical estimate.
+
+## Exact source
+
+The field is F=Q(w), w^2+w+1=0, with S the prime ideals above 2 and 3.
+All nonzero integral ideals are indexed separately, including conjugate
+ideals of equal rational norm. For EVERY ideal b outside S with Nb<=64,
+the observable is the actual masked principal Gaussian
+
+    A_(b^6)(D)=sum_n mu_F(n) 1_((n,b)=1) W_(0,1)(Nn/D),
+    W_(0,1)(y)=exp[-(log y)^2/4]/sqrt(4 pi).
+
+Thus tau=1 agrees with the Gaussian normalization of #976; c=0 is fixed
+before evaluation. The generalized tau in PROOF.md is not required here.
+The peak is at Nn=D, within the sampled arithmetic range. This avoids
+letting the first source coefficient dominate the whole declared grid.
+No exponent fit or asymptotic deduction is made from the resulting values.
+All b, including their repeated-prime powers, are included. Signatures
+only combine rows proven identical at this principal source; their exact
+ideal multiplicities remain in every reported moment.
+
+The finite production grid and precision are recorded in GAUSSIAN.json.
+It is a finite list of real scales, not all real D and not a zero scan.
+
+## Primitive coefficient generation
+
+`ideals.py` enumerates lattice ideals by complete column HNF. Independently,
+`norm_mobius_coefficients` uses rational Euler factors. The latter supplies
+all norm coefficients up to the explicitly recorded N cutoff:
+
+* split p=1 mod 3: the complete factor is (1-X)^2;
+* inert p=2 mod 3: the complete factor is 1-X^2;
+* ramified p=3: the complete factor is 1-X;
+* S exclusions remove the factors at 2 and 3 entirely.
+
+Masking one prime ideal above a split p changes (1-X)^2 to (1-X), while
+masking both changes it to 1. An inert prime has ideal norm p^2, not p.
+An exponent in b does not cause the same prime ideal to be removed twice.
+These rules are checked against every individual HNF ideal in the finite
+caps in CHECKS.json and EXTENDED_CHECKS.json. No floating arithmetic enters
+the integer source production. Each full coefficient array has its own
+portable little-endian signed-int32 SHA-256 in the numerical report.
+
+The principal producer reuses one complete primitive array and applies the
+exact Euler-deletion recurrence from PROOF.md §2. Removing a prime ideal
+of norm q divides the Dirichlet series by (1-q^(-s)): at multiples of q, in ascending
+order, set `out[n] = in[n] + out[n/q]`. Two split conjugates require two
+separate factors. This avoids rebuilding and factoring every integer for
+every mask. The fast arrays are checked against the independent local-factor
+algorithm for all 66 distinct mask signatures through Nb<=512, over every
+norm <=8192. It is the proved source identity used as an algorithm.
+
+## A complete upper-tail majorant
+
+The Eisenstein ring is norm-Euclidean: rounding the two coordinates of a
+quotient leaves errors at most 1/2, whose norm is at most 3/4<1. Thus every
+ideal is principal and has exactly six unit generators. For x>=1,
+
+    N(a+bw)=(a-b/2)^2+3b^2/4 <=x
+
+allows at most (4 sqrt(x)/sqrt(3)+1)(2 sqrt(x)+1) lattice points. Dividing
+by six, omitting zero, and bounding each constant by its multiple of
+sqrt(x) gives
+
+    I_F(x) <= (2/sqrt(3)+1/2)x < 2x.                     (G1)
+
+This intentionally coarse bound counts all ideals, so it also bounds the
+S-excluded and masked sources. Since |mu_F(n)|<=1, it bounds the absolute
+omitted tail for every b in the report, without a sign or cancellation
+assumption.
+
+For general fixed c,tau let Y>=1 and R=Y/D. Suppose W_(c,tau) is decreasing
+on [R,infinity), i.e. c+log(R)/(2tau)>=0. Stieltjes partial summation and
+(G1) give
+
+    sum_(Nn>Y) |mu_F(n) 1_((n,b)=1) W_(c,tau)(Nn/D)|
+       <= 2 Y W_(c,tau)(Y/D)
+          + D exp[tau(1-c)^2]
+             erfc((log(Y/D)-2tau(1-c))/(2sqrt(tau))).    (G2)
+
+The nonnegative boundary term is retained. Specifically, from
+sum_(Nn>Y) W = -I_F(Y)W(Y/D) + integral_Y^infinity I_F(t)(-dW(t/D)),
+discarding the negative boundary and using I_F(t)<=2t yields
+2 Y W(Y/D)+2 integral_Y^infinity W(t/D)dt. Completing the square in log(t/D)
+evaluates the integral and proves (G2). This covers infinitely many ideal
+columns beyond Y. No lower tail is truncated: all norms 1<=n<=Y occur in
+the integer coefficient arrays.
+
+### A tighter fixed-field bound, with the S exclusions retained
+
+The actual production also uses the following independently valid
+improvement. Let chi be the real Dirichlet character modulo three, with
+values 1,-1,0 in its three successive residue slots. Euler factors give
+
+    I_F(x) = sum_(ab<=x) chi(b),
+    C(t) = sum_(b<=t) chi(b) in {0,1},
+    kappa = L(1,chi) = pi/(3 sqrt(3)).
+
+The last value follows by integrating 1/(1+t+t^2) from zero to one:
+its power-series integral is sum_m [1/(3m+1)-1/(3m+2)]. For x>=1 put
+y=floor(sqrt(x)). The exact hyperbola formula is
+
+    I_F(x) = sum_(a<=y) C(x/a)
+             + sum_(b<=y) chi(b) floor(x/b) - y C(y).
+
+The first and last terms together have absolute value at most y.
+Replacing each floor by x/b costs at most y. Partial summation gives
+
+    L(1,chi)-sum_(b<=y) chi(b)/b
+                          = -C(y)/y+integral_y^infinity C(t)dt/t^2,
+
+whose absolute value is at most 1/y because C takes values in [0,1].
+Consequently
+
+    |I_F(x)-kappa x| <= 2y+x/y <=4 sqrt(x)       (x>=1),
+
+since sqrt(x)/2<=y<=sqrt(x).
+
+For 0<x<1 the same error bound holds since I_F(x)=0 and kappa<1.
+There is one prime ideal over two, of norm FOUR, and one over three,
+of norm three. Thus exact ideal-divisibility inclusion-exclusion gives
+
+    I_F^S(x) = I_F(x)-I_F(x/3)-I_F(x/4)+I_F(x/12)
+             <= A x+B sqrt(x)                    (every x>0),
+    A=pi/(6 sqrt(3)),   B=6+2sqrt(3).                     (G3a)
+
+All ideals, including conjugates, repeated prime powers and non-squarefree
+ideals, are counted here. This is an unconditional envelope for the larger
+absolute source, rather than a sign or cancellation estimate.
+
+For a>0 define the explicitly evaluated decreasing-profile envelope
+
+    U_a(Y,D)=Y^a W_(c,tau)(Y/D)
+       +(a D^a/2) exp[tau(a-c)^2]
+          erfc((log(Y/D)-2tau(a-c))/(2sqrt(tau))).        (G3b)
+
+Indeed U_a=Y^a W(Y/D)+a integral_Y^infinity t^(a-1)W(t/D)dt.
+Stieltjes partial summation with (G3a), dropping the negative boundary
+term exactly as above, proves the sharper complete-source tail bound
+
+    sum_(Nn>Y, n prime to S) |mu_F(n)chi_u(n)W(Nn/D)|
+                           <= A U_1(Y,D)+B U_(1/2)(Y,D). (G3c)
+
+This covers every row in BOTH numerical experiments since |chi_u(n)|<=1
+and all their columns are outside S. The producer evaluates (G2) and
+(G3c) separately using directed balls, choosing (G3c) only when a strict
+directed comparison proves it smaller. Either choice is valid. Only exact
+rationals, directed pi and square roots occur in A,B and U_(1/2); no
+floating approximation is used for the half exponent or field constants.
+The count proof, not a finite norm sample, justifies the infinite tail.
+
+### Restore the exact negative boundary at an integer cutoff
+
+For an integer Y>=1 the hyperbola formula above computes I_F(Y) exactly
+using O(sqrt(Y)) integer operations. Apply it also at floor(Y/3),
+floor(Y/4), and floor(Y/12), to obtain the exact integer N_Y=I_F^S(Y).
+The routine exterior_ideal_count in ideals.py uses precisely these four
+hyperbola counts. It retains every ideal, rather than only the squarefree
+or unmasked ones.
+
+First dominate the absolute omitted source by the sum of W over ALL
+S-free ideals of norm greater than Y. For that larger positive sum the
+Stieltjes identity has its exact negative boundary term, giving
+
+    sum_(Nn>Y, n prime to S) |mu_F(n)chi_u(n)W(Nn/D)|
+       <= A U_1(Y,D)+B U_(1/2)(Y,D)-N_Y W(Y/D).           (G4)
+
+Indeed the larger sum equals -N_Y W(Y/D) plus the integral of I_F^S(t)
+against the nonnegative measure -dW(t/D). Bound only that integral by
+(G3a). This proves (G4), with no finite-tail assumption and no subtraction
+of a guessed signed-source count. The earlier proof of the hyperbola
+formula and inclusion-exclusion supplies the exact boundary count.
+
+The implementation retains (G2) and (G3c) and selects (G4) only when
+directed arithmetic proves it finite, positive, and strictly smaller than
+the current bound. Noninteger cutoffs keep the preceding bounds. The exact
+boundary count is checked at every integer cap from zero through 512
+against actual HNF ideal enumeration, and at eight caps through 1,048,576
+against the separate full divisor sum. A corrupted count enlarged by one
+is rejected by that independent gate.
+
+The producer evaluates the selected right side by Arb ball arithmetic and
+adds a symmetric radius at least its upper endpoint to each signed finite
+sum. Positivity, finite values and the decreasing-profile premise are
+strict acceptance gates. All normalizing constants, logarithms, exponentials,
+pi, square roots and erfc values are directed operations. The library's
+arithmetic contract, rather than ordinary high precision, is the numerical
+assumption. No hand-specified approximate pi or float input is used.
+
+## Acceptance and limits
+
+`gaussian.py` reproduces GAUSSIAN.json. `replay_gaussian.py` reconstructs the
+source and recomputes at higher precision with a longer cutoff, then requires
+the deposited full-source enclosures to contain the new full-source
+enclosures. It separately compares low-scale values to sums over individual
+HNF ideals. `test_exact.py` executes corrupted exact models in subprocesses.
+The source, coverage, tail proof and directed numerical contract are each
+necessary; agreement between two decimal reports alone is insufficient.
+
+This is a full primitive replay of the DECLARED principal-sector finite
+experiment. It does not compute nonprincipal Hecke characters, every physical
+CT row, or the full family moment in Theorem A. It does not prove an all-scale
+bound, a critical exponent, field RH or ordinary RH. The analytic theorems
+remain written deductions awaiting independent mathematical review.
