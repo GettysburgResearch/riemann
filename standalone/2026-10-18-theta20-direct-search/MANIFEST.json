@@ -1,0 +1,133 @@
+{
+  "status": "EXPLORATORY_NO_THEOREM",
+  "files": {
+    "CANDIDATE_REPLAY.json": {
+      "sha256": "857457ed103430c75f7a505063538071001d577d0629c663e8bdcb8beb0b811d",
+      "bytes": 6732
+    },
+    "EXECUTION.json": {
+      "sha256": "fef23a1f2a010abcf08ddde249c603abafb98ef436bc1c085f83df28e9805a7d",
+      "bytes": 1141
+    },
+    "MATHEMATICAL_SCOPE.md": {
+      "sha256": "8657cebc009b246c197b545e21c9e8818f5625f4a7d7f49f10eb9b85bab7b520",
+      "bytes": 4142
+    },
+    "PUBLICATION_ACCESS.json": {
+      "sha256": "724b96e014443f39fcf0ec70f542cacc6a3785dd1e07f85b977c2da197c1509e",
+      "bytes": 350
+    },
+    "README.md": {
+      "sha256": "7d7fcbe1ef356f05bf4c8968926f106347becebd2a202758ef7265cf56ccb69b",
+      "bytes": 6151
+    },
+    "SOURCE_COMPARISON.json": {
+      "sha256": "f21dee50a9b0357f83facbef3c265ec924949a10b99a8ac660319f4b5d9349b6",
+      "bytes": 198
+    },
+    "SOURCE_LOCK.json": {
+      "sha256": "8c0b7da55b6a1eb87b721bcb3936987b5fffac8d073f61ac3a40431654978c95",
+      "bytes": 773
+    },
+    "SOURCE_REFRESH.json": {
+      "sha256": "4006cdc1bbf24775a8b31c1ecfaaa58c1d5baaa129b0442845e40c1c9f312e12",
+      "bytes": 4841
+    },
+    "exploration/antiferro.py": {
+      "sha256": "0ad42bcad63fba6dd39687805b720d7490781e46344868d8cf9eae7dda7ded45",
+      "bytes": 2195
+    },
+    "exploration/complete.py": {
+      "sha256": "bee802a2d9a59d1fb349dabad466f0370657277188bc659935a47f8529aedf50",
+      "bytes": 2088
+    },
+    "exploration/complete0.json": {
+      "sha256": "f3a686983d383d8ff87e0fcafbaa89243b4bdfe8c874cbe3ad8b8169f09d5e6f",
+      "bytes": 2507
+    },
+    "exploration/compound.py": {
+      "sha256": "1054dd17be6520b5fc0d15c42cb35f50e4ec8d54cb5024c0f423edd6165c3727",
+      "bytes": 2157
+    },
+    "exploration/gaussian_groups.py": {
+      "sha256": "1cc4db1845695e117c4b87229c754215572bde7951fdabfad95254de78fc5546",
+      "bytes": 2446
+    },
+    "exploration/groups.py": {
+      "sha256": "fc7d1372f758dc834c67cd7965c03fb258baa79e89d2413f83e073e086db7593",
+      "bytes": 2306
+    },
+    "exploration/groups6.py": {
+      "sha256": "5c408b2134884e0bbb8172ab611107b4cffe8297085b0b665a61d95a7c3dd03b",
+      "bytes": 2349
+    },
+    "exploration/rbm.py": {
+      "sha256": "5d52a3cb98253271d63d6a2b1ec945eb45d5418f689f1c70cd38ee7f07560438",
+      "bytes": 2159
+    },
+    "exploration/target.json": {
+      "sha256": "1d0d985fd3833001a6c3fcf985cb0cef5dc10092c29dbe833c3299d1878f5c35",
+      "bytes": 3418
+    },
+    "loop_tangent.py": {
+      "sha256": "6ffede6ff2a92fd7770b3b8bfec2f571e55fe46baa7c815fcb900e2e03deae7a",
+      "bytes": 4734
+    },
+    "models.py": {
+      "sha256": "8f5fef8eee2f79f33e3b67803b9d622741881e49c27f90c9a07c7ec33051ea67",
+      "bytes": 5270
+    },
+    "records/antiferro0.json": {
+      "sha256": "b3bc744252a8666bdb3a04a9eb725d3576fe364f56231a7d81695f042441249b",
+      "bytes": 2504
+    },
+    "records/complete0.json": {
+      "sha256": "f3a686983d383d8ff87e0fcafbaa89243b4bdfe8c874cbe3ad8b8169f09d5e6f",
+      "bytes": 2507
+    },
+    "records/compound0.json": {
+      "sha256": "0653340b5144313e0f683b79d0a64defbcbad1f206672aef223e921a0b227312",
+      "bytes": 3487
+    },
+    "records/gaussian_groups0.json": {
+      "sha256": "c63253735c844ce173dd56d43c59433fc07435696425cb41850964b77a428ada",
+      "bytes": 1352
+    },
+    "records/groups6_best0.json": {
+      "sha256": "cf15d639a9a688f334054ecd646dba0c302ea784ad6c42519ace28dae45321d1",
+      "bytes": 1814
+    },
+    "records/groups_best0.json": {
+      "sha256": "d3eddd996f2c234ddc5014e58a8617ecfbed845ce595c79aa192df79d55cae84",
+      "bytes": 1133
+    },
+    "records/loop_lp.json": {
+      "sha256": "f007559da7903f6110b5cfb307a1c4c53005c14ef3b38fc5f43065d3f24b74a5",
+      "bytes": 19048
+    },
+    "records/rbm0.json": {
+      "sha256": "06b92ec5930f9f5378a4353f716235128b0755700b83126eb75be20dad97e5fb",
+      "bytes": 1652
+    },
+    "replay_candidates.py": {
+      "sha256": "3f2767ee23cbb7f874d617f5eca45a82e2f2431e15fa0f080713184ce270545f",
+      "bytes": 1820
+    },
+    "search.py": {
+      "sha256": "ce10f7b0939261d2697f38aa443a7731ac3ce0950e78e3484add108757aef7c8",
+      "bytes": 1873
+    },
+    "target.json": {
+      "sha256": "1d0d985fd3833001a6c3fcf985cb0cef5dc10092c29dbe833c3299d1878f5c35",
+      "bytes": 3418
+    },
+    "test_models.py": {
+      "sha256": "d4a80f069fb69986255cc32a5d6be218e9276628d6a538f8413a79299972a65f",
+      "bytes": 4931
+    },
+    "theta_source.py": {
+      "sha256": "895f8ec2bec48509bd045ebea12234c66fb1eadb6ef70549c3db931b6014251e",
+      "bytes": 2586
+    }
+  }
+}

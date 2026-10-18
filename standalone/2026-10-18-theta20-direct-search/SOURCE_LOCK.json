@@ -1,0 +1,30 @@
+{
+  "repository": "GettysburgResearch/riemann",
+  "base_commit": "b586b518a8de634444c1e987a0bba03c593198f0",
+  "base_pr": 992,
+  "scope": "exploratory additions only",
+  "upstream": [
+    {
+      "pr": 992,
+      "head": "b586b518a8de634444c1e987a0bba03c593198f0",
+      "source_files_read": [
+        "PROOF.md",
+        "POSITIVE_LOOP.json",
+        "loop_model.py",
+        "inherited.py",
+        "verify.py"
+      ],
+      "upstream_certificate_replayed": false
+    },
+    {
+      "pr": 988,
+      "head": "86c156baa3f10296a26e066f5f4d276776b79c27",
+      "reading_scope": "PR description only"
+    },
+    {
+      "pr": 991,
+      "head": "b4d97d837214cf14fc09c093f66a50e798288afa",
+      "scope": "previous conversation proposal, no new arithmetic bound"
+    }
+  ]
+}

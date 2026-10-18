@@ -1,0 +1,26 @@
+{
+  "status": "NO_DEGREE_20_CERTIFICATE",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "mpmath": "1.3.0",
+  "current_execution": {
+    "exact_and_numerical_test_methods_normal": 9,
+    "exact_and_numerical_test_methods_optimized": 9,
+    "candidate_replay_modes_match_byte_for_byte": true,
+    "source_refresh_degree": 40,
+    "source_refresh_decimal_digits": 60,
+    "source_quadrature_certified": false,
+    "interval_root_certificate": false,
+    "independent_review": false,
+    "RH_bound_proved": false,
+    "pushed": false
+  },
+  "failure_notes": [
+    "An early grouped random initial guess exceeded its declared parameter bound; the failed run was not counted as a certificate.",
+    "Negative-coupling experiment is excluded from Lee-Yang use.",
+    "Interrupted pre-resume exploratory attempts are not claimed fully recovered or independently replayed.",
+    "Development optimizer trajectories are not guaranteed byte-identical across SciPy/platform versions; frozen candidates are re-evaluated separately."
+  ]
+}
