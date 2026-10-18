@@ -1,0 +1,142 @@
+{
+  "analytic_inputs_verified": false,
+  "checks": {
+    "actual_dual_conductor": 2592,
+    "comparison_DF": 1,
+    "comparison_central": 1,
+    "comparison_shifted": 1,
+    "complete_detector_budget": 123,
+    "complete_rational_power_decomposition": 2560,
+    "density_parameters": 123,
+    "detector_common_mask": 768,
+    "detector_initial_annihilation": 125,
+    "dilated_prefix_square_mass": 6630,
+    "eighth_moment_overlap": 1,
+    "literal_power_mask": 1060,
+    "mollifier_dominance": 615,
+    "polynomial_density_identity": 8,
+    "prefix_disjointness": 2210,
+    "same_order_first_mean": 1,
+    "selected_envelope": 8800,
+    "selected_holder_power": 123,
+    "sextic_example": 121
+  },
+  "density_table": [
+    {
+      "A_exponent": "5/7",
+      "B_exponent": "8/7",
+      "costs": [
+        "5/7",
+        "5/7",
+        "4/7",
+        "9/14",
+        "5/7",
+        "5/7"
+      ],
+      "density_exponent": "5/7",
+      "n": 6
+    },
+    {
+      "A_exponent": "3/4",
+      "B_exponent": "7/6",
+      "costs": [
+        "15/22",
+        "11/16",
+        "7/12",
+        "5/8",
+        "11/16",
+        "11/16"
+      ],
+      "density_exponent": "11/16",
+      "n": 8
+    },
+    {
+      "A_exponent": "13/17",
+      "B_exponent": "20/17",
+      "costs": [
+        "79/119",
+        "57/85",
+        "10/17",
+        "21/34",
+        "57/85",
+        "57/85"
+      ],
+      "density_exponent": "57/85",
+      "n": 10
+    },
+    {
+      "A_exponent": "17/22",
+      "B_exponent": "13/11",
+      "costs": [
+        "122/187",
+        "29/44",
+        "13/22",
+        "27/44",
+        "29/44",
+        "29/44"
+      ],
+      "density_exponent": "29/44",
+      "n": 12
+    },
+    {
+      "A_exponent": "25/32",
+      "B_exponent": "19/16",
+      "costs": [
+        "235/368",
+        "165/256",
+        "19/32",
+        "39/64",
+        "165/256",
+        "165/256"
+      ],
+      "density_exponent": "165/256",
+      "n": 16
+    },
+    {
+      "A_exponent": "19/24",
+      "B_exponent": "43/36",
+      "costs": [
+        "349/564",
+        "239/384",
+        "43/72",
+        "29/48",
+        "239/384",
+        "239/384"
+      ],
+      "density_exponent": "239/384",
+      "n": 32
+    },
+    {
+      "A_exponent": "121/152",
+      "B_exponent": "91/76",
+      "costs": [
+        "4399/7220",
+        "2973/4864",
+        "91/152",
+        "183/304",
+        "2973/4864",
+        "2973/4864"
+      ],
+      "density_exponent": "2973/4864",
+      "n": 64
+    },
+    {
+      "A_exponent": "83/104",
+      "B_exponent": "187/156",
+      "costs": [
+        "6005/9932",
+        "4031/6656",
+        "187/312",
+        "125/208",
+        "4031/6656",
+        "4031/6656"
+      ],
+      "density_exponent": "4031/6656",
+      "n": 128
+    }
+  ],
+  "independent_mathematical_review": false,
+  "scope": "Exact exponents, formal polynomial identities, abstract roots/nonunit masks, rational-integer fixtures. No L-values, zeros or full number-field census.",
+  "status": "PASS_FINITE_ALGEBRA_ONLY",
+  "total_predicates": 25863
+}
