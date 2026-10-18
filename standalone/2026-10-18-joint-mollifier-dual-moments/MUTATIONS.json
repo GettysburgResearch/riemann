@@ -1,0 +1,40 @@
+{
+  "executed_separate_processes": 7,
+  "results": [
+    {
+      "mutation": "erased_mask",
+      "rejected_at": "literal_nonunit_zero",
+      "returncode": 1
+    },
+    {
+      "mutation": "same_character_dual",
+      "rejected_at": "dual_conjugation",
+      "returncode": 1
+    },
+    {
+      "mutation": "false_shared_coprimality",
+      "rejected_at": "shared_power_mask",
+      "returncode": 1
+    },
+    {
+      "mutation": "wrong_cutoff_dilation",
+      "rejected_at": "complete_cutoff_convolution",
+      "returncode": 1
+    },
+    {
+      "mutation": "pointwise_mollifier",
+      "rejected_at": "joint_dual_budget",
+      "returncode": 1
+    },
+    {
+      "mutation": "lost_actual_conductor",
+      "rejected_at": "actual_conductor_cancellation",
+      "returncode": 1
+    },
+    {
+      "mutation": "erased_zero_cap",
+      "rejected_at": "actual_zero_keeps_cap",
+      "returncode": 1
+    }
+  ]
+}
