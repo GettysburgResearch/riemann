@@ -1,0 +1,74 @@
+[
+  {
+    "gate": "ramified_convolution",
+    "lane": "fields",
+    "mutation": "ramified_as_split",
+    "returncode": 2
+  },
+  {
+    "gate": "inverse_complete_powers",
+    "lane": "fields",
+    "mutation": "erase_power_tail",
+    "returncode": 2
+  },
+  {
+    "gate": "normalized_bias_removal",
+    "lane": "probes",
+    "mutation": "unnormalized_probe",
+    "returncode": 2
+  },
+  {
+    "gate": "joint_nonreal_visibility",
+    "lane": "probes",
+    "mutation": "commensurate_pair",
+    "returncode": 2
+  },
+  {
+    "gate": "probability_normalization",
+    "lane": "strip",
+    "mutation": "strip_normalization",
+    "returncode": 2
+  },
+  {
+    "gate": "rare_total_variance",
+    "lane": "strip",
+    "mutation": "rare_variance_omitted",
+    "returncode": 2
+  },
+  {
+    "gate": "all_product_mask_factorization",
+    "lane": "newton",
+    "mutation": "drop_above_output_products",
+    "returncode": 2
+  },
+  {
+    "gate": "adaptive_complete_core_budget",
+    "lane": "newton",
+    "mutation": "root_budget_omitted",
+    "returncode": 2
+  },
+  {
+    "gate": "full_recurrence_exponents",
+    "lane": "newton",
+    "mutation": "missing_square_scale",
+    "returncode": 2
+  },
+  {
+    "gate": "prime_power_determinant",
+    "lane": "determinant",
+    "mutation": "delete_prime_powers",
+    "returncode": 2
+  },
+  {
+    "gate": "all_mass_regularization",
+    "lane": "determinant",
+    "mutation": "wrong_mass_parameter",
+    "returncode": 2
+  },
+  {
+    "gate": "unit_preserving_rearrangement",
+    "lane": "determinant",
+    "mutation": "lost_unit",
+    "returncode": 2
+  }
+]

@@ -1,0 +1,94 @@
+{
+  "agents_launched": 0,
+  "format": 1,
+  "independent_referee": false,
+  "lanes": [
+    {
+      "gates": {
+        "complete_character_mean": 26,
+        "family_scale_budget": 5,
+        "field_population": 1,
+        "fundamental_discriminant": 11,
+        "independent_full_average": 64,
+        "inverse_complete_powers": 2816,
+        "inverse_kernel": 2816,
+        "literal_ramification": 12,
+        "primitive_PV_progression": 1740,
+        "product_divisor_average": 858,
+        "ramified_convolution": 2816,
+        "ramified_coverage": 1,
+        "refined_weighted_full_family": 2,
+        "weighted_full_family": 4
+      },
+      "lane": "fields",
+      "predicates": 11172,
+      "stdout_sha256": "bb74cf97d9a03b9e5cd119a0e98b7cab879ca392b831dd3deea6b5c12da46b40"
+    },
+    {
+      "gates": {
+        "complete_rescaled_source": 24,
+        "integer_separation": 512,
+        "joint_nonreal_visibility": 1,
+        "multiplicity_preservation": 36,
+        "normalized_bias_removal": 648,
+        "small_field_positive_pairs": 1000
+      },
+      "lane": "probes",
+      "predicates": 2221,
+      "stdout_sha256": "14be03be89c0bb94fd26855c7195f1196b8e39689b8d97ce328032c749b62768"
+    },
+    {
+      "gates": {
+        "complete_product_moments": 84,
+        "complex_escape": 7,
+        "disk_tail_factor": 420,
+        "exact_zero_polynomial": 8,
+        "probability_normalization": 4,
+        "rare_fixed_moments": 35,
+        "rare_total_variance": 7,
+        "rare_variance_domain": 7,
+        "three_point_moments": 40,
+        "variance_tail_budget": 40
+      },
+      "lane": "strip",
+      "predicates": 652,
+      "stdout_sha256": "a5ff3cb879fd24e5de4146377c7db974e85912d0f1472e736c976e2b7f473b1e"
+    },
+    {
+      "gates": {
+        "above_output_coverage": 1,
+        "adaptive_complete_core_budget": 115,
+        "all_product_mask_factorization": 4099,
+        "complete_cube_zero": 800,
+        "full_recurrence_exponents": 48,
+        "square_sector": 210
+      },
+      "lane": "newton",
+      "predicates": 5273,
+      "stdout_sha256": "7b2dd34605566a59a5fc6f488db82baa3110677fbc740e657e7972525c072e34"
+    },
+    {
+      "gates": {
+        "all_mass_regularization": 34,
+        "atan_reciprocal": 6,
+        "directed_log_identity": 140,
+        "directed_sqrt": 140,
+        "machin_pi_enclosure": 1,
+        "mesoscopic_conditioning_scale": 10,
+        "positive_definite_minors": 176,
+        "positive_polynomial_coefficients": 31,
+        "prime_power_determinant": 31,
+        "rational_matrix_determinant": 32,
+        "rational_primitive_projector": 284,
+        "unit_preserving_rearrangement": 45,
+        "whole_cycle_factorization": 31
+      },
+      "lane": "determinant",
+      "predicates": 961,
+      "stdout_sha256": "b23f49fa84b8b717f622965feeed18a6868f970d9738cf09b6af8581991a95b9"
+    }
+  ],
+  "rh_established": false,
+  "scope": "Finite tests and directed comparisons, not the infinite proofs or the open arithmetic estimates.",
+  "total_predicates": 20279
+}
