@@ -1,0 +1,68 @@
+{
+  "failed_087": {
+    "matches_original_RESULT_json": true,
+    "new_mutation_campaign": false,
+    "normal_output_sha256": "70e3435ce181a2222d661d796bf17df9db11ca86b47077b458a22f8a641ea7af",
+    "optimized_output_sha256": "70e3435ce181a2222d661d796bf17df9db11ca86b47077b458a22f8a641ea7af"
+  },
+  "five_route": {
+    "agents_launched": 0,
+    "finite_predicates_per_mode": 20279,
+    "independent_mathematical_review": false,
+    "lanes": 5,
+    "manifested_payloads": 14,
+    "rejected_mutations": 12,
+    "rh_established": false,
+    "status": "PASS"
+  },
+  "historical_flag_note": "The positive-determinant source report contains a frozen remote_publication:false literal; publication was subsequently recorded in #1000. It is not a live GitHub query.",
+  "independent_referee_in_this_pass": false,
+  "positive_determinant": {
+    "analytic_proof_certified": false,
+    "corrupted_processes_rejected": {
+      "drop_prime_powers": {
+        "gate": "complete_prime_power_height",
+        "returncode": 2
+      },
+      "erase_projection": {
+        "gate": "primitive_projection",
+        "returncode": 2
+      },
+      "gram_factor": {
+        "gate": "gram_valuation_layers",
+        "returncode": 2
+      },
+      "lose_conjugate": {
+        "gate": "conjugate_disk_identity",
+        "returncode": 2
+      },
+      "omit_unit": {
+        "gate": "complete_unit_corrected_regrouping",
+        "returncode": 2
+      },
+      "unsigned_mobius": {
+        "gate": "complete_unit_corrected_regrouping",
+        "returncode": 2
+      },
+      "wrong_continuum": {
+        "gate": "one_sided_continuum",
+        "returncode": 2
+      },
+      "wrong_mass": {
+        "gate": "matrix_polynomial_identity",
+        "returncode": 2
+      }
+    },
+    "finite_predicates": 3370,
+    "manifested_payloads": 10,
+    "positive_modes": [
+      "ordinary",
+      "optimized"
+    ],
+    "remote_publication": false,
+    "status": "PASS_FINITE_REPLAY"
+  },
+  "scope": "Fresh selected-source replays during manuscript preparation; not analytic certification.",
+  "stderr_empty": true,
+  "theta_1003_full_source_replay_in_this_pass": false
+}

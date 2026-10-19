@@ -1,0 +1,570 @@
+{
+  "schema_version": 2,
+  "repository": "GettysburgResearch/riemann",
+  "editorial_date": "2026-10-19",
+  "base_main_observed": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "scientific_status": "Revised exposition; includes explicitly import-dependent zero-free proposals; no new analytic proof or integration approval",
+  "sources": [
+    {
+      "key": "R934",
+      "pr": 934,
+      "commit": "3092feee25c583ec760c5f14f4aa4c98d9c5df39",
+      "path": "research/exploratory/2026-10-10-quasi-rh-wave",
+      "title": "Research wave on the October 2026 zero-free half-plane",
+      "scope": "Earlier comparison model; source-qualified background; not a fresh analytic audit",
+      "url": "https://github.com/GettysburgResearch/riemann/tree/3092feee25c583ec760c5f14f4aa4c98d9c5df39/research/exploratory/2026-10-10-quasi-rh-wave",
+      "files": [
+        {
+          "path": "research/exploratory/2026-10-10-quasi-rh-wave/notes/A_exponent_model.md",
+          "git_blob_sha1": "c7ac173a1dbcc8f43d8ea46599101a2cda102577"
+        },
+        {
+          "path": "research/exploratory/2026-10-10-quasi-rh-wave/notes/E_mechanism_lead.md",
+          "git_blob_sha1": "8bddfc6a5b18ba60a1e33a8962d3a6c98e6a47ac"
+        },
+        {
+          "path": "research/exploratory/2026-10-10-quasi-rh-wave/notes/J_gram_loss_attack.md",
+          "git_blob_sha1": "58d6bf7a138415bbfcd024c4e8c95f7d2f48cdd2"
+        }
+      ]
+    },
+    {
+      "key": "R957",
+      "pr": 957,
+      "commit": "ec54cb6b0029aedd8a99e6016a42a1426a0223a2",
+      "path": "standalone/2026-10-17-dedekind-density-upgrade",
+      "title": "A proposed 23/24 zero-free region for all Dedekind zeta functions",
+      "scope": "Stronger density; exact family matching; 23/24 proposal",
+      "revision_reading_scope": "Detailed live PR description; used for historical exposition, not a fresh analytic proof audit",
+      "url": "https://github.com/GettysburgResearch/riemann/tree/ec54cb6b0029aedd8a99e6016a42a1426a0223a2/standalone/2026-10-17-dedekind-density-upgrade",
+      "files": []
+    },
+    {
+      "key": "R958",
+      "pr": 958,
+      "commit": "e6dfa07d07ed7a5d049039d7255919a992cadc77",
+      "path": "standalone/2026-10-17-stratified-dedekind-density",
+      "title": "Stratified zero density and the proposed 25/27 refinement",
+      "scope": "Finite zero strata and the 25/27 proposal",
+      "revision_reading_scope": "Detailed live PR description; used for historical exposition, not a fresh analytic proof audit",
+      "url": "https://github.com/GettysburgResearch/riemann/tree/e6dfa07d07ed7a5d049039d7255919a992cadc77/standalone/2026-10-17-stratified-dedekind-density",
+      "files": []
+    },
+    {
+      "key": "R959",
+      "pr": 959,
+      "commit": "7b845294207d96b883c1fa95028663082267804f",
+      "path": "standalone/2026-10-17-numerator-mean-refinement",
+      "title": "Numerator-family averaging and the proposed 11/12 all-field region",
+      "scope": "Second numerator mean and the 11/12 proposal",
+      "revision_reading_scope": "Detailed live PR description; used for historical exposition, not a fresh analytic proof audit; full source-identity and reading-scope note also read",
+      "url": "https://github.com/GettysburgResearch/riemann/tree/7b845294207d96b883c1fa95028663082267804f/standalone/2026-10-17-numerator-mean-refinement",
+      "files": [
+        {
+          "path": "standalone/2026-10-17-numerator-mean-refinement/SOURCES.md",
+          "git_blob_sha1": "d6c5c50237d7307eb776c657dd689a4c8265af82"
+        }
+      ]
+    },
+    {
+      "key": "R965",
+      "pr": 965,
+      "commit": "d58e3282a9379b6ae165681bc2e21e4f9fd18c26",
+      "path": "standalone/2026-10-17-subcritical-dedekind",
+      "title": "Short-support theta estimates and the proposed 91/100 boundary",
+      "scope": "Two-term short-support estimate; 91/100 proposal",
+      "revision_reading_scope": "Detailed live PR description; used for historical exposition, not a fresh analytic proof audit",
+      "url": "https://github.com/GettysburgResearch/riemann/tree/d58e3282a9379b6ae165681bc2e21e4f9fd18c26/standalone/2026-10-17-subcritical-dedekind",
+      "files": []
+    },
+    {
+      "key": "R966",
+      "pr": 966,
+      "commit": "8d94494698ee447711a53dec922986586418e398",
+      "path": "standalone/2026-10-17-selected-fourth-density",
+      "title": "Selected fourth-moment density and the proposed 109/120 refinement",
+      "scope": "Fourth moment, selected density, 109/120 proposal",
+      "revision_reading_scope": "Detailed live PR description; used for historical exposition, not a fresh analytic proof audit",
+      "url": "https://github.com/GettysburgResearch/riemann/tree/8d94494698ee447711a53dec922986586418e398/standalone/2026-10-17-selected-fourth-density",
+      "files": []
+    },
+    {
+      "key": "R968",
+      "pr": 968,
+      "commit": "14f544fb4293ffb59942ff8d345ab9d6da67025c",
+      "path": "standalone/2026-10-17-fourth-numerator-dedekind",
+      "title": "Fourth numerator moments and the proposed 10/11 boundary",
+      "scope": "All fixed numerator moments; parallel 10/11 proposal",
+      "revision_reading_scope": "Detailed live PR description; used for historical exposition, not a fresh analytic proof audit",
+      "url": "https://github.com/GettysburgResearch/riemann/tree/14f544fb4293ffb59942ff8d345ab9d6da67025c/standalone/2026-10-17-fourth-numerator-dedekind",
+      "files": []
+    },
+    {
+      "key": "R969",
+      "pr": 969,
+      "commit": "6542781188469e8a23dadf9d419b3d5cf4d11de7",
+      "path": "standalone/2026-10-18-offcentral-numerator",
+      "title": "Off-central numerator moments and the proposed 49/54 boundary",
+      "scope": "Off-central fourth mean; 49/54 proposal",
+      "revision_reading_scope": "Detailed live PR description; used for historical exposition, not a fresh analytic proof audit",
+      "url": "https://github.com/GettysburgResearch/riemann/tree/6542781188469e8a23dadf9d419b3d5cf4d11de7/standalone/2026-10-18-offcentral-numerator",
+      "files": []
+    },
+    {
+      "key": "R970",
+      "pr": 970,
+      "commit": "026f70fc91f221296b4a4ad874dc2235c5ba07ac",
+      "path": "standalone/2026-10-18-local-support-recovery",
+      "title": "Archive of the local-support 68/75 proposal",
+      "scope": "Archived 68/75 proposal; not independently extracted or re-reviewed",
+      "revision_reading_scope": "Detailed live PR description; used for historical exposition, not a fresh analytic proof audit",
+      "url": "https://github.com/GettysburgResearch/riemann/tree/026f70fc91f221296b4a4ad874dc2235c5ba07ac/standalone/2026-10-18-local-support-recovery",
+      "files": []
+    },
+    {
+      "key": "R971",
+      "pr": 971,
+      "commit": "3f1d2a07631eb6cca1f2716be01f64e874667639",
+      "path": "standalone/2026-10-18-ramified-shifted-detector",
+      "title": "Ramified factors and an enlarged correction domain",
+      "scope": "Five ramified classes; local-domain improvement",
+      "revision_reading_scope": "Detailed live PR description; used for historical exposition, not a fresh analytic proof audit",
+      "url": "https://github.com/GettysburgResearch/riemann/tree/3f1d2a07631eb6cca1f2716be01f64e874667639/standalone/2026-10-18-ramified-shifted-detector",
+      "files": []
+    },
+    {
+      "key": "R974",
+      "pr": 974,
+      "commit": "89c37b6707cb77fc5a86143ea98d8756759fdcbc",
+      "path": "standalone/2026-10-17-three-route-continuation",
+      "title": "49/54 composition, local factors, and three-route continuation",
+      "scope": "Parallel interpolation; 9081/10000 and 49/54; local domain",
+      "revision_reading_scope": "Detailed live PR description; used for historical exposition, not a fresh analytic proof audit",
+      "url": "https://github.com/GettysburgResearch/riemann/tree/89c37b6707cb77fc5a86143ea98d8756759fdcbc/standalone/2026-10-17-three-route-continuation",
+      "files": []
+    },
+    {
+      "key": "R977",
+      "pr": 977,
+      "commit": "1b473843c920b004994a3ffb7e9b6b7f9ce54c05",
+      "path": "standalone/2026-10-18-zero-free-reflected-numerator",
+      "title": "A zero-free-selected reflected numerator and a proposed 271/300 boundary",
+      "scope": "Composition read through the principal comparison; density note read in full; finite 850-class substitutions rerun; deep adapters not reconstructed",
+      "url": "https://github.com/GettysburgResearch/riemann/tree/1b473843c920b004994a3ffb7e9b6b7f9ce54c05/standalone/2026-10-18-zero-free-reflected-numerator",
+      "files": [
+        {
+          "path": "standalone/2026-10-18-zero-free-reflected-numerator/COMPOSITION.md",
+          "git_blob_sha1": "da33b756bf1f672b080344f102bbb151315a34a0"
+        },
+        {
+          "path": "standalone/2026-10-18-zero-free-reflected-numerator/DENSITY.md",
+          "git_blob_sha1": "5f097b8d16e3d3bd78e8de6509462097c9690828"
+        }
+      ]
+    },
+    {
+      "key": "R989",
+      "pr": 989,
+      "commit": "0162599b1373341b0b1622d1273c075da0f147b5",
+      "path": "standalone/2026-10-18-two-mollifier-law",
+      "title": "Density-free capped reciprocal laws via two mollifiers",
+      "scope": "Full transfer proof and analytic contracts read; capped application retains source qualifications; complete checker not rerun",
+      "url": "https://github.com/GettysburgResearch/riemann/tree/0162599b1373341b0b1622d1273c075da0f147b5/standalone/2026-10-18-two-mollifier-law",
+      "files": [
+        {
+          "path": "standalone/2026-10-18-two-mollifier-law/PROOF.md",
+          "git_blob_sha1": null
+        }
+      ]
+    },
+    {
+      "key": "R991",
+      "pr": 991,
+      "commit": "b4d97d837214cf14fc09c093f66a50e798288afa",
+      "path": "standalone/2026-10-18-chebyshev-critical-extraction",
+      "title": "Logarithmic-cost critical extraction and a fixed-member shift mean",
+      "scope": "Related component recorded at source overview scope; not an input to new upper estimates",
+      "url": "https://github.com/GettysburgResearch/riemann/tree/b4d97d837214cf14fc09c093f66a50e798288afa/standalone/2026-10-18-chebyshev-critical-extraction",
+      "files": [
+        {
+          "path": "standalone/2026-10-18-chebyshev-critical-extraction/PROOF.md",
+          "git_blob_sha1": null
+        },
+        {
+          "path": "standalone/2026-10-18-chebyshev-critical-extraction/FIXED_SHIFT_TARGET.md",
+          "git_blob_sha1": null
+        }
+      ]
+    },
+    {
+      "key": "R993",
+      "pr": 993,
+      "commit": "5569defd8d77f1f8f3586b326577aacb384ffb23",
+      "path": "standalone/2026-10-18-green-determinant-single-zero",
+      "title": "Independent-jet prime bias and a zero-preserving determinant route",
+      "scope": "Complete local proof files read from delivered source archive; prime-bias claim remains source-qualified; private note not redistributed",
+      "url": "https://github.com/GettysburgResearch/riemann/tree/5569defd8d77f1f8f3586b326577aacb384ffb23/standalone/2026-10-18-green-determinant-single-zero",
+      "files": [
+        {
+          "path": "standalone/2026-10-18-green-determinant-single-zero/RECTANGULAR_JETS.md",
+          "git_blob_sha1": null
+        },
+        {
+          "path": "standalone/2026-10-18-green-determinant-single-zero/ZERO_PRESERVING_ROUTE.md",
+          "git_blob_sha1": null
+        }
+      ]
+    },
+    {
+      "key": "R994",
+      "pr": 994,
+      "commit": "c93ca65a510b6acaf167f929b9bf7e67d742b05a",
+      "path": "standalone/2026-10-18-theta20-and-native-cancellation",
+      "title": "Theta degree 20, native denominator bounds, and signed critical correlations",
+      "scope": "Native proof used with explicit complete-source conventions; related divisibility result at overview scope; theta backend not rerun in this editorial pass",
+      "url": "https://github.com/GettysburgResearch/riemann/tree/c93ca65a510b6acaf167f929b9bf7e67d742b05a/standalone/2026-10-18-theta20-and-native-cancellation",
+      "files": [
+        {
+          "path": "standalone/2026-10-18-theta20-and-native-cancellation/native/PROOF.md",
+          "git_blob_sha1": "f8abf7967e8d71dfed4a506827401df96f6cdb34"
+        },
+        {
+          "path": "standalone/2026-10-18-theta20-and-native-cancellation/theta/pr886_primitive.py",
+          "git_blob_sha1": "c32015f110d10186538ffabcb4689ba5bbc060d0"
+        },
+        {
+          "path": "standalone/2026-10-18-theta20-and-native-cancellation/critical/ARITHMETIC.md",
+          "git_blob_sha1": null
+        }
+      ]
+    },
+    {
+      "key": "R996",
+      "pr": 996,
+      "commit": "56ec8747ccf75d7fc19c2395a6523a664938b9f6",
+      "path": "standalone/2026-10-18-quadratic-angular-all-order",
+      "title": "Native angular moments and a rational primitive-core source",
+      "scope": "Primitive-core proof available in the reviewed conversation source; predecessor credit, not a new fixed-field upper bound",
+      "url": "https://github.com/GettysburgResearch/riemann/tree/56ec8747ccf75d7fc19c2395a6523a664938b9f6/standalone/2026-10-18-quadratic-angular-all-order",
+      "files": [
+        {
+          "path": "standalone/2026-10-18-quadratic-angular-all-order/PRIMITIVE_CORE_EQUIVALENCE.md",
+          "git_blob_sha1": "f5eeb80d337120f0bb042251bec0afb0e00ee618"
+        }
+      ]
+    },
+    {
+      "key": "R998",
+      "pr": 998,
+      "commit": "65a0e7e4016aad5aeb099973c0d079c6059a6c76",
+      "path": "standalone/2026-10-18-full-density-causal-capture",
+      "title": "Full-density signed replica capture with a finite-horizon inverse",
+      "scope": "Related same-field component at PR-description scope; no full replay or upper-bound inference",
+      "url": "https://github.com/GettysburgResearch/riemann/tree/65a0e7e4016aad5aeb099973c0d079c6059a6c76/standalone/2026-10-18-full-density-causal-capture",
+      "files": [
+        {
+          "path": "standalone/2026-10-18-full-density-causal-capture/PROOF.md",
+          "git_blob_sha1": null
+        }
+      ]
+    },
+    {
+      "key": "R1000",
+      "pr": 1000,
+      "commit": "6c4d5309d64978b420c2b897977d6db2ea01ce03",
+      "path": "standalone/2026-10-18-primitive-positive-determinant",
+      "title": "Primitive positive determinants and short-conductor zero budgets",
+      "scope": "Complete determinant proof read; original full replay rerun, 3370 predicates per mode and eight rejected mutations; no independent analytic review",
+      "url": "https://github.com/GettysburgResearch/riemann/tree/6c4d5309d64978b420c2b897977d6db2ea01ce03/standalone/2026-10-18-primitive-positive-determinant",
+      "files": [
+        {
+          "path": "standalone/2026-10-18-primitive-positive-determinant/POSITIVE_DETERMINANT.md",
+          "git_blob_sha1": "6af94838b41d4351c804048e026e6e791b09c7c7"
+        },
+        {
+          "path": "standalone/2026-10-18-primitive-positive-determinant/SHORT_CONDUCTOR.md",
+          "git_blob_sha1": "b57b37c24529131e536d12f5a8de55d7f9c73d4d"
+        }
+      ]
+    },
+    {
+      "key": "R1001",
+      "pr": 1001,
+      "commit": "f6beb3774ae7ff5eca4cb046786eae10e4f88abc",
+      "path": "standalone/2026-10-18-zeta-specific-family-and-strip",
+      "title": "Ordinary-zeta family capture and strip-confined theta models",
+      "scope": "PR description read; character and square-kernel contracts reproduced in full #1003 proof; no fresh original campaign",
+      "url": "https://github.com/GettysburgResearch/riemann/tree/f6beb3774ae7ff5eca4cb046786eae10e4f88abc/standalone/2026-10-18-zeta-specific-family-and-strip",
+      "files": [
+        {
+          "path": "standalone/2026-10-18-zeta-specific-family-and-strip/shared/PROOF.md",
+          "git_blob_sha1": null
+        },
+        {
+          "path": "standalone/2026-10-18-zeta-specific-family-and-strip/strip/PROOF.md",
+          "git_blob_sha1": null
+        }
+      ]
+    },
+    {
+      "key": "R1002",
+      "pr": 1002,
+      "commit": "1319373815ee408146705b25a426fba6b22ed755",
+      "path": "standalone/2026-10-18-five-route-zero-preserving-attack",
+      "title": "Quadratic-field averages, paired probes, and five-route continuation",
+      "scope": "Complete component proofs read; full original replay rerun, 20279 predicates per mode and twelve rejected mutations",
+      "url": "https://github.com/GettysburgResearch/riemann/tree/1319373815ee408146705b25a426fba6b22ed755/standalone/2026-10-18-five-route-zero-preserving-attack",
+      "files": [
+        {
+          "path": "standalone/2026-10-18-five-route-zero-preserving-attack/QUADRATIC_AVERAGE.md",
+          "git_blob_sha1": "03da36a1c9c3d09305eb8af9951cb59c6f482ae8"
+        },
+        {
+          "path": "standalone/2026-10-18-five-route-zero-preserving-attack/PAIRED_PROBES.md",
+          "git_blob_sha1": "97456319ca96968ce599440a3fe41762c9429ca7"
+        },
+        {
+          "path": "standalone/2026-10-18-five-route-zero-preserving-attack/STRIP_COMPACTNESS.md",
+          "git_blob_sha1": "808171f601f4778b6c22af4caab500a5f5fed35d"
+        },
+        {
+          "path": "standalone/2026-10-18-five-route-zero-preserving-attack/MESOSCOPIC_DETERMINANT.md",
+          "git_blob_sha1": "865f6fe2480d51ba960c6f8f22352c077718f6f3"
+        },
+        {
+          "path": "standalone/2026-10-18-five-route-zero-preserving-attack/NEWTON_BUDGET.md",
+          "git_blob_sha1": "b5307da48efc6e73344775a8b0d37677ee6ca2e4"
+        }
+      ]
+    },
+    {
+      "key": "R1003",
+      "pr": 1003,
+      "commit": "669b6a01f4d4858ae1ef806b07547be95c08c935",
+      "path": "standalone/2026-10-18-theta26-and-critical-family",
+      "title": "Finite theta approximants through order 26 and critical quadratic-family transfer",
+      "scope": "Principal full proof files read live at immutable commit; finite existence receipts are reported source certificates, not rerun campaigns in this editorial turn",
+      "url": "https://github.com/GettysburgResearch/riemann/tree/669b6a01f4d4858ae1ef806b07547be95c08c935/standalone/2026-10-18-theta26-and-critical-family",
+      "files": [
+        {
+          "path": "standalone/2026-10-18-theta26-and-critical-family/theta/PROOF_GAUSSIAN.md",
+          "git_blob_sha1": "4b3053451232e1c680f9e493e918cd8fce75ceea"
+        },
+        {
+          "path": "standalone/2026-10-18-theta26-and-critical-family/theta/SOURCE26.md",
+          "git_blob_sha1": "899426beeedeeab4ed470678ebaa6a0362fe7e6d"
+        },
+        {
+          "path": "standalone/2026-10-18-theta26-and-critical-family/theta/WEIGHTED_CANONICAL.md",
+          "git_blob_sha1": "6ccf3a011370b07884e4c5e7b5e99253fbb1b917"
+        },
+        {
+          "path": "standalone/2026-10-18-theta26-and-critical-family/theta/PROOF_INCREMENTAL.md",
+          "git_blob_sha1": "e8dec7210cb2ad73e9db61f086e5b595032e2767"
+        },
+        {
+          "path": "standalone/2026-10-18-theta26-and-critical-family/arithmetic/PROOF.md",
+          "git_blob_sha1": "fdbcd1b38e163ca47d600a473bc5d5c5239efa5a"
+        },
+        {
+          "path": "standalone/2026-10-18-theta26-and-critical-family/arithmetic/NATIVE_FREQUENCY_TAIL.md",
+          "git_blob_sha1": null
+        },
+        {
+          "path": "standalone/2026-10-18-theta26-and-critical-family/analytic/NEGATIVE_COUPLING_STRIP.md",
+          "git_blob_sha1": null
+        }
+      ]
+    },
+    {
+      "key": "R1004",
+      "pr": 1004,
+      "commit": "8e7375cd75909cc7dc3548c44e4d08c8adb4c034",
+      "path": "standalone/2026-10-19-zero-free-0p87-failed-attempt",
+      "title": "Failed 0.87 zero-free comparison and exact exponent audit",
+      "scope": "Full unchanged original report and checker read; isolated normal and optimized runs match archived RESULTS.json byte-for-byte",
+      "url": "https://github.com/GettysburgResearch/riemann/tree/8e7375cd75909cc7dc3548c44e4d08c8adb4c034/standalone/2026-10-19-zero-free-0p87-failed-attempt",
+      "files": [
+        {
+          "path": "standalone/2026-10-19-zero-free-0p87-failed-attempt/REPORT.md",
+          "git_blob_sha1": "caafa0f1f5009b812d7332313459c546b6dcfd66"
+        },
+        {
+          "path": "standalone/2026-10-19-zero-free-0p87-failed-attempt/RESULTS.json",
+          "git_blob_sha1": "800ad5dbcbcc18adb87580f81aa9bec8ce8ea664"
+        },
+        {
+          "path": "standalone/2026-10-19-zero-free-0p87-failed-attempt/verify.py",
+          "git_blob_sha1": "ca6a2253ca88165e3bea70e56678ef9f3736db76"
+        }
+      ]
+    },
+    {
+      "key": "R1005",
+      "pr": 1005,
+      "commit": "d3b3d19573b8dc47ac6e37abd108d54982e9e5f1",
+      "path": "standalone/2026-10-18-amplified-boundary-and-global-attacks",
+      "title": "An import-dependent 0.87488666 corollary and direct-estimate limits",
+      "scope": "Conditional all-height corollary; no new analytic estimate",
+      "revision_reading_scope": "Full UNIFORM_BOUNDARY.md read; exact source hypotheses and small gain retained; original checker not rerun",
+      "url": "https://github.com/GettysburgResearch/riemann/tree/d3b3d19573b8dc47ac6e37abd108d54982e9e5f1/standalone/2026-10-18-amplified-boundary-and-global-attacks",
+      "files": [
+        {
+          "path": "standalone/2026-10-18-amplified-boundary-and-global-attacks/correlated/UNIFORM_BOUNDARY.md",
+          "git_blob_sha1": "2877f29d1cfb8b226239d43fad3724a0df5888e3"
+        }
+      ]
+    },
+    {
+      "key": "R1006",
+      "pr": 1006,
+      "commit": "0c838d130f275efb6e8ddb81dab42462b4ce9454",
+      "path": "standalone/2026-10-18-three-direction-sprint",
+      "title": "Cofinal quartic filters and complete-source RH attempts",
+      "scope": "Related quartic filters and an explicitly unproved mixed mean",
+      "revision_reading_scope": "Detailed live PR description; used for historical exposition, not a fresh analytic proof audit",
+      "url": "https://github.com/GettysburgResearch/riemann/tree/0c838d130f275efb6e8ddb81dab42462b4ce9454/standalone/2026-10-18-three-direction-sprint",
+      "files": []
+    },
+    {
+      "key": "R1008",
+      "pr": 1008,
+      "commit": "c1de6363f9579847e4eb2406abbb2de84fcef032",
+      "path": "standalone/2026-10-19-finite-jet-and-probability-models",
+      "title": "Finite-jet zero insertion and positive probability countermodels",
+      "scope": "Fixed-order ambiguity, not an actual off-critical zeta zero",
+      "revision_reading_scope": "FINITE_JET_ZERO_INSERTION.md through the full qualitative insertion proof and beginning quantitative adapter; probability companion at PR-description scope",
+      "url": "https://github.com/GettysburgResearch/riemann/tree/c1de6363f9579847e4eb2406abbb2de84fcef032/standalone/2026-10-19-finite-jet-and-probability-models",
+      "files": [
+        {
+          "path": "standalone/2026-10-19-finite-jet-and-probability-models/FINITE_JET_ZERO_INSERTION.md",
+          "git_blob_sha1": "8ad18ff28c92e0cc5ee78dcf4793eb3153f0b649"
+        }
+      ]
+    }
+  ],
+  "selected_original_archives_sha256": {
+    "riemann-five-route-attack-20261018.zip": "117aba1a3dc8606125a9592fa4ba0937ed90a8f3751cffaec961c128fdf5bcc4",
+    "riemann-green-determinant-20261018.zip": "3410e8fa9b6b69abeba27f640402af11fd18dc0fabd491a179c248d2b654b10e",
+    "riemann-primitive-positive-determinant-20261018.zip": "2605bfa7bf585d409d0373630540fe138ed3b2d9732cc7448fa74eb41a1fe7f7",
+    "zero-free-0p87-attempt-20261019.zip": "a635c238428ca37024e4c8005da88f6c12283cec4afccecc0b15ec00ec048ca1"
+  },
+  "omitted_blob_hash_semantics": "null means not independently recorded in this editorial pass; the immutable commit and exact path remain authoritative",
+  "external_references": [
+    {
+      "key": "HB95",
+      "author": "D. R. Heath-Brown",
+      "bibauthor": "Heath-Brown, D. R.",
+      "title": "A mean value estimate for real character sums",
+      "journal": "Acta Arithmetica",
+      "volume": "72",
+      "year": "1995",
+      "pages": "235--275",
+      "doi": "10.4064/aa-72-3-235-275"
+    },
+    {
+      "key": "SY10",
+      "author": "K. Soundararajan and M. P. Young",
+      "bibauthor": "Soundararajan, K. and Young, M. P.",
+      "title": "The second moment of quadratic twists of modular $L$-functions",
+      "journal": "Journal of the European Mathematical Society",
+      "volume": "12",
+      "year": "2010",
+      "pages": "1097--1116",
+      "doi": "10.4171/JEMS/224"
+    },
+    {
+      "key": "Bourgain17",
+      "author": "J. Bourgain",
+      "bibauthor": "Bourgain, Jean",
+      "title": "Decoupling, exponential sums and the Riemann zeta function",
+      "journal": "Journal of the American Mathematical Society",
+      "volume": "30",
+      "year": "2017",
+      "pages": "205--224",
+      "doi": "10.1090/jams/860"
+    },
+    {
+      "key": "Tao10",
+      "author": "T. Tao",
+      "bibauthor": "Tao, Terence",
+      "title": "A remark on partial sums involving the M\\\"obius function",
+      "journal": "Bulletin of the Australian Mathematical Society",
+      "volume": "81",
+      "year": "2010",
+      "pages": "343--349",
+      "doi": "10.1017/S0004972709000884"
+    },
+    {
+      "key": "LY52",
+      "author": "T. D. Lee and C. N. Yang",
+      "bibauthor": "Lee, T. D. and Yang, C. N.",
+      "title": "Statistical theory of equations of state and phase transitions. II. Lattice gas and Ising model",
+      "journal": "Physical Review",
+      "volume": "87",
+      "year": "1952",
+      "pages": "410--419",
+      "doi": "10.1103/PhysRev.87.410"
+    },
+    {
+      "key": "NW19",
+      "author": "C. M. Newman and W. Wu",
+      "bibauthor": "Newman, Charles M. and Wu, Wei",
+      "title": "Lee--Yang property and Gaussian multiplicative chaos",
+      "journal": "Communications in Mathematical Physics",
+      "volume": "369",
+      "year": "2019",
+      "pages": "153--170",
+      "doi": "10.1007/s00220-019-03453-0"
+    },
+    {
+      "key": "AK22",
+      "author": "S. Akiyama and H. Kaneko",
+      "bibauthor": "Akiyama, Shigeki and Kaneko, Hajime",
+      "title": "Curious congruences for cyclotomic polynomials",
+      "year": "2022",
+      "eprint": "2204.11267v6"
+    }
+  ],
+  "revision_of": "bb9e81af4a4d76fd6696bd7bf8b868cd30392b76",
+  "publication_parent_observed": "dae946002d77d5bb11493efdcdd3a9c885fd0ba6",
+  "prior_reading_scope_notice": "Reading and execution scopes of the original thirteen entries below are inherited from v1. They are not fresh executions in this revision.",
+  "external_revision_sources": [
+    {
+      "key": "OAI30",
+      "repository": "openai/math",
+      "commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "path": "preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/README.md",
+      "scope": "Title/date and formalization-scope companion, not full proof rebuild"
+    },
+    {
+      "key": "OAI05",
+      "repository": "openai/math",
+      "commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "path": "preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex",
+      "scope": "First140 source lines including abstract, main theorem and relation to7/8"
+    },
+    {
+      "key": "OAIScope",
+      "repository": "openai/math",
+      "commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "path": "lean/docs/003.md",
+      "scope": "Entire formalization-scope description; no Lean build"
+    },
+    {
+      "key": "CT26",
+      "version": "Hexagon2610.00200v2",
+      "scope": "Primary project statement and R959 source note; fresh v2 manuscript retrieval failed"
+    },
+    {
+      "key": "Liu26",
+      "version": "arXiv2610.12234v2",
+      "scope": "Value and version from pinned R1002; fresh primary body retrieval failed"
+    },
+    {
+      "key": "XS26",
+      "version": "arXiv2610.15291v2",
+      "scope": "Hypotheses, title and value from full pinned R1005 UNIFORM_BOUNDARY; fresh primary body retrieval failed"
+    }
+  ]
+}

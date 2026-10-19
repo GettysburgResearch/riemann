@@ -1,0 +1,273 @@
+\section{Zero-free half-planes: what improved, and why}\label{sec:progression}
+
+This section fills in the analytic history that motivates the rest of the paper. We first separate two settings, then explain the estimates behind the successive bounds. The fractions in the tables are boundaries for nonvanishing, not exponents in a family moment or finite approximation orders. Unless explicitly stated otherwise, a boundary $B$ means the \emph{strict} region $\Re s>B$. A principal pole at $s=1$ is not a zero and is excluded when writing a finite-valued nonvanishing statement.
+
+\subsection{Two settings, not one league table}
+
+OpenAI's manuscript dated 30 September 2026 reports the region $\Re s>7/8$ for ordinary zeta and all Dirichlet $L$-functions, obtained through finite-order Hecke characters over the Eisenstein field $\Q(\sqrt{-3})$ \cite{OAI30}. Its formalization notes state those same scopes and exclude principal poles \cite{OAIScope}. The manuscript dated 5 October gives a separate, shorter argument for $11/12$ in that setting \cite{OAI05}. The later date does not make $11/12$ a stronger numerical boundary than $7/8$: the point of the second paper is its simpler proof.
+
+Cureton and Thorner instead report a $31/32$ half-plane for \emph{every} number field, together with the corresponding finite-order Hecke statement \cite{CT26}. Their project reports a Lean formalization. We distinguish that report from a new execution or audit of the formalization, neither of which was performed in preparing this revision.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Reported special-field and ordinary-zeta bounds. The last row is an explicitly import-dependent repository deduction.}\label{tab:special-boundaries}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{4.4cm}>{\raggedright\arraybackslash}p{3.1cm}>{\raggedright\arraybackslash}p{6.1cm}@{}}
+\toprule
+Work & Boundary $B$ & Scope and qualification\\
+\midrule
+OpenAI, 30 September \cite{OAI30} & $7/8=0.875$ & Ordinary zeta, Dirichlet $L$-functions, and finite-order Hecke $L$-functions over $\Q(\sqrt{-3})$.\\[5pt]
+OpenAI, 5 October \cite{OAI05} & $11/12\approx0.916667$ & A shorter alternative proof in the same special setting.\\[5pt]
+Liu, version 2 \cite{Liu26} & $0.874957019420\ldots$ & Refinement recorded in the pinned source comparison \cite{R1002}.\\[5pt]
+Xu--Sang, version 2 \cite{XS26} & $0.8748867$ & Their amplified-moment framework, with its stipulated analytic hypotheses, as recorded in \cite{R1005}.\\[5pt]
+Repository note 1005 \cite{R1005} & $43744333/50000000$ & $0.87488666$ under that same imported framework; not an independently rebuilt analytic proof.\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The Liu and Xu--Sang entries retain the versions and qualifications recorded in the repository. Their primary bodies could not be retrieved afresh for this revision. They are included to make the comparison accurate, not as newly verified inputs to the component theorems below. In particular, none of the all-field numbers near $0.9$ beats $7/8$ for ordinary zeta; their proposed advance is the wider number-field coverage.
+
+\subsection{The all-number-field progression}
+
+Table~\ref{tab:all-field-boundaries} records the principal proposals and the relevant parallel variants. The entries are not a claim that each later pull request improved every earlier one. Some arguments were developed in parallel; some recover an earlier manuscript rather than prove a second theorem. Each repository entry remains a proposal with the analytic dependencies stated in its source.
+
+\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{3.0cm}p{2.0cm}p{2.0cm}>{\raggedright\arraybackslash}p{6.6cm}@{}}
+\caption{All-number-field boundaries and the changes behind them. All entries concern Dedekind zeta functions and the stated finite-order Hecke extensions; no infinite-order angular-character claim is included.}\label{tab:all-field-boundaries}\\
+\toprule
+Source & $B$ & Decimal & Main change or status\\
+\midrule\endfirsthead
+\toprule Source & $B$ & Decimal & Main change or status\\\midrule\endhead
+\bottomrule\endfoot
+Cureton--Thorner \cite{CT26} & $31/32$ & $0.968750$ & External all-number-field starting point; formalization reported by its authors.\\[4pt]
+Note 957 \cite{R957} & $23/24$ & $0.958333$ & Stronger exceptional-character density in the same Poisson family.\\[4pt]
+Note 958 \cite{R958} & $25/27$ & $0.925926$ & Several zero-density thresholds instead of one good/bad split.\\[4pt]
+Note 959 \cite{R959} & $11/12$ & $0.916667$ & A second moment for numerator values replaces individual convexity on the large good class.\\[4pt]
+Note 965 \cite{R965} & $91/100$ & $0.910000$ & Shorter theta support; the diagonal term is retained in a new two-term estimate.\\[4pt]
+Note 966 \cite{R966} & $109/120$ & $0.908333$ & A fourth numerator moment and a stronger selected-character density estimate.\\[4pt]
+Note 968 \cite{R968} & $10/11$ & $0.909091$ & Parallel fourth-moment composition; also records every fixed numerator moment.\\[4pt]
+Note 974, second-mean variant \cite{R974} & $9081/10000$ & $0.908100$ & Off-central interpolation using only the second numerator mean.\\[4pt]
+Notes 969 and 974 \cite{R969,R974} & $49/54$ & $0.907407$ & Off-central fourth-moment estimates and their full contour comparison; two overlapping derivations.\\[4pt]
+Archive 970 \cite{R970} & $68/75$ & $0.906667$ & A preserved local-support/interpolation proposal. The archive was not mathematically re-reviewed here.\\[4pt]
+Note 977, fewer-input variant \cite{R977} & $19/21$ & $0.904762$ & Enlarged correction domain and reflected numerator, with the original density and second mean.\\[4pt]
+Note 977 \cite{R977} & $271/300$ & $0.903333$ & The same reflection strategy with the selected-fourth density input.\\
+\end{longtable}
+\normalsize
+
+The useful historical chain is therefore not just a list of optimized fractions. It contains several changes in the proof: better counting of exceptional characters, averaging before estimating each numerator, allowing shorter support, using a fourth moment where a second moment loses too much, and exploiting more of the local Euler-factor algebra. The following discussion explains these changes in turn.
+
+\subsection{How a sum estimate becomes a zero-free half-plane}
+
+The theta method compares two expressions for the same average $I(X,Y,Z)$. One expression can be bounded by mean-square estimates. A Poisson expansion gives another expression involving $L$-functions; its principal term contains the reciprocal of the zeta function one wants to study. The auxiliary parameters $X,Y$ are chosen as powers of the main scale $Z$.
+
+The final analytic step can be stated without the theta machinery. Suppose an arithmetic function $f(Z)$ decays sufficiently fast as $Z\downarrow0$, and on an initial right half-plane its Mellin transform is
+\begin{equation}\label{eq:general-mellin-detector}
+ \int_0^\infty f(Z)Z^{b-s}\frac{\dd Z}{Z}
+       =e^{(s-c)^2}\frac{H(s)}{\zeta_F^S(s)}.
+\end{equation}
+Here $\zeta_F^S$ omits a fixed finite set of Euler factors, and $H$ is holomorphic and nonzero in the region under discussion. If, for every fixed $\eps>0$,
+\[
+ f(Z)\ll_\eps Z^{\theta+\eps}\qquad(Z\ge1),
+\]
+then the integral on the left is holomorphic for $\Re s>b+\theta$. The expression on the right must be holomorphic there as well. A zero of $\zeta_F^S$ would give a pole because neither the exponential nor $H$ can cancel it. Thus the zero-free boundary is $b+\theta$.
+
+Both exponents matter. An improvement in the growth exponent $\theta$ is not, by itself, the new boundary: changing the theta scales also changes the Mellin shift $b$. The sources below keep track of this normalization. The difficult part is proving the bound for $f$, including the nonprincipal terms and every tail, before applying \eqref{eq:general-mellin-detector}.
+
+\subsection{The first three refinements: density, stratification, and a numerator mean}
+
+\paragraph{From $31/32$ to $23/24$.}
+The first adaptation \cite{R957} uses de Faveri's stronger large sieve and zero-density calculation for fixed-order characters \cite{DF26}. A necessary preliminary step is to identify the characters in the theta Poisson expansion with that sieve's family, including its finite twists and zero values at nonunits. The summation is over sixth-power-free ideals ordered by their full norms, not by conductor alone.
+
+At the threshold $\sigma=41/50$, the adopted density calculation gives the exponent $2563/4267$ for the number of exceptional indices, up to the stated height and small-power factors. The scales are
+\[
+ X=Z^{11/20},\qquad Y=Z^{103/200},\qquad XY=Z^{213/200}.
+\]
+The proposed comparison gives a Mellin shift $b=13/20$ and an admissible detector exponent $\theta=37/120$, whose sum is $23/24$. The new content is the compatible use of the stronger density estimate in the original theta expression, not the elementary addition of those exponents.
+
+\paragraph{From $23/24$ to $25/27$.}
+A single exceptional set treats moderately troublesome and very troublesome characters alike. Note~958 \cite{R958} instead uses four thresholds,
+\[
+ 2/3,\quad3/4,\quad17/20,\quad19/20,
+\]
+with respective count exponents
+\[
+ 5/6,\quad8/11,\quad191/359,\quad11/47.
+\]
+A middle class is counted using its lower threshold, but the contour can be moved only beyond its upper threshold. This elementary distinction prevents using a sparse count where the necessary zero-free rectangle is not available.
+
+With $X=Z^{5/9}$ and $Y=Z^{4/9+e}$, for a fixed $e>0$, the support exponent remains strictly above one. The resulting shift and growth are $35/54$ and $5/18+3e$. Their sum approaches $25/27$ from above. One chooses a sufficiently small fixed $e$ for each point in the strict half-plane; no estimate at $XY=Z$ or constant uniform in $e\downarrow0$ is asserted.
+
+\paragraph{From $25/27$ to $11/12$.}
+The next gain \cite{R959} is easier to see directly. At the central line, estimating one numerator $L$-value by convexity costs roughly $U^{1/4}$ for an index of size $U$. Applied to $U$ indices, this costs $U^{5/4}$. The second-moment input from Blomer--Goldmakher--Louvel \cite{BGL14}, with the source's family adaptation, instead gives
+\[
+ \sum_{N\mathfrak a\le U}^{\flat}
+      |L_F^S(1/2+it,\psi\chi_{\mathfrak a})|^2
+       \ll U^{1+\eps}(1+|t|)^C.
+\]
+For any selected class $\mathcal E$ of size $O(U^\nu)$, Cauchy's inequality yields
+\begin{equation}\label{eq:progression-M2}
+ \sum_{\mathfrak a\in\mathcal E}|L_F^S(1/2+it,\psi\chi_{\mathfrak a})|
+       \ll U^{(1+\nu)/2+\eps}(1+|t|)^C.
+\end{equation}
+For the full good class, this changes $U^{5/4}$ into $U^{1+\eps}$. The reciprocal and local correction are bounded uniformly on the selected zero-free rectangle before applying Cauchy. No independence from the zero-based selection is needed.
+
+Taking $X=Z^{1/2+e}$ and $Y=Z^{1/2}$ gives detector growth $1/4+3e$ and shift $2/3-e/3$. The limiting boundary is $11/12$. This is an all-number-field proposal: it has the same numerical boundary as OpenAI's shorter special-field proof, but a different claimed scope.
+
+\subsection{Short support and fourth moments}
+
+\paragraph{Why the $11/12$ ceiling could be crossed.}
+The earlier positive estimate was stated in the regime $XY=Z^M$ with $M>1$. Continuing that simplified estimate to $M<1$ would incorrectly discard a diagonal contribution. Note~965 \cite{R965} instead reconstructs the reflected mean square from the unrestricted expression and proposes
+\begin{equation}\label{eq:history-reflected-mean}
+ \sum_{\text{physical indices }m}|B_m(Z)|^2
+          \ll Z^\eps\left(XY+\frac{(XY)^2}{Z}\right).
+\end{equation}
+The reconstruction includes the auxiliary ideal sums and effective lengths below one. Combined with the additive mean-square factor $X^{-1}+Y^{-1}$, it gives \eqref{eq:short-reflection-contract} below. For $X=Y=Z^a$, $2a<1$, the resulting bound for the pairing is $Z^{a/2+\eps}$, because the first term in \eqref{eq:history-reflected-mean} now dominates.
+
+The value $a=23/50$ gives shift $17/25$ and growth $23/100$, hence $91/100$. The gain depends on the reconstructed estimate, not on an extrapolation of the old one. This is one of the principal analytic steps requiring review.
+
+\paragraph{Why a fourth numerator moment helps selected classes.}
+Notes~966 and 968 \cite{R966,R968} derive, from the stated sixth-power-free sieve and the approximate functional equation,
+\begin{equation}\label{eq:progression-M4}
+ \sum_{N\mathfrak a\le U}^{\flat}|L_F^S(1/2+it,\psi\chi_{\mathfrak a})|^4
+       \ll U^{7/6+\eps}(2+|t|)^C.
+\end{equation}
+The square of an approximate-functional-equation polynomial has length about $U$, rather than $\sqrt U$. Writing a general column as $\mathfrak c\mathfrak d^6$ gives
+\[
+ \chi_{\mathfrak a}(\mathfrak c\mathfrak d^6)
+ =\chi_{\mathfrak a}(\mathfrak c)\ind_{(\mathfrak a,\mathfrak d)=1}.
+\]
+There is no additional coprimality condition between $\mathfrak c$ and $\mathfrak d$. Keeping this mask is necessary to apply the sieve to the right family.
+
+H\"older's inequality turns \eqref{eq:progression-M4} into a first-mean exponent $3\nu/4+7/24$ on a class of size $U^\nu$. It beats \eqref{eq:progression-M2} when $\nu<5/6$; the second moment is still better for the full class. Note~966 also retains the unknown exceptional count inside H\"older's inequality in the zero detector. At $\sigma=3/4$, this changes the count exponent from $8/11$ to $43/60$. Its composition gives $109/120$. The parallel note~968 gives $10/11$ without that selected-density improvement.
+
+For each fixed positive integer $r$, note~968 also records
+\begin{equation}\label{eq:all-numerator-orders}
+ \sum_{N\mathfrak a\le U}^{\flat}|L_F^S(1/2+it,\psi\chi_{\mathfrak a})|^{2r}
+       \ll U^{\kappa_r+\eps}(2+|t|)^{C_r},\qquad
+ \kappa_r=\max\left(1,\frac r2,\frac56+\frac r6,
+                              \frac13+\frac{5r}{12}\right).
+\end{equation}
+These are numerator moments at every \emph{fixed} order. They are not moments of $1/L$, and no uniform passage to $r\to\infty$ is asserted. For large $r$ the exponent grows like $r/2$, so merely increasing the order does not force the boundary to $1/2$.
+
+\paragraph{Why moving off the central line helps.}
+Note~969 \cite{R969} proposes fourth means of size $U^{1+\eps}$ at $7/12$ and $U^{4/3+\eps}$ at $5/12$, the latter obtained by the functional equation. Although the $L$-values on the left-hand line are larger, the contour factor $Y^{w-1}$ becomes smaller. At symmetric scale $X=Y=Z^a$, the combined improvement is $(3a-1)/24$, or $1/72$ at $a=4/9$. The result is a $49/54$ composition. Note~974 \cite{R974} reaches the same fraction by interpolation from the central fourth moment; it is overlapping work, not a second independent verification of the theorem.
+
+\subsection{The local correction factor and the $49/54$ obstruction}
+
+In the symmetric short-support calculation, the detector boundary is
+\[
+ B=\left(\frac56-\frac a3\right)+\frac a2
+       =\frac56+\frac a6.
+\]
+The full good-class estimate requires $x-a\le a/2$, whereas the old correction-factor domain requires $x>2/3$. Together these give $a>4/9$, and hence the limiting boundary $49/54$. This is a restriction of those estimates. It is not evidence for a zero on that vertical line.
+
+The local calculations recorded in notes~971 and 974 \cite{R971,R974} remove two restrictions inherited from a coarser bound for the correction factor. They keep all ramified valuation classes and the original character masks. The archived $68/75$ proposal \cite{R970} also uses local-support information and off-central interpolation; its recovery is included in Table~\ref{tab:all-field-boundaries}, but we do not claim to have extracted and independently reviewed that entire archive during this revision.
+
+The more developed composition in note~977 uses the enlarged domain and another observation: a zero-free rectangle used to bound a reciprocal can also bound the \emph{reflected numerator}. We spell out that argument next, because it explains the proposed $271/300$ endpoint rather than simply announcing another number.
+
+\subsection{The full proposed comparison giving $271/300$}
+The frozen composition \cite{R977} proposes nonvanishing for every Dedekind zeta function on
+\begin{equation}\label{eq:271}
+ \Re s>271/300,\qquad s\ne1,
+\end{equation}
+and the same strict region for finite-order Hecke $L$-functions. It explicitly depends on new analytic adapters in preceding research branches. This manuscript does not independently reconstruct those adapters, and therefore reports the conclusion under those assumptions rather than certifying it anew.
+
+The main physical input is the proposed short-support reflection estimate
+\begin{equation}\label{eq:short-reflection-contract}
+ \abs{I(X,Y,Z)}\ll_\eta Z^\eta
+       \left[(XY+(XY)^2/Z)(X^{-1}+Y^{-1})\right]^{1/2}.
+\end{equation}
+It retains the diagonal $XY$, the full cube variable, all local auxiliary ideals, and effective lengths below one. Its use is not justified by substituting new parameters into a long-support corollary. The other main adapter is an enlarged holomorphy domain for the exact correction factor in the Poisson expansion
+\[
+ X^{1/2-z}Z^{\xi+z-1}Y^{w-1}q_u^{-z}\zeta_F^S(6z)
+          \frac{L_F^S(w,\chi_u)H_u(\xi,w,z)}{L_F^S(\xi,\overline\chi_u)}.
+\]
+For $x=\Re\xi$, $y=\Re w$, the adopted domain is
+\begin{gather}\label{eq:correction-domain}
+ x,y,z>0,\quad x\ge1/2,\quad 6z+y>1,\quad x+6z>1,\quad x+y>1,\notag\\
+ x+y+6z>2,\qquad 6x+6z>5.
+\end{gather}
+The finite-$S$, ramified, and full-norm character conventions are essential. The source also adopts a complete second numerator moment and selected-character density estimates with polynomial height dependence. None is an estimate for an unrestricted reciprocal moment.
+
+The new use of these inputs is to reflect a numerator into the \emph{same} selected zero-free rectangle already used for its denominator. At a selected threshold $\tau$, the contour is $x=\tau+3e$, $y=1-\tau-e$, $z=1/3$. The functional equation changes the numerator to $L(\tau+e-\ii t,\overline\chi_u)$. Both signs of its analytic logarithm are then controlled in the buffered rectangle. The numerator ordinates and denominator ordinates are separately truncated; the claim does not extend this bound to arbitrary height tails.
+
+For the exact exponent comparison, take
+\[
+ a=21/50,\qquad h=1-a=29/50,\qquad \vartheta=a/2=21/100,
+ \qquad X=Y=Z^a.
+\]
+There are 851 thresholds $\sigma_j=63/100+j/2500$, $0\le j\le850$. A middle class has density at $\sigma_j$ and zero-freeness at $\tau=\sigma_{j+1}$. Its central exponent, before the reserved small losses, is
+\begin{equation}\label{eq:middle-exponent}
+ c_j=h(2\tau+g_j)+a-3/2.
+\end{equation}
+On $7/10\le\sigma\le9/10$, the adopted selected-fourth density is
+\[
+ g_4(\sigma)=\frac{468\sigma^2-741\sigma+271}
+                  {6(36\sigma^2-75\sigma+31)}.
+\]
+Elsewhere the source uses $g_{\mathrm{DF}}=1-\delta_{\mathrm{DF}}$, with $q=2\sigma-1$ and
+\[
+ \delta_{\mathrm{DF}}=\begin{cases}
+ q/(4-6q),&\sigma\le2/3,\\
+ \dfrac{q\{36q-6(6\sigma-2)+3\}}
+ {36q(3-2\sigma)-24\sigma+2},&2/3\le\sigma\le11/12,\\[3pt]
+ \dfrac{8\sigma^2-10\sigma+3}{1-24(1-\sigma)^2},&\sigma\ge11/12.
+ \end{cases}
+\]
+These are the exact analytic inputs and rational formulas in \cite[\texttt{DENSITY.md}]{R977}, not independently improved density results here. Their 850 middle-class instances give
+\begin{equation}\label{eq:271-margin}
+ \min_{0\le j<850}(\vartheta-c_j)
+     =\frac{96266833}{858608062500}>0.
+\end{equation}
+The minimum occurs at $j=411$, $\sigma_j=993/1250$. The manuscript's exact-arithmetic check independently reproduces these finite substitutions; it does not prove the analytic density bounds.
+
+The source fixes all selected sets and the common height exponent before allocating contour losses, separately treats the good and terminal classes, retains horizontal connectors, and sums the infinite frequency tail on its original absolute-convergence lines. Its principal detector is
+\[
+ f_a(Z)=\frac1{2\pi\ii}\int_{(2)}
+ Z^{s-b_a}e^{(s-5/6)^2}\frac{H(s)}{\zeta_F^S(s)}\dd s,
+ \qquad b_a=5/6-a/3,
+\]
+with inherited $H$ holomorphic and nonzero on $\Re s>2/3$. The complete proposed comparison is
+\[
+ I(Z^a,Z^a,Z)=c_0f_a(Z)+O_e(Z^{\vartheta+8e}),\qquad c_0\ne0.
+\]
+Together with \eqref{eq:short-reflection-contract}, it gives the stated detector growth and hence the boundary
+\[
+ b_a+\vartheta=\frac56+\frac a6=\frac{271}{300}.
+\]
+This last Mellin deduction is straightforward once the full comparison is valid. The substantive review obligations lie in the short-support reflection, correction domain, selected-family adapters, and complete contour accounting. Passing from $F=K(\mu_{12})$ to $K$, and then to finite-order Hecke factors, uses the corresponding abelian factorizations. Infinite-order angular characters are not included.
+
+The lower-input variant in the same source gives $19/21$ using the original density and second numerator moment. These broad-field proposals are not a new ordinary-zeta improvement in this manuscript. The separate ordinary-zeta comparisons are in Table~\ref{tab:special-boundaries}. None of those reported zero-free conclusions is an analytic premise of the elementary character-average, canonical-product, or determinant arguments in the later sections.
+
+
+\subsection{A later conditional refinement for ordinary zeta}
+The all-field discussion above is not the last numerical claim in the repository. Note~1005 uses the amplified-moment framework of Xu--Sang to obtain
+\begin{equation}\label{eq:1005-boundary}
+ B_\dagger=\frac{43744333}{50000000}=0.87488666.
+\end{equation}
+Unlike the all-field proposals, this conclusion applies to ordinary $\zeta$, Dirichlet $L$-functions, and finite-order Hecke $L$-functions over the Eisenstein field. It is explicitly conditional on the analytic hypotheses stipulated in Section~2 of the cited Xu--Sang version. The new part is an exact parameter calculation within that framework, not a new proof of its analytic estimates \cite{XS26,R1005}.
+
+The size of the improvement should be stated plainly. Relative to Xu--Sang's displayed $0.8748867$, it is
+\[
+ 0.8748867-0.87488666=4\cdot10^{-8}.
+\]
+It is a fixed all-height consequence under the imported hypotheses, but it is not a substantial widening of the strip.
+
+The parameters in \cite{R1005} are
+\[
+ b=\frac{173}{2000},\qquad
+ \ell=\frac{6267001}{37500000},\qquad
+ \kappa=\frac{29991}{40000}.
+\]
+They satisfy $11/12-\ell/4=B_\dagger$. An important detail comes before this calculation: the moment parameter $\kappa$ is justified by the \emph{preceding} stage of Xu--Sang's argument, whose boundary is
+\[
+ \frac{1+\kappa}{2}=\frac{69991}{80000}.
+\]
+Thus the desired new conclusion is not used to justify its own input.
+
+The remaining parameter test is not a check at a few sample points. The source reduces it to positivity of a quadratic polynomial in a zero-class variable $\delta$, on $0\le\delta\le5/6$ and $0\le x\le1/2$. With $y=1/2-x$, the cleared expression is
+\[
+ Q=A(y)\delta^2+B_q(y)\delta+C(y).
+\]
+The exact coefficients show $A(y)>0$ and $4A(y)C(y)-B_q(y)^2>0$ for $y\ge0$. Completing the square proves positivity on the entire rectangle. The same certificate includes the other row ranges and the strict margins required by the closure lemma. The large rational coefficient lists belong in the accompanying source rather than in the narrative here.
+
+This is the appropriate status of \eqref{eq:1005-boundary}: a checked algebraic corollary of named analytic hypotheses. It should neither be omitted from the record nor described as an independently established new estimate. The proposed $0.87$ calculation discussed in Section~\ref{sec:boundaries} concerns an earlier comparison system; its failure does not contradict this later, weaker numerical target.

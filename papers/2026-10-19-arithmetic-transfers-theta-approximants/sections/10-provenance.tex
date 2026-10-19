@@ -1,0 +1,72 @@
+\section{Sources and related results}\label{app:provenance}
+
+This paper is based on frozen versions of the research notes, not on an assumed single merged proof. Table~\ref{tab:pins} gives a short source map. The bibliography links to the immutable versions; the accompanying \texttt{SOURCE\_LOCK.json} gives the full commit identifiers, principal paths, recorded file hashes, and the scope of the reading used for this revision. The longer technical proofs and finite parameter files remain available there.
+
+\small
+\begin{longtable}{@{}p{1.5cm}p{2.4cm}>{\raggedright\arraybackslash}p{10.7cm}@{}}
+\caption{Research notes used in the paper. A version identifier records the source, not a verdict on its correctness.}\label{tab:pins}\\
+\toprule Note & Version & Principal use\\
+\midrule\endfirsthead
+\toprule Note & Version & Principal use\\\midrule\endhead
+\bottomrule\endfoot
+934 & \texttt{3092feee25c5} & Earlier exponent model and its limits.\\[3pt]
+957 & \texttt{ec54cb6b0029} & Stronger density; exact family matching; 23/24 proposal\\[3pt]
+958 & \texttt{e6dfa07d07ed} & Finite zero strata and the 25/27 proposal\\[3pt]
+959 & \texttt{7b845294207d} & Second numerator mean and the 11/12 proposal\\[3pt]
+965 & \texttt{d58e3282a937} & Two-term short-support estimate; 91/100 proposal\\[3pt]
+966 & \texttt{8d94494698ee} & Fourth moment, selected density, 109/120 proposal\\[3pt]
+968 & \texttt{14f544fb4293} & All fixed numerator moments; parallel 10/11 proposal\\[3pt]
+969 & \texttt{654278118846} & Off-central fourth mean; 49/54 proposal\\[3pt]
+970 & \texttt{026f70fc91f2} & Archived 68/75 proposal; not independently extracted or re-reviewed\\[3pt]
+971 & \texttt{3f1d2a07631e} & Five ramified classes; local-domain improvement\\[3pt]
+974 & \texttt{89c37b6707cb} & Parallel interpolation; 9081/10000 and 49/54; local domain\\[3pt]
+977 & \texttt{1b473843c920} & Proposed $271/300$ and $19/21$ comparisons.\\[3pt]
+989 & \texttt{0162599b1373} & Two mollifiers and capped reciprocal moments.\\[3pt]
+991 & \texttt{b4d97d837214} & Fixed-shift extraction.\\[3pt]
+993 & \texttt{5569defd8d77} & Prime-bias argument and the prime-power integer.\\[3pt]
+994 & \texttt{c93ca65a510b} & Signed M\"obius sectors, order-$20$ Ising model, and theta arithmetic.\\[3pt]
+996 & \texttt{56ec8747ccf7} & Fixed-field rational coefficient comparison.\\[3pt]
+998 & \texttt{65a0e7e4016a} & An invertible signed average in one field.\\[3pt]
+1000 & \texttt{6c4d5309d649} & Positive determinant and regularization.\\[3pt]
+1001 & \texttt{f6beb3774ae7} & Quadratic-family limits and correlated strip models.\\[3pt]
+1002 & \texttt{1319373815ee} & Uniform field average, filters, compactness, and larger masses.\\[3pt]
+1003 & \texttt{669b6a01f4d4} & Finite order-$26$ constructions and quadratic-family estimates.\\[3pt]
+1004 & \texttt{8e7375cd7590} & The failed $0.87$ comparison.\\[3pt]
+1005 & \texttt{d3b3d19573b8} & Conditional all-height corollary; no new analytic estimate\\[3pt]
+1006 & \texttt{0c838d130f27} & Related quartic filters and an explicitly unproved mixed mean\\[3pt]
+1008 & \texttt{c1de6363f957} & Fixed-order ambiguity, not an actual off-critical zeta zero\\[3pt]
+\end{longtable}
+\normalsize
+
+The new historical summaries for notes~957--974 use their detailed published statements and the cited source-identification notes. They are not fresh audits of the full analytic arguments. In particular, the archived $68/75$ work is included as a historical proposal, not as a newly reconstructed proof. The accounts of Liu and Xu--Sang use the exact versions recorded in notes~1002 and~1005 because fresh retrieval of their primary bodies was unsuccessful. These limitations do not affect the elementary identities proved directly in the paper; they do matter when judging the imported zero-free conclusions.
+
+\subsection{Related results and their place in the argument}
+The following related results are useful companions to the proofs above. They are summarized here, not used as substitutes for the open estimates in Section~\ref{sec:verification}.
+
+\paragraph{Fixed-shift extraction.}
+The source \cite{R991} studies the actual deformed coefficients
+$a_h(\mathfrak I)=\sum_{\mathfrak A\mathfrak B=\mathfrak I}\mu_F(\mathfrak A)(N\mathfrak B)^{-h}$ and a complete centered Gaussian source $B(h,X)$. Its removable endpoint at $h=0$ is the fixed prime-power discrepancy. The stated Chebyshev interpolation uses $O_A(\log X)$ positive shifts and $O_A(\log^2X)$ total raw coefficient mass to recover that endpoint with error $O_A(X^{-A})$. A fixed real-shift average over an interval bounded away from zero retains every target zero on a positive-measure set of shifts. The source does not prove the subpower upper estimate for that average. This is an extraction result, not an imported inverse-$L$ moment bound.
+
+\paragraph{Same-field causal replica capture.}
+Over the Eisenstein field, \cite{R998} averages actual Euler-deleted native sources over all exterior ideals of norm at most $B$. The finite signed dilation kernel tends to $\chi(d)/N\rad(d)$ in a weighted absolute coefficient norm. Its limiting local series is
+\[
+ \frac{1-(1-1/q)z}{1-z},\qquad q=Np,
+\]
+with inverse coefficients $-q^{-1}(1-q^{-1})^{j-1}\chi(p)^j$ at $p^j$. The source proves finite-horizon norm equivalence with constants uniform in the displayed root-norm order. The complete limiting covariance has weight $1/N\rad(de)$, not the product of separate radical weights when primes overlap. Deletion is allowed for a small fraction of whole replica trajectories, not a different exceptional set at each physical time. No upper bound on the original native source is implied by invertibility of this averaging operation.
+
+\paragraph{A complete signed divisibility contribution.}
+The critical arithmetic section of \cite{R994} computes an infinite divisibility-sector coefficient with all tails retained and certifies $-9/5<L_{\rm div}<-17/10$. Its negative sign is a statement about that full specified sector, not the sign or an upper bound for the complete energy. The complementary nondivisibility contribution remains. The same source explicitly records that its primitive-ratio double limiting series is not absolutely summable, so an unrestricted interchange of the two limits is not available.
+
+
+\paragraph{Quartic filters over the Gaussian field.}
+The later note~1006 \cite{R1006} develops fourth-power filters over $\Q(\sqrt{-1})$ as a possible alternative to the sextic construction. Its reported retained squared norm is $1/\zeta_F^S(3)$, whereas a naive squareclass selector has squared norm
+\[
+ \prod_{\mathfrak p}\frac{N\mathfrak p+1}{2N\mathfrak p},
+\]
+which tends to zero. This identifies a loss in that particular selector, not an impossibility theorem for quartic methods. A separate comparison in the note would yield the boundary $437/500=0.874$ from a stated mixed mean of size $U^{6/5+\eps}$. That mean is unproved. It must not be listed as an achieved $0.874$ region. This paragraph reports the published scope; the full quartic proof and its computation collection were not re-audited for this revision.
+
+\paragraph{Finite probability models with different zero geometries.}
+Note~1008 \cite{R1008} also gives a probability-law counterpart to Proposition~\ref{prop:finite-insertion}. It is based on the finite order-$20$ Ising result, not on an order-$26$ probability realization. Its examples retain the stated positivity, strip, and leading growth properties while allowing nonreal zeros beyond a chosen height. The zero-counting error is $O(\sqrt T)$, not the sharper error for zeta. These examples delimit what the finite data establish; they are not examples of off-critical zeta zeros.
+
+\subsection{Review and submission}
+The manuscript and its source are prepared for review and compilation with standard LaTeX. No arXiv submission is made by publishing them in the repository. Before submission, authorship and contribution credit should be approved, and the analytic adaptations should receive independent mathematical review. The private motivating note discussed in \cite{R993} is not redistributed, and no authenticated public attribution or license is inferred for it.

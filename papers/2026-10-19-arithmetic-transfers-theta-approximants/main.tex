@@ -1,0 +1,90 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,longtable,array,microtype}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage{url}
+\emergencystretch=2em
+\allowdisplaybreaks[2]
+\setcounter{tocdepth}{1}
+\pagestyle{plain}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{certificate}[theorem]{Finite certificate}
+\newtheorem{reported}[theorem]{Proposed consequence}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{problem}[theorem]{Open problem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\E}{\mathbb E}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\ind}{\mathbf 1}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\cond}{cond}
+\DeclareMathOperator{\arcosh}{arcosh}
+\DeclareMathOperator{\arsinh}{arsinh}
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\git}[2]{\href{https://github.com/GettysburgResearch/riemann/blob/#1/#2}{\texttt{#1}}}
+
+\title{Zero-free regions, character averages,\\
+and approximations to the Riemann xi function}
+\author{Gideon Freund\\[4pt]
+\normalsize Gettysburg Research\\
+\normalsize Agentic Polymath project}
+\date{19 October 2026 --- revised manuscript}
+\hypersetup{
+ pdftitle={Zero-free regions, character averages, and approximations to the Riemann xi function},
+ pdfauthor={Gideon Freund},
+ pdfsubject={Gettysburg Research, Agentic Polymath project: research results and their limitations},
+ pdfkeywords={zeta functions, zero-free regions, Mobius function, character averages, theta moments}
+}
+\begin{document}
+\maketitle
+\begin{abstract}
+We describe recent work on zero-free regions for zeta functions and on two related approaches to the Riemann hypothesis. The first part follows the proposed improvements for Dedekind zeta functions from $31/32$ to $271/300$, explaining the role of zero-density estimates, averages of numerator $L$-values, shorter theta sums, and an enlarged domain for the local correction factors. These all-number-field results are kept separate from the stronger reported bounds for ordinary zeta and Dirichlet $L$-functions. The second part develops quadratic-character averages and mollifiers that retain the ordinary zeta factor; it identifies the rational error that remains after the auxiliary variance is removed. The third part presents finite real-zero approximants matching the theta expansion through order $26$, together with the convergence and positivity conditions needed to pass to all orders. We also discuss signed M\"obius sums, positive determinants, and precise failures of several attempted extensions. Proofs of the component results are included. Analytic proposals that depend on unreviewed adaptations and finite computer-assisted certificates are identified separately. The Riemann hypothesis is not proved here.
+\end{abstract}
+\medskip
+\noindent\textbf{About this paper.} This is a research manuscript from Gettysburg Research's Agentic Polymath project. It brings together results from several parallel investigations, rather than presenting them as one completed proof. The mathematical record is frozen at the source versions listed in Appendix~\ref{app:provenance}, including the later contributions through repository note~1008.
+\par\medskip
+\noindent\textbf{Reading guide.} Sections~\ref{sec:introduction}--\ref{sec:progression} explain the zero-free claims and their meaning. Readers interested in character averages can then turn to Sections~\ref{sec:quadratic}--\ref{sec:capped}; readers interested in approximating $\xi$ can go directly to Sections~\ref{sec:theta}--\ref{sec:strips}. The last sections explain what the present estimates do not yet settle.
+\clearpage
+\tableofcontents
+\clearpage
+\input{sections/01-introduction}
+\input{sections/01b-zero-free-regions}
+\input{sections/02-quadratic}
+\input{sections/03-residuals}
+\input{sections/04-native}
+\input{sections/05-theta}
+\input{sections/06-strips}
+\input{sections/07-detectors}
+\input{sections/08-boundaries}
+\input{sections/09-verification}
+\appendix
+\input{sections/10-provenance}
+\input{main.bbl}
+\par\bigskip
+\noindent\rule{\linewidth}{0.3pt}
+\par\smallskip
+\noindent\textbf{Project and AI acknowledgment.}
+This work forms part of the Agentic Polymath project at Gettysburg Research. Artificial intelligence was used extensively to explore arguments, develop and test code, and draft and revise the exposition. In particular, \textbf{GPT 6 Pro} was used for research assistance and preparation of this manuscript. The source notes also record assistance from other agents where applicable. AI-generated arguments and AI-agent reviews are not substitutes for independent mathematical review. Responsibility for evaluating the claims, checking attribution, and approving public submission remains with the human author.
+\end{document}

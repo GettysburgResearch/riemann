@@ -1,0 +1,30 @@
+\section{What the results establish, and what remains}\label{sec:verification}
+
+\subsection{Reading the computational evidence}
+The calculations in this project serve different purposes. The theta calculations are finite existence proofs: directed intervals enclose the defining integrals and a whole parameter cube, and a contraction proves that the required exact solution lies in that cube. The arithmetic checkers usually have a narrower role. They check identities, parameter inequalities, and the bookkeeping attached to an analytic proof. They do not prove the analytic continuation or an infinite mean-value estimate merely by returning a positive result.
+
+The source notes retain the full parameter files and their execution records. The first version of this manuscript also replayed the determinant, five-route, and failed-$0.87$ checks. Those historical replays remain recorded in the accompanying files. For the present revision, the manuscript checker verifies the displayed rational comparisons, boundary arithmetic, references, and source map. It does not rebuild the original order-$26$ theta integration, certify the underlying large-sieve and reflection theorems, or provide a new independent review of the mathematical arguments.
+
+The compilation check is separate again: it establishes that the source produces a readable PDF with resolved references. Some research notes record cross-reviews by separate agents in one AI session. Those records are not external referee reports. No independent mathematical referee report or new Lean verification is claimed for this revision.
+
+\subsection{The remaining mathematical questions}
+The strongest new all-field proposal reviewed in Section~\ref{sec:progression} is $271/300$. Its mathematical assessment depends on the short-support reflection, local correction factors, density estimates, and contour argument together. A positive margin in the final exponent calculation cannot repair an error in one of those inputs. The later ordinary-zeta value $0.87488666$ has a different status: it is a small exact corollary of the explicitly stipulated Xu--Sang framework, not a new direct analytic estimate.
+
+For the quadratic-family approach, the remaining question is particularly easy to state. We can remove the auxiliary fluctuation, but the limit in \eqref{eq:remaining-scalar} is still
+\[
+ |\zeta(s)M_Z(s)-1|^2.
+\]
+To exclude a zero at $s$, a strict bound below one would suffice. None of the family approximation theorems proves that bound for the ordinary scalar. The signed coefficient average in Theorem~\ref{thm:field-average} has the same difficulty in another form: its comparison with the M\"obius sum is controlled, but the cancellation in the sum is not.
+
+For the direct M\"obius approach, the estimates in Section~\ref{sec:native} remove whole denominator and frequency ranges. They leave a specific signed remainder. A recurrence with a power of the old energy smaller than two could improve the zero-free boundary, provided its scale cost is small enough. The counterexample for generic coefficients explains why such a recurrence must use more than boundedness and the two balance conditions: it must exploit the particular M\"obius identities.
+
+For the theta approach, the missing statement is existence at unbounded orders. The finite certificates through order $26$ do not imply it. Proposition~\ref{prop:finite-insertion} makes the limitation explicit: the same finite match and the same growth bound can coexist with remote nonreal zeros in an auxiliary function. The positive weighted moment criterion avoids several unnecessary restrictions on finite models, but it still needs a proof of positivity and feasibility for arbitrarily large systems.
+
+For the determinant and scale-filter approaches, retaining every relevant zero is only the first step. The remaining step is a stronger bound for the signed filtered expression or for the centered logarithm of the determinant. Positive matrices and well-conditioned regularizations make those quantities more accessible; they do not supply the missing estimate.
+
+\subsection{Conclusion}
+There are two kinds of progress to distinguish. The zero-free proposals change a claimed nonvanishing half-plane under stated analytic inputs. The other results improve the tools available for studying the target: they give exact coefficient transfers, useful family approximation bounds, a two-mollifier moment theorem, bounds on parts of signed M\"obius sums, finite real-zero approximants, and more flexible strip-preserving constructions.
+
+The negative results matter as well. A failed exponent comparison identifies the size of a missing saving. A counterexample to a compactness shortcut shows which tail condition cannot be omitted. A finite-jet insertion shows why matching many moments is not yet a global zero theorem. Recording these distinctions keeps a promising calculation from being mistaken for the final argument.
+
+The next substantial advance must establish one of the remaining estimates, not merely rename it. For ordinary zeta, the central alternatives are a new signed arithmetic bound or an all-order construction tied to the actual theta coefficients. This manuscript records what is available for those attempts, including the dependencies and limitations that any successful continuation must respect.

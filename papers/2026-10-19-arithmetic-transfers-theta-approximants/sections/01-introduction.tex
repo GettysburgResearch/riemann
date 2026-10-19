@@ -1,0 +1,45 @@
+\section{Introduction}\label{sec:introduction}
+
+The Riemann hypothesis asks whether every nontrivial zero of $\zeta(s)$ has real part $1/2$. A zero-free half-plane is a weaker, but still global, statement: it excludes zeros with $\Re s>B$ for some fixed $B<1$, at every height. Within this kind of statement, a smaller value of $B$ is stronger. There is a second consideration, however: which functions are covered? A bound for every Dedekind zeta function has a broader scope than a bound for ordinary zeta alone. The two should not be ranked by their decimal values without this qualification.
+
+That distinction matters throughout the present work. The early analytic investigations adapt a general number-field argument and propose successively smaller values of $B$. The later investigations ask a different question: can one take advantage of the fact that ordinary zeta is a single fixed function? They try to retain that function while averaging over auxiliary quadratic characters, or to approximate its completed form by functions whose zeros can be located exactly. A third line works directly with the signs of the M\"obius function.
+
+This paper is an account of these mathematical contributions, not an account of how many computations or agent tasks were performed. Results are organized by the question they answer. The repository contains the longer derivations, computational data, and unsuccessful attempts; references to those notes identify the exact versions used here.
+
+\subsection{Three kinds of progress}
+
+The first kind is a proposed \emph{zero-free theorem}. The sequence for arbitrary number fields begins with the reported Cureton--Thorner bound $31/32$ and proceeds through $23/24$, $25/27$, and $11/12$, followed by the short-support and higher-moment refinements. The most developed all-field composition included here proposes $271/300$. Section~\ref{sec:progression} explains this sequence, including the overlapping branches and their different hypotheses. A separate, explicitly import-dependent ordinary-zeta deduction in \cite{R1005} gives $0.87488666$. Neither this paper nor the computations reported in it independently establish the external analytic framework on which that deduction rests.
+
+The second kind is a better \emph{average estimate}. A mollifier $M$ is a finite Dirichlet polynomial intended to approximate $1/L$. The residual $LM-1$ measures its error. Bounds for a sum of these errors can improve substantially without ruling out a zero of one particular member: at a zero, $LM-1=-1$, so that member contributes only one to the sum. Likewise, a capped reciprocal moment remains finite at a zero precisely because the value is replaced by the cap. Sections~\ref{sec:quadratic}--\ref{sec:capped} explain both the useful estimates and this limitation.
+
+The third kind is a \emph{finite approximation theorem}. The theta calculations construct entire functions with only real zeros whose Taylor coefficients agree with those of normalized $\xi$ through a prescribed order. Matching through order $26$ is an exact finite assertion, not a statement about the first $26$ zeros, a verified height, or the whole zero set. A theorem at unbounded matching orders would need a further existence and convergence argument. Section~\ref{sec:theta} makes that requirement explicit; the later counterexamples show why finite agreement alone cannot replace it.
+
+\subsection{What is proved here, and what is being reported}
+
+The lemmas and theorems with proofs below are the component arguments offered in this manuscript. They use classical results where cited. The analytic zero-free extensions are described as \emph{proposals} when they require new adaptations that have not received an independent mathematical review. Statements labelled ``Proposed consequence'' retain the assumptions stated in their sources. They are not presented as independently established theorems. The theta existence results use the fixed computer-assisted certificates specified in their sources.
+
+This distinction is not a reason to discard the proposed results. It tells a reader where the burden of proof lies. For example, the addition of two rational exponents at the end of a Mellin argument is easy to check; the substantive question is whether the estimates preceding that addition apply to the same function, over their full stated ranges. The discussion therefore concentrates on those estimates rather than on the fractions alone.
+
+\subsection{Notation and the role of an auxiliary field}
+We write $\mu$ and $\Lambda$ for the M\"obius and von Mangoldt functions, and
+\[
+ M(x)=\sum_{n\le x}\mu(n),\qquad
+ m(x)=\sum_{n\le x}\frac{\mu(n)}n,\qquad
+ F_X=\sum_{k\le X}\abs{m(k)}^2.
+\]
+The harmonic number is $h_N=\sum_{j\le N}j^{-1}$. For a number field, $N\mathfrak a$ denotes the absolute ideal norm. Superscript $S$ denotes removal of the stated finite Euler factors. Every occurrence of $O_\eps$ or $\ll_\eps$ allows dependence on the explicitly fixed data. Moment orders are fixed unless uniformity is expressly stated.
+
+For a quadratic discriminant $\Delta$, the factorization
+\begin{equation}\label{eq:quadratic-factorization}
+ \zeta_{\Q(\sqrt\Delta)}(s)=\zeta(s)L(s,\chi_\Delta)
+\end{equation}
+is used in its usual meromorphic sense; here and below $\Q$ denotes $\mathbb Q$. The nonprincipal Dirichlet factor is entire. Thus a nontrivial ordinary zeta zero is a zero of every such full Dedekind product. This observation is lost if one instead studies only the quotient by $\zeta$.
+
+For Fourier arguments we use
+\[
+ \Xi(z)=\xi(1/2+\ii z),\qquad
+ \xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s).
+\]
+A zero $\rho=\beta+\ii\gamma$ corresponds to $z=\gamma-\ii(\beta-1/2)$. Hence confinement of all zeros of $\Xi$ to $\abs{\Im z}\le b$ implies $\Re\rho\le 1/2+b$. A standardized theta variable changes this band by its scale factor; Section~\ref{sec:theta} fixes that normalization explicitly.
+
+Two elementary warnings recur. If $L(\rho)=0$ and $M$ is finite at $\rho$, then $L(\rho)M(\rho)-1=-1$. Its squared residual contributes one, not infinity. Conversely, if a fixed-source Mellin transform has a nonremovable pole at every target zero, proving holomorphy of that transform in a region really does exclude those zeros. The issue is to prove the required bound on the same source.

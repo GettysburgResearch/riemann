@@ -1,0 +1,95 @@
+\section{Prime bias and the limits of the present estimates}\label{sec:boundaries}
+
+Two further calculations help locate the limits of the preceding approaches. The first bounds inert-prime bias through a quadratic-field determinant. The second shows exactly why a particular attempt to reach $0.87$ did not close. Neither is a further step in the all-number-field chain of Section~\ref{sec:progression}.
+
+\subsection{Independent-jet prime bias: a separate proposed consequence}
+The determinant packet \cite{R993} gives a different proposed arithmetic statement. For a primitive nonprincipal real character $\chi$ of conductor $q$, it states
+\begin{equation}\label{eq:inert-bias}
+ \sum_{p\le R,\ \chi(p)=-1}\frac{\log p}{p}
+ \le\frac12\log R+\frac14\log q+O(1+\log\log(3R)),
+ \qquad R\ge\max(q,R_0),
+\end{equation}
+with absolute constants. The derivative depth and grid side length are independent parameters, rather than being identified as in the imported note. Its rank condition for $n$ points with an incidence bound $M\deg F$ is
+\[
+ Jn>M(R+S)+2RS+(J-M)_+S.
+\]
+A discriminant-balanced quadratic rectangle and $J=S=\lfloor R/\lceil\log(2R)\rceil\rfloor$ then balance the integral Gram height against inert-prime divisibility. Ordinary derivatives are essential: the $p!$ factors preserve divisibility even when the derivative order reaches $p$. Hasse derivatives cannot be substituted.
+
+The companion in \cite{R1000} extends the stated range to
+\[
+ R\ge64\sqrt q\,\lceil\log(2R)\rceil^2
+\]
+with an explicit error $4\log\lceil\log(2R)\rceil+30$, retaining the discriminant version of the leading terms. The source gives a positive Hadamard zero budget at conductor-scaled low heights. These are not fixed all-height complex zero-free half-planes.
+
+The real-zero implication of \eqref{eq:inert-bias} illustrates its distinct scope. Put $\ell=\log q$. Its Laplace transfer, retaining small primes, ramified primes, and all higher prime powers, gives
+\[
+ -\frac{L'}L(1+t,\chi)
+ \ge-\ell/2-O\bigl(t\ell^2+\log(2+1/t)+\log(2+\ell)\bigr).
+\]
+The positive Hadamard zero sum gives, at a real zero $\beta$,
+\[
+ -\frac{L'}L(1+t,\chi)\le\ell/2-\frac1{t+1-\beta}+O(1).
+\]
+Taking $t=\ell^{-2}$ yields the proposed asymptotic consequence
+\[
+ (1-\beta)\log q\ge1-O\left(\frac{\log\log q}{\log q}\right).
+\]
+This implication is recorded subject to the determinant and transfer proof in \cite{R993}; no numerical conductor threshold or independently reviewed absolute constant is supplied here. It is not used in the preceding sections. The circulated motivating note is attributed in the source to Ben Green but its provenance remains unauthenticated; the printed identifier is \texttt{hexagon:2610.00311v1}, not an arXiv identifier. We do not list it as an authenticated public paper or reproduce its PDF.
+
+\subsection{An exact obstruction inside the attempted 0.87 estimate system}
+The failed comparison in \cite{R1004} is useful precisely because it identifies an error in sufficient estimates without asserting an error in the target conjecture. Adopt the balanced comparison and witness-capacity formulas of the earlier audit \cite{R934}. Set
+\[
+ B=87/100,\quad \ell_0=14/75,\quad\delta=7/18,\quad x=1/2,
+ \quad\alpha=5/6,\quad a=(1+\delta)/2=25/36.
+\]
+The auxiliary zero class $a$ is not the location of an asserted actual zero. The relaxed direct requirement $11/12-\ell/4\le B$ forces $\ell\ge\ell_0$. Allow the larger triangle $b\ge0$, $b+\ell\le1$, and set
+$\ell_y=(1+b-\ell)/2$, $h=(1+b+3\ell)/2$.
+
+For a moment parameter $\kappa$, define
+\begin{gather*}
+ c=2/(3\kappa),\quad D=3-(1+c)x,\quad P=(2-cx)(1-x),\quad
+ J=(\alpha-\delta)D+\delta P,\\
+ t=1+\delta P/(2J),\quad
+ r=\{(2-cx)t-x(1-c/2)\}/D,\quad m=t-r,\\
+ z_M=(1-r)/2,\quad z_S=(1-2m)/(6\kappa),\quad
+ R=1-\delta+\frac{(\alpha-\delta)\delta P}{2J}.
+\end{gather*}
+The raw endpoint exponent relative to the fixed target is
+\begin{equation}\label{eq:failed-E}
+ E=a-a\ell_y-\ell/2+x\delta\ell
+                     +h(R+\delta/2-1/6)-B.
+\end{equation}
+At $\kappa=3/4$, exact arithmetic gives
+\begin{gather*}
+ t=443/394,\quad r=141/197,\quad m=161/394,\\
+ z_M=28/197,\quad z_S=8/197,\quad R=2363/3546.
+\end{gather*}
+At $\ell=\ell_0$,
+\[
+ E=521/19700-b/7092\ge7003/265950>1/40.
+\]
+This is a certificate on the entire enlarged triangle, not merely its bottom edge. Put $v=\ell-\ell_0\ge0$ and $u=1-\ell-b\ge0$. Then
+\[
+ E=E_{\min}+(E_\ell-E_b)v-E_bu,
+ \qquad E_\ell=640/591,\quad E_b=-1/7092,
+\]
+and both added coefficients are nonnegative.
+
+Even granting the more favorable parameter $\kappa=37/50$ gives
+\begin{equation}\label{eq:failed-positive-gap}
+ R=2075/3114,\quad E(\ell_0,b)=457/17300-b/6228,
+ \quad E_{\min}=6139/233550>1/40.
+\end{equation}
+Within this formula $R$ increases with $\kappa$. At $b=1/8$, the same class would need $R\le214/337$, leaving the exact count-exponent shortfall
+\[
+ \frac{2075}{3114}-\frac{214}{337}
+ =\frac{32879}{1049418}.
+\]
+The raw sextic-kernel diagnostic is also exact: for
+$k(v)=\max(1,v,5/6+v/3,1/3+5v/6)$,
+\[
+ \min_{v\ge0}\{k(v)-(7/18)v\}=7/9,
+\]
+attained at $v=1$. This isolated calculation is not an impossibility theorem for every application of the sieve.
+
+Equations~\eqref{eq:failed-E}--\eqref{eq:failed-positive-gap} concern upper-estimate budgets. Extra side constraints can only restrict the parameter triangle, and logarithmic improvements cannot absorb its positive power gap. A different signed physical estimate could change the comparison. The computation supplies no lower bound on the actual arithmetic residual and no evidence for an off-critical zero.

@@ -1,0 +1,243 @@
+\section{Approximating the xi function by functions with real zeros}\label{sec:theta}
+
+The Riemann hypothesis can also be approached as an approximation problem. Write $\Xi(z)=\xi(1/2+\ii z)$. Its zeros are all real exactly when the nontrivial zeros of $\zeta$ lie on the critical line. A sequence of functions with real zeros would therefore be useful if it converged to $\Xi$ in a sufficiently strong sense.
+
+The finite result is concrete. The constructions in \cite{R1003} match the theta expansion through Taylor orders $22$, $24$, and $26$ using a Gaussian times an even polynomial with real zeros. This goes beyond the order-$20$ Ising construction of \cite{R994}, but uses a different class of functions: a positive probability-density representation is no longer required. The change enlarges the available constructions; it does not identify them with ferromagnetic models.
+
+The main distinction in this section is between \emph{matching a fixed number of coefficients} and \emph{matching arbitrarily many coefficients with a convergence theorem}. We have finite certificates for the former and a sufficient criterion for the latter. The all-order existence statement remains open.
+
+\subsection{The theta integral and its normalization}
+For $t\ge0$ put $q_n=\pi n^2$ and
+\begin{equation}\label{eq:theta-density}
+ \Phi(t)=\sum_{n\ge1}
+       (4q_n^2e^{9t/2}-6q_ne^{5t/2})e^{-q_ne^{2t}},
+\end{equation}
+and extend evenly. Every summand is positive on $t\ge0$. Normalizing the density gives a random variable $T$ with
+\[
+ F_\theta(z)=\E e^{\ii zT}
+ =\frac{\xi(1/2+\ii z)}{\xi(1/2)},\qquad
+ v_\theta=\E T^2=0.046209986230837941577867620860678\ldots.
+\]
+The decimal is descriptive; the source uses directed intervals for the full integral. Define
+\[
+ H(z)=F_\theta(z/\sqrt{v_\theta}),\qquad H(0)=1,\quad H''(0)=-1.
+\]
+All matching equations in this section concern $H$. A physical approximant to $F_\theta(z)$ is obtained by replacing $z$ by $\sqrt{v_\theta}z$. In particular, a band of width $b$ in the standardized variable becomes a band of width $b/\sqrt{v_\theta}$ in the physical variable.
+
+Let $\kappa_{2r}$ be the even cumulants of $T/\sqrt{v_\theta}$, and set
+\begin{equation}\label{eq:Qr}
+ Q_r=\frac{(-1)^{r+1}r\kappa_{2r}}{(2r)!},\qquad r\ge2.
+\end{equation}
+These numbers are defined by the theta moments, without a zero sum or an assumed real-zero product representation. On a disc about zero,
+\begin{equation}\label{eq:logH}
+ \log H(z)=-\frac{z^2}{2}-\sum_{r\ge2}\frac{Q_r}{r}z^{2r}.
+\end{equation}
+
+\subsection{A finite power-sum construction}
+\begin{proposition}\label{prop:finite-P}
+Suppose $b_1,\ldots,b_N>0$, $a=1/2-\sum_jb_j>0$, and
+\begin{equation}\label{eq:power-sum-target}
+ \sum_{j=1}^N b_j^r=Q_r,\qquad 2\le r\le M.
+\end{equation}
+Then
+\[
+ P(z)=e^{-az^2}\prod_{j=1}^N(1-b_jz^2)
+\]
+is even and entire, has only real zeros, and satisfies
+\begin{equation}\label{eq:P-envelope}
+ P(z)-H(z)=O(z^{2M+2}),\qquad
+ \abs{P(z)}\le e^{\abs z^2/2}\quad(z\in\C).
+\end{equation}
+\end{proposition}
+\begin{proof}
+The nonzero exponential contributes no zeros, and each polynomial factor has roots $\pm b_j^{-1/2}$. Near zero,
+\[
+ \log P(z)=-\frac{z^2}{2}
+       -\sum_{r\ge2}\frac{z^{2r}}r\sum_jb_j^r.
+\]
+Comparison with \eqref{eq:logH} proves Taylor matching. Finally,
+$\abs{e^{-az^2}}\le e^{a\abs z^2}$ and
+$\abs{1-b_jz^2}\le e^{b_j\abs z^2}$. Multiply and use $a+\sum b_j=1/2$.
+\end{proof}
+
+\begin{certificate}[Frozen source through order 26]\label{cert:theta26}
+The directed data and proofs at the immutable source \cite{R1003} provide five solutions of \eqref{eq:power-sum-target}, with strict $a>0$ and $b_j>0$, as listed in Table~\ref{tab:theta-certificates}. Each active-coordinate cube has radius $10^{-50}$. The two incremental endpoints have twenty equal newest nodes, all fixed during their individual certificate calculations.
+\end{certificate}
+
+\begin{table}[ht]
+\centering
+\caption{Recorded directed theta certificates. The bounds are rounded upward from the source receipts; $\beta$ and $L$ are defined in \eqref{eq:Banach-bounds}. The Taylor order is not the polynomial degree or a verified zero height.}\label{tab:theta-certificates}
+\small
+\begin{tabular}{lrrrrr}
+\toprule
+Construction & Order $2M$ & Factors $N$ & Active & $\beta<$ & $L<$\\
+\midrule
+Direct &22&64&10&$1.155\cdot10^{-92}$&$2.320\cdot10^{-38}$\\
+Direct &24&128&11&$1.518\cdot10^{-90}$&$5.857\cdot10^{-37}$\\
+Direct &26&128&12&$1.194\cdot10^{-87}$&$8.859\cdot10^{-35}$\\
+Incremental endpoint &24&84&11&$4.499\cdot10^{-90}$&$1.749\cdot10^{-36}$\\
+Incremental endpoint &26&104&12&$1.231\cdot10^{-87}$&$9.236\cdot10^{-35}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Here is the precise finite-to-infinite argument used by those certificates. The parameter files specify exact rational centers $x_0$, active indices, and a rational preconditioner $R$. All inactive nodes remain fixed. For the vector
+\[
+ f(x)=\left(\sum_jb_j^r-Q_r\right)_{r=2}^M,
+ \qquad \frac{\partial f_r}{\partial b_j}=r b_j^{r-1},
+\]
+the interval calculation covers every term of each finite sum and every Jacobian entry on the full cube. It verifies positivity throughout and gives
+\begin{equation}\label{eq:Banach-bounds}
+ \norm{Rf(x_0)}_\infty\le\beta,\qquad
+ \sup_x\norm{I-RDf(x)}_\infty\le L<1,\qquad
+ \beta+L\rho<\rho,
+ \quad \rho=10^{-50}.
+\end{equation}
+The map $x\mapsto x-Rf(x)$ is a strict contraction into the cube. Moreover $RDf(x_0)$ is invertible by the norm bound, so $R$ is invertible. Its fixed point therefore solves $f(x)=0$. This proves existence of a true solution, not equality of a displayed decimal center with that solution.
+
+The theta directory at the pin in Appendix~\ref{app:provenance} contains the rational centers in \nolinkurl{gaussian_parameters.json} and \nolinkurl{incremental_parameters.json}. The accepting routines are \nolinkurl{check_gaussian.py} and \nolinkurl{check_incremental.py}. The complete moment source has SHA-256
+\begin{center}\footnotesize\texttt{c171903e4f60c189a929ccfcce36f7db034508e9ca10c85ed766338625558dcf}.
+\end{center}
+The mathematical acceptance requires the source bounds described next; a matching hash alone is not a proof of them. This manuscript records the frozen certificates and their proof mechanism. Their full order-26 source reconstruction was not newly executed during the editorial compilation.
+
+\subsection{Bounding the errors in the theta integrals}
+The producer described in \cite[\texttt{theta/SOURCE26.md}]{R1003} uses an authenticated interval backend from \cite{R994}, configured for 512 fractional bits and Taylor degree 220. It explicitly retains indices $n=1,\ldots,11$ and integrates to $U_n=c_n/16$, where
+\[
+ (c_1,\ldots,c_{11})=(40,29,23,18,14,12,9,7,5,3,2).
+\]
+There are 162 cells of width $1/16$, each with half-width $1/32$. The full density summand is expanded on a Cauchy circle of radius $1/8$, then multiplied by $t^j$ and integrated exactly for each even $j\le26$. On these circles $q_n<484$, $\Re t<21/8$, and $\abs{\Im t}\le1/8$, so the summand is bounded in modulus by $10^{16}$. The complete full-line Taylor integration error is at most
+\begin{equation}\label{eq:theta-Taylor-error}
+ E_j=\frac{32\cdot10^{16}(5/2)^j}{4^{221}(3/4)}.
+\end{equation}
+This uses the ratio $1/4$ of the cell half-width to the Cauchy radius and an upper bound 32 for the total full-line interval length.
+
+For a retained index let $q=\pi n^2$, $E=e^{2U}$, and $\lambda=2qE-9/2>0$. The full omitted time interval satisfies
+\begin{equation}\label{eq:theta-time-error}
+ 2\int_U^\infty t^j\Phi_n(t)\dd t
+ \le8q^2e^{9U/2-qE}
+       \sum_{k=0}^j\binom jk\frac{U^{j-k}k!}{\lambda^{k+1}}.
+\end{equation}
+Indeed $e^{2x}\ge1+2x$ for $x\ge0$ supplies an exponential tail after writing $t=U+x$, and dropping the negative prefactor term gives a positive majorant. For all omitted indices $n\ge12$, the complete bound is
+\begin{equation}\label{eq:theta-index-error}
+ \sum_{n\ge12}2\int_0^\infty t^j\Phi_n(t)\dd t
+ \le\frac{16\pi^2 12^4e^{-144\pi}j!}{(288\pi-9/2)^{j+1}}.
+\end{equation}
+The consecutive numerator ratio $(1+1/n)^4e^{-\pi(2n+1)}$ is below $1/2$; the denominator increases. This pays the entire index tail.
+
+After the normalization interval is proved positive, directed division gives the raw normalized moments and their variance-one versions. Cumulants are formed by the exact finite recursion
+\[
+ \kappa_n=\mu_n-\sum_{j=1}^{n-1}\binom{n-1}{j-1}\kappa_j\mu_{n-j}.
+\]
+Every Taylor, time, and index remainder enters the target intervals used in \eqref{eq:Banach-bounds}. Public zero-table entries were used only to initialize exploratory numerical searches; the accepting checker does not load a zero table. The successful numerical chain $64/22\to84/24\to104/26$ is not a certified connecting path: each endpoint has its own certificate, and no unbounded induction follows from two successful extensions.
+
+\subsection{What would suffice at unbounded orders}
+The next theorem is the all-order component of \cite[\texttt{WEIGHTED\_CANONICAL.md}]{R1003}. It removes the need for a positive Gaussian reserve, a positive inverse Fourier density, integer multiplicities, or a common support bound. Its unbounded feasibility hypothesis is not proved by the five finite certificates.
+
+\begin{theorem}[Cofinal positive weighted feasibility]\label{thm:weighted-canonical}
+Suppose that for an unbounded sequence of integers $M$ there are finitely many positive real nodes $b_{M,j}$ and positive real weights $\lambda_{M,j}$ with
+\begin{equation}\label{eq:weighted-moments}
+ \sum_j\lambda_{M,j}b_{M,j}^{\,r}=Q_r,\qquad 2\le r\le M.
+\end{equation}
+Then every zero of $H$ is real, and RH follows. No uniform bound on node count, support, total weight, or $\sum_j\lambda_{M,j}b_{M,j}$ is assumed.
+\end{theorem}
+\begin{proof}
+On the open upper half-plane, $1-bz^2$ avoids the nonpositive real axis for every $b>0$. The principal branch $\ell_b(z)=\operatorname{Log}(1-bz^2)$ is holomorphic there. Define
+\[
+ P_M(z)=\exp\left[-\frac{z^2}{2}
+       +\sum_j\lambda_{M,j}\{\ell_{b_{M,j}}(z)+b_{M,j}z^2\}\right].
+\]
+It is holomorphic and nonvanishing on this half-plane. For noninteger weights it need not be entire; its branch points are on the real boundary.
+
+The elementary canonical-factor inequality
+\begin{equation}\label{eq:canonical-inequality}
+ \abs{(1-w)e^w}\le\exp(\abs w^2/2),\qquad w\in\C,
+\end{equation}
+follows from $\abs{1-w}^2=1-2\Re w+\abs w^2$ and $\log(1+u)\le u$; $w=1$ is immediate. Positive weights and the $r=2$ equation give
+\begin{equation}\label{eq:quartic-envelope}
+ \abs{P_M(z)}\le\exp\left(\frac{\abs z^2}{2}
+                              +\frac{Q_2\abs z^4}{2}\right).
+\end{equation}
+This establishes normality without a support restriction.
+
+One must still identify the limit without assuming a common Taylor disc: large nodes could bring branch points arbitrarily close to zero. For $x\ge0$ the exact logarithm remainder is
+\[
+ \log(1+x)-x=\sum_{r=2}^{M-1}\frac{(-1)^{r+1}x^r}{r}+R_M(x),
+ \qquad \abs{R_M(x)}\le x^M/M.
+\]
+The estimate is valid for all $x$, not just $x<1$. At $z=\ii t$, the real logarithm therefore satisfies
+\[
+ \left|\log P_M(\ii t)-\left(
+ \frac{t^2}{2}+\sum_{r=2}^{M-1}\frac{(-1)^{r+1}Q_rt^{2r}}r\right)\right|
+ \le\frac{Q_Mt^{2M}}M.
+\]
+Choose $d>0$ inside a disc on which $\log H$ is analytic, and let $C=\max_{\abs z=d}\abs{\log H(z)}$. Cauchy's bound gives $\abs{Q_r}/r\le Cd^{-2r}$. For every fixed $0<t<d$, both the displayed remainder and the tail of \eqref{eq:logH} tend to zero. Thus $P_M(\ii t)\to H(\ii t)$ on an interval inside the upper half-plane.
+
+By \eqref{eq:quartic-envelope}, every subsequence has a locally uniformly convergent subsequence. The identity theorem identifies its limit with $H$ using that imaginary interval. Hence the full cofinal sequence converges to $H$ locally uniformly on the upper half-plane. Hurwitz makes $H$ nonvanishing there, since it is not identically zero. Conjugation gives the same result below the real axis. The normalization of $H$ then gives RH.
+\end{proof}
+
+For each $M$, the measure $\nu_M=\sum_j\lambda_{M,j}b_{M,j}^2\delta_{b_{M,j}}$ converts \eqref{eq:weighted-moments} to
+\[
+ \int x^k\dd\nu_M(x)=Q_{k+2},\qquad0\le k\le M-2.
+\]
+This is a positive finite moment problem. Every available Hankel matrix
+\[
+ [Q_{i+j+2}]_{i,j=0}^d,\qquad [Q_{i+j+3}]_{i,j=0}^d
+\]
+must be positive semidefinite whenever its entries are prescribed, by integrating $p(x)^2$ and $xp(x)^2$. We do not assume a converse for a truncated system. In particular, finite feasibility through $M=13$ is not unbounded positive feasibility.
+
+The earlier connected 305-vertex ferromagnet in \cite{R994} remains a distinct finite contribution: it matches the original standardized theta moments through degree 20 with 304 observed spins and strictly positive couplings. The present order-26 products are stronger in Taylor order but belong to a larger, not necessarily probabilistic, class. Conflating the two would misstate what either certificate proves.
+
+\subsection{Why a finite match cannot locate all zeros}
+The need for unbounded orders is not merely a technical qualification. The later note~1008 shows that a finite theta match can coexist with prescribed nonreal zeros far away, even while retaining the same simple bound on the whole plane \cite{R1008}. The construction is short enough to include here.
+
+\begin{proposition}[Preserving a finite match while inserting four zeros]\label{prop:finite-insertion}
+Suppose
+\[
+ P(z)=e^{-az^2}\prod_{j=1}^N(1-b_jz^2),\qquad
+ a>0,\quad b_j>0,\quad a+\sum_jb_j=\tfrac12,
+\]
+with $\sum_jb_j^r=Q_r$ for $2\le r\le M$. Suppose $M-1$ chosen nodes are distinct, so their power-sum Jacobian is nonsingular. Fix $v>0$ and $B>0$. For every sufficiently large $T$, there is an even real entire function $G_T$ with the same Taylor coefficients through order $2M$, satisfying
+\[
+ |G_T(z)|\le e^{|z|^2/2}\qquad(z\in\C),
+\]
+whose only nonreal zeros in the physical variable, for $g_T(w)=G_T(\sqrt v\,w)$, are $\pm T\pm\ii B$.
+\end{proposition}
+\begin{proof}
+Put
+\[
+ c=\frac1{v(T+\ii B)^2}=u+\ii y.
+\]
+As $T\to\infty$, $c\to0$. The implicit-function theorem permits a small change in the chosen real nodes such that
+\[
+ \sum_j\widetilde b_j^r=Q_r-2\Re(c^r),\qquad 2\le r\le M.
+\]
+Indeed their Jacobian has entries $r b_j^{r-1}$, a nonsingular diagonal multiple of a Vandermonde matrix. All the changed nodes remain positive. For large enough $T$, the adjusted Gaussian coefficient
+\[
+ \widetilde a=\tfrac12-\sum_j\widetilde b_j-2u
+\]
+is also positive. Define
+\[
+ G_T(z)=e^{-\widetilde a z^2}
+   \prod_j(1-\widetilde b_jz^2)(1-cz^2)(1-\overline c z^2).
+\]
+The logarithmic coefficients give the stated Taylor match. The last two factors give precisely the four prescribed physical zeros; the other factors have real zeros.
+
+For sufficiently large $T$, $u>0$ and $y^2\le u^2$. Writing $t=|z|^2$ gives
+\[
+ \begin{split}
+ |(1-cz^2)(1-\overline c z^2)|
+ &\le 1+2ut+(u^2+y^2)t^2\\
+ &\le 1+2ut+2u^2t^2\le e^{2ut}.
+ \end{split}
+\]
+The bounds for the real-node factors and the defining identity for $\widetilde a$ now give the unchanged envelope $e^{|z|^2/2}$.
+\end{proof}
+
+The source applies this argument to the nonsingular finite constructions through order $26$. It does not construct nonreal zeros of $\xi$: the functions $G_T$ are auxiliary functions. The order $M$ is fixed first, and the inserted zeros are then moved far away. This is exactly the distinction that an argument for RH must overcome.
+
+There is even a quantitative indication of how little a finite test can see. The extra squared absolute node mass is
+\[
+ 2|c|^2-2\Re(c^2)
+ =\frac{16T^2B^2}{v^2(T^2+B^2)^4}=O_{v,B}(T^{-6}).
+\]
+A separate probability-law construction in \cite{R1008} retains positivity and several leading growth properties while allowing both zero geometries. Its theta application uses the finite Ising model through order $20$, not the order-$26$ entire-function construction. Neither result contradicts the all-order criterion: both show why its unbounded feasibility hypothesis cannot be replaced by finitely many successful matches.
