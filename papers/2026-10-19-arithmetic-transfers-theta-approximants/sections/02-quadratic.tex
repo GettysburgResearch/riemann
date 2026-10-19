@@ -1,8 +1,12 @@
 \section{Quadratic-field coefficients and a uniform signed average}\label{sec:quadratic}
 
-This section develops the fixed-field primitive-core comparison of \cite{R996} and its ramification-preserving, conductor-uniform extension in \cite{R1002}. The averaging family in this section is different from the dyadic family used in Section~\ref{sec:residuals}; the two are not interchanged.
+A quadratic field has a useful feature: its zeta function contains ordinary $\zeta$ as a factor. Varying the field therefore gives many different arithmetic expressions with the same target factor. The question is whether averaging these expressions can simplify the auxiliary arithmetic without losing ordinary $\zeta$.
 
-\subsection{An invertible primitive-core correction}
+The first result replaces ideal coefficients by an explicit sequence on rational integers. The replacement preserves any cancellation estimate with exponent greater than $1/2$. The second result shows quantitatively that averaging this sequence over quadratic fields recovers the ordinary M\"obius sequence. Neither step proves that the resulting sum is small; it tells us exactly which sum must be estimated.
+
+The fixed-field construction is from \cite{R996}, and the uniform extension and field average are from \cite{R1002}. The family here differs from the dyadic family in Section~\ref{sec:residuals}; we specify each one rather than interchange them.
+
+\subsection{Replacing ideal coefficients by rational coefficients}
 Put $\mu_6(n)=\mu(n)\ind_{(n,6)=1}$. For a negative fundamental discriminant $\Delta$, let $\chi_\Delta$ be the associated primitive quadratic character. Define
 \begin{equation}\label{eq:primitive-sequences}
  a_\Delta=\mu_6*(\mu_6\chi_\Delta),\qquad
@@ -68,12 +72,12 @@ For example, $b_\Delta=a_\Delta*v_\Delta$ gives
  \sum_{n\le X}b_\Delta(n)
  =\sum_{d\le X}v_\Delta(d)\sum_{m\le X/d}a_\Delta(m).
 \]
-Apply the hypothesized bound with a smaller positive loss and sum $\abs{v_\Delta(d)}d^{-\beta-\eps'}$. The inverse uses $W_\Delta$. For a polynomial phase $e^{2\pi\ii P(n)}$, the inner phase becomes $P(dm)$, which is still a polynomial of the same degree. No estimate for either sequence is manufactured by this equivalence.
+Apply the hypothesized bound with a smaller positive loss and sum $\abs{v_\Delta(d)}d^{-\beta-\eps'}$. The inverse uses $W_\Delta$. For a polynomial phase $e^{2\pi\ii P(n)}$, the inner phase becomes $P(dm)$, which is still a polynomial of the same degree. The equivalence transfers an estimate; it does not establish one.
 \end{proof}
 
 At the all-$\eps$ square-root exponent, this reproduces the fixed-field reciprocal criterion described in \cite{R996}. For $K=\Q(\sqrt{-3})$, the unramified primitive sequence is simply $\mu(n)2^{\omega(n)}$ on squarefree integers all of whose prime factors are $1\bmod3$. Its fixed-field square-root estimate is stronger than ordinary RH alone, because it also controls the factor $L(s,\chi_{-3})$.
 
-\subsection{An elementary actual-family character mean}
+\subsection{Averaging over quadratic fields}
 For $Q\ge2^{16}$ define
 \[
  \mathcal D(Q)=\{d\le Q:d>0,\ d\text{ squarefree},\ d\equiv3\pmod4\},

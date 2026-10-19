@@ -1,13 +1,17 @@
-\section{Actual quadratic families and optimal auxiliary-variance removal}\label{sec:residuals}
+\section{Quadratic families: approximation and removal of auxiliary variance}\label{sec:residuals}
 
-We now use the dyadic family from \cite{R1001,R1003},
+The preceding section averaged coefficients. We now average $L$-values. A random Euler product is a useful model for this calculation, but a statement about a random model is not automatically a statement about actual quadratic characters. We first prove a quantitative comparison between the two. We then choose a finite Euler-product correction that removes the auxiliary variance as efficiently as possible.
+
+The result has a simple interpretation: after this correction, the full family residual approaches $|\zeta(s)M_Z(s)-1|^2$. The field-dependent fluctuation has been removed, while the ordinary-zeta error remains. This separates a part we can control from the part still needed for zero exclusion.
+
+We use the dyadic family from \cite{R1001,R1003},
 \[
  \mathcal U(Q)=\{u:Q<u\le2Q,\ u\text{ odd and squarefree}\},
  \qquad \chi_u=\chi_{-8u}.
 \]
 These are primitive odd characters of conductor $q=8u$ and root number one. Write $\E_Q$ for the uniform family average. The cardinality is $(4/\pi^2)Q+O(\sqrt Q)$. We retain all ramified values.
 
-\subsection{The character mean and the random square kernel}
+\subsection{The limiting distribution of quadratic characters}
 The elementary squarefree-character calculation in \cite[shared proof]{R1001}, restated in \cite[arithmetic proof, (1.1)]{R1003}, is
 \begin{equation}\label{eq:dyadic-character-mean}
  \E_Q\chi_u(n)=\ind_{n=\square}g(n)
@@ -36,7 +40,7 @@ For fixed $x,y$, expanding the finite sums in \eqref{eq:dyadic-character-mean} g
 \end{align}
 Indeed $A_u(x)=\sum_{m\le x}\mu(m)\chi_u(m)M(x/m)$, and two squarefree indices have square product exactly when they are equal. The term $m=1$ is the original ordinary covariance. The additional diagonal weights are ramification probabilities, not independent copies of the original source. These fixed-cutoff limits alone do not authorize a growing-cutoff interchange.
 
-\subsection{Mean-square approximation of the complete \texorpdfstring{$L$}{L}-value}
+\subsection{Approximating an \texorpdfstring{$L$}{L}-value by an initial segment}
 Fix a compact set $\mathcal K\subset\{s:1/2<\Re s<1\}$. All heights below are bounded by this compact set. Write
 \[
  \sigma=\Re s,\qquad h=\sigma-\tfrac12,\qquad
@@ -117,7 +121,7 @@ A holomorphic submean argument gives the compact-supremum variant
 \]
 One uses a finite disc cover inside a slightly larger compact set with left edge $\sigma_0-\tau>1/2$, and absorbs $K^{2\tau}\le Q^{2\tau}$ after choosing preliminary losses. This asserts neither growing-height uniformity nor a critical-line endpoint.
 
-\subsection{The limiting Euler object and a master residual comparison}
+\subsection{From the random Euler product back to the arithmetic family}
 The random product
 \[
  \mathcal L(s)=\prod_{p\text{ odd}}(1-X_pp^{-s})^{-1}
@@ -253,6 +257,10 @@ The normalizer contains no inverse zeta factor. At an ordinary zero, both sides 
 
 \section{Two mollifiers and capped reciprocal moments}\label{sec:capped}
 
+A mollifier is a short Dirichlet polynomial intended to approximate $1/L$. The usual choice uses M\"obius coefficients, since those coefficients give the exact inverse Euler product where it converges absolutely. Farther left, the approximation requires a theorem.
+
+There are two jobs here: controlling the rare large errors, and calculating the average accurately. The argument below assigns these jobs to different mollifiers. A longer polynomial controls the errors; a shorter polynomial provides the main term. The result is a reciprocal-moment formula with a cap. The cap is part of the theorem, not a numerical convenience: at a zero, the capped reciprocal is finite and must still be counted.
+
 The following transfer, from \cite{R989}, is independent of the particular arithmetic family. It makes explicit why one polynomial need not perform both the control and leading-term tasks.
 
 \begin{theorem}[Two-mollifier transfer]\label{thm:two-mollifier}
@@ -286,7 +294,7 @@ The cap is not assumed inactive on $G$. Its complete loss is at most
 The capped contribution of $B$ is at most $U^\theta\sum_Bw_i\ll U^{1-\delta+\theta+\eps}$. Add these four errors to the short-polynomial moment asymptotic. There is no independence hypothesis between either polynomial and the family.
 \end{proof}
 
-\subsection{Source-qualified character-family application}
+\subsection{Application to finite-order character families}
 To state the scope of the arithmetic application, fix a field containing the $n$th roots of unity, $n\ge3$, admissible finite local data $S$, and one allowed fixed finite-order twist $\psi$. Rows are the actual $n$th-power-free exterior integral ideals, ordered by their full norms. Character values at nonunits are zero. Let
 \[
  L_{\mathfrak a}(s)=L_F^S(s,\psi\chi_{\mathfrak a}),\qquad
@@ -298,7 +306,7 @@ The application in \cite{R989} adopts the precise large-sieve, flat-cutoff funct
  K_n(U,V)=U+V+U^{1-1/n}V^{2/n}+U^{2/n}V^{1-1/n},
 \end{equation}
 with power-free indices on both sides. Full columns $\mathfrak c=\mathfrak e\mathfrak f^n$ retain the exact mask
-$\chi_{\mathfrak a}(\mathfrak c)=\chi_{\mathfrak a}(\mathfrak e)\ind_{(\mathfrak a,\mathfrak f)=1}$, without an extra condition $(\mathfrak e,\mathfrak f)=1$. The complete conjugate dual and its actual conductor are part of the functional-equation contract. These analytic contracts are not independently reconstructed in this manuscript; the next statement is explicitly conditional on them.
+$\chi_{\mathfrak a}(\mathfrak c)=\chi_{\mathfrak a}(\mathfrak e)\ind_{(\mathfrak a,\mathfrak f)=1}$, without an extra condition $(\mathfrak e,\mathfrak f)=1$. The complete conjugate dual and its actual conductor are part of the functional-equation estimate. These analytic inputs are not independently reconstructed in this manuscript; the next statement is explicitly conditional on them.
 
 For a nonnegative smooth $W$ supported in $(1,2)$, put
 \[
@@ -314,7 +322,7 @@ and
 All neutral aliases for $k\ge n$ occur in this positive local average.
 
 \begin{reported}[Capped fixed-order laws of \cite{R989}]\label{prop:all-capped}
-Under the named source contracts, at $n=6$, $s=3/4+\ii t$, fixed $k\ge1$ and fixed compact $t$-range, define
+Under the named analytic assumptions, at $n=6$, $s=3/4+\ii t$, fixed $k\ge1$ and fixed compact $t$-range, define
 \[
  e_k=\frac1{8k+2},\qquad
  \delta_k=\begin{cases}
@@ -333,6 +341,6 @@ More generally, on every fixed line $1/2<\sigma<1$, put $d=2\sigma-1$, $a=\min(d
 \end{reported}
 
 The arithmetic leading term is obtained by expanding a short polynomial before averaging. Nonprincipal tuples cost
-$U^{1/2+\eps}B^{k(5/2-2\sigma)+\eps}$, while the omitted neutral-tuple tail costs $UB^{-d/2}$. The long polynomial is chosen using the predecessor's complete residual estimate. Theorem~\ref{thm:two-mollifier} then supplies the displayed transfer, including the cap loss on the good set. This explanation identifies the operation contributed by \cite{R989}; it is not a substitute for its deep source contracts.
+$U^{1/2+\eps}B^{k(5/2-2\sigma)+\eps}$, while the omitted neutral-tuple tail costs $UB^{-d/2}$. The long polynomial is chosen using the predecessor's complete residual estimate. Theorem~\ref{thm:two-mollifier} then supplies the displayed transfer, including the cap loss on the good set. This explanation identifies the operation contributed by \cite{R989}; it is not a substitute for its deep analytic assumptions.
 
 At $k=1$, the two useful choices are cap $U^{1/6}$ with error $U^{9/10+\eps}$ and cap $U^{1/4}$ with error $U^{59/60+\eps}$. Every statement is for fixed order. The constants are not controlled for an unbounded-order limit, and the cap exponent at large $k$ is not uniformly superior to every earlier fixed cap. At a zero, the cap remains compatible with the family error. This is an all-fixed-moments result of a capped kind, not an uncapped moment theorem or a zero-free half-plane.

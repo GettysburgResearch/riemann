@@ -1,8 +1,10 @@
-\section{Complete native denominator and frequency sectors}\label{sec:native}
+\section{Keeping the signs in M\"obius sums}\label{sec:native}
 
-The native arguments of \cite{R994} keep the literal old M\"obius prefix, rather than replacing it by an arbitrary coefficient family. This distinction remains important even after its harmless sectors have been removed.
+The family methods leave an exceptional-member problem. A different approach works directly with the ordinary M\"obius function. The starting point is an exact identity: knowing $\mu(n)$ up to $Y$ determines a quadratic expression that agrees with $\mu(n)$ up to, but not including, $(Y+1)^2$.
 
-\subsection{An exact strict-square-step identity}
+This is useful only if its signs are retained. Bounding every summand by its absolute value gives an estimate too large for the intended application. The work in \cite{R994,R1003} separates contributions that can already be bounded from the remaining signed sum. In the repository this is called the \emph{native} approach: the coefficients are the original M\"obius coefficients, not arbitrary bounded substitutes. We retain that meaning here.
+
+\subsection{An exact identity from one scale to its square}
 Fix an integer $Y\ge2$, put $b=Y+1$, and define
 \[
  g_Y(n)=\mu(n)\ind_{n\le Y},\qquad z_Y=g_Y*g_Y,\qquad
@@ -43,7 +45,7 @@ Indeed the Dirichlet-convolution identity
 has right side supported on $n\ge b^2$, since each factor $\delta-\mathbf1*g_Y$ vanishes below $b$. Here $\mathbf1(n)=1$ and $\delta$ is the convolution unit. Weighted summation gives
 $m(k)=2M_Y-\sum_d z_Y(d)h_{\lfloor k/d\rfloor}/d$. Grouping the reduced rational frequencies gives \eqref{eq:Newton-exact}. The first possible coefficient defect at $b^2$ is $\mu(b)^2$, so the endpoint is strict.
 
-\subsection{Complete coefficient factorization}
+\subsection{Factoring the reduced-denominator coefficients}
 For $d\ge1$ put $m_d(x)=\sum_{n\le x,(n,d)=1}\mu(n)/n$, with value zero for $x<1$. We use Tao's elementary bound \cite{Tao10}
 \begin{equation}\label{eq:masked-m}
  \abs{m_d(x)}\le1.
@@ -92,7 +94,7 @@ Indeed its logarithm is at most $4\sum_{n\ge2}n^{-2}+\sum_{n\ge2}n^{-3}\le13/4$,
 
 The rectangular factorization \eqref{eq:coefficient-factorization} relies on all products in \eqref{eq:CY}. An additional cutoff $d\le k$ inside that sum would destroy the factorization, and is not part of this theorem.
 
-\subsection{Small denominators and complete small-core sectors}
+\subsection{The denominator ranges that can be controlled}
 The low-denominator estimate of \cite[native proof, Lemma 3]{R994} is
 \begin{equation}\label{eq:low-denominator}
  \sum_{K\le k<2K}\left|\sum_{2\le q\le Q}C_Y(q)S_q(k)\right|^2
@@ -186,7 +188,7 @@ If $V^{\mathrm{rough}}_{Y,\rho,S}$ retains only cores greater than $S$, Theorem~
 \end{equation}
 There is no additional count of annuli. For $\log S=o(\log Y)$ the squared removed cost is subpower, not necessarily vanishing.
 
-\subsection{A completely paid frequency tail}
+\subsection{A bound for the entire high-frequency tail}
 The additional result of \cite[arithmetic frequency-tail proof]{R1003} has a short direct derivation. Let
 \[
  Z_Y(x)=\sum_{d\le Y^2}\frac{z_Y(d)}dR(x/d),\qquad
@@ -256,6 +258,6 @@ then $F_X\ll_\eps X^{a/(2-p)+\eps}$. Indeed an input exponent $\kappa$ is replac
 \]
 For each desired loss choose a sufficiently large fixed $j$, then the earlier losses. For the actual $m$, dyadic Cauchy--Schwarz makes its Mellin transform holomorphic on $\Re z>(\kappa-1)/2$ when $F_X\ll X^{\kappa+\eps}$. This excludes zeta zeros to the right of $(1+\kappa)/2$.
 
-Thus $(a,p)=(1/3,3/2)$ would give $5/6$, and $(1/4,3/2)$ would give $3/4$. Neither recurrence is established here. In particular, \eqref{eq:crossing-comparison} on a sparse cofinal set is not itself the all-$Y$ premise \eqref{eq:recurrence}. The separate all-prefix growth consumer invoked in \cite{R994} must be checked at its own scope before using a weaker cofinal formulation.
+Thus $(a,p)=(1/3,3/2)$ would give $5/6$, and $(1/4,3/2)$ would give $3/4$. Neither recurrence is established here. In particular, \eqref{eq:crossing-comparison} on a sparse cofinal set is not itself the all-$Y$ premise \eqref{eq:recurrence}. The separate all-prefix growth theorem invoked in \cite{R994} must be checked at its stated hypotheses before using a weaker cofinal formulation.
 
 The low-frequency counterexample in \cite[\texttt{LOW\_FREQUENCY\_ATTACK.md}]{R1003} further distinguishes the arithmetic task from a generic operator inequality. It constructs bounded squarefree-supported coefficient arrays with first coefficient one and both smooth balance coordinates zero, but with old energy of order $Y^\kappa$ and output energy of order $Y^{2\kappa}$. Those arrays do not obey M\"obius inversion. The result rules out obtaining the advertised contraction from that larger coefficient class alone; it is not a counterexample for the actual M\"obius coefficients.

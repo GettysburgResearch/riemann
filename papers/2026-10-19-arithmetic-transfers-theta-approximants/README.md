@@ -1,42 +1,33 @@
-# Arithmetic transfers, finite theta approximants, and obstruction estimates for zeta functions
+# Zero-free regions, character averages, and approximations to the Riemann xi function
 
-**Author draft — 19 October 2026.** This is an additive manuscript, not a merge or approval of the underlying research branches. It covers selected recent contributions through the immutable sources in PRs #1003 and #1004, including their predecessors. No RH proof or new global ordinary-zeta zero-free region is claimed.
+**Revised manuscript — 19 October 2026.** Gettysburg Research · Agentic Polymath project.
 
-## Read and build
+The revised 49-page paper explains the zero-free proposals and their mathematical context before developing the character-average, Möbius, theta, and determinant arguments. It replaces the original 36-page editorial version in the same manuscript directory. It is not a merger of the research branches or an approval of their analytic claims.
 
-`main.tex` is the manuscript entry point. `sections/` contains its ten source chapters; `main.bbl` is the pre-generated bibliography and `references.bib` is the corresponding editable bibliographic data. The PDF can be built without BibTeX, shell escape, external downloads, or a checkout of the research packets:
+## What changed
+
+The new Section 2 covers the two OpenAI manuscripts, Cureton–Thorner's reported 31/32 all-field result, and the repository proposals 23/24, 25/27, 11/12, 91/100, 109/120, 10/11, 9081/10000, 49/54, the archived 68/75, and the 19/21 and 271/300 comparisons. It explains the gains from zero-density stratification, numerator averaging, shorter support, fourth moments, and the enlarged correction domain. The ordinary-zeta and all-number-field settings are not conflated.
+
+Later work is also included: note #1005's explicitly import-dependent 0.87488666 corollary, the related quartic attempts in #1006, and #1008's finite-jet zero-insertion obstruction. The conditional gain in #1005 is stated at its actual size, 4 × 10⁻⁸ relative to its cited Xu–Sang value. The unproved mixed-mean target in #1006 is not presented as an achieved region.
+
+The introduction and section openings now explain the mathematical questions in ordinary prose. Technical derivations, quantifiers, and the distinction between finite matching and all-order existence are retained. The author appears on the title page only; all later pages have page numbers without author headers. Gettysburg Research and the Agentic Polymath project appear on the title page, and the closing acknowledgment expressly records AI assistance, including GPT 6 Pro.
+
+## Build and download package
+
+`main.tex` is the entry point. The eleven files under `sections/` contain the text, `main.bbl` is the ready-to-use bibliography, and `references.bib` is its editable counterpart.
 
 ```sh
 python -I -S -B verify_paper.py
 python build.py
+python build.py --arxiv recent-zeta-contributions-v2-arxiv.zip
 ```
 
-The build requires a standard TeX installation with pdfLaTeX, AMS packages, Latin Modern, geometry, microtype, hyperref, and booktabs. It runs pdfLaTeX three times, checks references and overfull boxes, and writes `main.pdf`. The mathematical checker uses only Python's standard library. On a system without Python, run `pdflatex -no-shell-escape main.tex` three times.
+The build needs a standard pdfLaTeX installation with AMS packages, Latin Modern, geometry, microtype, hyperref, and booktabs. It uses three no-shell-escape passes, needs no network or research-packet checkout, and writes `main.pdf`. The clean arXiv source archive contains 14 source files; it excludes the PDF, build products, and font files. The compiled PDF and complete package are supplied in the accompanying conversation. Repository publication here concerns the editable source and checks; no arXiv submission has been made.
 
-Create a clean, source-only arXiv upload archive with:
+## Evidence and attribution
 
-```sh
-python build.py --arxiv recent-zeta-contributions-arxiv.zip
-```
+`SOURCE_LOCK.json` records 26 immutable research versions and the exact reading scopes, plus the external references used for the expanded history. Several historical entries were read at detailed PR-statement scope, not as fresh analytic audits. Fresh primary-body retrieval of the cited Liu and Xu–Sang versions was unsuccessful, so their versions, values, and hypotheses are reported through the pinned repository accounts.
 
-The archive contains `main.tex`, all local section files, `main.bbl`, and `references.bib`; it excludes the generated PDF, logs, auxiliary files, and fonts. The repository contribution preserves editable source and build instructions. The compiled PDF is also delivered in the accompanying conversation. No arXiv upload or submission has been performed.
+`PAPER_CHECKS.json` is the output of 972 finite arithmetic and editorial checks. They do not verify the infinite analytic proofs. `REPLAY_RECEIPTS.json` preserves the first version's original packet replays; those historical runs are not represented as fresh revision runs. `VALIDATION.md` records this revision's checks, compilation, and PDF inspection. `CLAIM_LEDGER.md` and `AUTHOR_REVIEW.md` distinguish the types of claims and remaining review obligations.
 
-## Mathematical contents
-
-The main text gives detailed proofs of the uniform primitive quadratic-field coefficient comparison, actual quadratic-family residual transfer and optimal auxiliary-variance removal, the elementary two-mollifier theorem, complete native denominator/core and frequency-sector estimates, weighted canonical and strip compactness statements, controlled negative Ising couplings, paired scale filters, and primitive positive-determinant regularization.
-
-It presents the five source-certified real-zero approximants matching theta Taylor orders 22, 24, and 26, with the exact normalization, parameter-cube mechanism, and complete-source remainder formulas. These are finite certificates, not an unbounded-order theorem. The original order-26 certification campaigns were not rerun for this editorial compilation.
-
-The proposed all-field `271/300` composition and real-zero prime-bias consequence are explicitly source-qualified. The failed `0.87` comparison is an exact obstruction within its specified estimate system, not an actual zeta-zero assertion or a general impossibility theorem.
-
-## Provenance and review
-
-- `SOURCE_LOCK.json`: thirteen immutable research heads, principal file paths, recorded blob identities, and exact reading/replay scopes.
-- `CLAIM_LEDGER.md`: classification of the paper's principal results, source contracts, and missing conclusions.
-- `PAPER_CHECKS.json`: output of the 921-predicate finite arithmetic/editorial check. This is not an analytic proof certificate.
-- `VALIDATION.md`: actual fresh replays, compile and visual-inspection scope, and limitations.
-- `AUTHOR_REVIEW.md`: author, attribution, mathematical-review, and submission decisions that remain with the human author.
-
-Some original packets contain historical `remote_publication: false` literals. Those are frozen source-report fields, not current GitHub queries; their separate publication notices supersede publication status only. The manuscript does not edit any source packet or its historical report.
-
-Substantial AI assistance is disclosed in the paper. A clean build and finite checks do not establish novelty, certify every imported analytic contract, or replace human author approval or independent mathematical review.
+No new zero-free region is proved by this editorial revision. The proposed analytic compositions, finite certificate claims, and open all-order estimates retain their source qualifications. Independent mathematical review and human approval of authorship, attribution, and submission remain necessary.

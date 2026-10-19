@@ -1,8 +1,12 @@
-\section{Finite theta approximants and a weighted canonical criterion}\label{sec:theta}
+\section{Approximating the xi function by functions with real zeros}\label{sec:theta}
 
-The finite approximation results in \cite{R1003} are more recent than the order-20 Ising construction in \cite{R994}. They use an explicitly different class: a Gaussian times a real-rooted even polynomial. A positive inverse Fourier density is not required. This is an enlargement of the approximation class, not a claim that the new functions are ferromagnetic probability laws.
+The Riemann hypothesis can also be approached as an approximation problem. Write $\Xi(z)=\xi(1/2+\ii z)$. Its zeros are all real exactly when the nontrivial zeros of $\zeta$ lie on the critical line. A sequence of functions with real zeros would therefore be useful if it converged to $\Xi$ in a sufficiently strong sense.
 
-\subsection{The actual source and the physical variable}
+The finite result is concrete. The constructions in \cite{R1003} match the theta expansion through Taylor orders $22$, $24$, and $26$ using a Gaussian times an even polynomial with real zeros. This goes beyond the order-$20$ Ising construction of \cite{R994}, but uses a different class of functions: a positive probability-density representation is no longer required. The change enlarges the available constructions; it does not identify them with ferromagnetic models.
+
+The main distinction in this section is between \emph{matching a fixed number of coefficients} and \emph{matching arbitrarily many coefficients with a convergence theorem}. We have finite certificates for the former and a sufficient criterion for the latter. The all-order existence statement remains open.
+
+\subsection{The theta integral and its normalization}
 For $t\ge0$ put $q_n=\pi n^2$ and
 \begin{equation}\label{eq:theta-density}
  \Phi(t)=\sum_{n\ge1}
@@ -96,7 +100,7 @@ The theta directory at the pin in Appendix~\ref{app:provenance} contains the rat
 \end{center}
 The mathematical acceptance requires the source bounds described next; a matching hash alone is not a proof of them. This manuscript records the frozen certificates and their proof mechanism. Their full order-26 source reconstruction was not newly executed during the editorial compilation.
 
-\subsection{Complete-source error bounds}
+\subsection{Bounding the errors in the theta integrals}
 The producer described in \cite[\texttt{theta/SOURCE26.md}]{R1003} uses an authenticated interval backend from \cite{R994}, configured for 512 fractional bits and Taylor degree 220. It explicitly retains indices $n=1,\ldots,11$ and integrates to $U_n=c_n/16$, where
 \[
  (c_1,\ldots,c_{11})=(40,29,23,18,14,12,9,7,5,3,2).
@@ -126,7 +130,7 @@ After the normalization interval is proved positive, directed division gives the
 \]
 Every Taylor, time, and index remainder enters the target intervals used in \eqref{eq:Banach-bounds}. Public zero-table entries were used only to initialize exploratory numerical searches; the accepting checker does not load a zero table. The successful numerical chain $64/22\to84/24\to104/26$ is not a certified connecting path: each endpoint has its own certificate, and no unbounded induction follows from two successful extensions.
 
-\subsection{A positive weighted criterion without unit multiplicities}
+\subsection{What would suffice at unbounded orders}
 The next theorem is the all-order component of \cite[\texttt{WEIGHTED\_CANONICAL.md}]{R1003}. It removes the need for a positive Gaussian reserve, a positive inverse Fourier density, integer multiplicities, or a common support bound. Its unbounded feasibility hypothesis is not proved by the five finite certificates.
 
 \begin{theorem}[Cofinal positive weighted feasibility]\label{thm:weighted-canonical}
@@ -182,3 +186,58 @@ This is a positive finite moment problem. Every available Hankel matrix
 must be positive semidefinite whenever its entries are prescribed, by integrating $p(x)^2$ and $xp(x)^2$. We do not assume a converse for a truncated system. In particular, finite feasibility through $M=13$ is not unbounded positive feasibility.
 
 The earlier connected 305-vertex ferromagnet in \cite{R994} remains a distinct finite contribution: it matches the original standardized theta moments through degree 20 with 304 observed spins and strictly positive couplings. The present order-26 products are stronger in Taylor order but belong to a larger, not necessarily probabilistic, class. Conflating the two would misstate what either certificate proves.
+
+\subsection{Why a finite match cannot locate all zeros}
+The need for unbounded orders is not merely a technical qualification. The later note~1008 shows that a finite theta match can coexist with prescribed nonreal zeros far away, even while retaining the same simple bound on the whole plane \cite{R1008}. The construction is short enough to include here.
+
+\begin{proposition}[Preserving a finite match while inserting four zeros]\label{prop:finite-insertion}
+Suppose
+\[
+ P(z)=e^{-az^2}\prod_{j=1}^N(1-b_jz^2),\qquad
+ a>0,\quad b_j>0,\quad a+\sum_jb_j=\tfrac12,
+\]
+with $\sum_jb_j^r=Q_r$ for $2\le r\le M$. Suppose $M-1$ chosen nodes are distinct, so their power-sum Jacobian is nonsingular. Fix $v>0$ and $B>0$. For every sufficiently large $T$, there is an even real entire function $G_T$ with the same Taylor coefficients through order $2M$, satisfying
+\[
+ |G_T(z)|\le e^{|z|^2/2}\qquad(z\in\C),
+\]
+whose only nonreal zeros in the physical variable, for $g_T(w)=G_T(\sqrt v\,w)$, are $\pm T\pm\ii B$.
+\end{proposition}
+\begin{proof}
+Put
+\[
+ c=\frac1{v(T+\ii B)^2}=u+\ii y.
+\]
+As $T\to\infty$, $c\to0$. The implicit-function theorem permits a small change in the chosen real nodes such that
+\[
+ \sum_j\widetilde b_j^r=Q_r-2\Re(c^r),\qquad 2\le r\le M.
+\]
+Indeed their Jacobian has entries $r b_j^{r-1}$, a nonsingular diagonal multiple of a Vandermonde matrix. All the changed nodes remain positive. For large enough $T$, the adjusted Gaussian coefficient
+\[
+ \widetilde a=\tfrac12-\sum_j\widetilde b_j-2u
+\]
+is also positive. Define
+\[
+ G_T(z)=e^{-\widetilde a z^2}
+   \prod_j(1-\widetilde b_jz^2)(1-cz^2)(1-\overline c z^2).
+\]
+The logarithmic coefficients give the stated Taylor match. The last two factors give precisely the four prescribed physical zeros; the other factors have real zeros.
+
+For sufficiently large $T$, $u>0$ and $y^2\le u^2$. Writing $t=|z|^2$ gives
+\[
+ \begin{split}
+ |(1-cz^2)(1-\overline c z^2)|
+ &\le 1+2ut+(u^2+y^2)t^2\\
+ &\le 1+2ut+2u^2t^2\le e^{2ut}.
+ \end{split}
+\]
+The bounds for the real-node factors and the defining identity for $\widetilde a$ now give the unchanged envelope $e^{|z|^2/2}$.
+\end{proof}
+
+The source applies this argument to the nonsingular finite constructions through order $26$. It does not construct nonreal zeros of $\xi$: the functions $G_T$ are auxiliary functions. The order $M$ is fixed first, and the inserted zeros are then moved far away. This is exactly the distinction that an argument for RH must overcome.
+
+There is even a quantitative indication of how little a finite test can see. The extra squared absolute node mass is
+\[
+ 2|c|^2-2\Re(c^2)
+ =\frac{16T^2B^2}{v^2(T^2+B^2)^4}=O_{v,B}(T^{-6}).
+\]
+A separate probability-law construction in \cite{R1008} retains positivity and several leading growth properties while allowing both zero geometries. Its theta application uses the finite Ising model through order $20$, not the order-$26$ entire-function construction. Neither result contradicts the all-order criterion: both show why its unbounded feasibility hypothesis cannot be replaced by finitely many successful matches.

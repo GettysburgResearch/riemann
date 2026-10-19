@@ -1,16 +1,13 @@
-# Author review before submission
+# Review before submission
 
-This is a complete, compilable preprint draft, not an arXiv submission and not an independent mathematical acceptance certificate.
+This is a revised, compilable research manuscript, not an arXiv submission or a declaration that all analytic proposals have been independently accepted.
 
-The draft uses the public name **Gideon Freund** and affiliation **Gettysburg Research**. No email, ORCID, academic appointment, or coauthor identity has been invented. The named author must approve this metadata and decide the final author/contributor list; the paper credits the repository contributors and discloses substantial AI assistance. Review the original source credits before asserting exclusive authorship or novelty.
+The title page uses the requested public name **Gideon Freund**, **Gettysburg Research**, and **Agentic Polymath project**. Later PDF pages have page numbers only, without author running headers. The final acknowledgment explicitly discloses substantial AI assistance, including **GPT 6 Pro**. No email, ORCID, academic appointment, or additional coauthor has been invented.
 
-The principal pre-submission decisions are:
+Before public submission, the human author should approve the contributor and authorship credits, review primary-literature attribution, and decide whether all the explicitly conditional and proposed comparisons belong in one paper. The full historical progression is now included, but its inclusion is not a new proof audit.
 
-1. Approve the title, abstract, authorship, affiliation, contribution map, and AI-assistance disclosure.
-2. Commission mathematical review of the new arithmetic adapters and all infinite-limit arguments. In particular, review the full actual-family tail and residual proofs, weighted canonical limit identification, negative-edge contraction, and full determinant comparison.
-3. Independently reconstruct the order-26 theta source and the five certificate cubes from the pinned primitives. The manuscript supplies the normalization and analytic error bounds, but its preparation did not rerun that campaign.
-4. Decide whether the explicitly source-qualified broad-field and prime-bias proposals belong in this consolidated account or in separate manuscripts. Their appearance here does not certify their full upstream proofs.
-5. Review primary-literature priority and credit. The manuscript makes no world-record or exhaustive novelty claim. Do not cite the privately circulated, unauthenticated motivating note as a public arXiv paper.
-6. Confirm the chosen arXiv license, subject classification, endorsement eligibility, and final source package. These account-level submission decisions have not been made by this task.
+Independent mathematical review should prioritize the short-support reflection and local correction-factor arguments used by the all-field proposals; the exact analytic hypotheses of the later ordinary-zeta corollary; the quadratic-family limit arguments; and the theta integral enclosures and five full parameter cubes. The original order-26 campaign was not rerun for this revision.
 
-The source package compiles offline without shell escape. Technical formatting readiness and scientific review are separate. No repository main branch, existing scientific packet, or integrated claim status is changed by this manuscript PR.
+The later finite-jet and probability countermodels must not be mistaken for counterexamples to RH. Likewise, the unproved quartic mixed mean must not be presented as a new 0.874 region. The paper distinguishes these points explicitly.
+
+The author must make any arXiv account, endorsement, license, category, or final submission decisions. Nothing in this revision submits the paper, merges research branches into main, or approves integrated mathematical claims.

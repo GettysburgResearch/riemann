@@ -1,33 +1,35 @@
-# Manuscript preparation and verification record
+# Revision validation — 19 October 2026
 
-## Delivered mathematical scope
+This record applies to the revised 49-page manuscript. It does not reclassify the source research as independently accepted mathematics.
 
-This is an editorial consolidation of the frozen sources in `SOURCE_LOCK.json`. It supplies a conventional mathematical exposition with full component proofs where stated, preserves named external inputs, distinguishes finite certificates from unbounded claims, and retains the unproved estimates. The order-26 results are included at the newer #1003 pin, not left at the earlier degree-20 frontier.
+## Checks performed for this revision
 
-No RH proof, new global ordinary-zeta zero-free region, source-branch merge, or integrated mathematical promotion is made. No independent mathematical referee, Lean build, actual L-value or zero census, or repository-wide validator was run for this manuscript.
+- `python -I -S -B verify_paper.py` and `python -I -S -O -B verify_paper.py` pass with byte-identical output. The report contains 972 finite arithmetic/editorial checks, including the inherited 850 rational middle-class comparisons, historical Mellin sums, the selected-density gain, the conditional #1005 boundary and preceding-stage equality, four finite conjugate-node fixtures, local LaTeX inputs, 126 unique labels, 41 bibliography entries, and 26 source pins.
+- The bibliography keys in `main.bbl` and `references.bib` agree. All LaTeX citations and cross-references resolve. Every linked research source uses a 40-character immutable commit, not a moving branch.
+- Three pdfLaTeX passes with `-no-shell-escape` succeed. There are no overfull boxes or undefined references. The ordinary disabled-shell-escape package warning is expected and does not indicate a build failure.
+- A clean 14-file arXiv source ZIP was extracted into a separate directory and compiled in three passes. Every page has the same extracted text as the main build. The archive contains no PDF, font file, or transient build product.
+- The 49-page PDF was rendered for layout inspection. Contact sheets cover the full manuscript; title, progression tables, technical tables, and the closing page were also checked separately. After the final table/header refinements, selected affected pages were rendered again, and a full-page text-coordinate check found no horizontal text outside the prescribed text area.
+- PDF text inspection confirms that the author's name occurs visibly on page 1 only; the Gettysburg Research and Agentic Polymath project credits appear on the first page; the explicit GPT 6 Pro acknowledgment appears at the end, on page 49. Page numbers replace the old alternating author headers.
 
-## Fresh executions
+The checks cover finite arithmetic, source/editorial consistency, and document production. They are not an independent verification of the infinite analytic estimates, the original theta source integrals, or the five original certificate cubes.
 
-The unchanged delivered #1000 packet's complete `replay.py` passed: 3,370 finite predicates per ordinary/optimized mode, ten manifested payloads, and eight separately executed corruptions rejected at their designated gates. The unchanged delivered #1002 packet's complete `replay.py` passed: five concurrent finite lanes, 20,279 predicates per mode, fourteen manifested payloads, and twelve designated rejected corruptions. Both returned with empty standard error. The reports include repeated setup guards, not independent analytic cases. Full summarized outputs are preserved in `REPLAY_RECEIPTS.json`.
+## Source and review limits
 
-The unchanged #1004 `verify.py` passed in isolated normal and optimized Python. Both complete outputs match its archived `RESULTS.json` byte-for-byte; their SHA-256 is `70e3435ce181a2222d661d796bf17df9db11ca86b47077b458a22f8a641ea7af`. No new corruption campaign was claimed for that four-file audit.
+The original thirteen source locks and the v1 `REPLAY_RECEIPTS.json` are preserved as historical records. Their recorded runs are not claimed as new executions in this revision. The original #1003 full theta integration and parameter-cube campaigns, #1005's complete originating checker, and #1006's large experiment collection were not rerun.
 
-The manuscript-specific `verify_paper.py` passes in isolated ordinary and optimized Python with byte-identical output. It performs **921 finite predicates**, including 850 complete rational middle-class comparisons. It verifies the stated margin `96266833/858608062500`, the two failed-0.87 model minima, length/cap/recurrence/frequency/variance arithmetic, five rounded Banach budgets, 116 unique labels, 20 bibliography entries, all local includes, and thirteen source pins. `PAPER_CHECKS.json` is the complete output. These checks do not prove the analytic input contracts or rebuild the theta moment source.
+The expanded historical account reads the detailed live PR statements for #957–974, including overlap and recovery qualifications. The #959 source-identity note, the complete #1005 uniform-boundary argument, and the qualitative finite-jet insertion proof in #1008 were additionally read at the scopes recorded in `SOURCE_LOCK.json`.
 
-In particular, the original #1003 complete theta-source and five-cube certification campaigns were **not rerun** in this editorial turn. The source proofs, normalization, source remainder derivations, and accepting mechanism were read and reproduced in the manuscript. The numerical bounds remain reported source certificates, not a newly independent arithmetic implementation.
+The two OpenAI scopes were checked against the pinned primary repository: the September 30 metadata and formalization-scope document, and the October 5 introduction and main theorem. Fresh primary-body retrieval of the Liu and Xu–Sang versions was unsuccessful. Their versioned claims are therefore reported through the pinned research notes, not as fresh primary verification. The Cureton–Thorner formalization is reported by its project; no Lean build or axiom audit was performed here.
 
-## Compile and presentation checks
+No separate research agent, independent human referee, new analytic theorem, repository-wide validator, remote CI execution, arXiv submission, or merge into main is claimed by this revision.
 
-The manuscript was compiled using pdfTeX 1.40.26 / LaTeX, with shell escape disabled, through repeated passes. The final PDF has **36 pages**. All references and citations resolve; there are no overfull horizontal or vertical boxes and no unresolved `??` markers. The remaining generic epstopdf shell-escape warning is harmless: the manuscript includes no EPS figures or external conversion. One underfull vertical-page warning concerns page balancing, not clipping.
+## Reproduce
 
-All 36 pages were rendered with Poppler and inspected in contact sheets; the title page, theta-certificate table, and immutable-source table were also inspected at higher resolution. Text extraction and page-bound checks found no text outside a 20-point outer safety margin. The document has a linked contents list, numbered equations, named theorem/finite-certificate environments, bibliography links, and PDF author/title metadata.
+```sh
+python -I -S -B verify_paper.py
+python -I -S -O -B verify_paper.py
+python build.py
+python build.py --arxiv manuscript-v2-arxiv.zip
+```
 
-The clean arXiv source ZIP contains exactly thirteen files: `main.tex`, `main.bbl`, `references.bib`, and ten local section files. It excludes PDFs, fonts, transient LaTeX outputs, and source research archives. A fresh extraction compiled successfully in three no-shell-escape pdfLaTeX passes without any files outside that archive. This tests compilation, not arXiv account eligibility, moderation, endorsement, or submission acceptance.
-
-The compiled PDF is supplied with the conversation; the Git contribution contains the editable source, bibliography, build script, provenance, and checks. No binary PDF or third-party font file is added to the repository. Rebuilding can change PDF metadata and the resulting PDF hash; the mathematical source identity is the reproducibility anchor.
-
-## Author and source boundaries
-
-Human author approval is pending. Public author/affiliation metadata, contribution credit, the AI-assistance disclosure, source-qualified Section 9, literature priority, and the choice of submission license require review as described in `AUTHOR_REVIEW.md`. The privately circulated motivating note is not redistributed or assigned an authenticated public-paper citation.
-
-This manuscript is a new add-only paper directory, based on the observed main commit `f99d9e3908dde4865377c75d9ca051c1f545bf4f`. The publication PR records the actual new head and tree readback. Git storage and a successful compile do not constitute mathematical acceptance.
+`SHA256SUMS` binds the revised text and data files. `REVISION.json` records the delivered PDF and source-ZIP hashes; PDF metadata may change on a later rebuild. Remote publication is recorded separately after a successful commit and branch readback.

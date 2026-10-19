@@ -1,27 +1,27 @@
-# Manuscript claim and dependency ledger
+# Claim map for the revised manuscript
 
-All references below are bound to the full immutable commits in `SOURCE_LOCK.json`. This ledger classifies the manuscript's conclusions; it does not promote the underlying repository's scientific status.
+This ledger classifies what the paper presents. A compiled PDF, finite arithmetic check, or Git commit is not independent approval of an analytic theorem.
 
-| Manuscript label or section | Source | Scope and proof basis | What is not concluded |
-| --- | --- | --- | --- |
-| `thm:primitive`, `thm:field-average` | #996, #1002 | Uniform split/inert/ramified Euler kernels; explicit finite-family approximation to ordinary Möbius, with full proofs. | No power bound on the remaining signed field mean. |
-| `thm:L-tail`, `thm:residual-transfer` | #1001, #1003 | Actual quadratic characters, fixed compact sets right of 1/2, all square parts and dual tails retained; Heath-Brown's named large-sieve input. | The line 1/2 is not included; the convergence domain is not a zero-free region. |
-| `thm:variance` | #1003 | Exact finite-local-state optimization with independent Euler tail; transfer to actual growing families. | The ordinary scalar residual is not bounded below one. |
-| `thm:two-mollifier` | #989 | Elementary arbitrary-complex-array transfer proved in the text. | No uncapped inverse moment. |
-| `prop:all-capped` | #989 | Source-qualified fixed-order capped Euler laws under the exact Hecke-family sieve, functional-equation, and character-mean contracts. | No growing-order uniformity, critical-line result, or individual-zero exclusion. |
-| `prop:denominator`, `thm:small-core` | #994 | Full native products, exact prime-mask factorization, complete coherent square/core sectors. Tao's masked reciprocal bound is stated and proved in its used form. | Large-core signed cancellation is unproved. |
-| `prop:frequency-tail` | #1003 | Literal native frequency transform; published Bourgain 13/84 pointwise bound plus finite-polynomial moments; all high frequencies paid. | No low-frequency subquadratic contraction or new zero-free boundary. |
-| `cert:theta26`, Table 1 | #1003 | Five directed finite existence certificates reported at their source pins; full normalization, source-tail formulas, and Banach mechanism reproduced. | No fresh replay of the full order-26 source/certification campaign, connecting-path certificate, or unbounded extension. |
-| `thm:weighted-canonical` | #1003 | Complete conditional Montel/Hurwitz argument for positive weighted power sums at unbounded orders. | Positive weighted feasibility at unbounded orders remains open. |
-| `thm:strip-transfer` | #1002 | Explicit rare-jump counterexample and corrected one-exponential-budget compactness theorem. | No constructed cofinal theta approximants. |
-| `thm:negative-strip`, `prop:reference-variance` | #1001, #1003 | Finite-graph zero strip via explicit disk contraction and local negative-edge budgets; reference Gaussian bound is a named classical input. | No negative-coupling theta-matching family or new zeta strip. |
-| `prop:paired-notches` | #1002 | Incommensurate scale filters, full multiplicities, quantitative polynomial-height recovery, elementary real nonvanishing for two principal quadratic fields. | No full CT adapter or signed filtered remainder saving. |
-| `prop:exact-det`, `thm:all-mass` | #993, #1000, #1002 | Positive rational cycle matrices, exact prime-power height, complete all-mass comparison with explicit counterterm and tails. Classical cyclotomic facts are credited. | Matrix positivity/conditioning does not imply a centered height estimate or identify zeta zeros with eigenvalues. |
-| Section 9.1 | #977 and its named upstream adapters | The proposed 271/300 all-field comparison is source-qualified; exact finite substitutions independently repeated. | No independent reconstruction or acceptance of the deep reflection/domain/density adapters; no new ordinary-zeta record. |
-| Section 9.2 | #993, #1000 | Prime-bias and real-zero consequences retained as source-qualified proposals, with a scoped implication sketch. | No authenticated attribution of the privately supplied note, numerical conductor threshold, or fixed all-height complex strip. |
-| Section 9.3 | #934, #1004 | Exact positive gap within the stated failed-0.87 estimate model, with complete rational triangle certificate. | No asserted zero at 25/36, lower bound on actual arithmetic, or general impossibility theorem. |
-| Appendix A.2 | #991, #998, #994 | Related extraction, same-field replica, and signed-sector results summarized at stated source scope. | None is inserted as the missing arithmetic upper estimate. |
+| Topic | Source and status | What is not concluded |
+|---|---|---|
+| OpenAI 7/8 and alternate 11/12 | Reported external theorems; exact special-field/Dirichlet scope recorded | No new formalization run or extension to every number field |
+| Cureton–Thorner 31/32 | Reported all-field result; formalization reported by its project | No fresh full proof or Lean audit |
+| 23/24 → 25/27 → 11/12 | Proposed compositions in #957–959, based on identified analytic inputs | No independent certification by this revision |
+| Short support, numerator fourth moments, improved density | Proposed source-compatible arguments in #965–969 and #974 | Not inverse-L moments; no unlimited moment-order bootstrap |
+| 68/75 | Historical proposal preserved by #970 | Archive was not extracted and re-reviewed here; recovery is not a second discovery |
+| Enlarged local domain, 19/21 and 271/300 | #971/#974 local inputs and #977's source-qualified composition | Finite exponent margins do not prove the local/reflection adapters |
+| 0.87488666 | Exact parameter corollary in #1005 under Xu–Sang's stipulated analytic framework | Only 4 × 10⁻⁸ beyond its cited 0.8748867; no new direct analytic estimate |
+| Uniform primitive quadratic coefficients and field average | Component proofs in #996/#1002; exposition includes inverse kernels and signed finite-family comparison | Comparison with Möbius is not a bound on the retained Möbius sum |
+| Actual quadratic full-L approximation and local variance removal | Component arguments from #1001/#1003, using the stated classical quadratic large sieve | Residual limit retains |zeta M−1|²; no individual zero exclusion |
+| Two-mollifier transfer | Elementary finite-array theorem from #989; character applications retain its analytic inputs | Caps remain essential; no growing-order uniformity |
+| Signed Möbius denominator and high-frequency estimates | #994/#1003 component proofs | No complete subquadratic recurrence for the remaining low-frequency or rough-core expression |
+| Finite theta matching through 22,24,26 | Five frozen computer-assisted certificates in #1003, with their source normalization and cube argument reproduced | Original integral/cube campaign not rerun; finite order is not zero height or all-order feasibility |
+| Positive weighted canonical criterion | Conditional component theorem in #1003; proof included | Unbounded positive moment feasibility is not established |
+| Finite-jet nonreal zero insertion | #1008 analytic construction; proof included, at fixed matching order | No actual off-critical zeta zero; no contradiction to the cofinal criterion |
+| Strip compactness and controlled negative couplings | #1002/#1003 component arguments, using their stated positivity inputs | No cofinal theta model with a narrower strip |
+| Paired filters and positive determinants | #993/#1000/#1002 identities, error estimates, and conditional zero-exclusion implications | Neither positivity nor improved conditioning supplies the missing centered bound |
+| Quadratic prime bias | Source-qualified #993/#1000 consequences, separate from a fixed complex half-plane | Not a new ordinary-zeta strip; no authentication of the privately circulated note |
+| Failed 0.87 comparison | Exact model obstruction in #1004 | Not an arithmetic lower bound, actual zero, or impossibility theorem |
+| Later quartic attempts | #1006 summarized at published-statement scope | Its 0.874 implication has an unproved mixed-mean premise |
 
-## Evidence separation
-
-The ordinary/optimized manuscript checker tests finite constants, reference resolution, and source-pin transcription. The freshly rerun original #1000/#1002 campaigns test their declared finite constructions and corruption gates. The #1003 finite existence receipts remain source records. No part of this editorial contribution claims a new independent referee report, proof-assistant certificate, whole-repository validator, remote CI run, or actual L-value or zeta-zero census.
+The source map fixes each reading scope. New historical exposition does not silently promote a proposal, transfer a fixed-field theorem to a moving family, remove a cap, or turn finite matching into a global assertion. Classical methods are attributed; no exhaustive priority claim is made.

@@ -111,18 +111,40 @@ def main() -> None:
             file=file.with_suffix('.tex')
         require(file.is_file(),"local_include_"+include)
     lock=json.loads((ROOT/'SOURCE_LOCK.json').read_text())
-    require(len(lock['sources'])==13,"thirteen_frozen_sources")
+    require(len(lock['sources'])==26,"twenty_six_frozen_research_sources")
     for source in lock['sources']:
         require(bool(re.fullmatch('[0-9a-f]{40}',source['commit'])),"source_pin_"+str(source['pr']))
-        require(source['commit'] in text,"source_pin_printed_"+str(source['pr']))
+        require(source['commit'] in bbl,"source_pin_linked_"+str(source['pr']))
     require('arXiv submission' in text and 'No independent mathematical referee' in text,"review_and_submission_boundary")
+    require(r'\pagestyle{plain}' in text, 'page_number_only_headers')
+    require('Gettysburg Research' in text and 'Agentic Polymath project' in text, 'project_credit')
+    main_source=(ROOT/'main.tex').read_text()
+    require(main_source.count('Gideon Freund')==2, 'name_only_author_and_pdf_metadata')
+    require('Gideon Freund' not in '\n'.join(p.read_text() for p in (ROOT/'sections').glob('*.tex')), 'no_author_name_in_body_or_running_headers')
+    require(main_source.index('GPT 6 Pro')>main_source.index(r'\input{main.bbl}'), 'named_AI_acknowledgment_at_end')
+    require(F(11,12)-F(6267001,37500000)/4==F(43744333,50000000), 'conditional_1005_boundary')
+    require(F(8748867,10000000)-F(43744333,50000000)==F(1,25000000), 'conditional_1005_gain')
+    require((1+F(29991,40000))/2==F(69991,80000), 'preceding_stage_license_arithmetic')
+    stages=[(F(13,20),F(37,120),F(23,24)), (F(35,54),F(5,18),F(25,27)),
+      (F(2,3),F(1,4),F(11,12)), (F(17,25),F(23,100),F(91,100)),
+      (F(41,60),F(9,40),F(109,120)),(F(15,22),F(5,22),F(10,11)),
+      (F(37,54),F(2,9),F(49,54))]
+    for shift,power,boundary in stages:
+        require(shift+power==boundary,'historical_mellin_'+str(boundary))
+    require(F(8,11)-F(43,60)==F(7,660),'fourth_density_gain')
+    for T in (3,5,10,100):
+        v,B=F(1,20),F(1,2)
+        u=(T*T-B*B)/(v*(T*T+B*B)**2)
+        y=-2*T*B/(v*(T*T+B*B)**2)
+        require(4*y*y==16*T*T*B*B/(v*v*(T*T+B*B)**4),'finite_pair_mass_'+str(T))
+        require(u>0 and y*y<=u*u,'finite_pair_envelope_'+str(T))
     report={'status':'PASS','finite_predicates':len(checks),'middle_classes':850,
       'minimum_middle_margin':str(min(margins)),'binding_middle_index':411,
       'failed_087_old_minimum':str(old['Emin']),'failed_087_relaxed_minimum':str(relaxed['Emin']),
       'mollifier_ranges':ranges,'rounded_certificate_budgets_checked':5,
       'latex_files':len(texfiles),'labels':len(labels),'bibliography_entries':len(bibkeys),
-      'source_pins':13,'infinite_proofs_verified':False,'theta_source_rebuilt':False,
-      'new_zero_free_region':False,'arxiv_submitted':False}
+      'source_pins':len(lock['sources']),'infinite_proofs_verified':False,'theta_source_rebuilt':False,
+      'new_zero_free_region_proved_by_revision':False,'conditional_1005_claim_reported':True,'arxiv_submitted':False}
     print(json.dumps(report,indent=2,sort_keys=True))
 
 if __name__=='__main__':

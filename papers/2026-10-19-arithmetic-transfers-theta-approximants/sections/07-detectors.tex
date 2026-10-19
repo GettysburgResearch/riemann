@@ -1,6 +1,8 @@
-\section{Fixed-source filters and primitive positive determinants}\label{sec:detectors}
+\section{Scale filters and a determinant that retains the primes}\label{sec:detectors}
 
-This section brings together two constructions from \cite{R993,R1000,R1002}. Their common requirement is exact retention of target poles. Neither a scalar main-term subtraction nor positive definiteness is itself the missing arithmetic upper bound.
+The two constructions in this section ask a related question: can we change the arithmetic expression without erasing the zero we hope to rule out?
+
+A scale difference can remove a known main term, but may also remove certain oscillations. Using two different scales avoids a common nonreal blind spot. A determinant provides a different representation: its logarithm is an exact weighted sum of prime powers. In both cases the representation is useful because its Mellin transform still detects every relevant zero. The work in \cite{R993,R1000,R1002} establishes these identities and bounds their approximation errors. An upper bound strong enough to exclude new zeros remains a separate task.
 
 \subsection{Two scale differences without a common nonreal blind spot}
 For real $\lambda$ and $h>0$, define
@@ -95,7 +97,7 @@ Write
 \]
 This is also $\log\prod_{r<N}\operatorname{lcm}(1,\ldots,r)$ at integer $N$. The identity is a classical Riesz-mean quantity in a matrix representation; it is not a spectrum of Riemann zeros.
 
-\subsection{A complete all-mass regularization comparison}
+\subsection{Regularizing the determinant and controlling the error}
 Continuously at zero, put
 \[
  f(u)=\log\frac{\sinh(u/2)}{u/2},\quad
@@ -180,7 +182,7 @@ If $D_N$ is the matrix dimension, $D_N\le N^3/6$, and the eigenvalue form of Fru
 For $0<t\le1$, the absolute tail after $T$ is at most $D_Ne^{-tT}/(tT)$. Taking $T=K\log N/t_N$ pays the entire longer-time tail by
 $N^{3-K}/(6K\log N)$ and uses only $T\le K N^{1-\theta}\log N$. The centered short-time trace estimate remains unproved.
 
-\subsection{The one-sided height estimate that would exclude zeros}
+\subsection{The missing bound on the determinant}
 Let $E(x)=C(x)-(x-1)^2/2$. Direct integration on $\Re s>1$ gives
 \begin{equation}\label{eq:det-Mellin}
  \int_1^\infty E(x)x^{-s-2}\dd x

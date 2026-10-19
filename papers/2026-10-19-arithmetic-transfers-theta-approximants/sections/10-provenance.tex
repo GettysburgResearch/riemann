@@ -1,34 +1,47 @@
-\section{Immutable provenance and related recent components}\label{app:provenance}
+\section{Sources and related results}\label{app:provenance}
 
-\subsection{Source map}
-Table~\ref{tab:pins} gives the immutable research heads used in this manuscript. Full repository paths and the blob identities of the principal files read for the paper are also supplied in \texttt{SOURCE\_LOCK.json}. The bibliography links to the immutable trees rather than to moving branch heads. A source-qualified statement inherits the qualifications of its named source, including any additional source contracts inside that packet.
+This paper is based on frozen versions of the research notes, not on an assumed single merged proof. Table~\ref{tab:pins} gives a short source map. The bibliography links to the immutable versions; the accompanying \texttt{SOURCE\_LOCK.json} gives the full commit identifiers, principal paths, recorded file hashes, and the scope of the reading used for this revision. The longer technical proofs and finite parameter files remain available there.
 
-\begin{longtable}{@{}p{17mm}p{85mm}>{\raggedright\arraybackslash}p{43mm}@{}}
-\caption{Frozen source heads and their principal uses.}\label{tab:pins}\\
-\toprule
-Source & Commit & Use in this manuscript\\
+\small
+\begin{longtable}{@{}p{1.5cm}p{2.4cm}>{\raggedright\arraybackslash}p{10.7cm}@{}}
+\caption{Research notes used in the paper. A version identifier records the source, not a verdict on its correctness.}\label{tab:pins}\\
+\toprule Note & Version & Principal use\\
 \midrule\endfirsthead
-\toprule Source & Commit & Use in this manuscript\\\midrule\endhead
+\toprule Note & Version & Principal use\\\midrule\endhead
 \bottomrule\endfoot
-GR-934 &\scriptsize\texttt{3092feee25c583ec760c5f14f4aa4c98d9c5df39}&Earlier comparison model.\\[3pt]
-GR-977 &\scriptsize\texttt{1b473843c920b004994a3ffb7e9b6b7f9ce54c05}&Source-qualified $271/300$; density formulas.\\[3pt]
-GR-989 &\scriptsize\texttt{0162599b1373341b0b1622d1273c075da0f147b5}&Two-mollifier transfer; capped fixed orders.\\[3pt]
-GR-991 &\scriptsize\texttt{b4d97d837214cf14fc09c093f66a50e798288afa}&Related fixed-shift extraction.\\[3pt]
-GR-993 &\scriptsize\texttt{5569defd8d77f1f8f3586b326577aacb384ffb23}&Prime bias; primitive integer; import provenance.\\[3pt]
-GR-994 &\scriptsize\texttt{c93ca65a510b6acaf167f929b9bf7e67d742b05a}&Native sectors; degree-20 model; theta backend.\\[3pt]
-GR-996 &\scriptsize\texttt{56ec8747ccf75d7fc19c2395a6523a664938b9f6}&Fixed-field primitive-core predecessor.\\[3pt]
-GR-998 &\scriptsize\texttt{65a0e7e4016aad5aeb099973c0d079c6059a6c76}&Related same-field signed replica inverse.\\[3pt]
-GR-1000 &\scriptsize\texttt{6c4d5309d64978b420c2b897977d6db2ea01ce03}&Positive determinant and short-conductor packet.\\[3pt]
-GR-1001 &\scriptsize\texttt{f6beb3774ae7ff5eca4cb046786eae10e4f88abc}&Actual quadratic square kernel; correlated strip class.\\[3pt]
-GR-1002 &\scriptsize\texttt{1319373815ee408146705b25a426fba6b22ed755}&Uniform field mean; paired filters; compactness; all mass.\\[3pt]
-GR-1003 &\scriptsize\texttt{669b6a01f4d4858ae1ef806b07547be95c08c935}&Order 26; critical family transfer; canonical and graph extensions.\\[3pt]
-GR-1004 &\scriptsize\texttt{8e7375cd75909cc7dc3548c44e4d08c8adb4c034}&Failed $0.87$ audit and unchanged archived source.\\
+934 & \texttt{3092feee25c5} & Earlier exponent model and its limits.\\[3pt]
+957 & \texttt{ec54cb6b0029} & Stronger density; exact family matching; 23/24 proposal\\[3pt]
+958 & \texttt{e6dfa07d07ed} & Finite zero strata and the 25/27 proposal\\[3pt]
+959 & \texttt{7b845294207d} & Second numerator mean and the 11/12 proposal\\[3pt]
+965 & \texttt{d58e3282a937} & Two-term short-support estimate; 91/100 proposal\\[3pt]
+966 & \texttt{8d94494698ee} & Fourth moment, selected density, 109/120 proposal\\[3pt]
+968 & \texttt{14f544fb4293} & All fixed numerator moments; parallel 10/11 proposal\\[3pt]
+969 & \texttt{654278118846} & Off-central fourth mean; 49/54 proposal\\[3pt]
+970 & \texttt{026f70fc91f2} & Archived 68/75 proposal; not independently extracted or re-reviewed\\[3pt]
+971 & \texttt{3f1d2a07631e} & Five ramified classes; local-domain improvement\\[3pt]
+974 & \texttt{89c37b6707cb} & Parallel interpolation; 9081/10000 and 49/54; local domain\\[3pt]
+977 & \texttt{1b473843c920} & Proposed $271/300$ and $19/21$ comparisons.\\[3pt]
+989 & \texttt{0162599b1373} & Two mollifiers and capped reciprocal moments.\\[3pt]
+991 & \texttt{b4d97d837214} & Fixed-shift extraction.\\[3pt]
+993 & \texttt{5569defd8d77} & Prime-bias argument and the prime-power integer.\\[3pt]
+994 & \texttt{c93ca65a510b} & Signed M\"obius sectors, order-$20$ Ising model, and theta arithmetic.\\[3pt]
+996 & \texttt{56ec8747ccf7} & Fixed-field rational coefficient comparison.\\[3pt]
+998 & \texttt{65a0e7e4016a} & An invertible signed average in one field.\\[3pt]
+1000 & \texttt{6c4d5309d649} & Positive determinant and regularization.\\[3pt]
+1001 & \texttt{f6beb3774ae7} & Quadratic-family limits and correlated strip models.\\[3pt]
+1002 & \texttt{1319373815ee} & Uniform field average, filters, compactness, and larger masses.\\[3pt]
+1003 & \texttt{669b6a01f4d4} & Finite order-$26$ constructions and quadratic-family estimates.\\[3pt]
+1004 & \texttt{8e7375cd7590} & The failed $0.87$ comparison.\\[3pt]
+1005 & \texttt{d3b3d19573b8} & Conditional all-height corollary; no new analytic estimate\\[3pt]
+1006 & \texttt{0c838d130f27} & Related quartic filters and an explicitly unproved mixed mean\\[3pt]
+1008 & \texttt{c1de6363f957} & Fixed-order ambiguity, not an actual off-critical zeta zero\\[3pt]
 \end{longtable}
+\normalsize
 
-The paper is an additive manuscript contribution. It neither merges these research branches nor changes the repository's integrated mathematical status. The underlying source license and attribution remain as recorded in each source. The private motivating note in \cite{R993} is not redistributed with this manuscript, and no license or authenticated authorship for that note is inferred.
+The new historical summaries for notes~957--974 use their detailed published statements and the cited source-identification notes. They are not fresh audits of the full analytic arguments. In particular, the archived $68/75$ work is included as a historical proposal, not as a newly reconstructed proof. The accounts of Liu and Xu--Sang use the exact versions recorded in notes~1002 and~1005 because fresh retrieval of their primary bodies was unsuccessful. These limitations do not affect the elementary identities proved directly in the paper; they do matter when judging the imported zero-free conclusions.
 
-\subsection{Three related components not used as missing upper bounds}
-The preceding sections select complete arguments suitable for a single exposition. Three related recent components help locate the results without supplying any of the open estimates in Section~\ref{sec:verification}.
+\subsection{Related results and their place in the argument}
+The following related results are useful companions to the proofs above. They are summarized here, not used as substitutes for the open estimates in Section~\ref{sec:verification}.
 
 \paragraph{Fixed-shift extraction.}
 The source \cite{R991} studies the actual deformed coefficients
@@ -44,5 +57,16 @@ with inverse coefficients $-q^{-1}(1-q^{-1})^{j-1}\chi(p)^j$ at $p^j$. The sourc
 \paragraph{A complete signed divisibility contribution.}
 The critical arithmetic section of \cite{R994} computes an infinite divisibility-sector coefficient with all tails retained and certifies $-9/5<L_{\rm div}<-17/10$. Its negative sign is a statement about that full specified sector, not the sign or an upper bound for the complete energy. The complementary nondivisibility contribution remains. The same source explicitly records that its primitive-ratio double limiting series is not absolutely summable, so an unrestricted interchange of the two limits is not available.
 
-\subsection{Submission and author review}
-The source bundle is prepared in arXiv-compatible LaTeX form, but no arXiv submission, endorsement, or acceptance is asserted. Before submission, the named author should approve author and affiliation metadata, review the contribution and attribution map, and choose whether the source-qualified proposals of Section~\ref{sec:boundaries} remain in this manuscript or are deferred to separate papers. The finite certificate files and deep analytic contracts require their own mathematical review. Formatting readiness does not convert a source-qualified proposal into an independently established theorem.
+
+\paragraph{Quartic filters over the Gaussian field.}
+The later note~1006 \cite{R1006} develops fourth-power filters over $\Q(\sqrt{-1})$ as a possible alternative to the sextic construction. Its reported retained squared norm is $1/\zeta_F^S(3)$, whereas a naive squareclass selector has squared norm
+\[
+ \prod_{\mathfrak p}\frac{N\mathfrak p+1}{2N\mathfrak p},
+\]
+which tends to zero. This identifies a loss in that particular selector, not an impossibility theorem for quartic methods. A separate comparison in the note would yield the boundary $437/500=0.874$ from a stated mixed mean of size $U^{6/5+\eps}$. That mean is unproved. It must not be listed as an achieved $0.874$ region. This paragraph reports the published scope; the full quartic proof and its computation collection were not re-audited for this revision.
+
+\paragraph{Finite probability models with different zero geometries.}
+Note~1008 \cite{R1008} also gives a probability-law counterpart to Proposition~\ref{prop:finite-insertion}. It is based on the finite order-$20$ Ising result, not on an order-$26$ probability realization. Its examples retain the stated positivity, strip, and leading growth properties while allowing nonreal zeros beyond a chosen height. The zero-counting error is $O(\sqrt T)$, not the sharper error for zeta. These examples delimit what the finite data establish; they are not examples of off-critical zeta zeros.
+
+\subsection{Review and submission}
+The manuscript and its source are prepared for review and compilation with standard LaTeX. No arXiv submission is made by publishing them in the repository. Before submission, authorship and contribution credit should be approved, and the analytic adaptations should receive independent mathematical review. The private motivating note discussed in \cite{R993} is not redistributed, and no authenticated public attribution or license is inferred for it.
