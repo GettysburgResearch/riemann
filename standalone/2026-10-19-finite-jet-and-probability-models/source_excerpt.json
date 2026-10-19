@@ -1,0 +1,30 @@
+{
+  "kind": "MANUALLY_TRANSCRIBED_COARSE_ADAPTER_NOT_A_SOURCE_REPLAY",
+  "repository": "GettysburgResearch/riemann",
+  "source_commit": "669b6a01f4d4858ae1ef806b07547be95c08c935",
+  "parameter_path": "standalone/2026-10-18-theta26-and-critical-family/theta/gaussian_parameters.json",
+  "source_blob_sha1": "432904733cb860eddec4ad82f9c1add9de13e37f",
+  "degree": 26,
+  "active_indices": [0,1,2,4,7,3,14,5,20,9,41,17],
+  "decimal_truncations": [
+    "0.108315204825875285490870",
+    "0.048968236085571671691467",
+    "0.034594481962742963584148",
+    "0.019926330319567056446110",
+    "0.011566603560353016075168",
+    "0.023381378737115062387730",
+    "0.005824164040662418384313",
+    "0.015529837347346804120641",
+    "0.003057403534732472664637",
+    "0.007800759551973965914994",
+    "0.001472080730846281337739",
+    "0.004855448817827341339694"
+  ],
+  "truncation_width": "1e-24",
+  "source_cube_radius": "1e-50",
+  "reported_beta_coarsened_upper": "1e-80",
+  "reported_L_coarsened_upper": "1e-30",
+  "reported_variance_lower": "1/25",
+  "reported_Q2_upper": "17409/1000000",
+  "replay_status": "Original theta integration, full 128-node equations, and source preconditioner were NOT recomputed."
+}
