@@ -1,0 +1,158 @@
+{
+  "status": "COMPONENT_CHECKS_PASS; THETA_SOURCE_REPLAY_NOT_RUN",
+  "new_zeta_zero_free_region": false,
+  "RH_proved": false,
+  "off_critical_zeta_zero_found": false,
+  "github_written": false,
+  "source_commit": "669b6a01f4d4858ae1ef806b07547be95c08c935",
+  "arithmetic": "Python fractions.Fraction, exact integer arithmetic",
+  "checks": [
+    {
+      "name": "12 transcribed active-node intervals are positive and bounded",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "all active-node separations exceed 1/2000",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "conditional preconditioner norm bound < 10^40",
+      "status": "PASS",
+      "detail": "Uses the source assertion ||I-RJ|| < 1; does not load the original R."
+    },
+    {
+      "name": "moment-equation contraction perturbation has strict slack",
+      "status": "PASS",
+      "detail": "Imported beta and L are coarsened reported bounds, not independently replayed."
+    },
+    {
+      "name": "pair-envelope sector condition for T=10^25, B=2/5",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "inserted-pair canonical mass stays below 7/400",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "exact pair geometry T=3, B=1/7",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "exact pair geometry T=3, B=1/3",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "exact pair geometry T=3, B=2/5",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "exact pair geometry T=7, B=1/7",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "exact pair geometry T=7, B=1/3",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "exact pair geometry T=7, B=2/5",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "exact pair geometry T=100, B=1/7",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "exact pair geometry T=100, B=1/3",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "exact pair geometry T=100, B=2/5",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "exact pair geometry T=1000000, B=1/7",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "exact pair geometry T=1000000, B=1/3",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "exact pair geometry T=1000000, B=2/5",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "exact pair geometry T=10000000000000000000000000, B=1/7",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "exact pair geometry T=10000000000000000000000000, B=1/3",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "exact pair geometry T=10000000000000000000000000, B=2/5",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "three-atom Gaussian domination through k=100",
+      "status": "PASS",
+      "detail": "The note supplies the all-k induction; this finite loop is only a regression check."
+    },
+    {
+      "name": "synthetic two-weight fourth-cumulant repair is feasible",
+      "status": "PASS",
+      "detail": "Squared weights are (s2 +/- sqrt(disc))/2. This is NOT a theta fit."
+    },
+    {
+      "name": "synthetic repaired variance and fourth moment are exact",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "exact harmonic zero-count identity",
+      "status": "PASS",
+      "detail": "4950 integer cases checked."
+    }
+  ],
+  "case_counts": {
+    "pair_geometry": 15,
+    "harmonic_integer_cases": 4950
+  },
+  "contraction_budget_ratio_upper": "24414062500000000000000390625000000000000000000000000000000000000000000001250000000000000000000000000000000000000000000000001/195312500000000000000000000000000000000000000000000625000000000000000000000000000000000000000000000000500000000000000000000000000000",
+  "contraction_budget_ratio_float_for_display": 1.25e-07,
+  "reserve_guard_not_replayed": "The original full-cube minimum a must exceed 2/[v(T^2+B^2)]. The qualitative theorem only needs sufficiently large T.",
+  "limitations": [
+    "Original infinite theta integrals and complete source certificate were not recomputed.",
+    "The probability theorem is analytic and source-qualified; its enormous finite Ising model was not numerically instantiated.",
+    "No all-order theta feasibility, new zeta strip, or RH conclusion is asserted.",
+    "No external mathematical independence or worldwide novelty review was performed."
+  ],
+  "file_sha256": {
+    "check.py": "a30959d2f47bca762ff868dbd444d9b4eae51a9979b5a5d382f414ba2c8db813",
+    "source_excerpt.json": "a62f50bae831f79492c643ffb0a4a7813dc15c6c9cee747c64fa8e3180dabb37",
+    "README.md": "e776b541b903e226e530535dcd5258ad8c909ba8e1d4c588c1fa3bd9150759b4",
+    "VALIDATION.md": "4161c076b85b8dd2e83fda6152ed66adf4127fe2aa8c8b9883cb505b59659a12",
+    "PROBABILITY_MODEL_AMBIGUITY.md": "590a7fd20e878898f683d135a6c525cd32f17baa91133b227062fd4fba34f790",
+    "corruption_controls.json": "c0c674d0f42176e9c7db42b55dd138bf88e7a8ece837faa1cf2aa11a0d80ceb3",
+    "FINITE_JET_ZERO_INSERTION.md": "5df8baaccb5878d9be9cbe4cbbb5d9932cfcb81ada13da70293be2e115118709"
+  }
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "mutation": "duplicate_node",
+    "status": "REJECTED_AT_EXPECTED_PREDICATE",
+    "predicate": "all active-node separations exceed 1/2000"
+  },
+  {
+    "mutation": "negative_node",
+    "status": "REJECTED_AT_EXPECTED_PREDICATE",
+    "predicate": "12 transcribed active-node intervals are positive and bounded"
+  },
+  {
+    "mutation": "oversized_beta",
+    "status": "REJECTED_AT_EXPECTED_PREDICATE",
+    "predicate": "moment-equation contraction perturbation has strict slack"
+  }
+]
