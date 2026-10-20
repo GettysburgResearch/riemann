@@ -1,0 +1,83 @@
+{
+  "independent_analytic_review": false,
+  "local": {
+    "additional_unit_identities": 198,
+    "characters": 87,
+    "exact_stream_sha256": "bad68b06a44c3a9be3386e8772bc3b72b1afea0df0edf4f2295a3162545807d2",
+    "field_norms": [
+      7,
+      13,
+      19,
+      31,
+      4,
+      25
+    ],
+    "gauss_norms": 87,
+    "transform_identities": 1983,
+    "zero_frequency_checks": 99
+  },
+  "new_zero_free_boundary_proved": false,
+  "root": {
+    "bracket": [
+      "218721661759991/250000000000000",
+      "174977329407993/200000000000000"
+    ],
+    "decimal_evaluation_not_analytic_proof": {
+      "B_flat": "0.8748866470399641309446140005301806494988849618898974222380416480102513",
+      "marked_example_exponent": "0.8239460534293294475189998500574362370290458708714055540757878452011106",
+      "marked_example_saving_below_5_over_6": "0.0093872799040038858143334832758970963042874624619277792575454881322227",
+      "p": "0.4582955490133213769815380001767268831662949872966324740793472160034172",
+      "q": "0.2708522254933393115092309999116365584168525063516837629603263919982914",
+      "unmatched_conductor_exponent": "0.5417044509866786230184619998232731168337050127033675259206527839965828"
+    },
+    "derivative_interval": [
+      "-462985880940940151417010650324790262069342047/244140625000000000000000000000000000000000",
+      "-237048771041264852008697510659508858306093649/125000000000000000000000000000000000000000"
+    ]
+  },
+  "scalar": {
+    "exact_checks": 59,
+    "rational_marked_example": {
+      "B_power_of_Y": "1/4",
+      "Euler_baseline": "67/80",
+      "beta": "7/8",
+      "exponent": "791/960",
+      "saving_below_5_over_6": "3/320",
+      "unmatched_modulus_power_of_Y": "3/10"
+    },
+    "sixth_order_local_table": [
+      {
+        "completion_exponent": 3,
+        "dual_exponent": 3,
+        "matching": false,
+        "psi_exponent": 1
+      },
+      {
+        "completion_exponent": 0,
+        "dual_exponent": 4,
+        "matching": false,
+        "psi_exponent": 2
+      },
+      {
+        "completion_exponent": 3,
+        "dual_exponent": 5,
+        "matching": false,
+        "psi_exponent": 3
+      },
+      {
+        "completion_exponent": 0,
+        "dual_exponent": 0,
+        "matching": true,
+        "psi_exponent": 4
+      },
+      {
+        "completion_exponent": 3,
+        "dual_exponent": 1,
+        "matching": false,
+        "psi_exponent": 5
+      }
+    ]
+  },
+  "scope": "finite algebra and exponent identities only; not a global analytic theorem",
+  "status": "PASS"
+}

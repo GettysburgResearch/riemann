@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-20",
+  "base_main_commit": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "external_sources": [
+    {
+      "id": "DR",
+      "authors": [
+        "Alexander Dunn",
+        "Maksym Radziwill"
+      ],
+      "title": "Bias in cubic Gauss sums: Patterson's conjecture",
+      "version": "arXiv:2109.07463v3",
+      "url": "https://arxiv.org/html/2109.07463v3",
+      "locators": [
+        "(2.2)-(2.3)",
+        "(5.7), (5.13)-(5.14)",
+        "(5.21)-(5.23)",
+        "Proposition 5.1; (5.46)-(5.52)",
+        "Lemma 5.4 and proof before cubic specialization: (5.61)-(5.63)",
+        "(5.73)-(5.74)"
+      ],
+      "read_scope": "Primary HTML at the listed interfaces. No GRH-dependent prime or dispersion theorem imported. No PDF or local source-byte hash claimed."
+    },
+    {
+      "id": "LIU",
+      "author": "Baiying Liu",
+      "title": "Zero-free half-planes for Hecke L-functions over number fields",
+      "version": "arXiv:2610.26835v1",
+      "url": "https://arxiv.org/html/2610.26835v1",
+      "locators": [
+        "Abstract",
+        "Theorem 17.1",
+        "Theorem 18.2",
+        "Proposition 19.1"
+      ],
+      "read_scope": "The common finite-order zero-free statement is imported. The full analytic proof is not independently reconstructed or certified."
+    }
+  ],
+  "repository_sources": [
+    {
+      "pr": 1009,
+      "commit": "7f6ff9dae8d3473a5835a5cbe7308148b8b3c1a0",
+      "path": "standalone/2026-10-20-angular-hecke-continuation/ANGULAR_TYPE_I.md",
+      "blob": "ad3d4fb81b8d0db27a9ceca2f7015f1031d73397",
+      "use": "Pure cubic/angular predecessor and marked-block restriction. Credit its Type-I transfer; new work generalizes finite twists and retains the nonmatching conductor cost."
+    },
+    {
+      "pr": 1009,
+      "commit": "7f6ff9dae8d3473a5835a5cbe7308148b8b3c1a0",
+      "path": "standalone/2026-10-20-angular-hecke-continuation/MIXED_MEAN_STATUS.md",
+      "use": "Full-polygon scope and outstanding native inverse edge; no assertion that this packet proves the localized 0.01225 saving."
+    },
+    {
+      "pr": 1006,
+      "commit": "0c838d130f275efb6e8ddb81dab42462b4ce9454",
+      "path": "standalone/2026-10-18-three-direction-sprint/eisenstein/RELAXED_MIXED_CONSUMER.md",
+      "blob": "b155d5b92ca575d7e093ed5f12a6707c4a8ddedb",
+      "use": "Conditional 437/500 consumer, not an achieved boundary."
+    },
+    {
+      "pr": 1006,
+      "commit": "0c838d130f275efb6e8ddb81dab42462b4ce9454",
+      "path": "standalone/2026-10-18-three-direction-sprint/eisenstein/MIXED_CONSUMER.md",
+      "use": "Whole robust length polygon and original-source scope."
+    },
+    {
+      "pr": 1006,
+      "commit": "0c838d130f275efb6e8ddb81dab42462b4ce9454",
+      "path": "standalone/2026-10-18-three-direction-sprint/rational/JOINT_CUBIC_CORE_COMPOSITION.md",
+      "blob": "49b98e6f42e09039947a6590624f9dd66252b9c7",
+      "use": "Complete signed remainder remains open; not replaced by the present block bound."
+    }
+  ],
+  "claim_scope": {
+    "T26-LOCAL": "Proved finite transform identity; exact tests, with analytic CRT argument.",
+    "T26-TRANSFER": "Proposed analytic proof conditional on the common H_beta input.",
+    "T26-MASK": "Proposed consequence for zero-only coprimality masks.",
+    "T26-MARK": "Proposed coherent short-mark consequence, not a full mixed operator norm.",
+    "T26-BOUNDARY": "No new zero-free boundary."
+  },
+  "independent_review": false,
+  "formal_analytic_verification": false,
+  "literature_wide_priority_claim": false
+}
