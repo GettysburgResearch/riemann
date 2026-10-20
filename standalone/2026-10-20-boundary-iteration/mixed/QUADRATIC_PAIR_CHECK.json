@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "checks": 3123,
+  "rejected_wrong_variants": 60,
+  "arithmetic": "Exact integer arithmetic in Z[zeta_6,zeta_p] and rational exponents; no floating point.",
+  "finite_fields": [
+    7,
+    13,
+    19,
+    31,
+    37,
+    43,
+    61,
+    67,
+    73,
+    97
+  ],
+  "proof_sha256": "1d14351a92904ef438e9dfcd8e0090ee2181c3c8a97742e243dd5ee628b02a86",
+  "scope": "Finite orientation/masks and rational exponent identities only; not an analytic proof."
+}

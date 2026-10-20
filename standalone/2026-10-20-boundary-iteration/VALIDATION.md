@@ -1,0 +1,46 @@
+# Replay and review scope
+
+The exact checks use Python's standard library only. From this directory:
+
+```sh
+python -I -S -B replay.py
+```
+
+The replay first checks the frozen byte hashes in MANIFEST.json, then
+runs each of eight finite checkers in ordinary and optimized mode.
+It rejects acceptance assertions that Python would remove under `-O`,
+requires every receipt to pass, and compares the two receipts after
+canonical JSON serialization. The aggregate result is
+REPLAY_RESULTS.json. The packet's `.gitattributes` preserves the
+reviewed source bytes across checkouts.
+
+| Checker | What it authenticates |
+|---|---|
+| type_i/verify_type_i.py | Exact Eisenstein arithmetic, multiplicative ramified profiles, two-prime formal dual series, and rational exponents |
+| type_i/verify_profile_closure.py | The actual cusp minor and its inverse in a cyclotomic ring, plus all 27 finite coefficient profiles in the stated coverage |
+| type_i/verify_numerator_barriers.py | Exact identities for the supplied numerator estimates and their endpoint interpolation |
+| mixed/audit_cusp_minor.py | An independently written cusp-minor calculation, including rejection of the withdrawn incorrect minor |
+| mixed/check_marked_exponents.py | Complete Euler/mask identities, counterexamples to first-power truncation, and exact marked exponent bookkeeping |
+| mixed/check_quadratic_pair.py | Exact finite Fourier orientation, conductor and zero masks in a cyclotomic ring; wrong-variant negative controls; rational pair exponents |
+| global/check_residue_algebra.py | Residue factors, shifted labels, selected-prime laws, guard phases/valuation support, exact tame Fourier sums, and canonical residue margins |
+| scalar/verify_tangent.py | Primitive critical polynomials and resultant; 64 exact rational intervals covering the narrow tangent family; positivity over the continuous delta/x rectangle; side conditions and endpoint branch isolation |
+
+These are finite algebra checks with explicitly stated coverage. Their
+success does not prove theta continuation, Mellin contour shifts,
+large-sieve theorems, infinite canonical induction, uniform analytic
+estimates, or a global zero-free statement. The scalar checker now
+independently replays the closing tangent certificate, but not the
+initial analytic improvement to seven-eighths. Source hashes pin the inputs;
+they do not certify those inputs.
+
+The centered canonical numerical probe, when present in `mixed/`, is an
+exploration using ordinary floating arithmetic. It is excluded from this
+acceptance replay and does not establish an asymptotic theorem.
+
+Component analytic reviews are separate from the computation. Their
+file hashes and authorship boundaries are recorded in
+GLOBAL_ASSEMBLY_REVIEW.md, type_i/REVIEW_ANGULAR_MEAN.md,
+type_i/REVIEW_QUADRATIC_PAIR.md, type_i/REVIEW_UNIFORM.md,
+and the two independently authored auxiliary-guard reviews.
+A later source edit requires a new hash and review; old reviews are not
+silently applied to changed arguments.

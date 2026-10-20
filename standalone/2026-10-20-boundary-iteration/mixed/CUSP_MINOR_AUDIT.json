@@ -1,0 +1,39 @@
+{
+  "status": "pass",
+  "arithmetic": "exact Z[rho]/(rho^6+rho^3+1)",
+  "source": "https://arxiv.org/html/2109.07463v3",
+  "valid_cusps": [
+    22,
+    26,
+    27
+  ],
+  "identity": "M M*=3 I, |det M|^2=27",
+  "ell_values": [
+    -6,
+    -5,
+    -4,
+    -3,
+    -2,
+    -1,
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "row_unit_classes": [
+    0,
+    1,
+    2
+  ],
+  "exact_checks": 390,
+  "rejected_minor": [
+    20,
+    22,
+    26
+  ],
+  "rejected_singular_checks": 39,
+  "scope": "Finite local algebra only; not an infinite mean-value proof."
+}

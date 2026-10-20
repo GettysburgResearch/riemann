@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "scope": "Exact finite algebra and exponent checks only; no analytic proof certification.",
+  "checks": {
+    "primary_group_and_additive_profile": {
+      "classes": 9,
+      "multiplication_pairs": 81,
+      "unit_profile_cases": 54
+    },
+    "dual_resummation_formal_series": {
+      "cases": 432,
+      "prime_variables": 2,
+      "maximum_exponent_each": 10,
+      "coefficient_ring": "Z[omega]",
+      "norm_constants": [
+        4,
+        25
+      ],
+      "scope": "formal algebra, not actual prime enumeration"
+    },
+    "rational_exponents": "passed"
+  },
+  "sha256": {
+    "AVERAGED_TYPE_I.md": "b5b13c2cbfeaf3df7dd4630c77bda5278fc8214bb47e164513b418e794900336",
+    "QUADRATIC_TWIST_EXTENSION.md": "cecf4c4b0cf564ace1d765e12db001ae1e72b9045f15486f8fcb0927fdfd601e",
+    "DUAL_RESUMMATION.md": "d8dae0a17a85b466ba9d9d5b762ee532ce92b0a45de7236ffe5b3bb8256dbef2",
+    "verify_type_i.py": "e2406088cae962649640135b2d9c14d35a53d6003833d4678629be6ec44399d3"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "status": "pass",
+  "checks": {
+    "native_phase_identities": 972,
+    "local_residue_factors": 15,
+    "completed_index_selection_identities": 10,
+    "spherical_local_digit_support": 60,
+    "auxiliary_guard_and_sixth_power_cancellation": 222,
+    "all_field_guard_character_and_valuation_identities": 87,
+    "guard_negative_controls_rejected": 2,
+    "exact_tame_fourier_guard_mod_prime_squared": 218,
+    "shifted_label_local_majorants": 36,
+    "finite_coprimality_identities": 32,
+    "reciprocal_zeta_unit_identities": 25,
+    "canonical_residue_margins": 687
+  },
+  "sparse_lift_squared_mean_exponents": {
+    "r_squared_b_sixth": "1/3",
+    "r_fourth_b_sixth": "1/6 with log(2H)"
+  },
+  "marked_residue_exponent": "Y^(5/6) N^(beta-1+epsilon)",
+  "scope": "Exact finite algebra only; no analytic or zero-free certification.",
+  "total_named_checks": 2366,
+  "checker_sha256": "2b6fa5a054c42909e4f026d73451d1e8f5f012253e3c5c596c2190d1621f98a6",
+  "acceptance": "Explicit ArithmeticError checks remain active under Python -O; two negative guard controls must be rejected."
+}

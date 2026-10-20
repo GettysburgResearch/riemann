@@ -1,0 +1,942 @@
+{
+  "status": "pass",
+  "scope": "Finite algebra and explicit coverage only; not analytic or zero-free certification.",
+  "source_manifest_sha256": "45db98ab4dbc9689f58314c110e9ea6aad28d83cfb3312314caf1ae3b2665e08",
+  "source_files_checked": 64,
+  "checkers": [
+    {
+      "checker": "type_i/verify_type_i.py",
+      "checker_sha256": "e2406088cae962649640135b2d9c14d35a53d6003833d4678629be6ec44399d3",
+      "normal_and_optimized_identical": true,
+      "result_canonical_sha256": "53596ef129d78d7d0814d6ced95ff6099bde17d904805fe6cae1158e10fe6cb2",
+      "result": {
+        "status": "PASS",
+        "scope": "Exact finite algebra and exponent checks only; no analytic proof certification.",
+        "checks": {
+          "primary_group_and_additive_profile": {
+            "classes": 9,
+            "multiplication_pairs": 81,
+            "unit_profile_cases": 54
+          },
+          "dual_resummation_formal_series": {
+            "cases": 432,
+            "prime_variables": 2,
+            "maximum_exponent_each": 10,
+            "coefficient_ring": "Z[omega]",
+            "norm_constants": [
+              4,
+              25
+            ],
+            "scope": "formal algebra, not actual prime enumeration"
+          },
+          "rational_exponents": "passed"
+        },
+        "sha256": {
+          "AVERAGED_TYPE_I.md": "b5b13c2cbfeaf3df7dd4630c77bda5278fc8214bb47e164513b418e794900336",
+          "QUADRATIC_TWIST_EXTENSION.md": "cecf4c4b0cf564ace1d765e12db001ae1e72b9045f15486f8fcb0927fdfd601e",
+          "DUAL_RESUMMATION.md": "d8dae0a17a85b466ba9d9d5b762ee532ce92b0a45de7236ffe5b3bb8256dbef2",
+          "verify_type_i.py": "e2406088cae962649640135b2d9c14d35a53d6003833d4678629be6ec44399d3"
+        }
+      }
+    },
+    {
+      "checker": "type_i/verify_profile_closure.py",
+      "checker_sha256": "338082fb85b6413015fd7f53fccfbbee21fd51a0d1f76583992efb38bd5e9dcb",
+      "normal_and_optimized_identical": true,
+      "result_canonical_sha256": "beef64fdd03a2fdaac49d5586f964b9bc4b6eb4497a347b959b78d9c7e38b2bb",
+      "result": {
+        "status": "PASS",
+        "scope": "Exact finite coefficient algebra only; this does not certify the accompanying analytic argument.",
+        "source": {
+          "url": "https://arxiv.org/html/2109.07463v3",
+          "html_sha256": "3949e0f0ae87808d84fe02c12a3b68c5b66aa8d967d8ecb5e1605f1d985b956d",
+          "locations": [
+            "(5.7)",
+            "(5.13)",
+            "(5.14)",
+            "Appendix A"
+          ]
+        },
+        "minor_rows": [
+          22,
+          26,
+          27
+        ],
+        "minor_source_coefficient_cases": 486,
+        "full_table_profile_support_cases": 2430,
+        "matrix_identity": "M^* M = 3 I for all three effective angular residues",
+        "determinants_in_basis_1_rho_rho2_rho3_rho4_rho5": {
+          "0": [
+            -3,
+            0,
+            0,
+            3,
+            0,
+            0
+          ],
+          "1": [
+            -3,
+            0,
+            0,
+            -6,
+            0,
+            0
+          ],
+          "2": [
+            6,
+            0,
+            0,
+            3,
+            0,
+            0
+          ]
+        },
+        "determinant_absolute_square": 27,
+        "checker_sha256": "338082fb85b6413015fd7f53fccfbbee21fd51a0d1f76583992efb38bd5e9dcb",
+        "proof_sha256": "a4a1798f304fd9a551c35b2a161ef2f7b82644d62d9f0eae986df2afb7100dad"
+      }
+    },
+    {
+      "checker": "type_i/verify_numerator_barriers.py",
+      "checker_sha256": "82ccf42617268c40a8e5e944169d40de0e9f46b2f4253fab7e0cd95c48b78091",
+      "normal_and_optimized_identical": true,
+      "result_canonical_sha256": "9512190963d0ca69c931877371f5b8d3c5e260fc232986762fd2b84119479866",
+      "result": {
+        "status": "PASS",
+        "scope": "Exact comparison of displayed supplied exponents only.",
+        "checks": [
+          "second-moment gap",
+          "uniform positive endpoint",
+          "critical witness interval",
+          "higher-moment identity",
+          "local-buffer endpoint interpolation",
+          "intersection location",
+          "direct-Gram normalization"
+        ],
+        "sha256": {
+          "NUMERATOR_MOMENT_BARRIERS.md": "0534e841541201d4c9cf95a68d506744dccf69a2ea627d1a874cf96054f51f56",
+          "verify_numerator_barriers.py": "82ccf42617268c40a8e5e944169d40de0e9f46b2f4253fab7e0cd95c48b78091"
+        }
+      }
+    },
+    {
+      "checker": "mixed/audit_cusp_minor.py",
+      "checker_sha256": "2c4278539c0b6dedba0bd558c6927528309e80378d9f26a3e4174d9f0b28d78b",
+      "normal_and_optimized_identical": true,
+      "result_canonical_sha256": "f05ebca339bb9e58275b64c2829e6650dcf3566be3a5976fa1418df92b5f8b15",
+      "result": {
+        "status": "pass",
+        "arithmetic": "exact Z[rho]/(rho^6+rho^3+1)",
+        "source": "https://arxiv.org/html/2109.07463v3",
+        "valid_cusps": [
+          22,
+          26,
+          27
+        ],
+        "identity": "M M*=3 I, |det M|^2=27",
+        "ell_values": [
+          -6,
+          -5,
+          -4,
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "row_unit_classes": [
+          0,
+          1,
+          2
+        ],
+        "exact_checks": 390,
+        "rejected_minor": [
+          20,
+          22,
+          26
+        ],
+        "rejected_singular_checks": 39,
+        "scope": "Finite local algebra only; not an infinite mean-value proof."
+      }
+    },
+    {
+      "checker": "mixed/check_marked_exponents.py",
+      "checker_sha256": "6fe93f450f357f8f57a6f8c59edeb12ebfffebae7f58e8df5ac254ff1aa4d861",
+      "normal_and_optimized_identical": true,
+      "result_canonical_sha256": "8b3d3b3de5340ee3d5e9523ed002f7363f2f7d736ac5cc55d0db5dc15ea77eb8",
+      "result": {
+        "status": "pass",
+        "exact_euler_identity_checks": 10125,
+        "first_power_truncation_counterexamples": 112,
+        "exact_exponent_checks": 13,
+        "canonical_admission_region": [
+          "d >= k+z",
+          "4d >= 3k+6z"
+        ],
+        "balanced_marked_gain": "K*P^(5/6) for P <= K^(1/3)",
+        "global_zero_free_improvement": false,
+        "analytic_inputs_verified_by_this_script": false
+      }
+    },
+    {
+      "checker": "mixed/check_quadratic_pair.py",
+      "checker_sha256": "b548862cf97c1efee7413b75780d97741c4e0392f7c398f2ff51ca1ac1a55540",
+      "normal_and_optimized_identical": true,
+      "result_canonical_sha256": "e771be25b093cfa1a136b43c267225ccd289bd751cd4881f32dfa5657fb8a523",
+      "result": {
+        "status": "PASS",
+        "checks": 3123,
+        "rejected_wrong_variants": 60,
+        "arithmetic": "Exact integer arithmetic in Z[zeta_6,zeta_p] and rational exponents; no floating point.",
+        "finite_fields": [
+          7,
+          13,
+          19,
+          31,
+          37,
+          43,
+          61,
+          67,
+          73,
+          97
+        ],
+        "proof_sha256": "1d14351a92904ef438e9dfcd8e0090ee2181c3c8a97742e243dd5ee628b02a86",
+        "scope": "Finite orientation/masks and rational exponent identities only; not an analytic proof."
+      }
+    },
+    {
+      "checker": "global/check_residue_algebra.py",
+      "checker_sha256": "2b6fa5a054c42909e4f026d73451d1e8f5f012253e3c5c596c2190d1621f98a6",
+      "normal_and_optimized_identical": true,
+      "result_canonical_sha256": "a61b9e91ca30093f6c38d4681adcd58c5c64b2dc9ecd00dd8adb7fefd212f26d",
+      "result": {
+        "status": "pass",
+        "checks": {
+          "native_phase_identities": 972,
+          "local_residue_factors": 15,
+          "completed_index_selection_identities": 10,
+          "spherical_local_digit_support": 60,
+          "auxiliary_guard_and_sixth_power_cancellation": 222,
+          "all_field_guard_character_and_valuation_identities": 87,
+          "guard_negative_controls_rejected": 2,
+          "exact_tame_fourier_guard_mod_prime_squared": 218,
+          "shifted_label_local_majorants": 36,
+          "finite_coprimality_identities": 32,
+          "reciprocal_zeta_unit_identities": 25,
+          "canonical_residue_margins": 687
+        },
+        "sparse_lift_squared_mean_exponents": {
+          "r_squared_b_sixth": "1/3",
+          "r_fourth_b_sixth": "1/6 with log(2H)"
+        },
+        "marked_residue_exponent": "Y^(5/6) N^(beta-1+epsilon)",
+        "scope": "Exact finite algebra only; no analytic or zero-free certification."
+      }
+    },
+    {
+      "checker": "scalar/verify_tangent.py",
+      "checker_sha256": "74d4fe6d3d0fd6727a4f352d3fd1cfc629ca97f8c842c724a3caa1d0b81cad89",
+      "normal_and_optimized_identical": true,
+      "result_canonical_sha256": "73872be7ad44a0a9f8ea5583ac8a2beb64187a76b4c7e464196d2b999ed7f56c",
+      "result": {
+        "status": "pass",
+        "scope": "Exact rational interval replay of tangent positivity and scalar side conditions. Critical double-root identities are documented algebraic derivations, not inferred from an interval containing zero. No analytic certification.",
+        "source": "Liu arXiv:2610.26835v1 (14.3), (14.8), (14.10), Lemmas 14.8-14.10",
+        "source_html_sha256": "5b128f3cedb4d6ecfe3a3d57b1290cb576cac03092cf0b807c6f8092abf864c6",
+        "checker_sha256": "74d4fe6d3d0fd6727a4f352d3fd1cfc629ca97f8c842c724a3caa1d0b81cad89",
+        "boxes": [
+          {
+            "kappa": [
+              "7497732940799/10000000000000",
+              "479857175270337/640000000000000"
+            ],
+            "delta": {
+              "lower": "1612623710897/3435973836800",
+              "upper": "1612690185413/3435973836800"
+            }
+          },
+          {
+            "kappa": [
+              "479857175270337/640000000000000",
+              "239929721164769/320000000000000"
+            ],
+            "delta": {
+              "lower": "403156074019/858993459200",
+              "upper": "403172692557/858993459200"
+            }
+          },
+          {
+            "kappa": [
+              "239929721164769/320000000000000",
+              "479861709388739/640000000000000"
+            ],
+            "delta": {
+              "lower": "1612624881249/3435973836800",
+              "upper": "1612691355037/3435973836800"
+            }
+          },
+          {
+            "kappa": [
+              "479861709388739/640000000000000",
+              "23993198822397/32000000000000"
+            ],
+            "delta": {
+              "lower": "100789091651/214748364800",
+              "upper": "806345969921/1717986918400"
+            }
+          },
+          {
+            "kappa": [
+              "23993198822397/32000000000000",
+              "479866243507141/640000000000000"
+            ],
+            "delta": {
+              "lower": "1612626051579/3435973836800",
+              "upper": "1612692524641/3435973836800"
+            }
+          },
+          {
+            "kappa": [
+              "479866243507141/640000000000000",
+              "239934255283171/320000000000000"
+            ],
+            "delta": {
+              "lower": "25197291199/53687091200",
+              "upper": "322538621887/687194767360"
+            }
+          },
+          {
+            "kappa": [
+              "239934255283171/320000000000000",
+              "479870777625543/640000000000000"
+            ],
+            "delta": {
+              "lower": "12598650171/26843545600",
+              "upper": "100793355889/214748364800"
+            }
+          },
+          {
+            "kappa": [
+              "479870777625543/640000000000000",
+              "59984130585593/80000000000000"
+            ],
+            "delta": {
+              "lower": "806313903517/1717986918400",
+              "upper": "1612694279007/3435973836800"
+            }
+          },
+          {
+            "kappa": [
+              "59984130585593/80000000000000",
+              "95975062348789/128000000000000"
+            ],
+            "delta": {
+              "lower": "64505135687/137438953472",
+              "upper": "322538972757/687194767360"
+            }
+          },
+          {
+            "kappa": [
+              "95975062348789/128000000000000",
+              "239938789401573/320000000000000"
+            ],
+            "delta": {
+              "lower": "1612628977311/3435973836800",
+              "upper": "806347724279/1717986918400"
+            }
+          },
+          {
+            "kappa": [
+              "239938789401573/320000000000000",
+              "479879845862347/640000000000000"
+            ],
+            "delta": {
+              "lower": "806314781221/1717986918400",
+              "upper": "64507841333/137438953472"
+            }
+          },
+          {
+            "kappa": [
+              "479879845862347/640000000000000",
+              "119970528230387/160000000000000"
+            ],
+            "delta": {
+              "lower": "1612630147567/3435973836800",
+              "upper": "1612696618087/3435973836800"
+            }
+          },
+          {
+            "kappa": [
+              "119970528230387/160000000000000",
+              "479884379980749/640000000000000"
+            ],
+            "delta": {
+              "lower": "1612630732687/3435973836800",
+              "upper": "403174300711/858993459200"
+            }
+          },
+          {
+            "kappa": [
+              "479884379980749/640000000000000",
+              "9597732940799/12800000000000"
+            ],
+            "delta": {
+              "lower": "1612631317801/3435973836800",
+              "upper": "322539557519/687194767360"
+            }
+          },
+          {
+            "kappa": [
+              "9597732940799/12800000000000",
+              "479888914099151/640000000000000"
+            ],
+            "delta": {
+              "lower": "1612631902911/3435973836800",
+              "upper": "1612698372341/3435973836800"
+            }
+          },
+          {
+            "kappa": [
+              "479888914099151/640000000000000",
+              "29993198822397/40000000000000"
+            ],
+            "delta": {
+              "lower": "806316244007/1717986918400",
+              "upper": "806349478541/1717986918400"
+            }
+          },
+          {
+            "kappa": [
+              "29993198822397/40000000000000",
+              "479893448217553/640000000000000"
+            ],
+            "delta": {
+              "lower": "1612633073113/3435973836800",
+              "upper": "806349770909/1717986918400"
+            }
+          },
+          {
+            "kappa": [
+              "479893448217553/640000000000000",
+              "239947857638377/320000000000000"
+            ],
+            "delta": {
+              "lower": "806316829103/1717986918400",
+              "upper": "403175031637/858993459200"
+            }
+          },
+          {
+            "kappa": [
+              "239947857638377/320000000000000",
+              "95979596467191/128000000000000"
+            ],
+            "delta": {
+              "lower": "322526848659/687194767360",
+              "upper": "1612700711273/3435973836800"
+            }
+          },
+          {
+            "kappa": [
+              "95979596467191/128000000000000",
+              "119975062348789/160000000000000"
+            ],
+            "delta": {
+              "lower": "1612634828377/3435973836800",
+              "upper": "1612701295993/3435973836800"
+            }
+          },
+          {
+            "kappa": [
+              "119975062348789/160000000000000",
+              "479902516454357/640000000000000"
+            ],
+            "delta": {
+              "lower": "322527082691/687194767360",
+              "upper": "1612701880707/3435973836800"
+            }
+          },
+          {
+            "kappa": [
+              "479902516454357/640000000000000",
+              "239952391756779/320000000000000"
+            ],
+            "delta": {
+              "lower": "1612635998527/3435973836800",
+              "upper": "201587808177/429496729600"
+            }
+          },
+          {
+            "kappa": [
+              "239952391756779/320000000000000",
+              "479907050572759/640000000000000"
+            ],
+            "delta": {
+              "lower": "806318291797/1717986918400",
+              "upper": "40317576253/85899345920"
+            }
+          },
+          {
+            "kappa": [
+              "479907050572759/640000000000000",
+              "11997732940799/16000000000000"
+            ],
+            "delta": {
+              "lower": "322527433731/687194767360",
+              "upper": "806351817409/1717986918400"
+            }
+          },
+          {
+            "kappa": [
+              "11997732940799/16000000000000",
+              "479911584691161/640000000000000"
+            ],
+            "delta": {
+              "lower": "1612637753711/3435973836800",
+              "upper": "1612704219511/3435973836800"
+            }
+          },
+          {
+            "kappa": [
+              "479911584691161/640000000000000",
+              "239956925875181/320000000000000"
+            ],
+            "delta": {
+              "lower": "806319169381/1717986918400",
+              "upper": "1612704804199/3435973836800"
+            }
+          },
+          {
+            "kappa": [
+              "239956925875181/320000000000000",
+              "479916118809563/640000000000000"
+            ],
+            "delta": {
+              "lower": "50394966369/107374182400",
+              "upper": "1612705388881/3435973836800"
+            }
+          },
+          {
+            "kappa": [
+              "479916118809563/640000000000000",
+              "119979596467191/160000000000000"
+            ],
+            "delta": {
+              "lower": "100789969303/214748364800",
+              "upper": "1612705973559/3435973836800"
+            }
+          },
+          {
+            "kappa": [
+              "119979596467191/160000000000000",
+              "95984130585593/128000000000000"
+            ],
+            "delta": {
+              "lower": "1612640093883/3435973836800",
+              "upper": "161270655823/343597383680"
+            }
+          },
+          {
+            "kappa": [
+              "95984130585593/128000000000000",
+              "239961459993583/320000000000000"
+            ],
+            "delta": {
+              "lower": "1612640678913/3435973836800",
+              "upper": "1612707142897/3435973836800"
+            }
+          },
+          {
+            "kappa": [
+              "239961459993583/320000000000000",
+              "479925187046367/640000000000000"
+            ],
+            "delta": {
+              "lower": "1612641263937/3435973836800",
+              "upper": "806353863779/1717986918400"
+            }
+          },
+          {
+            "kappa": [
+              "479925187046367/640000000000000",
+              "14997732940799/20000000000000"
+            ],
+            "delta": {
+              "lower": "403160462239/858993459200",
+              "upper": "806354156107/1717986918400"
+            }
+          },
+          {
+            "kappa": [
+              "14997732940799/20000000000000",
+              "479929721164769/640000000000000"
+            ],
+            "delta": {
+              "lower": "161264243397/343597383680",
+              "upper": "322541779373/687194767360"
+            }
+          },
+          {
+            "kappa": [
+              "479929721164769/640000000000000",
+              "47993198822397/64000000000000"
+            ],
+            "delta": {
+              "lower": "806321509489/1717986918400",
+              "upper": "161270948151/343597383680"
+            }
+          },
+          {
+            "kappa": [
+              "47993198822397/64000000000000",
+              "479934255283171/640000000000000"
+            ],
+            "delta": {
+              "lower": "1612643603981/3435973836800",
+              "upper": "32254201323/68719476736"
+            }
+          },
+          {
+            "kappa": [
+              "479934255283171/640000000000000",
+              "119984130585593/160000000000000"
+            ],
+            "delta": {
+              "lower": "1612644188979/3435973836800",
+              "upper": "322542130157/687194767360"
+            }
+          },
+          {
+            "kappa": [
+              "119984130585593/160000000000000",
+              "479938789401573/640000000000000"
+            ],
+            "delta": {
+              "lower": "403161193493/858993459200",
+              "upper": "322542247083/687194767360"
+            }
+          },
+          {
+            "kappa": [
+              "479938789401573/640000000000000",
+              "239970528230387/320000000000000"
+            ],
+            "delta": {
+              "lower": "1612645358959/3435973836800",
+              "upper": "1612711820039/3435973836800"
+            }
+          },
+          {
+            "kappa": [
+              "239970528230387/320000000000000",
+              "19197732940799/25600000000000"
+            ],
+            "delta": {
+              "lower": "1612645943941/3435973836800",
+              "upper": "806356202329/1717986918400"
+            }
+          },
+          {
+            "kappa": [
+              "19197732940799/25600000000000",
+              "59993198822397/80000000000000"
+            ],
+            "delta": {
+              "lower": "1612646528917/3435973836800",
+              "upper": "1612712989271/3435973836800"
+            }
+          },
+          {
+            "kappa": [
+              "59993198822397/80000000000000",
+              "479947857638377/640000000000000"
+            ],
+            "delta": {
+              "lower": "50395222309/107374182400",
+              "upper": "1612713573879/3435973836800"
+            }
+          },
+          {
+            "kappa": [
+              "479947857638377/640000000000000",
+              "239975062348789/320000000000000"
+            ],
+            "delta": {
+              "lower": "806323849427/1717986918400",
+              "upper": "806357079241/1717986918400"
+            }
+          },
+          {
+            "kappa": [
+              "239975062348789/320000000000000",
+              "479952391756779/640000000000000"
+            ],
+            "delta": {
+              "lower": "322529656763/687194767360",
+              "upper": "40317868577/85899345920"
+            }
+          },
+          {
+            "kappa": [
+              "479952391756779/640000000000000",
+              "23997732940799/32000000000000"
+            ],
+            "delta": {
+              "lower": "161264886877/343597383680",
+              "upper": "201589415959/429496729600"
+            }
+          },
+          {
+            "kappa": [
+              "23997732940799/32000000000000",
+              "479956925875181/640000000000000"
+            ],
+            "delta": {
+              "lower": "40316236343/85899345920",
+              "upper": "1612715912259/3435973836800"
+            }
+          },
+          {
+            "kappa": [
+              "479956925875181/640000000000000",
+              "239979596467191/320000000000000"
+            ],
+            "delta": {
+              "lower": "322530007733/687194767360",
+              "upper": "1612716496841/3435973836800"
+            }
+          },
+          {
+            "kappa": [
+              "239979596467191/320000000000000",
+              "479961459993583/640000000000000"
+            ],
+            "delta": {
+              "lower": "403162655901/858993459200",
+              "upper": "1612717081417/3435973836800"
+            }
+          },
+          {
+            "kappa": [
+              "479961459993583/640000000000000",
+              "29997732940799/40000000000000"
+            ],
+            "delta": {
+              "lower": "1612651208539/3435973836800",
+              "upper": "403179416497/858993459200"
+            }
+          },
+          {
+            "kappa": [
+              "29997732940799/40000000000000",
+              "95993198822397/128000000000000"
+            ],
+            "delta": {
+              "lower": "1612651793467/3435973836800",
+              "upper": "806359125277/1717986918400"
+            }
+          },
+          {
+            "kappa": [
+              "95993198822397/128000000000000",
+              "239984130585593/320000000000000"
+            ],
+            "delta": {
+              "lower": "1612652378391/3435973836800",
+              "upper": "322543767023/687194767360"
+            }
+          },
+          {
+            "kappa": [
+              "239984130585593/320000000000000",
+              "479970528230387/640000000000000"
+            ],
+            "delta": {
+              "lower": "1612652963309/3435973836800",
+              "upper": "161271941967/343597383680"
+            }
+          },
+          {
+            "kappa": [
+              "479970528230387/640000000000000",
+              "119993198822397/160000000000000"
+            ],
+            "delta": {
+              "lower": "806326774111/1717986918400",
+              "upper": "80636000211/171798691840"
+            }
+          },
+          {
+            "kappa": [
+              "119993198822397/160000000000000",
+              "479975062348789/640000000000000"
+            ],
+            "delta": {
+              "lower": "161265413313/343597383680",
+              "upper": "403180147191/858993459200"
+            }
+          },
+          {
+            "kappa": [
+              "479975062348789/640000000000000",
+              "47997732940799/64000000000000"
+            ],
+            "delta": {
+              "lower": "100790919877/214748364800",
+              "upper": "201590146663/429496729600"
+            }
+          },
+          {
+            "kappa": [
+              "47997732940799/64000000000000",
+              "479979596467191/640000000000000"
+            ],
+            "delta": {
+              "lower": "1612655302929/3435973836800",
+              "upper": "806360878919/1717986918400"
+            }
+          },
+          {
+            "kappa": [
+              "479979596467191/640000000000000",
+              "59997732940799/80000000000000"
+            ],
+            "delta": {
+              "lower": "80632794391/171798691840",
+              "upper": "806361171183/1717986918400"
+            }
+          },
+          {
+            "kappa": [
+              "59997732940799/80000000000000",
+              "479984130585593/640000000000000"
+            ],
+            "delta": {
+              "lower": "1612656472707/3435973836800",
+              "upper": "161272292689/343597383680"
+            }
+          },
+          {
+            "kappa": [
+              "479984130585593/640000000000000",
+              "239993198822397/320000000000000"
+            ],
+            "delta": {
+              "lower": "403164264397/858993459200",
+              "upper": "100795219463/214748364800"
+            }
+          },
+          {
+            "kappa": [
+              "239993198822397/320000000000000",
+              "95997732940799/128000000000000"
+            ],
+            "delta": {
+              "lower": "50395551327/107374182400",
+              "upper": "1612724095921/3435973836800"
+            }
+          },
+          {
+            "kappa": [
+              "95997732940799/128000000000000",
+              "119997732940799/160000000000000"
+            ],
+            "delta": {
+              "lower": "806329113667/1717986918400",
+              "upper": "403181170107/858993459200"
+            }
+          },
+          {
+            "kappa": [
+              "119997732940799/160000000000000",
+              "479993198822397/640000000000000"
+            ],
+            "delta": {
+              "lower": "1612658812199/3435973836800",
+              "upper": "161272526493/343597383680"
+            }
+          },
+          {
+            "kappa": [
+              "479993198822397/640000000000000",
+              "239997732940799/320000000000000"
+            ],
+            "delta": {
+              "lower": "1612659397059/3435973836800",
+              "upper": "1612725849427/3435973836800"
+            }
+          },
+          {
+            "kappa": [
+              "239997732940799/320000000000000",
+              "479997732940799/640000000000000"
+            ],
+            "delta": {
+              "lower": "1612659981913/3435973836800",
+              "upper": "1612726433919/3435973836800"
+            }
+          },
+          {
+            "kappa": [
+              "479997732940799/640000000000000",
+              "3/4"
+            ],
+            "delta": {
+              "lower": "1612660566763/3435973836800",
+              "upper": "322545403681/687194767360"
+            }
+          }
+        ],
+        "strict_lower_bounds": {
+          "A0": "41433531/100000000",
+          "A1": "80281019/100000000",
+          "A2": "298312433/500000000",
+          "A3": "6805647/25000000",
+          "B_floor": "880627/1000000000",
+          "G_derivative": "49844849/100000000",
+          "b": "43205403/500000000",
+          "discriminant_y1": "58801139/500000000",
+          "discriminant_y2": "19659017/50000000",
+          "discriminant_y3": "370335259/1000000000",
+          "discriminant_y4": "4169413/50000000",
+          "ell_above_sixth": "17119/40000000",
+          "ell_below_fifth": "32855841/1000000000",
+          "ell_derivative_minus_eighth": "38558289/40000000",
+          "ell_over_h_lower": "218153/500000000",
+          "ell_over_h_upper": "5837221/500000000",
+          "floor_endpoint": "1613069/1000000000",
+          "lx_above_ell": "205956539/1000000000",
+          "ly_above_h_half": "62613921/1000000000",
+          "ly_below_half": "20110383/500000000",
+          "ly_minus_ell_above_11b6": "133625007/1000000000",
+          "prime_capacity": "1704619/1000000000",
+          "small_delta_0": "11313697/500000000",
+          "small_delta_1": "1511/12500000",
+          "small_row": "1386473/62500000"
+        },
+        "rounding": "Each reported margin is rounded down to a rational multiple of 10^-9 using integer division. Acceptance uses the original exact positive interval bound.",
+        "primitive_polynomial_identities": 3,
+        "negative_controls": 2,
+        "endpoint_bracket": {
+          "kappa": [
+            "93721661759991/125000000000000",
+            "749773294079929/1000000000000000"
+          ],
+          "B": [
+            "218721661759991/250000000000000",
+            "1749773294079929/2000000000000000"
+          ]
+        },
+        "not_replayed": [
+          "upstream analytic estimates",
+          "global critical family monotonicity outside the stated kappa interval"
+        ]
+      }
+    }
+  ],
+  "excluded_exploration": "mixed/probe_centered_canonical.py is a numerical exploration, not an exact acceptance check."
+}
