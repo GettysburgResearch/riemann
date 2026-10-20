@@ -1,0 +1,150 @@
+{
+  "audit_date_utc": "2026-10-20",
+  "base_commit": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "classical_primary_sources": [
+    {
+      "authors": "James W. Cogdell",
+      "title": "On Artin L-functions",
+      "url": "https://math.osu.edu/~cogdell/artin-www.pdf",
+      "used": "pp. 10-12; Brauer integer factorization, ramified Euler factors and induction"
+    },
+    {
+      "authors": "J. S. Milne",
+      "title": "Class Field Theory",
+      "url": "https://www.jmilne.org/math/CourseNotes/CFT.pdf",
+      "used": "VIII Section 10; induction and Hecke identification",
+      "version": "4.03 (2020)"
+    },
+    {
+      "authors": "Jesse Thorner and Asif Zaman",
+      "doi": "10.2140/ant.2019.13.1039",
+      "identifier": "arXiv:1803.02823v3",
+      "title": "A unified and improved Chebotarev density theorem",
+      "url": "https://arxiv.org/abs/1803.02823v3",
+      "used": "Section 2.3, Lemma 2.5 and Section 4.2; classical Hecke analytic ingredients"
+    },
+    {
+      "authors": "Benjamin Wesolowski",
+      "doi": "10.2140/obs.2019.2.461",
+      "not_imported": "Numerical constants proved there under ERH",
+      "title": "Generating subgroups of ray class groups with small prime ideals",
+      "url": "https://msp.org/obs/2019/2-1/obs-v2-n1-p28-s.pdf",
+      "used": "Section 2 equations (2-2),(2-3) and Table 1; subgroup method in Theorems 1.1-1.2 and Section 3",
+      "year": 2019
+    }
+  ],
+  "packet": "2026-10-20-liu-all-field-artin-and-barrier",
+  "primary_import": {
+    "abstract_url": "https://arxiv.org/abs/2610.26835v1",
+    "author": "Baiying Liu",
+    "boundary": {
+      "decimal_for_display": "0.874886647039964...",
+      "domain": "open Re(s)>B_flat; principal simple pole at s=1 allowed",
+      "isolating_interval": [
+        "1749773294079928/2000000000000000",
+        "1749773294079929/2000000000000000"
+      ],
+      "polynomial_coefficients_descending": [
+        133488,
+        -376596,
+        384534,
+        -167541,
+        26231
+      ]
+    },
+    "html_url": "https://arxiv.org/html/2610.26835v1",
+    "identifier": "arXiv:2610.26835v1",
+    "license": "arXiv perpetual non-exclusive license; PDF not redistributed in this contribution",
+    "locators": {
+      "angular_type": "Lemma 4.2, pp. 28-29",
+      "descent": "Proposition 19.1",
+      "field_transfer": "Lemma 18.1 and Theorem 18.2",
+      "monomial_corollary": "Corollary 19.2(2)",
+      "optimality_scope": "Theorem 14.12 and Remark 14.13",
+      "principal_Mellin_integral": "Equation (13.13)",
+      "principal_local_factor": "Section 13.3, pp. 94-97, equation (13.9)",
+      "scalar_inputs": "Sections 14.1, 14.3, 14.8, 15.1 and 15.3; equations (14.3), (14.7), (14.8)",
+      "small_argument_tail": "Section 13.6, p. 106",
+      "zero_free_theorem": "Theorem 17.1"
+    },
+    "manuscript_date": "2026-10-18",
+    "not_fully_reaudited": [
+      "Sections 10-12 varying inverse/product moment inductions",
+      "All exceptional-theta local and global normalizations"
+    ],
+    "pdf_pages": 136,
+    "pdf_sha256": "5d0fd10274c8444c789b0b7925a1cd3419017fe760be3219b6be51d7fbed9bd5",
+    "pdf_url": "https://arxiv.org/pdf/2610.26835v1",
+    "status": "External preprint theorem; focused audit only",
+    "submission_utc": "2026-10-19T17:57:27Z",
+    "title": "Zero-free half-planes for Hecke L-functions over number fields"
+  },
+  "repository": "GettysburgResearch/riemann",
+  "repository_sources": [
+    {
+      "commit": "d3b3d19573b8dc47ac6e37abd108d54982e9e5f1",
+      "paths": [
+        "standalone/2026-10-18-amplified-boundary-and-global-attacks/correlated/UNIFORM_BOUNDARY.md",
+        "standalone/2026-10-18-amplified-boundary-and-global-attacks/correlated/DIRECT_ESTIMATE_FLOOR.md",
+        "standalone/2026-10-18-amplified-boundary-and-global-attacks/native/JOINT_NUMERATOR_CLOSURE.md",
+        "standalone/2026-10-18-amplified-boundary-and-global-attacks/field/PRINCIPAL_CORRELATIONS_AND_QUARTIC.md"
+      ],
+      "pr": 1005,
+      "url": "https://github.com/GettysburgResearch/riemann/pull/1005"
+    },
+    {
+      "commit": "0c838d130f275efb6e8ddb81dab42462b4ce9454",
+      "paths": [
+        "standalone/2026-10-18-three-direction-sprint/eisenstein/RELAXED_MIXED_CONSUMER.md",
+        "standalone/2026-10-18-three-direction-sprint/quartic/COFINAL_HILBERT_FILTER.md"
+      ],
+      "pr": 1006,
+      "url": "https://github.com/GettysburgResearch/riemann/pull/1006"
+    },
+    {
+      "commit": "ae22a228691fc7e571f97d4c80a8c6585c5fb656",
+      "pr": 1007,
+      "url": "https://github.com/GettysburgResearch/riemann/pull/1007",
+      "used": "Editorial inventory and claim ledger"
+    },
+    {
+      "commit": "edbc27b61208ccc7ee1fa99fa3f4e861f5a03452",
+      "paths": [
+        "standalone/2026-10-18-resonant-transverse-jet/PROOF.md"
+      ],
+      "pr": 975,
+      "url": "https://github.com/GettysburgResearch/riemann/pull/975",
+      "used": "Distinct zeta(s+w) resonant normalizer; compare with actual principal residue at w=1,z=1/6"
+    }
+  ],
+  "upstream_references_as_reported_by_pinned_Liu_source": [
+    {
+      "authors": "D. Cureton and J. Thorner (investigators)",
+      "label": "CT26",
+      "review_scope": "Source bibliography and theorem comparison; no complete new audit",
+      "title": "Report: A quasi-Riemann hypothesis for Dedekind zeta functions",
+      "version": "hexagon:2610.00200v2 (2026)"
+    },
+    {
+      "authors": "Baiying Liu",
+      "label": "Liu26a",
+      "review_scope": "Inherited dependency; locators as stated in 2610.26835v1",
+      "title": "Improved zero-free half-planes for the quasi-Riemann hypothesis",
+      "version": "12 October 2026, arXiv:2610.12234"
+    },
+    {
+      "authors": "OpenAI",
+      "label": "Ope26a",
+      "review_scope": "Inherited exceptional-theta input; not reconstructed in this packet",
+      "title": "The Quasi-Riemann Hypothesis: A Zero-Free Half-Plane Re s > 7/8",
+      "version": "30 September 2026 manuscript"
+    },
+    {
+      "authors": "Y. Xu and H. Sang",
+      "label": "XS26",
+      "review_scope": "Inherited averaged numerator strategy; full new proof not reaudited",
+      "title": "Amplified moments and a refinement of the quasi-Riemann hypothesis",
+      "version": "15 October 2026, arXiv:2610.15291v2"
+    }
+  ]
+}

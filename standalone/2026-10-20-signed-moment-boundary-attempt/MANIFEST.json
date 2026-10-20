@@ -1,0 +1,45 @@
+{
+  "benchmark": {
+    "name": "Liu B_flat",
+    "strict_improvement_established_here": false,
+    "value_display": "0.874886647039964..."
+  },
+  "date": "2026-10-20",
+  "external_sources": [
+    {
+      "pdf_sha256": "5d0fd10274c8444c789b0b7925a1cd3419017fe760be3219b6be51d7fbed9bd5",
+      "title": "Zero-free half-planes for Hecke L-functions over number fields",
+      "url": "https://arxiv.org/abs/2610.26835v1"
+    },
+    {
+      "downloaded_markdown_sha256": "414d196862672b5aefbfa671b4b2e60f60ad9dde12dc3042d038a1bfb1d08d39",
+      "title": "Structured cubic and sextic means for angular Gauss coefficients",
+      "url": "https://rstation.ai/problems/riemann_hypothesis/papers/5",
+      "version": 3
+    }
+  ],
+  "files_sha256": {
+    "MARKED_INVERSE_TRANSFER.md": "b00426948714738a6119a7c4ed794be8203a0d7ed00b16dab806fe031b72ab0e",
+    "README.md": "1e262b8ed613fb69f234679a1b1a1a2f2446f45c1bc5edb5af30372a64e59150",
+    "REVIEW_MARKED_INVERSE.md": "8590969cc0c7ce6fab5d76d671b88eb13432311596f42a86a1acd58a04c903e0",
+    "REVIEW_SIGNED_GRAPH.md": "248f317b0c65e14b8593e8617a0adea6a497f6c3d31aa485d079b084cc310a5e",
+    "REVIEW_SIGNED_ORIGIN.md": "72ca5a2302bfcd62af509cf47e55ab001a3f87976b82f97347e09ba97dc8a822",
+    "REVIEW_TRIPLE_AND_CHECKER.md": "af9f8cd751d8a2aa50f3bf655211b6eff8ce8796ddc15cdcd3ee94eecbc4d311",
+    "SIGNED_CHECKS.json": "5630f72d8f2fd4427d33f6eb8d4a940178d05d53f75cf10d3c794b3b9b5dae23",
+    "SIGNED_SECOND_ORIGIN.md": "34f88db8c28280ff45104cd4e86c7465112cc118babd6a3afa408757a4323725",
+    "SIGNED_SIXTH_POWER_GRAPH.md": "0459e0b5ccb98ebe2fcbe3618117c864e5e3baa4d181b2d076882ed5d5a5348e",
+    "THETA_AND_SIXTH_MOMENT_AUDIT.md": "8eae0c4bd2338d7a0c871af7e9d9c502e78831d03c18d9d81c80084b3cbc43e9",
+    "TRIPLE_COMPARISON.md": "8ce1ef4e64f1a80cbcd66ddc95af25003e79f9b7992ff76633db114071beacb8",
+    "replay.py": "44aecc71892e4f1a1ce3a5a7aa049160100074e3c29bebfd74b482a4eb3681e3",
+    "verify_signed_components.py": "c03ba99038503a43aaef7a0afb6e4a2ba467c797d925bef56e495c976f1af91b"
+  },
+  "previous_repository_commit": "7f6ff9dae8d3473a5835a5cbe7308148b8b3c1a0",
+  "replay_scope": [
+    "Resident hashes and exact symbolic component algebra",
+    "Finite integer projector and residue models; not all number fields",
+    "Does not authenticate or reprove external analytic inputs",
+    "Does not prove a sixth moment, a signed width decrease, or a smaller zero-free boundary"
+  ],
+  "schema": "riemann.signed-moment-attempt.resident-manifest.v1",
+  "status": "PROPOSED source-dependent components; no smaller boundary established"
+}
