@@ -55,3 +55,13 @@ Later analytic additions have separate current-hash component reviews
 listed in [LATER_RESULTS.md](LATER_RESULTS.md). The ninth checker tests
 the newly used positive cubic local self-reflection; it does not certify
 the corresponding infinite joint mean.
+
+The [final hybrid-head review](FINAL_HYBRID_HEAD_REVIEW.md) binds the
+complete mathematical head `b05d0675e2824f7b83325f881c243df8e5b56487`.
+It independently replays all nine checkers from an isolated archive,
+checks 98 source hashes and 106 local links, and verifies preservation
+of prior mathematical bytes and the new review bindings. The final
+packaging commit adds that receipt and refreshes this index and the
+manifest; it does not alter the reviewed mathematics. Agent reviews
+are not human review, global analytic certification, or integration
+approval.

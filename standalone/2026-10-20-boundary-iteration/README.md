@@ -103,6 +103,8 @@ Use [CLAIMS.md](CLAIMS.md) for the exact claim map,
 [NEXT_STEPS.md](NEXT_STEPS.md) for the remaining numerical-boundary
 targets. The scoped [assembly review](GLOBAL_ASSEMBLY_REVIEW.md)
 distinguishes independent checks from coauthor checks.
+The [final exact-head audit](FINAL_HYBRID_HEAD_REVIEW.md) binds the
+complete mathematical head, including the later hybrid estimates.
 
 The [later results and comparisons](LATER_RESULTS.md) add a signed
 long-divisor estimate, an exact Mobius-complement Euler product, and
