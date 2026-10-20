@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "scope": "Exact comparison of displayed supplied exponents only.",
+  "checks": [
+    "second-moment gap",
+    "uniform positive endpoint",
+    "critical witness interval",
+    "higher-moment identity",
+    "local-buffer endpoint interpolation",
+    "intersection location",
+    "direct-Gram normalization"
+  ],
+  "sha256": {
+    "NUMERATOR_MOMENT_BARRIERS.md": "0534e841541201d4c9cf95a68d506744dccf69a2ea627d1a874cf96054f51f56",
+    "verify_numerator_barriers.py": "82ccf42617268c40a8e5e944169d40de0e9f46b2f4253fab7e0cd95c48b78091"
+  }
+}

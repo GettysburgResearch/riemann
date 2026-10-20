@@ -1,0 +1,111 @@
+{
+  "base_commit": "7f6ff9dae8d3473a5835a5cbe7308148b8b3c1a0",
+  "date_utc": "2026-10-20",
+  "packet": "2026-10-20-boundary-iteration/global",
+  "status": "Proposed source-dependent mathematics; analytic claims require independent review.",
+  "repository_sources": [
+    {
+      "repository": "openai/math",
+      "commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "path": "preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/build/paper.tex",
+      "sha256": "42a5ee0febca59fd1def55cfd6c6808c322ef4237d7726303ea52f711deac6a3",
+      "used": [
+        "Completed reflection and exact cusp coefficients",
+        "Base probe auxiliary-character freedom, lines 3331-3378",
+        "Coefficientwise auxiliary cancellation, lines 3941-3951",
+        "Product-form mark divisor bound, lines 7303-7315",
+        "Canonical inverse, both Poisson steps, selected initialization and amplification",
+        "Ordinary product moment, lines 12531-14974",
+        "Native Eisenstein final comparison, lines 15505-16461"
+      ],
+      "review_scope": "The changed interfaces were read directly. The entire upstream proof was not independently certified."
+    },
+    {
+      "repository": "openai/math",
+      "commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+      "directory": "preprints/Primitive-roots-for-every-admissible-integer-base-October-4-2026/build/",
+      "files": {
+        "02-arithmetic.tex": "892ce2d22b787810e4e7dc3dda9ac54877a3b749e5cc87c1e21868c1a72f492b",
+        "03-theta.tex": "fb55e83219ef28a92f0be4f5fce77207be96c6573c3660e5182eb0f435016587",
+        "04-reflection.tex": "d76f23137518b7b6ffb491f86598570ec1a89adf43320775eafed5661ce30407",
+        "05-poisson.tex": "bd5e53c2d9436aa1c621dca2d1c423035b610b423f064f7d5b6e19f3d9f31992",
+        "06-zero-free.tex": "c565166640d5e8210a2af70f00f6b9072112033a182ec7dede17e1517e76be33"
+      },
+      "used": [
+        "Adapted finite power-class complement and allowed generators",
+        "Gauss-phase reconstruction via quadratic Weil index, arithmetic lines 523-573",
+        "Actual theta row-unit character and finite class cutoff",
+        "Exact finite Poisson transform, argument and frequency decomposition",
+        "The full all-field auxiliary-guard identity is new work in this packet"
+      ],
+      "review_scope": "Read the changed interfaces directly; not an independent certification of the full upstream paper."
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "7f6ff9dae8d3473a5835a5cbe7308148b8b3c1a0",
+      "path": "standalone/2026-10-20-angular-hecke-continuation",
+      "used": [
+        "Inherited nonresonant unitary adapters and their exact scope",
+        "Ordinary fixed-angular product-moment proof changes",
+        "Principal unitary Euler factorization",
+        "Prior primary-source pins"
+      ]
+    }
+  ],
+  "primary_sources": [
+    {
+      "authors": ["Alexander Dunn", "Maksym Radziwill"],
+      "title": "Bias in cubic Gauss sums: Patterson's conjecture",
+      "identifier": "arXiv:2109.07463v3",
+      "url": "https://arxiv.org/html/2109.07463v3",
+      "version_date": "2024-05-14",
+      "inherited_html_sha256": "3949e0f0ae87808d84fe02c12a3b68c5b66aa8d967d8ecb5e1605f1d985b956d",
+      "used": ["Section 5 coefficient and cusp formulas", "Proposition 5.2 residue", "Completed Mellin representations"],
+      "not_used": "GRH-dependent conclusions of Section 8"
+    },
+    {
+      "author": "Baiying Liu",
+      "identifier": "arXiv:2610.12234v2",
+      "url": "https://arxiv.org/html/2610.12234v2",
+      "fetched_html_sha256": "638037f71bf079f8f37e384f8a3d62662c532f42bc43f6d1fab065de3fe99eee",
+      "used": ["Native Eisenstein formulation", "Proposition 28.1 extended ordinary moment range", "Initial scalar comparison"],
+      "not_used": "Its finite-order conclusion as a theorem about new angular characters"
+    },
+    {
+      "authors": ["Xu", "Sang"],
+      "title": "Amplified moments and a refinement of the quasi-Riemann hypothesis",
+      "identifier": "arXiv:2610.15291v2",
+      "url": "https://arxiv.org/html/2610.15291v2",
+      "fetched_html_sha256": "74ace7acb59fe416c7891da3b29b0a0ea1c8601304aa9274d40b4f662c2afbc8",
+      "used": ["Proposition 3.1 native low bound", "Proposition 4.1 row count", "Proposition 5.1 numerator average", "Lemma 6.2 and Appendix C local contour estimates", "Appendix A ordinary moment range"],
+      "not_used": "Its finite-order conclusion as a theorem about new angular characters"
+    },
+    {
+      "author": "Baiying Liu",
+      "title": "Zero-free half-planes for Hecke L-functions over number fields",
+      "identifier": "arXiv:2610.26835v1",
+      "url": "https://arxiv.org/html/2610.26835v1",
+      "pdf_sha256": "5d0fd10274c8444c789b0b7925a1cd3419017fe760be3219b6be51d7fbed9bd5",
+      "fetched_html_sha256": "5b128f3cedb4d6ecfe3a3d57b1290cb576cac03092cf0b807c6f8092abf864c6",
+      "used": [
+        "Proposition 4.1 ordinary torus cocycle and spherical representation",
+        "Lemma 5.1 actual class weights, Jacquet exponents, and absolute Fourier bounds",
+        "Sections 10-11 canonical bounded-row and inverse interfaces",
+        "Sections 13.2-13.6 direct probe, additive Gram including fixed S-supported twists, exact correction and initial continuation",
+        "Section 14 residue-averaged contour comparison",
+        "Equations 14.3-14.10 and Lemmas 14.8-14.10 scalar inputs",
+        "Section 18 arbitrary field setup and abelian descent"
+      ],
+      "not_used": "Theorem 14.11 specialized to E outside its stated field domain",
+      "certificate_scope": "The continuous scalar certificates are imported inputs; this subpacket does not claim an independent replay."
+    }
+  ],
+  "check": {
+    "file": "check_residue_algebra.py",
+    "sha256": "2b6fa5a054c42909e4f026d73451d1e8f5f012253e3c5c596c2190d1621f98a6",
+    "command": "python -I -S -B check_residue_algebra.py",
+    "result": "residue_check_results.json",
+    "named_checks": 2366,
+    "scope": "Exact finite algebra only. No analytic or zero-free certification."
+  }
+}
