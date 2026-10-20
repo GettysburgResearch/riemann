@@ -1,0 +1,124 @@
+{
+  "date": "2026-10-20",
+  "external_sources": [
+    {
+      "authors": [
+        "Alexander Dunn",
+        "Maksym Radziwill"
+      ],
+      "id": "DR",
+      "locators": [
+        "(5.7), (5.13)-(5.14)",
+        "(5.17), (5.19)-(5.23)",
+        "Proposition 5.1; (5.48)-(5.53)",
+        "Lemma 5.4 coefficient derivation, not its cubic-only conclusion",
+        "(5.73)-(5.74), (5.77)"
+      ],
+      "title": "Bias in cubic Gauss sums: Patterson's conjecture",
+      "url": "https://arxiv.org/html/2109.07463v3",
+      "use": "General periodic-twist functional equation and actual coefficients. No GRH-dependent prime, dispersion or later average Type-I theorem imported.",
+      "version": "arXiv:2109.07463v3"
+    },
+    {
+      "authors": [
+        "Alexandre de Faveri"
+      ],
+      "id": "DF",
+      "locators": [
+        "Theorem 1.1",
+        "Sections 2.2-2.5",
+        "equations (1.2)-(1.4)"
+      ],
+      "title": "Optimal large sieve for fixed order characters",
+      "url": "https://arxiv.org/html/2610.04045v1",
+      "use": "Sextic large-sieve upper bound with arbitrary squarefree column coefficients, as a special case of the sixth-power-free theorem. Full preprint proof not independently rebuilt.",
+      "version": "arXiv:2610.04045v1"
+    },
+    {
+      "authors": [
+        "Leo Goldmakher",
+        "Benoit Louvel"
+      ],
+      "id": "GL",
+      "locators": [
+        "Definition 1",
+        "Remark 3",
+        "Theorem 1.1",
+        "Section 2"
+      ],
+      "title": "A quadratic large sieve inequality over number fields",
+      "url": "https://arxiv.org/html/1112.1642v2",
+      "use": "Quadratic Hecke-family large sieve and finite reciprocity data. Full proof not independently rebuilt.",
+      "version": "arXiv:1112.1642v2"
+    },
+    {
+      "authors": [
+        "Baiying Liu"
+      ],
+      "id": "LIU",
+      "locators": [
+        "Abstract",
+        "Theorem 17.1",
+        "Theorem 18.2",
+        "Proposition 19.1"
+      ],
+      "title": "Zero-free half-planes for Hecke L-functions over number fields",
+      "url": "https://arxiv.org/html/2610.26835v1",
+      "use": "Common finite-order Hecke boundary B_flat. Imported preprint dependency, not independently certified. Only needed to remove the completion, not for Theorem A.",
+      "version": "arXiv:2610.26835v1"
+    },
+    {
+      "authors": [
+        "Xu",
+        "Sang"
+      ],
+      "id": "XS",
+      "locators": [
+        "Section 1.1; (1.2)",
+        "Section 2.2; (2.3)"
+      ],
+      "title": "A sharp lower bound for the sextic large sieve",
+      "url": "https://arxiv.org/html/2610.17675v1",
+      "use": "Primary confirmation of DF upper bound for the explicit Eisenstein sextic symbols. The lower-bound theorem is not an input.",
+      "version": "arXiv:2610.17675v1"
+    }
+  ],
+  "formal_analytic_verification": false,
+  "independent_human_or_separate_agent_review": false,
+  "literature_wide_priority_claim": false,
+  "new_zero_free_boundary_proved": false,
+  "parent_commit": "a1afee36313ff5994dad7b97983948113571965e",
+  "parent_pr": 1010,
+  "repository_sources": [
+    {
+      "blob": "9853b589ca3906fd14702f1383eb2de3647ddfa4",
+      "commit": "a1afee36313ff5994dad7b97983948113571965e",
+      "path": "standalone/2026-10-20-primitive-twist-type-i/PROOF.md",
+      "pr": 1010,
+      "sha256": "73e47442847a6d2a9cd843e5449a85e6e1cdadee59bcf14caa5bcb6859c78023",
+      "use": "Finite transform, cube completion, pointwise predecessor and uniform reciprocal argument. Relevant interfaces rederived in new proof."
+    },
+    {
+      "blob": "5eee8d8c3fa3c763217cf1943591b2c33acb53de",
+      "commit": "a1afee36313ff5994dad7b97983948113571965e",
+      "path": "standalone/2026-10-20-primitive-twist-type-i/verify.py",
+      "pr": 1010,
+      "sha256": "a56c35b9dece264ab1471da7aa9a8c314544e08d3d96df596162482d3955879b",
+      "use": "Prior exact finite checker rerun ordinary/optimized; inherited read-only finite-field primitives used for new local tests."
+    },
+    {
+      "blob": "b155d5b92ca575d7e093ed5f12a6707c4a8ddedb",
+      "commit": "0c838d130f275efb6e8ddb81dab42462b4ce9454",
+      "path": "standalone/2026-10-18-three-direction-sprint/eisenstein/RELAXED_MIXED_CONSUMER.md",
+      "pr": 1006,
+      "use": "Conditional 0.874 consumer; not activated."
+    },
+    {
+      "commit": "0c838d130f275efb6e8ddb81dab42462b4ce9454",
+      "path": "standalone/2026-10-18-three-direction-sprint/rational/CUBIC_CORE_ALL_POWER_TRANSFER.md",
+      "pr": 1006,
+      "use": "Actual all-power cross-component source audit; no replacement of its indefinite high-core remainder by a positive norm."
+    }
+  ],
+  "retrieval_scope": "Listed primary HTML interfaces read through web. No PDF rendering, downloaded source-byte hash or complete independent upstream reconstruction claimed."
+}
