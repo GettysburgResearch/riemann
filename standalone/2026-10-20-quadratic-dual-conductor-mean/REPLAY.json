@@ -1,0 +1,66 @@
+{
+  "benchmarks": {
+    "Euler_only_RMS_example": "153/220",
+    "RMS_saving_against_comparable_Euler_baseline": "5/352",
+    "beta": "7/8",
+    "gain_against_generic_equal_length_sieve": "5/96",
+    "gap_to_6_over_5": "1/480",
+    "marked_RMS_example": "109/160",
+    "normalized_X_equals_U": "107/96",
+    "normalized_marked_corner_cost": "11/6",
+    "p": "11/24",
+    "unmarked_conductor_exponent": "115/96"
+  },
+  "check_stream_sha256": "36997df073d627f48808b9b239bdd725bf9b5ed77b975cf6a71c62d4c953027d",
+  "checks": {
+    "affine_k": 31,
+    "bilinear_shape": 65,
+    "closed_domain_nonnegative": 232,
+    "consumer_gap_retained": 1,
+    "exact_benchmark": 7,
+    "infinite_strip_slope": 28,
+    "local_completion_and_dual": 90,
+    "polynomial_identity": 19,
+    "powerful_effective_level": 1296,
+    "predecessor_hash": 1,
+    "primitive_powerful_modulus": 1296,
+    "quadratic_dual_mass": 95,
+    "quadratic_dual_transform": 95,
+    "residue_fourth_power": 1296,
+    "unique_row_decomposition": 1296
+  },
+  "independent_human_or_separate_agent_review": false,
+  "inherited_root_certificate": {
+    "bracket": [
+      "218721661759991/250000000000000",
+      "174977329407993/200000000000000"
+    ],
+    "decimal_evaluation_not_analytic_proof": {
+      "B_flat": "0.8748866470399641309446140005301806494988849618898974222380416480102513",
+      "marked_example_exponent": "0.8239460534293294475189998500574362370290458708714055540757878452011106",
+      "marked_example_saving_below_5_over_6": "0.0093872799040038858143334832758970963042874624619277792575454881322227",
+      "p": "0.4582955490133213769815380001767268831662949872966324740793472160034172",
+      "q": "0.2708522254933393115092309999116365584168525063516837629603263919982914",
+      "unmatched_conductor_exponent": "0.5417044509866786230184619998232731168337050127033675259206527839965828"
+    },
+    "derivative_interval": [
+      "-462985880940940151417010650324790262069342047/244140625000000000000000000000000000000000",
+      "-237048771041264852008697510659508858306093649/125000000000000000000000000000000000000000"
+    ]
+  },
+  "local": {
+    "all_four_prime_valuation_patterns": 1296,
+    "analytic_Euler_product_proof_required": true,
+    "fields": [
+      7,
+      13,
+      19,
+      31,
+      25
+    ]
+  },
+  "new_zero_free_boundary_proved": false,
+  "scope": "exact finite algebra, continuous scalar inequalities and row bookkeeping; not analytic certification",
+  "status": "PASS",
+  "upstream_analytic_proofs_rebuilt": false
+}
