@@ -1,0 +1,99 @@
+{
+  "alias_models": [
+    {
+      "aliases_per_class": 64,
+      "frequency_classes_checked": 7,
+      "modulus": 7,
+      "pool_prime": 2
+    },
+    {
+      "aliases_per_class": 64,
+      "frequency_classes_checked": 13,
+      "modulus": 13,
+      "pool_prime": 2
+    },
+    {
+      "aliases_per_class": 64,
+      "frequency_classes_checked": 19,
+      "modulus": 19,
+      "pool_prime": 2
+    },
+    {
+      "aliases_per_class": 64,
+      "frequency_classes_checked": 21,
+      "modulus": 21,
+      "pool_prime": 2
+    },
+    {
+      "aliases_per_class": 729,
+      "frequency_classes_checked": 25,
+      "modulus": 25,
+      "pool_prime": 3
+    },
+    {
+      "aliases_per_class": 729,
+      "frequency_classes_checked": 35,
+      "modulus": 35,
+      "pool_prime": 3
+    }
+  ],
+  "arithmetic": "EXACT_RATIONAL_AND_SYMBOLIC_LINEAR_FORMS",
+  "excluded_claims": [
+    "sixth moment bounded by U^(1+epsilon)",
+    "signed amplification with a smaller width",
+    "boundary below 0.874886647039964..."
+  ],
+  "producer_sha256": "c03ba99038503a43aaef7a0afb6e4a2ba467c797d925bef56e495c976f1af91b",
+  "projector_models": {
+    "indefinite_form_values": [
+      -2,
+      2
+    ],
+    "integer_models": 512
+  },
+  "scalar_component": {
+    "exceptional_excess": "A/3-M/2",
+    "infimum": "2*s2/3",
+    "separate_second_diagonal_excess_at_A_3M_2": "M/2"
+  },
+  "scope": "Finite algebraic components; no analytic moment or smaller zero-free boundary certified.",
+  "status": "PASS",
+  "symbolic_comparison_cases": [
+    {
+      "maximum_of_cyclic_input": 1,
+      "minimum_of_cyclic_input": 2,
+      "signed_mass": 0,
+      "vertices": 8
+    },
+    {
+      "maximum_of_cyclic_input": 1,
+      "minimum_of_cyclic_input": 3,
+      "signed_mass": 0,
+      "vertices": 8
+    },
+    {
+      "maximum_of_cyclic_input": 2,
+      "minimum_of_cyclic_input": 1,
+      "signed_mass": 0,
+      "vertices": 8
+    },
+    {
+      "maximum_of_cyclic_input": 2,
+      "minimum_of_cyclic_input": 3,
+      "signed_mass": 0,
+      "vertices": 8
+    },
+    {
+      "maximum_of_cyclic_input": 3,
+      "minimum_of_cyclic_input": 1,
+      "signed_mass": 0,
+      "vertices": 8
+    },
+    {
+      "maximum_of_cyclic_input": 3,
+      "minimum_of_cyclic_input": 2,
+      "signed_mass": 0,
+      "vertices": 8
+    }
+  ]
+}
