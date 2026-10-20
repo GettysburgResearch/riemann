@@ -1,0 +1,26 @@
+{
+  "checker": "beyond_hybrid_barrier.py",
+  "checker_sha256": "e2277fd388c64953ff626e551046af3c9ecdfca8458c5af4a38815f259fbeb1b",
+  "controls": [
+    {
+      "mutated_sha256": "875debda5f1b36d259f600d0fc1ac90ea5f6cbc2baeb227630982ad9ee531587",
+      "name": "quartic_changed",
+      "rejected_at": "quartic endpoint signs",
+      "return_code": 1
+    },
+    {
+      "mutated_sha256": "5979fddfd24b6eb7cd881f95ead92bd45cddb2bd191387fee1e8e3abef3e8ed5",
+      "name": "witness_overlap_broken",
+      "rejected_at": "0.0969<=b<=0.1092 pointwise margin",
+      "return_code": 1
+    },
+    {
+      "mutated_sha256": "bc3641cc423feaa87ba6898273512b3b8a2f6173a94854d57978f061108cd644",
+      "name": "unequal_length_sign_flipped",
+      "rejected_at": "free-length affine identity 3",
+      "return_code": 1
+    }
+  ],
+  "mode": "optimized isolated Python",
+  "status": "PASS"
+}

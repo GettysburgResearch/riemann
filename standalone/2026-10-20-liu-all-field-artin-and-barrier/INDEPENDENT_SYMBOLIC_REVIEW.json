@@ -1,0 +1,30 @@
+{
+  "checker_sha256": "c857554a0b07ffb7b587ebfefbb7e73e08522c6e2bfd8b4634ac32132fc792bf",
+  "checks": {
+    "annular_weight_mass": true,
+    "annular_weight_peak": true,
+    "arithmetic_exponent_quartic": true,
+    "boundary_to_kappa_quartic": true,
+    "critical_averaged_zero_b0": true,
+    "critical_averaged_zero_b1": true,
+    "critical_denominator_coprime_b0": true,
+    "critical_denominator_coprime_b1": true,
+    "free_affine_left": true,
+    "free_affine_right": true,
+    "free_affine_shifted": true,
+    "free_affine_zero": true,
+    "paid_negative_asymmetry_left": true,
+    "paid_negative_asymmetry_right": true,
+    "paid_negative_asymmetry_shifted": true,
+    "paid_negative_asymmetry_zero": true,
+    "principal_factorization": true,
+    "unrestricted_direct_dual": true,
+    "weight_derivative_1": true,
+    "weight_derivative_1/2": true,
+    "weight_value_1": true,
+    "weight_value_1/2": true
+  },
+  "scope": "Exact identities only; no analytic proof or root-sign certification",
+  "status": "PASS",
+  "sympy_version": "1.14.0"
+}

@@ -1,0 +1,26 @@
+{
+  "arithmetic": "exact integer polynomial identities and exponent tuples",
+  "checked_identities": [
+    "principal_Pstar_after_common_denominator",
+    "principal_H_after_common_denominator",
+    "extracted_K_formula",
+    "K_minus_one_expansion",
+    "boundary_lower_bound",
+    "R_retains_eta_sixth_power_and_argument_6s_minus_3"
+  ],
+  "checker_sha256": "a14d511f519c66726455dc3d91b056cf1161dabf28811c778752db26e811ff1a",
+  "mutation_controls_rejected": [
+    "omitting_source_mixed_term_D_times_v",
+    "omitting_angular_R_term_in_K",
+    "dropping_one_residue_normalizer_1_minus_v",
+    "replacing_general_target_eta_sixth_power_by_one",
+    "using_argument_6s_minus_4_instead_of_6s_minus_3"
+  ],
+  "scope": "Finite algebra for the displayed local source formula only. Does not certify exceptional-theta identities, normal convergence, global Hecke continuation, a contour shift, or a new zero-free bound.",
+  "source": {
+    "arxiv": "2610.26835v1",
+    "locator": "Section 13.3, pp. 94-97, equation (13.9), principal residues",
+    "pdf_sha256": "5d0fd10274c8444c789b0b7925a1cd3419017fe760be3219b6be51d7fbed9bd5"
+  },
+  "status": "passed"
+}
