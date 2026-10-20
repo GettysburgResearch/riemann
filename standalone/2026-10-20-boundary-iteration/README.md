@@ -35,7 +35,7 @@ than \(B_\flat=0.874886647039964\ldots\) is proved here.**
 | Object | New statement or role | Scope |
 |---|---|---|
 | [Angular second moment](average/ANGULAR_SELF_ABSORPTION.md) | Row-scale mean and balanced \(X^{3/4+\epsilon}\) bilinear estimate | Fixed nonzero angular degree over the Eisenstein field; source-dependent analytic proof |
-| [Angular uniformity](type_i/ANGULAR_UNIFORMITY.md) | Explicit polynomial dependence on angular order and smooth angular localization down to width \(X^{-1/8+\eta}\) in the balanced form | Uniform cubic mean; no moving-quadratic saving inferred |
+| [Hybrid angular mean](type_i/HYBRID_ANGULAR_MEAN.md) | Retains all three conductor/angular terms; balanced smooth-sector width \(X^{-d_*+\eta}\), where \(d_*=(\sqrt{73}-1)/48\approx0.1571667\), improving the earlier \(1/8\) | Uniform free-column cubic form; exact zero-angular term retained; no prime-sector assertion |
 | [Finite profile closure](type_i/FINITE_PROFILE_CLOSURE.md) | Actual 27 cusp Mellins close on four scalar channels; exact three-by-three extraction | Finite local algebra and source-table audit |
 | [Complete dual resummation](type_i/DUAL_RESUMMATION.md) | Restores the deleted cube factors with their signs | Exact local algebra; load-bearing for absorption |
 | [Quadratic pair](mixed/QUADRATIC_PAIR_ABSORPTION.md) | Completed mean for a fixed moving quadratic conductor, with its explicit conductor cost | Stronger Type I estimate; insufficient in the binding mixed range |
@@ -106,7 +106,7 @@ distinguishes independent checks from coauthor checks.
 
 The [later results and comparisons](LATER_RESULTS.md) add a signed
 long-divisor estimate, an exact Mobius-complement Euler product, and
-conditional improvements in smooth angular localization. They also
+stronger unconditional and conditional smooth angular estimates. They also
 record a rejected novelty claim: the joint quadratic/sextic exponent
 28/11 already follows from a stronger supplied estimate. Its new proof
 uses fewer analytic inputs, but does not improve the best bound

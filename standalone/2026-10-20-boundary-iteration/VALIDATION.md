@@ -46,8 +46,11 @@ and the two independently authored auxiliary-guard reviews.
 A later source edit requires a new hash and review; old reviews are not
 silently applied to changed arguments.
 
-The exact-head reviews at the packet root and in mixed/ bind the initial
-commit `9bf9e21f95669abdcaa74e3b2ba54fb93e779503`, which had eight checkers.
+The initial exact-head reviews bind commit
+`9bf9e21f95669abdcaa74e3b2ba54fb93e779503`, which had eight checkers.
+EXACT_HEAD_REVIEW_FINAL.md and type_i/EXACT_HEAD_LATER_REVIEW.md bind
+the later research commit `17d7b5b617027cffa4869b47eb898c14eb89e7b9`.
+They do not silently extend to the subsequent hybrid angular additions.
 Later analytic additions have separate current-hash component reviews
 listed in [LATER_RESULTS.md](LATER_RESULTS.md). The ninth checker tests
 the newly used positive cubic local self-reflection; it does not certify

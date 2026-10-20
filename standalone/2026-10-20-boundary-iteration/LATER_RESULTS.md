@@ -79,6 +79,46 @@ by arbitrary bounded coefficients loses the relevant cancellation.
 
 ## Smooth angular localization
 
+The [hybrid angular mean](type_i/HYBRID_ANGULAR_MEAN.md) retains the
+three original conductor/angular terms in the absorption argument.
+Its enlarged normalization past `delta=1/6` keeps the small positive
+row loss needed for partial summation. At balanced lengths it gives
+smooth zero-mode-subtracted discrepancy smaller than `X Delta` by a
+fixed power whenever
+
+\[
+ \Delta\ge X^{-d_*+\eta},\qquad
+ d_*=(\sqrt{73}-1)/48=0.1571667446\ldots.
+\]
+
+The optimal displacement within its stated three-term constraints is
+`delta_*=(13-sqrt(73))/24`, an interior point of the proved strip.
+This strictly improves the earlier width exponent `1/8`.
+The simple all-ratio consequence is
+`min((1+a)/8,3a/10)` for `A=X^a`, `B=X^(1-a)`; retaining a fixed
+positive displacement gives the stronger balanced value above.
+The exact zero-angular coefficient is retained. These are smooth
+weighted Gauss-form discrepancies, not prime-sector asymptotics.
+The [independent analytic review](global/REVIEW_HYBRID_ANGULAR_MEAN.md)
+and [second scoped review](mixed/REVIEW_HYBRID_ANGULAR_MEAN.md) bind
+the proof's current hash and distinguish review from coauthorship.
+
+The [full-ratio optimization](global/HYBRID_SECTOR_OPTIMIZATION.md)
+and its [independent algebra review](global/REVIEW_HYBRID_SECTOR_OPTIMIZATION.md)
+give the sharper exponent
+
+\[
+g(a)=\begin{cases}
+(5a-3+\sqrt{9+42a-47a^2})/24,&0<a\le5/9,\\
+3a/10,&5/9\le a\le5/7,\\
+(1+a)/8,&5/7\le a\le1.
+\end{cases}
+\]
+
+The optimizing displacement crosses the two row normalizations at
+`a=3/7`; both sides of that transition are checked explicitly.
+This is the exact optimum within the three stated error constraints.
+
 The [conditional sector consumer](type_i/CONDITIONAL_ANGULAR_SECTORS.md)
 uses the reflected cubic mean and uniform inverse cube factor. With
 `A=X^a`, `B=X^(1-a)`, its smooth discrepancy from the exact zero-angular
@@ -88,12 +128,25 @@ mode saves a power at widths at least `X^(-xi_beta(a)+eta)`, where
  \xi_\beta(a)=\frac{(7-4\beta)a-2(1-\beta)}{4(4-\beta)}.
 \]
 
-This improves the unconditional exponent `a/4` exactly for `a>2/3`.
+This improves the earlier coarse exponent `a/4` exactly for `a>2/3`.
 For `a=1` and the proposed common boundary, the exponent is about
-0.2600 instead of 0.25. The balanced width remains `X^(-1/8+eta)`.
+0.2600 instead of 0.25. It improves the new simple all-ratio hybrid
+formula only for `a>(8-5 beta)/(10-7 beta)`. At balance the new
+unconditional result above is stronger.
 The [independent consumer review](type_i/REVIEW_CONDITIONAL_ANGULAR_SECTORS.md)
 keeps the zero mode and all positive contour buffers. This is not a
 prime-counting assertion.
+
+The [conditional hybrid consumer](type_i/CONDITIONAL_HYBRID_SECTORS.md)
+reflects all three mean terms before stripping the ordinary cube
+factor. Its exponent is the minimum of the three explicit expressions
+CH5. Under the same actual-family common boundary, it strictly
+improves `g(a)` for every `a>5/9`, agrees at `5/9`, and retains the
+stronger unconditional balanced result. The
+[independent review](global/REVIEW_CONDITIONAL_HYBRID_SECTORS.md)
+checks the contour buffer, conductor uniformity, and the full
+three-term comparison. Neither sector result lowers its input
+zero-free boundary.
 
 ## A comparison that withdrew a claimed improvement
 
@@ -118,8 +171,11 @@ proposed `R^(1+epsilon)` improvement near the half-line.
 
 The root agent and component authors jointly developed several of these
 ideas; root assembly checks are not called independent reviews of those
-proofs. The linked independent reviews were performed by agents who did
-not author the reviewed argument. The initial exact-head reviews bind
-the initial commit, not these later additions. All current source bytes
+proofs. Each review states its authorship boundary; the second hybrid
+review explicitly separates independently checked earlier sections
+from its coauthored final optimization. The initial exact-head reviews
+bind the initial commit. The [later exact-head audit](EXACT_HEAD_REVIEW_FINAL.md)
+binds `17d7b5b617027cffa4869b47eb898c14eb89e7b9`, before the final
+hybrid additions, which have separate current-hash reviews. All current source bytes
 are listed in the refreshed manifest; finite algebra replay cannot
 certify the analytic inputs or an infinite proof.
