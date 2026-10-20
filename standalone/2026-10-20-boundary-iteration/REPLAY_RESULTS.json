@@ -1,8 +1,8 @@
 {
   "status": "pass",
   "scope": "Finite algebra and explicit coverage only; not analytic or zero-free certification.",
-  "source_manifest_sha256": "45db98ab4dbc9689f58314c110e9ea6aad28d83cfb3312314caf1ae3b2665e08",
-  "source_files_checked": 64,
+  "source_manifest_sha256": "d4d49975b1c69dedd6d8e29ae35baa704530745c238bbb0cbbfa795946847f55",
+  "source_files_checked": 89,
   "checkers": [
     {
       "checker": "type_i/verify_type_i.py",
@@ -117,6 +117,35 @@
           "NUMERATOR_MOMENT_BARRIERS.md": "0534e841541201d4c9cf95a68d506744dccf69a2ea627d1a874cf96054f51f56",
           "verify_numerator_barriers.py": "82ccf42617268c40a8e5e944169d40de0e9f46b2f4253fab7e0cd95c48b78091"
         }
+      }
+    },
+    {
+      "checker": "type_i/verify_positive_cubic.py",
+      "checker_sha256": "dd08f819528b345c7e5e39b3ffa820d369d7417a8159986537ad1b8cee27973a",
+      "normal_and_optimized_identical": true,
+      "result_canonical_sha256": "5ab9510f4eb3f6f5bbd5c1fb799128bd441b41a5bd50dc739ecbf3ed867d7d12",
+      "result": {
+        "fieldresults": [
+          {
+            "checks": 102,
+            "negativecontrols": 48,
+            "q": 7
+          },
+          {
+            "checks": 342,
+            "negativecontrols": 192,
+            "q": 13
+          },
+          {
+            "checks": 726,
+            "negativecontrols": 432,
+            "q": 19
+          }
+        ],
+        "negativecontrols": 672,
+        "scope": "Exact positive cubic finite Fourier identities; no analytic certification",
+        "status": "pass",
+        "totalchecks": 1170
       }
     },
     {

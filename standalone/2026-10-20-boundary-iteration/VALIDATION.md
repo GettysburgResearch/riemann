@@ -7,7 +7,7 @@ python -I -S -B replay.py
 ```
 
 The replay first checks the frozen byte hashes in MANIFEST.json, then
-runs each of eight finite checkers in ordinary and optimized mode.
+runs each of nine finite checkers in ordinary and optimized mode.
 It rejects acceptance assertions that Python would remove under `-O`,
 requires every receipt to pass, and compares the two receipts after
 canonical JSON serialization. The aggregate result is
@@ -19,6 +19,7 @@ reviewed source bytes across checkouts.
 | type_i/verify_type_i.py | Exact Eisenstein arithmetic, multiplicative ramified profiles, two-prime formal dual series, and rational exponents |
 | type_i/verify_profile_closure.py | The actual cusp minor and its inverse in a cyclotomic ring, plus all 27 finite coefficient profiles in the stated coverage |
 | type_i/verify_numerator_barriers.py | Exact identities for the supplied numerator estimates and their endpoint interpolation |
+| type_i/verify_positive_cubic.py | Exact primitive cubic Fourier transform, inverse-variable substitution and positive cubic self-reflection over residue fields of sizes 7, 13 and 19; rejection of the wrong output orientation |
 | mixed/audit_cusp_minor.py | An independently written cusp-minor calculation, including rejection of the withdrawn incorrect minor |
 | mixed/check_marked_exponents.py | Complete Euler/mask identities, counterexamples to first-power truncation, and exact marked exponent bookkeeping |
 | mixed/check_quadratic_pair.py | Exact finite Fourier orientation, conductor and zero masks in a cyclotomic ring; wrong-variant negative controls; rational pair exponents |
@@ -44,3 +45,10 @@ type_i/REVIEW_QUADRATIC_PAIR.md, type_i/REVIEW_UNIFORM.md,
 and the two independently authored auxiliary-guard reviews.
 A later source edit requires a new hash and review; old reviews are not
 silently applied to changed arguments.
+
+The exact-head reviews at the packet root and in mixed/ bind the initial
+commit `9bf9e21f95669abdcaa74e3b2ba54fb93e779503`, which had eight checkers.
+Later analytic additions have separate current-hash component reviews
+listed in [LATER_RESULTS.md](LATER_RESULTS.md). The ninth checker tests
+the newly used positive cubic local self-reflection; it does not certify
+the corresponding infinite joint mean.

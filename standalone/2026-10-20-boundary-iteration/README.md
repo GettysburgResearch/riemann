@@ -39,6 +39,7 @@ than \(B_\flat=0.874886647039964\ldots\) is proved here.**
 | [Finite profile closure](type_i/FINITE_PROFILE_CLOSURE.md) | Actual 27 cusp Mellins close on four scalar channels; exact three-by-three extraction | Finite local algebra and source-table audit |
 | [Complete dual resummation](type_i/DUAL_RESUMMATION.md) | Restores the deleted cube factors with their signs | Exact local algebra; load-bearing for absorption |
 | [Quadratic pair](mixed/QUADRATIC_PAIR_ABSORPTION.md) | Completed mean for a fixed moving quadratic conductor, with its explicit conductor cost | Stronger Type I estimate; insufficient in the binding mixed range |
+| [Opposite cubic conductors](mixed/OPPOSITE_CUBIC_JOINT_MEAN.md) | Joint natural-count mean on Re s=2/3 for all conductor ratios, and a balanced free-column X^(8/9+epsilon) consumer | Two cubic orientations; explicit polynomial angular cost |
 | [Spherical residue](global/ALL_FIELD_SPHERICAL_RESIDUE.md) | Digit support, moving-row decay, actual finite class transport, and selected multiplier \(1/Np\) | Initially fields containing the twelfth roots of unity; field descent stated separately |
 | [Guarded physical probe](global/ALL_FIELD_AUXILIARY_GUARD.md) | Removes both spherical constants while preserving the original reciprocal and its principal frequency | Exact fixed-place construction; independently reviewed |
 | [Full unitary boundary](global/ALL_UNITARY_REFINED_BOUNDARY.md) | Extends the inherited \(B_\flat\) to all unitary Hecke characters over all number fields | Proposed source-dependent assembly, with open half-plane and poles stated explicitly |
@@ -102,3 +103,12 @@ Use [CLAIMS.md](CLAIMS.md) for the exact claim map,
 [NEXT_STEPS.md](NEXT_STEPS.md) for the remaining numerical-boundary
 targets. The scoped [assembly review](GLOBAL_ASSEMBLY_REVIEW.md)
 distinguishes independent checks from coauthor checks.
+
+The [later results and comparisons](LATER_RESULTS.md) add a signed
+long-divisor estimate, an exact Mobius-complement Euler product, and
+conditional improvements in smooth angular localization. They also
+record a rejected novelty claim: the joint quadratic/sextic exponent
+28/11 already follows from a stronger supplied estimate. Its new proof
+uses fewer analytic inputs, but does not improve the best bound
+recoverable from that source. The [pure cubic source comparison](type_i/PURE_CUBIC_SOURCE_COMPARISON.md)
+explains why that overlap does not remove the main cubic improvement.

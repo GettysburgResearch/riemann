@@ -32,7 +32,8 @@ which changes the binding comparison.
    the whole continuous domain.
 
 4. **Audit the new analytic assemblies before integration.** The complete
-   upstream recursion and scalar certificates remain imported inputs.
+   upstream analytic recursion and initial seven-eighths step remain
+   imported inputs; the closing tangent step now has an exact replay.
    The most focused new objects for external review are the actual
    four-channel cusp extraction, the full resummed reflection, the
    all-field constant-term transport, and the finite-place guarded
@@ -48,3 +49,14 @@ work can start at the remaining analytic problem.
 RH requires a complete argument down to one-half. No such argument is
 provided by the improvements above, by the signed factor-removal
 threshold, or by the finite computations.
+
+The later signed estimates narrow these targets but do not close them.
+The [long-gcd tail](global/SIGNED_MOBIUS_GCD_TAIL.md) controls a range of
+large common divisors; the short part leaves the jointly dependent
+[reciprocal kernel](global/RECIPROCAL_PROJECTOR_KERNEL.md). The
+[Mobius-complement factorization](type_i/SIGNED_MOBIUS_COMPLEMENT.md)
+controls a long complementary variable after exact reflection, while
+the full-divisor term remains. Any use in a prime decomposition must
+also preserve the actual prime-detection coefficients and all new
+ranges. The [opposite-cubic joint mean](mixed/OPPOSITE_CUBIC_JOINT_MEAN.md)
+has a different row character from the binding sextic terminal.

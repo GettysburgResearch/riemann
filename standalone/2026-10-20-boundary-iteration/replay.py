@@ -16,6 +16,7 @@ CHECKERS = (
     "type_i/verify_type_i.py",
     "type_i/verify_profile_closure.py",
     "type_i/verify_numerator_barriers.py",
+    "type_i/verify_positive_cubic.py",
     "mixed/audit_cusp_minor.py",
     "mixed/check_marked_exponents.py",
     "mixed/check_quadratic_pair.py",
