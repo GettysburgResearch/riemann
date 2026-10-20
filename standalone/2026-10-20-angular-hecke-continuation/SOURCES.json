@@ -1,0 +1,97 @@
+{
+  "base_commit": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "date_utc": "2026-10-20",
+  "packet": "2026-10-20-angular-hecke-continuation",
+  "primary_sources": [
+    {
+      "author": "Baiying Liu",
+      "identifier": "arXiv:2610.26835v1",
+      "license": "arXiv perpetual non-exclusive license; PDF not redistributed",
+      "pages": 136,
+      "pdf_sha256": "5d0fd10274c8444c789b0b7925a1cd3419017fe760be3219b6be51d7fbed9bd5",
+      "pdf_url": "https://arxiv.org/pdf/2610.26835v1",
+      "review_scope": "New analytic adapters and changed interfaces were checked against the source; the entire upstream construction and scalar certificates were not independently re-proved or re-run.",
+      "submission_utc": "2026-10-19T17:57:27Z",
+      "title": "Zero-free half-planes for Hecke L-functions over number fields",
+      "url": "https://arxiv.org/abs/2610.26835v1",
+      "used": {
+        "Eisenstein_character": "Lemma 4.2, pp.28-29",
+        "actual_representation": "Proposition 4.1, pp.25-28",
+        "detector_continuation_and_scalar_comparison": "Sections 13-14",
+        "finite_order_all_field_theorem": "Theorem 17.1 and Proposition 19.1",
+        "general_field_transfer": "Theorem 18.2",
+        "inverse_and_selected_inverse": "Sections 10-11",
+        "ordinary_product_moment": "Section 12, especially Lemma 12.6 and Theorem 12.14",
+        "theta_and_Jacquet": "Section 5, especially Lemma 5.1, pp.31-34"
+      }
+    },
+    {
+      "authors": [
+        "Alexander Dunn",
+        "Maksym Radziwill"
+      ],
+      "derived_text_sha256": "3262a76247d6f829fe456a68c011f001c624b2b555bffb8b2e67feb26c929d07",
+      "html_bytes": 2792599,
+      "html_sha256": "3949e0f0ae87808d84fe02c12a3b68c5b66aa8d967d8ecb5e1605f1d985b956d",
+      "identifier": "arXiv:2109.07463v3",
+      "license": "CC BY 4.0",
+      "not_used": "GRH-dependent conclusions of Section 8",
+      "source_reading_note": "The coefficient argument follows the derivation (5.79), whose a-star(lambda^-3 nu) argument resolves an apparent repeated ramified power in display (5.67).",
+      "title": "Bias in cubic Gauss sums: Patterson's conjecture",
+      "url": "https://arxiv.org/html/2109.07463v3",
+      "used": [
+        "Equations (2.2)-(2.3)",
+        "Theta coefficient formulas (5.7), (5.13)-(5.14)",
+        "Proposition 5.2 and derivation (5.74), (5.77)-(5.79)",
+        "Completed Mellin representations (5.49)-(5.52) for vertical growth"
+      ],
+      "version_date": "2024-05-14"
+    },
+    {
+      "authors": [
+        "Pascal Molin",
+        "Aurel Page"
+      ],
+      "pdf_sha256": "7b9bd64ac0ff6b17525787b663d43e2a6d87a4a39c483cea8b16088e6c2d486c",
+      "title": "Computing groups of Hecke characters",
+      "url": "https://webusers.imj-prg.fr/~pascal.molin/pdf/hecke.pdf",
+      "used": [
+        "Section 2.4: general unitary infinity types and completed gamma factors",
+        "Section 2.5.2: algebraic and unitary normalization",
+        "Theorem 37: Hecke characters and holomorphic CM modular forms"
+      ],
+      "version_date": "2022-10-19"
+    }
+  ],
+  "prior_packet_commit": "e2bd86d1d062ac1dc4140d52331797b81d7d825d",
+  "repository": "GettysburgResearch/riemann",
+  "repository_sources": [
+    {
+      "commit": "0c838d130f275efb6e8ddb81dab42462b4ce9454",
+      "git_blob": "dd2ca1c6ef1922efe06e27b882966a968def850d",
+      "path": "standalone/2026-10-18-three-direction-sprint/eisenstein/MIXED_CONSUMER.md",
+      "pr": 1006,
+      "used": "Earlier principal factorization, corrected attribution, and exact complete mixed target"
+    },
+    {
+      "commit": "0c838d130f275efb6e8ddb81dab42462b4ce9454",
+      "path": "standalone/2026-10-18-three-direction-sprint/eisenstein/CONTINUOUS_COMPLETION_ATTEMPT.md",
+      "pr": 1006,
+      "used": "Unresolved continuous mixed-mean route"
+    },
+    {
+      "commit": "e2bd86d1d062ac1dc4140d52331797b81d7d825d",
+      "path": "standalone/2026-10-20-liu-all-field-artin-and-barrier/principal_factorization.md",
+      "pr": 1009,
+      "sha256": "a30318e672f6ae7bc91defdb1ba1e23447b4d9d315cce77dbb47efb2e4d79fd0",
+      "used": "General-field target-dependent principal identity and holomorphic unit proof"
+    },
+    {
+      "commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "path": "preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/build/paper.tex",
+      "repository": "openai/math",
+      "sha256": "42a5ee0febca59fd1def55cfd6c6808c322ef4237d7726303ea52f711deac6a3",
+      "used": "Inherited mixed-mean normalization and source exponents"
+    }
+  ]
+}

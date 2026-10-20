@@ -2,6 +2,17 @@
 
 Date: 20 October 2026. Status: **proposed research packet with an imported preprint theorem**.
 
+**Continuation and attribution correction:** The later
+[unitary Hecke continuation packet](../2026-10-20-angular-hecke-continuation/README.md)
+supplies new proposed infinite-order moment arguments and cubic cancellation
+estimates. Its [attribution correction](../2026-10-20-angular-hecke-continuation/ATTRIBUTION_CORRECTION.md)
+credits the earlier Eisenstein principal factorization in PR #1006.
+Its [mixed-mean status](../2026-10-20-angular-hecke-continuation/MIXED_MEAN_STATUS.md)
+replaces the corner-only description with the complete length polygon.
+The original packet below remains the frozen contribution at commit
+`e2bd86d1d062ac1dc4140d52331797b81d7d825d`; this notice does not
+promote that contribution or the continuation to an integrated theorem.
+
 This packet imports Baiying Liu's newly posted *Zero-free half-planes for
 Hecke L-functions over number fields*, [arXiv:2610.26835v1](https://arxiv.org/abs/2610.26835v1),
 and develops five consequences and component results. The new scalar theorem

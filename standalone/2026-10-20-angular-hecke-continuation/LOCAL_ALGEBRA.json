@@ -1,0 +1,85 @@
+{
+  "accepted": true,
+  "arithmetic": "Gaussian rationals and rational interval arithmetic; no floating point",
+  "dual_local_identity": "F_q(1)=2-(q^(5/2)-q^2)/(q*(q^(5/2)-1))<2 for q>=2; monotonicity in s>=1 is proved in the review",
+  "gaussian_example": {
+    "angular": [
+      1,
+      -1
+    ],
+    "determinant": 2,
+    "eisenstein": [
+      1,
+      1
+    ],
+    "theta": [
+      0,
+      -2
+    ]
+  },
+  "lie_algebra": {
+    "model": "complexification of real sl2(C) as two sl2(C) factors",
+    "not_verified": "existence or automorphic realization of the exceptional representation",
+    "opposite_factor_brackets": "zero",
+    "same_factor_negative_controls": "nonzero",
+    "weyl_and_compact_identities": "verified"
+  },
+  "mellin_shifts": {
+    "0": [
+      "1/3",
+      "2/3"
+    ],
+    "1": [
+      "5/6",
+      "7/6"
+    ],
+    "2": [
+      "4/3",
+      "5/3"
+    ],
+    "6": [
+      "10/3",
+      "11/3"
+    ]
+  },
+  "principal_threshold_interval": [
+    "3874886647039963/6000000000000000",
+    "258325776469331/400000000000000"
+  ],
+  "quartic": {
+    "coefficients_descending": [
+      133488,
+      -376596,
+      384534,
+      -167541,
+      26231
+    ],
+    "derivative_interval": [
+      "-5926219276041536738817952611412209153432654969/3125000000000000000000000000000000000000000",
+      "-1185243855206835136403539038020868654808853859/625000000000000000000000000000000000000000"
+    ],
+    "endpoint_values": [
+      "134044515432423256181281957948720453817507485223/62500000000000000000000000000000000000000000000000000000000",
+      "-164806808974545587576689597044994761587136457/100000000000000000000000000000000000000000000000000000000"
+    ],
+    "isolating_interval": [
+      "874886647039963/1000000000000000",
+      "174977329407993/200000000000000"
+    ]
+  },
+  "scope": "Exact finite Lie algebra, rational identities, and one isolated quartic root; no analytic theorem is certified.",
+  "type_i_X_exponent_interval": [
+    "458295549013321/1000000000000000",
+    "274977329407993/600000000000000"
+  ],
+  "type_i_level_exponent_interval": [
+    "325022670592007/1200000000000000",
+    "541704450986679/2000000000000000"
+  ],
+  "unverified_analytic_inputs": [
+    "Liu's exceptional representation, local tables, sieves, and contour assembly",
+    "the angular and balanced-unitary moment and continuation proofs",
+    "the source tangent comparison certificates and global zero-free theorem",
+    "Dunn-Radziwill's functional equation and analytic continuation"
+  ]
+}
