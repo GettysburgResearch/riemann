@@ -1,0 +1,169 @@
+{
+  "certificate_count": 5,
+  "classification": "EXACT_ALGEBRAIC_SYNTHETIC_CONTROLS",
+  "interpretation": "Synthetic exact-arithmetic controls only; no Riemann zeta or xi evaluation and no RH candidate.",
+  "records": [
+    {
+      "certificate": "affine-box-survives.json",
+      "result": {
+        "details": {
+          "contributions": [
+            {
+              "center_part": "0",
+              "channel_id": "evaluation-a",
+              "worst_case_increment": "1/10"
+            },
+            {
+              "center_part": "0",
+              "channel_id": "tail-b",
+              "worst_case_increment": "1/10"
+            }
+          ]
+        },
+        "interpretation": "Exact rational verification of the declared quantitative uncertainty set only. A Riemann-hypothesis conclusion additionally requires independent discharge of the logical gates and soundness of every primitive enclosure.",
+        "kind": "affine-box",
+        "manifest": {
+          "logical_gate_count": 1,
+          "logical_manifest_closed": false,
+          "quantitative_channels": [
+            "evaluation-a",
+            "tail-b"
+          ],
+          "synthetic_gate_count": 1
+        },
+        "robust_upper": "-4/5",
+        "schema": "riemann.witness-survival.v1",
+        "status": "CERTIFIED_QUANTITATIVE_SURVIVAL",
+        "strict_moat": "4/5"
+      }
+    },
+    {
+      "certificate": "affine-box-touches-zero.json",
+      "result": {
+        "details": {
+          "contributions": [
+            {
+              "center_part": "0",
+              "channel_id": "evaluation-a",
+              "worst_case_increment": "1/5"
+            }
+          ]
+        },
+        "interpretation": "Exact rational verification of the declared quantitative uncertainty set only. A Riemann-hypothesis conclusion additionally requires independent discharge of the logical gates and soundness of every primitive enclosure.",
+        "kind": "affine-box",
+        "manifest": {
+          "logical_gate_count": 1,
+          "logical_manifest_closed": false,
+          "quantitative_channels": [
+            "evaluation-a"
+          ],
+          "synthetic_gate_count": 1
+        },
+        "robust_upper": "0",
+        "schema": "riemann.witness-survival.v1",
+        "status": "NOT_CERTIFIED",
+        "strict_moat": "0"
+      }
+    },
+    {
+      "certificate": "affine-polytope-correlation.json",
+      "result": {
+        "details": {
+          "dual_bound": "0",
+          "minimum_feasible_slack": "0"
+        },
+        "interpretation": "Exact rational verification of the declared quantitative uncertainty set only. A Riemann-hypothesis conclusion additionally requires independent discharge of the logical gates and soundness of every primitive enclosure.",
+        "kind": "affine-polytope-dual",
+        "manifest": {
+          "logical_gate_count": 1,
+          "logical_manifest_closed": false,
+          "quantitative_channels": [
+            "joint-correlated-model"
+          ],
+          "synthetic_gate_count": 1
+        },
+        "robust_upper": "-1/10",
+        "schema": "riemann.witness-survival.v1",
+        "status": "CERTIFIED_QUANTITATIVE_SURVIVAL",
+        "strict_moat": "1/10"
+      }
+    },
+    {
+      "certificate": "pick-disks-survives.json",
+      "result": {
+        "details": {
+          "coefficients": [
+            {
+              "abs2": "25/13",
+              "abs_upper": "7/5",
+              "im": "-1/13",
+              "re": "18/13"
+            },
+            {
+              "abs2": "25/256",
+              "abs_upper": "5/16",
+              "im": "1/13",
+              "re": "-63/208"
+            }
+          ],
+          "midpoint": "-225/104",
+          "uncertainty_increment": "137/4000"
+        },
+        "interpretation": "Exact rational verification of the declared quantitative uncertainty set only. A Riemann-hypothesis conclusion additionally requires independent discharge of the logical gates and soundness of every primitive enclosure.",
+        "kind": "pick-disks",
+        "manifest": {
+          "logical_gate_count": 1,
+          "logical_manifest_closed": false,
+          "quantitative_channels": [
+            "F-0",
+            "F-1"
+          ],
+          "synthetic_gate_count": 1
+        },
+        "robust_upper": "-110719/52000",
+        "schema": "riemann.witness-survival.v1",
+        "status": "CERTIFIED_QUANTITATIVE_SURVIVAL",
+        "strict_moat": "110719/52000"
+      }
+    },
+    {
+      "certificate": "pick-disks-too-wide.json",
+      "result": {
+        "details": {
+          "coefficients": [
+            {
+              "abs2": "25/13",
+              "abs_upper": "7/5",
+              "im": "-1/13",
+              "re": "18/13"
+            },
+            {
+              "abs2": "25/256",
+              "abs_upper": "5/16",
+              "im": "1/13",
+              "re": "-63/208"
+            }
+          ],
+          "midpoint": "-225/104",
+          "uncertainty_increment": "137/40"
+        },
+        "interpretation": "Exact rational verification of the declared quantitative uncertainty set only. A Riemann-hypothesis conclusion additionally requires independent discharge of the logical gates and soundness of every primitive enclosure.",
+        "kind": "pick-disks",
+        "manifest": {
+          "logical_gate_count": 1,
+          "logical_manifest_closed": false,
+          "quantitative_channels": [
+            "F-0",
+            "F-1"
+          ],
+          "synthetic_gate_count": 1
+        },
+        "robust_upper": "82/65",
+        "schema": "riemann.witness-survival.v1",
+        "status": "NOT_CERTIFIED",
+        "strict_moat": "0"
+      }
+    }
+  ],
+  "schema": "riemann.witness-survival-results.v1"
+}
