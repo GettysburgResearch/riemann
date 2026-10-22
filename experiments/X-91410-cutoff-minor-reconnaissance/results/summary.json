@@ -1,0 +1,20 @@
+{
+  "classification": "RECONNAISSANCE_ONLY_NOT_A_PROOF",
+  "p_values": [67, 83, 101, 167, 257, 509, 1009],
+  "integer_y_range": [1, 67],
+  "row_range": [2, 66],
+  "parameter_triples": 30485,
+  "negative_actual_cutoff_determinants_found": 0,
+  "negative_actual_finite_prefix_gaps_found": 0,
+  "negative_cutoff_minor_shift8_margins_found": 0,
+  "minimum_observed": {
+    "p": 67,
+    "y": 1,
+    "row": 66,
+    "cutoff": 46,
+    "threshold": 2,
+    "determinant_approx": 0.0008536086054483781,
+    "row_reserve_approx": 0.0019079896612261302
+  },
+  "scope": "Floating-point discovery scan only. The continuum in p and y, directed transcendental enclosures, and exact cutoff-state logic remain to be certified."
+}
