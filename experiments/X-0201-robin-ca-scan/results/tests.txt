@@ -1,0 +1,18 @@
+test_composite_rejected (test_certify.PrimalityTests.test_composite_rejected) ... ok
+test_u64 (test_certify.PrimalityTests.test_u64) ... ok
+test_5040_outside_domain (test_certify.RobinCertificateTests.test_5040_outside_domain) ... ok
+test_5041_satisfies (test_certify.RobinCertificateTests.test_5041_satisfies) ... ok
+test_55440_satisfies (test_certify.RobinCertificateTests.test_55440_satisfies) ... ok
+test_precision_stability (test_certify.RobinCertificateTests.test_precision_stability) ... ok
+test_edges (test_run.PrimeGenerationTests.test_edges) ... ok
+test_simple_and_segmented_sieves_agree (test_run.PrimeGenerationTests.test_simple_and_segmented_sieves_agree) ... ok
+test_small_scan (test_run.ScanTests.test_small_scan) ... ok
+test_stream_matches_naive_event_sort (test_run.ScanTests.test_stream_matches_naive_event_sort) ... ok
+test_boundary_decreases_with_exponent (test_run.TransitionTests.test_boundary_decreases_with_exponent) ... ok
+test_boundary_decreases_with_prime (test_run.TransitionTests.test_boundary_decreases_with_prime) ... ok
+test_initial_ca_sequence (test_run.TransitionTests.test_initial_ca_sequence) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.057s
+
+OK
