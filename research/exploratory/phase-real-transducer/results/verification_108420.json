@@ -1,0 +1,102 @@
+{
+  "check_count": 10,
+  "checks": [
+    {
+      "error": 4.2688386739472166e-17,
+      "name": "finite_two_point_hermite_resolvent",
+      "status": "PASS"
+    },
+    {
+      "error": 2.168404344971009e-18,
+      "name": "symmetric_to_one_sided_partial_fraction_bridge",
+      "order": 4,
+      "status": "PASS"
+    },
+    {
+      "eigenvalues": [
+        0.003997967184746199,
+        0.04191919257856741
+      ],
+      "name": "line_zero_toeplitz_positive",
+      "status": "PASS"
+    },
+    {
+      "eigenvalues": [
+        -0.0003198936359104926,
+        0.07753516865573583
+      ],
+      "name": "off_axis_two_point_toeplitz_witness",
+      "status": "PASS",
+      "time": 0.98
+    },
+    {
+      "boundary_rejected": true,
+      "energy_at_0.3": 0.0017805095444978656,
+      "name": "symmetric_energy_abscissa",
+      "status": "PASS"
+    },
+    {
+      "expected": -0.24506453586713678,
+      "green_jump": 1.0,
+      "jump": -0.24506453586713678,
+      "n": 8,
+      "name": "symmetric_prime_knot_jump_m2",
+      "status": "PASS"
+    },
+    {
+      "n_left": 2,
+      "n_right": 1,
+      "name": "finite_poisson_screening",
+      "negative_error": 0.0012000000480703044,
+      "negative_mass": 1.4761940086711207,
+      "overlap": 1.664198644870602,
+      "positive_error": 0.0024000132162118604,
+      "positive_mass": 4.616586649092772,
+      "status": "PASS"
+    },
+    {
+      "max_abs_field": 0.0,
+      "name": "mirrored_speiser_screening_firewall",
+      "status": "PASS"
+    },
+    {
+      "boundary_change": 12.566370607111825,
+      "count": 2,
+      "error": 7.2473476109280455e-09,
+      "name": "finite_rectangle_gauss_ledger",
+      "status": "PASS"
+    },
+    {
+      "arithmetic_class": "NON_DIRECTED_HIGH_PRECISION",
+      "discrepancy": 2.361790707460834e-11,
+      "name": "actual_xi_safe_hermite_zero_prefix",
+      "order": 2,
+      "rate": 2.0,
+      "source": [
+        3.336660737156248e-07,
+        1.9122217817336356e-07
+      ],
+      "status": "PASS",
+      "z": [
+        1.2,
+        0.7
+      ],
+      "zero_pairs": 30,
+      "zero_prefix": [
+        3.336456717277223e-07,
+        1.9121028008846675e-07
+      ]
+    }
+  ],
+  "proof_object": "eec2e381e3efc29ebe85bfe406027a6e54117db2cc833e2130a75458ab65498e",
+  "rh_status": "UNPROVEN",
+  "schema": "riemann.phase-positive-screening.v1",
+  "scope": {
+    "actual_zeta_regressions": "NON_DIRECTED_HIGH_PRECISION",
+    "analytic_manuscript_machine_proved": false,
+    "directed_rounding": false,
+    "exact_finite_algebra": true,
+    "external_novelty_certified": false
+  },
+  "status": "PASS_PFR_SYMMETRIC_POSITIVITY_AND_SPEISER_SCREENING"
+}

@@ -1,0 +1,34 @@
+{
+  "schema": "riemann.phase-real-transducer.continuation-lock.v1",
+  "parent": {
+    "branch": "research/gpt56-pro/108200-phase-flow-real-transducer",
+    "sha": "433f76e2541406e0ca69ac0edb917cc3984a649a"
+  },
+  "base": {
+    "ref": "main",
+    "sha": "6dda8b5125457ed936330229f8c9eb6491728e76"
+  },
+  "new_claims": [
+    "PFR-T5",
+    "PFR-T6",
+    "PFR-R2",
+    "PFR-C2",
+    "PFR-C3"
+  ],
+  "imports": [
+    "PFR-T4 positive-frequency explicit-formula distribution",
+    "classical N(T)=O(T log T)",
+    "elementary Laplace-transform analyticity",
+    "plane-curve turning theorem for a simple closed curve",
+    "Hadamard logarithmic derivative and Taylor remainder cancellation"
+  ],
+  "computation": {
+    "arithmetic_classes": [
+      "EXACT_FINITE_ALGEBRA",
+      "FLOATING_RECONNAISSANCE"
+    ],
+    "replay": "code/verify_phase_resolvent.py",
+    "tests": "tests/test_phase_resolvent.py"
+  },
+  "rh_established": false
+}

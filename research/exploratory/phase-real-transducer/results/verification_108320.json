@@ -1,0 +1,82 @@
+{
+  "check_count": 7,
+  "checks": [
+    {
+      "jump": -0.24506453586713678,
+      "m": 2,
+      "n": 8,
+      "name": "prime_knot_jump",
+      "status": "PASS"
+    },
+    {
+      "C_H": 2.8825478366958404,
+      "D_H": 1.5210291889204435,
+      "arithmetic_class": "NON_DIRECTED_HIGH_PRECISION",
+      "name": "hardy_curvature_zeta_prime_bridge",
+      "phase_acceleration": -1.0970442414688553,
+      "status": "PASS",
+      "t": 20.0
+    },
+    {
+      "analytic_integral": 3.141592653589793,
+      "name": "critical_point_poisson_index",
+      "signed_index": 1,
+      "status": "PASS",
+      "truncated_integral": 3.1415916614870274
+    },
+    {
+      "D_in": 1.5811388300841898,
+      "D_out": 3.0413812651491097,
+      "eta": 0.5198752449100364,
+      "inside_magnitude": 576.9507477674761,
+      "name": "soft_band_separation",
+      "order": 8,
+      "outside_magnitude": 0.0024647514127027438,
+      "status": "PASS"
+    },
+    {
+      "bound": 0.0033965010718515275,
+      "coefficient_mass": 0.0006262423549913619,
+      "measured_norm": 0.001926363682177175,
+      "name": "finite_horizon_leakage",
+      "status": "PASS"
+    },
+    {
+      "arithmetic_class": "NON_DIRECTED_HIGH_PRECISION",
+      "discrepancy": 1.5555508306440734e-06,
+      "m": 3,
+      "name": "complex_gamma_source_zero_prefix",
+      "prime_limit": 1000000,
+      "q": [
+        2.0,
+        14.0
+      ],
+      "source": [
+        0.06762662065501701,
+        0.10565483062315237
+      ],
+      "status": "PASS",
+      "t": 0.5,
+      "zero_prefix": [
+        0.06762714651408938,
+        0.10565336665231156
+      ]
+    },
+    {
+      "boundary_rejected": true,
+      "energy_at_0.3": 23.256624600967772,
+      "name": "filtered_energy_boundary",
+      "status": "PASS"
+    }
+  ],
+  "proof_object": "8548718c9de79bdaffbae1bdb700be52981a1af10f8cb241442d8d4e2626ffbe",
+  "rh_status": "UNPROVEN",
+  "schema": "riemann.phase-speiser-localization.v1",
+  "scope": {
+    "actual_zeta_regressions": "NON_DIRECTED_HIGH_PRECISION",
+    "analytic_manuscript_machine_proved": false,
+    "directed_rounding": false,
+    "external_novelty_certified": false
+  },
+  "status": "PASS_PFR_PRIME_KNOT_CURVATURE_AND_SOFT_LOCALIZATION"
+}

@@ -1,0 +1,44 @@
+{
+  "schema": "riemann.phase-real-transducer.source-lock.v3",
+  "created_utc": "2026-08-30T23:29:31Z",
+  "repository": "gfreund123/riemann",
+  "branch": "research/gpt56-pro/108200-phase-flow-real-transducer",
+  "parent_head": "4a78ba3ca89dcb63fcccf50d6738f01e28c80c64",
+  "main_reference": "6dda8b5125457ed936330229f8c9eb6491728e76",
+  "parent_claims": [
+    "PFR-T4",
+    "PFR-T5",
+    "PFR-T6",
+    "PFR-R2"
+  ],
+  "new_claims": [
+    "PFR-T7",
+    "PFR-T8",
+    "PFR-R3",
+    "PFR-T9"
+  ],
+  "overlap_surfaces": [
+    "issue #17",
+    "issue #39",
+    "issue #744 / PR #729",
+    "issue #763",
+    "PR #762",
+    "Sourmelidis--Steuding arXiv:2306.00460"
+  ],
+  "computation": {
+    "exact_finite_algebra": true,
+    "actual_zeta_regressions": "NON_DIRECTED_HIGH_PRECISION",
+    "directed_certificate": false,
+    "verifier": "code/verify_phase_speiser_localization.py",
+    "result": "results/verification_108320.json",
+    "proof_object": "8548718c9de79bdaffbae1bdb700be52981a1af10f8cb241442d8d4e2626ffbe"
+  },
+  "scope": {
+    "rh": "UNPROVEN",
+    "new_zero": false,
+    "new_zero_proportion": false,
+    "external_priority": false,
+    "height_local_zero_theorem": false,
+    "analytic_manuscript_machine_proved": false
+  }
+}

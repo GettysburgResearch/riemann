@@ -1,0 +1,45 @@
+{
+  "schema": "riemann.phase-real-transducer.packet.v2",
+  "packet": "PFR-108260",
+  "parent_commit": "433f76e2541406e0ca69ac0edb917cc3984a649a",
+  "branch": "research/gpt56-pro/108200-phase-flow-real-transducer",
+  "claims": [
+    {
+      "id": "PFR-T5",
+      "status": "AUTHOR_PROVED_REVIEW_PENDING",
+      "scope": "global_actual_xi"
+    },
+    {
+      "id": "PFR-T6",
+      "status": "AUTHOR_PROVED_REVIEW_PENDING",
+      "scope": "piecewise_smooth_hardy_petals"
+    },
+    {
+      "id": "PFR-R2",
+      "status": "AUTHOR_PROVED_REVIEW_PENDING",
+      "scope": "holomorphic_mode_filter_firewall"
+    },
+    {
+      "id": "PFR-C2",
+      "status": "OPEN",
+      "scope": "height_localized_actual_xi"
+    },
+    {
+      "id": "PFR-C3",
+      "status": "OPEN_RH_FACING",
+      "scope": "flower_curvature_transfer"
+    }
+  ],
+  "replay": {
+    "command": "python3 code/verify_phase_resolvent.py",
+    "marker": "PASS_PFR_T5_T6_CONTINUATION",
+    "checks": 8,
+    "proof_object": "c29b66ffdb29e5eb2eedef66ded096be38af2e1d9d52219cecd830645dcfb2d8",
+    "arithmetic_classes": [
+      "EXACT_FINITE_ALGEBRA",
+      "FLOATING_RECONNAISSANCE"
+    ]
+  },
+  "rh_established": false,
+  "external_novelty_reviewed": false
+}

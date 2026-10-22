@@ -1,0 +1,86 @@
+{
+  "check_count": 9,
+  "checks": [
+    {
+      "critical_points": [
+        "0",
+        "+sqrt(221/100)",
+        "-sqrt(221/100)"
+      ],
+      "id": "exact_quartet_derivative",
+      "status": "PASS"
+    },
+    {
+      "id": "flower_pointwise_kinematics",
+      "samples": 4,
+      "status": "PASS"
+    },
+    {
+      "id": "weighted_petal_wirtinger",
+      "lhs": "0.838731496730781642948994179153",
+      "rhs": "0.83985260300807199183510174724",
+      "status": "PASS"
+    },
+    {
+      "errors": [
+        "4.9470891e-16"
+      ],
+      "id": "phase_poisson_fourier",
+      "status": "PASS"
+    },
+    {
+      "cauchy": "9.090364083427772",
+      "id": "response_energy",
+      "numeric": "9.09036408342777154403427241451",
+      "quartet": "9.09036408342777",
+      "status": "PASS"
+    },
+    {
+      "id": "quartet_two_point_real_witness",
+      "maximum_eigenvalue": "11.840319093809365",
+      "minimum_eigenvalue": "-3.8403190938093648",
+      "status": "PASS"
+    },
+    {
+      "errors": [
+        "4.5917748e-41",
+        "1.4349296e-41"
+      ],
+      "id": "xi_safe_line_phase_reflection",
+      "status": "PASS"
+    },
+    {
+      "absolute_error": "0.0000141858345688838007790965067739",
+      "cutoff": 20000,
+      "id": "safe_line_prime_cosine",
+      "status": "PASS",
+      "tail_bound": "0.000545174377626806393182246068818"
+    },
+    {
+      "archimedean": "1.17079632679489661923132169164",
+      "error": "0.0",
+      "id": "critical_distribution_normalization",
+      "prime": "-1.21649467023007482045420575713",
+      "status": "PASS",
+      "xi_difference": "-0.0456983434351782012228840654873"
+    }
+  ],
+  "claims_authenticated": [
+    "finite quartet polynomial algebra",
+    "finite flower kinematic regressions",
+    "finite Poisson/Fourier transducer regressions",
+    "finite response-energy regressions",
+    "safe-line xi reflection and prime-cosine regressions",
+    "distributional normalization regression"
+  ],
+  "claims_not_authenticated": [
+    "external novelty or priority",
+    "the analytic proofs in the manuscript",
+    "an all-zero actual-Xi inverse-Poisson energy theorem",
+    "RH or GRH"
+  ],
+  "proof_object_sha256": "e1ee07301bba9122c50023f7c1932e51b9a5b1c31f2d2495882845f3ffa73db7",
+  "rh_established": false,
+  "schema": "riemann.phase-real-transducer.verification.v1",
+  "status": "PASS_PFR_PHASE_REAL_TRANSDUCER"
+}
