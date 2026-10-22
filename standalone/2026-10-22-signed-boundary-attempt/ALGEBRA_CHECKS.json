@@ -1,0 +1,97 @@
+{
+  "arithmetic": "exact integers and rational numbers",
+  "checks": {
+    "M2_face_capacity_ratio": "6",
+    "auxiliary_digits": [
+      {
+        "character_digit": 1,
+        "frequency_digit": 0,
+        "minimum_loss_per_prime_exponent": "5/12",
+        "theta_digit": 4
+      },
+      {
+        "character_digit": 2,
+        "frequency_digit": 1,
+        "minimum_loss_per_prime_exponent": "1/3",
+        "theta_digit": 3
+      },
+      {
+        "character_digit": 3,
+        "frequency_digit": 2,
+        "minimum_loss_per_prime_exponent": "1/4",
+        "theta_digit": 2
+      },
+      {
+        "character_digit": 4,
+        "frequency_digit": 3,
+        "minimum_loss_per_prime_exponent": "1/6",
+        "theta_digit": 1
+      },
+      {
+        "character_digit": 5,
+        "frequency_digit": 4,
+        "minimum_loss_per_prime_exponent": "1/12",
+        "theta_digit": 0
+      }
+    ],
+    "continuous_completed_optimization": [
+      {
+        "beta_interval": [
+          "1/2",
+          "2/3"
+        ],
+        "delta_affine": [
+          "1/3",
+          "-1/3"
+        ],
+        "rho_affine": [
+          "1",
+          "-1/2"
+        ]
+      },
+      {
+        "beta_interval": [
+          "2/3",
+          "1"
+        ],
+        "delta_affine": [
+          "0",
+          "1/6"
+        ],
+        "rho_affine": [
+          "1",
+          "-1/2"
+        ]
+      }
+    ],
+    "inherited_boundary_isolating_interval": [
+      "218721661759991/250000000000000",
+      "1749773294079929/2000000000000000"
+    ],
+    "joint_euler_polynomial_identity": true,
+    "low_conductor_threshold_interval": [
+      "250680117760213/2500000000000000",
+      "31335014720027/312500000000000"
+    ],
+    "omitted_cube_inverse_mutation_rejected": true,
+    "quadratic_terminal_resource": "H^(1+2 delta) B",
+    "rational_high_conductor_target": {
+      "beta": "7/8",
+      "c": "2/25",
+      "conditional_amplified_slope": "33/40",
+      "eta": "1/100",
+      "low_row_exponent": "589/600",
+      "saving_relative_to_H": "D^(-1/120)",
+      "tau": "1/100"
+    },
+    "sixth_power_valuation_classes": 6
+  },
+  "scope": {
+    "RH_proved": false,
+    "analytic_continuation_reproved_by_computation": false,
+    "high_conductor_moment_proved": false,
+    "imported_cubic_mean_proved_by_computation": false,
+    "new_zero_free_boundary_proved": false
+  },
+  "status": "PASS"
+}

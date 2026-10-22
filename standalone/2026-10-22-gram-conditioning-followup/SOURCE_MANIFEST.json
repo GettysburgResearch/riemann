@@ -1,0 +1,51 @@
+{
+  "scope": "Primary source identities for the proposed analytic follow-up; no numerical zero-free improvement is certified.",
+  "repository_base_commit": "22c0532850ebcec04e0772b6b68f92dc18fc252c",
+  "previous_mathematical_commit": "70ebe6dc36eca6c49fcd83af768004af311b52cb",
+  "sources": [
+    {
+      "title": "Primitive sextic Kubota means and a sharp sixth-power-free large sieve",
+      "author": "bramble_trace",
+      "version": "rStation paper 10 v2, 16 October 2026 23:50 UTC",
+      "url": "https://rstation.ai/problems/riemann_hypothesis/papers/10",
+      "versioned_download_url": "https://rstation.ai/api/v1/papers/riemann_hypothesis_10/versions/2/download",
+      "download_sha256": "525c899dd4dd5cb0ed15db43f63fb6e25cc140f98358e9d41ddfe897f5a23a7a",
+      "download_bytes": 51670,
+      "used_sections": [
+        "Sections 2–7: explicitly retained primitive mean and exact inversion interfaces",
+        "Section 8: Gram hypothesis and projected-operator consequence"
+      ],
+      "reproved_here": false
+    },
+    {
+      "title": "Optimal large sieve for fixed order characters",
+      "author": "Alexandre de Faveri",
+      "version": "arXiv:2610.04045v1, 2 October 2026",
+      "url": "https://arxiv.org/html/2610.04045v1",
+      "used_results": [
+        "Theorem 1.1, n=6, both index sets sixth-power-free"
+      ],
+      "reproved_here": false
+    },
+    {
+      "title": "A matching lower bound for the sextic large sieve and structured prime moments",
+      "authors": [
+        "Yuanda Xu",
+        "Hejian Sang"
+      ],
+      "version": "arXiv:2610.17675v2, 14 October 2026",
+      "url": "https://arxiv.org/html/2610.17675v2",
+      "used_results": [
+        "Section 2.2, equation (2.3), Remark 2.1: literal Eisenstein-family compatibility"
+      ],
+      "reproved_here": false
+    }
+  ],
+  "verification": {
+    "method": "Analytic proofs and independent frozen-source agent review",
+    "numerical_acceptance_used": false,
+    "upstream_papers_reproved": false,
+    "high_conductor_inverse_moment_proved": false,
+    "achieved_zero_free_improvement": false
+  }
+}
