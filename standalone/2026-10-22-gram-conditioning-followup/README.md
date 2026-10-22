@@ -14,7 +14,7 @@ recorded in the [preceding packet](../2026-10-22-signed-boundary-attempt/README.
 
 ## 1. The strongest new estimate
 
-Work over the Eisenstein field. For distinct sixth-power-free good ideal labels \(NR\le K\), use squarefree good row ideals \(z\), a fixed nonnegative annular weight \(w\), and the original zero-extended sextic residue symbols. Let \(Q\) be a growing prime-exclusion ideal and define
+Work over the Eisenstein field. For distinct sixth-power-free good ideal labels \(NR\le K\), use squarefree good row ideals \(z\), a fixed nonzero, nonnegative smooth annular weight \(w\), and the original zero-extended sextic residue symbols. Let \(Q\) be a growing prime-exclusion ideal and define
 
 \[
 G_{R,S}=\frac1U\sum_{z\text{ squarefree}}w(Nz/U)
