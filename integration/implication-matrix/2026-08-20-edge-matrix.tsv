@@ -1,0 +1,15 @@
+edge_id	inputs	output	status	type	meaning
+E01	IM-S01+IM-P01	IM-P02	VERIFIED	producer	complex shifted positivity supplies the activation-free quadratic producer
+E02	IM-P02+IM-M01+IM-D01	IM-RH	CONDITIONAL	closure	quadratic producer plus critical variation plus Landau
+E03	IM-M01	IM-M02	VERIFIED	translation	critical variation controls envelope deficit by positive Hardy smoothing
+E04	IM-M02+IM-D01	IM-RH	CONDITIONAL	closure	envelope negative mass plus Mellin-Landau
+E05	IM-P03+IM-P04+IM-M06	IM-M01	CONDITIONAL	source-cover	squared small core plus depth-one collar plus oriented collar variation
+E06	IM-S02+IM-P05+IM-P06	IM-M04	DECOMPOSITION	source-cover	minimal wavelet equals smooth plus rough largest-prime sector
+E07	IM-M04+IM-D02	IM-RH	CONDITIONAL	closure	rough largest-prime negative mass closes wavelet detector
+E08	IM-S02+IM-P05+IM-P07+IM-P08	IM-M05	DECOMPOSITION	source-cover	zero moment closes Type I and leaves balanced trilinear
+E09	IM-M05+IM-D02	IM-RH	CONDITIONAL	closure	balanced trilinear negative mass closes wavelet detector
+E10	IM-M04	IM-M05	VERIFIED	equivalence	largest-prime and Vaughan gates differ by L1 error
+E11	IM-M05	IM-M04	VERIFIED	equivalence	converse L1 translation
+E12	IM-P09	IM-M03	EXACT_REALIZATION	translation	signed Hasse divergence is the minimal wavelet
+E13	IM-M03+IM-D02	IM-RH	CONDITIONAL	closure	minimal wavelet subpower estimate and Mellin detector
+E14	IM-M03+IM-D03	IM-RH	CONDITIONAL	closure	minimal wavelet and Littlewood exponent dictionary
