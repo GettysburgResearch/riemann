@@ -1,0 +1,47 @@
+{
+  "anchored_path": {
+    "pr510_declared_to_native_ratio_squared": "1/67",
+    "pr510_path_normalization_matches_native": false,
+    "pr522_normalization_fork_closed": false,
+    "test_occurrence": {
+      "k": 67,
+      "m": 1
+    }
+  },
+  "frozen_heads": {
+    "pr508": "4ae97dffd1f76ed3244b8f3028560ffa80663caf",
+    "pr509": "e01daee9cdfea35d2a7d2591f1df6c8080084119",
+    "pr510": "b596b1abae9213366aab4cf3f2c911ff8cfab725",
+    "pr522": "3e8949af3e23b8563bfbc0cf8846820cc6c66d76",
+    "review516": "2492bd48f8e2bafacfc04fc9237c06219b8c9bf8"
+  },
+  "native_cost": {
+    "strict_upper_bound": 61000,
+    "total": 60989
+  },
+  "pr508_tail": {
+    "all_parameter_avlt_verified": false,
+    "certificate_contract": "FAILED_BY_REVIEW_516",
+    "failure_digest": "7ffb59b9209d8d1db2527f363631708db9d4ed8ac89d45b793d2ee267d5ccfa8",
+    "tail_inequality_refuted": false
+  },
+  "pr522_readme": {
+    "base_blob": "f0d9e9aadfbd7b192b07e3bd0762a94e6e4da97e",
+    "replacement_blob": "f2d66e62226ab53b95be4c11e9cb578989535fd6",
+    "replacement_equals_standalone_blob": true,
+    "revert_required": true
+  },
+  "proof_object_sha256": "3845a341ae541a61229665f114ae04a7e98abf97d0d32b6999fc16d930dfd974",
+  "rh_established": false,
+  "schema": "riemann.review.pr510-pr522.live-coupling.v1",
+  "top_ownership": {
+    "K": 14925373135,
+    "X": 1000000000000,
+    "explicit_output_vs_omission_split_present": false,
+    "retained_cell_max": 999999989997,
+    "retained_cell_min": 14925373137,
+    "test_top_index": 999999999999,
+    "test_top_index_is_anchored": true
+  },
+  "verdict": "PASS_EXACT_PR510_PR522_COMPARATIVE_REVIEW_CHECKS"
+}
