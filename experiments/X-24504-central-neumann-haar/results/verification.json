@@ -1,0 +1,22 @@
+{
+  "content_sha256": "67c579f67093985f436ac98f25e6aac4dce52a9a4ccef1a0e231763bdea34d7a",
+  "counterexample": {
+    "X": 10050,
+    "coefficient_interval": [
+      "-0.00000338713025281696432847501869049748021797147658759992104422926727976411941085035547786943176233572",
+      "-0.00000338713025281696432847501869049748021797147658759992104422926727976411941085035547786943176012845"
+    ],
+    "index": 11,
+    "precision": 100,
+    "strictly_negative": true
+  },
+  "exact": {
+    "haar_terms": 321,
+    "recurrence_rows": 63,
+    "saturation_rows": 63,
+    "shell_rows": 63,
+    "tent_terms": 465
+  },
+  "schema": "riemann.x24504.central-neumann-haar.v1",
+  "verdict": "PASS_EXACT_HAAR_AND_DIRECTED_CENTRAL_NEGATIVITY"
+}

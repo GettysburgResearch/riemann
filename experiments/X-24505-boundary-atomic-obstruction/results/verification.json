@@ -1,0 +1,37 @@
+{
+  "content_sha256": "c15c4c4306830844cd614348b23bb0bc4d8ebeedd5f3224b888ef72810458f1c",
+  "controls": [
+    {
+      "atomic_norm_band_lower": "210.954751728714324078386538673719802178221802302575361874466",
+      "endpoint": 10000,
+      "minimum_weighted_boundary_lower": "0.910802184546452389125335150671345926306151597962882631997038",
+      "precision": 60,
+      "prime_band": "X/3 < p <= X/2",
+      "prime_count": 199
+    },
+    {
+      "atomic_norm_band_lower": "2125.73110708916035021798722112396594567134088707533514485683",
+      "endpoint": 100000,
+      "minimum_weighted_boundary_lower": "1.20742324261583173459623854864492819658409713019681112921354",
+      "precision": 60,
+      "prime_band": "X/3 < p <= X/2",
+      "prime_count": 1564
+    },
+    {
+      "atomic_norm_band_lower": "21349.3256921454948357349936952824120418382514695455965523679",
+      "endpoint": 1000000,
+      "minimum_weighted_boundary_lower": "1.50595916314814965201863447556214423053719204374096479523532",
+      "precision": 60,
+      "prime_band": "X/3 < p <= X/2",
+      "prime_count": 12873
+    }
+  ],
+  "does_not_prove": [
+    "the prime number theorem",
+    "the asymptotic Omega(X) conclusion without the analytic proof",
+    "the failure of every possible relative analytic-boundary repair",
+    "RH"
+  ],
+  "schema": "riemann.x24505.boundary-atomic-obstruction.v1",
+  "verdict": "PASS_DIRECTED_MACROSCOPIC_BOUNDARY_ATOMIC_LOWER_BOUND"
+}

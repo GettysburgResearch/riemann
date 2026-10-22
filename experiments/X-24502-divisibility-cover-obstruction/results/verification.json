@@ -1,0 +1,23 @@
+{
+  "all_cells_pass": true,
+  "arithmetic": "EXACT_RATIONAL",
+  "cells": [
+    {"cell": 32, "lower_decimal": "0.168508076497528", "lower_gt_margin": true},
+    {"cell": 33, "lower_decimal": "0.221607181057847", "lower_gt_margin": true},
+    {"cell": 34, "lower_decimal": "0.275109630474372", "lower_gt_margin": true},
+    {"cell": 35, "lower_decimal": "0.328980604540924", "lower_gt_margin": true},
+    {"cell": 36, "lower_decimal": "0.38318846543527", "lower_gt_margin": true},
+    {"cell": 37, "lower_decimal": "0.43770440247977", "lower_gt_margin": true},
+    {"cell": 38, "lower_decimal": "0.492502124214031", "lower_gt_margin": true},
+    {"cell": 39, "lower_decimal": "0.547557590471985", "lower_gt_margin": true},
+    {"cell": 40, "lower_decimal": "0.602848778434898", "lower_gt_margin": true}
+  ],
+  "finite_X_threshold": 101201,
+  "lipschitz_bound": 253,
+  "lipschitz_integer_check": true,
+  "margin": "1/10",
+  "proof_object_sha256": "428307dd3e0be7647aa660094433e2071c5e67454d534d5b0c9219defabd4cda",
+  "remainder_threshold_check": true,
+  "source_verifier": "../X-24501-outer-parabolic-seed/verify.py",
+  "verdict": "PASS_EXACT_POSITIVE_SEED_EXCESS_BAND"
+}
