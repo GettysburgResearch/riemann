@@ -1,0 +1,28 @@
+{
+  "checks": {
+    "affine_rows": 18336,
+    "digital_convolution": 192,
+    "dipole_rows": 18336,
+    "local_coefficients": 192,
+    "mutations_rejected": 6,
+    "positive_inverse": 192,
+    "shell_inversions": 192,
+    "transport_rows": 20
+  },
+  "classification": "EXACT_DYADIC_PARITY_DIPOLE_ALGEBRA_VERIFIED",
+  "digital_output": [
+    "1@1",
+    "-5/2@2",
+    "1@4"
+  ],
+  "dipole_support_ratio": 4,
+  "max_n": 192,
+  "proof_boundary": "finite algebra only; the reflected dyadic Hall reserve and RH remain unproved",
+  "source_layers": [
+    "1",
+    "-5/2",
+    "2",
+    "-1/2"
+  ],
+  "verifier_sha256": "34108e694895b04020aa2398d52871e0d884e52ac466d62cefa71b85c80fce1f"
+}
