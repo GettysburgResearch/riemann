@@ -1,0 +1,61 @@
+{
+  "classification": "PASS_PR455_STOPPED_LEAF_HALL_PREFIX_COUNTEREXAMPLE",
+  "core": {
+    "frozen_target": {
+      "normative_content_commit": "c696d2a356eeacb3097d4ea6cc727b84548d7a03",
+      "proposal_head": "1b502acbe511776178da3dc916e3cd3464cd5e77",
+      "proposal_pr": 455
+    },
+    "promoted_row_margin": {
+      "M1": {
+        "lower": "0.049925670420018717371340024833",
+        "upper": "0.049925670420018717371340024833"
+      },
+      "M1_lt_1_over_20": true,
+      "M1_positive": true,
+      "cell_N": 71,
+      "note": "This refutes the promoted global 1/20 margin, not global monotonicity itself.",
+      "right_endpoint_Y": 72,
+      "row_j": 70
+    },
+    "scope": {
+      "T91656_conclusion_survives_this_reconstruction": false,
+      "finite_seed_fubini_identity_refuted": false,
+      "riemann_hypothesis_established": false,
+      "single_sharp_atom_identity_refuted": false,
+      "stopped_leaf_hall_entry_refuted_as_stated": true
+    },
+    "stopped_leaf": {
+      "A13": "-2323/30030",
+      "B13": {
+        "lower": "-0.964020505095035689496223979391",
+        "upper": "-0.964020505095035689496223979391"
+      },
+      "active_prefix_threshold": 13,
+      "conservative_all_p_ge_67_upper_bound": {
+        "lower": "-2.079958773467923061889931113890",
+        "upper": "-2.079958773467923061889931113890"
+      },
+      "failure_for_every_prime_p_ge_67_at_y_13": true,
+      "no_upward_survival_target_hall_transport_exists": false,
+      "p": 67,
+      "parent_endpoint_X_equals_p_times_y": 871,
+      "physical_survival_prefix_margin": {
+        "lower": "-5.863841709602757759803248275971",
+        "upper": "-5.863841709602757759803248275971"
+      },
+      "survival_alpha": {
+        "lower": "1.359419776650739036445028916029",
+        "upper": "1.359419776650739036445028916029"
+      },
+      "unscaled_margin_lt_minus_2": true,
+      "unscaled_survival_prefix_margin": {
+        "lower": "-2.139513718150115658301751536870",
+        "upper": "-2.139513718150115658301751536870"
+      },
+      "y": 13
+    }
+  },
+  "proof_object_sha256": "d010a2ec2e1efa95efa98c237958a25166ae486381c6ace5d633d5f2016bace1",
+  "schema": "riemann.pr455.stopped-leaf-hall-prefix-counterexample.v1"
+}
