@@ -1,0 +1,58 @@
+{
+  "constraints": {
+    "force_push": false,
+    "heavy_computation_rerun": false,
+    "modified_primary_reviews": false,
+    "new_rh_research": false
+  },
+  "created_utc": "2026-08-22T00:00:00+03:00",
+  "evidence_boundary": [
+    "Exact finite algebra and small fixtures were reconstructed.",
+    "The external high-zero verification was treated as a frozen published input and not rerun.",
+    "Likely omitted claims are candidates for Reviewer C/D reconciliation, not final census verdicts.",
+    "A passing Reviewer B replay was not treated as verification of attached classifications."
+  ],
+  "frozen_main_sha": "677203992eb0168920365ee45ae9db76bfa97dcf",
+  "output_branch": "review/2026-08-22/reviewer-a-cross-review-b",
+  "overlap_context_only": {
+    "authority": false,
+    "head_sha": "55fe0b6f23d9163e2b602608da84194ba243d7c4",
+    "pr": 709
+  },
+  "primary_review": {
+    "branch": "review/2026-08-21/operator-heat-q4",
+    "declared_rows": {
+      "aliases": 18,
+      "claims": 167,
+      "computations": 13,
+      "refutations": 26,
+      "route_edges": 30
+    },
+    "files_changed": 25,
+    "head_sha": "eb1987502ef9043e782ac6ab1e19c47be9daef93",
+    "pr": 708
+  },
+  "repository": "gfreund123/riemann",
+  "reviewer": "A",
+  "role": "independent cross-review of Reviewer B",
+  "sampled_source_heads": [
+    {"pr": 438, "sha": "bb7327d21c47410820cda2671f45dbe709a72eea"},
+    {"pr": 445, "sha": "c079c2ef21022be951027de1316aecf1168422c1"},
+    {"pr": 446, "sha": "880d14cb4bcbf542ec199137d60c58d9a8fd723d"},
+    {"pr": 460, "sha": "db9a767e312d9928f5ef827762dcb4ef95494af0"},
+    {"pr": 461, "sha": "ea633d416609565b3926f37c9302c93e1b818e2d"},
+    {"pr": 520, "sha": "41db5f783c751e66c786f18fa7fbd6d9bf229a8d"},
+    {"pr": 580, "sha": "812e7fcbaff2dd1c2c53c885def7b6c0d0e68a05"},
+    {"pr": 595, "sha": "e66a91166b80cbf0a520e3a78ea96582d263d563"},
+    {"pr": 597, "sha": "5478ead5fc82e1730cb1fe53965663d608a851b3"},
+    {"pr": 600, "sha": "193ca24d4ebecabb2c51efb62fa16c37947ad90c"},
+    {"pr": 606, "sha": "327c0967c67e7efa08fcb62937ca1730f8c24069"},
+    {"pr": 641, "sha": "19cd3939a54ccea73b055b3952b5dd7ed638c4fb"},
+    {"pr": 649, "sha": "433fd3662f7b2e4ba384ce64f196380e88624090"},
+    {"pr": 652, "sha": "24ab64551225f2dba9aa53a533eb9b0285c6e363"},
+    {"pr": 653, "sha": "e928fd615d753882706bb88c51b717bd8d4a86ba"},
+    {"pr": 675, "sha": "7b28224ba1b072d4ccd5b93ad37c0a64e7939740"}
+  ],
+  "schema": "riemann.cross-review-delta.v1",
+  "scientific_status": "RH_UNPROVED"
+}
