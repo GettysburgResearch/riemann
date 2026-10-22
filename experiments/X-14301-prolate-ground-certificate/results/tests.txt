@@ -1,0 +1,39 @@
+X-14301 verification transcript
+Date: 2026-07-29
+
+Command:
+  python3 -m py_compile \
+    experiments/X-14301-prolate-ground-certificate/verify.py \
+    experiments/X-14301-prolate-ground-certificate/tests/test_verify.py
+Result:
+  PASS
+
+Command:
+  python3 -m unittest discover \
+    -s experiments/X-14301-prolate-ground-certificate/tests -v
+Result:
+  test_absorbs_small_entrywise_boxes ... ok
+  test_rejects_dimension_one ... ok
+  test_rejects_false_even_gap ... ok
+  test_rejects_non_even_candidate ... ok
+  test_rejects_non_parity_invariant_radii ... ok
+  test_rejects_noninteger_fraction_object ... ok
+  test_rejects_uncertainty_larger_than_gap ... ok
+  test_rejects_understated_residual ... ok
+  test_rejects_understated_weighted_complement_factor ... ok
+  test_synthetic_certificate_passes ... ok
+
+  Ran 10 tests
+  OK
+
+Command:
+  python3 experiments/X-14301-prolate-ground-certificate/verify.py \
+    experiments/X-14301-prolate-ground-certificate/certificates/synthetic-exact.json \
+    --output experiments/X-14301-prolate-ground-certificate/results/synthetic-exact-verification.json
+Result:
+  PASS
+  ground_eigenvalue_interval = [-1/100, 0]
+  tan_ground_angle_upper = 1/10
+  global_spectral_gap_lower = 1
+  weighted_target_line_distance_upper = 31/100
+
