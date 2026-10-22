@@ -1,0 +1,38 @@
+{
+  "packet_version": "0.1.0",
+  "created_utc": "2026-08-10",
+  "target_repository": {
+    "full_name": "gfreund123/riemann",
+    "base_commit": "d6409319b4041cd09bee85f55a344631508f2501"
+  },
+  "external_sources": {
+    "official_page": {
+      "url": "https://www.anthropic.com/research/riemann-zeta",
+      "accessed_utc": "2026-08-10"
+    },
+    "paper_pdf": {
+      "local_name": "zeta-two-thirds.pdf",
+      "sha256": "6792988e6cd0e17690621ce898abd5d534f98407741bc7cb14bbe7d07c77d72f",
+      "pages": 35,
+      "date_in_document": "2026-08-10"
+    },
+    "condensed_note_pdf": {
+      "local_name": "zeta-two-thirds-condensed.pdf",
+      "sha256": "45e0330ad37965e5531fa1f4f11e5bebcae147a5237a3e5b3d029efa7ddf759d",
+      "pages": 5
+    },
+    "lean_repository": {
+      "full_name": "anthropics/zeta-23-lean",
+      "commit": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510",
+      "license": "Apache-2.0",
+      "toolchain": "Lean v4.33.0-rc2",
+      "mathlib_commit": "51e6992efd06126df61a496bebf8f49482a4e129"
+    }
+  },
+  "local_replay_boundary": {
+    "paper_hashes_verified": true,
+    "python_experiments_replayed": true,
+    "external_lean_build_replayed_locally": false,
+    "reason": "The execution environment had neither a pre-existing Lean checkout nor network access sufficient to fetch the pinned dependency closure. The external repository's own audit record was inspected, but this packet does not present that record as an independent local replay."
+  }
+}
