@@ -1,0 +1,37 @@
+{
+  "checks": {
+    "band_geometry": {
+      "endpoint_cases": 3905,
+      "limit_endpoint": 4096,
+      "stopped_endpoint_geometry_cases": 1115788,
+      "top_band_node_cases": 557894
+    },
+    "linear_count": {
+      "cases": 99809,
+      "limit_endpoint": 100000,
+      "proved_atomic_lower": "X/750",
+      "weakest_count_over_X": "1/16",
+      "weakest_endpoint": 192
+    },
+    "rational_moat": {
+      "scaled_boundary_upper": "-123/512",
+      "shift_error_m64_upper": "5/512",
+      "sum_2k_power_tail_upper": "5/8",
+      "unshifted_difference_tail_upper": "5/16",
+      "weighted_layer_node_moat": "1/25"
+    },
+    "source_type_mutation": {
+      "divided_even_control": "1/484",
+      "raw_even_control": "1/121",
+      "verdict": "SOURCE_NORMALIZATION_MISMATCH_REJECTED"
+    }
+  },
+  "classification": "EXACT_LINEAR_CRITICAL_BOUNDARY_ATOMIC_NORM_LOWER_BOUND",
+  "does_not_prove": [
+    "a linear lower bound for optimized Cycle Debt",
+    "impossibility of structured pre-atomization recombination",
+    "RH"
+  ],
+  "result_sha256_without_digest": "7f4c5029e6b025686d24b2860202d357b359d461f30783825cb8a2c0c46a56ef",
+  "schema": "X-30501-boundary-atomization-v1"
+}

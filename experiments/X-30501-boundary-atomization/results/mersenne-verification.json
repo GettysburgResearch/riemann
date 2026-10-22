@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "adjacent_coefficient_squared": "512/27",
+    "declared_constant": 16,
+    "derivative_smooth_coefficient_squared": "32/3",
+    "dyadic_sum_upper": "5/2",
+    "final_constant_upper": "31/2",
+    "pointwise_coefficient_squared": "6"
+  },
+  "classification": "EXACT_LOGARITHMIC_MERSENNE_SEMINORM_CONSTANTS",
+  "does_not_prove": [
+    "the all-generation Mersenne bound",
+    "the reciprocal-eta subpower theorem",
+    "RH"
+  ],
+  "result_sha256_without_digest": "3e8c282eec233d5dfe07d9e24ae1f3619940fb2ed7f255b596d4d4fef6294424",
+  "schema": "X-30501-mersenne-constants-v1"
+}
