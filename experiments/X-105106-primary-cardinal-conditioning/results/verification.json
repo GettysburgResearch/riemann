@@ -1,0 +1,330 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL",
+  "checks": {
+    "mutation_firewalls": {
+      "count_multiplicity_parity_only_uniform_bound_refuted": true,
+      "omitted_M_target_normalization_rejected": true,
+      "quarantined_moving_order_vandermonde_claim_used": false,
+      "radicalizing_repeated_nontarget_rejected": true,
+      "same_count_orders_and_parity_at_epsilon_1_over_5": {
+        "D": 5,
+        "norm": "676"
+      },
+      "same_count_orders_and_parity_at_epsilon_1_over_50": {
+        "D": 5,
+        "norm": "6255001"
+      },
+      "true_selector": [
+        "1",
+        "7/6",
+        "-7/12",
+        "-5/8",
+        "1/6",
+        "1/24"
+      ],
+      "unweighted_edge_decay_survives_arbitrary_polynomial_weight": false,
+      "using_local_power_d_instead_of_d_minus_1_rejected": true
+    },
+    "paired_first_second_cluster": {
+      "F": [
+        "1",
+        "0",
+        "1/50",
+        "0",
+        "1/4"
+      ],
+      "F_double_prime": [
+        "1/25",
+        "0",
+        "3"
+      ],
+      "F_prime": [
+        "0",
+        "1/25",
+        "0",
+        "1"
+      ],
+      "all_denominator_events_simple": true,
+      "epsilon": "1/5",
+      "family": "F_epsilon(z)=1+epsilon^2*z^2/2+z^4/4",
+      "first_actual_pole_factor": "z(z^2+epsilon^2)",
+      "first_blaschke_lower_bound": "25",
+      "first_selector": [
+        "1",
+        "0",
+        "25"
+      ],
+      "first_unit_circle_sup_norm": "26",
+      "higher_degree_holomorphic_escape_blocked": true,
+      "rho_jet": "25",
+      "rho_jet_squared": "625",
+      "second_actual_pole_factor": "z(z^2+epsilon^2)(3z^2+epsilon^2)",
+      "second_blaschke_lower_bound": "1875",
+      "second_selector": [
+        "1",
+        "0",
+        "100",
+        "0",
+        "1875"
+      ],
+      "second_unit_circle_sup_norm": "1976",
+      "selectors_real_and_even": true,
+      "target_manifest": [
+        "0"
+      ]
+    },
+    "pole_cancelled_edge_reduction": {
+      "W_over_M": "7/36",
+      "cardinal_partial_fraction_sum": "7/36",
+      "edge_envelope": "len(E)/(2*pi) * ||M h||_E * sum_target |gamma|*kappa/dist(E,target)",
+      "event_data_alone_bounds_holomorphic_remainder": false,
+      "global_modulus": [
+        "0",
+        "4",
+        "4",
+        "-3",
+        "-2",
+        "1"
+      ],
+      "identity_verified": true,
+      "large_remainder_boundary_norm": "101",
+      "same_pole_and_principal_part_for_all_C": true,
+      "sample_point": "3",
+      "selector": [
+        "1",
+        "7/9",
+        "-13/12",
+        "-1/2",
+        "13/36"
+      ],
+      "simple_remainder_family": "h_C=1/z+C; M*h_C=1+Cz",
+      "small_remainder_boundary_norm": "2",
+      "target_terms": [
+        {
+          "M_target_at_target": "4",
+          "gamma": "1",
+          "sample_contribution": "1/12",
+          "target": "0"
+        },
+        {
+          "M_target_at_target": "18",
+          "gamma": "2",
+          "sample_contribution": "1/9",
+          "target": "2"
+        }
+      ]
+    },
+    "primary_cardinal_fixtures": {
+      "mixed_multiplicity": {
+        "boundary_radius": "3",
+        "coefficient_bound_verified": true,
+        "degree": 5,
+        "exact_condition_sum": "7/24",
+        "leading_coefficient_formula": "1/24",
+        "manifest": [
+          {
+            "order": 2,
+            "point": "-1"
+          },
+          {
+            "order": 1,
+            "point": "0"
+          },
+          {
+            "order": 3,
+            "point": "2"
+          }
+        ],
+        "minimum_separation": "1",
+        "node_radius": "2",
+        "selector": [
+          "1",
+          "7/6",
+          "-7/12",
+          "-5/8",
+          "1/6",
+          "1/24"
+        ],
+        "separation_bound_verified": true,
+        "separation_condition_sum": "4",
+        "targets": [
+          {
+            "M_target_at_target": "-8",
+            "gamma": "1",
+            "kappa": "1/8",
+            "order": 1,
+            "point": "0"
+          },
+          {
+            "M_target_at_target": "18",
+            "gamma": "3",
+            "kappa": "1/18",
+            "order": 3,
+            "point": "2"
+          }
+        ],
+        "total_primary_order": 6,
+        "uniform_primary_cardinal_bound": "21875/24",
+        "weighted_coefficient_norm": "201/4"
+      },
+      "real_even_sign_stable": {
+        "D_even_degree_improves_to_at_most_D_minus_2": true,
+        "boundary_radius": "3",
+        "coefficient_bound_verified": true,
+        "degree": 8,
+        "even_selector": true,
+        "exact_condition_sum": "1/36",
+        "leading_coefficient_formula": "0",
+        "manifest": [
+          {
+            "order": 2,
+            "point": "-2"
+          },
+          {
+            "order": 3,
+            "point": "-1"
+          },
+          {
+            "order": 3,
+            "point": "1"
+          },
+          {
+            "order": 2,
+            "point": "2"
+          }
+        ],
+        "minimum_separation": "1",
+        "node_radius": "2",
+        "real_coefficients": true,
+        "selector": [
+          "4/9",
+          "0",
+          "-10/9",
+          "0",
+          "11/12",
+          "0",
+          "-5/18",
+          "0",
+          "1/36"
+        ],
+        "separation_bound_verified": true,
+        "separation_condition_sum": "2",
+        "targets": [
+          {
+            "M_target_at_target": "-72",
+            "gamma": "1",
+            "kappa": "1/72",
+            "order": 3,
+            "point": "-1"
+          },
+          {
+            "M_target_at_target": "72",
+            "gamma": "1",
+            "kappa": "1/72",
+            "order": 3,
+            "point": "1"
+          }
+        ],
+        "total_primary_order": 10,
+        "uniform_primary_cardinal_bound": "1953125/36",
+        "weighted_coefficient_norm": "4225/9"
+      }
+    },
+    "sharp_even_cluster": {
+      "all_holomorphic_selector_blaschke_lower_bound": "625",
+      "boundary_radius": "1",
+      "coefficient_bound_verified": true,
+      "degree": 4,
+      "degree_D_minus_1_is_attained": true,
+      "delta_exponent_D_minus_1_is_necessary": true,
+      "epsilon": "1/5",
+      "exact_condition_sum": "625",
+      "exact_unit_circle_sup_norm": "676",
+      "leading_coefficient_formula": "625",
+      "manifest": [
+        {
+          "order": 2,
+          "point": "-1/5"
+        },
+        {
+          "order": 1,
+          "point": "0"
+        },
+        {
+          "order": 2,
+          "point": "1/5"
+        }
+      ],
+      "minimum_separation": "1/5",
+      "node_radius": "1/5",
+      "nontarget_multiplicity": 2,
+      "real_even_symmetry_does_not_remove_conditioning": true,
+      "selector": [
+        "1",
+        "0",
+        "-50",
+        "0",
+        "625"
+      ],
+      "separation_bound_verified": true,
+      "separation_condition_sum": "625",
+      "targets": [
+        {
+          "M_target_at_target": "1/625",
+          "gamma": "1",
+          "kappa": "625",
+          "order": 1,
+          "point": "0"
+        }
+      ],
+      "total_primary_order": 5,
+      "uniform_primary_cardinal_bound": "1296",
+      "unique_reduced_closed_form": "(1-z^2/epsilon^2)^m",
+      "weighted_coefficient_norm": "676"
+    }
+  },
+  "classification": "PASS_T105106_PRIMARY_CARDINAL_CONDITIONING",
+  "content_hash_mode": "LF_NORMALIZED_TEXT",
+  "content_sha256": {
+    "PACKET_METADATA_105106.json": "50e40a5616a5ca3b6dc2178036c8b3b204c1157a302e558183c865f7b4393298",
+    "claims/lemmas/L-105106-primary-cardinal-selector-conditioning.md": "c6a54f42595056374fff25a8d1d6a9b2ce11a9ee4dd2ab7aa80cdf7a1051dea2",
+    "claims/methodology/M-105106-selector-conditioning-review-contract.md": "a18bad8988fc7e022a62c13dfa74461570987fe635c34b295d29392d93e4a10d",
+    "claims/refutations/R-105106-selector-completeness-does-not-give-cofinal-control.md": "581d1772d174f962b5515aba418776ac6c4301eb8c8cc1f4f2feea0d7bfd553f",
+    "claims/theorems/T-105106-weighted-selector-frontier.md": "3a55f662f9d426634d3e9cf026b6c84718b8e939948c9982be4e91bc817c2eee",
+    "experiments/X-105106-primary-cardinal-conditioning/tests/test_verify.py": "ed59ea3ed423559c2a449ad7e3dbf9b01ad33789cb3661c0731f1af83ba045c7",
+    "experiments/X-105106-primary-cardinal-conditioning/verify.py": "912dca4d212b2249e4ef7a47ff140983eab58584bfc28fa006a89fbdbb10e017"
+  },
+  "dependency_checkpoint": {
+    "artifact_matches_live_producer": true,
+    "commit": "0a7b83e596534a7b9633b1c59ea4fdb057551c05",
+    "proof_object_sha256": "3edde4fdb651ae0c3781e4f832884f0d7c81247edd3b5a151c6b2c54f051cf05"
+  },
+  "heavy_computation_run": false,
+  "proof_object_sha256": "7dc8a3075e983d48032d74e14af2d3fed5611adb9735623e32a9dfa8623ace33",
+  "schema": "riemann.t105106.primary-cardinal-conditioning.v1",
+  "scope": {
+    "event_data_bounds_pole_cancelled_holomorphic_factor": false,
+    "exact_conditioning_products_exposed": true,
+    "finite_window_coefficient_and_boundary_envelope_proved": true,
+    "finite_window_degree_bound_proved": true,
+    "pole_cancelled_weighted_edge_reduction_proved": true,
+    "rcmv104530_proved": false,
+    "real_even_parity_cures_selector_conditioning": false,
+    "rh_established": false,
+    "separation_free_uniform_selector_bound_refuted": true,
+    "sharp_cluster_higher_degree_holomorphic_escape_exists": false,
+    "strict_xi_jet_coherence_margin_proved": false,
+    "top_jet_primary_cardinal_formula_proved": true,
+    "xi_conditioning_products_estimated_cofinally": false,
+    "xi_event_manifest_constructed": false,
+    "xi_jet_moments_estimated": false,
+    "xi_pole_cancelled_holomorphic_factors_estimated": false,
+    "xi_weighted_edge_asymptotics_proved": false
+  },
+  "source": {
+    "checkpoint_base": "0a7b83e596534a7b9633b1c59ea4fdb057551c05",
+    "post_freeze_context_head": "10bba584c01277e880aaa21e1fea09f396ca7246",
+    "post_freeze_context_pr": 720
+  },
+  "verdict": "PASS_T105106_PRIMARY_CARDINAL_CONDITIONING"
+}

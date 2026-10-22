@@ -1,0 +1,56 @@
+{
+  "schema": "riemann.t105112.packet.v1",
+  "created": "2026-08-23",
+  "repository": "gfreund123/riemann",
+  "branch": "codex/105100-residue-second-moment",
+  "checkpoint_base_sha": "51c67046a726be188bf724f7b4652e299bd31ccb",
+  "main_registry_sha": "852d8aa05c701ea7818ce8a50543e68987fef5cc",
+  "classification": "exact forward repair of the selector-domain scope in the T-105109 quotient-edge equalities",
+  "claims": [
+    "L-105112",
+    "T-105112",
+    "R-105112",
+    "M-105112"
+  ],
+  "arithmetic_class": "EXACT_RATIONAL_AND_POLYNOMIAL_ERRATUM",
+  "heavy_computation_run": false,
+  "dependency_checkpoint": {
+    "claim": "T-105111",
+    "commit": "51c67046a726be188bf724f7b4652e299bd31ccb",
+    "proof_object_sha256": "7bafdd3d8fb379e8d8de2cd30df8b96331378d7e4f244bb801439493a2e132cd"
+  },
+  "repair_scope": {
+    "literal_wording": "overbroad or ambiguous unless every boundary arc is read as a boundary arc of the exact selector domain",
+    "intended_reading": "the constant-modulus weighted-sup equality is restricted to E contained in the boundary of the exact domain used to construct the selector",
+    "affected_frozen_files": [
+      "PACKET_METADATA_105109.json",
+      "claims/lemmas/L-105109-log-derivative-edge-margins.md",
+      "claims/methodology/M-105109-quotient-edge-review-contract.md",
+      "claims/theorems/T-105109-quotient-edge-frontier.md",
+      "PR_BODY_105109_ADDENDUM.md",
+      "reports/codex/2026-08-23-log-derivative-edge-obstruction.md"
+    ],
+    "frozen_105109_files_modified": false,
+    "retrospective_105109_verification_claimed": false,
+    "forward_repair_only": true
+  },
+  "proved_or_supplied_for_review": [
+    "same-selector-domain constant-boundary-modulus weighted-sup equalities for both quotient carriers",
+    "general product inequality using the actual edge norm of the weight",
+    "maximum-modulus tau envelope for compact edges in the selector-domain closure",
+    "exact unit-disk polynomial-exponential counterexample to an off-selector-boundary equality",
+    "exact recovery of equality on a boundary arc of the selector domain"
+  ],
+  "open": [
+    "independent exact-SHA review",
+    "retrospective regeneration or reverification of T-105109",
+    "Xi actual-pole and exterior-collar manifest",
+    "cofinal Xi logarithmic-derivative lower margins",
+    "cofinal selector/margin absorption",
+    "phase-sensitive oriented-edge cancellation",
+    "strict Xi jet coherence",
+    "RCMV104530",
+    "Riemann Hypothesis"
+  ],
+  "rh_established": false
+}

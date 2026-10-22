@@ -1,0 +1,248 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL_WITH_EXACT_POLYNOMIAL_ROOT_CERTIFICATES",
+  "checks": {
+    "collective_three_target_obstruction": {
+      "adjacent_pair_determinant_factor": "(1/3)*(s^2-14*s+1)",
+      "adjacent_pair_squared_norm_isolating_interval": [
+        "13",
+        "14"
+      ],
+      "all_two_by_two_pick_conditions_are_sufficient": false,
+      "endpoint_pair_optimal_norm": "1",
+      "full_optimal_norm": "4+sqrt(15)",
+      "full_optimum_strictly_exceeds_every_pair_optimum": true,
+      "full_squared_norm_factor": "s^2-62*s+1",
+      "full_squared_norm_isolating_interval": [
+        "61",
+        "62"
+      ],
+      "generalized_determinant_coefficients": [
+        "-16/225",
+        "112/25",
+        "-112/25",
+        "16/225"
+      ],
+      "generalized_determinant_factor": "(16/225)*(s-1)*(s^2-62*s+1)",
+      "maximum_pair_optimal_norm": "2+sqrt(3)",
+      "nodes": [
+        "-1/2",
+        "0",
+        "1/2"
+      ],
+      "pick_kernel": [
+        [
+          "4/3",
+          "1",
+          "4/5"
+        ],
+        [
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "4/5",
+          "1",
+          "4/3"
+        ]
+      ],
+      "values": [
+        "-1",
+        "1",
+        "-1"
+      ]
+    },
+    "compatible_three_event_selector": {
+      "cardinal_upper_bound": "26",
+      "epsilon": "1/5",
+      "forced_inner": "z",
+      "generalized_squared_roots": [
+        "1",
+        "625"
+      ],
+      "gram_condition_number": "25",
+      "gram_maximum_eigenvalue": "25/13",
+      "gram_minimum_eigenvalue": "1/13",
+      "gram_upper_bound": "25",
+      "manifest": [
+        {
+          "order": 1,
+          "point": "-1/5",
+          "role": "target"
+        },
+        {
+          "order": 1,
+          "point": "0",
+          "role": "nontarget"
+        },
+        {
+          "order": 1,
+          "point": "1/5",
+          "role": "target"
+        }
+      ],
+      "maximum_local_load": "5",
+      "normalized_gram_off_diagonal": "12/13",
+      "optimal_H": "25*z",
+      "optimal_W": "25*z^2",
+      "optimal_norm": "25",
+      "target_gamma": "1",
+      "target_product_separation": "5/13",
+      "target_pseudohyperbolic_separation": "5/13",
+      "target_values_y": [
+        "-5",
+        "5"
+      ],
+      "top_jet_congruences_verified": true
+    },
+    "fixed_manifest_disk_radius": {
+      "fixed_manifest": [
+        {
+          "gamma": "1",
+          "order": 2,
+          "point": "0",
+          "role": "target"
+        },
+        {
+          "order": 2,
+          "point": "1/2",
+          "role": "nontarget"
+        }
+      ],
+      "formula": "tau_R=4*R^3",
+      "nontarget_collision_exponent": 2,
+      "radius_doubling_factor": "8",
+      "radius_one_optimal_norm": "4",
+      "radius_two_optimal_norm": "32",
+      "target_conformal_radius_exponent": 1,
+      "total_radius_exponent": 3
+    },
+    "mutation_firewalls": {
+      "absolute_target_values_determine_pick_optimum": false,
+      "accepted_actual_xi_pick_kernel_used": false,
+      "cardinal_upper_bound_is_always_exact": false,
+      "compatible_full_optimum": "25",
+      "compatible_local_load_maximum": "5",
+      "fixed_manifest_radius_norms": [
+        "4",
+        "32"
+      ],
+      "fixed_manifest_selector_norm_is_disk_radius_independent": false,
+      "local_load_maximum_controls_multi_target_optimum": false,
+      "pairwise_pick_conditions_are_sufficient": false,
+      "pairwise_target_separation_controls_full_event_collision_load": false,
+      "raw_pick_kernel_condition_number_is_conformally_intrinsic": false,
+      "rh_established": false,
+      "same_absolute_values_distinct_optimal_norms": [
+        "2",
+        "4"
+      ],
+      "single_target_collision_norm": "125"
+    },
+    "off_centre_local_load": {
+      "checkpoint_8_load_matches": true,
+      "conformal_radius": "8/9",
+      "forced_target_exponent": 1,
+      "gamma": "1",
+      "local_load": "56/45",
+      "pseudohyperbolic_product": "5/7"
+    },
+    "phase_sensitive_pair": {
+      "absolute_target_values": [
+        "2",
+        "2"
+      ],
+      "gram_condition_number": "4",
+      "gram_maximum_eigenvalue": "8/5",
+      "gram_minimum_eigenvalue": "2/5",
+      "nodes": [
+        "-1/2",
+        "1/2"
+      ],
+      "normalized_gram": [
+        [
+          "1",
+          "3/5"
+        ],
+        [
+          "3/5",
+          "1"
+        ]
+      ],
+      "opposite_phase_determinant_factor": "(256/225)*(s-1)*(s-16)",
+      "opposite_phase_gram_upper_bound": "4",
+      "opposite_phase_optimal_norm": "4",
+      "opposite_phase_pick_at_diagonal_threshold_psd": false,
+      "opposite_phase_values": [
+        "-2",
+        "2"
+      ],
+      "phase_is_load_bearing": true,
+      "same_phase_determinant_factor": "(256/225)*(s-4)^2",
+      "same_phase_optimal_norm": "2",
+      "same_phase_values": [
+        "2",
+        "2"
+      ]
+    },
+    "single_target_collision": {
+      "collision_exponent": 3,
+      "nontarget": "1/5",
+      "nontarget_order": 3,
+      "optimal_norm": "125",
+      "pick_value_y": "-125",
+      "pseudohyperbolic_distance": "1/5",
+      "target": "0",
+      "target_gamma": "1",
+      "target_order": 1,
+      "top_jet_congruences_verified": true
+    }
+  },
+  "classification": "PASS_T105108_GREEN_GRAM_SELECTOR_CONDITIONING",
+  "content_hash_mode": "LF_NORMALIZED_TEXT",
+  "content_sha256": {
+    "PACKET_METADATA_105108.json": "7767c4caf976b609ccbe984635e9044741089cf3dc0dfae1abe547be2fe4f7c5",
+    "claims/lemmas/L-105108-green-gram-selector-conditioning.md": "497563d7bcda9b1c44027e0216c80b7dbc4d439d3b0e2c826489e7445caca4ee",
+    "claims/methodology/M-105108-green-gram-review-contract.md": "85943022f2185e8834085816a55978486e6281e135d63d4ba8b6694d3c6ed95a",
+    "claims/refutations/R-105108-local-potential-loads-do-not-control-pick-interaction.md": "650c3432b36ce7f09f764b9e5e1db021ceaa1333c3fd9a376248b5b0684ed0ca",
+    "claims/theorems/T-105108-optimal-selector-conditioning-frontier.md": "62f514b425052a60ae4db7385056fc9f645300237f8dda6f4d4a4a7b41380b6b",
+    "experiments/X-105108-green-gram-selector-conditioning/tests/test_verify.py": "8bf31120c80a9c9bfb47426cd9bfedbdff7465a052ccacf533234a5810e8cb0a",
+    "experiments/X-105108-green-gram-selector-conditioning/verify.py": "76a370c080aa3b041f7ba45c59d37dccbf83097a636766afbaf1a1d9a43ba5f5"
+  },
+  "dependency_checkpoint": {
+    "artifact_matches_live_producer": true,
+    "commit": "cf07de0ba009e8b288eb98b6b4a0ed1d8f12e251",
+    "proof_object_sha256": "82747e320365a97bf9824dd84960f00bbcb77cd738040c2c5214be844dfc738c"
+  },
+  "heavy_computation_run": false,
+  "proof_object_sha256": "6c2484c4e63612b238f1ec6044c9b8778b725899d4be643d7e80b6a6dc345cdb",
+  "schema": "riemann.t105108.green-gram-selector-conditioning.v1",
+  "scope": {
+    "cardinal_product_upper_bound_is_always_exact": false,
+    "collective_three_target_pick_obstruction_verified": true,
+    "compatible_selector_gram_upper_bound_sharp": true,
+    "fixed_manifest_disk_radius_scaling_verified": true,
+    "green_local_load_formula_verified": true,
+    "local_potential_loads_control_pick_interaction": false,
+    "normalized_target_gram_conditioning_verified": true,
+    "pairwise_pick_conditions_are_sufficient": false,
+    "phase_sensitive_pick_amplification_verified": true,
+    "raw_pick_kernel_condition_number_is_conformally_intrinsic": false,
+    "rcmv104530_proved": false,
+    "rh_established": false,
+    "single_target_collision_growth_verified": true,
+    "strict_xi_jet_coherence_margin_proved": false,
+    "xi_conformal_coordinates_certified": false,
+    "xi_event_manifest_constructed": false,
+    "xi_local_loads_estimated_cofinally": false,
+    "xi_pick_norm_estimated_cofinally": false,
+    "xi_target_gram_conditioning_estimated_cofinally": false,
+    "xi_unweighted_quotient_edges_estimated": false
+  },
+  "source": {
+    "checkpoint_base": "cf07de0ba009e8b288eb98b6b4a0ed1d8f12e251",
+    "post_freeze_context_head": "10bba584c01277e880aaa21e1fea09f396ca7246",
+    "post_freeze_context_pr": 720
+  },
+  "verdict": "PASS_T105108_GREEN_GRAM_SELECTOR_CONDITIONING"
+}

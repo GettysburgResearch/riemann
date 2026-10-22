@@ -1,0 +1,195 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL_GEOMETRY_AND_SYMBOLIC_ANALYTIC_INEQUALITY",
+  "checks": {
+    "amplitude_counterexample": {
+      "claimed_right_side": "0",
+      "function": "f(z)=1/2",
+      "growth_difference": "0",
+      "literal_unnormalized_display_false": true,
+      "normalized_left_side": "0",
+      "unnormalized_left_side": "log(1/2)<0",
+      "zeros": []
+    },
+    "forbidden_control_characters": [],
+    "formula_ledger": {
+      "amplitude_scale_invariant": true,
+      "beta": "log(r_3/r_2)",
+      "combined_bound": "log|f(z)/f(a)|>=-[2*r_1/(r_2-r_1)+log(2/epsilon)/beta]*A_f",
+      "coordinate_scale_invariant": true,
+      "growth_load": "A_f=log(max_{|z-a|=r_3}|f(z)|/|f(a)|)",
+      "hypotheses": {
+        "anchor": "f(a)!=0",
+        "epsilon": "0<epsilon<=1",
+        "radii": "0<r_1<r_2<r_3",
+        "zeros": "zeros in D(a,r_2), counted with multiplicity"
+      },
+      "jensen_count": "n<=A_f/beta",
+      "nominal_radius_sum": "S_f<=epsilon*r_2*A_f/beta",
+      "strong_intermediate_bound": "log|f(z)/f(a)|>=-2*r_1*A_f/(r_2-r_1)-n*log(2/epsilon)"
+    },
+    "mutation_firewalls": {
+      "cofinal_xi_margin_established": false,
+      "fixed_k_bound_is_uniform_in_growing_k": false,
+      "generic_order_one_growth_absorbs_selector_cost": false,
+      "origin_is_automatic_common_xi_anchor": false,
+      "printed_unnormalized_display_is_valid": false,
+      "raw_route_requires_F_zero_disks": false,
+      "rcmv104530_proved": false,
+      "rh_established": false,
+      "strict_xi_jet_coherence_proved": false,
+      "t_plane_xi_can_be_replaced_by_rotated_xi": false,
+      "total_radius_alone_identifies_a_prescribed_good_edge": false,
+      "zero_cover_is_actual_pole_manifest": false
+    },
+    "projection_fixture": {
+      "exact_projection_can_beat_nominal_2S_relaxation": true,
+      "horizontal_bad_measure": "1/2",
+      "nominal_total_radius": "2",
+      "positive_horizontal_bad_union": "[0,1/2]",
+      "positive_vertical_bad_union": "[0,3/4]",
+      "strict_total_radius_sufficient_condition": "Delta_T>2S and Delta_eta>2S",
+      "vertical_bad_measure": "3/4"
+    },
+    "rational_fixture": {
+      "combined_coefficient": "5",
+      "epsilon": "1/4",
+      "epsilon_disk_radius": "1/2",
+      "factor_rows": [
+        {
+          "probe_factor_abs": "104/41",
+          "zero": "-1/4"
+        },
+        {
+          "probe_factor_abs": "8/13",
+          "zero": "1/4"
+        },
+        {
+          "probe_factor_abs": "112/27",
+          "zero": "-1/8"
+        }
+      ],
+      "functions": [
+        {
+          "jensen_power_check": "2^1<=17",
+          "maximum_ratio": "17",
+          "multiplicity_count": 1,
+          "name": "1+4z",
+          "zeros": [
+            "-1/4"
+          ]
+        },
+        {
+          "jensen_power_check": "2^2<=289",
+          "maximum_ratio": "289",
+          "multiplicity_count": 2,
+          "name": "(1-4z)^2",
+          "zeros": [
+            "1/4",
+            "1/4"
+          ]
+        },
+        {
+          "jensen_power_check": "2^1<=33",
+          "maximum_ratio": "33",
+          "multiplicity_count": 1,
+          "name": "1+8z",
+          "zeros": [
+            "-1/8"
+          ]
+        }
+      ],
+      "harnack_coefficient": "2",
+      "log_ratio_identity": "log(2/epsilon)/log(r_3/r_2)=log(8)/log(2)=3",
+      "nominal_radius_sum": "2",
+      "probe": "2/5",
+      "probe_values": [
+        "13/5",
+        "9/25",
+        "21/5"
+      ],
+      "radii": {
+        "r_1": "1",
+        "r_2": "2",
+        "r_3": "4"
+      },
+      "selected_rectangle": {
+        "T": "4/5",
+        "eta": "3/5"
+      },
+      "selected_rectangle_avoids_all_unique_disks": true,
+      "total_multiplicity": 4
+    },
+    "raw_quotient_ledger": {
+      "F_upper_load": "A_0",
+      "F_zero_disks_charged": false,
+      "first_quotient": "|F/F'|<=(|F(a)|/|F'(a)|)*exp(A_0+B_1)",
+      "log_derivative_route_requires_F_nonzero": true,
+      "lower_modulus_disk_indices": [
+        1,
+        2
+      ],
+      "second_quotient": "|F^2/(F'F'')|<=(|F(a)|^2/|F'(a)F''(a)|)*exp(2A_0+B_1+B_2)"
+    },
+    "source_and_normalization_ledger": {
+      "cuenin_doi": "https://doi.org/10.1007/s00220-022-04358-1",
+      "dyatlov_zworski_appendix": "https://math.mit.edu/~dyatlov/res/res_final.pdf",
+      "fixed_derivative_order_only": true,
+      "origin_is_common_three_derivative_anchor": false,
+      "printed_display_imported_verbatim": false,
+      "proof_normalization": "f(z)/f(a)",
+      "spatial_coefficient": "2*r_1/(r_2-r_1)",
+      "xi_normalization": "Xi_t(z)=xi(1/2+i*z)"
+    },
+    "standard_radius_ledger": {
+      "beta": "1",
+      "harnack_coefficient": "2",
+      "lower_exponent": "[2+log(2/epsilon)]*A_f",
+      "nominal_radius_sum": "S_f<=2*epsilon*R*A_f",
+      "radii": [
+        "R",
+        "2R",
+        "2eR"
+      ],
+      "zero_count": "n<=A_f"
+    }
+  },
+  "classification": "PASS_T105114_ANCHORED_EQUAL_DISK_COLLAR",
+  "content_hash_mode": "LF_NORMALIZED_TEXT",
+  "content_sha256": {
+    "PACKET_METADATA_105114.json": "3dffaf50adff9a584a8e999d9447f4018c308232e66c049b415a6d6544637ead",
+    "claims/lemmas/L-105114-anchored-equal-disk-minimum-modulus.md": "a0550eb866347287e4e6a4dfb7c2e5a682686ce9e6256291bc347e5ce522282c",
+    "claims/methodology/M-105114-cartan-source-review-contract.md": "c06e07dd55b959139a0779b808be76abc0780c8634354eafed5a657be3f24599",
+    "claims/refutations/R-105114-unnormalized-minimum-modulus-bound-is-false.md": "07addfab78a27911f853f0f9e74afeaa5d6e4ea2c026a9b9fc857c405034b92a",
+    "claims/theorems/T-105114-simultaneous-cartan-collar-transfer.md": "a2b45223b5d85d6fa334236232815741bb6872351f6e80780a3fc373c4bf56ac",
+    "experiments/X-105114-anchored-equal-disk-collar/tests/test_verify.py": "3112fb43e7c1c3c281c040561cb66077b049b1007d5b2de89e5852e654824080",
+    "experiments/X-105114-anchored-equal-disk-collar/verify.py": "2874f698f79f1b137a9bc858972e5252585108ac16843e01a2c3b1ed7302079a"
+  },
+  "dependency_checkpoint": {
+    "artifact_matches_live_producer": true,
+    "commit": "98e76fdd350556b2c659a0a16f7fa4083396527e",
+    "path": "experiments/X-105113-buffered-selector-shell-average",
+    "proof_object_sha256": "44e0cffca9d4d680555287e8290cfa645d979dc76b064f0ab6914ace88c7d560"
+  },
+  "heavy_computation_run": false,
+  "proof_object_sha256": "15ff7ba8056a9beb5e942945c9f92dcce566f7d737bc04f8f2db6895109c3284",
+  "schema": "riemann.t105114.anchored-equal-disk-collar.v1",
+  "scope": {
+    "cofinal_xi_growth_load_proved": false,
+    "common_xi_anchor_authenticated": false,
+    "complete_cofinal_xi_manifests_authenticated": false,
+    "finite_simultaneous_projection_interface_verified": true,
+    "jensen_equal_disk_radius_budget_verified": true,
+    "normalized_finite_minimum_modulus_verified": true,
+    "raw_route_smaller_exceptional_union_verified": true,
+    "rcmv104530_proved": false,
+    "rh_established": false,
+    "selector_margin_absorption_proved": false,
+    "strict_xi_jet_coherence_proved": false,
+    "t_plane_xi_normalization_locked": true,
+    "unnormalized_display_refuted": true
+  },
+  "source": {
+    "checkpoint_base": "f8102c6648829f72a6faaad06141c25b043c3f05"
+  },
+  "verdict": "PASS_T105114_ANCHORED_EQUAL_DISK_COLLAR"
+}

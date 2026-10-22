@@ -1,0 +1,153 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL",
+  "checks": {
+    "formal_laurent_expansions": {
+      "degree_range": [
+        2,
+        8
+      ],
+      "exact_rows": [
+        {
+          "coefficient_at_infinity": "289/64",
+          "degree": 2,
+          "root_moment_ledger": "289/64"
+        },
+        {
+          "coefficient_at_infinity": "2/9",
+          "degree": 3,
+          "root_moment_ledger": "2/9"
+        },
+        {
+          "coefficient_at_infinity": "5437/3888",
+          "degree": 4,
+          "root_moment_ledger": "5437/3888"
+        },
+        {
+          "coefficient_at_infinity": "14059/250000",
+          "degree": 5,
+          "root_moment_ledger": "14059/250000"
+        },
+        {
+          "coefficient_at_infinity": "31381/648000",
+          "degree": 6,
+          "root_moment_ledger": "31381/648000"
+        },
+        {
+          "coefficient_at_infinity": "53045/3176523",
+          "degree": 7,
+          "root_moment_ledger": "53045/3176523"
+        },
+        {
+          "coefficient_at_infinity": "-1060121/89915392",
+          "degree": 8,
+          "root_moment_ledger": "-1060121/89915392"
+        }
+      ],
+      "v4_sign_mutation_rejected": true
+    },
+    "nonreal_critical_correction": {
+      "algebraic_squares_not_absolute_squares": true,
+      "off_real_absolute_square_sum": "31/162",
+      "off_real_algebraic_square_sum": "-23/162",
+      "polynomial": "x^3+x+1",
+      "real_critical_residue_m2": "0",
+      "real_nonreal_decomposition_verified": true,
+      "root_moment_ledger": "2/81",
+      "second_level_debt": "1/6"
+    },
+    "quartic_firewall": {
+      "critical_square_sum": "9/32",
+      "dropping_second_level_debt_fails": true,
+      "polynomial": "x^4-2*x^2+2",
+      "root_ledger_is_not_an_upper_bound": true,
+      "root_moment_ledger": "37/432",
+      "second_level_debt": "-169/864"
+    },
+    "rational_fixtures": [
+      {
+        "balance_verified": true,
+        "centered_v2": "6",
+        "centered_v4": "18",
+        "critical_residues": [
+          "-1/2",
+          "-1/6"
+        ],
+        "critical_square_sum": "5/18",
+        "degree": 3,
+        "name": "cubic_rational_critical_ladder",
+        "root_moment_ledger": "2/9",
+        "second_level_cross_residues": [
+          "-1/18"
+        ],
+        "second_level_debt": "-1/18"
+      },
+      {
+        "balance_verified": true,
+        "centered_v2": "196/3",
+        "centered_v4": "55600/27",
+        "critical_residues": [
+          "-1277/480",
+          "-49/90",
+          "-253/288"
+        ],
+        "critical_square_sum": "8445721/1036800",
+        "degree": 4,
+        "name": "asymmetric_quartic_rational_critical_ladder",
+        "root_moment_ledger": "5437/3888",
+        "second_level_cross_residues": [
+          "-469225/72576",
+          "-6145441/21772800"
+        ],
+        "second_level_debt": "-20987563/3110400"
+      }
+    ],
+    "translation_fixture": {
+      "balance_verified": true,
+      "centered_v2": "6",
+      "centered_v4": "18",
+      "critical_residues": [
+        "-1/2",
+        "-1/6"
+      ],
+      "critical_square_sum": "5/18",
+      "degree": 3,
+      "name": "translated_cubic",
+      "root_moment_ledger": "2/9",
+      "second_level_cross_residues": [
+        "-1/18"
+      ],
+      "second_level_debt": "-1/18"
+    },
+    "translation_invariance": true
+  },
+  "classification": "PASS_T105100_CRITICAL_RESIDUE_SECOND_MOMENT_LEDGER",
+  "content_hash_mode": "LF_NORMALIZED_TEXT",
+  "content_sha256": {
+    "PACKET_METADATA_105100.json": "b97af7856873ef7b1611b5ead9579377b1318c3f4c970447a663d819af9a1e39",
+    "claims/lemmas/L-105100-critical-residue-second-moment-balance.md": "f89fd20051bb7c5eedff199a656bd31725b7f3e35676d952c3fcebae9ed2051e",
+    "claims/methodology/M-105100-hostile-review-contract.md": "ef875cf8ceead792b29a394d9c94afb8b6cda1010afc2a1bb6ea2b28ad886da6",
+    "claims/refutations/R-105100-root-ledger-alone-does-not-bound-m2.md": "b902aebeeefc42a962ced4af56d9e2be631c3dc5bc7f0131ccc89aae0703fe4c",
+    "claims/theorems/T-105100-critical-residue-second-moment-frontier.md": "29e285832a56cb45527bb2a12017994023d4b9bb1b42764fe9be420271d8e2fc",
+    "experiments/X-105100-critical-residue-second-moment/tests/test_verify.py": "01c502ae37ebc3d22827f10a8e5b882c9eea449f53998f51a690e8020491a0b6",
+    "experiments/X-105100-critical-residue-second-moment/verify.py": "d3978545fe49334810a3505b0f6e522c5c525e9f04d8e63061e6ad17fe4e5af8"
+  },
+  "heavy_computation_run": false,
+  "proof_object_sha256": "1d2a75cebfc8946597d9485a2de737ddad10baedf5011261dac95af9a6cf7ea0",
+  "schema": "riemann.t105100.critical-residue-second-moment.v1",
+  "scope": {
+    "canonical_product_limit_proved": false,
+    "exact_rational_fixtures_replayed": true,
+    "finite_polynomial_identity_proof_supplied": true,
+    "height_localization_proved": false,
+    "off_real_correction_controlled": false,
+    "rcmv104530_proved": false,
+    "rh_established": false,
+    "second_level_debt_controlled": false
+  },
+  "source": {
+    "integrated_main": "852d8aa05c701ea7818ce8a50543e68987fef5cc",
+    "post_freeze_context_head": "10bba584c01277e880aaa21e1fea09f396ca7246",
+    "post_freeze_context_pr": 720
+  },
+  "verdict": "PASS_T105100_CRITICAL_RESIDUE_SECOND_MOMENT_LEDGER"
+}

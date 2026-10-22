@@ -1,0 +1,187 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL_AND_POLYNOMIAL_ERRATUM",
+  "checks": {
+    "arbitrary_edge_norm_ledger": {
+      "actual_weight_norm_product_upper": "8",
+      "actual_weighted_norm": "2",
+      "denominator": "z^3",
+      "edge": "[1/2,1] inside closure(unit disk)",
+      "first_margin": "1/8",
+      "maximum_modulus_gives_weight_edge_norm_at_most_tau": true,
+      "product_inequality_can_be_strict": true,
+      "raw_quotient_norm": "8",
+      "selector_domain_norm_tau": "1",
+      "tau_envelope_need_not_be_equality": true,
+      "tau_margin_envelope": "8",
+      "weight": "z^2",
+      "weight_edge_norm": "1"
+    },
+    "forbidden_control_characters": [],
+    "mutation_firewalls": {
+      "arbitrary_edge_product_bound_is_always_equality": false,
+      "constant_modulus_transfers_to_every_other_boundary": false,
+      "counterexample_refutes_same_domain_boundary_equality": false,
+      "interior_arc_has_selector_modulus_tau_pointwise": false,
+      "membership_in_A_Omega_defines_selector_outside_closure": false,
+      "rcmv104530_proved": false,
+      "repair_silently_modifies_frozen_105109_files": false,
+      "rh_established": false,
+      "scalar_tau_alone_authenticates_same_domain_identity": false,
+      "selector_domain_norm_always_equals_local_edge_norm": false,
+      "t105109_was_retrospectively_reverified": false,
+      "xi_margin_or_collar_supplied": false
+    },
+    "repair_ledger": {
+      "affected_frozen_files": [
+        "PACKET_METADATA_105109.json",
+        "claims/lemmas/L-105109-log-derivative-edge-margins.md",
+        "claims/methodology/M-105109-quotient-edge-review-contract.md",
+        "claims/theorems/T-105109-quotient-edge-frontier.md",
+        "PR_BODY_105109_ADDENDUM.md",
+        "reports/codex/2026-08-23-log-derivative-edge-obstruction.md"
+      ],
+      "frozen_105109_files_modified": false,
+      "intended_same_domain_reading_repaired": true,
+      "literal_wording_overbroad_or_ambiguous": true,
+      "retrospective_105109_verification_claimed": false,
+      "t105109_same_unit_disk_obstruction_survives": true
+    },
+    "same_domain_norm_ledger": {
+      "both_same_domain_equalities_exact": true,
+      "edge_location": "E subset boundary(Omega)",
+      "first_denominator_samples": [
+        "3/2",
+        "1/2",
+        "5/4"
+      ],
+      "first_margin": "1/2",
+      "first_weighted_supremum": "8",
+      "pointwise_selector_moduli": [
+        "tau_1",
+        "tau_2"
+      ],
+      "product_denominator_samples": [
+        "7/3",
+        "2/5",
+        "9/4"
+      ],
+      "product_margin": "2/5",
+      "second_weighted_supremum": "15/2",
+      "selector_domain": "the exact bounded simply connected Jordan domain Omega",
+      "tau_1": "4",
+      "tau_1_over_first_margin": "8",
+      "tau_2": "3",
+      "tau_2_over_product_margin": "15/2"
+    },
+    "unit_disk_counterexample": {
+      "F_is_zero_free": true,
+      "F_prime": "z^3*F",
+      "F_second": "z^2*(z^4+3)*F",
+      "all_admissible_selectors": "W(z)=z^2*H(z), H(0)=1",
+      "exponent_coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/4"
+      ],
+      "first_manifest": [
+        {
+          "order": 3,
+          "point": "0",
+          "role": "target"
+        }
+      ],
+      "first_quotient": "z^-3",
+      "first_target_principal_coefficient": "1",
+      "function": "F(z)=exp(z^4/4)",
+      "general_radius_actual_norm": "1/r",
+      "general_radius_tau_over_margin": "1/r^3",
+      "half_radius_upper_semicircle": {
+        "F_second_factor_lower_bound": "47/16",
+        "actual_weight_norm_product_bound": "2",
+        "actual_weighted_norm": "2",
+        "first_margin": "1/8",
+        "is_selector_domain_boundary": false,
+        "radius": "1/2",
+        "raw_quotient_norm": "8",
+        "tau_equality_holds": false,
+        "tau_over_margin": "8",
+        "weight_edge_norm": "1/4"
+      },
+      "log_derivative_coefficients": [
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      "normalized_second_coefficients": [
+        "0",
+        "0",
+        "3",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      "optimal_selector": "z^2",
+      "optimal_selector_norm_tau": "1",
+      "optimality_from_maximum_modulus": true,
+      "selector_domain": "unit disk",
+      "tau_equality_for_0_less_r_at_most_1_iff_r_equals_1": true,
+      "unit_upper_semicircle": {
+        "F_second_factor_lower_bound": "2",
+        "actual_weight_norm_product_bound": "1",
+        "actual_weighted_norm": "1",
+        "first_margin": "1",
+        "is_selector_domain_boundary": true,
+        "radius": "1",
+        "raw_quotient_norm": "1",
+        "tau_equality_holds": true,
+        "tau_over_margin": "1",
+        "weight_edge_norm": "1"
+      },
+      "weighted_first_quotient": "z^-1"
+    }
+  },
+  "classification": "PASS_T105112_SELECTOR_DOMAIN_REPAIR",
+  "content_hash_mode": "LF_NORMALIZED_TEXT",
+  "content_sha256": {
+    "PACKET_METADATA_105112.json": "ff955def7164b3842a88ed2135a6d0a7dc2238d6565b01b9f3da67602ff3c5b9",
+    "claims/lemmas/L-105112-same-domain-selector-equalities.md": "180a0631d390f815d46897214ca880b9b05e0f429e46dddfba37a935dc75717e",
+    "claims/methodology/M-105112-selector-domain-repair-contract.md": "7964767fb07b21e51c555d60c86cc17c1dd0e728d448c585e8de23f9ab48e3b7",
+    "claims/refutations/R-105112-off-domain-boundary-equality-fails.md": "60d7fb1c9c79c8289061bf4267670aff8237355e4cc4257dddf5ad3f54223a9c",
+    "claims/theorems/T-105112-repaired-quotient-edge-frontier.md": "d155de958a2396224217838dc01d2ab27c53b8c98ba3649123a32f7ca5feba2c",
+    "experiments/X-105112-selector-domain-repair/tests/test_verify.py": "2370bf14a23f05724a9c8e057d9ba00273d3480ded68f6e173b21219526d6fbb",
+    "experiments/X-105112-selector-domain-repair/verify.py": "7fead469686f12c58217171639aaec4ae97151219b87fa1ba40f3f353fa5c19d"
+  },
+  "dependency_checkpoint": {
+    "artifact_matches_live_producer": true,
+    "commit": "51c67046a726be188bf724f7b4652e299bd31ccb",
+    "path": "experiments/X-105111-anchored-disk-margin-certificate",
+    "proof_object_sha256": "7bafdd3d8fb379e8d8de2cd30df8b96331378d7e4f244bb801439493a2e132cd"
+  },
+  "heavy_computation_run": false,
+  "proof_object_sha256": "3748777ede886502e57c6ad77777807b11b98104a8ecba04b60f162b10e2b19c",
+  "schema": "riemann.t105112.selector-domain-repair.v1",
+  "scope": {
+    "arbitrary_edge_actual_weight_norm_inequality_verified": true,
+    "closure_maximum_modulus_tau_envelope_verified": true,
+    "cofinal_selector_margin_absorption_proved": false,
+    "frozen_105109_files_modified": false,
+    "off_selector_boundary_tau_equality_refuted": true,
+    "phase_sensitive_edge_cancellation_proved": false,
+    "rcmv104530_proved": false,
+    "retrospective_105109_verification_claimed": false,
+    "rh_established": false,
+    "same_domain_unit_semicircle_equality_verified": true,
+    "same_selector_domain_first_equality_verified": true,
+    "same_selector_domain_second_equality_verified": true,
+    "strict_xi_jet_coherence_proved": false,
+    "xi_margin_or_collar_authenticated": false
+  },
+  "source": {
+    "checkpoint_base": "51c67046a726be188bf724f7b4652e299bd31ccb"
+  },
+  "verdict": "PASS_T105112_SELECTOR_DOMAIN_REPAIR"
+}

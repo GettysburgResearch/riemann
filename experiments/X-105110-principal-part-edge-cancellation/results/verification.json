@@ -1,0 +1,259 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL_WITH_SYMBOLIC_ELEMENTARY_IDENTITIES",
+  "checks": {
+    "F_delta_scope": {
+      "F_prime_zero": "delta",
+      "F_second_zeros": [
+        "delta-i",
+        "delta+i"
+      ],
+      "empty_problem_optimal_selector": "0",
+      "fixed_a_required_for_stated_absolute_divergence": true,
+      "function": "exp(z^2/2-delta*z)",
+      "left_rectangle_interior_manifest": [],
+      "left_rectangle_right_edge_orientation": "upward",
+      "pole_delta_is_exterior_to_left_rectangle": true,
+      "properties": [
+        "real",
+        "entire",
+        "zero_free"
+      ],
+      "unit_weight_is_empty_problem_optimum": false,
+      "unit_weight_role": "fixed_test_weight"
+    },
+    "dyadic_absolute_divergence": {
+      "absolute_integral_divergence_requires_a_over_delta_unbounded": true,
+      "absolute_integral_divergence_uniform_for_all_a_delta": false,
+      "one_sided_real_part_per_block_lower_bound": "1/5",
+      "per_positive_dyadic_block_h1_lower_bound": "4/9",
+      "rows": [
+        {
+          "a": "1/2",
+          "a_over_delta": "16",
+          "delta": "1/32",
+          "dyadic_blocks": 4,
+          "first_absolute_integral_lower_bound": "32/9",
+          "first_supremum": "32",
+          "one_sided_real_part_lower_bound": "4/5",
+          "second_absolute_integral_lower_bound": "64/27",
+          "second_supremum": "32768/1025"
+        },
+        {
+          "a": "1/2",
+          "a_over_delta": "256",
+          "delta": "1/512",
+          "dyadic_blocks": 8,
+          "first_absolute_integral_lower_bound": "64/9",
+          "first_supremum": "512",
+          "one_sided_real_part_lower_bound": "8/5",
+          "second_absolute_integral_lower_bound": "128/27",
+          "second_supremum": "134217728/262145"
+        }
+      ],
+      "sequence": "a=1/2,delta=a/2^m",
+      "two_sided_per_block_h1_lower_bound": "8/9",
+      "two_sided_per_block_h2_lower_bound": "16/27"
+    },
+    "exterior_residue_formulas": {
+      "first_residue_formula": "W1(p)/L_prime(p)",
+      "probe_first_residue": "2/3",
+      "probe_second_F_prime_residue": "2/9",
+      "probe_second_F_second_residue": "5/14",
+      "second_F_prime_residue_formula": "W2(p)/L_prime(p)^2",
+      "second_F_second_residue_formula": "W2(q)/(L(q)*A_prime(q))",
+      "simple_F_prime_identity": "A(p)=L_prime(p)"
+    },
+    "hostile_holomorphic_remainder": {
+      "N_probe": 6,
+      "Taylor_growth_certificate": "exp(N)>N^3/6",
+      "additive_holomorphic_remainder": "(exp(N*z^2)-1)/z",
+      "additive_remainder_is_zero_free": false,
+      "additive_remainder_value_at_zero": "0",
+      "eta_probe": "1/48",
+      "exact_exponential_lower_bound": "(1953/8320)*exp(N)/N",
+      "exterior_critical_points_exist": false,
+      "first_quotient": "exp(N*z^2)/z",
+      "fixed_function_family": false,
+      "full_normalized_contour_charge": "1",
+      "function": "exp((1-exp(-N*z^2))/(2*N))",
+      "global_F_prime_manifest": [
+        {
+          "order": 1,
+          "point": "0",
+          "role": "target"
+        }
+      ],
+      "log_derivative": "z*exp(-N*z^2)",
+      "multiplicative_exponential_is_zero_free": true,
+      "optimal_selector": "1",
+      "optimal_selector_norm": "1",
+      "probe_cubic_Taylor_term": "36",
+      "probe_rational_growth_lower_bound": "6/5",
+      "properties": [
+        "real",
+        "even",
+        "entire",
+        "zero_free",
+        "infinite_order"
+      ],
+      "rational_growth_lower_bound": "N^2/30",
+      "rational_kernel_coefficient": "1953/8320",
+      "rectangle": "abs(Re(z))<1,abs(Im(z))<1/(8*N)",
+      "remainder_edge_L1_uniformly_bounded": false,
+      "right_edge_integral_is_pure_positive_imaginary": true,
+      "right_edge_orientation": "upward",
+      "second_quotient_treated": false,
+      "simplified_exponential_lower_bound": "exp(N)/(5*N)",
+      "target_residue": "1",
+      "window_height_fixed": false
+    },
+    "mutation_firewalls": {
+      "additive_holomorphic_remainder_is_zero_free": false,
+      "centered_L1_divergence_is_uniform_over_all_a_delta": false,
+      "corner_separation_is_dispensable": false,
+      "fixed_unit_weight_is_empty_manifest_optimum": false,
+      "full_contour_charge_bounds_each_edge": false,
+      "hostile_family_is_fixed_function_cofinal_Xi_model": false,
+      "hostile_family_treats_second_quotient": false,
+      "normal_pole_approach_forces_oriented_divergence": false,
+      "principal_parts_may_be_paid_without_residue_l1_bound": false,
+      "remainder_bound_is_automatic_from_manifest": false,
+      "rh_established": false,
+      "simple_pole_certificate_covers_confluent_events": false,
+      "stable_manifest_forces_each_oriented_edge_bounded": false,
+      "weighted_quotient_continuation_is_automatic": false
+    },
+    "one_sided_corner_failure": {
+      "a": "1/2",
+      "arbitrary_edge_partition_inherits_centered_cancellation": false,
+      "corner_projection_uniformly_bounded": false,
+      "delta": "1/8",
+      "first_one_sided_integral": "(1/2)*log((a^2+delta^2)/delta^2)-i*atan(a/delta)",
+      "probe_correction_numerator": [
+        "49/64",
+        "-1/8"
+      ],
+      "probe_log_ratio": "17",
+      "second_minus_first_correction": "-(1/2)*Log((1+delta^2-a^2-2*i*a*delta)/(1+delta^2))"
+    },
+    "principal_part_certificate": {
+      "complete_exterior_pole_list_required": true,
+      "corner_separation_kappa": "1/4",
+      "fixture_kernel_bound": "pi+log(2)",
+      "kernel_bound": "pi+log(ell/kappa)",
+      "multiple_or_common_events_covered": false,
+      "normal_collar_distance_enters_bound": false,
+      "oriented_edge_bound": "5/3+(13/4)*(pi+log(2))",
+      "pole_count": 3,
+      "remainder_edge_l1": "5/3",
+      "residues": [
+        "2",
+        "-1/2",
+        "3/4"
+      ],
+      "tangential_upper_distance_ell": "1/2",
+      "weighted_quotient_continuation_required": true,
+      "weighted_residue_l1": "13/4"
+    },
+    "simultaneous_quotient_fixture": {
+      "both_fixed_edge_limits": "-i*pi",
+      "correction_absolute_bound": "4*delta/3",
+      "correction_ratio": "4/13",
+      "derivative_positive_decomposition": "(1-t)*(1-3*t)+3*d*(d+2*t)",
+      "factor_modulus_lower_bound": "3/4",
+      "factor_modulus_upper_bound": "3/2",
+      "first_centered_integral": "-2*i*atan(a/delta)",
+      "first_quotient": "1/w",
+      "first_supremum": "1/delta",
+      "log_derivative": "w=z-delta",
+      "oriented_integrals_uniformly_bounded": true,
+      "parameter_probe": {
+        "a": "1/2",
+        "delta": "1/4"
+      },
+      "partial_fraction_numerator_coefficients": [
+        "1",
+        "0",
+        "0"
+      ],
+      "pointwise_h2_over_h1_bounds": [
+        "2/3",
+        "4/3"
+      ],
+      "probe_first_supremum": "4",
+      "probe_second_supremum": "64/17",
+      "second_centered_integral": "-2*i*atan(a/delta)+i*atan(2*a*delta/(1+delta^2-a^2))",
+      "second_denominator": "w^2+1",
+      "second_quotient": "1/(w*(w^2+1))=1/w-w/(w^2+1)",
+      "second_supremum": "1/(delta*(1+delta^2))",
+      "squared_denominator_derivative": "1+3*d^2+2*(3*d-2)*t+3*t^2"
+    },
+    "straight_edge_kernel": {
+      "absolute_integral": "asinh(A/delta)+asinh(B/delta)",
+      "centered_absolute_bound": "pi",
+      "centered_integral": "2*i*sigma*atan(a/delta)",
+      "centered_real_log_ratio": "1",
+      "endpoint_integral": "(1/2)*log((B^2+delta^2)/delta^2)+i*sigma*atan(B/delta)",
+      "endpoint_real_log_ratio": "5",
+      "kernel_integral": "(1/2)*log((B^2+delta^2)/(A^2+delta^2))+i*sigma*(atan(B/delta)+atan(A/delta))",
+      "orientation": "increasing_t",
+      "orientation_reversal_changes_sign": true,
+      "pole": "z0+i*sigma*u*delta",
+      "probe": {
+        "A": "1/3",
+        "B": "1/2",
+        "delta": "1/4",
+        "real_log_ratio": "9/5",
+        "sigma": -1
+      },
+      "transcendental_numerical_evaluation_used": false
+    }
+  },
+  "classification": "PASS_T105110_PRINCIPAL_PART_EDGE_CANCELLATION",
+  "content_hash_mode": "LF_NORMALIZED_TEXT",
+  "content_sha256": {
+    "PACKET_METADATA_105110.json": "0811d1883878eff7ad1c4aeb61e7ede0f92a9f92316855476d62ec96393c9b8a",
+    "claims/lemmas/L-105110-principal-part-edge-cancellation.md": "27b28e17d18aee065e116c290c1a3708a862af3ad58f448d1b6154ed393f1ed7",
+    "claims/methodology/M-105110-edge-cancellation-review-contract.md": "69614204e0e471a2c0dcdb93bc931f5104a094441726d33eae318cc6ea542fd2",
+    "claims/refutations/R-105110-stable-manifest-does-not-give-edge-cancellation.md": "41eca75b5c0618255ec30bc1281eb61c2a52ebbd87491b377bd6af6e1e917553",
+    "claims/theorems/T-105110-oriented-edge-cancellation-frontier.md": "9896627a668b406fdcc93178196e74f7c1255cdec826618b6c0edea502354d41",
+    "experiments/X-105110-principal-part-edge-cancellation/tests/test_verify.py": "a1e0e11a08b98cd4c85177e8942ec3aecc331ec7d421400e1d9c0494080b2419",
+    "experiments/X-105110-principal-part-edge-cancellation/verify.py": "6ee3552e6e2fd67eef01195a8a3749d48ad33d19085bf34fec26d6fef0805980"
+  },
+  "dependency_checkpoint": {
+    "artifact_matches_live_producer": true,
+    "commit": "99a5eef2160e85609da590cb76b632511b33f112",
+    "path": "experiments/X-105109-log-derivative-edge-obstruction",
+    "proof_object_sha256": "54829e77cb2aa90192aabdd61f86ff045a04ba3549f82c75384bc9a4e08f2890"
+  },
+  "heavy_computation_run": false,
+  "proof_object_sha256": "3f0286c2d574e8252fe9903f4f62d86e510275bdf4a1a085e3f232873aec9532",
+  "schema": "riemann.t105110.principal-part-edge-cancellation.v1",
+  "scope": {
+    "cofinal_weighted_edge_passage_proved": false,
+    "cofinal_xi_green_gram_control_proved": false,
+    "corner_logarithmic_failure_verified": true,
+    "finite_principal_part_certificate_verified": true,
+    "hostile_family_is_finite_order": false,
+    "hostile_family_is_fixed_function_cofinal_model": false,
+    "hostile_second_quotient_analogue_proved": false,
+    "hostile_windows_have_fixed_height": false,
+    "rcmv104530_proved": false,
+    "rh_established": false,
+    "simultaneous_first_second_fixture_verified": true,
+    "stable_manifest_individual_edge_refutation_verified": true,
+    "straight_edge_simple_pole_cancellation_verified": true,
+    "strict_xi_jet_coherence_margin_proved": false,
+    "weighted_quotient_continuation_proved_for_xi": false,
+    "xi_corner_separation_or_pairing_proved": false,
+    "xi_exterior_principal_part_manifest_constructed": false,
+    "xi_pole_subtracted_remainder_bound_proved": false,
+    "xi_weighted_exterior_residue_l1_bound_proved": false
+  },
+  "source": {
+    "checkpoint_base": "99a5eef2160e85609da590cb76b632511b33f112",
+    "post_freeze_context_head": "10bba584c01277e880aaa21e1fea09f396ca7246",
+    "post_freeze_context_pr": 720
+  },
+  "verdict": "PASS_T105110_PRINCIPAL_PART_EDGE_CANCELLATION"
+}

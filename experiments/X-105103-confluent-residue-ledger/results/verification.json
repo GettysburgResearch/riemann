@@ -1,0 +1,645 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL_AND_GAUSSIAN_RATIONAL",
+  "checks": {
+    "derivative_order_firewalls": {
+      "common_event_can_be_contour_invisible": true,
+      "confluent_second_correction_sign_definite": false,
+      "fixtures": {
+        "common_parent_derivative": {
+          "P_pole_order": 0,
+          "P_principal_part": [],
+          "P_residue": "0",
+          "P_unit_quotient": [],
+          "Q_pole_order": 0,
+          "Q_principal_part": [],
+          "Q_residue": "0",
+          "Q_unit_quotient": [],
+          "merged_support_kind": "G_MERGED_EXCEPTIONAL",
+          "orders": {
+            "m": 3,
+            "r": 2,
+            "s": 1
+          },
+          "point": "0"
+        },
+        "negative_Q_residue": {
+          "P_pole_order": 2,
+          "P_principal_part": [
+            {
+              "coefficient": "1/3",
+              "power": -2
+            },
+            {
+              "coefficient": "0",
+              "power": -1
+            }
+          ],
+          "P_residue": "0",
+          "P_unit_quotient": [
+            "1/3",
+            "0"
+          ],
+          "Q_pole_order": 3,
+          "Q_principal_part": [
+            {
+              "coefficient": "1/18",
+              "power": -3
+            },
+            {
+              "coefficient": "0",
+              "power": -2
+            },
+            {
+              "coefficient": "-5/18",
+              "power": -1
+            }
+          ],
+          "Q_residue": "-5/18",
+          "Q_unit_quotient": [
+            "1/18",
+            "0",
+            "-5/18"
+          ],
+          "merged_support_kind": "G_MERGED_EXCEPTIONAL",
+          "orders": {
+            "m": 0,
+            "r": 2,
+            "s": 1
+          },
+          "point": "0"
+        },
+        "pole_with_zero_residue": {
+          "P_pole_order": 2,
+          "P_principal_part": [
+            {
+              "coefficient": "1/3",
+              "power": -2
+            },
+            {
+              "coefficient": "0",
+              "power": -1
+            }
+          ],
+          "P_residue": "0",
+          "P_unit_quotient": [
+            "1/3",
+            "0"
+          ],
+          "Q_pole_order": 3,
+          "Q_principal_part": [
+            {
+              "coefficient": "1/18",
+              "power": -3
+            },
+            {
+              "coefficient": "0",
+              "power": -2
+            },
+            {
+              "coefficient": "0",
+              "power": -1
+            }
+          ],
+          "Q_residue": "0",
+          "Q_unit_quotient": [
+            "1/18",
+            "0",
+            "0"
+          ],
+          "merged_support_kind": "G_MERGED_EXCEPTIONAL",
+          "orders": {
+            "m": 0,
+            "r": 2,
+            "s": 1
+          },
+          "point": "0"
+        },
+        "positive_common_parent_Fsecond": {
+          "P_pole_order": 0,
+          "P_principal_part": [],
+          "P_residue": "0",
+          "P_unit_quotient": [],
+          "Q_pole_order": 1,
+          "Q_principal_part": [
+            {
+              "coefficient": "1/4",
+              "power": -1
+            }
+          ],
+          "Q_residue": "1/4",
+          "Q_unit_quotient": [
+            "1/4"
+          ],
+          "merged_support_kind": "G_MERGED_EXCEPTIONAL",
+          "orders": {
+            "m": 1,
+            "r": 0,
+            "s": 3
+          },
+          "point": "0"
+        },
+        "simple_common_parent_derivative": {
+          "P_pole_order": 0,
+          "P_principal_part": [],
+          "P_residue": "0",
+          "P_unit_quotient": [],
+          "Q_pole_order": 0,
+          "Q_principal_part": [],
+          "Q_residue": "0",
+          "Q_unit_quotient": [],
+          "merged_support_kind": "G_MERGED_EXCEPTIONAL",
+          "orders": {
+            "m": 2,
+            "r": 1,
+            "s": 0
+          },
+          "point": "0"
+        }
+      },
+      "pole_order_does_not_force_nonzero_residue": true,
+      "simple_common_event_is_transfer_obstruction": true
+    },
+    "merged_support_full_quartic": {
+      "B2": "169/4096",
+      "C1_simple_nonreal": "0",
+      "C2_simple_nonreal": "0",
+      "D2_isolated_simple": "-75/128",
+      "Lambda1_merged": "-4/9",
+      "Lambda2_merged": "38/81",
+      "Phi1": "-3/64",
+      "event_manifest": [
+        {
+          "P_pole_order": 2,
+          "P_principal_part": [
+            {
+              "coefficient": "1/3",
+              "power": -2
+            },
+            {
+              "coefficient": "-4/9",
+              "power": -1
+            }
+          ],
+          "P_residue": "-4/9",
+          "P_unit_quotient": [
+            "1/3",
+            "-4/9"
+          ],
+          "Q_pole_order": 3,
+          "Q_principal_part": [
+            {
+              "coefficient": "1/18",
+              "power": -3
+            },
+            {
+              "coefficient": "-5/27",
+              "power": -2
+            },
+            {
+              "coefficient": "38/81",
+              "power": -1
+            }
+          ],
+          "Q_residue": "38/81",
+          "Q_unit_quotient": [
+            "1/18",
+            "-5/27",
+            "38/81"
+          ],
+          "merged_support_kind": "G_MERGED_EXCEPTIONAL",
+          "orders": {
+            "m": 0,
+            "r": 2,
+            "s": 1
+          },
+          "point": "0"
+        },
+        {
+          "P_pole_order": 1,
+          "P_principal_part": [
+            {
+              "coefficient": "229/576",
+              "power": -1
+            }
+          ],
+          "P_residue": "229/576",
+          "P_unit_quotient": [
+            "229/576"
+          ],
+          "Q_pole_order": 1,
+          "Q_principal_part": [
+            {
+              "coefficient": "52441/331776",
+              "power": -1
+            }
+          ],
+          "Q_residue": "52441/331776",
+          "Q_unit_quotient": [
+            "52441/331776"
+          ],
+          "merged_support_kind": "S1_SIMPLE_NONCOMMON_FPRIME",
+          "orders": {
+            "m": 0,
+            "r": 1,
+            "s": 0
+          },
+          "point": "-3/4"
+        },
+        {
+          "P_pole_order": 0,
+          "P_principal_part": [],
+          "P_residue": "0",
+          "P_unit_quotient": [],
+          "Q_pole_order": 1,
+          "Q_principal_part": [
+            {
+              "coefficient": "-75/128",
+              "power": -1
+            }
+          ],
+          "Q_residue": "-75/128",
+          "Q_unit_quotient": [
+            "-75/128"
+          ],
+          "merged_support_kind": "S2_ISOLATED_SIMPLE_FSECOND",
+          "orders": {
+            "m": 0,
+            "r": 0,
+            "s": 1
+          },
+          "point": "-1/2"
+        }
+      ],
+      "infinity_oracle": {
+        "P_oracle": "[w^2] w P(1/w)",
+        "Q_oracle": "[w^4] w^3 Q(1/w)",
+        "sum_finite_P_residues": "-3/64",
+        "sum_finite_Q_residues": "169/4096"
+      },
+      "naive_dropped_Lambda1_carrier": "3/64",
+      "naive_dropped_Lambda2_M2": "2569/4096",
+      "polynomial": "1+x^3+x^4",
+      "reconstructed_M1": "-229/576",
+      "reconstructed_M2": "52441/331776",
+      "simple_real_critical_count": 1,
+      "simple_stratum_M1": "-229/576",
+      "simple_stratum_M2": "52441/331776",
+      "transfer_certified": false,
+      "transfer_withheld_reason": "real multiple F' event in merged support",
+      "unique_denominator_event_count": 3
+    },
+    "merged_support_narrow_quartic": {
+      "B2": "38/81",
+      "Lambda1_merged": "-4/9",
+      "Lambda2_merged": "38/81",
+      "Phi1": "-4/9",
+      "event": {
+        "P_pole_order": 2,
+        "P_principal_part": [
+          {
+            "coefficient": "1/3",
+            "power": -2
+          },
+          {
+            "coefficient": "-4/9",
+            "power": -1
+          }
+        ],
+        "P_residue": "-4/9",
+        "P_unit_quotient": [
+          "1/3",
+          "-4/9"
+        ],
+        "Q_pole_order": 3,
+        "Q_principal_part": [
+          {
+            "coefficient": "1/18",
+            "power": -3
+          },
+          {
+            "coefficient": "-5/27",
+            "power": -2
+          },
+          {
+            "coefficient": "38/81",
+            "power": -1
+          }
+        ],
+        "Q_residue": "38/81",
+        "Q_unit_quotient": [
+          "1/18",
+          "-5/27",
+          "38/81"
+        ],
+        "merged_support_kind": "G_MERGED_EXCEPTIONAL",
+        "orders": {
+          "m": 0,
+          "r": 2,
+          "s": 1
+        },
+        "point": "0"
+      },
+      "simple_real_critical_count": 0,
+      "simple_stratum_M1": "0",
+      "simple_stratum_M2": "0",
+      "window": "|Re z|<1/4 with sufficiently thin regular height"
+    },
+    "multiple_Fsecond_sign_firewall": {
+      "confluent_debt_has_no_favorable_sign": true,
+      "fixtures": {
+        "nonzero_parent": {
+          "boundary_Q_charge": "-9/100",
+          "multiple_Fsecond_event": {
+            "P_pole_order": 0,
+            "P_principal_part": [],
+            "P_residue": "0",
+            "P_unit_quotient": [],
+            "Q_pole_order": 3,
+            "Q_principal_part": [
+              {
+                "coefficient": "-1/4",
+                "power": -3
+              },
+              {
+                "coefficient": "1/2",
+                "power": -2
+              },
+              {
+                "coefficient": "-1/4",
+                "power": -1
+              }
+            ],
+            "Q_residue": "-1/4",
+            "Q_unit_quotient": [
+              "-1/4",
+              "1/2",
+              "-1/4"
+            ],
+            "merged_support_kind": "G_MERGED_EXCEPTIONAL",
+            "orders": {
+              "m": 0,
+              "r": 0,
+              "s": 3
+            },
+            "point": "0"
+          },
+          "polynomial_coefficients_low_to_high": [
+            "5",
+            "-5",
+            "0",
+            "0",
+            "0",
+            "1"
+          ],
+          "reconstructed_real_simple_M2": "41/200",
+          "simple_square_split": {
+            "nonreal_simple_square_sum": "-9/200",
+            "real_simple_square_sum": "41/200",
+            "simple_first_residue_sum": "0"
+          }
+        },
+        "simple_parent_zero": {
+          "boundary_Q_charge": "-9/100",
+          "multiple_Fsecond_event": {
+            "P_pole_order": 0,
+            "P_principal_part": [],
+            "P_residue": "0",
+            "P_unit_quotient": [],
+            "Q_pole_order": 1,
+            "Q_principal_part": [
+              {
+                "coefficient": "-1/4",
+                "power": -1
+              }
+            ],
+            "Q_residue": "-1/4",
+            "Q_unit_quotient": [
+              "-1/4"
+            ],
+            "merged_support_kind": "G_MERGED_EXCEPTIONAL",
+            "orders": {
+              "m": 1,
+              "r": 0,
+              "s": 3
+            },
+            "point": "0"
+          },
+          "polynomial_coefficients_low_to_high": [
+            "0",
+            "-5",
+            "0",
+            "0",
+            "0",
+            "1"
+          ],
+          "reconstructed_real_simple_M2": "2/25",
+          "simple_square_split": {
+            "nonreal_simple_square_sum": "2/25",
+            "real_simple_square_sum": "2/25",
+            "simple_first_residue_sum": "0"
+          }
+        }
+      },
+      "same_confluent_debt_with_and_without_parent_zero": "-1/4"
+    },
+    "root_ledger_crosscheck": {
+      "fixtures": {
+        "common_cubic": {
+          "V2_V4_second_ledger": "0",
+          "V2_first_ledger": "0",
+          "infinity_oracle": {
+            "P_oracle": "[w^2] w P(1/w)",
+            "Q_oracle": "[w^4] w^3 Q(1/w)",
+            "sum_finite_P_residues": "0",
+            "sum_finite_Q_residues": "0"
+          }
+        },
+        "merged_quartic": {
+          "V2_V4_second_ledger": "169/4096",
+          "V2_first_ledger": "-3/64",
+          "infinity_oracle": {
+            "P_oracle": "[w^2] w P(1/w)",
+            "Q_oracle": "[w^4] w^3 Q(1/w)",
+            "sum_finite_P_residues": "-3/64",
+            "sum_finite_Q_residues": "169/4096"
+          }
+        },
+        "quintic_nonzero_parent": {
+          "V2_V4_second_ledger": "-9/100",
+          "V2_first_ledger": "0",
+          "infinity_oracle": {
+            "P_oracle": "[w^2] w P(1/w)",
+            "Q_oracle": "[w^4] w^3 Q(1/w)",
+            "sum_finite_P_residues": "0",
+            "sum_finite_Q_residues": "-9/100"
+          }
+        },
+        "quintic_simple_parent_zero": {
+          "V2_V4_second_ledger": "-9/100",
+          "V2_first_ledger": "0",
+          "infinity_oracle": {
+            "P_oracle": "[w^2] w P(1/w)",
+            "Q_oracle": "[w^4] w^3 Q(1/w)",
+            "sum_finite_P_residues": "0",
+            "sum_finite_Q_residues": "-9/100"
+          }
+        }
+      },
+      "independent_infinity_and_root_ledgers_agree": true
+    },
+    "shift_scale_invariance": {
+      "base_event": {
+        "P_pole_order": 2,
+        "P_principal_part": [
+          {
+            "coefficient": "1/3",
+            "power": -2
+          },
+          {
+            "coefficient": "-4/9",
+            "power": -1
+          }
+        ],
+        "P_residue": "-4/9",
+        "P_unit_quotient": [
+          "1/3",
+          "-4/9"
+        ],
+        "Q_pole_order": 3,
+        "Q_principal_part": [
+          {
+            "coefficient": "1/18",
+            "power": -3
+          },
+          {
+            "coefficient": "-5/27",
+            "power": -2
+          },
+          {
+            "coefficient": "38/81",
+            "power": -1
+          }
+        ],
+        "Q_residue": "38/81",
+        "Q_unit_quotient": [
+          "1/18",
+          "-5/27",
+          "38/81"
+        ],
+        "merged_support_kind": "G_MERGED_EXCEPTIONAL",
+        "orders": {
+          "m": 0,
+          "r": 2,
+          "s": 1
+        },
+        "point": "0"
+      },
+      "base_oracle": {
+        "P_oracle": "[w^2] w P(1/w)",
+        "Q_oracle": "[w^4] w^3 Q(1/w)",
+        "sum_finite_P_residues": "-3/64",
+        "sum_finite_Q_residues": "169/4096"
+      },
+      "residues_and_global_sums_invariant": true,
+      "shifted_coefficients_low_to_high": [
+        "63",
+        "-140",
+        "126",
+        "-49",
+        "7"
+      ],
+      "shifted_event": {
+        "P_pole_order": 2,
+        "P_principal_part": [
+          {
+            "coefficient": "1/3",
+            "power": -2
+          },
+          {
+            "coefficient": "-4/9",
+            "power": -1
+          }
+        ],
+        "P_residue": "-4/9",
+        "P_unit_quotient": [
+          "1/3",
+          "-4/9"
+        ],
+        "Q_pole_order": 3,
+        "Q_principal_part": [
+          {
+            "coefficient": "1/18",
+            "power": -3
+          },
+          {
+            "coefficient": "-5/27",
+            "power": -2
+          },
+          {
+            "coefficient": "38/81",
+            "power": -1
+          }
+        ],
+        "Q_residue": "38/81",
+        "Q_unit_quotient": [
+          "1/18",
+          "-5/27",
+          "38/81"
+        ],
+        "merged_support_kind": "G_MERGED_EXCEPTIONAL",
+        "orders": {
+          "m": 0,
+          "r": 2,
+          "s": 1
+        },
+        "point": "2"
+      },
+      "shifted_oracle": {
+        "P_oracle": "[w^2] w P(1/w)",
+        "Q_oracle": "[w^4] w^3 Q(1/w)",
+        "sum_finite_P_residues": "-3/64",
+        "sum_finite_Q_residues": "169/4096"
+      },
+      "transformation": "7*(1+(x-2)^3+(x-2)^4)"
+    }
+  },
+  "classification": "PASS_T105103_CONFLUENT_RESIDUE_LEDGER",
+  "content_hash_mode": "LF_NORMALIZED_TEXT",
+  "content_sha256": {
+    "PACKET_METADATA_105103.json": "7c61413fea777cd0b3201e61a074b7b5309617c44d83f115b4e7ebf19190331d",
+    "claims/lemmas/L-105103-confluent-residue-merged-support-ledger.md": "423cbf650c0c5fff8546f2b52a9a05de19bef6e648dce92aac3ce9880b59bca6",
+    "claims/methodology/M-105103-confluent-ledger-review-contract.md": "3844708cd84098779cac812b0e847c6c6258083abdabc80f09c0cd749de3e2bd",
+    "claims/refutations/R-105103-confluent-corrections-are-load-bearing.md": "31096895f211abf63aebffdbf022e159534bda119b5d1d469a2ec6c96358a8bf",
+    "claims/theorems/T-105103-multiplicity-frontier.md": "74b39dc30895d35711ae05d843ff1c2f3724ae1c20a4fbecf44e8e5049e16d51",
+    "experiments/X-105103-confluent-residue-ledger/tests/test_verify.py": "e456a0a53dcc480304b45fd1d8ee6dc1e150ba355527152d50d353c9f5faf2ea",
+    "experiments/X-105103-confluent-residue-ledger/verify.py": "fbbc634ae813592e6667af3ef6fb4fcfb4a14a4700562425fe9b103d3946097d"
+  },
+  "dependency_checkpoint": {
+    "artifact_matches_live_producer": true,
+    "commit": "0c1aedcafe7c6fe384695eee64435cc87b792aea",
+    "proof_object_sha256": "cbf21d35cb125aed2d5d6ea85818375e5f1c978a9db0e0de3309a3b3807bd44e"
+  },
+  "heavy_computation_run": false,
+  "proof_object_sha256": "e208cceb8b09c639f6587024e5bef334a37d650435453515f68b8f42512c53c2",
+  "schema": "riemann.t105103.confluent-residue-ledger.v1",
+  "scope": {
+    "admissible_height_strip_sequence_controlled": false,
+    "confluent_corrections_estimated": false,
+    "interior_simplicity_required_for_contour_identity": false,
+    "local_confluent_P_residue_recurrence_proved": true,
+    "local_confluent_Q_residue_recurrence_proved": true,
+    "merged_support_fixed_window_identity_proved": true,
+    "multiple_Fprime_reverse_rolle_transfer_proved": false,
+    "rcmv104530_proved": false,
+    "rh_established": false,
+    "simple_stratum_count_separated_from_event_count": true,
+    "strict_coherence_margin_proved": false,
+    "xi_multiplicity_manifest_proved": false
+  },
+  "source": {
+    "checkpoint_base": "0c1aedcafe7c6fe384695eee64435cc87b792aea",
+    "post_freeze_context_head": "10bba584c01277e880aaa21e1fea09f396ca7246",
+    "post_freeze_context_pr": 720
+  },
+  "verdict": "PASS_T105103_CONFLUENT_RESIDUE_LEDGER"
+}

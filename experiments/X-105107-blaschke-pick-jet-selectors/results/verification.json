@@ -1,0 +1,265 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL",
+  "checks": {
+    "direct_two_node_pick_problem": {
+      "extremal": "b_{1/3}(z)",
+      "extremal_denominator": [
+        "1",
+        "-1/3"
+      ],
+      "extremal_numerator": [
+        "-1/3",
+        "1"
+      ],
+      "nodes": [
+        "0",
+        "1/2"
+      ],
+      "norm_9_over_10_pick_matrix_psd": false,
+      "off_diagonal_pick_condition_load_bearing": true,
+      "optimal_norm": "1",
+      "pick_matrix_at_optimum": [
+        [
+          "8/9",
+          "16/15"
+        ],
+        [
+          "16/15",
+          "32/25"
+        ]
+      ],
+      "pick_principal_minors_at_optimum": [
+        "8/9",
+        "32/25",
+        "0"
+      ],
+      "values": [
+        "-1/3",
+        "1/5"
+      ]
+    },
+    "mutation_firewalls": {
+      "accepted_actual_xi_pick_kernel_used_as_interpolation_theorem": false,
+      "diagonal_pick_inequalities_are_sufficient": false,
+      "exterior_rational_poles_can_be_ignored_on_larger_windows": false,
+      "historical_colliding_L91014_used_as_dependency": false,
+      "omitting_target_blaschke_derivative_rejected": true,
+      "optimal_inner_cluster_norm": "625",
+      "polynomial_cluster_norm": "676",
+      "reduced_polynomial_selector_always_boundary_optimal": false,
+      "using_nontarget_exponent_d_minus_1_rejected": true,
+      "using_target_exponent_d_instead_of_d_minus_1_rejected": true
+    },
+    "off_centre_top_jet": {
+      "all_rational_poles_outside_closed_disk": true,
+      "beta": "45/56",
+      "forced_inner_denominator": [
+        "1",
+        "1/6",
+        "-1/6"
+      ],
+      "forced_inner_numerator": [
+        "-1/6",
+        "1/6",
+        "1"
+      ],
+      "gamma": "1",
+      "manifest": [
+        {
+          "order": 1,
+          "point": "-1/2"
+        },
+        {
+          "order": 2,
+          "point": "1/3"
+        }
+      ],
+      "norm_one_pick_matrix_psd": false,
+      "optimal_H_infinity_norm": "56/45",
+      "optimal_selector_denominator": [
+        "1",
+        "1/6",
+        "-1/6"
+      ],
+      "optimal_selector_numerator": [
+        "-28/135",
+        "28/135",
+        "56/45"
+      ],
+      "pick_matrix_at_optimum": [
+        [
+          "0"
+        ]
+      ],
+      "pick_value_y": "56/45",
+      "target": "1/3",
+      "top_jet_congruences_verified": true
+    },
+    "sharp_cluster_optimum": {
+      "all_exterior_poles_outside_closed_disk": true,
+      "checkpoint_7_blaschke_lower_bound": "625",
+      "checkpoint_7_reduced_polynomial_norm": "676",
+      "epsilon": "1/5",
+      "exterior_poles": [
+        "-5",
+        "5"
+      ],
+      "forced_inner_denominator": [
+        "1",
+        "0",
+        "-2/25",
+        "0",
+        "1/625"
+      ],
+      "forced_inner_numerator": [
+        "1/625",
+        "0",
+        "-2/25",
+        "0",
+        "1"
+      ],
+      "lower_bound_attained_exactly": true,
+      "manifest": [
+        {
+          "order": 2,
+          "point": "-1/5"
+        },
+        {
+          "order": 1,
+          "point": "0"
+        },
+        {
+          "order": 2,
+          "point": "1/5"
+        }
+      ],
+      "optimal_H_infinity_norm": "625",
+      "optimal_selector_denominator": [
+        "1",
+        "0",
+        "-2/25",
+        "0",
+        "1/625"
+      ],
+      "optimal_selector_numerator": [
+        "1",
+        "0",
+        "-50",
+        "0",
+        "625"
+      ],
+      "selector_real_and_even": true
+    },
+    "symmetric_multi_target_selector": {
+      "diagonal_threshold_full_matrix_psd": false,
+      "forced_inner": "z",
+      "manifest": [
+        {
+          "order": 1,
+          "point": "-1/2"
+        },
+        {
+          "order": 1,
+          "point": "0"
+        },
+        {
+          "order": 1,
+          "point": "1/2"
+        }
+      ],
+      "norm_three_full_matrix_psd": false,
+      "optimal_H": "4z",
+      "optimal_W": "4z^2",
+      "optimal_norm": "4",
+      "pick_matrix_at_diagonal_threshold": [
+        [
+          "0",
+          "32/5"
+        ],
+        [
+          "32/5",
+          "0"
+        ]
+      ],
+      "pick_matrix_at_optimum": [
+        [
+          "16",
+          "16"
+        ],
+        [
+          "16",
+          "16"
+        ]
+      ],
+      "real_even_optimal_selector": true,
+      "target_values_y": [
+        "-2",
+        "2"
+      ]
+    },
+    "weighted_residue_preservation": {
+      "edge_envelope": "len(E)*tau*||h||_E/(2*pi)",
+      "exact_L105105_residue_mechanism_preserved": true,
+      "nontarget_order": 1,
+      "nontarget_principal_coefficient": "11/5",
+      "nontarget_selector_local_series": [
+        "0"
+      ],
+      "nontarget_weighted_residue": "0",
+      "selector_minimizes_weighted_product_for_nonuniform_h": false,
+      "source_row_optimal_norm": "56/45",
+      "target_order": 2,
+      "target_principal_coefficient": "7/3",
+      "target_selector_local_series": [
+        "0",
+        "1"
+      ],
+      "target_weighted_residue": "7/3"
+    }
+  },
+  "classification": "PASS_T105107_BLASCHKE_PICK_JET_SELECTORS",
+  "content_hash_mode": "LF_NORMALIZED_TEXT",
+  "content_sha256": {
+    "PACKET_METADATA_105107.json": "7b74ae2865bcafe7b7095954f7e881f849ff24c178e88d3db0f3504562a4a6e0",
+    "claims/lemmas/L-105107-blaschke-pick-optimal-jet-selectors.md": "8e1c43662c9a5cf6e6ce8b53158b600df60ea811fb56d3ec766274ede9b2d26f",
+    "claims/methodology/M-105107-hinfinity-selector-review-contract.md": "cab57b8dd15dc0f1570085f50ce790d62129bdfa4a9812dee8cace9e5d02cdbb",
+    "claims/refutations/R-105107-reduced-polynomial-selector-need-not-be-boundary-optimal.md": "e695b262e1f864aa490e5320847ee2a61a7ed55689f84ea74c003610d1b2294c",
+    "claims/theorems/T-105107-boundary-optimal-jet-observable-frontier.md": "afd567798307a48303646f28e4930f5448ffafbcff0893bc122ce45ae67aa813",
+    "experiments/X-105107-blaschke-pick-jet-selectors/tests/test_verify.py": "9a855c3936a2d8fc867c185cafaf4e5464f48e15abefb933811ada061ee806b2",
+    "experiments/X-105107-blaschke-pick-jet-selectors/verify.py": "ef568b7aa30f5f4b18ced188fb965d4a19b67ce4c4a29a3d894ecd93a4dd8f9e"
+  },
+  "dependency_checkpoint": {
+    "artifact_matches_live_producer": true,
+    "commit": "7e1cb178cd11202ed1e5877c898d1c2877d22521",
+    "proof_object_sha256": "7dc8a3075e983d48032d74e14af2d3fed5611adb9735623e32a9dfa8623ace33"
+  },
+  "heavy_computation_run": false,
+  "proof_object_sha256": "82747e320365a97bf9824dd84960f00bbcb77cd738040c2c5214be844dfc738c",
+  "schema": "riemann.t105107.blaschke-pick-jet-selectors.v1",
+  "scope": {
+    "disk_forced_inner_factorization_proved": true,
+    "finite_pick_matrix_optimal_norm_characterization_proved": true,
+    "intrinsic_coalescence_conditioning_removed": false,
+    "optimal_constant_boundary_modulus_selector_exists": true,
+    "rcmv104530_proved": false,
+    "real_even_optimal_selector_available_for_compatible_data": true,
+    "rectifiable_jordan_residue_identity_preserved": true,
+    "reduced_polynomial_selector_always_boundary_optimal": false,
+    "rh_established": false,
+    "simply_connected_jordan_transport_proved": true,
+    "single_target_closed_form_optimum_proved": true,
+    "strict_xi_jet_coherence_margin_proved": false,
+    "top_jet_problem_reduced_to_value_interpolation": true,
+    "xi_conformal_coordinates_certified": false,
+    "xi_event_manifest_constructed": false,
+    "xi_pick_norm_estimated_cofinally": false,
+    "xi_unweighted_quotient_edges_estimated": false,
+    "xi_weighted_edge_asymptotics_proved": false
+  },
+  "source": {
+    "checkpoint_base": "7e1cb178cd11202ed1e5877c898d1c2877d22521",
+    "post_freeze_context_head": "10bba584c01277e880aaa21e1fea09f396ca7246",
+    "post_freeze_context_pr": 720
+  },
+  "verdict": "PASS_T105107_BLASCHKE_PICK_JET_SELECTORS"
+}

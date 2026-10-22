@@ -1,0 +1,38 @@
+{
+  "schema": "riemann.t105116.packet.v1",
+  "created": "2026-08-23",
+  "repository": "gfreund123/riemann",
+  "branch": "codex/105100-residue-second-moment",
+  "checkpoint_base_sha": "ccc2244b65a2e75a60b5f46fecba35ad016ce4fe",
+  "main_registry_sha": "852d8aa05c701ea7818ce8a50543e68987fef5cc",
+  "classification": "exact capped Cartan radius-budget optimization with fixed safe-shell slack and Xi absorption open",
+  "claims": ["L-105116", "T-105116", "R-105116", "M-105116"],
+  "arithmetic_class": "EXACT_RATIONAL_CONVEX_OPTIMIZATION_AND_SYMBOLIC_LOG_IDENTITY",
+  "heavy_computation_run": false,
+  "dependency_checkpoint": {
+    "claim": "T-105115",
+    "commit": "ccc2244b65a2e75a60b5f46fecba35ad016ce4fe",
+    "path": "experiments/X-105115-common-safe-rectangle",
+    "proof_object_sha256": "b9e9d4c77045189e1c807b056f5b2e257d22a1bdf45e5fc824a652e710ac7aaf"
+  },
+  "proved_or_supplied_for_review": [
+    "unique capped water-filling optimizer for a closed nominal-radius budget",
+    "interior proportional-radius allocation and exact minimum logarithmic penalty",
+    "T-105114 specialization with equal epsilon for common middle radii",
+    "fixed fractional safe-shell slack implying the strict projection gate and kappa at most delta inverse squared",
+    "exact Pareto barrier between reciprocal-modulus penalty and safe-set normalization",
+    "refutation of optimizer language under an active strict open budget"
+  ],
+  "open": [
+    "independent exact-SHA review",
+    "choice of the Xi carrier scalarization weights",
+    "authenticated cofinal Xi derivative anchors and growth loads",
+    "complete actual Xi quotient-pole manifests and cancellations",
+    "proof that the optimized finite penalty is absorbable by actual selectors",
+    "positive signed Xi first-moment lower bound",
+    "multiplicity-defect control and strict jet coherence",
+    "RCMV104530",
+    "Riemann Hypothesis"
+  ],
+  "rh_established": false
+}

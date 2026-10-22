@@ -1,0 +1,40 @@
+{
+  "schema": "riemann.t105101.packet.v1",
+  "created": "2026-08-23",
+  "repository": "gfreund123/riemann",
+  "branch": "codex/105100-residue-second-moment",
+  "checkpoint_base_sha": "51c5619ef3c4b793de756b1c359b39df2ac35466",
+  "post_freeze_context": {
+    "pull_request": 720,
+    "head_sha": "10bba584c01277e880aaa21e1fea09f396ca7246",
+    "status": "OPEN_DRAFT_UNREVIEWED"
+  },
+  "classification": "proposed exact entire-window second-residue flux",
+  "claims": [
+    "L-105101",
+    "T-105101",
+    "R-105101",
+    "M-105101"
+  ],
+  "arithmetic_class": "EXACT_RATIONAL_AND_GAUSSIAN_RATIONAL",
+  "heavy_computation_run": false,
+  "proved_or_supplied_for_review": [
+    "fixed-window entire residue identity",
+    "exact real/nonreal/adjacent-derivative split",
+    "explicit counterclockwise four-edge flux",
+    "Schwarz and parity reduction",
+    "conditional exact Xi derivative specialization",
+    "global-ledger localization firewall"
+  ],
+  "open": [
+    "independent exact-SHA review",
+    "multiple-zero confluent ledger",
+    "Xi-derivative window hypotheses",
+    "admissible height/strip sequence and flux estimates",
+    "nonreal correction estimate",
+    "adjacent-derivative debt estimate",
+    "RCMV104530",
+    "Riemann Hypothesis"
+  ],
+  "rh_established": false
+}

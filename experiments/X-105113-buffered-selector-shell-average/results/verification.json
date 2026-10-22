@@ -1,0 +1,273 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL_POLYNOMIAL_AND_RECTANGULAR_INTEGRAL",
+  "checks": {
+    "coordinate_orientation_ledger": {
+      "coordinate_and_orientation_identity_exact": true,
+      "horizontal_area_component": {
+        "imaginary": "616",
+        "real": "0"
+      },
+      "horizontal_oriented_edge_average": {
+        "imaginary": "616",
+        "real": "0"
+      },
+      "horizontal_sign": "-sgn(y)",
+      "polynomial_coefficients": [
+        "2",
+        "-3",
+        "1",
+        "2"
+      ],
+      "rectangle_parameters": {
+        "T_0": "1",
+        "T_1": "3",
+        "eta_0": "2",
+        "eta_1": "5"
+      },
+      "total_contour_charge": {
+        "imaginary": "0",
+        "real": "0"
+      },
+      "vertical_area_component": {
+        "imaginary": "-616",
+        "real": "0"
+      },
+      "vertical_oriented_edge_average": {
+        "imaginary": "-616",
+        "real": "0"
+      },
+      "vertical_sign": "+i*sgn(x)"
+    },
+    "cubic_buffer_ledger": {
+      "F_coefficients": [
+        "1",
+        "0",
+        "-1",
+        "1/3"
+      ],
+      "F_prime_coefficients": [
+        "0",
+        "-2",
+        "1"
+      ],
+      "F_second_coefficients": [
+        "-2",
+        "2"
+      ],
+      "F_third_coefficients": [
+        "2"
+      ],
+      "W_1_coefficients": [
+        "1",
+        "-1/2"
+      ],
+      "W_2_coefficients": [
+        "1",
+        "-3/2",
+        "1/2"
+      ],
+      "buffered_normalized_charges": [
+        "-1/2",
+        "1/4"
+      ],
+      "canceled_first_carrier": "-F/(2*z)",
+      "canceled_second_carrier": "F^2/(4*z)",
+      "complete_outer_manifest_restores_invariance": true,
+      "core_only_normalized_P_charges_for_T_regions": [
+        "-1/2",
+        "-1/2",
+        "-2/3"
+      ],
+      "core_only_normalized_Q_charges_for_T_regions": [
+        "1/4",
+        "7/36",
+        "2/9"
+      ],
+      "outer_actual_manifests": {
+        "P": [
+          {
+            "order": 1,
+            "point": "0",
+            "role": "target"
+          },
+          {
+            "order": 1,
+            "point": "2",
+            "role": "nontarget"
+          }
+        ],
+        "Q": [
+          {
+            "order": 1,
+            "point": "0",
+            "role": "target"
+          },
+          {
+            "order": 1,
+            "point": "1",
+            "role": "nontarget"
+          },
+          {
+            "order": 1,
+            "point": "2",
+            "role": "nontarget"
+          }
+        ]
+      },
+      "residues": {
+        "P_at_0": "-1/2",
+        "P_at_2": "-1/6",
+        "Q_at_0": "1/4",
+        "Q_at_1": "-1/18",
+        "Q_at_2": "1/36"
+      },
+      "selector_values": {
+        "W1_at_0": "1",
+        "W1_at_2": "0",
+        "W2_at_0": "1",
+        "W2_at_1": "0",
+        "W2_at_2": "0"
+      }
+    },
+    "forbidden_control_characters": [],
+    "manifest_ledger": {
+      "abstract_finiteness_is_not_Xi_authentication": true,
+      "actual_first_order_formula": "max(r-m,0)",
+      "actual_second_order_formula": "max(r+s-2*m,0)",
+      "all_other_outer_events": "zero congruence to full actual order",
+      "intermediate_raw_irregular_parameter_pairs_form_null_set": true,
+      "manifest_type": "complete actual-pole manifest on outer rectangle",
+      "outer_boundary_raw_regular": true,
+      "target_set": "eligible real events strictly inside fixed core"
+    },
+    "mutation_firewalls": {
+      "absolute_second_budget_supplies_signed_first_moment_lower_bound": false,
+      "contour_charge_is_silently_normalized_by_two_pi_i": false,
+      "core_only_manifest_transports_through_uncanceled_buffer": false,
+      "finite_outer_event_set_is_an_authenticated_Xi_manifest": false,
+      "good_rectangle_is_independent_of_prescribed_weights": false,
+      "horizontal_shell_is_divided_by_Delta_T": false,
+      "multiple_target_defect_is_closed": false,
+      "one_rectangle_works_for_every_weight_pair": false,
+      "qualitative_finite_shell_integrability_is_a_cofinal_bound": false,
+      "rcmv104530_proved": false,
+      "rh_established": false,
+      "separately_minimized_carriers_supply_one_common_rectangle": false,
+      "shell_budget_discards_selector_cost": false,
+      "strict_xi_jet_coherence_proved": false,
+      "vertical_shell_is_divided_by_Delta_eta": false
+    },
+    "prescribed_weight_quantifier_ledger": {
+      "component_means": [
+        "1",
+        "1"
+      ],
+      "one_aggregate_cost_used_per_prescribed_pair": true,
+      "prescribed_weight_rows": [
+        {
+          "aggregate_mean": "4",
+          "selected_cost": "2",
+          "selected_rectangle": "A",
+          "weights": [
+            "3",
+            "1"
+          ]
+        },
+        {
+          "aggregate_mean": "4",
+          "selected_cost": "2",
+          "selected_rectangle": "B",
+          "weights": [
+            "1",
+            "3"
+          ]
+        },
+        {
+          "aggregate_mean": "2",
+          "selected_cost": "2",
+          "selected_rectangle": "A",
+          "weights": [
+            "1",
+            "1"
+          ]
+        }
+      ],
+      "selected_rectangle_can_depend_on_weights": true,
+      "two_rectangle_costs": {
+        "A": [
+          "0",
+          "2"
+        ],
+        "B": [
+          "2",
+          "0"
+        ]
+      },
+      "universal_componentwise_rectangle_exists": false
+    },
+    "sharp_width_ledger": {
+      "both_width_constants_attained": true,
+      "horizontal_indicator_area_over_Delta_eta": "2",
+      "horizontal_indicator_boundary_cost": "2",
+      "vertical_indicator_area_over_Delta_T": "4",
+      "vertical_indicator_boundary_cost": "4"
+    },
+    "tonelli_width_ledger": {
+      "coordinate_width_pairing_exact": true,
+      "horizontal_inverse_width": "1/Delta_eta",
+      "horizontal_parameter_edge_integral": "2048",
+      "horizontal_unweighted_area": "1584",
+      "horizontal_upper_component": "528",
+      "horizontal_weighted_area": "2048",
+      "nonnegative_cost": "K(x,y)=2+x^2+3*y^2",
+      "normalized_exact_mean": "633",
+      "tonelli_mean_exact": true,
+      "vertical_inverse_width": "1/Delta_T",
+      "vertical_parameter_edge_integral": "1750",
+      "vertical_unweighted_area": "3760/3",
+      "vertical_upper_component": "1880/3",
+      "vertical_weighted_area": "1750"
+    }
+  },
+  "classification": "PASS_T105113_BUFFERED_SELECTOR_SHELL_AVERAGE",
+  "content_hash_mode": "LF_NORMALIZED_TEXT",
+  "content_sha256": {
+    "PACKET_METADATA_105113.json": "4f911094d570f3ee9123e1ab82f1a5818337456594ee6be548c194514b3b40e0",
+    "claims/lemmas/L-105113-buffered-selector-shell-averaging.md": "7821774dcd0d9525ad2fc57bf57771facc208946bdc9aa1ac98f1615f0c8b3e5",
+    "claims/methodology/M-105113-shell-average-review-contract.md": "2d84c2ded05a62f014f0f3b55f104f4621eeb0ada00b08f6f024809bf64d9b8c",
+    "claims/refutations/R-105113-incomplete-buffer-manifest-changes-charge.md": "8b4fa3279b83fdc7f3a045f61e070485d8c7f8e0501c2c64d9f3d119e66a0dc7",
+    "claims/theorems/T-105113-shell-average-edge-frontier.md": "1f0aba2deaa7f4e1fa3aff449e4df7eca9ee97e4087f267ed73462cc926e4fcd",
+    "experiments/X-105113-buffered-selector-shell-average/tests/test_verify.py": "b24c0d86cb3b6a697749bc0a9180638fcb3b6373fac1bc13adb3e63286007964",
+    "experiments/X-105113-buffered-selector-shell-average/verify.py": "152da966cfc3e3876fa6ee1965d7c108405803028a9c9455a6365ed8fff658b2"
+  },
+  "dependency_checkpoint": {
+    "artifact_matches_live_producer": true,
+    "commit": "53c3a24b23335e7b4e77a703b2c3c224821ed749",
+    "path": "experiments/X-105112-selector-domain-repair",
+    "proof_object_sha256": "3748777ede886502e57c6ad77777807b11b98104a8ecba04b60f162b10e2b19c"
+  },
+  "heavy_computation_run": false,
+  "proof_object_sha256": "44e0cffca9d4d680555287e8290cfa645d979dc76b064f0ab6914ace88c7d560",
+  "schema": "riemann.t105113.buffered-selector-shell-average.v1",
+  "scope": {
+    "cofinal_weighted_xi_shell_bound_proved": false,
+    "complete_buffer_cubic_invariance_verified": true,
+    "complete_cofinal_xi_manifests_authenticated": false,
+    "coordinate_width_pairing_verified": true,
+    "core_only_transport_refuted": true,
+    "fixed_core_outer_buffer_charge_verified": true,
+    "multiplicity_defect_closed": false,
+    "positive_signed_xi_first_moment_proved": false,
+    "rcmv104530_proved": false,
+    "rh_established": false,
+    "sharp_measurable_width_constants_verified": true,
+    "signed_two_parameter_shell_identity_verified": true,
+    "simultaneous_prescribed_weight_selection_verified": true,
+    "strict_xi_jet_coherence_proved": false,
+    "tonelli_mean_identity_verified": true
+  },
+  "source": {
+    "checkpoint_base": "53c3a24b23335e7b4e77a703b2c3c224821ed749"
+  },
+  "verdict": "PASS_T105113_BUFFERED_SELECTOR_SHELL_AVERAGE"
+}

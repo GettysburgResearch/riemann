@@ -1,0 +1,258 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL_AND_GAUSSIAN_RATIONAL",
+  "checks": {
+    "algebraic_square_firewall": {
+      "absolute_square_substitution_rejected": true,
+      "absolute_squared_residue_sum": "5/18",
+      "algebraic_squared_residue_sum": "1/6"
+    },
+    "edge_formula_mutations": {
+      "Q_right_sample": "373/136+919/544i",
+      "Q_top_sample": "1/160+19/80i",
+      "correct_horizontal_paired_density": "0-19/40i",
+      "correct_vertical_paired_density": "0+373/68i",
+      "fixture": "p(z)=z^2+1",
+      "sign_mutations_rejected": true,
+      "unit_square_1_over_z_ccw_winding": "1",
+      "unit_square_1_over_z_clockwise_winding": "-1",
+      "wrong_horizontal_density": "1/80",
+      "wrong_vertical_density": "-919/272"
+    },
+    "integrated_edge_formula": {
+      "both_sign_mutations_rejected": true,
+      "combined_a_over_pi_plus_b": [
+        "0",
+        "1/4"
+      ],
+      "fixture": "p(z)=z^2+1, T=eta=1",
+      "horizontal_contribution_a_over_pi_plus_b": [
+        "-1",
+        "1/8"
+      ],
+      "residue": "1/4",
+      "right_integral": "1+pi/8",
+      "top_imaginary_integral": "1-pi/8",
+      "vertical_contribution_a_over_pi_plus_b": [
+        "1",
+        "1/8"
+      ]
+    },
+    "local_ledgers": [
+      {
+        "T": "1/2",
+        "adjacent_derivative_debt": "-1/18",
+        "boundary_residue_sum": "-1/18",
+        "degree": 3,
+        "eta": "1",
+        "exterior_residue_sum": "5/18",
+        "global_exterior_split_verified": true,
+        "global_residue_sum": "2/9",
+        "independent_root_ledger_verified": true,
+        "inside_critical_roots": [],
+        "inside_second_critical_roots": [
+          "0"
+        ],
+        "local_split_verified": true,
+        "name": "real_cubic_narrow_window",
+        "nonreal_correction": "0",
+        "real_m2": "0",
+        "root_v2_v4_ledger": "2/9"
+      },
+      {
+        "T": "3/2",
+        "adjacent_derivative_debt": "-1/18",
+        "boundary_residue_sum": "2/9",
+        "degree": 3,
+        "eta": "1",
+        "exterior_residue_sum": "0",
+        "global_exterior_split_verified": true,
+        "global_residue_sum": "2/9",
+        "independent_root_ledger_verified": true,
+        "inside_critical_roots": [
+          "-1",
+          "1"
+        ],
+        "inside_second_critical_roots": [
+          "0"
+        ],
+        "local_split_verified": true,
+        "name": "real_cubic_full_window",
+        "nonreal_correction": "0",
+        "real_m2": "5/18",
+        "root_v2_v4_ledger": "2/9"
+      },
+      {
+        "T": "3",
+        "adjacent_derivative_debt": "-20987563/3110400",
+        "boundary_residue_sum": "-20065579/3110400",
+        "degree": 4,
+        "eta": "1",
+        "exterior_residue_sum": "8138393/1036800",
+        "global_exterior_split_verified": true,
+        "global_residue_sum": "5437/3888",
+        "independent_root_ledger_verified": true,
+        "inside_critical_roots": [
+          "1"
+        ],
+        "inside_second_critical_roots": [
+          "-2",
+          "8/3"
+        ],
+        "local_split_verified": true,
+        "name": "asymmetric_quartic_partial_window",
+        "nonreal_correction": "0",
+        "real_m2": "2401/8100",
+        "root_v2_v4_ledger": "5437/3888"
+      },
+      {
+        "T": "1",
+        "adjacent_derivative_debt": "1/18",
+        "boundary_residue_sum": "1/18",
+        "degree": 3,
+        "eta": "1/2",
+        "exterior_residue_sum": "1/6",
+        "global_exterior_split_verified": true,
+        "global_residue_sum": "2/9",
+        "independent_root_ledger_verified": true,
+        "inside_critical_roots": [],
+        "inside_second_critical_roots": [
+          "0"
+        ],
+        "local_split_verified": true,
+        "name": "complex_cubic_narrow_strip",
+        "nonreal_correction": "0",
+        "real_m2": "0",
+        "root_v2_v4_ledger": "2/9"
+      },
+      {
+        "T": "1",
+        "adjacent_derivative_debt": "1/18",
+        "boundary_residue_sum": "2/9",
+        "degree": 3,
+        "eta": "2",
+        "exterior_residue_sum": "0",
+        "global_exterior_split_verified": true,
+        "global_residue_sum": "2/9",
+        "independent_root_ledger_verified": true,
+        "inside_critical_roots": [
+          "0-1i",
+          "0+1i"
+        ],
+        "inside_second_critical_roots": [
+          "0"
+        ],
+        "local_split_verified": true,
+        "name": "complex_cubic_wide_strip",
+        "nonreal_correction": "1/6",
+        "real_m2": "0",
+        "root_v2_v4_ledger": "2/9"
+      },
+      {
+        "T": "2",
+        "adjacent_derivative_debt": "0",
+        "boundary_residue_sum": "0",
+        "degree": 2,
+        "eta": "1",
+        "exterior_residue_sum": "0",
+        "global_exterior_split_verified": true,
+        "global_residue_sum": "0",
+        "independent_root_ledger_verified": true,
+        "inside_critical_roots": [
+          "1"
+        ],
+        "inside_second_critical_roots": [],
+        "local_split_verified": true,
+        "name": "common_p_pprime_removable",
+        "nonreal_correction": "0",
+        "real_m2": "0",
+        "root_v2_v4_ledger": "0"
+      },
+      {
+        "T": "1",
+        "adjacent_derivative_debt": "0",
+        "boundary_residue_sum": "0",
+        "degree": 3,
+        "eta": "1/2",
+        "exterior_residue_sum": "2/9",
+        "global_exterior_split_verified": true,
+        "global_residue_sum": "2/9",
+        "independent_root_ledger_verified": true,
+        "inside_critical_roots": [],
+        "inside_second_critical_roots": [
+          "0"
+        ],
+        "local_split_verified": true,
+        "name": "zero_tau_removable",
+        "nonreal_correction": "0",
+        "real_m2": "0",
+        "root_v2_v4_ledger": "2/9"
+      }
+    ],
+    "rectangle_orientation": {
+      "affine_contour_integral": "0",
+      "counterclockwise": true,
+      "edge_deltas": [
+        "5",
+        "0+3/2i",
+        "-5",
+        "0-3/2i"
+      ],
+      "reversed_signed_area": "-15/2",
+      "signed_area": "15/2",
+      "vertices": [
+        "-5/2-3/4i",
+        "5/2-3/4i",
+        "5/2+3/4i",
+        "-5/2+3/4i"
+      ]
+    },
+    "schwarz_and_parity": {
+      "even": {
+        "Q(z)": "17011007/212622720+2628659/44850105i",
+        "Q_is_odd": true,
+        "schwarz": true
+      },
+      "generic_real": {
+        "Q(z)": "8858/204795+844879/7372620i",
+        "Q_is_odd": false,
+        "schwarz": true
+      },
+      "odd": {
+        "Q(z)": "7381/7020+19193/63180i",
+        "Q_is_odd": true,
+        "schwarz": true
+      }
+    }
+  },
+  "classification": "PASS_L105101_ENTIRE_WINDOW_RESIDUE_FLUX",
+  "content_hash_mode": "LF_NORMALIZED_TEXT",
+  "content_sha256": {
+    "PACKET_METADATA_105101.json": "6d98f1a4eb133f4f9ea205ecc45f44ed03e570ae03f9964c2ff642a6efd8c774",
+    "claims/lemmas/L-105101-entire-window-second-residue-flux.md": "1e726bdd2ea272c550779c24ab5542dc219a96bac2ee83023e17d118057e797b",
+    "claims/methodology/M-105101-window-flux-review-contract.md": "59dfb54d3ff2eae6c942aec60619edec6b68ea63c7e0a65e5f61683911c91eba",
+    "claims/refutations/R-105101-global-ledger-is-not-height-local.md": "863e613cba78d1b3d0e36bdd9ac77ed5dbc63bd84340d66e0659c2e3b83bc52e",
+    "claims/theorems/T-105101-entire-window-residue-flux-frontier.md": "b356340ff0c724740f17593f2e59af625335590b62f207571e695e59f605b0ad",
+    "experiments/X-105101-entire-window-residue-flux/tests/test_verify.py": "6170ea217c32b9129225127f66a697d60e76020c03edea002a17b764af71aa43",
+    "experiments/X-105101-entire-window-residue-flux/verify.py": "61c83247f03807ab2c0b3030234fcd908550a66fc6e3a2c5f548d3e889d81d2a"
+  },
+  "heavy_computation_run": false,
+  "proof_object_sha256": "3e54ec6406ae1c37ceb43049ec433a29f7e2b269b293d84d9663b3480774a196",
+  "schema": "riemann.l105101.entire-window-residue-flux.v1",
+  "scope": {
+    "adjacent_derivative_debt_bound_proved": false,
+    "admissible_height_strip_sequence_controlled": false,
+    "exact_local_fixtures_replayed": true,
+    "fixed_window_entire_identity_proof_supplied": true,
+    "multiple_zero_confluent_ledger_proved": false,
+    "nonreal_correction_bound_proved": false,
+    "rcmv104530_proved": false,
+    "rh_established": false,
+    "uniform_height_flux_bound_proved": false
+  },
+  "source": {
+    "checkpoint_base": "51c5619ef3c4b793de756b1c359b39df2ac35466",
+    "post_freeze_context_head": "10bba584c01277e880aaa21e1fea09f396ca7246",
+    "post_freeze_context_pr": 720
+  },
+  "verdict": "PASS_L105101_ENTIRE_WINDOW_RESIDUE_FLUX"
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "riemann.t105115.packet.v1",
+  "created": "2026-08-23",
+  "repository": "gfreund123/riemann",
+  "branch": "codex/105100-residue-second-moment",
+  "checkpoint_base_sha": "c071fc31168847b901542be04ed6fc30c60b29d9",
+  "main_registry_sha": "852d8aa05c701ea7818ce8a50543e68987fef5cc",
+  "classification": "exact finite supporting-line projection and restricted Tonelli transfer with Xi analytic inputs open",
+  "claims": [
+    "L-105115",
+    "T-105115",
+    "R-105115",
+    "M-105115"
+  ],
+  "arithmetic_class": "EXACT_RATIONAL_INTERVAL_GEOMETRY_AND_SYMBOLIC_INEQUALITY",
+  "heavy_computation_run": false,
+  "dependency_checkpoint": {
+    "claim": "T-105114",
+    "commit": "aa7b44947f8b0f9c37bb8adc2141079b57729d04",
+    "path": "experiments/X-105114-anchored-equal-disk-collar",
+    "proof_object_sha256": "15ff7ba8056a9beb5e942945c9f92dcce566f7d737bc04f8f2db6895109c3284"
+  },
+  "proved_or_supplied_for_review": [
+    "exact coordinate bad sets for the four supporting lines of a symmetric rectangle",
+    "positive-measure safe-product criterion and exact safe-product measure",
+    "sharp strict total-radius relaxation Delta_T>2S and Delta_eta>2S",
+    "restricted Tonelli selection with exact projection normalization and a total-radius relaxation",
+    "raw F/F-prime and F-squared/(F-prime F-second) edge envelopes allowing boundary zeros of F",
+    "selector-domain firewall for fixed outer selectors on intermediate rectangles"
+  ],
+  "open": [
+    "independent exact-SHA review",
+    "authenticated cofinal Xi derivative anchors and growth loads",
+    "complete actual Xi quotient-pole manifests",
+    "cofinal proof that the Cartan radius load leaves a positive safe shell",
+    "absorption of reciprocal margins, safe-set loss, edge length, and actual selector cost",
+    "positive signed Xi first-moment lower bound",
+    "multiplicity-defect control and strict jet coherence",
+    "RCMV104530",
+    "Riemann Hypothesis"
+  ],
+  "rh_established": false
+}

@@ -1,0 +1,1737 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL",
+  "checks": {
+    "canonical_fixtures": {
+      "common_and_two_good_turns": {
+        "active_component_count": 2,
+        "coarse_sign_lower_bound": 2,
+        "common_derivative_order_mass": 1,
+        "common_points": [
+          "0"
+        ],
+        "component_moment_rows": [
+          {
+            "component_index": 0,
+            "first_carrier_positive_part": "1/8",
+            "nonnegative_integer_lower_bound": 0,
+            "raw_moment_lower_bound": "0",
+            "second_moment": "1/64",
+            "turn_count": 1
+          },
+          {
+            "component_index": 1,
+            "first_carrier_positive_part": "1/8",
+            "nonnegative_integer_lower_bound": 0,
+            "raw_moment_lower_bound": "0",
+            "second_moment": "1/64",
+            "turn_count": 1
+          }
+        ],
+        "componentwise_moment_lower_bound": 2,
+        "derivative_real_zero_multiplicity": 3,
+        "eligible_odd_noncommon_turns": [
+          {
+            "P_leading_power": -1,
+            "P_leading_principal_coefficient": "-1/8",
+            "Q_leading_power": -1,
+            "Q_leading_principal_coefficient": "1/64",
+            "critical_order": 1,
+            "good_turn": true,
+            "local_event": {
+              "P_pole_order": 1,
+              "P_principal_part": [
+                {
+                  "coefficient": "-1/8",
+                  "power": -1
+                }
+              ],
+              "P_residue": "-1/8",
+              "P_unit_quotient": [
+                "-1/8"
+              ],
+              "Q_pole_order": 1,
+              "Q_principal_part": [
+                {
+                  "coefficient": "1/64",
+                  "power": -1
+                }
+              ],
+              "Q_residue": "1/64",
+              "Q_unit_quotient": [
+                "1/64"
+              ],
+              "merged_support_kind": "S1_SIMPLE_NONCOMMON_FPRIME",
+              "orders": {
+                "m": 0,
+                "r": 1,
+                "s": 0
+              },
+              "point": "-1"
+            },
+            "ordinary_P_residue": "-1/8",
+            "ordinary_Q_residue": "1/64",
+            "point": "-1",
+            "rho_jet": "-1/8",
+            "wrong_turn": false
+          },
+          {
+            "P_leading_power": -1,
+            "P_leading_principal_coefficient": "-1/8",
+            "Q_leading_power": -1,
+            "Q_leading_principal_coefficient": "1/64",
+            "critical_order": 1,
+            "good_turn": true,
+            "local_event": {
+              "P_pole_order": 1,
+              "P_principal_part": [
+                {
+                  "coefficient": "-1/8",
+                  "power": -1
+                }
+              ],
+              "P_residue": "-1/8",
+              "P_unit_quotient": [
+                "-1/8"
+              ],
+              "Q_pole_order": 1,
+              "Q_principal_part": [
+                {
+                  "coefficient": "1/64",
+                  "power": -1
+                }
+              ],
+              "Q_residue": "1/64",
+              "Q_unit_quotient": [
+                "1/64"
+              ],
+              "merged_support_kind": "S1_SIMPLE_NONCOMMON_FPRIME",
+              "orders": {
+                "m": 0,
+                "r": 1,
+                "s": 0
+              },
+              "point": "1"
+            },
+            "ordinary_P_residue": "-1/8",
+            "ordinary_Q_residue": "1/64",
+            "point": "1",
+            "rho_jet": "-1/8",
+            "wrong_turn": false
+          }
+        ],
+        "eligible_turn_support_count": 2,
+        "exact_multiplicity_identity": "3=1+2+0",
+        "global_jet_moment_lower_bound": "2",
+        "good_turn_count": 2,
+        "jet_coherence": "1",
+        "jet_first_carrier": "1/4",
+        "jet_second_moment": "1/32",
+        "name": "common_and_two_good_turns",
+        "neutral_even_noncommon_events": [],
+        "omitted_derivative_multiplicity_defect": 0,
+        "primitive_zero_count": {
+          "common_parent_multiplicity": 2,
+          "common_support_count": 1,
+          "critical_events": [
+            {
+              "P_pole_order": 1,
+              "P_principal_part": [
+                {
+                  "coefficient": "-1/8",
+                  "power": -1
+                }
+              ],
+              "P_residue": "-1/8",
+              "P_unit_quotient": [
+                "-1/8"
+              ],
+              "Q_pole_order": 1,
+              "Q_principal_part": [
+                {
+                  "coefficient": "1/64",
+                  "power": -1
+                }
+              ],
+              "Q_residue": "1/64",
+              "Q_unit_quotient": [
+                "1/64"
+              ],
+              "merged_support_kind": "S1_SIMPLE_NONCOMMON_FPRIME",
+              "orders": {
+                "m": 0,
+                "r": 1,
+                "s": 0
+              },
+              "point": "-1"
+            },
+            {
+              "P_pole_order": 0,
+              "P_principal_part": [],
+              "P_residue": "0",
+              "P_unit_quotient": [],
+              "Q_pole_order": 0,
+              "Q_principal_part": [],
+              "Q_residue": "0",
+              "Q_unit_quotient": [],
+              "merged_support_kind": "G_MERGED_EXCEPTIONAL",
+              "orders": {
+                "m": 2,
+                "r": 1,
+                "s": 0
+              },
+              "point": "0"
+            },
+            {
+              "P_pole_order": 1,
+              "P_principal_part": [
+                {
+                  "coefficient": "-1/8",
+                  "power": -1
+                }
+              ],
+              "P_residue": "-1/8",
+              "P_unit_quotient": [
+                "-1/8"
+              ],
+              "Q_pole_order": 1,
+              "Q_principal_part": [
+                {
+                  "coefficient": "1/64",
+                  "power": -1
+                }
+              ],
+              "Q_residue": "1/64",
+              "Q_unit_quotient": [
+                "1/64"
+              ],
+              "merged_support_kind": "S1_SIMPLE_NONCOMMON_FPRIME",
+              "orders": {
+                "m": 0,
+                "r": 1,
+                "s": 0
+              },
+              "point": "1"
+            }
+          ],
+          "critical_points": [
+            "-1",
+            "0",
+            "1"
+          ],
+          "distinct_real_zero_count": 1,
+          "frozen_expected_critical_points": [
+            "-1",
+            "0",
+            "1"
+          ],
+          "interval": [
+            "-5/4",
+            "5/4"
+          ],
+          "multiplicity_real_zero_count": 2,
+          "node_values": [
+            "-175/256",
+            "-1",
+            "0",
+            "-1",
+            "-175/256"
+          ],
+          "primitive_identity_verified": true,
+          "strict_sign_change_edges": 0
+        },
+        "sharp_sign_lower_bound": 2,
+        "transfer_bounds_verified": true
+      },
+      "common_only_x4": {
+        "active_component_count": 0,
+        "coarse_sign_lower_bound": 2,
+        "common_derivative_order_mass": 3,
+        "common_points": [
+          "0"
+        ],
+        "component_moment_rows": [],
+        "componentwise_moment_lower_bound": 4,
+        "derivative_real_zero_multiplicity": 3,
+        "eligible_odd_noncommon_turns": [],
+        "eligible_turn_support_count": 0,
+        "exact_multiplicity_identity": "3=3+0+0",
+        "global_jet_moment_lower_bound": null,
+        "good_turn_count": 0,
+        "jet_coherence": null,
+        "jet_first_carrier": "0",
+        "jet_second_moment": "0",
+        "name": "common_only_x4",
+        "neutral_even_noncommon_events": [],
+        "omitted_derivative_multiplicity_defect": 0,
+        "primitive_zero_count": {
+          "common_parent_multiplicity": 4,
+          "common_support_count": 1,
+          "critical_events": [
+            {
+              "P_pole_order": 0,
+              "P_principal_part": [],
+              "P_residue": "0",
+              "P_unit_quotient": [],
+              "Q_pole_order": 0,
+              "Q_principal_part": [],
+              "Q_residue": "0",
+              "Q_unit_quotient": [],
+              "merged_support_kind": "G_MERGED_EXCEPTIONAL",
+              "orders": {
+                "m": 4,
+                "r": 3,
+                "s": 2
+              },
+              "point": "0"
+            }
+          ],
+          "critical_points": [
+            "0"
+          ],
+          "distinct_real_zero_count": 1,
+          "frozen_expected_critical_points": [
+            "0"
+          ],
+          "interval": [
+            "-1",
+            "1"
+          ],
+          "multiplicity_real_zero_count": 4,
+          "node_values": [
+            "1",
+            "0",
+            "1"
+          ],
+          "primitive_identity_verified": true,
+          "strict_sign_change_edges": 0
+        },
+        "sharp_sign_lower_bound": 4,
+        "transfer_bounds_verified": true
+      },
+      "flat_good_quartic": {
+        "active_component_count": 1,
+        "coarse_sign_lower_bound": 0,
+        "common_derivative_order_mass": 0,
+        "common_points": [],
+        "component_moment_rows": [
+          {
+            "component_index": 0,
+            "first_carrier_positive_part": "1/4",
+            "nonnegative_integer_lower_bound": 0,
+            "raw_moment_lower_bound": "0",
+            "second_moment": "1/16",
+            "turn_count": 1
+          }
+        ],
+        "componentwise_moment_lower_bound": 0,
+        "derivative_real_zero_multiplicity": 3,
+        "eligible_odd_noncommon_turns": [
+          {
+            "P_leading_power": -3,
+            "P_leading_principal_coefficient": "-1/4",
+            "Q_leading_power": -5,
+            "Q_leading_principal_coefficient": "1/48",
+            "critical_order": 3,
+            "good_turn": true,
+            "local_event": {
+              "P_pole_order": 3,
+              "P_principal_part": [
+                {
+                  "coefficient": "-1/4",
+                  "power": -3
+                },
+                {
+                  "coefficient": "0",
+                  "power": -2
+                },
+                {
+                  "coefficient": "0",
+                  "power": -1
+                }
+              ],
+              "P_residue": "0",
+              "P_unit_quotient": [
+                "-1/4",
+                "0",
+                "0"
+              ],
+              "Q_pole_order": 5,
+              "Q_principal_part": [
+                {
+                  "coefficient": "1/48",
+                  "power": -5
+                },
+                {
+                  "coefficient": "0",
+                  "power": -4
+                },
+                {
+                  "coefficient": "0",
+                  "power": -3
+                },
+                {
+                  "coefficient": "0",
+                  "power": -2
+                },
+                {
+                  "coefficient": "-1/24",
+                  "power": -1
+                }
+              ],
+              "Q_residue": "-1/24",
+              "Q_unit_quotient": [
+                "1/48",
+                "0",
+                "0",
+                "0",
+                "-1/24"
+              ],
+              "merged_support_kind": "G_MERGED_EXCEPTIONAL",
+              "orders": {
+                "m": 0,
+                "r": 3,
+                "s": 2
+              },
+              "point": "0"
+            },
+            "ordinary_P_residue": "0",
+            "ordinary_Q_residue": "-1/24",
+            "point": "0",
+            "rho_jet": "-1/4",
+            "wrong_turn": false
+          }
+        ],
+        "eligible_turn_support_count": 1,
+        "exact_multiplicity_identity": "3=0+1+2",
+        "global_jet_moment_lower_bound": "0",
+        "good_turn_count": 1,
+        "jet_coherence": "1",
+        "jet_first_carrier": "1/4",
+        "jet_second_moment": "1/16",
+        "name": "flat_good_quartic",
+        "neutral_even_noncommon_events": [],
+        "omitted_derivative_multiplicity_defect": 2,
+        "primitive_zero_count": {
+          "common_parent_multiplicity": 0,
+          "common_support_count": 0,
+          "critical_events": [
+            {
+              "P_pole_order": 3,
+              "P_principal_part": [
+                {
+                  "coefficient": "-1/4",
+                  "power": -3
+                },
+                {
+                  "coefficient": "0",
+                  "power": -2
+                },
+                {
+                  "coefficient": "0",
+                  "power": -1
+                }
+              ],
+              "P_residue": "0",
+              "P_unit_quotient": [
+                "-1/4",
+                "0",
+                "0"
+              ],
+              "Q_pole_order": 5,
+              "Q_principal_part": [
+                {
+                  "coefficient": "1/48",
+                  "power": -5
+                },
+                {
+                  "coefficient": "0",
+                  "power": -4
+                },
+                {
+                  "coefficient": "0",
+                  "power": -3
+                },
+                {
+                  "coefficient": "0",
+                  "power": -2
+                },
+                {
+                  "coefficient": "-1/24",
+                  "power": -1
+                }
+              ],
+              "Q_residue": "-1/24",
+              "Q_unit_quotient": [
+                "1/48",
+                "0",
+                "0",
+                "0",
+                "-1/24"
+              ],
+              "merged_support_kind": "G_MERGED_EXCEPTIONAL",
+              "orders": {
+                "m": 0,
+                "r": 3,
+                "s": 2
+              },
+              "point": "0"
+            }
+          ],
+          "critical_points": [
+            "0"
+          ],
+          "distinct_real_zero_count": 2,
+          "frozen_expected_critical_points": [
+            "0"
+          ],
+          "interval": [
+            "-2",
+            "2"
+          ],
+          "multiplicity_real_zero_count": 2,
+          "node_values": [
+            "15",
+            "-1",
+            "15"
+          ],
+          "primitive_identity_verified": true,
+          "strict_sign_change_edges": 2
+        },
+        "sharp_sign_lower_bound": 0,
+        "transfer_bounds_verified": true
+      },
+      "flat_wrong_quartic": {
+        "active_component_count": 1,
+        "coarse_sign_lower_bound": -2,
+        "common_derivative_order_mass": 0,
+        "common_points": [],
+        "component_moment_rows": [
+          {
+            "component_index": 0,
+            "first_carrier_positive_part": "0",
+            "nonnegative_integer_lower_bound": 0,
+            "raw_moment_lower_bound": "-2",
+            "second_moment": "1/16",
+            "turn_count": 1
+          }
+        ],
+        "componentwise_moment_lower_bound": 0,
+        "derivative_real_zero_multiplicity": 3,
+        "eligible_odd_noncommon_turns": [
+          {
+            "P_leading_power": -3,
+            "P_leading_principal_coefficient": "1/4",
+            "Q_leading_power": -5,
+            "Q_leading_principal_coefficient": "1/48",
+            "critical_order": 3,
+            "good_turn": false,
+            "local_event": {
+              "P_pole_order": 3,
+              "P_principal_part": [
+                {
+                  "coefficient": "1/4",
+                  "power": -3
+                },
+                {
+                  "coefficient": "0",
+                  "power": -2
+                },
+                {
+                  "coefficient": "0",
+                  "power": -1
+                }
+              ],
+              "P_residue": "0",
+              "P_unit_quotient": [
+                "1/4",
+                "0",
+                "0"
+              ],
+              "Q_pole_order": 5,
+              "Q_principal_part": [
+                {
+                  "coefficient": "1/48",
+                  "power": -5
+                },
+                {
+                  "coefficient": "0",
+                  "power": -4
+                },
+                {
+                  "coefficient": "0",
+                  "power": -3
+                },
+                {
+                  "coefficient": "0",
+                  "power": -2
+                },
+                {
+                  "coefficient": "1/24",
+                  "power": -1
+                }
+              ],
+              "Q_residue": "1/24",
+              "Q_unit_quotient": [
+                "1/48",
+                "0",
+                "0",
+                "0",
+                "1/24"
+              ],
+              "merged_support_kind": "G_MERGED_EXCEPTIONAL",
+              "orders": {
+                "m": 0,
+                "r": 3,
+                "s": 2
+              },
+              "point": "0"
+            },
+            "ordinary_P_residue": "0",
+            "ordinary_Q_residue": "1/24",
+            "point": "0",
+            "rho_jet": "1/4",
+            "wrong_turn": true
+          }
+        ],
+        "eligible_turn_support_count": 1,
+        "exact_multiplicity_identity": "3=0+1+2",
+        "global_jet_moment_lower_bound": "-2",
+        "good_turn_count": 0,
+        "jet_coherence": "0",
+        "jet_first_carrier": "-1/4",
+        "jet_second_moment": "1/16",
+        "name": "flat_wrong_quartic",
+        "neutral_even_noncommon_events": [],
+        "omitted_derivative_multiplicity_defect": 2,
+        "primitive_zero_count": {
+          "common_parent_multiplicity": 0,
+          "common_support_count": 0,
+          "critical_events": [
+            {
+              "P_pole_order": 3,
+              "P_principal_part": [
+                {
+                  "coefficient": "1/4",
+                  "power": -3
+                },
+                {
+                  "coefficient": "0",
+                  "power": -2
+                },
+                {
+                  "coefficient": "0",
+                  "power": -1
+                }
+              ],
+              "P_residue": "0",
+              "P_unit_quotient": [
+                "1/4",
+                "0",
+                "0"
+              ],
+              "Q_pole_order": 5,
+              "Q_principal_part": [
+                {
+                  "coefficient": "1/48",
+                  "power": -5
+                },
+                {
+                  "coefficient": "0",
+                  "power": -4
+                },
+                {
+                  "coefficient": "0",
+                  "power": -3
+                },
+                {
+                  "coefficient": "0",
+                  "power": -2
+                },
+                {
+                  "coefficient": "1/24",
+                  "power": -1
+                }
+              ],
+              "Q_residue": "1/24",
+              "Q_unit_quotient": [
+                "1/48",
+                "0",
+                "0",
+                "0",
+                "1/24"
+              ],
+              "merged_support_kind": "G_MERGED_EXCEPTIONAL",
+              "orders": {
+                "m": 0,
+                "r": 3,
+                "s": 2
+              },
+              "point": "0"
+            }
+          ],
+          "critical_points": [
+            "0"
+          ],
+          "distinct_real_zero_count": 0,
+          "frozen_expected_critical_points": [
+            "0"
+          ],
+          "interval": [
+            "-2",
+            "2"
+          ],
+          "multiplicity_real_zero_count": 0,
+          "node_values": [
+            "17",
+            "1",
+            "17"
+          ],
+          "primitive_identity_verified": true,
+          "strict_sign_change_edges": 0
+        },
+        "sharp_sign_lower_bound": -2,
+        "transfer_bounds_verified": true
+      },
+      "neutral_even_stationary": {
+        "active_component_count": 0,
+        "coarse_sign_lower_bound": -1,
+        "common_derivative_order_mass": 0,
+        "common_points": [],
+        "component_moment_rows": [],
+        "componentwise_moment_lower_bound": 0,
+        "derivative_real_zero_multiplicity": 2,
+        "eligible_odd_noncommon_turns": [],
+        "eligible_turn_support_count": 0,
+        "exact_multiplicity_identity": "2=0+0+2",
+        "global_jet_moment_lower_bound": null,
+        "good_turn_count": 0,
+        "jet_coherence": null,
+        "jet_first_carrier": "0",
+        "jet_second_moment": "0",
+        "name": "neutral_even_stationary",
+        "neutral_even_noncommon_events": [
+          {
+            "critical_order": 2,
+            "point": "0",
+            "reason": "NONCOMMON_EVEN_ORDER_STATIONARY_EVENT"
+          }
+        ],
+        "omitted_derivative_multiplicity_defect": 2,
+        "primitive_zero_count": {
+          "common_parent_multiplicity": 0,
+          "common_support_count": 0,
+          "critical_events": [
+            {
+              "P_pole_order": 2,
+              "P_principal_part": [
+                {
+                  "coefficient": "2/3",
+                  "power": -2
+                },
+                {
+                  "coefficient": "0",
+                  "power": -1
+                }
+              ],
+              "P_residue": "0",
+              "P_unit_quotient": [
+                "2/3",
+                "0"
+              ],
+              "Q_pole_order": 3,
+              "Q_principal_part": [
+                {
+                  "coefficient": "2/9",
+                  "power": -3
+                },
+                {
+                  "coefficient": "0",
+                  "power": -2
+                },
+                {
+                  "coefficient": "0",
+                  "power": -1
+                }
+              ],
+              "Q_residue": "0",
+              "Q_unit_quotient": [
+                "2/9",
+                "0",
+                "0"
+              ],
+              "merged_support_kind": "G_MERGED_EXCEPTIONAL",
+              "orders": {
+                "m": 0,
+                "r": 2,
+                "s": 1
+              },
+              "point": "0"
+            }
+          ],
+          "critical_points": [
+            "0"
+          ],
+          "distinct_real_zero_count": 0,
+          "frozen_expected_critical_points": [
+            "0"
+          ],
+          "interval": [
+            "-1",
+            "1"
+          ],
+          "multiplicity_real_zero_count": 0,
+          "node_values": [
+            "1",
+            "2",
+            "3"
+          ],
+          "primitive_identity_verified": true,
+          "strict_sign_change_edges": 0
+        },
+        "sharp_sign_lower_bound": 0,
+        "transfer_bounds_verified": true
+      },
+      "simple_cubic_recovery": {
+        "active_component_count": 1,
+        "coarse_sign_lower_bound": 1,
+        "common_derivative_order_mass": 0,
+        "common_points": [],
+        "component_moment_rows": [
+          {
+            "component_index": 0,
+            "first_carrier_positive_part": "2/3",
+            "nonnegative_integer_lower_bound": 1,
+            "raw_moment_lower_bound": "1/5",
+            "second_moment": "5/18",
+            "turn_count": 2
+          }
+        ],
+        "componentwise_moment_lower_bound": 1,
+        "derivative_real_zero_multiplicity": 2,
+        "eligible_odd_noncommon_turns": [
+          {
+            "P_leading_power": -1,
+            "P_leading_principal_coefficient": "-1/2",
+            "Q_leading_power": -1,
+            "Q_leading_principal_coefficient": "1/4",
+            "critical_order": 1,
+            "good_turn": true,
+            "local_event": {
+              "P_pole_order": 1,
+              "P_principal_part": [
+                {
+                  "coefficient": "-1/2",
+                  "power": -1
+                }
+              ],
+              "P_residue": "-1/2",
+              "P_unit_quotient": [
+                "-1/2"
+              ],
+              "Q_pole_order": 1,
+              "Q_principal_part": [
+                {
+                  "coefficient": "1/4",
+                  "power": -1
+                }
+              ],
+              "Q_residue": "1/4",
+              "Q_unit_quotient": [
+                "1/4"
+              ],
+              "merged_support_kind": "S1_SIMPLE_NONCOMMON_FPRIME",
+              "orders": {
+                "m": 0,
+                "r": 1,
+                "s": 0
+              },
+              "point": "-1"
+            },
+            "ordinary_P_residue": "-1/2",
+            "ordinary_Q_residue": "1/4",
+            "point": "-1",
+            "rho_jet": "-1/2",
+            "wrong_turn": false
+          },
+          {
+            "P_leading_power": -1,
+            "P_leading_principal_coefficient": "-1/6",
+            "Q_leading_power": -1,
+            "Q_leading_principal_coefficient": "1/36",
+            "critical_order": 1,
+            "good_turn": true,
+            "local_event": {
+              "P_pole_order": 1,
+              "P_principal_part": [
+                {
+                  "coefficient": "-1/6",
+                  "power": -1
+                }
+              ],
+              "P_residue": "-1/6",
+              "P_unit_quotient": [
+                "-1/6"
+              ],
+              "Q_pole_order": 1,
+              "Q_principal_part": [
+                {
+                  "coefficient": "1/36",
+                  "power": -1
+                }
+              ],
+              "Q_residue": "1/36",
+              "Q_unit_quotient": [
+                "1/36"
+              ],
+              "merged_support_kind": "S1_SIMPLE_NONCOMMON_FPRIME",
+              "orders": {
+                "m": 0,
+                "r": 1,
+                "s": 0
+              },
+              "point": "1"
+            },
+            "ordinary_P_residue": "-1/6",
+            "ordinary_Q_residue": "1/36",
+            "point": "1",
+            "rho_jet": "-1/6",
+            "wrong_turn": false
+          }
+        ],
+        "eligible_turn_support_count": 2,
+        "exact_multiplicity_identity": "2=0+2+0",
+        "global_jet_moment_lower_bound": "1/5",
+        "good_turn_count": 2,
+        "jet_coherence": "4/5",
+        "jet_first_carrier": "2/3",
+        "jet_second_moment": "5/18",
+        "name": "simple_cubic_recovery",
+        "neutral_even_noncommon_events": [],
+        "omitted_derivative_multiplicity_defect": 0,
+        "primitive_zero_count": {
+          "common_parent_multiplicity": 0,
+          "common_support_count": 0,
+          "critical_events": [
+            {
+              "P_pole_order": 1,
+              "P_principal_part": [
+                {
+                  "coefficient": "-1/2",
+                  "power": -1
+                }
+              ],
+              "P_residue": "-1/2",
+              "P_unit_quotient": [
+                "-1/2"
+              ],
+              "Q_pole_order": 1,
+              "Q_principal_part": [
+                {
+                  "coefficient": "1/4",
+                  "power": -1
+                }
+              ],
+              "Q_residue": "1/4",
+              "Q_unit_quotient": [
+                "1/4"
+              ],
+              "merged_support_kind": "S1_SIMPLE_NONCOMMON_FPRIME",
+              "orders": {
+                "m": 0,
+                "r": 1,
+                "s": 0
+              },
+              "point": "-1"
+            },
+            {
+              "P_pole_order": 1,
+              "P_principal_part": [
+                {
+                  "coefficient": "-1/6",
+                  "power": -1
+                }
+              ],
+              "P_residue": "-1/6",
+              "P_unit_quotient": [
+                "-1/6"
+              ],
+              "Q_pole_order": 1,
+              "Q_principal_part": [
+                {
+                  "coefficient": "1/36",
+                  "power": -1
+                }
+              ],
+              "Q_residue": "1/36",
+              "Q_unit_quotient": [
+                "1/36"
+              ],
+              "merged_support_kind": "S1_SIMPLE_NONCOMMON_FPRIME",
+              "orders": {
+                "m": 0,
+                "r": 1,
+                "s": 0
+              },
+              "point": "1"
+            }
+          ],
+          "critical_points": [
+            "-1",
+            "1"
+          ],
+          "distinct_real_zero_count": 3,
+          "frozen_expected_critical_points": [
+            "-1",
+            "1"
+          ],
+          "interval": [
+            "-2",
+            "2"
+          ],
+          "multiplicity_real_zero_count": 3,
+          "node_values": [
+            "-1",
+            "3",
+            "-1",
+            "3"
+          ],
+          "primitive_identity_verified": true,
+          "strict_sign_change_edges": 3
+        },
+        "sharp_sign_lower_bound": 1,
+        "transfer_bounds_verified": true
+      },
+      "two_even_stationary_firewall": {
+        "active_component_count": 0,
+        "coarse_sign_lower_bound": -1,
+        "common_derivative_order_mass": 0,
+        "common_points": [],
+        "component_moment_rows": [],
+        "componentwise_moment_lower_bound": 0,
+        "derivative_real_zero_multiplicity": 4,
+        "eligible_odd_noncommon_turns": [],
+        "eligible_turn_support_count": 0,
+        "exact_multiplicity_identity": "4=0+0+4",
+        "global_jet_moment_lower_bound": null,
+        "good_turn_count": 0,
+        "jet_coherence": null,
+        "jet_first_carrier": "0",
+        "jet_second_moment": "0",
+        "name": "two_even_stationary_firewall",
+        "neutral_even_noncommon_events": [
+          {
+            "critical_order": 2,
+            "point": "-1/2",
+            "reason": "NONCOMMON_EVEN_ORDER_STATIONARY_EVENT"
+          },
+          {
+            "critical_order": 2,
+            "point": "1/2",
+            "reason": "NONCOMMON_EVEN_ORDER_STATIONARY_EVENT"
+          }
+        ],
+        "omitted_derivative_multiplicity_defect": 4,
+        "primitive_zero_count": {
+          "common_parent_multiplicity": 0,
+          "common_support_count": 0,
+          "critical_events": [
+            {
+              "P_pole_order": 2,
+              "P_principal_part": [
+                {
+                  "coefficient": "-601/60",
+                  "power": -2
+                },
+                {
+                  "coefficient": "-601/30",
+                  "power": -1
+                }
+              ],
+              "P_residue": "-601/30",
+              "P_unit_quotient": [
+                "-601/60",
+                "-601/30"
+              ],
+              "Q_pole_order": 3,
+              "Q_principal_part": [
+                {
+                  "coefficient": "361201/7200",
+                  "power": -3
+                },
+                {
+                  "coefficient": "361201/1440",
+                  "power": -2
+                },
+                {
+                  "coefficient": "361201/450",
+                  "power": -1
+                }
+              ],
+              "Q_residue": "361201/450",
+              "Q_unit_quotient": [
+                "361201/7200",
+                "361201/1440",
+                "361201/450"
+              ],
+              "merged_support_kind": "G_MERGED_EXCEPTIONAL",
+              "orders": {
+                "m": 0,
+                "r": 2,
+                "s": 1
+              },
+              "point": "-1/2"
+            },
+            {
+              "P_pole_order": 2,
+              "P_principal_part": [
+                {
+                  "coefficient": "-599/60",
+                  "power": -2
+                },
+                {
+                  "coefficient": "599/30",
+                  "power": -1
+                }
+              ],
+              "P_residue": "599/30",
+              "P_unit_quotient": [
+                "-599/60",
+                "599/30"
+              ],
+              "Q_pole_order": 3,
+              "Q_principal_part": [
+                {
+                  "coefficient": "358801/7200",
+                  "power": -3
+                },
+                {
+                  "coefficient": "-358801/1440",
+                  "power": -2
+                },
+                {
+                  "coefficient": "358801/450",
+                  "power": -1
+                }
+              ],
+              "Q_residue": "358801/450",
+              "Q_unit_quotient": [
+                "358801/7200",
+                "-358801/1440",
+                "358801/450"
+              ],
+              "merged_support_kind": "G_MERGED_EXCEPTIONAL",
+              "orders": {
+                "m": 0,
+                "r": 2,
+                "s": 1
+              },
+              "point": "1/2"
+            }
+          ],
+          "critical_points": [
+            "-1/2",
+            "1/2"
+          ],
+          "distinct_real_zero_count": 0,
+          "frozen_expected_critical_points": [
+            "-1/2",
+            "1/2"
+          ],
+          "interval": [
+            "-1",
+            "1"
+          ],
+          "multiplicity_real_zero_count": 0,
+          "node_values": [
+            "-2423/240",
+            "-601/60",
+            "-599/60",
+            "-2377/240"
+          ],
+          "primitive_identity_verified": true,
+          "strict_sign_change_edges": 0
+        },
+        "sharp_sign_lower_bound": 0,
+        "transfer_bounds_verified": true
+      }
+    },
+    "component_combinatorics": {
+      "bounded_enumeration_only": true,
+      "maximum_turn_count": 8,
+      "minimum_internal_edge_slack": 0,
+      "valid_nonadjacent_wrong_patterns_checked": 141,
+      "valid_patterns_by_length": {
+        "1": 2,
+        "2": 3,
+        "3": 5,
+        "4": 8,
+        "5": 13,
+        "6": 21,
+        "7": 34,
+        "8": 55
+      }
+    },
+    "ordinary_residue_no_go_firewall": {
+      "epsilon": "1/64",
+      "factor_in_y": {
+        "minus": "(y-1/4)(y^2+y/4+1/16)",
+        "plus": "(y+1/4)(y^2-y/4+1/16)",
+        "quadratic_discriminant": "-3/16"
+      },
+      "interval": "[-1,1]",
+      "leading_jet_orientation_distinguishes_pair": true,
+      "minus": {
+        "active_component_count": 1,
+        "coarse_sign_lower_bound": 0,
+        "common_derivative_order_mass": 0,
+        "common_points": [],
+        "component_moment_rows": [
+          {
+            "component_index": 0,
+            "first_carrier_positive_part": "1/384",
+            "nonnegative_integer_lower_bound": 0,
+            "raw_moment_lower_bound": "0",
+            "second_moment": "1/147456",
+            "turn_count": 1
+          }
+        ],
+        "componentwise_moment_lower_bound": 0,
+        "derivative_real_zero_multiplicity": 5,
+        "eligible_odd_noncommon_turns": [
+          {
+            "P_leading_power": -5,
+            "P_leading_principal_coefficient": "-1/384",
+            "Q_leading_power": -9,
+            "Q_leading_principal_coefficient": "1/737280",
+            "critical_order": 5,
+            "good_turn": true,
+            "local_event": {
+              "P_pole_order": 5,
+              "P_principal_part": [
+                {
+                  "coefficient": "-1/384",
+                  "power": -5
+                },
+                {
+                  "coefficient": "0",
+                  "power": -4
+                },
+                {
+                  "coefficient": "0",
+                  "power": -3
+                },
+                {
+                  "coefficient": "0",
+                  "power": -2
+                },
+                {
+                  "coefficient": "0",
+                  "power": -1
+                }
+              ],
+              "P_residue": "0",
+              "P_unit_quotient": [
+                "-1/384",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "Q_pole_order": 9,
+              "Q_principal_part": [
+                {
+                  "coefficient": "1/737280",
+                  "power": -9
+                },
+                {
+                  "coefficient": "0",
+                  "power": -8
+                },
+                {
+                  "coefficient": "0",
+                  "power": -7
+                },
+                {
+                  "coefficient": "0",
+                  "power": -6
+                },
+                {
+                  "coefficient": "0",
+                  "power": -5
+                },
+                {
+                  "coefficient": "0",
+                  "power": -4
+                },
+                {
+                  "coefficient": "-1/5760",
+                  "power": -3
+                },
+                {
+                  "coefficient": "0",
+                  "power": -2
+                },
+                {
+                  "coefficient": "0",
+                  "power": -1
+                }
+              ],
+              "Q_residue": "0",
+              "Q_unit_quotient": [
+                "1/737280",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "-1/5760",
+                "0",
+                "0"
+              ],
+              "merged_support_kind": "G_MERGED_EXCEPTIONAL",
+              "orders": {
+                "m": 0,
+                "r": 5,
+                "s": 4
+              },
+              "point": "0"
+            },
+            "ordinary_P_residue": "0",
+            "ordinary_Q_residue": "0",
+            "point": "0",
+            "rho_jet": "-1/384",
+            "wrong_turn": false
+          }
+        ],
+        "eligible_turn_support_count": 1,
+        "exact_multiplicity_identity": "5=0+1+4",
+        "global_jet_moment_lower_bound": "0",
+        "good_turn_count": 1,
+        "jet_coherence": "1",
+        "jet_first_carrier": "1/384",
+        "jet_second_moment": "1/147456",
+        "name": "x6_minus_1_over_64",
+        "neutral_even_noncommon_events": [],
+        "omitted_derivative_multiplicity_defect": 4,
+        "primitive_zero_count": {
+          "common_parent_multiplicity": 0,
+          "common_support_count": 0,
+          "critical_events": [
+            {
+              "P_pole_order": 5,
+              "P_principal_part": [
+                {
+                  "coefficient": "-1/384",
+                  "power": -5
+                },
+                {
+                  "coefficient": "0",
+                  "power": -4
+                },
+                {
+                  "coefficient": "0",
+                  "power": -3
+                },
+                {
+                  "coefficient": "0",
+                  "power": -2
+                },
+                {
+                  "coefficient": "0",
+                  "power": -1
+                }
+              ],
+              "P_residue": "0",
+              "P_unit_quotient": [
+                "-1/384",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "Q_pole_order": 9,
+              "Q_principal_part": [
+                {
+                  "coefficient": "1/737280",
+                  "power": -9
+                },
+                {
+                  "coefficient": "0",
+                  "power": -8
+                },
+                {
+                  "coefficient": "0",
+                  "power": -7
+                },
+                {
+                  "coefficient": "0",
+                  "power": -6
+                },
+                {
+                  "coefficient": "0",
+                  "power": -5
+                },
+                {
+                  "coefficient": "0",
+                  "power": -4
+                },
+                {
+                  "coefficient": "-1/5760",
+                  "power": -3
+                },
+                {
+                  "coefficient": "0",
+                  "power": -2
+                },
+                {
+                  "coefficient": "0",
+                  "power": -1
+                }
+              ],
+              "Q_residue": "0",
+              "Q_unit_quotient": [
+                "1/737280",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "-1/5760",
+                "0",
+                "0"
+              ],
+              "merged_support_kind": "G_MERGED_EXCEPTIONAL",
+              "orders": {
+                "m": 0,
+                "r": 5,
+                "s": 4
+              },
+              "point": "0"
+            }
+          ],
+          "critical_points": [
+            "0"
+          ],
+          "distinct_real_zero_count": 2,
+          "frozen_expected_critical_points": [
+            "0"
+          ],
+          "interval": [
+            "-1",
+            "1"
+          ],
+          "multiplicity_real_zero_count": 2,
+          "node_values": [
+            "63/64",
+            "-1/64",
+            "63/64"
+          ],
+          "primitive_identity_verified": true,
+          "strict_sign_change_edges": 2
+        },
+        "sharp_sign_lower_bound": 0,
+        "transfer_bounds_verified": true
+      },
+      "ordinary_global_residue_oracle": {
+        "P_oracle": "[w^2] w P(1/w)",
+        "Q_oracle": "[w^4] w^3 Q(1/w)",
+        "sum_finite_P_residues": "0",
+        "sum_finite_Q_residues": "0"
+      },
+      "ordinary_residue_data_insufficient": true,
+      "plus": {
+        "active_component_count": 1,
+        "coarse_sign_lower_bound": -2,
+        "common_derivative_order_mass": 0,
+        "common_points": [],
+        "component_moment_rows": [
+          {
+            "component_index": 0,
+            "first_carrier_positive_part": "0",
+            "nonnegative_integer_lower_bound": 0,
+            "raw_moment_lower_bound": "-2",
+            "second_moment": "1/147456",
+            "turn_count": 1
+          }
+        ],
+        "componentwise_moment_lower_bound": 0,
+        "derivative_real_zero_multiplicity": 5,
+        "eligible_odd_noncommon_turns": [
+          {
+            "P_leading_power": -5,
+            "P_leading_principal_coefficient": "1/384",
+            "Q_leading_power": -9,
+            "Q_leading_principal_coefficient": "1/737280",
+            "critical_order": 5,
+            "good_turn": false,
+            "local_event": {
+              "P_pole_order": 5,
+              "P_principal_part": [
+                {
+                  "coefficient": "1/384",
+                  "power": -5
+                },
+                {
+                  "coefficient": "0",
+                  "power": -4
+                },
+                {
+                  "coefficient": "0",
+                  "power": -3
+                },
+                {
+                  "coefficient": "0",
+                  "power": -2
+                },
+                {
+                  "coefficient": "0",
+                  "power": -1
+                }
+              ],
+              "P_residue": "0",
+              "P_unit_quotient": [
+                "1/384",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "Q_pole_order": 9,
+              "Q_principal_part": [
+                {
+                  "coefficient": "1/737280",
+                  "power": -9
+                },
+                {
+                  "coefficient": "0",
+                  "power": -8
+                },
+                {
+                  "coefficient": "0",
+                  "power": -7
+                },
+                {
+                  "coefficient": "0",
+                  "power": -6
+                },
+                {
+                  "coefficient": "0",
+                  "power": -5
+                },
+                {
+                  "coefficient": "0",
+                  "power": -4
+                },
+                {
+                  "coefficient": "1/5760",
+                  "power": -3
+                },
+                {
+                  "coefficient": "0",
+                  "power": -2
+                },
+                {
+                  "coefficient": "0",
+                  "power": -1
+                }
+              ],
+              "Q_residue": "0",
+              "Q_unit_quotient": [
+                "1/737280",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1/5760",
+                "0",
+                "0"
+              ],
+              "merged_support_kind": "G_MERGED_EXCEPTIONAL",
+              "orders": {
+                "m": 0,
+                "r": 5,
+                "s": 4
+              },
+              "point": "0"
+            },
+            "ordinary_P_residue": "0",
+            "ordinary_Q_residue": "0",
+            "point": "0",
+            "rho_jet": "1/384",
+            "wrong_turn": true
+          }
+        ],
+        "eligible_turn_support_count": 1,
+        "exact_multiplicity_identity": "5=0+1+4",
+        "global_jet_moment_lower_bound": "-2",
+        "good_turn_count": 0,
+        "jet_coherence": "0",
+        "jet_first_carrier": "-1/384",
+        "jet_second_moment": "1/147456",
+        "name": "x6_plus_1_over_64",
+        "neutral_even_noncommon_events": [],
+        "omitted_derivative_multiplicity_defect": 4,
+        "primitive_zero_count": {
+          "common_parent_multiplicity": 0,
+          "common_support_count": 0,
+          "critical_events": [
+            {
+              "P_pole_order": 5,
+              "P_principal_part": [
+                {
+                  "coefficient": "1/384",
+                  "power": -5
+                },
+                {
+                  "coefficient": "0",
+                  "power": -4
+                },
+                {
+                  "coefficient": "0",
+                  "power": -3
+                },
+                {
+                  "coefficient": "0",
+                  "power": -2
+                },
+                {
+                  "coefficient": "0",
+                  "power": -1
+                }
+              ],
+              "P_residue": "0",
+              "P_unit_quotient": [
+                "1/384",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "Q_pole_order": 9,
+              "Q_principal_part": [
+                {
+                  "coefficient": "1/737280",
+                  "power": -9
+                },
+                {
+                  "coefficient": "0",
+                  "power": -8
+                },
+                {
+                  "coefficient": "0",
+                  "power": -7
+                },
+                {
+                  "coefficient": "0",
+                  "power": -6
+                },
+                {
+                  "coefficient": "0",
+                  "power": -5
+                },
+                {
+                  "coefficient": "0",
+                  "power": -4
+                },
+                {
+                  "coefficient": "1/5760",
+                  "power": -3
+                },
+                {
+                  "coefficient": "0",
+                  "power": -2
+                },
+                {
+                  "coefficient": "0",
+                  "power": -1
+                }
+              ],
+              "Q_residue": "0",
+              "Q_unit_quotient": [
+                "1/737280",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1/5760",
+                "0",
+                "0"
+              ],
+              "merged_support_kind": "G_MERGED_EXCEPTIONAL",
+              "orders": {
+                "m": 0,
+                "r": 5,
+                "s": 4
+              },
+              "point": "0"
+            }
+          ],
+          "critical_points": [
+            "0"
+          ],
+          "distinct_real_zero_count": 0,
+          "frozen_expected_critical_points": [
+            "0"
+          ],
+          "interval": [
+            "-1",
+            "1"
+          ],
+          "multiplicity_real_zero_count": 0,
+          "node_values": [
+            "65/64",
+            "1/64",
+            "65/64"
+          ],
+          "primitive_identity_verified": true,
+          "strict_sign_change_edges": 0
+        },
+        "sharp_sign_lower_bound": -2,
+        "transfer_bounds_verified": true
+      },
+      "same_derivative_support_and_orders": true,
+      "same_endpoint_signs": true
+    }
+  },
+  "classification": "PASS_T105104_JET_COHERENCE_REVERSE_ROLLE",
+  "content_hash_mode": "LF_NORMALIZED_TEXT",
+  "content_sha256": {
+    "PACKET_METADATA_105104.json": "2da33074808318144f5897a35cf4808eb077bd7b88d96dd34cbe27c1a7f2e76b",
+    "claims/lemmas/L-105104-jet-coherence-reverse-rolle-transfer.md": "3326557ec73519473519422327e557b9bb47566edffc235caccfe4130a6139ad",
+    "claims/methodology/M-105104-jet-transfer-review-contract.md": "34af3a1f3b96aa8e2613828b278a2e2b8a61172b5aeb65c7a5ea45943bc1cbf2",
+    "claims/refutations/R-105104-ordinary-residues-cannot-see-flat-turn-orientation.md": "439163bb2129700680affb294af2cb1f6f9ea5362073403b33da23799509eaa5",
+    "claims/theorems/T-105104-multiplicity-aware-transfer-frontier.md": "8daaf4df86d036df917bf3dce5ac550ba046d5af427da70940fd1bc013c3919e",
+    "experiments/X-105104-jet-coherence-reverse-rolle/tests/test_verify.py": "5c779ec3a6695f770f82869ae3059118069e9c49abdc4c3c1829ade483a52d53",
+    "experiments/X-105104-jet-coherence-reverse-rolle/verify.py": "dcc3f45dd5936b1486d250d864886f2e127b03ff968e61d397cb4bab612c26a6"
+  },
+  "dependency_checkpoint": {
+    "artifact_matches_live_producer": true,
+    "commit": "eafd6d86055179e5b2fa9b3747ea740b8609ba64",
+    "proof_object_sha256": "e208cceb8b09c639f6587024e5bef334a37d650435453515f68b8f42512c53c2"
+  },
+  "heavy_computation_run": false,
+  "proof_object_sha256": "bcd3ac0f644c49e47be6b2e019a57b2e7d2b8b6df14dfec97da854cb44b3bed6",
+  "schema": "riemann.t105104.jet-coherence-reverse-rolle.v1",
+  "scope": {
+    "arbitrary_multiplicity_real_interval_identity_proved": true,
+    "common_critical_multiplicity_accounted": true,
+    "jet_coherence_transfer_bound_proved": true,
+    "jet_data_reconstructed_from_global_boundary_flux": false,
+    "odd_turn_jet_sign_dictionary_proved": true,
+    "ordinary_residue_only_extension_refuted": true,
+    "rcmv104530_proved": false,
+    "rh_established": false,
+    "strict_xi_jet_coherence_margin_proved": false,
+    "xi_effective_turning_proportion_proved": false,
+    "xi_jet_moments_estimated": false,
+    "xi_multiplicity_defect_controlled": false
+  },
+  "source": {
+    "checkpoint_base": "eafd6d86055179e5b2fa9b3747ea740b8609ba64",
+    "post_freeze_context_head": "10bba584c01277e880aaa21e1fea09f396ca7246",
+    "post_freeze_context_pr": 720
+  },
+  "verdict": "PASS_T105104_JET_COHERENCE_REVERSE_ROLLE"
+}

@@ -1,0 +1,190 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL_INTERVAL_GEOMETRY_AND_SYMBOLIC_INEQUALITY",
+  "checks": {
+    "forbidden_control_characters": [],
+    "geometry_fixture": {
+      "bad_measures": {
+        "T": "3/2",
+        "eta": "3/2"
+      },
+      "closed_disks": [
+        {
+          "radius": "1/2",
+          "x": "2",
+          "y": "1"
+        },
+        {
+          "radius": "1/4",
+          "x": "-3",
+          "y": "-2"
+        },
+        {
+          "radius": "1/4",
+          "x": "2",
+          "y": "-1"
+        }
+      ],
+      "deltas": {
+        "T": "3",
+        "eta": "3"
+      },
+      "good_measures": {
+        "T": "3/2",
+        "eta": "3/2"
+      },
+      "merged_bad_T": [
+        [
+          "3/2",
+          "5/2"
+        ],
+        [
+          "11/4",
+          "13/4"
+        ]
+      ],
+      "merged_bad_eta": [
+        [
+          "1/2",
+          "3/2"
+        ],
+        [
+          "7/4",
+          "9/4"
+        ]
+      ],
+      "safe_product_measure": "9/4",
+      "selected_safe_pair": {
+        "T": "7/2",
+        "eta": "5/2"
+      },
+      "strict_total_radius_gate_holds": true,
+      "supporting_line_product_is_only_sufficient_for_finite_edges": true,
+      "total_radius": "1",
+      "twice_total_radius": "2",
+      "windows": {
+        "T": [
+          "1",
+          "4"
+        ],
+        "eta": [
+          "0",
+          "3"
+        ]
+      }
+    },
+    "metadata_ledger": {
+      "checkpoint_base": "c071fc31168847b901542be04ed6fc30c60b29d9",
+      "dependency_commit": "aa7b44947f8b0f9c37bb8adc2141079b57729d04",
+      "dependency_digest": "15ff7ba8056a9beb5e942945c9f92dcce566f7d737bc04f8f2db6895109c3284",
+      "heavy_computation_run": false,
+      "rh_established": false
+    },
+    "mutation_firewalls": {
+      "cartan_zero_cover_is_complete_actual_pole_manifest": false,
+      "cofinal_xi_safe_shell_established": false,
+      "nonstrict_total_radius_gate_suffices": false,
+      "outer_selector_intermediate_edge_equality_is_guaranteed": false,
+      "raw_route_requires_F_zero_disks": false,
+      "rcmv104530_proved": false,
+      "restricted_average_has_no_normalization_loss": false,
+      "rh_established": false,
+      "selectors_may_be_rebuilt_after_parameter_selection": false,
+      "supporting_line_product_exhausts_all_safe_rectangles": false,
+      "twice_total_radius_is_the_exact_projection_measure": false,
+      "unsafe_raw_singularities_need_no_integrability_check": false
+    },
+    "raw_quotient_ledger": {
+      "F_zero_disks_required": false,
+      "denominator_zero_cover_required": [
+        "F'",
+        "F''"
+      ],
+      "loads": {
+        "M_0": "6",
+        "a_1": "2",
+        "a_2": "3"
+      },
+      "post_cancellation_minimality_claimed": false,
+      "quotient_sup_bounds": {
+        "F/F'": "3",
+        "F^2/(F'F'')": "6"
+      },
+      "selected_edge_length": "24",
+      "weighted_integral_bounds": {
+        "using_I_1": "15",
+        "using_I_2": "42",
+        "using_b_1": "72",
+        "using_b_2": "288"
+      }
+    },
+    "selector_firewall": {
+      "fixed_outer_carriers_required_for_shell_average": true,
+      "outer_optimal_selector_constant_modulus_on_intermediate_edge_is_guaranteed": false,
+      "outer_selector_upper_norm_bound_remains_available": true,
+      "rebuilding_after_rectangle_selection_is_allowed": false,
+      "same_domain_optimal_selector_constant_modulus": true
+    },
+    "sharpness_fixture": {
+      "Delta": "2",
+      "Delta_equals_2S": true,
+      "S": "1",
+      "bad_measure": "2",
+      "disk": "closed D(2,1)",
+      "nonstrict_gate_is_insufficient": true,
+      "parameter_interval": "(1,3)",
+      "safe_measure": "0",
+      "sharpness_scope": "coordinatewise using only total radius"
+    },
+    "tonelli_ledger": {
+      "aggregate": "one prescribed nonnegative measurable cost q(T,eta)",
+      "exact_kappa": "4",
+      "full_integral_Q": "18",
+      "full_parameter_measure": "9",
+      "full_shell_integrability_required_for_kappa_comparison": true,
+      "safe_only_fallback": "average the restricted integral without citing the unrestricted shell budget",
+      "safe_product_measure": "9/4",
+      "selected_safe_bound": "8",
+      "total_radius_relaxed_kappa": "9",
+      "unrestricted_mean": "2",
+      "unsafe_raw_singularities_are_automatically_integrable": false
+    }
+  },
+  "classification": "PASS_T105115_COMMON_SAFE_RECTANGLE",
+  "content_hash_mode": "LF_NORMALIZED_TEXT",
+  "content_sha256": {
+    "PACKET_METADATA_105115.json": "2c6d3e678a6f62efb66f5d6fa1112248794e26b80183e2946c0c67794e884873",
+    "claims/lemmas/L-105115-common-safe-rectangle-projection.md": "88f3bc48bcdb68bf696addbf0534c98845fc7ca72202607b82ad55b584f2cc3c",
+    "claims/methodology/M-105115-common-safe-rectangle-review-contract.md": "7184b029e38000c24e6a783e5e0d12477aa9069b480ebc8957829ebc1d77ddf7",
+    "claims/refutations/R-105115-nonstrict-radius-gate-is-insufficient.md": "3da14652e1171531f361ad0703991d594e0ffd7a847822882b81751a01795998",
+    "claims/theorems/T-105115-common-safe-rectangle-frontier.md": "23a13dba06dfa6e3c1ee4048bd8de272c2c5fc08167b249e54f2525046de566a",
+    "experiments/X-105115-common-safe-rectangle/tests/test_verify.py": "04039e1db851a53d0d06596a3cecc02036a79d8a463d209f7e107da870947d61",
+    "experiments/X-105115-common-safe-rectangle/verify.py": "32d8edc51942a9a12749f65d6647b9e6877a6413e6a5b2044763e099a468550e"
+  },
+  "dependency_checkpoint": {
+    "artifact_matches_live_producer": true,
+    "commit": "aa7b44947f8b0f9c37bb8adc2141079b57729d04",
+    "path": "experiments/X-105114-anchored-equal-disk-collar",
+    "proof_object_sha256": "15ff7ba8056a9beb5e942945c9f92dcce566f7d737bc04f8f2db6895109c3284"
+  },
+  "heavy_computation_run": false,
+  "proof_object_sha256": "b9e9d4c77045189e1c807b056f5b2e257d22a1bdf45e5fc824a652e710ac7aaf",
+  "schema": "riemann.t105115.common-safe-rectangle.v1",
+  "scope": {
+    "cofinal_xi_safe_shell_established": false,
+    "complete_actual_xi_manifests_authenticated": false,
+    "exact_safe_product_measure_verified": true,
+    "finite_supporting_line_projection_verified": true,
+    "full_shell_integrability_authenticated_for_xi": false,
+    "raw_quotient_edge_envelopes_verified": true,
+    "rcmv104530_proved": false,
+    "restricted_tonelli_normalization_verified": true,
+    "rh_established": false,
+    "selector_margin_absorption_proved": false,
+    "strict_total_radius_gate_verified": true,
+    "strict_xi_jet_coherence_proved": false
+  },
+  "source": {
+    "checkpoint_base": "c071fc31168847b901542be04ed6fc30c60b29d9"
+  },
+  "verdict": "PASS_T105115_COMMON_SAFE_RECTANGLE"
+}

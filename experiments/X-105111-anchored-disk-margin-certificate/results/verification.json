@@ -1,0 +1,279 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL_WITH_SYMBOLIC_LOG_VARIATION_IDENTITIES",
+  "checks": {
+    "anchored_log_drop": {
+      "anchor": "1/2",
+      "anchor_included_so_drop_nonnegative": true,
+      "arc": "[0,1]",
+      "exact_downward_ratio": "7/6",
+      "exact_drop": "log(7/6)",
+      "function": "G(z)=1-z/4",
+      "nonvanishing_authenticated_before_log_division": true,
+      "real_log_variation_no_larger_than_complex_variation": true,
+      "reverse_subarc_modulus_ratio": "8/7",
+      "signed_subarc_integral_used": true,
+      "total_variation": "log(4/3)",
+      "total_variation_ratio": "4/3",
+      "values_left_anchor_right": [
+        "1",
+        "7/8",
+        "3/4"
+      ]
+    },
+    "finite_anchor_counterfamily": {
+      "Q_at_nonsample": "-315/4096",
+      "Q_coefficients": [
+        "0",
+        "0",
+        "1/4",
+        "0",
+        "-5/4",
+        "0",
+        "1"
+      ],
+      "Q_prime_at_nonsample": "-159/512",
+      "Q_square_at_nonsample": "99225/16777216",
+      "anchor_rows": [
+        {
+          "A": "5/4",
+          "L": "1/2",
+          "L_prime": "1",
+          "L_times_A": "5/8",
+          "point": "1/2"
+        },
+        {
+          "A": "2",
+          "L": "1",
+          "L_prime": "1",
+          "L_times_A": "2",
+          "point": "1"
+        }
+      ],
+      "both_nonsample_denominators_converge_to_zero": true,
+      "bound_probe_n": 8,
+      "collapse_linear_coefficient": "212/35",
+      "collapse_sequence": "C_n=n/Q(zeta)^2",
+      "complete_first_manifest_is_stable": true,
+      "edge": "[1/2,1]",
+      "exp_minus_n_bound": "6/n^3",
+      "family_has_finite_order": false,
+      "family_is_fixed_function": false,
+      "family_is_xi_class": false,
+      "first_optimal_selector": "1",
+      "first_optimal_selector_norm": "1",
+      "first_target_residue": "1",
+      "global_first_event_manifest": [
+        {
+          "order": 1,
+          "point": "0",
+          "role": "target"
+        }
+      ],
+      "nonsample": "3/4",
+      "nonsample_A_formula": "zeta^2*exp(-2*n)+(1-(212/35)*n)*exp(-n)",
+      "nonsample_L_formula": "zeta*exp(-n)",
+      "probe_first_absolute_bound": "9/1024",
+      "probe_second_absolute_bound": "84033/143360",
+      "product_log_drop_is_uniformly_bounded": false,
+      "sample_set": [
+        "1/2",
+        "1"
+      ],
+      "second_derivative_manifest_is_stable": false
+    },
+    "finite_disk_cover": {
+      "centers": [
+        "1/4",
+        "3/4"
+      ],
+      "closed_disks_inside_holomorphy_domain": true,
+      "complete_edge_including_endpoints_covered": true,
+      "first_center_values": [
+        "15/16",
+        "13/16"
+      ],
+      "first_derivative_suprema": [
+        "1/4",
+        "1/4"
+      ],
+      "first_slacks": [
+        "7/8",
+        "3/4"
+      ],
+      "minimum_first_slack": "3/4",
+      "minimum_product_slack": "841/4096",
+      "product_center_values": [
+        "2415/4096",
+        "1365/4096"
+      ],
+      "product_derivative_suprema": [
+        "11/16",
+        "131/256"
+      ],
+      "product_majorant_coefficients": [
+        [
+          "611/256",
+          "45/8",
+          "3"
+        ],
+        [
+          "443/256",
+          "39/8",
+          "3"
+        ]
+      ],
+      "product_slacks": [
+        "1711/4096",
+        "841/4096"
+      ],
+      "product_suprema_exact_by_positive_coefficient_attainment": true,
+      "radius": "1/4",
+      "real_intervals": [
+        [
+          "0",
+          "1/2"
+        ],
+        [
+          "1/2",
+          "1"
+        ]
+      ]
+    },
+    "first_product_independence": {
+      "A": "(1-a*z^2)^2-2*a*z",
+      "L": "1-a*z^2",
+      "family": "F_a=exp(z-a*z^3/3)",
+      "first_margin": "3/4",
+      "first_margin_alone_controls_product_margin": false,
+      "first_margin_stays_positive_at_product_collapse": true,
+      "parameter_probe": "1/4",
+      "parameter_range": "0<a<2-sqrt(3)",
+      "product_factor": "1/16",
+      "product_factor_boundary_polynomial": "1-4*a+a^2",
+      "product_margin": "3/64"
+    },
+    "mutation_firewalls": {
+      "arbitrary_weight_has_constant_modulus_selector_equality": false,
+      "closed_disks_may_leave_the_holomorphy_domain": false,
+      "cofinal_green_gram_margin_absorption_proved": false,
+      "complex_log_variation_is_always_sharp": false,
+      "counterfamily_has_uniform_product_log_drop": false,
+      "counterfamily_is_fixed_function_cofinal_xi_model": false,
+      "disk_cover_may_omit_edge_endpoints": false,
+      "downward_drop_equals_total_variation_for_every_anchor": false,
+      "finite_anchors_determine_between_anchor_margins": false,
+      "first_denominator_derivative_bound_certifies_product_margin": false,
+      "first_margin_controls_product_margin": false,
+      "log_division_is_valid_before_nonvanishing_authentication": false,
+      "nonpositive_disk_slack_certifies_nonvanishing": false,
+      "rh_established": false,
+      "stable_first_manifest_implies_stable_second_manifest": false,
+      "xi_anchor_or_disk_data_supplied": false
+    },
+    "normalized_denominator_identities": {
+      "density_probe": "1/3",
+      "first_density": "6/7",
+      "first_density_formula": "6/7",
+      "first_derivative_identity": "G1_prime=A-L^2",
+      "identities_verified_by_polynomial_coefficients": true,
+      "normalized_second_coefficients": [
+        "3",
+        "2",
+        "2",
+        "-4",
+        "1"
+      ],
+      "normalized_third_coefficients": [
+        "5",
+        "12",
+        "-9",
+        "2",
+        "-9",
+        "6",
+        "-1"
+      ],
+      "probe_log_derivative_coefficients": [
+        "1",
+        "2",
+        "-1"
+      ],
+      "product_density": "1521/1064",
+      "product_density_formula": "1521/1064",
+      "product_derivative_identity": "G12_prime=A^2+L*B-2*L^2*A"
+    },
+    "rational_margin_fixture": {
+      "A": "u^2-1/4",
+      "B": "u^3-3*u/4",
+      "G12": "u*(u^2-1/4)",
+      "G12_prime": "-(3*u^2-1/4)/4",
+      "L": "u",
+      "anchor_G12": "3/4",
+      "anchor_L": "1",
+      "both_monotone_positive": true,
+      "edge": "[0,1]",
+      "first_drop": "log(4/3)",
+      "first_drop_ratio": "4/3",
+      "first_margin": "3/4",
+      "function": "exp(z-z^2/8)",
+      "product_drop": "log(16/5)",
+      "product_drop_ratio": "16/5",
+      "product_margin": "15/64",
+      "u": "1-z/4"
+    },
+    "sharp_anchor_loss": {
+      "anchor_value": "1",
+      "drop": "log(4)",
+      "drop_ratio": "4",
+      "exponential_loss_attained": true,
+      "family": "F_q=exp(z-(1-q)*z^2/2)",
+      "general_drop": "log(1/q)",
+      "margin": "1/4",
+      "q_probe": "1/4"
+    }
+  },
+  "classification": "PASS_T105111_ANCHORED_DISK_MARGIN_CERTIFICATE",
+  "content_hash_mode": "LF_NORMALIZED_TEXT",
+  "content_sha256": {
+    "PACKET_METADATA_105111.json": "9a67fe6588b92a7542300551acf8a093026d84e472ad96a203de8655d70406d4",
+    "claims/lemmas/L-105111-anchored-disk-margin-certificates.md": "d68fabc2b1e02d85e0df8c722b9f2bea36cc299c0dc236a0fa4e702563ccbe48",
+    "claims/methodology/M-105111-quantitative-margin-review-contract.md": "fd9356bb4110f40a98092c51111248c317fe7d7b8cf094f1b9fe99fd20772b9b",
+    "claims/refutations/R-105111-finite-anchors-do-not-give-quotient-margins.md": "ebb4da408c2a8f973beebb747f603dbc04ada01ae9884b021ebd600516ba7af3",
+    "claims/theorems/T-105111-certified-absolute-edge-frontier.md": "9bf75e419b098075eaa542029d8670bb40c20359cbc69e8bbe075298fc3f220b",
+    "experiments/X-105111-anchored-disk-margin-certificate/tests/test_verify.py": "2d79eb593f4f92aecd7b324c83d64106fe84024102bc2db75279551bf457b71b",
+    "experiments/X-105111-anchored-disk-margin-certificate/verify.py": "c293fd2383f8434e25d7532ad6c1334e02a6a298512d7ef87bb7dff64018f20a"
+  },
+  "dependency_checkpoint": {
+    "artifact_matches_live_producer": true,
+    "commit": "b52e4b4dceefb0b6c56b0ffe303d4ca01ffe9c56",
+    "path": "experiments/X-105110-principal-part-edge-cancellation",
+    "proof_object_sha256": "3f0286c2d574e8252fe9903f4f62d86e510275bdf4a1a085e3f232873aec9532"
+  },
+  "heavy_computation_run": false,
+  "proof_object_sha256": "7bafdd3d8fb379e8d8de2cd30df8b96331378d7e4f244bb801439493a2e132cd",
+  "schema": "riemann.t105111.anchored-disk-margin-certificate.v1",
+  "scope": {
+    "cofinal_green_gram_selector_growth_absorbed": false,
+    "exact_anchored_log_drop_verified": true,
+    "finite_disk_positive_slack_certificate_verified": true,
+    "normalized_derivative_identities_through_F_third_verified": true,
+    "rational_first_product_margin_fixture_verified": true,
+    "rcmv104530_proved": false,
+    "rh_established": false,
+    "selector_equality_restricted_to_same_selector_domain_boundary_arc": true,
+    "stable_first_manifest_anchor_only_refutation_verified": true,
+    "strict_xi_jet_coherence_margin_proved": false,
+    "total_log_variation_sufficient_certificate_verified": true,
+    "xi_anchor_values_authenticated": false,
+    "xi_disk_count_and_minimum_slack_proved": false,
+    "xi_log_variation_bounds_proved": false,
+    "xi_pole_subtracted_remainder_and_corner_ledger_proved": false,
+    "xi_third_normalized_derivative_bounds_proved": false,
+    "xi_zero_free_disk_cover_authenticated": false
+  },
+  "source": {
+    "checkpoint_base": "b52e4b4dceefb0b6c56b0ffe303d4ca01ffe9c56",
+    "post_freeze_context_head": "10bba584c01277e880aaa21e1fea09f396ca7246",
+    "post_freeze_context_pr": 720
+  },
+  "verdict": "PASS_T105111_ANCHORED_DISK_MARGIN_CERTIFICATE"
+}

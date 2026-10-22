@@ -1,0 +1,42 @@
+{
+  "schema": "riemann.t105113.packet.v1",
+  "created": "2026-08-23",
+  "repository": "gfreund123/riemann",
+  "branch": "codex/105100-residue-second-moment",
+  "checkpoint_base_sha": "53c3a24b23335e7b4e77a703b2c3c224821ed749",
+  "main_registry_sha": "852d8aa05c701ea7818ce8a50543e68987fef5cc",
+  "classification": "exact finite buffered-selector shell-average ledger with Xi shell bounds open",
+  "claims": [
+    "L-105113",
+    "T-105113",
+    "R-105113",
+    "M-105113"
+  ],
+  "arithmetic_class": "EXACT_RATIONAL_POLYNOMIAL_AND_RECTANGULAR_INTEGRAL",
+  "heavy_computation_run": false,
+  "dependency_checkpoint": {
+    "claim": "T-105112",
+    "commit": "53c3a24b23335e7b4e77a703b2c3c224821ed749",
+    "path": "experiments/X-105112-selector-domain-repair",
+    "proof_object_sha256": "3748777ede886502e57c6ad77777807b11b98104a8ecba04b60f162b10e2b19c"
+  },
+  "proved_or_supplied_for_review": [
+    "fixed-core contour charges from complete outer actual-pole manifests",
+    "exact signed two-parameter shell-average identity with coordinate-correct triangular weights",
+    "exact Tonelli mean and simultaneous good-rectangle selection for every prescribed nonnegative weight pair",
+    "inverse-width pairing of the vertical shell with Delta_T and horizontal shell with Delta_eta",
+    "exact cubic charge jumps for core-only selectors and invariant charges for complete-buffer selectors",
+    "conditional cofinal residue-coherence criterion retaining the full weighted selector-carrier shell cost"
+  ],
+  "open": [
+    "independent exact-SHA review",
+    "authenticated complete actual Xi manifests on a cofinal sequence",
+    "cofinal weighted Xi shell-budget estimates including selector growth",
+    "positive signed Xi first-moment lower bound",
+    "multiplicity-defect control and complete zero-count comparison",
+    "strict Xi jet coherence",
+    "RCMV104530",
+    "Riemann Hypothesis"
+  ],
+  "rh_established": false
+}
