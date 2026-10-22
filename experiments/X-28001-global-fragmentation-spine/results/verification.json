@@ -1,0 +1,17 @@
+{
+  "schema": "riemann.x28001.global-fragmentation-spine.v1",
+  "verdict": "PASS_EXACT_GLOBAL_FRAGMENTATION_SPINE_ALGEBRA",
+  "stochastic_rows": 255,
+  "green_rows": 51,
+  "first_entrance_rows": 51,
+  "quarter_balanced_tree_rows": 16382,
+  "top_fifth_derivative_lower_bound": ">1/25",
+  "abel_witnesses": [
+    "-1",
+    "-13/16",
+    "-91/256",
+    "-1168054960769/4096"
+  ],
+  "verifier_sha256": "1e358254d5735b5b6d09415642baa4191841474de57652f814740dbeadd6bfcc",
+  "proof_boundary": "Exact finite algebra and rational interval certificate only; GFEP and RH are not proved."
+}

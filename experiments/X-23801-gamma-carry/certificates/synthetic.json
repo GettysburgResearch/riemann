@@ -1,0 +1,8 @@
+{
+  "schema": "riemann.x23801-gamma-carry.certificate.v1",
+  "max_carry_n": 64,
+  "max_interval_m": 64,
+  "mellin_exponents": [1, 2, 3, 4, 5, 6],
+  "partial_cutoffs": [1, 2, 3, 8, 16, 64],
+  "expected_verdict": "PASS_EXACT_GAMMA_CARRY_ALGEBRA"
+}

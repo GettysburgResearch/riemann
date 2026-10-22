@@ -1,0 +1,50 @@
+{
+  "exact": {
+    "beta_floor_checks": 1225,
+    "limit": 50,
+    "min_sum_beta_over_q": [
+      1,
+      6
+    ],
+    "mobius_affine_checks": 1225
+  },
+  "inverse_recon": [
+    {
+      "classification": "BINARY64_RECONNAISSANCE_ONLY",
+      "coefficient_mass": 17.854365919631785,
+      "first_negative_indices": [],
+      "mass_ratio_to_8_sqrt_x": 0.9867973816415665,
+      "negative_count_below_minus_1e_12": 0,
+      "weighted_mass": 249.64218520622208,
+      "xmax": 1000
+    },
+    {
+      "classification": "BINARY64_RECONNAISSANCE_ONLY",
+      "coefficient_mass": 24.527842033148442,
+      "first_negative_indices": [],
+      "mass_ratio_to_8_sqrt_x": 1.0022694061582371,
+      "negative_count_below_minus_1e_12": 0,
+      "weighted_mass": 801.8155249265897,
+      "xmax": 10000
+    },
+    {
+      "classification": "BINARY64_RECONNAISSANCE_ONLY",
+      "coefficient_mass": 31.198443866899545,
+      "first_negative_indices": [],
+      "mass_ratio_to_8_sqrt_x": 1.00279872769144,
+      "negative_count_below_minus_1e_12": 0,
+      "weighted_mass": 2536.902411379132,
+      "xmax": 100000
+    }
+  ],
+  "proof_boundary": "Exact finite algebra is checked only in the exact section. The inverse and row-potential scans are binary64 reconnaissance and do not prove GCM, Carry Saturation, or RH.",
+  "row_potential_recon": {
+    "argmax_n": 2,
+    "classification": "BINARY64_RECONNAISSANCE_ONLY",
+    "constant": 1.0,
+    "limit": 5000,
+    "max_row_minus_n": -1.5690355937288492
+  },
+  "schema": "riemann.x23801-carry-packing-recon.v1",
+  "sha256": "360ec03a58044125a68fcf754e12277146420178c56c092ac43ca53aaa8579be"
+}
