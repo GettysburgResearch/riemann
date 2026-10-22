@@ -1,0 +1,9 @@
+{
+  "checks": {
+    "cayley_anticommutator": true,
+    "jacobi_one_cell_gap": "9/8",
+    "prime_julia_absorption_margin": "21587/38416"
+  },
+  "scope": "selected exact local identities only; no source-to-output domination theorem",
+  "verdict": "PASS_REVIEWER_B_OPERATOR_LOCAL_LIGHT_REPLAY"
+}

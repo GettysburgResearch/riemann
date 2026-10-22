@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "beta_hankel_determinants_alpha_half": {
+      "1": "1/2",
+      "2": "1/64",
+      "3": "1/32768",
+      "4": "1/268435456",
+      "5": "1/35184372088832",
+      "6": "1/73786976294838206464"
+    },
+    "pairwise_reciprocal_curvature": true,
+    "pairwise_schwarzian_curvature": true
+  },
+  "scope": "two-pole symbolic identities and fixed finite beta-Hankel orders only; no growing-order zero-frame theorem",
+  "verdict": "PASS_REVIEWER_B_LOEWNER_HANKEL_LIGHT_REPLAY"
+}

@@ -1,0 +1,12 @@
+{
+  "checks": {
+    "critical_orbit_curvature": "0",
+    "cross_curvature_factorization": true,
+    "global_declared_budget_upper_bound": "1.78367726511960157652183165551432162213602832043204803975260E-10",
+    "off_line_orbit_curvature": "-32*B**2*m**2/(B**2 + c**2 + 2*c*t + t**2)**3",
+    "reciprocal_concavity_sum_closure": true,
+    "three_node_determinant_factorization": true
+  },
+  "scope": "exact finite algebra and printed budget only; external zero verification and infinite Hadamard passage not rerun",
+  "verdict": "PASS_REVIEWER_B_XI_PICK_ORDER3_LIGHT_REPLAY"
+}

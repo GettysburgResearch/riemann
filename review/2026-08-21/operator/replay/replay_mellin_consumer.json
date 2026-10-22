@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "factor_67_multiplier_positive_half_plane_modulus": true,
+    "log_box_positive_real_samples": [
+      "50*sinh(7/50)/7",
+      "5*sinh(7/5)/7",
+      "2*sinh(7/2)/7"
+    ],
+    "two_row_common_zero_elimination": "-3*a**2 + 9*a - 6"
+  },
+  "scope": "finite symbolic algebra only; no arithmetic producer and no zeta-zero campaign",
+  "verdict": "PASS_REVIEWER_B_MELLIN_CONSUMER_LIGHT_REPLAY"
+}
