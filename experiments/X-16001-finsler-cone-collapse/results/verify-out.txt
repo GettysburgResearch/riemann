@@ -1,0 +1,68 @@
+X-16001 exact verifier - collapse of the target-pinned Finsler criterion
+==============================================================================
+
+-- P4: the minimal instance --------------------------------------------
+[PASS] P1[minimal] B_p|p^perp positive definite: inertia(B_p|p^perp) = (2, 0, 0), expected (2,0,0) for a positive target (positive target: True)
+[PASS] P3[minimal] explicit feasible rational c: c = 1; LDL^T pivots of U^T T_p(c) U all > 0 = True; inertia(T_p(c)) = (2, 0, 1); T_p(c) p = 0; T_p(c) is special with source recovered
+[PASS] P4a[minimal] every stated hypothesis of the finite gate holds: Q = 0 is special (source beta = 0): True; A_p = 0: True; p even under index reversal: True; eta^T p = 1
+[PASS] P4b[minimal] the finite Fourier sum has NO real zero: f(z) = 4/5 + 1/5 cos z; strict-positivity witness p_0 - 2*sum_{m>0} p_m = 3/5 > 0, so min_R f = 3/5 > 0. The zeros solve cos z = -4, i.e. z = pi +/- i*arccosh(4): all NONREAL.
+[PASS] P4c[minimal] the interpolation polynomial IS real-rooted: P(s) coefficients (ascending) = ['-4/5', '0', '1']; degree 2; exact Sturm count of distinct real roots = 2
+
+-- P2: inertia of the universal slope on mixed-sign targets -------------
+[PASS] P2[case0] inertia(B_p) = (n_+ - 1, n_-, 1): p = ['3', '-3', '1']; n_+ = 2, n_- = 1; got (1, 1, 1), expected (1, 1, 1)
+[PASS] P2[case1] inertia(B_p) = (n_+ - 1, n_-, 1): p = ['2', '-1', '-1', '1']; n_+ = 2, n_- = 2; got (1, 2, 1), expected (1, 2, 1)
+[PASS] P2[case2] inertia(B_p) = (n_+ - 1, n_-, 1): p = ['4/9', '-2/9', '8/9', '-2/9', '1/9']; n_+ = 3, n_- = 2; got (2, 2, 1), expected (2, 2, 1)
+[PASS] P2[case3] inertia(B_p) = (n_+ - 1, n_-, 1): p = ['-1', '-1', '3']; n_+ = 1, n_- = 2; got (0, 2, 1), expected (0, 2, 1)
+
+-- P5: Nevanlinna triviality of the polynomial model --------------------
+[PASS] P5[inst0] positive target => interpolation polynomial real-rooted and interlacing: n = 3, degree 2, distinct real roots 2, roots per node gap [1, 1] (each must be 1)
+[PASS] P5[inst1] positive target => interpolation polynomial real-rooted and interlacing: n = 3, degree 2, distinct real roots 2, roots per node gap [1, 1] (each must be 1)
+[PASS] P5[inst2] positive target => interpolation polynomial real-rooted and interlacing: n = 3, degree 2, distinct real roots 2, roots per node gap [1, 1] (each must be 1)
+[PASS] P5[inst3] positive target => interpolation polynomial real-rooted and interlacing: n = 5, degree 4, distinct real roots 4, roots per node gap [1, 1, 1, 1] (each must be 1)
+[PASS] P5[inst4] positive target => interpolation polynomial real-rooted and interlacing: n = 5, degree 4, distinct real roots 4, roots per node gap [1, 1, 1, 1] (each must be 1)
+[PASS] P5[inst5] positive target => interpolation polynomial real-rooted and interlacing: n = 7, degree 6, distinct real roots 6, roots per node gap [1, 1, 1, 1, 1, 1] (each must be 1)
+[PASS] P5[inst6] positive target => interpolation polynomial real-rooted and interlacing: n = 7, degree 6, distinct real roots 6, roots per node gap [1, 1, 1, 1, 1, 1] (each must be 1)
+
+-- P6: the collapse is independent of the source vector beta ------------
+[PASS] P1[beta=0] B_p|p^perp positive definite: inertia(B_p|p^perp) = (4, 0, 0), expected (4,0,0) for a positive target (positive target: True)
+[PASS] P3[beta=0] explicit feasible rational c: c = 1; LDL^T pivots of U^T T_p(c) U all > 0 = True; inertia(T_p(c)) = (4, 0, 1); T_p(c) p = 0; T_p(c) is special with source recovered
+[PASS] P1[beta=lambda] B_p|p^perp positive definite: inertia(B_p|p^perp) = (4, 0, 0), expected (4,0,0) for a positive target (positive target: True)
+[PASS] P3[beta=lambda] explicit feasible rational c: c = 2; LDL^T pivots of U^T T_p(c) U all > 0 = True; inertia(T_p(c)) = (4, 0, 1); T_p(c) p = 0; T_p(c) is special with source recovered
+[PASS] P1[beta=lambda^2] B_p|p^perp positive definite: inertia(B_p|p^perp) = (4, 0, 0), expected (4,0,0) for a positive target (positive target: True)
+[PASS] P3[beta=lambda^2] explicit feasible rational c: c = 2; LDL^T pivots of U^T T_p(c) U all > 0 = True; inertia(T_p(c)) = (4, 0, 1); T_p(c) p = 0; T_p(c) is special with source recovered
+[PASS] P1[beta=asymmetric] B_p|p^perp positive definite: inertia(B_p|p^perp) = (4, 0, 0), expected (4,0,0) for a positive target (positive target: True)
+[PASS] P3[beta=asymmetric] explicit feasible rational c: c = 4; LDL^T pivots of U^T T_p(c) U all > 0 = True; inertia(T_p(c)) = (4, 0, 1); T_p(c) p = 0; T_p(c) is special with source recovered
+
+-- P7: certified real-root census for the sampled radical target ---------
+[PASS] P7[M=2] certified real-root census of the sampled radical target (delta = 1/4): deg h = 2; distinct real roots of h over R = 2; in (-1,1) = 0; criterion 'all zeros of f real' requires 2 in (-1,1) => VIOLATED; real fraction = 0/2
+[PASS] P7[M=3] certified real-root census of the sampled radical target (delta = 1/4): deg h = 3; distinct real roots of h over R = 3; in (-1,1) = 0; criterion 'all zeros of f real' requires 3 in (-1,1) => VIOLATED; real fraction = 0/3
+[PASS] P7[M=4] certified real-root census of the sampled radical target (delta = 1/4): deg h = 4; distinct real roots of h over R = 4; in (-1,1) = 0; criterion 'all zeros of f real' requires 4 in (-1,1) => VIOLATED; real fraction = 0/4
+[PASS] P7[M=5] certified real-root census of the sampled radical target (delta = 1/4): deg h = 5; distinct real roots of h over R = 5; in (-1,1) = 0; criterion 'all zeros of f real' requires 5 in (-1,1) => VIOLATED; real fraction = 0/5
+[PASS] P7[M=6] certified real-root census of the sampled radical target (delta = 1/4): deg h = 6; distinct real roots of h over R = 6; in (-1,1) = 0; criterion 'all zeros of f real' requires 6 in (-1,1) => VIOLATED; real fraction = 0/6
+
+==============================================================================
+OVERALL: ALL PROPOSITIONS VERIFIED
+
+Interpretation (see claims/lemmas/L-16002 and claims/observations/O-16001):
+  These propositions establish that the working note's finite gate is
+  satisfiable for every ONE-SIGNED target and every special Q, so the
+  Finsler condition is vacuous there.  P5 shows why: for a one-signed
+  target the interpolation polynomial is real-rooted automatically, by a
+  Nevanlinna argument.
+
+  IMPORTANT - do not over-read this.  An earlier reading of these same
+  propositions concluded that the whole cofinal programme collapses,
+  because Polya's Phi is positive so the targets 'must' be positive.
+  That inference is FALSE.  The Connes-van Suijlekom coordinates are
+  Fourier COEFFICIENTS, not point samples: the finite target is
+  xi_j = (-1)^j F(2 pi j) ~ (-1)^j Xi(2 pi alpha j), which alternates in
+  sign, so n_- is about n/2 and the isotropic cone is genuinely nonempty.
+  The minimal instance in P4 likewise does NOT refute Connes-van
+  Suijlekom Theorem 5.6: the theorem's transform is the WINDOWED one,
+  2 e^{-iz/2} sin(z/2) sum_j xi_j/(z - 2 pi j), whose zeros here are all
+  real -- not the exponential sum 8/10 + (2/10) cos z used in P4b.
+  See O-16001 for the full adjudication.  The scope of these
+  propositions is one-signed coefficient vectors, which the programme
+  does not produce; they serve as a boundary marker and a screening test.
+
+certificate written to certificates/collapse.json (sha256 2eacce19f8a82024619c7a157ec918d5a56af61286e3c92948f0d55045292576)

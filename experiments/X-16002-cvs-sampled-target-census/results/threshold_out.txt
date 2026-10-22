@@ -1,0 +1,201 @@
+==============================================================================================================
+### RUN mode=custom  2026-07-31 12:25:29  SIGDIG=100
+alpha=0.6   N=6   D=108  deg=12   #distinct_real=4    deficit=8    sqfdeg=12   FAIL N0=24.0  <eta|xi>*10^D=+3.029e+104  t=0.1s 
+alpha=0.6   N=8   D=111  deg=16   #distinct_real=8    deficit=8    sqfdeg=16   FAIL N0=24.0  <eta|xi>*10^D=+3.042e+107  t=0.1s 
+alpha=0.6   N=10  D=113  deg=20   #distinct_real=12   deficit=8    sqfdeg=20   FAIL N0=24.0  <eta|xi>*10^D=+3.042e+109  t=0.1s 
+alpha=0.5   N=10  D=111  deg=20   #distinct_real=8    deficit=12   sqfdeg=20   FAIL N0=40.2  <eta|xi>*10^D=+1.098e+105  t=0.1s 
+alpha=0.3   N=14  D=109  deg=28   #distinct_real=6    deficit=22   sqfdeg=28   FAIL N0=254.0  <eta|xi>*10^D=-4.451e+102  t=0.1s 
+### wrote /tmp/claude-0/-home-user-riemann/8aa2c694-669d-5c54-ab29-9ac46b683161/scratchpad/w3/results_custom.json
+==============================================================================================================
+### RUN mode=grid  2026-07-31 12:25:36  SIGDIG=100
+alpha=1.0   N=6   D=113  deg=12   #distinct_real=8    deficit=4    sqfdeg=12   FAIL N0=7.4  <eta|xi>*10^D=+1.208e+112  t=0.1s 
+alpha=1.0   N=8   D=117  deg=16   #distinct_real=12   deficit=4    sqfdeg=16   FAIL N0=7.4  <eta|xi>*10^D=+1.208e+116  t=0.1s 
+alpha=1.0   N=10  D=120  deg=20   #distinct_real=16   deficit=4    sqfdeg=20   FAIL N0=7.4  <eta|xi>*10^D=+1.208e+119  t=0.1s 
+alpha=1.0   N=12  D=125  deg=24   #distinct_real=20   deficit=4    sqfdeg=24   FAIL N0=7.4  <eta|xi>*10^D=+1.208e+124  t=0.2s 
+alpha=1.0   N=14  D=129  deg=28   #distinct_real=24   deficit=4    sqfdeg=28   FAIL N0=7.4  <eta|xi>*10^D=+1.208e+128  t=0.2s 
+alpha=0.9   N=8   D=114  deg=16   #distinct_real=12   deficit=4    sqfdeg=16   FAIL N0=9.2  <eta|xi>*10^D=+6.457e+112  t=0.1s 
+alpha=0.9   N=10  D=119  deg=20   #distinct_real=16   deficit=4    sqfdeg=20   FAIL N0=9.2  <eta|xi>*10^D=+6.457e+117  t=0.1s 
+alpha=0.9   N=12  D=122  deg=24   #distinct_real=20   deficit=4    sqfdeg=24   FAIL N0=9.2  <eta|xi>*10^D=+6.457e+120  t=0.1s 
+alpha=0.9   N=14  D=127  deg=28   #distinct_real=24   deficit=4    sqfdeg=28   FAIL N0=9.2  <eta|xi>*10^D=+6.457e+125  t=0.2s 
+alpha=0.9   N=16  D=129  deg=32   #distinct_real=28   deficit=4    sqfdeg=32   FAIL N0=9.2  <eta|xi>*10^D=+6.457e+127  t=0.2s 
+alpha=0.8   N=10  D=117  deg=20   #distinct_real=16   deficit=4    sqfdeg=20   FAIL N0=11.9  <eta|xi>*10^D=+2.453e+115  t=0.1s 
+alpha=0.8   N=12  D=120  deg=24   #distinct_real=20   deficit=4    sqfdeg=24   FAIL N0=11.9  <eta|xi>*10^D=+2.453e+118  t=0.1s 
+alpha=0.8   N=14  D=123  deg=28   #distinct_real=24   deficit=4    sqfdeg=28   FAIL N0=11.9  <eta|xi>*10^D=+2.453e+121  t=0.2s 
+alpha=0.8   N=16  D=126  deg=32   #distinct_real=28   deficit=4    sqfdeg=32   FAIL N0=11.9  <eta|xi>*10^D=+2.453e+124  t=0.2s 
+alpha=0.8   N=18  D=129  deg=36   #distinct_real=32   deficit=4    sqfdeg=36   FAIL N0=11.9  <eta|xi>*10^D=+2.453e+127  t=0.2s 
+alpha=0.8   N=20  D=133  deg=40   #distinct_real=36   deficit=4    sqfdeg=40   FAIL N0=11.9  <eta|xi>*10^D=+2.453e+131  t=0.3s 
+alpha=0.7   N=14  D=120  deg=28   #distinct_real=24   deficit=4    sqfdeg=28   FAIL N0=16.2  <eta|xi>*10^D=+5.038e+117  t=0.1s 
+alpha=0.7   N=16  D=123  deg=32   #distinct_real=28   deficit=4    sqfdeg=32   FAIL N0=16.2  <eta|xi>*10^D=+5.038e+120  t=0.2s 
+alpha=0.7   N=18  D=127  deg=36   #distinct_real=32   deficit=4    sqfdeg=36   FAIL N0=16.2  <eta|xi>*10^D=+5.038e+124  t=0.2s 
+alpha=0.7   N=20  D=129  deg=40   #distinct_real=36   deficit=4    sqfdeg=40   FAIL N0=16.2  <eta|xi>*10^D=+5.038e+126  t=0.2s 
+alpha=0.7   N=22  D=132  deg=44   #distinct_real=40   deficit=4    sqfdeg=44   FAIL N0=16.2  <eta|xi>*10^D=+5.038e+129  t=0.3s 
+alpha=0.7   N=24  D=136  deg=48   #distinct_real=44   deficit=4    sqfdeg=48   FAIL N0=16.2  <eta|xi>*10^D=+5.038e+133  t=0.4s 
+alpha=0.6   N=20  D=125  deg=40   #distinct_real=32   deficit=8    sqfdeg=40   FAIL N0=24.0  <eta|xi>*10^D=+3.042e+121  t=0.2s 
+alpha=0.6   N=22  D=129  deg=44   #distinct_real=36   deficit=8    sqfdeg=44   FAIL N0=24.0  <eta|xi>*10^D=+3.042e+125  t=0.1s 
+alpha=0.6   N=24  D=129  deg=48   #distinct_real=40   deficit=8    sqfdeg=48   FAIL N0=24.0  <eta|xi>*10^D=+3.042e+125  t=0.0s 
+alpha=0.6   N=26  D=132  deg=52   #distinct_real=44   deficit=8    sqfdeg=52   FAIL N0=24.0  <eta|xi>*10^D=+3.042e+128  t=0.3s 
+alpha=0.6   N=28  D=136  deg=56   #distinct_real=48   deficit=8    sqfdeg=56   FAIL N0=24.0  <eta|xi>*10^D=+3.042e+132  t=0.4s 
+alpha=0.6   N=30  D=137  deg=60   #distinct_real=52   deficit=8    sqfdeg=60   FAIL N0=24.0  <eta|xi>*10^D=+3.042e+133  t=0.5s 
+### wrote /tmp/claude-0/-home-user-riemann/8aa2c694-669d-5c54-ab29-9ac46b683161/scratchpad/w3/results_grid.json
+==============================================================================================================
+### RUN mode=custom  2026-07-31 12:26:05  SIGDIG=100
+alpha=1.1   N=10  D=123  deg=20   #distinct_real=20   deficit=0    sqfdeg=20   PASS N0=6.1  <eta|xi>*10^D=+1.841e+122  t=0.2s 
+alpha=1.2   N=10  D=125  deg=20   #distinct_real=20   deficit=0    sqfdeg=20   PASS N0=5.2  <eta|xi>*10^D=+2.467e+124  t=0.1s 
+alpha=1.3   N=10  D=126  deg=20   #distinct_real=20   deficit=0    sqfdeg=20   PASS N0=4.5  <eta|xi>*10^D=+3.034e+125  t=0.2s 
+alpha=1.4   N=10  D=129  deg=20   #distinct_real=20   deficit=0    sqfdeg=20   PASS N0=4.0  <eta|xi>*10^D=+3.520e+128  t=0.2s 
+alpha=1.5   N=10  D=131  deg=20   #distinct_real=20   deficit=0    sqfdeg=20   PASS N0=3.5  <eta|xi>*10^D=+3.919e+130  t=0.2s 
+alpha=1.6   N=10  D=133  deg=20   #distinct_real=20   deficit=0    sqfdeg=20   PASS N0=3.2  <eta|xi>*10^D=+4.235e+132  t=0.2s 
+alpha=1.8   N=10  D=137  deg=20   #distinct_real=20   deficit=0    sqfdeg=20   PASS N0=2.6  <eta|xi>*10^D=+4.657e+136  t=0.2s 
+alpha=2.0   N=10  D=141  deg=20   #distinct_real=20   deficit=0    sqfdeg=20   PASS N0=2.2  <eta|xi>*10^D=+4.872e+140  t=0.2s 
+alpha=2.5   N=10  D=152  deg=20   #distinct_real=20   deficit=0    sqfdeg=20   PASS N0=1.6  <eta|xi>*10^D=+4.987e+151  t=0.2s 
+alpha=3.0   N=10  D=162  deg=20   #distinct_real=20   deficit=0    sqfdeg=20   PASS N0=1.3  <eta|xi>*10^D=+4.974e+161  t=0.2s 
+alpha=4.0   N=10  D=184  deg=20   #distinct_real=20   deficit=0    sqfdeg=20   PASS N0=0.9  <eta|xi>*10^D=+4.971e+183  t=0.3s 
+### wrote /tmp/claude-0/-home-user-riemann/8aa2c694-669d-5c54-ab29-9ac46b683161/scratchpad/w3/results_custom.json
+==============================================================================================================
+### RUN mode=custom  2026-07-31 12:26:17  SIGDIG=100
+alpha=1.01  N=10  D=120  deg=20   #distinct_real=16   deficit=4    sqfdeg=20   FAIL N0=7.2  <eta|xi>*10^D=+1.269e+119  t=0.2s 
+alpha=1.02  N=10  D=121  deg=20   #distinct_real=16   deficit=4    sqfdeg=20   FAIL N0=7.1  <eta|xi>*10^D=+1.331e+120  t=0.1s 
+alpha=1.03  N=10  D=121  deg=20   #distinct_real=16   deficit=4    sqfdeg=20   FAIL N0=7.0  <eta|xi>*10^D=+1.394e+120  t=0.1s 
+alpha=1.04  N=10  D=122  deg=20   #distinct_real=16   deficit=4    sqfdeg=20   FAIL N0=6.8  <eta|xi>*10^D=+1.457e+121  t=0.1s 
+alpha=1.05  N=10  D=122  deg=20   #distinct_real=16   deficit=4    sqfdeg=20   FAIL N0=6.7  <eta|xi>*10^D=+1.521e+121  t=0.1s 
+alpha=1.06  N=10  D=122  deg=20   #distinct_real=16   deficit=4    sqfdeg=20   FAIL N0=6.6  <eta|xi>*10^D=+1.585e+121  t=0.1s 
+alpha=1.07  N=10  D=123  deg=20   #distinct_real=20   deficit=0    sqfdeg=20   PASS N0=6.5  <eta|xi>*10^D=+1.649e+122  t=0.1s 
+alpha=1.08  N=10  D=122  deg=20   #distinct_real=20   deficit=0    sqfdeg=20   PASS N0=6.4  <eta|xi>*10^D=+1.713e+121  t=0.1s 
+alpha=1.09  N=10  D=122  deg=20   #distinct_real=20   deficit=0    sqfdeg=20   PASS N0=6.2  <eta|xi>*10^D=+1.777e+121  t=0.1s 
+### wrote /tmp/claude-0/-home-user-riemann/8aa2c694-669d-5c54-ab29-9ac46b683161/scratchpad/w3/results_custom.json
+==============================================================================================================
+### RUN mode=custom  2026-07-31 12:26:28  SIGDIG=100
+alpha=1.1   N=4   D=109  deg=8    #distinct_real=8    deficit=0    sqfdeg=8    PASS N0=6.1  <eta|xi>*10^D=+1.841e+108  t=0.1s 
+alpha=1.1   N=6   D=114  deg=12   #distinct_real=12   deficit=0    sqfdeg=12   PASS N0=6.1  <eta|xi>*10^D=+1.841e+113  t=0.1s 
+alpha=1.1   N=8   D=118  deg=16   #distinct_real=16   deficit=0    sqfdeg=16   PASS N0=6.1  <eta|xi>*10^D=+1.841e+117  t=0.1s 
+alpha=1.1   N=12  D=129  deg=24   #distinct_real=24   deficit=0    sqfdeg=24   PASS N0=6.1  <eta|xi>*10^D=+1.841e+128  t=0.2s 
+alpha=1.1   N=14  D=132  deg=28   #distinct_real=28   deficit=0    sqfdeg=28   PASS N0=6.1  <eta|xi>*10^D=+1.841e+131  t=0.2s 
+alpha=1.1   N=16  D=137  deg=32   #distinct_real=32   deficit=0    sqfdeg=32   PASS N0=6.1  <eta|xi>*10^D=+1.841e+136  t=0.2s 
+alpha=1.1   N=20  D=146  deg=40   #distinct_real=40   deficit=0    sqfdeg=40   PASS N0=6.1  <eta|xi>*10^D=+1.841e+145  t=0.4s 
+alpha=1.1   N=24  D=155  deg=48   #distinct_real=48   deficit=0    sqfdeg=48   PASS N0=6.1  <eta|xi>*10^D=+1.841e+154  t=0.5s 
+alpha=1.1   N=30  D=169  deg=60   #distinct_real=60   deficit=0    sqfdeg=60   PASS N0=6.1  <eta|xi>*10^D=+1.841e+168  t=0.7s 
+alpha=1.1   N=36  D=183  deg=72   #distinct_real=72   deficit=0    sqfdeg=72   PASS N0=6.1  <eta|xi>*10^D=+1.841e+182  t=1.1s 
+### wrote /tmp/claude-0/-home-user-riemann/8aa2c694-669d-5c54-ab29-9ac46b683161/scratchpad/w3/results_custom.json
+==============================================================================================================
+### RUN mode=scan  2026-07-31 12:27:06  SIGDIG=100
+alpha=0.6   N=6   D=108  deg=12   #distinct_real=4    deficit=8    sqfdeg=12   FAIL N0=24.0  <eta|xi>*10^D=+3.029e+104  t=0.2s 
+alpha=0.6   N=8   D=111  deg=16   #distinct_real=8    deficit=8    sqfdeg=16   FAIL N0=24.0  <eta|xi>*10^D=+3.042e+107  t=0.1s 
+alpha=0.6   N=10  D=113  deg=20   #distinct_real=12   deficit=8    sqfdeg=20   FAIL N0=24.0  <eta|xi>*10^D=+3.042e+109  t=0.1s 
+alpha=0.6   N=12  D=114  deg=24   #distinct_real=16   deficit=8    sqfdeg=24   FAIL N0=24.0  <eta|xi>*10^D=+3.042e+110  t=0.2s 
+alpha=0.6   N=14  D=118  deg=28   #distinct_real=20   deficit=8    sqfdeg=28   FAIL N0=24.0  <eta|xi>*10^D=+3.042e+114  t=0.2s 
+alpha=0.6   N=16  D=120  deg=32   #distinct_real=24   deficit=8    sqfdeg=32   FAIL N0=24.0  <eta|xi>*10^D=+3.042e+116  t=0.2s 
+alpha=0.6   N=18  D=122  deg=36   #distinct_real=28   deficit=8    sqfdeg=36   FAIL N0=24.0  <eta|xi>*10^D=+3.042e+118  t=0.2s 
+alpha=0.6   N=20  D=125  deg=40   #distinct_real=32   deficit=8    sqfdeg=40   FAIL N0=24.0  <eta|xi>*10^D=+3.042e+121  t=0.3s 
+alpha=0.65  N=6   D=109  deg=12   #distinct_real=4    deficit=8    sqfdeg=12   FAIL N0=19.5  <eta|xi>*10^D=+1.536e+106  t=0.1s 
+alpha=0.65  N=8   D=111  deg=16   #distinct_real=8    deficit=8    sqfdeg=16   FAIL N0=19.5  <eta|xi>*10^D=+1.536e+108  t=0.1s 
+alpha=0.65  N=10  D=114  deg=20   #distinct_real=12   deficit=8    sqfdeg=20   FAIL N0=19.5  <eta|xi>*10^D=+1.536e+111  t=0.1s 
+alpha=0.65  N=12  D=116  deg=24   #distinct_real=16   deficit=8    sqfdeg=24   FAIL N0=19.5  <eta|xi>*10^D=+1.536e+113  t=0.1s 
+alpha=0.65  N=14  D=119  deg=28   #distinct_real=20   deficit=8    sqfdeg=28   FAIL N0=19.5  <eta|xi>*10^D=+1.536e+116  t=0.2s 
+alpha=0.65  N=16  D=122  deg=32   #distinct_real=24   deficit=8    sqfdeg=32   FAIL N0=19.5  <eta|xi>*10^D=+1.536e+119  t=0.2s 
+alpha=0.65  N=18  D=124  deg=36   #distinct_real=28   deficit=8    sqfdeg=36   FAIL N0=19.5  <eta|xi>*10^D=+1.536e+121  t=0.2s 
+alpha=0.65  N=20  D=126  deg=40   #distinct_real=32   deficit=8    sqfdeg=40   FAIL N0=19.5  <eta|xi>*10^D=+1.536e+123  t=0.3s 
+alpha=0.7   N=6   D=109  deg=12   #distinct_real=8    deficit=4    sqfdeg=12   FAIL N0=16.2  <eta|xi>*10^D=+5.038e+106  t=0.1s 
+alpha=0.7   N=8   D=111  deg=16   #distinct_real=12   deficit=4    sqfdeg=16   FAIL N0=16.2  <eta|xi>*10^D=+5.038e+108  t=0.1s 
+alpha=0.7   N=10  D=114  deg=20   #distinct_real=16   deficit=4    sqfdeg=20   FAIL N0=16.2  <eta|xi>*10^D=+5.038e+111  t=0.1s 
+alpha=0.7   N=12  D=118  deg=24   #distinct_real=20   deficit=4    sqfdeg=24   FAIL N0=16.2  <eta|xi>*10^D=+5.038e+115  t=0.1s 
+alpha=0.7   N=14  D=120  deg=28   #distinct_real=24   deficit=4    sqfdeg=28   FAIL N0=16.2  <eta|xi>*10^D=+5.038e+117  t=0.1s 
+alpha=0.7   N=16  D=123  deg=32   #distinct_real=28   deficit=4    sqfdeg=32   FAIL N0=16.2  <eta|xi>*10^D=+5.038e+120  t=0.2s 
+alpha=0.7   N=18  D=127  deg=36   #distinct_real=32   deficit=4    sqfdeg=36   FAIL N0=16.2  <eta|xi>*10^D=+5.038e+124  t=0.2s 
+alpha=0.7   N=20  D=129  deg=40   #distinct_real=36   deficit=4    sqfdeg=40   FAIL N0=16.2  <eta|xi>*10^D=+5.038e+126  t=0.3s 
+alpha=0.75  N=6   D=109  deg=12   #distinct_real=8    deficit=4    sqfdeg=12   FAIL N0=13.7  <eta|xi>*10^D=+1.233e+107  t=0.1s 
+alpha=0.75  N=8   D=113  deg=16   #distinct_real=12   deficit=4    sqfdeg=16   FAIL N0=13.7  <eta|xi>*10^D=+1.233e+111  t=0.1s 
+alpha=0.75  N=10  D=115  deg=20   #distinct_real=16   deficit=4    sqfdeg=20   FAIL N0=13.7  <eta|xi>*10^D=+1.233e+113  t=0.1s 
+alpha=0.75  N=12  D=119  deg=24   #distinct_real=20   deficit=4    sqfdeg=24   FAIL N0=13.7  <eta|xi>*10^D=+1.233e+117  t=0.1s 
+alpha=0.75  N=14  D=122  deg=28   #distinct_real=24   deficit=4    sqfdeg=28   FAIL N0=13.7  <eta|xi>*10^D=+1.233e+120  t=0.1s 
+alpha=0.75  N=16  D=125  deg=32   #distinct_real=28   deficit=4    sqfdeg=32   FAIL N0=13.7  <eta|xi>*10^D=+1.233e+123  t=0.2s 
+alpha=0.75  N=18  D=129  deg=36   #distinct_real=32   deficit=4    sqfdeg=36   FAIL N0=13.7  <eta|xi>*10^D=+1.233e+127  t=0.3s 
+alpha=0.75  N=20  D=131  deg=40   #distinct_real=36   deficit=4    sqfdeg=40   FAIL N0=13.7  <eta|xi>*10^D=+1.233e+129  t=0.4s 
+alpha=0.8   N=6   D=111  deg=12   #distinct_real=8    deficit=4    sqfdeg=12   FAIL N0=11.9  <eta|xi>*10^D=+2.453e+109  t=0.1s 
+alpha=0.8   N=8   D=113  deg=16   #distinct_real=12   deficit=4    sqfdeg=16   FAIL N0=11.9  <eta|xi>*10^D=+2.453e+111  t=0.1s 
+alpha=0.8   N=10  D=117  deg=20   #distinct_real=16   deficit=4    sqfdeg=20   FAIL N0=11.9  <eta|xi>*10^D=+2.453e+115  t=0.2s 
+alpha=0.8   N=12  D=120  deg=24   #distinct_real=20   deficit=4    sqfdeg=24   FAIL N0=11.9  <eta|xi>*10^D=+2.453e+118  t=0.1s 
+alpha=0.8   N=14  D=123  deg=28   #distinct_real=24   deficit=4    sqfdeg=28   FAIL N0=11.9  <eta|xi>*10^D=+2.453e+121  t=0.2s 
+alpha=0.8   N=16  D=126  deg=32   #distinct_real=28   deficit=4    sqfdeg=32   FAIL N0=11.9  <eta|xi>*10^D=+2.453e+124  t=0.2s 
+alpha=0.8   N=18  D=129  deg=36   #distinct_real=32   deficit=4    sqfdeg=36   FAIL N0=11.9  <eta|xi>*10^D=+2.453e+127  t=0.2s 
+alpha=0.8   N=20  D=133  deg=40   #distinct_real=36   deficit=4    sqfdeg=40   FAIL N0=11.9  <eta|xi>*10^D=+2.453e+131  t=0.3s 
+alpha=0.85  N=6   D=111  deg=12   #distinct_real=8    deficit=4    sqfdeg=12   FAIL N0=10.4  <eta|xi>*10^D=+4.206e+109  t=0.1s 
+alpha=0.85  N=8   D=114  deg=16   #distinct_real=12   deficit=4    sqfdeg=16   FAIL N0=10.4  <eta|xi>*10^D=+4.206e+112  t=0.1s 
+alpha=0.85  N=10  D=118  deg=20   #distinct_real=16   deficit=4    sqfdeg=20   FAIL N0=10.4  <eta|xi>*10^D=+4.206e+116  t=0.1s 
+alpha=0.85  N=12  D=121  deg=24   #distinct_real=20   deficit=4    sqfdeg=24   FAIL N0=10.4  <eta|xi>*10^D=+4.206e+119  t=0.2s 
+alpha=0.85  N=14  D=124  deg=28   #distinct_real=24   deficit=4    sqfdeg=28   FAIL N0=10.4  <eta|xi>*10^D=+4.206e+122  t=0.2s 
+alpha=0.85  N=16  D=128  deg=32   #distinct_real=28   deficit=4    sqfdeg=32   FAIL N0=10.4  <eta|xi>*10^D=+4.206e+126  t=0.2s 
+alpha=0.85  N=18  D=132  deg=36   #distinct_real=32   deficit=4    sqfdeg=36   FAIL N0=10.4  <eta|xi>*10^D=+4.206e+130  t=0.3s 
+alpha=0.85  N=20  D=135  deg=40   #distinct_real=36   deficit=4    sqfdeg=40   FAIL N0=10.4  <eta|xi>*10^D=+4.206e+133  t=0.3s 
+alpha=0.9   N=6   D=111  deg=12   #distinct_real=8    deficit=4    sqfdeg=12   FAIL N0=9.2  <eta|xi>*10^D=+6.457e+109  t=0.1s 
+alpha=0.9   N=8   D=114  deg=16   #distinct_real=12   deficit=4    sqfdeg=16   FAIL N0=9.2  <eta|xi>*10^D=+6.457e+112  t=0.1s 
+alpha=0.9   N=10  D=119  deg=20   #distinct_real=16   deficit=4    sqfdeg=20   FAIL N0=9.2  <eta|xi>*10^D=+6.457e+117  t=0.1s 
+alpha=0.9   N=12  D=122  deg=24   #distinct_real=20   deficit=4    sqfdeg=24   FAIL N0=9.2  <eta|xi>*10^D=+6.457e+120  t=0.1s 
+alpha=0.9   N=14  D=127  deg=28   #distinct_real=24   deficit=4    sqfdeg=28   FAIL N0=9.2  <eta|xi>*10^D=+6.457e+125  t=0.2s 
+alpha=0.9   N=16  D=129  deg=32   #distinct_real=28   deficit=4    sqfdeg=32   FAIL N0=9.2  <eta|xi>*10^D=+6.457e+127  t=0.2s 
+alpha=0.9   N=18  D=134  deg=36   #distinct_real=32   deficit=4    sqfdeg=36   FAIL N0=9.2  <eta|xi>*10^D=+6.457e+132  t=0.4s 
+alpha=0.9   N=20  D=137  deg=40   #distinct_real=36   deficit=4    sqfdeg=40   FAIL N0=9.2  <eta|xi>*10^D=+6.457e+135  t=0.5s 
+alpha=0.95  N=6   D=111  deg=12   #distinct_real=8    deficit=4    sqfdeg=12   FAIL N0=8.2  <eta|xi>*10^D=+9.118e+109  t=0.1s 
+alpha=0.95  N=8   D=116  deg=16   #distinct_real=12   deficit=4    sqfdeg=16   FAIL N0=8.2  <eta|xi>*10^D=+9.118e+114  t=0.1s 
+alpha=0.95  N=10  D=120  deg=20   #distinct_real=16   deficit=4    sqfdeg=20   FAIL N0=8.2  <eta|xi>*10^D=+9.118e+118  t=0.1s 
+alpha=0.95  N=12  D=124  deg=24   #distinct_real=20   deficit=4    sqfdeg=24   FAIL N0=8.2  <eta|xi>*10^D=+9.118e+122  t=0.2s 
+alpha=0.95  N=14  D=128  deg=28   #distinct_real=24   deficit=4    sqfdeg=28   FAIL N0=8.2  <eta|xi>*10^D=+9.118e+126  t=0.2s 
+alpha=0.95  N=16  D=132  deg=32   #distinct_real=28   deficit=4    sqfdeg=32   FAIL N0=8.2  <eta|xi>*10^D=+9.118e+130  t=0.2s 
+alpha=0.95  N=18  D=136  deg=36   #distinct_real=32   deficit=4    sqfdeg=36   FAIL N0=8.2  <eta|xi>*10^D=+9.118e+134  t=0.3s 
+alpha=0.95  N=20  D=139  deg=40   #distinct_real=36   deficit=4    sqfdeg=40   FAIL N0=8.2  <eta|xi>*10^D=+9.118e+137  t=0.4s 
+alpha=1.0   N=6   D=113  deg=12   #distinct_real=8    deficit=4    sqfdeg=12   FAIL N0=7.4  <eta|xi>*10^D=+1.208e+112  t=0.0s 
+alpha=1.0   N=8   D=117  deg=16   #distinct_real=12   deficit=4    sqfdeg=16   FAIL N0=7.4  <eta|xi>*10^D=+1.208e+116  t=0.1s 
+alpha=1.0   N=10  D=120  deg=20   #distinct_real=16   deficit=4    sqfdeg=20   FAIL N0=7.4  <eta|xi>*10^D=+1.208e+119  t=0.1s 
+alpha=1.0   N=12  D=125  deg=24   #distinct_real=20   deficit=4    sqfdeg=24   FAIL N0=7.4  <eta|xi>*10^D=+1.208e+124  t=0.1s 
+alpha=1.0   N=14  D=129  deg=28   #distinct_real=24   deficit=4    sqfdeg=28   FAIL N0=7.4  <eta|xi>*10^D=+1.208e+128  t=0.1s 
+alpha=1.0   N=16  D=133  deg=32   #distinct_real=28   deficit=4    sqfdeg=32   FAIL N0=7.4  <eta|xi>*10^D=+1.208e+132  t=0.2s 
+alpha=1.0   N=18  D=137  deg=36   #distinct_real=32   deficit=4    sqfdeg=36   FAIL N0=7.4  <eta|xi>*10^D=+1.208e+136  t=0.3s 
+alpha=1.0   N=20  D=141  deg=40   #distinct_real=36   deficit=4    sqfdeg=40   FAIL N0=7.4  <eta|xi>*10^D=+1.208e+140  t=0.4s 
+alpha=1.05  N=6   D=113  deg=12   #distinct_real=8    deficit=4    sqfdeg=12   FAIL N0=6.7  <eta|xi>*10^D=+1.521e+112  t=0.1s 
+alpha=1.05  N=8   D=118  deg=16   #distinct_real=12   deficit=4    sqfdeg=16   FAIL N0=6.7  <eta|xi>*10^D=+1.521e+117  t=0.0s 
+alpha=1.05  N=10  D=122  deg=20   #distinct_real=16   deficit=4    sqfdeg=20   FAIL N0=6.7  <eta|xi>*10^D=+1.521e+121  t=0.1s 
+alpha=1.05  N=12  D=127  deg=24   #distinct_real=20   deficit=4    sqfdeg=24   FAIL N0=6.7  <eta|xi>*10^D=+1.521e+126  t=0.1s 
+alpha=1.05  N=14  D=131  deg=28   #distinct_real=24   deficit=4    sqfdeg=28   FAIL N0=6.7  <eta|xi>*10^D=+1.521e+130  t=0.2s 
+alpha=1.05  N=16  D=136  deg=32   #distinct_real=28   deficit=4    sqfdeg=32   FAIL N0=6.7  <eta|xi>*10^D=+1.521e+135  t=0.3s 
+alpha=1.05  N=18  D=140  deg=36   #distinct_real=32   deficit=4    sqfdeg=36   FAIL N0=6.7  <eta|xi>*10^D=+1.521e+139  t=0.3s 
+alpha=1.05  N=20  D=143  deg=40   #distinct_real=36   deficit=4    sqfdeg=40   FAIL N0=6.7  <eta|xi>*10^D=+1.521e+142  t=0.4s 
+alpha=1.1   N=6   D=114  deg=12   #distinct_real=12   deficit=0    sqfdeg=12   PASS N0=6.1  <eta|xi>*10^D=+1.841e+113  t=0.1s 
+alpha=1.1   N=8   D=118  deg=16   #distinct_real=16   deficit=0    sqfdeg=16   PASS N0=6.1  <eta|xi>*10^D=+1.841e+117  t=0.1s 
+alpha=1.1   N=10  D=123  deg=20   #distinct_real=20   deficit=0    sqfdeg=20   PASS N0=6.1  <eta|xi>*10^D=+1.841e+122  t=0.1s 
+alpha=1.1   N=12  D=129  deg=24   #distinct_real=24   deficit=0    sqfdeg=24   PASS N0=6.1  <eta|xi>*10^D=+1.841e+128  t=0.1s 
+alpha=1.1   N=14  D=132  deg=28   #distinct_real=28   deficit=0    sqfdeg=28   PASS N0=6.1  <eta|xi>*10^D=+1.841e+131  t=0.3s 
+alpha=1.1   N=16  D=137  deg=32   #distinct_real=32   deficit=0    sqfdeg=32   PASS N0=6.1  <eta|xi>*10^D=+1.841e+136  t=0.3s 
+alpha=1.1   N=18  D=142  deg=36   #distinct_real=36   deficit=0    sqfdeg=36   PASS N0=6.1  <eta|xi>*10^D=+1.841e+141  t=0.4s 
+alpha=1.1   N=20  D=146  deg=40   #distinct_real=40   deficit=0    sqfdeg=40   PASS N0=6.1  <eta|xi>*10^D=+1.841e+145  t=0.5s 
+alpha=1.15  N=6   D=116  deg=12   #distinct_real=12   deficit=0    sqfdeg=12   PASS N0=5.6  <eta|xi>*10^D=+2.159e+115  t=0.1s 
+alpha=1.15  N=8   D=119  deg=16   #distinct_real=16   deficit=0    sqfdeg=16   PASS N0=5.6  <eta|xi>*10^D=+2.159e+118  t=0.1s 
+alpha=1.15  N=10  D=124  deg=20   #distinct_real=20   deficit=0    sqfdeg=20   PASS N0=5.6  <eta|xi>*10^D=+2.159e+123  t=0.2s 
+alpha=1.15  N=12  D=129  deg=24   #distinct_real=24   deficit=0    sqfdeg=24   PASS N0=5.6  <eta|xi>*10^D=+2.159e+128  t=0.2s 
+alpha=1.15  N=14  D=134  deg=28   #distinct_real=28   deficit=0    sqfdeg=28   PASS N0=5.6  <eta|xi>*10^D=+2.159e+133  t=0.2s 
+alpha=1.15  N=16  D=138  deg=32   #distinct_real=32   deficit=0    sqfdeg=32   PASS N0=5.6  <eta|xi>*10^D=+2.159e+137  t=0.3s 
+alpha=1.15  N=18  D=143  deg=36   #distinct_real=36   deficit=0    sqfdeg=36   PASS N0=5.6  <eta|xi>*10^D=+2.159e+142  t=0.3s 
+alpha=1.15  N=20  D=147  deg=40   #distinct_real=40   deficit=0    sqfdeg=40   PASS N0=5.6  <eta|xi>*10^D=+2.159e+146  t=0.5s 
+alpha=1.2   N=6   D=114  deg=12   #distinct_real=12   deficit=0    sqfdeg=12   PASS N0=5.2  <eta|xi>*10^D=+2.467e+113  t=0.0s 
+alpha=1.2   N=8   D=120  deg=16   #distinct_real=16   deficit=0    sqfdeg=16   PASS N0=5.2  <eta|xi>*10^D=+2.467e+119  t=0.0s 
+alpha=1.2   N=10  D=125  deg=20   #distinct_real=20   deficit=0    sqfdeg=20   PASS N0=5.2  <eta|xi>*10^D=+2.467e+124  t=0.0s 
+alpha=1.2   N=12  D=129  deg=24   #distinct_real=24   deficit=0    sqfdeg=24   PASS N0=5.2  <eta|xi>*10^D=+2.467e+128  t=0.0s 
+alpha=1.2   N=14  D=136  deg=28   #distinct_real=28   deficit=0    sqfdeg=28   PASS N0=5.2  <eta|xi>*10^D=+2.467e+135  t=0.2s 
+alpha=1.2   N=16  D=140  deg=32   #distinct_real=32   deficit=0    sqfdeg=32   PASS N0=5.2  <eta|xi>*10^D=+2.467e+139  t=0.3s 
+alpha=1.2   N=18  D=144  deg=36   #distinct_real=36   deficit=0    sqfdeg=36   PASS N0=5.2  <eta|xi>*10^D=+2.467e+143  t=0.4s 
+alpha=1.2   N=20  D=151  deg=40   #distinct_real=40   deficit=0    sqfdeg=40   PASS N0=5.2  <eta|xi>*10^D=+2.467e+150  t=0.6s 
+### wrote /tmp/claude-0/-home-user-riemann/8aa2c694-669d-5c54-ab29-9ac46b683161/scratchpad/w3/results_scan.json
+==============================================================================================================
+### RUN mode=bisect
+N=6   alpha_c in (1.064404, 1.064417)
+N=8   alpha_c in (1.064404, 1.064417)
+N=10  alpha_c in (1.064404, 1.064417)
+N=14  alpha_c in (1.064404, 1.064417)
+N=20  alpha_c in (1.064404, 1.064417)
+N=26  alpha_c in (1.064404, 1.064417)
+N=30  alpha_c in (1.064404, 1.064417)
+==============================================================================================================
+### RUN mode=big  2026-07-31 12:28:11  SIGDIG=100
+alpha=0.5   N=34  D=135  deg=68   #distinct_real=56   deficit=12   sqfdeg=68   FAIL N0=40.2  <eta|xi>*10^D=+1.102e+129  t=0.7s 
+alpha=0.5   N=38  D=140  deg=76   #distinct_real=64   deficit=12   sqfdeg=76   FAIL N0=40.2  <eta|xi>*10^D=+1.102e+134  t=0.7s 
+alpha=0.5   N=40  D=141  deg=80   #distinct_real=68   deficit=12   sqfdeg=80   FAIL N0=40.2  <eta|xi>*10^D=+1.102e+135  t=0.7s 
+alpha=0.5   N=44  D=146  deg=88   #distinct_real=76   deficit=12   sqfdeg=88   FAIL N0=40.2  <eta|xi>*10^D=+1.102e+140  t=0.9s 
+### wrote /tmp/claude-0/-home-user-riemann/8aa2c694-669d-5c54-ab29-9ac46b683161/scratchpad/w3/results_big.json

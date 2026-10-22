@@ -1,0 +1,40 @@
+### Phi'' sign scan on [0.30, 5.0]  (Phi convex there => int_T^inf |Phi''| = |Phi'(T)|)
+   negative/zero Phi'' samples on the grid: NONE (Phi'' > 0 throughout)
+   Phi''(0.0)= -16.7305  Phi''(0.1)= -12.8784  Phi''(0.2)= -3.67454
+
+### (b) CERTIFICATION BOUNDARY, table (v) recomputed.  Comparison index j=10 as in L-16005.
+B1 = L-16005(iii) bound 2 Phi(T)/(pi alpha j)          [the O(1/j) bound]
+B2 = corrected rigorous bound 4|Phi'(T)|/(2 pi alpha j)^2 = |Phi'(T)|/(pi^2 alpha^2 j^2)
+     (rigorous given Phi'' >= 0 on (T,inf), scanned above)
+ alpha        T   eps(T) bnd  eps(T) true     B1(j=10)     B2(j=10)  |E_10| true      |Xi_10|   old?   new?
+-----------------------------------------------------------------------------------------------------------
+   1.1  0.45455       0.0301      0.01555      0.00586    0.0009004    0.0004481    4.257e-21     no     no
+   1.0      0.5       0.0159     0.008319     0.003844    0.0007435    0.0003671    2.377e-18     no     no
+   0.9  0.55556     0.006624     0.003515     0.002055    0.0005166    0.0002508    1.605e-17     no     no
+   0.8    0.625     0.001878     0.001013    0.0007809    0.0002659    0.0001242    5.849e-15     no     no
+   0.7  0.71429    0.0002715     0.000149    0.0001604     7.825e-5     3.327e-5    1.138e-12     no     no
+   0.6  0.83333     1.062e-5     5.938e-6     9.682e-6     7.337e-6      2.44e-6    1.919e-11     no     no
+   0.5      1.0       2.2e-8     1.255e-8     3.509e-8     4.667e-8     8.528e-9     7.859e-9     no     no
+   0.4     1.25    1.166e-14    6.792e-15    4.001e-14    1.146e-13    6.133e-15     1.434e-7    yes    yes
+  0.35   1.4286    1.327e-21    7.801e-22    7.583e-21    3.615e-20      7.5e-22     7.708e-6    yes    yes
+   0.3   1.6667    7.741e-36     4.59e-36    8.456e-35    7.698e-34    4.539e-36    0.0001479    yes    yes
+  0.25      2.0    1.004e-71    5.996e-72    2.598e-70      5.6e-69     5.98e-72    0.0007984    yes    yes
+
+### (a) CROSSOVER: smallest j with |E_j| > |Xi(2 pi alpha j)|
+  alpha=1.1: crossover at j=2;  ratios |E_j|/|Xi_j| j=1..6: 0.0827, 15.8, 724, 6.87e+03, 8.02e+05, 3.13e+08
+  alpha=1.0: crossover at j=2;  ratios |E_j|/|Xi_j| j=1..6: 0.0379, 1.05, 22.4, 1.47e+04, 1.79e+05, 5.18e+07
+  alpha=0.7: crossover at j=5;  ratios |E_j|/|Xi_j| j=1..6: 0.000459, 0.00186, 0.0544, 0.258, 10.9, 105
+  alpha=0.5: crossover at j=10;  ratios |E_j|/|Xi_j| j=1..6: 3.16e-08, 6.38e-08, 2.3e-07, 2.35e-06, 1.41e-05, 7.28e-05
+  alpha=0.4: crossover at j=None;  ratios |E_j|/|Xi_j| j=1..6: 1.58e-14, 2.47e-14, 5.4e-14, 1.82e-13, 1.33e-12, 8.93e-12
+  alpha=0.3: crossover at j=None;  ratios |E_j|/|Xi_j| j=1..6: 1e-35, 1.29e-35, 1.97e-35, 3.68e-35, 8.72e-35, 2.9e-34
+
+### ONSET of the j^-2 regime.  Expansion parameter is lambda/omega with
+    lambda = 2 pi e^{2T} = 2 pi e^{1/alpha}  (log-derivative scale of Phi at T),
+    omega = 2 pi alpha j  =>  regime needs  j >> e^{1/alpha}/alpha =: j*(alpha).
+ alpha       T  lambda=|Phi2/Phi1|(T)  j*(a)=e^{1/a}/a  first j: j^2|E_j|/C>0.9
+------------------------------------------------------------------------------------------
+   1.0     0.5                9.25758          2.71828                      4
+   0.7  0.7143                 18.989          5.96105                     13
+   0.5     1.0                39.5596          14.7781                     38
+   0.4    1.25                69.8336          30.4562                     83
+   0.3   1.667                 169.54          93.4387                   None
