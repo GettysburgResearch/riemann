@@ -1,0 +1,122 @@
+{
+  "classification": "PASS_PRIME_POWER_MOAT_AND_MONOTONICITY_RECONNAISSANCE",
+  "constants": {
+    "moat_derivative_coefficient": -0.23017725440479342,
+    "moat_quadratic_coefficient": -0.11508862720239671,
+    "zeta_half": -1.4603545088095868
+  },
+  "direct_formula_checks": [
+    {
+      "X": 10,
+      "absolute_error": 1.5543122344752192e-15
+    },
+    {
+      "X": 31,
+      "absolute_error": 4.6629367034256575e-15
+    },
+    {
+      "X": 100,
+      "absolute_error": 1.554312234475219e-14
+    },
+    {
+      "X": 257,
+      "absolute_error": 4.1300296516055823e-14
+    },
+    {
+      "X": 1000,
+      "absolute_error": 2.5224267119483557e-13
+    }
+  ],
+  "integer_increment_scan": {
+    "at_M": 4409886,
+    "largest_increment": -6.270389820674203e-07,
+    "positive_count": 0
+  },
+  "max_X": 5000000,
+  "real_interval_derivative_scan": {
+    "attained_at": "right_limit",
+    "interval_left_endpoint": 222,
+    "largest_interval_maximum": -0.0064383486728724695,
+    "nonnegative_count": 0
+  },
+  "sample_rows": [
+    {
+      "A": -7.757492856865599,
+      "D_A": -1.8612722158107062,
+      "D_moat": -4.395219523245117,
+      "D_moat_over_log": -0.47720489642469893,
+      "Delta_lambda": 28.487584518899205,
+      "E_half": -2.5339473074344117,
+      "X": 10000,
+      "moat": -36.2450773757648,
+      "moat_over_log2": -0.4272653470100158
+    },
+    {
+      "A": -12.549075127680359,
+      "D_A": -2.558345872503763,
+      "D_moat": -5.072523938757245,
+      "D_moat_over_log": -0.440593831184884,
+      "Delta_lambda": 34.66584480382477,
+      "E_half": -2.514178066253482,
+      "X": 100000,
+      "moat": -47.21491993150513,
+      "moat_over_log2": -0.3562114469019463
+    },
+    {
+      "A": -14.253996651022135,
+      "D_A": -2.662864701623927,
+      "D_moat": -5.2869913354448705,
+      "D_moat_over_log": -0.43314434453910533,
+      "Delta_lambda": 36.538282482992614,
+      "E_half": -2.624126633820944,
+      "X": 200000,
+      "moat": -50.79227913401475,
+      "moat_over_log2": -0.3409147564698685
+    },
+    {
+      "A": -16.711392164902733,
+      "D_A": -2.9761630231160954,
+      "D_moat": -5.5039342522341785,
+      "D_moat_over_log": -0.419431629344415,
+      "Delta_lambda": 39.00384300582241,
+      "E_half": -2.527771229118083,
+      "X": 500000,
+      "moat": -55.715235170725144,
+      "moat_over_log2": -0.32355629097164207
+    },
+    {
+      "A": -18.73643924054713,
+      "D_A": -2.595955098317531,
+      "D_moat": -5.68914628234777,
+      "D_moat_over_log": -0.41179413952733934,
+      "Delta_lambda": 40.84739100621871,
+      "E_half": -3.0931911840302386,
+      "X": 1000000,
+      "moat": -59.58383024676584,
+      "moat_over_log2": -0.3121724260359566
+    },
+    {
+      "A": -20.848293289255395,
+      "D_A": -3.2387757670072395,
+      "D_moat": -5.847042346520235,
+      "D_moat_over_log": -0.40300367214500027,
+      "Delta_lambda": 42.728447229374815,
+      "E_half": -2.6082665795129953,
+      "X": 2000000,
+      "moat": -63.57674051863021,
+      "moat_over_log2": -0.30202562174984493
+    },
+    {
+      "A": -23.855193455370575,
+      "D_A": -3.8513061089783314,
+      "D_moat": -6.106994164836527,
+      "D_moat_over_log": -0.3959166655601024,
+      "Delta_lambda": 45.189568947868416,
+      "E_half": -2.2556880558581955,
+      "X": 5000000,
+      "moat": -69.04476240323899,
+      "moat_over_log2": -0.2901905701083937
+    }
+  ],
+  "scope": "Finite identity authentication and reconnaissance only. The all-X moat asymptotic and the conditional implications are mathematical arguments in L-90009/T-90009."
+}

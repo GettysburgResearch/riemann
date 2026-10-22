@@ -1,0 +1,66 @@
+{
+  "X_2000": {
+    "J_prime": [
+      135.29946063556982,
+      135.29946063556982
+    ],
+    "higher_prime_power_ramp": [
+      14.169367232991782,
+      14.169367232991782
+    ],
+    "moat": [
+      -29.41661033142158,
+      -29.41661033142158
+    ]
+  },
+  "classification": "PASS_EXPLICIT_PRIME_POWER_MOAT_DECREASE_CONSTANTS",
+  "quotient_constants": {
+    "boundary_half_sum": [
+      3.3159040494265774,
+      3.3159040494265774
+    ],
+    "u_10": [
+      -0.009228992262605953,
+      -0.009228992262605951
+    ],
+    "v_15": [
+      -0.014269557751892575,
+      -0.014269557751892573
+    ],
+    "w_gaps": [
+      {
+        "K": 1,
+        "lower_gap": 0.13958063821684645
+      },
+      {
+        "K": 2,
+        "lower_gap": 0.11993238577699705
+      },
+      {
+        "K": 3,
+        "lower_gap": 0.10661087818287704
+      },
+      {
+        "K": 4,
+        "lower_gap": 0.09686938065921972
+      },
+      {
+        "K": 5,
+        "lower_gap": 0.0893622328552894
+      },
+      {
+        "K": 6,
+        "lower_gap": 0.0833540652377323
+      },
+      {
+        "K": 7,
+        "lower_gap": 0.0784071439897424
+      },
+      {
+        "K": 8,
+        "lower_gap": 0.07424325097354502
+      }
+    ]
+  },
+  "scope": "Directed finite constants only. Symbolic monotonicity, the prime-power summation, and the imported theta bound are in L-90012."
+}
