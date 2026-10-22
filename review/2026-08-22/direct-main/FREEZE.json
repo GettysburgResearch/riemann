@@ -1,0 +1,77 @@
+{
+  "acceptance_condition": "Every one of the 85 commits is assigned exactly once by contiguous packet boundaries and cumulative compare indices.",
+  "audit_kind": "direct-to-main scientific delta",
+  "controlling_later_heads": {
+    "PR400": "7dc9fec9eb5fab4ee9340ddbc5a52e36a6ab617e",
+    "PR431": "78a622e32ef36e587099bb95cb791461b75d26bf",
+    "PR436": "9aeccd55779689d3ee105d16a0caf6f600ff1ea2",
+    "PR439": "706445c01d4a5c9f852a4faf1329bd9858dc727a",
+    "PR544": "d4dcd1256dc9c8e110c860cff87b3f89aee842a5",
+    "PR663": "fa081e81044a81e76f48cb9878a659d749e98427",
+    "PR668": "15719b975115ecad1b23264c6a6303899b4c99dc",
+    "ReviewerA_PR709": "55fe0b6f23d9163e2b602608da84194ba243d7c4",
+    "ReviewerB_PR708": "eb1987502ef9043e782ac6ab1e19c47be9daef93"
+  },
+  "cumulative_packet_end_indices": [
+    7,
+    16,
+    26,
+    27,
+    32,
+    48,
+    53,
+    64,
+    66,
+    67,
+    85
+  ],
+  "forbidden_mutations_respected": [
+    "main",
+    "PRs #708-#712",
+    "Reviewer C branch",
+    "historical research branches",
+    "existing review packets"
+  ],
+  "heavy_computation_rerun": false,
+  "non_scientific_packet_ids": [
+    "DM-001",
+    "DM-005",
+    "DM-006"
+  ],
+  "packet_commit_counts": [
+    7,
+    9,
+    10,
+    1,
+    5,
+    16,
+    5,
+    11,
+    2,
+    1,
+    18
+  ],
+  "packet_count": 11,
+  "range": {
+    "base": "a88bed9711b1b2057fb258354924056c5ad8696b",
+    "base_exclusive": true,
+    "commit_count": 85,
+    "head": "677203992eb0168920365ee45ae9db76bfa97dcf",
+    "head_inclusive": true
+  },
+  "repository": "gfreund123/riemann",
+  "review_branch": "review/2026-08-22/direct-main-delta",
+  "review_date": "2026-08-22",
+  "review_output_prefix": "review/2026-08-22/direct-main",
+  "scientific_status": "RH_UNPROVED",
+  "substantive_packet_ids": [
+    "DM-002A",
+    "DM-002B",
+    "DM-002C",
+    "DM-003A",
+    "DM-003B",
+    "DM-003C",
+    "DM-004",
+    "DM-007"
+  ]
+}
