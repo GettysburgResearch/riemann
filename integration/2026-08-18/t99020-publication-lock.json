@@ -1,0 +1,23 @@
+{
+  "schema": "riemann.t99020.publication-lock.v1",
+  "repository": "gfreund123/riemann",
+  "pull_request": 620,
+  "branch": "research/gpt56-pro/99020-direct-integral-score-free-hall",
+  "base_sha": "bac504b2d227669d9d5310d96e6cf805f6376ff2",
+  "normative_parent_head": "c1f0a22de74fba2683551a916ba8ea838430cb15",
+  "remote_core_replay": {
+    "classification": "PASS_T99020_DIRECT_INTEGRAL_SCORE_FREE_HALL_CANDIDATE_ALGEBRA",
+    "proof_object_sha256": "14c18b4ea5f7ef308c0d0df79d3872877a972ae40c0b6f8a700d690280cd1b6e",
+    "heavy_directed_campaigns_replayed": false,
+    "rh_established": false
+  },
+  "deterministic_full_packet": {
+    "zip_filename": "riemann-t99020-direct-integral-score-free-hall-candidate.zip",
+    "zip_sha256": "3b7e67bce4f31a7086645bbd251ce5c7c41498a160e998c2197f53ebc3a1df8f",
+    "patch_filename": "t99020-add-only.patch",
+    "patch_sha256": "411d8e0e5be49f2fd4415a1c52a06c93e4d51d0915f073b27be30e7daee42048",
+    "full_replay_proof_object_sha256": "d027856451823c1b877019a5456f5c242ce4d0e953cc2ad500da06a13e3f1456"
+  },
+  "status": "proposed complete unconditional proof candidate; hostile independent reconstruction required",
+  "rh_established": false
+}
