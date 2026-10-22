@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "filtered_endpoint_fiber_rows": 8253,
+    "generalized_selberg_counterexample": {
+      "defect": "log(3)*log(25/32)<0",
+      "parent": 6,
+      "split": 2
+    },
+    "positive_endpoint_binding_blocks": 15,
+    "row_scaling_counterexample": {
+      "amplitude": "1/2",
+      "four_times_defect": "-log(3/2)^2-4log(2)^2<0",
+      "parent": 4,
+      "split": 2
+    }
+  },
+  "proof_boundary": "Exact finite carry/tree/formal-log algebra and exact symbolic counterexamples only; no coupled interior source matrix, cofinal recurrence, or RH claim is certified.",
+  "proof_object_sha256": "aaccceaed2de644025ce6a7e97bfb8ca25ae9da213da2987eee0d0dff1e12d29",
+  "schema": "riemann.x29002.source-binding-firewall.v1",
+  "verdict": "EXACT_ENDPOINT_FIBER_BINDING_VERIFIED_AND_NAIVE_SOURCE_CONE_LIFTS_REFUTED",
+  "verified": true
+}
