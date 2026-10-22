@@ -1,0 +1,39 @@
+{
+  "N": 2,
+  "claimed_total": {
+    "lower": "23/20",
+    "upper": "51/40"
+  },
+  "lerch_term": {
+    "lower": "1/10",
+    "upper": "1/8"
+  },
+  "linear_term": {
+    "lower": "-1/2",
+    "upper": "-2/5"
+  },
+  "manifest": {
+    "completeness": "EXTERNALLY_CERTIFIED_COMPLETE",
+    "cutoff": 4,
+    "entry_count": 3,
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "prime_terms": [
+    {
+      "lower": "1/10",
+      "n": 2,
+      "upper": "1/10"
+    },
+    {
+      "lower": "3/20",
+      "n": 3,
+      "upper": "3/20"
+    },
+    {
+      "lower": "1/5",
+      "n": 4,
+      "upper": "1/5"
+    }
+  ],
+  "schema": "riemann.square-screw-level.v1"
+}
