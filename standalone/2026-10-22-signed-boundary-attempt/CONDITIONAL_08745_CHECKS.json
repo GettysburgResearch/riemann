@@ -1,0 +1,91 @@
+{
+  "status": "pass",
+  "scope": "Exact continuous scalar certificate conditional on the field-matched improved inverse moment and all inherited analytic interfaces. Matching analytic assembly is stated in separate packet notes and is not checked by this program. No high-conductor moment or new zero-free theorem is proved.",
+  "source_commit": "64cb43c038d1828a478cb97cbc32e435e111d2d2",
+  "source_formulas": "Liu arXiv:2610.26835v1 (13.16), (14.3), (14.8), Remark 14.1, Proposition 14.6 and Lemma 14.7, with the stated conditional inverse replacement",
+  "parameters": {
+    "kappa": "3/4",
+    "ell": "253/1500",
+    "b": "7/100",
+    "eta": "1/100",
+    "nu": "1/120",
+    "B_conditional": "1749/2000",
+    "lx": "571/1500",
+    "ly": "169/375",
+    "h": "197/250",
+    "C0": "-11/400",
+    "V": "2107/13500",
+    "zeta": "1/10000000"
+  },
+  "new_range": [
+    "1/8",
+    "4/5"
+  ],
+  "old_high_range": [
+    "3/4",
+    "5/6"
+  ],
+  "flat_inverse_cutoff": "100/99",
+  "A": [
+    "103649/243000",
+    "15917/20250",
+    "11807/20250",
+    "8428/30375"
+  ],
+  "B": [
+    "-1289117/3240000",
+    "-61493/162000",
+    "89647/810000"
+  ],
+  "C": [
+    "4477/48000",
+    "2057/24000"
+  ],
+  "discriminant": [
+    "8709023111/10497600000000",
+    "36066648779/262440000000",
+    "188515131683/437400000000",
+    "25419430511/65610000000",
+    "54374440991/656100000000"
+  ],
+  "old_shifted_coefficients": {
+    "z^0y^0": "106721/3888000",
+    "z^0y^1": "54961/243000",
+    "z^0y^2": "393479/972000",
+    "z^0y^3": "2107/13500",
+    "z^1y^0": "336631/1458000",
+    "z^1y^1": "565453/729000",
+    "z^1y^2": "178067/182250",
+    "z^1y^3": "4214/10125",
+    "z^2y^0": "103649/243000",
+    "z^2y^1": "15917/20250",
+    "z^2y^2": "11807/20250",
+    "z^2y^3": "8428/30375"
+  },
+  "strict_endpoint_margin": "1/25000",
+  "new_proved_margin": "8709023111/207852480000000",
+  "old_high_proved_margin": "106721/19440000",
+  "side_margins": {
+    "b_positive": "7/100",
+    "ell_above_sixth": "1/500",
+    "ell_below_fifth": "47/1500",
+    "kappa_above_source_lower": "3/10000",
+    "boundary_above_principal_floor": "1/2000",
+    "lx_above_ell": "53/250",
+    "ly_minus_ell_above_11b6": "461/3000",
+    "prime_capacity": "9/1000",
+    "ell_over_h_upper": "29/3546",
+    "ell_over_h_lower": "239/59100",
+    "ly_above_h_half": "17/300",
+    "ly_below_half": "37/750",
+    "small_delta_zero": "47/2000",
+    "small_delta_eighth": "13231/28368000",
+    "floor_endpoint": "61/25000",
+    "small_row": "703/37500"
+  },
+  "negative_control_old_endpoint": "27399077/16218900000",
+  "checker_sha256": "55b3f3901be0c21bec76f69dc1572c1c0938a7954ccdd6e1e266f49cfa98c93c",
+  "analytic_HC_proved": false,
+  "achieved_zero_free_improvement": false,
+  "arithmetic": "fractions.Fraction; no floating-point acceptance or sample grid"
+}
