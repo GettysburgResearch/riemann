@@ -1,0 +1,18 @@
+{
+  "schema": "riemann.t99100.common-parent-status.v1",
+  "outcome": "ABSTRACT_COMMON_PARENT_CLOSED_NATIVE_APPLICATION_OPEN",
+  "one_sentence_verdict": "One random key gives an exact common-parent partition with factor-67 child density below 1/8, but the exact native score/capacity producer has not yet been proved to be an integral Hall-flow face.",
+  "rh_status": "UNPROVED",
+  "main_new_idea": "Partition the unnormalized source first, normalize last, and use an integral network-flow decomposition for samplewise Hall feasibility.",
+  "proved": [
+    "common-parent Radon-Nikodym partition",
+    "factor-67 alpha-mass bound below 1/8",
+    "normalize-last barycentric identity",
+    "finite integral Hall-flow convex decomposition"
+  ],
+  "open": [
+    "literal domination in the complete native source normalization",
+    "integral encoding of all native score and endpoint constraints",
+    "samplewise score preservation for the conclusion-producing producer"
+  ]
+}
