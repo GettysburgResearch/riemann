@@ -1,0 +1,23 @@
+{
+  "arithmetic_class": "EXACT_INTEGER_AND_FORMAL_PRIME_LOG",
+  "classification": "PASS_X_95050_SCALE_FOUR_DIVISOR_COMPILER",
+  "coefficient_checks": 768,
+  "does_not_prove": [
+    "capacity-subpower transfer",
+    "Q4 mean bound",
+    "RH"
+  ],
+  "dyadic_level_checks": 10,
+  "hostile_mutations_detected": 0,
+  "majorant_checks": 767,
+  "positive_recursion_checks": 767,
+  "probability_normalization_checks": 767,
+  "proves": [
+    "positive g4 coefficients",
+    "nonnegative generalized-prime recursion",
+    "coefficient-one formal normalization",
+    "signed reciprocal recursion",
+    "positive majorant"
+  ],
+  "signed_reciprocal_checks": 767
+}
