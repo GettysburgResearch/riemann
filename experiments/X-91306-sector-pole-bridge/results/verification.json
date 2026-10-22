@@ -1,0 +1,43 @@
+{
+  "checks": 86,
+  "commutation_checks": 60,
+  "endpoint_asymptotic_relative_errors": {
+    "0.25": 8.860315675974973e-22,
+    "0.5": 6.250000000000205e-29
+  },
+  "finite_euler_log_products": {
+    "100": 3.141736882143743,
+    "10000": 13.771520279241114,
+    "2000": 8.402093121185636,
+    "500": 5.452851021114956
+  },
+  "max_translation_overlap_error": 1.1102230246251565e-16,
+  "pole_node_mismatch": [
+    {
+      "2a_source": 0.9999544670817618,
+      "a": "0.001",
+      "model_over_Ca": 1.0537816340253698,
+      "source_model_ratio": 4232.7586182501655
+    },
+    {
+      "2a_source": 0.9999770689713737,
+      "a": "0.0005",
+      "model_over_Ca": 1.026428950031099,
+      "source_model_ratio": 17382.612254546722
+    },
+    {
+      "2a_source": 0.9999907880705897,
+      "a": "0.0002",
+      "model_over_Ca": 1.0104629426251286,
+      "source_model_ratio": 110359.4480966677
+    },
+    {
+      "2a_source": 0.9999953874471944,
+      "a": "0.0001",
+      "model_over_Ca": 1.0052135460537617,
+      "source_model_ratio": 443745.0967836343
+    }
+  ],
+  "scope": "finite algebra and numerical asymptotics only; the PNT limit theorems, EPBOT_omega, renewal L2, innerness, and RH are not proved",
+  "verdict": "PASS_X_91306_SECTOR_POLE_BRIDGE"
+}
