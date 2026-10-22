@@ -1,0 +1,40 @@
+{
+  "constants": {
+    "c1_star_display": 0.7532960678560707,
+    "not_below_tail_fraction_display": 0.8362503518397059,
+    "off_line_pair_budget_display": 0.16374964816029414,
+    "simple_line_fraction_display": 0.6725007036794117
+  },
+  "exact_pullback_checks": {
+    "lagrange_wedge_identities": 500,
+    "opposite_weak_sign_products": 500,
+    "random_cases": 500,
+    "vanishing_3x3_minors": 8741
+  },
+  "near_line_mutation": {
+    "exact_models": [
+      {
+        "epsilon": "1/2",
+        "negative_eigenvalue": "-1/2",
+        "positive_eigenvalue": "2"
+      },
+      {
+        "epsilon": "1/10",
+        "negative_eigenvalue": "-1/50",
+        "positive_eigenvalue": "2"
+      },
+      {
+        "epsilon": "1/100",
+        "negative_eigenvalue": "-1/5000",
+        "positive_eigenvalue": "2"
+      },
+      {
+        "epsilon": "1/1000",
+        "negative_eigenvalue": "-1/500000",
+        "positive_eigenvalue": "2"
+      }
+    ]
+  },
+  "scope": "Exact finite-channel rank/inertia algebra and near-line mutation only. The Claude Zeta23 proportion theorem is imported, not reproved here. No RH conclusion.",
+  "verdict": "PASS_X_90210_CLAUDE_ZETA23_INDEX_BRIDGE"
+}

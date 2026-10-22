@@ -1,0 +1,98 @@
+{
+  "verdict": "PASS_X_90209_CRITICAL_NEUTRAL_PARITY_FLUX",
+  "endpoints": [
+    {
+      "X": 8,
+      "K": "0.80157470639491160936307888297362247",
+      "direct_vs_three": "2.4545467e-91",
+      "direct_vs_annulus": "1.2272734e-91",
+      "direct_vs_flux": "1.2272734e-91",
+      "divisor_edges": 0
+    },
+    {
+      "X": 9,
+      "K": "0.81341934170582415003115281981503754",
+      "direct_vs_three": "1.2272734e-91",
+      "direct_vs_annulus": "1.2272734e-91",
+      "direct_vs_flux": "0.0",
+      "divisor_edges": 0
+    },
+    {
+      "X": 16,
+      "K": "0.79591306227277906666347614103708797",
+      "direct_vs_three": "1.2272734e-91",
+      "direct_vs_annulus": "2.4545467e-91",
+      "direct_vs_flux": "1.2272734e-91",
+      "divisor_edges": 2
+    },
+    {
+      "X": 31,
+      "K": "0.8142307637614376743167709123000595",
+      "direct_vs_three": "0.0",
+      "direct_vs_annulus": "2.4545467e-91",
+      "direct_vs_flux": "1.2272734e-91",
+      "divisor_edges": 2
+    },
+    {
+      "X": 64,
+      "K": "0.87429580628796923710017436778303309",
+      "direct_vs_three": "0.0",
+      "direct_vs_annulus": "4.9090935e-91",
+      "direct_vs_flux": "1.2272734e-91",
+      "divisor_edges": 5
+    },
+    {
+      "X": 127,
+      "K": "0.91620571533964511840490239712781204",
+      "direct_vs_three": "0.0",
+      "direct_vs_annulus": "3.6818201e-91",
+      "direct_vs_flux": "4.9090935e-91",
+      "divisor_edges": 13
+    },
+    {
+      "X": 256,
+      "K": "0.92555217091398221459483213054341251",
+      "direct_vs_three": "0.0",
+      "direct_vs_annulus": "4.9090935e-91",
+      "direct_vs_flux": "6.1363668e-91",
+      "divisor_edges": 25
+    },
+    {
+      "X": 1000,
+      "K": "0.94846446631775780993249631454361775",
+      "direct_vs_three": "2.4545467e-91",
+      "direct_vs_annulus": "1.7181827e-90",
+      "direct_vs_flux": "2.4545467e-91",
+      "divisor_edges": 94
+    },
+    {
+      "X": 4096,
+      "K": "0.97401998253440483976256095483156769",
+      "direct_vs_three": "4.9090935e-91",
+      "direct_vs_annulus": "1.5954554e-90",
+      "direct_vs_flux": "3.6818201e-91",
+      "divisor_edges": 391
+    }
+  ],
+  "max_errors": {
+    "direct_vs_three": "4.9090934653e-91",
+    "direct_vs_annulus": "1.71818271285e-90",
+    "direct_vs_flux": "6.13636683162e-91",
+    "corrected_forcing_inversion": "3.73091103363e-89"
+  },
+  "graph": {
+    "edges_checked": 532,
+    "color_equalities": 532,
+    "allowed_primes": [
+      3,
+      5,
+      7
+    ],
+    "zero": "2.91421356237309504880168872420969807857"
+  },
+  "boundary_repair": {
+    "true_H_2": "0.0",
+    "old_unqualified_inversion_at_2": "1.4246212024587490062088658021"
+  },
+  "scope": "exact identities and parity firewall only; no Mertens-flux bound and no RH proof"
+}

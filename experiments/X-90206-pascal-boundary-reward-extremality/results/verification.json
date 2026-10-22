@@ -1,0 +1,94 @@
+{
+  "canonical_reward": {
+    "d2": 15,
+    "d3": 4,
+    "r": "5/2",
+    "scale": 12,
+    "tail_zero_through": 499
+  },
+  "ordered_nonnegative_checks": 5988,
+  "ordered_r_gt_2_witnesses": [
+    {
+      "alpha": "1/100",
+      "drift_at_2.01": "-1/247450",
+      "interval": [2, 99],
+      "m": 101
+    },
+    {
+      "alpha": "1/10",
+      "drift_at_2.01": "-1/2200",
+      "interval": [2, 9],
+      "m": 11
+    },
+    {
+      "alpha": "1/4",
+      "drift_at_2.01": "-1/250",
+      "interval": [2, 3],
+      "m": 5
+    },
+    {
+      "alpha": "1/3",
+      "drift_at_2.01": "-1/200",
+      "interval": [2, 2],
+      "m": 4
+    },
+    {
+      "alpha": "2/5",
+      "drift_at_2.01": "-1/200",
+      "interval": [2, 2],
+      "m": 4
+    },
+    {
+      "alpha": "49/100",
+      "drift_at_2.01": "-1/200",
+      "interval": [2, 2],
+      "m": 4
+    }
+  ],
+  "source_polynomial_cases": [
+    {
+      "pairing": "449069205838810147/78908472046043640",
+      "q1": "1",
+      "q2": "1",
+      "q4": "-2",
+      "r": "0"
+    },
+    {
+      "pairing": "3348604822200474591146333/754974087255900609257160",
+      "q1": "1",
+      "q2": "0",
+      "q4": "-1",
+      "r": "1"
+    },
+    {
+      "pairing": "51077482369830944711659/16063278452253204452280",
+      "q1": "1",
+      "q2": "-1",
+      "q4": "0",
+      "r": "2"
+    },
+    {
+      "pairing": "1926660095972844306598793/754974087255900609257160",
+      "q1": "1",
+      "q2": "-3/2",
+      "q4": "1/2",
+      "r": "5/2"
+    },
+    {
+      "pairing": "1831863780891002287628957/754974087255900609257160",
+      "q1": "1",
+      "q2": "-8/5",
+      "q4": "3/5",
+      "r": "13/5"
+    }
+  ],
+  "theorem": {
+    "max_balanced_polynomial": "1-t",
+    "max_uniform_polynomial": "(1-t)(1-t/2)",
+    "positive_ordered_balance_r_interval": "[0,2]",
+    "uniform_positive_r_interval": "[0,5/2]",
+    "zero_safe_uniform_subinterval": "[1,5/2]"
+  },
+  "uniform_formula_checks": 995,
+  "verdict": "PASS_X_90206_PASCAL_BOUNDARY_REWARD_EXTREMALITY"
+}

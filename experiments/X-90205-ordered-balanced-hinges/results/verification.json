@@ -1,0 +1,35 @@
+{
+  "verdict": "PASS_X_90205_ORDERED_BALANCED_HINGE_RECONNAISSANCE",
+  "exact_policy": {
+    "probability_rows": 99,
+    "max_direct_vs_range_error": 2.6645352591003757e-15
+  },
+  "step_mutation": {
+    "X": 9,
+    "target": "1_(2<=q<=8)",
+    "M4": "-4/3"
+  },
+  "hinge_exhaustive": {
+    "T_min": 3,
+    "T_max": 2000,
+    "negative_coordinates": 0,
+    "smallest_nonterminal": 0.011178941995514106,
+    "smallest_at": {
+      "T": 2000,
+      "n": 1999
+    }
+  },
+  "hinge_spots": [
+    {"X": 1000, "negative_coordinates": 0, "M2": 0.8288315027101476},
+    {"X": 10000, "negative_coordinates": 0, "M2": 0.8538543363170702},
+    {"X": 100000, "negative_coordinates": 0, "M2": 0.865840137497399},
+    {"X": 1000000, "negative_coordinates": 0, "M2": 0.8707995547582963}
+  ],
+  "critical_spots": [
+    {"X": 1000, "negative_coordinates": 0, "M2": 5.831487393863583},
+    {"X": 10000, "negative_coordinates": 0, "M2": 7.8351504539921875},
+    {"X": 100000, "negative_coordinates": 0, "M2": 9.83551726482776},
+    {"X": 1000000, "negative_coordinates": 0, "M2": 11.829944372525508}
+  ],
+  "note": "finite scans are reconnaissance only; OBH is not certified cofinally"
+}
