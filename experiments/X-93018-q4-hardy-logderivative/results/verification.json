@@ -1,0 +1,24 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL_AND_FORMAL_PRIME_LOGS",
+  "classification": "PASS_X_93018_Q4_HARDY_LOGDERIVATIVE",
+  "does_not_prove": [
+    "the square-root Q4 mean bound",
+    "the endpoint PIG bound",
+    "the Riemann Hypothesis"
+  ],
+  "finite_backward_inversion_checks": 5005,
+  "formal_log_derivative_convolution_checks": 512,
+  "hardy_prefix_checks": 5005,
+  "hostile_mutations_detected": 5554,
+  "linear_boundary_firewall_checks": 127,
+  "proves": [
+    "finite prefix/mean Hardy identity",
+    "finite backward inversion with boundary",
+    "boundary-free inversion on exact zero-boundary fixtures",
+    "linear-mode boundary firewall",
+    "explicit scale-four Mobius coefficients",
+    "coefficientwise Q4 logarithmic-derivative convolution"
+  ],
+  "scale_four_mobius_coefficient_checks": 512,
+  "zero_boundary_inversion_checks": 5535
+}

@@ -1,0 +1,26 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL",
+  "basis_reconstructions": 180,
+  "bottom_nonpositive_checks": 208,
+  "centered_baseline_checks": 4,
+  "classification": "PASS_X_93017_CYCLE_DEBT_CARRY_DISCREPANCY",
+  "does_not_prove": [
+    "the OPB asymptotic bound",
+    "polylogarithmic Cycle Debt",
+    "the Riemann Hypothesis"
+  ],
+  "dyadic_objective_checks": 208,
+  "hostile_mutations_detected": 564,
+  "proves": [
+    "triangular carry-coordinate basis",
+    "split-defect discrepancy identity",
+    "target objective diagonalization",
+    "small exact asymmetric/discrepancy LP equivalence",
+    "centered baseline relation",
+    "bottom nonpositivity",
+    "factor-one-half dyadic objective split"
+  ],
+  "small_lp_equivalence_checks": 4,
+  "split_defect_checks": 5310,
+  "target_pairing_checks": 180
+}

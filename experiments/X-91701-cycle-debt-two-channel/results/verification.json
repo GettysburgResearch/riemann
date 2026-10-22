@@ -1,0 +1,28 @@
+{
+  "arithmetic": "EXACT_RATIONAL",
+  "certificate": {
+    "actions": "84",
+    "dual_value": "695066143879909/833223944553000",
+    "primal_value": "695066143879909/833223944553000",
+    "states": "24"
+  },
+  "certificate_identities": 225,
+  "certificate_mutations_detected": 2,
+  "does_not_prove": [
+    "actual irrational carry-capacity evaluation",
+    "critical Mobius source estimate",
+    "cofinal subpower Cycle Debt",
+    "Riemann Hypothesis"
+  ],
+  "overlap_cases_with_strict_cost_reduction": 89,
+  "overlap_identities": 3026,
+  "proves": [
+    "finite two-channel source identity",
+    "finite cost identity and overlap cancellation",
+    "finite Bellman-envelope feasibility",
+    "finite bang-bang primal-dual equality"
+  ],
+  "signed_flow_identities": 7684,
+  "signed_flow_mutations_detected": 113,
+  "verdict": "PASS_X_91701_CYCLE_DEBT_TWO_CHANNEL_MARKOV_CONTROL"
+}
