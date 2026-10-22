@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "convolutions": {
+      "rows": 72
+    },
+    "moment_tower": {
+      "coefficient_mutation_rejected": 1,
+      "nonzero_unit_boundary_cells": 411,
+      "pointwise_cells": 2698
+    }
+  },
+  "classification": "PASS_EXACT_SELBERG_CARRY_MOMENT_TOWER_AND_BOUNDARY_FIREWALL",
+  "schema": "X-26201-selberg-carry-moment-tower-v1",
+  "scope": "exact finite algebra only; does not prove physical transference, F5TC, bottom-charge positivity, DSS, or RH",
+  "sha256_without_digest": "eaaed5595e09e6b7d0f9fd990f42bea3e99d4c4e180fd04d78b7d2fa8434c2af"
+}

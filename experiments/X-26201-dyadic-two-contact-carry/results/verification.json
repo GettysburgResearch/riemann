@@ -1,0 +1,50 @@
+{
+  "checks": {
+    "adjacent_flow_potential": {
+      "endpoints": 3
+    },
+    "average_rank_one_collapse": {
+      "cases": 12879
+    },
+    "divisor_collapse": {
+      "cases": 160
+    },
+    "dyadic_layer_formula": {
+      "cases": 230
+    },
+    "flow_cost_rational_envelope": {
+      "cases": 998
+    },
+    "pointwise_two_contact": {
+      "formal_cross_cases": 13038,
+      "pointwise_cases": 13038,
+      "second_moment_rows": 159
+    },
+    "signed_residual_pairing": {
+      "endpoints": 3
+    },
+    "unprojected_green_two_charge": {
+      "instances": [
+        {"X": 3, "dimension": 2, "energy": 5},
+        {"X": 4, "dimension": 3, "energy": 5},
+        {"X": 5, "dimension": 4, "energy": 5},
+        {"X": 6, "dimension": 5, "energy": 5},
+        {"X": 7, "dimension": 6, "energy": 5},
+        {"X": 8, "dimension": 7, "energy": 5},
+        {"X": 9, "dimension": 8, "energy": 5},
+        {"X": 10, "dimension": 9, "energy": 5},
+        {"X": 11, "dimension": 10, "energy": 5},
+        {"X": 12, "dimension": 11, "energy": 5},
+        {"X": 13, "dimension": 12, "energy": 5},
+        {"X": 14, "dimension": 13, "energy": 5},
+        {"X": 15, "dimension": 14, "energy": 5},
+        {"X": 16, "dimension": 15, "energy": 5},
+        {"X": 17, "dimension": 16, "energy": 5},
+        {"X": 18, "dimension": 17, "energy": 5}
+      ]
+    }
+  },
+  "schema": "X-26201-dyadic-carry-bridge-v1",
+  "scope": "exact finite algebra only; does not prove Dyadic Signed Slack, Parity-Dipole Descent, a Green-to-normal transference, or RH",
+  "sha256_without_digest": "dd6f66f1e026178c1277f2fa634671d8868219e0303db505d9f0547df5eb0715"
+}

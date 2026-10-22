@@ -1,0 +1,26 @@
+{
+  "classification": "PASS_EXACT_DYADIC_BOTTOM_CHARGE_AND_FLOW_INVISIBILITY",
+  "rows": [
+    {
+      "X": 17,
+      "bottom_flow_delta": {"denominator": 44, "numerator": 1},
+      "high_index_flow_delta": {"denominator": 1, "numerator": 0},
+      "projection": {"denominator": 570, "numerator": 77}
+    },
+    {
+      "X": 29,
+      "bottom_flow_delta": {"denominator": 68, "numerator": 1},
+      "high_index_flow_delta": {"denominator": 1, "numerator": 0},
+      "projection": {"denominator": 930, "numerator": 77}
+    },
+    {
+      "X": 43,
+      "bottom_flow_delta": {"denominator": 96, "numerator": 1},
+      "high_index_flow_delta": {"denominator": 1, "numerator": 0},
+      "projection": {"denominator": 1350, "numerator": 77}
+    }
+  ],
+  "schema": "X-26201-bottom-charge-v1",
+  "scope": "finite exact algebra; no DSS, PBD, or RH conclusion",
+  "sha256_without_digest": "395a7a89ea2267cfa5a3b805ead2646fa46a1761408f6ff048fed7b2e218757f"
+}
