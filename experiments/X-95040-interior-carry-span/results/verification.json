@@ -1,0 +1,20 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL",
+  "classification": "PASS_X_95040_INTERIOR_CARRY_SPAN",
+  "does_not_prove": [
+    "CRCTP for the actual target",
+    "root scalar bound",
+    "RH"
+  ],
+  "hostile_mutations_detected": 2,
+  "positive_interval_checks": 1456,
+  "proves": [
+    "signed interior span",
+    "terminal six-cycle correction",
+    "positive two-leaf interval cone",
+    "root-neutral Farkas separator"
+  ],
+  "separator_checks": 1,
+  "signed_span_checks": 200,
+  "tree_count_checks": 125
+}
