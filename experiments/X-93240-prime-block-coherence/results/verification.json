@@ -1,0 +1,25 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL",
+  "checks": {
+    "hilbert_space_fixtures": 1205,
+    "mutation_tests_detected": 3,
+    "prime_phase_blocks": 6,
+    "q4_endpoint_fixtures": 95,
+    "q4_source_coefficients": 4655,
+    "same_tower_algebra_checks": 144
+  },
+  "claim_ids": [
+    "L-93240",
+    "L-93241",
+    "L-93242",
+    "T-93243"
+  ],
+  "does_not_authenticate": [
+    "PR #392 first-Hermite explicit formula or large-value theorem",
+    "V(q)=q+O(sqrt(q))",
+    "T-93010 Mellin pole-to-energy implication",
+    "any deterministic prime-resonance exclusion",
+    "the Riemann Hypothesis"
+  ],
+  "verdict": "PASS_X_93240_PRIME_BLOCK_COHERENCE"
+}
