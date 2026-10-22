@@ -1,0 +1,252 @@
+{
+  "checkpoints": [
+    {
+      "last_ordinate": 49.7738324776723,
+      "original_vector_residual": 1.917094804484693e-05,
+      "positive_zero_pairs": 10,
+      "reoptimized_min_eigenvalue": 1.9013895091468104e-05,
+      "residual_trace": 1.9513716100740401
+    },
+    {
+      "last_ordinate": 88.80911120763446,
+      "original_vector_residual": 1.8862978973818355e-05,
+      "positive_zero_pairs": 25,
+      "reoptimized_min_eigenvalue": 1.8334284004507626e-05,
+      "residual_trace": 1.4089001659628761
+    },
+    {
+      "last_ordinate": 143.11184580762063,
+      "original_vector_residual": 1.8260775550653464e-05,
+      "positive_zero_pairs": 50,
+      "reoptimized_min_eigenvalue": 1.7678223428519598e-05,
+      "residual_trace": 0.9868968529087743
+    },
+    {
+      "last_ordinate": 236.5242296658162,
+      "original_vector_residual": 1.5323541642846008e-05,
+      "positive_zero_pairs": 100,
+      "reoptimized_min_eigenvalue": 1.4040520290923674e-05,
+      "residual_trace": 0.6504334102220268
+    },
+    {
+      "last_ordinate": 396.3818542225922,
+      "original_vector_residual": 1.066826448396479e-05,
+      "positive_zero_pairs": 200,
+      "reoptimized_min_eigenvalue": 1.0250490189184564e-05,
+      "residual_trace": 0.4343220304405114
+    },
+    {
+      "last_ordinate": 541.8474371212013,
+      "original_vector_residual": 7.828840679418288e-06,
+      "positive_zero_pairs": 300,
+      "reoptimized_min_eigenvalue": 7.356346770058978e-06,
+      "residual_trace": 0.33873743688554836
+    },
+    {
+      "last_ordinate": 679.7421978825282,
+      "original_vector_residual": 6.069374399606573e-06,
+      "positive_zero_pairs": 400,
+      "reoptimized_min_eigenvalue": 5.691171697364718e-06,
+      "residual_trace": 0.28208024402031345
+    },
+    {
+      "last_ordinate": 811.1843588465063,
+      "original_vector_residual": 5.736120622219697e-06,
+      "positive_zero_pairs": 500,
+      "reoptimized_min_eigenvalue": 5.379353543612243e-06,
+      "residual_trace": 0.24272230422160027
+    },
+    {
+      "last_ordinate": 939.0243008992184,
+      "original_vector_residual": 5.44367820964589e-06,
+      "positive_zero_pairs": 600,
+      "reoptimized_min_eigenvalue": 5.062821737814553e-06,
+      "residual_trace": 0.21555957691948957
+    }
+  ],
+  "classification": "EMPIRICAL_APPROXIMATE_ZERO_ATTRIBUTION_ONLY",
+  "cumulative_top_contribution": [
+    {
+      "fraction_of_raw_rayleigh": 0.15353180775961148,
+      "sum": 2.960943337405289e-06,
+      "top_count": 1
+    },
+    {
+      "fraction_of_raw_rayleigh": 0.4433131750860652,
+      "sum": 8.549532577707145e-06,
+      "top_count": 5
+    },
+    {
+      "fraction_of_raw_rayleigh": 0.5644829114177161,
+      "sum": 1.0886355993791082e-05,
+      "top_count": 10
+    },
+    {
+      "fraction_of_raw_rayleigh": 0.6349826661800378,
+      "sum": 1.2245981612731502e-05,
+      "top_count": 20
+    },
+    {
+      "fraction_of_raw_rayleigh": 0.6826546903141293,
+      "sum": 1.3165362191259376e-05,
+      "top_count": 50
+    },
+    {
+      "fraction_of_raw_rayleigh": 0.7030582828509577,
+      "sum": 1.3558856427161593e-05,
+      "top_count": 100
+    },
+    {
+      "fraction_of_raw_rayleigh": 0.7137379377837598,
+      "sum": 1.3764819305997612e-05,
+      "top_count": 200
+    },
+    {
+      "fraction_of_raw_rayleigh": 0.7173719849005512,
+      "sum": 1.3834903855611775e-05,
+      "top_count": 400
+    },
+    {
+      "fraction_of_raw_rayleigh": 0.7177326070958818,
+      "sum": 1.3841858648251595e-05,
+      "top_count": 600
+    }
+  ],
+  "environment": {
+    "mpmath": "1.3.0",
+    "numpy": "2.3.5",
+    "python": "3.13.5"
+  },
+  "parameters": {
+    "h_binary64": 0.23104906018664845,
+    "h_kind": "log(2)/3",
+    "matrix_size": 53,
+    "positive_zero_pairs": 600,
+    "zero_precision_decimal_digits": 22
+  },
+  "raw_min_eigenvalue": 1.9285536857882313e-05,
+  "top_original_vector_contributors": [
+    {
+      "fraction_of_raw_rayleigh": 0.15353180775961148,
+      "ordinate": 271.494055641645,
+      "pair_contribution": 2.960943337405289e-06,
+      "positive_zero_index": 121
+    },
+    {
+      "fraction_of_raw_rayleigh": 0.1349388248658051,
+      "ordinate": 163.030709687182,
+      "pair_contribution": 2.602367680508811e-06,
+      "positive_zero_index": 60
+    },
+    {
+      "fraction_of_raw_rayleigh": 0.0715131453692071,
+      "ordinate": 407.5814603868962,
+      "pair_contribution": 1.3791694008409392e-06,
+      "positive_zero_index": 207
+    },
+    {
+      "fraction_of_raw_rayleigh": 0.04281659837245636,
+      "ordinate": 244.07089849707816,
+      "pair_contribution": 8.25741086041151e-07,
+      "positive_zero_index": 105
+    },
+    {
+      "fraction_of_raw_rayleigh": 0.0405127987189851,
+      "ordinate": 462.06536727488253,
+      "pair_contribution": 7.813110729109546e-07,
+      "positive_zero_index": 244
+    },
+    {
+      "fraction_of_raw_rayleigh": 0.03876363781579724,
+      "ordinate": 544.3238901010053,
+      "pair_contribution": 7.475775658421583e-07,
+      "positive_zero_index": 301
+    },
+    {
+      "fraction_of_raw_rayleigh": 0.02230000635196069,
+      "ordinate": 598.4930773461648,
+      "pair_contribution": 4.300675944317476e-07,
+      "positive_zero_index": 340
+    },
+    {
+      "fraction_of_raw_rayleigh": 0.021695917913129196,
+      "ordinate": 489.66176157795616,
+      "pair_contribution": 4.1841742457924225e-07,
+      "positive_zero_index": 263
+    },
+    {
+      "fraction_of_raw_rayleigh": 0.019500522352473938,
+      "ordinate": 299.8403260537213,
+      "pair_contribution": 3.76078042576594e-07,
+      "positive_zero_index": 138
+    },
+    {
+      "fraction_of_raw_rayleigh": 0.018909651898289904,
+      "ordinate": 626.0192834276544,
+      "pair_contribution": 3.646827886541942e-07,
+      "positive_zero_index": 360
+    },
+    {
+      "fraction_of_raw_rayleigh": 0.014228579978052564,
+      "ordinate": 734.789643252378,
+      "pair_contribution": 2.7440580360205906e-07,
+      "positive_zero_index": 441
+    },
+    {
+      "fraction_of_raw_rayleigh": 0.012720373763032401,
+      "ordinate": 134.75650975337388,
+      "pair_contribution": 2.453192370530005e-07,
+      "positive_zero_index": 46
+    },
+    {
+      "fraction_of_raw_rayleigh": 0.007733135113320065,
+      "ordinate": 107.1686111842764,
+      "pair_contribution": 1.4913766225491802e-07,
+      "positive_zero_index": 33
+    },
+    {
+      "fraction_of_raw_rayleigh": 0.0063915963542939365,
+      "ordinate": 924.7734839334767,
+      "pair_contribution": 1.2326536707144193e-07,
+      "positive_zero_index": 589
+    },
+    {
+      "fraction_of_raw_rayleigh": 0.0057173986704022964,
+      "ordinate": 189.41615865601693,
+      "pair_contribution": 1.1026310278925082e-07,
+      "positive_zero_index": 74
+    },
+    {
+      "fraction_of_raw_rayleigh": 0.005578170712949473,
+      "ordinate": 679.7421978825282,
+      "pair_contribution": 1.0757801688414673e-07,
+      "positive_zero_index": 400
+    },
+    {
+      "fraction_of_raw_rayleigh": 0.005334908635220845,
+      "ordinate": 870.8469023257541,
+      "pair_contribution": 1.0288657711798622e-07,
+      "positive_zero_index": 546
+    },
+    {
+      "fraction_of_raw_rayleigh": 0.0043468693391852916,
+      "ordinate": 327.44390126190547,
+      "pair_contribution": 8.383170885725647e-08,
+      "positive_zero_index": 155
+    },
+    {
+      "fraction_of_raw_rayleigh": 0.004300440831604414,
+      "ordinate": 297.97927706194344,
+      "pair_contribution": 8.2936310163049e-08,
+      "positive_zero_index": 137
+    },
+    {
+      "fraction_of_raw_rayleigh": 0.004148281364260502,
+      "ordinate": 52.970321477714464,
+      "pair_contribution": 8.000183314731224e-08,
+      "positive_zero_index": 11
+    }
+  ],
+  "warning": "mpmath zero ordinates and binary64 matrices; not a zero certificate or RH witness",
+  "zero_list_sha256": "52b82d24790baa46d8dd9a5d9c8f5f883be0eabba9dd2272d74d20520a7a2889"
+}
