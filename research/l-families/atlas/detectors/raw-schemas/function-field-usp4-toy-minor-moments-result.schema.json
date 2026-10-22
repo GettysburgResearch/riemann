@@ -1,0 +1,859 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/gfreund123/riemann/research/l-families/atlas/detectors/raw-schemas/function-field-usp4-toy-minor-moments-result.schema.json",
+  "title": "Exact USp(4) genus-two toy-minor moment comparison result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "definition",
+    "detector_semantic_id",
+    "exact_result_status",
+    "source_locks",
+    "character_identity",
+    "range_certificate",
+    "weyl_certificate",
+    "character_decomposition_certificate",
+    "twelve_moment_sign_certificate",
+    "negative_sign_moment_certificate",
+    "finite_comparisons",
+    "frozen_moment_pattern",
+    "convergence_target",
+    "firewalls"
+  ],
+  "properties": {
+    "schema": {"const": "riemann.atlas.raw.function_field_usp4_toy_minor_moments.v1"},
+    "definition": {"type": "string", "minLength": 1},
+    "detector_semantic_id": {"type": "string", "pattern": "^ATLAS\\.DETECTOR\\."},
+    "exact_result_status": {"const": "RIGOROUS_CERTIFIED"},
+    "source_locks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "comparator_source",
+        "comparator_fixture",
+        "character_decomposition_source",
+        "character_decomposition_fixture",
+        "twelve_moment_source",
+        "twelve_moment_fixture",
+        "q_scan_source",
+        "q_scan_fixture"
+      ],
+      "properties": {
+        "comparator_source": {
+          "allOf": [
+            {"$ref": "#/$defs/source_lock"},
+            {"properties": {"path": {"const": "research/l-families/atlas/function_field/usp4_toy_minor_moments.py"}}}
+          ]
+        },
+        "comparator_fixture": {
+          "allOf": [
+            {"$ref": "#/$defs/fixture_lock"},
+            {"properties": {"path": {"const": "research/l-families/atlas/function_field/usp4_toy_minor_moments.json"}}}
+          ]
+        },
+        "character_decomposition_source": {
+          "allOf": [
+            {"$ref": "#/$defs/source_lock"},
+            {"properties": {"path": {"const": "research/l-families/atlas/function_field/usp4_toy_minor_character_decomposition.py"}}}
+          ]
+        },
+        "character_decomposition_fixture": {
+          "allOf": [
+            {"$ref": "#/$defs/character_fixture_lock"},
+            {"properties": {"path": {"const": "research/l-families/atlas/function_field/usp4_toy_minor_character_decomposition.json"}}}
+          ]
+        },
+        "twelve_moment_source": {
+          "allOf": [
+            {"$ref": "#/$defs/source_lock"},
+            {"properties": {"path": {"const": "research/l-families/atlas/function_field/usp4_twelve_moment_sign_bound.py"}}}
+          ]
+        },
+        "twelve_moment_fixture": {
+          "allOf": [
+            {"$ref": "#/$defs/fixture_lock"},
+            {"properties": {"path": {"const": "research/l-families/atlas/function_field/usp4_twelve_moment_sign_bound.json"}}}
+          ]
+        },
+        "q_scan_source": {
+          "allOf": [
+            {"$ref": "#/$defs/source_lock"},
+            {"properties": {"path": {"const": "research/l-families/atlas/function_field/genus2_q_scan.py"}}}
+          ]
+        },
+        "q_scan_fixture": {
+          "allOf": [
+            {"$ref": "#/$defs/fixture_lock"},
+            {"properties": {"path": {"const": "research/l-families/atlas/function_field/genus2_q_scan.json"}}}
+          ]
+        }
+      }
+    },
+    "character_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "formula", "dimensions_at_identity", "haar_mean_consequence"],
+      "properties": {
+        "status": {"const": "PROVED_EXACT_LAURENT_IDENTITY"},
+        "formula": {"const": "F=-(1+chi_{omega_2}+chi_{2*omega_2})"},
+        "dimensions_at_identity": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["standard", "omega_2", "2*omega_2", "F"],
+          "properties": {
+            "standard": {"const": 4},
+            "omega_2": {"const": 5},
+            "2*omega_2": {"const": 14},
+            "F": {"const": -20}
+          }
+        },
+        "haar_mean_consequence": {"const": -1}
+      }
+    },
+    "range_certificate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "trace_coordinates",
+        "formula",
+        "minimum",
+        "minimum_witnesses",
+        "maximum",
+        "maximum_witnesses",
+        "proof"
+      ],
+      "properties": {
+        "status": {"const": "PROVED_EXACT_ELEMENTARY_OPTIMIZATION"},
+        "trace_coordinates": {"const": "X=2*cos(theta_1), Y=2*cos(theta_2), each in [-2,2]"},
+        "formula": {"const": "F=(X+Y)^2-(2+X*Y)^2=(X-Y)^2-4-X^2*Y^2"},
+        "minimum": {
+          "const": {"numerator": -20, "denominator": 1, "text": "-20"}
+        },
+        "minimum_witnesses": {
+          "const": [
+            {
+              "X": {"numerator": -2, "denominator": 1, "text": "-2"},
+              "Y": {"numerator": -2, "denominator": 1, "text": "-2"}
+            },
+            {
+              "X": {"numerator": 2, "denominator": 1, "text": "2"},
+              "Y": {"numerator": 2, "denominator": 1, "text": "2"}
+            }
+          ]
+        },
+        "maximum": {
+          "const": {"numerator": 4, "denominator": 3, "text": "4/3"}
+        },
+        "maximum_witnesses": {
+          "const": [
+            {
+              "X": {"numerator": 2, "denominator": 1, "text": "2"},
+              "Y": {"numerator": -2, "denominator": 3, "text": "-2/3"}
+            },
+            {
+              "X": {"numerator": -2, "denominator": 3, "text": "-2/3"},
+              "Y": {"numerator": 2, "denominator": 1, "text": "2"}
+            },
+            {
+              "X": {"numerator": -2, "denominator": 1, "text": "-2"},
+              "Y": {"numerator": 2, "denominator": 3, "text": "2/3"}
+            },
+            {
+              "X": {"numerator": 2, "denominator": 3, "text": "2/3"},
+              "Y": {"numerator": -2, "denominator": 1, "text": "-2"}
+            }
+          ]
+        },
+        "proof": {"type": "string", "minLength": 1}
+      }
+    },
+    "weyl_certificate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "root_system",
+        "positive_roots_as_exponent_pairs",
+        "density_constant_term",
+        "formula",
+        "maximum_moment",
+        "haar_moments_orders_1_through_6",
+        "haar_centered_moments_orders_1_through_6",
+        "haar_cumulants_orders_1_through_6",
+        "arithmetic"
+      ],
+      "properties": {
+        "root_system": {"const": "C2"},
+        "positive_roots_as_exponent_pairs": {
+          "const": [[2, 0], [0, 2], [1, 1], [1, -1]]
+        },
+        "density_constant_term": {"const": 8},
+        "formula": {"const": "integral f = CT(f*product_{alpha>0}(1-X^alpha)(1-X^-alpha))/8"},
+        "maximum_moment": {"const": 6},
+        "haar_moments_orders_1_through_6": {"const": [-1, 3, -11, 56, -374, 3117]},
+        "haar_centered_moments_orders_1_through_6": {"const": [0, 2, -4, 27, -178, 1533]},
+        "haar_cumulants_orders_1_through_6": {"const": [-1, 2, -4, 15, -98, 803]},
+        "arithmetic": {"const": "exact integer Laurent-polynomial convolution"}
+      }
+    },
+    "character_decomposition_certificate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "highest_weight_convention",
+        "defining_identity",
+        "irreducible_identity",
+        "maximum_power",
+        "powers",
+        "all_power_corollary",
+        "verification",
+        "scope",
+        "does_not_prove"
+      ],
+      "properties": {
+        "status": {"const": "PROVED_EXACT_C2_CHARACTER_DECOMPOSITION"},
+        "highest_weight_convention": {
+          "const": "a*omega1+b*omega2 corresponds to e-basis coordinates (lambda1,lambda2)=(a+b,b)"
+        },
+        "defining_identity": {"const": "F=(Tr U)^2-e_2(U)^2"},
+        "irreducible_identity": {
+          "const": "-(1+chi_(0*omega1+1*omega2)+chi_(0*omega1+2*omega2))"
+        },
+        "maximum_power": {"const": 6},
+        "powers": {
+          "const": [
+            {"power": 1, "irreducible_count": 3, "tensor_dimension": 20, "trivial_coefficient_in_F_power": -1, "independent_weyl_constant_term_haar_moment": -1, "all_sign_adjusted_tensor_multiplicities_positive": true, "dimension_reconstruction_exact": true, "laurent_reconstruction_exact": true},
+            {"power": 2, "irreducible_count": 9, "tensor_dimension": 400, "trivial_coefficient_in_F_power": 3, "independent_weyl_constant_term_haar_moment": 3, "all_sign_adjusted_tensor_multiplicities_positive": true, "dimension_reconstruction_exact": true, "laurent_reconstruction_exact": true},
+            {"power": 3, "irreducible_count": 16, "tensor_dimension": 8000, "trivial_coefficient_in_F_power": -11, "independent_weyl_constant_term_haar_moment": -11, "all_sign_adjusted_tensor_multiplicities_positive": true, "dimension_reconstruction_exact": true, "laurent_reconstruction_exact": true},
+            {"power": 4, "irreducible_count": 25, "tensor_dimension": 160000, "trivial_coefficient_in_F_power": 56, "independent_weyl_constant_term_haar_moment": 56, "all_sign_adjusted_tensor_multiplicities_positive": true, "dimension_reconstruction_exact": true, "laurent_reconstruction_exact": true},
+            {"power": 5, "irreducible_count": 36, "tensor_dimension": 3200000, "trivial_coefficient_in_F_power": -374, "independent_weyl_constant_term_haar_moment": -374, "all_sign_adjusted_tensor_multiplicities_positive": true, "dimension_reconstruction_exact": true, "laurent_reconstruction_exact": true},
+            {"power": 6, "irreducible_count": 49, "tensor_dimension": 64000000, "trivial_coefficient_in_F_power": 3117, "independent_weyl_constant_term_haar_moment": 3117, "all_sign_adjusted_tensor_multiplicities_positive": true, "dimension_reconstruction_exact": true, "laurent_reconstruction_exact": true}
+          ]
+        },
+        "all_power_corollary": {
+          "const": {
+            "statement": "For every integer m>=0, Haar(F^m)=(-1)^m times the multiplicity of the trivial representation in G^tensor_m.",
+            "strict_sign_rule": "(-1)^m*Haar(F^m)>0 for every m>=0",
+            "integrality": true,
+            "proof": "G=1+chi_(0,1)+chi_(0,2) is the character of an honest self-dual representation containing the trivial summand; tensor-product multiplicities are nonnegative integers and the all-trivial tensor supplies at least one invariant.",
+            "scope": "compact-group Haar moments only; no finite-family convergence"
+          }
+        },
+        "verification": {
+          "const": {
+            "all_kostant_character_dimensions_match_weyl_formula": true,
+            "all_generated_characters_are_weyl_invariant": true,
+            "all_power_reconstructions_exact": true,
+            "all_tensor_multiplicities_positive": true,
+            "all_F_power_coefficients_have_uniform_sign_minus_one_to_m": true,
+            "all_dimension_sums_equal_20_to_m": true,
+            "all_trivial_multiplicities_match_independent_haar_constant_terms": true
+          }
+        },
+        "scope": {
+          "const": "the exact compact-group character decompositions and Haar moments listed here"
+        },
+        "does_not_prove": {
+          "const": [
+            "finite genus-two family moment convergence",
+            "USp(4) equidistribution for the scanned polynomial family",
+            "a rate of convergence in q",
+            "any number-field L-function statement"
+          ]
+        }
+      }
+    },
+    "twelve_moment_sign_certificate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "event",
+        "maximum_moment",
+        "haar_moments_orders_1_through_12",
+        "majorant",
+        "haar_bound",
+        "finite_q_bounds",
+        "resource_contract",
+        "scope"
+      ],
+      "properties": {
+        "status": {"const": "RIGOROUS_EXACT_FINITE_MOMENT_MAJORANT"},
+        "event": {"const": "F>=0"},
+        "maximum_moment": {"const": 12},
+        "haar_moments_orders_1_through_12": {
+          "const": [-1, 3, -11, 56, -374, 3117, -30321, 327688, -3815668, 46998100, -605231862, 8084025096]
+        },
+        "majorant": {
+          "const": {
+            "degree": 12,
+            "definition": "P(x)=p((3*x+28)/32)",
+            "pointwise_statement": "P(x)>=0 on [-20,0], and P(x)>=1 on [0,4/3].",
+            "nonnegative_side_proof": "p(t)=C*product(t-r)^2*((t+A/2)^2+B-A^2/4), with C and the stored floor positive.",
+            "positive_side_factorization": "p(t)-1=(t-7/8)*(t-241/250)^2*Q(t)",
+            "positive_side_bernstein_coordinate": "t=7/8+z/8, z in [0,1]",
+            "positive_side_bernstein_coefficient_count": 10,
+            "all_positive_side_bernstein_coefficients_strictly_positive": true,
+            "exact_factorization_and_positivity_replayed": true
+          }
+        },
+        "haar_bound": {
+          "const": {
+            "moment_majorant_nonnegative_upper_bound": {
+              "numerator": 165373093729595698644691055097919487644206880882919392440503838869,
+              "denominator": 318454738700269877013669525120657835305950388794994707229994647552,
+              "text": "165373093729595698644691055097919487644206880882919392440503838869/318454738700269877013669525120657835305950388794994707229994647552"
+            },
+            "negative_probability_lower_bound": {
+              "numerator": 153081644970674178368978470022738347661743507912075314789490808683,
+              "denominator": 318454738700269877013669525120657835305950388794994707229994647552,
+              "text": "153081644970674178368978470022738347661743507912075314789490808683/318454738700269877013669525120657835305950388794994707229994647552"
+            },
+            "support_adapted_degree_six_upper_bound": {
+              "numerator": 3879608783,
+              "denominator": 6358302720,
+              "text": "3879608783/6358302720"
+            },
+            "strict_improvement": {
+              "numerator": 1591512542290665885075183371275920634034566533880115933864168256509,
+              "denominator": 17515010628514843235751823881636180941827271383724708897649705615360,
+              "text": "1591512542290665885075183371275920634034566533880115933864168256509/17515010628514843235751823881636180941827271383724708897649705615360"
+            },
+            "strictly_improves_support_adapted_degree_six_bound": true
+          }
+        },
+        "finite_q_bounds": {
+          "const": [
+            {
+              "q": 3,
+              "moment_majorant_nonnegative_upper_bound": {
+                "numerator": 25775402379863804286755901016393787628512946087002958086158162118977769,
+                "denominator": 37608867731024471935560343577699449033962129015911284934447907886596096,
+                "text": "25775402379863804286755901016393787628512946087002958086158162118977769/37608867731024471935560343577699449033962129015911284934447907886596096"
+              },
+              "negative_probability_lower_bound": {
+                "numerator": 11833465351160667648804442561305661405449182928908326848289745767618327,
+                "denominator": 37608867731024471935560343577699449033962129015911284934447907886596096,
+                "text": "11833465351160667648804442561305661405449182928908326848289745767618327/37608867731024471935560343577699449033962129015911284934447907886596096"
+              },
+              "observed_negative_fraction": {"numerator": 17, "denominator": 27, "text": "17/27"},
+              "verified_bound_holds": true
+            },
+            {
+              "q": 5,
+              "moment_majorant_nonnegative_upper_bound": {
+                "numerator": 18721910657251664640732665969500665113318984444309243589388042011446280239,
+                "denominator": 31099095576198230177116164562564241729096717655761201877929164800000000000,
+                "text": "18721910657251664640732665969500665113318984444309243589388042011446280239/31099095576198230177116164562564241729096717655761201877929164800000000000"
+              },
+              "negative_probability_lower_bound": {
+                "numerator": 12377184918946565536383498593063576615777733211451958288541122788553719761,
+                "denominator": 31099095576198230177116164562564241729096717655761201877929164800000000000,
+                "text": "12377184918946565536383498593063576615777733211451958288541122788553719761/31099095576198230177116164562564241729096717655761201877929164800000000000"
+              },
+              "observed_negative_fraction": {"numerator": 33, "denominator": 50, "text": "33/50"},
+              "verified_bound_holds": true
+            },
+            {
+              "q": 7,
+              "moment_majorant_nonnegative_upper_bound": {
+                "numerator": 37191747621933680382287324939947204552899438052010386148205302580614437380433495393506103,
+                "denominator": 62779239557570273539339817794204265317679215592269939823964387414858848569995676990046208,
+                "text": "37191747621933680382287324939947204552899438052010386148205302580614437380433495393506103/62779239557570273539339817794204265317679215592269939823964387414858848569995676990046208"
+              },
+              "negative_probability_lower_bound": {
+                "numerator": 25587491935636593157052492854257060764779777540259553675759084834244411189562181596540105,
+                "denominator": 62779239557570273539339817794204265317679215592269939823964387414858848569995676990046208,
+                "text": "25587491935636593157052492854257060764779777540259553675759084834244411189562181596540105/62779239557570273539339817794204265317679215592269939823964387414858848569995676990046208"
+              },
+              "observed_negative_fraction": {"numerator": 33, "denominator": 49, "text": "33/49"},
+              "verified_bound_holds": true
+            }
+          ]
+        },
+        "resource_contract": {
+          "const": {
+            "maximum_laurent_pair_products": 300000,
+            "actual_laurent_pair_products": 238743,
+            "maximum_wall_seconds": 3.0,
+            "random_sampling": false,
+            "numerical_integration": false,
+            "field_enumeration": false,
+            "external_dependencies": false
+          }
+        },
+        "scope": {
+          "const": {
+            "haar_statement": "Pr_Haar(F>=0) is at most the stored rational expectation.",
+            "not_an_optimality_claim": true,
+            "not_an_equidistribution_theorem": true,
+            "not_a_number_field_transfer": true,
+            "discovery_firewall": "Numerical linear programming nominated the rational factor pattern; acceptance replays only exact rational algebra."
+          }
+        }
+      }
+    },
+    "negative_sign_moment_certificate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "event",
+        "support",
+        "majorant",
+        "haar",
+        "finite_q_bounds",
+        "support_adapted_majorant",
+        "conditional_consequence",
+        "scope"
+      ],
+      "properties": {
+        "status": {"const": "PROVED_EXACT_DEGREE_SIX_MOMENT_BOUND"},
+        "event": {"const": "F<0"},
+        "support": {
+          "const": {
+            "minimum": {"numerator": -20, "denominator": 1, "text": "-20"},
+            "maximum": {"numerator": 4, "denominator": 3, "text": "4/3"}
+          }
+        },
+        "majorant": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "polynomial",
+            "coefficients_low_to_high",
+            "square_coefficients_low_to_high",
+            "pointwise_statement",
+            "positive_interval_factorization",
+            "quadratic_endpoint_values_on_0_to_4_over_3",
+            "proof",
+            "construction"
+          ],
+          "properties": {
+            "polynomial": {"const": "R(x)=1+(5405*x+264*x^2-23*x^3)/12023"},
+            "coefficients_low_to_high": {
+              "const": [
+                {"numerator": 1, "denominator": 1, "text": "1"},
+                {"numerator": 5405, "denominator": 12023, "text": "5405/12023"},
+                {"numerator": 24, "denominator": 1093, "text": "24/1093"},
+                {"numerator": -23, "denominator": 12023, "text": "-23/12023"}
+              ]
+            },
+            "square_coefficients_low_to_high": {
+              "const": [
+                {"numerator": 1, "denominator": 1, "text": "1"},
+                {"numerator": 10810, "denominator": 12023, "text": "10810/12023"},
+                {"numerator": 35562169, "denominator": 144552529, "text": "35562169/144552529"},
+                {"numerator": 209162, "denominator": 13141139, "text": "209162/13141139"},
+                {"numerator": -178934, "denominator": 144552529, "text": "-178934/144552529"},
+                {"numerator": -1104, "denominator": 13141139, "text": "-1104/13141139"},
+                {"numerator": 529, "denominator": 144552529, "text": "529/144552529"}
+              ]
+            },
+            "pointwise_statement": {"const": "1_{x>=0} <= R(x)^2 on [-20,4/3]"},
+            "positive_interval_factorization": {
+              "const": "R(x)-1=x*(5405+264*x-23*x^2)/12023"
+            },
+            "quadratic_endpoint_values_on_0_to_4_over_3": {
+              "const": [
+                {"numerator": 5405, "denominator": 1, "text": "5405"},
+                {"numerator": 51445, "denominator": 9, "text": "51445/9"}
+              ]
+            },
+            "proof": {"type": "string", "minLength": 1},
+            "construction": {"type": "string", "minLength": 1}
+          }
+        },
+        "haar": {
+          "const": {
+            "moment_majorant_nonnegative_upper_bound": {
+              "numerator": 7663,
+              "denominator": 12023,
+              "text": "7663/12023"
+            },
+            "negative_probability_lower_bound": {
+              "numerator": 4360,
+              "denominator": 12023,
+              "text": "4360/12023"
+            }
+          }
+        },
+        "finite_q_bounds": {
+          "const": [
+            {
+              "q": 3,
+              "moment_majorant_nonnegative_upper_bound": {
+                "numerator": 1757785450112411,
+                "denominator": 2074170795235803,
+                "text": "1757785450112411/2074170795235803"
+              },
+              "negative_probability_lower_bound": {
+                "numerator": 316385345123392,
+                "denominator": 2074170795235803,
+                "text": "316385345123392/2074170795235803"
+              },
+              "observed_negative_fraction": {
+                "numerator": 17,
+                "denominator": 27,
+                "text": "17/27"
+              },
+              "verified_bound_holds": true
+            },
+            {
+              "q": 5,
+              "moment_majorant_nonnegative_upper_bound": {
+                "numerator": 3362134983925181081,
+                "denominator": 4411393096923828125,
+                "text": "3362134983925181081/4411393096923828125"
+              },
+              "negative_probability_lower_bound": {
+                "numerator": 1049258112998647044,
+                "denominator": 4411393096923828125,
+                "text": "1049258112998647044/4411393096923828125"
+              },
+              "observed_negative_fraction": {
+                "numerator": 33,
+                "denominator": 50,
+                "text": "33/50"
+              },
+              "verified_bound_holds": true
+            },
+            {
+              "q": 7,
+              "moment_majorant_nonnegative_upper_bound": {
+                "numerator": 498077924985842372191,
+                "denominator": 686272022845319295847,
+                "text": "498077924985842372191/686272022845319295847"
+              },
+              "negative_probability_lower_bound": {
+                "numerator": 188194097859476923656,
+                "denominator": 686272022845319295847,
+                "text": "188194097859476923656/686272022845319295847"
+              },
+              "observed_negative_fraction": {
+                "numerator": 33,
+                "denominator": 49,
+                "text": "33/49"
+              },
+              "verified_bound_holds": true
+            }
+          ]
+        },
+        "support_adapted_majorant": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "coordinate",
+            "polynomial_factorization",
+            "coefficients_in_x_low_to_high",
+            "pointwise_statement",
+            "nonnegative_support_proof",
+            "positive_interval_factorization",
+            "positive_interval_bernstein_coordinate",
+            "positive_interval_quotient_bernstein_coefficients_degree_4",
+            "positive_interval_proof",
+            "haar",
+            "finite_q_bounds",
+            "strictly_improves_cubic_square_bound",
+            "construction_scope"
+          ],
+          "properties": {
+            "coordinate": {
+              "const": "t=(3*x+28)/32 maps x in [-20,4/3] to t in [-1,1], with x>=0 equivalent to t>=7/8"
+            },
+            "polynomial_factorization": {
+              "const": "p(t)=(t+1)*(20*t-13)^2*(40*t-7)^2*(2927-2792*t)/14407470"
+            },
+            "coefficients_in_x_low_to_high": {
+              "const": [
+                {"numerator": 1, "denominator": 1, "text": "1"},
+                {"numerator": 124079, "denominator": 203280, "text": "124079/203280"},
+                {"numerator": -10433053, "denominator": 68302080, "text": "-10433053/68302080"},
+                {"numerator": -5367181, "denominator": 31223808, "text": "-5367181/31223808"},
+                {"numerator": -3716745, "denominator": 97140736, "text": "-3716745/97140736"},
+                {"numerator": -177075, "denominator": 55508992, "text": "-177075/55508992"},
+                {"numerator": -130875, "denominator": 1554251776, "text": "-130875/1554251776"}
+              ]
+            },
+            "pointwise_statement": {
+              "const": "1_{x>=0} <= p((3*x+28)/32) on [-20,4/3]"
+            },
+            "nonnegative_support_proof": {"type": "string", "minLength": 1},
+            "positive_interval_factorization": {
+              "const": "p(t)-1=(t-7/8)*(1-t)*Q(t)"
+            },
+            "positive_interval_bernstein_coordinate": {"const": "z=8*t-7 in [0,1]"},
+            "positive_interval_quotient_bernstein_coefficients_degree_4": {
+              "const": [
+                {"numerator": 1985264, "denominator": 38115, "text": "1985264/38115"},
+                {"numerator": 145906487, "denominator": 2401245, "text": "145906487/2401245"},
+                {"numerator": 3063511081, "denominator": 43222410, "text": "3063511081/43222410"},
+                {"numerator": 198471997, "denominator": 2401245, "text": "198471997/2401245"},
+                {"numerator": 1001492, "denominator": 10395, "text": "1001492/10395"}
+              ]
+            },
+            "positive_interval_proof": {"type": "string", "minLength": 1},
+            "haar": {
+              "const": {
+                "moment_majorant_nonnegative_upper_bound": {
+                  "numerator": 3879608783,
+                  "denominator": 6358302720,
+                  "text": "3879608783/6358302720"
+                },
+                "negative_probability_lower_bound": {
+                  "numerator": 2478693937,
+                  "denominator": 6358302720,
+                  "text": "2478693937/6358302720"
+                }
+              }
+            },
+            "finite_q_bounds": {
+              "const": [
+                {
+                  "q": 3,
+                  "moment_majorant_nonnegative_upper_bound": {
+                    "numerator": 3574999200802583,
+                    "denominator": 4646211289251840,
+                    "text": "3574999200802583/4646211289251840"
+                  },
+                  "negative_probability_lower_bound": {
+                    "numerator": 1071212088449257,
+                    "denominator": 4646211289251840,
+                    "text": "1071212088449257/4646211289251840"
+                  },
+                  "observed_negative_fraction": {
+                    "numerator": 17,
+                    "denominator": 27,
+                    "text": "17/27"
+                  },
+                  "verified_bound_holds": true
+                },
+                {
+                  "q": 5,
+                  "moment_majorant_nonnegative_upper_bound": {
+                    "numerator": 297404551790272981,
+                    "denominator": 426888000000000000,
+                    "text": "297404551790272981/426888000000000000"
+                  },
+                  "negative_probability_lower_bound": {
+                    "numerator": 129483448209727019,
+                    "denominator": 426888000000000000,
+                    "text": "129483448209727019/426888000000000000"
+                  },
+                  "observed_negative_fraction": {
+                    "numerator": 33,
+                    "denominator": 50,
+                    "text": "33/50"
+                  },
+                  "verified_bound_holds": true
+                },
+                {
+                  "q": 7,
+                  "moment_majorant_nonnegative_upper_bound": {
+                    "numerator": 2806431341120513621311,
+                    "denominator": 4150634573530209042432,
+                    "text": "2806431341120513621311/4150634573530209042432"
+                  },
+                  "negative_probability_lower_bound": {
+                    "numerator": 1344203232409695421121,
+                    "denominator": 4150634573530209042432,
+                    "text": "1344203232409695421121/4150634573530209042432"
+                  },
+                  "observed_negative_fraction": {
+                    "numerator": 33,
+                    "denominator": 49,
+                    "text": "33/49"
+                  },
+                  "verified_bound_holds": true
+                }
+              ]
+            },
+            "strictly_improves_cubic_square_bound": {"const": true},
+            "construction_scope": {"type": "string", "minLength": 1}
+          }
+        },
+        "conditional_consequence": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "not_an_equidistribution_proof", "assumption", "statement", "reason"],
+          "properties": {
+            "status": {"const": "CONDITIONAL_ON_FIRST_SIX_MOMENT_CONVERGENCE"},
+            "not_an_equidistribution_proof": {"const": true},
+            "assumption": {"type": "string", "minLength": 1},
+            "statement": {"const": "Under that assumption, liminf_q Pr(K_D/q^2<0) >= 2478693937/6358302720."},
+            "reason": {"type": "string", "minLength": 1}
+          }
+        },
+        "scope": {"type": "string", "minLength": 1}
+      }
+    },
+    "finite_comparisons": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "prefixItems": [
+        {
+          "allOf": [{"$ref": "#/$defs/finite_comparison"}],
+          "properties": {"q": {"const": 3}}
+        },
+        {
+          "allOf": [{"$ref": "#/$defs/finite_comparison"}],
+          "properties": {"q": {"const": 5}}
+        },
+        {
+          "allOf": [{"$ref": "#/$defs/finite_comparison"}],
+          "properties": {"q": {"const": 7}}
+        }
+      ],
+      "items": false
+    },
+    "frozen_moment_pattern": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status", "not_a_theorem_beyond_frozen_fields", "q_values", "per_order", "interpretation"
+      ],
+      "properties": {
+        "status": {"const": "EXACT_FOR_Q_3_5_7_ONLY"},
+        "not_a_theorem_beyond_frozen_fields": {"const": true},
+        "q_values": {"const": [3, 5, 7]},
+        "per_order": {
+          "const": [
+            {"order": 1, "same_nonzero_sign_as_haar": true, "absolute_value_below_haar": true, "absolute_value_strictly_increases_with_q": true, "absolute_gap_strictly_decreases_with_q": true},
+            {"order": 2, "same_nonzero_sign_as_haar": true, "absolute_value_below_haar": true, "absolute_value_strictly_increases_with_q": true, "absolute_gap_strictly_decreases_with_q": true},
+            {"order": 3, "same_nonzero_sign_as_haar": true, "absolute_value_below_haar": true, "absolute_value_strictly_increases_with_q": true, "absolute_gap_strictly_decreases_with_q": true},
+            {"order": 4, "same_nonzero_sign_as_haar": true, "absolute_value_below_haar": true, "absolute_value_strictly_increases_with_q": true, "absolute_gap_strictly_decreases_with_q": true},
+            {"order": 5, "same_nonzero_sign_as_haar": true, "absolute_value_below_haar": true, "absolute_value_strictly_increases_with_q": true, "absolute_gap_strictly_decreases_with_q": true},
+            {"order": 6, "same_nonzero_sign_as_haar": true, "absolute_value_below_haar": true, "absolute_value_strictly_increases_with_q": true, "absolute_gap_strictly_decreases_with_q": true}
+          ]
+        },
+        "interpretation": {"type": "string", "minLength": 1}
+      }
+    },
+    "convergence_target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "atlas_status",
+        "not_a_theorem",
+        "statement",
+        "evidence_scope",
+        "smallest_gap"
+      ],
+      "properties": {
+        "status": {"const": "CONJECTURAL_USP4_LIMIT_NOT_A_THEOREM"},
+        "atlas_status": {"const": "PROPOSED"},
+        "not_a_theorem": {"const": true},
+        "statement": {"type": "string", "minLength": 1},
+        "evidence_scope": {"const": "three exact fields q=3,5,7 and moment orders 1 through 6"},
+        "smallest_gap": {"type": "string", "minLength": 1}
+      }
+    },
+    "firewalls": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    }
+  },
+  "$defs": {
+    "source_lock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "raw_sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "raw_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "fixture_lock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "canonical_sha256", "payload_sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "canonical_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "payload_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "character_fixture_lock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "canonical_sha256",
+        "producer_source_sha256_lf_normalized"
+      ],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "canonical_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "producer_source_sha256_lf_normalized": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "fraction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["numerator", "denominator", "text"],
+      "properties": {
+        "numerator": {"type": "integer"},
+        "denominator": {"type": "integer", "minimum": 1},
+        "text": {"type": "string", "minLength": 1}
+      }
+    },
+    "moment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["order", "finite_exact", "usp4_haar_exact", "finite_minus_haar"],
+      "properties": {
+        "order": {"enum": [1, 2, 3, 4, 5, 6]},
+        "finite_exact": {"$ref": "#/$defs/fraction"},
+        "usp4_haar_exact": {"type": "integer"},
+        "finite_minus_haar": {"$ref": "#/$defs/fraction"}
+      },
+      "allOf": [
+        {"if": {"properties": {"order": {"const": 1}}}, "then": {"properties": {"usp4_haar_exact": {"const": -1}}}},
+        {"if": {"properties": {"order": {"const": 2}}}, "then": {"properties": {"usp4_haar_exact": {"const": 3}}}},
+        {"if": {"properties": {"order": {"const": 3}}}, "then": {"properties": {"usp4_haar_exact": {"const": -11}}}},
+        {"if": {"properties": {"order": {"const": 4}}}, "then": {"properties": {"usp4_haar_exact": {"const": 56}}}},
+        {"if": {"properties": {"order": {"const": 5}}}, "then": {"properties": {"usp4_haar_exact": {"const": -374}}}},
+        {"if": {"properties": {"order": {"const": 6}}}, "then": {"properties": {"usp4_haar_exact": {"const": 3117}}}}
+      ]
+    },
+    "finite_comparison": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["q", "spec_semantic_id", "member_count", "moments"],
+      "properties": {
+        "q": {"enum": [3, 5, 7]},
+        "spec_semantic_id": {"type": "string", "pattern": "^ATLAS\\.LFUNC\\."},
+        "member_count": {"type": "integer", "minimum": 1},
+        "moments": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "prefixItems": [
+            {"allOf": [{"$ref": "#/$defs/moment"}], "properties": {"order": {"const": 1}}},
+            {"allOf": [{"$ref": "#/$defs/moment"}], "properties": {"order": {"const": 2}}},
+            {"allOf": [{"$ref": "#/$defs/moment"}], "properties": {"order": {"const": 3}}},
+            {"allOf": [{"$ref": "#/$defs/moment"}], "properties": {"order": {"const": 4}}},
+            {"allOf": [{"$ref": "#/$defs/moment"}], "properties": {"order": {"const": 5}}},
+            {"allOf": [{"$ref": "#/$defs/moment"}], "properties": {"order": {"const": 6}}}
+          ],
+          "items": false
+        }
+      },
+      "allOf": [
+        {"if": {"properties": {"q": {"const": 3}}}, "then": {"properties": {"member_count": {"const": 162}}}},
+        {"if": {"properties": {"q": {"const": 5}}}, "then": {"properties": {"member_count": {"const": 2500}}}},
+        {"if": {"properties": {"q": {"const": 7}}}, "then": {"properties": {"member_count": {"const": 14406}}}}
+      ]
+    }
+  }
+}

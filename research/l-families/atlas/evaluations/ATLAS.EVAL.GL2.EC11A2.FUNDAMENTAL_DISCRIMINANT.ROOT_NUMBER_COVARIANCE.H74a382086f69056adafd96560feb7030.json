@@ -1,0 +1,307 @@
+{
+  "adapter_bindings": [
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "hash_mode": "RAW_BYTES",
+      "media_type": "text/x-python",
+      "notes": "Content checked by the offline atlas validator.",
+      "path": "research/l-families/atlas/core/twist_root_number_covariance.py",
+      "role": "root_number_family_adapter",
+      "schema_path": null,
+      "sha256": "05f4bb1f3840b13c7ccb0590deabdf068873fa2b4f163330b879d23716a3320b"
+    },
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "hash_mode": "RAW_BYTES",
+      "media_type": "text/x-python",
+      "notes": "Content checked by the offline atlas validator.",
+      "path": "research/l-families/atlas/core/twist_character_covariance.py",
+      "role": "exact_covariance_summarizer",
+      "schema_path": null,
+      "sha256": "20d62858c6fae9b0d998796c35b6ecab299f5cb9a76d2fae9fc11f96233e6586"
+    },
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "hash_mode": "RAW_BYTES",
+      "media_type": "text/x-python",
+      "notes": "Content checked by the offline atlas validator.",
+      "path": "research/l-families/atlas/core/local_euler.py",
+      "role": "local_trace_arithmetic",
+      "schema_path": null,
+      "sha256": "99ee82c605cefb42e3b1058e4c4ed6b2dbed4236e96f8d9e6cf429d79a43e2ee"
+    }
+  ],
+  "arithmetic": {
+    "class": "MIXED",
+    "directed": false,
+    "rounding_contract": "Cohort membership, counts, correlations, and the sufficient statistics for exact radical coefficients are exact conditional on imported theorem/base data; decimal moment fields are display-only binary64 conversions, while Gram and marginal contrast square-root displays are rounded by exact integer comparisons from rational mean squares.",
+    "serialization_contract": "Aligned integer vectors, common-denominator matrices, reconstruction formulas, and reduced rational triples in canonical UTF-8 NFC JSON."
+  },
+  "assumptions": [
+    {
+      "code": "BASE_CURVE_METADATA_IMPORTED",
+      "statement": "The LMFDB model, conductor 11, identification with the intended newform, and base root number +1 are imported discovery metadata.",
+      "status": "IMPORTED"
+    },
+    {
+      "code": "TWIST_SIGN_THEOREM_IMPORTED",
+      "statement": "Rohrlich's corollary and Conrey equation (19) are imported on the enforced fundamental-discriminant and conductor-coprime domain.",
+      "status": "IMPORTED"
+    }
+  ],
+  "central_zero_policy_applied": "NOT_APPLICABLE",
+  "configuration": {
+    "canonical_sha256": "f2bb237d709d2003513aae77472312e68d514a05aaab09cca7b468e83d851196",
+    "values": {
+      "base_conductor": 11,
+      "discriminant_bounds": [
+        256,
+        512,
+        1024,
+        2048
+      ],
+      "partition_policy": "ROOT_NUMBER_PLUS_MINUS",
+      "prime_bound": 43
+    }
+  },
+  "coverage": {
+    "class": "FINITE_COMPLETE",
+    "omissions": [
+      "discriminants divisible by 11",
+      "nonfundamental twist parameters",
+      "primes above 43",
+      "discriminants above 2048",
+      "ranks and central orders",
+      "zero ordinates",
+      "asymptotic estimates"
+    ],
+    "statement": "Every fundamental discriminant 1<|d|<=2048 coprime to 11, nested at four bounds, in exactly one root-number cohort, and every good prime p<=43."
+  },
+  "detector_contract_binding": {
+    "record_sha256": "38d8061a93b5c104fcf7232ac1af38071f88c990dd80382b5df1098e8a7f75a4",
+    "semantic_id": "ATLAS.DETECTOR.GL2.TWIST_ROOT_NUMBER.COVARIANCE.Hd5404747052a8d3d426b5d7f10551d28"
+  },
+  "evaluation_scope": "FAMILY_MOMENT",
+  "firewalls": [
+    {
+      "code": "COPRIME_DOMAIN_ONLY",
+      "statement": "No d divisible by 11 is classified by the coprime sign formula."
+    },
+    {
+      "code": "NO_CENTRAL_DATA_INFERENCE",
+      "statement": "Root-number labels are not converted into ranks, central orders, or zero records."
+    },
+    {
+      "code": "FINITE_NOT_ASYMPTOTIC",
+      "statement": "The four finite bounds, decreasing RMS displays, and sqrt(N_total)-scaled displays do not establish a limiting law or rate."
+    },
+    {
+      "code": "IMPORTED_BASE_METADATA",
+      "statement": "The evaluation remains DISCOVERY_ONLY because the compact LMFDB base metadata are not independently certified here."
+    },
+    {
+      "code": "BAD_PRIME_OMITTED",
+      "statement": "The base bad prime 11 is excluded; zeros chi_d(p)=0 at primes dividing d remain visible."
+    }
+  ],
+  "identity_kernel": {
+    "adapter_bindings": [
+      {
+        "coverage_class": "FINITE_COMPLETE",
+        "hash_mode": "RAW_BYTES",
+        "media_type": "text/x-python",
+        "notes": "Content checked by the offline atlas validator.",
+        "path": "research/l-families/atlas/core/twist_root_number_covariance.py",
+        "role": "root_number_family_adapter",
+        "schema_path": null,
+        "sha256": "05f4bb1f3840b13c7ccb0590deabdf068873fa2b4f163330b879d23716a3320b"
+      },
+      {
+        "coverage_class": "FINITE_COMPLETE",
+        "hash_mode": "RAW_BYTES",
+        "media_type": "text/x-python",
+        "notes": "Content checked by the offline atlas validator.",
+        "path": "research/l-families/atlas/core/twist_character_covariance.py",
+        "role": "exact_covariance_summarizer",
+        "schema_path": null,
+        "sha256": "20d62858c6fae9b0d998796c35b6ecab299f5cb9a76d2fae9fc11f96233e6586"
+      },
+      {
+        "coverage_class": "FINITE_COMPLETE",
+        "hash_mode": "RAW_BYTES",
+        "media_type": "text/x-python",
+        "notes": "Content checked by the offline atlas validator.",
+        "path": "research/l-families/atlas/core/local_euler.py",
+        "role": "local_trace_arithmetic",
+        "schema_path": null,
+        "sha256": "99ee82c605cefb42e3b1058e4c4ed6b2dbed4236e96f8d9e6cf429d79a43e2ee"
+      }
+    ],
+    "configuration_sha256": "f2bb237d709d2003513aae77472312e68d514a05aaab09cca7b468e83d851196",
+    "detector_contract_binding": {
+      "record_sha256": "38d8061a93b5c104fcf7232ac1af38071f88c990dd80382b5df1098e8a7f75a4",
+      "semantic_id": "ATLAS.DETECTOR.GL2.TWIST_ROOT_NUMBER.COVARIANCE.Hd5404747052a8d3d426b5d7f10551d28"
+    },
+    "implementation_commit": "PENDING",
+    "implementation_sha256": "05f4bb1f3840b13c7ccb0590deabdf068873fa2b4f163330b879d23716a3320b",
+    "input_fulfillments_sha256": "28444c49182412ba5487fc4deadf6aaccc0d91b1ea2511bb212330b616e899bc",
+    "input_sha256s": [
+      "641ee1e4b45695769b5b0594d4f0d977da957e042c93ccefebfa76e4102ad9bf",
+      "66c7c62a159c0ab32178bdb21aefae18adb3f2e759cd507918c282ac7e318e32"
+    ],
+    "lfunction_spec_bindings": [
+      {
+        "record_sha256": "f80c3b53d1293997fdfc68665e47e09247e0985f5f63095ec89ee109d8bac808",
+        "semantic_id": "ATLAS.LFUNC.GL2.EC11A2.QUADRATIC_TWISTS.CONDUCTOR_COPRIME.H8b93930bf96db7a104103fad5da0a3ae"
+      }
+    ],
+    "seed": null,
+    "slug": "GL2.EC11A2.FUNDAMENTAL_DISCRIMINANT.ROOT_NUMBER_COVARIANCE",
+    "version": 1
+  },
+  "identity_sha256": "74a382086f69056adafd96560feb7030d8aab43d7091115778da884a59f3df34",
+  "input_bindings": [
+    {
+      "coverage_class": "COMPLETE",
+      "hash_mode": "CANONICAL_JSON_UTF8_NFC",
+      "media_type": "application/json",
+      "notes": "Content checked by the offline atlas validator.",
+      "path": "research/l-families/atlas/sources/quadratic-twist-root-number.json",
+      "role": "root_number_source_manifest",
+      "schema_path": null,
+      "sha256": "641ee1e4b45695769b5b0594d4f0d977da957e042c93ccefebfa76e4102ad9bf"
+    },
+    {
+      "coverage_class": "PARTIAL",
+      "hash_mode": "CANONICAL_JSON_UTF8_NFC",
+      "media_type": "application/json",
+      "notes": "Content checked by the offline atlas validator.",
+      "path": "research/l-families/atlas/sources/lmfdb-curves.json",
+      "role": "base_curve_source_manifest",
+      "schema_path": null,
+      "sha256": "66c7c62a159c0ab32178bdb21aefae18adb3f2e759cd507918c282ac7e318e32"
+    }
+  ],
+  "input_fulfillments": [
+    {
+      "coverage_class": "COMPLETE",
+      "input_type": "LFUNCTION_SPEC",
+      "name": "lfunction_spec",
+      "sources": [
+        "ATLAS.LFUNC.GL2.EC11A2.QUADRATIC_TWISTS.CONDUCTOR_COPRIME.H8b93930bf96db7a104103fad5da0a3ae"
+      ]
+    },
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "input_type": "LOCAL_EULER_FACTORS",
+      "name": "local_euler_factors",
+      "sources": [
+        "research/l-families/atlas/sources/lmfdb-curves.json",
+        "research/l-families/atlas/core/local_euler.py"
+      ]
+    },
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "input_type": "FAMILY_PARAMETER",
+      "name": "family_parameter",
+      "sources": [
+        "research/l-families/atlas/core/twist_root_number_covariance.py",
+        "research/l-families/atlas/core/twist_character_covariance.py"
+      ]
+    },
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "input_type": "ROOT_NUMBER",
+      "name": "root_number",
+      "sources": [
+        "research/l-families/atlas/core/twist_root_number_covariance.py",
+        "research/l-families/atlas/sources/quadratic-twist-root-number.json"
+      ]
+    },
+    {
+      "coverage_class": "COMPLETE",
+      "input_type": "RAW_ARTIFACT",
+      "name": "root_number_theorem",
+      "sources": [
+        "research/l-families/atlas/sources/quadratic-twist-root-number.json"
+      ]
+    }
+  ],
+  "interpretation": {
+    "smallest_gap": "Independently archive/certify the base 11.a2 metadata and prove any desired uniform root-number-conditioned covariance estimate; neither is supplied here.",
+    "statement": "Conditional on the imported coprime twist-sign theorem and 11.a2 base metadata, all emitted cohort membership, character counts, covariance entries, and sufficient statistics reconstructing the rational/radical coordinates are exact on the declared finite domain; the cross-cohort Gram and marginal maxima and mean squares are exact derived Fractions.",
+    "status": "EXACT_FINITE",
+    "theorem_claim_id": null
+  },
+  "lfunction_spec_bindings": [
+    {
+      "record_sha256": "f80c3b53d1293997fdfc68665e47e09247e0985f5f63095ec89ee109d8bac808",
+      "semantic_id": "ATLAS.LFUNC.GL2.EC11A2.QUADRATIC_TWISTS.CONDUCTOR_COPRIME.H8b93930bf96db7a104103fad5da0a3ae"
+    }
+  ],
+  "notes": "The source manifest, curve manifest, dedicated family spec, new sign adapter, shared covariance summarizer, and local trace adapter are all content-bound; the Gram and marginal contrasts are derived only from already-emitted aligned sufficient statistics.",
+  "programme_refs": [
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 738,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/738"
+    },
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 741,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/741"
+    }
+  ],
+  "record_state": "DRAFT",
+  "record_type": "EVALUATION_RECORD",
+  "result": {
+    "artifact": {
+      "coverage_class": "FINITE_COMPLETE",
+      "hash_mode": "CANONICAL_JSON_UTF8_NFC",
+      "media_type": "application/json",
+      "notes": "Exact integer sufficient statistics reconstruct the rational/radical moments conditional on the imported root-number theorem and base metadata; decimal fields are display-only.",
+      "path": "research/l-families/atlas/results/ATLAS.EVAL.GL2.EC11A2.FUNDAMENTAL_DISCRIMINANT.ROOT_NUMBER_COVARIANCE.H74a382086f69056adafd96560feb7030.json",
+      "role": "detector_result",
+      "schema_path": "research/l-families/atlas/detectors/raw-schemas/twist-root-number-covariance-result.schema.json",
+      "sha256": "cfcfdf2d8079110d8ad9a6d8025f41f9ec49b4700139fa2a25a4f4d8bf4240c4"
+    },
+    "predicate_outcome": "NOT_APPLICABLE",
+    "representation": "HASHED_ARTIFACT",
+    "summary": "Exact within-sign character Gram/covariance, cross-sign raw-Gram and marginal contrasts, and unitary-prime-sum moment coordinates at four bounds (X=256: + 65, - 76; X=512: + 140, - 145; X=1024: + 281, - 289; X=2048: + 568, - 574)."
+  },
+  "result_hashes": [
+    {
+      "algorithm": "sha256",
+      "binds": "canonical JSON twist root-number covariance result",
+      "hash_mode": "CANONICAL_JSON_UTF8_NFC",
+      "value": "cfcfdf2d8079110d8ad9a6d8025f41f9ec49b4700139fa2a25a4f4d8bf4240c4"
+    }
+  ],
+  "revision": 3,
+  "rigor_level": "DISCOVERY_ONLY",
+  "run": {
+    "code_commit": "PENDING",
+    "command": "python research/l-families/atlas/core/twist_root_number_covariance.py --check",
+    "implementation_path": "research/l-families/atlas/core/twist_root_number_covariance.py",
+    "implementation_sha256": "05f4bb1f3840b13c7ccb0590deabdf068873fa2b4f163330b879d23716a3320b",
+    "timestamp_utc": "2026-08-24T15:00:00Z"
+  },
+  "schema_version": "riemann.atlas.evaluation_record.v1",
+  "scope_boundary": "Every declared conductor-coprime fundamental discriminant through 2048 and every good prime through 43, split only by the sourced root-number formula; no rank, zero, or asymptotic conclusion.",
+  "semantic_id": "ATLAS.EVAL.GL2.EC11A2.FUNDAMENTAL_DISCRIMINANT.ROOT_NUMBER_COVARIANCE.H74a382086f69056adafd96560feb7030",
+  "software": [
+    {
+      "name": "CPython",
+      "role": "exact integer point counts and rational moment aggregation",
+      "version": "3.12.10"
+    }
+  ],
+  "subject": {
+    "description": "The two root-number cohorts of conductor-coprime 11.a2 quadratic twists",
+    "kind": "L_FUNCTION_SET"
+  },
+  "supersedes": [],
+  "title": "Exact finite 11.a2 character covariance in the two quadratic-twist root-number cohorts"
+}

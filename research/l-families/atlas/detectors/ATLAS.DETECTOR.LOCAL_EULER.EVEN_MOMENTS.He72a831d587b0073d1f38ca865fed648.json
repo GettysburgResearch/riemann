@@ -1,0 +1,195 @@
+{
+  "central_zero_policy": "NOT_APPLICABLE",
+  "detector_kind": "COEFFICIENT_DISPERSION",
+  "failure_modes": [
+    {
+      "code": "BAD_PRIME_AS_GOOD",
+      "description": "Substituting a good factor at a conductor prime changes the object.",
+      "hostile_control": "Validator requires the declared omit policy."
+    },
+    {
+      "code": "MOTIVIC_SCALE_MIX",
+      "description": "Raw a_p values are not comparable across weights.",
+      "hostile_control": "Only exact even powers after p^(w/2) normalization are emitted."
+    },
+    {
+      "code": "FINITE_TO_LIMIT",
+      "description": "A short prime window is not a Sato-Tate or family-moment theorem.",
+      "hostile_control": "Evaluation scope is SINGLE_OBJECT with FINITE_COMPLETE coverage."
+    },
+    {
+      "code": "LOCAL_TO_GRH",
+      "description": "Local coefficient rows contain no zero-completeness information.",
+      "hostile_control": "global_claim_allowed is false and zero data is NOT_USED."
+    }
+  ],
+  "family_adapters": [
+    {
+      "adapter_path": "research/l-families/atlas/core/local_euler.py",
+      "correction": "Omit conductor primes and use weight zero.",
+      "family": "GL1_ZETA_AND_REAL_DIRICHLET",
+      "status": "REQUIRED_AVAILABLE"
+    },
+    {
+      "adapter_path": "research/l-families/atlas/core/local_euler.py",
+      "correction": "Point-count a_p, divide even moments by p^(w*k/2), and omit bad primes.",
+      "family": "GL2_ELLIPTIC",
+      "status": "REQUIRED_AVAILABLE"
+    },
+    {
+      "adapter_path": "research/l-families/atlas/function_field/pilot.py",
+      "correction": "Use degree as scale; bespoke raw results are separately wrapped.",
+      "family": "FUNCTION_FIELD",
+      "status": "REQUIRED_AVAILABLE"
+    }
+  ],
+  "formalization_refs": [
+    {
+      "path": null,
+      "state": "DEFINITION_READY",
+      "target": "Finite rational aggregation after a typed local normalization."
+    }
+  ],
+  "identity_kernel": {
+    "central_zero_policy": "NOT_APPLICABLE",
+    "contract_revision": 1,
+    "kernel_convention": "COEFFICIENT_DISPERSION",
+    "mathematical_definition": "For each declared unramified prime p, write the unitary reciprocal local factor with prime coefficient b_p=-a_p/p^(w/2), then form the exact finite averages M_2(P)=|P|^(-1) sum_p b_p^2 and M_4(P)=|P|^(-1) sum_p b_p^4.",
+    "normalization_requirements": [
+      "Use the unitary local variable and stored motivic weight w.",
+      "Omit, rather than guess, every declared bad Euler factor."
+    ],
+    "slug": "LOCAL_EULER.EVEN_MOMENTS",
+    "version": 1
+  },
+  "identity_sha256": "e72a831d587b0073d1f38ca865fed648b0209ab2d34f6c7149028dcf6ecaf8e9",
+  "invariances": [
+    {
+      "code": "ISOGENY_GOOD_ROWS",
+      "statement": "Good-prime rows are invariant within a rational elliptic-curve isogeny class.",
+      "status": "PROVED"
+    },
+    {
+      "code": "UNITARY_TOP_MODULUS",
+      "statement": "The normalized top reciprocal local coefficient has modulus one for every included self-dual factor.",
+      "status": "PROVED"
+    }
+  ],
+  "kernel_convention": "COEFFICIENT_DISPERSION",
+  "mathematical_definition": "For each declared unramified prime p, write the unitary reciprocal local factor with prime coefficient b_p=-a_p/p^(w/2), then form the exact finite averages M_2(P)=|P|^(-1) sum_p b_p^2 and M_4(P)=|P|^(-1) sum_p b_p^4.",
+  "normalization_requirements": [
+    {
+      "comparison_role": "SCALING",
+      "field": "classification.motivic_weight",
+      "requirement": "Use the unitary local variable and stored motivic weight w."
+    },
+    {
+      "comparison_role": "FIREWALL",
+      "field": "euler_product.bad_factor_policy",
+      "requirement": "Omit, rather than guess, every declared bad Euler factor."
+    },
+    {
+      "comparison_role": "IDENTITY",
+      "field": "completed_normalization.normalization_id",
+      "requirement": "Bind the exact LFunctionSpec record content in every evaluation."
+    }
+  ],
+  "notes": "The function-field and GL(2) pilots remain raw adapters/results until wrapped by EvaluationRecord objects.",
+  "output_contract": {
+    "arithmetic_classes": [
+      "EXACT_RATIONAL"
+    ],
+    "global_claim_allowed": false,
+    "raw_schema_path": "research/l-families/atlas/detectors/raw-schemas/local-euler-result.schema.json",
+    "representations": [
+      "EXACT_RATIONAL"
+    ]
+  },
+  "parameters": [
+    {
+      "constraints": {
+        "minimum": 2
+      },
+      "domain": "integer >= 2",
+      "name": "prime_bound",
+      "required": true,
+      "value_type": "INTEGER"
+    },
+    {
+      "constraints": {
+        "element_minimum": 1,
+        "element_multiple_of": 2,
+        "nonempty": true
+      },
+      "default": [
+        2,
+        4
+      ],
+      "domain": "positive even integers",
+      "name": "moments",
+      "required": true,
+      "value_type": "INTEGER_LIST"
+    },
+    {
+      "constraints": {
+        "enum_values": [
+          "DECLARED_OMIT"
+        ]
+      },
+      "default": "DECLARED_OMIT",
+      "domain": "DECLARED_OMIT",
+      "name": "bad_prime_policy",
+      "required": true,
+      "value_type": "ENUM"
+    }
+  ],
+  "programme_refs": [
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 741,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/741"
+    },
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 738,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/738"
+    }
+  ],
+  "record_state": "DRAFT",
+  "record_type": "DETECTOR_CONTRACT",
+  "reference_implementation": {
+    "entry_point": "evaluate_local_euler",
+    "path": "research/l-families/atlas/core/run_pilot.py",
+    "source_sha256": "f2f16ad501730d91b49de59da464024306978d212d324d27f03a64e981a3e286",
+    "version": "1"
+  },
+  "required_inputs": [
+    {
+      "coverage_requirement": "COMPLETE",
+      "input_type": "LFUNCTION_SPEC",
+      "name": "lfunction_spec",
+      "required": true
+    },
+    {
+      "coverage_requirement": "FINITE_COMPLETE",
+      "input_type": "LOCAL_EULER_FACTORS",
+      "name": "local_euler_factors",
+      "required": true
+    }
+  ],
+  "revision": 1,
+  "schema_version": "riemann.atlas.detector_contract.v1",
+  "scope_boundary": "Exact finite local-coefficient statistic only; it consumes no zero data and has no RH/GRH predicate.",
+  "semantic_id": "ATLAS.DETECTOR.LOCAL_EULER.EVEN_MOMENTS.He72a831d587b0073d1f38ca865fed648",
+  "supersedes": [],
+  "theorem_links": [
+    {
+      "scope": "No canonical theorem is inferred from this Phase-0 statistic.",
+      "semantic_id": "NONE",
+      "status": "NONE"
+    }
+  ],
+  "title": "Exact normalized local-Euler even moments"
+}

@@ -1,0 +1,243 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/gfreund123/riemann/research/l-families/atlas/detectors/raw-schemas/function-field-genus2-result.schema.json",
+  "title": "Raw exact F_3 quintic genus-two coefficient-minor result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema", "raw_fixture_id", "rigor_level", "scope", "field", "curve_convention",
+    "object_metadata", "detector", "producer", "family", "exact_checks", "family_statistics",
+    "witnesses", "asymptotic_target", "firewall", "payload_sha256"
+  ],
+  "properties": {
+    "schema": {"const": "riemann.function_field.genus2_exact_pilot.v1"},
+    "raw_fixture_id": {"const": "FUNCTION_FIELD.F3.QUINTIC.GENUS2.EXACT.V1"},
+    "rigor_level": {"const": "RIGOROUS_CERTIFIED"},
+    "scope": {"type": "string", "minLength": 1},
+    "field": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["q", "model", "quadratic_extension_for_point_counts"],
+      "properties": {
+        "q": {"const": 3},
+        "model": {"const": "F_3[T]"},
+        "quadratic_extension_for_point_counts": {"const": "F_9=F_3[theta]/(theta^2+1)"}
+      }
+    },
+    "curve_convention": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["model", "projective_completion", "point_at_infinity", "point_count_formula"],
+      "properties": {
+        "model": {"const": "C_D: y^2=D(x)"},
+        "projective_completion": {"const": "odd-degree hyperelliptic model"},
+        "point_at_infinity": {"const": "exactly one rational point over every finite extension"},
+        "point_count_formula": {"type": "string", "minLength": 1}
+      }
+    },
+    "object_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "family", "object_type", "L_degree", "conductor", "normalization",
+        "functional_equation", "analytic_rank", "zero_data_provenance"
+      ],
+      "properties": {
+        "family": {"type": "string", "minLength": 1},
+        "object_type": {"const": "self-dual quadratic character"},
+        "L_degree": {"const": 4},
+        "conductor": {"type": "string", "minLength": 1},
+        "normalization": {"type": "string", "minLength": 1},
+        "functional_equation": {"const": "P_D(u)=9*u^4*P_D(1/(3*u))"},
+        "analytic_rank": {"const": "not computed or inferred"},
+        "zero_data_provenance": {"type": "string", "minLength": 1}
+      }
+    },
+    "detector": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "definition", "exact_identity", "failure_mode", "parity"],
+      "properties": {
+        "id": {"const": "FUNCTION_FIELD.NORMALIZED_RECIPROCAL.HANKEL_MINOR_2X2.TOY"},
+        "definition": {"type": "string", "minLength": 1},
+        "exact_identity": {"type": "string", "minLength": 1},
+        "failure_mode": {"type": "string", "minLength": 1},
+        "parity": {"type": "string", "minLength": 1}
+      }
+    },
+    "producer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "source_sha256_lf_normalized", "runtime_contract", "input_provenance"],
+      "properties": {
+        "source": {"const": "research/l-families/atlas/function_field/genus2_pilot.py"},
+        "source_sha256_lf_normalized": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "runtime_contract": {"type": "string", "minLength": 1},
+        "input_provenance": {"const": "complete deterministic generation, no external data"}
+      }
+    },
+    "family": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "conductor_degree", "member_count", "candidate_count", "expected_squarefree_count",
+        "reciprocal_degree_checked_through"
+      ],
+      "properties": {
+        "conductor_degree": {"const": 5},
+        "member_count": {"const": 162},
+        "candidate_count": {"const": 243},
+        "expected_squarefree_count": {"const": 162},
+        "reciprocal_degree_checked_through": {"const": 4}
+      }
+    },
+    "exact_checks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "point_counts_reconstruct_character_L_polynomial_for_every_member",
+        "palindromic_functional_equation_for_every_member",
+        "direct_Moebius_coefficients_equal_formal_inverse_for_every_member",
+        "L_times_reciprocal_is_one_through_checked_degree_for_every_member",
+        "integer_purity_certificate_for_every_member",
+        "coefficient_Hankel_closed_form_for_every_member",
+        "twist_involution_coefficient_parity_for_every_member"
+      ],
+      "properties": {
+        "point_counts_reconstruct_character_L_polynomial_for_every_member": {"const": true},
+        "palindromic_functional_equation_for_every_member": {"const": true},
+        "direct_Moebius_coefficients_equal_formal_inverse_for_every_member": {"const": true},
+        "L_times_reciprocal_is_one_through_checked_degree_for_every_member": {"const": true},
+        "integer_purity_certificate_for_every_member": {"const": true},
+        "coefficient_Hankel_closed_form_for_every_member": {"const": true},
+        "twist_involution_coefficient_parity_for_every_member": {"const": true}
+      }
+    },
+    "family_statistics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "L_a1_histogram", "L_a1_a2_histogram", "N1_histogram", "N2_histogram",
+        "toy_minor_numerator_histogram", "toy_minor_numerator_mean", "normalized_toy_minor_mean",
+        "negative_member_count", "zero_member_count", "positive_member_count",
+        "parity_odd_B1_B2_mean", "parity_odd_B1_B2_sign_counts",
+        "twist_involution_fixed_member_count"
+      ],
+      "properties": {
+        "L_a1_histogram": {"type": "object"},
+        "L_a1_a2_histogram": {"type": "object"},
+        "N1_histogram": {"type": "object"},
+        "N2_histogram": {"type": "object"},
+        "toy_minor_numerator_histogram": {"type": "object"},
+        "toy_minor_numerator_mean": {"$ref": "#/$defs/fraction_pair"},
+        "normalized_toy_minor_mean": {"$ref": "#/$defs/fraction_pair"},
+        "negative_member_count": {"const": 102},
+        "zero_member_count": {"const": 12},
+        "positive_member_count": {"const": 48},
+        "parity_odd_B1_B2_mean": {"$ref": "#/$defs/fraction_pair"},
+        "parity_odd_B1_B2_sign_counts": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["negative", "zero", "positive"],
+          "properties": {
+            "negative": {"const": 54},
+            "zero": {"const": 54},
+            "positive": {"const": 54}
+          }
+        },
+        "twist_involution_fixed_member_count": {"const": 4}
+      }
+    },
+    "witnesses": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["negative", "zero", "positive"],
+      "properties": {
+        "negative": {"$ref": "#/$defs/witness"},
+        "zero": {"$ref": "#/$defs/witness"},
+        "positive": {"$ref": "#/$defs/witness"}
+      }
+    },
+    "asymptotic_target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "statement", "heuristic", "finite_evidence"],
+      "properties": {
+        "status": {"const": "CONJECTURAL_TARGET_NOT_A_THEOREM"},
+        "statement": {"type": "string", "minLength": 1},
+        "heuristic": {"type": "string", "minLength": 1},
+        "finite_evidence": {"type": "string", "minLength": 1}
+      }
+    },
+    "firewall": {"type": "string", "minLength": 1},
+    "payload_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "$defs": {
+    "fraction_pair": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {"type": "integer"}
+    },
+    "point_counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["F_3", "F_9", "point_at_infinity_added"],
+      "properties": {
+        "F_3": {"type": "integer", "minimum": 0},
+        "F_9": {"type": "integer", "minimum": 0},
+        "point_at_infinity_added": {"const": 1}
+      }
+    },
+    "purity_certificate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "palindromic_functional_equation", "pair_trace_polynomial_low_to_high",
+        "pair_trace_discriminant", "pair_traces_are_real", "pair_trace_center_inside_interval",
+        "endpoint_base_nonnegative", "endpoint_square_inequality",
+        "reciprocal_roots_have_modulus_sqrt_q", "L_zeros_have_modulus_q_to_minus_one_half"
+      ],
+      "properties": {
+        "palindromic_functional_equation": {"const": true},
+        "pair_trace_polynomial_low_to_high": {
+          "type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "integer"}
+        },
+        "pair_trace_discriminant": {"type": "integer", "minimum": 0},
+        "pair_traces_are_real": {"const": true},
+        "pair_trace_center_inside_interval": {"const": true},
+        "endpoint_base_nonnegative": {"const": true},
+        "endpoint_square_inequality": {"const": true},
+        "reciprocal_roots_have_modulus_sqrt_q": {"const": true},
+        "L_zeros_have_modulus_q_to_minus_one_half": {"const": true}
+      }
+    },
+    "witness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "conductor_coefficients_low_to_high", "conductor", "point_counts",
+        "L_coefficients_low_to_high", "frobenius_trace", "reciprocal_coefficients_B0_to_B4",
+        "toy_coefficient_hankel_minor_numerator", "normalized_toy_coefficient_hankel_minor",
+        "purity_certificate"
+      ],
+      "properties": {
+        "conductor_coefficients_low_to_high": {
+          "type": "array", "minItems": 6, "maxItems": 6, "items": {"type": "integer"}
+        },
+        "conductor": {"type": "string", "minLength": 1},
+        "point_counts": {"$ref": "#/$defs/point_counts"},
+        "L_coefficients_low_to_high": {
+          "type": "array", "minItems": 5, "maxItems": 5, "items": {"type": "integer"}
+        },
+        "frobenius_trace": {"type": "integer"},
+        "reciprocal_coefficients_B0_to_B4": {
+          "type": "array", "minItems": 5, "maxItems": 5, "items": {"type": "integer"}
+        },
+        "toy_coefficient_hankel_minor_numerator": {"type": "integer"},
+        "normalized_toy_coefficient_hankel_minor": {"$ref": "#/$defs/fraction_pair"},
+        "purity_certificate": {"$ref": "#/$defs/purity_certificate"}
+      }
+    }
+  }
+}

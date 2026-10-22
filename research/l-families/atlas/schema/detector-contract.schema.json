@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/gfreund123/riemann/research/l-families/atlas/schema/detector-contract.schema.json",
+  "title": "DetectorContract v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "record_type", "semantic_id", "identity_sha256", "identity_kernel", "title", "revision", "record_state",
+    "programme_refs", "scope_boundary", "supersedes", "detector_kind", "mathematical_definition", "kernel_convention",
+    "central_zero_policy", "required_inputs", "parameters", "normalization_requirements", "invariances", "family_adapters",
+    "theorem_links", "failure_modes", "output_contract", "reference_implementation", "formalization_refs", "notes"
+  ],
+  "properties": {
+    "schema_version": {"const": "riemann.atlas.detector_contract.v1"},
+    "record_type": {"const": "DETECTOR_CONTRACT"},
+    "semantic_id": {"type": "string", "pattern": "^ATLAS\\.DETECTOR\\.[A-Z0-9_.-]+\\.H[0-9a-f]{32}$"},
+    "identity_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "identity_kernel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["version", "slug", "mathematical_definition", "kernel_convention", "central_zero_policy", "normalization_requirements", "contract_revision"],
+      "properties": {
+        "version": {"const": 1},
+        "slug": {"type": "string", "pattern": "^[A-Z0-9_.-]+$"},
+        "mathematical_definition": {"type": "string", "minLength": 1},
+        "kernel_convention": {"enum": ["RECIPROCAL_MELLIN", "FIXED_KERNEL", "LOEWNER_DIFFERENCE", "PICK_SUM_HANKEL", "HEAT_FIRST_HERMITE", "COEFFICIENT_DISPERSION", "PHASE_CUBIC_GRAM", "OCCUPANCY", "CUSTOM"]},
+        "central_zero_policy": {"$ref": "common.schema.json#/$defs/centralZeroPolicy"},
+        "normalization_requirements": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "contract_revision": {"type": "integer", "minimum": 1}
+      }
+    },
+    "title": {"type": "string", "minLength": 1},
+    "revision": {"type": "integer", "minimum": 1},
+    "record_state": {"$ref": "common.schema.json#/$defs/recordState"},
+    "programme_refs": {"type": "array", "minItems": 1, "items": {"$ref": "common.schema.json#/$defs/programmeRef"}, "uniqueItems": true},
+    "scope_boundary": {"type": "string", "minLength": 1},
+    "supersedes": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/semanticId"}, "uniqueItems": true},
+    "detector_kind": {"enum": ["RECIPROCAL_L_MELLIN_WAVELET", "FIXED_KERNEL_NEGATIVE_MASS", "PICK_LOEWNER", "RANK_DEFLATED_PICK", "FIRST_HERMITE_HEAT", "SPECTRAL_ABSCISSA", "COEFFICIENT_DISPERSION", "PHASE_CUBIC_GRAM", "PHYSICAL_OCCUPANCY", "ZERO_SPACING_SUMMARY", "CUSTOM"]},
+    "mathematical_definition": {"type": "string", "minLength": 1},
+    "kernel_convention": {"enum": ["RECIPROCAL_MELLIN", "FIXED_KERNEL", "LOEWNER_DIFFERENCE", "PICK_SUM_HANKEL", "HEAT_FIRST_HERMITE", "COEFFICIENT_DISPERSION", "PHASE_CUBIC_GRAM", "OCCUPANCY", "CUSTOM"]},
+    "central_zero_policy": {"$ref": "common.schema.json#/$defs/centralZeroPolicy"},
+    "required_inputs": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["name", "input_type", "required", "coverage_requirement"],
+        "properties": {
+          "name": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+          "input_type": {"$ref": "common.schema.json#/$defs/inputType"},
+          "required": {"type": "boolean"},
+          "coverage_requirement": {"$ref": "common.schema.json#/$defs/coverageClass"}
+        }
+      }
+    },
+    "parameters": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["name", "value_type", "required", "domain"],
+        "properties": {
+          "name": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+          "value_type": {"enum": ["INTEGER", "RATIONAL_STRING", "RATIONAL_STRING_LIST", "DECIMAL_STRING", "BOOLEAN", "STRING", "ENUM", "SEMANTIC_ID", "INTEGER_LIST"]},
+          "required": {"type": "boolean"},
+          "domain": {"type": "string", "minLength": 1},
+          "constraints": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "minimum": {"type": "integer"},
+              "maximum": {"type": "integer"},
+              "multiple_of": {"type": "integer", "minimum": 1},
+              "odd": {"type": "boolean"},
+              "nonempty": {"type": "boolean"},
+              "unique": {"type": "boolean"},
+              "strictly_increasing": {"type": "boolean"},
+              "element_minimum": {"type": "integer"},
+              "element_multiple_of": {"type": "integer", "minimum": 1},
+              "rational_positive": {"type": "boolean"},
+              "enum_values": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
+              "frozen_value": {}
+            }
+          },
+          "default": {}
+        }
+      }
+    },
+    "normalization_requirements": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["field", "requirement", "comparison_role"],
+        "properties": {
+          "field": {"type": "string", "minLength": 1},
+          "requirement": {"type": "string", "minLength": 1},
+          "comparison_role": {"enum": ["IDENTITY", "SCALING", "COVARIANCE", "FIREWALL"]}
+        }
+      }
+    },
+    "invariances": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["code", "statement", "status"],
+        "properties": {
+          "code": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]*$"},
+          "statement": {"type": "string", "minLength": 1},
+          "status": {"enum": ["PROVED", "CONDITIONAL", "EXPECTED", "FALSE", "UNKNOWN", "NOT_APPLICABLE"]}
+        }
+      }
+    },
+    "family_adapters": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["family", "status", "adapter_path", "correction"],
+        "properties": {
+          "family": {"type": "string", "minLength": 1},
+          "status": {"enum": ["REQUIRED_AVAILABLE", "REQUIRED_OPEN", "NOT_REQUIRED", "UNSUPPORTED"]},
+          "adapter_path": {"type": ["string", "null"]},
+          "correction": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "theorem_links": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["semantic_id", "status", "scope"],
+        "properties": {
+          "semantic_id": {"type": "string"},
+          "status": {"enum": ["VERIFIED", "VERIFIED_WITH_FIXES", "CONDITIONAL_EXACT", "OPEN", "PROPOSED", "NONE"]},
+          "scope": {"type": "string"}
+        }
+      }
+    },
+    "failure_modes": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["code", "description", "hostile_control"],
+        "properties": {
+          "code": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]*$"},
+          "description": {"type": "string", "minLength": 1},
+          "hostile_control": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "output_contract": {
+      "type": "object", "additionalProperties": false,
+      "required": ["representations", "arithmetic_classes", "raw_schema_path", "global_claim_allowed"],
+      "properties": {
+        "representations": {"type": "array", "minItems": 1, "items": {"enum": ["EXACT_INTEGER", "EXACT_RATIONAL", "DIRECTED_REAL_INTERVAL", "DIRECTED_COMPLEX_RECTANGLE", "NON_DIRECTED_DECIMAL", "BOOLEAN_PREDICATE", "VECTOR", "MATRIX", "HASHED_ARTIFACT", "SUMMARY_ONLY"]}},
+        "arithmetic_classes": {"type": "array", "minItems": 1, "items": {"$ref": "common.schema.json#/$defs/arithmeticClass"}},
+        "raw_schema_path": {"type": ["string", "null"]},
+        "global_claim_allowed": {"const": false}
+      }
+    },
+    "reference_implementation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "entry_point", "version", "source_sha256"],
+      "properties": {
+        "path": {"type": "string", "pattern": "^(?!/)(?!.*\\.\\.)(?!.*\\\\)[A-Za-z0-9._/-]+$"},
+        "entry_point": {"type": "string"},
+        "version": {"type": "string"},
+        "source_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$|^PENDING$"}
+      }
+    },
+    "formalization_refs": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["state", "target", "path"],
+        "properties": {
+          "state": {"enum": ["NOT_STARTED", "DEFINITION_READY", "PARTIAL", "FORMALIZED"]},
+          "target": {"type": "string"},
+          "path": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "canonical_provenance_ref": {"$ref": "common.schema.json#/$defs/canonicalProvenanceRef"},
+    "notes": {"type": "string"}
+  }
+}

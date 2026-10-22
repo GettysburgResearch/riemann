@@ -1,0 +1,136 @@
+{
+  "analytic_properties": {
+    "analytic_continuation": "IMPORTED_THEOREM",
+    "euler_product": "IMPORTED_THEOREM",
+    "functional_equation": "IMPORTED_THEOREM",
+    "source_ref": "CLASSICAL_DIRICHLET_THEORY"
+  },
+  "assumptions": [
+    {
+      "code": "CLASSICAL_DIRICHLET_THEORY",
+      "statement": "Analytic continuation and the completed functional equation are imported.",
+      "status": "IMPORTED"
+    }
+  ],
+  "base_field": {
+    "characteristic": 0,
+    "label": "Q"
+  },
+  "central_data": {
+    "assertion": "UNKNOWN",
+    "notes": "Central values are outside this coefficient-only pilot.",
+    "parity_forced": false,
+    "rigor_level": "DISCOVERY_ONLY",
+    "source_ref": "NONE",
+    "value": null
+  },
+  "classification": {
+    "automorphic_class": "GL1",
+    "degree": 1,
+    "domain": "NUMBER_FIELD",
+    "family_id": "GL1.QUADRATIC.MOD5",
+    "motivic_weight": 0,
+    "object_type": "DIRICHLET_L",
+    "self_duality": "SELF_DUAL",
+    "symmetry_type": "SYMPLECTIC"
+  },
+  "completed_normalization": {
+    "analytic_variable": "s",
+    "conductor_factor": "5^(s/2)",
+    "critical_center": "1/2",
+    "exact_formula": "Lambda(s)=(5/pi)^(s/2) Gamma(s/2) L(s,chi_5)",
+    "gamma_factors": [
+      {
+        "kind": "GAMMA_R",
+        "multiplicity": 1,
+        "scale": "pi^(-s/2)",
+        "shift": "0"
+      }
+    ],
+    "normalization_id": "DIRICHLET.EVEN.UNITARY",
+    "notes": "chi_5(-1)=+1."
+  },
+  "conductor": {
+    "kind": "INTEGER",
+    "norm_decimal": "5",
+    "status": "PROVED_NATIVE",
+    "value": "5"
+  },
+  "data_sources": [
+    {
+      "coverage": "Every finite character value requested by the declared prime window.",
+      "hashes": [],
+      "identifier": "Legendre symbol modulo 5",
+      "locator": "research/l-families/atlas/core/local_euler.py",
+      "notes": "The finite adapter is checked into the repository and separately content-bound by each evaluation.",
+      "retention": "GENERATED",
+      "rigor_level": "RIGOROUS_CERTIFIED",
+      "role": "definition_source",
+      "source_kind": "GENERATED_EXACT",
+      "version_or_retrieved_utc": "2026-08-24T15:00:00Z"
+    }
+  ],
+  "euler_product": {
+    "bad_factor_policy": "Omit p=5.",
+    "coverage": "All rational primes p<=prime_bound except 5.",
+    "good_factor_formula": "L_p(s)^(-1)=1-chi_5(p)p^(-s) for p != 5",
+    "reciprocal_coefficient_definition": "mu_chi(p)=-chi_5(p)",
+    "rigor_level": "RIGOROUS_CERTIFIED",
+    "source_refs": [
+      "DIRICHLET:KRONECKER:5"
+    ]
+  },
+  "functional_equation": {
+    "exact_formula": "Lambda(s)=Lambda(1-s)",
+    "root_number": "+1",
+    "root_number_status": "IMPORTED_THEOREM",
+    "source_ref": "CLASSICAL_DIRICHLET_THEORY"
+  },
+  "identity_kernel": {
+    "base_field_label": "Q",
+    "construction": "Primitive real even quadratic character modulo 5",
+    "slug": "DIRICHLET.QUADRATIC.MOD5",
+    "source_identifiers": [
+      "DIRICHLET:KRONECKER:5"
+    ],
+    "twist_parameters": [],
+    "version": 1
+  },
+  "identity_sha256": "0f25a0b178fb88f6a857ac01c677a979ad49ce6fe44a4587e6a06801fd0a2ba8",
+  "notes": "Finite character and coefficient rows are exact; zero data is absent.",
+  "programme_refs": [
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 741,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/741"
+    }
+  ],
+  "record_state": "DRAFT",
+  "record_type": "L_FUNCTION_SPEC",
+  "revision": 1,
+  "schema_version": "riemann.atlas.l_function_spec.v1",
+  "scope_boundary": "Phase-0 metadata and declared finite adapters only; no zero-set or global conclusion is inherited.",
+  "semantic_id": "ATLAS.LFUNC.DIRICHLET.QUADRATIC.MOD5.H0f25a0b178fb88f6a857ac01c677a979",
+  "software": [
+    {
+      "name": "CPython",
+      "role": "exact integer point counts and rational moment aggregation",
+      "version": "3.12.10"
+    }
+  ],
+  "source_identifiers": [
+    "DIRICHLET:KRONECKER:5"
+  ],
+  "supersedes": [],
+  "title": "Primitive quadratic Dirichlet L-function modulo 5",
+  "zero_data": {
+    "central_zero_policy": "NOT_APPLICABLE",
+    "coverage_class": "NOT_APPLICABLE",
+    "precision": null,
+    "rigor_level": "DISCOVERY_ONLY",
+    "source_refs": [],
+    "usage": "NOT_USED",
+    "window": null
+  }
+}

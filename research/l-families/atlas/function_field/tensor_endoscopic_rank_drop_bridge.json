@@ -1,0 +1,1190 @@
+{
+  "frozen_product_model_incidence": [
+    {
+      "complete_product_atom_classification_ledger_sha256": "bc9b50a01bf367c14e63b69606b5cc067fc382b5938c73172a20248e365b8cf7",
+      "detector_recognition": {
+        "L_zero_contingency": {
+          "non_split_and_L_positive": 2430,
+          "non_split_and_L_zero": 0,
+          "split_and_L_positive": 420,
+          "split_and_L_zero": 66
+        },
+        "locked_genus2_detector_failures": {
+          "B": {
+            "fiber_count": 14,
+            "genus2_member_count_in_mixed_fibers": 12,
+            "mixed_split_status_fiber_count": 1
+          },
+          "F": {
+            "fiber_count": 12,
+            "genus2_member_count_in_mixed_fibers": 24,
+            "mixed_split_status_fiber_count": 1
+          },
+          "complete_balanced_echo": {
+            "fiber_count": 17,
+            "genus2_member_count_in_mixed_fibers": 12,
+            "mixed_split_status_fiber_count": 1
+          }
+        },
+        "rank_as_split_detector": {
+          "interpretation": "L=0 recognizes exactly the rank-drop sublocus on integer product parameters, not the whole integral split locus",
+          "precision_P_split_given_L_zero": [
+            1,
+            1
+          ],
+          "recall_P_L_zero_given_split": [
+            11,
+            81
+          ]
+        }
+      },
+      "exact_cross_checks": {
+        "endoscopic_counts_replayed": true,
+        "factorization_residuals_zero": true,
+        "integer_L_zero_equals_reduced_rank_union": true,
+        "rank_rows_all_integral_split": true,
+        "tensor_counts_replayed": true
+      },
+      "incidence_counts": {
+        "all_product_pairs": {
+          "product_pair_count": 2916,
+          "source_histogram_atom_pair_count": 224
+        },
+        "integral_split": {
+          "product_pair_count": 486,
+          "source_histogram_atom_pair_count": 63
+        },
+        "rank_drop": {
+          "product_pair_count": 66,
+          "source_histogram_atom_pair_count": 6
+        },
+        "rank_split_distinct": {
+          "product_pair_count": 66,
+          "source_histogram_atom_pair_count": 6
+        },
+        "rank_split_repeated": {
+          "product_pair_count": 0,
+          "source_histogram_atom_pair_count": 0
+        },
+        "split_and_tensor_singular": {
+          "product_pair_count": 150,
+          "source_histogram_atom_pair_count": 15
+        },
+        "split_distinct": {
+          "product_pair_count": 486,
+          "source_histogram_atom_pair_count": 63
+        },
+        "split_outside_tensor_singular": {
+          "product_pair_count": 336,
+          "source_histogram_atom_pair_count": 48
+        },
+        "split_repeated": {
+          "product_pair_count": 0,
+          "source_histogram_atom_pair_count": 0
+        },
+        "split_singular_not_rank": {
+          "product_pair_count": 84,
+          "source_histogram_atom_pair_count": 9
+        },
+        "tensor_singular": {
+          "product_pair_count": 1068,
+          "source_histogram_atom_pair_count": 56
+        }
+      },
+      "incidence_fractions": {
+        "rank_drop_of_all_product_pairs": [
+          11,
+          486
+        ],
+        "rank_drop_of_integral_split_pairs": [
+          11,
+          81
+        ],
+        "rank_drop_of_split_singular": [
+          11,
+          25
+        ],
+        "rank_drop_of_tensor_singular": [
+          11,
+          178
+        ],
+        "split_singular_of_tensor_singular": [
+          25,
+          178
+        ]
+      },
+      "inclusive_branch_converse_census": {
+        "C_trace_zero_component": {
+          "all_component_pairs": 540,
+          "integral_split_pairs": 54,
+          "rank_pairs_trace_match": 18,
+          "split_but_trace_mismatch_pairs": 36
+        },
+        "E_trace_zero_component": {
+          "all_component_pairs": 648,
+          "integral_split_pairs": 108,
+          "rank_pairs_zero_factor": 48,
+          "split_but_nonzero_factor_pairs": 60
+        },
+        "rank_branch_intersection_pairs": 0,
+        "warning": "the two component rows are inclusive and share their intersection"
+      },
+      "q": 3,
+      "rank_drop_product_atoms": [
+        {
+          "Delta": 16,
+          "R": 0,
+          "branches": [
+            "C_trace_zero_matching_antidiagonal_branch"
+          ],
+          "elliptic_histogram_count": 3,
+          "genus2_a": 0,
+          "genus2_b": 2,
+          "genus2_histogram_count": 3,
+          "integral_factor_traces_sorted": [
+            -2,
+            2
+          ],
+          "product_pair_count": 9,
+          "q_squared_L_numerator": 0,
+          "source_geometric_trace_t_E": 2,
+          "split_kind": "split_distinct",
+          "tensor_polynomial_coefficient_A": -2
+        },
+        {
+          "Delta": 9,
+          "R": 0,
+          "branches": [
+            "E_trace_zero_zero_factor_branch"
+          ],
+          "elliptic_histogram_count": 4,
+          "genus2_a": -3,
+          "genus2_b": 6,
+          "genus2_histogram_count": 3,
+          "integral_factor_traces_sorted": [
+            0,
+            3
+          ],
+          "product_pair_count": 12,
+          "q_squared_L_numerator": 0,
+          "source_geometric_trace_t_E": 0,
+          "split_kind": "split_distinct",
+          "tensor_polynomial_coefficient_A": 0
+        },
+        {
+          "Delta": 4,
+          "R": 0,
+          "branches": [
+            "E_trace_zero_zero_factor_branch"
+          ],
+          "elliptic_histogram_count": 4,
+          "genus2_a": -2,
+          "genus2_b": 6,
+          "genus2_histogram_count": 3,
+          "integral_factor_traces_sorted": [
+            0,
+            2
+          ],
+          "product_pair_count": 12,
+          "q_squared_L_numerator": 0,
+          "source_geometric_trace_t_E": 0,
+          "split_kind": "split_distinct",
+          "tensor_polynomial_coefficient_A": 0
+        },
+        {
+          "Delta": 4,
+          "R": 0,
+          "branches": [
+            "E_trace_zero_zero_factor_branch"
+          ],
+          "elliptic_histogram_count": 4,
+          "genus2_a": 2,
+          "genus2_b": 6,
+          "genus2_histogram_count": 3,
+          "integral_factor_traces_sorted": [
+            -2,
+            0
+          ],
+          "product_pair_count": 12,
+          "q_squared_L_numerator": 0,
+          "source_geometric_trace_t_E": 0,
+          "split_kind": "split_distinct",
+          "tensor_polynomial_coefficient_A": 0
+        },
+        {
+          "Delta": 9,
+          "R": 0,
+          "branches": [
+            "E_trace_zero_zero_factor_branch"
+          ],
+          "elliptic_histogram_count": 4,
+          "genus2_a": 3,
+          "genus2_b": 6,
+          "genus2_histogram_count": 3,
+          "integral_factor_traces_sorted": [
+            -3,
+            0
+          ],
+          "product_pair_count": 12,
+          "q_squared_L_numerator": 0,
+          "source_geometric_trace_t_E": 0,
+          "split_kind": "split_distinct",
+          "tensor_polynomial_coefficient_A": 0
+        },
+        {
+          "Delta": 16,
+          "R": 0,
+          "branches": [
+            "C_trace_zero_matching_antidiagonal_branch"
+          ],
+          "elliptic_histogram_count": 3,
+          "genus2_a": 0,
+          "genus2_b": 2,
+          "genus2_histogram_count": 3,
+          "integral_factor_traces_sorted": [
+            -2,
+            2
+          ],
+          "product_pair_count": 9,
+          "q_squared_L_numerator": 0,
+          "source_geometric_trace_t_E": -2,
+          "split_kind": "split_distinct",
+          "tensor_polynomial_coefficient_A": 2
+        }
+      ],
+      "source_histogram_sizes": {
+        "elliptic_trace_atoms": 7,
+        "genus2_coefficient_atoms": 32,
+        "product_atom_pairs": 224
+      }
+    },
+    {
+      "complete_product_atom_classification_ledger_sha256": "7df0f4c99d6ba32a6a8d8aee93de260ff9adaf1872b9811a40bc635563d53e0d",
+      "detector_recognition": {
+        "L_zero_contingency": {
+          "non_split_and_L_positive": 179500,
+          "non_split_and_L_zero": 0,
+          "split_and_L_positive": 65500,
+          "split_and_L_zero": 5000
+        },
+        "locked_genus2_detector_failures": {
+          "B": {
+            "fiber_count": 33,
+            "genus2_member_count_in_mixed_fibers": 246,
+            "mixed_split_status_fiber_count": 3
+          },
+          "F": {
+            "fiber_count": 24,
+            "genus2_member_count_in_mixed_fibers": 700,
+            "mixed_split_status_fiber_count": 6
+          },
+          "complete_balanced_echo": {
+            "fiber_count": 39,
+            "genus2_member_count_in_mixed_fibers": 6,
+            "mixed_split_status_fiber_count": 1
+          }
+        },
+        "rank_as_split_detector": {
+          "interpretation": "L=0 recognizes exactly the rank-drop sublocus on integer product parameters, not the whole integral split locus",
+          "precision_P_split_given_L_zero": [
+            1,
+            1
+          ],
+          "recall_P_L_zero_given_split": [
+            10,
+            141
+          ]
+        }
+      },
+      "exact_cross_checks": {
+        "endoscopic_counts_replayed": true,
+        "factorization_residuals_zero": true,
+        "integer_L_zero_equals_reduced_rank_union": true,
+        "rank_rows_all_integral_split": true,
+        "tensor_counts_replayed": true
+      },
+      "incidence_counts": {
+        "all_product_pairs": {
+          "product_pair_count": 250000,
+          "source_histogram_atom_pair_count": 729
+        },
+        "integral_split": {
+          "product_pair_count": 70500,
+          "source_histogram_atom_pair_count": 207
+        },
+        "rank_drop": {
+          "product_pair_count": 5000,
+          "source_histogram_atom_pair_count": 11
+        },
+        "rank_split_distinct": {
+          "product_pair_count": 4900,
+          "source_histogram_atom_pair_count": 10
+        },
+        "rank_split_repeated": {
+          "product_pair_count": 100,
+          "source_histogram_atom_pair_count": 1
+        },
+        "split_and_tensor_singular": {
+          "product_pair_count": 21700,
+          "source_histogram_atom_pair_count": 47
+        },
+        "split_distinct": {
+          "product_pair_count": 69000,
+          "source_histogram_atom_pair_count": 180
+        },
+        "split_outside_tensor_singular": {
+          "product_pair_count": 48800,
+          "source_histogram_atom_pair_count": 160
+        },
+        "split_repeated": {
+          "product_pair_count": 1500,
+          "source_histogram_atom_pair_count": 27
+        },
+        "split_singular_not_rank": {
+          "product_pair_count": 16700,
+          "source_histogram_atom_pair_count": 36
+        },
+        "tensor_singular": {
+          "product_pair_count": 82480,
+          "source_histogram_atom_pair_count": 153
+        }
+      },
+      "incidence_fractions": {
+        "rank_drop_of_all_product_pairs": [
+          1,
+          50
+        ],
+        "rank_drop_of_integral_split_pairs": [
+          10,
+          141
+        ],
+        "rank_drop_of_split_singular": [
+          50,
+          217
+        ],
+        "rank_drop_of_tensor_singular": [
+          125,
+          2062
+        ],
+        "split_singular_of_tensor_singular": [
+          1085,
+          4124
+        ]
+      },
+      "inclusive_branch_converse_census": {
+        "C_trace_zero_component": {
+          "all_component_pairs": 40600,
+          "integral_split_pairs": 9500,
+          "rank_pairs_trace_match": 2200,
+          "split_but_trace_mismatch_pairs": 7300
+        },
+        "E_trace_zero_component": {
+          "all_component_pairs": 50000,
+          "integral_split_pairs": 14100,
+          "rank_pairs_zero_factor": 2900,
+          "split_but_nonzero_factor_pairs": 11200
+        },
+        "rank_branch_intersection_pairs": 100,
+        "warning": "the two component rows are inclusive and share their intersection"
+      },
+      "q": 5,
+      "rank_drop_product_atoms": [
+        {
+          "Delta": 64,
+          "R": 0,
+          "branches": [
+            "C_trace_zero_matching_antidiagonal_branch"
+          ],
+          "elliptic_histogram_count": 5,
+          "genus2_a": 0,
+          "genus2_b": -6,
+          "genus2_histogram_count": 30,
+          "integral_factor_traces_sorted": [
+            -4,
+            4
+          ],
+          "product_pair_count": 150,
+          "q_squared_L_numerator": 0,
+          "source_geometric_trace_t_E": 4,
+          "split_kind": "split_distinct",
+          "tensor_polynomial_coefficient_A": -4
+        },
+        {
+          "Delta": 16,
+          "R": 0,
+          "branches": [
+            "C_trace_zero_matching_antidiagonal_branch"
+          ],
+          "elliptic_histogram_count": 15,
+          "genus2_a": 0,
+          "genus2_b": 6,
+          "genus2_histogram_count": 60,
+          "integral_factor_traces_sorted": [
+            -2,
+            2
+          ],
+          "product_pair_count": 900,
+          "q_squared_L_numerator": 0,
+          "source_geometric_trace_t_E": 2,
+          "split_kind": "split_distinct",
+          "tensor_polynomial_coefficient_A": -2
+        },
+        {
+          "Delta": 16,
+          "R": 0,
+          "branches": [
+            "E_trace_zero_zero_factor_branch"
+          ],
+          "elliptic_histogram_count": 20,
+          "genus2_a": -4,
+          "genus2_b": 10,
+          "genus2_histogram_count": 30,
+          "integral_factor_traces_sorted": [
+            0,
+            4
+          ],
+          "product_pair_count": 600,
+          "q_squared_L_numerator": 0,
+          "source_geometric_trace_t_E": 0,
+          "split_kind": "split_distinct",
+          "tensor_polynomial_coefficient_A": 0
+        },
+        {
+          "Delta": 9,
+          "R": 0,
+          "branches": [
+            "E_trace_zero_zero_factor_branch"
+          ],
+          "elliptic_histogram_count": 20,
+          "genus2_a": -3,
+          "genus2_b": 10,
+          "genus2_histogram_count": 20,
+          "integral_factor_traces_sorted": [
+            0,
+            3
+          ],
+          "product_pair_count": 400,
+          "q_squared_L_numerator": 0,
+          "source_geometric_trace_t_E": 0,
+          "split_kind": "split_distinct",
+          "tensor_polynomial_coefficient_A": 0
+        },
+        {
+          "Delta": 4,
+          "R": 0,
+          "branches": [
+            "E_trace_zero_zero_factor_branch"
+          ],
+          "elliptic_histogram_count": 20,
+          "genus2_a": -2,
+          "genus2_b": 10,
+          "genus2_histogram_count": 20,
+          "integral_factor_traces_sorted": [
+            0,
+            2
+          ],
+          "product_pair_count": 400,
+          "q_squared_L_numerator": 0,
+          "source_geometric_trace_t_E": 0,
+          "split_kind": "split_distinct",
+          "tensor_polynomial_coefficient_A": 0
+        },
+        {
+          "Delta": 0,
+          "R": 0,
+          "branches": [
+            "E_trace_zero_zero_factor_branch",
+            "C_trace_zero_matching_antidiagonal_branch"
+          ],
+          "elliptic_histogram_count": 20,
+          "genus2_a": 0,
+          "genus2_b": 10,
+          "genus2_histogram_count": 5,
+          "integral_factor_traces_sorted": [
+            0,
+            0
+          ],
+          "product_pair_count": 100,
+          "q_squared_L_numerator": 0,
+          "source_geometric_trace_t_E": 0,
+          "split_kind": "split_repeated",
+          "tensor_polynomial_coefficient_A": 0
+        },
+        {
+          "Delta": 4,
+          "R": 0,
+          "branches": [
+            "E_trace_zero_zero_factor_branch"
+          ],
+          "elliptic_histogram_count": 20,
+          "genus2_a": 2,
+          "genus2_b": 10,
+          "genus2_histogram_count": 20,
+          "integral_factor_traces_sorted": [
+            -2,
+            0
+          ],
+          "product_pair_count": 400,
+          "q_squared_L_numerator": 0,
+          "source_geometric_trace_t_E": 0,
+          "split_kind": "split_distinct",
+          "tensor_polynomial_coefficient_A": 0
+        },
+        {
+          "Delta": 9,
+          "R": 0,
+          "branches": [
+            "E_trace_zero_zero_factor_branch"
+          ],
+          "elliptic_histogram_count": 20,
+          "genus2_a": 3,
+          "genus2_b": 10,
+          "genus2_histogram_count": 20,
+          "integral_factor_traces_sorted": [
+            -3,
+            0
+          ],
+          "product_pair_count": 400,
+          "q_squared_L_numerator": 0,
+          "source_geometric_trace_t_E": 0,
+          "split_kind": "split_distinct",
+          "tensor_polynomial_coefficient_A": 0
+        },
+        {
+          "Delta": 16,
+          "R": 0,
+          "branches": [
+            "E_trace_zero_zero_factor_branch"
+          ],
+          "elliptic_histogram_count": 20,
+          "genus2_a": 4,
+          "genus2_b": 10,
+          "genus2_histogram_count": 30,
+          "integral_factor_traces_sorted": [
+            -4,
+            0
+          ],
+          "product_pair_count": 600,
+          "q_squared_L_numerator": 0,
+          "source_geometric_trace_t_E": 0,
+          "split_kind": "split_distinct",
+          "tensor_polynomial_coefficient_A": 0
+        },
+        {
+          "Delta": 16,
+          "R": 0,
+          "branches": [
+            "C_trace_zero_matching_antidiagonal_branch"
+          ],
+          "elliptic_histogram_count": 15,
+          "genus2_a": 0,
+          "genus2_b": 6,
+          "genus2_histogram_count": 60,
+          "integral_factor_traces_sorted": [
+            -2,
+            2
+          ],
+          "product_pair_count": 900,
+          "q_squared_L_numerator": 0,
+          "source_geometric_trace_t_E": -2,
+          "split_kind": "split_distinct",
+          "tensor_polynomial_coefficient_A": 2
+        },
+        {
+          "Delta": 64,
+          "R": 0,
+          "branches": [
+            "C_trace_zero_matching_antidiagonal_branch"
+          ],
+          "elliptic_histogram_count": 5,
+          "genus2_a": 0,
+          "genus2_b": -6,
+          "genus2_histogram_count": 30,
+          "integral_factor_traces_sorted": [
+            -4,
+            4
+          ],
+          "product_pair_count": 150,
+          "q_squared_L_numerator": 0,
+          "source_geometric_trace_t_E": -4,
+          "split_kind": "split_distinct",
+          "tensor_polynomial_coefficient_A": 4
+        }
+      ],
+      "source_histogram_sizes": {
+        "elliptic_trace_atoms": 9,
+        "genus2_coefficient_atoms": 81,
+        "product_atom_pairs": 729
+      }
+    },
+    {
+      "complete_product_atom_classification_ledger_sha256": "e5dd4a2bdfa464a0490bd163d7d4f72510310e6ed285263d78cc2d3e2ed18993",
+      "detector_recognition": {
+        "L_zero_contingency": {
+          "non_split_and_L_positive": 3185784,
+          "non_split_and_L_zero": 0,
+          "split_and_L_positive": 977256,
+          "split_and_L_zero": 72324
+        },
+        "locked_genus2_detector_failures": {
+          "B": {
+            "fiber_count": 55,
+            "genus2_member_count_in_mixed_fibers": 2898,
+            "mixed_split_status_fiber_count": 5
+          },
+          "F": {
+            "fiber_count": 53,
+            "genus2_member_count_in_mixed_fibers": 2856,
+            "mixed_split_status_fiber_count": 5
+          },
+          "complete_balanced_echo": {
+            "fiber_count": 67,
+            "genus2_member_count_in_mixed_fibers": 924,
+            "mixed_split_status_fiber_count": 2
+          }
+        },
+        "rank_as_split_detector": {
+          "interpretation": "L=0 recognizes exactly the rank-drop sublocus on integer product parameters, not the whole integral split locus",
+          "precision_P_split_given_L_zero": [
+            1,
+            1
+          ],
+          "recall_P_L_zero_given_split": [
+            41,
+            595
+          ]
+        }
+      },
+      "exact_cross_checks": {
+        "endoscopic_counts_replayed": true,
+        "factorization_residuals_zero": true,
+        "integer_L_zero_equals_reduced_rank_union": true,
+        "rank_rows_all_integral_split": true,
+        "tensor_counts_replayed": true
+      },
+      "incidence_counts": {
+        "all_product_pairs": {
+          "product_pair_count": 4235364,
+          "source_histogram_atom_pair_count": 1518
+        },
+        "integral_split": {
+          "product_pair_count": 1049580,
+          "source_histogram_atom_pair_count": 363
+        },
+        "rank_drop": {
+          "product_pair_count": 72324,
+          "source_histogram_atom_pair_count": 13
+        },
+        "rank_split_distinct": {
+          "product_pair_count": 70560,
+          "source_histogram_atom_pair_count": 12
+        },
+        "rank_split_repeated": {
+          "product_pair_count": 1764,
+          "source_histogram_atom_pair_count": 1
+        },
+        "split_and_tensor_singular": {
+          "product_pair_count": 287532,
+          "source_histogram_atom_pair_count": 63
+        },
+        "split_distinct": {
+          "product_pair_count": 1024884,
+          "source_histogram_atom_pair_count": 330
+        },
+        "split_outside_tensor_singular": {
+          "product_pair_count": 762048,
+          "source_histogram_atom_pair_count": 300
+        },
+        "split_repeated": {
+          "product_pair_count": 24696,
+          "source_histogram_atom_pair_count": 33
+        },
+        "split_singular_not_rank": {
+          "product_pair_count": 215208,
+          "source_histogram_atom_pair_count": 50
+        },
+        "tensor_singular": {
+          "product_pair_count": 1155420,
+          "source_histogram_atom_pair_count": 258
+        }
+      },
+      "incidence_fractions": {
+        "rank_drop_of_all_product_pairs": [
+          41,
+          2401
+        ],
+        "rank_drop_of_integral_split_pairs": [
+          41,
+          595
+        ],
+        "rank_drop_of_split_singular": [
+          41,
+          163
+        ],
+        "rank_drop_of_tensor_singular": [
+          41,
+          655
+        ],
+        "split_singular_of_tensor_singular": [
+          163,
+          655
+        ]
+      },
+      "inclusive_branch_converse_census": {
+        "C_trace_zero_component": {
+          "all_component_pairs": 642096,
+          "integral_split_pairs": 160524,
+          "rank_pairs_trace_match": 37044,
+          "split_but_trace_mismatch_pairs": 123480
+        },
+        "E_trace_zero_component": {
+          "all_component_pairs": 605052,
+          "integral_split_pairs": 149940,
+          "rank_pairs_zero_factor": 37044,
+          "split_but_nonzero_factor_pairs": 112896
+        },
+        "rank_branch_intersection_pairs": 1764,
+        "warning": "the two component rows are inclusive and share their intersection"
+      },
+      "q": 7,
+      "rank_drop_product_atoms": [
+        {
+          "Delta": 64,
+          "R": 0,
+          "branches": [
+            "C_trace_zero_matching_antidiagonal_branch"
+          ],
+          "elliptic_histogram_count": 28,
+          "genus2_a": 0,
+          "genus2_b": -2,
+          "genus2_histogram_count": 252,
+          "integral_factor_traces_sorted": [
+            -4,
+            4
+          ],
+          "product_pair_count": 7056,
+          "q_squared_L_numerator": 0,
+          "source_geometric_trace_t_E": 4,
+          "split_kind": "split_distinct",
+          "tensor_polynomial_coefficient_A": -4
+        },
+        {
+          "Delta": 16,
+          "R": 0,
+          "branches": [
+            "C_trace_zero_matching_antidiagonal_branch"
+          ],
+          "elliptic_histogram_count": 42,
+          "genus2_a": 0,
+          "genus2_b": 10,
+          "genus2_histogram_count": 252,
+          "integral_factor_traces_sorted": [
+            -2,
+            2
+          ],
+          "product_pair_count": 10584,
+          "q_squared_L_numerator": 0,
+          "source_geometric_trace_t_E": 2,
+          "split_kind": "split_distinct",
+          "tensor_polynomial_coefficient_A": -2
+        },
+        {
+          "Delta": 25,
+          "R": 0,
+          "branches": [
+            "E_trace_zero_zero_factor_branch"
+          ],
+          "elliptic_histogram_count": 42,
+          "genus2_a": -5,
+          "genus2_b": 14,
+          "genus2_histogram_count": 84,
+          "integral_factor_traces_sorted": [
+            0,
+            5
+          ],
+          "product_pair_count": 3528,
+          "q_squared_L_numerator": 0,
+          "source_geometric_trace_t_E": 0,
+          "split_kind": "split_distinct",
+          "tensor_polynomial_coefficient_A": 0
+        },
+        {
+          "Delta": 16,
+          "R": 0,
+          "branches": [
+            "E_trace_zero_zero_factor_branch"
+          ],
+          "elliptic_histogram_count": 42,
+          "genus2_a": -4,
+          "genus2_b": 14,
+          "genus2_histogram_count": 126,
+          "integral_factor_traces_sorted": [
+            0,
+            4
+          ],
+          "product_pair_count": 5292,
+          "q_squared_L_numerator": 0,
+          "source_geometric_trace_t_E": 0,
+          "split_kind": "split_distinct",
+          "tensor_polynomial_coefficient_A": 0
+        },
+        {
+          "Delta": 9,
+          "R": 0,
+          "branches": [
+            "E_trace_zero_zero_factor_branch"
+          ],
+          "elliptic_histogram_count": 42,
+          "genus2_a": -3,
+          "genus2_b": 14,
+          "genus2_histogram_count": 168,
+          "integral_factor_traces_sorted": [
+            0,
+            3
+          ],
+          "product_pair_count": 7056,
+          "q_squared_L_numerator": 0,
+          "source_geometric_trace_t_E": 0,
+          "split_kind": "split_distinct",
+          "tensor_polynomial_coefficient_A": 0
+        },
+        {
+          "Delta": 4,
+          "R": 0,
+          "branches": [
+            "E_trace_zero_zero_factor_branch"
+          ],
+          "elliptic_histogram_count": 42,
+          "genus2_a": -2,
+          "genus2_b": 14,
+          "genus2_histogram_count": 42,
+          "integral_factor_traces_sorted": [
+            0,
+            2
+          ],
+          "product_pair_count": 1764,
+          "q_squared_L_numerator": 0,
+          "source_geometric_trace_t_E": 0,
+          "split_kind": "split_distinct",
+          "tensor_polynomial_coefficient_A": 0
+        },
+        {
+          "Delta": 0,
+          "R": 0,
+          "branches": [
+            "E_trace_zero_zero_factor_branch",
+            "C_trace_zero_matching_antidiagonal_branch"
+          ],
+          "elliptic_histogram_count": 42,
+          "genus2_a": 0,
+          "genus2_b": 14,
+          "genus2_histogram_count": 42,
+          "integral_factor_traces_sorted": [
+            0,
+            0
+          ],
+          "product_pair_count": 1764,
+          "q_squared_L_numerator": 0,
+          "source_geometric_trace_t_E": 0,
+          "split_kind": "split_repeated",
+          "tensor_polynomial_coefficient_A": 0
+        },
+        {
+          "Delta": 4,
+          "R": 0,
+          "branches": [
+            "E_trace_zero_zero_factor_branch"
+          ],
+          "elliptic_histogram_count": 42,
+          "genus2_a": 2,
+          "genus2_b": 14,
+          "genus2_histogram_count": 42,
+          "integral_factor_traces_sorted": [
+            -2,
+            0
+          ],
+          "product_pair_count": 1764,
+          "q_squared_L_numerator": 0,
+          "source_geometric_trace_t_E": 0,
+          "split_kind": "split_distinct",
+          "tensor_polynomial_coefficient_A": 0
+        },
+        {
+          "Delta": 9,
+          "R": 0,
+          "branches": [
+            "E_trace_zero_zero_factor_branch"
+          ],
+          "elliptic_histogram_count": 42,
+          "genus2_a": 3,
+          "genus2_b": 14,
+          "genus2_histogram_count": 168,
+          "integral_factor_traces_sorted": [
+            -3,
+            0
+          ],
+          "product_pair_count": 7056,
+          "q_squared_L_numerator": 0,
+          "source_geometric_trace_t_E": 0,
+          "split_kind": "split_distinct",
+          "tensor_polynomial_coefficient_A": 0
+        },
+        {
+          "Delta": 16,
+          "R": 0,
+          "branches": [
+            "E_trace_zero_zero_factor_branch"
+          ],
+          "elliptic_histogram_count": 42,
+          "genus2_a": 4,
+          "genus2_b": 14,
+          "genus2_histogram_count": 126,
+          "integral_factor_traces_sorted": [
+            -4,
+            0
+          ],
+          "product_pair_count": 5292,
+          "q_squared_L_numerator": 0,
+          "source_geometric_trace_t_E": 0,
+          "split_kind": "split_distinct",
+          "tensor_polynomial_coefficient_A": 0
+        },
+        {
+          "Delta": 25,
+          "R": 0,
+          "branches": [
+            "E_trace_zero_zero_factor_branch"
+          ],
+          "elliptic_histogram_count": 42,
+          "genus2_a": 5,
+          "genus2_b": 14,
+          "genus2_histogram_count": 84,
+          "integral_factor_traces_sorted": [
+            -5,
+            0
+          ],
+          "product_pair_count": 3528,
+          "q_squared_L_numerator": 0,
+          "source_geometric_trace_t_E": 0,
+          "split_kind": "split_distinct",
+          "tensor_polynomial_coefficient_A": 0
+        },
+        {
+          "Delta": 16,
+          "R": 0,
+          "branches": [
+            "C_trace_zero_matching_antidiagonal_branch"
+          ],
+          "elliptic_histogram_count": 42,
+          "genus2_a": 0,
+          "genus2_b": 10,
+          "genus2_histogram_count": 252,
+          "integral_factor_traces_sorted": [
+            -2,
+            2
+          ],
+          "product_pair_count": 10584,
+          "q_squared_L_numerator": 0,
+          "source_geometric_trace_t_E": -2,
+          "split_kind": "split_distinct",
+          "tensor_polynomial_coefficient_A": 2
+        },
+        {
+          "Delta": 64,
+          "R": 0,
+          "branches": [
+            "C_trace_zero_matching_antidiagonal_branch"
+          ],
+          "elliptic_histogram_count": 28,
+          "genus2_a": 0,
+          "genus2_b": -2,
+          "genus2_histogram_count": 252,
+          "integral_factor_traces_sorted": [
+            -4,
+            4
+          ],
+          "product_pair_count": 7056,
+          "q_squared_L_numerator": 0,
+          "source_geometric_trace_t_E": -4,
+          "split_kind": "split_distinct",
+          "tensor_polynomial_coefficient_A": 4
+        }
+      ],
+      "source_histogram_sizes": {
+        "elliptic_trace_atoms": 11,
+        "genus2_coefficient_atoms": 138,
+        "product_atom_pairs": 1518
+      }
+    }
+  ],
+  "payload_sha256": "ec00e931de39a10d7ff6753d565751b24bd3956767a7234bcfa0f57873198eca",
+  "producer_and_source_locks": {
+    "input_method": "source-locked JSON histogram convolution and sparse monomial algebra",
+    "locks": {
+      "balanced_fixture": {
+        "path": "research/l-families/atlas/function_field/balanced_control_family_scan.json",
+        "payload_sha256": "50fd136eb0483387246766c5f2426c3e727c69cd9a89943f9268368db0f9d39c",
+        "sha256_lf_normalized": "c3494ae852fda4e754b3b0da7cb30a26e3e38ec1c87e2619cd6fee6cdc68b68e"
+      },
+      "balanced_producer": {
+        "path": "research/l-families/atlas/function_field/balanced_control_family_scan.py",
+        "sha256_lf_normalized": "7192fa26b0ea17cb68cff288620ea4dfb124e07807986d9c74fbd37e66087d3b"
+      },
+      "endoscopic_fixture": {
+        "path": "research/l-families/atlas/function_field/genus2_endoscopic_split_locus.json",
+        "payload_sha256": "01ccb19f591f48682fa79dbef306880e924282184352cb992e3f66153ceae5c3",
+        "sha256_lf_normalized": "10edc162a37403c3c2af1bfa1051dfb07b1b75dbdea181dc673585dde70fd2f4"
+      },
+      "endoscopic_producer": {
+        "path": "research/l-families/atlas/function_field/genus2_endoscopic_split_locus.py",
+        "sha256_lf_normalized": "4489c109f25f8e0ca3051dc9983a8738b7aaee941a351959c552aa19b001e4de"
+      },
+      "genus1_fixture": {
+        "path": "research/l-families/atlas/function_field/genus1_cubic_family_laws.json",
+        "payload_sha256": "183ffb31ae2f5776944e162e59390c40bd7081827b8731246e72e25a882e50df",
+        "sha256_lf_normalized": "b9016ae801cff40d15c53d96210b66a7d44fae7d916e827a0526b9dd42017227"
+      },
+      "genus1_producer": {
+        "path": "research/l-families/atlas/function_field/genus1_cubic_family_laws.py",
+        "sha256_lf_normalized": "3d5baace952240c162c83bd5c66eb81db1704aee35e770de3d8df43fff669b79"
+      },
+      "note": {
+        "path": "research/l-families/atlas/function_field/TENSOR_ENDOSCOPIC_RANK_DROP_BRIDGE.md",
+        "sha256_lf_normalized": "5ad00093a391e83952deb893bd3d9862acad48c0e7b5f4694b1949dc4b5b1ab4"
+      },
+      "producer": {
+        "path": "research/l-families/atlas/function_field/tensor_endoscopic_rank_drop_bridge.py",
+        "sha256_lf_normalized": "aae9188d3b99accd5e12dacef652c8a9f1da7d63c10686fe60a3ecedf2a8f0b4"
+      },
+      "tensor_fixture": {
+        "path": "research/l-families/atlas/function_field/tensor_trace_zero_singular_strata.json",
+        "payload_sha256": "f34aec41ee76a79715e2dc20b522c0dab19b87a507db951c17018b30a0d21592",
+        "sha256_lf_normalized": "570d334f883963003547f53857c452381ebb0540c2cb2177661062366d5f04e8"
+      },
+      "tensor_producer": {
+        "path": "research/l-families/atlas/function_field/tensor_trace_zero_singular_strata.py",
+        "sha256_lf_normalized": "878c44730eb62b3e6fb429630b599be0b8fded74da919792dbaa636a51f056ec"
+      },
+      "test": {
+        "path": "tests/test_tensor_endoscopic_rank_drop_bridge.py",
+        "sha256_lf_normalized": "37386d91fc61a18f16305f89105713833f7ec6ab51b65ed8d31150284be7a1b7"
+      }
+    }
+  },
+  "raw_fixture_id": "FUNCTION_FIELD.TENSOR.ENDOSCOPIC.RANK_DROP.BRIDGE.Q3_Q5_Q7.V1",
+  "resource_contract": {
+    "arithmetic": "integers, fractions, and sparse monomial ideals only",
+    "field_curve_variety_or_member_enumerations": 0,
+    "floating_point_values": 0,
+    "guarded_work_units": {
+      "product_histogram_atom_pair": 2471,
+      "total": 2471
+    },
+    "random_samples": 0,
+    "strict_cap_satisfied": true,
+    "strict_histogram_work_cap_exclusive": 5000
+  },
+  "rigor_level": "PROVED_ALGEBRA_PLUS_COMPLETE_SOURCE_HISTOGRAM_TRANSFORM",
+  "schema": "riemann.function_field.tensor_endoscopic_rank_drop_bridge.v1",
+  "scope": "the pullback of the product-tensor coefficient-hypersurface rank-drop line and its relation to integral +q quadratic factorization of the genus-two Frobenius polynomial",
+  "scope_firewall": {
+    "coefficient_geometry_not_variety_singularity": "Rank drop concerns the transverse cone of an ambient coefficient hypersurface; it does not make E, C, E x C, or a Jacobian singular.",
+    "endoscopic_is_operational_label": "Endoscopic means only integral factorization into two constant-+q elliptic-form quadratics in this packet.",
+    "formal_factorization_not_isogeny_or_polarization": "The displayed polynomial factorizations do not import Honda-Tate/Tate, prove a product isogeny, identify a principal polarization, split a genus-two curve, or exhibit elliptic quotient maps.",
+    "no_causal_or_global_claim": "The incidence tables imply no extra endomorphisms, monodromy component, all-q frequency, equidistribution, number-field transfer, RH, or GRH.",
+    "product_model_measure_only": "The q=3,5,7 weights are the ordered product of two locked uniform-model histograms, not a coarse moduli or product-variety measure.",
+    "real_integer_sum_of_squares_scope": "L=0 alone recognizes rank drop on real/integer product parameters; over complex parameters the sum of squares can cancel.",
+    "reduced_support_not_nonreduced_scheme_containment": "The integral +q split locus is an arithmetic square/parity predicate. Only the reduced integer rank-drop support is contained; the R^2 nilpotent thickening is not asserted to lie in an endoscopic scheme."
+  },
+  "status": "EXACT_REDUCED_CONTAINMENT_SCHEME_MULTIPLICITY_AND_LOCKED_INCIDENCE",
+  "symbolic_bridge": {
+    "base_ring": "Q[A,a,R] for scheme statements; q is fixed and invertible",
+    "exact_converse": {
+      "on_C_trace_zero_component": "split implies (r,s)=(-r,r); rank drop iff r^2=A^2, equivalently the factor traces are (-A,A) as an unordered pair",
+      "on_E_trace_zero_component": "for split traces (r,s), rank drop iff b=2*q iff r*s=0",
+      "outside_singular_preimage": "A*a!=0 implies no tensor rank drop",
+      "repeated_rank_drop": "occurs exactly at A=a=0,b=2*q"
+    },
+    "parameters": {
+      "Delta_after_b_substitution": "a^2+4*A^2-4*R",
+      "R": "A^2+b-2*q",
+      "detector_identity": "q^2*L=R^2+(A*a)^2"
+    },
+    "rank_line_pullback": {
+      "computed_monomial_generators_A_a_R": {
+        "C_primary": [
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "E_primary": [
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            1,
+            0,
+            0
+          ]
+        ],
+        "I_rank": [
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "intersection": [
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ]
+      },
+      "ideal": "I_rank=(A*a,R^2)",
+      "primary_decomposition": "(A,R^2) intersect (a,R^2); each branch is doubled in R",
+      "radical": "rad(I_rank)=(A*a,R)=(A,R) intersect (a,R), with no asserted containment of the nilpotent thickening in an arithmetic split scheme"
+    },
+    "real_integer_detector_scope": "on real or integer product parameters, L=0 alone forces R=A*a=0 by the sum of squares; over complex points L=0 alone has extra cancellation",
+    "reduced_branch_containment": {
+      "C_branch": {
+        "Delta": "4*A^2",
+        "conditions": "a=0,b=2*q-A^2",
+        "factorization": "(1+A*T+q*T^2)*(1-A*T+q*T^2)",
+        "integral_factor_traces": "(-A,A)"
+      },
+      "E_branch": {
+        "Delta": "a^2",
+        "conditions": "A=0,b=2*q",
+        "factorization": "(1+q*T^2)*(1+a*T+q*T^2)",
+        "integral_factor_traces": "(0,-a)"
+      },
+      "combined_square_on_reduction": "Delta=(a+2*A)^2=(a-2*A)^2 modulo (A*a,R)",
+      "nonreduced_warning": "Delta-(a+2*A)^2=-4*(R+A*a); R survives nilpotently modulo (A*a,R^2), so containment is a reduced-support statement"
+    },
+    "singular_plane_pullback": {
+      "ideal": "I_sing=(A*a)=(A) intersect (a)",
+      "scheme_status": "reduced union of the two trace-zero components"
+    }
+  }
+}

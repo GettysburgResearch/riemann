@@ -1,0 +1,6462 @@
+{
+  "all_q_primitive_character_moments": {
+    "SO5_Haar_Gram_target": {
+      "mean_k": 0,
+      "mean_k_squared": 1,
+      "mean_s": 0,
+      "mean_s_squared": 1,
+      "mean_s_times_k": 0,
+      "reason": "s and k are distinct nontrivial irreducible characters"
+    },
+    "characters": {
+      "k": "e2(W)/q^2=(a^2-b)/q=chi_(2,0), the exterior^2/adjoint character",
+      "s": "Tr(W)/q=b/q-1=chi_(0,1), the SO(5) standard character"
+    },
+    "derivation": "substitution into the five locked exact means of a^2,a^4,a^2*b,b,b^2; frozen fields are regression checks, not interpolation inputs",
+    "formulas": {
+      "mean_k": "1/q^3-1/q^4",
+      "mean_k_squared": "1-2/q+1/q^2+3/q^3-3/q^4-6/q^5",
+      "mean_s": "-1/q+1/q^2-1/q^4",
+      "mean_s_squared": "1-1/q+1/q^3-1/q^4-1/q^5",
+      "mean_s_times_k": "-1/q+1/q^2+3/q^3-3/q^4-2/q^5"
+    },
+    "measure": "uniform monic squarefree quintic models",
+    "scope": "every odd prime power q"
+  },
+  "compact_SO5_baseline": {
+    "derivation": "B2 Weyl constant term for character 1+x+x^-1+y+y^-1 and all eight roots, divided by Weyl-group order 8",
+    "frozen_fifth_moment_sign_reversal": {
+      "rows": [
+        {
+          "SO5_Haar_target": 1,
+          "family_mean_s_fifth": [
+            -8059,
+            6561
+          ],
+          "q": 3,
+          "sign": "negative"
+        },
+        {
+          "SO5_Haar_target": 1,
+          "family_mean_s_fifth": [
+            -541001,
+            390625
+          ],
+          "q": 5,
+          "sign": "negative"
+        },
+        {
+          "SO5_Haar_target": 1,
+          "family_mean_s_fifth": [
+            -5982775,
+            5764801
+          ],
+          "q": 7,
+          "sign": "negative"
+        }
+      ],
+      "status": "EXACT_FROZEN_SIGN_REVERSAL_ONLY; no all-q fifth-moment formula, monotonicity, convergence rate, or asymptotic sign is inferred"
+    },
+    "orders_0_through_6": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "orientation_fingerprint": {
+      "O5_moment": 0,
+      "SO5_moment": 1,
+      "order": 5,
+      "reason": "the SO(5) volume tensor is the first odd invariant; adjoining a reflection kills odd trace moments"
+    },
+    "standard_trace_moments": [
+      1,
+      0,
+      1,
+      0,
+      3,
+      1,
+      15
+    ]
+  },
+  "frozen_histogram_transforms": [
+    {
+      "all_q_character_moment_regression": {
+        "mean_k": [
+          2,
+          81
+        ],
+        "mean_k_squared": [
+          40,
+          81
+        ],
+        "mean_s": [
+          -19,
+          81
+        ],
+        "mean_s_squared": [
+          167,
+          243
+        ],
+        "mean_s_times_k": [
+          -38,
+          243
+        ]
+      },
+      "complete_primitive_coefficient_law": {
+        "atoms": [
+          {
+            "member_count": 9,
+            "member_fraction": [
+              1,
+              18
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              8,
+              30,
+              72,
+              81
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              5,
+              6,
+              -18,
+              -135,
+              -243
+            ],
+            "second_character_k": [
+              2,
+              3
+            ],
+            "source_twist_quotient_a_squared_b": [
+              0,
+              -2
+            ],
+            "trace_s": [
+              -5,
+              3
+            ]
+          },
+          {
+            "member_count": 6,
+            "member_fraction": [
+              1,
+              27
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              8,
+              33,
+              72,
+              81
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              5,
+              9,
+              -27,
+              -135,
+              -243
+            ],
+            "second_character_k": [
+              1,
+              1
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              -2
+            ],
+            "trace_s": [
+              -5,
+              3
+            ]
+          },
+          {
+            "member_count": 6,
+            "member_fraction": [
+              1,
+              27
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              7,
+              27,
+              63,
+              81
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              4,
+              6,
+              -18,
+              -108,
+              -243
+            ],
+            "second_character_k": [
+              2,
+              3
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              -1
+            ],
+            "trace_s": [
+              -4,
+              3
+            ]
+          },
+          {
+            "member_count": 12,
+            "member_fraction": [
+              2,
+              27
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              6,
+              18,
+              54,
+              81
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              3,
+              0,
+              0,
+              -81,
+              -243
+            ],
+            "second_character_k": [
+              0,
+              1
+            ],
+            "source_twist_quotient_a_squared_b": [
+              0,
+              0
+            ],
+            "trace_s": [
+              -1,
+              1
+            ]
+          },
+          {
+            "member_count": 6,
+            "member_fraction": [
+              1,
+              27
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              6,
+              21,
+              54,
+              81
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              3,
+              3,
+              -9,
+              -81,
+              -243
+            ],
+            "second_character_k": [
+              1,
+              3
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              0
+            ],
+            "trace_s": [
+              -1,
+              1
+            ]
+          },
+          {
+            "member_count": 12,
+            "member_fraction": [
+              2,
+              27
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              5,
+              15,
+              45,
+              81
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              2,
+              0,
+              0,
+              -54,
+              -243
+            ],
+            "second_character_k": [
+              0,
+              1
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              1
+            ],
+            "trace_s": [
+              -2,
+              3
+            ]
+          },
+          {
+            "member_count": 3,
+            "member_fraction": [
+              1,
+              54
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              4,
+              6,
+              36,
+              81
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              1,
+              -6,
+              18,
+              -27,
+              -243
+            ],
+            "second_character_k": [
+              -2,
+              3
+            ],
+            "source_twist_quotient_a_squared_b": [
+              0,
+              2
+            ],
+            "trace_s": [
+              -1,
+              3
+            ]
+          },
+          {
+            "member_count": 24,
+            "member_fraction": [
+              4,
+              27
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              4,
+              9,
+              36,
+              81
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              1,
+              -3,
+              9,
+              -27,
+              -243
+            ],
+            "second_character_k": [
+              -1,
+              3
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              2
+            ],
+            "trace_s": [
+              -1,
+              3
+            ]
+          },
+          {
+            "member_count": 18,
+            "member_fraction": [
+              1,
+              9
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              4,
+              18,
+              36,
+              81
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              1,
+              6,
+              -18,
+              -27,
+              -243
+            ],
+            "second_character_k": [
+              2,
+              3
+            ],
+            "source_twist_quotient_a_squared_b": [
+              4,
+              2
+            ],
+            "trace_s": [
+              -1,
+              3
+            ]
+          },
+          {
+            "member_count": 12,
+            "member_fraction": [
+              2,
+              27
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              3,
+              3,
+              27,
+              81
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              0,
+              -6,
+              18,
+              0,
+              -243
+            ],
+            "second_character_k": [
+              -2,
+              3
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              3
+            ],
+            "trace_s": [
+              0,
+              1
+            ]
+          },
+          {
+            "member_count": 6,
+            "member_fraction": [
+              1,
+              27
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              2,
+              -6,
+              18,
+              81
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -1,
+              -12,
+              36,
+              27,
+              -243
+            ],
+            "second_character_k": [
+              -4,
+              3
+            ],
+            "source_twist_quotient_a_squared_b": [
+              0,
+              4
+            ],
+            "trace_s": [
+              1,
+              3
+            ]
+          },
+          {
+            "member_count": 6,
+            "member_fraction": [
+              1,
+              27
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              2,
+              -3,
+              18,
+              81
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -1,
+              -9,
+              27,
+              27,
+              -243
+            ],
+            "second_character_k": [
+              -1,
+              1
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              4
+            ],
+            "trace_s": [
+              1,
+              3
+            ]
+          },
+          {
+            "member_count": 12,
+            "member_fraction": [
+              2,
+              27
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              2,
+              6,
+              18,
+              81
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -1,
+              0,
+              0,
+              27,
+              -243
+            ],
+            "second_character_k": [
+              0,
+              1
+            ],
+            "source_twist_quotient_a_squared_b": [
+              4,
+              4
+            ],
+            "trace_s": [
+              1,
+              3
+            ]
+          },
+          {
+            "member_count": 6,
+            "member_fraction": [
+              1,
+              27
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              1,
+              -9,
+              9,
+              81
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -2,
+              -12,
+              36,
+              54,
+              -243
+            ],
+            "second_character_k": [
+              -4,
+              3
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              5
+            ],
+            "trace_s": [
+              2,
+              3
+            ]
+          },
+          {
+            "member_count": 6,
+            "member_fraction": [
+              1,
+              27
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              1,
+              15,
+              9,
+              81
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -2,
+              12,
+              -36,
+              54,
+              -243
+            ],
+            "second_character_k": [
+              4,
+              3
+            ],
+            "source_twist_quotient_a_squared_b": [
+              9,
+              5
+            ],
+            "trace_s": [
+              2,
+              3
+            ]
+          },
+          {
+            "member_count": 6,
+            "member_fraction": [
+              1,
+              27
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              0,
+              -6,
+              0,
+              81
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -3,
+              -6,
+              18,
+              81,
+              -243
+            ],
+            "second_character_k": [
+              -2,
+              3
+            ],
+            "source_twist_quotient_a_squared_b": [
+              4,
+              6
+            ],
+            "trace_s": [
+              1,
+              1
+            ]
+          },
+          {
+            "member_count": 6,
+            "member_fraction": [
+              1,
+              27
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              0,
+              9,
+              0,
+              81
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -3,
+              9,
+              -27,
+              81,
+              -243
+            ],
+            "second_character_k": [
+              1,
+              1
+            ],
+            "source_twist_quotient_a_squared_b": [
+              9,
+              6
+            ],
+            "trace_s": [
+              1,
+              1
+            ]
+          },
+          {
+            "member_count": 6,
+            "member_fraction": [
+              1,
+              27
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              -1,
+              3,
+              -9,
+              81
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -4,
+              6,
+              -18,
+              108,
+              -243
+            ],
+            "second_character_k": [
+              2,
+              3
+            ],
+            "source_twist_quotient_a_squared_b": [
+              9,
+              7
+            ],
+            "trace_s": [
+              4,
+              3
+            ]
+          }
+        ],
+        "parameterization": "s=(b-q)/q=chi_(0,1), k=(a^2-b)/q=chi_(2,0); the primitive polynomial is 1-s*z+k*z^2-k*z^3+s*z^4-z^5",
+        "support_size_after_a_sign_compression": 18
+      },
+      "member_count": 162,
+      "newton_and_division_witnesses": [
+        {
+          "full_exterior_square_coefficients": [
+            1,
+            -5,
+            18,
+            -72,
+            162,
+            -405,
+            729
+          ],
+          "input_a_b": [
+            -3,
+            5
+          ],
+          "pointwise_quartic_quotient": [
+            1,
+            1,
+            15,
+            9,
+            81
+          ],
+          "primitive_coefficients": [
+            1,
+            -2,
+            12,
+            -36,
+            54,
+            -243
+          ]
+        },
+        {
+          "full_exterior_square_coefficients": [
+            1,
+            -2,
+            -9,
+            36,
+            -81,
+            -162,
+            729
+          ],
+          "input_a_b": [
+            0,
+            2
+          ],
+          "pointwise_quartic_quotient": [
+            1,
+            4,
+            6,
+            36,
+            81
+          ],
+          "primitive_coefficients": [
+            1,
+            1,
+            -6,
+            18,
+            -27,
+            -243
+          ]
+        },
+        {
+          "full_exterior_square_coefficients": [
+            1,
+            -7,
+            18,
+            -36,
+            162,
+            -567,
+            729
+          ],
+          "input_a_b": [
+            3,
+            7
+          ],
+          "pointwise_quartic_quotient": [
+            1,
+            -1,
+            3,
+            -9,
+            81
+          ],
+          "primitive_coefficients": [
+            1,
+            -4,
+            6,
+            -18,
+            108,
+            -243
+          ]
+        }
+      ],
+      "normalized_trace_law": {
+        "atoms": [
+          {
+            "member_count": 15,
+            "member_fraction": [
+              5,
+              54
+            ],
+            "normalized_trace_s": [
+              -5,
+              3
+            ],
+            "trace_numerator_b_minus_q": -5
+          },
+          {
+            "member_count": 6,
+            "member_fraction": [
+              1,
+              27
+            ],
+            "normalized_trace_s": [
+              -4,
+              3
+            ],
+            "trace_numerator_b_minus_q": -4
+          },
+          {
+            "member_count": 18,
+            "member_fraction": [
+              1,
+              9
+            ],
+            "normalized_trace_s": [
+              -1,
+              1
+            ],
+            "trace_numerator_b_minus_q": -3
+          },
+          {
+            "member_count": 12,
+            "member_fraction": [
+              2,
+              27
+            ],
+            "normalized_trace_s": [
+              -2,
+              3
+            ],
+            "trace_numerator_b_minus_q": -2
+          },
+          {
+            "member_count": 45,
+            "member_fraction": [
+              5,
+              18
+            ],
+            "normalized_trace_s": [
+              -1,
+              3
+            ],
+            "trace_numerator_b_minus_q": -1
+          },
+          {
+            "member_count": 12,
+            "member_fraction": [
+              2,
+              27
+            ],
+            "normalized_trace_s": [
+              0,
+              1
+            ],
+            "trace_numerator_b_minus_q": 0
+          },
+          {
+            "member_count": 24,
+            "member_fraction": [
+              4,
+              27
+            ],
+            "normalized_trace_s": [
+              1,
+              3
+            ],
+            "trace_numerator_b_minus_q": 1
+          },
+          {
+            "member_count": 12,
+            "member_fraction": [
+              2,
+              27
+            ],
+            "normalized_trace_s": [
+              2,
+              3
+            ],
+            "trace_numerator_b_minus_q": 2
+          },
+          {
+            "member_count": 12,
+            "member_fraction": [
+              2,
+              27
+            ],
+            "normalized_trace_s": [
+              1,
+              1
+            ],
+            "trace_numerator_b_minus_q": 3
+          },
+          {
+            "member_count": 6,
+            "member_fraction": [
+              1,
+              27
+            ],
+            "normalized_trace_s": [
+              4,
+              3
+            ],
+            "trace_numerator_b_minus_q": 4
+          }
+        ],
+        "moments_0_through_8": [
+          {
+            "SO5_Haar_moment": 1,
+            "all_q_formula_checked": true,
+            "family_mean_s_power": [
+              1,
+              1
+            ],
+            "finite_minus_Haar": [
+              0,
+              1
+            ],
+            "order": 0,
+            "raw_sum_(b-q)^order": 162
+          },
+          {
+            "SO5_Haar_moment": 0,
+            "all_q_formula_checked": true,
+            "family_mean_s_power": [
+              -19,
+              81
+            ],
+            "finite_minus_Haar": [
+              -19,
+              81
+            ],
+            "order": 1,
+            "raw_sum_(b-q)^order": -114
+          },
+          {
+            "SO5_Haar_moment": 1,
+            "all_q_formula_checked": true,
+            "family_mean_s_power": [
+              167,
+              243
+            ],
+            "finite_minus_Haar": [
+              -76,
+              243
+            ],
+            "order": 2,
+            "raw_sum_(b-q)^order": 1002
+          },
+          {
+            "SO5_Haar_moment": 0,
+            "family_mean_s_power": [
+              -343,
+              729
+            ],
+            "finite_minus_Haar": [
+              -343,
+              729
+            ],
+            "order": 3,
+            "raw_sum_(b-q)^order": -2058
+          },
+          {
+            "SO5_Haar_moment": 3,
+            "family_mean_s_power": [
+              2555,
+              2187
+            ],
+            "finite_minus_Haar": [
+              -4006,
+              2187
+            ],
+            "order": 4,
+            "raw_sum_(b-q)^order": 15330
+          },
+          {
+            "SO5_Haar_moment": 1,
+            "family_mean_s_power": [
+              -8059,
+              6561
+            ],
+            "finite_minus_Haar": [
+              -14620,
+              6561
+            ],
+            "order": 5,
+            "raw_sum_(b-q)^order": -48354
+          },
+          {
+            "SO5_Haar_moment": 15,
+            "family_mean_s_power": [
+              51167,
+              19683
+            ],
+            "finite_minus_Haar": [
+              -244078,
+              19683
+            ],
+            "order": 6,
+            "raw_sum_(b-q)^order": 307002
+          },
+          {
+            "family_mean_s_power": [
+              -197503,
+              59049
+            ],
+            "order": 7,
+            "raw_sum_(b-q)^order": -1185018
+          },
+          {
+            "family_mean_s_power": [
+              1141475,
+              177147
+            ],
+            "order": 8,
+            "raw_sum_(b-q)^order": 6848850
+          }
+        ],
+        "support_size": 10
+      },
+      "q": 3,
+      "source_joint_atom_count": 32,
+      "twist_kernel_check": {
+        "members_on_a_equals_zero_fixed_locus": 30,
+        "primitive_polynomial_depends_only_on_a_squared_and_b": true,
+        "signed_histogram_invariant_under_a_to_minus_a": true,
+        "source_signed_support_size": 32,
+        "twist_quotient_support_size": 18
+      }
+    },
+    {
+      "all_q_character_moment_regression": {
+        "mean_k": [
+          4,
+          625
+        ],
+        "mean_k_squared": [
+          2054,
+          3125
+        ],
+        "mean_s": [
+          -101,
+          625
+        ],
+        "mean_s_squared": [
+          2519,
+          3125
+        ],
+        "mean_s_times_k": [
+          -442,
+          3125
+        ]
+      },
+      "complete_primitive_coefficient_law": {
+        "atoms": [
+          {
+            "member_count": 1,
+            "member_fraction": [
+              1,
+              2500
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              20,
+              150,
+              500,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              15,
+              50,
+              -250,
+              -1875,
+              -3125
+            ],
+            "second_character_k": [
+              2,
+              1
+            ],
+            "source_twist_quotient_a_squared_b": [
+              0,
+              -10
+            ],
+            "trace_s": [
+              -3,
+              1
+            ]
+          },
+          {
+            "member_count": 30,
+            "member_fraction": [
+              3,
+              250
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              16,
+              110,
+              400,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              11,
+              30,
+              -150,
+              -1375,
+              -3125
+            ],
+            "second_character_k": [
+              6,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              0,
+              -6
+            ],
+            "trace_s": [
+              -11,
+              5
+            ]
+          },
+          {
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              15,
+              105,
+              375,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              10,
+              30,
+              -150,
+              -1250,
+              -3125
+            ],
+            "second_character_k": [
+              6,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              -5
+            ],
+            "trace_s": [
+              -2,
+              1
+            ]
+          },
+          {
+            "member_count": 40,
+            "member_fraction": [
+              2,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              14,
+              90,
+              350,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              9,
+              20,
+              -100,
+              -1125,
+              -3125
+            ],
+            "second_character_k": [
+              4,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              0,
+              -4
+            ],
+            "trace_s": [
+              -9,
+              5
+            ]
+          },
+          {
+            "member_count": 60,
+            "member_fraction": [
+              3,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              14,
+              95,
+              350,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              9,
+              25,
+              -125,
+              -1125,
+              -3125
+            ],
+            "second_character_k": [
+              1,
+              1
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              -4
+            ],
+            "trace_s": [
+              -9,
+              5
+            ]
+          },
+          {
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              13,
+              85,
+              325,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              8,
+              20,
+              -100,
+              -1000,
+              -3125
+            ],
+            "second_character_k": [
+              4,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              -3
+            ],
+            "trace_s": [
+              -8,
+              5
+            ]
+          },
+          {
+            "member_count": 60,
+            "member_fraction": [
+              3,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              12,
+              70,
+              300,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              7,
+              10,
+              -50,
+              -875,
+              -3125
+            ],
+            "second_character_k": [
+              2,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              0,
+              -2
+            ],
+            "trace_s": [
+              -7,
+              5
+            ]
+          },
+          {
+            "member_count": 40,
+            "member_fraction": [
+              2,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              12,
+              75,
+              300,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              7,
+              15,
+              -75,
+              -875,
+              -3125
+            ],
+            "second_character_k": [
+              3,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              -2
+            ],
+            "trace_s": [
+              -7,
+              5
+            ]
+          },
+          {
+            "member_count": 60,
+            "member_fraction": [
+              3,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              11,
+              65,
+              275,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              6,
+              10,
+              -50,
+              -750,
+              -3125
+            ],
+            "second_character_k": [
+              2,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              -1
+            ],
+            "trace_s": [
+              -6,
+              5
+            ]
+          },
+          {
+            "member_count": 50,
+            "member_fraction": [
+              1,
+              50
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              10,
+              50,
+              250,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              5,
+              0,
+              0,
+              -625,
+              -3125
+            ],
+            "second_character_k": [
+              0,
+              1
+            ],
+            "source_twist_quotient_a_squared_b": [
+              0,
+              0
+            ],
+            "trace_s": [
+              -1,
+              1
+            ]
+          },
+          {
+            "member_count": 160,
+            "member_fraction": [
+              8,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              10,
+              55,
+              250,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              5,
+              5,
+              -25,
+              -625,
+              -3125
+            ],
+            "second_character_k": [
+              1,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              0
+            ],
+            "trace_s": [
+              -1,
+              1
+            ]
+          },
+          {
+            "member_count": 40,
+            "member_fraction": [
+              2,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              10,
+              70,
+              250,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              5,
+              20,
+              -100,
+              -625,
+              -3125
+            ],
+            "second_character_k": [
+              4,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              4,
+              0
+            ],
+            "trace_s": [
+              -1,
+              1
+            ]
+          },
+          {
+            "member_count": 60,
+            "member_fraction": [
+              3,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              9,
+              45,
+              225,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              4,
+              0,
+              0,
+              -500,
+              -3125
+            ],
+            "second_character_k": [
+              0,
+              1
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              1
+            ],
+            "trace_s": [
+              -4,
+              5
+            ]
+          },
+          {
+            "member_count": 80,
+            "member_fraction": [
+              4,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              8,
+              30,
+              200,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              3,
+              -10,
+              50,
+              -375,
+              -3125
+            ],
+            "second_character_k": [
+              -2,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              0,
+              2
+            ],
+            "trace_s": [
+              -3,
+              5
+            ]
+          },
+          {
+            "member_count": 40,
+            "member_fraction": [
+              2,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              8,
+              35,
+              200,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              3,
+              -5,
+              25,
+              -375,
+              -3125
+            ],
+            "second_character_k": [
+              -1,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              2
+            ],
+            "trace_s": [
+              -3,
+              5
+            ]
+          },
+          {
+            "member_count": 180,
+            "member_fraction": [
+              9,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              8,
+              50,
+              200,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              3,
+              10,
+              -50,
+              -375,
+              -3125
+            ],
+            "second_character_k": [
+              2,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              4,
+              2
+            ],
+            "trace_s": [
+              -3,
+              5
+            ]
+          },
+          {
+            "member_count": 100,
+            "member_fraction": [
+              1,
+              25
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              7,
+              25,
+              175,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              2,
+              -10,
+              50,
+              -250,
+              -3125
+            ],
+            "second_character_k": [
+              -2,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              3
+            ],
+            "trace_s": [
+              -2,
+              5
+            ]
+          },
+          {
+            "member_count": 80,
+            "member_fraction": [
+              4,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              6,
+              10,
+              150,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              1,
+              -20,
+              100,
+              -125,
+              -3125
+            ],
+            "second_character_k": [
+              -4,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              0,
+              4
+            ],
+            "trace_s": [
+              -1,
+              5
+            ]
+          },
+          {
+            "member_count": 100,
+            "member_fraction": [
+              1,
+              25
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              6,
+              15,
+              150,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              1,
+              -15,
+              75,
+              -125,
+              -3125
+            ],
+            "second_character_k": [
+              -3,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              4
+            ],
+            "trace_s": [
+              -1,
+              5
+            ]
+          },
+          {
+            "member_count": 80,
+            "member_fraction": [
+              4,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              6,
+              30,
+              150,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              1,
+              0,
+              0,
+              -125,
+              -3125
+            ],
+            "second_character_k": [
+              0,
+              1
+            ],
+            "source_twist_quotient_a_squared_b": [
+              4,
+              4
+            ],
+            "trace_s": [
+              -1,
+              5
+            ]
+          },
+          {
+            "member_count": 60,
+            "member_fraction": [
+              3,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              6,
+              55,
+              150,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              1,
+              25,
+              -125,
+              -125,
+              -3125
+            ],
+            "second_character_k": [
+              1,
+              1
+            ],
+            "source_twist_quotient_a_squared_b": [
+              9,
+              4
+            ],
+            "trace_s": [
+              -1,
+              5
+            ]
+          },
+          {
+            "member_count": 40,
+            "member_fraction": [
+              2,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              5,
+              5,
+              125,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              0,
+              -20,
+              100,
+              0,
+              -3125
+            ],
+            "second_character_k": [
+              -4,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              5
+            ],
+            "trace_s": [
+              0,
+              1
+            ]
+          },
+          {
+            "member_count": 40,
+            "member_fraction": [
+              2,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              5,
+              45,
+              125,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              0,
+              20,
+              -100,
+              0,
+              -3125
+            ],
+            "second_character_k": [
+              4,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              9,
+              5
+            ],
+            "trace_s": [
+              0,
+              1
+            ]
+          },
+          {
+            "member_count": 60,
+            "member_fraction": [
+              3,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              4,
+              -10,
+              100,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -1,
+              -30,
+              150,
+              125,
+              -3125
+            ],
+            "second_character_k": [
+              -6,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              0,
+              6
+            ],
+            "trace_s": [
+              1,
+              5
+            ]
+          },
+          {
+            "member_count": 40,
+            "member_fraction": [
+              2,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              4,
+              -5,
+              100,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -1,
+              -25,
+              125,
+              125,
+              -3125
+            ],
+            "second_character_k": [
+              -1,
+              1
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              6
+            ],
+            "trace_s": [
+              1,
+              5
+            ]
+          },
+          {
+            "member_count": 160,
+            "member_fraction": [
+              8,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              4,
+              10,
+              100,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -1,
+              -10,
+              50,
+              125,
+              -3125
+            ],
+            "second_character_k": [
+              -2,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              4,
+              6
+            ],
+            "trace_s": [
+              1,
+              5
+            ]
+          },
+          {
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              4,
+              35,
+              100,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -1,
+              15,
+              -75,
+              125,
+              -3125
+            ],
+            "second_character_k": [
+              3,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              9,
+              6
+            ],
+            "trace_s": [
+              1,
+              5
+            ]
+          },
+          {
+            "member_count": 60,
+            "member_fraction": [
+              3,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              3,
+              -15,
+              75,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -2,
+              -30,
+              150,
+              250,
+              -3125
+            ],
+            "second_character_k": [
+              -6,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              7
+            ],
+            "trace_s": [
+              2,
+              5
+            ]
+          },
+          {
+            "member_count": 80,
+            "member_fraction": [
+              4,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              3,
+              25,
+              75,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -2,
+              10,
+              -50,
+              250,
+              -3125
+            ],
+            "second_character_k": [
+              2,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              9,
+              7
+            ],
+            "trace_s": [
+              2,
+              5
+            ]
+          },
+          {
+            "member_count": 100,
+            "member_fraction": [
+              1,
+              25
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              2,
+              -25,
+              50,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -3,
+              -35,
+              175,
+              375,
+              -3125
+            ],
+            "second_character_k": [
+              -7,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              8
+            ],
+            "trace_s": [
+              3,
+              5
+            ]
+          },
+          {
+            "member_count": 40,
+            "member_fraction": [
+              2,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              2,
+              -10,
+              50,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -3,
+              -20,
+              100,
+              375,
+              -3125
+            ],
+            "second_character_k": [
+              -4,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              4,
+              8
+            ],
+            "trace_s": [
+              3,
+              5
+            ]
+          },
+          {
+            "member_count": 120,
+            "member_fraction": [
+              6,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              2,
+              15,
+              50,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -3,
+              5,
+              -25,
+              375,
+              -3125
+            ],
+            "second_character_k": [
+              1,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              9,
+              8
+            ],
+            "trace_s": [
+              3,
+              5
+            ]
+          },
+          {
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              2,
+              50,
+              50,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -3,
+              40,
+              -200,
+              375,
+              -3125
+            ],
+            "second_character_k": [
+              8,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              16,
+              8
+            ],
+            "trace_s": [
+              3,
+              5
+            ]
+          },
+          {
+            "member_count": 40,
+            "member_fraction": [
+              2,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              1,
+              -35,
+              25,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -4,
+              -40,
+              200,
+              500,
+              -3125
+            ],
+            "second_character_k": [
+              -8,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              9
+            ],
+            "trace_s": [
+              4,
+              5
+            ]
+          },
+          {
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              1,
+              5,
+              25,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -4,
+              0,
+              0,
+              500,
+              -3125
+            ],
+            "second_character_k": [
+              0,
+              1
+            ],
+            "source_twist_quotient_a_squared_b": [
+              9,
+              9
+            ],
+            "trace_s": [
+              4,
+              5
+            ]
+          },
+          {
+            "member_count": 5,
+            "member_fraction": [
+              1,
+              500
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              0,
+              -50,
+              0,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -5,
+              -50,
+              250,
+              625,
+              -3125
+            ],
+            "second_character_k": [
+              -2,
+              1
+            ],
+            "source_twist_quotient_a_squared_b": [
+              0,
+              10
+            ],
+            "trace_s": [
+              1,
+              1
+            ]
+          },
+          {
+            "member_count": 40,
+            "member_fraction": [
+              2,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              0,
+              -30,
+              0,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -5,
+              -30,
+              150,
+              625,
+              -3125
+            ],
+            "second_character_k": [
+              -6,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              4,
+              10
+            ],
+            "trace_s": [
+              1,
+              1
+            ]
+          },
+          {
+            "member_count": 40,
+            "member_fraction": [
+              2,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              0,
+              -5,
+              0,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -5,
+              -5,
+              25,
+              625,
+              -3125
+            ],
+            "second_character_k": [
+              -1,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              9,
+              10
+            ],
+            "trace_s": [
+              1,
+              1
+            ]
+          },
+          {
+            "member_count": 60,
+            "member_fraction": [
+              3,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              0,
+              30,
+              0,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -5,
+              30,
+              -150,
+              625,
+              -3125
+            ],
+            "second_character_k": [
+              6,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              16,
+              10
+            ],
+            "trace_s": [
+              1,
+              1
+            ]
+          },
+          {
+            "member_count": 40,
+            "member_fraction": [
+              2,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              -1,
+              -15,
+              -25,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -6,
+              -10,
+              50,
+              750,
+              -3125
+            ],
+            "second_character_k": [
+              -2,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              9,
+              11
+            ],
+            "trace_s": [
+              6,
+              5
+            ]
+          },
+          {
+            "member_count": 40,
+            "member_fraction": [
+              2,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              -2,
+              10,
+              -50,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -7,
+              20,
+              -100,
+              875,
+              -3125
+            ],
+            "second_character_k": [
+              4,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              16,
+              12
+            ],
+            "trace_s": [
+              7,
+              5
+            ]
+          },
+          {
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              -3,
+              45,
+              -75,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -8,
+              60,
+              -300,
+              1000,
+              -3125
+            ],
+            "second_character_k": [
+              12,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              25,
+              13
+            ],
+            "trace_s": [
+              8,
+              5
+            ]
+          },
+          {
+            "member_count": 10,
+            "member_fraction": [
+              1,
+              250
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              -4,
+              -10,
+              -100,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -9,
+              10,
+              -50,
+              1125,
+              -3125
+            ],
+            "second_character_k": [
+              2,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              16,
+              14
+            ],
+            "trace_s": [
+              9,
+              5
+            ]
+          },
+          {
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              -4,
+              35,
+              -100,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -9,
+              55,
+              -275,
+              1125,
+              -3125
+            ],
+            "second_character_k": [
+              11,
+              5
+            ],
+            "source_twist_quotient_a_squared_b": [
+              25,
+              14
+            ],
+            "trace_s": [
+              9,
+              5
+            ]
+          },
+          {
+            "member_count": 24,
+            "member_fraction": [
+              6,
+              625
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              -5,
+              25,
+              -125,
+              625
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -10,
+              50,
+              -250,
+              1250,
+              -3125
+            ],
+            "second_character_k": [
+              2,
+              1
+            ],
+            "source_twist_quotient_a_squared_b": [
+              25,
+              15
+            ],
+            "trace_s": [
+              2,
+              1
+            ]
+          }
+        ],
+        "parameterization": "s=(b-q)/q=chi_(0,1), k=(a^2-b)/q=chi_(2,0); the primitive polynomial is 1-s*z+k*z^2-k*z^3+s*z^4-z^5",
+        "support_size_after_a_sign_compression": 45
+      },
+      "member_count": 2500,
+      "newton_and_division_witnesses": [
+        {
+          "full_exterior_square_coefficients": [
+            1,
+            -13,
+            100,
+            -600,
+            2500,
+            -8125,
+            15625
+          ],
+          "input_a_b": [
+            -5,
+            13
+          ],
+          "pointwise_quartic_quotient": [
+            1,
+            -3,
+            45,
+            -75,
+            625
+          ],
+          "primitive_coefficients": [
+            1,
+            -8,
+            60,
+            -300,
+            1000,
+            -3125
+          ]
+        },
+        {
+          "full_exterior_square_coefficients": [
+            1,
+            0,
+            -25,
+            0,
+            -625,
+            0,
+            15625
+          ],
+          "input_a_b": [
+            0,
+            0
+          ],
+          "pointwise_quartic_quotient": [
+            1,
+            10,
+            50,
+            250,
+            625
+          ],
+          "primitive_coefficients": [
+            1,
+            5,
+            0,
+            0,
+            -625,
+            -3125
+          ]
+        },
+        {
+          "full_exterior_square_coefficients": [
+            1,
+            -15,
+            100,
+            -500,
+            2500,
+            -9375,
+            15625
+          ],
+          "input_a_b": [
+            5,
+            15
+          ],
+          "pointwise_quartic_quotient": [
+            1,
+            -5,
+            25,
+            -125,
+            625
+          ],
+          "primitive_coefficients": [
+            1,
+            -10,
+            50,
+            -250,
+            1250,
+            -3125
+          ]
+        }
+      ],
+      "normalized_trace_law": {
+        "atoms": [
+          {
+            "member_count": 1,
+            "member_fraction": [
+              1,
+              2500
+            ],
+            "normalized_trace_s": [
+              -3,
+              1
+            ],
+            "trace_numerator_b_minus_q": -15
+          },
+          {
+            "member_count": 30,
+            "member_fraction": [
+              3,
+              250
+            ],
+            "normalized_trace_s": [
+              -11,
+              5
+            ],
+            "trace_numerator_b_minus_q": -11
+          },
+          {
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "normalized_trace_s": [
+              -2,
+              1
+            ],
+            "trace_numerator_b_minus_q": -10
+          },
+          {
+            "member_count": 100,
+            "member_fraction": [
+              1,
+              25
+            ],
+            "normalized_trace_s": [
+              -9,
+              5
+            ],
+            "trace_numerator_b_minus_q": -9
+          },
+          {
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "normalized_trace_s": [
+              -8,
+              5
+            ],
+            "trace_numerator_b_minus_q": -8
+          },
+          {
+            "member_count": 100,
+            "member_fraction": [
+              1,
+              25
+            ],
+            "normalized_trace_s": [
+              -7,
+              5
+            ],
+            "trace_numerator_b_minus_q": -7
+          },
+          {
+            "member_count": 60,
+            "member_fraction": [
+              3,
+              125
+            ],
+            "normalized_trace_s": [
+              -6,
+              5
+            ],
+            "trace_numerator_b_minus_q": -6
+          },
+          {
+            "member_count": 250,
+            "member_fraction": [
+              1,
+              10
+            ],
+            "normalized_trace_s": [
+              -1,
+              1
+            ],
+            "trace_numerator_b_minus_q": -5
+          },
+          {
+            "member_count": 60,
+            "member_fraction": [
+              3,
+              125
+            ],
+            "normalized_trace_s": [
+              -4,
+              5
+            ],
+            "trace_numerator_b_minus_q": -4
+          },
+          {
+            "member_count": 300,
+            "member_fraction": [
+              3,
+              25
+            ],
+            "normalized_trace_s": [
+              -3,
+              5
+            ],
+            "trace_numerator_b_minus_q": -3
+          },
+          {
+            "member_count": 100,
+            "member_fraction": [
+              1,
+              25
+            ],
+            "normalized_trace_s": [
+              -2,
+              5
+            ],
+            "trace_numerator_b_minus_q": -2
+          },
+          {
+            "member_count": 320,
+            "member_fraction": [
+              16,
+              125
+            ],
+            "normalized_trace_s": [
+              -1,
+              5
+            ],
+            "trace_numerator_b_minus_q": -1
+          },
+          {
+            "member_count": 80,
+            "member_fraction": [
+              4,
+              125
+            ],
+            "normalized_trace_s": [
+              0,
+              1
+            ],
+            "trace_numerator_b_minus_q": 0
+          },
+          {
+            "member_count": 280,
+            "member_fraction": [
+              14,
+              125
+            ],
+            "normalized_trace_s": [
+              1,
+              5
+            ],
+            "trace_numerator_b_minus_q": 1
+          },
+          {
+            "member_count": 140,
+            "member_fraction": [
+              7,
+              125
+            ],
+            "normalized_trace_s": [
+              2,
+              5
+            ],
+            "trace_numerator_b_minus_q": 2
+          },
+          {
+            "member_count": 280,
+            "member_fraction": [
+              14,
+              125
+            ],
+            "normalized_trace_s": [
+              3,
+              5
+            ],
+            "trace_numerator_b_minus_q": 3
+          },
+          {
+            "member_count": 60,
+            "member_fraction": [
+              3,
+              125
+            ],
+            "normalized_trace_s": [
+              4,
+              5
+            ],
+            "trace_numerator_b_minus_q": 4
+          },
+          {
+            "member_count": 145,
+            "member_fraction": [
+              29,
+              500
+            ],
+            "normalized_trace_s": [
+              1,
+              1
+            ],
+            "trace_numerator_b_minus_q": 5
+          },
+          {
+            "member_count": 40,
+            "member_fraction": [
+              2,
+              125
+            ],
+            "normalized_trace_s": [
+              6,
+              5
+            ],
+            "trace_numerator_b_minus_q": 6
+          },
+          {
+            "member_count": 40,
+            "member_fraction": [
+              2,
+              125
+            ],
+            "normalized_trace_s": [
+              7,
+              5
+            ],
+            "trace_numerator_b_minus_q": 7
+          },
+          {
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "normalized_trace_s": [
+              8,
+              5
+            ],
+            "trace_numerator_b_minus_q": 8
+          },
+          {
+            "member_count": 30,
+            "member_fraction": [
+              3,
+              250
+            ],
+            "normalized_trace_s": [
+              9,
+              5
+            ],
+            "trace_numerator_b_minus_q": 9
+          },
+          {
+            "member_count": 24,
+            "member_fraction": [
+              6,
+              625
+            ],
+            "normalized_trace_s": [
+              2,
+              1
+            ],
+            "trace_numerator_b_minus_q": 10
+          }
+        ],
+        "moments_0_through_8": [
+          {
+            "SO5_Haar_moment": 1,
+            "all_q_formula_checked": true,
+            "family_mean_s_power": [
+              1,
+              1
+            ],
+            "finite_minus_Haar": [
+              0,
+              1
+            ],
+            "order": 0,
+            "raw_sum_(b-q)^order": 2500
+          },
+          {
+            "SO5_Haar_moment": 0,
+            "all_q_formula_checked": true,
+            "family_mean_s_power": [
+              -101,
+              625
+            ],
+            "finite_minus_Haar": [
+              -101,
+              625
+            ],
+            "order": 1,
+            "raw_sum_(b-q)^order": -2020
+          },
+          {
+            "SO5_Haar_moment": 1,
+            "all_q_formula_checked": true,
+            "family_mean_s_power": [
+              2519,
+              3125
+            ],
+            "finite_minus_Haar": [
+              -606,
+              3125
+            ],
+            "order": 2,
+            "raw_sum_(b-q)^order": 50380
+          },
+          {
+            "SO5_Haar_moment": 0,
+            "family_mean_s_power": [
+              -6431,
+              15625
+            ],
+            "finite_minus_Haar": [
+              -6431,
+              15625
+            ],
+            "order": 3,
+            "raw_sum_(b-q)^order": -128620
+          },
+          {
+            "SO5_Haar_moment": 3,
+            "family_mean_s_power": [
+              137069,
+              78125
+            ],
+            "finite_minus_Haar": [
+              -97306,
+              78125
+            ],
+            "order": 4,
+            "raw_sum_(b-q)^order": 2741380
+          },
+          {
+            "SO5_Haar_moment": 1,
+            "family_mean_s_power": [
+              -541001,
+              390625
+            ],
+            "finite_minus_Haar": [
+              -931626,
+              390625
+            ],
+            "order": 5,
+            "raw_sum_(b-q)^order": -10820020
+          },
+          {
+            "SO5_Haar_moment": 15,
+            "family_mean_s_power": [
+              10817459,
+              1953125
+            ],
+            "finite_minus_Haar": [
+              -18479416,
+              1953125
+            ],
+            "order": 6,
+            "raw_sum_(b-q)^order": 216349180
+          },
+          {
+            "family_mean_s_power": [
+              -55676771,
+              9765625
+            ],
+            "order": 7,
+            "raw_sum_(b-q)^order": -1113535420
+          },
+          {
+            "family_mean_s_power": [
+              1040094089,
+              48828125
+            ],
+            "order": 8,
+            "raw_sum_(b-q)^order": 20801881780
+          }
+        ],
+        "support_size": 23
+      },
+      "q": 5,
+      "source_joint_atom_count": 81,
+      "twist_kernel_check": {
+        "members_on_a_equals_zero_fixed_locus": 406,
+        "primitive_polynomial_depends_only_on_a_squared_and_b": true,
+        "signed_histogram_invariant_under_a_to_minus_a": true,
+        "source_signed_support_size": 81,
+        "twist_quotient_support_size": 45
+      }
+    },
+    {
+      "all_q_character_moment_regression": {
+        "mean_k": [
+          6,
+          2401
+        ],
+        "mean_k_squared": [
+          12468,
+          16807
+        ],
+        "mean_s": [
+          -295,
+          2401
+        ],
+        "mean_s_squared": [
+          14447,
+          16807
+        ],
+        "mean_s_times_k": [
+          -1934,
+          16807
+        ]
+      },
+      "complete_primitive_coefficient_law": {
+        "atoms": [
+          {
+            "member_count": 126,
+            "member_fraction": [
+              3,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              24,
+              238,
+              1176,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              17,
+              70,
+              -490,
+              -5831,
+              -16807
+            ],
+            "second_character_k": [
+              10,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              0,
+              -10
+            ],
+            "trace_s": [
+              -17,
+              7
+            ]
+          },
+          {
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              22,
+              210,
+              1078,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              15,
+              56,
+              -392,
+              -5145,
+              -16807
+            ],
+            "second_character_k": [
+              8,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              0,
+              -8
+            ],
+            "trace_s": [
+              -15,
+              7
+            ]
+          },
+          {
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              22,
+              217,
+              1078,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              15,
+              63,
+              -441,
+              -5145,
+              -16807
+            ],
+            "second_character_k": [
+              9,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              -8
+            ],
+            "trace_s": [
+              -15,
+              7
+            ]
+          },
+          {
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              21,
+              203,
+              1029,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              14,
+              56,
+              -392,
+              -4802,
+              -16807
+            ],
+            "second_character_k": [
+              8,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              -7
+            ],
+            "trace_s": [
+              -2,
+              1
+            ]
+          },
+          {
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              20,
+              182,
+              980,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              13,
+              42,
+              -294,
+              -4459,
+              -16807
+            ],
+            "second_character_k": [
+              6,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              0,
+              -6
+            ],
+            "trace_s": [
+              -13,
+              7
+            ]
+          },
+          {
+            "member_count": 168,
+            "member_fraction": [
+              4,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              20,
+              189,
+              980,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              13,
+              49,
+              -343,
+              -4459,
+              -16807
+            ],
+            "second_character_k": [
+              1,
+              1
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              -6
+            ],
+            "trace_s": [
+              -13,
+              7
+            ]
+          },
+          {
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              19,
+              175,
+              931,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              12,
+              42,
+              -294,
+              -4116,
+              -16807
+            ],
+            "second_character_k": [
+              6,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              -5
+            ],
+            "trace_s": [
+              -12,
+              7
+            ]
+          },
+          {
+            "member_count": 126,
+            "member_fraction": [
+              3,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              18,
+              154,
+              882,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              11,
+              28,
+              -196,
+              -3773,
+              -16807
+            ],
+            "second_character_k": [
+              4,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              0,
+              -4
+            ],
+            "trace_s": [
+              -11,
+              7
+            ]
+          },
+          {
+            "member_count": 126,
+            "member_fraction": [
+              3,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              18,
+              161,
+              882,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              11,
+              35,
+              -245,
+              -3773,
+              -16807
+            ],
+            "second_character_k": [
+              5,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              -4
+            ],
+            "trace_s": [
+              -11,
+              7
+            ]
+          },
+          {
+            "member_count": 168,
+            "member_fraction": [
+              4,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              17,
+              147,
+              833,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              10,
+              28,
+              -196,
+              -3430,
+              -16807
+            ],
+            "second_character_k": [
+              4,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              -3
+            ],
+            "trace_s": [
+              -10,
+              7
+            ]
+          },
+          {
+            "member_count": 252,
+            "member_fraction": [
+              6,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              16,
+              126,
+              784,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              9,
+              14,
+              -98,
+              -3087,
+              -16807
+            ],
+            "second_character_k": [
+              2,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              0,
+              -2
+            ],
+            "trace_s": [
+              -9,
+              7
+            ]
+          },
+          {
+            "member_count": 672,
+            "member_fraction": [
+              16,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              16,
+              133,
+              784,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              9,
+              21,
+              -147,
+              -3087,
+              -16807
+            ],
+            "second_character_k": [
+              3,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              -2
+            ],
+            "trace_s": [
+              -9,
+              7
+            ]
+          },
+          {
+            "member_count": 336,
+            "member_fraction": [
+              8,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              16,
+              154,
+              784,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              9,
+              42,
+              -294,
+              -3087,
+              -16807
+            ],
+            "second_character_k": [
+              6,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              4,
+              -2
+            ],
+            "trace_s": [
+              -9,
+              7
+            ]
+          },
+          {
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              15,
+              119,
+              735,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              8,
+              14,
+              -98,
+              -2744,
+              -16807
+            ],
+            "second_character_k": [
+              2,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              -1
+            ],
+            "trace_s": [
+              -8,
+              7
+            ]
+          },
+          {
+            "member_count": 336,
+            "member_fraction": [
+              8,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              14,
+              98,
+              686,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              7,
+              0,
+              0,
+              -2401,
+              -16807
+            ],
+            "second_character_k": [
+              0,
+              1
+            ],
+            "source_twist_quotient_a_squared_b": [
+              0,
+              0
+            ],
+            "trace_s": [
+              -1,
+              1
+            ]
+          },
+          {
+            "member_count": 168,
+            "member_fraction": [
+              4,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              14,
+              105,
+              686,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              7,
+              7,
+              -49,
+              -2401,
+              -16807
+            ],
+            "second_character_k": [
+              1,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              0
+            ],
+            "trace_s": [
+              -1,
+              1
+            ]
+          },
+          {
+            "member_count": 168,
+            "member_fraction": [
+              4,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              14,
+              126,
+              686,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              7,
+              28,
+              -196,
+              -2401,
+              -16807
+            ],
+            "second_character_k": [
+              4,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              4,
+              0
+            ],
+            "trace_s": [
+              -1,
+              1
+            ]
+          },
+          {
+            "member_count": 210,
+            "member_fraction": [
+              5,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              13,
+              91,
+              637,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              6,
+              0,
+              0,
+              -2058,
+              -16807
+            ],
+            "second_character_k": [
+              0,
+              1
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              1
+            ],
+            "trace_s": [
+              -6,
+              7
+            ]
+          },
+          {
+            "member_count": 252,
+            "member_fraction": [
+              6,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              12,
+              70,
+              588,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              5,
+              -14,
+              98,
+              -1715,
+              -16807
+            ],
+            "second_character_k": [
+              -2,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              0,
+              2
+            ],
+            "trace_s": [
+              -5,
+              7
+            ]
+          },
+          {
+            "member_count": 252,
+            "member_fraction": [
+              6,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              12,
+              77,
+              588,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              5,
+              -7,
+              49,
+              -1715,
+              -16807
+            ],
+            "second_character_k": [
+              -1,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              2
+            ],
+            "trace_s": [
+              -5,
+              7
+            ]
+          },
+          {
+            "member_count": 546,
+            "member_fraction": [
+              13,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              12,
+              98,
+              588,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              5,
+              14,
+              -98,
+              -1715,
+              -16807
+            ],
+            "second_character_k": [
+              2,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              4,
+              2
+            ],
+            "trace_s": [
+              -5,
+              7
+            ]
+          },
+          {
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              12,
+              133,
+              588,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              5,
+              49,
+              -343,
+              -1715,
+              -16807
+            ],
+            "second_character_k": [
+              1,
+              1
+            ],
+            "source_twist_quotient_a_squared_b": [
+              9,
+              2
+            ],
+            "trace_s": [
+              -5,
+              7
+            ]
+          },
+          {
+            "member_count": 336,
+            "member_fraction": [
+              8,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              11,
+              63,
+              539,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              4,
+              -14,
+              98,
+              -1372,
+              -16807
+            ],
+            "second_character_k": [
+              -2,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              3
+            ],
+            "trace_s": [
+              -4,
+              7
+            ]
+          },
+          {
+            "member_count": 126,
+            "member_fraction": [
+              3,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              11,
+              119,
+              539,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              4,
+              42,
+              -294,
+              -1372,
+              -16807
+            ],
+            "second_character_k": [
+              6,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              9,
+              3
+            ],
+            "trace_s": [
+              -4,
+              7
+            ]
+          },
+          {
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              10,
+              49,
+              490,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              3,
+              -21,
+              147,
+              -1029,
+              -16807
+            ],
+            "second_character_k": [
+              -3,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              4
+            ],
+            "trace_s": [
+              -3,
+              7
+            ]
+          },
+          {
+            "member_count": 252,
+            "member_fraction": [
+              6,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              10,
+              70,
+              490,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              3,
+              0,
+              0,
+              -1029,
+              -16807
+            ],
+            "second_character_k": [
+              0,
+              1
+            ],
+            "source_twist_quotient_a_squared_b": [
+              4,
+              4
+            ],
+            "trace_s": [
+              -3,
+              7
+            ]
+          },
+          {
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              10,
+              105,
+              490,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              3,
+              35,
+              -245,
+              -1029,
+              -16807
+            ],
+            "second_character_k": [
+              5,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              9,
+              4
+            ],
+            "trace_s": [
+              -3,
+              7
+            ]
+          },
+          {
+            "member_count": 210,
+            "member_fraction": [
+              5,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              9,
+              35,
+              441,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              2,
+              -28,
+              196,
+              -686,
+              -16807
+            ],
+            "second_character_k": [
+              -4,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              5
+            ],
+            "trace_s": [
+              -2,
+              7
+            ]
+          },
+          {
+            "member_count": 126,
+            "member_fraction": [
+              3,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              9,
+              91,
+              441,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              2,
+              28,
+              -196,
+              -686,
+              -16807
+            ],
+            "second_character_k": [
+              4,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              9,
+              5
+            ],
+            "trace_s": [
+              -2,
+              7
+            ]
+          },
+          {
+            "member_count": 420,
+            "member_fraction": [
+              10,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              8,
+              14,
+              392,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              1,
+              -42,
+              294,
+              -343,
+              -16807
+            ],
+            "second_character_k": [
+              -6,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              0,
+              6
+            ],
+            "trace_s": [
+              -1,
+              7
+            ]
+          },
+          {
+            "member_count": 672,
+            "member_fraction": [
+              16,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              8,
+              21,
+              392,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              1,
+              -35,
+              245,
+              -343,
+              -16807
+            ],
+            "second_character_k": [
+              -5,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              6
+            ],
+            "trace_s": [
+              -1,
+              7
+            ]
+          },
+          {
+            "member_count": 756,
+            "member_fraction": [
+              18,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              8,
+              42,
+              392,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              1,
+              -14,
+              98,
+              -343,
+              -16807
+            ],
+            "second_character_k": [
+              -2,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              4,
+              6
+            ],
+            "trace_s": [
+              -1,
+              7
+            ]
+          },
+          {
+            "member_count": 504,
+            "member_fraction": [
+              12,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              8,
+              77,
+              392,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              1,
+              21,
+              -147,
+              -343,
+              -16807
+            ],
+            "second_character_k": [
+              3,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              9,
+              6
+            ],
+            "trace_s": [
+              -1,
+              7
+            ]
+          },
+          {
+            "member_count": 252,
+            "member_fraction": [
+              6,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              7,
+              7,
+              343,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              0,
+              -42,
+              294,
+              0,
+              -16807
+            ],
+            "second_character_k": [
+              -6,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              7
+            ],
+            "trace_s": [
+              0,
+              1
+            ]
+          },
+          {
+            "member_count": 252,
+            "member_fraction": [
+              6,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              7,
+              63,
+              343,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              0,
+              14,
+              -98,
+              0,
+              -16807
+            ],
+            "second_character_k": [
+              2,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              9,
+              7
+            ],
+            "trace_s": [
+              0,
+              1
+            ]
+          },
+          {
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              6,
+              -14,
+              294,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -1,
+              -56,
+              392,
+              343,
+              -16807
+            ],
+            "second_character_k": [
+              -8,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              0,
+              8
+            ],
+            "trace_s": [
+              1,
+              7
+            ]
+          },
+          {
+            "member_count": 168,
+            "member_fraction": [
+              4,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              6,
+              -7,
+              294,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -1,
+              -49,
+              343,
+              343,
+              -16807
+            ],
+            "second_character_k": [
+              -1,
+              1
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              8
+            ],
+            "trace_s": [
+              1,
+              7
+            ]
+          },
+          {
+            "member_count": 168,
+            "member_fraction": [
+              4,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              6,
+              14,
+              294,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -1,
+              -28,
+              196,
+              343,
+              -16807
+            ],
+            "second_character_k": [
+              -4,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              4,
+              8
+            ],
+            "trace_s": [
+              1,
+              7
+            ]
+          },
+          {
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              6,
+              49,
+              294,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -1,
+              7,
+              -49,
+              343,
+              -16807
+            ],
+            "second_character_k": [
+              1,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              9,
+              8
+            ],
+            "trace_s": [
+              1,
+              7
+            ]
+          },
+          {
+            "member_count": 168,
+            "member_fraction": [
+              4,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              6,
+              98,
+              294,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -1,
+              56,
+              -392,
+              343,
+              -16807
+            ],
+            "second_character_k": [
+              8,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              16,
+              8
+            ],
+            "trace_s": [
+              1,
+              7
+            ]
+          },
+          {
+            "member_count": 168,
+            "member_fraction": [
+              4,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              5,
+              -21,
+              245,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -2,
+              -56,
+              392,
+              686,
+              -16807
+            ],
+            "second_character_k": [
+              -8,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              9
+            ],
+            "trace_s": [
+              2,
+              7
+            ]
+          },
+          {
+            "member_count": 210,
+            "member_fraction": [
+              5,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              5,
+              35,
+              245,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -2,
+              0,
+              0,
+              686,
+              -16807
+            ],
+            "second_character_k": [
+              0,
+              1
+            ],
+            "source_twist_quotient_a_squared_b": [
+              9,
+              9
+            ],
+            "trace_s": [
+              2,
+              7
+            ]
+          },
+          {
+            "member_count": 252,
+            "member_fraction": [
+              6,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              4,
+              -42,
+              196,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -3,
+              -70,
+              490,
+              1029,
+              -16807
+            ],
+            "second_character_k": [
+              -10,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              0,
+              10
+            ],
+            "trace_s": [
+              3,
+              7
+            ]
+          },
+          {
+            "member_count": 252,
+            "member_fraction": [
+              6,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              4,
+              -35,
+              196,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -3,
+              -63,
+              441,
+              1029,
+              -16807
+            ],
+            "second_character_k": [
+              -9,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              10
+            ],
+            "trace_s": [
+              3,
+              7
+            ]
+          },
+          {
+            "member_count": 336,
+            "member_fraction": [
+              8,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              4,
+              -14,
+              196,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -3,
+              -42,
+              294,
+              1029,
+              -16807
+            ],
+            "second_character_k": [
+              -6,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              4,
+              10
+            ],
+            "trace_s": [
+              3,
+              7
+            ]
+          },
+          {
+            "member_count": 336,
+            "member_fraction": [
+              8,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              4,
+              21,
+              196,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -3,
+              -7,
+              49,
+              1029,
+              -16807
+            ],
+            "second_character_k": [
+              -1,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              9,
+              10
+            ],
+            "trace_s": [
+              3,
+              7
+            ]
+          },
+          {
+            "member_count": 336,
+            "member_fraction": [
+              8,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              4,
+              70,
+              196,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -3,
+              42,
+              -294,
+              1029,
+              -16807
+            ],
+            "second_character_k": [
+              6,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              16,
+              10
+            ],
+            "trace_s": [
+              3,
+              7
+            ]
+          },
+          {
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              3,
+              -49,
+              147,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -4,
+              -70,
+              490,
+              1372,
+              -16807
+            ],
+            "second_character_k": [
+              -10,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              11
+            ],
+            "trace_s": [
+              4,
+              7
+            ]
+          },
+          {
+            "member_count": 168,
+            "member_fraction": [
+              4,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              3,
+              7,
+              147,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -4,
+              -14,
+              98,
+              1372,
+              -16807
+            ],
+            "second_character_k": [
+              -2,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              9,
+              11
+            ],
+            "trace_s": [
+              4,
+              7
+            ]
+          },
+          {
+            "member_count": 126,
+            "member_fraction": [
+              3,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              2,
+              -70,
+              98,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -5,
+              -84,
+              588,
+              1715,
+              -16807
+            ],
+            "second_character_k": [
+              -12,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              0,
+              12
+            ],
+            "trace_s": [
+              5,
+              7
+            ]
+          },
+          {
+            "member_count": 126,
+            "member_fraction": [
+              3,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              2,
+              -63,
+              98,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -5,
+              -77,
+              539,
+              1715,
+              -16807
+            ],
+            "second_character_k": [
+              -11,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              12
+            ],
+            "trace_s": [
+              5,
+              7
+            ]
+          },
+          {
+            "member_count": 168,
+            "member_fraction": [
+              4,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              2,
+              -42,
+              98,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -5,
+              -56,
+              392,
+              1715,
+              -16807
+            ],
+            "second_character_k": [
+              -8,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              4,
+              12
+            ],
+            "trace_s": [
+              5,
+              7
+            ]
+          },
+          {
+            "member_count": 168,
+            "member_fraction": [
+              4,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              2,
+              -7,
+              98,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -5,
+              -21,
+              147,
+              1715,
+              -16807
+            ],
+            "second_character_k": [
+              -3,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              9,
+              12
+            ],
+            "trace_s": [
+              5,
+              7
+            ]
+          },
+          {
+            "member_count": 168,
+            "member_fraction": [
+              4,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              2,
+              42,
+              98,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -5,
+              28,
+              -196,
+              1715,
+              -16807
+            ],
+            "second_character_k": [
+              4,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              16,
+              12
+            ],
+            "trace_s": [
+              5,
+              7
+            ]
+          },
+          {
+            "member_count": 126,
+            "member_fraction": [
+              3,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              1,
+              -77,
+              49,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -6,
+              -84,
+              588,
+              2058,
+              -16807
+            ],
+            "second_character_k": [
+              -12,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              1,
+              13
+            ],
+            "trace_s": [
+              6,
+              7
+            ]
+          },
+          {
+            "member_count": 168,
+            "member_fraction": [
+              4,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              1,
+              -21,
+              49,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -6,
+              -28,
+              196,
+              2058,
+              -16807
+            ],
+            "second_character_k": [
+              -4,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              9,
+              13
+            ],
+            "trace_s": [
+              6,
+              7
+            ]
+          },
+          {
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              1,
+              91,
+              49,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -6,
+              84,
+              -588,
+              2058,
+              -16807
+            ],
+            "second_character_k": [
+              12,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              25,
+              13
+            ],
+            "trace_s": [
+              6,
+              7
+            ]
+          },
+          {
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              0,
+              -98,
+              0,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -7,
+              -98,
+              686,
+              2401,
+              -16807
+            ],
+            "second_character_k": [
+              -2,
+              1
+            ],
+            "source_twist_quotient_a_squared_b": [
+              0,
+              14
+            ],
+            "trace_s": [
+              1,
+              1
+            ]
+          },
+          {
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              0,
+              -70,
+              0,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -7,
+              -70,
+              490,
+              2401,
+              -16807
+            ],
+            "second_character_k": [
+              -10,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              4,
+              14
+            ],
+            "trace_s": [
+              1,
+              1
+            ]
+          },
+          {
+            "member_count": 336,
+            "member_fraction": [
+              8,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              0,
+              -35,
+              0,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -7,
+              -35,
+              245,
+              2401,
+              -16807
+            ],
+            "second_character_k": [
+              -5,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              9,
+              14
+            ],
+            "trace_s": [
+              1,
+              1
+            ]
+          },
+          {
+            "member_count": 252,
+            "member_fraction": [
+              6,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              0,
+              14,
+              0,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -7,
+              14,
+              -98,
+              2401,
+              -16807
+            ],
+            "second_character_k": [
+              2,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              16,
+              14
+            ],
+            "trace_s": [
+              1,
+              1
+            ]
+          },
+          {
+            "member_count": 168,
+            "member_fraction": [
+              4,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              0,
+              77,
+              0,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -7,
+              77,
+              -539,
+              2401,
+              -16807
+            ],
+            "second_character_k": [
+              11,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              25,
+              14
+            ],
+            "trace_s": [
+              1,
+              1
+            ]
+          },
+          {
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              -1,
+              -49,
+              -49,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -8,
+              -42,
+              294,
+              2744,
+              -16807
+            ],
+            "second_character_k": [
+              -6,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              9,
+              15
+            ],
+            "trace_s": [
+              8,
+              7
+            ]
+          },
+          {
+            "member_count": 168,
+            "member_fraction": [
+              4,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              -1,
+              63,
+              -49,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -8,
+              70,
+              -490,
+              2744,
+              -16807
+            ],
+            "second_character_k": [
+              10,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              25,
+              15
+            ],
+            "trace_s": [
+              8,
+              7
+            ]
+          },
+          {
+            "member_count": 168,
+            "member_fraction": [
+              4,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              -2,
+              -14,
+              -98,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -9,
+              0,
+              0,
+              3087,
+              -16807
+            ],
+            "second_character_k": [
+              0,
+              1
+            ],
+            "source_twist_quotient_a_squared_b": [
+              16,
+              16
+            ],
+            "trace_s": [
+              9,
+              7
+            ]
+          },
+          {
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              -2,
+              49,
+              -98,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -9,
+              63,
+              -441,
+              3087,
+              -16807
+            ],
+            "second_character_k": [
+              9,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              25,
+              16
+            ],
+            "trace_s": [
+              9,
+              7
+            ]
+          },
+          {
+            "member_count": 126,
+            "member_fraction": [
+              3,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              -3,
+              35,
+              -147,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -10,
+              56,
+              -392,
+              3430,
+              -16807
+            ],
+            "second_character_k": [
+              8,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              25,
+              17
+            ],
+            "trace_s": [
+              10,
+              7
+            ]
+          },
+          {
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              -4,
+              -42,
+              -196,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -11,
+              -14,
+              98,
+              3773,
+              -16807
+            ],
+            "second_character_k": [
+              -2,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              16,
+              18
+            ],
+            "trace_s": [
+              11,
+              7
+            ]
+          },
+          {
+            "member_count": 126,
+            "member_fraction": [
+              3,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              -4,
+              21,
+              -196,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -11,
+              49,
+              -343,
+              3773,
+              -16807
+            ],
+            "second_character_k": [
+              1,
+              1
+            ],
+            "source_twist_quotient_a_squared_b": [
+              25,
+              18
+            ],
+            "trace_s": [
+              11,
+              7
+            ]
+          },
+          {
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              -4,
+              98,
+              -196,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -11,
+              126,
+              -882,
+              3773,
+              -16807
+            ],
+            "second_character_k": [
+              18,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              36,
+              18
+            ],
+            "trace_s": [
+              11,
+              7
+            ]
+          },
+          {
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              -5,
+              7,
+              -245,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -12,
+              42,
+              -294,
+              4116,
+              -16807
+            ],
+            "second_character_k": [
+              6,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              25,
+              19
+            ],
+            "trace_s": [
+              12,
+              7
+            ]
+          },
+          {
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              -6,
+              70,
+              -294,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -13,
+              112,
+              -784,
+              4459,
+              -16807
+            ],
+            "second_character_k": [
+              16,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              36,
+              20
+            ],
+            "trace_s": [
+              13,
+              7
+            ]
+          },
+          {
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              -8,
+              42,
+              -392,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -15,
+              98,
+              -686,
+              5145,
+              -16807
+            ],
+            "second_character_k": [
+              2,
+              1
+            ],
+            "source_twist_quotient_a_squared_b": [
+              36,
+              22
+            ],
+            "trace_s": [
+              15,
+              7
+            ]
+          },
+          {
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              -10,
+              105,
+              -490,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -17,
+              175,
+              -1225,
+              5831,
+              -16807
+            ],
+            "second_character_k": [
+              25,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              49,
+              24
+            ],
+            "trace_s": [
+              17,
+              7
+            ]
+          },
+          {
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "pointwise_quartic_coefficients_d0_through_d4": [
+              1,
+              -11,
+              91,
+              -539,
+              2401
+            ],
+            "primitive_coefficients_c0_through_c5": [
+              1,
+              -18,
+              168,
+              -1176,
+              6174,
+              -16807
+            ],
+            "second_character_k": [
+              24,
+              7
+            ],
+            "source_twist_quotient_a_squared_b": [
+              49,
+              25
+            ],
+            "trace_s": [
+              18,
+              7
+            ]
+          }
+        ],
+        "parameterization": "s=(b-q)/q=chi_(0,1), k=(a^2-b)/q=chi_(2,0); the primitive polynomial is 1-s*z+k*z^2-k*z^3+s*z^4-z^5",
+        "support_size_after_a_sign_compression": 75
+      },
+      "member_count": 14406,
+      "newton_and_division_witnesses": [
+        {
+          "full_exterior_square_coefficients": [
+            1,
+            -24,
+            294,
+            -2450,
+            14406,
+            -57624,
+            117649
+          ],
+          "input_a_b": [
+            -7,
+            24
+          ],
+          "pointwise_quartic_quotient": [
+            1,
+            -10,
+            105,
+            -490,
+            2401
+          ],
+          "primitive_coefficients": [
+            1,
+            -17,
+            175,
+            -1225,
+            5831,
+            -16807
+          ]
+        },
+        {
+          "full_exterior_square_coefficients": [
+            1,
+            -2,
+            -49,
+            196,
+            -2401,
+            -4802,
+            117649
+          ],
+          "input_a_b": [
+            0,
+            2
+          ],
+          "pointwise_quartic_quotient": [
+            1,
+            12,
+            70,
+            588,
+            2401
+          ],
+          "primitive_coefficients": [
+            1,
+            5,
+            -14,
+            98,
+            -1715,
+            -16807
+          ]
+        },
+        {
+          "full_exterior_square_coefficients": [
+            1,
+            -25,
+            294,
+            -2352,
+            14406,
+            -60025,
+            117649
+          ],
+          "input_a_b": [
+            7,
+            25
+          ],
+          "pointwise_quartic_quotient": [
+            1,
+            -11,
+            91,
+            -539,
+            2401
+          ],
+          "primitive_coefficients": [
+            1,
+            -18,
+            168,
+            -1176,
+            6174,
+            -16807
+          ]
+        }
+      ],
+      "normalized_trace_law": {
+        "atoms": [
+          {
+            "member_count": 126,
+            "member_fraction": [
+              3,
+              343
+            ],
+            "normalized_trace_s": [
+              -17,
+              7
+            ],
+            "trace_numerator_b_minus_q": -17
+          },
+          {
+            "member_count": 126,
+            "member_fraction": [
+              3,
+              343
+            ],
+            "normalized_trace_s": [
+              -15,
+              7
+            ],
+            "trace_numerator_b_minus_q": -15
+          },
+          {
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "normalized_trace_s": [
+              -2,
+              1
+            ],
+            "trace_numerator_b_minus_q": -14
+          },
+          {
+            "member_count": 252,
+            "member_fraction": [
+              6,
+              343
+            ],
+            "normalized_trace_s": [
+              -13,
+              7
+            ],
+            "trace_numerator_b_minus_q": -13
+          },
+          {
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "normalized_trace_s": [
+              -12,
+              7
+            ],
+            "trace_numerator_b_minus_q": -12
+          },
+          {
+            "member_count": 252,
+            "member_fraction": [
+              6,
+              343
+            ],
+            "normalized_trace_s": [
+              -11,
+              7
+            ],
+            "trace_numerator_b_minus_q": -11
+          },
+          {
+            "member_count": 168,
+            "member_fraction": [
+              4,
+              343
+            ],
+            "normalized_trace_s": [
+              -10,
+              7
+            ],
+            "trace_numerator_b_minus_q": -10
+          },
+          {
+            "member_count": 1260,
+            "member_fraction": [
+              30,
+              343
+            ],
+            "normalized_trace_s": [
+              -9,
+              7
+            ],
+            "trace_numerator_b_minus_q": -9
+          },
+          {
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "normalized_trace_s": [
+              -8,
+              7
+            ],
+            "trace_numerator_b_minus_q": -8
+          },
+          {
+            "member_count": 672,
+            "member_fraction": [
+              16,
+              343
+            ],
+            "normalized_trace_s": [
+              -1,
+              1
+            ],
+            "trace_numerator_b_minus_q": -7
+          },
+          {
+            "member_count": 210,
+            "member_fraction": [
+              5,
+              343
+            ],
+            "normalized_trace_s": [
+              -6,
+              7
+            ],
+            "trace_numerator_b_minus_q": -6
+          },
+          {
+            "member_count": 1092,
+            "member_fraction": [
+              26,
+              343
+            ],
+            "normalized_trace_s": [
+              -5,
+              7
+            ],
+            "trace_numerator_b_minus_q": -5
+          },
+          {
+            "member_count": 462,
+            "member_fraction": [
+              11,
+              343
+            ],
+            "normalized_trace_s": [
+              -4,
+              7
+            ],
+            "trace_numerator_b_minus_q": -4
+          },
+          {
+            "member_count": 420,
+            "member_fraction": [
+              10,
+              343
+            ],
+            "normalized_trace_s": [
+              -3,
+              7
+            ],
+            "trace_numerator_b_minus_q": -3
+          },
+          {
+            "member_count": 336,
+            "member_fraction": [
+              8,
+              343
+            ],
+            "normalized_trace_s": [
+              -2,
+              7
+            ],
+            "trace_numerator_b_minus_q": -2
+          },
+          {
+            "member_count": 2352,
+            "member_fraction": [
+              8,
+              49
+            ],
+            "normalized_trace_s": [
+              -1,
+              7
+            ],
+            "trace_numerator_b_minus_q": -1
+          },
+          {
+            "member_count": 504,
+            "member_fraction": [
+              12,
+              343
+            ],
+            "normalized_trace_s": [
+              0,
+              1
+            ],
+            "trace_numerator_b_minus_q": 0
+          },
+          {
+            "member_count": 672,
+            "member_fraction": [
+              16,
+              343
+            ],
+            "normalized_trace_s": [
+              1,
+              7
+            ],
+            "trace_numerator_b_minus_q": 1
+          },
+          {
+            "member_count": 378,
+            "member_fraction": [
+              9,
+              343
+            ],
+            "normalized_trace_s": [
+              2,
+              7
+            ],
+            "trace_numerator_b_minus_q": 2
+          },
+          {
+            "member_count": 1512,
+            "member_fraction": [
+              36,
+              343
+            ],
+            "normalized_trace_s": [
+              3,
+              7
+            ],
+            "trace_numerator_b_minus_q": 3
+          },
+          {
+            "member_count": 252,
+            "member_fraction": [
+              6,
+              343
+            ],
+            "normalized_trace_s": [
+              4,
+              7
+            ],
+            "trace_numerator_b_minus_q": 4
+          },
+          {
+            "member_count": 756,
+            "member_fraction": [
+              18,
+              343
+            ],
+            "normalized_trace_s": [
+              5,
+              7
+            ],
+            "trace_numerator_b_minus_q": 5
+          },
+          {
+            "member_count": 336,
+            "member_fraction": [
+              8,
+              343
+            ],
+            "normalized_trace_s": [
+              6,
+              7
+            ],
+            "trace_numerator_b_minus_q": 6
+          },
+          {
+            "member_count": 882,
+            "member_fraction": [
+              3,
+              49
+            ],
+            "normalized_trace_s": [
+              1,
+              1
+            ],
+            "trace_numerator_b_minus_q": 7
+          },
+          {
+            "member_count": 252,
+            "member_fraction": [
+              6,
+              343
+            ],
+            "normalized_trace_s": [
+              8,
+              7
+            ],
+            "trace_numerator_b_minus_q": 8
+          },
+          {
+            "member_count": 252,
+            "member_fraction": [
+              6,
+              343
+            ],
+            "normalized_trace_s": [
+              9,
+              7
+            ],
+            "trace_numerator_b_minus_q": 9
+          },
+          {
+            "member_count": 126,
+            "member_fraction": [
+              3,
+              343
+            ],
+            "normalized_trace_s": [
+              10,
+              7
+            ],
+            "trace_numerator_b_minus_q": 10
+          },
+          {
+            "member_count": 210,
+            "member_fraction": [
+              5,
+              343
+            ],
+            "normalized_trace_s": [
+              11,
+              7
+            ],
+            "trace_numerator_b_minus_q": 11
+          },
+          {
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "normalized_trace_s": [
+              12,
+              7
+            ],
+            "trace_numerator_b_minus_q": 12
+          },
+          {
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "normalized_trace_s": [
+              13,
+              7
+            ],
+            "trace_numerator_b_minus_q": 13
+          },
+          {
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "normalized_trace_s": [
+              15,
+              7
+            ],
+            "trace_numerator_b_minus_q": 15
+          },
+          {
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "normalized_trace_s": [
+              17,
+              7
+            ],
+            "trace_numerator_b_minus_q": 17
+          },
+          {
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "normalized_trace_s": [
+              18,
+              7
+            ],
+            "trace_numerator_b_minus_q": 18
+          }
+        ],
+        "moments_0_through_8": [
+          {
+            "SO5_Haar_moment": 1,
+            "all_q_formula_checked": true,
+            "family_mean_s_power": [
+              1,
+              1
+            ],
+            "finite_minus_Haar": [
+              0,
+              1
+            ],
+            "order": 0,
+            "raw_sum_(b-q)^order": 14406
+          },
+          {
+            "SO5_Haar_moment": 0,
+            "all_q_formula_checked": true,
+            "family_mean_s_power": [
+              -295,
+              2401
+            ],
+            "finite_minus_Haar": [
+              -295,
+              2401
+            ],
+            "order": 1,
+            "raw_sum_(b-q)^order": -12390
+          },
+          {
+            "SO5_Haar_moment": 1,
+            "all_q_formula_checked": true,
+            "family_mean_s_power": [
+              14447,
+              16807
+            ],
+            "finite_minus_Haar": [
+              -2360,
+              16807
+            ],
+            "order": 2,
+            "raw_sum_(b-q)^order": 606774
+          },
+          {
+            "SO5_Haar_moment": 0,
+            "family_mean_s_power": [
+              -39439,
+              117649
+            ],
+            "finite_minus_Haar": [
+              -39439,
+              117649
+            ],
+            "order": 3,
+            "raw_sum_(b-q)^order": -1656438
+          },
+          {
+            "SO5_Haar_moment": 3,
+            "family_mean_s_power": [
+              1701335,
+              823543
+            ],
+            "finite_minus_Haar": [
+              -769294,
+              823543
+            ],
+            "order": 4,
+            "raw_sum_(b-q)^order": 71456070
+          },
+          {
+            "SO5_Haar_moment": 1,
+            "family_mean_s_power": [
+              -5982775,
+              5764801
+            ],
+            "finite_minus_Haar": [
+              -11747576,
+              5764801
+            ],
+            "order": 5,
+            "raw_sum_(b-q)^order": -251276550
+          },
+          {
+            "SO5_Haar_moment": 15,
+            "family_mean_s_power": [
+              303614687,
+              40353607
+            ],
+            "finite_minus_Haar": [
+              -301689418,
+              40353607
+            ],
+            "order": 6,
+            "raw_sum_(b-q)^order": 12751816854
+          },
+          {
+            "family_mean_s_power": [
+              -1008551839,
+              282475249
+            ],
+            "order": 7,
+            "raw_sum_(b-q)^order": -42359177238
+          },
+          {
+            "family_mean_s_power": [
+              67500400295,
+              1977326743
+            ],
+            "order": 8,
+            "raw_sum_(b-q)^order": 2835016812390
+          }
+        ],
+        "support_size": 33
+      },
+      "q": 7,
+      "source_joint_atom_count": 138,
+      "twist_kernel_check": {
+        "members_on_a_equals_zero_fixed_locus": 2184,
+        "primitive_polynomial_depends_only_on_a_squared_and_b": true,
+        "signed_histogram_invariant_under_a_to_minus_a": true,
+        "source_signed_support_size": 138,
+        "twist_quotient_support_size": 75
+      }
+    }
+  ],
+  "geometric_representation": {
+    "canonical_ambient_Tate_lines_removed": 1,
+    "center_kernel": "-I acts trivially on exterior^2, explaining a -> -a blindness",
+    "decomposition": "exterior^2 H^1(C) = Q_l(-1) direct_sum W",
+    "dynkin_label_convention": "character labels use C2 conventions: C2 (0,1) corresponds to B2 (1,0), the 5-dimensional standard representation, while C2 (2,0) corresponds to B2 (0,2), the 10-dimensional adjoint",
+    "input": "H^1(C), dimension 4, symplectic similitude of weight one",
+    "monodromy_firewall": "this identifies the ambient Sp4/SO5 representation; it does not prove that the actual quintic-family local system has full SO(5) geometric or arithmetic monodromy or no additional invariant subsystem",
+    "normalized_compact_representation": "USp(4)/{+I,-I} isomorphic to SO(5), with W the standard 5-dimensional representation",
+    "primitive_W_dimension": 5,
+    "primitive_weight": 2
+  },
+  "literature_boundary": {
+    "classical_context": "the degree-five standard GSp(4) local factor and its unit eigenvalue are classical; this packet does not claim their discovery",
+    "primary_reference": "Daniel File, On the degree five L-function for GSp(4), arXiv:1201.2783, https://arxiv.org/abs/1201.2783",
+    "project_specific_contribution": "exact pushforward of the locked marked-quintic coefficient laws, the all-q finite character Gram defects, and the frozen orientation moment anomaly with reproducible source locks"
+  },
+  "payload_sha256": "235991e9e36a55ec8352a7c18fc2e0722546267daf51a17642ff767c3387ab1c",
+  "pointwise_local_eigenline_without_forced_common_line": {
+    "actual_family_level": "the family monodromy group is not determined here; it could be a proper subgroup, and special or endoscopic loci can acquire extra invariant subsystems",
+    "ambient_representation_level": "Lambda^2(Std_Sp4)=1 direct_sum W, and W is irreducible as the ambient 5-dimensional SO(5) representation, so it has no forced SO(5)-common invariant vector",
+    "endoscopic_specialization": "if H1=V1 direct_sum V2, then exterior^2 H1 contains the two Tate lines exterior^2 V1 and exterior^2 V2; after removing the diagonal polarization line, the primitive factor retains the anti-diagonal line",
+    "formal_Euler_product_warning": "the quotient is genuine for each procyclic finite-field fiber, but assembling the varying quartics across a family or across primes into a compatible representation, motive, or automorphic system remains formal; bad factors and analytic continuation are not analyzed",
+    "group_reason": "every element of odd-dimensional SO(5) has an eigenvalue 1: reciprocal eigenvalue pairs leave one unpaired eigenvalue and determinant one forces it to be 1",
+    "identity": "R(T)=(1-q*T)*Q_local(T) for every input polynomial",
+    "individual_finite_field_fiber_level": "Gal(F_qbar/F_q) is procyclic, so the q-eigenspace is an actual Frobenius-stable Q_l(-1) line on each fiber; it is canonical when the q eigenvalue has multiplicity one",
+    "noncanonical_tensor_warning": "the four cross roots resemble a 2-by-2 tensor product only after choosing and ordering two torus eigenvalue pairs; they do not define two global rank-two factors",
+    "normalized_quartic": "Q_local(z/q)=1+(1-s)*z+(1-s+k)*z^2+(1-s)*z^3+z^4",
+    "quartic": "Q_local(T)=1+(2*q-b)*T+q*(a^2-2*b+2*q)*T^2+q^2*(2*q-b)*T^3+q^4*T^4",
+    "torus_cross_eigenvalues": "if normalized H1 has eigenvalues x,x^-1,y,y^-1, then Q_local has roots x*y,x/y,y/x,(x*y)^-1",
+    "why_not_a_forced_common_Tate_subrepresentation": "the fixed axis varies with the SO(5) element, so ambient representation theory supplies no second common line; this does not rule out a line for a smaller actual family monodromy group"
+  },
+  "polynomial_theorem": {
+    "canonical_polarization_Tate_factor": "1-q*T",
+    "coefficient_recovery": "R determines b/q=1+s and a^2/q=1+s+k, but not the sign of a",
+    "full_exterior_square_degree_6": "1-b*T+q*(a^2-q)*T^2-2*q^2*(a^2-b)*T^3+q^3*(a^2-q)*T^4-q^4*b*T^5+q^6*T^6",
+    "independent_derivations": [
+      "closed elementary-symmetric coefficient calculation",
+      "Newton recurrence with p_n(exterior^2)=(p_n(H1)^2-p_(2n)(H1))/2, followed by exact Tate division"
+    ],
+    "input": "P_C(T)=1+a*T+b*T^2+q*a*T^3+q^2*T^4",
+    "normalized_character_form": "R(z/q)=1-s*z+k*z^2-k*z^3+s*z^4-z^5, with s=b/q-1=chi_(0,1) and k=(a^2-b)/q=chi_(2,0)",
+    "primitive_degree_5": "R(T)=1+(q-b)*T+q*(a^2-b)*T^2-q^2*(a^2-b)*T^3+q^3*(b-q)*T^4-q^5*T^5"
+  },
+  "producer_and_source_locks": {
+    "input_method": "complete JSON (a,b) histogram pushforward only",
+    "locks": {
+      "all_q_moment_certificate": {
+        "path": "research/l-families/atlas/function_field/genus2_moment_identity.py",
+        "sha256_lf_normalized": "c9c9ca527623b3d589d79175f56e605f07b5dbad3f09a46c4a978ef54ed216a4"
+      },
+      "all_q_moment_note": {
+        "path": "research/l-families/atlas/function_field/GENUS2_MOMENT_IDENTITY.md",
+        "sha256_lf_normalized": "69272720e27f9630220be0fc083cd16bb22a94c73b57b466740aa4b77dcc6277"
+      },
+      "balanced_fixture": {
+        "path": "research/l-families/atlas/function_field/balanced_control_family_scan.json",
+        "payload_sha256": "50fd136eb0483387246766c5f2426c3e727c69cd9a89943f9268368db0f9d39c",
+        "sha256_lf_normalized": "c3494ae852fda4e754b3b0da7cb30a26e3e38ec1c87e2619cd6fee6cdc68b68e"
+      },
+      "balanced_source": {
+        "path": "research/l-families/atlas/function_field/balanced_control_family_scan.py",
+        "sha256_lf_normalized": "7192fa26b0ea17cb68cff288620ea4dfb124e07807986d9c74fbd37e66087d3b"
+      },
+      "genus2_formula_fixture": {
+        "path": "research/l-families/atlas/function_field/genus2_q_scan.json",
+        "payload_sha256": "80a28d820e45b2548e3e4b482982ef8313c8919f4a3fb9cc2c0b622b244870b5",
+        "sha256_lf_normalized": "b49b7e2803401904b0bc1f82eb442bf1d8e81bdeb1ec388ff7fb14e7e5628dc6"
+      },
+      "genus2_formula_source": {
+        "path": "research/l-families/atlas/function_field/genus2_q_scan.py",
+        "sha256_lf_normalized": "f595dbf52d4265cfe2ea6888255f53df887fed77e204103f2b0dfd95e961f935"
+      },
+      "note": {
+        "path": "research/l-families/atlas/function_field/GENUS2_PRIMITIVE_EXTERIOR_SQUARE.md",
+        "sha256_lf_normalized": "033cf1e6342248e037e7c375e17f47071fb5ffdfd40c649be124271055f77f32"
+      },
+      "producer": {
+        "path": "research/l-families/atlas/function_field/genus2_primitive_exterior_square.py",
+        "sha256_lf_normalized": "d86c58fc8a1752f43402009f1abc467a58064418a723d2fd5cf6bf8fae32e5f4"
+      },
+      "test": {
+        "path": "tests/test_genus2_primitive_exterior_square.py",
+        "sha256_lf_normalized": "0190f49dd1f1f6b78ab9d73b9d11bb44861a50068e451e4719c2337c08789293"
+      }
+    },
+    "no_field_or_curve_enumeration": true
+  },
+  "raw_fixture_id": "genus2-primitive-exterior-square-q3-q5-q7-v1",
+  "resource_contract": {
+    "accounted_work_unit_ledger": {
+      "coefficient_character_terms": 690,
+      "frozen_trace_moment_terms": 594,
+      "histogram_atom_visits": 251,
+      "newton_atom_checks": 251,
+      "total_accounted_work_units": 2843,
+      "weyl_constant_term_pairs": 231,
+      "weyl_laurent_term_products": 826
+    },
+    "exclusive_accounted_work_unit_cap": 10000,
+    "field_or_curve_enumerations": 0,
+    "floating_point_results": 0,
+    "maximum_frozen_moment_order": 8,
+    "maximum_polynomial_degree": 6,
+    "random_samples": 0,
+    "unit_definition": "declared high-level histogram visits, formula terms, Newton comparisons, division checks, and Laurent-term products; not literal arithmetic instructions or a wall-clock complexity bound"
+  },
+  "rigor_level": {
+    "SO5_Haar_baseline": "EXACT_B2_WEYL_CONSTANT_TERM",
+    "all_q_moments": "PROVED_FOR_EVERY_ODD_PRIME_POWER_FROM_LOCKED_INPUT_THEOREM",
+    "finite_laws": "EXACT_ONLY_FOR_Q_3_5_7_FROM_COMPLETE_LOCKED_HISTOGRAMS",
+    "monodromy_and_global_analytic_claims": "NOT_ASSERTED",
+    "polynomial_identities": "PROVED_POINTWISE_BY_TWO_EXACT_DERIVATIONS"
+  },
+  "schema": "riemann.function_field.genus2_primitive_exterior_square.v1",
+  "scope_firewall": {
+    "no_analytic_or_RH_claim": "local polynomial identities and compact Haar comparisons imply no analytic continuation, functional equation, zero-free region, RH, or GRH result",
+    "no_forced_second_common_Tate_line": "ambient SO(5) representation theory forces only the canonical polarization line; every individual finite-field fiber has a genuine q-eigenline, while the actual family monodromy and its possible extra sub-local-systems remain undetermined",
+    "no_frozen_to_asymptotic_inference": "q=3,5,7 laws are complete finite facts and are not fitted to a convergence rate or new all-q formula",
+    "no_full_monodromy_claim": "the representation factors through SO(5), but this packet does not prove Zariski-dense family monodromy",
+    "no_measure_substitution": "uniform marked quintic/model-stack weights are not relabeled as uniform coarse curve or twist-orbit weights"
+  },
+  "status": "EXACT_ALL_Q_ALGEBRA_LOW_MOMENTS_AND_FROZEN_HISTOGRAM_TRANSFORM",
+  "strange_next_targets": [
+    {
+      "known": "every primitive local polynomial has a q-eigenvalue, while the ambient irreducible SO(5) representation forces no second common line; special/endoscopic family loci may nevertheless have one",
+      "name": "unisingular_local_global_gap",
+      "open": "determine when the formal quartic Euler product has an independent automorphic or motivic realization and how any compensating zero/pole appears globally"
+    },
+    {
+      "known": "the compact SO(5) fifth trace moment is 1, unlike O(5)",
+      "name": "orientation_moment",
+      "open": "obtain an all-q evaluation or power-saving estimate for mean((b/q-1)^5) and isolate its epsilon-tensor contribution"
+    },
+    {
+      "known": "the exact means of s,s^2,k,k^2,s*k quantify failure of finite-family character orthogonality through order two",
+      "name": "finite_character_Gram_matrix",
+      "open": "diagonalize higher character Gram blocks and identify which corrections are boundary, endoscopic, or automorphic"
+    },
+    {
+      "known": "the primitive factor records exactly a^2 and b, losing only the signed a coordinate",
+      "name": "twist_quotient_family",
+      "open": "compare its natural stack measure with uniform coarse twist-orbits without substituting one for the other"
+    }
+  ]
+}

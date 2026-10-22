@@ -1,0 +1,4311 @@
+{
+  "frozen_histogram_census": [
+    {
+      "component_incidence_census": {
+        "C_component_rank_drop": {
+          "pair_count": 18,
+          "pair_fraction_of_all_product_pairs": [
+            1,
+            162
+          ],
+          "source_atom_pair_count": 2
+        },
+        "C_trace_zero_component": {
+          "pair_count": 540,
+          "pair_fraction_of_all_product_pairs": [
+            5,
+            27
+          ],
+          "source_atom_pair_count": 28
+        },
+        "E_component_rank_drop": {
+          "pair_count": 48,
+          "pair_fraction_of_all_product_pairs": [
+            4,
+            243
+          ],
+          "source_atom_pair_count": 4
+        },
+        "E_trace_zero_component": {
+          "pair_count": 648,
+          "pair_fraction_of_all_product_pairs": [
+            2,
+            9
+          ],
+          "source_atom_pair_count": 32
+        },
+        "component_intersection": {
+          "pair_count": 120,
+          "pair_fraction_of_all_product_pairs": [
+            10,
+            243
+          ],
+          "source_atom_pair_count": 4
+        },
+        "rank_drop_intersection": {
+          "pair_count": 0,
+          "pair_fraction_of_all_product_pairs": [
+            0,
+            1
+          ],
+          "source_atom_pair_count": 0
+        }
+      },
+      "exact_replay_checks": {
+        "A_conversion": "A=-t_E applied before every histogram pair",
+        "no_product_packet_histogram_reuse": true,
+        "symbolic_member_checks": 224,
+        "trace_zero_integer_square_checks": 56
+      },
+      "product_model_pair_count": 2916,
+      "q": 3,
+      "source_histogram_sizes": {
+        "cartesian_histogram_atom_pairs": 224,
+        "genus1_trace_atoms": 7,
+        "genus2_joint_a_b_atoms": 32
+      },
+      "strata": {
+        "C_trace_zero_only": {
+          "coordinate_distribution_summaries_and_moment_shares": {
+            "h": {
+              "maximum_normalized_value": [
+                23,
+                9
+              ],
+              "minimum_normalized_value": [
+                -14,
+                9
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    35,
+                    243
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 420
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    2,
+                    243
+                  ],
+                  "conditional_mean": [
+                    2,
+                    35
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 216
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    1552,
+                    6561
+                  ],
+                  "conditional_mean": [
+                    1552,
+                    945
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 55872
+                }
+              ],
+              "normalization_denominator_before_reduction": 9,
+              "numerator_name": "H",
+              "support_size": 8,
+              "zero_value_pair_count": 0
+            },
+            "signed_square_root_R_over_q": {
+              "maximum_normalized_value": [
+                7,
+                3
+              ],
+              "minimum_normalized_value": [
+                -7,
+                3
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    35,
+                    243
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 420
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    -76,
+                    729
+                  ],
+                  "conditional_mean": [
+                    -76,
+                    105
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": -912
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    64,
+                    243
+                  ],
+                  "conditional_mean": [
+                    64,
+                    35
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 6912
+                }
+              ],
+              "normalization_denominator_before_reduction": 3,
+              "numerator_name": "R",
+              "support_size": 12,
+              "zero_value_pair_count": 18
+            },
+            "transverse_rank_drop_detector_L": {
+              "maximum_normalized_value": [
+                49,
+                9
+              ],
+              "minimum_normalized_value": [
+                0,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    35,
+                    243
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 420
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    64,
+                    243
+                  ],
+                  "conditional_mean": [
+                    64,
+                    35
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 6912
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    6284,
+                    6561
+                  ],
+                  "conditional_mean": [
+                    6284,
+                    945
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 226224
+                }
+              ],
+              "normalization_denominator_before_reduction": 9,
+              "numerator_name": "L_num",
+              "support_size": 7,
+              "zero_value_pair_count": 18
+            },
+            "v": {
+              "maximum_normalized_value": [
+                4,
+                3
+              ],
+              "minimum_normalized_value": [
+                -20,
+                9
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    35,
+                    243
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 420
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    -4,
+                    243
+                  ],
+                  "conditional_mean": [
+                    -4,
+                    35
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": -432
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    256,
+                    2187
+                  ],
+                  "conditional_mean": [
+                    256,
+                    315
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 27648
+                }
+              ],
+              "normalization_denominator_before_reduction": 9,
+              "numerator_name": "V",
+              "support_size": 10,
+              "zero_value_pair_count": 168
+            }
+          },
+          "pair_count": 420,
+          "pair_fraction_of_all_product_pairs": [
+            35,
+            243
+          ],
+          "source_atom_pair_count": 24,
+          "square_identity": "L=(R/q)^2 on u=w=0, with R=A^2+b-2*q",
+          "transverse_degenerate_fraction_within_stratum": [
+            3,
+            70
+          ],
+          "transverse_degenerate_pair_count": 18
+        },
+        "E_trace_zero_only": {
+          "coordinate_distribution_summaries_and_moment_shares": {
+            "h": {
+              "maximum_normalized_value": [
+                37,
+                9
+              ],
+              "minimum_normalized_value": [
+                -11,
+                9
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    44,
+                    243
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 528
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    568,
+                    2187
+                  ],
+                  "conditional_mean": [
+                    142,
+                    99
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 6816
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    12736,
+                    19683
+                  ],
+                  "conditional_mean": [
+                    3184,
+                    891
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 152832
+                }
+              ],
+              "normalization_denominator_before_reduction": 9,
+              "numerator_name": "H",
+              "support_size": 11,
+              "zero_value_pair_count": 24
+            },
+            "signed_square_root_R_over_q": {
+              "maximum_normalized_value": [
+                1,
+                3
+              ],
+              "minimum_normalized_value": [
+                -8,
+                3
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    44,
+                    243
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 528
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    -16,
+                    81
+                  ],
+                  "conditional_mean": [
+                    -12,
+                    11
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": -1728
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    688,
+                    2187
+                  ],
+                  "conditional_mean": [
+                    172,
+                    99
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 8256
+                }
+              ],
+              "normalization_denominator_before_reduction": 3,
+              "numerator_name": "R",
+              "support_size": 10,
+              "zero_value_pair_count": 48
+            },
+            "transverse_rank_drop_detector_L": {
+              "maximum_normalized_value": [
+                64,
+                9
+              ],
+              "minimum_normalized_value": [
+                0,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    44,
+                    243
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 528
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    688,
+                    2187
+                  ],
+                  "conditional_mean": [
+                    172,
+                    99
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 8256
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    22096,
+                    19683
+                  ],
+                  "conditional_mean": [
+                    5524,
+                    891
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 265152
+                }
+              ],
+              "normalization_denominator_before_reduction": 9,
+              "numerator_name": "L_num",
+              "support_size": 9,
+              "zero_value_pair_count": 48
+            },
+            "v": {
+              "maximum_normalized_value": [
+                5,
+                3
+              ],
+              "minimum_normalized_value": [
+                -3,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    44,
+                    243
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 528
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    -112,
+                    729
+                  ],
+                  "conditional_mean": [
+                    -28,
+                    33
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": -4032
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    256,
+                    729
+                  ],
+                  "conditional_mean": [
+                    64,
+                    33
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 82944
+                }
+              ],
+              "normalization_denominator_before_reduction": 9,
+              "numerator_name": "V",
+              "support_size": 11,
+              "zero_value_pair_count": 72
+            }
+          },
+          "pair_count": 528,
+          "pair_fraction_of_all_product_pairs": [
+            44,
+            243
+          ],
+          "source_atom_pair_count": 28,
+          "square_identity": "L=(R/q)^2 on u=w=0, with R=A^2+b-2*q",
+          "transverse_degenerate_fraction_within_stratum": [
+            1,
+            11
+          ],
+          "transverse_degenerate_pair_count": 48
+        },
+        "both_trace_zero": {
+          "coordinate_distribution_summaries_and_moment_shares": {
+            "h": {
+              "maximum_normalized_value": [
+                34,
+                9
+              ],
+              "minimum_normalized_value": [
+                2,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    10,
+                    243
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 120
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    76,
+                    729
+                  ],
+                  "conditional_mean": [
+                    38,
+                    15
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 2736
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    616,
+                    2187
+                  ],
+                  "conditional_mean": [
+                    308,
+                    45
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 66528
+                }
+              ],
+              "normalization_denominator_before_reduction": 9,
+              "numerator_name": "H",
+              "support_size": 3,
+              "zero_value_pair_count": 0
+            },
+            "signed_square_root_R_over_q": {
+              "maximum_normalized_value": [
+                -2,
+                3
+              ],
+              "minimum_normalized_value": [
+                -8,
+                3
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    10,
+                    243
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 120
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    -56,
+                    729
+                  ],
+                  "conditional_mean": [
+                    -28,
+                    15
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": -672
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    40,
+                    243
+                  ],
+                  "conditional_mean": [
+                    4,
+                    1
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 4320
+                }
+              ],
+              "normalization_denominator_before_reduction": 3,
+              "numerator_name": "R",
+              "support_size": 4,
+              "zero_value_pair_count": 0
+            },
+            "transverse_rank_drop_detector_L": {
+              "maximum_normalized_value": [
+                64,
+                9
+              ],
+              "minimum_normalized_value": [
+                4,
+                9
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    10,
+                    243
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 120
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    40,
+                    243
+                  ],
+                  "conditional_mean": [
+                    4,
+                    1
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 4320
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    5920,
+                    6561
+                  ],
+                  "conditional_mean": [
+                    592,
+                    27
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 213120
+                }
+              ],
+              "normalization_denominator_before_reduction": 9,
+              "numerator_name": "L_num",
+              "support_size": 4,
+              "zero_value_pair_count": 0
+            },
+            "v": {
+              "maximum_normalized_value": [
+                4,
+                3
+              ],
+              "minimum_normalized_value": [
+                -8,
+                3
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    10,
+                    243
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 120
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    -8,
+                    729
+                  ],
+                  "conditional_mean": [
+                    -4,
+                    15
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": -288
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    64,
+                    729
+                  ],
+                  "conditional_mean": [
+                    32,
+                    15
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 20736
+                }
+              ],
+              "normalization_denominator_before_reduction": 9,
+              "numerator_name": "V",
+              "support_size": 4,
+              "zero_value_pair_count": 48
+            }
+          },
+          "pair_count": 120,
+          "pair_fraction_of_all_product_pairs": [
+            10,
+            243
+          ],
+          "source_atom_pair_count": 4,
+          "square_identity": "L=(R/q)^2 on u=w=0, with R=A^2+b-2*q",
+          "transverse_degenerate_fraction_within_stratum": [
+            0,
+            1
+          ],
+          "transverse_degenerate_pair_count": 0
+        },
+        "singular_trace_zero_total": {
+          "coordinate_distribution_summaries_and_moment_shares": {
+            "h": {
+              "maximum_normalized_value": [
+                37,
+                9
+              ],
+              "minimum_normalized_value": [
+                -14,
+                9
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    89,
+                    243
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 1068
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    814,
+                    2187
+                  ],
+                  "conditional_mean": [
+                    814,
+                    801
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 9768
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    22936,
+                    19683
+                  ],
+                  "conditional_mean": [
+                    22936,
+                    7209
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 275232
+                }
+              ],
+              "normalization_denominator_before_reduction": 9,
+              "numerator_name": "H",
+              "support_size": 22,
+              "zero_value_pair_count": 24
+            },
+            "signed_square_root_R_over_q": {
+              "maximum_normalized_value": [
+                7,
+                3
+              ],
+              "minimum_normalized_value": [
+                -8,
+                3
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    89,
+                    243
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 1068
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    -92,
+                    243
+                  ],
+                  "conditional_mean": [
+                    -92,
+                    89
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": -3312
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    1624,
+                    2187
+                  ],
+                  "conditional_mean": [
+                    1624,
+                    801
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 19488
+                }
+              ],
+              "normalization_denominator_before_reduction": 3,
+              "numerator_name": "R",
+              "support_size": 14,
+              "zero_value_pair_count": 66
+            },
+            "transverse_rank_drop_detector_L": {
+              "maximum_normalized_value": [
+                64,
+                9
+              ],
+              "minimum_normalized_value": [
+                0,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    89,
+                    243
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 1068
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    1624,
+                    2187
+                  ],
+                  "conditional_mean": [
+                    1624,
+                    801
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 19488
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    58708,
+                    19683
+                  ],
+                  "conditional_mean": [
+                    58708,
+                    7209
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 704496
+                }
+              ],
+              "normalization_denominator_before_reduction": 9,
+              "numerator_name": "L_num",
+              "support_size": 9,
+              "zero_value_pair_count": 66
+            },
+            "v": {
+              "maximum_normalized_value": [
+                5,
+                3
+              ],
+              "minimum_normalized_value": [
+                -3,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    89,
+                    243
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 1068
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    -44,
+                    243
+                  ],
+                  "conditional_mean": [
+                    -44,
+                    89
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": -4752
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    1216,
+                    2187
+                  ],
+                  "conditional_mean": [
+                    1216,
+                    801
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 131328
+                }
+              ],
+              "normalization_denominator_before_reduction": 9,
+              "numerator_name": "V",
+              "support_size": 20,
+              "zero_value_pair_count": 288
+            }
+          },
+          "pair_count": 1068,
+          "pair_fraction_of_all_product_pairs": [
+            89,
+            243
+          ],
+          "source_atom_pair_count": 56,
+          "square_identity": "L=(R/q)^2 on u=w=0, with R=A^2+b-2*q",
+          "transverse_degenerate_fraction_within_stratum": [
+            11,
+            178
+          ],
+          "transverse_degenerate_pair_count": 66
+        },
+        "transverse_degenerate_union": {
+          "complete_joint_v_h_transverse_detector_law": {
+            "atoms": [
+              {
+                "normalized_v_h_L": [
+                  [
+                    -8,
+                    3
+                  ],
+                  [
+                    10,
+                    3
+                  ],
+                  [
+                    0,
+                    1
+                  ]
+                ],
+                "numerators_v_h_L_over_q_squared": [
+                  -24,
+                  30,
+                  0
+                ],
+                "pair_count": 24,
+                "pair_fraction_of_all_product_pairs": [
+                  2,
+                  243
+                ],
+                "pair_fraction_within_stratum": [
+                  4,
+                  11
+                ]
+              },
+              {
+                "normalized_v_h_L": [
+                  [
+                    -1,
+                    1
+                  ],
+                  [
+                    0,
+                    1
+                  ],
+                  [
+                    0,
+                    1
+                  ]
+                ],
+                "numerators_v_h_L_over_q_squared": [
+                  -9,
+                  0,
+                  0
+                ],
+                "pair_count": 24,
+                "pair_fraction_of_all_product_pairs": [
+                  2,
+                  243
+                ],
+                "pair_fraction_within_stratum": [
+                  4,
+                  11
+                ]
+              },
+              {
+                "normalized_v_h_L": [
+                  [
+                    -4,
+                    9
+                  ],
+                  [
+                    -10,
+                    9
+                  ],
+                  [
+                    0,
+                    1
+                  ]
+                ],
+                "numerators_v_h_L_over_q_squared": [
+                  -4,
+                  -10,
+                  0
+                ],
+                "pair_count": 18,
+                "pair_fraction_of_all_product_pairs": [
+                  1,
+                  162
+                ],
+                "pair_fraction_within_stratum": [
+                  3,
+                  11
+                ]
+              }
+            ],
+            "normalization": "v=V/q^2, h=H/q^2, L=L_num/q^2=h+2*v+2",
+            "support_size": 3
+          },
+          "coordinate_distribution_summaries_and_moment_shares": {
+            "h": {
+              "maximum_normalized_value": [
+                10,
+                3
+              ],
+              "minimum_normalized_value": [
+                -10,
+                9
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    11,
+                    486
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 66
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    5,
+                    243
+                  ],
+                  "conditional_mean": [
+                    10,
+                    11
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 540
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    650,
+                    6561
+                  ],
+                  "conditional_mean": [
+                    1300,
+                    297
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 23400
+                }
+              ],
+              "normalization_denominator_before_reduction": 9,
+              "numerator_name": "H",
+              "support_size": 3,
+              "zero_value_pair_count": 24
+            },
+            "signed_square_root_R_over_q": {
+              "maximum_normalized_value": [
+                0,
+                1
+              ],
+              "minimum_normalized_value": [
+                0,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    11,
+                    486
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 66
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    0,
+                    1
+                  ],
+                  "conditional_mean": [
+                    0,
+                    1
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 0
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    0,
+                    1
+                  ],
+                  "conditional_mean": [
+                    0,
+                    1
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 0
+                }
+              ],
+              "normalization_denominator_before_reduction": 3,
+              "numerator_name": "R",
+              "support_size": 1,
+              "zero_value_pair_count": 66
+            },
+            "transverse_rank_drop_detector_L": {
+              "maximum_normalized_value": [
+                0,
+                1
+              ],
+              "minimum_normalized_value": [
+                0,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    11,
+                    486
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 66
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    0,
+                    1
+                  ],
+                  "conditional_mean": [
+                    0,
+                    1
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 0
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    0,
+                    1
+                  ],
+                  "conditional_mean": [
+                    0,
+                    1
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 0
+                }
+              ],
+              "normalization_denominator_before_reduction": 9,
+              "numerator_name": "L_num",
+              "support_size": 1,
+              "zero_value_pair_count": 66
+            },
+            "v": {
+              "maximum_normalized_value": [
+                -4,
+                9
+              ],
+              "minimum_normalized_value": [
+                -8,
+                3
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    11,
+                    486
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 66
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    -8,
+                    243
+                  ],
+                  "conditional_mean": [
+                    -16,
+                    11
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": -864
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    446,
+                    6561
+                  ],
+                  "conditional_mean": [
+                    892,
+                    297
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 16056
+                }
+              ],
+              "normalization_denominator_before_reduction": 9,
+              "numerator_name": "V",
+              "support_size": 3,
+              "zero_value_pair_count": 0
+            }
+          },
+          "pair_count": 66,
+          "pair_fraction_of_all_product_pairs": [
+            11,
+            486
+          ],
+          "source_atom_pair_count": 6,
+          "square_identity": "L=(R/q)^2 on u=w=0, with R=A^2+b-2*q",
+          "transverse_degenerate_fraction_within_stratum": [
+            1,
+            1
+          ],
+          "transverse_degenerate_pair_count": 66
+        }
+      },
+      "trace_zero_partition_counts": {
+        "C_trace_zero_only": 420,
+        "E_trace_zero_only": 528,
+        "both_trace_zero": 120,
+        "neither_trace_zero": 1848,
+        "singular_trace_zero_total": 1068,
+        "transverse_degenerate_union": 66
+      },
+      "trace_zero_partition_fractions_of_all_product_pairs": {
+        "C_trace_zero_only": [
+          35,
+          243
+        ],
+        "E_trace_zero_only": [
+          44,
+          243
+        ],
+        "both_trace_zero": [
+          10,
+          243
+        ],
+        "neither_trace_zero": [
+          154,
+          243
+        ],
+        "singular_trace_zero_total": [
+          89,
+          243
+        ],
+        "transverse_degenerate_union": [
+          11,
+          486
+        ]
+      }
+    },
+    {
+      "component_incidence_census": {
+        "C_component_rank_drop": {
+          "pair_count": 2200,
+          "pair_fraction_of_all_product_pairs": [
+            11,
+            1250
+          ],
+          "source_atom_pair_count": 5
+        },
+        "C_trace_zero_component": {
+          "pair_count": 40600,
+          "pair_fraction_of_all_product_pairs": [
+            203,
+            1250
+          ],
+          "source_atom_pair_count": 81
+        },
+        "E_component_rank_drop": {
+          "pair_count": 2900,
+          "pair_fraction_of_all_product_pairs": [
+            29,
+            2500
+          ],
+          "source_atom_pair_count": 7
+        },
+        "E_trace_zero_component": {
+          "pair_count": 50000,
+          "pair_fraction_of_all_product_pairs": [
+            1,
+            5
+          ],
+          "source_atom_pair_count": 81
+        },
+        "component_intersection": {
+          "pair_count": 8120,
+          "pair_fraction_of_all_product_pairs": [
+            203,
+            6250
+          ],
+          "source_atom_pair_count": 9
+        },
+        "rank_drop_intersection": {
+          "pair_count": 100,
+          "pair_fraction_of_all_product_pairs": [
+            1,
+            2500
+          ],
+          "source_atom_pair_count": 1
+        }
+      },
+      "exact_replay_checks": {
+        "A_conversion": "A=-t_E applied before every histogram pair",
+        "no_product_packet_histogram_reuse": true,
+        "symbolic_member_checks": 729,
+        "trace_zero_integer_square_checks": 153
+      },
+      "product_model_pair_count": 250000,
+      "q": 5,
+      "source_histogram_sizes": {
+        "cartesian_histogram_atom_pairs": 729,
+        "genus1_trace_atoms": 9,
+        "genus2_joint_a_b_atoms": 81
+      },
+      "strata": {
+        "C_trace_zero_only": {
+          "coordinate_distribution_summaries_and_moment_shares": {
+            "h": {
+              "maximum_normalized_value": [
+                131,
+                25
+              ],
+              "minimum_normalized_value": [
+                -49,
+                25
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    406,
+                    3125
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 32480
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    1651,
+                    78125
+                  ],
+                  "conditional_mean": [
+                    1651,
+                    10150
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 132080
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    445271,
+                    1953125
+                  ],
+                  "conditional_mean": [
+                    445271,
+                    253750
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 35621680
+                }
+              ],
+              "normalization_denominator_before_reduction": 25,
+              "numerator_name": "H",
+              "support_size": 15,
+              "zero_value_pair_count": 0
+            },
+            "signed_square_root_R_over_q": {
+              "maximum_normalized_value": [
+                16,
+                5
+              ],
+              "minimum_normalized_value": [
+                -19,
+                5
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    406,
+                    3125
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 32480
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    -1204,
+                    15625
+                  ],
+                  "conditional_mean": [
+                    -86,
+                    145
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": -96320
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    18591,
+                    78125
+                  ],
+                  "conditional_mean": [
+                    18591,
+                    10150
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 1487280
+                }
+              ],
+              "normalization_denominator_before_reduction": 5,
+              "numerator_name": "R",
+              "support_size": 28,
+              "zero_value_pair_count": 2100
+            },
+            "transverse_rank_drop_detector_L": {
+              "maximum_normalized_value": [
+                361,
+                25
+              ],
+              "minimum_normalized_value": [
+                0,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    406,
+                    3125
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 32480
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    18591,
+                    78125
+                  ],
+                  "conditional_mean": [
+                    18591,
+                    10150
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 1487280
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    1990131,
+                    1953125
+                  ],
+                  "conditional_mean": [
+                    1990131,
+                    253750
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 159210480
+                }
+              ],
+              "normalization_denominator_before_reduction": 25,
+              "numerator_name": "L_num",
+              "support_size": 17,
+              "zero_value_pair_count": 2100
+            },
+            "v": {
+              "maximum_normalized_value": [
+                18,
+                5
+              ],
+              "minimum_normalized_value": [
+                -18,
+                5
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    406,
+                    3125
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 32480
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    -336,
+                    15625
+                  ],
+                  "conditional_mean": [
+                    -24,
+                    145
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": -134400
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    48664,
+                    390625
+                  ],
+                  "conditional_mean": [
+                    3476,
+                    3625
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 19465600
+                }
+              ],
+              "normalization_denominator_before_reduction": 25,
+              "numerator_name": "V",
+              "support_size": 23,
+              "zero_value_pair_count": 4000
+            }
+          },
+          "pair_count": 32480,
+          "pair_fraction_of_all_product_pairs": [
+            406,
+            3125
+          ],
+          "source_atom_pair_count": 72,
+          "square_identity": "L=(R/q)^2 on u=w=0, with R=A^2+b-2*q",
+          "transverse_degenerate_fraction_within_stratum": [
+            15,
+            232
+          ],
+          "transverse_degenerate_pair_count": 2100
+        },
+        "E_trace_zero_only": {
+          "coordinate_distribution_summaries_and_moment_shares": {
+            "h": {
+              "maximum_normalized_value": [
+                121,
+                25
+              ],
+              "minimum_normalized_value": [
+                -46,
+                25
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    1047,
+                    6250
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 41880
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    4273,
+                    15625
+                  ],
+                  "conditional_mean": [
+                    8546,
+                    5235
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 1709200
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    296354,
+                    390625
+                  ],
+                  "conditional_mean": [
+                    592708,
+                    130875
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 118541600
+                }
+              ],
+              "normalization_denominator_before_reduction": 25,
+              "numerator_name": "H",
+              "support_size": 29,
+              "zero_value_pair_count": 0
+            },
+            "signed_square_root_R_over_q": {
+              "maximum_normalized_value": [
+                1,
+                1
+              ],
+              "minimum_normalized_value": [
+                -3,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    1047,
+                    6250
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 41880
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    -544,
+                    3125
+                  ],
+                  "conditional_mean": [
+                    -1088,
+                    1047
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": -217600
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    4728,
+                    15625
+                  ],
+                  "conditional_mean": [
+                    3152,
+                    1745
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 1891200
+                }
+              ],
+              "normalization_denominator_before_reduction": 5,
+              "numerator_name": "R",
+              "support_size": 21,
+              "zero_value_pair_count": 2800
+            },
+            "transverse_rank_drop_detector_L": {
+              "maximum_normalized_value": [
+                9,
+                1
+              ],
+              "minimum_normalized_value": [
+                0,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    1047,
+                    6250
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 41880
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    4728,
+                    15625
+                  ],
+                  "conditional_mean": [
+                    3152,
+                    1745
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 1891200
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    479484,
+                    390625
+                  ],
+                  "conditional_mean": [
+                    319656,
+                    43625
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 191793600
+                }
+              ],
+              "normalization_denominator_before_reduction": 25,
+              "numerator_name": "L_num",
+              "support_size": 16,
+              "zero_value_pair_count": 2800
+            },
+            "v": {
+              "maximum_normalized_value": [
+                11,
+                5
+              ],
+              "minimum_normalized_value": [
+                -17,
+                5
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    1047,
+                    6250
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 41880
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    -478,
+                    3125
+                  ],
+                  "conditional_mean": [
+                    -956,
+                    1047
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": -956000
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    6268,
+                    15625
+                  ],
+                  "conditional_mean": [
+                    12536,
+                    5235
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 62680000
+                }
+              ],
+              "normalization_denominator_before_reduction": 25,
+              "numerator_name": "V",
+              "support_size": 21,
+              "zero_value_pair_count": 4000
+            }
+          },
+          "pair_count": 41880,
+          "pair_fraction_of_all_product_pairs": [
+            1047,
+            6250
+          ],
+          "source_atom_pair_count": 72,
+          "square_identity": "L=(R/q)^2 on u=w=0, with R=A^2+b-2*q",
+          "transverse_degenerate_fraction_within_stratum": [
+            70,
+            1047
+          ],
+          "transverse_degenerate_pair_count": 2800
+        },
+        "both_trace_zero": {
+          "coordinate_distribution_summaries_and_moment_shares": {
+            "h": {
+              "maximum_normalized_value": [
+                6,
+                1
+              ],
+              "minimum_normalized_value": [
+                2,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    203,
+                    6250
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 8120
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    1331,
+                    15625
+                  ],
+                  "conditional_mean": [
+                    2662,
+                    1015
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 532400
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    18566,
+                    78125
+                  ],
+                  "conditional_mean": [
+                    37132,
+                    5075
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 37132000
+                }
+              ],
+              "normalization_denominator_before_reduction": 25,
+              "numerator_name": "H",
+              "support_size": 5,
+              "zero_value_pair_count": 0
+            },
+            "signed_square_root_R_over_q": {
+              "maximum_normalized_value": [
+                0,
+                1
+              ],
+              "minimum_normalized_value": [
+                -4,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    203,
+                    6250
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 8120
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    -182,
+                    3125
+                  ],
+                  "conditional_mean": [
+                    -52,
+                    29
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": -72800
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    1926,
+                    15625
+                  ],
+                  "conditional_mean": [
+                    3852,
+                    1015
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 770400
+                }
+              ],
+              "normalization_denominator_before_reduction": 5,
+              "numerator_name": "R",
+              "support_size": 9,
+              "zero_value_pair_count": 100
+            },
+            "transverse_rank_drop_detector_L": {
+              "maximum_normalized_value": [
+                16,
+                1
+              ],
+              "minimum_normalized_value": [
+                0,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    203,
+                    6250
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 8120
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    1926,
+                    15625
+                  ],
+                  "conditional_mean": [
+                    3852,
+                    1015
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 770400
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    58536,
+                    78125
+                  ],
+                  "conditional_mean": [
+                    117072,
+                    5075
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 117072000
+                }
+              ],
+              "normalization_denominator_before_reduction": 25,
+              "numerator_name": "L_num",
+              "support_size": 9,
+              "zero_value_pair_count": 100
+            },
+            "v": {
+              "maximum_normalized_value": [
+                4,
+                1
+              ],
+              "minimum_normalized_value": [
+                -4,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    203,
+                    6250
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 8120
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    -42,
+                    3125
+                  ],
+                  "conditional_mean": [
+                    -12,
+                    29
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": -84000
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    1264,
+                    15625
+                  ],
+                  "conditional_mean": [
+                    2528,
+                    1015
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 12640000
+                }
+              ],
+              "normalization_denominator_before_reduction": 25,
+              "numerator_name": "V",
+              "support_size": 9,
+              "zero_value_pair_count": 1000
+            }
+          },
+          "pair_count": 8120,
+          "pair_fraction_of_all_product_pairs": [
+            203,
+            6250
+          ],
+          "source_atom_pair_count": 9,
+          "square_identity": "L=(R/q)^2 on u=w=0, with R=A^2+b-2*q",
+          "transverse_degenerate_fraction_within_stratum": [
+            5,
+            406
+          ],
+          "transverse_degenerate_pair_count": 100
+        },
+        "singular_trace_zero_total": {
+          "coordinate_distribution_summaries_and_moment_shares": {
+            "h": {
+              "maximum_normalized_value": [
+                6,
+                1
+              ],
+              "minimum_normalized_value": [
+                -49,
+                25
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    1031,
+                    3125
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 82480
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    29671,
+                    78125
+                  ],
+                  "conditional_mean": [
+                    29671,
+                    25775
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 2373680
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    2391191,
+                    1953125
+                  ],
+                  "conditional_mean": [
+                    2391191,
+                    644375
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 191295280
+                }
+              ],
+              "normalization_denominator_before_reduction": 25,
+              "numerator_name": "H",
+              "support_size": 46,
+              "zero_value_pair_count": 0
+            },
+            "signed_square_root_R_over_q": {
+              "maximum_normalized_value": [
+                16,
+                5
+              ],
+              "minimum_normalized_value": [
+                -4,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    1031,
+                    3125
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 82480
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    -4834,
+                    15625
+                  ],
+                  "conditional_mean": [
+                    -4834,
+                    5155
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": -386720
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    51861,
+                    78125
+                  ],
+                  "conditional_mean": [
+                    51861,
+                    25775
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 4148880
+                }
+              ],
+              "normalization_denominator_before_reduction": 5,
+              "numerator_name": "R",
+              "support_size": 30,
+              "zero_value_pair_count": 5000
+            },
+            "transverse_rank_drop_detector_L": {
+              "maximum_normalized_value": [
+                16,
+                1
+              ],
+              "minimum_normalized_value": [
+                0,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    1031,
+                    3125
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 82480
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    51861,
+                    78125
+                  ],
+                  "conditional_mean": [
+                    51861,
+                    25775
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 4148880
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    5850951,
+                    1953125
+                  ],
+                  "conditional_mean": [
+                    5850951,
+                    644375
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 468076080
+                }
+              ],
+              "normalization_denominator_before_reduction": 25,
+              "numerator_name": "L_num",
+              "support_size": 19,
+              "zero_value_pair_count": 5000
+            },
+            "v": {
+              "maximum_normalized_value": [
+                4,
+                1
+              ],
+              "minimum_normalized_value": [
+                -4,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    1031,
+                    3125
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 82480
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    -2936,
+                    15625
+                  ],
+                  "conditional_mean": [
+                    -2936,
+                    5155
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": -1174400
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    236964,
+                    390625
+                  ],
+                  "conditional_mean": [
+                    236964,
+                    128875
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 94785600
+                }
+              ],
+              "normalization_denominator_before_reduction": 25,
+              "numerator_name": "V",
+              "support_size": 45,
+              "zero_value_pair_count": 9000
+            }
+          },
+          "pair_count": 82480,
+          "pair_fraction_of_all_product_pairs": [
+            1031,
+            3125
+          ],
+          "source_atom_pair_count": 153,
+          "square_identity": "L=(R/q)^2 on u=w=0, with R=A^2+b-2*q",
+          "transverse_degenerate_fraction_within_stratum": [
+            125,
+            2062
+          ],
+          "transverse_degenerate_pair_count": 5000
+        },
+        "transverse_degenerate_union": {
+          "complete_joint_v_h_transverse_detector_law": {
+            "atoms": [
+              {
+                "normalized_v_h_L": [
+                  [
+                    -4,
+                    1
+                  ],
+                  [
+                    6,
+                    1
+                  ],
+                  [
+                    0,
+                    1
+                  ]
+                ],
+                "numerators_v_h_L_over_q_squared": [
+                  -100,
+                  150,
+                  0
+                ],
+                "pair_count": 100,
+                "pair_fraction_of_all_product_pairs": [
+                  1,
+                  2500
+                ],
+                "pair_fraction_within_stratum": [
+                  1,
+                  50
+                ]
+              },
+              {
+                "normalized_v_h_L": [
+                  [
+                    -16,
+                    5
+                  ],
+                  [
+                    22,
+                    5
+                  ],
+                  [
+                    0,
+                    1
+                  ]
+                ],
+                "numerators_v_h_L_over_q_squared": [
+                  -80,
+                  110,
+                  0
+                ],
+                "pair_count": 800,
+                "pair_fraction_of_all_product_pairs": [
+                  2,
+                  625
+                ],
+                "pair_fraction_within_stratum": [
+                  4,
+                  25
+                ]
+              },
+              {
+                "normalized_v_h_L": [
+                  [
+                    -11,
+                    5
+                  ],
+                  [
+                    12,
+                    5
+                  ],
+                  [
+                    0,
+                    1
+                  ]
+                ],
+                "numerators_v_h_L_over_q_squared": [
+                  -55,
+                  60,
+                  0
+                ],
+                "pair_count": 800,
+                "pair_fraction_of_all_product_pairs": [
+                  2,
+                  625
+                ],
+                "pair_fraction_within_stratum": [
+                  4,
+                  25
+                ]
+              },
+              {
+                "normalized_v_h_L": [
+                  [
+                    -36,
+                    25
+                  ],
+                  [
+                    22,
+                    25
+                  ],
+                  [
+                    0,
+                    1
+                  ]
+                ],
+                "numerators_v_h_L_over_q_squared": [
+                  -36,
+                  22,
+                  0
+                ],
+                "pair_count": 2100,
+                "pair_fraction_of_all_product_pairs": [
+                  21,
+                  2500
+                ],
+                "pair_fraction_within_stratum": [
+                  21,
+                  50
+                ]
+              },
+              {
+                "normalized_v_h_L": [
+                  [
+                    -4,
+                    5
+                  ],
+                  [
+                    -2,
+                    5
+                  ],
+                  [
+                    0,
+                    1
+                  ]
+                ],
+                "numerators_v_h_L_over_q_squared": [
+                  -20,
+                  -10,
+                  0
+                ],
+                "pair_count": 1200,
+                "pair_fraction_of_all_product_pairs": [
+                  3,
+                  625
+                ],
+                "pair_fraction_within_stratum": [
+                  6,
+                  25
+                ]
+              }
+            ],
+            "normalization": "v=V/q^2, h=H/q^2, L=L_num/q^2=h+2*v+2",
+            "support_size": 5
+          },
+          "coordinate_distribution_summaries_and_moment_shares": {
+            "h": {
+              "maximum_normalized_value": [
+                6,
+                1
+              ],
+              "minimum_normalized_value": [
+                -2,
+                5
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    1,
+                    50
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 5000
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    463,
+                    15625
+                  ],
+                  "conditional_mean": [
+                    926,
+                    625
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 185200
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    39866,
+                    390625
+                  ],
+                  "conditional_mean": [
+                    79732,
+                    15625
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 15946400
+                }
+              ],
+              "normalization_denominator_before_reduction": 25,
+              "numerator_name": "H",
+              "support_size": 5,
+              "zero_value_pair_count": 0
+            },
+            "signed_square_root_R_over_q": {
+              "maximum_normalized_value": [
+                0,
+                1
+              ],
+              "minimum_normalized_value": [
+                0,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    1,
+                    50
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 5000
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    0,
+                    1
+                  ],
+                  "conditional_mean": [
+                    0,
+                    1
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 0
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    0,
+                    1
+                  ],
+                  "conditional_mean": [
+                    0,
+                    1
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 0
+                }
+              ],
+              "normalization_denominator_before_reduction": 5,
+              "numerator_name": "R",
+              "support_size": 1,
+              "zero_value_pair_count": 5000
+            },
+            "transverse_rank_drop_detector_L": {
+              "maximum_normalized_value": [
+                0,
+                1
+              ],
+              "minimum_normalized_value": [
+                0,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    1,
+                    50
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 5000
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    0,
+                    1
+                  ],
+                  "conditional_mean": [
+                    0,
+                    1
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 0
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    0,
+                    1
+                  ],
+                  "conditional_mean": [
+                    0,
+                    1
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 0
+                }
+              ],
+              "normalization_denominator_before_reduction": 25,
+              "numerator_name": "L_num",
+              "support_size": 1,
+              "zero_value_pair_count": 5000
+            },
+            "v": {
+              "maximum_normalized_value": [
+                -4,
+                5
+              ],
+              "minimum_normalized_value": [
+                -4,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    1,
+                    50
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 5000
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    -544,
+                    15625
+                  ],
+                  "conditional_mean": [
+                    -1088,
+                    625
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": -217600
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    29354,
+                    390625
+                  ],
+                  "conditional_mean": [
+                    58708,
+                    15625
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 11741600
+                }
+              ],
+              "normalization_denominator_before_reduction": 25,
+              "numerator_name": "V",
+              "support_size": 5,
+              "zero_value_pair_count": 0
+            }
+          },
+          "pair_count": 5000,
+          "pair_fraction_of_all_product_pairs": [
+            1,
+            50
+          ],
+          "source_atom_pair_count": 11,
+          "square_identity": "L=(R/q)^2 on u=w=0, with R=A^2+b-2*q",
+          "transverse_degenerate_fraction_within_stratum": [
+            1,
+            1
+          ],
+          "transverse_degenerate_pair_count": 5000
+        }
+      },
+      "trace_zero_partition_counts": {
+        "C_trace_zero_only": 32480,
+        "E_trace_zero_only": 41880,
+        "both_trace_zero": 8120,
+        "neither_trace_zero": 167520,
+        "singular_trace_zero_total": 82480,
+        "transverse_degenerate_union": 5000
+      },
+      "trace_zero_partition_fractions_of_all_product_pairs": {
+        "C_trace_zero_only": [
+          406,
+          3125
+        ],
+        "E_trace_zero_only": [
+          1047,
+          6250
+        ],
+        "both_trace_zero": [
+          203,
+          6250
+        ],
+        "neither_trace_zero": [
+          2094,
+          3125
+        ],
+        "singular_trace_zero_total": [
+          1031,
+          3125
+        ],
+        "transverse_degenerate_union": [
+          1,
+          50
+        ]
+      }
+    },
+    {
+      "component_incidence_census": {
+        "C_component_rank_drop": {
+          "pair_count": 37044,
+          "pair_fraction_of_all_product_pairs": [
+            3,
+            343
+          ],
+          "source_atom_pair_count": 5
+        },
+        "C_trace_zero_component": {
+          "pair_count": 642096,
+          "pair_fraction_of_all_product_pairs": [
+            52,
+            343
+          ],
+          "source_atom_pair_count": 132
+        },
+        "E_component_rank_drop": {
+          "pair_count": 37044,
+          "pair_fraction_of_all_product_pairs": [
+            3,
+            343
+          ],
+          "source_atom_pair_count": 9
+        },
+        "E_trace_zero_component": {
+          "pair_count": 605052,
+          "pair_fraction_of_all_product_pairs": [
+            1,
+            7
+          ],
+          "source_atom_pair_count": 138
+        },
+        "component_intersection": {
+          "pair_count": 91728,
+          "pair_fraction_of_all_product_pairs": [
+            52,
+            2401
+          ],
+          "source_atom_pair_count": 12
+        },
+        "rank_drop_intersection": {
+          "pair_count": 1764,
+          "pair_fraction_of_all_product_pairs": [
+            1,
+            2401
+          ],
+          "source_atom_pair_count": 1
+        }
+      },
+      "exact_replay_checks": {
+        "A_conversion": "A=-t_E applied before every histogram pair",
+        "no_product_packet_histogram_reuse": true,
+        "symbolic_member_checks": 1518,
+        "trace_zero_integer_square_checks": 258
+      },
+      "product_model_pair_count": 4235364,
+      "q": 7,
+      "source_histogram_sizes": {
+        "cartesian_histogram_atom_pairs": 1518,
+        "genus1_trace_atoms": 11,
+        "genus2_joint_a_b_atoms": 138
+      },
+      "strata": {
+        "C_trace_zero_only": {
+          "coordinate_distribution_summaries_and_moment_shares": {
+            "h": {
+              "maximum_normalized_value": [
+                267,
+                49
+              ],
+              "minimum_normalized_value": [
+                -94,
+                49
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    312,
+                    2401
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 550368
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    9088,
+                    117649
+                  ],
+                  "conditional_mean": [
+                    1136,
+                    1911
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 16031232
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    2164544,
+                    5764801
+                  ],
+                  "conditional_mean": [
+                    270568,
+                    93639
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 3818255616
+                }
+              ],
+              "normalization_denominator_before_reduction": 49,
+              "numerator_name": "H",
+              "support_size": 34,
+              "zero_value_pair_count": 0
+            },
+            "signed_square_root_R_over_q": {
+              "maximum_normalized_value": [
+                25,
+                7
+              ],
+              "minimum_normalized_value": [
+                -23,
+                7
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    312,
+                    2401
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 550368
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    -24,
+                    343
+                  ],
+                  "conditional_mean": [
+                    -7,
+                    13
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": -2074464
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    31312,
+                    117649
+                  ],
+                  "conditional_mean": [
+                    3914,
+                    1911
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 55234368
+                }
+              ],
+              "normalization_denominator_before_reduction": 7,
+              "numerator_name": "R",
+              "support_size": 42,
+              "zero_value_pair_count": 35280
+            },
+            "transverse_rank_drop_detector_L": {
+              "maximum_normalized_value": [
+                625,
+                49
+              ],
+              "minimum_normalized_value": [
+                0,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    312,
+                    2401
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 550368
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    31312,
+                    117649
+                  ],
+                  "conditional_mean": [
+                    3914,
+                    1911
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 55234368
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    7600032,
+                    5764801
+                  ],
+                  "conditional_mean": [
+                    316668,
+                    31213
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 13406456448
+                }
+              ],
+              "normalization_denominator_before_reduction": 49,
+              "numerator_name": "L_num",
+              "support_size": 24,
+              "zero_value_pair_count": 35280
+            },
+            "v": {
+              "maximum_normalized_value": [
+                22,
+                7
+              ],
+              "minimum_normalized_value": [
+                -26,
+                7
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    312,
+                    2401
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 550368
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    -4176,
+                    117649
+                  ],
+                  "conditional_mean": [
+                    -174,
+                    637
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": -7366464
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    1146752,
+                    5764801
+                  ],
+                  "conditional_mean": [
+                    143344,
+                    93639
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 2022870528
+                }
+              ],
+              "normalization_denominator_before_reduction": 49,
+              "numerator_name": "V",
+              "support_size": 51,
+              "zero_value_pair_count": 84672
+            }
+          },
+          "pair_count": 550368,
+          "pair_fraction_of_all_product_pairs": [
+            312,
+            2401
+          ],
+          "source_atom_pair_count": 120,
+          "square_identity": "L=(R/q)^2 on u=w=0, with R=A^2+b-2*q",
+          "transverse_degenerate_fraction_within_stratum": [
+            5,
+            78
+          ],
+          "transverse_degenerate_pair_count": 35280
+        },
+        "E_trace_zero_only": {
+          "coordinate_distribution_summaries_and_moment_shares": {
+            "h": {
+              "maximum_normalized_value": [
+                253,
+                49
+              ],
+              "minimum_normalized_value": [
+                -83,
+                49
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    291,
+                    2401
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 513324
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    23762,
+                    117649
+                  ],
+                  "conditional_mean": [
+                    23762,
+                    14259
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 41916168
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    3175868,
+                    5764801
+                  ],
+                  "conditional_mean": [
+                    3175868,
+                    698691
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 5602231152
+                }
+              ],
+              "normalization_denominator_before_reduction": 49,
+              "numerator_name": "H",
+              "support_size": 48,
+              "zero_value_pair_count": 0
+            },
+            "signed_square_root_R_over_q": {
+              "maximum_normalized_value": [
+                11,
+                7
+              ],
+              "minimum_normalized_value": [
+                -22,
+                7
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    291,
+                    2401
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 513324
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    -2084,
+                    16807
+                  ],
+                  "conditional_mean": [
+                    -2084,
+                    2037
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": -3676176
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    26128,
+                    117649
+                  ],
+                  "conditional_mean": [
+                    26128,
+                    14259
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 46089792
+                }
+              ],
+              "normalization_denominator_before_reduction": 7,
+              "numerator_name": "R",
+              "support_size": 32,
+              "zero_value_pair_count": 35280
+            },
+            "transverse_rank_drop_detector_L": {
+              "maximum_normalized_value": [
+                484,
+                49
+              ],
+              "minimum_normalized_value": [
+                0,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    291,
+                    2401
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 513324
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    26128,
+                    117649
+                  ],
+                  "conditional_mean": [
+                    26128,
+                    14259
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 46089792
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    5312464,
+                    5764801
+                  ],
+                  "conditional_mean": [
+                    5312464,
+                    698691
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 9371186496
+                }
+              ],
+              "normalization_denominator_before_reduction": 49,
+              "numerator_name": "L_num",
+              "support_size": 23,
+              "zero_value_pair_count": 35280
+            },
+            "v": {
+              "maximum_normalized_value": [
+                17,
+                7
+              ],
+              "minimum_normalized_value": [
+                -25,
+                7
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    291,
+                    2401
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 513324
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    -1868,
+                    16807
+                  ],
+                  "conditional_mean": [
+                    -1868,
+                    2037
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": -23066064
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    34128,
+                    117649
+                  ],
+                  "conditional_mean": [
+                    11376,
+                    4753
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 2949887808
+                }
+              ],
+              "normalization_denominator_before_reduction": 49,
+              "numerator_name": "V",
+              "support_size": 31,
+              "zero_value_pair_count": 31752
+            }
+          },
+          "pair_count": 513324,
+          "pair_fraction_of_all_product_pairs": [
+            291,
+            2401
+          ],
+          "source_atom_pair_count": 126,
+          "square_identity": "L=(R/q)^2 on u=w=0, with R=A^2+b-2*q",
+          "transverse_degenerate_fraction_within_stratum": [
+            20,
+            291
+          ],
+          "transverse_degenerate_pair_count": 35280
+        },
+        "both_trace_zero": {
+          "coordinate_distribution_summaries_and_moment_shares": {
+            "h": {
+              "maximum_normalized_value": [
+                6,
+                1
+              ],
+              "minimum_normalized_value": [
+                2,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    52,
+                    2401
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 91728
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    7408,
+                    117649
+                  ],
+                  "conditional_mean": [
+                    1852,
+                    637
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 13067712
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    1176080,
+                    5764801
+                  ],
+                  "conditional_mean": [
+                    294020,
+                    31213
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 2074605120
+                }
+              ],
+              "normalization_denominator_before_reduction": 49,
+              "numerator_name": "H",
+              "support_size": 8,
+              "zero_value_pair_count": 0
+            },
+            "signed_square_root_R_over_q": {
+              "maximum_normalized_value": [
+                0,
+                1
+              ],
+              "minimum_normalized_value": [
+                -24,
+                7
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    52,
+                    2401
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 91728
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    -612,
+                    16807
+                  ],
+                  "conditional_mean": [
+                    -153,
+                    91
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": -1079568
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    9256,
+                    117649
+                  ],
+                  "conditional_mean": [
+                    178,
+                    49
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 16327584
+                }
+              ],
+              "normalization_denominator_before_reduction": 7,
+              "numerator_name": "R",
+              "support_size": 12,
+              "zero_value_pair_count": 1764
+            },
+            "transverse_rank_drop_detector_L": {
+              "maximum_normalized_value": [
+                576,
+                49
+              ],
+              "minimum_normalized_value": [
+                0,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    52,
+                    2401
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 91728
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    9256,
+                    117649
+                  ],
+                  "conditional_mean": [
+                    178,
+                    49
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 16327584
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    2968864,
+                    5764801
+                  ],
+                  "conditional_mean": [
+                    742216,
+                    31213
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 5237076096
+                }
+              ],
+              "normalization_denominator_before_reduction": 49,
+              "numerator_name": "L_num",
+              "support_size": 12,
+              "zero_value_pair_count": 1764
+            },
+            "v": {
+              "maximum_normalized_value": [
+                20,
+                7
+              ],
+              "minimum_normalized_value": [
+                -4,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    52,
+                    2401
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 91728
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    -232,
+                    16807
+                  ],
+                  "conditional_mean": [
+                    -58,
+                    91
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": -2864736
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    9248,
+                    117649
+                  ],
+                  "conditional_mean": [
+                    2312,
+                    637
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 799360128
+                }
+              ],
+              "normalization_denominator_before_reduction": 49,
+              "numerator_name": "V",
+              "support_size": 12,
+              "zero_value_pair_count": 14112
+            }
+          },
+          "pair_count": 91728,
+          "pair_fraction_of_all_product_pairs": [
+            52,
+            2401
+          ],
+          "source_atom_pair_count": 12,
+          "square_identity": "L=(R/q)^2 on u=w=0, with R=A^2+b-2*q",
+          "transverse_degenerate_fraction_within_stratum": [
+            1,
+            52
+          ],
+          "transverse_degenerate_pair_count": 1764
+        },
+        "singular_trace_zero_total": {
+          "coordinate_distribution_summaries_and_moment_shares": {
+            "h": {
+              "maximum_normalized_value": [
+                6,
+                1
+              ],
+              "minimum_normalized_value": [
+                -94,
+                49
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    655,
+                    2401
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 1155420
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    40258,
+                    117649
+                  ],
+                  "conditional_mean": [
+                    40258,
+                    32095
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 71015112
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    6516492,
+                    5764801
+                  ],
+                  "conditional_mean": [
+                    6516492,
+                    1572655
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 11495091888
+                }
+              ],
+              "normalization_denominator_before_reduction": 49,
+              "numerator_name": "H",
+              "support_size": 86,
+              "zero_value_pair_count": 0
+            },
+            "signed_square_root_R_over_q": {
+              "maximum_normalized_value": [
+                25,
+                7
+              ],
+              "minimum_normalized_value": [
+                -24,
+                7
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    655,
+                    2401
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 1155420
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    -3872,
+                    16807
+                  ],
+                  "conditional_mean": [
+                    -3872,
+                    4585
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": -6830208
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    9528,
+                    16807
+                  ],
+                  "conditional_mean": [
+                    9528,
+                    4585
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 117651744
+                }
+              ],
+              "normalization_denominator_before_reduction": 7,
+              "numerator_name": "R",
+              "support_size": 45,
+              "zero_value_pair_count": 72324
+            },
+            "transverse_rank_drop_detector_L": {
+              "maximum_normalized_value": [
+                625,
+                49
+              ],
+              "minimum_normalized_value": [
+                0,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    655,
+                    2401
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 1155420
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    9528,
+                    16807
+                  ],
+                  "conditional_mean": [
+                    9528,
+                    4585
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 117651744
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    15881360,
+                    5764801
+                  ],
+                  "conditional_mean": [
+                    3176272,
+                    314531
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 28014719040
+                }
+              ],
+              "normalization_denominator_before_reduction": 49,
+              "numerator_name": "L_num",
+              "support_size": 26,
+              "zero_value_pair_count": 72324
+            },
+            "v": {
+              "maximum_normalized_value": [
+                22,
+                7
+              ],
+              "minimum_normalized_value": [
+                -4,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    655,
+                    2401
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 1155420
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    -18876,
+                    117649
+                  ],
+                  "conditional_mean": [
+                    -18876,
+                    32095
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": -33297264
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    3272176,
+                    5764801
+                  ],
+                  "conditional_mean": [
+                    3272176,
+                    1572655
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 5772118464
+                }
+              ],
+              "normalization_denominator_before_reduction": 49,
+              "numerator_name": "V",
+              "support_size": 83,
+              "zero_value_pair_count": 130536
+            }
+          },
+          "pair_count": 1155420,
+          "pair_fraction_of_all_product_pairs": [
+            655,
+            2401
+          ],
+          "source_atom_pair_count": 258,
+          "square_identity": "L=(R/q)^2 on u=w=0, with R=A^2+b-2*q",
+          "transverse_degenerate_fraction_within_stratum": [
+            41,
+            655
+          ],
+          "transverse_degenerate_pair_count": 72324
+        },
+        "transverse_degenerate_union": {
+          "complete_joint_v_h_transverse_detector_law": {
+            "atoms": [
+              {
+                "normalized_v_h_L": [
+                  [
+                    -4,
+                    1
+                  ],
+                  [
+                    6,
+                    1
+                  ],
+                  [
+                    0,
+                    1
+                  ]
+                ],
+                "numerators_v_h_L_over_q_squared": [
+                  -196,
+                  294,
+                  0
+                ],
+                "pair_count": 1764,
+                "pair_fraction_of_all_product_pairs": [
+                  1,
+                  2401
+                ],
+                "pair_fraction_within_stratum": [
+                  1,
+                  41
+                ]
+              },
+              {
+                "normalized_v_h_L": [
+                  [
+                    -24,
+                    7
+                  ],
+                  [
+                    34,
+                    7
+                  ],
+                  [
+                    0,
+                    1
+                  ]
+                ],
+                "numerators_v_h_L_over_q_squared": [
+                  -168,
+                  238,
+                  0
+                ],
+                "pair_count": 3528,
+                "pair_fraction_of_all_product_pairs": [
+                  2,
+                  2401
+                ],
+                "pair_fraction_within_stratum": [
+                  2,
+                  41
+                ]
+              },
+              {
+                "normalized_v_h_L": [
+                  [
+                    -19,
+                    7
+                  ],
+                  [
+                    24,
+                    7
+                  ],
+                  [
+                    0,
+                    1
+                  ]
+                ],
+                "numerators_v_h_L_over_q_squared": [
+                  -133,
+                  168,
+                  0
+                ],
+                "pair_count": 14112,
+                "pair_fraction_of_all_product_pairs": [
+                  8,
+                  2401
+                ],
+                "pair_fraction_within_stratum": [
+                  8,
+                  41
+                ]
+              },
+              {
+                "normalized_v_h_L": [
+                  [
+                    -100,
+                    49
+                  ],
+                  [
+                    102,
+                    49
+                  ],
+                  [
+                    0,
+                    1
+                  ]
+                ],
+                "numerators_v_h_L_over_q_squared": [
+                  -100,
+                  102,
+                  0
+                ],
+                "pair_count": 21168,
+                "pair_fraction_of_all_product_pairs": [
+                  12,
+                  2401
+                ],
+                "pair_fraction_within_stratum": [
+                  12,
+                  41
+                ]
+              },
+              {
+                "normalized_v_h_L": [
+                  [
+                    -12,
+                    7
+                  ],
+                  [
+                    10,
+                    7
+                  ],
+                  [
+                    0,
+                    1
+                  ]
+                ],
+                "numerators_v_h_L_over_q_squared": [
+                  -84,
+                  70,
+                  0
+                ],
+                "pair_count": 10584,
+                "pair_fraction_of_all_product_pairs": [
+                  6,
+                  2401
+                ],
+                "pair_fraction_within_stratum": [
+                  6,
+                  41
+                ]
+              },
+              {
+                "normalized_v_h_L": [
+                  [
+                    -3,
+                    7
+                  ],
+                  [
+                    -8,
+                    7
+                  ],
+                  [
+                    0,
+                    1
+                  ]
+                ],
+                "numerators_v_h_L_over_q_squared": [
+                  -21,
+                  -56,
+                  0
+                ],
+                "pair_count": 7056,
+                "pair_fraction_of_all_product_pairs": [
+                  4,
+                  2401
+                ],
+                "pair_fraction_within_stratum": [
+                  4,
+                  41
+                ]
+              },
+              {
+                "normalized_v_h_L": [
+                  [
+                    -4,
+                    49
+                  ],
+                  [
+                    -90,
+                    49
+                  ],
+                  [
+                    0,
+                    1
+                  ]
+                ],
+                "numerators_v_h_L_over_q_squared": [
+                  -4,
+                  -90,
+                  0
+                ],
+                "pair_count": 14112,
+                "pair_fraction_of_all_product_pairs": [
+                  8,
+                  2401
+                ],
+                "pair_fraction_within_stratum": [
+                  8,
+                  41
+                ]
+              }
+            ],
+            "normalization": "v=V/q^2, h=H/q^2, L=L_num/q^2=h+2*v+2",
+            "support_size": 7
+          },
+          "coordinate_distribution_summaries_and_moment_shares": {
+            "h": {
+              "maximum_normalized_value": [
+                6,
+                1
+              ],
+              "minimum_normalized_value": [
+                -90,
+                49
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    41,
+                    2401
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 72324
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    402,
+                    16807
+                  ],
+                  "conditional_mean": [
+                    402,
+                    287
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 4963896
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    657108,
+                    5764801
+                  ],
+                  "conditional_mean": [
+                    657108,
+                    98441
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 1159138512
+                }
+              ],
+              "normalization_denominator_before_reduction": 49,
+              "numerator_name": "H",
+              "support_size": 7,
+              "zero_value_pair_count": 0
+            },
+            "signed_square_root_R_over_q": {
+              "maximum_normalized_value": [
+                0,
+                1
+              ],
+              "minimum_normalized_value": [
+                0,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    41,
+                    2401
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 72324
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    0,
+                    1
+                  ],
+                  "conditional_mean": [
+                    0,
+                    1
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 0
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    0,
+                    1
+                  ],
+                  "conditional_mean": [
+                    0,
+                    1
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 0
+                }
+              ],
+              "normalization_denominator_before_reduction": 7,
+              "numerator_name": "R",
+              "support_size": 1,
+              "zero_value_pair_count": 72324
+            },
+            "transverse_rank_drop_detector_L": {
+              "maximum_normalized_value": [
+                0,
+                1
+              ],
+              "minimum_normalized_value": [
+                0,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    41,
+                    2401
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 72324
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    0,
+                    1
+                  ],
+                  "conditional_mean": [
+                    0,
+                    1
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": 0
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    0,
+                    1
+                  ],
+                  "conditional_mean": [
+                    0,
+                    1
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 0
+                }
+              ],
+              "normalization_denominator_before_reduction": 49,
+              "numerator_name": "L_num",
+              "support_size": 1,
+              "zero_value_pair_count": 72324
+            },
+            "v": {
+              "maximum_normalized_value": [
+                -4,
+                49
+              ],
+              "minimum_normalized_value": [
+                -4,
+                1
+              ],
+              "moments_0_through_2": [
+                {
+                  "all_product_pair_moment_share": [
+                    41,
+                    2401
+                  ],
+                  "conditional_mean": [
+                    1,
+                    1
+                  ],
+                  "order": 0,
+                  "raw_numerator_power_sum": 72324
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    -488,
+                    16807
+                  ],
+                  "conditional_mean": [
+                    -488,
+                    287
+                  ],
+                  "order": 1,
+                  "raw_numerator_power_sum": -6025824
+                },
+                {
+                  "all_product_pair_moment_share": [
+                    400604,
+                    5764801
+                  ],
+                  "conditional_mean": [
+                    400604,
+                    98441
+                  ],
+                  "order": 2,
+                  "raw_numerator_power_sum": 706665456
+                }
+              ],
+              "normalization_denominator_before_reduction": 49,
+              "numerator_name": "V",
+              "support_size": 7,
+              "zero_value_pair_count": 0
+            }
+          },
+          "pair_count": 72324,
+          "pair_fraction_of_all_product_pairs": [
+            41,
+            2401
+          ],
+          "source_atom_pair_count": 13,
+          "square_identity": "L=(R/q)^2 on u=w=0, with R=A^2+b-2*q",
+          "transverse_degenerate_fraction_within_stratum": [
+            1,
+            1
+          ],
+          "transverse_degenerate_pair_count": 72324
+        }
+      },
+      "trace_zero_partition_counts": {
+        "C_trace_zero_only": 550368,
+        "E_trace_zero_only": 513324,
+        "both_trace_zero": 91728,
+        "neither_trace_zero": 3079944,
+        "singular_trace_zero_total": 1155420,
+        "transverse_degenerate_union": 72324
+      },
+      "trace_zero_partition_fractions_of_all_product_pairs": {
+        "C_trace_zero_only": [
+          312,
+          2401
+        ],
+        "E_trace_zero_only": [
+          291,
+          2401
+        ],
+        "both_trace_zero": [
+          52,
+          2401
+        ],
+        "neither_trace_zero": [
+          1746,
+          2401
+        ],
+        "singular_trace_zero_total": [
+          655,
+          2401
+        ],
+        "transverse_degenerate_union": [
+          41,
+          2401
+        ]
+      }
+    }
+  ],
+  "normalization_and_source_bridge": {
+    "coefficient_space": "u=c1/q, v=c2/q^2, w=c3/q^3, h=c4/q^4",
+    "genus1_fixture": "t_E=q+1-#E(F_q), L_E=1-t_E*T+q*T^2",
+    "genus2_fixture": "P_C=1+a*T+b*T^2+q*a*T^3+q^2*T^4",
+    "tensor_coefficient": "A=-t_E, P_E=1+A*T+q*T^2",
+    "trace_zero_meaning": "E trace zero iff A=0; C trace zero iff a=0"
+  },
+  "payload_sha256": "f34aec41ee76a79715e2dc20b522c0dab19b87a507db951c17018b30a0d21592",
+  "producer_and_source_locks": {
+    "input_method": "locked JSON histogram convolution plus exact symbolic algebra",
+    "locks": {
+      "balanced_fixture": {
+        "path": "research/l-families/atlas/function_field/balanced_control_family_scan.json",
+        "payload_sha256": "50fd136eb0483387246766c5f2426c3e727c69cd9a89943f9268368db0f9d39c",
+        "sha256_lf_normalized": "c3494ae852fda4e754b3b0da7cb30a26e3e38ec1c87e2619cd6fee6cdc68b68e"
+      },
+      "balanced_source": {
+        "path": "research/l-families/atlas/function_field/balanced_control_family_scan.py",
+        "sha256_lf_normalized": "7192fa26b0ea17cb68cff288620ea4dfb124e07807986d9c74fbd37e66087d3b"
+      },
+      "genus1_fixture": {
+        "path": "research/l-families/atlas/function_field/genus1_cubic_family_laws.json",
+        "payload_sha256": "183ffb31ae2f5776944e162e59390c40bd7081827b8731246e72e25a882e50df",
+        "sha256_lf_normalized": "b9016ae801cff40d15c53d96210b66a7d44fae7d916e827a0526b9dd42017227"
+      },
+      "genus1_source": {
+        "path": "research/l-families/atlas/function_field/genus1_cubic_family_laws.py",
+        "sha256_lf_normalized": "3d5baace952240c162c83bd5c66eb81db1704aee35e770de3d8df43fff669b79"
+      },
+      "note": {
+        "path": "research/l-families/atlas/function_field/TENSOR_TRACE_ZERO_SINGULAR_STRATA.md",
+        "sha256_lf_normalized": "96949bd179462cf2025ebe3710358ec670ab050bd016a06212ec5ab58f49cda2"
+      },
+      "producer": {
+        "path": "research/l-families/atlas/function_field/tensor_trace_zero_singular_strata.py",
+        "sha256_lf_normalized": "878c44730eb62b3e6fb429630b599be0b8fded74da919792dbaa636a51f056ec"
+      },
+      "product_tensor_fixture": {
+        "path": "research/l-families/atlas/function_field/product_variety_tensor_family.json",
+        "payload_sha256": "2b0e308554f5a6ace1640b2cbe438ad258c842a1db6424e5014b1ab88fded76a",
+        "sha256_lf_normalized": "5f38b43dcddead795c89739cbc9d7769d5af889154cac62264acb187f36a1c22"
+      },
+      "product_tensor_note": {
+        "path": "research/l-families/atlas/function_field/PRODUCT_VARIETY_TENSOR_FAMILY.md",
+        "sha256_lf_normalized": "fef7cbd8efd6053f998bd150076c15939e4c047580782e543929d93752cad068"
+      },
+      "product_tensor_source": {
+        "path": "research/l-families/atlas/function_field/product_variety_tensor_family.py",
+        "sha256_lf_normalized": "0fd3f0a3af3c549131640c64ada768af20314e93f0923479caf40d71f25b9761"
+      },
+      "test": {
+        "path": "tests/test_tensor_trace_zero_singular_strata.py",
+        "sha256_lf_normalized": "8e8cb0594b491734ac983d4dde5011a3656fc5c31b5f8a62acaa1cda9440dfb7"
+      }
+    }
+  },
+  "raw_fixture_id": "product-tensor-trace-zero-singular-strata-q3-q5-q7-v1",
+  "resource_contract": {
+    "arithmetic": "integers, fractions, and sparse integer polynomials only",
+    "field_or_curve_enumerations": 0,
+    "floating_point_arithmetic_or_results": 0,
+    "histogram_pair_operations": 2471,
+    "random_samples": 0,
+    "strict_cap_satisfied": true,
+    "strict_histogram_pair_cap": 20000
+  },
+  "rigor_level": {
+    "coefficient_map_pullback": "PROVED_BY_EXACT_INTEGER_POLYNOMIAL_IDENTITIES",
+    "finite_census": "EXACT_ONLY_FOR_Q_3_5_7_FROM_LOCKED_HISTOGRAMS",
+    "singular_locus": "PROVED_OVER_CHARACTERISTIC_NOT_2_AS_A_REDUCED_AFFINE_LOCUS",
+    "transverse_rank_drop": "PROVED_BY_EXACT_QUADRATIC_MATRIX_DETERMINANT"
+  },
+  "schema": "riemann.product-tensor-trace-zero-singular-strata.v1",
+  "scope_firewall": {
+    "coefficient_image_only": "This packet studies an ambient hypersurface containing the normalized coefficient image and the pullback of its singular strata to histogram parameters; equality with the full coefficient image is not asserted.",
+    "no_asymptotic_or_global_claim": "Three frozen finite fields imply no equidistribution theorem, asymptotic law, number-field transfer, RH statement, or GRH statement.",
+    "no_causal_classification": "The q=3,5,7 census counts coefficient states only; it does not classify supersingularity, twists, or endomorphism mechanisms.",
+    "no_extra_endomorphism_claim": "Trace-zero or transverse rank drop is not evidence, by itself, of extra endomorphisms, a correspondence, or enhanced geometric monodromy.",
+    "no_honda_tate_or_isogeny_import": "The two formal P_C factorizations are polynomial identities only in this packet; no Honda-Tate/Tate theorem is imported and no Jacobian splitting, isogeny, or extra-endomorphism conclusion is asserted.",
+    "no_singular_product_variety_claim": "A singular point of the ambient coefficient hypersurface does not say that E, C, or E x C is a singular variety."
+  },
+  "status": "EXACT_SYMBOLIC_GEOMETRY_AND_LOCKED_HISTOGRAM_CENSUS",
+  "symbolic_geometry": {
+    "adapted_coordinates": {
+      "L": "h+2*v+2",
+      "identity": "F=L*u^2-u^4-r^2",
+      "jacobian_ideal_in_characteristic_not_2": "(r,u^2,u*L)",
+      "pinch_coordinate": "lambda=L-u^2",
+      "pinch_point_identity": "r^2=u^2*lambda",
+      "r": "u+w",
+      "reduced_jacobian_ideal": "rad(r,u^2,u*L)=(u,r)=(u,w)",
+      "total_rank_drop_germ": "pinch point times the free v-line"
+    },
+    "arithmetic": "sparse multivariate polynomials with integer coefficients",
+    "coefficient_map_pullback": {
+      "C_trace_zero_component": {
+        "condition": "a=0, hence y=0",
+        "detector_square": "q^2*L=(A^2+b-2*q)^2",
+        "formal_P_C_factorization": "(1+A*T+q*T^2)*(1-A*T+q*T^2)",
+        "rank_drop_condition": "A^2+b=2*q",
+        "rank_drop_image": "z=2-x, v=-z^2, h=2*z^2-2",
+        "square_restriction": "2*q-b=A^2 is an integer square"
+      },
+      "E_trace_zero_component": {
+        "condition": "A=0, hence x=0",
+        "detector_square": "q^2*L=(b-2*q)^2",
+        "formal_P_C_factorization": "(1+q*T^2)*(1+a*T+q*T^2)",
+        "rank_drop_condition": "b=2*q",
+        "rank_drop_image": "v=y-4, h=6-2*y",
+        "square_restriction": "q*(v+4)=a^2 is an integer square"
+      },
+      "adapted_relations": {
+        "F_pullback": "u^2*(x*y-u^2)=0",
+        "L=h+2*v+2": "t^2+x*y=t^2+u^2",
+        "r=u+w": "u*t",
+        "t": "x+z-2"
+      },
+      "base_ring_scope": "the normalized x,y,z pullback is over Q (or any base where q is a unit); the target hypersurface singular-locus calculation separately needs only characteristic not 2",
+      "exact_symbolic_checks": {
+        "adapted_coordinate_identity": true,
+        "both_formal_P_C_factorizations_checked": true,
+        "both_rank_drop_branch_images_checked": true,
+        "detector_pullback_factored": true,
+        "hypersurface_pullback_reduced_mod_u2_minus_xy": true,
+        "partials_rebuilt": true,
+        "transverse_quadratic_extracted": true
+      },
+      "parameters": "x=A^2/q, y=a^2/q, z=b/q",
+      "rank_drop_intersection": {
+        "image": "(u,v,w,h)=(0,-4,0,6)",
+        "parameters": "A=a=0 and b=2*q"
+      },
+      "reduced_rank_drop_preimage": "(x=0,z=2) union (y=0,z=2-x)",
+      "relations": {
+        "h": "x^2+x*y-4*x-2*y+z^2+2",
+        "u^2": "x*y",
+        "v": "x*z+y-2*z",
+        "w": "u*(x+z-3)"
+      },
+      "scheme_pullback_after_clearing_q": {
+        "R": "A^2+b-2*q",
+        "rank_drop_line_ideal": "(A*a,R^2)",
+        "reduced_rank_drop_ideal": "rad(A*a,R^2)=(A*a,R)=(A,b-2*q) intersect (a,A^2+b-2*q)",
+        "singular_plane_ideal": "(A*a)"
+      },
+      "singular_preimage": "x*y=0: the union x=0 (A=0) and y=0 (a=0)"
+    },
+    "exact_partial_derivatives": {
+      "dF_dh": "u^2",
+      "dF_du": "2*u*h-4*u^3+4*u*v+2*u-2*w",
+      "dF_dv": "2*u^2",
+      "dF_dw": "-2*u-2*w"
+    },
+    "full_reduced_affine_singular_locus": "u=w=0, with v and h free",
+    "hypersurface": "F=u^2*h-u^4+2*u^2*v+u^2-2*u*w-w^2",
+    "transverse_quadratic_cone": {
+      "equation": "Q=(h+2*v+1)*u^2-2*u*w-w^2=L*u^2-r^2",
+      "fixed_original_v_h_slice_on_rank_drop_line_over_C": "F=-u^4-r^2, a slice-dependent A3 plane-curve singularity",
+      "hessian_determinant": "-4*(h+2*v+2)=-4*L",
+      "matrix_determinant": "-(h+2*v+2)=-L",
+      "matrix_in_(u,w)": [
+        [
+          "h+2*v+1",
+          -1
+        ],
+        [
+          -1,
+          -1
+        ]
+      ],
+      "rank_drop_line_inside_singular_plane": "u=w=0 and h+2*v+2=0",
+      "rank_off_line": 2,
+      "rank_on_line": 1,
+      "real_fixed_slice": "r^2+u^4=0 has only the real point u=r=0"
+    }
+  }
+}

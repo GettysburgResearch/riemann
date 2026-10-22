@@ -1,0 +1,233 @@
+{
+  "adapter_bindings": [
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "hash_mode": "RAW_BYTES",
+      "media_type": "text/x-python",
+      "notes": "Content checked by the offline atlas validator.",
+      "path": "research/l-families/atlas/function_field/genus2_pilot.py",
+      "role": "genus_two_exact_adapter",
+      "schema_path": null,
+      "sha256": "0025238e058ce20140f2ec6899a65e1c122caaa7c61a37e1df1934b6115fa90b"
+    },
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "hash_mode": "RAW_BYTES",
+      "media_type": "text/x-python",
+      "notes": "Content checked by the offline atlas validator.",
+      "path": "research/l-families/atlas/function_field/pilot.py",
+      "role": "polynomial_arithmetic_adapter",
+      "schema_path": null,
+      "sha256": "c9b4873daa50e96859c2c079dc031ebcdb5193bd495656e7049bfc6836a93258"
+    }
+  ],
+  "arithmetic": {
+    "class": "CERTIFIED_INTEGER_COVERAGE",
+    "directed": false,
+    "rounding_contract": "No floating point and no approximated roots; all counts, recurrences, inequalities, and signs are integral.",
+    "serialization_contract": "Canonical UTF-8 NFC JSON; reduced integer pairs encode the two reported rational means."
+  },
+  "assumptions": [],
+  "central_zero_policy_applied": "NOT_APPLICABLE",
+  "configuration": {
+    "canonical_sha256": "c6d9d84e8147028734777acda91c5a569c4bb8cbb5e153a3ce855780965e4e04",
+    "values": {
+      "conductor_degree": 5,
+      "infinity_convention": "ONE_ODD_DEGREE_POINT",
+      "q": 3,
+      "reciprocal_degree": 4,
+      "statistic": "NORMALIZED_B1_B3_MINUS_B2_SQUARED"
+    }
+  },
+  "coverage": {
+    "class": "FINITE_COMPLETE",
+    "omissions": [
+      "other odd constant fields",
+      "other conductor degrees",
+      "analytic Pick/Loewner, XD, and HCNC kernels",
+      "proof of the proposed USp(4) limit"
+    ],
+    "statement": "Every monic squarefree quintic D in F_3[T], both F_3/F_9 point counts, and every reciprocal coefficient B_0 through B_4."
+  },
+  "detector_contract_binding": {
+    "record_sha256": "807c33b3243492def9f4539c5710cc71483991e80782af71fc7c036f904b17cc",
+    "semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.GENUS2.NORMALIZED_RECIPROCAL.HANKEL_MINOR_TOY.Hb14ce20507c889883858197a62f1a227"
+  },
+  "evaluation_scope": "FINITE_EXHAUSTIVE_FAMILY",
+  "firewalls": [
+    {
+      "code": "TOY_NOT_ANALYTIC_KERNEL",
+      "statement": "This coefficient minor is not the atlas analytic Pick/Loewner kernel, XD, or HCNC."
+    },
+    {
+      "code": "FINITE_NOT_ASYMPTOTIC",
+      "statement": "The exhaustive q=3 mean does not prove the proposed q-to-infinity USp(4) target."
+    },
+    {
+      "code": "NO_NUMBER_FIELD_TRANSFER",
+      "statement": "The finite function-field computation implies no theorem for number-field L-functions."
+    }
+  ],
+  "identity_kernel": {
+    "adapter_bindings": [
+      {
+        "coverage_class": "FINITE_COMPLETE",
+        "hash_mode": "RAW_BYTES",
+        "media_type": "text/x-python",
+        "notes": "Content checked by the offline atlas validator.",
+        "path": "research/l-families/atlas/function_field/genus2_pilot.py",
+        "role": "genus_two_exact_adapter",
+        "schema_path": null,
+        "sha256": "0025238e058ce20140f2ec6899a65e1c122caaa7c61a37e1df1934b6115fa90b"
+      },
+      {
+        "coverage_class": "FINITE_COMPLETE",
+        "hash_mode": "RAW_BYTES",
+        "media_type": "text/x-python",
+        "notes": "Content checked by the offline atlas validator.",
+        "path": "research/l-families/atlas/function_field/pilot.py",
+        "role": "polynomial_arithmetic_adapter",
+        "schema_path": null,
+        "sha256": "c9b4873daa50e96859c2c079dc031ebcdb5193bd495656e7049bfc6836a93258"
+      }
+    ],
+    "configuration_sha256": "c6d9d84e8147028734777acda91c5a569c4bb8cbb5e153a3ce855780965e4e04",
+    "detector_contract_binding": {
+      "record_sha256": "807c33b3243492def9f4539c5710cc71483991e80782af71fc7c036f904b17cc",
+      "semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.GENUS2.NORMALIZED_RECIPROCAL.HANKEL_MINOR_TOY.Hb14ce20507c889883858197a62f1a227"
+    },
+    "implementation_commit": "PENDING",
+    "implementation_sha256": "6556fae9da95d1e87514bce15d446329be5262c4d698b75d750de9c6b822a526",
+    "input_fulfillments_sha256": "c5aadcd731a7e3c01d1a1d7e0ff32b2ba7dfa17c755c6ecbf4664c3caaa239e4",
+    "input_sha256s": [
+      "aa5bcd4a432de265ae8477b17d03515e7b9c39028dd955d483174dd860256005"
+    ],
+    "lfunction_spec_bindings": [
+      {
+        "record_sha256": "92c0c55bf7c0dc65754f200453d83fdf3d427c0581cab0dc7387b6b04a886694",
+        "semantic_id": "ATLAS.LFUNC.FUNCTION_FIELD.F3.QUADRATIC.QUINTIC_GENUS2_FAMILY.H64fa184deff37bfade32dede39110cb6"
+      }
+    ],
+    "seed": null,
+    "slug": "FUNCTION_FIELD.F3.QUINTIC.GENUS2.HANKEL_MINOR_TOY",
+    "version": 1
+  },
+  "identity_sha256": "95d38bfb44fe96f49221525f717a7b9a8220943eef1e06a356c99735cf08f1a6",
+  "input_bindings": [
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "hash_mode": "CANONICAL_JSON_UTF8_NFC",
+      "media_type": "application/json",
+      "notes": "Content checked by the offline atlas validator.",
+      "path": "research/l-families/atlas/function_field/genus2_f3_quintics.json",
+      "role": "exhaustive_family_fixture",
+      "schema_path": "research/l-families/atlas/detectors/raw-schemas/function-field-genus2-result.schema.json",
+      "sha256": "aa5bcd4a432de265ae8477b17d03515e7b9c39028dd955d483174dd860256005"
+    }
+  ],
+  "input_fulfillments": [
+    {
+      "coverage_class": "COMPLETE",
+      "input_type": "LFUNCTION_SPEC",
+      "name": "lfunction_spec",
+      "sources": [
+        "ATLAS.LFUNC.FUNCTION_FIELD.F3.QUADRATIC.QUINTIC_GENUS2_FAMILY.H64fa184deff37bfade32dede39110cb6"
+      ]
+    },
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "input_type": "RECIPROCAL_COEFFICIENTS",
+      "name": "reciprocal_coefficients",
+      "sources": [
+        "research/l-families/atlas/function_field/genus2_pilot.py",
+        "research/l-families/atlas/function_field/pilot.py",
+        "research/l-families/atlas/function_field/genus2_f3_quintics.json"
+      ]
+    },
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "input_type": "RAW_ARTIFACT",
+      "name": "exact_family_fixture",
+      "sources": [
+        "research/l-families/atlas/function_field/genus2_f3_quintics.json"
+      ]
+    }
+  ],
+  "interpretation": {
+    "smallest_gap": "Prove or disprove the proposed USp(4) family-mean limit across odd constant fields without identifying this toy minor with an analytic kernel.",
+    "statement": "Within the exhaustive q=3 quintic family, exact reciprocal-root purity and the palindromic genus-two functional equation do not force a memberwise sign for the declared toy reciprocal-coefficient minor.",
+    "status": "REFUTATION",
+    "theorem_claim_id": null
+  },
+  "lfunction_spec_bindings": [
+    {
+      "record_sha256": "92c0c55bf7c0dc65754f200453d83fdf3d427c0581cab0dc7387b6b04a886694",
+      "semantic_id": "ATLAS.LFUNC.FUNCTION_FIELD.F3.QUADRATIC.QUINTIC_GENUS2_FAMILY.H64fa184deff37bfade32dede39110cb6"
+    }
+  ],
+  "notes": "The raw finite arithmetic is exact, exhaustively replayed, and bound to its dedicated F_3 quintic family spec. The USp(4) statement remains proposed only and is not used in the certified finite interpretation.",
+  "programme_refs": [
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 737,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/737"
+    },
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 741,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/741"
+    }
+  ],
+  "record_state": "DRAFT",
+  "record_type": "EVALUATION_RECORD",
+  "result": {
+    "artifact": {
+      "coverage_class": "FINITE_COMPLETE",
+      "hash_mode": "CANONICAL_JSON_UTF8_NFC",
+      "media_type": "application/json",
+      "notes": "Content checked by the offline atlas validator.",
+      "path": "research/l-families/atlas/function_field/genus2_f3_quintics.json",
+      "role": "detector_result",
+      "schema_path": "research/l-families/atlas/detectors/raw-schemas/function-field-genus2-result.schema.json",
+      "sha256": "aa5bcd4a432de265ae8477b17d03515e7b9c39028dd955d483174dd860256005"
+    },
+    "predicate_outcome": "VIOLATED",
+    "representation": "HASHED_ARTIFACT",
+    "summary": "Integer purity certificates pass for all 162 members, while the toy minor has 102 negative, 12 zero, and 48 positive values; its exact normalized family mean is -104/243."
+  },
+  "result_hashes": [
+    {
+      "algorithm": "sha256",
+      "binds": "canonical JSON exact genus-two fixture",
+      "hash_mode": "CANONICAL_JSON_UTF8_NFC",
+      "value": "aa5bcd4a432de265ae8477b17d03515e7b9c39028dd955d483174dd860256005"
+    }
+  ],
+  "revision": 1,
+  "rigor_level": "RIGOROUS_CERTIFIED",
+  "run": {
+    "code_commit": "PENDING",
+    "command": "python research/l-families/atlas/core/wrap_genus2_pilot.py --check",
+    "implementation_path": "research/l-families/atlas/core/wrap_genus2_pilot.py",
+    "implementation_sha256": "6556fae9da95d1e87514bce15d446329be5262c4d698b75d750de9c6b822a526",
+    "timestamp_utc": "2026-08-24T15:00:00Z"
+  },
+  "schema_version": "riemann.atlas.evaluation_record.v1",
+  "scope_boundary": "Exactly all 162 monic squarefree quintics over F_3, reciprocal degrees 0 through 4, and the declared toy 2x2 coefficient minor.",
+  "semantic_id": "ATLAS.EVAL.FUNCTION_FIELD.F3.QUINTIC.GENUS2.HANKEL_MINOR_TOY.H95d38bfb44fe96f49221525f717a7b9a",
+  "software": [
+    {
+      "name": "CPython",
+      "role": "exact integer point counts and rational moment aggregation",
+      "version": "3.12.10"
+    }
+  ],
+  "subject": {
+    "description": "Complete frozen q=3 monic squarefree quintic genus-two hyperelliptic family",
+    "kind": "L_FUNCTION_SET"
+  },
+  "supersedes": [],
+  "title": "Exact exhaustive F_3[T] genus-two coefficient-minor sign audit"
+}

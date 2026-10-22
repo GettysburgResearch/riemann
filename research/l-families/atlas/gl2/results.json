@@ -1,0 +1,329 @@
+{
+  "controls": [
+    {
+      "central_order": 1,
+      "conventions": {
+        "loewner_difference": {
+          "atom_sign": -1,
+          "central_atom_rank": 1,
+          "excess_order": 0,
+          "forced_order": 1,
+          "fully_deflated": {
+            "determinant": "0",
+            "inertia": {
+              "negative": 0,
+              "positive": 1,
+              "zero": 1
+            },
+            "rank": 1
+          },
+          "parity_deflated": {
+            "determinant": "0",
+            "inertia": {
+              "negative": 0,
+              "positive": 1,
+              "zero": 1
+            },
+            "rank": 1
+          },
+          "parity_minus_full_frobenius_squared": "0",
+          "raw": {
+            "determinant": "-1/4",
+            "inertia": {
+              "negative": 1,
+              "positive": 1,
+              "zero": 0
+            },
+            "rank": 2
+          },
+          "raw_minus_full_frobenius_squared": "25/16"
+        },
+        "pick_sum": {
+          "atom_sign": 1,
+          "central_atom_rank": 1,
+          "excess_order": 0,
+          "forced_order": 1,
+          "fully_deflated": {
+            "determinant": "0",
+            "inertia": {
+              "negative": 0,
+              "positive": 1,
+              "zero": 1
+            },
+            "rank": 1
+          },
+          "parity_deflated": {
+            "determinant": "0",
+            "inertia": {
+              "negative": 0,
+              "positive": 1,
+              "zero": 1
+            },
+            "rank": 1
+          },
+          "parity_minus_full_frobenius_squared": "0",
+          "raw": {
+            "determinant": "1/4",
+            "inertia": {
+              "negative": 0,
+              "positive": 2,
+              "zero": 0
+            },
+            "rank": 2
+          },
+          "raw_minus_full_frobenius_squared": "25/16"
+        }
+      },
+      "id": "minimal-odd-quadratic",
+      "label": "SYNTHETIC_CONTROL",
+      "root_number": -1
+    },
+    {
+      "central_order": 3,
+      "conventions": {
+        "loewner_difference": {
+          "atom_sign": -1,
+          "central_atom_rank": 1,
+          "excess_order": 2,
+          "forced_order": 1,
+          "fully_deflated": {
+            "determinant": "0",
+            "inertia": {
+              "negative": 0,
+              "positive": 1,
+              "zero": 1
+            },
+            "rank": 1
+          },
+          "parity_deflated": {
+            "determinant": "-1/2",
+            "inertia": {
+              "negative": 1,
+              "positive": 1,
+              "zero": 0
+            },
+            "rank": 2
+          },
+          "parity_minus_full_frobenius_squared": "25/4",
+          "raw": {
+            "determinant": "-3/4",
+            "inertia": {
+              "negative": 1,
+              "positive": 1,
+              "zero": 0
+            },
+            "rank": 2
+          },
+          "raw_minus_full_frobenius_squared": "225/16"
+        },
+        "pick_sum": {
+          "atom_sign": 1,
+          "central_atom_rank": 1,
+          "excess_order": 2,
+          "forced_order": 1,
+          "fully_deflated": {
+            "determinant": "0",
+            "inertia": {
+              "negative": 0,
+              "positive": 1,
+              "zero": 1
+            },
+            "rank": 1
+          },
+          "parity_deflated": {
+            "determinant": "1/2",
+            "inertia": {
+              "negative": 0,
+              "positive": 2,
+              "zero": 0
+            },
+            "rank": 2
+          },
+          "parity_minus_full_frobenius_squared": "25/4",
+          "raw": {
+            "determinant": "3/4",
+            "inertia": {
+              "negative": 0,
+              "positive": 2,
+              "zero": 0
+            },
+            "rank": 2
+          },
+          "raw_minus_full_frobenius_squared": "225/16"
+        }
+      },
+      "id": "excess-odd-quadratic",
+      "label": "SYNTHETIC_CONTROL",
+      "root_number": -1
+    },
+    {
+      "central_order": 2,
+      "conventions": {
+        "loewner_difference": {
+          "atom_sign": -1,
+          "central_atom_rank": 1,
+          "excess_order": 2,
+          "forced_order": 0,
+          "fully_deflated": {
+            "determinant": "0",
+            "inertia": {
+              "negative": 0,
+              "positive": 1,
+              "zero": 1
+            },
+            "rank": 1
+          },
+          "parity_deflated": {
+            "determinant": "-1/2",
+            "inertia": {
+              "negative": 1,
+              "positive": 1,
+              "zero": 0
+            },
+            "rank": 2
+          },
+          "parity_minus_full_frobenius_squared": "25/4",
+          "raw": {
+            "determinant": "-1/2",
+            "inertia": {
+              "negative": 1,
+              "positive": 1,
+              "zero": 0
+            },
+            "rank": 2
+          },
+          "raw_minus_full_frobenius_squared": "25/4"
+        },
+        "pick_sum": {
+          "atom_sign": 1,
+          "central_atom_rank": 1,
+          "excess_order": 2,
+          "forced_order": 0,
+          "fully_deflated": {
+            "determinant": "0",
+            "inertia": {
+              "negative": 0,
+              "positive": 1,
+              "zero": 1
+            },
+            "rank": 1
+          },
+          "parity_deflated": {
+            "determinant": "1/2",
+            "inertia": {
+              "negative": 0,
+              "positive": 2,
+              "zero": 0
+            },
+            "rank": 2
+          },
+          "parity_minus_full_frobenius_squared": "25/4",
+          "raw": {
+            "determinant": "1/2",
+            "inertia": {
+              "negative": 0,
+              "positive": 2,
+              "zero": 0
+            },
+            "rank": 2
+          },
+          "raw_minus_full_frobenius_squared": "25/4"
+        }
+      },
+      "id": "unforced-even-quadratic",
+      "label": "SYNTHETIC_CONTROL",
+      "root_number": 1
+    },
+    {
+      "central_order": 1,
+      "conventions": {
+        "loewner_difference": {
+          "atom_sign": -1,
+          "central_atom_rank": 1,
+          "excess_order": 0,
+          "forced_order": 1,
+          "fully_deflated": {
+            "determinant": "-36",
+            "inertia": {
+              "negative": 1,
+              "positive": 2,
+              "zero": 0
+            },
+            "rank": 3
+          },
+          "parity_deflated": {
+            "determinant": "-36",
+            "inertia": {
+              "negative": 1,
+              "positive": 2,
+              "zero": 0
+            },
+            "rank": 3
+          },
+          "parity_minus_full_frobenius_squared": "0",
+          "raw": {
+            "determinant": "27/4",
+            "inertia": {
+              "negative": 2,
+              "positive": 1,
+              "zero": 0
+            },
+            "rank": 3
+          },
+          "raw_minus_full_frobenius_squared": "441/256"
+        },
+        "pick_sum": {
+          "atom_sign": 1,
+          "central_atom_rank": 1,
+          "excess_order": 0,
+          "forced_order": 1,
+          "fully_deflated": {
+            "determinant": "36",
+            "inertia": {
+              "negative": 2,
+              "positive": 1,
+              "zero": 0
+            },
+            "rank": 3
+          },
+          "parity_deflated": {
+            "determinant": "36",
+            "inertia": {
+              "negative": 2,
+              "positive": 1,
+              "zero": 0
+            },
+            "rank": 3
+          },
+          "parity_minus_full_frobenius_squared": "0",
+          "raw": {
+            "determinant": "189/8",
+            "inertia": {
+              "negative": 2,
+              "positive": 1,
+              "zero": 0
+            },
+            "rank": 3
+          },
+          "raw_minus_full_frobenius_squared": "441/256"
+        }
+      },
+      "id": "indefinite-quartic-background",
+      "label": "SYNTHETIC_HOSTILE_CONTROL",
+      "root_number": -1
+    },
+    {
+      "error": "central-order parity is incompatible with the root number",
+      "id": "parity-mismatch-rejected",
+      "label": "SYNTHETIC_NEGATIVE_CONTROL",
+      "result": "EXPECTED_ERROR_CONFIRMED"
+    }
+  ],
+  "kernel_conventions": {
+    "loewner_difference": "(F(x)-F(y))/(x-y); central atom -r/(xy)",
+    "pick_sum": "(F(x)+F(y))/(x+y); central atom +r/(xy)"
+  },
+  "result": "PASS",
+  "schema": "gl2-deflation-verification-v1",
+  "status": "EXACT_RATIONAL_SYNTHETIC_CONTROL_ONLY"
+}

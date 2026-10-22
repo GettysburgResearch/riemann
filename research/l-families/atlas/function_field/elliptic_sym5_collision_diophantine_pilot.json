@@ -1,0 +1,1141 @@
+{
+  "elliptic_curve_bridge": {
+    "affine_quartic": "v^2=r^4+5r^3+9r^2+5r+1",
+    "exceptional_points_are_finite": true,
+    "forward_map": {
+      "X": "2m",
+      "Y": "(r-1/r)*(m^2-1)"
+    },
+    "infinite_order_certificate": {
+      "Q": [
+        -2,
+        3
+      ],
+      "conclusion": "By Lutz-Nagell, Q is nontorsion; hence the quartic has infinitely many rational points. This does not classify integral or prime-power collision points.",
+      "divides": false,
+      "lutz_nagell_divisor_abs_4A3_plus_27B2": 189,
+      "two_Q": [
+        5,
+        -10
+      ],
+      "two_Q_y_squared": 100
+    },
+    "intermediate": {
+      "conic": "w^2=u^2+5u+7",
+      "m": "(w-1)/(u+2)",
+      "u": "r+1/r",
+      "w": "v/r"
+    },
+    "inverse_map": {
+      "r": "(-X^2-2X+6+2Y)/(X^2-4)",
+      "w": "-(X^2-2X+4)/(X^2-4)"
+    },
+    "multiples_2_through_7": [
+      {
+        "both_traces_outside_scalar_zero_fiber": true,
+        "elliptic_point": {
+          "X": {
+            "denominator": 1,
+            "numerator": 5
+          },
+          "Y": {
+            "denominator": 1,
+            "numerator": -10
+          }
+        },
+        "first_separating_coefficient_degree": 2,
+        "gcd_of_traces": 1,
+        "hasse_admissible": true,
+        "multiple": 2,
+        "primitive_traces": [
+          -7,
+          3
+        ],
+        "q": 31,
+        "q_factorization": {
+          "31": 1
+        },
+        "q_is_prime": true,
+        "scalar_trace": 5544,
+        "second_coefficients": [
+          29339640,
+          11744040
+        ],
+        "signed_quartic_root": 19
+      },
+      {
+        "both_traces_outside_scalar_zero_fiber": true,
+        "elliptic_point": {
+          "X": {
+            "denominator": 49,
+            "numerator": 22
+          },
+          "Y": {
+            "denominator": 343,
+            "numerator": 531
+          }
+        },
+        "first_separating_coefficient_degree": 2,
+        "gcd_of_traces": 1,
+        "hasse_admissible": true,
+        "multiple": 3,
+        "primitive_traces": [
+          -40,
+          19
+        ],
+        "q": 1021,
+        "q_factorization": {
+          "1021": 1
+        },
+        "q_is_prime": true,
+        "scalar_trace": 33883080,
+        "second_coefficients": [
+          1122906057622503,
+          122026165864680
+        ],
+        "signed_quartic_root": -661
+      },
+      {
+        "both_traces_outside_scalar_zero_fiber": true,
+        "elliptic_point": {
+          "X": {
+            "denominator": 400,
+            "numerator": 761
+          },
+          "Y": {
+            "denominator": 8000,
+            "numerator": -5491
+          }
+        },
+        "first_separating_coefficient_degree": 2,
+        "gcd_of_traces": 1,
+        "hasse_admissible": true,
+        "multiple": 4,
+        "primitive_traces": [
+          669,
+          91
+        ],
+        "q": 547921,
+        "q_factorization": {
+          "11": 1,
+          "49811": 1
+        },
+        "q_is_prime": false,
+        "scalar_trace": 80314007089680,
+        "second_coefficients": [
+          -15468175044457339704484704720,
+          138629656773121676255000035920
+        ],
+        "signed_quartic_root": 610321
+      },
+      {
+        "both_traces_outside_scalar_zero_fiber": true,
+        "elliptic_point": {
+          "X": {
+            "denominator": 49729,
+            "numerator": 49222
+          },
+          "Y": {
+            "denominator": 11089567,
+            "numerator": -1949259
+          }
+        },
+        "first_separating_coefficient_degree": 2,
+        "gcd_of_traces": 1,
+        "hasse_admissible": true,
+        "multiple": 5,
+        "primitive_traces": [
+          -23541,
+          26440
+        ],
+        "q": 626640421,
+        "q_factorization": {
+          "11": 1,
+          "631": 1,
+          "90281": 1
+        },
+        "q_is_prime": false,
+        "scalar_trace": -2261480625855234299880,
+        "second_coefficients": [
+          -20589127642557317128834398183814823446526280,
+          23198417514124179553454322840793235082397503
+        ],
+        "signed_quartic_root": -618264781
+      },
+      {
+        "both_traces_outside_scalar_zero_fiber": true,
+        "elliptic_point": {
+          "X": {
+            "denominator": 1535121,
+            "numerator": 3282805
+          },
+          "Y": {
+            "denominator": 1902014919,
+            "numerator": 2654992430
+          }
+        },
+        "first_separating_coefficient_degree": 2,
+        "gcd_of_traces": 1,
+        "hasse_admissible": true,
+        "multiple": 6,
+        "primitive_traces": [
+          -370357,
+          3646273
+        ],
+        "q": 11429428518271,
+        "q_factorization": {
+          "1171": 1,
+          "131": 1,
+          "22571": 1,
+          "3301": 1
+        },
+        "q_is_prime": false,
+        "scalar_trace": -142825763885655887317303761995256,
+        "second_coefficients": [
+          555136954895320431371921795928100507516078092346347493995483936840,
+          66472023584318546842495307117000598244364987793442971033121838040
+        ],
+        "signed_quartic_root": 10124188817779
+      },
+      {
+        "both_traces_outside_scalar_zero_fiber": true,
+        "elliptic_point": {
+          "X": {
+            "denominator": 811623121,
+            "numerator": 9557518
+          },
+          "Y": {
+            "denominator": 23122331094169,
+            "numerator": -51336505396347
+          }
+        },
+        "first_separating_coefficient_degree": 2,
+        "gcd_of_traces": 1,
+        "hasse_admissible": true,
+        "multiple": 7,
+        "primitive_traces": [
+          -290364080,
+          756187719
+        ],
+        "q": 363804984411209881,
+        "q_factorization": {
+          "363804984411209881": 1
+        },
+        "q_is_prime": true,
+        "scalar_trace": -81731423386885589748689642706043219411322640,
+        "second_coefficients": [
+          4858416419980139535105286216427457938515471936317057488103866584380082628214185861553003,
+          6478609233604309169015552052633184507850499947668589059678828499240304028582156475099760
+        ],
+        "signed_quartic_root": -218292125261757961
+      }
+    ],
+    "quartic_polynomial_discriminant": 189,
+    "weierstrass_curve": "Y^2=X^3-6X+5",
+    "weierstrass_discriminant": 3024
+  },
+  "exact_algebra": {
+    "H": "x^2+x*y+y^2",
+    "K": "x^4+x^3*y+x^2*y^2+x*y^3+y^4",
+    "W": "x^4+5*x^3*y+9*x^2*y^2+5*x*y^3+y^4",
+    "collision_quotient": "K-4*q*H+3*q^2",
+    "elimination_identity": "(3q-2H)^2-W=3*(K-4qH+3q^2)",
+    "factorization": "E5(t,q)=t*(t^2-q)*(t^2-3q)",
+    "full_factor_coefficients": {
+      "T2": "q*(q-t^2)*(3q-t^2)*(q^2-3q*t^2+t^4)",
+      "T3": "-q^3*t*(2q-t^2)*(3q-t^2)*(q^2-3q*t^2+t^4)",
+      "sign_t2_eq_3q": "full factors equal",
+      "sign_t2_eq_q": "separated at T^3",
+      "zero_vs_nonzero": "always separated at T^2"
+    },
+    "q_recovery": "q=(2H+z)/3 for either signed square root z of W",
+    "quadratic_discriminant": "4*W",
+    "weighted_scaling": {
+      "map": "(x,y,q)->(d*x,d*y,d^2*q)",
+      "prime_tower_consequence": "a primitive collision at prime p yields collisions at q=p^(2k+1) after d=p^k",
+      "quotient_weight": "Q(d*x,d*y,d^2*q)=d^4*Q(x,y,q)",
+      "trace_weight": "E5(d*t,d^2*q)=d^5*E5(t,q)"
+    },
+    "zero_fiber_over_odd_prime_powers": {
+      "all_other_q": "t=0 only",
+      "q=3^a_with_a_odd": "t in {0,+3^((a+1)/2),-3^((a+1)/2)}",
+      "q=p^a_with_a_even": "t in {0,+p^(a/2),-p^(a/2)}"
+    }
+  },
+  "finite_census": {
+    "class_counts": {
+      "general": 4,
+      "sign_pair": 19,
+      "zero_nonzero": 38
+    },
+    "collision_pair_count": 61,
+    "enumeration_method": "enumerate x<y once, require W(x,y) square, then test q=(2H+z)/3 for both signs of z",
+    "full_local_factor_equal_pair_count": 3,
+    "max_q_inclusive": 2000,
+    "maximum_absolute_trace_examined": 89,
+    "q_branches_tested": 590,
+    "q_with_collisions_count": 21,
+    "rows": [
+      {
+        "pairs": [
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": -9,
+            "x": -3,
+            "y": 0
+          },
+          {
+            "collision_class": "sign_pair",
+            "first_separating_coefficient_degree": null,
+            "full_local_factors_equal": true,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": -9,
+            "x": -3,
+            "y": 3
+          },
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": -9,
+            "x": 0,
+            "y": 3
+          }
+        ],
+        "prime_base": 3,
+        "prime_power_exponent": 1,
+        "q": 3
+      },
+      {
+        "pairs": [
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 9,
+            "x": -3,
+            "y": 0
+          },
+          {
+            "collision_class": "sign_pair",
+            "first_separating_coefficient_degree": 3,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 9,
+            "x": -3,
+            "y": 3
+          },
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 9,
+            "x": 0,
+            "y": 3
+          }
+        ],
+        "prime_base": 3,
+        "prime_power_exponent": 2,
+        "q": 9
+      },
+      {
+        "pairs": [
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 25,
+            "x": -5,
+            "y": 0
+          },
+          {
+            "collision_class": "sign_pair",
+            "first_separating_coefficient_degree": 3,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 25,
+            "x": -5,
+            "y": 5
+          },
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 25,
+            "x": 0,
+            "y": 5
+          }
+        ],
+        "prime_base": 5,
+        "prime_power_exponent": 2,
+        "q": 25
+      },
+      {
+        "pairs": [
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": -81,
+            "x": -9,
+            "y": 0
+          },
+          {
+            "collision_class": "sign_pair",
+            "first_separating_coefficient_degree": null,
+            "full_local_factors_equal": true,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": -81,
+            "x": -9,
+            "y": 9
+          },
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": -81,
+            "x": 0,
+            "y": 9
+          }
+        ],
+        "prime_base": 3,
+        "prime_power_exponent": 3,
+        "q": 27
+      },
+      {
+        "pairs": [
+          {
+            "collision_class": "general",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 5544,
+            "signed_discriminant_root_3q_minus_2H": 19,
+            "x": -7,
+            "y": 3
+          },
+          {
+            "collision_class": "general",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": -5544,
+            "signed_discriminant_root_3q_minus_2H": 19,
+            "x": -3,
+            "y": 7
+          }
+        ],
+        "prime_base": 31,
+        "prime_power_exponent": 1,
+        "q": 31
+      },
+      {
+        "pairs": [
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 49,
+            "x": -7,
+            "y": 0
+          },
+          {
+            "collision_class": "sign_pair",
+            "first_separating_coefficient_degree": 3,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 49,
+            "x": -7,
+            "y": 7
+          },
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 49,
+            "x": 0,
+            "y": 7
+          }
+        ],
+        "prime_base": 7,
+        "prime_power_exponent": 2,
+        "q": 49
+      },
+      {
+        "pairs": [
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 81,
+            "x": -9,
+            "y": 0
+          },
+          {
+            "collision_class": "sign_pair",
+            "first_separating_coefficient_degree": 3,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 81,
+            "x": -9,
+            "y": 9
+          },
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 81,
+            "x": 0,
+            "y": 9
+          }
+        ],
+        "prime_base": 3,
+        "prime_power_exponent": 4,
+        "q": 81
+      },
+      {
+        "pairs": [
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 121,
+            "x": -11,
+            "y": 0
+          },
+          {
+            "collision_class": "sign_pair",
+            "first_separating_coefficient_degree": 3,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 121,
+            "x": -11,
+            "y": 11
+          },
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 121,
+            "x": 0,
+            "y": 11
+          }
+        ],
+        "prime_base": 11,
+        "prime_power_exponent": 2,
+        "q": 121
+      },
+      {
+        "pairs": [
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 169,
+            "x": -13,
+            "y": 0
+          },
+          {
+            "collision_class": "sign_pair",
+            "first_separating_coefficient_degree": 3,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 169,
+            "x": -13,
+            "y": 13
+          },
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 169,
+            "x": 0,
+            "y": 13
+          }
+        ],
+        "prime_base": 13,
+        "prime_power_exponent": 2,
+        "q": 169
+      },
+      {
+        "pairs": [
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": -729,
+            "x": -27,
+            "y": 0
+          },
+          {
+            "collision_class": "sign_pair",
+            "first_separating_coefficient_degree": null,
+            "full_local_factors_equal": true,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": -729,
+            "x": -27,
+            "y": 27
+          },
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": -729,
+            "x": 0,
+            "y": 27
+          }
+        ],
+        "prime_base": 3,
+        "prime_power_exponent": 5,
+        "q": 243
+      },
+      {
+        "pairs": [
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 289,
+            "x": -17,
+            "y": 0
+          },
+          {
+            "collision_class": "sign_pair",
+            "first_separating_coefficient_degree": 3,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 289,
+            "x": -17,
+            "y": 17
+          },
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 289,
+            "x": 0,
+            "y": 17
+          }
+        ],
+        "prime_base": 17,
+        "prime_power_exponent": 2,
+        "q": 289
+      },
+      {
+        "pairs": [
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 361,
+            "x": -19,
+            "y": 0
+          },
+          {
+            "collision_class": "sign_pair",
+            "first_separating_coefficient_degree": 3,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 361,
+            "x": -19,
+            "y": 19
+          },
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 361,
+            "x": 0,
+            "y": 19
+          }
+        ],
+        "prime_base": 19,
+        "prime_power_exponent": 2,
+        "q": 361
+      },
+      {
+        "pairs": [
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 529,
+            "x": -23,
+            "y": 0
+          },
+          {
+            "collision_class": "sign_pair",
+            "first_separating_coefficient_degree": 3,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 529,
+            "x": -23,
+            "y": 23
+          },
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 529,
+            "x": 0,
+            "y": 23
+          }
+        ],
+        "prime_base": 23,
+        "prime_power_exponent": 2,
+        "q": 529
+      },
+      {
+        "pairs": [
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 625,
+            "x": -25,
+            "y": 0
+          },
+          {
+            "collision_class": "sign_pair",
+            "first_separating_coefficient_degree": 3,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 625,
+            "x": -25,
+            "y": 25
+          },
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 625,
+            "x": 0,
+            "y": 25
+          }
+        ],
+        "prime_base": 5,
+        "prime_power_exponent": 4,
+        "q": 625
+      },
+      {
+        "pairs": [
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 729,
+            "x": -27,
+            "y": 0
+          },
+          {
+            "collision_class": "sign_pair",
+            "first_separating_coefficient_degree": 3,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 729,
+            "x": -27,
+            "y": 27
+          },
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 729,
+            "x": 0,
+            "y": 27
+          }
+        ],
+        "prime_base": 3,
+        "prime_power_exponent": 6,
+        "q": 729
+      },
+      {
+        "pairs": [
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 841,
+            "x": -29,
+            "y": 0
+          },
+          {
+            "collision_class": "sign_pair",
+            "first_separating_coefficient_degree": 3,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 841,
+            "x": -29,
+            "y": 29
+          },
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 841,
+            "x": 0,
+            "y": 29
+          }
+        ],
+        "prime_base": 29,
+        "prime_power_exponent": 2,
+        "q": 841
+      },
+      {
+        "pairs": [
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 961,
+            "x": -31,
+            "y": 0
+          },
+          {
+            "collision_class": "sign_pair",
+            "first_separating_coefficient_degree": 3,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 961,
+            "x": -31,
+            "y": 31
+          },
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 961,
+            "x": 0,
+            "y": 31
+          }
+        ],
+        "prime_base": 31,
+        "prime_power_exponent": 2,
+        "q": 961
+      },
+      {
+        "pairs": [
+          {
+            "collision_class": "general",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 33883080,
+            "signed_discriminant_root_3q_minus_2H": 661,
+            "x": -40,
+            "y": 19
+          },
+          {
+            "collision_class": "general",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": -33883080,
+            "signed_discriminant_root_3q_minus_2H": 661,
+            "x": -19,
+            "y": 40
+          }
+        ],
+        "prime_base": 1021,
+        "prime_power_exponent": 1,
+        "q": 1021
+      },
+      {
+        "pairs": [
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 1369,
+            "x": -37,
+            "y": 0
+          },
+          {
+            "collision_class": "sign_pair",
+            "first_separating_coefficient_degree": 3,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 1369,
+            "x": -37,
+            "y": 37
+          },
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 1369,
+            "x": 0,
+            "y": 37
+          }
+        ],
+        "prime_base": 37,
+        "prime_power_exponent": 2,
+        "q": 1369
+      },
+      {
+        "pairs": [
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 1681,
+            "x": -41,
+            "y": 0
+          },
+          {
+            "collision_class": "sign_pair",
+            "first_separating_coefficient_degree": 3,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 1681,
+            "x": -41,
+            "y": 41
+          },
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 1681,
+            "x": 0,
+            "y": 41
+          }
+        ],
+        "prime_base": 41,
+        "prime_power_exponent": 2,
+        "q": 1681
+      },
+      {
+        "pairs": [
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 1849,
+            "x": -43,
+            "y": 0
+          },
+          {
+            "collision_class": "sign_pair",
+            "first_separating_coefficient_degree": 3,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 1849,
+            "x": -43,
+            "y": 43
+          },
+          {
+            "collision_class": "zero_nonzero",
+            "first_separating_coefficient_degree": 2,
+            "full_local_factors_equal": false,
+            "scalar_trace": 0,
+            "signed_discriminant_root_3q_minus_2H": 1849,
+            "x": 0,
+            "y": 43
+          }
+        ],
+        "prime_base": 43,
+        "prime_power_exponent": 2,
+        "q": 1849
+      }
+    ],
+    "square_quartic_pairs": 295,
+    "unordered_trace_pairs_examined": 15931
+  },
+  "large_prime_certificate": {
+    "all_factor_primes_by_trial_division_through_sqrt_240479": true,
+    "factor_product": 363804984411209880,
+    "fermat_residue": 1,
+    "gcd_certificates_by_distinct_prime_factor": {
+      "11": 1,
+      "2": 1,
+      "240479": 1,
+      "3": 1,
+      "4003": 1,
+      "5": 1,
+      "5843": 1,
+      "7": 1
+    },
+    "method": "full n-1 Lucas/Pocklington criterion",
+    "n": 363804984411209881,
+    "n_minus_one_factorization": {
+      "11": 1,
+      "2": 3,
+      "240479": 1,
+      "3": 1,
+      "4003": 1,
+      "5": 1,
+      "5843": 1,
+      "7": 2
+    },
+    "verified": true,
+    "witness": 23
+  },
+  "literature_boundary": {
+    "external_novelty_claim": false,
+    "external_priority_search_performed": false,
+    "references": [
+      {
+        "author": "Elisabeth Lutz",
+        "title": "Sur l'equation y^2=x^3-Ax-B dans les corps p-adiques",
+        "url": "https://doi.org/10.1515/crll.1937.177.238",
+        "use": "classical torsion criterion only",
+        "year": 1937
+      },
+      {
+        "author": "William C. Waterhouse",
+        "title": "Abelian varieties over finite fields",
+        "url": "https://numdam.org/articles/10.24033/asens.1183/",
+        "use": "Theorem 4.1 cases (1)-(5), local trace realization and nonrealization boundaries only",
+        "year": 1969
+      }
+    ]
+  },
+  "normalization": {
+    "base_local_factor": "L_E(T)=1-t*T+q*T^2",
+    "collision_domain": "odd prime powers q; unordered distinct integer traces x<y satisfying x^2,y^2<=4q",
+    "full_factor": "det(1-Sym^5(Frob_q)*T), degree 6",
+    "sym5_scalar_trace": "E5(t,q)=t^5-4*q*t^3+3*q^2*t"
+  },
+  "payload_sha256": "13bf7f95949b0905843c6f453008359fe8b05b65157fdb8c2eaf48e7af542ca5",
+  "prime_field_realization_boundary": {
+    "criterion": "Waterhouse Theorem 4.1 case (1): |t|<=2sqrt(q) and gcd(t,p)=1 gives an ordinary elliptic isogeny class over F_q",
+    "global_compatible_family_claimed": false,
+    "realized_rows": [
+      {
+        "each_trace_coprime_to_q": true,
+        "hasse_admissible": true,
+        "q": 31,
+        "separate_curves_exist_over_F_q": true,
+        "traces": [
+          -7,
+          3
+        ]
+      },
+      {
+        "each_trace_coprime_to_q": true,
+        "hasse_admissible": true,
+        "q": 1021,
+        "separate_curves_exist_over_F_q": true,
+        "traces": [
+          -40,
+          19
+        ]
+      },
+      {
+        "each_trace_coprime_to_q": true,
+        "hasse_admissible": true,
+        "q": 363804984411209881,
+        "separate_curves_exist_over_F_q": true,
+        "traces": [
+          -290364080,
+          756187719
+        ]
+      }
+    ],
+    "square_q_zero_fiber_realization": {
+      "q=3^(odd)": "t=0 and t=+/-sqrt(3q) are Waterhouse cases (5) and (4)",
+      "q=p^(2k)": "t=+/-sqrt(q) occurs only when p is not 1 mod 3; t=0 occurs only when p is not 1 mod 4",
+      "simultaneous_three_point_zero_fiber": "requires both Waterhouse congruence conditions; the algebraic/Hasse zero fiber alone does not imply realization"
+    },
+    "weighted_odd_exponent_towers_beyond_the_prime_base": {
+      "reason": "for k>=1 the field size is p^(2k+1) and each scaled nonzero trace p^k*t is divisible by p: Waterhouse case (1) fails; cases (2) and (3) require even exponent; case (4) requires p in {2,3}; case (5) requires trace zero",
+      "scope": "the scaling theorem is an exact Hasse-lattice/scalar-polynomial tower, not an elliptic-curve realization tower",
+      "status": "not realized by elliptic traces for these p>3 bases"
+    }
+  },
+  "producer": {
+    "note": "research/l-families/atlas/function_field/ELLIPTIC_SYM5_COLLISION_DIOPHANTINE_PILOT.md",
+    "note_sha256_lf_normalized": "6b3c0443e7ffcee915ce567345704dbf6f026089f863f796b66b8ff7fac8cf50",
+    "script": "research/l-families/atlas/function_field/elliptic_sym5_collision_diophantine_pilot.py",
+    "script_sha256_lf_normalized": "df3ed14368cbdac091d0e122b0051eb501b210c62ec9c320e10db855397ad55b",
+    "test": "tests/test_elliptic_sym5_collision_diophantine_pilot.py",
+    "test_sha256_lf_normalized": "d6d7ede14eb33d8e337b108fb0bf63adef1cb58c33ea1fea894c51919081a4f9"
+  },
+  "project_relative_results": {
+    "bounded_conjecture": "Primitive prime-power general collisions are sparse and are controlled by integral/arithmetic constraints on the positive-rank elliptic curve; no completeness beyond q=2000 is asserted.",
+    "theorems": [
+      "complete Hasse-admissible odd-prime-power census through q=2000",
+      "exact zero-fiber and weighted prime-power scaling laws",
+      "birational positive-rank elliptic bridge",
+      "three exact non-cyclotomic prime bases 31, 1021, and 363804984411209881, each giving a weighted odd-exponent tower"
+    ]
+  },
+  "resource_contract": {
+    "accounted_work_ledger": {
+      "census_collision_factor_diagnostics": 61,
+      "census_prime_power_classifications": 41,
+      "census_q_branches_tested": 590,
+      "census_square_quartic_pairs": 295,
+      "census_unordered_trace_pairs": 15931,
+      "declared_factorization_components_verified": 12,
+      "elliptic_group_additions": 6,
+      "elliptic_inverse_lifts": 6,
+      "elliptic_sequence_factor_diagnostics": 6,
+      "locked_source_payloads_loaded": 1,
+      "pocklington_modular_exponentiations": 9,
+      "pocklington_small_prime_trial_certificates": 8
+    },
+    "accounted_work_unit_cap_exclusive": 500000,
+    "accounted_work_units": 16966,
+    "elliptic_group_additions": 6,
+    "finite_search_kind": "integer trace-pair discriminant sieve",
+    "larger_blind_search_performed_by_producer": false,
+    "maximum_q_in_frozen_census": 2000,
+    "new_curve_or_field_enumerations": 0
+  },
+  "schema": "riemann.function_field.elliptic_sym5_collision_diophantine_pilot.v1",
+  "scope_firewall": {
+    "finite_census_claim_stops_at_q_2000": true,
+    "hasse_admissibility_is_not_curve_realization": true,
+    "no_claim_of_infinitely_many_prime_q": true,
+    "no_global_compatible_family_or_euler_product_constructed": true,
+    "no_integral_point_classification": true,
+    "positive_rank_is_not_an_integral_or_prime_power_classification": true,
+    "project_relative_discovery_not_literature_priority": true,
+    "scalar_collision_is_not_full_factor_equality": true,
+    "square_q_zero_fibers_are_not_automatically_realized": true,
+    "waterhouse_rows_assert_separate_local_curves_only": true,
+    "weighted_prime_power_towers_are_not_curve_realization_towers": true
+  },
+  "source_lock": {
+    "path": "research/l-families/atlas/function_field/elliptic_symmetric_power_trace_aliasing.json",
+    "payload_sha256": "046f76f43a2af3ac296f5c18c258e61f138e122bee38ec618af489e7e3a9e50e",
+    "schema": "riemann.function_field.elliptic_symmetric_power_trace_aliasing.v1",
+    "use": "provenance boundary only; all Sym^5 algebra, census rows, and elliptic-curve calculations are rederived in this packet"
+  }
+}

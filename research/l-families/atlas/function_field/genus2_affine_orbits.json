@@ -1,0 +1,635 @@
+{
+  "action": {
+    "coefficient_formula": "c'_j=alpha^(j-5)*sum_{i=j}^5 binom(i,j)*c_i*beta^(i-j)",
+    "convention": "right action",
+    "definition": "D^{alpha,beta}(T)=alpha^(-5)*D(alpha*T+beta)",
+    "group": "AGL(1,F_q), alpha in F_q^*, beta in F_q",
+    "transformation_law": {
+      "K_D": "K_{D^{alpha,beta}}=K_D for K_D=q*a_D^2-b_D^2",
+      "a_D": "a_{D^{alpha,beta}}=chi_q(alpha)*a_D",
+      "b_D": "b_{D^{alpha,beta}}=b_D"
+    }
+  },
+  "exact_proof": {
+    "base_sum": "x->alpha*x+beta permutes F_q and chi_q(alpha^(-5))=chi_q(alpha), so a transforms by chi_q(alpha)",
+    "coefficient_consequence": "b=(S_2+a^2)/2 is fixed and therefore K=q*a^2-b^2 is fixed",
+    "extension_sum": "z->alpha*z+beta permutes F_(q^2) and every alpha in F_q^* is a square in F_(q^2), so the second character sum is fixed",
+    "scope_boundary": "The algebra is exact on the declared finite fields; the orbit tables do not assert an equidistribution law or any analytic-detector consequence.",
+    "squarefree_closure": "invertible affine substitution and nonzero scalar multiplication preserve degree, monicity after normalization, and squarefreeness",
+    "status": "PROVED_EXACTLY_AND_EXHAUSTIVELY_REPLAYED_ON_FROZEN_FIELDS"
+  },
+  "families": [
+    {
+      "a_D_zero_partition": {
+        "nonzero_member_count": 132,
+        "nonzero_orbit_count": 22,
+        "zero_member_count": 30,
+        "zero_orbit_count": 7
+      },
+      "action_checks": {
+        "K_D_invariance_checks": 972,
+        "a_D_character_law_checks": 972,
+        "b_D_invariance_checks": 972,
+        "expected_member_action_pairs": 972,
+        "family_closure_checks": 972,
+        "member_action_pairs_checked": 972,
+        "nontrivial_nonsquare_a_D_flip_checks": 396
+      },
+      "candidate_count": 243,
+      "group": {
+        "element_count": 6,
+        "name": "AGL(1,F_q)",
+        "order": 6,
+        "right_action": "(D|g)|h=D|(g*h), g*h=(alpha*gamma,alpha*delta+beta)"
+      },
+      "member_count": 162,
+      "member_sign_counts": {
+        "negative": 102,
+        "positive": 48,
+        "zero": 12
+      },
+      "moment_sums": {
+        "K_D": -624,
+        "a_D_squared": 384,
+        "b_D_squared": 1776
+      },
+      "nontrivial_stabilizer_witnesses": {
+        "2": {
+          "K_D": -4,
+          "a_D_squared": 0,
+          "b_D": 2,
+          "orbit_size": 3,
+          "representative_a_D": 0,
+          "representative_coefficients_low_to_high": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "sign": "negative",
+          "stabilizer_elements_alpha_beta": [
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "stabilizer_order": 2
+        }
+      },
+      "orbit_partition": {
+        "canonical_orbit_records_sha256": "4c6aafb876c98fffac1b17b4d7cd7008546d73a46797d5bc886cfe0d196fe7c2",
+        "free_orbit_count": 25,
+        "member_count_reconstructed": 162,
+        "member_to_representative_sha256": "91e60a8e633b9826d8afe4a9c84062aba225ecc9bba277623b67bd22902f6f9c",
+        "nontrivial_stabilizer_orbit_count": 4,
+        "orbit_count": 29,
+        "orbit_size_histogram": {
+          "3": 4,
+          "6": 25
+        },
+        "orbit_stabilizer_checks": 29,
+        "stabilizer_order_histogram": {
+          "1": 25,
+          "2": 4
+        }
+      },
+      "q": 3,
+      "sign_summaries": {
+        "negative": {
+          "member_count": 102,
+          "orbit_count": 19,
+          "orbit_size_histogram": {
+            "3": 4,
+            "6": 15
+          },
+          "stabilizer_order_histogram": {
+            "1": 15,
+            "2": 4
+          }
+        },
+        "positive": {
+          "member_count": 48,
+          "orbit_count": 8,
+          "orbit_size_histogram": {
+            "6": 8
+          },
+          "stabilizer_order_histogram": {
+            "1": 8
+          }
+        },
+        "zero": {
+          "member_count": 12,
+          "orbit_count": 2,
+          "orbit_size_histogram": {
+            "6": 2
+          },
+          "stabilizer_order_histogram": {
+            "1": 2
+          }
+        }
+      }
+    },
+    {
+      "a_D_zero_partition": {
+        "nonzero_member_count": 2094,
+        "nonzero_orbit_count": 108,
+        "zero_member_count": 406,
+        "zero_orbit_count": 24
+      },
+      "action_checks": {
+        "K_D_invariance_checks": 50000,
+        "a_D_character_law_checks": 50000,
+        "b_D_invariance_checks": 50000,
+        "expected_member_action_pairs": 50000,
+        "family_closure_checks": 50000,
+        "member_action_pairs_checked": 50000,
+        "nontrivial_nonsquare_a_D_flip_checks": 20940
+      },
+      "candidate_count": 3125,
+      "group": {
+        "element_count": 20,
+        "name": "AGL(1,F_q)",
+        "order": 20,
+        "right_action": "(D|g)|h=D|(g*h), g*h=(alpha*gamma,alpha*delta+beta)"
+      },
+      "member_count": 2500,
+      "member_sign_counts": {
+        "negative": 1650,
+        "positive": 800,
+        "zero": 50
+      },
+      "moment_sums": {
+        "K_D": -39880,
+        "a_D_squared": 10560,
+        "b_D_squared": 92680
+      },
+      "nontrivial_stabilizer_witnesses": {
+        "2": {
+          "K_D": -116,
+          "a_D_squared": 16,
+          "b_D": 14,
+          "orbit_size": 10,
+          "representative_a_D": -4,
+          "representative_coefficients_low_to_high": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "sign": "negative",
+          "stabilizer_elements_alpha_beta": [
+            [
+              1,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "stabilizer_order": 2
+        },
+        "20": {
+          "K_D": -100,
+          "a_D_squared": 0,
+          "b_D": -10,
+          "orbit_size": 1,
+          "representative_a_D": 0,
+          "representative_coefficients_low_to_high": [
+            0,
+            4,
+            0,
+            0,
+            0,
+            1
+          ],
+          "sign": "negative",
+          "stabilizer_elements_alpha_beta": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "stabilizer_order": 20
+        },
+        "4": {
+          "K_D": -100,
+          "a_D_squared": 0,
+          "b_D": 10,
+          "orbit_size": 5,
+          "representative_a_D": 0,
+          "representative_coefficients_low_to_high": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "sign": "negative",
+          "stabilizer_elements_alpha_beta": [
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "stabilizer_order": 4
+        },
+        "5": {
+          "K_D": -100,
+          "a_D_squared": 25,
+          "b_D": 15,
+          "orbit_size": 4,
+          "representative_a_D": 5,
+          "representative_coefficients_low_to_high": [
+            1,
+            4,
+            0,
+            0,
+            0,
+            1
+          ],
+          "sign": "negative",
+          "stabilizer_elements_alpha_beta": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ]
+          ],
+          "stabilizer_order": 5
+        }
+      },
+      "orbit_partition": {
+        "canonical_orbit_records_sha256": "16e51c5d9d50a2786676d5a0263dbc53b8972213c1364d2d034527de04dd0c8a",
+        "free_orbit_count": 121,
+        "member_count_reconstructed": 2500,
+        "member_to_representative_sha256": "f95ca9b82b3f93d50f595e3fd768cb628d42cd0c0879346c85d4fe0fb08e65fc",
+        "nontrivial_stabilizer_orbit_count": 11,
+        "orbit_count": 132,
+        "orbit_size_histogram": {
+          "1": 1,
+          "10": 6,
+          "20": 121,
+          "4": 1,
+          "5": 3
+        },
+        "orbit_stabilizer_checks": 132,
+        "stabilizer_order_histogram": {
+          "1": 121,
+          "2": 6,
+          "20": 1,
+          "4": 3,
+          "5": 1
+        }
+      },
+      "q": 5,
+      "sign_summaries": {
+        "negative": {
+          "member_count": 1650,
+          "orbit_count": 86,
+          "orbit_size_histogram": {
+            "1": 1,
+            "10": 2,
+            "20": 81,
+            "4": 1,
+            "5": 1
+          },
+          "stabilizer_order_histogram": {
+            "1": 81,
+            "2": 2,
+            "20": 1,
+            "4": 1,
+            "5": 1
+          }
+        },
+        "positive": {
+          "member_count": 800,
+          "orbit_count": 42,
+          "orbit_size_histogram": {
+            "10": 4,
+            "20": 38
+          },
+          "stabilizer_order_histogram": {
+            "1": 38,
+            "2": 4
+          }
+        },
+        "zero": {
+          "member_count": 50,
+          "orbit_count": 4,
+          "orbit_size_histogram": {
+            "20": 2,
+            "5": 2
+          },
+          "stabilizer_order_histogram": {
+            "1": 2,
+            "4": 2
+          }
+        }
+      }
+    },
+    {
+      "a_D_zero_partition": {
+        "nonzero_member_count": 12222,
+        "nonzero_orbit_count": 291,
+        "zero_member_count": 2184,
+        "zero_orbit_count": 58
+      },
+      "action_checks": {
+        "K_D_invariance_checks": 605052,
+        "a_D_character_law_checks": 605052,
+        "b_D_invariance_checks": 605052,
+        "expected_member_action_pairs": 605052,
+        "family_closure_checks": 605052,
+        "member_action_pairs_checked": 605052,
+        "nontrivial_nonsquare_a_D_flip_checks": 256662
+      },
+      "candidate_count": 16807,
+      "group": {
+        "element_count": 42,
+        "name": "AGL(1,F_q)",
+        "order": 42,
+        "right_action": "(D|g)|h=D|(g*h), g*h=(alpha*gamma,alpha*delta+beta)"
+      },
+      "member_count": 14406,
+      "member_sign_counts": {
+        "negative": 9702,
+        "positive": 4368,
+        "zero": 336
+      },
+      "moment_sums": {
+        "K_D": -518280,
+        "a_D_squared": 88704,
+        "b_D_squared": 1139208
+      },
+      "nontrivial_stabilizer_witnesses": {
+        "2": {
+          "K_D": -196,
+          "a_D_squared": 0,
+          "b_D": 14,
+          "orbit_size": 21,
+          "representative_a_D": 0,
+          "representative_coefficients_low_to_high": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "sign": "negative",
+          "stabilizer_elements_alpha_beta": [
+            [
+              1,
+              0
+            ],
+            [
+              6,
+              0
+            ]
+          ],
+          "stabilizer_order": 2
+        }
+      },
+      "orbit_partition": {
+        "canonical_orbit_records_sha256": "169ea8b7abf805d3b7cc778b461ab28cbe031dc2bdc0cf57db9343fc26f2cde3",
+        "free_orbit_count": 337,
+        "member_count_reconstructed": 14406,
+        "member_to_representative_sha256": "bcb7520182608e911a8c5e003214762d22e9e006bfba49eb538e9fbc8b360e4b",
+        "nontrivial_stabilizer_orbit_count": 12,
+        "orbit_count": 349,
+        "orbit_size_histogram": {
+          "21": 12,
+          "42": 337
+        },
+        "orbit_stabilizer_checks": 349,
+        "stabilizer_order_histogram": {
+          "1": 337,
+          "2": 12
+        }
+      },
+      "q": 7,
+      "sign_summaries": {
+        "negative": {
+          "member_count": 9702,
+          "orbit_count": 237,
+          "orbit_size_histogram": {
+            "21": 12,
+            "42": 225
+          },
+          "stabilizer_order_histogram": {
+            "1": 225,
+            "2": 12
+          }
+        },
+        "positive": {
+          "member_count": 4368,
+          "orbit_count": 104,
+          "orbit_size_histogram": {
+            "42": 104
+          },
+          "stabilizer_order_histogram": {
+            "1": 104
+          }
+        },
+        "zero": {
+          "member_count": 336,
+          "orbit_count": 8,
+          "orbit_size_histogram": {
+            "42": 8
+          },
+          "stabilizer_order_histogram": {
+            "1": 8
+          }
+        }
+      }
+    }
+  ],
+  "firewall": "These are exact finite affine-orbit and coefficient identities for q=3,5,7. K is the existing toy coefficient minor, not a Pick/Loewner, XD, HCNC, or number-field analytic kernel. Orbit counts and stabilizers are not asymptotic laws.",
+  "method": {
+    "coverage": "every family member against every affine group element, followed by a complete orbit partition and exact orbit-stabilizer checks",
+    "excluded_algorithms": [
+      "numerical root finding",
+      "per-member Euler coefficient enumeration",
+      "floating-point arithmetic"
+    ],
+    "family_arithmetic": "reuse genus2_q_scan exact squarefree gcd, F_q/F_(q^2) character tables, and a_D,b_D reconstruction"
+  },
+  "odd_trace_cancellation_corollary": {
+    "proof": "Choose a nonsquare alpha in F_q^* and beta=0. The affine action permutes the family, sends a_D to -a_D, and fixes both a_D^2 and b_D.",
+    "scope_boundary": "This is an exact finite-family symmetry statement; it supplies no equidistribution rate or number-field transfer.",
+    "special_cases": [
+      "every odd moment of a_D is exactly zero",
+      "the joint distribution of (a_D,b_D) is invariant under (a,b)->(-a,b)"
+    ],
+    "statement": "For every r>=0 and every function Phi, the uniform family sum of a_D^(2r+1)*Phi(a_D^2,b_D) is zero whenever the sum is defined.",
+    "status": "PROVED_FOR_EVERY_ODD_PRIME_POWER"
+  },
+  "payload_sha256": "9f55481e43e096d7495d1c2966634e24b69ea15b986d5777af79efe9627a98d1",
+  "producer": {
+    "input_provenance": "complete deterministic generation, no external data",
+    "runtime_contract": "Python 3.11+ standard library; exact integer arithmetic",
+    "shared_q_scan_fixture": "research/l-families/atlas/function_field/genus2_q_scan.json",
+    "shared_q_scan_fixture_canonical_sha256": "5190f667e341fb0ffc4affe41920be9edb53c1cfd1a663a28b30c5374e4bf632",
+    "shared_q_scan_source": "research/l-families/atlas/function_field/genus2_q_scan.py",
+    "shared_q_scan_source_sha256_lf_normalized": "f595dbf52d4265cfe2ea6888255f53df887fed77e204103f2b0dfd95e961f935",
+    "source": "research/l-families/atlas/function_field/genus2_affine_orbits.py",
+    "source_sha256_lf_normalized": "32e440750b2832ec4cc84473187b4b1aa6396eda87c64f5ac845b2a96dc88f08"
+  },
+  "q_scan_regression_controls": {
+    "3": {
+      "K_histogram": true,
+      "member_count": true,
+      "sign_counts": true,
+      "sum_K": true,
+      "sum_a_squared": true,
+      "sum_b_squared": true
+    },
+    "5": {
+      "K_histogram": true,
+      "member_count": true,
+      "sign_counts": true,
+      "sum_K": true,
+      "sum_a_squared": true,
+      "sum_b_squared": true
+    },
+    "7": {
+      "K_histogram": true,
+      "member_count": true,
+      "sign_counts": true,
+      "sum_K": true,
+      "sum_a_squared": true,
+      "sum_b_squared": true
+    }
+  },
+  "raw_fixture_id": "FUNCTION_FIELD.GENUS2.Q3_Q5_Q7.AFFINE_ORBITS.V1",
+  "resource_contract": {
+    "candidate_cap": 20000,
+    "candidate_cap_scope": "PER_FIELD",
+    "clock": "time.monotonic",
+    "frozen_q_values": [
+      3,
+      5,
+      7
+    ],
+    "guard_interval_work_items": 256,
+    "larger_q_policy": "refuse every q outside 3,5,7",
+    "maximum_global_wall_seconds": 8.0,
+    "runtime_not_in_identity": true
+  },
+  "rigor_level": "RIGOROUS_CERTIFIED",
+  "schema": "riemann.function_field.genus2_affine_orbits.v1",
+  "scope": "all monic squarefree quintics over F_q for exactly q=3,5,7"
+}

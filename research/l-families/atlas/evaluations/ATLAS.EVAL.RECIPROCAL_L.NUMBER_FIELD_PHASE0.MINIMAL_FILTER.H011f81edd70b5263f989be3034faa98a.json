@@ -1,0 +1,269 @@
+{
+  "adapter_bindings": [
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "hash_mode": "RAW_BYTES",
+      "media_type": "text/x-python",
+      "notes": "Content checked by the offline atlas validator.",
+      "path": "research/l-families/atlas/core/reciprocal_wavelet.py",
+      "role": "reciprocal_coefficient_adapter",
+      "schema_path": null,
+      "sha256": "a6244aeedf143433e576af847744ef6addb35b9462dc49a6c307c5ec41f2fce2"
+    },
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "hash_mode": "RAW_BYTES",
+      "media_type": "text/x-python",
+      "notes": "Content checked by the offline atlas validator.",
+      "path": "research/l-families/atlas/core/local_euler.py",
+      "role": "local_factor_arithmetic",
+      "schema_path": null,
+      "sha256": "99ee82c605cefb42e3b1058e4c4ed6b2dbed4236e96f8d9e6cf429d79a43e2ee"
+    }
+  ],
+  "arithmetic": {
+    "class": "CERTIFIED_INTEGER_COVERAGE",
+    "directed": false,
+    "rounding_contract": "All reciprocal coefficients and Q(sqrt(2)) coordinates are integers.",
+    "serialization_contract": "Canonical UTF-8 NFC JSON with explicit inclusive endpoints."
+  },
+  "assumptions": [
+    {
+      "code": "LMFDB_MODELS_IMPORTED",
+      "statement": "The three Weierstrass models identify the intended elliptic L-functions.",
+      "status": "HEURISTIC"
+    }
+  ],
+  "central_zero_policy_applied": "NOT_APPLICABLE",
+  "configuration": {
+    "canonical_sha256": "cd174c7e6de27a31b8c45a57777d9e2e3211ba6f781d5b2bc85bf177a2c71d04",
+    "values": {
+      "endpoint_convention": "INCLUSIVE_FLOOR_DYADIC",
+      "endpoints": [
+        32,
+        64,
+        128,
+        256
+      ]
+    }
+  },
+  "coverage": {
+    "class": "FINITE_COMPLETE",
+    "omissions": [
+      "endpoints above 256",
+      "zero data",
+      "spectral abscissa",
+      "family average"
+    ],
+    "statement": "Every classical reciprocal coefficient n<=256 and every declared local factor needed for the five objects."
+  },
+  "detector_contract_binding": {
+    "record_sha256": "fe4218391642b5ea8a3bc631f07264963bd63f79d88dc3da850dad5801f79573",
+    "semantic_id": "ATLAS.DETECTOR.RECIPROCAL_L.MINIMAL_DYADIC_FILTER.H77f79043d9b0a6403720bdc6a6b28c9c"
+  },
+  "evaluation_scope": "MEMBERWISE_BATCH",
+  "firewalls": [
+    {
+      "code": "FINITE_NOT_ABSCISSA",
+      "statement": "Four finite endpoints do not determine a weighted-L2 abscissa."
+    },
+    {
+      "code": "NO_ZERO_DATA",
+      "statement": "No zero ordinate or completeness theorem enters the result."
+    },
+    {
+      "code": "BAD_FACTORS_EXPLICIT",
+      "statement": "The semistable conductor-prime factors are included, not silently dropped."
+    }
+  ],
+  "identity_kernel": {
+    "adapter_bindings": [
+      {
+        "coverage_class": "FINITE_COMPLETE",
+        "hash_mode": "RAW_BYTES",
+        "media_type": "text/x-python",
+        "notes": "Content checked by the offline atlas validator.",
+        "path": "research/l-families/atlas/core/reciprocal_wavelet.py",
+        "role": "reciprocal_coefficient_adapter",
+        "schema_path": null,
+        "sha256": "a6244aeedf143433e576af847744ef6addb35b9462dc49a6c307c5ec41f2fce2"
+      },
+      {
+        "coverage_class": "FINITE_COMPLETE",
+        "hash_mode": "RAW_BYTES",
+        "media_type": "text/x-python",
+        "notes": "Content checked by the offline atlas validator.",
+        "path": "research/l-families/atlas/core/local_euler.py",
+        "role": "local_factor_arithmetic",
+        "schema_path": null,
+        "sha256": "99ee82c605cefb42e3b1058e4c4ed6b2dbed4236e96f8d9e6cf429d79a43e2ee"
+      }
+    ],
+    "configuration_sha256": "cd174c7e6de27a31b8c45a57777d9e2e3211ba6f781d5b2bc85bf177a2c71d04",
+    "detector_contract_binding": {
+      "record_sha256": "fe4218391642b5ea8a3bc631f07264963bd63f79d88dc3da850dad5801f79573",
+      "semantic_id": "ATLAS.DETECTOR.RECIPROCAL_L.MINIMAL_DYADIC_FILTER.H77f79043d9b0a6403720bdc6a6b28c9c"
+    },
+    "implementation_commit": "PENDING",
+    "implementation_sha256": "a6244aeedf143433e576af847744ef6addb35b9462dc49a6c307c5ec41f2fce2",
+    "input_fulfillments_sha256": "3fa4b61a80e747f16e27ae955c575b8c82aacf792fdc7db7059d537f6091f35f",
+    "input_sha256s": [
+      "66c7c62a159c0ab32178bdb21aefae18adb3f2e759cd507918c282ac7e318e32"
+    ],
+    "lfunction_spec_bindings": [
+      {
+        "record_sha256": "cae0caa1c1c0154713830b1b1ab73eaeb26551f7f2a799574de50172a1257bed",
+        "semantic_id": "ATLAS.LFUNC.ZETA.RIEMANN.H06d569f76e2b9259e540987deed9aa2b"
+      },
+      {
+        "record_sha256": "93cd7987bc49efa52bd800b750064b03060fb974c17cf6fc8591d6fbd3eb8e58",
+        "semantic_id": "ATLAS.LFUNC.DIRICHLET.QUADRATIC.MOD5.H0f25a0b178fb88f6a857ac01c677a979"
+      },
+      {
+        "record_sha256": "4a0d2b63da44a27b4e8a4ebc311d61cf51d6a596eee4f89a6a4b32cc913a2c36",
+        "semantic_id": "ATLAS.LFUNC.EC.11.R0.H640f9f7ea45725183495b7b2525cf21c"
+      },
+      {
+        "record_sha256": "ce646295ea12b8838dec372068049f8a098186afa0998171d6a49120a2768ff2",
+        "semantic_id": "ATLAS.LFUNC.EC.37.R1.H1d738e01ce5a9f22134cbd1c27969b32"
+      },
+      {
+        "record_sha256": "46f6083c390d50470a23d6f760f55a9677bc6de92fb59ad458dd40e0b787b4c8",
+        "semantic_id": "ATLAS.LFUNC.EC.389.R2.Hc38b7d1ec7c189163b3fa8f43a27a57c"
+      }
+    ],
+    "seed": null,
+    "slug": "RECIPROCAL_L.NUMBER_FIELD_PHASE0.MINIMAL_FILTER",
+    "version": 1
+  },
+  "identity_sha256": "011f81edd70b5263f989be3034faa98a9c0f8d68a5db9be05194b7368ed2875c",
+  "input_bindings": [
+    {
+      "coverage_class": "PARTIAL",
+      "hash_mode": "CANONICAL_JSON_UTF8_NFC",
+      "media_type": "application/json",
+      "notes": "Content checked by the offline atlas validator.",
+      "path": "research/l-families/atlas/sources/lmfdb-curves.json",
+      "role": "source_object_manifest",
+      "schema_path": null,
+      "sha256": "66c7c62a159c0ab32178bdb21aefae18adb3f2e759cd507918c282ac7e318e32"
+    }
+  ],
+  "input_fulfillments": [
+    {
+      "coverage_class": "COMPLETE",
+      "input_type": "LFUNCTION_SPEC",
+      "name": "lfunction_spec",
+      "sources": [
+        "ATLAS.LFUNC.ZETA.RIEMANN.H06d569f76e2b9259e540987deed9aa2b",
+        "ATLAS.LFUNC.DIRICHLET.QUADRATIC.MOD5.H0f25a0b178fb88f6a857ac01c677a979",
+        "ATLAS.LFUNC.EC.11.R0.H640f9f7ea45725183495b7b2525cf21c",
+        "ATLAS.LFUNC.EC.37.R1.H1d738e01ce5a9f22134cbd1c27969b32",
+        "ATLAS.LFUNC.EC.389.R2.Hc38b7d1ec7c189163b3fa8f43a27a57c"
+      ]
+    },
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "input_type": "RECIPROCAL_COEFFICIENTS",
+      "name": "reciprocal_coefficients",
+      "sources": [
+        "research/l-families/atlas/core/reciprocal_wavelet.py",
+        "research/l-families/atlas/core/local_euler.py",
+        "research/l-families/atlas/sources/lmfdb-curves.json"
+      ]
+    }
+  ],
+  "interpretation": {
+    "smallest_gap": "Prove a completed-L Mellin identity and a family moment for one GL(2) twist adapter before using these rows as a zero detector.",
+    "statement": "The common finite classical-variable filter is computationally portable once the classical-to-unitary map and bad factors are explicit; its analytic meaning remains family-specific.",
+    "status": "EMPIRICAL",
+    "theorem_claim_id": null
+  },
+  "lfunction_spec_bindings": [
+    {
+      "record_sha256": "cae0caa1c1c0154713830b1b1ab73eaeb26551f7f2a799574de50172a1257bed",
+      "semantic_id": "ATLAS.LFUNC.ZETA.RIEMANN.H06d569f76e2b9259e540987deed9aa2b"
+    },
+    {
+      "record_sha256": "93cd7987bc49efa52bd800b750064b03060fb974c17cf6fc8591d6fbd3eb8e58",
+      "semantic_id": "ATLAS.LFUNC.DIRICHLET.QUADRATIC.MOD5.H0f25a0b178fb88f6a857ac01c677a979"
+    },
+    {
+      "record_sha256": "4a0d2b63da44a27b4e8a4ebc311d61cf51d6a596eee4f89a6a4b32cc913a2c36",
+      "semantic_id": "ATLAS.LFUNC.EC.11.R0.H640f9f7ea45725183495b7b2525cf21c"
+    },
+    {
+      "record_sha256": "ce646295ea12b8838dec372068049f8a098186afa0998171d6a49120a2768ff2",
+      "semantic_id": "ATLAS.LFUNC.EC.37.R1.H1d738e01ce5a9f22134cbd1c27969b32"
+    },
+    {
+      "record_sha256": "46f6083c390d50470a23d6f760f55a9677bc6de92fb59ad458dd40e0b787b4c8",
+      "semantic_id": "ATLAS.LFUNC.EC.389.R2.Hc38b7d1ec7c189163b3fa8f43a27a57c"
+    }
+  ],
+  "notes": "Exact finite arithmetic is paired with discovery-only object metadata; no rank trend is inferred.",
+  "programme_refs": [
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 738,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/738"
+    },
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 741,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/741"
+    }
+  ],
+  "record_state": "DRAFT",
+  "record_type": "EVALUATION_RECORD",
+  "result": {
+    "artifact": {
+      "coverage_class": "FINITE_COMPLETE",
+      "hash_mode": "CANONICAL_JSON_UTF8_NFC",
+      "media_type": "application/json",
+      "notes": "Content checked by the offline atlas validator.",
+      "path": "research/l-families/atlas/results/ATLAS.EVAL.RECIPROCAL_L.NUMBER_FIELD_PHASE0.MINIMAL_FILTER.H011f81edd70b5263f989be3034faa98a.json",
+      "role": "detector_result",
+      "schema_path": "research/l-families/atlas/detectors/raw-schemas/reciprocal-wavelet-result.schema.json",
+      "sha256": "6c2015336770482869856f494b98c4b6fc7be4a106eefd8d0ac204fc9a502e40"
+    },
+    "predicate_outcome": "NOT_APPLICABLE",
+    "representation": "HASHED_ARTIFACT",
+    "summary": "Exact Q(sqrt(2)) coefficient-filter rows for four endpoints; no analytic zero conclusion."
+  },
+  "result_hashes": [
+    {
+      "algorithm": "sha256",
+      "binds": "canonical JSON reciprocal-wavelet result",
+      "hash_mode": "CANONICAL_JSON_UTF8_NFC",
+      "value": "6c2015336770482869856f494b98c4b6fc7be4a106eefd8d0ac204fc9a502e40"
+    }
+  ],
+  "revision": 1,
+  "rigor_level": "DISCOVERY_ONLY",
+  "run": {
+    "code_commit": "PENDING",
+    "command": "python research/l-families/atlas/core/reciprocal_wavelet.py --check",
+    "implementation_path": "research/l-families/atlas/core/reciprocal_wavelet.py",
+    "implementation_sha256": "a6244aeedf143433e576af847744ef6addb35b9462dc49a6c307c5ec41f2fce2",
+    "timestamp_utc": "2026-08-24T15:00:00Z"
+  },
+  "schema_version": "riemann.atlas.evaluation_record.v1",
+  "scope_boundary": "Five declared number-field objects, exact reciprocal coefficients n<=256, endpoints 32/64/128/256.",
+  "semantic_id": "ATLAS.EVAL.RECIPROCAL_L.NUMBER_FIELD_PHASE0.MINIMAL_FILTER.H011f81edd70b5263f989be3034faa98a",
+  "software": [
+    {
+      "name": "CPython",
+      "role": "exact integer point counts and rational moment aggregation",
+      "version": "3.12.10"
+    }
+  ],
+  "subject": {
+    "description": "Zeta, quadratic chi_5, and elliptic-curve rank-stress rows 11.a2/37.a1/389.a1",
+    "kind": "L_FUNCTION_SET"
+  },
+  "supersedes": [],
+  "title": "Five-object exact reciprocal-L minimal-filter reconnaissance"
+}

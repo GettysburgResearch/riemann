@@ -1,0 +1,51 @@
+{
+  "nodes": [
+    "1",
+    "2"
+  ],
+  "result": "PASS",
+  "rows": [
+    {
+      "central_order": 0,
+      "excess_order": 0,
+      "forced_order": 0,
+      "parity_minus_full_frobenius_squared": {
+        "denominator": 1,
+        "numerator": 0,
+        "text": "0"
+      },
+      "root_number": "+1",
+      "semantic_id": "ATLAS.LFUNC.EC.11.R0.H640f9f7ea45725183495b7b2525cf21c"
+    },
+    {
+      "central_order": 1,
+      "excess_order": 0,
+      "forced_order": 1,
+      "parity_minus_full_frobenius_squared": {
+        "denominator": 1,
+        "numerator": 0,
+        "text": "0"
+      },
+      "root_number": "-1",
+      "semantic_id": "ATLAS.LFUNC.EC.37.R1.H1d738e01ce5a9f22134cbd1c27969b32"
+    },
+    {
+      "central_order": 2,
+      "excess_order": 2,
+      "forced_order": 0,
+      "parity_minus_full_frobenius_squared": {
+        "denominator": 4,
+        "numerator": 25,
+        "text": "25/4"
+      },
+      "root_number": "+1",
+      "semantic_id": "ATLAS.LFUNC.EC.389.R2.Hc38b7d1ec7c189163b3fa8f43a27a57c"
+    }
+  ],
+  "schema": "riemann.gl2.rank_stress_result.v1",
+  "sum_inverse_node_squares": {
+    "denominator": 4,
+    "numerator": 5,
+    "text": "5/4"
+  }
+}

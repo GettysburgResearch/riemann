@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/gfreund123/riemann/research/l-families/atlas/detectors/raw-schemas/local-euler-result.schema.json",
+  "title": "Raw exact local-Euler even-moment result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "subject_semantic_id", "detector_semantic_id", "per_prime", "summary"],
+  "properties": {
+    "schema_version": {"const": "riemann.atlas.raw.local_euler_result.v1"},
+    "subject_semantic_id": {"type": "string", "pattern": "^ATLAS\\.LFUNC\\."},
+    "detector_semantic_id": {"type": "string", "pattern": "^ATLAS\\.DETECTOR\\."},
+    "per_prime": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["p", "a_p", "inverse_prime_coefficient", "coefficient_square", "coefficient_fourth", "unit_magnitude", "hasse_control"],
+        "properties": {
+          "p": {"type": "integer", "minimum": 2},
+          "a_p": {"type": "integer"},
+          "inverse_prime_coefficient": {"type": "string"},
+          "coefficient_square": {"$ref": "#/$defs/fraction"},
+          "coefficient_fourth": {"$ref": "#/$defs/fraction"},
+          "unit_magnitude": {"type": "boolean"},
+          "hasse_control": {"type": "boolean"}
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["prime_count", "mean_square", "mean_fourth", "sign_counts", "unitary_top_coefficient_modulus_squared", "unitary_top_coefficient_control", "naive_prime_coefficient_unit_magnitude", "hasse_control"],
+      "properties": {
+        "prime_count": {"type": "integer", "minimum": 1},
+        "mean_square": {"$ref": "#/$defs/fraction"},
+        "mean_fourth": {"$ref": "#/$defs/fraction"},
+        "sign_counts": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["negative", "zero", "positive"],
+          "properties": {
+            "negative": {"type": "integer", "minimum": 0},
+            "zero": {"type": "integer", "minimum": 0},
+            "positive": {"type": "integer", "minimum": 0}
+          }
+        },
+        "unitary_top_coefficient_modulus_squared": {"const": "1"},
+        "unitary_top_coefficient_control": {"type": "boolean"},
+        "naive_prime_coefficient_unit_magnitude": {"type": "boolean"},
+        "hasse_control": {"type": "boolean"}
+      }
+    }
+  },
+  "$defs": {
+    "fraction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["numerator", "denominator", "text"],
+      "properties": {
+        "numerator": {"type": "integer"},
+        "denominator": {"type": "integer", "minimum": 1},
+        "text": {"type": "string"}
+      }
+    }
+  }
+}

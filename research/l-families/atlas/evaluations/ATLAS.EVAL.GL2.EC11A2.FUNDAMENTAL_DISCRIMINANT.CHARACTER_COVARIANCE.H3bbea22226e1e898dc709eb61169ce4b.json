@@ -1,0 +1,248 @@
+{
+  "adapter_bindings": [
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "hash_mode": "RAW_BYTES",
+      "media_type": "text/x-python",
+      "notes": "Content checked by the offline atlas validator.",
+      "path": "research/l-families/atlas/core/twist_character_covariance.py",
+      "role": "twist_character_adapter",
+      "schema_path": null,
+      "sha256": "20d62858c6fae9b0d998796c35b6ecab299f5cb9a76d2fae9fc11f96233e6586"
+    },
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "hash_mode": "RAW_BYTES",
+      "media_type": "text/x-python",
+      "notes": "Content checked by the offline atlas validator.",
+      "path": "research/l-families/atlas/core/local_euler.py",
+      "role": "local_trace_arithmetic",
+      "schema_path": null,
+      "sha256": "99ee82c605cefb42e3b1058e4c4ed6b2dbed4236e96f8d9e6cf429d79a43e2ee"
+    }
+  ],
+  "arithmetic": {
+    "class": "MIXED",
+    "directed": false,
+    "rounding_contract": "Integer sufficient statistics and rational diagonals are exact; reconstructed radical coordinates are exact; decimal moment fields are display-only binary64 conversions.",
+    "serialization_contract": "Aligned integer vectors, common-denominator matrices, and reduced rational triples in canonical UTF-8 NFC JSON."
+  },
+  "assumptions": [
+    {
+      "code": "BASE_CURVE_MODEL_IMPORTED",
+      "statement": "The displayed 11.a2 Weierstrass model identifies the intended base L-function.",
+      "status": "HEURISTIC"
+    }
+  ],
+  "central_zero_policy_applied": "NOT_APPLICABLE",
+  "configuration": {
+    "canonical_sha256": "8079ba4fee6307fd605710b034b67b2a595ce860d27cc292d16238bff7c8bfdf",
+    "values": {
+      "base_conductor": 11,
+      "discriminant_bounds": [
+        256,
+        512,
+        1024,
+        2048
+      ],
+      "partition_policy": "ALL_POSITIVE_NEGATIVE",
+      "prime_bound": 43
+    }
+  },
+  "coverage": {
+    "class": "FINITE_COMPLETE",
+    "omissions": [
+      "root-number split",
+      "primes above 43",
+      "discriminants above 2048",
+      "central ranks",
+      "zero ordinates",
+      "asymptotic error bound"
+    ],
+    "statement": "Every fundamental discriminant 1<|d|<=2048 coprime to 11, nested at four bounds, and every good prime p<=43."
+  },
+  "detector_contract_binding": {
+    "record_sha256": "123b9765b2d5ba010a3953946c0dec8507e5fbdabdb6649c0ac69733cdac9ce1",
+    "semantic_id": "ATLAS.DETECTOR.GL2.TWIST_CHARACTER.COVARIANCE.Hfbc71d709f2e2a1fb6ad6eaaf50528c6"
+  },
+  "evaluation_scope": "FAMILY_MOMENT",
+  "firewalls": [
+    {
+      "code": "NO_ROOT_SPLIT",
+      "statement": "Discriminant sign is retained only as an archimedean partition and is never called a root number."
+    },
+    {
+      "code": "FINITE_NOT_ASYMPTOTIC",
+      "statement": "Four finite bounds do not prove character orthogonality or a power-saving error."
+    },
+    {
+      "code": "CHARACTERS_NOT_ZEROS",
+      "statement": "No central rank or zero ordinate is evaluated."
+    },
+    {
+      "code": "DENSITY_CORRECTION_RETAINED",
+      "statement": "The diagonal keeps chi_d(p)^2 and its p/(p+1) comparator rather than replacing it by one."
+    }
+  ],
+  "identity_kernel": {
+    "adapter_bindings": [
+      {
+        "coverage_class": "FINITE_COMPLETE",
+        "hash_mode": "RAW_BYTES",
+        "media_type": "text/x-python",
+        "notes": "Content checked by the offline atlas validator.",
+        "path": "research/l-families/atlas/core/twist_character_covariance.py",
+        "role": "twist_character_adapter",
+        "schema_path": null,
+        "sha256": "20d62858c6fae9b0d998796c35b6ecab299f5cb9a76d2fae9fc11f96233e6586"
+      },
+      {
+        "coverage_class": "FINITE_COMPLETE",
+        "hash_mode": "RAW_BYTES",
+        "media_type": "text/x-python",
+        "notes": "Content checked by the offline atlas validator.",
+        "path": "research/l-families/atlas/core/local_euler.py",
+        "role": "local_trace_arithmetic",
+        "schema_path": null,
+        "sha256": "99ee82c605cefb42e3b1058e4c4ed6b2dbed4236e96f8d9e6cf429d79a43e2ee"
+      }
+    ],
+    "configuration_sha256": "8079ba4fee6307fd605710b034b67b2a595ce860d27cc292d16238bff7c8bfdf",
+    "detector_contract_binding": {
+      "record_sha256": "123b9765b2d5ba010a3953946c0dec8507e5fbdabdb6649c0ac69733cdac9ce1",
+      "semantic_id": "ATLAS.DETECTOR.GL2.TWIST_CHARACTER.COVARIANCE.Hfbc71d709f2e2a1fb6ad6eaaf50528c6"
+    },
+    "implementation_commit": "PENDING",
+    "implementation_sha256": "20d62858c6fae9b0d998796c35b6ecab299f5cb9a76d2fae9fc11f96233e6586",
+    "input_fulfillments_sha256": "1db913cd35e8a41e6f7f6d4aa0e04ff66d3aff6c7ae9c49babd0dee96f47851b",
+    "input_sha256s": [
+      "66c7c62a159c0ab32178bdb21aefae18adb3f2e759cd507918c282ac7e318e32"
+    ],
+    "lfunction_spec_bindings": [
+      {
+        "record_sha256": "4a0d2b63da44a27b4e8a4ebc311d61cf51d6a596eee4f89a6a4b32cc913a2c36",
+        "semantic_id": "ATLAS.LFUNC.EC.11.R0.H640f9f7ea45725183495b7b2525cf21c"
+      }
+    ],
+    "seed": null,
+    "slug": "GL2.EC11A2.FUNDAMENTAL_DISCRIMINANT.CHARACTER_COVARIANCE",
+    "version": 1
+  },
+  "identity_sha256": "3bbea22226e1e898dc709eb61169ce4bcc57ae23b01af5612e13c62c5da12b7c",
+  "input_bindings": [
+    {
+      "coverage_class": "PARTIAL",
+      "hash_mode": "CANONICAL_JSON_UTF8_NFC",
+      "media_type": "application/json",
+      "notes": "Content checked by the offline atlas validator.",
+      "path": "research/l-families/atlas/sources/lmfdb-curves.json",
+      "role": "base_curve_source_manifest",
+      "schema_path": null,
+      "sha256": "66c7c62a159c0ab32178bdb21aefae18adb3f2e759cd507918c282ac7e318e32"
+    }
+  ],
+  "input_fulfillments": [
+    {
+      "coverage_class": "COMPLETE",
+      "input_type": "LFUNCTION_SPEC",
+      "name": "lfunction_spec",
+      "sources": [
+        "ATLAS.LFUNC.EC.11.R0.H640f9f7ea45725183495b7b2525cf21c"
+      ]
+    },
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "input_type": "LOCAL_EULER_FACTORS",
+      "name": "local_euler_factors",
+      "sources": [
+        "research/l-families/atlas/sources/lmfdb-curves.json",
+        "research/l-families/atlas/core/local_euler.py"
+      ]
+    },
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "input_type": "FAMILY_PARAMETER",
+      "name": "family_parameter",
+      "sources": [
+        "research/l-families/atlas/core/twist_character_covariance.py"
+      ]
+    }
+  ],
+  "interpretation": {
+    "smallest_gap": "Source and verify the root-number partition, then prove local-density and off-diagonal estimates uniformly when the prime window grows with the discriminant bound.",
+    "statement": "Given the imported 11.a2 model, the finite character covariance sufficient statistics and all coordinates reconstructed by the declared formulas are exact for the conductor-coprime unconditioned families.",
+    "status": "EXACT_FINITE",
+    "theorem_claim_id": null
+  },
+  "lfunction_spec_bindings": [
+    {
+      "record_sha256": "4a0d2b63da44a27b4e8a4ebc311d61cf51d6a596eee4f89a6a4b32cc913a2c36",
+      "semantic_id": "ATLAS.LFUNC.EC.11.R0.H640f9f7ea45725183495b7b2525cf21c"
+    }
+  ],
+  "notes": "This is the conductor-coprime but root-number-unconditioned coefficient-family precursor to the root-number-split theorem target, not the target itself.",
+  "programme_refs": [
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 738,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/738"
+    },
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 741,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/741"
+    }
+  ],
+  "record_state": "DRAFT",
+  "record_type": "EVALUATION_RECORD",
+  "result": {
+    "artifact": {
+      "coverage_class": "FINITE_COMPLETE",
+      "hash_mode": "CANONICAL_JSON_UTF8_NFC",
+      "media_type": "application/json",
+      "notes": "Exact aligned sufficient statistics reconstruct all character marginals and rational/radical coordinates; decimal fields are display-only.",
+      "path": "research/l-families/atlas/results/ATLAS.EVAL.GL2.EC11A2.FUNDAMENTAL_DISCRIMINANT.CHARACTER_COVARIANCE.H3bbea22226e1e898dc709eb61169ce4b.json",
+      "role": "detector_result",
+      "schema_path": "research/l-families/atlas/detectors/raw-schemas/twist-character-covariance-result.schema.json",
+      "sha256": "541b14826fd0cdf82274006f031273d99d12a2bf38073d54ee8d9c24a8304b4d"
+    },
+    "predicate_outcome": "NOT_APPLICABLE",
+    "representation": "HASHED_ARTIFACT",
+    "summary": "Exact aligned sufficient statistics for local marginals, full character Gram/covariance matrices, and reconstructible unitary prime-sum mean, second moment, and variance coordinates at four nested bounds."
+  },
+  "result_hashes": [
+    {
+      "algorithm": "sha256",
+      "binds": "canonical JSON twist-character covariance result",
+      "hash_mode": "CANONICAL_JSON_UTF8_NFC",
+      "value": "541b14826fd0cdf82274006f031273d99d12a2bf38073d54ee8d9c24a8304b4d"
+    }
+  ],
+  "revision": 1,
+  "rigor_level": "DISCOVERY_ONLY",
+  "run": {
+    "code_commit": "PENDING",
+    "command": "python research/l-families/atlas/core/twist_character_covariance.py --check",
+    "implementation_path": "research/l-families/atlas/core/twist_character_covariance.py",
+    "implementation_sha256": "20d62858c6fae9b0d998796c35b6ecab299f5cb9a76d2fae9fc11f96233e6586",
+    "timestamp_utc": "2026-08-24T15:00:00Z"
+  },
+  "schema_version": "riemann.atlas.evaluation_record.v1",
+  "scope_boundary": "All declared fundamental discriminants coprime to 11 through 2048 and all good primes through 43; no root-number split.",
+  "semantic_id": "ATLAS.EVAL.GL2.EC11A2.FUNDAMENTAL_DISCRIMINANT.CHARACTER_COVARIANCE.H3bbea22226e1e898dc709eb61169ce4b",
+  "software": [
+    {
+      "name": "CPython",
+      "role": "exact integer point counts and rational moment aggregation",
+      "version": "3.12.10"
+    }
+  ],
+  "subject": {
+    "description": "Quadratic-character coefficient twists of the fixed 11.a2 Euler data",
+    "kind": "L_FUNCTION_SET"
+  },
+  "supersedes": [],
+  "title": "Exact unconditioned conductor-coprime 11.a2 quadratic-character covariance through |d|<=2048"
+}

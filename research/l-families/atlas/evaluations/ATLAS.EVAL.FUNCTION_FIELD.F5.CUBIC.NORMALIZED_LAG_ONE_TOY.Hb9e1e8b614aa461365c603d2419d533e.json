@@ -1,0 +1,201 @@
+{
+  "adapter_bindings": [
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "hash_mode": "RAW_BYTES",
+      "media_type": "text/x-python",
+      "notes": "Content checked by the offline atlas validator.",
+      "path": "research/l-families/atlas/function_field/pilot.py",
+      "role": "family_adapter",
+      "schema_path": null,
+      "sha256": "c9b4873daa50e96859c2c079dc031ebcdb5193bd495656e7049bfc6836a93258"
+    }
+  ],
+  "arithmetic": {
+    "class": "CERTIFIED_INTEGER_COVERAGE",
+    "directed": false,
+    "rounding_contract": "No floating point; Q(sqrt(5)) elements use rational coordinate pairs.",
+    "serialization_contract": "Sorted-key JSON plus an independently recomputed artifact hash."
+  },
+  "assumptions": [],
+  "central_zero_policy_applied": "NOT_APPLICABLE",
+  "configuration": {
+    "canonical_sha256": "0c3470b2dc3ccdcda77013a9d7ad7579c9a42937a36fa9c0cd30df4f99999164",
+    "values": {
+      "conductor_degree": 3,
+      "q": 5,
+      "reciprocal_degree": 3,
+      "statistic": "H1_TIMES_H2"
+    }
+  },
+  "coverage": {
+    "class": "FINITE_COMPLETE",
+    "omissions": [
+      "larger q",
+      "larger conductor degree",
+      "canonical XD/HCNC kernels"
+    ],
+    "statement": "Every monic squarefree cubic D in F_5[T], with all monic terms required through degree 3."
+  },
+  "detector_contract_binding": {
+    "record_sha256": "730c48c1220bd89fc420ab55df82ff4f486bf4720e75db2d699288440c69e92e",
+    "semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.NORMALIZED_LAG_ONE_TOY.H9470def57b0bc98a0bce166fb12e7136"
+  },
+  "evaluation_scope": "FINITE_EXHAUSTIVE_FAMILY",
+  "firewalls": [
+    {
+      "code": "NO_NUMBER_FIELD_TRANSFER",
+      "statement": "The function-field computation implies no theorem over the integers."
+    },
+    {
+      "code": "TOY_NOT_XD",
+      "statement": "H_D(1)H_D(2) is not canonical XD, HCNC, or physical occupancy."
+    },
+    {
+      "code": "AVERAGE_NOT_MEMBERWISE",
+      "statement": "The exact family mean is not an individual conclusion."
+    }
+  ],
+  "identity_kernel": {
+    "adapter_bindings": [
+      {
+        "coverage_class": "FINITE_COMPLETE",
+        "hash_mode": "RAW_BYTES",
+        "media_type": "text/x-python",
+        "notes": "Content checked by the offline atlas validator.",
+        "path": "research/l-families/atlas/function_field/pilot.py",
+        "role": "family_adapter",
+        "schema_path": null,
+        "sha256": "c9b4873daa50e96859c2c079dc031ebcdb5193bd495656e7049bfc6836a93258"
+      }
+    ],
+    "configuration_sha256": "0c3470b2dc3ccdcda77013a9d7ad7579c9a42937a36fa9c0cd30df4f99999164",
+    "detector_contract_binding": {
+      "record_sha256": "730c48c1220bd89fc420ab55df82ff4f486bf4720e75db2d699288440c69e92e",
+      "semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.NORMALIZED_LAG_ONE_TOY.H9470def57b0bc98a0bce166fb12e7136"
+    },
+    "implementation_commit": "PENDING",
+    "implementation_sha256": "c9b4873daa50e96859c2c079dc031ebcdb5193bd495656e7049bfc6836a93258",
+    "input_fulfillments_sha256": "a61225fa7acaea992beea86bf10763ec096958cfbbb621cd11cc343dcea7f0ff",
+    "input_sha256s": [
+      "c9b4873daa50e96859c2c079dc031ebcdb5193bd495656e7049bfc6836a93258"
+    ],
+    "lfunction_spec_bindings": [
+      {
+        "record_sha256": "5f69b76a561a4fc6e68bd73205a9cd0e464135b2a3cfb375888a0dbf1d69b09a",
+        "semantic_id": "ATLAS.LFUNC.FUNCTION_FIELD.F5.QUADRATIC.CUBIC_FAMILY.H8e43f81561dfe872d7e00fb6f29e749b"
+      }
+    ],
+    "seed": null,
+    "slug": "FUNCTION_FIELD.F5.CUBIC.NORMALIZED_LAG_ONE_TOY",
+    "version": 1
+  },
+  "identity_sha256": "b9e1e8b614aa461365c603d2419d533e5417bdb2e370c4435c3549da93c73e83",
+  "input_bindings": [
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "hash_mode": "RAW_BYTES",
+      "media_type": "text/x-python",
+      "notes": "Content checked by the offline atlas validator.",
+      "path": "research/l-families/atlas/function_field/pilot.py",
+      "role": "deterministic_family_generator",
+      "schema_path": null,
+      "sha256": "c9b4873daa50e96859c2c079dc031ebcdb5193bd495656e7049bfc6836a93258"
+    }
+  ],
+  "input_fulfillments": [
+    {
+      "coverage_class": "COMPLETE",
+      "input_type": "LFUNCTION_SPEC",
+      "name": "lfunction_spec",
+      "sources": [
+        "ATLAS.LFUNC.FUNCTION_FIELD.F5.QUADRATIC.CUBIC_FAMILY.H8e43f81561dfe872d7e00fb6f29e749b"
+      ]
+    },
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "input_type": "RECIPROCAL_COEFFICIENTS",
+      "name": "reciprocal_coefficients",
+      "sources": [
+        "research/l-families/atlas/function_field/pilot.py"
+      ]
+    }
+  ],
+  "interpretation": {
+    "smallest_gap": "Derive a true degree-kernel analogue of XD or HCNC and identify the monodromy input that individualizes its family trace.",
+    "statement": "The naive universalization 'Frobenius purity forces a memberwise sign for H_D(1)H_D(2)' is false in this finite family.",
+    "status": "REFUTATION",
+    "theorem_claim_id": null
+  },
+  "lfunction_spec_bindings": [
+    {
+      "record_sha256": "5f69b76a561a4fc6e68bd73205a9cd0e464135b2a3cfb375888a0dbf1d69b09a",
+      "semantic_id": "ATLAS.LFUNC.FUNCTION_FIELD.F5.QUADRATIC.CUBIC_FAMILY.H8e43f81561dfe872d7e00fb6f29e749b"
+    }
+  ],
+  "notes": "The verifier regenerates all conductors and coefficients; the fixture is derived data, not an external primitive.",
+  "programme_refs": [
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 737,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/737"
+    },
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 741,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/741"
+    }
+  ],
+  "record_state": "DRAFT",
+  "record_type": "EVALUATION_RECORD",
+  "result": {
+    "artifact": {
+      "coverage_class": "FINITE_COMPLETE",
+      "hash_mode": "CANONICAL_JSON_UTF8_NFC",
+      "media_type": "application/json",
+      "notes": "Content checked by the offline atlas validator.",
+      "path": "research/l-families/atlas/function_field/fixtures.json",
+      "role": "detector_result",
+      "schema_path": null,
+      "sha256": "6c403dcc6e3f92aabfba43eb31a50886def89c48e467fbd93ce3e102af50e027"
+    },
+    "predicate_outcome": "VIOLATED",
+    "representation": "HASHED_ARTIFACT",
+    "summary": "Purity holds for every member, while C_D has 40 negative, 20 zero, and 40 positive values and exact family mean zero."
+  },
+  "result_hashes": [
+    {
+      "algorithm": "sha256",
+      "binds": "canonical JSON function-field fixture",
+      "hash_mode": "CANONICAL_JSON_UTF8_NFC",
+      "value": "6c403dcc6e3f92aabfba43eb31a50886def89c48e467fbd93ce3e102af50e027"
+    }
+  ],
+  "revision": 1,
+  "rigor_level": "RIGOROUS_CERTIFIED",
+  "run": {
+    "code_commit": "PENDING",
+    "command": "python research/l-families/atlas/function_field/pilot.py --check research/l-families/atlas/function_field/fixtures.json",
+    "implementation_path": "research/l-families/atlas/function_field/pilot.py",
+    "implementation_sha256": "c9b4873daa50e96859c2c079dc031ebcdb5193bd495656e7049bfc6836a93258",
+    "timestamp_utc": "2026-08-24T15:00:00Z"
+  },
+  "schema_version": "riemann.atlas.evaluation_record.v1",
+  "scope_boundary": "Exactly 100 monic squarefree cubic conductors and reciprocal degrees 0 through 3.",
+  "semantic_id": "ATLAS.EVAL.FUNCTION_FIELD.F5.CUBIC.NORMALIZED_LAG_ONE_TOY.Hb9e1e8b614aa461365c603d2419d533e",
+  "software": [
+    {
+      "name": "CPython",
+      "role": "exact integer point counts and rational moment aggregation",
+      "version": "3.12.10"
+    }
+  ],
+  "subject": {
+    "description": "Complete frozen q=5 monic squarefree cubic quadratic-character family",
+    "kind": "L_FUNCTION_SET"
+  },
+  "supersedes": [],
+  "title": "Exact exhaustive F_5[T] cubic-family sign audit"
+}

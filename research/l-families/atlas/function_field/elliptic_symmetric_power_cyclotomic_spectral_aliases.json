@@ -1,0 +1,1750 @@
+{
+  "bounded_exact_regression": {
+    "method": "integer residue Counters, unit multiplication, and direct cyclic-interval intersections only",
+    "odd_order_count": 25,
+    "odd_orders_inclusive": [
+      3,
+      51
+    ],
+    "per_order": [
+      {
+        "autocorrelation_formula_checks": 0,
+        "observed_nontrivial_alias_m_residues": [],
+        "odd_order": 3,
+        "stabilizer_unit_candidate_checks": 12,
+        "tested_m_range_inclusive": [
+          0,
+          5
+        ],
+        "theorem_special_m_residues": [
+          1,
+          2,
+          0
+        ],
+        "unit_group": [
+          1,
+          2
+        ]
+      },
+      {
+        "autocorrelation_formula_checks": 8,
+        "observed_nontrivial_alias_m_residues": [
+          3,
+          4,
+          0
+        ],
+        "odd_order": 5,
+        "stabilizer_unit_candidate_checks": 40,
+        "tested_m_range_inclusive": [
+          0,
+          9
+        ],
+        "theorem_special_m_residues": [
+          3,
+          4,
+          0
+        ],
+        "unit_group": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "autocorrelation_formula_checks": 24,
+        "observed_nontrivial_alias_m_residues": [
+          5,
+          6,
+          0
+        ],
+        "odd_order": 7,
+        "stabilizer_unit_candidate_checks": 84,
+        "tested_m_range_inclusive": [
+          0,
+          13
+        ],
+        "theorem_special_m_residues": [
+          5,
+          6,
+          0
+        ],
+        "unit_group": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "autocorrelation_formula_checks": 48,
+        "observed_nontrivial_alias_m_residues": [
+          7,
+          8,
+          0
+        ],
+        "odd_order": 9,
+        "stabilizer_unit_candidate_checks": 108,
+        "tested_m_range_inclusive": [
+          0,
+          17
+        ],
+        "theorem_special_m_residues": [
+          7,
+          8,
+          0
+        ],
+        "unit_group": [
+          1,
+          2,
+          4,
+          5,
+          7,
+          8
+        ]
+      },
+      {
+        "autocorrelation_formula_checks": 80,
+        "observed_nontrivial_alias_m_residues": [
+          9,
+          10,
+          0
+        ],
+        "odd_order": 11,
+        "stabilizer_unit_candidate_checks": 220,
+        "tested_m_range_inclusive": [
+          0,
+          21
+        ],
+        "theorem_special_m_residues": [
+          9,
+          10,
+          0
+        ],
+        "unit_group": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      {
+        "autocorrelation_formula_checks": 120,
+        "observed_nontrivial_alias_m_residues": [
+          11,
+          12,
+          0
+        ],
+        "odd_order": 13,
+        "stabilizer_unit_candidate_checks": 312,
+        "tested_m_range_inclusive": [
+          0,
+          25
+        ],
+        "theorem_special_m_residues": [
+          11,
+          12,
+          0
+        ],
+        "unit_group": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      {
+        "autocorrelation_formula_checks": 168,
+        "observed_nontrivial_alias_m_residues": [
+          13,
+          14,
+          0
+        ],
+        "odd_order": 15,
+        "stabilizer_unit_candidate_checks": 240,
+        "tested_m_range_inclusive": [
+          0,
+          29
+        ],
+        "theorem_special_m_residues": [
+          13,
+          14,
+          0
+        ],
+        "unit_group": [
+          1,
+          2,
+          4,
+          7,
+          8,
+          11,
+          13,
+          14
+        ]
+      },
+      {
+        "autocorrelation_formula_checks": 224,
+        "observed_nontrivial_alias_m_residues": [
+          15,
+          16,
+          0
+        ],
+        "odd_order": 17,
+        "stabilizer_unit_candidate_checks": 544,
+        "tested_m_range_inclusive": [
+          0,
+          33
+        ],
+        "theorem_special_m_residues": [
+          15,
+          16,
+          0
+        ],
+        "unit_group": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      },
+      {
+        "autocorrelation_formula_checks": 288,
+        "observed_nontrivial_alias_m_residues": [
+          17,
+          18,
+          0
+        ],
+        "odd_order": 19,
+        "stabilizer_unit_candidate_checks": 684,
+        "tested_m_range_inclusive": [
+          0,
+          37
+        ],
+        "theorem_special_m_residues": [
+          17,
+          18,
+          0
+        ],
+        "unit_group": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ]
+      },
+      {
+        "autocorrelation_formula_checks": 360,
+        "observed_nontrivial_alias_m_residues": [
+          19,
+          20,
+          0
+        ],
+        "odd_order": 21,
+        "stabilizer_unit_candidate_checks": 504,
+        "tested_m_range_inclusive": [
+          0,
+          41
+        ],
+        "theorem_special_m_residues": [
+          19,
+          20,
+          0
+        ],
+        "unit_group": [
+          1,
+          2,
+          4,
+          5,
+          8,
+          10,
+          11,
+          13,
+          16,
+          17,
+          19,
+          20
+        ]
+      },
+      {
+        "autocorrelation_formula_checks": 440,
+        "observed_nontrivial_alias_m_residues": [
+          21,
+          22,
+          0
+        ],
+        "odd_order": 23,
+        "stabilizer_unit_candidate_checks": 1012,
+        "tested_m_range_inclusive": [
+          0,
+          45
+        ],
+        "theorem_special_m_residues": [
+          21,
+          22,
+          0
+        ],
+        "unit_group": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22
+        ]
+      },
+      {
+        "autocorrelation_formula_checks": 528,
+        "observed_nontrivial_alias_m_residues": [
+          23,
+          24,
+          0
+        ],
+        "odd_order": 25,
+        "stabilizer_unit_candidate_checks": 1000,
+        "tested_m_range_inclusive": [
+          0,
+          49
+        ],
+        "theorem_special_m_residues": [
+          23,
+          24,
+          0
+        ],
+        "unit_group": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9,
+          11,
+          12,
+          13,
+          14,
+          16,
+          17,
+          18,
+          19,
+          21,
+          22,
+          23,
+          24
+        ]
+      },
+      {
+        "autocorrelation_formula_checks": 624,
+        "observed_nontrivial_alias_m_residues": [
+          25,
+          26,
+          0
+        ],
+        "odd_order": 27,
+        "stabilizer_unit_candidate_checks": 972,
+        "tested_m_range_inclusive": [
+          0,
+          53
+        ],
+        "theorem_special_m_residues": [
+          25,
+          26,
+          0
+        ],
+        "unit_group": [
+          1,
+          2,
+          4,
+          5,
+          7,
+          8,
+          10,
+          11,
+          13,
+          14,
+          16,
+          17,
+          19,
+          20,
+          22,
+          23,
+          25,
+          26
+        ]
+      },
+      {
+        "autocorrelation_formula_checks": 728,
+        "observed_nontrivial_alias_m_residues": [
+          27,
+          28,
+          0
+        ],
+        "odd_order": 29,
+        "stabilizer_unit_candidate_checks": 1624,
+        "tested_m_range_inclusive": [
+          0,
+          57
+        ],
+        "theorem_special_m_residues": [
+          27,
+          28,
+          0
+        ],
+        "unit_group": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ]
+      },
+      {
+        "autocorrelation_formula_checks": 840,
+        "observed_nontrivial_alias_m_residues": [
+          29,
+          30,
+          0
+        ],
+        "odd_order": 31,
+        "stabilizer_unit_candidate_checks": 1860,
+        "tested_m_range_inclusive": [
+          0,
+          61
+        ],
+        "theorem_special_m_residues": [
+          29,
+          30,
+          0
+        ],
+        "unit_group": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      },
+      {
+        "autocorrelation_formula_checks": 960,
+        "observed_nontrivial_alias_m_residues": [
+          31,
+          32,
+          0
+        ],
+        "odd_order": 33,
+        "stabilizer_unit_candidate_checks": 1320,
+        "tested_m_range_inclusive": [
+          0,
+          65
+        ],
+        "theorem_special_m_residues": [
+          31,
+          32,
+          0
+        ],
+        "unit_group": [
+          1,
+          2,
+          4,
+          5,
+          7,
+          8,
+          10,
+          13,
+          14,
+          16,
+          17,
+          19,
+          20,
+          23,
+          25,
+          26,
+          28,
+          29,
+          31,
+          32
+        ]
+      },
+      {
+        "autocorrelation_formula_checks": 1088,
+        "observed_nontrivial_alias_m_residues": [
+          33,
+          34,
+          0
+        ],
+        "odd_order": 35,
+        "stabilizer_unit_candidate_checks": 1680,
+        "tested_m_range_inclusive": [
+          0,
+          69
+        ],
+        "theorem_special_m_residues": [
+          33,
+          34,
+          0
+        ],
+        "unit_group": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          8,
+          9,
+          11,
+          12,
+          13,
+          16,
+          17,
+          18,
+          19,
+          22,
+          23,
+          24,
+          26,
+          27,
+          29,
+          31,
+          32,
+          33,
+          34
+        ]
+      },
+      {
+        "autocorrelation_formula_checks": 1224,
+        "observed_nontrivial_alias_m_residues": [
+          35,
+          36,
+          0
+        ],
+        "odd_order": 37,
+        "stabilizer_unit_candidate_checks": 2664,
+        "tested_m_range_inclusive": [
+          0,
+          73
+        ],
+        "theorem_special_m_residues": [
+          35,
+          36,
+          0
+        ],
+        "unit_group": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36
+        ]
+      },
+      {
+        "autocorrelation_formula_checks": 1368,
+        "observed_nontrivial_alias_m_residues": [
+          37,
+          38,
+          0
+        ],
+        "odd_order": 39,
+        "stabilizer_unit_candidate_checks": 1872,
+        "tested_m_range_inclusive": [
+          0,
+          77
+        ],
+        "theorem_special_m_residues": [
+          37,
+          38,
+          0
+        ],
+        "unit_group": [
+          1,
+          2,
+          4,
+          5,
+          7,
+          8,
+          10,
+          11,
+          14,
+          16,
+          17,
+          19,
+          20,
+          22,
+          23,
+          25,
+          28,
+          29,
+          31,
+          32,
+          34,
+          35,
+          37,
+          38
+        ]
+      },
+      {
+        "autocorrelation_formula_checks": 1520,
+        "observed_nontrivial_alias_m_residues": [
+          39,
+          40,
+          0
+        ],
+        "odd_order": 41,
+        "stabilizer_unit_candidate_checks": 3280,
+        "tested_m_range_inclusive": [
+          0,
+          81
+        ],
+        "theorem_special_m_residues": [
+          39,
+          40,
+          0
+        ],
+        "unit_group": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40
+        ]
+      },
+      {
+        "autocorrelation_formula_checks": 1680,
+        "observed_nontrivial_alias_m_residues": [
+          41,
+          42,
+          0
+        ],
+        "odd_order": 43,
+        "stabilizer_unit_candidate_checks": 3612,
+        "tested_m_range_inclusive": [
+          0,
+          85
+        ],
+        "theorem_special_m_residues": [
+          41,
+          42,
+          0
+        ],
+        "unit_group": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42
+        ]
+      },
+      {
+        "autocorrelation_formula_checks": 1848,
+        "observed_nontrivial_alias_m_residues": [
+          43,
+          44,
+          0
+        ],
+        "odd_order": 45,
+        "stabilizer_unit_candidate_checks": 2160,
+        "tested_m_range_inclusive": [
+          0,
+          89
+        ],
+        "theorem_special_m_residues": [
+          43,
+          44,
+          0
+        ],
+        "unit_group": [
+          1,
+          2,
+          4,
+          7,
+          8,
+          11,
+          13,
+          14,
+          16,
+          17,
+          19,
+          22,
+          23,
+          26,
+          28,
+          29,
+          31,
+          32,
+          34,
+          37,
+          38,
+          41,
+          43,
+          44
+        ]
+      },
+      {
+        "autocorrelation_formula_checks": 2024,
+        "observed_nontrivial_alias_m_residues": [
+          45,
+          46,
+          0
+        ],
+        "odd_order": 47,
+        "stabilizer_unit_candidate_checks": 4324,
+        "tested_m_range_inclusive": [
+          0,
+          93
+        ],
+        "theorem_special_m_residues": [
+          45,
+          46,
+          0
+        ],
+        "unit_group": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46
+        ]
+      },
+      {
+        "autocorrelation_formula_checks": 2208,
+        "observed_nontrivial_alias_m_residues": [
+          47,
+          48,
+          0
+        ],
+        "odd_order": 49,
+        "stabilizer_unit_candidate_checks": 4116,
+        "tested_m_range_inclusive": [
+          0,
+          97
+        ],
+        "theorem_special_m_residues": [
+          47,
+          48,
+          0
+        ],
+        "unit_group": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48
+        ]
+      },
+      {
+        "autocorrelation_formula_checks": 2400,
+        "observed_nontrivial_alias_m_residues": [
+          49,
+          50,
+          0
+        ],
+        "odd_order": 51,
+        "stabilizer_unit_candidate_checks": 3264,
+        "tested_m_range_inclusive": [
+          0,
+          101
+        ],
+        "theorem_special_m_residues": [
+          49,
+          50,
+          0
+        ],
+        "unit_group": [
+          1,
+          2,
+          4,
+          5,
+          7,
+          8,
+          10,
+          11,
+          13,
+          14,
+          16,
+          19,
+          20,
+          22,
+          23,
+          25,
+          26,
+          28,
+          29,
+          31,
+          32,
+          35,
+          37,
+          38,
+          40,
+          41,
+          43,
+          44,
+          46,
+          47,
+          49,
+          50
+        ]
+      }
+    ]
+  },
+  "next_targets": [
+    "classify the affine parity cosets for even root order without conflating scalar-lift signs",
+    "study which algebraic cyclotomic strata can occur in coefficient fields of genuine compatible L-function families",
+    "combine quotient-group recovery with integral and local-global constraints across many primes"
+  ],
+  "odd_order_stabilizer_theorem": {
+    "class_level_nuance": "a=+/-1 is one semisimple conjugacy class; the three exceptional m residues collapse all primitive classes modulo inversion",
+    "complete_cycle_decomposition": "if m+1=kN+s with 0<=s<N, the exponent multiset is k copies of every residue plus R_s={s-1-2j:0<=j<s}",
+    "edge_cases": {
+      "s_0_equivalently_m_N_minus_1": "R_s is empty; every unit stabilizes it",
+      "s_1_equivalently_m_0": "R_s={0}; every unit stabilizes it",
+      "s_N_minus_1_equivalently_m_N_minus_2": "R_s is every nonzero residue; every unit stabilizes it"
+    },
+    "interior_proof": {
+      "autocorrelation": "C_s(d)=max(0,s-d)+max(0,s-(N-d)) for 1<=d<=N-1",
+      "range": "2<=s<=N-2",
+      "stabilizer_conclusion": "aR_s=R_s implies C_s(a)=C_s(1)=s-1, hence a=+/-1",
+      "unique_maximum": "C_s(d)=s-1 exactly for d=+/-1; every other nonzero d gives at most s-2"
+    },
+    "nontriviality_boundary": "for N=3 there is only one primitive class modulo inversion, so the collapse is vacuous; every odd N>=5 has genuine non-sign primitive-class aliases in the three exceptional residues",
+    "scaling_step": "because N is odd, multiplication by 2^-1 turns R_s into a cyclic interval of length s",
+    "scope": "every odd N>=3, every m>=0, every unit a modulo N",
+    "statement": "S_m(zeta)=S_m(zeta^a) iff a=+/-1 mod N or m mod N belongs to {N-2,N-1,0}"
+  },
+  "orders_5_7_9_11": [
+    {
+      "factorization": "C_5(X)-2=(X-2)*M_5(X)^2",
+      "first_alias_power": 3,
+      "irreducibility": {
+        "conclusion": "irreducible over F_2, hence irreducible over Q by Gauss's lemma",
+        "degree": 2,
+        "monic_candidate_degrees": [
+          1
+        ],
+        "monic_candidates_exhausted": 2,
+        "prime": 2,
+        "proper_factor_found": false
+      },
+      "lower_order_trace_factors": [],
+      "minimal_polynomial_coefficients_low_to_high": [
+        -1,
+        1,
+        1
+      ],
+      "primitive_class_count": 2,
+      "primitive_class_representatives_modulo_inversion": [
+        1,
+        2
+      ],
+      "root_order": 5,
+      "shared_factor_coefficients_T0_up": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "trace_recurrence_polynomial_C_N_minus_2_low_to_high": [
+        -2,
+        5,
+        0,
+        -5,
+        0,
+        1
+      ]
+    },
+    {
+      "factorization": "C_7(X)-2=(X-2)*M_7(X)^2",
+      "first_alias_power": 5,
+      "irreducibility": {
+        "conclusion": "irreducible over F_2, hence irreducible over Q by Gauss's lemma",
+        "degree": 3,
+        "monic_candidate_degrees": [
+          1
+        ],
+        "monic_candidates_exhausted": 2,
+        "prime": 2,
+        "proper_factor_found": false
+      },
+      "lower_order_trace_factors": [],
+      "minimal_polynomial_coefficients_low_to_high": [
+        -1,
+        -2,
+        1,
+        1
+      ],
+      "primitive_class_count": 3,
+      "primitive_class_representatives_modulo_inversion": [
+        1,
+        2,
+        3
+      ],
+      "root_order": 7,
+      "shared_factor_coefficients_T0_up": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "trace_recurrence_polynomial_C_N_minus_2_low_to_high": [
+        -2,
+        -7,
+        0,
+        14,
+        0,
+        -7,
+        0,
+        1
+      ]
+    },
+    {
+      "factorization": "C_9(X)-2=(X-2)*(X+1)^2*M_9(X)^2",
+      "first_alias_power": 7,
+      "irreducibility": {
+        "conclusion": "irreducible over F_2, hence irreducible over Q by Gauss's lemma",
+        "degree": 3,
+        "monic_candidate_degrees": [
+          1
+        ],
+        "monic_candidates_exhausted": 2,
+        "prime": 2,
+        "proper_factor_found": false
+      },
+      "lower_order_trace_factors": [
+        [
+          1,
+          1
+        ]
+      ],
+      "minimal_polynomial_coefficients_low_to_high": [
+        1,
+        -3,
+        0,
+        1
+      ],
+      "primitive_class_count": 3,
+      "primitive_class_representatives_modulo_inversion": [
+        1,
+        2,
+        4
+      ],
+      "root_order": 9,
+      "shared_factor_coefficients_T0_up": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "trace_recurrence_polynomial_C_N_minus_2_low_to_high": [
+        -2,
+        9,
+        0,
+        -30,
+        0,
+        27,
+        0,
+        -9,
+        0,
+        1
+      ]
+    },
+    {
+      "factorization": "C_11(X)-2=(X-2)*M_11(X)^2",
+      "first_alias_power": 9,
+      "irreducibility": {
+        "conclusion": "irreducible over F_2, hence irreducible over Q by Gauss's lemma",
+        "degree": 5,
+        "monic_candidate_degrees": [
+          1,
+          2
+        ],
+        "monic_candidates_exhausted": 6,
+        "prime": 2,
+        "proper_factor_found": false
+      },
+      "lower_order_trace_factors": [],
+      "minimal_polynomial_coefficients_low_to_high": [
+        1,
+        3,
+        -3,
+        -4,
+        1,
+        1
+      ],
+      "primitive_class_count": 5,
+      "primitive_class_representatives_modulo_inversion": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "root_order": 11,
+      "shared_factor_coefficients_T0_up": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "trace_recurrence_polynomial_C_N_minus_2_low_to_high": [
+        -2,
+        -11,
+        0,
+        55,
+        0,
+        -77,
+        0,
+        44,
+        0,
+        -11,
+        0,
+        1
+      ]
+    }
+  ],
+  "packet_id": "FUNCTION_FIELD.ELLIPTIC.SYMMETRIC_POWER.CYCLOTOMIC_SPECTRAL_ALIASES.V1",
+  "payload_sha256": "b783dc120095c5256cacc2eaa79f3f152883f9b33b4074a18b123489f81bc6ff",
+  "rational_fixed_determinant_recovery_theorem": {
+    "hypotheses": "m>=1 and x,y,q are rational with q!=0; P_x(U)=U^2-xU+q and P_y(U)=U^2-yU+q are semisimple over an algebraic closure",
+    "nontorsion_case": "two generators of one infinite cyclic group are inverse; r_y=r_x^+/-1 and y^2/q-2=r_y+r_y^-1=x^2/q-2",
+    "quotient_group_certificate": {
+      "consequence": "equal complete factors give equal multisets and hence equal eigenratio groups, including repeated spectra and m=1",
+      "intrinsic_group": "Gamma(A_x)=<u/v:u,v in A_x>=<alpha/beta>; the j=0 and j=1 terms exhibit the generator",
+      "spectrum": "A_x={alpha^(m-j)*beta^j:0<=j<=m}, alpha*beta=q"
+    },
+    "statement": "equality of the complete Sym^m factors implies x=+y or x=-y",
+    "torsion_exhaustion": "r+r^-1=x^2/q-2 is a rational algebraic integer in [-2,2], hence one of -2,-1,0,1,2 and the eigenratio order is exactly one of 2,3,4,6,1",
+    "torsion_table": [
+      {
+        "eigenratio_order": 1,
+        "r_plus_r_inverse": 2,
+        "trace_square_over_q": 4
+      },
+      {
+        "eigenratio_order": 2,
+        "r_plus_r_inverse": -2,
+        "trace_square_over_q": 0
+      },
+      {
+        "eigenratio_order": 3,
+        "r_plus_r_inverse": -1,
+        "trace_square_over_q": 1
+      },
+      {
+        "eigenratio_order": 4,
+        "r_plus_r_inverse": 0,
+        "trace_square_over_q": 2
+      },
+      {
+        "eigenratio_order": 6,
+        "r_plus_r_inverse": 1,
+        "trace_square_over_q": 3
+      }
+    ],
+    "why_cyclotomic_examples_do_not_contradict_it": "orders 5,7,9,11 have irrational primitive trace squares; their algebraic SL2 traces are not rational fixed-determinant elliptic traces"
+  },
+  "resource_contract": {
+    "accounted_work_unit_ledger": {
+      "bounded_autocorrelation_formula_checks": 20800,
+      "bounded_stabilizer_unit_candidates": 37508,
+      "cyclotomic_trace_factorizations": 4,
+      "locked_source_files_verified": 2,
+      "special_factor_identity_certificates": 12,
+      "total_accounted_work_units": 58326
+    },
+    "exclusive_accounted_work_unit_cap": 100000,
+    "field_curve_or_polynomial_model_enumerations": 0,
+    "floating_point_results": 0,
+    "maximum_local_factor_degree_in_examples": 12,
+    "maximum_root_order_in_bounded_replay": 51,
+    "random_samples": 0,
+    "symbolic_packages": 0,
+    "unit_definition": "one candidate unit stabilizer comparison, one direct autocorrelation comparison, or one named exact certificate; not CPU instructions"
+  },
+  "rigor_level": {
+    "global_arithmetic_or_novelty": "NOT_INFERRED",
+    "minimal_trace_polynomials": "CERTIFIED_BY_C_N_MINUS_2_FACTORIZATION_AND_EXHAUSTIVE_MOD_2_IRREDUCIBILITY",
+    "odd_order_stabilizer": "PROVED_FOR_EVERY_ODD N BY_COMPLETE_CYCLES_AND_CYCLIC_INTERVAL_AUTOCORRELATION",
+    "rational_recovery": "PROVED_FROM_THE_INTRINSIC_SPECTRAL_QUOTIENT_GROUP_AND_RATIONAL_ROOT_OF_UNITY_TRACES",
+    "special_factor_identities": "PROVED_BY_EXACT_EXPONENT_MULTIPLICITIES_AND_X_N_MINUS_1_ROOT_FACTORIZATION"
+  },
+  "schema": "riemann.function_field.elliptic_symmetric_power_cyclotomic_spectral_aliases.v1",
+  "scope_firewall": {
+    "no_RH_or_GRH_claim": "finite local spectral aliases imply no analytic continuation, zero-free region, RH, or GRH statement",
+    "no_curve_or_global_family_claim": "a compact semisimple local conjugacy class does not supply a curve, motive, compatible Euler product, automorphy, or monodromy family",
+    "no_even_order_classification_claim": "the closed stabilizer theorem is for odd root order; the exact residue-multiset criterion still decides any individually supplied finite order, but even orders are not globally classified here",
+    "no_negative_lift_conflation": "at odd m the negative scalar lift sends F(T) to F(-T); it is not merged with the same-lift cyclotomic aliases",
+    "no_priority_claim": "the cyclic-interval proof and project packaging are recorded without a literature-priority or novelty claim",
+    "no_rational_example_claim": "the non-sign aliases at orders 5,7,9,11 have algebraic irrational traces and are not advertised as elliptic local factors over Q with rational q and trace",
+    "no_scalar_full_factor_conflation": "scalar-character collisions need not be complete-factor collisions; this packet studies only the latter in a cyclotomic stratum"
+  },
+  "source_and_file_locks": {
+    "locks": {
+      "scalar_trace_fixture": {
+        "path": "research/l-families/atlas/function_field/elliptic_symmetric_power_trace_aliasing.json",
+        "payload_sha256": "046f76f43a2af3ac296f5c18c258e61f138e122bee38ec618af489e7e3a9e50e",
+        "sha256_lf_normalized": "7a6e249fd696f9526154375f60bd97c2c40d251791f08eec6ecdc70b3177b941"
+      },
+      "scalar_trace_producer": {
+        "path": "research/l-families/atlas/function_field/elliptic_symmetric_power_trace_aliasing.py",
+        "sha256_lf_normalized": "74d3f8cb65a99ab0c5c7943df6a4aba9f29ba91f6876ea935e0673cfd1dcf043"
+      }
+    },
+    "source_schema": "riemann.function_field.elliptic_symmetric_power_trace_aliasing.v1",
+    "upstream_role": "scope/provenance binding only; no finite histogram is transformed and no in-progress sign packet is consumed"
+  },
+  "special_factor_identities": [
+    {
+      "fixed_determinant_scalar_substitution": "for eigenvalues rho*zeta^a,rho*zeta^-a with common rho^2=q, replace T by rho^m*T in the displayed SL2 factor",
+      "lift_sign_audit": {
+        "m_N_minus_1": "N-1 is even, so the negative lift has the same factor",
+        "m_N_minus_2_and_m_N": "N-2 and N are odd, so the negative lift sends F(T) to F(-T) and is not silently included",
+        "negative_lift": "replacing rho by -rho multiplies every Sym^m eigenvalue by (-1)^m",
+        "same_lift": "the scalar rho^m is identical for all primitive powers a, so all three factor equalities are exact"
+      },
+      "m_N": {
+        "coefficients_T0_through_T_to_N_plus_1": [
+          1,
+          -1,
+          0,
+          0,
+          0,
+          -1,
+          1
+        ],
+        "factor_SL2": "(1-T)*(1-T^N)",
+        "residue_multiplicities_0_through_N_minus_1": [
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        "spectrum": "every N-th root exactly once, with 1 occurring once more"
+      },
+      "m_N_minus_1": {
+        "coefficients_T0_through_T_to_N": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ],
+        "factor_SL2": "1-T^N",
+        "residue_multiplicities_0_through_N_minus_1": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "spectrum": "every N-th root exactly once"
+      },
+      "m_N_minus_2": {
+        "coefficients_T0_through_T_to_N_minus_1": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "factor_SL2": "(1-T^N)/(1-T)",
+        "residue_multiplicities_0_through_N_minus_1": [
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "spectrum": "every nontrivial N-th root exactly once"
+      },
+      "primitive_power_condition": "gcd(a,N)=1; all compared classes use the same scalar lift",
+      "root_order_N": 5
+    },
+    {
+      "fixed_determinant_scalar_substitution": "for eigenvalues rho*zeta^a,rho*zeta^-a with common rho^2=q, replace T by rho^m*T in the displayed SL2 factor",
+      "lift_sign_audit": {
+        "m_N_minus_1": "N-1 is even, so the negative lift has the same factor",
+        "m_N_minus_2_and_m_N": "N-2 and N are odd, so the negative lift sends F(T) to F(-T) and is not silently included",
+        "negative_lift": "replacing rho by -rho multiplies every Sym^m eigenvalue by (-1)^m",
+        "same_lift": "the scalar rho^m is identical for all primitive powers a, so all three factor equalities are exact"
+      },
+      "m_N": {
+        "coefficients_T0_through_T_to_N_plus_1": [
+          1,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          1
+        ],
+        "factor_SL2": "(1-T)*(1-T^N)",
+        "residue_multiplicities_0_through_N_minus_1": [
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "spectrum": "every N-th root exactly once, with 1 occurring once more"
+      },
+      "m_N_minus_1": {
+        "coefficients_T0_through_T_to_N": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ],
+        "factor_SL2": "1-T^N",
+        "residue_multiplicities_0_through_N_minus_1": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "spectrum": "every N-th root exactly once"
+      },
+      "m_N_minus_2": {
+        "coefficients_T0_through_T_to_N_minus_1": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "factor_SL2": "(1-T^N)/(1-T)",
+        "residue_multiplicities_0_through_N_minus_1": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "spectrum": "every nontrivial N-th root exactly once"
+      },
+      "primitive_power_condition": "gcd(a,N)=1; all compared classes use the same scalar lift",
+      "root_order_N": 7
+    },
+    {
+      "fixed_determinant_scalar_substitution": "for eigenvalues rho*zeta^a,rho*zeta^-a with common rho^2=q, replace T by rho^m*T in the displayed SL2 factor",
+      "lift_sign_audit": {
+        "m_N_minus_1": "N-1 is even, so the negative lift has the same factor",
+        "m_N_minus_2_and_m_N": "N-2 and N are odd, so the negative lift sends F(T) to F(-T) and is not silently included",
+        "negative_lift": "replacing rho by -rho multiplies every Sym^m eigenvalue by (-1)^m",
+        "same_lift": "the scalar rho^m is identical for all primitive powers a, so all three factor equalities are exact"
+      },
+      "m_N": {
+        "coefficients_T0_through_T_to_N_plus_1": [
+          1,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          1
+        ],
+        "factor_SL2": "(1-T)*(1-T^N)",
+        "residue_multiplicities_0_through_N_minus_1": [
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "spectrum": "every N-th root exactly once, with 1 occurring once more"
+      },
+      "m_N_minus_1": {
+        "coefficients_T0_through_T_to_N": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ],
+        "factor_SL2": "1-T^N",
+        "residue_multiplicities_0_through_N_minus_1": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "spectrum": "every N-th root exactly once"
+      },
+      "m_N_minus_2": {
+        "coefficients_T0_through_T_to_N_minus_1": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "factor_SL2": "(1-T^N)/(1-T)",
+        "residue_multiplicities_0_through_N_minus_1": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "spectrum": "every nontrivial N-th root exactly once"
+      },
+      "primitive_power_condition": "gcd(a,N)=1; all compared classes use the same scalar lift",
+      "root_order_N": 9
+    },
+    {
+      "fixed_determinant_scalar_substitution": "for eigenvalues rho*zeta^a,rho*zeta^-a with common rho^2=q, replace T by rho^m*T in the displayed SL2 factor",
+      "lift_sign_audit": {
+        "m_N_minus_1": "N-1 is even, so the negative lift has the same factor",
+        "m_N_minus_2_and_m_N": "N-2 and N are odd, so the negative lift sends F(T) to F(-T) and is not silently included",
+        "negative_lift": "replacing rho by -rho multiplies every Sym^m eigenvalue by (-1)^m",
+        "same_lift": "the scalar rho^m is identical for all primitive powers a, so all three factor equalities are exact"
+      },
+      "m_N": {
+        "coefficients_T0_through_T_to_N_plus_1": [
+          1,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          1
+        ],
+        "factor_SL2": "(1-T)*(1-T^N)",
+        "residue_multiplicities_0_through_N_minus_1": [
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "spectrum": "every N-th root exactly once, with 1 occurring once more"
+      },
+      "m_N_minus_1": {
+        "coefficients_T0_through_T_to_N": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ],
+        "factor_SL2": "1-T^N",
+        "residue_multiplicities_0_through_N_minus_1": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "spectrum": "every N-th root exactly once"
+      },
+      "m_N_minus_2": {
+        "coefficients_T0_through_T_to_N_minus_1": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "factor_SL2": "(1-T^N)/(1-T)",
+        "residue_multiplicities_0_through_N_minus_1": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "spectrum": "every nontrivial N-th root exactly once"
+      },
+      "primitive_power_condition": "gcd(a,N)=1; all compared classes use the same scalar lift",
+      "root_order_N": 11
+    }
+  ],
+  "spectral_setup": {
+    "SL2_class": "diag(z,z^-1), modulo z~z^-1",
+    "complete_Sym_m_spectrum": "S_m(z)={z^(m-2j):0<=j<=m}, with multiplicity",
+    "complete_factor": "F_m(z;T)=product_(j=0)^m (1-z^(m-2j)*T)",
+    "distinction_from_upstream": "the bound source classifies one scalar character tau_m; this packet classifies equality of the complete eigenvalue multiset in a cyclotomic stratum",
+    "primitive_comparison": "z=zeta and w=zeta^a for zeta of odd order N and gcd(a,N)=1"
+  },
+  "status": "EXACT_ODD_ORDER_STABILIZER_THEOREM_PLUS_BOUNDED_DEPENDENCY_FREE_REPLAY"
+}

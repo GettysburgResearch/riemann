@@ -1,0 +1,8222 @@
+{
+  "all_q_low_moment_theorem": {
+    "base_inputs": {
+      "m2=E[u^2]": "1-q^(-2)",
+      "m4=E[u^4]": "2-3*q^(-2)-q^(-3)",
+      "source": "locked W_2=q^2-1, W_4=2*q^3-3*q-1 and E_model[t^(2*n)]=W_(2*n)/q"
+    },
+    "exact_prime_power_cross_checks": {
+      "11": {
+        "mean_coefficient_map_fold_D": [
+          29016,
+          14641
+        ],
+        "mean_x_fourth": [
+          6906384,
+          1771561
+        ],
+        "mean_x_squared": [
+          14400,
+          14641
+        ],
+        "mean_x_squared_times_y": [
+          313920,
+          161051
+        ],
+        "mean_y": [
+          -2,
+          121
+        ],
+        "mean_y_squared": [
+          29020,
+          14641
+        ]
+      },
+      "13": {
+        "mean_coefficient_map_fold_D": [
+          56756,
+          28561
+        ],
+        "mean_x_fourth": [
+          18957316,
+          4826809
+        ],
+        "mean_x_squared": [
+          28224,
+          28561
+        ],
+        "mean_x_squared_times_y": [
+          729120,
+          371293
+        ],
+        "mean_y": [
+          -2,
+          169
+        ],
+        "mean_y_squared": [
+          56760,
+          28561
+        ]
+      },
+      "25": {
+        "mean_coefficient_map_fold_D": [
+          779948,
+          390625
+        ],
+        "mean_x_fourth": [
+          971818276,
+          244140625
+        ],
+        "mean_x_squared": [
+          389376,
+          390625
+        ],
+        "mean_x_squared_times_y": [
+          19436352,
+          9765625
+        ],
+        "mean_y": [
+          -2,
+          625
+        ],
+        "mean_y_squared": [
+          779952,
+          390625
+        ]
+      },
+      "27": {
+        "mean_coefficient_map_fold_D": [
+          1061368,
+          531441
+        ],
+        "mean_x_fourth": [
+          1543232656,
+          387420489
+        ],
+        "mean_x_squared": [
+          529984,
+          531441
+        ],
+        "mean_x_squared_times_y": [
+          28578368,
+          14348907
+        ],
+        "mean_y": [
+          -2,
+          729
+        ],
+        "mean_y_squared": [
+          1061372,
+          531441
+        ]
+      },
+      "3": {
+        "mean_coefficient_map_fold_D": [
+          136,
+          81
+        ],
+        "mean_x_fourth": [
+          1936,
+          729
+        ],
+        "mean_x_squared": [
+          64,
+          81
+        ],
+        "mean_x_squared_times_y": [
+          320,
+          243
+        ],
+        "mean_y": [
+          -2,
+          9
+        ],
+        "mean_y_squared": [
+          140,
+          81
+        ]
+      },
+      "49": {
+        "mean_coefficient_map_fold_D": [
+          11524700,
+          5764801
+        ],
+        "mean_x_fourth": [
+          55295522500,
+          13841287201
+        ],
+        "mean_x_squared": [
+          5760000,
+          5764801
+        ],
+        "mean_x_squared_times_y": [
+          564240000,
+          282475249
+        ],
+        "mean_y": [
+          -2,
+          2401
+        ],
+        "mean_y_squared": [
+          11524704,
+          5764801
+        ]
+      },
+      "5": {
+        "mean_coefficient_map_fold_D": [
+          1188,
+          625
+        ],
+        "mean_x_fourth": [
+          54756,
+          15625
+        ],
+        "mean_x_squared": [
+          576,
+          625
+        ],
+        "mean_x_squared_times_y": [
+          5472,
+          3125
+        ],
+        "mean_y": [
+          -2,
+          25
+        ],
+        "mean_y_squared": [
+          1192,
+          625
+        ]
+      },
+      "7": {
+        "mean_coefficient_map_fold_D": [
+          4688,
+          2401
+        ],
+        "mean_x_fourth": [
+          440896,
+          117649
+        ],
+        "mean_x_squared": [
+          2304,
+          2401
+        ],
+        "mean_x_squared_times_y": [
+          31488,
+          16807
+        ],
+        "mean_y": [
+          -2,
+          49
+        ],
+        "mean_y_squared": [
+          4692,
+          2401
+        ]
+      },
+      "9": {
+        "mean_coefficient_map_fold_D": [
+          12940,
+          6561
+        ],
+        "mean_x_fourth": [
+          2044900,
+          531441
+        ],
+        "mean_x_squared": [
+          6400,
+          6561
+        ],
+        "mean_x_squared_times_y": [
+          113600,
+          59049
+        ],
+        "mean_y": [
+          -2,
+          81
+        ],
+        "mean_y_squared": [
+          12944,
+          6561
+        ]
+      }
+    },
+    "formulas": {
+      "E[D]": "2-2*q^(-2)-2*q^(-3)-2*q^(-4), where D=(u^2-v^2)^2 is the coefficient-map fold discriminant, not the full quartic root discriminant",
+      "E[x^2*y]": "2-6*q^(-2)-2*q^(-3)+4*q^(-4)+2*q^(-5)",
+      "E[x^2]": "(1-q^(-2))^2",
+      "E[x^4]": "(2-3*q^(-2)-q^(-3))^2",
+      "E[y]": "-2*q^(-2)",
+      "E[y^2]": "2-2*q^(-2)-2*q^(-3)+2*q^(-4)"
+    },
+    "scope": "every odd prime power q, for two independent uniform marked-cubic models / normalized elliptic-stack draws",
+    "two_symbolic_routes": [
+      "expand each observable using independence and the locked m2,m4",
+      "compare against the separately expanded rational functions in q"
+    ]
+  },
+  "coefficient_map_fold_walls": {
+    "A_equals_B": "P_tensor(T)=(1-q*T)^2*(1-(A^2-2*q)*T+q^2*T^2)",
+    "A_equals_minus_B": "P_tensor(T)=(1+q*T)^2*(1+(A^2-2*q)*T+q^2*T^2)",
+    "coefficient_geometry": "the two walls are p=r, equivalently D=0; their normalized images are the two sign branches x=+p and x=-p with y=2*p-2",
+    "local_global_firewall": "A=+/-B is equality/opposition of one local trace. It does not prove that the two curves are isomorphic, quadratic twists, related by a global correspondence, or members of the same global automorphic representation",
+    "scope": "these A=+/-B masses measure the coefficient-map fold D=0 only; they are not labeled as exhaustive reciprocal-quartic repeated-root masses"
+  },
+  "compact_SO4_coefficient_image": {
+    "coordinates": "x=u*v=A*B/q and y=u^2+v^2-2=(A^2+B^2-2*q)/q",
+    "normalization": "u=A/sqrt(q), v=B/sqrt(q), Z=q*T; P=1-x*Z+y*Z^2-x*Z^3+Z^4",
+    "rank_warning": "SO(4) has two compact torus parameters; this is a full rank-two compact image, not the rank-one slices studied elsewhere",
+    "representation_image": "(SU(2) x SU(2))/{(1,1),(-1,-1)} isomorphic to SO(4) in its standard four-dimensional representation",
+    "semialgebraic_image": {
+      "coefficient_map_fold_discriminant": "D=(y+2)^2-4*x^2",
+      "criterion": "D>=0 and p=((y+2)+sqrt(D))/2, r=((y+2)-sqrt(D))/2 both lie in [0,4]",
+      "forward_certificate": "p=u^2, r=v^2, x^2=p*r, y=p+r-2, D=(p-r)^2",
+      "not_the_full_quartic_discriminant": "D is the discriminant for reconstructing the unordered squared base traces p,r and detects the p=r fold; it is only one factor of the reciprocal quartic root discriminant",
+      "sufficiency": "given the criterion, choose real u,v with squares p,r and signs whose product is x"
+    }
+  },
+  "compact_haar_trace_moments": {
+    "SO4_standard_trace": [
+      1,
+      0,
+      1,
+      0,
+      4,
+      0,
+      25,
+      0,
+      196,
+      0,
+      1764,
+      0,
+      17424
+    ],
+    "formula": "E[(u*v)^(2*n)]=Catalan(n)^2 and every odd moment is zero",
+    "orders_0_through_12": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "reason": "under Haar on Spin(4)=SU(2)xSU(2), the two standard SU(2) traces are independent and each has Catalan even moments"
+  },
+  "compact_image_discriminator": {
+    "SO4_standard": [
+      1,
+      0,
+      1,
+      0,
+      4,
+      0,
+      25
+    ],
+    "Sym3_SU2": [
+      1,
+      0,
+      1,
+      0,
+      4,
+      0,
+      34
+    ],
+    "coefficient_support_geometry": {
+      "SO4": "two-dimensional semialgebraic region D>=0 with both quadratic roots p,r in [0,4]",
+      "Sym3_SU2": "one-dimensional nodal curve -x^4+x^2*y+x^2+y^3-2*y^2=0, independently checked from x=t^3-2*t and y=t^4-3*t^2+2",
+      "relation": "the Sym3 curve lies inside the same reciprocal degree-four compact coefficient region but carries a different Haar pushforward"
+    },
+    "exact_derivations": {
+      "SO4": "Catalan squares from two independent SU(2) standard traces",
+      "Sym3_SU2": "Clebsch--Gordan recursion for the multiplicity of V_0 in V_3 tensor power n",
+      "generic_USp4": "symplectic pair contractions through degree 4; at degree 6 the 15 contractions have the unique rank-four Pfaffian relation, leaving 14"
+    },
+    "first_trace_moment_separations": {
+      "SO4_vs_Sym3_SU2": "the sequences alias through order 4 and first separate at order 6: 25 versus 34",
+      "SO4_vs_generic_USp4": "the sequences first separate at order 4: 4 versus 3",
+      "Sym3_SU2_vs_generic_USp4": "the sequences first separate at order 4: 4 versus 3"
+    },
+    "generic_USp4_standard": [
+      1,
+      0,
+      1,
+      0,
+      3,
+      0,
+      14
+    ],
+    "orders_0_through_6": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "scope_firewall": "moment and support geometry distinguish compact representation-image laws; they do not prove finite-family convergence, actual monodromy, automorphy, or global descent",
+    "symbolic_polynomial_certificates_in_z_equals_t_squared": {
+      "SO4_region_discriminant_coefficients_low_to_high": [
+        16,
+        -40,
+        33,
+        -10,
+        1
+      ],
+      "curve_residual_coefficients_low_to_high": [
+        0
+      ],
+      "factorization": "(z-1)^2*(z-4)^2"
+    },
+    "upstream_consumption": "no Sym3 fixture or producer is consumed or source-locked here; the displayed curve and moments are independently rederived by this producer"
+  },
+  "frozen_histogram_cartesian_transforms": [
+    {
+      "coefficient_map_fold_wall_masses": {
+        "A_equals_B": 54,
+        "A_equals_minus_B": 54,
+        "fold_union_D_equals_zero_by_inclusion_exclusion": 92,
+        "intersection_A_equals_B_equals_zero": 16
+      },
+      "complete_integral_local_factor_law": {
+        "atoms": [
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -9,
+              36,
+              -81,
+              81
+            ],
+            "pair_count": 2
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -6,
+              21,
+              -54,
+              81
+            ],
+            "pair_count": 12
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -4,
+              6,
+              -36,
+              81
+            ],
+            "pair_count": 18
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -3,
+              12,
+              -27,
+              81
+            ],
+            "pair_count": 12
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -2,
+              -3,
+              -18,
+              81
+            ],
+            "pair_count": 36
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -1,
+              -12,
+              -9,
+              81
+            ],
+            "pair_count": 18
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              0,
+              -18,
+              0,
+              81
+            ],
+            "pair_count": 16
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              0,
+              -15,
+              0,
+              81
+            ],
+            "pair_count": 48
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              0,
+              -6,
+              0,
+              81
+            ],
+            "pair_count": 48
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              0,
+              9,
+              0,
+              81
+            ],
+            "pair_count": 16
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              1,
+              -12,
+              9,
+              81
+            ],
+            "pair_count": 18
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              2,
+              -3,
+              18,
+              81
+            ],
+            "pair_count": 36
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              3,
+              12,
+              27,
+              81
+            ],
+            "pair_count": 12
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              4,
+              6,
+              36,
+              81
+            ],
+            "pair_count": 18
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              6,
+              21,
+              54,
+              81
+            ],
+            "pair_count": 12
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              9,
+              36,
+              81,
+              81
+            ],
+            "pair_count": 2
+          }
+        ],
+        "support_size": 16
+      },
+      "complete_normalized_coefficient_law": {
+        "atoms": [
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              1,
+              1
+            ],
+            "pair_count": 2,
+            "x": [
+              -3,
+              1
+            ],
+            "y": [
+              4,
+              1
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              25,
+              9
+            ],
+            "full_quartic_root_discriminant": [
+              1600,
+              81
+            ],
+            "hasse_endpoint_factor_E": [
+              8,
+              3
+            ],
+            "pair_count": 12,
+            "x": [
+              -2,
+              1
+            ],
+            "y": [
+              7,
+              3
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              64,
+              9
+            ],
+            "pair_count": 18,
+            "x": [
+              -4,
+              3
+            ],
+            "y": [
+              2,
+              3
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              64,
+              9
+            ],
+            "full_quartic_root_discriminant": [
+              7744,
+              81
+            ],
+            "hasse_endpoint_factor_E": [
+              11,
+              3
+            ],
+            "pair_count": 12,
+            "x": [
+              -1,
+              1
+            ],
+            "y": [
+              4,
+              3
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              1,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              7744,
+              81
+            ],
+            "hasse_endpoint_factor_E": [
+              88,
+              9
+            ],
+            "pair_count": 36,
+            "x": [
+              -2,
+              3
+            ],
+            "y": [
+              -1,
+              3
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              121,
+              9
+            ],
+            "pair_count": 18,
+            "x": [
+              -1,
+              3
+            ],
+            "y": [
+              -4,
+              3
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              16,
+              1
+            ],
+            "pair_count": 16,
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              -2,
+              1
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              1,
+              9
+            ],
+            "full_quartic_root_discriminant": [
+              1936,
+              81
+            ],
+            "hasse_endpoint_factor_E": [
+              44,
+              3
+            ],
+            "pair_count": 48,
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              -5,
+              3
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              16,
+              9
+            ],
+            "full_quartic_root_discriminant": [
+              16384,
+              81
+            ],
+            "hasse_endpoint_factor_E": [
+              32,
+              3
+            ],
+            "pair_count": 48,
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              -2,
+              3
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              9,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              144,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              4,
+              1
+            ],
+            "pair_count": 16,
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              1,
+              1
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              121,
+              9
+            ],
+            "pair_count": 18,
+            "x": [
+              1,
+              3
+            ],
+            "y": [
+              -4,
+              3
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              1,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              7744,
+              81
+            ],
+            "hasse_endpoint_factor_E": [
+              88,
+              9
+            ],
+            "pair_count": 36,
+            "x": [
+              2,
+              3
+            ],
+            "y": [
+              -1,
+              3
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              64,
+              9
+            ],
+            "full_quartic_root_discriminant": [
+              7744,
+              81
+            ],
+            "hasse_endpoint_factor_E": [
+              11,
+              3
+            ],
+            "pair_count": 12,
+            "x": [
+              1,
+              1
+            ],
+            "y": [
+              4,
+              3
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              64,
+              9
+            ],
+            "pair_count": 18,
+            "x": [
+              4,
+              3
+            ],
+            "y": [
+              2,
+              3
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              25,
+              9
+            ],
+            "full_quartic_root_discriminant": [
+              1600,
+              81
+            ],
+            "hasse_endpoint_factor_E": [
+              8,
+              3
+            ],
+            "pair_count": 12,
+            "x": [
+              2,
+              1
+            ],
+            "y": [
+              7,
+              3
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              1,
+              1
+            ],
+            "pair_count": 2,
+            "x": [
+              3,
+              1
+            ],
+            "y": [
+              4,
+              1
+            ]
+          }
+        ],
+        "support_size": 16
+      },
+      "full_quartic_repeated_root_masses": {
+        "classification": "Disc_Z(Q)=D*E^2, so repeated roots occur exactly on the union D=0 or E=0",
+        "exhaustive_union_full_discriminant_equals_zero": 92,
+        "fold_and_endpoint_intersection": 0,
+        "fold_wall_D_equals_zero": 92,
+        "hasse_endpoint_wall_E_equals_zero": 0
+      },
+      "normalized_tensor_trace_histogram": {
+        "atoms": [
+          {
+            "pair_count": 2,
+            "x": [
+              -3,
+              1
+            ]
+          },
+          {
+            "pair_count": 12,
+            "x": [
+              -2,
+              1
+            ]
+          },
+          {
+            "pair_count": 18,
+            "x": [
+              -4,
+              3
+            ]
+          },
+          {
+            "pair_count": 12,
+            "x": [
+              -1,
+              1
+            ]
+          },
+          {
+            "pair_count": 36,
+            "x": [
+              -2,
+              3
+            ]
+          },
+          {
+            "pair_count": 18,
+            "x": [
+              -1,
+              3
+            ]
+          },
+          {
+            "pair_count": 128,
+            "x": [
+              0,
+              1
+            ]
+          },
+          {
+            "pair_count": 18,
+            "x": [
+              1,
+              3
+            ]
+          },
+          {
+            "pair_count": 36,
+            "x": [
+              2,
+              3
+            ]
+          },
+          {
+            "pair_count": 12,
+            "x": [
+              1,
+              1
+            ]
+          },
+          {
+            "pair_count": 18,
+            "x": [
+              4,
+              3
+            ]
+          },
+          {
+            "pair_count": 12,
+            "x": [
+              2,
+              1
+            ]
+          },
+          {
+            "pair_count": 2,
+            "x": [
+              3,
+              1
+            ]
+          }
+        ],
+        "support_size": 13
+      },
+      "ordered_cartesian_atom_pairs": 49,
+      "ordered_model_pairs_represented": 324,
+      "q": 3,
+      "selected_exact_moments": {
+        "mean_coefficient_map_fold_D": [
+          136,
+          81
+        ],
+        "mean_x_fourth": [
+          1936,
+          729
+        ],
+        "mean_x_squared": [
+          64,
+          81
+        ],
+        "mean_x_squared_times_y": [
+          320,
+          243
+        ],
+        "mean_y": [
+          -2,
+          9
+        ],
+        "mean_y_squared": [
+          140,
+          81
+        ]
+      },
+      "source_histogram_sha256": "764f51f4cc413bf8e54022420c553f821480d823279e170397f246c4be3c3bde",
+      "source_members_represented": 18,
+      "source_trace_atom_count": 7,
+      "source_trace_histogram": {
+        "-1": 3,
+        "-2": 3,
+        "-3": 1,
+        "0": 4,
+        "1": 3,
+        "2": 3,
+        "3": 1
+      }
+    },
+    {
+      "coefficient_map_fold_wall_masses": {
+        "A_equals_B": 1300,
+        "A_equals_minus_B": 1300,
+        "fold_union_D_equals_zero_by_inclusion_exclusion": 2200,
+        "intersection_A_equals_B_equals_zero": 400
+      },
+      "complete_integral_local_factor_law": {
+        "atoms": [
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -16,
+              110,
+              -400,
+              625
+            ],
+            "pair_count": 50
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -12,
+              75,
+              -300,
+              625
+            ],
+            "pair_count": 200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -9,
+              40,
+              -225,
+              625
+            ],
+            "pair_count": 200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -8,
+              50,
+              -200,
+              625
+            ],
+            "pair_count": 300
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -6,
+              15,
+              -150,
+              625
+            ],
+            "pair_count": 600
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -4,
+              -10,
+              -100,
+              625
+            ],
+            "pair_count": 450
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -4,
+              35,
+              -100,
+              625
+            ],
+            "pair_count": 200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -3,
+              0,
+              -75,
+              625
+            ],
+            "pair_count": 400
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -2,
+              -25,
+              -50,
+              625
+            ],
+            "pair_count": 600
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -1,
+              -40,
+              -25,
+              625
+            ],
+            "pair_count": 200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              0,
+              -50,
+              0,
+              625
+            ],
+            "pair_count": 400
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              0,
+              -45,
+              0,
+              625
+            ],
+            "pair_count": 800
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              0,
+              -30,
+              0,
+              625
+            ],
+            "pair_count": 1200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              0,
+              -5,
+              0,
+              625
+            ],
+            "pair_count": 800
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              0,
+              30,
+              0,
+              625
+            ],
+            "pair_count": 400
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              1,
+              -40,
+              25,
+              625
+            ],
+            "pair_count": 200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              2,
+              -25,
+              50,
+              625
+            ],
+            "pair_count": 600
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              3,
+              0,
+              75,
+              625
+            ],
+            "pair_count": 400
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              4,
+              -10,
+              100,
+              625
+            ],
+            "pair_count": 450
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              4,
+              35,
+              100,
+              625
+            ],
+            "pair_count": 200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              6,
+              15,
+              150,
+              625
+            ],
+            "pair_count": 600
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              8,
+              50,
+              200,
+              625
+            ],
+            "pair_count": 300
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              9,
+              40,
+              225,
+              625
+            ],
+            "pair_count": 200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              12,
+              75,
+              300,
+              625
+            ],
+            "pair_count": 200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              16,
+              110,
+              400,
+              625
+            ],
+            "pair_count": 50
+          }
+        ],
+        "support_size": 25
+      },
+      "complete_normalized_coefficient_law": {
+        "atoms": [
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              16,
+              25
+            ],
+            "pair_count": 50,
+            "x": [
+              -16,
+              5
+            ],
+            "y": [
+              22,
+              5
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              49,
+              25
+            ],
+            "full_quartic_root_discriminant": [
+              94864,
+              15625
+            ],
+            "hasse_endpoint_factor_E": [
+              44,
+              25
+            ],
+            "pair_count": 200,
+            "x": [
+              -12,
+              5
+            ],
+            "y": [
+              3,
+              1
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              121,
+              25
+            ],
+            "pair_count": 200,
+            "x": [
+              -9,
+              5
+            ],
+            "y": [
+              8,
+              5
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              144,
+              25
+            ],
+            "full_quartic_root_discriminant": [
+              589824,
+              15625
+            ],
+            "hasse_endpoint_factor_E": [
+              64,
+              25
+            ],
+            "pair_count": 300,
+            "x": [
+              -8,
+              5
+            ],
+            "y": [
+              2,
+              1
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              1,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              30976,
+              625
+            ],
+            "hasse_endpoint_factor_E": [
+              176,
+              25
+            ],
+            "pair_count": 600,
+            "x": [
+              -6,
+              5
+            ],
+            "y": [
+              3,
+              5
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              256,
+              25
+            ],
+            "pair_count": 450,
+            "x": [
+              -4,
+              5
+            ],
+            "y": [
+              -2,
+              5
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              9,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              51984,
+              625
+            ],
+            "hasse_endpoint_factor_E": [
+              76,
+              25
+            ],
+            "pair_count": 200,
+            "x": [
+              -4,
+              5
+            ],
+            "y": [
+              7,
+              5
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              64,
+              25
+            ],
+            "full_quartic_root_discriminant": [
+              2795584,
+              15625
+            ],
+            "hasse_endpoint_factor_E": [
+              209,
+              25
+            ],
+            "pair_count": 400,
+            "x": [
+              -3,
+              5
+            ],
+            "y": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              9,
+              25
+            ],
+            "full_quartic_root_discriminant": [
+              831744,
+              15625
+            ],
+            "hasse_endpoint_factor_E": [
+              304,
+              25
+            ],
+            "pair_count": 600,
+            "x": [
+              -2,
+              5
+            ],
+            "y": [
+              -1,
+              1
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              361,
+              25
+            ],
+            "pair_count": 200,
+            "x": [
+              -1,
+              5
+            ],
+            "y": [
+              -8,
+              5
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              16,
+              1
+            ],
+            "pair_count": 400,
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              -2,
+              1
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              1,
+              25
+            ],
+            "full_quartic_root_discriminant": [
+              5776,
+              625
+            ],
+            "hasse_endpoint_factor_E": [
+              76,
+              5
+            ],
+            "pair_count": 800,
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              -9,
+              5
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              16,
+              25
+            ],
+            "full_quartic_root_discriminant": [
+              65536,
+              625
+            ],
+            "hasse_endpoint_factor_E": [
+              64,
+              5
+            ],
+            "pair_count": 1200,
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              -6,
+              5
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              81,
+              25
+            ],
+            "full_quartic_root_discriminant": [
+              156816,
+              625
+            ],
+            "hasse_endpoint_factor_E": [
+              44,
+              5
+            ],
+            "pair_count": 800,
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              -1,
+              5
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              256,
+              25
+            ],
+            "full_quartic_root_discriminant": [
+              65536,
+              625
+            ],
+            "hasse_endpoint_factor_E": [
+              16,
+              5
+            ],
+            "pair_count": 400,
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              6,
+              5
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              361,
+              25
+            ],
+            "pair_count": 200,
+            "x": [
+              1,
+              5
+            ],
+            "y": [
+              -8,
+              5
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              9,
+              25
+            ],
+            "full_quartic_root_discriminant": [
+              831744,
+              15625
+            ],
+            "hasse_endpoint_factor_E": [
+              304,
+              25
+            ],
+            "pair_count": 600,
+            "x": [
+              2,
+              5
+            ],
+            "y": [
+              -1,
+              1
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              64,
+              25
+            ],
+            "full_quartic_root_discriminant": [
+              2795584,
+              15625
+            ],
+            "hasse_endpoint_factor_E": [
+              209,
+              25
+            ],
+            "pair_count": 400,
+            "x": [
+              3,
+              5
+            ],
+            "y": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              256,
+              25
+            ],
+            "pair_count": 450,
+            "x": [
+              4,
+              5
+            ],
+            "y": [
+              -2,
+              5
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              9,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              51984,
+              625
+            ],
+            "hasse_endpoint_factor_E": [
+              76,
+              25
+            ],
+            "pair_count": 200,
+            "x": [
+              4,
+              5
+            ],
+            "y": [
+              7,
+              5
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              1,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              30976,
+              625
+            ],
+            "hasse_endpoint_factor_E": [
+              176,
+              25
+            ],
+            "pair_count": 600,
+            "x": [
+              6,
+              5
+            ],
+            "y": [
+              3,
+              5
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              144,
+              25
+            ],
+            "full_quartic_root_discriminant": [
+              589824,
+              15625
+            ],
+            "hasse_endpoint_factor_E": [
+              64,
+              25
+            ],
+            "pair_count": 300,
+            "x": [
+              8,
+              5
+            ],
+            "y": [
+              2,
+              1
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              121,
+              25
+            ],
+            "pair_count": 200,
+            "x": [
+              9,
+              5
+            ],
+            "y": [
+              8,
+              5
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              49,
+              25
+            ],
+            "full_quartic_root_discriminant": [
+              94864,
+              15625
+            ],
+            "hasse_endpoint_factor_E": [
+              44,
+              25
+            ],
+            "pair_count": 200,
+            "x": [
+              12,
+              5
+            ],
+            "y": [
+              3,
+              1
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              16,
+              25
+            ],
+            "pair_count": 50,
+            "x": [
+              16,
+              5
+            ],
+            "y": [
+              22,
+              5
+            ]
+          }
+        ],
+        "support_size": 25
+      },
+      "full_quartic_repeated_root_masses": {
+        "classification": "Disc_Z(Q)=D*E^2, so repeated roots occur exactly on the union D=0 or E=0",
+        "exhaustive_union_full_discriminant_equals_zero": 2200,
+        "fold_and_endpoint_intersection": 0,
+        "fold_wall_D_equals_zero": 2200,
+        "hasse_endpoint_wall_E_equals_zero": 0
+      },
+      "normalized_tensor_trace_histogram": {
+        "atoms": [
+          {
+            "pair_count": 50,
+            "x": [
+              -16,
+              5
+            ]
+          },
+          {
+            "pair_count": 200,
+            "x": [
+              -12,
+              5
+            ]
+          },
+          {
+            "pair_count": 200,
+            "x": [
+              -9,
+              5
+            ]
+          },
+          {
+            "pair_count": 300,
+            "x": [
+              -8,
+              5
+            ]
+          },
+          {
+            "pair_count": 600,
+            "x": [
+              -6,
+              5
+            ]
+          },
+          {
+            "pair_count": 650,
+            "x": [
+              -4,
+              5
+            ]
+          },
+          {
+            "pair_count": 400,
+            "x": [
+              -3,
+              5
+            ]
+          },
+          {
+            "pair_count": 600,
+            "x": [
+              -2,
+              5
+            ]
+          },
+          {
+            "pair_count": 200,
+            "x": [
+              -1,
+              5
+            ]
+          },
+          {
+            "pair_count": 3600,
+            "x": [
+              0,
+              1
+            ]
+          },
+          {
+            "pair_count": 200,
+            "x": [
+              1,
+              5
+            ]
+          },
+          {
+            "pair_count": 600,
+            "x": [
+              2,
+              5
+            ]
+          },
+          {
+            "pair_count": 400,
+            "x": [
+              3,
+              5
+            ]
+          },
+          {
+            "pair_count": 650,
+            "x": [
+              4,
+              5
+            ]
+          },
+          {
+            "pair_count": 600,
+            "x": [
+              6,
+              5
+            ]
+          },
+          {
+            "pair_count": 300,
+            "x": [
+              8,
+              5
+            ]
+          },
+          {
+            "pair_count": 200,
+            "x": [
+              9,
+              5
+            ]
+          },
+          {
+            "pair_count": 200,
+            "x": [
+              12,
+              5
+            ]
+          },
+          {
+            "pair_count": 50,
+            "x": [
+              16,
+              5
+            ]
+          }
+        ],
+        "support_size": 19
+      },
+      "ordered_cartesian_atom_pairs": 81,
+      "ordered_model_pairs_represented": 10000,
+      "q": 5,
+      "selected_exact_moments": {
+        "mean_coefficient_map_fold_D": [
+          1188,
+          625
+        ],
+        "mean_x_fourth": [
+          54756,
+          15625
+        ],
+        "mean_x_squared": [
+          576,
+          625
+        ],
+        "mean_x_squared_times_y": [
+          5472,
+          3125
+        ],
+        "mean_y": [
+          -2,
+          25
+        ],
+        "mean_y_squared": [
+          1192,
+          625
+        ]
+      },
+      "source_histogram_sha256": "2daacc2ffd6f75fcb9557d41b45463552f4701d99df9858a44788da2e5ccc107",
+      "source_members_represented": 100,
+      "source_trace_atom_count": 9,
+      "source_trace_histogram": {
+        "-1": 10,
+        "-2": 15,
+        "-3": 10,
+        "-4": 5,
+        "0": 20,
+        "1": 10,
+        "2": 15,
+        "3": 10,
+        "4": 5
+      }
+    },
+    {
+      "coefficient_map_fold_wall_masses": {
+        "A_equals_B": 9408,
+        "A_equals_minus_B": 9408,
+        "fold_union_D_equals_zero_by_inclusion_exclusion": 17052,
+        "intersection_A_equals_B_equals_zero": 1764
+      },
+      "complete_integral_local_factor_law": {
+        "atoms": [
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -25,
+              252,
+              -1225,
+              2401
+            ],
+            "pair_count": 98
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -20,
+              189,
+              -980,
+              2401
+            ],
+            "pair_count": 784
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -16,
+              126,
+              -784,
+              2401
+            ],
+            "pair_count": 1568
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -15,
+              140,
+              -735,
+              2401
+            ],
+            "pair_count": 588
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -12,
+              77,
+              -588,
+              2401
+            ],
+            "pair_count": 2352
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -10,
+              105,
+              -490,
+              2401
+            ],
+            "pair_count": 1176
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -9,
+              28,
+              -441,
+              2401
+            ],
+            "pair_count": 882
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -8,
+              42,
+              -392,
+              2401
+            ],
+            "pair_count": 4704
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -6,
+              -7,
+              -294,
+              2401
+            ],
+            "pair_count": 3528
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -5,
+              84,
+              -245,
+              2401
+            ],
+            "pair_count": 784
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -4,
+              -42,
+              -196,
+              2401
+            ],
+            "pair_count": 3528
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -4,
+              21,
+              -196,
+              2401
+            ],
+            "pair_count": 3136
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -3,
+              -28,
+              -147,
+              2401
+            ],
+            "pair_count": 2352
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -2,
+              -63,
+              -98,
+              2401
+            ],
+            "pair_count": 4704
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -1,
+              -84,
+              -49,
+              2401
+            ],
+            "pair_count": 1568
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              0,
+              -98,
+              0,
+              2401
+            ],
+            "pair_count": 1764
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              0,
+              -91,
+              0,
+              2401
+            ],
+            "pair_count": 4704
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              0,
+              -70,
+              0,
+              2401
+            ],
+            "pair_count": 7056
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              0,
+              -35,
+              0,
+              2401
+            ],
+            "pair_count": 3528
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              0,
+              14,
+              0,
+              2401
+            ],
+            "pair_count": 4704
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              0,
+              77,
+              0,
+              2401
+            ],
+            "pair_count": 1176
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              1,
+              -84,
+              49,
+              2401
+            ],
+            "pair_count": 1568
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              2,
+              -63,
+              98,
+              2401
+            ],
+            "pair_count": 4704
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              3,
+              -28,
+              147,
+              2401
+            ],
+            "pair_count": 2352
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              4,
+              -42,
+              196,
+              2401
+            ],
+            "pair_count": 3528
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              4,
+              21,
+              196,
+              2401
+            ],
+            "pair_count": 3136
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              5,
+              84,
+              245,
+              2401
+            ],
+            "pair_count": 784
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              6,
+              -7,
+              294,
+              2401
+            ],
+            "pair_count": 3528
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              8,
+              42,
+              392,
+              2401
+            ],
+            "pair_count": 4704
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              9,
+              28,
+              441,
+              2401
+            ],
+            "pair_count": 882
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              10,
+              105,
+              490,
+              2401
+            ],
+            "pair_count": 1176
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              12,
+              77,
+              588,
+              2401
+            ],
+            "pair_count": 2352
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              15,
+              140,
+              735,
+              2401
+            ],
+            "pair_count": 588
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              16,
+              126,
+              784,
+              2401
+            ],
+            "pair_count": 1568
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              20,
+              189,
+              980,
+              2401
+            ],
+            "pair_count": 784
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              25,
+              252,
+              1225,
+              2401
+            ],
+            "pair_count": 98
+          }
+        ],
+        "support_size": 36
+      },
+      "complete_normalized_coefficient_law": {
+        "atoms": [
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              9,
+              49
+            ],
+            "pair_count": 98,
+            "x": [
+              -25,
+              7
+            ],
+            "y": [
+              36,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              81,
+              49
+            ],
+            "full_quartic_root_discriminant": [
+              104976,
+              117649
+            ],
+            "hasse_endpoint_factor_E": [
+              36,
+              49
+            ],
+            "pair_count": 784,
+            "x": [
+              -20,
+              7
+            ],
+            "y": [
+              27,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              144,
+              49
+            ],
+            "pair_count": 1568,
+            "x": [
+              -16,
+              7
+            ],
+            "y": [
+              18,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              256,
+              49
+            ],
+            "full_quartic_root_discriminant": [
+              831744,
+              117649
+            ],
+            "hasse_endpoint_factor_E": [
+              57,
+              49
+            ],
+            "pair_count": 588,
+            "x": [
+              -15,
+              7
+            ],
+            "y": [
+              20,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              1,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              51984,
+              2401
+            ],
+            "hasse_endpoint_factor_E": [
+              228,
+              49
+            ],
+            "pair_count": 2352,
+            "x": [
+              -12,
+              7
+            ],
+            "y": [
+              11,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              9,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              46656,
+              2401
+            ],
+            "hasse_endpoint_factor_E": [
+              72,
+              49
+            ],
+            "pair_count": 1176,
+            "x": [
+              -10,
+              7
+            ],
+            "y": [
+              15,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              361,
+              49
+            ],
+            "pair_count": 882,
+            "x": [
+              -9,
+              7
+            ],
+            "y": [
+              4,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              144,
+              49
+            ],
+            "full_quartic_root_discriminant": [
+              11943936,
+              117649
+            ],
+            "hasse_endpoint_factor_E": [
+              288,
+              49
+            ],
+            "pair_count": 4704,
+            "x": [
+              -8,
+              7
+            ],
+            "y": [
+              6,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              25,
+              49
+            ],
+            "full_quartic_root_discriminant": [
+              5198400,
+              117649
+            ],
+            "hasse_endpoint_factor_E": [
+              456,
+              49
+            ],
+            "pair_count": 3528,
+            "x": [
+              -6,
+              7
+            ],
+            "y": [
+              -1,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              576,
+              49
+            ],
+            "full_quartic_root_discriminant": [
+              3779136,
+              117649
+            ],
+            "hasse_endpoint_factor_E": [
+              81,
+              49
+            ],
+            "pair_count": 784,
+            "x": [
+              -5,
+              7
+            ],
+            "y": [
+              12,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              576,
+              49
+            ],
+            "pair_count": 3528,
+            "x": [
+              -4,
+              7
+            ],
+            "y": [
+              -6,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              225,
+              49
+            ],
+            "full_quartic_root_discriminant": [
+              23619600,
+              117649
+            ],
+            "hasse_endpoint_factor_E": [
+              324,
+              49
+            ],
+            "pair_count": 3136,
+            "x": [
+              -4,
+              7
+            ],
+            "y": [
+              3,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              64,
+              49
+            ],
+            "full_quartic_root_discriminant": [
+              16842816,
+              117649
+            ],
+            "hasse_endpoint_factor_E": [
+              513,
+              49
+            ],
+            "pair_count": 2352,
+            "x": [
+              -3,
+              7
+            ],
+            "y": [
+              -4,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              9,
+              49
+            ],
+            "full_quartic_root_discriminant": [
+              3779136,
+              117649
+            ],
+            "hasse_endpoint_factor_E": [
+              648,
+              49
+            ],
+            "pair_count": 4704,
+            "x": [
+              -2,
+              7
+            ],
+            "y": [
+              -9,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              729,
+              49
+            ],
+            "pair_count": 1568,
+            "x": [
+              -1,
+              7
+            ],
+            "y": [
+              -12,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              16,
+              1
+            ],
+            "pair_count": 1764,
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              -2,
+              1
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              1,
+              49
+            ],
+            "full_quartic_root_discriminant": [
+              11664,
+              2401
+            ],
+            "hasse_endpoint_factor_E": [
+              108,
+              7
+            ],
+            "pair_count": 4704,
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              -13,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              16,
+              49
+            ],
+            "full_quartic_root_discriminant": [
+              147456,
+              2401
+            ],
+            "hasse_endpoint_factor_E": [
+              96,
+              7
+            ],
+            "pair_count": 7056,
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              -10,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              81,
+              49
+            ],
+            "full_quartic_root_discriminant": [
+              467856,
+              2401
+            ],
+            "hasse_endpoint_factor_E": [
+              76,
+              7
+            ],
+            "pair_count": 3528,
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              -5,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              256,
+              49
+            ],
+            "full_quartic_root_discriminant": [
+              589824,
+              2401
+            ],
+            "hasse_endpoint_factor_E": [
+              48,
+              7
+            ],
+            "pair_count": 4704,
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              2,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              625,
+              49
+            ],
+            "full_quartic_root_discriminant": [
+              90000,
+              2401
+            ],
+            "hasse_endpoint_factor_E": [
+              12,
+              7
+            ],
+            "pair_count": 1176,
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              11,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              729,
+              49
+            ],
+            "pair_count": 1568,
+            "x": [
+              1,
+              7
+            ],
+            "y": [
+              -12,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              9,
+              49
+            ],
+            "full_quartic_root_discriminant": [
+              3779136,
+              117649
+            ],
+            "hasse_endpoint_factor_E": [
+              648,
+              49
+            ],
+            "pair_count": 4704,
+            "x": [
+              2,
+              7
+            ],
+            "y": [
+              -9,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              64,
+              49
+            ],
+            "full_quartic_root_discriminant": [
+              16842816,
+              117649
+            ],
+            "hasse_endpoint_factor_E": [
+              513,
+              49
+            ],
+            "pair_count": 2352,
+            "x": [
+              3,
+              7
+            ],
+            "y": [
+              -4,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              576,
+              49
+            ],
+            "pair_count": 3528,
+            "x": [
+              4,
+              7
+            ],
+            "y": [
+              -6,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              225,
+              49
+            ],
+            "full_quartic_root_discriminant": [
+              23619600,
+              117649
+            ],
+            "hasse_endpoint_factor_E": [
+              324,
+              49
+            ],
+            "pair_count": 3136,
+            "x": [
+              4,
+              7
+            ],
+            "y": [
+              3,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              576,
+              49
+            ],
+            "full_quartic_root_discriminant": [
+              3779136,
+              117649
+            ],
+            "hasse_endpoint_factor_E": [
+              81,
+              49
+            ],
+            "pair_count": 784,
+            "x": [
+              5,
+              7
+            ],
+            "y": [
+              12,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              25,
+              49
+            ],
+            "full_quartic_root_discriminant": [
+              5198400,
+              117649
+            ],
+            "hasse_endpoint_factor_E": [
+              456,
+              49
+            ],
+            "pair_count": 3528,
+            "x": [
+              6,
+              7
+            ],
+            "y": [
+              -1,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              144,
+              49
+            ],
+            "full_quartic_root_discriminant": [
+              11943936,
+              117649
+            ],
+            "hasse_endpoint_factor_E": [
+              288,
+              49
+            ],
+            "pair_count": 4704,
+            "x": [
+              8,
+              7
+            ],
+            "y": [
+              6,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              361,
+              49
+            ],
+            "pair_count": 882,
+            "x": [
+              9,
+              7
+            ],
+            "y": [
+              4,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              9,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              46656,
+              2401
+            ],
+            "hasse_endpoint_factor_E": [
+              72,
+              49
+            ],
+            "pair_count": 1176,
+            "x": [
+              10,
+              7
+            ],
+            "y": [
+              15,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              1,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              51984,
+              2401
+            ],
+            "hasse_endpoint_factor_E": [
+              228,
+              49
+            ],
+            "pair_count": 2352,
+            "x": [
+              12,
+              7
+            ],
+            "y": [
+              11,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              256,
+              49
+            ],
+            "full_quartic_root_discriminant": [
+              831744,
+              117649
+            ],
+            "hasse_endpoint_factor_E": [
+              57,
+              49
+            ],
+            "pair_count": 588,
+            "x": [
+              15,
+              7
+            ],
+            "y": [
+              20,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              144,
+              49
+            ],
+            "pair_count": 1568,
+            "x": [
+              16,
+              7
+            ],
+            "y": [
+              18,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              81,
+              49
+            ],
+            "full_quartic_root_discriminant": [
+              104976,
+              117649
+            ],
+            "hasse_endpoint_factor_E": [
+              36,
+              49
+            ],
+            "pair_count": 784,
+            "x": [
+              20,
+              7
+            ],
+            "y": [
+              27,
+              7
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              9,
+              49
+            ],
+            "pair_count": 98,
+            "x": [
+              25,
+              7
+            ],
+            "y": [
+              36,
+              7
+            ]
+          }
+        ],
+        "support_size": 36
+      },
+      "full_quartic_repeated_root_masses": {
+        "classification": "Disc_Z(Q)=D*E^2, so repeated roots occur exactly on the union D=0 or E=0",
+        "exhaustive_union_full_discriminant_equals_zero": 17052,
+        "fold_and_endpoint_intersection": 0,
+        "fold_wall_D_equals_zero": 17052,
+        "hasse_endpoint_wall_E_equals_zero": 0
+      },
+      "normalized_tensor_trace_histogram": {
+        "atoms": [
+          {
+            "pair_count": 98,
+            "x": [
+              -25,
+              7
+            ]
+          },
+          {
+            "pair_count": 784,
+            "x": [
+              -20,
+              7
+            ]
+          },
+          {
+            "pair_count": 1568,
+            "x": [
+              -16,
+              7
+            ]
+          },
+          {
+            "pair_count": 588,
+            "x": [
+              -15,
+              7
+            ]
+          },
+          {
+            "pair_count": 2352,
+            "x": [
+              -12,
+              7
+            ]
+          },
+          {
+            "pair_count": 1176,
+            "x": [
+              -10,
+              7
+            ]
+          },
+          {
+            "pair_count": 882,
+            "x": [
+              -9,
+              7
+            ]
+          },
+          {
+            "pair_count": 4704,
+            "x": [
+              -8,
+              7
+            ]
+          },
+          {
+            "pair_count": 3528,
+            "x": [
+              -6,
+              7
+            ]
+          },
+          {
+            "pair_count": 784,
+            "x": [
+              -5,
+              7
+            ]
+          },
+          {
+            "pair_count": 6664,
+            "x": [
+              -4,
+              7
+            ]
+          },
+          {
+            "pair_count": 2352,
+            "x": [
+              -3,
+              7
+            ]
+          },
+          {
+            "pair_count": 4704,
+            "x": [
+              -2,
+              7
+            ]
+          },
+          {
+            "pair_count": 1568,
+            "x": [
+              -1,
+              7
+            ]
+          },
+          {
+            "pair_count": 22932,
+            "x": [
+              0,
+              1
+            ]
+          },
+          {
+            "pair_count": 1568,
+            "x": [
+              1,
+              7
+            ]
+          },
+          {
+            "pair_count": 4704,
+            "x": [
+              2,
+              7
+            ]
+          },
+          {
+            "pair_count": 2352,
+            "x": [
+              3,
+              7
+            ]
+          },
+          {
+            "pair_count": 6664,
+            "x": [
+              4,
+              7
+            ]
+          },
+          {
+            "pair_count": 784,
+            "x": [
+              5,
+              7
+            ]
+          },
+          {
+            "pair_count": 3528,
+            "x": [
+              6,
+              7
+            ]
+          },
+          {
+            "pair_count": 4704,
+            "x": [
+              8,
+              7
+            ]
+          },
+          {
+            "pair_count": 882,
+            "x": [
+              9,
+              7
+            ]
+          },
+          {
+            "pair_count": 1176,
+            "x": [
+              10,
+              7
+            ]
+          },
+          {
+            "pair_count": 2352,
+            "x": [
+              12,
+              7
+            ]
+          },
+          {
+            "pair_count": 588,
+            "x": [
+              15,
+              7
+            ]
+          },
+          {
+            "pair_count": 1568,
+            "x": [
+              16,
+              7
+            ]
+          },
+          {
+            "pair_count": 784,
+            "x": [
+              20,
+              7
+            ]
+          },
+          {
+            "pair_count": 98,
+            "x": [
+              25,
+              7
+            ]
+          }
+        ],
+        "support_size": 29
+      },
+      "ordered_cartesian_atom_pairs": 121,
+      "ordered_model_pairs_represented": 86436,
+      "q": 7,
+      "selected_exact_moments": {
+        "mean_coefficient_map_fold_D": [
+          4688,
+          2401
+        ],
+        "mean_x_fourth": [
+          440896,
+          117649
+        ],
+        "mean_x_squared": [
+          2304,
+          2401
+        ],
+        "mean_x_squared_times_y": [
+          31488,
+          16807
+        ],
+        "mean_y": [
+          -2,
+          49
+        ],
+        "mean_y_squared": [
+          4692,
+          2401
+        ]
+      },
+      "source_histogram_sha256": "1e73537d1ecb3168705ffa7f71cf0f7b86356bdc92d46463188d460179aa2643",
+      "source_members_represented": 294,
+      "source_trace_atom_count": 11,
+      "source_trace_histogram": {
+        "-1": 28,
+        "-2": 42,
+        "-3": 21,
+        "-4": 28,
+        "-5": 7,
+        "0": 42,
+        "1": 28,
+        "2": 42,
+        "3": 21,
+        "4": 28,
+        "5": 7
+      }
+    },
+    {
+      "coefficient_map_fold_wall_masses": {
+        "A_equals_B": 139150,
+        "A_equals_minus_B": 139150,
+        "fold_union_D_equals_zero_by_inclusion_exclusion": 229900,
+        "intersection_A_equals_B_equals_zero": 48400
+      },
+      "complete_integral_local_factor_law": {
+        "atoms": [
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -36,
+              550,
+              -4356,
+              14641
+            ],
+            "pair_count": 6050
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -30,
+              429,
+              -3630,
+              14641
+            ],
+            "pair_count": 12100
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -25,
+              308,
+              -3025,
+              14641
+            ],
+            "pair_count": 6050
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -24,
+              330,
+              -2904,
+              14641
+            ],
+            "pair_count": 24200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -20,
+              209,
+              -2420,
+              14641
+            ],
+            "pair_count": 24200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -18,
+              253,
+              -2178,
+              14641
+            ],
+            "pair_count": 24200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -16,
+              110,
+              -1936,
+              14641
+            ],
+            "pair_count": 24200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -15,
+              132,
+              -1815,
+              14641
+            ],
+            "pair_count": 24200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -12,
+              33,
+              -1452,
+              14641
+            ],
+            "pair_count": 48400
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -12,
+              198,
+              -1452,
+              14641
+            ],
+            "pair_count": 24200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -10,
+              77,
+              -1210,
+              14641
+            ],
+            "pair_count": 24200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -9,
+              -44,
+              -1089,
+              14641
+            ],
+            "pair_count": 24200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -8,
+              -22,
+              -968,
+              14641
+            ],
+            "pair_count": 48400
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -6,
+              -99,
+              -726,
+              14641
+            ],
+            "pair_count": 48400
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -6,
+              165,
+              -726,
+              14641
+            ],
+            "pair_count": 12100
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -5,
+              44,
+              -605,
+              14641
+            ],
+            "pair_count": 12100
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -4,
+              -154,
+              -484,
+              14641
+            ],
+            "pair_count": 24200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -4,
+              -55,
+              -484,
+              14641
+            ],
+            "pair_count": 24200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -3,
+              -132,
+              -363,
+              14641
+            ],
+            "pair_count": 24200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -2,
+              -187,
+              -242,
+              14641
+            ],
+            "pair_count": 24200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -1,
+              -220,
+              -121,
+              14641
+            ],
+            "pair_count": 6050
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              0,
+              -242,
+              0,
+              14641
+            ],
+            "pair_count": 48400
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              0,
+              -231,
+              0,
+              14641
+            ],
+            "pair_count": 48400
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              0,
+              -198,
+              0,
+              14641
+            ],
+            "pair_count": 96800
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              0,
+              -143,
+              0,
+              14641
+            ],
+            "pair_count": 96800
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              0,
+              -66,
+              0,
+              14641
+            ],
+            "pair_count": 96800
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              0,
+              33,
+              0,
+              14641
+            ],
+            "pair_count": 48400
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              0,
+              154,
+              0,
+              14641
+            ],
+            "pair_count": 48400
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              1,
+              -220,
+              121,
+              14641
+            ],
+            "pair_count": 6050
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              2,
+              -187,
+              242,
+              14641
+            ],
+            "pair_count": 24200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              3,
+              -132,
+              363,
+              14641
+            ],
+            "pair_count": 24200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              4,
+              -154,
+              484,
+              14641
+            ],
+            "pair_count": 24200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              4,
+              -55,
+              484,
+              14641
+            ],
+            "pair_count": 24200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              5,
+              44,
+              605,
+              14641
+            ],
+            "pair_count": 12100
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              6,
+              -99,
+              726,
+              14641
+            ],
+            "pair_count": 48400
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              6,
+              165,
+              726,
+              14641
+            ],
+            "pair_count": 12100
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              8,
+              -22,
+              968,
+              14641
+            ],
+            "pair_count": 48400
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              9,
+              -44,
+              1089,
+              14641
+            ],
+            "pair_count": 24200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              10,
+              77,
+              1210,
+              14641
+            ],
+            "pair_count": 24200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              12,
+              33,
+              1452,
+              14641
+            ],
+            "pair_count": 48400
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              12,
+              198,
+              1452,
+              14641
+            ],
+            "pair_count": 24200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              15,
+              132,
+              1815,
+              14641
+            ],
+            "pair_count": 24200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              16,
+              110,
+              1936,
+              14641
+            ],
+            "pair_count": 24200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              18,
+              253,
+              2178,
+              14641
+            ],
+            "pair_count": 24200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              20,
+              209,
+              2420,
+              14641
+            ],
+            "pair_count": 24200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              24,
+              330,
+              2904,
+              14641
+            ],
+            "pair_count": 24200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              25,
+              308,
+              3025,
+              14641
+            ],
+            "pair_count": 6050
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              30,
+              429,
+              3630,
+              14641
+            ],
+            "pair_count": 12100
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              36,
+              550,
+              4356,
+              14641
+            ],
+            "pair_count": 6050
+          }
+        ],
+        "support_size": 49
+      },
+      "complete_normalized_coefficient_law": {
+        "atoms": [
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              64,
+              121
+            ],
+            "pair_count": 6050,
+            "x": [
+              -36,
+              11
+            ],
+            "y": [
+              50,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              1,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              23104,
+              14641
+            ],
+            "hasse_endpoint_factor_E": [
+              152,
+              121
+            ],
+            "pair_count": 12100,
+            "x": [
+              -30,
+              11
+            ],
+            "y": [
+              39,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              361,
+              121
+            ],
+            "pair_count": 6050,
+            "x": [
+              -25,
+              11
+            ],
+            "y": [
+              28,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              400,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              20070400,
+              1771561
+            ],
+            "hasse_endpoint_factor_E": [
+              224,
+              121
+            ],
+            "pair_count": 24200,
+            "x": [
+              -24,
+              11
+            ],
+            "y": [
+              30,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              81,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              22924944,
+              1771561
+            ],
+            "hasse_endpoint_factor_E": [
+              532,
+              121
+            ],
+            "pair_count": 24200,
+            "x": [
+              -20,
+              11
+            ],
+            "y": [
+              19,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              729,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              57153600,
+              1771561
+            ],
+            "hasse_endpoint_factor_E": [
+              280,
+              121
+            ],
+            "pair_count": 24200,
+            "x": [
+              -18,
+              11
+            ],
+            "y": [
+              23,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              784,
+              121
+            ],
+            "pair_count": 24200,
+            "x": [
+              -16,
+              11
+            ],
+            "y": [
+              10,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              256,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              113209600,
+              1771561
+            ],
+            "hasse_endpoint_factor_E": [
+              665,
+              121
+            ],
+            "pair_count": 24200,
+            "x": [
+              -15,
+              11
+            ],
+            "y": [
+              12,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              49,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              47059600,
+              1771561
+            ],
+            "hasse_endpoint_factor_E": [
+              980,
+              121
+            ],
+            "pair_count": 48400,
+            "x": [
+              -12,
+              11
+            ],
+            "y": [
+              3,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              1024,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              104857600,
+              1771561
+            ],
+            "hasse_endpoint_factor_E": [
+              320,
+              121
+            ],
+            "pair_count": 24200,
+            "x": [
+              -12,
+              11
+            ],
+            "y": [
+              18,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              441,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              254721600,
+              1771561
+            ],
+            "hasse_endpoint_factor_E": [
+              760,
+              121
+            ],
+            "pair_count": 24200,
+            "x": [
+              -10,
+              11
+            ],
+            "y": [
+              7,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              1225,
+              121
+            ],
+            "pair_count": 24200,
+            "x": [
+              -9,
+              11
+            ],
+            "y": [
+              -4,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              144,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              180633600,
+              1771561
+            ],
+            "hasse_endpoint_factor_E": [
+              1120,
+              121
+            ],
+            "pair_count": 48400,
+            "x": [
+              -8,
+              11
+            ],
+            "y": [
+              -2,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              25,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              49000000,
+              1771561
+            ],
+            "hasse_endpoint_factor_E": [
+              1400,
+              121
+            ],
+            "pair_count": 48400,
+            "x": [
+              -6,
+              11
+            ],
+            "y": [
+              -9,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              1225,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              144961600,
+              1771561
+            ],
+            "hasse_endpoint_factor_E": [
+              344,
+              121
+            ],
+            "pair_count": 12100,
+            "x": [
+              -6,
+              11
+            ],
+            "y": [
+              15,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              576,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              384473664,
+              1771561
+            ],
+            "hasse_endpoint_factor_E": [
+              817,
+              121
+            ],
+            "pair_count": 12100,
+            "x": [
+              -5,
+              11
+            ],
+            "y": [
+              4,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              1600,
+              121
+            ],
+            "pair_count": 24200,
+            "x": [
+              -4,
+              11
+            ],
+            "y": [
+              -14,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              225,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              326163600,
+              1771561
+            ],
+            "hasse_endpoint_factor_E": [
+              1204,
+              121
+            ],
+            "pair_count": 24200,
+            "x": [
+              -4,
+              11
+            ],
+            "y": [
+              -5,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              64,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              144961600,
+              1771561
+            ],
+            "hasse_endpoint_factor_E": [
+              1505,
+              121
+            ],
+            "pair_count": 24200,
+            "x": [
+              -3,
+              11
+            ],
+            "y": [
+              -12,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              9,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              26625600,
+              1771561
+            ],
+            "hasse_endpoint_factor_E": [
+              1720,
+              121
+            ],
+            "pair_count": 24200,
+            "x": [
+              -2,
+              11
+            ],
+            "y": [
+              -17,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              1849,
+              121
+            ],
+            "pair_count": 6050,
+            "x": [
+              -1,
+              11
+            ],
+            "y": [
+              -20,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              16,
+              1
+            ],
+            "pair_count": 48400,
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              -2,
+              1
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              1,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              29584,
+              14641
+            ],
+            "hasse_endpoint_factor_E": [
+              172,
+              11
+            ],
+            "pair_count": 48400,
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              -21,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              16,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              409600,
+              14641
+            ],
+            "hasse_endpoint_factor_E": [
+              160,
+              11
+            ],
+            "pair_count": 96800,
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              -18,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              81,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              1587600,
+              14641
+            ],
+            "hasse_endpoint_factor_E": [
+              140,
+              11
+            ],
+            "pair_count": 96800,
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              -13,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              256,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              3211264,
+              14641
+            ],
+            "hasse_endpoint_factor_E": [
+              112,
+              11
+            ],
+            "pair_count": 96800,
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              -6,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              625,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              3610000,
+              14641
+            ],
+            "hasse_endpoint_factor_E": [
+              76,
+              11
+            ],
+            "pair_count": 48400,
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              3,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              1296,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              1327104,
+              14641
+            ],
+            "hasse_endpoint_factor_E": [
+              32,
+              11
+            ],
+            "pair_count": 48400,
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              14,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              1849,
+              121
+            ],
+            "pair_count": 6050,
+            "x": [
+              1,
+              11
+            ],
+            "y": [
+              -20,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              9,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              26625600,
+              1771561
+            ],
+            "hasse_endpoint_factor_E": [
+              1720,
+              121
+            ],
+            "pair_count": 24200,
+            "x": [
+              2,
+              11
+            ],
+            "y": [
+              -17,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              64,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              144961600,
+              1771561
+            ],
+            "hasse_endpoint_factor_E": [
+              1505,
+              121
+            ],
+            "pair_count": 24200,
+            "x": [
+              3,
+              11
+            ],
+            "y": [
+              -12,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              1600,
+              121
+            ],
+            "pair_count": 24200,
+            "x": [
+              4,
+              11
+            ],
+            "y": [
+              -14,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              225,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              326163600,
+              1771561
+            ],
+            "hasse_endpoint_factor_E": [
+              1204,
+              121
+            ],
+            "pair_count": 24200,
+            "x": [
+              4,
+              11
+            ],
+            "y": [
+              -5,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              576,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              384473664,
+              1771561
+            ],
+            "hasse_endpoint_factor_E": [
+              817,
+              121
+            ],
+            "pair_count": 12100,
+            "x": [
+              5,
+              11
+            ],
+            "y": [
+              4,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              25,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              49000000,
+              1771561
+            ],
+            "hasse_endpoint_factor_E": [
+              1400,
+              121
+            ],
+            "pair_count": 48400,
+            "x": [
+              6,
+              11
+            ],
+            "y": [
+              -9,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              1225,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              144961600,
+              1771561
+            ],
+            "hasse_endpoint_factor_E": [
+              344,
+              121
+            ],
+            "pair_count": 12100,
+            "x": [
+              6,
+              11
+            ],
+            "y": [
+              15,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              144,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              180633600,
+              1771561
+            ],
+            "hasse_endpoint_factor_E": [
+              1120,
+              121
+            ],
+            "pair_count": 48400,
+            "x": [
+              8,
+              11
+            ],
+            "y": [
+              -2,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              1225,
+              121
+            ],
+            "pair_count": 24200,
+            "x": [
+              9,
+              11
+            ],
+            "y": [
+              -4,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              441,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              254721600,
+              1771561
+            ],
+            "hasse_endpoint_factor_E": [
+              760,
+              121
+            ],
+            "pair_count": 24200,
+            "x": [
+              10,
+              11
+            ],
+            "y": [
+              7,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              49,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              47059600,
+              1771561
+            ],
+            "hasse_endpoint_factor_E": [
+              980,
+              121
+            ],
+            "pair_count": 48400,
+            "x": [
+              12,
+              11
+            ],
+            "y": [
+              3,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              1024,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              104857600,
+              1771561
+            ],
+            "hasse_endpoint_factor_E": [
+              320,
+              121
+            ],
+            "pair_count": 24200,
+            "x": [
+              12,
+              11
+            ],
+            "y": [
+              18,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              256,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              113209600,
+              1771561
+            ],
+            "hasse_endpoint_factor_E": [
+              665,
+              121
+            ],
+            "pair_count": 24200,
+            "x": [
+              15,
+              11
+            ],
+            "y": [
+              12,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              784,
+              121
+            ],
+            "pair_count": 24200,
+            "x": [
+              16,
+              11
+            ],
+            "y": [
+              10,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              729,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              57153600,
+              1771561
+            ],
+            "hasse_endpoint_factor_E": [
+              280,
+              121
+            ],
+            "pair_count": 24200,
+            "x": [
+              18,
+              11
+            ],
+            "y": [
+              23,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              81,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              22924944,
+              1771561
+            ],
+            "hasse_endpoint_factor_E": [
+              532,
+              121
+            ],
+            "pair_count": 24200,
+            "x": [
+              20,
+              11
+            ],
+            "y": [
+              19,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              400,
+              121
+            ],
+            "full_quartic_root_discriminant": [
+              20070400,
+              1771561
+            ],
+            "hasse_endpoint_factor_E": [
+              224,
+              121
+            ],
+            "pair_count": 24200,
+            "x": [
+              24,
+              11
+            ],
+            "y": [
+              30,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              361,
+              121
+            ],
+            "pair_count": 6050,
+            "x": [
+              25,
+              11
+            ],
+            "y": [
+              28,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              1,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              23104,
+              14641
+            ],
+            "hasse_endpoint_factor_E": [
+              152,
+              121
+            ],
+            "pair_count": 12100,
+            "x": [
+              30,
+              11
+            ],
+            "y": [
+              39,
+              11
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              64,
+              121
+            ],
+            "pair_count": 6050,
+            "x": [
+              36,
+              11
+            ],
+            "y": [
+              50,
+              11
+            ]
+          }
+        ],
+        "support_size": 49
+      },
+      "full_quartic_repeated_root_masses": {
+        "classification": "Disc_Z(Q)=D*E^2, so repeated roots occur exactly on the union D=0 or E=0",
+        "exhaustive_union_full_discriminant_equals_zero": 229900,
+        "fold_and_endpoint_intersection": 0,
+        "fold_wall_D_equals_zero": 229900,
+        "hasse_endpoint_wall_E_equals_zero": 0
+      },
+      "normalized_tensor_trace_histogram": {
+        "atoms": [
+          {
+            "pair_count": 6050,
+            "x": [
+              -36,
+              11
+            ]
+          },
+          {
+            "pair_count": 12100,
+            "x": [
+              -30,
+              11
+            ]
+          },
+          {
+            "pair_count": 6050,
+            "x": [
+              -25,
+              11
+            ]
+          },
+          {
+            "pair_count": 24200,
+            "x": [
+              -24,
+              11
+            ]
+          },
+          {
+            "pair_count": 24200,
+            "x": [
+              -20,
+              11
+            ]
+          },
+          {
+            "pair_count": 24200,
+            "x": [
+              -18,
+              11
+            ]
+          },
+          {
+            "pair_count": 24200,
+            "x": [
+              -16,
+              11
+            ]
+          },
+          {
+            "pair_count": 24200,
+            "x": [
+              -15,
+              11
+            ]
+          },
+          {
+            "pair_count": 72600,
+            "x": [
+              -12,
+              11
+            ]
+          },
+          {
+            "pair_count": 24200,
+            "x": [
+              -10,
+              11
+            ]
+          },
+          {
+            "pair_count": 24200,
+            "x": [
+              -9,
+              11
+            ]
+          },
+          {
+            "pair_count": 48400,
+            "x": [
+              -8,
+              11
+            ]
+          },
+          {
+            "pair_count": 60500,
+            "x": [
+              -6,
+              11
+            ]
+          },
+          {
+            "pair_count": 12100,
+            "x": [
+              -5,
+              11
+            ]
+          },
+          {
+            "pair_count": 48400,
+            "x": [
+              -4,
+              11
+            ]
+          },
+          {
+            "pair_count": 24200,
+            "x": [
+              -3,
+              11
+            ]
+          },
+          {
+            "pair_count": 24200,
+            "x": [
+              -2,
+              11
+            ]
+          },
+          {
+            "pair_count": 6050,
+            "x": [
+              -1,
+              11
+            ]
+          },
+          {
+            "pair_count": 484000,
+            "x": [
+              0,
+              1
+            ]
+          },
+          {
+            "pair_count": 6050,
+            "x": [
+              1,
+              11
+            ]
+          },
+          {
+            "pair_count": 24200,
+            "x": [
+              2,
+              11
+            ]
+          },
+          {
+            "pair_count": 24200,
+            "x": [
+              3,
+              11
+            ]
+          },
+          {
+            "pair_count": 48400,
+            "x": [
+              4,
+              11
+            ]
+          },
+          {
+            "pair_count": 12100,
+            "x": [
+              5,
+              11
+            ]
+          },
+          {
+            "pair_count": 60500,
+            "x": [
+              6,
+              11
+            ]
+          },
+          {
+            "pair_count": 48400,
+            "x": [
+              8,
+              11
+            ]
+          },
+          {
+            "pair_count": 24200,
+            "x": [
+              9,
+              11
+            ]
+          },
+          {
+            "pair_count": 24200,
+            "x": [
+              10,
+              11
+            ]
+          },
+          {
+            "pair_count": 72600,
+            "x": [
+              12,
+              11
+            ]
+          },
+          {
+            "pair_count": 24200,
+            "x": [
+              15,
+              11
+            ]
+          },
+          {
+            "pair_count": 24200,
+            "x": [
+              16,
+              11
+            ]
+          },
+          {
+            "pair_count": 24200,
+            "x": [
+              18,
+              11
+            ]
+          },
+          {
+            "pair_count": 24200,
+            "x": [
+              20,
+              11
+            ]
+          },
+          {
+            "pair_count": 24200,
+            "x": [
+              24,
+              11
+            ]
+          },
+          {
+            "pair_count": 6050,
+            "x": [
+              25,
+              11
+            ]
+          },
+          {
+            "pair_count": 12100,
+            "x": [
+              30,
+              11
+            ]
+          },
+          {
+            "pair_count": 6050,
+            "x": [
+              36,
+              11
+            ]
+          }
+        ],
+        "support_size": 37
+      },
+      "ordered_cartesian_atom_pairs": 169,
+      "ordered_model_pairs_represented": 1464100,
+      "q": 11,
+      "selected_exact_moments": {
+        "mean_coefficient_map_fold_D": [
+          29016,
+          14641
+        ],
+        "mean_x_fourth": [
+          6906384,
+          1771561
+        ],
+        "mean_x_squared": [
+          14400,
+          14641
+        ],
+        "mean_x_squared_times_y": [
+          313920,
+          161051
+        ],
+        "mean_y": [
+          -2,
+          121
+        ],
+        "mean_y_squared": [
+          29020,
+          14641
+        ]
+      },
+      "source_histogram_sha256": "3f07b5491c165a155ee7abb3e4f11e6a3d015465e47d622429213aebaf13872d",
+      "source_members_represented": 1210,
+      "source_trace_atom_count": 13,
+      "source_trace_histogram": {
+        "-1": 55,
+        "-2": 110,
+        "-3": 110,
+        "-4": 110,
+        "-5": 55,
+        "-6": 55,
+        "0": 220,
+        "1": 55,
+        "2": 110,
+        "3": 110,
+        "4": 110,
+        "5": 55,
+        "6": 55
+      }
+    },
+    {
+      "coefficient_map_fold_wall_masses": {
+        "A_equals_B": 346788,
+        "A_equals_minus_B": 346788,
+        "fold_union_D_equals_zero_by_inclusion_exclusion": 669240,
+        "intersection_A_equals_B_equals_zero": 24336
+      },
+      "complete_integral_local_factor_law": {
+        "atoms": [
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -49,
+              936,
+              -8281,
+              28561
+            ],
+            "pair_count": 1352
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -42,
+              767,
+              -7098,
+              28561
+            ],
+            "pair_count": 12168
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -36,
+              598,
+              -6084,
+              28561
+            ],
+            "pair_count": 27378
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -35,
+              624,
+              -5915,
+              28561
+            ],
+            "pair_count": 10816
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -30,
+              455,
+              -5070,
+              28561
+            ],
+            "pair_count": 48672
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -28,
+              507,
+              -4732,
+              28561
+            ],
+            "pair_count": 20280
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -25,
+              312,
+              -4225,
+              28561
+            ],
+            "pair_count": 21632
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -24,
+              338,
+              -4056,
+              28561
+            ],
+            "pair_count": 91260
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -21,
+              416,
+              -3549,
+              28561
+            ],
+            "pair_count": 8112
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -20,
+              195,
+              -3380,
+              28561
+            ],
+            "pair_count": 81120
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -18,
+              247,
+              -3042,
+              28561
+            ],
+            "pair_count": 36504
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -16,
+              78,
+              -2704,
+              28561
+            ],
+            "pair_count": 76050
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -15,
+              104,
+              -2535,
+              28561
+            ],
+            "pair_count": 32448
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -14,
+              351,
+              -2366,
+              28561
+            ],
+            "pair_count": 27040
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -12,
+              -13,
+              -2028,
+              28561
+            ],
+            "pair_count": 60840
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -12,
+              182,
+              -2028,
+              28561
+            ],
+            "pair_count": 121680
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -10,
+              39,
+              -1690,
+              28561
+            ],
+            "pair_count": 108160
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -9,
+              -104,
+              -1521,
+              28561
+            ],
+            "pair_count": 12168
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -8,
+              -78,
+              -1352,
+              28561
+            ],
+            "pair_count": 202800
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -7,
+              312,
+              -1183,
+              28561
+            ],
+            "pair_count": 16224
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -6,
+              -169,
+              -1014,
+              28561
+            ],
+            "pair_count": 81120
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -6,
+              143,
+              -1014,
+              28561
+            ],
+            "pair_count": 73008
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -5,
+              0,
+              -845,
+              28561
+            ],
+            "pair_count": 64896
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -4,
+              -234,
+              -676,
+              28561
+            ],
+            "pair_count": 135200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -4,
+              -117,
+              -676,
+              28561
+            ],
+            "pair_count": 121680
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -3,
+              -208,
+              -507,
+              28561
+            ],
+            "pair_count": 48672
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -2,
+              -273,
+              -338,
+              28561
+            ],
+            "pair_count": 162240
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              -1,
+              -312,
+              -169,
+              28561
+            ],
+            "pair_count": 48672
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              0,
+              -338,
+              0,
+              28561
+            ],
+            "pair_count": 24336
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              0,
+              -325,
+              0,
+              28561
+            ],
+            "pair_count": 97344
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              0,
+              -286,
+              0,
+              28561
+            ],
+            "pair_count": 162240
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              0,
+              -221,
+              0,
+              28561
+            ],
+            "pair_count": 48672
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              0,
+              -130,
+              0,
+              28561
+            ],
+            "pair_count": 121680
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              0,
+              -13,
+              0,
+              28561
+            ],
+            "pair_count": 64896
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              0,
+              130,
+              0,
+              28561
+            ],
+            "pair_count": 73008
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              0,
+              299,
+              0,
+              28561
+            ],
+            "pair_count": 16224
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              1,
+              -312,
+              169,
+              28561
+            ],
+            "pair_count": 48672
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              2,
+              -273,
+              338,
+              28561
+            ],
+            "pair_count": 162240
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              3,
+              -208,
+              507,
+              28561
+            ],
+            "pair_count": 48672
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              4,
+              -234,
+              676,
+              28561
+            ],
+            "pair_count": 135200
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              4,
+              -117,
+              676,
+              28561
+            ],
+            "pair_count": 121680
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              5,
+              0,
+              845,
+              28561
+            ],
+            "pair_count": 64896
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              6,
+              -169,
+              1014,
+              28561
+            ],
+            "pair_count": 81120
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              6,
+              143,
+              1014,
+              28561
+            ],
+            "pair_count": 73008
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              7,
+              312,
+              1183,
+              28561
+            ],
+            "pair_count": 16224
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              8,
+              -78,
+              1352,
+              28561
+            ],
+            "pair_count": 202800
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              9,
+              -104,
+              1521,
+              28561
+            ],
+            "pair_count": 12168
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              10,
+              39,
+              1690,
+              28561
+            ],
+            "pair_count": 108160
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              12,
+              -13,
+              2028,
+              28561
+            ],
+            "pair_count": 60840
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              12,
+              182,
+              2028,
+              28561
+            ],
+            "pair_count": 121680
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              14,
+              351,
+              2366,
+              28561
+            ],
+            "pair_count": 27040
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              15,
+              104,
+              2535,
+              28561
+            ],
+            "pair_count": 32448
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              16,
+              78,
+              2704,
+              28561
+            ],
+            "pair_count": 76050
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              18,
+              247,
+              3042,
+              28561
+            ],
+            "pair_count": 36504
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              20,
+              195,
+              3380,
+              28561
+            ],
+            "pair_count": 81120
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              21,
+              416,
+              3549,
+              28561
+            ],
+            "pair_count": 8112
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              24,
+              338,
+              4056,
+              28561
+            ],
+            "pair_count": 91260
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              25,
+              312,
+              4225,
+              28561
+            ],
+            "pair_count": 21632
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              28,
+              507,
+              4732,
+              28561
+            ],
+            "pair_count": 20280
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              30,
+              455,
+              5070,
+              28561
+            ],
+            "pair_count": 48672
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              35,
+              624,
+              5915,
+              28561
+            ],
+            "pair_count": 10816
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              36,
+              598,
+              6084,
+              28561
+            ],
+            "pair_count": 27378
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              42,
+              767,
+              7098,
+              28561
+            ],
+            "pair_count": 12168
+          },
+          {
+            "coefficients_T0_through_T4": [
+              1,
+              49,
+              936,
+              8281,
+              28561
+            ],
+            "pair_count": 1352
+          }
+        ],
+        "support_size": 64
+      },
+      "complete_normalized_coefficient_law": {
+        "atoms": [
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              9,
+              169
+            ],
+            "pair_count": 1352,
+            "x": [
+              -49,
+              13
+            ],
+            "y": [
+              72,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              1,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              2304,
+              28561
+            ],
+            "hasse_endpoint_factor_E": [
+              48,
+              169
+            ],
+            "pair_count": 12168,
+            "x": [
+              -42,
+              13
+            ],
+            "y": [
+              59,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              256,
+              169
+            ],
+            "pair_count": 27378,
+            "x": [
+              -36,
+              13
+            ],
+            "y": [
+              46,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              576,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              3779136,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              81,
+              169
+            ],
+            "pair_count": 10816,
+            "x": [
+              -35,
+              13
+            ],
+            "y": [
+              48,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              121,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              22581504,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              432,
+              169
+            ],
+            "pair_count": 48672,
+            "x": [
+              -30,
+              13
+            ],
+            "y": [
+              35,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              1089,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              12702096,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              108,
+              169
+            ],
+            "pair_count": 20280,
+            "x": [
+              -28,
+              13
+            ],
+            "y": [
+              3,
+              1
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              729,
+              169
+            ],
+            "pair_count": 21632,
+            "x": [
+              -25,
+              13
+            ],
+            "y": [
+              24,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              400,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              132710400,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              576,
+              169
+            ],
+            "pair_count": 91260,
+            "x": [
+              -24,
+              13
+            ],
+            "y": [
+              2,
+              1
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              1600,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              26625600,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              129,
+              169
+            ],
+            "pair_count": 8112,
+            "x": [
+              -21,
+              13
+            ],
+            "y": [
+              32,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              81,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              76527504,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              972,
+              169
+            ],
+            "pair_count": 81120,
+            "x": [
+              -20,
+              13
+            ],
+            "y": [
+              15,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              729,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              345067776,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              688,
+              169
+            ],
+            "pair_count": 36504,
+            "x": [
+              -18,
+              13
+            ],
+            "y": [
+              19,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              1296,
+              169
+            ],
+            "pair_count": 76050,
+            "x": [
+              -16,
+              13
+            ],
+            "y": [
+              6,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              256,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              345067776,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              1161,
+              169
+            ],
+            "pair_count": 32448,
+            "x": [
+              -15,
+              13
+            ],
+            "y": [
+              8,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              2025,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              41990400,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              144,
+              169
+            ],
+            "pair_count": 27040,
+            "x": [
+              -14,
+              13
+            ],
+            "y": [
+              27,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              49,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              117418896,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              1548,
+              169
+            ],
+            "pair_count": 60840,
+            "x": [
+              -12,
+              13
+            ],
+            "y": [
+              -1,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              1024,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              603979776,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              768,
+              169
+            ],
+            "pair_count": 121680,
+            "x": [
+              -12,
+              13
+            ],
+            "y": [
+              14,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              441,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              740710656,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              1296,
+              169
+            ],
+            "pair_count": 108160,
+            "x": [
+              -10,
+              13
+            ],
+            "y": [
+              3,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              1849,
+              169
+            ],
+            "pair_count": 12168,
+            "x": [
+              -9,
+              13
+            ],
+            "y": [
+              -8,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              144,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              429981696,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              1728,
+              169
+            ],
+            "pair_count": 202800,
+            "x": [
+              -8,
+              13
+            ],
+            "y": [
+              -6,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              2304,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              53934336,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              153,
+              169
+            ],
+            "pair_count": 16224,
+            "x": [
+              -7,
+              13
+            ],
+            "y": [
+              24,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              25,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              106502400,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              2064,
+              169
+            ],
+            "pair_count": 81120,
+            "x": [
+              -6,
+              13
+            ],
+            "y": [
+              -1,
+              1
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              1225,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              815673600,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              816,
+              169
+            ],
+            "pair_count": 73008,
+            "x": [
+              -6,
+              13
+            ],
+            "y": [
+              11,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              576,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              1092170304,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              1377,
+              169
+            ],
+            "pair_count": 64896,
+            "x": [
+              -5,
+              13
+            ],
+            "y": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              2304,
+              169
+            ],
+            "pair_count": 135200,
+            "x": [
+              -4,
+              13
+            ],
+            "y": [
+              -18,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              225,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              758451600,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              1836,
+              169
+            ],
+            "pair_count": 121680,
+            "x": [
+              -4,
+              13
+            ],
+            "y": [
+              -9,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              64,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              307791936,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              2193,
+              169
+            ],
+            "pair_count": 48672,
+            "x": [
+              -3,
+              13
+            ],
+            "y": [
+              -16,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              9,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              53934336,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              2448,
+              169
+            ],
+            "pair_count": 162240,
+            "x": [
+              -2,
+              13
+            ],
+            "y": [
+              -21,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              2601,
+              169
+            ],
+            "pair_count": 48672,
+            "x": [
+              -1,
+              13
+            ],
+            "y": [
+              -24,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              16,
+              1
+            ],
+            "pair_count": 24336,
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              -2,
+              1
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              1,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              41616,
+              28561
+            ],
+            "hasse_endpoint_factor_E": [
+              204,
+              13
+            ],
+            "pair_count": 97344,
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              -25,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              16,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              589824,
+              28561
+            ],
+            "hasse_endpoint_factor_E": [
+              192,
+              13
+            ],
+            "pair_count": 162240,
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              -22,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              81,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              2396304,
+              28561
+            ],
+            "hasse_endpoint_factor_E": [
+              172,
+              13
+            ],
+            "pair_count": 48672,
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              -17,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              256,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              5308416,
+              28561
+            ],
+            "hasse_endpoint_factor_E": [
+              144,
+              13
+            ],
+            "pair_count": 121680,
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              -10,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              625,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              7290000,
+              28561
+            ],
+            "hasse_endpoint_factor_E": [
+              108,
+              13
+            ],
+            "pair_count": 64896,
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              -1,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              1296,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              5308416,
+              28561
+            ],
+            "hasse_endpoint_factor_E": [
+              64,
+              13
+            ],
+            "pair_count": 73008,
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              10,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              2401,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              345744,
+              28561
+            ],
+            "hasse_endpoint_factor_E": [
+              12,
+              13
+            ],
+            "pair_count": 16224,
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              23,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              2601,
+              169
+            ],
+            "pair_count": 48672,
+            "x": [
+              1,
+              13
+            ],
+            "y": [
+              -24,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              9,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              53934336,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              2448,
+              169
+            ],
+            "pair_count": 162240,
+            "x": [
+              2,
+              13
+            ],
+            "y": [
+              -21,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              64,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              307791936,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              2193,
+              169
+            ],
+            "pair_count": 48672,
+            "x": [
+              3,
+              13
+            ],
+            "y": [
+              -16,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              2304,
+              169
+            ],
+            "pair_count": 135200,
+            "x": [
+              4,
+              13
+            ],
+            "y": [
+              -18,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              225,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              758451600,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              1836,
+              169
+            ],
+            "pair_count": 121680,
+            "x": [
+              4,
+              13
+            ],
+            "y": [
+              -9,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              576,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              1092170304,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              1377,
+              169
+            ],
+            "pair_count": 64896,
+            "x": [
+              5,
+              13
+            ],
+            "y": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              25,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              106502400,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              2064,
+              169
+            ],
+            "pair_count": 81120,
+            "x": [
+              6,
+              13
+            ],
+            "y": [
+              -1,
+              1
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              1225,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              815673600,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              816,
+              169
+            ],
+            "pair_count": 73008,
+            "x": [
+              6,
+              13
+            ],
+            "y": [
+              11,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              2304,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              53934336,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              153,
+              169
+            ],
+            "pair_count": 16224,
+            "x": [
+              7,
+              13
+            ],
+            "y": [
+              24,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              144,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              429981696,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              1728,
+              169
+            ],
+            "pair_count": 202800,
+            "x": [
+              8,
+              13
+            ],
+            "y": [
+              -6,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              1849,
+              169
+            ],
+            "pair_count": 12168,
+            "x": [
+              9,
+              13
+            ],
+            "y": [
+              -8,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              441,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              740710656,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              1296,
+              169
+            ],
+            "pair_count": 108160,
+            "x": [
+              10,
+              13
+            ],
+            "y": [
+              3,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              49,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              117418896,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              1548,
+              169
+            ],
+            "pair_count": 60840,
+            "x": [
+              12,
+              13
+            ],
+            "y": [
+              -1,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              1024,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              603979776,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              768,
+              169
+            ],
+            "pair_count": 121680,
+            "x": [
+              12,
+              13
+            ],
+            "y": [
+              14,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              2025,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              41990400,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              144,
+              169
+            ],
+            "pair_count": 27040,
+            "x": [
+              14,
+              13
+            ],
+            "y": [
+              27,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              256,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              345067776,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              1161,
+              169
+            ],
+            "pair_count": 32448,
+            "x": [
+              15,
+              13
+            ],
+            "y": [
+              8,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              1296,
+              169
+            ],
+            "pair_count": 76050,
+            "x": [
+              16,
+              13
+            ],
+            "y": [
+              6,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              729,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              345067776,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              688,
+              169
+            ],
+            "pair_count": 36504,
+            "x": [
+              18,
+              13
+            ],
+            "y": [
+              19,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              81,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              76527504,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              972,
+              169
+            ],
+            "pair_count": 81120,
+            "x": [
+              20,
+              13
+            ],
+            "y": [
+              15,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              1600,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              26625600,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              129,
+              169
+            ],
+            "pair_count": 8112,
+            "x": [
+              21,
+              13
+            ],
+            "y": [
+              32,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              400,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              132710400,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              576,
+              169
+            ],
+            "pair_count": 91260,
+            "x": [
+              24,
+              13
+            ],
+            "y": [
+              2,
+              1
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              729,
+              169
+            ],
+            "pair_count": 21632,
+            "x": [
+              25,
+              13
+            ],
+            "y": [
+              24,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              1089,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              12702096,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              108,
+              169
+            ],
+            "pair_count": 20280,
+            "x": [
+              28,
+              13
+            ],
+            "y": [
+              3,
+              1
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              121,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              22581504,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              432,
+              169
+            ],
+            "pair_count": 48672,
+            "x": [
+              30,
+              13
+            ],
+            "y": [
+              35,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              576,
+              169
+            ],
+            "full_quartic_root_discriminant": [
+              3779136,
+              4826809
+            ],
+            "hasse_endpoint_factor_E": [
+              81,
+              169
+            ],
+            "pair_count": 10816,
+            "x": [
+              35,
+              13
+            ],
+            "y": [
+              48,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              256,
+              169
+            ],
+            "pair_count": 27378,
+            "x": [
+              36,
+              13
+            ],
+            "y": [
+              46,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              1,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              2304,
+              28561
+            ],
+            "hasse_endpoint_factor_E": [
+              48,
+              169
+            ],
+            "pair_count": 12168,
+            "x": [
+              42,
+              13
+            ],
+            "y": [
+              59,
+              13
+            ]
+          },
+          {
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              9,
+              169
+            ],
+            "pair_count": 1352,
+            "x": [
+              49,
+              13
+            ],
+            "y": [
+              72,
+              13
+            ]
+          }
+        ],
+        "support_size": 64
+      },
+      "full_quartic_repeated_root_masses": {
+        "classification": "Disc_Z(Q)=D*E^2, so repeated roots occur exactly on the union D=0 or E=0",
+        "exhaustive_union_full_discriminant_equals_zero": 669240,
+        "fold_and_endpoint_intersection": 0,
+        "fold_wall_D_equals_zero": 669240,
+        "hasse_endpoint_wall_E_equals_zero": 0
+      },
+      "normalized_tensor_trace_histogram": {
+        "atoms": [
+          {
+            "pair_count": 1352,
+            "x": [
+              -49,
+              13
+            ]
+          },
+          {
+            "pair_count": 12168,
+            "x": [
+              -42,
+              13
+            ]
+          },
+          {
+            "pair_count": 27378,
+            "x": [
+              -36,
+              13
+            ]
+          },
+          {
+            "pair_count": 10816,
+            "x": [
+              -35,
+              13
+            ]
+          },
+          {
+            "pair_count": 48672,
+            "x": [
+              -30,
+              13
+            ]
+          },
+          {
+            "pair_count": 20280,
+            "x": [
+              -28,
+              13
+            ]
+          },
+          {
+            "pair_count": 21632,
+            "x": [
+              -25,
+              13
+            ]
+          },
+          {
+            "pair_count": 91260,
+            "x": [
+              -24,
+              13
+            ]
+          },
+          {
+            "pair_count": 8112,
+            "x": [
+              -21,
+              13
+            ]
+          },
+          {
+            "pair_count": 81120,
+            "x": [
+              -20,
+              13
+            ]
+          },
+          {
+            "pair_count": 36504,
+            "x": [
+              -18,
+              13
+            ]
+          },
+          {
+            "pair_count": 76050,
+            "x": [
+              -16,
+              13
+            ]
+          },
+          {
+            "pair_count": 32448,
+            "x": [
+              -15,
+              13
+            ]
+          },
+          {
+            "pair_count": 27040,
+            "x": [
+              -14,
+              13
+            ]
+          },
+          {
+            "pair_count": 182520,
+            "x": [
+              -12,
+              13
+            ]
+          },
+          {
+            "pair_count": 108160,
+            "x": [
+              -10,
+              13
+            ]
+          },
+          {
+            "pair_count": 12168,
+            "x": [
+              -9,
+              13
+            ]
+          },
+          {
+            "pair_count": 202800,
+            "x": [
+              -8,
+              13
+            ]
+          },
+          {
+            "pair_count": 16224,
+            "x": [
+              -7,
+              13
+            ]
+          },
+          {
+            "pair_count": 154128,
+            "x": [
+              -6,
+              13
+            ]
+          },
+          {
+            "pair_count": 64896,
+            "x": [
+              -5,
+              13
+            ]
+          },
+          {
+            "pair_count": 256880,
+            "x": [
+              -4,
+              13
+            ]
+          },
+          {
+            "pair_count": 48672,
+            "x": [
+              -3,
+              13
+            ]
+          },
+          {
+            "pair_count": 162240,
+            "x": [
+              -2,
+              13
+            ]
+          },
+          {
+            "pair_count": 48672,
+            "x": [
+              -1,
+              13
+            ]
+          },
+          {
+            "pair_count": 608400,
+            "x": [
+              0,
+              1
+            ]
+          },
+          {
+            "pair_count": 48672,
+            "x": [
+              1,
+              13
+            ]
+          },
+          {
+            "pair_count": 162240,
+            "x": [
+              2,
+              13
+            ]
+          },
+          {
+            "pair_count": 48672,
+            "x": [
+              3,
+              13
+            ]
+          },
+          {
+            "pair_count": 256880,
+            "x": [
+              4,
+              13
+            ]
+          },
+          {
+            "pair_count": 64896,
+            "x": [
+              5,
+              13
+            ]
+          },
+          {
+            "pair_count": 154128,
+            "x": [
+              6,
+              13
+            ]
+          },
+          {
+            "pair_count": 16224,
+            "x": [
+              7,
+              13
+            ]
+          },
+          {
+            "pair_count": 202800,
+            "x": [
+              8,
+              13
+            ]
+          },
+          {
+            "pair_count": 12168,
+            "x": [
+              9,
+              13
+            ]
+          },
+          {
+            "pair_count": 108160,
+            "x": [
+              10,
+              13
+            ]
+          },
+          {
+            "pair_count": 182520,
+            "x": [
+              12,
+              13
+            ]
+          },
+          {
+            "pair_count": 27040,
+            "x": [
+              14,
+              13
+            ]
+          },
+          {
+            "pair_count": 32448,
+            "x": [
+              15,
+              13
+            ]
+          },
+          {
+            "pair_count": 76050,
+            "x": [
+              16,
+              13
+            ]
+          },
+          {
+            "pair_count": 36504,
+            "x": [
+              18,
+              13
+            ]
+          },
+          {
+            "pair_count": 81120,
+            "x": [
+              20,
+              13
+            ]
+          },
+          {
+            "pair_count": 8112,
+            "x": [
+              21,
+              13
+            ]
+          },
+          {
+            "pair_count": 91260,
+            "x": [
+              24,
+              13
+            ]
+          },
+          {
+            "pair_count": 21632,
+            "x": [
+              25,
+              13
+            ]
+          },
+          {
+            "pair_count": 20280,
+            "x": [
+              28,
+              13
+            ]
+          },
+          {
+            "pair_count": 48672,
+            "x": [
+              30,
+              13
+            ]
+          },
+          {
+            "pair_count": 10816,
+            "x": [
+              35,
+              13
+            ]
+          },
+          {
+            "pair_count": 27378,
+            "x": [
+              36,
+              13
+            ]
+          },
+          {
+            "pair_count": 12168,
+            "x": [
+              42,
+              13
+            ]
+          },
+          {
+            "pair_count": 1352,
+            "x": [
+              49,
+              13
+            ]
+          }
+        ],
+        "support_size": 51
+      },
+      "ordered_cartesian_atom_pairs": 225,
+      "ordered_model_pairs_represented": 4112784,
+      "q": 13,
+      "selected_exact_moments": {
+        "mean_coefficient_map_fold_D": [
+          56756,
+          28561
+        ],
+        "mean_x_fourth": [
+          18957316,
+          4826809
+        ],
+        "mean_x_squared": [
+          28224,
+          28561
+        ],
+        "mean_x_squared_times_y": [
+          729120,
+          371293
+        ],
+        "mean_y": [
+          -2,
+          169
+        ],
+        "mean_y_squared": [
+          56760,
+          28561
+        ]
+      },
+      "source_histogram_sha256": "002404dbbdda029e2d78da478696fe7373944851d7dc82ed1b195d0516bad1d0",
+      "source_members_represented": 2028,
+      "source_trace_atom_count": 15,
+      "source_trace_histogram": {
+        "-1": 156,
+        "-2": 260,
+        "-3": 78,
+        "-4": 195,
+        "-5": 104,
+        "-6": 117,
+        "-7": 26,
+        "0": 156,
+        "1": 156,
+        "2": 260,
+        "3": 78,
+        "4": 195,
+        "5": 104,
+        "6": 117,
+        "7": 26
+      }
+    }
+  ],
+  "full_reciprocal_quartic_root_discriminant": {
+    "coefficient_map_fold_factor": "D=(y+2)^2-4*x^2=(p-r)^2=(s^2-4)*(t^2-4)",
+    "full_identity": "Disc_Z(Q)=D*E^2=(p-r)^2*(p-4)^2*(r-4)^2",
+    "hasse_endpoint_factor": "E=x^2-4*(y-2)=(s-t)^2=(p-4)*(r-4)",
+    "intersection": "D=E=0 exactly at p=r=4, where the repeated-root multiplicity increases",
+    "normalization_firewall": "D alone is not called the full or exhaustive quartic discriminant; E^2 is load-bearing even though E never vanishes in the five frozen prime-field rows",
+    "proof_routes": [
+      "symbolic bivariate elimination in both (s,t) and (p,r), with all six residual polynomials identically zero",
+      "direct 7-by-7 Sylvester resultant of Q and Q' at every one of the 645 frozen histogram atom pairs"
+    ],
+    "quartic": "Q(Z)=Z^4-x*Z^3+y*Z^2-x*Z+1",
+    "reciprocal_quadratic_factorization": "Q=(Z^2-s*Z+1)*(Z^2-t*Z+1), with s+t=x and s*t=y-2",
+    "repeated_root_locus": "D=0 or E=0; the second component is the additional Hasse-endpoint union p=4 or r=4",
+    "symbolic_residuals": {
+      "factor_trace_D_residual": [],
+      "factor_trace_E_residual": [],
+      "factor_trace_full_discriminant_residual": [],
+      "squared_base_trace_D_residual": [],
+      "squared_base_trace_E_residual": [],
+      "squared_base_trace_full_discriminant_residual": []
+    }
+  },
+  "input_family_and_measure": {
+    "frozen_q_values": [
+      3,
+      5,
+      7,
+      11,
+      13
+    ],
+    "marked_models": "two independent monic squarefree cubics over F_q",
+    "new_field_curve_or_model_enumeration": false,
+    "packet_factor": "P_A(T)=1+A*T+q*T^2 with the load-bearing conversion A=-t, independently for both inputs",
+    "source_factor": "L_E(T)=1-t*T+q*T^2",
+    "source_measure": "ordered product of uniform marked-model measures, equivalently the product normalized elliptic-stack measure for trace statistics"
+  },
+  "literature_boundary": {
+    "classical_primary_context": "Dinakar Ramakrishnan, Modularity of the Rankin-Selberg L-series, and multiplicity one for SL(2), Annals of Mathematics 152 (2000), arXiv:math/0007203, https://arxiv.org/abs/math/0007203",
+    "dependency_status": "the finite-field local polynomial, coefficient image, and histogram calculations do not invoke the global automorphic theorem or silently extend its hypotheses",
+    "not_claimed_novel": [
+      "the GL(2) x GL(2) tensor-product local factor",
+      "the Spin(4)=SU(2)xSU(2) description",
+      "classical Rankin-Selberg or automorphic tensor-product theory"
+    ],
+    "novelty_status": "NO_LITERATURE_PRIORITY_CLAIM; the project-specific packaging is a candidate tool for later comparison and recognition work",
+    "project_specific_record_without_priority_claim": "the exact semialgebraic coefficient-region packaging, source-locked marked-cubic Cartesian laws, separately typed fold and full repeated-root masses, and explicit finite-q defects from SO(4) Haar"
+  },
+  "local_tensor_polynomial_theorem": {
+    "functional_equation_shape": "c_3=q^2*c_1 and c_4=q^4",
+    "hypotheses": "q is an odd prime power; A and B are integers; each quadratic factor has determinant q",
+    "independent_derivations": [
+      "elementary symmetric functions of alpha*gamma, alpha*delta, beta*gamma, beta*delta",
+      "Newton recurrence p_n(A tensor B)=p_n(A)*p_n(B)"
+    ],
+    "input": "(1+A*T+q*T^2)*(1+B*T+q*T^2) as two separate rank-two Frobenius factors",
+    "tensor_output": "1-A*B*T+q*(A^2+B^2-2*q)*T^2-q^2*A*B*T^3+q^4*T^4"
+  },
+  "next_targets": [
+    {
+      "known": "independent Cartesian sampling makes every mixed trace moment factor into two genus-one moments",
+      "name": "linked_pair_corrections",
+      "open": "replace independence by an isogeny, shared cover, or geometric correspondence and identify the first exact covariance correction"
+    },
+    {
+      "known": "the D=0 coefficient-map folds have exact repeated-factor decompositions and separately typed frozen masses; the full quartic repeated-root locus also contains the Hasse-endpoint wall E=0",
+      "name": "wall_arithmetic",
+      "open": "separate accidental local trace coincidences from systematic global twist, isogeny, or endoscopic subfamilies across many primes"
+    },
+    {
+      "known": "the semialgebraic region is necessary and sufficient at the compact coefficient level",
+      "name": "SO4_recognition",
+      "open": "add determinant, integrality, ramification, compatibility, and cross-prime conditions for an arithmetic or global recognition theorem"
+    }
+  ],
+  "payload_sha256": "3634ab438de17596fa7a616130a318b85b579178b6d87f017523dae25c53e028",
+  "producer_and_source_locks": {
+    "input_method": "locked JSON trace histograms followed only by ordered Cartesian histogram transforms",
+    "locks": {
+      "genus1_fixture": {
+        "path": "research/l-families/atlas/function_field/genus1_cubic_family_laws.json",
+        "payload_sha256": "183ffb31ae2f5776944e162e59390c40bd7081827b8731246e72e25a882e50df",
+        "sha256_lf_normalized": "b9016ae801cff40d15c53d96210b66a7d44fae7d916e827a0526b9dd42017227"
+      },
+      "genus1_producer": {
+        "path": "research/l-families/atlas/function_field/genus1_cubic_family_laws.py",
+        "sha256_lf_normalized": "3d5baace952240c162c83bd5c66eb81db1704aee35e770de3d8df43fff669b79"
+      },
+      "note": {
+        "path": "research/l-families/atlas/function_field/ELLIPTIC_PAIR_RANKIN_SO4_FAMILY.md",
+        "sha256_lf_normalized": "72769deb05c26c669da75b4d3eca5971cade711b94b33c903c4a02361b9993a4"
+      },
+      "producer": {
+        "path": "research/l-families/atlas/function_field/elliptic_pair_rankin_so4_family.py",
+        "sha256_lf_normalized": "2f3b0bab10135a626d0a05cde2a2fa75aa07e9bc62276411c1d0874bc2078545"
+      },
+      "test": {
+        "path": "tests/test_elliptic_pair_rankin_so4_family.py",
+        "sha256_lf_normalized": "624b7251969e5fe8c94d753b62c625843ba467606932be034ebae38c1d8b31e4"
+      }
+    },
+    "no_field_curve_or_model_enumeration": true
+  },
+  "raw_fixture_id": "elliptic-pair-rankin-so4-q3-q5-q7-q11-q13-v2",
+  "resource_contract": {
+    "accounted_work_unit_ledger": {
+      "closed_vs_newton_factor_checks": 645,
+      "compact_cross_family_moment_evaluations": 14,
+      "compact_moment_formula_evaluations": 13,
+      "finite_moment_law_checks": 30,
+      "full_quartic_resultant_checks": 645,
+      "full_quartic_symbolic_discriminant_certificates": 6,
+      "semialgebraic_forward_checks": 645,
+      "source_histogram_atom_pairs": 645,
+      "sym3_curve_comparison_checks": 7,
+      "sym3_symbolic_polynomial_certificates": 2,
+      "symbolic_prime_power_moment_cross_checks": 9,
+      "total_accounted_work_units": 2661
+    },
+    "actual_total_source_histogram_atom_pairs": 645,
+    "atom_pair_cap_inclusive": 3025,
+    "exclusive_accounted_work_unit_cap": 4000,
+    "field_curve_or_model_enumerations": 0,
+    "floating_point_results": 0,
+    "maximum_compact_moment_order": 12,
+    "maximum_local_polynomial_degree": 4,
+    "maximum_per_field_atom_pairs": 225,
+    "random_samples": 0,
+    "total_locked_source_trace_atoms": 55,
+    "unit_definition": "declared histogram-atom pairs and high-level exact identity checks; not literal CPU instructions or a wall-clock complexity claim"
+  },
+  "rigor_level": {
+    "all_q_family_moments": "EXACT_FOR_EVERY_ODD_PRIME_POWER_FROM_THE_LOCKED_GENUS_ONE_W2_AND_W4_LAWS",
+    "coefficient_image": "EXACT_SEMIALGEBRAIC_PARAMETER_ELIMINATION_AT_COMPACT_REPRESENTATION_LEVEL",
+    "compact_moments": "EXACT_PRODUCT_OF_TWO_SU2_HAAR_MOMENTS",
+    "finite_pushforwards": "EXACT_FOR_Q_3_5_7_11_13_FROM_COMPLETE_LOCKED_HISTOGRAMS",
+    "full_quartic_discriminant": "PROVED_BY_SYMBOLIC_FACTOR_ELIMINATION_AND_INDEPENDENT_SYLVESTER_RESULTANTS",
+    "global_automorphy_monodromy_and_novelty": "NOT_INFERRED",
+    "local_tensor_factor": "PROVED_POINTWISE_BY_ROOT_SYMMETRY_AND_INDEPENDENT_NEWTON_RECURRENCE",
+    "wall_factorizations": "EXACT_POINTWISE_POLYNOMIAL_IDENTITIES"
+  },
+  "schema": "riemann.function_field.elliptic_pair_rankin_so4_family.v2",
+  "scope_firewall": {
+    "no_RH_or_GRH_claim": "local factors, finite-field moments, and compact signatures imply no new analytic continuation, zero-free region, RH, or GRH result",
+    "no_actual_monodromy_upgrade": "the compact representation image is SO(4), but this packet does not prove that the arithmetic or geometric monodromy of any supplied curve-pair family is the full group",
+    "no_automorphy_claim": "the classical global GL(2) x GL(2) theory is cited as a boundary, not reproved or broadened here",
+    "no_finite_to_asymptotic_claim": "five exact finite histogram laws test all-q formulas but do not establish an empirical rate, a number-field family law, or equidistribution",
+    "no_fold_to_full_discriminant_conflation": "D=(p-r)^2 controls reconstruction of p,r and the A=+/-B fold; D is not the full reciprocal-quartic discriminant, which is D*[x^2-4*(y-2)]^2 and also vanishes at p=4 or r=4",
+    "no_local_to_global_curve_relation": "equal or opposite traces at one q do not identify curves, twists, isogenies, motives, or global L-functions",
+    "no_measure_substitution": "the ordered product marked-model / normalized-stack measure is not relabeled as uniform coarse curve-pair measure",
+    "no_novelty_claim": "classical representation theory is separated from project-specific coefficient and finite-family packaging, whose literature priority remains unchecked"
+  },
+  "status": "EXACT_LOCAL_ALGEBRA_ALL_Q_LOW_MOMENTS_AND_SOURCE_LOCKED_FINITE_PUSHFORWARDS"
+}

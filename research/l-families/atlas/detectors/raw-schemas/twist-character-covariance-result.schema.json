@@ -1,0 +1,159 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/gfreund123/riemann/research/l-families/atlas/detectors/raw-schemas/twist-character-covariance-result.schema.json",
+  "title": "Raw exact conductor-coprime quadratic-character covariance result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "definition", "base_curve", "family_definition", "family", "exact_identities", "exact_coordinate_formulas", "prime_bound", "primes", "traces", "bounds", "summaries"],
+  "properties": {
+    "schema": {"const": "riemann.atlas.raw.twist_character_covariance.v1"},
+    "definition": {"type": "string", "minLength": 1},
+    "base_curve": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "ainvs", "conductor", "excluded_bad_primes"],
+      "properties": {
+        "label": {"const": "11.a2"},
+        "ainvs": {"type": "array", "minItems": 5, "maxItems": 5, "items": {"type": "integer"}},
+        "conductor": {"const": 11},
+        "excluded_bad_primes": {"type": "array", "minItems": 1, "maxItems": 1, "items": {"const": 11}}
+      }
+    },
+    "family_definition": {"type": "string", "minLength": 1},
+    "family": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["parameter", "absolute_value_minimum_exclusive", "absolute_value_bounds", "coprime_to", "measure", "partitions", "root_number_partition"],
+      "properties": {
+        "parameter": {"const": "fundamental_discriminant"},
+        "absolute_value_minimum_exclusive": {"const": 1},
+        "absolute_value_bounds": {"const": [256, 512, 1024, 2048]},
+        "coprime_to": {"const": 11},
+        "measure": {"const": "UNIFORM"},
+        "partitions": {"const": ["ALL", "POSITIVE", "NEGATIVE"]},
+        "root_number_partition": {"const": "NONE"}
+      }
+    },
+    "exact_identities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["raw_gram", "centered_covariance", "moment_coordinates"],
+      "properties": {
+        "raw_gram": {"type": "string", "minLength": 1},
+        "centered_covariance": {"type": "string", "minLength": 1},
+        "moment_coordinates": {"type": "string", "minLength": 1}
+      }
+    },
+    "exact_coordinate_formulas": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["notation", "marginal_counts", "mean", "second_moment", "centered_variance", "reconstruction"],
+      "properties": {
+        "notation": {"type": "string", "minLength": 1},
+        "marginal_counts": {"type": "string", "minLength": 1},
+        "mean": {"type": "string", "minLength": 1},
+        "second_moment": {"type": "string", "minLength": 1},
+        "centered_variance": {"type": "string", "minLength": 1},
+        "reconstruction": {"type": "string", "minLength": 1}
+      }
+    },
+    "prime_bound": {"const": 43},
+    "primes": {"const": [2, 3, 5, 7, 13, 17, 19, 23, 29, 31, 37, 41, 43]},
+    "traces": {"const": [-2, -1, 1, -2, 4, -2, 0, -1, 0, 7, 3, -8, -6]},
+    "bounds": {"const": [256, 512, 1024, 2048]},
+    "summaries": {
+      "type": "array",
+      "minItems": 12,
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["bound", "partition", "discriminant_count", "first_discriminant", "last_discriminant", "character_sums", "correlation_matrices", "off_diagonal", "unitary_prime_sum"],
+        "properties": {
+          "bound": {"type": "integer", "minimum": 2},
+          "partition": {"enum": ["ALL", "POSITIVE", "NEGATIVE"]},
+          "discriminant_count": {"type": "integer", "minimum": 1},
+          "first_discriminant": {"type": "integer"},
+          "last_discriminant": {"type": "integer"},
+          "character_sums": {"type": "array", "minItems": 13, "maxItems": 13, "items": {"type": "integer"}},
+          "correlation_matrices": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["raw_gram", "centered_covariance"],
+            "properties": {
+              "raw_gram": {"$ref": "#/$defs/common_denominator_matrix"},
+              "centered_covariance": {"$ref": "#/$defs/common_denominator_matrix"}
+            }
+          },
+          "off_diagonal": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["pair_count", "max_absolute_raw", "max_absolute_centered", "mean_square_raw", "mean_square_centered"],
+            "properties": {
+              "pair_count": {"const": 78},
+              "max_absolute_raw": {"$ref": "#/$defs/correlation"},
+              "max_absolute_centered": {"$ref": "#/$defs/correlation"},
+              "mean_square_raw": {"$ref": "#/$defs/fraction"},
+              "mean_square_centered": {"$ref": "#/$defs/fraction"}
+            }
+          },
+          "unitary_prime_sum": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["definition", "second_moment_diagonal_rational", "centered_variance_diagonal_rational", "mean_decimal_display_only", "second_moment_decimal_display_only", "centered_variance_decimal_display_only"],
+            "properties": {
+              "definition": {"type": "string", "minLength": 1},
+              "second_moment_diagonal_rational": {"$ref": "#/$defs/fraction"},
+              "centered_variance_diagonal_rational": {"$ref": "#/$defs/fraction"},
+              "mean_decimal_display_only": {"type": "string", "minLength": 1},
+              "second_moment_decimal_display_only": {"type": "string", "minLength": 1},
+              "centered_variance_decimal_display_only": {"type": "string", "minLength": 1}
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "common_denominator_matrix": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["denominator", "numerators"],
+      "properties": {
+        "denominator": {"type": "integer", "minimum": 1},
+        "numerators": {
+          "type": "array",
+          "minItems": 13,
+          "maxItems": 13,
+          "items": {
+            "type": "array",
+            "minItems": 13,
+            "maxItems": 13,
+            "items": {"type": "integer"}
+          }
+        }
+      }
+    },
+    "fraction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["numerator", "denominator", "text"],
+      "properties": {
+        "numerator": {"type": "integer"},
+        "denominator": {"type": "integer", "minimum": 1},
+        "text": {"type": "string", "minLength": 1}
+      }
+    },
+    "correlation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["p", "q", "value", "absolute_value"],
+      "properties": {
+        "p": {"type": "integer", "minimum": 2},
+        "q": {"type": "integer", "minimum": 2},
+        "value": {"$ref": "#/$defs/fraction"},
+        "absolute_value": {"$ref": "#/$defs/fraction"}
+      }
+    }
+  }
+}

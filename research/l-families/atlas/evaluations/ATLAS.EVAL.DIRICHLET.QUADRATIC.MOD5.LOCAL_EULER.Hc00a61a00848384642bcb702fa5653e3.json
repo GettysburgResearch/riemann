@@ -1,0 +1,207 @@
+{
+  "adapter_bindings": [
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "hash_mode": "RAW_BYTES",
+      "media_type": "text/x-python",
+      "notes": "Content checked by the offline atlas validator.",
+      "path": "research/l-families/atlas/core/local_euler.py",
+      "role": "family_adapter",
+      "schema_path": null,
+      "sha256": "99ee82c605cefb42e3b1058e4c4ed6b2dbed4236e96f8d9e6cf429d79a43e2ee"
+    }
+  ],
+  "arithmetic": {
+    "class": "EXACT_RATIONAL",
+    "directed": false,
+    "rounding_contract": "No real-number rounding; point counts and even moments use integers/Fraction.",
+    "serialization_contract": "Sorted-key JSON; hashes use canonical UTF-8 NFC JSON without whitespace."
+  },
+  "assumptions": [
+    {
+      "code": "CLASSICAL_DIRICHLET_THEORY",
+      "statement": "Analytic continuation and the completed functional equation are imported.",
+      "status": "IMPORTED"
+    }
+  ],
+  "central_zero_policy_applied": "NOT_APPLICABLE",
+  "configuration": {
+    "canonical_sha256": "198ebcf89ee27c5910c00405dbb320175c4206dcea7fbd3ef2168ae7ec49b5a8",
+    "values": {
+      "bad_prime_policy": "DECLARED_OMIT",
+      "moments": [
+        2,
+        4
+      ],
+      "prime_bound": 43
+    }
+  },
+  "coverage": {
+    "class": "FINITE_COMPLETE",
+    "omissions": [
+      "bad Euler factors",
+      "primes above the bound",
+      "zero ordinates"
+    ],
+    "statement": "Every prime p<=43 except declared bad primes [5]."
+  },
+  "detector_contract_binding": {
+    "record_sha256": "aa62a183c76dbbd0628d30df875826ea13ba6f242841db71152039646d7bae07",
+    "semantic_id": "ATLAS.DETECTOR.LOCAL_EULER.EVEN_MOMENTS.He72a831d587b0073d1f38ca865fed648"
+  },
+  "evaluation_scope": "SINGLE_OBJECT",
+  "firewalls": [
+    {
+      "code": "NO_RH_GRH",
+      "statement": "No finite local-Euler table establishes RH or GRH."
+    },
+    {
+      "code": "NO_RANK_CORRELATION",
+      "statement": "One curve per displayed rank cannot support a rank-conditioned law."
+    },
+    {
+      "code": "BAD_PRIMES_OMITTED",
+      "statement": "Bad primes are omitted rather than assigned a guessed good factor."
+    },
+    {
+      "code": "ZERO_DATA_ABSENT",
+      "statement": "The result has no zero-completeness content."
+    }
+  ],
+  "identity_kernel": {
+    "adapter_bindings": [
+      {
+        "coverage_class": "FINITE_COMPLETE",
+        "hash_mode": "RAW_BYTES",
+        "media_type": "text/x-python",
+        "notes": "Content checked by the offline atlas validator.",
+        "path": "research/l-families/atlas/core/local_euler.py",
+        "role": "family_adapter",
+        "schema_path": null,
+        "sha256": "99ee82c605cefb42e3b1058e4c4ed6b2dbed4236e96f8d9e6cf429d79a43e2ee"
+      }
+    ],
+    "configuration_sha256": "198ebcf89ee27c5910c00405dbb320175c4206dcea7fbd3ef2168ae7ec49b5a8",
+    "detector_contract_binding": {
+      "record_sha256": "aa62a183c76dbbd0628d30df875826ea13ba6f242841db71152039646d7bae07",
+      "semantic_id": "ATLAS.DETECTOR.LOCAL_EULER.EVEN_MOMENTS.He72a831d587b0073d1f38ca865fed648"
+    },
+    "implementation_commit": "PENDING",
+    "implementation_sha256": "f2f16ad501730d91b49de59da464024306978d212d324d27f03a64e981a3e286",
+    "input_fulfillments_sha256": "4eae09833aa2d6ea3119375312adc4cd4aa2e6fff3b69d2f544f2563b580f466",
+    "input_sha256s": [
+      "99ee82c605cefb42e3b1058e4c4ed6b2dbed4236e96f8d9e6cf429d79a43e2ee"
+    ],
+    "lfunction_spec_bindings": [
+      {
+        "record_sha256": "93cd7987bc49efa52bd800b750064b03060fb974c17cf6fc8591d6fbd3eb8e58",
+        "semantic_id": "ATLAS.LFUNC.DIRICHLET.QUADRATIC.MOD5.H0f25a0b178fb88f6a857ac01c677a979"
+      }
+    ],
+    "seed": null,
+    "slug": "DIRICHLET.QUADRATIC.MOD5.LOCAL_EULER",
+    "version": 1
+  },
+  "identity_sha256": "c00a61a00848384642bcb702fa5653e3e3117e524ba62b94dd77ffbd1f228cf7",
+  "input_bindings": [
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "hash_mode": "RAW_BYTES",
+      "media_type": "text/x-python",
+      "notes": "Content checked by the offline atlas validator.",
+      "path": "research/l-families/atlas/core/local_euler.py",
+      "role": "primitive_exact_definition",
+      "schema_path": null,
+      "sha256": "99ee82c605cefb42e3b1058e4c4ed6b2dbed4236e96f8d9e6cf429d79a43e2ee"
+    }
+  ],
+  "input_fulfillments": [
+    {
+      "coverage_class": "COMPLETE",
+      "input_type": "LFUNCTION_SPEC",
+      "name": "lfunction_spec",
+      "sources": [
+        "ATLAS.LFUNC.DIRICHLET.QUADRATIC.MOD5.H0f25a0b178fb88f6a857ac01c677a979"
+      ]
+    },
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "input_type": "LOCAL_EULER_FACTORS",
+      "name": "local_euler_factors",
+      "sources": [
+        "research/l-families/atlas/core/local_euler.py"
+      ]
+    }
+  ],
+  "interpretation": {
+    "smallest_gap": "A proved prime or twist-family limiting theorem is required before nominating a universal moment law.",
+    "statement": "The displayed finite rows and even moments are exact given the bound source object.",
+    "status": "EXACT_FINITE",
+    "theorem_claim_id": null
+  },
+  "lfunction_spec_bindings": [
+    {
+      "record_sha256": "93cd7987bc49efa52bd800b750064b03060fb974c17cf6fc8591d6fbd3eb8e58",
+      "semantic_id": "ATLAS.LFUNC.DIRICHLET.QUADRATIC.MOD5.H0f25a0b178fb88f6a857ac01c677a979"
+    }
+  ],
+  "notes": "Spec path research/l-families/atlas/specs/ATLAS.LFUNC.DIRICHLET.QUADRATIC.MOD5.H0f25a0b178fb88f6a857ac01c677a979.json; detector path research/l-families/atlas/detectors/ATLAS.DETECTOR.LOCAL_EULER.EVEN_MOMENTS.He72a831d587b0073d1f38ca865fed648.json. Records remain DRAFT until an exact PR/head provenance sidecar exists.",
+  "programme_refs": [
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 741,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/741"
+    }
+  ],
+  "record_state": "DRAFT",
+  "record_type": "EVALUATION_RECORD",
+  "result": {
+    "artifact": {
+      "coverage_class": "FINITE_COMPLETE",
+      "hash_mode": "CANONICAL_JSON_UTF8_NFC",
+      "media_type": "application/json",
+      "notes": "Content checked by the offline atlas validator.",
+      "path": "research/l-families/atlas/results/ATLAS.EVAL.DIRICHLET.QUADRATIC.MOD5.LOCAL_EULER.Hc00a61a00848384642bcb702fa5653e3.json",
+      "role": "detector_result",
+      "schema_path": "research/l-families/atlas/detectors/raw-schemas/local-euler-result.schema.json",
+      "sha256": "11066b3732db2161450b1fde4244621629f99a5d2511fd255ea83ca3a7b692f6"
+    },
+    "predicate_outcome": "NOT_APPLICABLE",
+    "representation": "EXACT_RATIONAL",
+    "summary": "Exact local trace rows and exact rational second/fourth moments on the declared finite window."
+  },
+  "result_hashes": [
+    {
+      "algorithm": "sha256",
+      "binds": "Canonical JSON raw result",
+      "hash_mode": "CANONICAL_JSON_UTF8_NFC",
+      "value": "11066b3732db2161450b1fde4244621629f99a5d2511fd255ea83ca3a7b692f6"
+    }
+  ],
+  "revision": 1,
+  "rigor_level": "RIGOROUS_GIVEN_IMPORTED_THEOREM",
+  "run": {
+    "code_commit": "PENDING",
+    "command": "python research/l-families/atlas/core/run_pilot.py",
+    "implementation_path": "research/l-families/atlas/core/run_pilot.py",
+    "implementation_sha256": "f2f16ad501730d91b49de59da464024306978d212d324d27f03a64e981a3e286",
+    "timestamp_utc": "2026-08-24T15:00:00Z"
+  },
+  "schema_version": "riemann.atlas.evaluation_record.v1",
+  "scope_boundary": "Every declared good prime p<=43; no bad factor, prime limit, family average, or zero conclusion.",
+  "semantic_id": "ATLAS.EVAL.DIRICHLET.QUADRATIC.MOD5.LOCAL_EULER.Hc00a61a00848384642bcb702fa5653e3",
+  "software": [
+    {
+      "name": "CPython",
+      "role": "exact integer point counts and rational moment aggregation",
+      "version": "3.12.10"
+    }
+  ],
+  "subject": {
+    "description": "Primitive quadratic Dirichlet L-function modulo 5",
+    "kind": "L_FUNCTION"
+  },
+  "supersedes": [],
+  "title": "Local-Euler even moments for Primitive quadratic Dirichlet L-function modulo 5"
+}

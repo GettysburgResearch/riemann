@@ -1,0 +1,3766 @@
+{
+  "arithmetic_trace_conditions": {
+    "all_positive_integer_q_integrality": "for integer t, both induced coefficients a,b are integral iff q divides t^3; q|t^3 automatically implies q|t^4",
+    "frozen_acceptance_rule": "call a shape arithmetic only when its recovered integer Hasse trace occurs with positive count in the locked elliptic source fixture",
+    "general_prime_power_caveat": "integrality plus the Hasse inequality is only an arithmetic candidate test here; actual elliptic realization is separately required",
+    "necessary_hasse_bound": "t^2<=4q"
+  },
+  "coefficient_bridge": {
+    "clearing_denominators": "G_q(a,b)=q^3*F(-a/sqrt(q),b/q)",
+    "coordinate_identification": "x=-a/sqrt(q), y=b/q",
+    "genus2_factor": "1+a*T+b*T^2+q*a*T^3+q^2*T^4",
+    "genus2_normalized_factor": "1+(a/sqrt(q))*Z+(b/q)*Z^2+(a/sqrt(q))*Z^3+Z^4",
+    "scaled_integer_equation": "G_q(a,b)=-q*a^4+q*a^2*b+q^2*a^2+b^3-2q*b^2=0",
+    "sym3_curve": "F(x,y)=-x^4+x^2*y+x^2+y^3-2*y^2=0",
+    "sym3_normalized_factor": "1-x*Z+y*Z^2-x*Z^3+Z^4",
+    "weight_warning": "this matches independently normalized coefficient shapes; it is not an equality between the weight-1 genus-two factor and the weight-3 elliptic Sym^3 factor"
+  },
+  "frozen_atom_transform": {
+    "aggregate_audit_totals": {
+      "atom_counts_by_classification": {
+        "compact_curve_ghost_node_(0,0)": 3,
+        "off_compact_sym3_coefficient_curve": 244,
+        "source_witnessed_arithmetic_sym3_coefficient_shape": 4
+      },
+      "member_counts_by_classification": {
+        "compact_curve_ghost_node_(0,0)": 398,
+        "off_compact_sym3_coefficient_curve": 16617,
+        "source_witnessed_arithmetic_sym3_coefficient_shape": 53
+      },
+      "pooling_warning": "summing across q is an audit total, not a common probability measure",
+      "source_atom_count": 251,
+      "source_member_count": 17068
+    },
+    "coverage": "every joint (a_D,b_D) atom and its exact member count from the locked q=3,5,7 balanced-control fixture",
+    "families": [
+      {
+        "classification_summary": {
+          "atom_counts": {
+            "compact_curve_ghost_node_(0,0)": 1,
+            "off_compact_sym3_coefficient_curve": 29,
+            "source_witnessed_arithmetic_sym3_coefficient_shape": 2
+          },
+          "ghost_atom_count": 1,
+          "ghost_member_count": 12,
+          "ghost_member_fraction": [
+            2,
+            27
+          ],
+          "member_counts": {
+            "compact_curve_ghost_node_(0,0)": 12,
+            "off_compact_sym3_coefficient_curve": 144,
+            "source_witnessed_arithmetic_sym3_coefficient_shape": 6
+          },
+          "on_curve_atom_count": 3,
+          "on_curve_member_count": 18,
+          "on_curve_member_fraction": [
+            1,
+            9
+          ],
+          "source_witnessed_atom_count": 2,
+          "source_witnessed_member_count": 6,
+          "source_witnessed_member_fraction": [
+            1,
+            27
+          ]
+        },
+        "odd_prime_arithmetic_shape_candidates": [
+          {
+            "coefficient_shape_a_b": [
+              3,
+              6
+            ],
+            "elliptic_trace_t": -3,
+            "locked_member_count": 3,
+            "present_in_locked_support": true
+          },
+          {
+            "coefficient_shape_a_b": [
+              0,
+              6
+            ],
+            "elliptic_trace_t": 0,
+            "locked_member_count": 0,
+            "present_in_locked_support": false
+          },
+          {
+            "coefficient_shape_a_b": [
+              -3,
+              6
+            ],
+            "elliptic_trace_t": 3,
+            "locked_member_count": 3,
+            "present_in_locked_support": true
+          }
+        ],
+        "on_curve_atoms": [
+          {
+            "a_D": -3,
+            "b_D": 6,
+            "classification": "source_witnessed_arithmetic_sym3_coefficient_shape",
+            "elliptic_source_trace_witness_member_count": 1,
+            "generic_trace_parameter_t": [
+              3,
+              1
+            ],
+            "member_count": 3
+          },
+          {
+            "a_D": 0,
+            "b_D": 0,
+            "classification": "compact_curve_ghost_node_(0,0)",
+            "member_count": 12
+          },
+          {
+            "a_D": 3,
+            "b_D": 6,
+            "classification": "source_witnessed_arithmetic_sym3_coefficient_shape",
+            "elliptic_source_trace_witness_member_count": 1,
+            "generic_trace_parameter_t": [
+              -3,
+              1
+            ],
+            "member_count": 3
+          }
+        ],
+        "q": 3,
+        "source_atom_count": 32,
+        "source_member_count": 162,
+        "transformed_atoms": [
+          {
+            "a_D": -3,
+            "b_D": 5,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 3,
+            "member_fraction": [
+              1,
+              54
+            ],
+            "nodal_divisor_a2_minus_b": 4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -52
+          },
+          {
+            "a_D": -3,
+            "b_D": 6,
+            "classification": "source_witnessed_arithmetic_sym3_coefficient_shape",
+            "elliptic_source_trace_witness_member_count": 1,
+            "generic_trace_parameter_t": [
+              3,
+              1
+            ],
+            "integral_hasse_parameter": true,
+            "member_count": 3,
+            "member_fraction": [
+              1,
+              54
+            ],
+            "nodal_divisor_a2_minus_b": 3,
+            "on_compact_sym3_curve": true,
+            "parameter_reconstructs_atom": true,
+            "scaled_curve_residual": 0,
+            "source_witnessed_arithmetic_sym3_origin": true
+          },
+          {
+            "a_D": -3,
+            "b_D": 7,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 3,
+            "member_fraction": [
+              1,
+              54
+            ],
+            "nodal_divisor_a2_minus_b": 2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 76
+          },
+          {
+            "a_D": -2,
+            "b_D": 2,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 9,
+            "member_fraction": [
+              1,
+              18
+            ],
+            "nodal_divisor_a2_minus_b": 2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -4
+          },
+          {
+            "a_D": -2,
+            "b_D": 4,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 6,
+            "member_fraction": [
+              1,
+              27
+            ],
+            "nodal_divisor_a2_minus_b": 0,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 4
+          },
+          {
+            "a_D": -2,
+            "b_D": 6,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 3,
+            "member_fraction": [
+              1,
+              54
+            ],
+            "nodal_divisor_a2_minus_b": -2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 60
+          },
+          {
+            "a_D": -1,
+            "b_D": -2,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 3,
+            "member_fraction": [
+              1,
+              54
+            ],
+            "nodal_divisor_a2_minus_b": 3,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -32
+          },
+          {
+            "a_D": -1,
+            "b_D": -1,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 3,
+            "member_fraction": [
+              1,
+              54
+            ],
+            "nodal_divisor_a2_minus_b": 2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -4
+          },
+          {
+            "a_D": -1,
+            "b_D": 0,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 3,
+            "member_fraction": [
+              1,
+              54
+            ],
+            "nodal_divisor_a2_minus_b": 1,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 6
+          },
+          {
+            "a_D": -1,
+            "b_D": 1,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 6,
+            "member_fraction": [
+              1,
+              27
+            ],
+            "nodal_divisor_a2_minus_b": 0,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 4
+          },
+          {
+            "a_D": -1,
+            "b_D": 2,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 12,
+            "member_fraction": [
+              2,
+              27
+            ],
+            "nodal_divisor_a2_minus_b": -1,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -4
+          },
+          {
+            "a_D": -1,
+            "b_D": 3,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 6,
+            "member_fraction": [
+              1,
+              27
+            ],
+            "nodal_divisor_a2_minus_b": -2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -12
+          },
+          {
+            "a_D": -1,
+            "b_D": 4,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 3,
+            "member_fraction": [
+              1,
+              54
+            ],
+            "nodal_divisor_a2_minus_b": -3,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -14
+          },
+          {
+            "a_D": -1,
+            "b_D": 5,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 3,
+            "member_fraction": [
+              1,
+              54
+            ],
+            "nodal_divisor_a2_minus_b": -4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -4
+          },
+          {
+            "a_D": 0,
+            "b_D": -2,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 9,
+            "member_fraction": [
+              1,
+              18
+            ],
+            "nodal_divisor_a2_minus_b": 2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -32
+          },
+          {
+            "a_D": 0,
+            "b_D": 0,
+            "classification": "compact_curve_ghost_node_(0,0)",
+            "member_count": 12,
+            "member_fraction": [
+              2,
+              27
+            ],
+            "nodal_divisor_a2_minus_b": 0,
+            "normalization_preimages": "t0^2=2",
+            "normalized_node": [
+              0,
+              0
+            ],
+            "odd_q_arithmetic_obstruction": "t^2=2q has no integer solution when q is odd",
+            "on_compact_sym3_curve": true,
+            "scaled_curve_residual": 0,
+            "source_witnessed_arithmetic_sym3_origin": false
+          },
+          {
+            "a_D": 0,
+            "b_D": 2,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 3,
+            "member_fraction": [
+              1,
+              54
+            ],
+            "nodal_divisor_a2_minus_b": -2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -16
+          },
+          {
+            "a_D": 0,
+            "b_D": 4,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 6,
+            "member_fraction": [
+              1,
+              27
+            ],
+            "nodal_divisor_a2_minus_b": -4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -32
+          },
+          {
+            "a_D": 1,
+            "b_D": -2,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 3,
+            "member_fraction": [
+              1,
+              54
+            ],
+            "nodal_divisor_a2_minus_b": 3,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -32
+          },
+          {
+            "a_D": 1,
+            "b_D": -1,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 3,
+            "member_fraction": [
+              1,
+              54
+            ],
+            "nodal_divisor_a2_minus_b": 2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -4
+          },
+          {
+            "a_D": 1,
+            "b_D": 0,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 3,
+            "member_fraction": [
+              1,
+              54
+            ],
+            "nodal_divisor_a2_minus_b": 1,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 6
+          },
+          {
+            "a_D": 1,
+            "b_D": 1,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 6,
+            "member_fraction": [
+              1,
+              27
+            ],
+            "nodal_divisor_a2_minus_b": 0,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 4
+          },
+          {
+            "a_D": 1,
+            "b_D": 2,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 12,
+            "member_fraction": [
+              2,
+              27
+            ],
+            "nodal_divisor_a2_minus_b": -1,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -4
+          },
+          {
+            "a_D": 1,
+            "b_D": 3,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 6,
+            "member_fraction": [
+              1,
+              27
+            ],
+            "nodal_divisor_a2_minus_b": -2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -12
+          },
+          {
+            "a_D": 1,
+            "b_D": 4,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 3,
+            "member_fraction": [
+              1,
+              54
+            ],
+            "nodal_divisor_a2_minus_b": -3,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -14
+          },
+          {
+            "a_D": 1,
+            "b_D": 5,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 3,
+            "member_fraction": [
+              1,
+              54
+            ],
+            "nodal_divisor_a2_minus_b": -4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -4
+          },
+          {
+            "a_D": 2,
+            "b_D": 2,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 9,
+            "member_fraction": [
+              1,
+              18
+            ],
+            "nodal_divisor_a2_minus_b": 2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -4
+          },
+          {
+            "a_D": 2,
+            "b_D": 4,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 6,
+            "member_fraction": [
+              1,
+              27
+            ],
+            "nodal_divisor_a2_minus_b": 0,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 4
+          },
+          {
+            "a_D": 2,
+            "b_D": 6,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 3,
+            "member_fraction": [
+              1,
+              54
+            ],
+            "nodal_divisor_a2_minus_b": -2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 60
+          },
+          {
+            "a_D": 3,
+            "b_D": 5,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 3,
+            "member_fraction": [
+              1,
+              54
+            ],
+            "nodal_divisor_a2_minus_b": 4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -52
+          },
+          {
+            "a_D": 3,
+            "b_D": 6,
+            "classification": "source_witnessed_arithmetic_sym3_coefficient_shape",
+            "elliptic_source_trace_witness_member_count": 1,
+            "generic_trace_parameter_t": [
+              -3,
+              1
+            ],
+            "integral_hasse_parameter": true,
+            "member_count": 3,
+            "member_fraction": [
+              1,
+              54
+            ],
+            "nodal_divisor_a2_minus_b": 3,
+            "on_compact_sym3_curve": true,
+            "parameter_reconstructs_atom": true,
+            "scaled_curve_residual": 0,
+            "source_witnessed_arithmetic_sym3_origin": true
+          },
+          {
+            "a_D": 3,
+            "b_D": 7,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 3,
+            "member_fraction": [
+              1,
+              54
+            ],
+            "nodal_divisor_a2_minus_b": 2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 76
+          }
+        ]
+      },
+      {
+        "classification_summary": {
+          "atom_counts": {
+            "compact_curve_ghost_node_(0,0)": 1,
+            "off_compact_sym3_coefficient_curve": 79,
+            "source_witnessed_arithmetic_sym3_coefficient_shape": 1
+          },
+          "ghost_atom_count": 1,
+          "ghost_member_count": 50,
+          "ghost_member_fraction": [
+            1,
+            50
+          ],
+          "member_counts": {
+            "compact_curve_ghost_node_(0,0)": 50,
+            "off_compact_sym3_coefficient_curve": 2445,
+            "source_witnessed_arithmetic_sym3_coefficient_shape": 5
+          },
+          "on_curve_atom_count": 2,
+          "on_curve_member_count": 55,
+          "on_curve_member_fraction": [
+            11,
+            500
+          ],
+          "source_witnessed_atom_count": 1,
+          "source_witnessed_member_count": 5,
+          "source_witnessed_member_fraction": [
+            1,
+            500
+          ]
+        },
+        "odd_prime_arithmetic_shape_candidates": [
+          {
+            "coefficient_shape_a_b": [
+              0,
+              10
+            ],
+            "elliptic_trace_t": 0,
+            "locked_member_count": 5,
+            "present_in_locked_support": true
+          }
+        ],
+        "on_curve_atoms": [
+          {
+            "a_D": 0,
+            "b_D": 0,
+            "classification": "compact_curve_ghost_node_(0,0)",
+            "member_count": 50
+          },
+          {
+            "a_D": 0,
+            "b_D": 10,
+            "classification": "source_witnessed_arithmetic_sym3_coefficient_shape",
+            "elliptic_source_trace_witness_member_count": 20,
+            "generic_trace_parameter_t": [
+              0,
+              1
+            ],
+            "member_count": 5
+          }
+        ],
+        "q": 5,
+        "source_atom_count": 81,
+        "source_member_count": 2500,
+        "transformed_atoms": [
+          {
+            "a_D": -5,
+            "b_D": 13,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 10,
+            "member_fraction": [
+              1,
+              250
+            ],
+            "nodal_divisor_a2_minus_b": 12,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -368
+          },
+          {
+            "a_D": -5,
+            "b_D": 14,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 10,
+            "member_fraction": [
+              1,
+              250
+            ],
+            "nodal_divisor_a2_minus_b": 11,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 34
+          },
+          {
+            "a_D": -5,
+            "b_D": 15,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 12,
+            "member_fraction": [
+              3,
+              625
+            ],
+            "nodal_divisor_a2_minus_b": 10,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 500
+          },
+          {
+            "a_D": -4,
+            "b_D": 8,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 10,
+            "member_fraction": [
+              1,
+              250
+            ],
+            "nodal_divisor_a2_minus_b": 8,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -368
+          },
+          {
+            "a_D": -4,
+            "b_D": 10,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 30,
+            "member_fraction": [
+              3,
+              250
+            ],
+            "nodal_divisor_a2_minus_b": 6,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -80
+          },
+          {
+            "a_D": -4,
+            "b_D": 12,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": 4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 368
+          },
+          {
+            "a_D": -4,
+            "b_D": 14,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 5,
+            "member_fraction": [
+              1,
+              500
+            ],
+            "nodal_divisor_a2_minus_b": 2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 1024
+          },
+          {
+            "a_D": -3,
+            "b_D": 4,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 30,
+            "member_fraction": [
+              3,
+              250
+            ],
+            "nodal_divisor_a2_minus_b": 5,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -96
+          },
+          {
+            "a_D": -3,
+            "b_D": 5,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": 4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -80
+          },
+          {
+            "a_D": -3,
+            "b_D": 6,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 10,
+            "member_fraction": [
+              1,
+              250
+            ],
+            "nodal_divisor_a2_minus_b": 3,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -54
+          },
+          {
+            "a_D": -3,
+            "b_D": 7,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 40,
+            "member_fraction": [
+              2,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": 2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -12
+          },
+          {
+            "a_D": -3,
+            "b_D": 8,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 60,
+            "member_fraction": [
+              3,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": 1,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 52
+          },
+          {
+            "a_D": -3,
+            "b_D": 9,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 10,
+            "member_fraction": [
+              1,
+              250
+            ],
+            "nodal_divisor_a2_minus_b": 0,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 144
+          },
+          {
+            "a_D": -3,
+            "b_D": 10,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": -1,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 270
+          },
+          {
+            "a_D": -3,
+            "b_D": 11,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": -2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 436
+          },
+          {
+            "a_D": -2,
+            "b_D": 0,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": 4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 20
+          },
+          {
+            "a_D": -2,
+            "b_D": 2,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 90,
+            "member_fraction": [
+              9,
+              250
+            ],
+            "nodal_divisor_a2_minus_b": 2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 28
+          },
+          {
+            "a_D": -2,
+            "b_D": 4,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 40,
+            "member_fraction": [
+              2,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": 0,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 4
+          },
+          {
+            "a_D": -2,
+            "b_D": 6,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 80,
+            "member_fraction": [
+              4,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": -2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -4
+          },
+          {
+            "a_D": -2,
+            "b_D": 8,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": -4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 52
+          },
+          {
+            "a_D": -2,
+            "b_D": 10,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": -6,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 220
+          },
+          {
+            "a_D": -1,
+            "b_D": -5,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 10,
+            "member_fraction": [
+              1,
+              250
+            ],
+            "nodal_divisor_a2_minus_b": 6,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -380
+          },
+          {
+            "a_D": -1,
+            "b_D": -4,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 30,
+            "member_fraction": [
+              3,
+              250
+            ],
+            "nodal_divisor_a2_minus_b": 5,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -224
+          },
+          {
+            "a_D": -1,
+            "b_D": -3,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 10,
+            "member_fraction": [
+              1,
+              250
+            ],
+            "nodal_divisor_a2_minus_b": 4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -112
+          },
+          {
+            "a_D": -1,
+            "b_D": -2,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": 3,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -38
+          },
+          {
+            "a_D": -1,
+            "b_D": -1,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 30,
+            "member_fraction": [
+              3,
+              250
+            ],
+            "nodal_divisor_a2_minus_b": 2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 4
+          },
+          {
+            "a_D": -1,
+            "b_D": 0,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 80,
+            "member_fraction": [
+              4,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": 1,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 20
+          },
+          {
+            "a_D": -1,
+            "b_D": 1,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 30,
+            "member_fraction": [
+              3,
+              250
+            ],
+            "nodal_divisor_a2_minus_b": 0,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 16
+          },
+          {
+            "a_D": -1,
+            "b_D": 2,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": -1,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -2
+          },
+          {
+            "a_D": -1,
+            "b_D": 3,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 50,
+            "member_fraction": [
+              1,
+              50
+            ],
+            "nodal_divisor_a2_minus_b": -2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -28
+          },
+          {
+            "a_D": -1,
+            "b_D": 4,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 50,
+            "member_fraction": [
+              1,
+              50
+            ],
+            "nodal_divisor_a2_minus_b": -3,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -56
+          },
+          {
+            "a_D": -1,
+            "b_D": 5,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": -4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -80
+          },
+          {
+            "a_D": -1,
+            "b_D": 6,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": -5,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -94
+          },
+          {
+            "a_D": -1,
+            "b_D": 7,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 30,
+            "member_fraction": [
+              3,
+              250
+            ],
+            "nodal_divisor_a2_minus_b": -6,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -92
+          },
+          {
+            "a_D": -1,
+            "b_D": 8,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 50,
+            "member_fraction": [
+              1,
+              50
+            ],
+            "nodal_divisor_a2_minus_b": -7,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -68
+          },
+          {
+            "a_D": -1,
+            "b_D": 9,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": -8,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -16
+          },
+          {
+            "a_D": 0,
+            "b_D": -10,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 1,
+            "member_fraction": [
+              1,
+              2500
+            ],
+            "nodal_divisor_a2_minus_b": 10,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -2000
+          },
+          {
+            "a_D": 0,
+            "b_D": -6,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 30,
+            "member_fraction": [
+              3,
+              250
+            ],
+            "nodal_divisor_a2_minus_b": 6,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -576
+          },
+          {
+            "a_D": 0,
+            "b_D": -4,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 40,
+            "member_fraction": [
+              2,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": 4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -224
+          },
+          {
+            "a_D": 0,
+            "b_D": -2,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 60,
+            "member_fraction": [
+              3,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": 2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -48
+          },
+          {
+            "a_D": 0,
+            "b_D": 0,
+            "classification": "compact_curve_ghost_node_(0,0)",
+            "member_count": 50,
+            "member_fraction": [
+              1,
+              50
+            ],
+            "nodal_divisor_a2_minus_b": 0,
+            "normalization_preimages": "t0^2=2",
+            "normalized_node": [
+              0,
+              0
+            ],
+            "odd_q_arithmetic_obstruction": "t^2=2q has no integer solution when q is odd",
+            "on_compact_sym3_curve": true,
+            "scaled_curve_residual": 0,
+            "source_witnessed_arithmetic_sym3_origin": false
+          },
+          {
+            "a_D": 0,
+            "b_D": 2,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 80,
+            "member_fraction": [
+              4,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": -2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -32
+          },
+          {
+            "a_D": 0,
+            "b_D": 4,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 80,
+            "member_fraction": [
+              4,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": -4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -96
+          },
+          {
+            "a_D": 0,
+            "b_D": 6,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 60,
+            "member_fraction": [
+              3,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": -6,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -144
+          },
+          {
+            "a_D": 0,
+            "b_D": 10,
+            "classification": "source_witnessed_arithmetic_sym3_coefficient_shape",
+            "elliptic_source_trace_witness_member_count": 20,
+            "generic_trace_parameter_t": [
+              0,
+              1
+            ],
+            "integral_hasse_parameter": true,
+            "member_count": 5,
+            "member_fraction": [
+              1,
+              500
+            ],
+            "nodal_divisor_a2_minus_b": -10,
+            "on_compact_sym3_curve": true,
+            "parameter_reconstructs_atom": true,
+            "scaled_curve_residual": 0,
+            "source_witnessed_arithmetic_sym3_origin": true
+          },
+          {
+            "a_D": 1,
+            "b_D": -5,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 10,
+            "member_fraction": [
+              1,
+              250
+            ],
+            "nodal_divisor_a2_minus_b": 6,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -380
+          },
+          {
+            "a_D": 1,
+            "b_D": -4,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 30,
+            "member_fraction": [
+              3,
+              250
+            ],
+            "nodal_divisor_a2_minus_b": 5,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -224
+          },
+          {
+            "a_D": 1,
+            "b_D": -3,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 10,
+            "member_fraction": [
+              1,
+              250
+            ],
+            "nodal_divisor_a2_minus_b": 4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -112
+          },
+          {
+            "a_D": 1,
+            "b_D": -2,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": 3,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -38
+          },
+          {
+            "a_D": 1,
+            "b_D": -1,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 30,
+            "member_fraction": [
+              3,
+              250
+            ],
+            "nodal_divisor_a2_minus_b": 2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 4
+          },
+          {
+            "a_D": 1,
+            "b_D": 0,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 80,
+            "member_fraction": [
+              4,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": 1,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 20
+          },
+          {
+            "a_D": 1,
+            "b_D": 1,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 30,
+            "member_fraction": [
+              3,
+              250
+            ],
+            "nodal_divisor_a2_minus_b": 0,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 16
+          },
+          {
+            "a_D": 1,
+            "b_D": 2,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": -1,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -2
+          },
+          {
+            "a_D": 1,
+            "b_D": 3,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 50,
+            "member_fraction": [
+              1,
+              50
+            ],
+            "nodal_divisor_a2_minus_b": -2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -28
+          },
+          {
+            "a_D": 1,
+            "b_D": 4,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 50,
+            "member_fraction": [
+              1,
+              50
+            ],
+            "nodal_divisor_a2_minus_b": -3,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -56
+          },
+          {
+            "a_D": 1,
+            "b_D": 5,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": -4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -80
+          },
+          {
+            "a_D": 1,
+            "b_D": 6,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": -5,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -94
+          },
+          {
+            "a_D": 1,
+            "b_D": 7,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 30,
+            "member_fraction": [
+              3,
+              250
+            ],
+            "nodal_divisor_a2_minus_b": -6,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -92
+          },
+          {
+            "a_D": 1,
+            "b_D": 8,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 50,
+            "member_fraction": [
+              1,
+              50
+            ],
+            "nodal_divisor_a2_minus_b": -7,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -68
+          },
+          {
+            "a_D": 1,
+            "b_D": 9,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": -8,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -16
+          },
+          {
+            "a_D": 2,
+            "b_D": 0,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": 4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 20
+          },
+          {
+            "a_D": 2,
+            "b_D": 2,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 90,
+            "member_fraction": [
+              9,
+              250
+            ],
+            "nodal_divisor_a2_minus_b": 2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 28
+          },
+          {
+            "a_D": 2,
+            "b_D": 4,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 40,
+            "member_fraction": [
+              2,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": 0,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 4
+          },
+          {
+            "a_D": 2,
+            "b_D": 6,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 80,
+            "member_fraction": [
+              4,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": -2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -4
+          },
+          {
+            "a_D": 2,
+            "b_D": 8,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": -4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 52
+          },
+          {
+            "a_D": 2,
+            "b_D": 10,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": -6,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 220
+          },
+          {
+            "a_D": 3,
+            "b_D": 4,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 30,
+            "member_fraction": [
+              3,
+              250
+            ],
+            "nodal_divisor_a2_minus_b": 5,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -96
+          },
+          {
+            "a_D": 3,
+            "b_D": 5,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": 4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -80
+          },
+          {
+            "a_D": 3,
+            "b_D": 6,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 10,
+            "member_fraction": [
+              1,
+              250
+            ],
+            "nodal_divisor_a2_minus_b": 3,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -54
+          },
+          {
+            "a_D": 3,
+            "b_D": 7,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 40,
+            "member_fraction": [
+              2,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": 2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -12
+          },
+          {
+            "a_D": 3,
+            "b_D": 8,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 60,
+            "member_fraction": [
+              3,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": 1,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 52
+          },
+          {
+            "a_D": 3,
+            "b_D": 9,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 10,
+            "member_fraction": [
+              1,
+              250
+            ],
+            "nodal_divisor_a2_minus_b": 0,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 144
+          },
+          {
+            "a_D": 3,
+            "b_D": 10,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": -1,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 270
+          },
+          {
+            "a_D": 3,
+            "b_D": 11,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": -2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 436
+          },
+          {
+            "a_D": 4,
+            "b_D": 8,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 10,
+            "member_fraction": [
+              1,
+              250
+            ],
+            "nodal_divisor_a2_minus_b": 8,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -368
+          },
+          {
+            "a_D": 4,
+            "b_D": 10,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 30,
+            "member_fraction": [
+              3,
+              250
+            ],
+            "nodal_divisor_a2_minus_b": 6,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -80
+          },
+          {
+            "a_D": 4,
+            "b_D": 12,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ],
+            "nodal_divisor_a2_minus_b": 4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 368
+          },
+          {
+            "a_D": 4,
+            "b_D": 14,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 5,
+            "member_fraction": [
+              1,
+              500
+            ],
+            "nodal_divisor_a2_minus_b": 2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 1024
+          },
+          {
+            "a_D": 5,
+            "b_D": 13,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 10,
+            "member_fraction": [
+              1,
+              250
+            ],
+            "nodal_divisor_a2_minus_b": 12,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -368
+          },
+          {
+            "a_D": 5,
+            "b_D": 14,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 10,
+            "member_fraction": [
+              1,
+              250
+            ],
+            "nodal_divisor_a2_minus_b": 11,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 34
+          },
+          {
+            "a_D": 5,
+            "b_D": 15,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 12,
+            "member_fraction": [
+              3,
+              625
+            ],
+            "nodal_divisor_a2_minus_b": 10,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 500
+          }
+        ]
+      },
+      {
+        "classification_summary": {
+          "atom_counts": {
+            "compact_curve_ghost_node_(0,0)": 1,
+            "off_compact_sym3_coefficient_curve": 136,
+            "source_witnessed_arithmetic_sym3_coefficient_shape": 1
+          },
+          "ghost_atom_count": 1,
+          "ghost_member_count": 336,
+          "ghost_member_fraction": [
+            8,
+            343
+          ],
+          "member_counts": {
+            "compact_curve_ghost_node_(0,0)": 336,
+            "off_compact_sym3_coefficient_curve": 14028,
+            "source_witnessed_arithmetic_sym3_coefficient_shape": 42
+          },
+          "on_curve_atom_count": 2,
+          "on_curve_member_count": 378,
+          "on_curve_member_fraction": [
+            9,
+            343
+          ],
+          "source_witnessed_atom_count": 1,
+          "source_witnessed_member_count": 42,
+          "source_witnessed_member_fraction": [
+            1,
+            343
+          ]
+        },
+        "odd_prime_arithmetic_shape_candidates": [
+          {
+            "coefficient_shape_a_b": [
+              0,
+              14
+            ],
+            "elliptic_trace_t": 0,
+            "locked_member_count": 42,
+            "present_in_locked_support": true
+          }
+        ],
+        "on_curve_atoms": [
+          {
+            "a_D": 0,
+            "b_D": 0,
+            "classification": "compact_curve_ghost_node_(0,0)",
+            "member_count": 336
+          },
+          {
+            "a_D": 0,
+            "b_D": 14,
+            "classification": "source_witnessed_arithmetic_sym3_coefficient_shape",
+            "elliptic_source_trace_witness_member_count": 42,
+            "generic_trace_parameter_t": [
+              0,
+              1
+            ],
+            "member_count": 42
+          }
+        ],
+        "q": 7,
+        "source_atom_count": 138,
+        "source_member_count": 14406,
+        "transformed_atoms": [
+          {
+            "a_D": -7,
+            "b_D": 24,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 21,
+            "member_fraction": [
+              1,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": 25,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -414
+          },
+          {
+            "a_D": -7,
+            "b_D": 25,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 21,
+            "member_fraction": [
+              1,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": 24,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 1044
+          },
+          {
+            "a_D": -6,
+            "b_D": 18,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 21,
+            "member_fraction": [
+              1,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": 18,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -1476
+          },
+          {
+            "a_D": -6,
+            "b_D": 20,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 16,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 132
+          },
+          {
+            "a_D": -6,
+            "b_D": 22,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 14,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 2108
+          },
+          {
+            "a_D": -5,
+            "b_D": 13,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 21,
+            "member_fraction": [
+              1,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": 12,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -1044
+          },
+          {
+            "a_D": -5,
+            "b_D": 14,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 11,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -700
+          },
+          {
+            "a_D": -5,
+            "b_D": 15,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 10,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -300
+          },
+          {
+            "a_D": -5,
+            "b_D": 16,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 9,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 162
+          },
+          {
+            "a_D": -5,
+            "b_D": 17,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 63,
+            "member_fraction": [
+              3,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": 8,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 692
+          },
+          {
+            "a_D": -5,
+            "b_D": 18,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 63,
+            "member_fraction": [
+              3,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": 7,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 1296
+          },
+          {
+            "a_D": -5,
+            "b_D": 19,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 21,
+            "member_fraction": [
+              1,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": 6,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 1980
+          },
+          {
+            "a_D": -4,
+            "b_D": 8,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 8,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -496
+          },
+          {
+            "a_D": -4,
+            "b_D": 10,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 168,
+            "member_fraction": [
+              4,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 6,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -288
+          },
+          {
+            "a_D": -4,
+            "b_D": 12,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 48
+          },
+          {
+            "a_D": -4,
+            "b_D": 14,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 126,
+            "member_fraction": [
+              3,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 560
+          },
+          {
+            "a_D": -4,
+            "b_D": 16,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 0,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 1296
+          },
+          {
+            "a_D": -4,
+            "b_D": 18,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 21,
+            "member_fraction": [
+              1,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": -2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 2304
+          },
+          {
+            "a_D": -3,
+            "b_D": 2,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 21,
+            "member_fraction": [
+              1,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": 7,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -48
+          },
+          {
+            "a_D": -3,
+            "b_D": 3,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 63,
+            "member_fraction": [
+              3,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": 6,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -36
+          },
+          {
+            "a_D": -3,
+            "b_D": 4,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 5,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -34
+          },
+          {
+            "a_D": -3,
+            "b_D": 5,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 63,
+            "member_fraction": [
+              3,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": 4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -36
+          },
+          {
+            "a_D": -3,
+            "b_D": 6,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 252,
+            "member_fraction": [
+              6,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 3,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -36
+          },
+          {
+            "a_D": -3,
+            "b_D": 7,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 126,
+            "member_fraction": [
+              3,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -28
+          },
+          {
+            "a_D": -3,
+            "b_D": 8,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 1,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -6
+          },
+          {
+            "a_D": -3,
+            "b_D": 9,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 105,
+            "member_fraction": [
+              5,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": 0,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 36
+          },
+          {
+            "a_D": -3,
+            "b_D": 10,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 168,
+            "member_fraction": [
+              4,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -1,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 104
+          },
+          {
+            "a_D": -3,
+            "b_D": 11,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 204
+          },
+          {
+            "a_D": -3,
+            "b_D": 12,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -3,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 342
+          },
+          {
+            "a_D": -3,
+            "b_D": 13,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 524
+          },
+          {
+            "a_D": -3,
+            "b_D": 14,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 168,
+            "member_fraction": [
+              4,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -5,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 756
+          },
+          {
+            "a_D": -3,
+            "b_D": 15,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -6,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 1044
+          },
+          {
+            "a_D": -2,
+            "b_D": -2,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 168,
+            "member_fraction": [
+              4,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 6,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -36
+          },
+          {
+            "a_D": -2,
+            "b_D": 0,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 84
+          },
+          {
+            "a_D": -2,
+            "b_D": 2,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 273,
+            "member_fraction": [
+              13,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": 2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 92
+          },
+          {
+            "a_D": -2,
+            "b_D": 4,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 126,
+            "member_fraction": [
+              3,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 0,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 36
+          },
+          {
+            "a_D": -2,
+            "b_D": 6,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 378,
+            "member_fraction": [
+              9,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -36
+          },
+          {
+            "a_D": -2,
+            "b_D": 8,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -76
+          },
+          {
+            "a_D": -2,
+            "b_D": 10,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 168,
+            "member_fraction": [
+              4,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -6,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -36
+          },
+          {
+            "a_D": -2,
+            "b_D": 12,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -8,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 132
+          },
+          {
+            "a_D": -2,
+            "b_D": 14,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -10,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 476
+          },
+          {
+            "a_D": -1,
+            "b_D": -8,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 21,
+            "member_fraction": [
+              1,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": 9,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -1422
+          },
+          {
+            "a_D": -1,
+            "b_D": -7,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 8,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -1036
+          },
+          {
+            "a_D": -1,
+            "b_D": -6,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 7,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -720
+          },
+          {
+            "a_D": -1,
+            "b_D": -5,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 6,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -468
+          },
+          {
+            "a_D": -1,
+            "b_D": -4,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 63,
+            "member_fraction": [
+              3,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": 5,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -274
+          },
+          {
+            "a_D": -1,
+            "b_D": -3,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -132
+          },
+          {
+            "a_D": -1,
+            "b_D": -2,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 336,
+            "member_fraction": [
+              8,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 3,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -36
+          },
+          {
+            "a_D": -1,
+            "b_D": -1,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 20
+          },
+          {
+            "a_D": -1,
+            "b_D": 0,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 1,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 42
+          },
+          {
+            "a_D": -1,
+            "b_D": 1,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 105,
+            "member_fraction": [
+              5,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": 0,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 36
+          },
+          {
+            "a_D": -1,
+            "b_D": 2,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 126,
+            "member_fraction": [
+              3,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -1,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 8
+          },
+          {
+            "a_D": -1,
+            "b_D": 3,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 168,
+            "member_fraction": [
+              4,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -36
+          },
+          {
+            "a_D": -1,
+            "b_D": 4,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -3,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -90
+          },
+          {
+            "a_D": -1,
+            "b_D": 5,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 105,
+            "member_fraction": [
+              5,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": -4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -148
+          },
+          {
+            "a_D": -1,
+            "b_D": 6,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 336,
+            "member_fraction": [
+              8,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -5,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -204
+          },
+          {
+            "a_D": -1,
+            "b_D": 7,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 126,
+            "member_fraction": [
+              3,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -6,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -252
+          },
+          {
+            "a_D": -1,
+            "b_D": 8,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -7,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -286
+          },
+          {
+            "a_D": -1,
+            "b_D": 9,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -8,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -300
+          },
+          {
+            "a_D": -1,
+            "b_D": 10,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 126,
+            "member_fraction": [
+              3,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -9,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -288
+          },
+          {
+            "a_D": -1,
+            "b_D": 11,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -10,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -244
+          },
+          {
+            "a_D": -1,
+            "b_D": 12,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 63,
+            "member_fraction": [
+              3,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": -11,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -162
+          },
+          {
+            "a_D": -1,
+            "b_D": 13,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 63,
+            "member_fraction": [
+              3,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": -12,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -36
+          },
+          {
+            "a_D": 0,
+            "b_D": -10,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 126,
+            "member_fraction": [
+              3,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 10,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -2400
+          },
+          {
+            "a_D": 0,
+            "b_D": -8,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 8,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -1408
+          },
+          {
+            "a_D": 0,
+            "b_D": -6,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 6,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -720
+          },
+          {
+            "a_D": 0,
+            "b_D": -4,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 126,
+            "member_fraction": [
+              3,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -288
+          },
+          {
+            "a_D": 0,
+            "b_D": -2,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 252,
+            "member_fraction": [
+              6,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -64
+          },
+          {
+            "a_D": 0,
+            "b_D": 0,
+            "classification": "compact_curve_ghost_node_(0,0)",
+            "member_count": 336,
+            "member_fraction": [
+              8,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 0,
+            "normalization_preimages": "t0^2=2",
+            "normalized_node": [
+              0,
+              0
+            ],
+            "odd_q_arithmetic_obstruction": "t^2=2q has no integer solution when q is odd",
+            "on_compact_sym3_curve": true,
+            "scaled_curve_residual": 0,
+            "source_witnessed_arithmetic_sym3_origin": false
+          },
+          {
+            "a_D": 0,
+            "b_D": 2,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 252,
+            "member_fraction": [
+              6,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -48
+          },
+          {
+            "a_D": 0,
+            "b_D": 6,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 420,
+            "member_fraction": [
+              10,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -6,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -288
+          },
+          {
+            "a_D": 0,
+            "b_D": 8,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -8,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -384
+          },
+          {
+            "a_D": 0,
+            "b_D": 10,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 252,
+            "member_fraction": [
+              6,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -10,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -400
+          },
+          {
+            "a_D": 0,
+            "b_D": 12,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 126,
+            "member_fraction": [
+              3,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -12,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -288
+          },
+          {
+            "a_D": 0,
+            "b_D": 14,
+            "classification": "source_witnessed_arithmetic_sym3_coefficient_shape",
+            "elliptic_source_trace_witness_member_count": 42,
+            "generic_trace_parameter_t": [
+              0,
+              1
+            ],
+            "integral_hasse_parameter": true,
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -14,
+            "on_compact_sym3_curve": true,
+            "parameter_reconstructs_atom": true,
+            "scaled_curve_residual": 0,
+            "source_witnessed_arithmetic_sym3_origin": true
+          },
+          {
+            "a_D": 1,
+            "b_D": -8,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 21,
+            "member_fraction": [
+              1,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": 9,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -1422
+          },
+          {
+            "a_D": 1,
+            "b_D": -7,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 8,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -1036
+          },
+          {
+            "a_D": 1,
+            "b_D": -6,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 7,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -720
+          },
+          {
+            "a_D": 1,
+            "b_D": -5,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 6,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -468
+          },
+          {
+            "a_D": 1,
+            "b_D": -4,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 63,
+            "member_fraction": [
+              3,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": 5,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -274
+          },
+          {
+            "a_D": 1,
+            "b_D": -3,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -132
+          },
+          {
+            "a_D": 1,
+            "b_D": -2,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 336,
+            "member_fraction": [
+              8,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 3,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -36
+          },
+          {
+            "a_D": 1,
+            "b_D": -1,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 20
+          },
+          {
+            "a_D": 1,
+            "b_D": 0,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 1,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 42
+          },
+          {
+            "a_D": 1,
+            "b_D": 1,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 105,
+            "member_fraction": [
+              5,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": 0,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 36
+          },
+          {
+            "a_D": 1,
+            "b_D": 2,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 126,
+            "member_fraction": [
+              3,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -1,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 8
+          },
+          {
+            "a_D": 1,
+            "b_D": 3,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 168,
+            "member_fraction": [
+              4,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -36
+          },
+          {
+            "a_D": 1,
+            "b_D": 4,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -3,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -90
+          },
+          {
+            "a_D": 1,
+            "b_D": 5,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 105,
+            "member_fraction": [
+              5,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": -4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -148
+          },
+          {
+            "a_D": 1,
+            "b_D": 6,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 336,
+            "member_fraction": [
+              8,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -5,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -204
+          },
+          {
+            "a_D": 1,
+            "b_D": 7,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 126,
+            "member_fraction": [
+              3,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -6,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -252
+          },
+          {
+            "a_D": 1,
+            "b_D": 8,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -7,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -286
+          },
+          {
+            "a_D": 1,
+            "b_D": 9,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -8,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -300
+          },
+          {
+            "a_D": 1,
+            "b_D": 10,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 126,
+            "member_fraction": [
+              3,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -9,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -288
+          },
+          {
+            "a_D": 1,
+            "b_D": 11,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -10,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -244
+          },
+          {
+            "a_D": 1,
+            "b_D": 12,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 63,
+            "member_fraction": [
+              3,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": -11,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -162
+          },
+          {
+            "a_D": 1,
+            "b_D": 13,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 63,
+            "member_fraction": [
+              3,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": -12,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -36
+          },
+          {
+            "a_D": 2,
+            "b_D": -2,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 168,
+            "member_fraction": [
+              4,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 6,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -36
+          },
+          {
+            "a_D": 2,
+            "b_D": 0,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 84
+          },
+          {
+            "a_D": 2,
+            "b_D": 2,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 273,
+            "member_fraction": [
+              13,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": 2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 92
+          },
+          {
+            "a_D": 2,
+            "b_D": 4,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 126,
+            "member_fraction": [
+              3,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 0,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 36
+          },
+          {
+            "a_D": 2,
+            "b_D": 6,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 378,
+            "member_fraction": [
+              9,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -36
+          },
+          {
+            "a_D": 2,
+            "b_D": 8,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -76
+          },
+          {
+            "a_D": 2,
+            "b_D": 10,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 168,
+            "member_fraction": [
+              4,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -6,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -36
+          },
+          {
+            "a_D": 2,
+            "b_D": 12,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -8,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 132
+          },
+          {
+            "a_D": 2,
+            "b_D": 14,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -10,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 476
+          },
+          {
+            "a_D": 3,
+            "b_D": 2,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 21,
+            "member_fraction": [
+              1,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": 7,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -48
+          },
+          {
+            "a_D": 3,
+            "b_D": 3,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 63,
+            "member_fraction": [
+              3,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": 6,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -36
+          },
+          {
+            "a_D": 3,
+            "b_D": 4,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 5,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -34
+          },
+          {
+            "a_D": 3,
+            "b_D": 5,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 63,
+            "member_fraction": [
+              3,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": 4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -36
+          },
+          {
+            "a_D": 3,
+            "b_D": 6,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 252,
+            "member_fraction": [
+              6,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 3,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -36
+          },
+          {
+            "a_D": 3,
+            "b_D": 7,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 126,
+            "member_fraction": [
+              3,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -28
+          },
+          {
+            "a_D": 3,
+            "b_D": 8,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 1,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -6
+          },
+          {
+            "a_D": 3,
+            "b_D": 9,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 105,
+            "member_fraction": [
+              5,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": 0,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 36
+          },
+          {
+            "a_D": 3,
+            "b_D": 10,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 168,
+            "member_fraction": [
+              4,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -1,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 104
+          },
+          {
+            "a_D": 3,
+            "b_D": 11,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 204
+          },
+          {
+            "a_D": 3,
+            "b_D": 12,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -3,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 342
+          },
+          {
+            "a_D": 3,
+            "b_D": 13,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 524
+          },
+          {
+            "a_D": 3,
+            "b_D": 14,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 168,
+            "member_fraction": [
+              4,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -5,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 756
+          },
+          {
+            "a_D": 3,
+            "b_D": 15,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": -6,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 1044
+          },
+          {
+            "a_D": 4,
+            "b_D": 8,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 8,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -496
+          },
+          {
+            "a_D": 4,
+            "b_D": 10,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 168,
+            "member_fraction": [
+              4,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 6,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -288
+          },
+          {
+            "a_D": 4,
+            "b_D": 12,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 4,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 48
+          },
+          {
+            "a_D": 4,
+            "b_D": 14,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 126,
+            "member_fraction": [
+              3,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 560
+          },
+          {
+            "a_D": 4,
+            "b_D": 16,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 0,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 1296
+          },
+          {
+            "a_D": 4,
+            "b_D": 18,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 21,
+            "member_fraction": [
+              1,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": -2,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 2304
+          },
+          {
+            "a_D": 5,
+            "b_D": 13,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 21,
+            "member_fraction": [
+              1,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": 12,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -1044
+          },
+          {
+            "a_D": 5,
+            "b_D": 14,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 11,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -700
+          },
+          {
+            "a_D": 5,
+            "b_D": 15,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 84,
+            "member_fraction": [
+              2,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 10,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -300
+          },
+          {
+            "a_D": 5,
+            "b_D": 16,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 9,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 162
+          },
+          {
+            "a_D": 5,
+            "b_D": 17,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 63,
+            "member_fraction": [
+              3,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": 8,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 692
+          },
+          {
+            "a_D": 5,
+            "b_D": 18,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 63,
+            "member_fraction": [
+              3,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": 7,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 1296
+          },
+          {
+            "a_D": 5,
+            "b_D": 19,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 21,
+            "member_fraction": [
+              1,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": 6,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 1980
+          },
+          {
+            "a_D": 6,
+            "b_D": 18,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 21,
+            "member_fraction": [
+              1,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": 18,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -1476
+          },
+          {
+            "a_D": 6,
+            "b_D": 20,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 16,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 132
+          },
+          {
+            "a_D": 6,
+            "b_D": 22,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ],
+            "nodal_divisor_a2_minus_b": 14,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 2108
+          },
+          {
+            "a_D": 7,
+            "b_D": 24,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 21,
+            "member_fraction": [
+              1,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": 25,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": -414
+          },
+          {
+            "a_D": 7,
+            "b_D": 25,
+            "classification": "off_compact_sym3_coefficient_curve",
+            "member_count": 21,
+            "member_fraction": [
+              1,
+              686
+            ],
+            "nodal_divisor_a2_minus_b": 24,
+            "on_compact_sym3_curve": false,
+            "scaled_curve_residual": 1044
+          }
+        ]
+      }
+    ]
+  },
+  "generic_normalization_inverse": {
+    "consequence_on_G_zero": [
+      "q*a=2q*t-t^3",
+      "q*b=t^4-3q*t^2+2q^2"
+    ],
+    "cross_multiplied_identity_1": "n^3-2q*n*d^2+q*a*d^3=a(q-a^2)G_q(a,b)",
+    "cross_multiplied_identity_2": "n^4-3q*n^2*d^2+(2q^2-qb)d^4=(a^4*b-2q*a^4+q*a^2*b+q^2*a^2-q*b^2)G_q(a,b)",
+    "exceptional_divisor": "d=a^2-b=0",
+    "numerator": "n=a(q-b)",
+    "recovered_elliptic_trace": "t=n/d=a(q-b)/(a^2-b)",
+    "source_normalization_inverse": "t0=x(y-1)/(x^2-y), with t=sqrt(q)t0"
+  },
+  "literature_boundary": {
+    "classical_inherited": "the symmetric-cube representation and its automorphic theory are classical and are not novelty claims of this packet",
+    "inherited_primary_references": [
+      "https://arxiv.org/abs/math/9909198",
+      "https://arxiv.org/abs/math/0409607"
+    ],
+    "priority_caveat": "project-specific does not mean absent from the literature; no novelty or priority claim is made without a dedicated search",
+    "project_specific_only": "the scaled bridge, nodal arithmetic filter, and exact intersection with these 251 locked atoms are atlas calculations"
+  },
+  "negative_controls": {
+    "coefficient_curve_false_positive": {
+      "scaled_curve_residual": 0,
+      "shape_a_b": [
+        0,
+        0
+      ],
+      "why_negative": "for odd q its normalization preimages require t^2=2q, so it has no integral elliptic trace"
+    },
+    "generic_usp4_boundary_point": {
+      "lattice_shape_a_b": "(0,-2q)",
+      "normalized_point_x_y": [
+        0,
+        -2
+      ],
+      "purpose": "the compact Sym^3 curve is a proper subset of the USp(4) coefficient region",
+      "scaled_curve_residual": "-16q^3"
+    },
+    "locked_off_curve_witnesses": [
+      {
+        "a_D": -3,
+        "b_D": 5,
+        "member_count": 3,
+        "q": 3,
+        "scaled_curve_residual": -52
+      },
+      {
+        "a_D": -5,
+        "b_D": 13,
+        "member_count": 10,
+        "q": 5,
+        "scaled_curve_residual": -368
+      },
+      {
+        "a_D": -7,
+        "b_D": 24,
+        "member_count": 21,
+        "q": 7,
+        "scaled_curve_residual": -414
+      }
+    ]
+  },
+  "odd_prime_classification": {
+    "coefficient_shapes": {
+      "p_at_least_5": "t=0 gives (a,b)=(0,2p)",
+      "p_equals_3": [
+        {
+          "a_b": [
+            3,
+            6
+          ],
+          "t": -3
+        },
+        {
+          "a_b": [
+            0,
+            6
+          ],
+          "t": 0
+        },
+        {
+          "a_b": [
+            -3,
+            6
+          ],
+          "t": 3
+        }
+      ]
+    },
+    "proof": "p|t^3 implies p|t. Writing t=kp, k^2*p<=4. Thus k=0 for p>=5, while k in {-1,0,1} for p=3.",
+    "realization_scope": "the implication and candidate list are proved algebraically; the frozen q=3,5,7 traces called genuine below have independent positive-count elliptic witnesses",
+    "theorem": "if p is an odd prime and an elliptic trace t induces an integral genus-two-scale Sym^3 shape, then p|t; Hasse gives t=0 for p>=5 and t in {-3,0,3} for p=3"
+  },
+  "payload_sha256": "5d19dfeaa8aa2a142dd0c24f0f71d774e7f2d004e981e9fa5a30ac144c3d17e8",
+  "producer": {
+    "note": "GENUS2_SYM3_COEFFICIENT_INTERSECTION.md",
+    "note_sha256_lf_normalized": "4976a54a46b8aac4e47066d56bc862f7ff820860d737fefcd1e6a3a5791d6e1c",
+    "script": "genus2_sym3_coefficient_intersection.py",
+    "script_sha256_lf_normalized": "8f776daa8c5573aba931546433feb5d851667c80a2a7313cedc3044ea25a894f",
+    "test": "tests/test_genus2_sym3_coefficient_intersection.py",
+    "test_sha256_lf_normalized": "000c8e963888c630b8c08631ac2cd0322ec9dcf8273e957dd3a0c1fe39a03b06"
+  },
+  "resource_contract": {
+    "arithmetic": "exact Python integers and Fraction only",
+    "floating_point": "not used",
+    "new_curve_or_field_enumerations": 0,
+    "polynomial_residual_evaluations": 251,
+    "randomness": "not used",
+    "source_atom_cap": 300,
+    "source_atoms_transformed": 251,
+    "source_member_cap": 20000,
+    "source_members_represented": 17068
+  },
+  "schema": "riemann.function_field.genus2_sym3_coefficient_intersection.v1",
+  "scope_firewall": {
+    "conjectural": [],
+    "exact": [
+      "the displayed polynomial identities and nodal classification",
+      "the all-positive-integer-q divisibility criterion for an integer parameter",
+      "the odd-prime candidate classification",
+      "the complete transform of the 251 locked atoms"
+    ],
+    "frozen_only": [
+      "all member counts and support intersections for q=3,5,7",
+      "source-witnessed realization labels"
+    ],
+    "nonclaims": [
+      "no equidistribution or density theorem",
+      "no claim that a coefficient-curve point alone has arithmetic Sym^3 origin",
+      "no identity of the differently weighted local factors",
+      "no new curve, field, or L-function enumeration",
+      "no RH or GRH implication"
+    ]
+  },
+  "singular_nodal_classification": {
+    "all_lattice_possibilities_on_G_zero_and_d_zero": [
+      "(a,b)=(0,0)",
+      "a^2=q and b=q"
+    ],
+    "interpretation": "all three are compact-image nodes, but none is an integral elliptic-trace shape under the stated lattice conditions",
+    "restriction_to_exceptional_divisor": "G_q(a,a^2)=a^2(a^2-q)^2",
+    "side_nodes": {
+      "arithmetic_obstruction": "integral a makes sqrt(q) integral, but t0 has one of the irreducible equations t0^2+-t0-1=0",
+      "lattice_condition": "a^2=q,b=q",
+      "normalized_points": [
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    "zero_node": {
+      "normalized_point": [
+        0,
+        0
+      ],
+      "odd_q_theorem": "no integer t can satisfy t^2=2q because v_2(2q)=1",
+      "preimages": "t0=+-sqrt(2)"
+    }
+  },
+  "source_locks": {
+    "balanced_control_fixture": {
+      "file_sha256_lf_normalized": "c3494ae852fda4e754b3b0da7cb30a26e3e38ec1c87e2619cd6fee6cdc68b68e",
+      "path": "research/l-families/atlas/function_field/balanced_control_family_scan.json",
+      "payload_sha256": "50fd136eb0483387246766c5f2426c3e727c69cd9a89943f9268368db0f9d39c",
+      "producer_sha256_lf_normalized": "7192fa26b0ea17cb68cff288620ea4dfb124e07807986d9c74fbd37e66087d3b",
+      "schema": "riemann.function_field.balanced_control_family_scan.v1"
+    },
+    "elliptic_sym3_fixture": {
+      "file_sha256_lf_normalized": "2b8b7f206c4e4c24f4e1ac65d093ab976dd6483dceb6ea52f44e76a7004bb033",
+      "path": "research/l-families/atlas/function_field/elliptic_symmetric_cube_family.json",
+      "payload_sha256": "7e30dd220b9c9e3a3873ffe8b168ad53af4899de1dd21a2d69e2498abc6ee5b9",
+      "producer_sha256_lf_normalized": "1a99107771a804f39c6d3b26b0b1e67ad385500ce6776f2e14cfe6bf7b810d26",
+      "schema": "riemann.function_field.elliptic_symmetric_cube_family.v1"
+    }
+  },
+  "status": "EXACT_SYMBOLIC_AND_SOURCE_LOCKED_Q_3_5_7_TRANSFORM"
+}

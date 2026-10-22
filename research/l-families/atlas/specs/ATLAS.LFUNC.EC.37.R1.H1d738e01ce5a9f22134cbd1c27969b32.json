@@ -1,0 +1,169 @@
+{
+  "analytic_properties": {
+    "analytic_continuation": "IMPORTED_THEOREM",
+    "euler_product": "IMPORTED_THEOREM",
+    "functional_equation": "IMPORTED_THEOREM",
+    "source_ref": "ELLIPTIC_CURVE_MODULARITY_UNPINNED"
+  },
+  "assumptions": [
+    {
+      "code": "CURVE_MODEL_IMPORTED",
+      "statement": "The LMFDB Weierstrass model identifies the intended isogeny-class L-function.",
+      "status": "IMPORTED"
+    },
+    {
+      "code": "MODULARITY_IMPORTED",
+      "statement": "Analytic continuation and the functional equation are imported from elliptic-curve modularity.",
+      "status": "IMPORTED"
+    }
+  ],
+  "base_field": {
+    "characteristic": 0,
+    "label": "Q"
+  },
+  "central_data": {
+    "assertion": "EXACT",
+    "notes": "LMFDB display imported for stress-test classification; not independently certified here.",
+    "parity_forced": true,
+    "rigor_level": "DISCOVERY_ONLY",
+    "source_ref": "LMFDB:LFUNCTION:37.a",
+    "value": 1
+  },
+  "classification": {
+    "automorphic_class": "GL2",
+    "degree": 2,
+    "domain": "NUMBER_FIELD",
+    "family_id": "GL2.ELLIPTIC.RANK_STRESS",
+    "motivic_weight": 1,
+    "object_type": "ELLIPTIC_CURVE_L",
+    "self_duality": "SELF_DUAL",
+    "symmetry_type": "ORTHOGONAL_ODD"
+  },
+  "completed_normalization": {
+    "analytic_variable": "unitary s",
+    "conductor_factor": "N^((s+1/2)/2)",
+    "critical_center": "1/2",
+    "exact_formula": "Lambda_u(s)=N^((s+1/2)/2)(2*pi)^(-(s+1/2)) Gamma(s+1/2) L(s+1/2,E)",
+    "gamma_factors": [
+      {
+        "kind": "EXPLICIT_OTHER",
+        "multiplicity": 1,
+        "notes": "A Gamma_C presentation differs by an s-independent factor.",
+        "scale": "(2*pi)^(-(s+1/2))",
+        "shift": "1/2"
+      }
+    ],
+    "normalization_id": "EC.WEIGHT2.UNITARY.SHIFT_HALF",
+    "notes": "The standard weight-2 center s=1 is shifted to unitary center 1/2."
+  },
+  "conductor": {
+    "kind": "INTEGER",
+    "norm_decimal": "37",
+    "status": "IMPORTED_THEOREM",
+    "value": "37"
+  },
+  "data_sources": [
+    {
+      "coverage": "Weierstrass coefficients, conductor, and bad-prime list.",
+      "hashes": [
+        {
+          "algorithm": "sha256",
+          "binds": "Observed UTF-8 API response; bytes are not retained in this compact release",
+          "hash_mode": "RAW_BYTES",
+          "value": "2181633704e792c705268fdf559a510fba94154176549a2c47f80c201a54d7a9"
+        }
+      ],
+      "identifier": "LMFDB:EC:37.a1",
+      "locator": "https://www.lmfdb.org/api/ec_curvedata/?lmfdb_label=37.a1&_format=json",
+      "notes": "The unretained response hash is an observation lock, not an independently replayable source certificate.",
+      "retention": "DYNAMIC_EXTERNAL",
+      "rigor_level": "DISCOVERY_ONLY",
+      "role": "curve_metadata",
+      "source_kind": "DATABASE",
+      "version_or_retrieved_utc": "2026-08-24T14:48:23.661278Z"
+    },
+    {
+      "coverage": "Displayed functional-equation sign and analytic rank.",
+      "hashes": [],
+      "identifier": "LMFDB:LFUNCTION:37.a",
+      "locator": "https://www.lmfdb.org/L/EllipticCurve/Q/37/a/",
+      "notes": "Dynamic page identified but not archived.",
+      "retention": "DYNAMIC_EXTERNAL",
+      "rigor_level": "DISCOVERY_ONLY",
+      "role": "rank_root_number",
+      "source_kind": "DATABASE",
+      "version_or_retrieved_utc": "2026-08-24T14:48:23.661278Z"
+    }
+  ],
+  "euler_product": {
+    "bad_factor_policy": "At the semistable bad prime 37, the classical reciprocal factor is 1-(-1)T; the local-Euler moment detector explicitly omits this prime.",
+    "coverage": "Every good rational prime p<=prime_bound is independently point-counted from the imported model.",
+    "good_factor_formula": "L_p^u(s)^(-1)=1-(a_p/sqrt(p))p^(-s)+p^(-2s)",
+    "reciprocal_coefficient_definition": "mu_E(p)=-a_p and mu_E(p^2)=p in the classical variable at good p",
+    "rigor_level": "DISCOVERY_ONLY",
+    "source_refs": [
+      "LMFDB:EC:37.a1"
+    ]
+  },
+  "functional_equation": {
+    "exact_formula": "Lambda_u(s)=w_E Lambda_u(1-s)",
+    "root_number": "-1",
+    "root_number_status": "IMPORTED_THEOREM",
+    "source_ref": "LMFDB:LFUNCTION:37.a"
+  },
+  "identity_kernel": {
+    "base_field_label": "Q",
+    "construction": "L-function of the rational elliptic curve with LMFDB label 37.a1",
+    "slug": "EC.37.R1",
+    "source_identifiers": [
+      "LMFDB:EC:37.a1",
+      "LMFDB:LFUNCTION:37.a"
+    ],
+    "twist_parameters": [],
+    "version": 1
+  },
+  "identity_sha256": "1d738e01ce5a9f22134cbd1c27969b3247f72752c8b109863f24cf173f29c73c",
+  "notes": "Point counts are exact for the imported model; rank and sign remain discovery metadata.",
+  "programme_refs": [
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 738,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/738"
+    },
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 741,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/741"
+    }
+  ],
+  "record_state": "DRAFT",
+  "record_type": "L_FUNCTION_SPEC",
+  "revision": 1,
+  "schema_version": "riemann.atlas.l_function_spec.v1",
+  "scope_boundary": "Phase-0 metadata and declared finite adapters only; no zero-set or global conclusion is inherited.",
+  "semantic_id": "ATLAS.LFUNC.EC.37.R1.H1d738e01ce5a9f22134cbd1c27969b32",
+  "software": [
+    {
+      "name": "CPython",
+      "role": "exact integer point counts and rational moment aggregation",
+      "version": "3.12.10"
+    }
+  ],
+  "source_identifiers": [
+    "LMFDB:EC:37.a1",
+    "LMFDB:LFUNCTION:37.a"
+  ],
+  "supersedes": [],
+  "title": "Elliptic-curve L-function 37.a1, imported rank 1",
+  "zero_data": {
+    "central_zero_policy": "NOT_APPLICABLE",
+    "coverage_class": "NOT_APPLICABLE",
+    "precision": null,
+    "rigor_level": "DISCOVERY_ONLY",
+    "source_refs": [],
+    "usage": "NOT_USED",
+    "window": null
+  }
+}

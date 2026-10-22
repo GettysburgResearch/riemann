@@ -1,0 +1,1082 @@
+{
+  "character_decomposition_certificate": {
+    "all_power_corollary": {
+      "integrality": true,
+      "proof": "G=1+chi_(0,1)+chi_(0,2) is the character of an honest self-dual representation containing the trivial summand; tensor-product multiplicities are nonnegative integers and the all-trivial tensor supplies at least one invariant.",
+      "scope": "compact-group Haar moments only; no finite-family convergence",
+      "statement": "For every integer m>=0, Haar(F^m)=(-1)^m times the multiplicity of the trivial representation in G^tensor_m.",
+      "strict_sign_rule": "(-1)^m*Haar(F^m)>0 for every m>=0"
+    },
+    "defining_identity": "F=(Tr U)^2-e_2(U)^2",
+    "does_not_prove": [
+      "finite genus-two family moment convergence",
+      "USp(4) equidistribution for the scanned polynomial family",
+      "a rate of convergence in q",
+      "any number-field L-function statement"
+    ],
+    "highest_weight_convention": "a*omega1+b*omega2 corresponds to e-basis coordinates (lambda1,lambda2)=(a+b,b)",
+    "irreducible_identity": "-(1+chi_(0*omega1+1*omega2)+chi_(0*omega1+2*omega2))",
+    "maximum_power": 6,
+    "powers": [
+      {
+        "all_sign_adjusted_tensor_multiplicities_positive": true,
+        "dimension_reconstruction_exact": true,
+        "independent_weyl_constant_term_haar_moment": -1,
+        "irreducible_count": 3,
+        "laurent_reconstruction_exact": true,
+        "power": 1,
+        "tensor_dimension": 20,
+        "trivial_coefficient_in_F_power": -1
+      },
+      {
+        "all_sign_adjusted_tensor_multiplicities_positive": true,
+        "dimension_reconstruction_exact": true,
+        "independent_weyl_constant_term_haar_moment": 3,
+        "irreducible_count": 9,
+        "laurent_reconstruction_exact": true,
+        "power": 2,
+        "tensor_dimension": 400,
+        "trivial_coefficient_in_F_power": 3
+      },
+      {
+        "all_sign_adjusted_tensor_multiplicities_positive": true,
+        "dimension_reconstruction_exact": true,
+        "independent_weyl_constant_term_haar_moment": -11,
+        "irreducible_count": 16,
+        "laurent_reconstruction_exact": true,
+        "power": 3,
+        "tensor_dimension": 8000,
+        "trivial_coefficient_in_F_power": -11
+      },
+      {
+        "all_sign_adjusted_tensor_multiplicities_positive": true,
+        "dimension_reconstruction_exact": true,
+        "independent_weyl_constant_term_haar_moment": 56,
+        "irreducible_count": 25,
+        "laurent_reconstruction_exact": true,
+        "power": 4,
+        "tensor_dimension": 160000,
+        "trivial_coefficient_in_F_power": 56
+      },
+      {
+        "all_sign_adjusted_tensor_multiplicities_positive": true,
+        "dimension_reconstruction_exact": true,
+        "independent_weyl_constant_term_haar_moment": -374,
+        "irreducible_count": 36,
+        "laurent_reconstruction_exact": true,
+        "power": 5,
+        "tensor_dimension": 3200000,
+        "trivial_coefficient_in_F_power": -374
+      },
+      {
+        "all_sign_adjusted_tensor_multiplicities_positive": true,
+        "dimension_reconstruction_exact": true,
+        "independent_weyl_constant_term_haar_moment": 3117,
+        "irreducible_count": 49,
+        "laurent_reconstruction_exact": true,
+        "power": 6,
+        "tensor_dimension": 64000000,
+        "trivial_coefficient_in_F_power": 3117
+      }
+    ],
+    "scope": "the exact compact-group character decompositions and Haar moments listed here",
+    "status": "PROVED_EXACT_C2_CHARACTER_DECOMPOSITION",
+    "verification": {
+      "all_F_power_coefficients_have_uniform_sign_minus_one_to_m": true,
+      "all_dimension_sums_equal_20_to_m": true,
+      "all_generated_characters_are_weyl_invariant": true,
+      "all_kostant_character_dimensions_match_weyl_formula": true,
+      "all_power_reconstructions_exact": true,
+      "all_tensor_multiplicities_positive": true,
+      "all_trivial_multiplicities_match_independent_haar_constant_terms": true
+    }
+  },
+  "character_identity": {
+    "dimensions_at_identity": {
+      "2*omega_2": 14,
+      "F": -20,
+      "omega_2": 5,
+      "standard": 4
+    },
+    "formula": "F=-(1+chi_{omega_2}+chi_{2*omega_2})",
+    "haar_mean_consequence": -1,
+    "status": "PROVED_EXACT_LAURENT_IDENTITY"
+  },
+  "convergence_target": {
+    "atlas_status": "PROPOSED",
+    "evidence_scope": "three exact fields q=3,5,7 and moment orders 1 through 6",
+    "not_a_theorem": true,
+    "smallest_gap": "Prove the relevant hyperelliptic-family equidistribution; for each fixed order, F(U)^m is continuous and bounded on compact USp(4).",
+    "statement": "For each fixed moment order, the finite K/q^2 moment tends to the USp(4) Haar moment as q tends to infinity.",
+    "status": "CONJECTURAL_USP4_LIMIT_NOT_A_THEOREM"
+  },
+  "definition": "For U in USp(4), set F(U)=(Tr U)^2-e_2(U)^2. Prove the exact Laurent-character identity F=-(1+chi_{omega_2}+chi_{2*omega_2}), certify the exact range [-20,4/3], decompose F^m for m=1,...,6 into irreducible C_2 characters, evaluate the first twelve Haar moments by the normalized C_2 Weyl constant-term formula, and compare them exactly with the complete q=3,5,7 histogram moments of K_D/q^2, where K_D=q*a_D^2-b_D^2. Use exact degree-six and degree-twelve polynomial majorants to certify successively stronger lower bounds for the negative-sign probability.",
+  "detector_semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.GENUS2.USP4.TOY_MINOR.EXACT_MOMENT_COMPARATOR.Hc2dcb9b107d8aa3d5bc5dc2761a7e4f6",
+  "exact_result_status": "RIGOROUS_CERTIFIED",
+  "finite_comparisons": [
+    {
+      "member_count": 162,
+      "moments": [
+        {
+          "finite_exact": {
+            "denominator": 243,
+            "numerator": -104,
+            "text": "-104/243"
+          },
+          "finite_minus_haar": {
+            "denominator": 243,
+            "numerator": 139,
+            "text": "139/243"
+          },
+          "order": 1,
+          "usp4_haar_exact": -1
+        },
+        {
+          "finite_exact": {
+            "denominator": 2187,
+            "numerator": 2408,
+            "text": "2408/2187"
+          },
+          "finite_minus_haar": {
+            "denominator": 2187,
+            "numerator": -4153,
+            "text": "-4153/2187"
+          },
+          "order": 2,
+          "usp4_haar_exact": 3
+        },
+        {
+          "finite_exact": {
+            "denominator": 19683,
+            "numerator": -41240,
+            "text": "-41240/19683"
+          },
+          "finite_minus_haar": {
+            "denominator": 19683,
+            "numerator": 175273,
+            "text": "175273/19683"
+          },
+          "order": 3,
+          "usp4_haar_exact": -11
+        },
+        {
+          "finite_exact": {
+            "denominator": 177147,
+            "numerator": 917000,
+            "text": "917000/177147"
+          },
+          "finite_minus_haar": {
+            "denominator": 177147,
+            "numerator": -9003232,
+            "text": "-9003232/177147"
+          },
+          "order": 4,
+          "usp4_haar_exact": 56
+        },
+        {
+          "finite_exact": {
+            "denominator": 1594323,
+            "numerator": -19669784,
+            "text": "-19669784/1594323"
+          },
+          "finite_minus_haar": {
+            "denominator": 1594323,
+            "numerator": 576607018,
+            "text": "576607018/1594323"
+          },
+          "order": 5,
+          "usp4_haar_exact": -374
+        },
+        {
+          "finite_exact": {
+            "denominator": 14348907,
+            "numerator": 440895368,
+            "text": "440895368/14348907"
+          },
+          "finite_minus_haar": {
+            "denominator": 14348907,
+            "numerator": -44284647751,
+            "text": "-44284647751/14348907"
+          },
+          "order": 6,
+          "usp4_haar_exact": 3117
+        }
+      ],
+      "q": 3,
+      "spec_semantic_id": "ATLAS.LFUNC.FUNCTION_FIELD.F3.QUADRATIC.QUINTIC_GENUS2_FAMILY.H64fa184deff37bfade32dede39110cb6"
+    },
+    {
+      "member_count": 2500,
+      "moments": [
+        {
+          "finite_exact": {
+            "denominator": 3125,
+            "numerator": -1994,
+            "text": "-1994/3125"
+          },
+          "finite_minus_haar": {
+            "denominator": 3125,
+            "numerator": 1131,
+            "text": "1131/3125"
+          },
+          "order": 1,
+          "usp4_haar_exact": -1
+        },
+        {
+          "finite_exact": {
+            "denominator": 78125,
+            "numerator": 131504,
+            "text": "131504/78125"
+          },
+          "finite_minus_haar": {
+            "denominator": 78125,
+            "numerator": -102871,
+            "text": "-102871/78125"
+          },
+          "order": 2,
+          "usp4_haar_exact": 3
+        },
+        {
+          "finite_exact": {
+            "denominator": 1953125,
+            "numerator": -8139224,
+            "text": "-8139224/1953125"
+          },
+          "finite_minus_haar": {
+            "denominator": 1953125,
+            "numerator": 13345151,
+            "text": "13345151/1953125"
+          },
+          "order": 3,
+          "usp4_haar_exact": -11
+        },
+        {
+          "finite_exact": {
+            "denominator": 48828125,
+            "numerator": 633540584,
+            "text": "633540584/48828125"
+          },
+          "finite_minus_haar": {
+            "denominator": 48828125,
+            "numerator": -2100834416,
+            "text": "-2100834416/48828125"
+          },
+          "order": 4,
+          "usp4_haar_exact": 56
+        },
+        {
+          "finite_exact": {
+            "denominator": 1220703125,
+            "numerator": -52074761624,
+            "text": "-52074761624/1220703125"
+          },
+          "finite_minus_haar": {
+            "denominator": 1220703125,
+            "numerator": 404468207126,
+            "text": "404468207126/1220703125"
+          },
+          "order": 5,
+          "usp4_haar_exact": -374
+        },
+        {
+          "finite_exact": {
+            "denominator": 30517578125,
+            "numerator": 4605498593864,
+            "text": "4605498593864/30517578125"
+          },
+          "finite_minus_haar": {
+            "denominator": 30517578125,
+            "numerator": -90517792421761,
+            "text": "-90517792421761/30517578125"
+          },
+          "order": 6,
+          "usp4_haar_exact": 3117
+        }
+      ],
+      "q": 5,
+      "spec_semantic_id": "ATLAS.LFUNC.FUNCTION_FIELD.F5.QUADRATIC.QUINTIC_GENUS2_FAMILY.H26649ce49ca814ca1fe8d3f38668c572"
+    },
+    {
+      "member_count": 14406,
+      "moments": [
+        {
+          "finite_exact": {
+            "denominator": 16807,
+            "numerator": -12340,
+            "text": "-12340/16807"
+          },
+          "finite_minus_haar": {
+            "denominator": 16807,
+            "numerator": 4467,
+            "text": "4467/16807"
+          },
+          "order": 1,
+          "usp4_haar_exact": -1
+        },
+        {
+          "finite_exact": {
+            "denominator": 823543,
+            "numerator": 1645440,
+            "text": "1645440/823543"
+          },
+          "finite_minus_haar": {
+            "denominator": 823543,
+            "numerator": -825189,
+            "text": "-825189/823543"
+          },
+          "order": 2,
+          "usp4_haar_exact": 3
+        },
+        {
+          "finite_exact": {
+            "denominator": 40353607,
+            "numerator": -225694096,
+            "text": "-225694096/40353607"
+          },
+          "finite_minus_haar": {
+            "denominator": 40353607,
+            "numerator": 218195581,
+            "text": "218195581/40353607"
+          },
+          "order": 3,
+          "usp4_haar_exact": -11
+        },
+        {
+          "finite_exact": {
+            "denominator": 1977326743,
+            "numerator": 38513289072,
+            "text": "38513289072/1977326743"
+          },
+          "finite_minus_haar": {
+            "denominator": 1977326743,
+            "numerator": -72217008536,
+            "text": "-72217008536/1977326743"
+          },
+          "order": 4,
+          "usp4_haar_exact": 56
+        },
+        {
+          "finite_exact": {
+            "denominator": 96889010407,
+            "numerator": -7301411797840,
+            "text": "-7301411797840/96889010407"
+          },
+          "finite_minus_haar": {
+            "denominator": 96889010407,
+            "numerator": 28935078094378,
+            "text": "28935078094378/96889010407"
+          },
+          "order": 5,
+          "usp4_haar_exact": -374
+        },
+        {
+          "finite_exact": {
+            "denominator": 4747561509943,
+            "numerator": 1525356764826480,
+            "text": "1525356764826480/4747561509943"
+          },
+          "finite_minus_haar": {
+            "denominator": 4747561509943,
+            "numerator": -13272792461665851,
+            "text": "-13272792461665851/4747561509943"
+          },
+          "order": 6,
+          "usp4_haar_exact": 3117
+        }
+      ],
+      "q": 7,
+      "spec_semantic_id": "ATLAS.LFUNC.FUNCTION_FIELD.F7.QUADRATIC.QUINTIC_GENUS2_FAMILY.H066f50ec5ddb13c0ab7107ae1b68fb8b"
+    }
+  ],
+  "firewalls": [
+    "RIGOROUS_CERTIFIED covers the exact Laurent, Weyl, and finite-histogram arithmetic only; convergence is proposed and not a theorem.",
+    "The all-power alternating Haar-moment sign theorem is a compact-group character statement and does not imply finite-family moment convergence.",
+    "The directional finite-moment pattern is exact only for q=3,5,7 and does not assert monotonicity or a rate at another field.",
+    "The degree-six polynomial gives a lower bound for the negative-sign probability, not its exact Haar value; its liminf consequence is conditional on six-moment convergence.",
+    "The degree-twelve polynomial gives a strictly stronger exact lower bound, not the exact probability or an optimality claim; numerical discovery is excluded from acceptance, and any finite-family liminf requires twelve-moment convergence.",
+    "The statistic is a toy reciprocal-coefficient minor, not Pick/Loewner, XD, or HCNC.",
+    "No conclusion transfers from these function-field families to number-field L-functions.",
+    "The finite comparison covers only q=3,5,7 and moment orders 1 through 6."
+  ],
+  "frozen_moment_pattern": {
+    "interpretation": "For moment orders 1 through 6 at q=3,5,7 only, the finite moment has the Haar sign, smaller absolute value, increasing absolute magnitude, and decreasing absolute gap as q increases. No monotonicity or rate is asserted for another q.",
+    "not_a_theorem_beyond_frozen_fields": true,
+    "per_order": [
+      {
+        "absolute_gap_strictly_decreases_with_q": true,
+        "absolute_value_below_haar": true,
+        "absolute_value_strictly_increases_with_q": true,
+        "order": 1,
+        "same_nonzero_sign_as_haar": true
+      },
+      {
+        "absolute_gap_strictly_decreases_with_q": true,
+        "absolute_value_below_haar": true,
+        "absolute_value_strictly_increases_with_q": true,
+        "order": 2,
+        "same_nonzero_sign_as_haar": true
+      },
+      {
+        "absolute_gap_strictly_decreases_with_q": true,
+        "absolute_value_below_haar": true,
+        "absolute_value_strictly_increases_with_q": true,
+        "order": 3,
+        "same_nonzero_sign_as_haar": true
+      },
+      {
+        "absolute_gap_strictly_decreases_with_q": true,
+        "absolute_value_below_haar": true,
+        "absolute_value_strictly_increases_with_q": true,
+        "order": 4,
+        "same_nonzero_sign_as_haar": true
+      },
+      {
+        "absolute_gap_strictly_decreases_with_q": true,
+        "absolute_value_below_haar": true,
+        "absolute_value_strictly_increases_with_q": true,
+        "order": 5,
+        "same_nonzero_sign_as_haar": true
+      },
+      {
+        "absolute_gap_strictly_decreases_with_q": true,
+        "absolute_value_below_haar": true,
+        "absolute_value_strictly_increases_with_q": true,
+        "order": 6,
+        "same_nonzero_sign_as_haar": true
+      }
+    ],
+    "q_values": [
+      3,
+      5,
+      7
+    ],
+    "status": "EXACT_FOR_Q_3_5_7_ONLY"
+  },
+  "negative_sign_moment_certificate": {
+    "conditional_consequence": {
+      "assumption": "The first six raw moments of the normalized finite-family statistic converge to the six stored USp(4) Haar moments.",
+      "not_an_equidistribution_proof": true,
+      "reason": "The expectation of the stronger support-adapted degree-six majorant then converges to 3879608783/6358302720; no boundary-mass or weak-convergence argument is needed.",
+      "statement": "Under that assumption, liminf_q Pr(K_D/q^2<0) >= 2478693937/6358302720.",
+      "status": "CONDITIONAL_ON_FIRST_SIX_MOMENT_CONVERGENCE"
+    },
+    "event": "F<0",
+    "finite_q_bounds": [
+      {
+        "moment_majorant_nonnegative_upper_bound": {
+          "denominator": 2074170795235803,
+          "numerator": 1757785450112411,
+          "text": "1757785450112411/2074170795235803"
+        },
+        "negative_probability_lower_bound": {
+          "denominator": 2074170795235803,
+          "numerator": 316385345123392,
+          "text": "316385345123392/2074170795235803"
+        },
+        "observed_negative_fraction": {
+          "denominator": 27,
+          "numerator": 17,
+          "text": "17/27"
+        },
+        "q": 3,
+        "verified_bound_holds": true
+      },
+      {
+        "moment_majorant_nonnegative_upper_bound": {
+          "denominator": 4411393096923828125,
+          "numerator": 3362134983925181081,
+          "text": "3362134983925181081/4411393096923828125"
+        },
+        "negative_probability_lower_bound": {
+          "denominator": 4411393096923828125,
+          "numerator": 1049258112998647044,
+          "text": "1049258112998647044/4411393096923828125"
+        },
+        "observed_negative_fraction": {
+          "denominator": 50,
+          "numerator": 33,
+          "text": "33/50"
+        },
+        "q": 5,
+        "verified_bound_holds": true
+      },
+      {
+        "moment_majorant_nonnegative_upper_bound": {
+          "denominator": 686272022845319295847,
+          "numerator": 498077924985842372191,
+          "text": "498077924985842372191/686272022845319295847"
+        },
+        "negative_probability_lower_bound": {
+          "denominator": 686272022845319295847,
+          "numerator": 188194097859476923656,
+          "text": "188194097859476923656/686272022845319295847"
+        },
+        "observed_negative_fraction": {
+          "denominator": 49,
+          "numerator": 33,
+          "text": "33/49"
+        },
+        "q": 7,
+        "verified_bound_holds": true
+      }
+    ],
+    "haar": {
+      "moment_majorant_nonnegative_upper_bound": {
+        "denominator": 12023,
+        "numerator": 7663,
+        "text": "7663/12023"
+      },
+      "negative_probability_lower_bound": {
+        "denominator": 12023,
+        "numerator": 4360,
+        "text": "4360/12023"
+      }
+    },
+    "majorant": {
+      "coefficients_low_to_high": [
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "text": "1"
+        },
+        {
+          "denominator": 12023,
+          "numerator": 5405,
+          "text": "5405/12023"
+        },
+        {
+          "denominator": 1093,
+          "numerator": 24,
+          "text": "24/1093"
+        },
+        {
+          "denominator": 12023,
+          "numerator": -23,
+          "text": "-23/12023"
+        }
+      ],
+      "construction": "The coefficients solve the exact normal equations minimizing E[R(F)^2] among Haar cubics with R(0)=1; only the displayed pointwise inequality is used for the probability bound.",
+      "pointwise_statement": "1_{x>=0} <= R(x)^2 on [-20,4/3]",
+      "polynomial": "R(x)=1+(5405*x+264*x^2-23*x^3)/12023",
+      "positive_interval_factorization": "R(x)-1=x*(5405+264*x-23*x^2)/12023",
+      "proof": "The quadratic 5405+264*x-23*x^2 is concave, so its minimum on [0,4/3] occurs at an endpoint; both stored endpoint values are positive. Thus R(x)>=1 for x>=0, while R(x)^2>=0 handles x<0.",
+      "quadratic_endpoint_values_on_0_to_4_over_3": [
+        {
+          "denominator": 1,
+          "numerator": 5405,
+          "text": "5405"
+        },
+        {
+          "denominator": 9,
+          "numerator": 51445,
+          "text": "51445/9"
+        }
+      ],
+      "square_coefficients_low_to_high": [
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "text": "1"
+        },
+        {
+          "denominator": 12023,
+          "numerator": 10810,
+          "text": "10810/12023"
+        },
+        {
+          "denominator": 144552529,
+          "numerator": 35562169,
+          "text": "35562169/144552529"
+        },
+        {
+          "denominator": 13141139,
+          "numerator": 209162,
+          "text": "209162/13141139"
+        },
+        {
+          "denominator": 144552529,
+          "numerator": -178934,
+          "text": "-178934/144552529"
+        },
+        {
+          "denominator": 13141139,
+          "numerator": -1104,
+          "text": "-1104/13141139"
+        },
+        {
+          "denominator": 144552529,
+          "numerator": 529,
+          "text": "529/144552529"
+        }
+      ]
+    },
+    "scope": "These are exact lower bounds, not an evaluation of the Haar sign probability. The cubic-square construction is retained as a simple baseline; the rational support-adapted polynomial is stronger but is not claimed optimal. The q=3,5,7 rows are exact frozen checks; the liminf statement is conditional.",
+    "status": "PROVED_EXACT_DEGREE_SIX_MOMENT_BOUND",
+    "support": {
+      "maximum": {
+        "denominator": 3,
+        "numerator": 4,
+        "text": "4/3"
+      },
+      "minimum": {
+        "denominator": 1,
+        "numerator": -20,
+        "text": "-20"
+      }
+    },
+    "support_adapted_majorant": {
+      "coefficients_in_x_low_to_high": [
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "text": "1"
+        },
+        {
+          "denominator": 203280,
+          "numerator": 124079,
+          "text": "124079/203280"
+        },
+        {
+          "denominator": 68302080,
+          "numerator": -10433053,
+          "text": "-10433053/68302080"
+        },
+        {
+          "denominator": 31223808,
+          "numerator": -5367181,
+          "text": "-5367181/31223808"
+        },
+        {
+          "denominator": 97140736,
+          "numerator": -3716745,
+          "text": "-3716745/97140736"
+        },
+        {
+          "denominator": 55508992,
+          "numerator": -177075,
+          "text": "-177075/55508992"
+        },
+        {
+          "denominator": 1554251776,
+          "numerator": -130875,
+          "text": "-130875/1554251776"
+        }
+      ],
+      "construction_scope": "This rational support-adapted certificate is not claimed optimal among all degree-six polynomial majorants.",
+      "coordinate": "t=(3*x+28)/32 maps x in [-20,4/3] to t in [-1,1], with x>=0 equivalent to t>=7/8",
+      "finite_q_bounds": [
+        {
+          "moment_majorant_nonnegative_upper_bound": {
+            "denominator": 4646211289251840,
+            "numerator": 3574999200802583,
+            "text": "3574999200802583/4646211289251840"
+          },
+          "negative_probability_lower_bound": {
+            "denominator": 4646211289251840,
+            "numerator": 1071212088449257,
+            "text": "1071212088449257/4646211289251840"
+          },
+          "observed_negative_fraction": {
+            "denominator": 27,
+            "numerator": 17,
+            "text": "17/27"
+          },
+          "q": 3,
+          "verified_bound_holds": true
+        },
+        {
+          "moment_majorant_nonnegative_upper_bound": {
+            "denominator": 426888000000000000,
+            "numerator": 297404551790272981,
+            "text": "297404551790272981/426888000000000000"
+          },
+          "negative_probability_lower_bound": {
+            "denominator": 426888000000000000,
+            "numerator": 129483448209727019,
+            "text": "129483448209727019/426888000000000000"
+          },
+          "observed_negative_fraction": {
+            "denominator": 50,
+            "numerator": 33,
+            "text": "33/50"
+          },
+          "q": 5,
+          "verified_bound_holds": true
+        },
+        {
+          "moment_majorant_nonnegative_upper_bound": {
+            "denominator": 4150634573530209042432,
+            "numerator": 2806431341120513621311,
+            "text": "2806431341120513621311/4150634573530209042432"
+          },
+          "negative_probability_lower_bound": {
+            "denominator": 4150634573530209042432,
+            "numerator": 1344203232409695421121,
+            "text": "1344203232409695421121/4150634573530209042432"
+          },
+          "observed_negative_fraction": {
+            "denominator": 49,
+            "numerator": 33,
+            "text": "33/49"
+          },
+          "q": 7,
+          "verified_bound_holds": true
+        }
+      ],
+      "haar": {
+        "moment_majorant_nonnegative_upper_bound": {
+          "denominator": 6358302720,
+          "numerator": 3879608783,
+          "text": "3879608783/6358302720"
+        },
+        "negative_probability_lower_bound": {
+          "denominator": 6358302720,
+          "numerator": 2478693937,
+          "text": "2478693937/6358302720"
+        }
+      },
+      "nonnegative_support_proof": "On t in [-1,1], t+1>=0, the two middle factors are squares, and 2927-2792*t>=135, so p(t)>=0.",
+      "pointwise_statement": "1_{x>=0} <= p((3*x+28)/32) on [-20,4/3]",
+      "polynomial_factorization": "p(t)=(t+1)*(20*t-13)^2*(40*t-7)^2*(2927-2792*t)/14407470",
+      "positive_interval_bernstein_coordinate": "z=8*t-7 in [0,1]",
+      "positive_interval_factorization": "p(t)-1=(t-7/8)*(1-t)*Q(t)",
+      "positive_interval_proof": "Every stored Bernstein coefficient of Q is positive, hence Q(t)>0 on [7/8,1]; both remaining factors are nonnegative there.",
+      "positive_interval_quotient_bernstein_coefficients_degree_4": [
+        {
+          "denominator": 38115,
+          "numerator": 1985264,
+          "text": "1985264/38115"
+        },
+        {
+          "denominator": 2401245,
+          "numerator": 145906487,
+          "text": "145906487/2401245"
+        },
+        {
+          "denominator": 43222410,
+          "numerator": 3063511081,
+          "text": "3063511081/43222410"
+        },
+        {
+          "denominator": 2401245,
+          "numerator": 198471997,
+          "text": "198471997/2401245"
+        },
+        {
+          "denominator": 10395,
+          "numerator": 1001492,
+          "text": "1001492/10395"
+        }
+      ],
+      "strictly_improves_cubic_square_bound": true
+    }
+  },
+  "range_certificate": {
+    "formula": "F=(X+Y)^2-(2+X*Y)^2=(X-Y)^2-4-X^2*Y^2",
+    "maximum": {
+      "denominator": 3,
+      "numerator": 4,
+      "text": "4/3"
+    },
+    "maximum_witnesses": [
+      {
+        "X": {
+          "denominator": 1,
+          "numerator": 2,
+          "text": "2"
+        },
+        "Y": {
+          "denominator": 3,
+          "numerator": -2,
+          "text": "-2/3"
+        }
+      },
+      {
+        "X": {
+          "denominator": 3,
+          "numerator": -2,
+          "text": "-2/3"
+        },
+        "Y": {
+          "denominator": 1,
+          "numerator": 2,
+          "text": "2"
+        }
+      },
+      {
+        "X": {
+          "denominator": 1,
+          "numerator": -2,
+          "text": "-2"
+        },
+        "Y": {
+          "denominator": 3,
+          "numerator": 2,
+          "text": "2/3"
+        }
+      },
+      {
+        "X": {
+          "denominator": 3,
+          "numerator": 2,
+          "text": "2/3"
+        },
+        "Y": {
+          "denominator": 1,
+          "numerator": -2,
+          "text": "-2"
+        }
+      }
+    ],
+    "minimum": {
+      "denominator": 1,
+      "numerator": -20,
+      "text": "-20"
+    },
+    "minimum_witnesses": [
+      {
+        "X": {
+          "denominator": 1,
+          "numerator": -2,
+          "text": "-2"
+        },
+        "Y": {
+          "denominator": 1,
+          "numerator": -2,
+          "text": "-2"
+        }
+      },
+      {
+        "X": {
+          "denominator": 1,
+          "numerator": 2,
+          "text": "2"
+        },
+        "Y": {
+          "denominator": 1,
+          "numerator": 2,
+          "text": "2"
+        }
+      }
+    ],
+    "proof": "The lower bound follows from (X-Y)^2>=0 and X^2Y^2<=16. For the upper bound, fix Y: the quadratic in X is convex when |Y|<=1, so an endpoint gives -3Y^2+4|Y|<=4/3; when |Y|>1, checking the feasible vertex and endpoints gives the same bound.",
+    "status": "PROVED_EXACT_ELEMENTARY_OPTIMIZATION",
+    "trace_coordinates": "X=2*cos(theta_1), Y=2*cos(theta_2), each in [-2,2]"
+  },
+  "schema": "riemann.atlas.raw.function_field_usp4_toy_minor_moments.v1",
+  "source_locks": {
+    "character_decomposition_fixture": {
+      "canonical_sha256": "fdc92b8a3bdd3e89df1a14b4cfb66be417b5dabe5f0ccd6958e1e48258dc58af",
+      "path": "research/l-families/atlas/function_field/usp4_toy_minor_character_decomposition.json",
+      "producer_source_sha256_lf_normalized": "2f5187421d0add48806c6710ff520a0e8281805457eeebe570d1e8ef5475820b"
+    },
+    "character_decomposition_source": {
+      "path": "research/l-families/atlas/function_field/usp4_toy_minor_character_decomposition.py",
+      "raw_sha256": "2f5187421d0add48806c6710ff520a0e8281805457eeebe570d1e8ef5475820b"
+    },
+    "comparator_fixture": {
+      "canonical_sha256": "0a668053e6dfeee2887016996ea93023fbf16773932c444e749301f586098495",
+      "path": "research/l-families/atlas/function_field/usp4_toy_minor_moments.json",
+      "payload_sha256": "843a2fe286e52bcf83f971c624454c8a2e8c69e8c894b79c898728ff74e35e6f"
+    },
+    "comparator_source": {
+      "path": "research/l-families/atlas/function_field/usp4_toy_minor_moments.py",
+      "raw_sha256": "533f0938006223bb67fc76b9d2011347fc3cc617be69ca7bf0440d79b2660f89"
+    },
+    "q_scan_fixture": {
+      "canonical_sha256": "5190f667e341fb0ffc4affe41920be9edb53c1cfd1a663a28b30c5374e4bf632",
+      "path": "research/l-families/atlas/function_field/genus2_q_scan.json",
+      "payload_sha256": "80a28d820e45b2548e3e4b482982ef8313c8919f4a3fb9cc2c0b622b244870b5"
+    },
+    "q_scan_source": {
+      "path": "research/l-families/atlas/function_field/genus2_q_scan.py",
+      "raw_sha256": "f595dbf52d4265cfe2ea6888255f53df887fed77e204103f2b0dfd95e961f935"
+    },
+    "twelve_moment_fixture": {
+      "canonical_sha256": "f7ac9670cacc6ea9abf69cd1f9ce6935f404ac278c7fad2a5546f21b62fa016d",
+      "path": "research/l-families/atlas/function_field/usp4_twelve_moment_sign_bound.json",
+      "payload_sha256": "a49959c36cb7f6287e2f740d92778114cc81cdf0cf6101ecd1e203456e15774e"
+    },
+    "twelve_moment_source": {
+      "path": "research/l-families/atlas/function_field/usp4_twelve_moment_sign_bound.py",
+      "raw_sha256": "e191b47104a8ef318d56c378999b3d9b467062dca95c6a7815bcdbaf8709af49"
+    }
+  },
+  "twelve_moment_sign_certificate": {
+    "event": "F>=0",
+    "finite_q_bounds": [
+      {
+        "moment_majorant_nonnegative_upper_bound": {
+          "denominator": 37608867731024471935560343577699449033962129015911284934447907886596096,
+          "numerator": 25775402379863804286755901016393787628512946087002958086158162118977769,
+          "text": "25775402379863804286755901016393787628512946087002958086158162118977769/37608867731024471935560343577699449033962129015911284934447907886596096"
+        },
+        "negative_probability_lower_bound": {
+          "denominator": 37608867731024471935560343577699449033962129015911284934447907886596096,
+          "numerator": 11833465351160667648804442561305661405449182928908326848289745767618327,
+          "text": "11833465351160667648804442561305661405449182928908326848289745767618327/37608867731024471935560343577699449033962129015911284934447907886596096"
+        },
+        "observed_negative_fraction": {
+          "denominator": 27,
+          "numerator": 17,
+          "text": "17/27"
+        },
+        "q": 3,
+        "verified_bound_holds": true
+      },
+      {
+        "moment_majorant_nonnegative_upper_bound": {
+          "denominator": 31099095576198230177116164562564241729096717655761201877929164800000000000,
+          "numerator": 18721910657251664640732665969500665113318984444309243589388042011446280239,
+          "text": "18721910657251664640732665969500665113318984444309243589388042011446280239/31099095576198230177116164562564241729096717655761201877929164800000000000"
+        },
+        "negative_probability_lower_bound": {
+          "denominator": 31099095576198230177116164562564241729096717655761201877929164800000000000,
+          "numerator": 12377184918946565536383498593063576615777733211451958288541122788553719761,
+          "text": "12377184918946565536383498593063576615777733211451958288541122788553719761/31099095576198230177116164562564241729096717655761201877929164800000000000"
+        },
+        "observed_negative_fraction": {
+          "denominator": 50,
+          "numerator": 33,
+          "text": "33/50"
+        },
+        "q": 5,
+        "verified_bound_holds": true
+      },
+      {
+        "moment_majorant_nonnegative_upper_bound": {
+          "denominator": 62779239557570273539339817794204265317679215592269939823964387414858848569995676990046208,
+          "numerator": 37191747621933680382287324939947204552899438052010386148205302580614437380433495393506103,
+          "text": "37191747621933680382287324939947204552899438052010386148205302580614437380433495393506103/62779239557570273539339817794204265317679215592269939823964387414858848569995676990046208"
+        },
+        "negative_probability_lower_bound": {
+          "denominator": 62779239557570273539339817794204265317679215592269939823964387414858848569995676990046208,
+          "numerator": 25587491935636593157052492854257060764779777540259553675759084834244411189562181596540105,
+          "text": "25587491935636593157052492854257060764779777540259553675759084834244411189562181596540105/62779239557570273539339817794204265317679215592269939823964387414858848569995676990046208"
+        },
+        "observed_negative_fraction": {
+          "denominator": 49,
+          "numerator": 33,
+          "text": "33/49"
+        },
+        "q": 7,
+        "verified_bound_holds": true
+      }
+    ],
+    "haar_bound": {
+      "moment_majorant_nonnegative_upper_bound": {
+        "denominator": 318454738700269877013669525120657835305950388794994707229994647552,
+        "numerator": 165373093729595698644691055097919487644206880882919392440503838869,
+        "text": "165373093729595698644691055097919487644206880882919392440503838869/318454738700269877013669525120657835305950388794994707229994647552"
+      },
+      "negative_probability_lower_bound": {
+        "denominator": 318454738700269877013669525120657835305950388794994707229994647552,
+        "numerator": 153081644970674178368978470022738347661743507912075314789490808683,
+        "text": "153081644970674178368978470022738347661743507912075314789490808683/318454738700269877013669525120657835305950388794994707229994647552"
+      },
+      "strict_improvement": {
+        "denominator": 17515010628514843235751823881636180941827271383724708897649705615360,
+        "numerator": 1591512542290665885075183371275920634034566533880115933864168256509,
+        "text": "1591512542290665885075183371275920634034566533880115933864168256509/17515010628514843235751823881636180941827271383724708897649705615360"
+      },
+      "strictly_improves_support_adapted_degree_six_bound": true,
+      "support_adapted_degree_six_upper_bound": {
+        "denominator": 6358302720,
+        "numerator": 3879608783,
+        "text": "3879608783/6358302720"
+      }
+    },
+    "haar_moments_orders_1_through_12": [
+      -1,
+      3,
+      -11,
+      56,
+      -374,
+      3117,
+      -30321,
+      327688,
+      -3815668,
+      46998100,
+      -605231862,
+      8084025096
+    ],
+    "majorant": {
+      "all_positive_side_bernstein_coefficients_strictly_positive": true,
+      "definition": "P(x)=p((3*x+28)/32)",
+      "degree": 12,
+      "exact_factorization_and_positivity_replayed": true,
+      "nonnegative_side_proof": "p(t)=C*product(t-r)^2*((t+A/2)^2+B-A^2/4), with C and the stored floor positive.",
+      "pointwise_statement": "P(x)>=0 on [-20,0], and P(x)>=1 on [0,4/3].",
+      "positive_side_bernstein_coefficient_count": 10,
+      "positive_side_bernstein_coordinate": "t=7/8+z/8, z in [0,1]",
+      "positive_side_factorization": "p(t)-1=(t-7/8)*(t-241/250)^2*Q(t)"
+    },
+    "maximum_moment": 12,
+    "resource_contract": {
+      "actual_laurent_pair_products": 238743,
+      "external_dependencies": false,
+      "field_enumeration": false,
+      "maximum_laurent_pair_products": 300000,
+      "maximum_wall_seconds": 3.0,
+      "numerical_integration": false,
+      "random_sampling": false
+    },
+    "scope": {
+      "discovery_firewall": "Numerical linear programming nominated the rational factor pattern; acceptance replays only exact rational algebra.",
+      "haar_statement": "Pr_Haar(F>=0) is at most the stored rational expectation.",
+      "not_a_number_field_transfer": true,
+      "not_an_equidistribution_theorem": true,
+      "not_an_optimality_claim": true
+    },
+    "status": "RIGOROUS_EXACT_FINITE_MOMENT_MAJORANT"
+  },
+  "weyl_certificate": {
+    "arithmetic": "exact integer Laurent-polynomial convolution",
+    "density_constant_term": 8,
+    "formula": "integral f = CT(f*product_{alpha>0}(1-X^alpha)(1-X^-alpha))/8",
+    "haar_centered_moments_orders_1_through_6": [
+      0,
+      2,
+      -4,
+      27,
+      -178,
+      1533
+    ],
+    "haar_cumulants_orders_1_through_6": [
+      -1,
+      2,
+      -4,
+      15,
+      -98,
+      803
+    ],
+    "haar_moments_orders_1_through_6": [
+      -1,
+      3,
+      -11,
+      56,
+      -374,
+      3117
+    ],
+    "maximum_moment": 6,
+    "positive_roots_as_exponent_pairs": [
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        -1
+      ]
+    ],
+    "root_system": "C2"
+  }
+}

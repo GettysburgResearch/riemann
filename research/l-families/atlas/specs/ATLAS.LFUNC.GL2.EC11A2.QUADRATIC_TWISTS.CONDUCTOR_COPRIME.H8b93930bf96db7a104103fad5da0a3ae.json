@@ -1,0 +1,257 @@
+{
+  "analytic_properties": {
+    "analytic_continuation": "IMPORTED_THEOREM",
+    "euler_product": "IMPORTED_THEOREM",
+    "functional_equation": "IMPORTED_THEOREM",
+    "source_ref": "research/l-families/atlas/sources/quadratic-twist-root-number.json"
+  },
+  "assumptions": [
+    {
+      "code": "BASE_CURVE_METADATA_IMPORTED",
+      "statement": "The LMFDB model, conductor 11, identification with the intended newform, and base root number +1 are imported discovery metadata.",
+      "status": "IMPORTED"
+    },
+    {
+      "code": "TWIST_SIGN_THEOREM_IMPORTED",
+      "statement": "Rohrlich's corollary and Conrey equation (19) are imported on the enforced fundamental-discriminant and conductor-coprime domain.",
+      "status": "IMPORTED"
+    }
+  ],
+  "base_field": {
+    "characteristic": 0,
+    "label": "Q"
+  },
+  "central_data": {
+    "assertion": "UNKNOWN",
+    "notes": "No central order is computed or inferred from the functional-equation sign.",
+    "parity_forced": false,
+    "rigor_level": "DISCOVERY_ONLY",
+    "source_ref": "NONE",
+    "value": null
+  },
+  "classification": {
+    "automorphic_class": "GL2",
+    "degree": 2,
+    "domain": "NUMBER_FIELD",
+    "family_id": "GL2.EC11A2.FUNDAMENTAL_DISCRIMINANT.COPRIME11",
+    "motivic_weight": 1,
+    "object_type": "QUADRATIC_TWIST_L",
+    "self_duality": "SELF_DUAL",
+    "symmetry_type": "ORTHOGONAL_UNSPLIT"
+  },
+  "completed_normalization": {
+    "analytic_variable": "unitary s",
+    "conductor_factor": "(|d|*sqrt(11))^s",
+    "critical_center": "1/2",
+    "exact_formula": "xi_d(s)=(|d|*sqrt(11)/(2*pi))^s*Gamma(s+1/2)*L_f(s,chi_d)",
+    "gamma_factors": [
+      {
+        "kind": "EXPLICIT_OTHER",
+        "multiplicity": 1,
+        "notes": "Conrey equation (19) specialized to weight k=2 and level N=11.",
+        "scale": "(2*pi)^(-s)",
+        "shift": "1/2"
+      }
+    ],
+    "normalization_id": "GL2.WEIGHT2.QUADRATIC_TWIST.UNITARY.COPRIME",
+    "notes": "The corresponding classical variable is S=s+1/2, with center S=1 and completion (|d|*sqrt(11)/(2*pi))^S*Gamma(S)*L_classical(S)."
+  },
+  "conductor": {
+    "kind": "INTEGER",
+    "status": "IMPORTED_THEOREM",
+    "value": "11*d^2 for fundamental discriminants d with gcd(d,11)=1"
+  },
+  "data_sources": [
+    {
+      "coverage": "PDF pp. 28-29; printed pp. 337-338; Proposition 10 and the immediately following Corollary",
+      "hashes": [
+        {
+          "algorithm": "sha256",
+          "binds": "observed PDF bytes for ROHRLICH_1996",
+          "hash_mode": "RAW_BYTES",
+          "value": "0a1c0de28382b7474c3c59c549b4092f5c76f8d800758f96377abd7e05a1fe31"
+        }
+      ],
+      "identifier": "ROHRLICH:CM:1996:PROP10_COROLLARY",
+      "locator": "https://www.numdam.org/item/CM_1996__100_3_311_0.pdf",
+      "notes": "If the conductor ideals N(E) and N(tau) are relatively prime, Proposition 10 gives W(E,tau)=sign(det(tau))*det(tau)(N(E))*W(E)^dim(tau). Its corollary gives W(E^chi)=sign(chi)*chi(N(E))*W(E) for quadratic chi of conductor relatively prime to N(E).",
+      "retention": "DURABLE_EXTERNAL",
+      "rigor_level": "RIGOROUS_GIVEN_IMPORTED_THEOREM",
+      "role": "root_number_theorem",
+      "source_kind": "PUBLICATION",
+      "version_or_retrieved_utc": "1996"
+    },
+    {
+      "coverage": "Author PDF p. 11, Section 3.3, equation (19); character conventions on author PDF p. 5, Section 2.3",
+      "hashes": [
+        {
+          "algorithm": "sha256",
+          "binds": "observed PDF bytes for CONREY_EQ19",
+          "hash_mode": "RAW_BYTES",
+          "value": "b3eac714eaefdbd52f70d1136d987bb7a0e25973d9f9c11a9f750dfd43856d35"
+        }
+      ],
+      "identifier": "CONREY:FAMILIES:EQ19",
+      "locator": "https://aimath.org/~kaur/publications/54.pdf",
+      "notes": "For a primitive form f of weight k and level N and a primitive real quadratic character chi_d of conductor |d| with gcd(N,|d|)=1, the twist has level N*d^2 and xi_f(s,chi_d)=(|d|*sqrt(N)/(2*pi))^s*Gamma(s+(k-1)/2)*L_f(s,chi_d)=w_f*chi_d(-N)*xi_f(1-s,chi_d).",
+      "retention": "DURABLE_EXTERNAL",
+      "rigor_level": "RIGOROUS_GIVEN_IMPORTED_THEOREM",
+      "role": "root_number_theorem",
+      "source_kind": "PUBLICATION",
+      "version_or_retrieved_utc": "2005"
+    },
+    {
+      "coverage": "Pinned theorem statements, normalizations, negative-d convention, and 11.a2 specialization.",
+      "hashes": [
+        {
+          "algorithm": "sha256",
+          "binds": "canonical JSON quadratic-twist root-number source manifest",
+          "hash_mode": "CANONICAL_JSON_UTF8_NFC",
+          "value": "641ee1e4b45695769b5b0594d4f0d977da957e042c93ccefebfa76e4102ad9bf"
+        }
+      ],
+      "identifier": "ATLAS:SOURCE:QUADRATIC_TWIST_ROOT_NUMBER:V1",
+      "locator": "research/l-families/atlas/sources/quadratic-twist-root-number.json",
+      "notes": "The checked-in manifest is also content-bound by the evaluation.",
+      "retention": "CHECKED_IN",
+      "rigor_level": "RIGOROUS_GIVEN_IMPORTED_THEOREM",
+      "role": "root_number_source_manifest",
+      "source_kind": "REPOSITORY",
+      "version_or_retrieved_utc": "2026-08-24T15:00:00Z"
+    },
+    {
+      "coverage": "Compact 11.a2 model, conductor, bad-prime, and imported base-sign metadata.",
+      "hashes": [
+        {
+          "algorithm": "sha256",
+          "binds": "canonical JSON compact LMFDB curve manifest",
+          "hash_mode": "CANONICAL_JSON_UTF8_NFC",
+          "value": "66c7c62a159c0ab32178bdb21aefae18adb3f2e759cd507918c282ac7e318e32"
+        }
+      ],
+      "identifier": "ATLAS:SOURCE:LMFDB_CURVES",
+      "locator": "research/l-families/atlas/sources/lmfdb-curves.json",
+      "notes": "The compact manifest does not retain the complete LMFDB responses.",
+      "retention": "CHECKED_IN",
+      "rigor_level": "DISCOVERY_ONLY",
+      "role": "curve_source_manifest",
+      "source_kind": "REPOSITORY",
+      "version_or_retrieved_utc": "2026-08-24T15:00:00Z"
+    },
+    {
+      "coverage": "Weierstrass model, conductor, and bad-prime metadata for 11.a2.",
+      "hashes": [
+        {
+          "algorithm": "sha256",
+          "binds": "observed unretained LMFDB API response bytes",
+          "hash_mode": "RAW_BYTES",
+          "value": "e0824c28a68ff026be9f4de19cba39811cb8874527a1893b04c6e0afda80927b"
+        }
+      ],
+      "identifier": "LMFDB:EC:11.a2",
+      "locator": "https://www.lmfdb.org/api/ec_curvedata/?lmfdb_label=11.a2&_format=json",
+      "notes": "The response hash is an observation lock, not an independently retained certificate.",
+      "retention": "DYNAMIC_EXTERNAL",
+      "rigor_level": "DISCOVERY_ONLY",
+      "role": "curve_metadata",
+      "source_kind": "DATABASE",
+      "version_or_retrieved_utc": "2026-08-24T14:48:23.287985Z"
+    },
+    {
+      "coverage": "Imported base functional-equation sign +1.",
+      "hashes": [],
+      "identifier": "LMFDB:LFUNCTION:11.a",
+      "locator": "https://www.lmfdb.org/L/EllipticCurve/Q/11/a/",
+      "notes": "The dynamic LMFDB page is identified but not archived in this packet.",
+      "retention": "DYNAMIC_EXTERNAL",
+      "rigor_level": "DISCOVERY_ONLY",
+      "role": "base_root_number",
+      "source_kind": "DATABASE",
+      "version_or_retrieved_utc": "2026-08-24T14:48:23.287985Z"
+    }
+  ],
+  "euler_product": {
+    "bad_factor_policy": "The covariance omits the base bad prime 11; when p divides d, chi_d(p)=0 is retained in the coefficient row and no unramified degree-two factor is asserted.",
+    "coverage": "Exact coefficient twists at the 13 declared primes through 43, conditional on the imported 11.a2 model; not a complete memberwise Euler-product archive.",
+    "good_factor_formula": "For p not dividing 11*d, L_{p,d}(S)^(-1)=1-a_p*chi_d(p)*p^(-S)+p^(1-2*S).",
+    "reciprocal_coefficient_definition": "At the emitted primes, the classical first coefficient is a_p*chi_d(p), and the unitary prime-sum coordinate is a_p*chi_d(p)/sqrt(p).",
+    "rigor_level": "DISCOVERY_ONLY",
+    "source_refs": [
+      "research/l-families/atlas/sources/lmfdb-curves.json",
+      "research/l-families/atlas/core/twist_character_covariance.py",
+      "research/l-families/atlas/core/local_euler.py"
+    ]
+  },
+  "functional_equation": {
+    "exact_formula": "xi_d(s)=epsilon(11.a2)*chi_d(-11)*xi_d(1-s), with epsilon(11.a2)=+1 and chi_d(-11)=sign(d)*(d/11)",
+    "root_number": "epsilon_d=sign(d)*(d/11)",
+    "root_number_status": "IMPORTED_THEOREM",
+    "source_ref": "research/l-families/atlas/sources/quadratic-twist-root-number.json"
+  },
+  "identity_kernel": {
+    "base_field_label": "Q",
+    "construction": "Family d -> L_f(s,chi_d) for fundamental discriminants d with gcd(d,11)=1, where f is the weight-2 newform identified by the imported 11.a2 metadata",
+    "slug": "GL2.EC11A2.QUADRATIC_TWISTS.CONDUCTOR_COPRIME",
+    "source_identifiers": [
+      "ATLAS:SOURCE:LMFDB_CURVES",
+      "ATLAS:SOURCE:QUADRATIC_TWIST_ROOT_NUMBER:V1",
+      "CONREY:FAMILIES:EQ19",
+      "LMFDB:EC:11.a2",
+      "LMFDB:LFUNCTION:11.a",
+      "ROHRLICH:CM:1996:PROP10_COROLLARY"
+    ],
+    "twist_parameters": [
+      "fundamental_discriminant",
+      "gcd(d,11)=1"
+    ],
+    "version": 1
+  },
+  "identity_sha256": "8b93930bf96db7a104103fad5da0a3ae58a40056c78150957cdac28370018dbb",
+  "notes": "This DRAFT family spec records the sign split only. It imports no ranks, central orders, or zeros and makes no finite-to-asymptotic inference.",
+  "programme_refs": [
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 738,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/738"
+    },
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 741,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/741"
+    }
+  ],
+  "record_state": "DRAFT",
+  "record_type": "L_FUNCTION_SPEC",
+  "revision": 1,
+  "schema_version": "riemann.atlas.l_function_spec.v1",
+  "scope_boundary": "All fundamental-discriminant quadratic twists coprime to conductor 11 as a defined family; the attached evaluation is finite through |d|<=2048 and p<=43, with no rank, zero, or asymptotic conclusion.",
+  "semantic_id": "ATLAS.LFUNC.GL2.EC11A2.QUADRATIC_TWISTS.CONDUCTOR_COPRIME.H8b93930bf96db7a104103fad5da0a3ae",
+  "software": [
+    {
+      "name": "CPython",
+      "role": "exact integer point counts and rational moment aggregation",
+      "version": "3.12.10"
+    }
+  ],
+  "source_identifiers": [
+    "ATLAS:SOURCE:LMFDB_CURVES",
+    "ATLAS:SOURCE:QUADRATIC_TWIST_ROOT_NUMBER:V1",
+    "CONREY:FAMILIES:EQ19",
+    "LMFDB:EC:11.a2",
+    "LMFDB:LFUNCTION:11.a",
+    "ROHRLICH:CM:1996:PROP10_COROLLARY"
+  ],
+  "supersedes": [],
+  "title": "Conductor-coprime quadratic twists of the 11.a2 weight-2 L-function",
+  "zero_data": {
+    "central_zero_policy": "NOT_APPLICABLE",
+    "coverage_class": "NOT_APPLICABLE",
+    "precision": null,
+    "rigor_level": "DISCOVERY_ONLY",
+    "source_refs": [],
+    "usage": "NOT_USED",
+    "window": null
+  }
+}

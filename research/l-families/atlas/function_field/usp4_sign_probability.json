@@ -1,0 +1,267 @@
+{
+  "boundary_certificate": {
+    "statement": "F=(X-Y)^2-4-X^2*Y^2 is a nonzero polynomial, so F=0 is an algebraic curve of two-dimensional Lebesgue measure zero; the USp(4) Weyl measure is absolutely continuous in the trace-coordinate square.",
+    "status": "PROVED_HAAR_MEASURE_ZERO",
+    "weak_convergence_consequence": "Any proved weak convergence of the genus-two Frobenius class measures to Haar would imply convergence of the negative proportions because {F<0} is a Haar continuity set."
+  },
+  "display_estimate": "0.737849043834",
+  "finite_comparisons": [
+    {
+      "member_count": 162,
+      "negative_count": 102,
+      "negative_proportion": [
+        17,
+        27
+      ],
+      "negative_proportion_display": "0.629629629630",
+      "q": 3,
+      "quadrature_minus_finite_display": "0.108219414204"
+    },
+    {
+      "member_count": 2500,
+      "negative_count": 1650,
+      "negative_proportion": [
+        33,
+        50
+      ],
+      "negative_proportion_display": "0.660000000000",
+      "q": 5,
+      "quadrature_minus_finite_display": "0.077849043834"
+    },
+    {
+      "member_count": 14406,
+      "negative_count": 9702,
+      "negative_proportion": [
+        33,
+        49
+      ],
+      "negative_proportion_display": "0.673469387755",
+      "q": 7,
+      "quadrature_minus_finite_display": "0.064379656079"
+    }
+  ],
+  "firewall": "The exact range, Haar moments, Haar-null boundary, and all-q 1/20 liminf floor are separate certified results. This display-only probability quadrature is not an interval proof and must not be used as a theorem or number-field transfer.",
+  "grid_refinement": [
+    {
+      "cell_count": 65536,
+      "grid_size": 128,
+      "phase_count": 4,
+      "phase_estimates": [
+        {
+          "boundary_grid_weight_display": "0.000000000000",
+          "exact_moment_controls_pass": true,
+          "negative_probability_display": "0.737289159171",
+          "phase": [
+            "1/2",
+            "1/2"
+          ]
+        },
+        {
+          "boundary_grid_weight_display": "0.000000000000",
+          "exact_moment_controls_pass": true,
+          "negative_probability_display": "0.737383873827",
+          "phase": [
+            "1/4",
+            "3/4"
+          ]
+        },
+        {
+          "boundary_grid_weight_display": "0.000000000000",
+          "exact_moment_controls_pass": true,
+          "negative_probability_display": "0.736210673813",
+          "phase": [
+            "1/8",
+            "3/8"
+          ]
+        },
+        {
+          "boundary_grid_weight_display": "0.000000000000",
+          "exact_moment_controls_pass": true,
+          "negative_probability_display": "0.737383873827",
+          "phase": [
+            "3/4",
+            "1/4"
+          ]
+        }
+      ],
+      "phase_mean_display": "0.737066895159",
+      "phase_spread_display": "0.001173200014"
+    },
+    {
+      "cell_count": 262144,
+      "grid_size": 256,
+      "phase_count": 4,
+      "phase_estimates": [
+        {
+          "boundary_grid_weight_display": "0.000000000000",
+          "exact_moment_controls_pass": true,
+          "negative_probability_display": "0.737383873827",
+          "phase": [
+            "1/2",
+            "1/2"
+          ]
+        },
+        {
+          "boundary_grid_weight_display": "0.000000000000",
+          "exact_moment_controls_pass": true,
+          "negative_probability_display": "0.737832741873",
+          "phase": [
+            "1/4",
+            "3/4"
+          ]
+        },
+        {
+          "boundary_grid_weight_display": "0.000000000000",
+          "exact_moment_controls_pass": true,
+          "negative_probability_display": "0.737725038933",
+          "phase": [
+            "1/8",
+            "3/8"
+          ]
+        },
+        {
+          "boundary_grid_weight_display": "0.000000000000",
+          "exact_moment_controls_pass": true,
+          "negative_probability_display": "0.737832741873",
+          "phase": [
+            "3/4",
+            "1/4"
+          ]
+        }
+      ],
+      "phase_mean_display": "0.737693599127",
+      "phase_spread_display": "0.000448868046"
+    },
+    {
+      "cell_count": 1048576,
+      "grid_size": 512,
+      "phase_count": 4,
+      "phase_estimates": [
+        {
+          "boundary_grid_weight_display": "0.000000000000",
+          "exact_moment_controls_pass": true,
+          "negative_probability_display": "0.737832741873",
+          "phase": [
+            "1/2",
+            "1/2"
+          ]
+        },
+        {
+          "boundary_grid_weight_display": "0.000000000000",
+          "exact_moment_controls_pass": true,
+          "negative_probability_display": "0.737830911576",
+          "phase": [
+            "1/4",
+            "3/4"
+          ]
+        },
+        {
+          "boundary_grid_weight_display": "0.000000000000",
+          "exact_moment_controls_pass": true,
+          "negative_probability_display": "0.737901610312",
+          "phase": [
+            "1/8",
+            "3/8"
+          ]
+        },
+        {
+          "boundary_grid_weight_display": "0.000000000000",
+          "exact_moment_controls_pass": true,
+          "negative_probability_display": "0.737830911576",
+          "phase": [
+            "3/4",
+            "1/4"
+          ]
+        }
+      ],
+      "phase_mean_display": "0.737849043834",
+      "phase_spread_display": "0.000070698736"
+    }
+  ],
+  "interpretation": "The shifted-grid calculation nominates a Haar negative mass near 0.738. The exact q=3,5,7 negative proportions rise toward it, but three fields and numerical quadrature do not prove convergence, a rate, or a limiting sign law.",
+  "measure": {
+    "C2_positive_roots": [
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        -1
+      ]
+    ],
+    "density_constant_term": 8,
+    "domain": "full two-torus [0,2*pi)^2",
+    "weyl_density": "product_{alpha>0}(2-2*cos(alpha dot theta))"
+  },
+  "payload_sha256": "b30d56a1bbf31828ca4087a2a31c8009ce44b643861fe3dc667e61837d6960f2",
+  "q_scan_source_lock": {
+    "canonical_sha256": "5190f667e341fb0ffc4affe41920be9edb53c1cfd1a663a28b30c5374e4bf632",
+    "path": "research/l-families/atlas/function_field/genus2_q_scan.json",
+    "payload_sha256": "80a28d820e45b2548e3e4b482982ef8313c8919f4a3fb9cc2c0b622b244870b5"
+  },
+  "resource_contract": {
+    "grid_sizes": [
+      128,
+      256,
+      512
+    ],
+    "maximum_total_cells": 1400000,
+    "maximum_wall_seconds": 5.0,
+    "phase_shifts": [
+      [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      [
+        [
+          1,
+          8
+        ],
+        [
+          3,
+          8
+        ]
+      ],
+      [
+        [
+          3,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ]
+    ],
+    "randomness": "NONE",
+    "total_cell_count": 1376256
+  },
+  "schema": "riemann.atlas.function_field.usp4_sign_probability.v1",
+  "statistic": "F=(Tr U)^2-e_2(U)^2=(X-Y)^2-4-X^2*Y^2",
+  "status": "DISCOVERY_ONLY_NUMERICAL_QUADRATURE"
+}

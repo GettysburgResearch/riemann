@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/gfreund123/riemann/research/l-families/atlas/schema/evaluation-record.schema.json",
+  "title": "EvaluationRecord v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "record_type", "semantic_id", "identity_sha256", "identity_kernel", "title", "revision", "record_state",
+    "programme_refs", "scope_boundary", "supersedes", "subject", "lfunction_spec_bindings", "detector_contract_binding",
+    "adapter_bindings", "configuration", "evaluation_scope", "input_bindings", "input_fulfillments", "arithmetic", "coverage", "rigor_level",
+    "software", "run", "central_zero_policy_applied", "result", "result_hashes", "interpretation", "assumptions", "firewalls", "notes"
+  ],
+  "properties": {
+    "schema_version": {"const": "riemann.atlas.evaluation_record.v1"},
+    "record_type": {"const": "EVALUATION_RECORD"},
+    "semantic_id": {"type": "string", "pattern": "^ATLAS\\.EVAL\\.[A-Z0-9_.-]+\\.H[0-9a-f]{32}$"},
+    "identity_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "identity_kernel": {
+      "type": "object", "additionalProperties": false,
+      "required": ["version", "slug", "lfunction_spec_bindings", "detector_contract_binding", "adapter_bindings", "configuration_sha256", "input_sha256s", "input_fulfillments_sha256", "implementation_commit", "implementation_sha256", "seed"],
+      "properties": {
+        "version": {"const": 1},
+        "slug": {"type": "string", "pattern": "^[A-Z0-9_.-]+$"},
+        "lfunction_spec_bindings": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/contentBinding"}},
+        "detector_contract_binding": {"$ref": "common.schema.json#/$defs/contentBinding"},
+        "adapter_bindings": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/artifactBinding"}},
+        "configuration_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "input_sha256s": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^[0-9a-f]{64}$"}},
+        "input_fulfillments_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "implementation_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$|^PENDING$"},
+        "implementation_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "seed": {"type": ["string", "null"]}
+      }
+    },
+    "title": {"type": "string", "minLength": 1},
+    "revision": {"type": "integer", "minimum": 1},
+    "record_state": {"$ref": "common.schema.json#/$defs/recordState"},
+    "programme_refs": {"type": "array", "minItems": 1, "items": {"$ref": "common.schema.json#/$defs/programmeRef"}, "uniqueItems": true},
+    "scope_boundary": {"type": "string", "minLength": 1},
+    "supersedes": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/semanticId"}, "uniqueItems": true},
+    "subject": {
+      "type": "object", "additionalProperties": false,
+      "required": ["kind", "description"],
+      "properties": {
+        "kind": {"enum": ["L_FUNCTION", "L_FUNCTION_SET", "SYNTHETIC_CONTROL"]},
+        "description": {"type": "string", "minLength": 1}
+      }
+    },
+    "lfunction_spec_bindings": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/contentBinding"}},
+    "detector_contract_binding": {"$ref": "common.schema.json#/$defs/contentBinding"},
+    "adapter_bindings": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/artifactBinding"}},
+    "configuration": {
+      "type": "object", "additionalProperties": false,
+      "required": ["values", "canonical_sha256"],
+      "properties": {
+        "values": {"type": "object"},
+        "canonical_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "evaluation_scope": {"enum": ["SINGLE_OBJECT", "MEMBERWISE_BATCH", "FINITE_EXHAUSTIVE_FAMILY", "FAMILY_AVERAGE", "FAMILY_MOMENT", "SYNTHETIC_CONTROL"]},
+    "input_bindings": {"type": "array", "minItems": 1, "items": {"$ref": "common.schema.json#/$defs/artifactBinding"}},
+    "input_fulfillments": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "input_type", "coverage_class", "sources"],
+        "properties": {
+          "name": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+          "input_type": {"$ref": "common.schema.json#/$defs/inputType"},
+          "coverage_class": {"$ref": "common.schema.json#/$defs/coverageClass"},
+          "sources": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true}
+        }
+      }
+    },
+    "arithmetic": {
+      "type": "object", "additionalProperties": false,
+      "required": ["class", "directed", "rounding_contract", "serialization_contract"],
+      "properties": {
+        "class": {"$ref": "common.schema.json#/$defs/arithmeticClass"},
+        "directed": {"type": "boolean"},
+        "rounding_contract": {"type": "string"},
+        "serialization_contract": {"type": "string"}
+      }
+    },
+    "coverage": {
+      "type": "object", "additionalProperties": false,
+      "required": ["class", "statement", "omissions"],
+      "properties": {
+        "class": {"$ref": "common.schema.json#/$defs/coverageClass"},
+        "statement": {"type": "string", "minLength": 1},
+        "omissions": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "rigor_level": {"$ref": "common.schema.json#/$defs/rigorLevel"},
+    "software": {"type": "array", "minItems": 1, "items": {"$ref": "common.schema.json#/$defs/softwareLock"}},
+    "run": {
+      "type": "object", "additionalProperties": false,
+      "required": ["timestamp_utc", "command", "code_commit", "implementation_path", "implementation_sha256"],
+      "properties": {
+        "timestamp_utc": {"type": "string", "format": "date-time"},
+        "command": {"type": "string", "minLength": 1},
+        "code_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$|^PENDING$"},
+        "implementation_path": {"type": "string", "pattern": "^(?!/)(?!.*\\.\\.)(?!.*\\\\)[A-Za-z0-9._/-]+$"},
+        "implementation_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "wall_seconds": {"type": "number", "minimum": 0}
+      }
+    },
+    "central_zero_policy_applied": {"$ref": "common.schema.json#/$defs/centralZeroPolicy"},
+    "result": {
+      "type": "object", "additionalProperties": false,
+      "required": ["representation", "predicate_outcome", "artifact", "summary"],
+      "properties": {
+        "representation": {"enum": ["EXACT_INTEGER", "EXACT_RATIONAL", "DIRECTED_REAL_INTERVAL", "DIRECTED_COMPLEX_RECTANGLE", "NON_DIRECTED_DECIMAL", "BOOLEAN_PREDICATE", "VECTOR", "MATRIX", "HASHED_ARTIFACT", "SUMMARY_ONLY"]},
+        "predicate_outcome": {"enum": ["SATISFIED", "VIOLATED", "INDETERMINATE", "NOT_APPLICABLE"]},
+        "artifact": {"$ref": "common.schema.json#/$defs/artifactBinding"},
+        "summary": {"type": "string", "minLength": 1}
+      }
+    },
+    "result_hashes": {"type": "array", "minItems": 1, "items": {"$ref": "common.schema.json#/$defs/hash"}},
+    "interpretation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["status", "statement", "smallest_gap", "theorem_claim_id"],
+      "properties": {
+        "status": {"enum": ["EXACT_FINITE", "EMPIRICAL", "SYNTHETIC_CONTROL", "REFUTATION", "CONJECTURE_NOMINATION"]},
+        "statement": {"type": "string", "minLength": 1},
+        "smallest_gap": {"type": "string", "minLength": 1},
+        "theorem_claim_id": {"type": ["string", "null"]}
+      }
+    },
+    "assumptions": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/assumption"}},
+    "firewalls": {"type": "array", "minItems": 1, "items": {"$ref": "common.schema.json#/$defs/firewall"}},
+    "canonical_provenance_ref": {"$ref": "common.schema.json#/$defs/canonicalProvenanceRef"},
+    "notes": {"type": "string"}
+  }
+}

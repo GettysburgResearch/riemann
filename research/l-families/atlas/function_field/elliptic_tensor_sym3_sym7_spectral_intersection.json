@@ -1,0 +1,2139 @@
+{
+  "compact_trace_moment_context": {
+    "Std_SU2_tensor_Sym3_SU2_independent_product": [
+      1,
+      0,
+      1,
+      0,
+      8,
+      0,
+      170,
+      0,
+      5096
+    ],
+    "Sym7_SU2": [
+      1,
+      0,
+      1,
+      0,
+      8,
+      0,
+      260,
+      0,
+      11096
+    ],
+    "alias_through_degree": 4,
+    "degrees": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "firewall": "compact Haar moments are contextual fingerprints, not arithmetic-origin recovery or a local-to-global theorem",
+    "first_separation": "degree 6: 170 versus 260",
+    "generic_USp8_standard_degree_4_moment": 3,
+    "method": "exact Clebsch-Gordan multiplicity recursion; independent product moments multiply"
+  },
+  "complete_integral_raw_intersection_theorem": {
+    "Z_two_case": "C^2=2q is impossible for odd prime-power q by p-adic parity (and by the factor 2 when p is odd)",
+    "Z_zero_case": "the exact original-system stratification gives only (u,v)=(+/-2,0) or (0,+/-2), all graph points",
+    "no_search_dependency": "finite trace-triple replays are regressions, not the proof",
+    "nonsquare_q": "empty",
+    "normalized_graph_I": "(u,v)=(epsilon*C4(z),epsilon*z), C4(z)=z^4-4z^2+2",
+    "normalized_graph_II": "(u,v)=(epsilon*z,epsilon*C2(z)), C2(z)=z^2-2",
+    "proof_boundary": "the exact elimination leaves only the two graphs or the displayed residual support in Z=z^2=C^2/q; rationality of Z and odd-prime-power valuation exclude every residual",
+    "scope": "q=p^e for odd prime p, e>=1, and integral A,B,C; Hasse bounds are needed only for the count",
+    "sign": "epsilon in {-1,+1} is the same in both coordinates",
+    "square_graph_II_raw": "A=epsilon*C and s*B=epsilon*(C^2-2q)",
+    "square_graph_I_raw": "B=epsilon*C and s^3*A=epsilon*(C^4-4q*C^2+2q^2)",
+    "statement": "typed factor equality holds iff q is a square, say q=s^2 with s a positive integer, and one of the two same-epsilon raw graph systems holds"
+  },
+  "conventions": {
+    "base_factor": "P_t(T)=1-t*T+q*T^2 for geometric traces t=A,B,C",
+    "normalized_traces": "u=A/s, v=B/s, z=C/s after choosing s with s^2=q",
+    "same_epsilon": "both Std and Sym3 are odd under the central sign, so the graph signs must be coupled",
+    "square_q_identity": "when q=s^2 with chosen positive integer s, P_tensor(s^3*T)=P_Sym7(C)(T)",
+    "target": "Sym^7(E_C), degree 8 and weight 7",
+    "tensor": "Std(E_A) tensor Sym^3(E_B), degree 8 and weight 4",
+    "typed_raw_identity": "P_(Std(A) tensor Sym3(B))(q^(3/2)*T)=P_(Sym7(C))(T)",
+    "unscaled_firewall": "the unequal weights forbid comparison in the same unscaled variable"
+  },
+  "exact_elimination_certificate": {
+    "V_equals_2_factorization": "C(2,Z)=Z^2*(Z-2)^3*(Z^2-4Z+2)^3",
+    "Z_zero_original_system_stratification": {
+      "V_equals_2": "f2=-4, impossible",
+      "all_solutions_are_graph_points": true,
+      "first_equation": "u*v*(v^2-2)=0",
+      "solutions": [
+        {
+          "u": -2,
+          "v": 0
+        },
+        {
+          "u": 2,
+          "v": 0
+        },
+        {
+          "u": 0,
+          "v": -2
+        },
+        {
+          "u": 0,
+          "v": 2
+        }
+      ],
+      "u_equals_0": "f2=(V-4)*(V^2-2V+2), f4=V*(V-4)*(V^2-4V+5); the displayed Bezout identity makes V=4 necessary",
+      "u_equals_0_Bezout": "(1/2-V^2/10)*(V^2-2V+2)+(V/10+1/5)*V*(V^2-4V+5)=1",
+      "v_equals_0": "f2=2*(u^2-4), hence (u,v)=(+/-2,0)"
+    },
+    "cleared_factorizations": {
+      "A_serialized": [
+        [
+          [
+            3,
+            0
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            2,
+            2
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            2,
+            1
+          ],
+          -3,
+          1
+        ],
+        [
+          [
+            2,
+            0
+          ],
+          -4,
+          1
+        ],
+        [
+          [
+            1,
+            4
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            1,
+            3
+          ],
+          -7,
+          1
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          13,
+          1
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          -4,
+          1
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          6,
+          1
+        ],
+        [
+          [
+            0,
+            4
+          ],
+          -1,
+          1
+        ],
+        [
+          [
+            0,
+            3
+          ],
+          8,
+          1
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          -20,
+          1
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          16,
+          1
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          -4,
+          1
+        ]
+      ],
+      "A_sha256": "8dfd20df07bd51688fec4e24ce6949bc90d411e2542f76296300aa9ec803c24f",
+      "B_serialized": [
+        [
+          [
+            3,
+            0
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            2,
+            2
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            2,
+            1
+          ],
+          -3,
+          1
+        ],
+        [
+          [
+            2,
+            0
+          ],
+          -3,
+          1
+        ],
+        [
+          [
+            1,
+            3
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          -7,
+          1
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          12,
+          1
+        ],
+        [
+          [
+            0,
+            4
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            0,
+            3
+          ],
+          -8,
+          1
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          20,
+          1
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          -16,
+          1
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          4,
+          1
+        ]
+      ],
+      "B_sha256": "1d4755d0cb0fc12448f97b2110bf25be199315ca2ba0933f6fe8e86a00eb309b",
+      "C_serialized": [
+        [
+          [
+            8,
+            0
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            7,
+            2
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            7,
+            1
+          ],
+          -3,
+          1
+        ],
+        [
+          [
+            7,
+            0
+          ],
+          -12,
+          1
+        ],
+        [
+          [
+            6,
+            4
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            6,
+            3
+          ],
+          -7,
+          1
+        ],
+        [
+          [
+            6,
+            2
+          ],
+          5,
+          1
+        ],
+        [
+          [
+            6,
+            1
+          ],
+          20,
+          1
+        ],
+        [
+          [
+            6,
+            0
+          ],
+          61,
+          1
+        ],
+        [
+          [
+            5,
+            6
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            5,
+            5
+          ],
+          -11,
+          1
+        ],
+        [
+          [
+            5,
+            4
+          ],
+          37,
+          1
+        ],
+        [
+          [
+            5,
+            3
+          ],
+          -27,
+          1
+        ],
+        [
+          [
+            5,
+            2
+          ],
+          -15,
+          1
+        ],
+        [
+          [
+            5,
+            1
+          ],
+          -55,
+          1
+        ],
+        [
+          [
+            5,
+            0
+          ],
+          -168,
+          1
+        ],
+        [
+          [
+            4,
+            7
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            4,
+            6
+          ],
+          -19,
+          1
+        ],
+        [
+          [
+            4,
+            5
+          ],
+          133,
+          1
+        ],
+        [
+          [
+            4,
+            4
+          ],
+          -419,
+          1
+        ],
+        [
+          [
+            4,
+            3
+          ],
+          561,
+          1
+        ],
+        [
+          [
+            4,
+            2
+          ],
+          -256,
+          1
+        ],
+        [
+          [
+            4,
+            1
+          ],
+          124,
+          1
+        ],
+        [
+          [
+            4,
+            0
+          ],
+          264,
+          1
+        ],
+        [
+          [
+            3,
+            8
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            3,
+            7
+          ],
+          -19,
+          1
+        ],
+        [
+          [
+            3,
+            6
+          ],
+          157,
+          1
+        ],
+        [
+          [
+            3,
+            5
+          ],
+          -707,
+          1
+        ],
+        [
+          [
+            3,
+            4
+          ],
+          1776,
+          1
+        ],
+        [
+          [
+            3,
+            3
+          ],
+          -2296,
+          1
+        ],
+        [
+          [
+            3,
+            2
+          ],
+          1272,
+          1
+        ],
+        [
+          [
+            3,
+            1
+          ],
+          -296,
+          1
+        ],
+        [
+          [
+            3,
+            0
+          ],
+          -224,
+          1
+        ],
+        [
+          [
+            2,
+            9
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            2,
+            8
+          ],
+          -19,
+          1
+        ],
+        [
+          [
+            2,
+            7
+          ],
+          157,
+          1
+        ],
+        [
+          [
+            2,
+            6
+          ],
+          -740,
+          1
+        ],
+        [
+          [
+            2,
+            5
+          ],
+          2172,
+          1
+        ],
+        [
+          [
+            2,
+            4
+          ],
+          -3992,
+          1
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          4280,
+          1
+        ],
+        [
+          [
+            2,
+            2
+          ],
+          -2256,
+          1
+        ],
+        [
+          [
+            2,
+            1
+          ],
+          448,
+          1
+        ],
+        [
+          [
+            2,
+            0
+          ],
+          80,
+          1
+        ],
+        [
+          [
+            1,
+            10
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            1,
+            9
+          ],
+          -19,
+          1
+        ],
+        [
+          [
+            1,
+            8
+          ],
+          156,
+          1
+        ],
+        [
+          [
+            1,
+            7
+          ],
+          -728,
+          1
+        ],
+        [
+          [
+            1,
+            6
+          ],
+          2136,
+          1
+        ],
+        [
+          [
+            1,
+            5
+          ],
+          -4104,
+          1
+        ],
+        [
+          [
+            1,
+            4
+          ],
+          5168,
+          1
+        ],
+        [
+          [
+            1,
+            3
+          ],
+          -4064,
+          1
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          1744,
+          1
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          -304,
+          1
+        ],
+        [
+          [
+            0,
+            11
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            0,
+            10
+          ],
+          -20,
+          1
+        ],
+        [
+          [
+            0,
+            9
+          ],
+          172,
+          1
+        ],
+        [
+          [
+            0,
+            8
+          ],
+          -832,
+          1
+        ],
+        [
+          [
+            0,
+            7
+          ],
+          2488,
+          1
+        ],
+        [
+          [
+            0,
+            6
+          ],
+          -4768,
+          1
+        ],
+        [
+          [
+            0,
+            5
+          ],
+          5888,
+          1
+        ],
+        [
+          [
+            0,
+            4
+          ],
+          -4608,
+          1
+        ],
+        [
+          [
+            0,
+            3
+          ],
+          2192,
+          1
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          -576,
+          1
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          64,
+          1
+        ]
+      ],
+      "C_sha256": "11b9e448ae95a8b2b790080073e76ee46c249e6822b45aefc05b2473f744c6d2",
+      "N2": "D*(V-2)*A(V,Z)",
+      "N3": "D*v*z*(Z-2)*(Z^2-4Z+2)*(V-2)*B(V,Z)",
+      "N4": "D*C(V,Z)"
+    },
+    "common_graph_divisor": "D=(v^2-z^2)*(v^2-(z^2-2)^2)",
+    "exact_nongraph_Z_support": "(Z-2)*(Z^2-4Z+2)*(Z^2-5Z+5)*(Z^3-6Z^2+9Z-1)*(Z^3-5Z^2+6Z-1)",
+    "first_identity": "f1=u*g(v)-t(z), g=v*(v^2-2), t=z*(z^2-2)*(z^4-4*z^2+2)",
+    "generator_term_counts": [
+      6,
+      13,
+      14,
+      17
+    ],
+    "generator_total_degrees": [
+      7,
+      12,
+      15,
+      16
+    ],
+    "generators_serialized": [
+      [
+        [
+          [
+            1,
+            3,
+            0
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            1,
+            1,
+            0
+          ],
+          -2,
+          1
+        ],
+        [
+          [
+            0,
+            0,
+            7
+          ],
+          -1,
+          1
+        ],
+        [
+          [
+            0,
+            0,
+            5
+          ],
+          6,
+          1
+        ],
+        [
+          [
+            0,
+            0,
+            3
+          ],
+          -10,
+          1
+        ],
+        [
+          [
+            0,
+            0,
+            1
+          ],
+          4,
+          1
+        ]
+      ],
+      [
+        [
+          [
+            2,
+            4,
+            0
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            2,
+            2,
+            0
+          ],
+          -3,
+          1
+        ],
+        [
+          [
+            2,
+            0,
+            0
+          ],
+          2,
+          1
+        ],
+        [
+          [
+            0,
+            6,
+            0
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            0,
+            4,
+            0
+          ],
+          -6,
+          1
+        ],
+        [
+          [
+            0,
+            2,
+            0
+          ],
+          10,
+          1
+        ],
+        [
+          [
+            0,
+            0,
+            12
+          ],
+          -1,
+          1
+        ],
+        [
+          [
+            0,
+            0,
+            10
+          ],
+          11,
+          1
+        ],
+        [
+          [
+            0,
+            0,
+            8
+          ],
+          -46,
+          1
+        ],
+        [
+          [
+            0,
+            0,
+            6
+          ],
+          91,
+          1
+        ],
+        [
+          [
+            0,
+            0,
+            4
+          ],
+          -86,
+          1
+        ],
+        [
+          [
+            0,
+            0,
+            2
+          ],
+          34,
+          1
+        ],
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          -8,
+          1
+        ]
+      ],
+      [
+        [
+          [
+            3,
+            3,
+            0
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            3,
+            1,
+            0
+          ],
+          -2,
+          1
+        ],
+        [
+          [
+            1,
+            7,
+            0
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            1,
+            5,
+            0
+          ],
+          -5,
+          1
+        ],
+        [
+          [
+            1,
+            3,
+            0
+          ],
+          5,
+          1
+        ],
+        [
+          [
+            1,
+            1,
+            0
+          ],
+          2,
+          1
+        ],
+        [
+          [
+            0,
+            0,
+            15
+          ],
+          -1,
+          1
+        ],
+        [
+          [
+            0,
+            0,
+            13
+          ],
+          14,
+          1
+        ],
+        [
+          [
+            0,
+            0,
+            11
+          ],
+          -79,
+          1
+        ],
+        [
+          [
+            0,
+            0,
+            9
+          ],
+          229,
+          1
+        ],
+        [
+          [
+            0,
+            0,
+            7
+          ],
+          -359,
+          1
+        ],
+        [
+          [
+            0,
+            0,
+            5
+          ],
+          292,
+          1
+        ],
+        [
+          [
+            0,
+            0,
+            3
+          ],
+          -106,
+          1
+        ],
+        [
+          [
+            0,
+            0,
+            1
+          ],
+          12,
+          1
+        ]
+      ],
+      [
+        [
+          [
+            4,
+            0,
+            0
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            2,
+            6,
+            0
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            2,
+            4,
+            0
+          ],
+          -4,
+          1
+        ],
+        [
+          [
+            2,
+            2,
+            0
+          ],
+          4,
+          1
+        ],
+        [
+          [
+            2,
+            0,
+            0
+          ],
+          -4,
+          1
+        ],
+        [
+          [
+            0,
+            8,
+            0
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            0,
+            6,
+            0
+          ],
+          -8,
+          1
+        ],
+        [
+          [
+            0,
+            4,
+            0
+          ],
+          21,
+          1
+        ],
+        [
+          [
+            0,
+            2,
+            0
+          ],
+          -20,
+          1
+        ],
+        [
+          [
+            0,
+            0,
+            16
+          ],
+          -1,
+          1
+        ],
+        [
+          [
+            0,
+            0,
+            14
+          ],
+          15,
+          1
+        ],
+        [
+          [
+            0,
+            0,
+            12
+          ],
+          -92,
+          1
+        ],
+        [
+          [
+            0,
+            0,
+            10
+          ],
+          296,
+          1
+        ],
+        [
+          [
+            0,
+            0,
+            8
+          ],
+          -533,
+          1
+        ],
+        [
+          [
+            0,
+            0,
+            6
+          ],
+          532,
+          1
+        ],
+        [
+          [
+            0,
+            0,
+            4
+          ],
+          -277,
+          1
+        ],
+        [
+          [
+            0,
+            0,
+            2
+          ],
+          68,
+          1
+        ]
+      ]
+    ],
+    "generic_substitution_factorization": "A(H(Z),Z)=(Z^2-5Z+5)*(Z^2-4Z+2)^2*(Z^3-6Z^2+9Z-1)*(Z^3-5Z^2+6Z-1)",
+    "rational_root_exclusion": {
+      "Z^2-4Z+2": "discriminant 8 is not a rational square",
+      "Z^2-5Z+5": "discriminant 5 is not a rational square",
+      "Z^3-5Z^2+6Z-1": "monic rational-root candidates +/-1 both fail",
+      "Z^3-6Z^2+9Z-1": "monic rational-root candidates +/-1 both fail",
+      "remaining_rational_Z": [
+        0,
+        2
+      ]
+    },
+    "runtime_method": "exact sparse Fraction arithmetic, exact displayed-factor divisions, substitution, and multiplication; no Groebner basis or CAS",
+    "small_ideal_membership_identity": "A-B=-(V-2)*(V-H(Z)), H=Z^4-8Z^3+20Z^2-16Z+4",
+    "squarefree_residual_candidate_containment": "Z*(Z-2)*(Z^2-4Z+2)*(Z^2-5Z+5)*(Z^3-6Z^2+9Z-1)*(Z^3-5Z^2+6Z-1)",
+    "squarefree_residual_candidate_serialized": [
+      [
+        [
+          12
+        ],
+        1,
+        1
+      ],
+      [
+        [
+          11
+        ],
+        -22,
+        1
+      ],
+      [
+        [
+          10
+        ],
+        211,
+        1
+      ],
+      [
+        [
+          9
+        ],
+        -1157,
+        1
+      ],
+      [
+        [
+          8
+        ],
+        3997,
+        1
+      ],
+      [
+        [
+          7
+        ],
+        -9035,
+        1
+      ],
+      [
+        [
+          6
+        ],
+        13433,
+        1
+      ],
+      [
+        [
+          5
+        ],
+        -12856,
+        1
+      ],
+      [
+        [
+          4
+        ],
+        7515,
+        1
+      ],
+      [
+        [
+          3
+        ],
+        -2434,
+        1
+      ],
+      [
+        [
+          2
+        ],
+        370,
+        1
+      ],
+      [
+        [
+          1
+        ],
+        -20,
+        1
+      ]
+    ],
+    "support_logic": "the elimination certificate contains every candidate; the Z=0 stratification removes its nongraph possibility, and exact zero-remainder witnesses make every other irreducible factor genuine",
+    "verified_genuine_residual_strata": {
+      "N14_Z3_minus_5Z2_plus_6Z_minus_1": "(u,v)=epsilon*(C2(z),C3(z))",
+      "N16_Z2_minus_4Z_plus_2": [
+        "u=0, v=+/-C3(z), hence v^2=4-Z",
+        "u=+/-C3(z), v=+/-C2(z), hence u^2=4-Z and v^2=2; the two signs are independent"
+      ],
+      "N20_Z2_minus_5Z_plus_5": "(u,v)=epsilon*(z,C6(z))",
+      "N8_Z_equals_2": "u=0, v=+/-z (hence v^2=2)",
+      "N9_18_Z3_minus_6Z2_plus_9Z_minus_1": "(u,v)=epsilon*(C2(z),C5(z))",
+      "all_zero_remainder_checks": 56,
+      "scope": "verified non-graph strata contained in the exact support; not an exhaustive algebraic point classification",
+      "zero_remainder_checks": {
+        "N14": 8,
+        "N16_u_zero": 8,
+        "N16_v_squared_2": 16,
+        "N20": 8,
+        "N8": 8,
+        "N9_18": 8
+      }
+    }
+  },
+  "graph_spectral_certificate": {
+    "Std(w)_tensor_Sym3(w^2)_weights": [
+      -7,
+      -5,
+      -3,
+      -1,
+      1,
+      3,
+      5,
+      7
+    ],
+    "Std(w^4)_tensor_Sym3(w)_weights": [
+      -7,
+      -5,
+      -3,
+      -1,
+      1,
+      3,
+      5,
+      7
+    ],
+    "same_epsilon_reason": "Std(-a) contributes -1 and Sym3(-b) contributes -1 because degree 3 is odd, so only their coupled central sign preserves every tensor root",
+    "signed_graph_coefficient_zero_residuals": 16,
+    "target_weights": [
+      -7,
+      -5,
+      -3,
+      -1,
+      1,
+      3,
+      5,
+      7
+    ]
+  },
+  "locked_trace_support_replay": {
+    "aggregate": {
+      "factor_equal_member_weight": 0,
+      "factor_equal_trace_triple_count": 0,
+      "ordered_trace_triples_checked": 7975,
+      "q_values": [
+        3,
+        5,
+        7,
+        11,
+        13
+      ]
+    },
+    "families": [
+      {
+        "factor_equal_member_weight": 0,
+        "factor_equal_trace_triple_count": 0,
+        "hits": [],
+        "ordered_trace_triples_checked": 343,
+        "q": 3,
+        "trace_atom_count": 7
+      },
+      {
+        "factor_equal_member_weight": 0,
+        "factor_equal_trace_triple_count": 0,
+        "hits": [],
+        "ordered_trace_triples_checked": 729,
+        "q": 5,
+        "trace_atom_count": 9
+      },
+      {
+        "factor_equal_member_weight": 0,
+        "factor_equal_trace_triple_count": 0,
+        "hits": [],
+        "ordered_trace_triples_checked": 1331,
+        "q": 7,
+        "trace_atom_count": 11
+      },
+      {
+        "factor_equal_member_weight": 0,
+        "factor_equal_trace_triple_count": 0,
+        "hits": [],
+        "ordered_trace_triples_checked": 2197,
+        "q": 11,
+        "trace_atom_count": 13
+      },
+      {
+        "factor_equal_member_weight": 0,
+        "factor_equal_trace_triple_count": 0,
+        "hits": [],
+        "ordered_trace_triples_checked": 3375,
+        "q": 13,
+        "trace_atom_count": 15
+      }
+    ],
+    "source_measure": "three ordered draws from each locked genus-one marked-cubic trace histogram"
+  },
+  "next_targets": [
+    "classify the individual algebraic residual points at the supported cyclotomic orders 7/14, 8, 16, 9/18, and 20",
+    "test whether the same two graph loci are integrally complete for r=4 without a heavy elimination",
+    "seek a geometric family that enforces one graph coherently across places without mistaking local trace identities for a correspondence"
+  ],
+  "normalized_coefficient_system": {
+    "coefficient_range": "Newton e_1 through e_4; reciprocal symmetry supplies degrees 5 through 8",
+    "f1": "u*v^3-2*u*v-z^7+6*z^5-10*z^3+4*z",
+    "generator_term_counts": [
+      6,
+      13,
+      14,
+      17
+    ],
+    "generator_total_degrees": [
+      7,
+      12,
+      15,
+      16
+    ],
+    "target_power_sums": "p_n=C_n(z)+C_(3n)(z)+C_(5n)(z)+C_(7n)(z)",
+    "tensor_power_sums": "p_n=C_n(u)*(C_(3n)(v)+C_n(v))"
+  },
+  "odd_prime_power_arithmetic": {
+    "automatic_Hasse_bounds": "C4 and C2 map the normalized compact trace interval [-2,2] into itself",
+    "branch_II_count": "8*p^floor(k/2)+2 across both epsilon signs",
+    "branch_I_count": "8*p^floor(k/4)+2 across both epsilon signs",
+    "count_examples": [
+      {
+        "branch_II_C_divisor": 3,
+        "branch_II_distinct_triples": 10,
+        "branch_I_C_divisor": 3,
+        "branch_I_distinct_triples": 10,
+        "closed_formula": 12,
+        "cross_branch_overlap": 8,
+        "enumerated_graph_triples": 12,
+        "exponent": 2,
+        "k": 1,
+        "overlap_normalized_z": [
+          -2,
+          -1,
+          1,
+          2
+        ],
+        "overlap_triples": [
+          [
+            -6,
+            -6,
+            6
+          ],
+          [
+            -6,
+            6,
+            -6
+          ],
+          [
+            -3,
+            -3,
+            -3
+          ],
+          [
+            -3,
+            3,
+            3
+          ],
+          [
+            3,
+            -3,
+            3
+          ],
+          [
+            3,
+            3,
+            -3
+          ],
+          [
+            6,
+            -6,
+            -6
+          ],
+          [
+            6,
+            6,
+            6
+          ]
+        ],
+        "p": 3,
+        "q_is_square": true,
+        "union_distinct_triples": 12
+      },
+      {
+        "branch_II_C_divisor": 5,
+        "branch_II_distinct_triples": 10,
+        "branch_I_C_divisor": 5,
+        "branch_I_distinct_triples": 10,
+        "closed_formula": 12,
+        "cross_branch_overlap": 8,
+        "enumerated_graph_triples": 12,
+        "exponent": 2,
+        "k": 1,
+        "overlap_normalized_z": [
+          -2,
+          -1,
+          1,
+          2
+        ],
+        "overlap_triples": [
+          [
+            -10,
+            -10,
+            10
+          ],
+          [
+            -10,
+            10,
+            -10
+          ],
+          [
+            -5,
+            -5,
+            -5
+          ],
+          [
+            -5,
+            5,
+            5
+          ],
+          [
+            5,
+            -5,
+            5
+          ],
+          [
+            5,
+            5,
+            -5
+          ],
+          [
+            10,
+            -10,
+            -10
+          ],
+          [
+            10,
+            10,
+            10
+          ]
+        ],
+        "p": 5,
+        "q_is_square": true,
+        "union_distinct_triples": 12
+      },
+      {
+        "branch_II_C_divisor": 3,
+        "branch_II_distinct_triples": 26,
+        "branch_I_C_divisor": 9,
+        "branch_I_distinct_triples": 10,
+        "closed_formula": 28,
+        "cross_branch_overlap": 8,
+        "enumerated_graph_triples": 28,
+        "exponent": 4,
+        "k": 2,
+        "overlap_normalized_z": [
+          -2,
+          -1,
+          1,
+          2
+        ],
+        "overlap_triples": [
+          [
+            -18,
+            -18,
+            18
+          ],
+          [
+            -18,
+            18,
+            -18
+          ],
+          [
+            -9,
+            -9,
+            -9
+          ],
+          [
+            -9,
+            9,
+            9
+          ],
+          [
+            9,
+            -9,
+            9
+          ],
+          [
+            9,
+            9,
+            -9
+          ],
+          [
+            18,
+            -18,
+            -18
+          ],
+          [
+            18,
+            18,
+            18
+          ]
+        ],
+        "p": 3,
+        "q_is_square": true,
+        "union_distinct_triples": 28
+      }
+    ],
+    "eight_point_overlap": "z in {-2,-1,1,2}, with two epsilon choices for each z",
+    "lattice_firewall": "the count concerns integral Hasse trace triples, not existence of linked curves or a correspondence",
+    "nonsquare_graph_II_obstruction": "q*B=epsilon*s*(C^2-2q); separation would force B=0 and C^2=2q, impossible",
+    "nonsquare_graph_I_obstruction": "q^2*A=epsilon*s*(C^4-4q*C^2+2q^2); rational-versus-irrational separation would force A=0 and Z^2-4Z+2=0, impossible for rational Z",
+    "square_graph_II_integrality": "s divides C^2-2s^2 iff p^ceil(k/2) divides C",
+    "square_graph_I_integrality": "for q=p^(2k), s^3 divides C^4-4s^2*C^2+2s^4 iff p^ceil(3k/4) divides C",
+    "union_count": "8*p^floor(k/4)+8*p^floor(k/2)-4"
+  },
+  "packet_id": "FUNCTION_FIELD.ELLIPTIC.TENSOR_SYM3.SYM7.SPECTRAL.INTERSECTION.V1",
+  "payload_sha256": "a1ec101912ba9712c015c2cbbd81022097ad113f2d6d0d9178ad7be4b43cfdbf",
+  "resource_contract": {
+    "accounted_work_unit_ledger": {
+      "Z_zero_original_system_stratification": 7,
+      "compact_representation_moments": 18,
+      "cyclotomic_residual_zero_remainders": 56,
+      "exact_elimination_certificate_identities": 9,
+      "locked_source_pairs_verified": 4,
+      "locked_trace_triples": 7975,
+      "p_adic_count_and_overlap_certificates": 3,
+      "signed_graph_weight_and_coefficient_identities": 18,
+      "synthetic_hasse_trace_triples": 11458,
+      "total_accounted_work_units": 19548
+    },
+    "actual_locked_trace_triples": 7975,
+    "actual_synthetic_trace_triples": 11458,
+    "exclusive_accounted_work_unit_cap": 25000,
+    "field_curve_or_model_enumerations": 0,
+    "floating_point_results": 0,
+    "locked_trace_triple_cap_inclusive": 7975,
+    "maximum_normalized_coefficient_degree": 16,
+    "random_samples": 0,
+    "runtime_Groebner_basis_runs": 0,
+    "runtime_symbolic_packages": 0,
+    "synthetic_trace_triple_cap_inclusive": 11458,
+    "unit_definition": "one replayed trace triple or one named exact certificate; not CPU instructions"
+  },
+  "rigor_level": {
+    "algebraic_residual_points": "EXACT_Z_SUPPORT_WITH_WITNESS_STRATA; INDIVIDUAL POINT SET_NOT_COMPLETELY_CLASSIFIED",
+    "finite_replay": "EXACT_FOR_7975_LOCKED_AND_11458_SYNTHETIC_ORDERED_TRACE_TRIPLES",
+    "global_correspondence_automorphy_and_novelty": "NOT_INFERRED",
+    "integral_raw_classification": "PROVED_FOR_ALL_ODD_PRIME_POWERS",
+    "normalized_coefficients": "PROVED_BY_EXACT_CHEBYSHEV_POWER_SUMS_AND_NEWTON_RECURRENCES",
+    "residual_support": "PROVED_BY_EXPLICIT_EXACT_DIVISIONS_IDEAL_MEMBERSHIP_UNIVARIATE_FACTORIZATIONS_AND_FACTOR_WITNESSES",
+    "square_q_count": "PROVED_BY_P_ADIC_DIVISIBILITY_AND_EXACT_EIGHT_POINT_OVERLAP"
+  },
+  "schema": "riemann.function_field.elliptic_tensor_sym3_sym7_spectral_intersection.v1",
+  "scope_firewall": {
+    "no_RH_or_GRH_claim": "finite local spectral identities imply no zero-free region, RH, or GRH theorem",
+    "no_complete_algebraic_residual_claim": "the exact squarefree nongraph Z-support and explicit witness strata are proved, but the individual non-graph point set over the algebraic closure is not claimed complete",
+    "no_local_to_global_upgrade": "one-place local factors supply no motive, compatible system, Euler product, or automorphic transfer",
+    "no_novelty_priority_claim": "the exact rigidity packet is recorded without a literature-priority assertion",
+    "no_realizability_claim": "integral Hasse triples are coefficient-lattice points, not asserted linked elliptic curves",
+    "no_representation_homomorphism": "torus weight equalities on graph loci do not produce a homomorphism between the source groups"
+  },
+  "source_and_file_locks": {
+    "authentication": "every source JSON is schema-, payload-, canonical-payload-, and LF-file-locked; every source producer is LF-file-locked",
+    "owned_file_locks": {
+      "note": {
+        "path": "research/l-families/atlas/function_field/ELLIPTIC_TENSOR_SYM3_SYM7_SPECTRAL_INTERSECTION.md",
+        "sha256_lf_normalized": "dadbeeb6e20906f66cff4b25cc43c51e0a36be613c038e5b65a0b1771bef0549"
+      },
+      "producer": {
+        "path": "research/l-families/atlas/function_field/elliptic_tensor_sym3_sym7_spectral_intersection.py",
+        "sha256_lf_normalized": "9d78faf0ca23c86060050d8420d6127e959062c0cf3829f97cc5986e0db47956"
+      },
+      "test": {
+        "path": "tests/test_elliptic_tensor_sym3_sym7_spectral_intersection.py",
+        "sha256_lf_normalized": "1752cda1c91dc03efc2ab92e39c7235503bb6bac4d3f6ed1ef36a26f06831247"
+      }
+    },
+    "source_locks": {
+      "all_r_ladder": {
+        "fixture_path": "research/l-families/atlas/function_field/elliptic_tensor_sym2_sym5_spectral_intersection.json",
+        "fixture_payload_sha256": "e2c9c7ac3d1329b7b911a5214d36935d2694436cbe6d9cce551b94f8486b01ba",
+        "fixture_sha256_lf_normalized": "e583220e7df56765ef198d71a4a94887e8246992ba8fd9d127e8c1ce4e09cc32",
+        "producer_path": "research/l-families/atlas/function_field/elliptic_tensor_sym2_sym5_spectral_intersection.py",
+        "producer_sha256_lf_normalized": "d414807d8c2bb41ee075c5526e22b243204f3e587e5988a55f91245a99f6d9e7",
+        "schema": "riemann.function_field.elliptic_tensor_sym2_sym5_spectral_intersection.v1"
+      },
+      "cyclotomic": {
+        "fixture_path": "research/l-families/atlas/function_field/elliptic_symmetric_power_cyclotomic_spectral_aliases.json",
+        "fixture_payload_sha256": "b783dc120095c5256cacc2eaa79f3f152883f9b33b4074a18b123489f81bc6ff",
+        "fixture_sha256_lf_normalized": "4321113137615a88f43926c1e92df478160de5a00f0974c1472303de506aabdc",
+        "producer_path": "research/l-families/atlas/function_field/elliptic_symmetric_power_cyclotomic_spectral_aliases.py",
+        "producer_sha256_lf_normalized": "7ffc5952d1e68ae2784f1ba292b54976a6d6953e3f5ea12216c1e92566a00d56",
+        "schema": "riemann.function_field.elliptic_symmetric_power_cyclotomic_spectral_aliases.v1"
+      },
+      "full_factor": {
+        "fixture_path": "research/l-families/atlas/function_field/elliptic_symmetric_power_full_factor_sign_aliases.json",
+        "fixture_payload_sha256": "f1a7f183ee16c98c8f633e9b5ffa5f1bb76c0521cd596d5be71840a35711d983",
+        "fixture_sha256_lf_normalized": "5388e4e6819f2b48b08956ab810137054158424931e5e6ac1d516fc54d03c607",
+        "producer_path": "research/l-families/atlas/function_field/elliptic_symmetric_power_full_factor_sign_aliases.py",
+        "producer_sha256_lf_normalized": "b817406551fc9adc008fb6f24f9db6a1a84081cbcbd6aa3448344939bf74709a",
+        "schema": "riemann.function_field.elliptic_symmetric_power_full_factor_collisions.v1"
+      },
+      "genus1": {
+        "fixture_path": "research/l-families/atlas/function_field/genus1_cubic_family_laws.json",
+        "fixture_payload_sha256": "183ffb31ae2f5776944e162e59390c40bd7081827b8731246e72e25a882e50df",
+        "fixture_sha256_lf_normalized": "b9016ae801cff40d15c53d96210b66a7d44fae7d916e827a0526b9dd42017227",
+        "producer_path": "research/l-families/atlas/function_field/genus1_cubic_family_laws.py",
+        "producer_sha256_lf_normalized": "3d5baace952240c162c83bd5c66eb81db1704aee35e770de3d8df43fff669b79",
+        "schema": "riemann.function_field.genus1_cubic_family_laws.v1"
+      }
+    }
+  },
+  "status": "EXACT_INTEGRAL_RAW_INTERSECTION_AND_SQUARE_Q_HASSE_COUNT",
+  "synthetic_square_q_replay": {
+    "aggregate": {
+      "factor_equal_trace_triple_count": 24,
+      "ordered_trace_triples_checked": 11458,
+      "q_values": [
+        9,
+        25
+      ]
+    },
+    "purpose": "nonvacuous replay of both graph branches and the eight-point overlap",
+    "realizability_status": "NOT_TESTED_OR_INFERRED",
+    "rows": [
+      {
+        "count_theorem": {
+          "branch_II_C_divisor": 3,
+          "branch_II_distinct_triples": 10,
+          "branch_I_C_divisor": 3,
+          "branch_I_distinct_triples": 10,
+          "closed_formula": 12,
+          "cross_branch_overlap": 8,
+          "exponent": 2,
+          "k": 1,
+          "overlap_normalized_z": [
+            -2,
+            -1,
+            1,
+            2
+          ],
+          "p": 3,
+          "q_is_square": true,
+          "union_distinct_triples": 12
+        },
+        "factor_equal_member_weight": null,
+        "factor_equal_trace_triple_count": 12,
+        "hits": [
+          {
+            "A": -6,
+            "B": -6,
+            "C": 6,
+            "branches": [
+              "I:e=-1",
+              "II:e=-1"
+            ],
+            "member_weight": null
+          },
+          {
+            "A": -6,
+            "B": 0,
+            "C": 0,
+            "branches": [
+              "I:e=-1"
+            ],
+            "member_weight": null
+          },
+          {
+            "A": -6,
+            "B": 6,
+            "C": -6,
+            "branches": [
+              "I:e=-1",
+              "II:e=+1"
+            ],
+            "member_weight": null
+          },
+          {
+            "A": -3,
+            "B": -3,
+            "C": -3,
+            "branches": [
+              "I:e=+1",
+              "II:e=+1"
+            ],
+            "member_weight": null
+          },
+          {
+            "A": -3,
+            "B": 3,
+            "C": 3,
+            "branches": [
+              "II:e=-1",
+              "I:e=+1"
+            ],
+            "member_weight": null
+          },
+          {
+            "A": 0,
+            "B": -6,
+            "C": 0,
+            "branches": [
+              "II:e=+1"
+            ],
+            "member_weight": null
+          },
+          {
+            "A": 0,
+            "B": 6,
+            "C": 0,
+            "branches": [
+              "II:e=-1"
+            ],
+            "member_weight": null
+          },
+          {
+            "A": 3,
+            "B": -3,
+            "C": 3,
+            "branches": [
+              "I:e=-1",
+              "II:e=+1"
+            ],
+            "member_weight": null
+          },
+          {
+            "A": 3,
+            "B": 3,
+            "C": -3,
+            "branches": [
+              "I:e=-1",
+              "II:e=-1"
+            ],
+            "member_weight": null
+          },
+          {
+            "A": 6,
+            "B": -6,
+            "C": -6,
+            "branches": [
+              "II:e=-1",
+              "I:e=+1"
+            ],
+            "member_weight": null
+          },
+          {
+            "A": 6,
+            "B": 0,
+            "C": 0,
+            "branches": [
+              "I:e=+1"
+            ],
+            "member_weight": null
+          },
+          {
+            "A": 6,
+            "B": 6,
+            "C": 6,
+            "branches": [
+              "I:e=+1",
+              "II:e=+1"
+            ],
+            "member_weight": null
+          }
+        ],
+        "ordered_trace_triples_checked": 2197,
+        "q": 9,
+        "trace_atom_count": 13
+      },
+      {
+        "count_theorem": {
+          "branch_II_C_divisor": 5,
+          "branch_II_distinct_triples": 10,
+          "branch_I_C_divisor": 5,
+          "branch_I_distinct_triples": 10,
+          "closed_formula": 12,
+          "cross_branch_overlap": 8,
+          "exponent": 2,
+          "k": 1,
+          "overlap_normalized_z": [
+            -2,
+            -1,
+            1,
+            2
+          ],
+          "p": 5,
+          "q_is_square": true,
+          "union_distinct_triples": 12
+        },
+        "factor_equal_member_weight": null,
+        "factor_equal_trace_triple_count": 12,
+        "hits": [
+          {
+            "A": -10,
+            "B": -10,
+            "C": 10,
+            "branches": [
+              "I:e=-1",
+              "II:e=-1"
+            ],
+            "member_weight": null
+          },
+          {
+            "A": -10,
+            "B": 0,
+            "C": 0,
+            "branches": [
+              "I:e=-1"
+            ],
+            "member_weight": null
+          },
+          {
+            "A": -10,
+            "B": 10,
+            "C": -10,
+            "branches": [
+              "I:e=-1",
+              "II:e=+1"
+            ],
+            "member_weight": null
+          },
+          {
+            "A": -5,
+            "B": -5,
+            "C": -5,
+            "branches": [
+              "I:e=+1",
+              "II:e=+1"
+            ],
+            "member_weight": null
+          },
+          {
+            "A": -5,
+            "B": 5,
+            "C": 5,
+            "branches": [
+              "II:e=-1",
+              "I:e=+1"
+            ],
+            "member_weight": null
+          },
+          {
+            "A": 0,
+            "B": -10,
+            "C": 0,
+            "branches": [
+              "II:e=+1"
+            ],
+            "member_weight": null
+          },
+          {
+            "A": 0,
+            "B": 10,
+            "C": 0,
+            "branches": [
+              "II:e=-1"
+            ],
+            "member_weight": null
+          },
+          {
+            "A": 5,
+            "B": -5,
+            "C": 5,
+            "branches": [
+              "I:e=-1",
+              "II:e=+1"
+            ],
+            "member_weight": null
+          },
+          {
+            "A": 5,
+            "B": 5,
+            "C": -5,
+            "branches": [
+              "I:e=-1",
+              "II:e=-1"
+            ],
+            "member_weight": null
+          },
+          {
+            "A": 10,
+            "B": -10,
+            "C": -10,
+            "branches": [
+              "II:e=-1",
+              "I:e=+1"
+            ],
+            "member_weight": null
+          },
+          {
+            "A": 10,
+            "B": 0,
+            "C": 0,
+            "branches": [
+              "I:e=+1"
+            ],
+            "member_weight": null
+          },
+          {
+            "A": 10,
+            "B": 10,
+            "C": 10,
+            "branches": [
+              "I:e=+1",
+              "II:e=+1"
+            ],
+            "member_weight": null
+          }
+        ],
+        "ordered_trace_triples_checked": 9261,
+        "q": 25,
+        "trace_atom_count": 21
+      }
+    ]
+  }
+}

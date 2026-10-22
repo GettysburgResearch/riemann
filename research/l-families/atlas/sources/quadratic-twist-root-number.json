@@ -1,0 +1,76 @@
+{
+  "schema": "riemann.atlas.source.quadratic_twist_root_number.v1",
+  "manifest_id": "ATLAS.SOURCE.QUADRATIC_TWIST_ROOT_NUMBER.V1",
+  "scope": "Primitive quadratic twists of a primitive weight-2 newform, restricted to fundamental discriminants d whose conductor |d| is coprime to the base level N.",
+  "sources": [
+    {
+      "key": "ROHRLICH_1996",
+      "author": "David E. Rohrlich",
+      "title": "Galois theory, elliptic curves, and root numbers",
+      "publication": "Compositio Mathematica 100 (1996), 311-349",
+      "stable_url": "https://www.numdam.org/item/CM_1996__100_3_311_0.pdf",
+      "sha256_observed": "0a1c0de28382b7474c3c59c549b4092f5c76f8d800758f96377abd7e05a1fe31",
+      "pinpoint": "PDF pp. 28-29; printed pp. 337-338; Proposition 10 and the immediately following Corollary",
+      "statement": "If the conductor ideals N(E) and N(tau) are relatively prime, Proposition 10 gives W(E,tau)=sign(det(tau))*det(tau)(N(E))*W(E)^dim(tau). Its corollary gives W(E^chi)=sign(chi)*chi(N(E))*W(E) for quadratic chi of conductor relatively prime to N(E).",
+      "role": "Primary theorem source for the elliptic-curve root-number formula."
+    },
+    {
+      "key": "CONREY_EQ19",
+      "author": "Brian Conrey",
+      "title": "Families of L-functions and 1-level densities",
+      "publication": "Recent Perspectives in Random Matrix Theory and Number Theory (2005), 225-250",
+      "doi": "https://doi.org/10.1017/CBO9780511550492.009",
+      "author_pdf": "https://aimath.org/~kaur/publications/54.pdf",
+      "sha256_observed": "b3eac714eaefdbd52f70d1136d987bb7a0e25973d9f9c11a9f750dfd43856d35",
+      "pinpoint": "Author PDF p. 11, Section 3.3, equation (19); character conventions on author PDF p. 5, Section 2.3",
+      "statement": "For a primitive form f of weight k and level N and a primitive real quadratic character chi_d of conductor |d| with gcd(N,|d|)=1, the twist has level N*d^2 and xi_f(s,chi_d)=(|d|*sqrt(N)/(2*pi))^s*Gamma(s+(k-1)/2)*L_f(s,chi_d)=w_f*chi_d(-N)*xi_f(1-s,chi_d).",
+      "role": "Primary newform source for level, gamma normalization, and the exact functional-equation sign."
+    }
+  ],
+  "normalizations": {
+    "conrey_unitary": {
+      "analytic_variable": "s",
+      "critical_center": "1/2",
+      "weight_2_completion": "xi_f(s,chi_d)=(|d|*sqrt(N)/(2*pi))^s*Gamma(s+1/2)*L_f(s,chi_d)",
+      "functional_equation": "xi_f(s,chi_d)=epsilon(f)*chi_d(-N)*xi_f(1-s,chi_d)",
+      "analytic_conductor_level": "N*d^2"
+    },
+    "classical_weight_2_translation": {
+      "analytic_variable": "S=s+1/2",
+      "critical_center": "1",
+      "completion": "Lambda_d(S)=(|d|*sqrt(N)/(2*pi))^S*Gamma(S)*L_classical(f tensor chi_d,S)",
+      "functional_equation": "Lambda_d(S)=epsilon(f)*chi_d(-N)*Lambda_d(2-S)",
+      "note": "The classical completion differs from Conrey's unitary completion after S=s+1/2 only by an S-independent positive factor, so the sign is unchanged."
+    }
+  },
+  "character_conventions": {
+    "parameter": "d is a positive or negative fundamental discriminant",
+    "character": "chi_d(n)=(d/n), the primitive Kronecker character of conductor |d|",
+    "parity": "chi_d(-1)=+1 for d>0 and -1 for d<0; equivalently chi_d(-1)=sign(d)",
+    "negative_d_formula": "chi_d(-N)=chi_d(-1)*chi_d(N)=sign(d)*(d/N) when gcd(d,N)=1",
+    "root_number_formula": "epsilon(f tensor chi_d)=epsilon(f)*chi_d(-N)",
+    "values_under_coprimality": [-1, 1]
+  },
+  "specialization_11_a2": {
+    "base_curve_label": "11.a2",
+    "base_curve_manifest": "research/l-families/atlas/sources/lmfdb-curves.json",
+    "base_conductor": 11,
+    "imported_base_root_number": "+1",
+    "formula": "epsilon_d=sign(d)*(d/11)",
+    "quadratic_residues_mod_11": [1, 3, 4, 5, 9],
+    "quadratic_nonresidues_mod_11": [2, 6, 7, 8, 10],
+    "finite_rule": {
+      "d_positive": "ROOT_NUMBER_PLUS on residues and ROOT_NUMBER_MINUS on nonresidues modulo 11",
+      "d_negative": "ROOT_NUMBER_MINUS on residues and ROOT_NUMBER_PLUS on nonresidues modulo 11"
+    },
+    "conditionality": "The partition arithmetic is exact conditional on the imported theorem and the manifest's LMFDB identification/conductor/base-sign metadata."
+  },
+  "exclusions_and_caveats": [
+    "The formula in this manifest is invoked only when gcd(d,N)=1. If a prime divides both d and N, local correction factors are required and chi_d(-N)=0 is not a root number.",
+    "The parameter d must be a fundamental discriminant. A nonfundamental twist parameter must first be replaced by the fundamental discriminant of its primitive quadratic character.",
+    "Even fundamental discriminants are allowed here because 2 does not divide N=11; the Kronecker convention, not an odd-only Legendre convention, governs chi_d at 2.",
+    "The covariance prime set omits the base bad prime 11. At primes p dividing d, chi_d(p)=0 is retained exactly in the finite character rows.",
+    "No rank, central order, zero, or parity conclusion is drawn from a functional-equation sign.",
+    "No finite covariance table is asserted to imply an asymptotic law."
+  ]
+}

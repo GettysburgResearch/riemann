@@ -1,0 +1,743 @@
+{
+  "exact_symbolic_identities": {
+    "endpoint_slack": "Gamma=(4*q-t_1^2)*(4*q-t_2^2)",
+    "far_negative_implication": "K<-4*q^2 implies t_1*t_2>0 and b>2*q; hence if E=20*q^2+K, then Delta<=E/q and 6*q-b<=E/(4*q)",
+    "haar_edge_defect": "20*q^2+K=q*Delta+(6*q-b)*(2*q+b), K=q*a^2-b^2",
+    "quartic_discriminant": "disc(P)=q^2*Delta^2*Gamma, Gamma=(b+2*q)^2-4*q*a^2=(6*q-b)^2-4*q*Delta",
+    "range": "K>=-20*q^2, with equality only at t_1=t_2=+/-2*sqrt(q)",
+    "real_trace_discriminant": "Delta=a^2-4*b+8*q=(t_1-t_2)^2",
+    "real_weil_polynomial": "R(X)=X^2+a*X+(b-2*q), P(T)=T^2*R(T+q/T)",
+    "repeated_angle_ladder": "Delta=0 iff a=2*r, b=2*q+r^2 and P(T)=(T^2+r*T+q)^2; then K=-4*q^2-r^4 (replace r by -r to change the a convention)",
+    "square_defect": "P(T)=(T^2+(a/2)*T+q)^2-(Delta/4)*T^2",
+    "status": "VALID_FOR_EVERY_POSITIVE_INTEGER_Q_AND_INTEGER-COEFFICIENT ADMISSIBLE_RECIPROCAL_QUARTIC"
+  },
+  "families": [
+    {
+      "member_count": 162,
+      "minimum_tail_atom": {
+        "K": -24,
+        "absolute_moment_shares": {
+          "10": {
+            "decimal_display_only": "0.538377894777",
+            "denominator": 14720928733441,
+            "numerator": 7925422620672,
+            "text": "7925422620672/14720928733441"
+          },
+          "12": {
+            "decimal_display_only": "0.583992741334",
+            "denominator": 7816952346147025,
+            "numerator": 4565043429507072,
+            "text": "4565043429507072/7816952346147025"
+          },
+          "2": {
+            "decimal_display_only": "0.239202657807",
+            "denominator": 301,
+            "numerator": 72,
+            "text": "72/301"
+          },
+          "4": {
+            "decimal_display_only": "0.361805888768",
+            "denominator": 114625,
+            "numerator": 41472,
+            "text": "41472/114625"
+          },
+          "6": {
+            "decimal_display_only": "0.433442920634",
+            "denominator": 55111921,
+            "numerator": 23887872,
+            "text": "23887872/55111921"
+          },
+          "8": {
+            "decimal_display_only": "0.489148036275",
+            "denominator": 28129345825,
+            "numerator": 13759414272,
+            "text": "13759414272/28129345825"
+          }
+        },
+        "coarse_to_member_mass_ratio": {
+          "decimal_display_only": "0.931034482759",
+          "denominator": 29,
+          "numerator": 27,
+          "text": "27/29"
+        },
+        "coarse_uniform_orbit_mass": {
+          "decimal_display_only": "0.034482758621",
+          "denominator": 29,
+          "numerator": 1,
+          "text": "1/29"
+        },
+        "first_even_moment_order_with_more_than_half_of_absolute_moment": 10,
+        "frobenius_geometry": {
+          "chosen_a": -2,
+          "elliptic_trace_factors": [
+            0,
+            2
+          ],
+          "factorization": "(T^2 + 3)*(T^2 - 2*T + 3)",
+          "frobenius_polynomial": "T^4 - 2*T^3 + 6*T^2 - 6*T + 9",
+          "frobenius_polynomial_coefficients_high_to_low": [
+            1,
+            -2,
+            6,
+            -6,
+            9
+          ],
+          "quartic_discriminant": 13824,
+          "real_weil_discriminant": 4,
+          "real_weil_polynomial": "T^2 - 2*T",
+          "real_weil_polynomial_coefficients_high_to_low": [
+            1,
+            -2,
+            0
+          ],
+          "shape": "SPLIT_NONISOTYPIC",
+          "shape_proof": "the real Weil polynomial splits over Z; the two displayed quadratic q-Weil factors are exact"
+        },
+        "member_count": 6,
+        "member_or_marked_stack_mass": {
+          "decimal_display_only": "0.037037037037",
+          "denominator": 27,
+          "numerator": 1,
+          "text": "1/27"
+        },
+        "normalized_K": {
+          "decimal_display_only": "-2.666666666667",
+          "denominator": 3,
+          "numerator": -8,
+          "text": "-8/3"
+        },
+        "orbit_certificate": {
+          "orbit_count": 1,
+          "orbit_size": 6,
+          "proof_from_frozen_aggregate_data": "all frozen nonfree orbits have stabilizer order 2; in odd characteristic every nonidentity affine involution has multiplier -1, while q=3,7 have chi(-1)=-1; a fixed member would therefore have a=0, contrary to the unique minimum pair",
+          "representative_coefficients_low_to_high_if_frozen": null,
+          "stabilizer_elements_alpha_beta_if_frozen": [
+            [
+              1,
+              0
+            ]
+          ],
+          "stabilizer_order": 1
+        },
+        "top_two_negative_atoms_moment_12_share": {
+          "decimal_display_only": "0.995118524818",
+          "denominator": 7816952346147025,
+          "numerator": 7778794087269376,
+          "text": "7778794087269376/7816952346147025"
+        },
+        "unique_admissible_pair_up_to_a_sign": {
+          "Delta": 4,
+          "abs_a": 2,
+          "b": 6,
+          "endpoint_slack_Gamma": 96,
+          "haar_edge_defect_E": 156,
+          "upper_coefficient_defect_U": 12
+        }
+      },
+      "q": 3,
+      "realized_positive_repeated_angle_rungs": [],
+      "repeated_angle_ladder": [
+        {
+          "K": -36,
+          "abs_a": 0,
+          "b": 6,
+          "r": 0,
+          "support_present": false
+        },
+        {
+          "K": -37,
+          "abs_a": 2,
+          "b": 7,
+          "r": 1,
+          "support_present": false
+        },
+        {
+          "K": -52,
+          "abs_a": 4,
+          "b": 10,
+          "r": 2,
+          "support_present": false
+        },
+        {
+          "K": -117,
+          "abs_a": 6,
+          "b": 15,
+          "r": 3,
+          "support_present": false
+        }
+      ],
+      "source_reconstruction_checks": {
+        "every_K_support_atom_has_an_admissible_pair": true,
+        "minimum_atom_is_one_affine_orbit": true,
+        "minimum_multiplicity_matches_q_scan": true,
+        "minimum_pair_is_unique_up_to_a_sign": true
+      },
+      "support_atom_count": 12,
+      "usp4_admissible_integer_coefficient_lattice": {
+        "abs_a_sign_quotiented_pair_count": 38,
+        "absent_from_frozen_family_support": true,
+        "actual_minus_lattice_minimum_K": 93,
+        "actual_to_lattice_haar_edge_defect_ratio": {
+          "decimal_display_only": "2.476190476190",
+          "denominator": 21,
+          "numerator": 52,
+          "text": "52/21"
+        },
+        "minimum_K": -117,
+        "minimum_normalized_K": {
+          "decimal_display_only": "-13.000000000000",
+          "denominator": 1,
+          "numerator": -13,
+          "text": "-13/1"
+        },
+        "minimum_pair": {
+          "Delta": 0,
+          "K": -117,
+          "abs_a": 6,
+          "b": 15,
+          "endpoint_slack_Gamma": 9,
+          "haar_edge_defect_E": 63,
+          "upper_coefficient_defect_U": 3
+        }
+      }
+    },
+    {
+      "member_count": 2500,
+      "minimum_tail_atom": {
+        "K": -116,
+        "absolute_moment_shares": {
+          "10": {
+            "decimal_display_only": "0.517080057799",
+            "denominator": 53321470874239319953,
+            "numerator": 27571469241561972736,
+            "text": "27571469241561972736/53321470874239319953"
+          },
+          "12": {
+            "decimal_display_only": "0.619547747286",
+            "denominator": 598826630780182957326013,
+            "numerator": 371001690114457905135616,
+            "text": "371001690114457905135616/598826630780182957326013"
+          },
+          "2": {
+            "decimal_display_only": "0.051161941842",
+            "denominator": 16438,
+            "numerator": 841,
+            "text": "841/16438"
+          },
+          "4": {
+            "decimal_display_only": "0.142898450843",
+            "denominator": 79192573,
+            "numerator": 11316496,
+            "text": "11316496/79192573"
+          },
+          "6": {
+            "decimal_display_only": "0.264509506752",
+            "denominator": 575687324233,
+            "numerator": 152274770176,
+            "text": "152274770176/575687324233"
+          },
+          "8": {
+            "decimal_display_only": "0.395815186937",
+            "denominator": 178506271849817,
+            "numerator": 70655493361664,
+            "text": "70655493361664/178506271849817"
+          }
+        },
+        "coarse_to_member_mass_ratio": {
+          "decimal_display_only": "1.893939393939",
+          "denominator": 66,
+          "numerator": 125,
+          "text": "125/66"
+        },
+        "coarse_uniform_orbit_mass": {
+          "decimal_display_only": "0.007575757576",
+          "denominator": 132,
+          "numerator": 1,
+          "text": "1/132"
+        },
+        "first_even_moment_order_with_more_than_half_of_absolute_moment": 10,
+        "frobenius_geometry": {
+          "chosen_a": -4,
+          "elliptic_trace_factors": [
+            2,
+            2
+          ],
+          "factorization": "(T^2 - 2*T + 5)*(T^2 - 2*T + 5)",
+          "frobenius_polynomial": "T^4 - 4*T^3 + 14*T^2 - 20*T + 25",
+          "frobenius_polynomial_coefficients_high_to_low": [
+            1,
+            -4,
+            14,
+            -20,
+            25
+          ],
+          "quartic_discriminant": 0,
+          "real_weil_discriminant": 0,
+          "real_weil_polynomial": "T^2 - 4*T + 4",
+          "real_weil_polynomial_coefficients_high_to_low": [
+            1,
+            -4,
+            4
+          ],
+          "shape": "SPLIT_ISOTYPIC",
+          "shape_proof": "the real Weil polynomial splits over Z; the two displayed quadratic q-Weil factors are exact"
+        },
+        "member_count": 10,
+        "member_or_marked_stack_mass": {
+          "decimal_display_only": "0.004000000000",
+          "denominator": 250,
+          "numerator": 1,
+          "text": "1/250"
+        },
+        "normalized_K": {
+          "decimal_display_only": "-4.640000000000",
+          "denominator": 25,
+          "numerator": -116,
+          "text": "-116/25"
+        },
+        "orbit_certificate": {
+          "orbit_count": 1,
+          "orbit_size": 10,
+          "proof_from_frozen_aggregate_data": "the frozen order-2 stabilizer witness has the minimum invariants and orbit size 10; the minimum K atom also has exactly 10 members",
+          "representative_coefficients_low_to_high_if_frozen": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "stabilizer_elements_alpha_beta_if_frozen": [
+            [
+              1,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "stabilizer_order": 2
+        },
+        "top_two_negative_atoms_moment_12_share": {
+          "decimal_display_only": "0.932660074564",
+          "denominator": 598826630780182957326013,
+          "numerator": 558501690114457905135616,
+          "text": "558501690114457905135616/598826630780182957326013"
+        },
+        "unique_admissible_pair_up_to_a_sign": {
+          "Delta": 0,
+          "abs_a": 4,
+          "b": 14,
+          "endpoint_slack_Gamma": 256,
+          "haar_edge_defect_E": 384,
+          "upper_coefficient_defect_U": 16
+        }
+      },
+      "q": 5,
+      "realized_positive_repeated_angle_rungs": [
+        {
+          "K": -116,
+          "abs_a": 4,
+          "absolute_moment_12_share": {
+            "decimal_display_only": "0.619547747286",
+            "denominator": 598826630780182957326013,
+            "numerator": 371001690114457905135616,
+            "text": "371001690114457905135616/598826630780182957326013"
+          },
+          "admissible_candidate_count_at_K": 1,
+          "all_members_at_K_are_repeated_angle": true,
+          "b": 14,
+          "member_count_at_K": 10,
+          "r": 2,
+          "support_present": true
+        }
+      ],
+      "repeated_angle_ladder": [
+        {
+          "K": -100,
+          "abs_a": 0,
+          "admissible_candidate_count_at_K": 3,
+          "b": 10,
+          "member_count_at_K": 30,
+          "r": 0,
+          "support_present": true
+        },
+        {
+          "K": -101,
+          "abs_a": 2,
+          "b": 11,
+          "r": 1,
+          "support_present": false
+        },
+        {
+          "K": -116,
+          "abs_a": 4,
+          "admissible_candidate_count_at_K": 1,
+          "b": 14,
+          "member_count_at_K": 10,
+          "r": 2,
+          "support_present": true
+        },
+        {
+          "K": -181,
+          "abs_a": 6,
+          "b": 19,
+          "r": 3,
+          "support_present": false
+        },
+        {
+          "K": -356,
+          "abs_a": 8,
+          "b": 26,
+          "r": 4,
+          "support_present": false
+        }
+      ],
+      "source_reconstruction_checks": {
+        "every_K_support_atom_has_an_admissible_pair": true,
+        "minimum_atom_is_one_affine_orbit": true,
+        "minimum_multiplicity_matches_q_scan": true,
+        "minimum_pair_is_unique_up_to_a_sign": true
+      },
+      "support_atom_count": 24,
+      "usp4_admissible_integer_coefficient_lattice": {
+        "abs_a_sign_quotiented_pair_count": 75,
+        "absent_from_frozen_family_support": true,
+        "actual_minus_lattice_minimum_K": 240,
+        "actual_to_lattice_haar_edge_defect_ratio": {
+          "decimal_display_only": "2.666666666667",
+          "denominator": 3,
+          "numerator": 8,
+          "text": "8/3"
+        },
+        "minimum_K": -356,
+        "minimum_normalized_K": {
+          "decimal_display_only": "-14.240000000000",
+          "denominator": 25,
+          "numerator": -356,
+          "text": "-356/25"
+        },
+        "minimum_pair": {
+          "Delta": 0,
+          "K": -356,
+          "abs_a": 8,
+          "b": 26,
+          "endpoint_slack_Gamma": 16,
+          "haar_edge_defect_E": 144,
+          "upper_coefficient_defect_U": 4
+        }
+      }
+    },
+    {
+      "member_count": 14406,
+      "minimum_tail_atom": {
+        "K": -282,
+        "absolute_moment_shares": {
+          "10": {
+            "decimal_display_only": "0.629807910214",
+            "denominator": 105206297019196352621965,
+            "numerator": 66259758067061942685888,
+            "text": "66259758067061942685888/105206297019196352621965"
+          },
+          "12": {
+            "decimal_display_only": "0.734068421457",
+            "denominator": 797570369691811117670825621,
+            "numerator": 585471222280559325572506368,
+            "text": "585471222280559325572506368/797570369691811117670825621"
+          },
+          "2": {
+            "decimal_display_only": "0.048329929988",
+            "denominator": 137120,
+            "numerator": 6627,
+            "text": "6627/137120"
+          },
+          "4": {
+            "decimal_display_only": "0.164204790824",
+            "denominator": 802360189,
+            "numerator": 131751387,
+            "text": "131751387/802360189"
+          },
+          "6": {
+            "decimal_display_only": "0.329703241882",
+            "denominator": 10592755311295,
+            "numerator": 3492465766596,
+            "text": "3492465766596/10592755311295"
+          },
+          "8": {
+            "decimal_display_only": "0.494136681249",
+            "denominator": 1686182334737958989,
+            "numerator": 833204542868340912,
+            "text": "833204542868340912/1686182334737958989"
+          }
+        },
+        "coarse_to_member_mass_ratio": {
+          "decimal_display_only": "0.982808022923",
+          "denominator": 349,
+          "numerator": 343,
+          "text": "343/349"
+        },
+        "coarse_uniform_orbit_mass": {
+          "decimal_display_only": "0.002865329513",
+          "denominator": 349,
+          "numerator": 1,
+          "text": "1/349"
+        },
+        "first_even_moment_order_with_more_than_half_of_absolute_moment": 10,
+        "frobenius_geometry": {
+          "chosen_a": -7,
+          "factorization": "IRREDUCIBLE_OVER_Q",
+          "frobenius_polynomial": "T^4 - 7*T^3 + 25*T^2 - 49*T + 49",
+          "frobenius_polynomial_coefficients_high_to_low": [
+            1,
+            -7,
+            25,
+            -49,
+            49
+          ],
+          "mod_2_irreducibility_certificate": {
+            "coefficients_high_to_low": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "remainder_coefficients_high_to_low": [
+              1,
+              1
+            ],
+            "remainder_mod_T2_plus_T_plus_1": "T+1",
+            "values_at_0_and_1": [
+              1,
+              1
+            ]
+          },
+          "quartic_discriminant": 182525,
+          "real_trace_field": "Q(sqrt(5))",
+          "real_weil_discriminant": 5,
+          "real_weil_polynomial": "T^2 - 7*T + 11",
+          "real_weil_polynomial_coefficients_high_to_low": [
+            1,
+            -7,
+            11
+          ],
+          "shape": "FQ_SIMPLE",
+          "shape_proof": "modulo 2 the quartic is T^4+T^3+T^2+T+1=Phi_5; it has no F_2 root and division by the sole irreducible quadratic T^2+T+1 leaves T+1"
+        },
+        "member_count": 42,
+        "member_or_marked_stack_mass": {
+          "decimal_display_only": "0.002915451895",
+          "denominator": 343,
+          "numerator": 1,
+          "text": "1/343"
+        },
+        "normalized_K": {
+          "decimal_display_only": "-5.755102040816",
+          "denominator": 49,
+          "numerator": -282,
+          "text": "-282/49"
+        },
+        "orbit_certificate": {
+          "orbit_count": 1,
+          "orbit_size": 42,
+          "proof_from_frozen_aggregate_data": "all frozen nonfree orbits have stabilizer order 2; in odd characteristic every nonidentity affine involution has multiplier -1, while q=3,7 have chi(-1)=-1; a fixed member would therefore have a=0, contrary to the unique minimum pair",
+          "representative_coefficients_low_to_high_if_frozen": null,
+          "stabilizer_elements_alpha_beta_if_frozen": [
+            [
+              1,
+              0
+            ]
+          ],
+          "stabilizer_order": 1
+        },
+        "top_two_negative_atoms_moment_12_share": {
+          "decimal_display_only": "0.808373465210",
+          "denominator": 344550399706862402833796668272,
+          "numerator": 278525400550656964082645456737,
+          "text": "278525400550656964082645456737/344550399706862402833796668272"
+        },
+        "unique_admissible_pair_up_to_a_sign": {
+          "Delta": 5,
+          "abs_a": 7,
+          "b": 25,
+          "endpoint_slack_Gamma": 149,
+          "haar_edge_defect_E": 698,
+          "upper_coefficient_defect_U": 17
+        }
+      },
+      "q": 7,
+      "realized_positive_repeated_angle_rungs": [
+        {
+          "K": -212,
+          "abs_a": 4,
+          "absolute_moment_12_share": {
+            "decimal_display_only": "0.023920903170",
+            "denominator": 21534399981678900177112291767,
+            "numerator": 515122296789900884328841216,
+            "text": "515122296789900884328841216/21534399981678900177112291767"
+          },
+          "admissible_candidate_count_at_K": 1,
+          "all_members_at_K_are_repeated_angle": true,
+          "b": 18,
+          "member_count_at_K": 42,
+          "r": 2,
+          "support_present": true
+        }
+      ],
+      "repeated_angle_ladder": [
+        {
+          "K": -196,
+          "abs_a": 0,
+          "admissible_candidate_count_at_K": 2,
+          "b": 14,
+          "member_count_at_K": 42,
+          "r": 0,
+          "support_present": true
+        },
+        {
+          "K": -197,
+          "abs_a": 2,
+          "b": 15,
+          "r": 1,
+          "support_present": false
+        },
+        {
+          "K": -212,
+          "abs_a": 4,
+          "admissible_candidate_count_at_K": 1,
+          "b": 18,
+          "member_count_at_K": 42,
+          "r": 2,
+          "support_present": true
+        },
+        {
+          "K": -277,
+          "abs_a": 6,
+          "b": 23,
+          "r": 3,
+          "support_present": false
+        },
+        {
+          "K": -452,
+          "abs_a": 8,
+          "b": 30,
+          "r": 4,
+          "support_present": false
+        },
+        {
+          "K": -821,
+          "abs_a": 10,
+          "b": 39,
+          "r": 5,
+          "support_present": false
+        }
+      ],
+      "source_reconstruction_checks": {
+        "every_K_support_atom_has_an_admissible_pair": true,
+        "minimum_atom_is_one_affine_orbit": true,
+        "minimum_multiplicity_matches_q_scan": true,
+        "minimum_pair_is_unique_up_to_a_sign": true
+      },
+      "support_atom_count": 53,
+      "usp4_admissible_integer_coefficient_lattice": {
+        "abs_a_sign_quotiented_pair_count": 118,
+        "absent_from_frozen_family_support": true,
+        "actual_minus_lattice_minimum_K": 539,
+        "actual_to_lattice_haar_edge_defect_ratio": {
+          "decimal_display_only": "4.389937106918",
+          "denominator": 159,
+          "numerator": 698,
+          "text": "698/159"
+        },
+        "minimum_K": -821,
+        "minimum_normalized_K": {
+          "decimal_display_only": "-16.755102040816",
+          "denominator": 49,
+          "numerator": -821,
+          "text": "-821/49"
+        },
+        "minimum_pair": {
+          "Delta": 0,
+          "K": -821,
+          "abs_a": 10,
+          "b": 39,
+          "endpoint_slack_Gamma": 9,
+          "haar_edge_defect_E": 159,
+          "upper_coefficient_defect_U": 3
+        }
+      }
+    }
+  ],
+  "firewall": "The all-q statements are algebraic identities and conditional inequalities for admissible reciprocal quartics. Every orbit, support, moment-share, lattice-exclusion, and shape classification is a three-field fact only. USp-admissible integer coefficients need not be realized by a Jacobian or by the marked quintic family. No asymptotic tail law, equidistribution rate, number-field transfer, or analytic detector claim is made.",
+  "minimum_shape_trichotomy": {
+    "consequence": "all three minimum atoms dominate the tenth absolute moment, but they have split nonisotypic, repeated isotypic, and simple Frobenius types; repeated-angle or automorphism strata alone therefore do not explain the frozen high-moment tail",
+    "shapes_in_q_order": [
+      "SPLIT_NONISOTYPIC",
+      "SPLIT_ISOTYPIC",
+      "FQ_SIMPLE"
+    ],
+    "status": "EXACT_FOR_Q_3_5_7_ONLY"
+  },
+  "non_identifiability_ledger": {
+    "action_taken": "record only the exactly identifiable minimum-orbit mass distortion; do not rerun finite-field enumeration and do not invent a coarse-orbit mean",
+    "full_curve_stack_warning": "the affine quotient remembers a rational branch point at infinity; non-affine PGL2 automorphisms, explicitly present at the q=5 minimum, are outside its stabilizers",
+    "uniform_orbit_K_or_H_mean": "not recoverable from the frozen affine aggregate because it omits per-orbit K and H"
+  },
+  "payload_sha256": "cd47a873b8795dba1fbd8cd82d4019f8c69f119289da415ebabd2a59b500c5c2",
+  "producer": {
+    "affine_fixture": "research/l-families/atlas/function_field/genus2_affine_orbits.json",
+    "affine_fixture_canonical_sha256": "2849d152b93023a30951f0f8f9b6e9ca2bb7234d210602fcb1d2973977db7994",
+    "input_provenance": "existing exact frozen fixtures only",
+    "q_scan_fixture": "research/l-families/atlas/function_field/genus2_q_scan.json",
+    "q_scan_fixture_canonical_sha256": "5190f667e341fb0ffc4affe41920be9edb53c1cfd1a663a28b30c5374e4bf632",
+    "source": "research/l-families/atlas/function_field/genus2_tail_geometry.py",
+    "source_sha256_lf_normalized": "cc78f5603485c1f2e3b018a4a66119e790084453ac8e56133edfa94624fd2bdf"
+  },
+  "q5_special_curve_geometry": {
+    "curve": "y^2=x^5+x^3+x over F_5",
+    "elliptic_quotients": [
+      {
+        "equation": "v^2=(u^2-1)*(u+2)",
+        "invariants": "u=x+1/x, v=y*(x+1)/x^2",
+        "symbolic_laurent_residual_zero": true
+      },
+      {
+        "equation": "w^2=(u^2-1)*(u-2)",
+        "invariants": "u=x+1/x, w=y*(x-1)/x^2",
+        "symbolic_laurent_residual_zero": true
+      }
+    ],
+    "interpretation": "the non-affine involution gives an explicit elliptic splitting; the square Frobenius polynomial shows that the two quotient factors are in the same ordinary F_5 isogeny class of trace 2",
+    "measure_warning": "AGL stabilizers weight affine presentations with a marked rational Weierstrass point; they are not the full unmarked curve automorphism groups",
+    "odd_affine_symmetry": {
+      "affine_action_shadow": "(alpha,beta)=(-1,0) has order 2 after quotienting y-sign",
+      "map": "(x,y)->(-x,2y)",
+      "order": 4,
+      "square": "hyperelliptic involution (x,y)->(x,-y)"
+    },
+    "reciprocal_involution": {
+      "identity": "x^6*D(1/x)=D(x)",
+      "map": "tau:(x,y)->(1/x,y/x^3)",
+      "order": 2,
+      "scope_note": "tau does not preserve the marked branch point at infinity and is not in AGL(1,F_5)"
+    },
+    "status": "EXACT_FOR_THE_FROZEN_Q5_MINIMUM_REPRESENTATIVE"
+  },
+  "raw_fixture_id": "FUNCTION_FIELD.GENUS2.Q3_Q5_Q7.TOY_MINOR.TAIL_GEOMETRY.V1",
+  "resource_contract": {
+    "external_dependencies": "none; Python 3.11+ standard library",
+    "field_enumeration": "FORBIDDEN_AND_NOT_USED",
+    "frozen_q_values": [
+      3,
+      5,
+      7
+    ],
+    "maximum_coefficient_lattice_candidates_per_q": 1000,
+    "maximum_moment_order": 12,
+    "member_enumeration": "FORBIDDEN_AND_NOT_USED"
+  },
+  "rigor_level": "RIGOROUS_CERTIFIED_WITH_EXPLICIT_SCOPE_FIREWALLS",
+  "schema": "riemann.function_field.genus2_tail_geometry.v1",
+  "scope": "symbolic reciprocal-quartic geometry and exact reconstruction from the already-frozen q=3,5,7 K histograms and affine-orbit aggregates"
+}

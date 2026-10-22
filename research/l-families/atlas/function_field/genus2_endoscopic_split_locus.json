@@ -1,0 +1,5255 @@
+{
+  "definition_and_exact_identities": {
+    "affine_invariance_used_for_orbit_bounds": "under the source-locked AGL action a maps to +/-a and b is fixed, so Delta and the split classification are orbit-invariant",
+    "balanced_B": "B=(2*q*a^2-b^2)/q^2=2*Delta/q-(b-4*q)^2/q^2",
+    "discriminant": "Delta=a^2-4*b+8*q",
+    "echo_collapse": "the entire balanced Frobenius-power echo is determined by (B_1,B_2) through the recorded order-four recurrence",
+    "factorization": "P(T)=(1-r*T+q*T^2)*(1-s*T+q*T^2), r+s=-a, r*s=b-2*q",
+    "repeated_factor": "Delta=0 iff r=s=-a/2 and P(T)=(1-r*T+q*T^2)^2",
+    "source_polynomial": "P(T)=1+a*T+b*T^2+q*a*T^3+q^2*T^4",
+    "split_criterion": "Delta is a nonnegative square d^2 and d has the parity of a; then r=(-a-d)/2, s=(-a+d)/2",
+    "toy_minor_F": "F=(q*a^2-b^2)/q^2=Delta/q-(b-2*q)^2/q^2-4"
+  },
+  "frozen_histogram_results": {
+    "families": [
+      {
+        "affine_orbit_weighting": {
+          "bound_derivation": "each orbit stays in one (a^2,b) state, has between 1 and q*(q-1) members, and every nonempty class in a mixed B bucket needs an orbit",
+          "exact_split_orbits_from_homogeneous_B_buckets": 4,
+          "identifiability_note": "the source records orbit counts only after aggregation by B; singleton mixed-bucket bounds can nevertheless force an exact total, while a non-singleton interval records the remaining lost assignment",
+          "integral_split_locus_affine_orbit_count": 5,
+          "integral_split_locus_affine_orbit_count_bounds": [
+            5,
+            5
+          ],
+          "mixed_B_buckets": [
+            {
+              "B_D": [
+                -4,
+                9
+              ],
+              "B_numerator_J": -4,
+              "no_q_elliptic_form_factorization_member_count": 9,
+              "source_affine_orbit_count": 3,
+              "split_member_count": 3,
+              "split_orbit_count_bounds": [
+                1,
+                1
+              ]
+            }
+          ],
+          "source_total_affine_orbit_count": 29,
+          "split_orbits_forced_in_mixed_B_buckets": 1,
+          "status": "EXACTLY_IDENTIFIED_FROM_AGGREGATED_SOURCE_AND_ORBIT_SIZE_BOUNDS",
+          "uniform_affine_orbit_fraction_bounds": [
+            [
+              5,
+              29
+            ],
+            [
+              5,
+              29
+            ]
+          ]
+        },
+        "detector_correlations": {
+          "B": {
+            "by_factorization_type": {
+              "no_integral_q_elliptic_form_factorization": {
+                "conditional_member_mean": [
+                  176,
+                  405
+                ],
+                "member_sign_counts": {
+                  "negative": 33,
+                  "positive": 90,
+                  "zero": 12
+                },
+                "signed_atom_sign_counts": {
+                  "negative": 6,
+                  "positive": 16,
+                  "zero": 1
+                }
+              },
+              "split_distinct": {
+                "conditional_member_mean": [
+                  0,
+                  1
+                ],
+                "member_sign_counts": {
+                  "negative": 15,
+                  "positive": 12,
+                  "zero": 0
+                },
+                "signed_atom_sign_counts": {
+                  "negative": 5,
+                  "positive": 4,
+                  "zero": 0
+                }
+              },
+              "split_repeated": {
+                "conditional_member_mean": [
+                  0,
+                  1
+                ],
+                "member_sign_counts": {
+                  "negative": 0,
+                  "positive": 0,
+                  "zero": 0
+                },
+                "signed_atom_sign_counts": {
+                  "negative": 0,
+                  "positive": 0,
+                  "zero": 0
+                }
+              }
+            },
+            "covariance_with_split_indicator": [
+              -44,
+              729
+            ],
+            "family_member_mean": [
+              88,
+              243
+            ],
+            "fiber_purity": {
+              "fiber_count": 14,
+              "interpretation": "a mixed fiber contains both a +q elliptic-form split state and a state without such an integral factorization, so it is an exact obstruction to recovering that split locus from this detector coordinate alone; a split-repeated/split-distinct collision alone is not counted as mixed",
+              "member_count_in_mixed_fibers": 12,
+              "member_fraction_in_mixed_fibers": [
+                2,
+                27
+              ],
+              "mixed_factorization_fiber_count": 1,
+              "mixed_factorization_fibers": [
+                {
+                  "detector_value": [
+                    -4,
+                    9
+                  ],
+                  "factorization_types": [
+                    "split_distinct",
+                    "no_integral_q_elliptic_form_factorization"
+                  ],
+                  "member_count": 12,
+                  "signed_atom_count": 2,
+                  "states": [
+                    {
+                      "a_D_squared": 0,
+                      "b_D": -2,
+                      "factorization_type": "no_integral_q_elliptic_form_factorization",
+                      "member_count": 9
+                    },
+                    {
+                      "a_D_squared": 0,
+                      "b_D": 2,
+                      "factorization_type": "split_distinct",
+                      "member_count": 3
+                    }
+                  ],
+                  "twist_quotiented_state_count": 2
+                }
+              ],
+              "multi_factorization_label_fiber_count": 1,
+              "same_split_status_multi_label_fiber_count": 0
+            },
+            "integral_split_locus_conditional_member_mean": [
+              0,
+              1
+            ]
+          },
+          "F": {
+            "by_factorization_type": {
+              "no_integral_q_elliptic_form_factorization": {
+                "conditional_member_mean": [
+                  -118,
+                  405
+                ],
+                "member_sign_counts": {
+                  "negative": 81,
+                  "positive": 42,
+                  "zero": 12
+                },
+                "signed_atom_sign_counts": {
+                  "negative": 14,
+                  "positive": 8,
+                  "zero": 1
+                }
+              },
+              "split_distinct": {
+                "conditional_member_mean": [
+                  -10,
+                  9
+                ],
+                "member_sign_counts": {
+                  "negative": 21,
+                  "positive": 6,
+                  "zero": 0
+                },
+                "signed_atom_sign_counts": {
+                  "negative": 7,
+                  "positive": 2,
+                  "zero": 0
+                }
+              },
+              "split_repeated": {
+                "conditional_member_mean": [
+                  0,
+                  1
+                ],
+                "member_sign_counts": {
+                  "negative": 0,
+                  "positive": 0,
+                  "zero": 0
+                },
+                "signed_atom_sign_counts": {
+                  "negative": 0,
+                  "positive": 0,
+                  "zero": 0
+                }
+              }
+            },
+            "covariance_with_split_indicator": [
+              -83,
+              729
+            ],
+            "family_member_mean": [
+              -104,
+              243
+            ],
+            "fiber_purity": {
+              "fiber_count": 12,
+              "interpretation": "a mixed fiber contains both a +q elliptic-form split state and a state without such an integral factorization, so it is an exact obstruction to recovering that split locus from this detector coordinate alone; a split-repeated/split-distinct collision alone is not counted as mixed",
+              "member_count_in_mixed_fibers": 24,
+              "member_fraction_in_mixed_fibers": [
+                4,
+                27
+              ],
+              "mixed_factorization_fiber_count": 1,
+              "mixed_factorization_fibers": [
+                {
+                  "detector_value": [
+                    -4,
+                    9
+                  ],
+                  "factorization_types": [
+                    "split_distinct",
+                    "no_integral_q_elliptic_form_factorization"
+                  ],
+                  "member_count": 24,
+                  "signed_atom_count": 4,
+                  "states": [
+                    {
+                      "a_D_squared": 0,
+                      "b_D": -2,
+                      "factorization_type": "no_integral_q_elliptic_form_factorization",
+                      "member_count": 9
+                    },
+                    {
+                      "a_D_squared": 0,
+                      "b_D": 2,
+                      "factorization_type": "split_distinct",
+                      "member_count": 3
+                    },
+                    {
+                      "a_D_squared": 4,
+                      "b_D": 4,
+                      "factorization_type": "no_integral_q_elliptic_form_factorization",
+                      "member_count": 12
+                    }
+                  ],
+                  "twist_quotiented_state_count": 3
+                }
+              ],
+              "multi_factorization_label_fiber_count": 1,
+              "same_split_status_multi_label_fiber_count": 0
+            },
+            "integral_split_locus_conditional_member_mean": [
+              -10,
+              9
+            ]
+          },
+          "complete_frobenius_echo": {
+            "coordinates": "(B_1,B_2); the exact recurrence determines every B_r",
+            "fiber_purity": {
+              "fiber_count": 17,
+              "interpretation": "a mixed fiber contains both a +q elliptic-form split state and a state without such an integral factorization, so it is an exact obstruction to recovering that split locus from this detector coordinate alone; a split-repeated/split-distinct collision alone is not counted as mixed",
+              "member_count_in_mixed_fibers": 12,
+              "member_fraction_in_mixed_fibers": [
+                2,
+                27
+              ],
+              "mixed_factorization_fiber_count": 1,
+              "mixed_factorization_fibers": [
+                {
+                  "detector_value": {
+                    "B_1": [
+                      -4,
+                      9
+                    ],
+                    "B_2": [
+                      -196,
+                      81
+                    ]
+                  },
+                  "factorization_types": [
+                    "split_distinct",
+                    "no_integral_q_elliptic_form_factorization"
+                  ],
+                  "member_count": 12,
+                  "signed_atom_count": 2,
+                  "states": [
+                    {
+                      "a_D_squared": 0,
+                      "b_D": -2,
+                      "factorization_type": "no_integral_q_elliptic_form_factorization",
+                      "member_count": 9
+                    },
+                    {
+                      "a_D_squared": 0,
+                      "b_D": 2,
+                      "factorization_type": "split_distinct",
+                      "member_count": 3
+                    }
+                  ],
+                  "twist_quotiented_state_count": 2
+                }
+              ],
+              "multi_factorization_label_fiber_count": 1,
+              "same_split_status_multi_label_fiber_count": 0
+            },
+            "powers_directly_cross_checked": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "cyclotomic_normalized_spectrum": {
+            "by_factorization_type": {
+              "no_integral_q_elliptic_form_factorization": {
+                "member_count": 12,
+                "signed_atom_count": 1,
+                "state_count": 1
+              },
+              "split_distinct": {
+                "member_count": 6,
+                "signed_atom_count": 2,
+                "state_count": 1
+              },
+              "split_repeated": {
+                "member_count": 0,
+                "signed_atom_count": 0,
+                "state_count": 0
+              }
+            },
+            "certificate": "an even n<=24 with powered polynomial (X-q^(n/2))^4; then every normalized Frobenius root is an n-th root of unity",
+            "certified_states": [
+              {
+                "a_D_squared": 0,
+                "b_D": 0,
+                "echo_B1_B2": [
+                  [
+                    0,
+                    1
+                  ],
+                  [
+                    -4,
+                    1
+                  ]
+                ],
+                "factorization_type": "no_integral_q_elliptic_form_factorization",
+                "member_count": 12,
+                "minimum_even_power_to_identity": 8,
+                "signed_atom_count": 1
+              },
+              {
+                "a_D_squared": 9,
+                "b_D": 6,
+                "echo_B1_B2": [
+                  [
+                    2,
+                    1
+                  ],
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "factorization_type": "split_distinct",
+                "member_count": 6,
+                "minimum_even_power_to_identity": 12,
+                "signed_atom_count": 2
+              }
+            ],
+            "maximum_power_checked": 24,
+            "nondetection_warning": "absence of this bounded certificate is not asserted to prove a noncyclotomic spectrum",
+            "status": "EXACT_POSITIVE_CERTIFICATES_WITH_BOUNDED_NONDETECTION"
+          }
+        },
+        "factorization_classification": {
+          "classes": {
+            "no_integral_q_elliptic_form_factorization": {
+              "member_count": 135,
+              "member_fraction": [
+                5,
+                6
+              ],
+              "signed_coefficient_atom_count": 23,
+              "signed_coefficient_atom_fraction": [
+                23,
+                32
+              ],
+              "twist_quotiented_state_count": 13
+            },
+            "split_distinct": {
+              "member_count": 27,
+              "member_fraction": [
+                1,
+                6
+              ],
+              "signed_coefficient_atom_count": 9,
+              "signed_coefficient_atom_fraction": [
+                9,
+                32
+              ],
+              "twist_quotiented_state_count": 5
+            },
+            "split_repeated": {
+              "member_count": 0,
+              "member_fraction": [
+                0,
+                1
+              ],
+              "signed_coefficient_atom_count": 0,
+              "signed_coefficient_atom_fraction": [
+                0,
+                1
+              ],
+              "twist_quotiented_state_count": 0
+            }
+          },
+          "complete_classification_ledger_sha256": "ac2dd1e15a27a911c8e874ffe619b1c557e84731d96cc9992c14f744844c0f0a",
+          "integral_split_locus": {
+            "member_count": 27,
+            "member_fraction": [
+              1,
+              6
+            ],
+            "signed_coefficient_atom_count": 9,
+            "signed_coefficient_atom_fraction": [
+              9,
+              32
+            ],
+            "twist_quotiented_state_count": 5
+          },
+          "split_signed_coefficient_atoms": [
+            {
+              "B": [
+                2,
+                1
+              ],
+              "Delta": 9,
+              "F": [
+                -1,
+                1
+              ],
+              "a_D": -3,
+              "b_D": 6,
+              "cyclotomic_power_to_identity_exponent": 12,
+              "echo_B1_B2": [
+                [
+                  2,
+                  1
+                ],
+                [
+                  2,
+                  1
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                0,
+                3
+              ],
+              "factorization": "(1-(0)*T+3*T^2)*(1-(3)*T+3*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 3,
+              "square_root_Delta": 3
+            },
+            {
+              "B": [
+                -4,
+                3
+              ],
+              "Delta": 4,
+              "F": [
+                -8,
+                3
+              ],
+              "a_D": -2,
+              "b_D": 6,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -4,
+                  3
+                ],
+                [
+                  28,
+                  9
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                0,
+                2
+              ],
+              "factorization": "(1-(0)*T+3*T^2)*(1-(2)*T+3*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 3,
+              "square_root_Delta": 2
+            },
+            {
+              "B": [
+                2,
+                3
+              ],
+              "Delta": 25,
+              "F": [
+                1,
+                3
+              ],
+              "a_D": -1,
+              "b_D": 0,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  2,
+                  3
+                ],
+                [
+                  -14,
+                  9
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -2,
+                3
+              ],
+              "factorization": "(1-(-2)*T+3*T^2)*(1-(3)*T+3*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 3,
+              "square_root_Delta": 5
+            },
+            {
+              "B": [
+                -10,
+                9
+              ],
+              "Delta": 9,
+              "F": [
+                -13,
+                9
+              ],
+              "a_D": -1,
+              "b_D": 4,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -10,
+                  9
+                ],
+                [
+                  98,
+                  81
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -1,
+                2
+              ],
+              "factorization": "(1-(-1)*T+3*T^2)*(1-(2)*T+3*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 3,
+              "square_root_Delta": 3
+            },
+            {
+              "B": [
+                -4,
+                9
+              ],
+              "Delta": 16,
+              "F": [
+                -4,
+                9
+              ],
+              "a_D": 0,
+              "b_D": 2,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -4,
+                  9
+                ],
+                [
+                  -196,
+                  81
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -2,
+                2
+              ],
+              "factorization": "(1-(-2)*T+3*T^2)*(1-(2)*T+3*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 3,
+              "square_root_Delta": 4
+            },
+            {
+              "B": [
+                2,
+                3
+              ],
+              "Delta": 25,
+              "F": [
+                1,
+                3
+              ],
+              "a_D": 1,
+              "b_D": 0,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  2,
+                  3
+                ],
+                [
+                  -14,
+                  9
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -3,
+                2
+              ],
+              "factorization": "(1-(-3)*T+3*T^2)*(1-(2)*T+3*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 3,
+              "square_root_Delta": 5
+            },
+            {
+              "B": [
+                -10,
+                9
+              ],
+              "Delta": 9,
+              "F": [
+                -13,
+                9
+              ],
+              "a_D": 1,
+              "b_D": 4,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -10,
+                  9
+                ],
+                [
+                  98,
+                  81
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -2,
+                1
+              ],
+              "factorization": "(1-(-2)*T+3*T^2)*(1-(1)*T+3*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 3,
+              "square_root_Delta": 3
+            },
+            {
+              "B": [
+                -4,
+                3
+              ],
+              "Delta": 4,
+              "F": [
+                -8,
+                3
+              ],
+              "a_D": 2,
+              "b_D": 6,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -4,
+                  3
+                ],
+                [
+                  28,
+                  9
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -2,
+                0
+              ],
+              "factorization": "(1-(-2)*T+3*T^2)*(1-(0)*T+3*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 3,
+              "square_root_Delta": 2
+            },
+            {
+              "B": [
+                2,
+                1
+              ],
+              "Delta": 9,
+              "F": [
+                -1,
+                1
+              ],
+              "a_D": 3,
+              "b_D": 6,
+              "cyclotomic_power_to_identity_exponent": 12,
+              "echo_B1_B2": [
+                [
+                  2,
+                  1
+                ],
+                [
+                  2,
+                  1
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -3,
+                0
+              ],
+              "factorization": "(1-(-3)*T+3*T^2)*(1-(0)*T+3*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 3,
+              "square_root_Delta": 3
+            }
+          ]
+        },
+        "input_member_count": 162,
+        "input_signed_coefficient_atom_count": 32,
+        "q": 3,
+        "tail_and_extreme_shares": {
+          "B": {
+            "absolute_extreme": {
+              "member_count": 6,
+              "member_counts_by_factorization_type": {
+                "no_integral_q_elliptic_form_factorization": 6,
+                "split_distinct": 0,
+                "split_repeated": 0
+              },
+              "member_fraction": [
+                1,
+                27
+              ],
+              "values": [
+                [
+                  29,
+                  9
+                ]
+              ]
+            },
+            "absolute_moment_shares": {
+              "absolute_extreme_fibers": {
+                "10": [
+                  420707233300201,
+                  462302445009320
+                ],
+                "12": [
+                  353814783205469041,
+                  369764461210056392
+                ],
+                "2": [
+                  841,
+                  3560
+                ],
+                "4": [
+                  707281,
+                  1531592
+                ],
+                "6": [
+                  594823321,
+                  889288040
+                ],
+                "8": [
+                  500246412961,
+                  609911827592
+                ]
+              },
+              "integral_split_locus": {
+                "10": [
+                  455305697664,
+                  57787805626165
+                ],
+                "12": [
+                  145843708380672,
+                  46220557651257049
+                ],
+                "2": [
+                  153,
+                  890
+                ],
+                "4": [
+                  17142,
+                  191449
+                ],
+                "6": [
+                  4755864,
+                  111161005
+                ],
+                "8": [
+                  1443956832,
+                  76238978449
+                ]
+              },
+              "minimum_value_fiber": {
+                "10": [
+                  6131066257801,
+                  462302445009320
+                ],
+                "12": [
+                  2213314919066161,
+                  369764461210056392
+                ],
+                "2": [
+                  361,
+                  3560
+                ],
+                "4": [
+                  130321,
+                  1531592
+                ],
+                "6": [
+                  47045881,
+                  889288040
+                ],
+                "8": [
+                  16983563041,
+                  609911827592
+                ]
+              },
+              "repeated_factor_locus": {
+                "10": [
+                  0,
+                  1
+                ],
+                "12": [
+                  0,
+                  1
+                ],
+                "2": [
+                  0,
+                  1
+                ],
+                "4": [
+                  0,
+                  1
+                ],
+                "6": [
+                  0,
+                  1
+                ],
+                "8": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "haar_endpoints": {
+              "minus_four": {
+                "member_count": 0,
+                "member_counts_by_factorization_type": {
+                  "no_integral_q_elliptic_form_factorization": 0,
+                  "split_distinct": 0,
+                  "split_repeated": 0
+                },
+                "member_fraction": [
+                  0,
+                  1
+                ],
+                "values": [
+                  [
+                    -4,
+                    1
+                  ]
+                ]
+              },
+              "plus_four": {
+                "member_count": 0,
+                "member_counts_by_factorization_type": {
+                  "no_integral_q_elliptic_form_factorization": 0,
+                  "split_distinct": 0,
+                  "split_repeated": 0
+                },
+                "member_fraction": [
+                  0,
+                  1
+                ],
+                "values": [
+                  [
+                    4,
+                    1
+                  ]
+                ]
+              }
+            },
+            "maximum": {
+              "member_count": 6,
+              "member_counts_by_factorization_type": {
+                "no_integral_q_elliptic_form_factorization": 6,
+                "split_distinct": 0,
+                "split_repeated": 0
+              },
+              "member_fraction": [
+                1,
+                27
+              ],
+              "values": [
+                [
+                  29,
+                  9
+                ]
+              ]
+            },
+            "minimum": {
+              "member_count": 6,
+              "member_counts_by_factorization_type": {
+                "no_integral_q_elliptic_form_factorization": 6,
+                "split_distinct": 0,
+                "split_repeated": 0
+              },
+              "member_fraction": [
+                1,
+                27
+              ],
+              "values": [
+                [
+                  -19,
+                  9
+                ]
+              ]
+            }
+          },
+          "F": {
+            "absolute_extreme": {
+              "member_count": 6,
+              "member_counts_by_factorization_type": {
+                "no_integral_q_elliptic_form_factorization": 0,
+                "split_distinct": 6,
+                "split_repeated": 0
+              },
+              "member_fraction": [
+                1,
+                27
+              ],
+              "values": [
+                [
+                  -8,
+                  3
+                ]
+              ]
+            },
+            "absolute_moment_shares": {
+              "absolute_extreme_fibers": {
+                "10": [
+                  7925422620672,
+                  14720928733441
+                ],
+                "12": [
+                  4565043429507072,
+                  7816952346147025
+                ],
+                "2": [
+                  72,
+                  301
+                ],
+                "4": [
+                  41472,
+                  114625
+                ],
+                "6": [
+                  23887872,
+                  55111921
+                ],
+                "8": [
+                  13759414272,
+                  28129345825
+                ]
+              },
+              "integral_split_locus": {
+                "10": [
+                  63544726824963,
+                  117767429867528
+                ],
+                "12": [
+                  36543927959635587,
+                  62535618769176200
+                ],
+                "2": [
+                  843,
+                  2408
+                ],
+                "4": [
+                  367107,
+                  917000
+                ],
+                "6": [
+                  196464003,
+                  440895368
+                ],
+                "8": [
+                  110934130947,
+                  225034766600
+                ]
+              },
+              "minimum_value_fiber": {
+                "10": [
+                  7925422620672,
+                  14720928733441
+                ],
+                "12": [
+                  4565043429507072,
+                  7816952346147025
+                ],
+                "2": [
+                  72,
+                  301
+                ],
+                "4": [
+                  41472,
+                  114625
+                ],
+                "6": [
+                  23887872,
+                  55111921
+                ],
+                "8": [
+                  13759414272,
+                  28129345825
+                ]
+              },
+              "repeated_factor_locus": {
+                "10": [
+                  0,
+                  1
+                ],
+                "12": [
+                  0,
+                  1
+                ],
+                "2": [
+                  0,
+                  1
+                ],
+                "4": [
+                  0,
+                  1
+                ],
+                "6": [
+                  0,
+                  1
+                ],
+                "8": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "far_negative_F_below_minus_4": {
+              "member_count": 0,
+              "member_counts_by_factorization_type": {
+                "no_integral_q_elliptic_form_factorization": 0,
+                "split_distinct": 0,
+                "split_repeated": 0
+              },
+              "member_fraction": [
+                0,
+                1
+              ],
+              "signed_atom_count": 0,
+              "signed_atom_counts_by_factorization_type": {
+                "no_integral_q_elliptic_form_factorization": 0,
+                "split_distinct": 0,
+                "split_repeated": 0
+              }
+            },
+            "maximum": {
+              "member_count": 18,
+              "member_counts_by_factorization_type": {
+                "no_integral_q_elliptic_form_factorization": 18,
+                "split_distinct": 0,
+                "split_repeated": 0
+              },
+              "member_fraction": [
+                1,
+                9
+              ],
+              "values": [
+                [
+                  8,
+                  9
+                ]
+              ]
+            },
+            "minimum": {
+              "member_count": 6,
+              "member_counts_by_factorization_type": {
+                "no_integral_q_elliptic_form_factorization": 0,
+                "split_distinct": 6,
+                "split_repeated": 0
+              },
+              "member_fraction": [
+                1,
+                27
+              ],
+              "values": [
+                [
+                  -8,
+                  3
+                ]
+              ]
+            }
+          }
+        },
+        "twist_quotiented_coefficient_state_count": 18
+      },
+      {
+        "affine_orbit_weighting": {
+          "bound_derivation": "each orbit stays in one (a^2,b) state, has between 1 and q*(q-1) members, and every nonempty class in a mixed B bucket needs an orbit",
+          "exact_split_orbits_from_homogeneous_B_buckets": 30,
+          "identifiability_note": "the source records orbit counts only after aggregation by B; singleton mixed-bucket bounds can nevertheless force an exact total, while a non-singleton interval records the remaining lost assignment",
+          "integral_split_locus_affine_orbit_count": 38,
+          "integral_split_locus_affine_orbit_count_bounds": [
+            38,
+            38
+          ],
+          "mixed_B_buckets": [
+            {
+              "B_D": [
+                -4,
+                1
+              ],
+              "B_numerator_J": -100,
+              "no_q_elliptic_form_factorization_member_count": 1,
+              "source_affine_orbit_count": 2,
+              "split_member_count": 5,
+              "split_orbit_count_bounds": [
+                1,
+                1
+              ]
+            },
+            {
+              "B_D": [
+                -6,
+                25
+              ],
+              "B_numerator_J": -6,
+              "no_q_elliptic_form_factorization_member_count": 60,
+              "source_affine_orbit_count": 8,
+              "split_member_count": 100,
+              "split_orbit_count_bounds": [
+                5,
+                5
+              ]
+            },
+            {
+              "B_D": [
+                6,
+                25
+              ],
+              "B_numerator_J": 6,
+              "no_q_elliptic_form_factorization_member_count": 40,
+              "source_affine_orbit_count": 4,
+              "split_member_count": 40,
+              "split_orbit_count_bounds": [
+                2,
+                2
+              ]
+            }
+          ],
+          "source_total_affine_orbit_count": 132,
+          "split_orbits_forced_in_mixed_B_buckets": 8,
+          "status": "EXACTLY_IDENTIFIED_FROM_AGGREGATED_SOURCE_AND_ORBIT_SIZE_BOUNDS",
+          "uniform_affine_orbit_fraction_bounds": [
+            [
+              19,
+              66
+            ],
+            [
+              19,
+              66
+            ]
+          ]
+        },
+        "detector_correlations": {
+          "B": {
+            "by_factorization_type": {
+              "no_integral_q_elliptic_form_factorization": {
+                "conditional_member_mean": [
+                  2668,
+                  8975
+                ],
+                "member_sign_counts": {
+                  "negative": 601,
+                  "positive": 1144,
+                  "zero": 50
+                },
+                "signed_atom_sign_counts": {
+                  "negative": 21,
+                  "positive": 36,
+                  "zero": 1
+                }
+              },
+              "split_distinct": {
+                "conditional_member_mean": [
+                  44,
+                  1725
+                ],
+                "member_sign_counts": {
+                  "negative": 370,
+                  "positive": 320,
+                  "zero": 0
+                },
+                "signed_atom_sign_counts": {
+                  "negative": 10,
+                  "positive": 10,
+                  "zero": 0
+                }
+              },
+              "split_repeated": {
+                "conditional_member_mean": [
+                  -172,
+                  75
+                ],
+                "member_sign_counts": {
+                  "negative": 15,
+                  "positive": 0,
+                  "zero": 0
+                },
+                "signed_atom_sign_counts": {
+                  "negative": 3,
+                  "positive": 0,
+                  "zero": 0
+                }
+              }
+            },
+            "covariance_with_split_indicator": [
+              -50793,
+              781250
+            ],
+            "family_member_mean": [
+              646,
+              3125
+            ],
+            "fiber_purity": {
+              "fiber_count": 33,
+              "interpretation": "a mixed fiber contains both a +q elliptic-form split state and a state without such an integral factorization, so it is an exact obstruction to recovering that split locus from this detector coordinate alone; a split-repeated/split-distinct collision alone is not counted as mixed",
+              "member_count_in_mixed_fibers": 246,
+              "member_fraction_in_mixed_fibers": [
+                123,
+                1250
+              ],
+              "mixed_factorization_fiber_count": 3,
+              "mixed_factorization_fibers": [
+                {
+                  "detector_value": [
+                    -4,
+                    1
+                  ],
+                  "factorization_types": [
+                    "split_repeated",
+                    "no_integral_q_elliptic_form_factorization"
+                  ],
+                  "member_count": 6,
+                  "signed_atom_count": 2,
+                  "states": [
+                    {
+                      "a_D_squared": 0,
+                      "b_D": -10,
+                      "factorization_type": "no_integral_q_elliptic_form_factorization",
+                      "member_count": 1
+                    },
+                    {
+                      "a_D_squared": 0,
+                      "b_D": 10,
+                      "factorization_type": "split_repeated",
+                      "member_count": 5
+                    }
+                  ],
+                  "twist_quotiented_state_count": 2
+                },
+                {
+                  "detector_value": [
+                    -6,
+                    25
+                  ],
+                  "factorization_types": [
+                    "split_distinct",
+                    "no_integral_q_elliptic_form_factorization"
+                  ],
+                  "member_count": 160,
+                  "signed_atom_count": 4,
+                  "states": [
+                    {
+                      "a_D_squared": 1,
+                      "b_D": -4,
+                      "factorization_type": "no_integral_q_elliptic_form_factorization",
+                      "member_count": 60
+                    },
+                    {
+                      "a_D_squared": 1,
+                      "b_D": 4,
+                      "factorization_type": "split_distinct",
+                      "member_count": 100
+                    }
+                  ],
+                  "twist_quotiented_state_count": 2
+                },
+                {
+                  "detector_value": [
+                    6,
+                    25
+                  ],
+                  "factorization_types": [
+                    "split_distinct",
+                    "no_integral_q_elliptic_form_factorization"
+                  ],
+                  "member_count": 80,
+                  "signed_atom_count": 4,
+                  "states": [
+                    {
+                      "a_D_squared": 1,
+                      "b_D": -2,
+                      "factorization_type": "split_distinct",
+                      "member_count": 40
+                    },
+                    {
+                      "a_D_squared": 1,
+                      "b_D": 2,
+                      "factorization_type": "no_integral_q_elliptic_form_factorization",
+                      "member_count": 40
+                    }
+                  ],
+                  "twist_quotiented_state_count": 2
+                }
+              ],
+              "multi_factorization_label_fiber_count": 4,
+              "same_split_status_multi_label_fiber_count": 1
+            },
+            "integral_split_locus_conditional_member_mean": [
+              -28,
+              1175
+            ]
+          },
+          "F": {
+            "by_factorization_type": {
+              "no_integral_q_elliptic_form_factorization": {
+                "conditional_member_mean": [
+                  -4612,
+                  8975
+                ],
+                "member_sign_counts": {
+                  "negative": 1185,
+                  "positive": 560,
+                  "zero": 50
+                },
+                "signed_atom_sign_counts": {
+                  "negative": 39,
+                  "positive": 18,
+                  "zero": 1
+                }
+              },
+              "split_distinct": {
+                "conditional_member_mean": [
+                  -1516,
+                  1725
+                ],
+                "member_sign_counts": {
+                  "negative": 450,
+                  "positive": 240,
+                  "zero": 0
+                },
+                "signed_atom_sign_counts": {
+                  "negative": 14,
+                  "positive": 6,
+                  "zero": 0
+                }
+              },
+              "split_repeated": {
+                "conditional_member_mean": [
+                  -332,
+                  75
+                ],
+                "member_sign_counts": {
+                  "negative": 15,
+                  "positive": 0,
+                  "zero": 0
+                },
+                "signed_atom_sign_counts": {
+                  "negative": 3,
+                  "positive": 0,
+                  "zero": 0
+                }
+              }
+            },
+            "covariance_with_split_indicator": [
+              -69673,
+              781250
+            ],
+            "family_member_mean": [
+              -1994,
+              3125
+            ],
+            "fiber_purity": {
+              "fiber_count": 24,
+              "interpretation": "a mixed fiber contains both a +q elliptic-form split state and a state without such an integral factorization, so it is an exact obstruction to recovering that split locus from this detector coordinate alone; a split-repeated/split-distinct collision alone is not counted as mixed",
+              "member_count_in_mixed_fibers": 700,
+              "member_fraction_in_mixed_fibers": [
+                7,
+                25
+              ],
+              "mixed_factorization_fiber_count": 6,
+              "mixed_factorization_fibers": [
+                {
+                  "detector_value": [
+                    -4,
+                    1
+                  ],
+                  "factorization_types": [
+                    "split_repeated",
+                    "no_integral_q_elliptic_form_factorization"
+                  ],
+                  "member_count": 30,
+                  "signed_atom_count": 4,
+                  "states": [
+                    {
+                      "a_D_squared": 0,
+                      "b_D": -10,
+                      "factorization_type": "no_integral_q_elliptic_form_factorization",
+                      "member_count": 1
+                    },
+                    {
+                      "a_D_squared": 0,
+                      "b_D": 10,
+                      "factorization_type": "split_repeated",
+                      "member_count": 5
+                    },
+                    {
+                      "a_D_squared": 25,
+                      "b_D": 15,
+                      "factorization_type": "no_integral_q_elliptic_form_factorization",
+                      "member_count": 24
+                    }
+                  ],
+                  "twist_quotiented_state_count": 3
+                },
+                {
+                  "detector_value": [
+                    -36,
+                    25
+                  ],
+                  "factorization_types": [
+                    "split_distinct",
+                    "no_integral_q_elliptic_form_factorization"
+                  ],
+                  "member_count": 110,
+                  "signed_atom_count": 4,
+                  "states": [
+                    {
+                      "a_D_squared": 0,
+                      "b_D": -6,
+                      "factorization_type": "split_distinct",
+                      "member_count": 30
+                    },
+                    {
+                      "a_D_squared": 0,
+                      "b_D": 6,
+                      "factorization_type": "split_distinct",
+                      "member_count": 60
+                    },
+                    {
+                      "a_D_squared": 9,
+                      "b_D": 9,
+                      "factorization_type": "no_integral_q_elliptic_form_factorization",
+                      "member_count": 20
+                    }
+                  ],
+                  "twist_quotiented_state_count": 3
+                },
+                {
+                  "detector_value": [
+                    -4,
+                    5
+                  ],
+                  "factorization_types": [
+                    "split_distinct",
+                    "no_integral_q_elliptic_form_factorization"
+                  ],
+                  "member_count": 120,
+                  "signed_atom_count": 6,
+                  "states": [
+                    {
+                      "a_D_squared": 1,
+                      "b_D": -5,
+                      "factorization_type": "no_integral_q_elliptic_form_factorization",
+                      "member_count": 20
+                    },
+                    {
+                      "a_D_squared": 1,
+                      "b_D": 5,
+                      "factorization_type": "no_integral_q_elliptic_form_factorization",
+                      "member_count": 40
+                    },
+                    {
+                      "a_D_squared": 16,
+                      "b_D": 10,
+                      "factorization_type": "split_distinct",
+                      "member_count": 60
+                    }
+                  ],
+                  "twist_quotiented_state_count": 3
+                },
+                {
+                  "detector_value": [
+                    -11,
+                    25
+                  ],
+                  "factorization_types": [
+                    "split_distinct",
+                    "no_integral_q_elliptic_form_factorization"
+                  ],
+                  "member_count": 160,
+                  "signed_atom_count": 4,
+                  "states": [
+                    {
+                      "a_D_squared": 1,
+                      "b_D": -4,
+                      "factorization_type": "no_integral_q_elliptic_form_factorization",
+                      "member_count": 60
+                    },
+                    {
+                      "a_D_squared": 1,
+                      "b_D": 4,
+                      "factorization_type": "split_distinct",
+                      "member_count": 100
+                    }
+                  ],
+                  "twist_quotiented_state_count": 2
+                },
+                {
+                  "detector_value": [
+                    1,
+                    25
+                  ],
+                  "factorization_types": [
+                    "split_distinct",
+                    "no_integral_q_elliptic_form_factorization"
+                  ],
+                  "member_count": 80,
+                  "signed_atom_count": 4,
+                  "states": [
+                    {
+                      "a_D_squared": 1,
+                      "b_D": -2,
+                      "factorization_type": "split_distinct",
+                      "member_count": 40
+                    },
+                    {
+                      "a_D_squared": 1,
+                      "b_D": 2,
+                      "factorization_type": "no_integral_q_elliptic_form_factorization",
+                      "member_count": 40
+                    }
+                  ],
+                  "twist_quotiented_state_count": 2
+                },
+                {
+                  "detector_value": [
+                    16,
+                    25
+                  ],
+                  "factorization_types": [
+                    "split_distinct",
+                    "no_integral_q_elliptic_form_factorization"
+                  ],
+                  "member_count": 200,
+                  "signed_atom_count": 4,
+                  "states": [
+                    {
+                      "a_D_squared": 4,
+                      "b_D": 2,
+                      "factorization_type": "split_distinct",
+                      "member_count": 180
+                    },
+                    {
+                      "a_D_squared": 16,
+                      "b_D": 8,
+                      "factorization_type": "no_integral_q_elliptic_form_factorization",
+                      "member_count": 20
+                    }
+                  ],
+                  "twist_quotiented_state_count": 2
+                }
+              ],
+              "multi_factorization_label_fiber_count": 6,
+              "same_split_status_multi_label_fiber_count": 0
+            },
+            "integral_split_locus_conditional_member_mean": [
+              -3364,
+              3525
+            ]
+          },
+          "complete_frobenius_echo": {
+            "coordinates": "(B_1,B_2); the exact recurrence determines every B_r",
+            "fiber_purity": {
+              "fiber_count": 39,
+              "interpretation": "a mixed fiber contains both a +q elliptic-form split state and a state without such an integral factorization, so it is an exact obstruction to recovering that split locus from this detector coordinate alone; a split-repeated/split-distinct collision alone is not counted as mixed",
+              "member_count_in_mixed_fibers": 6,
+              "member_fraction_in_mixed_fibers": [
+                3,
+                1250
+              ],
+              "mixed_factorization_fiber_count": 1,
+              "mixed_factorization_fibers": [
+                {
+                  "detector_value": {
+                    "B_1": [
+                      -4,
+                      1
+                    ],
+                    "B_2": [
+                      -4,
+                      1
+                    ]
+                  },
+                  "factorization_types": [
+                    "split_repeated",
+                    "no_integral_q_elliptic_form_factorization"
+                  ],
+                  "member_count": 6,
+                  "signed_atom_count": 2,
+                  "states": [
+                    {
+                      "a_D_squared": 0,
+                      "b_D": -10,
+                      "factorization_type": "no_integral_q_elliptic_form_factorization",
+                      "member_count": 1
+                    },
+                    {
+                      "a_D_squared": 0,
+                      "b_D": 10,
+                      "factorization_type": "split_repeated",
+                      "member_count": 5
+                    }
+                  ],
+                  "twist_quotiented_state_count": 2
+                }
+              ],
+              "multi_factorization_label_fiber_count": 2,
+              "same_split_status_multi_label_fiber_count": 1
+            },
+            "powers_directly_cross_checked": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "cyclotomic_normalized_spectrum": {
+            "by_factorization_type": {
+              "no_integral_q_elliptic_form_factorization": {
+                "member_count": 75,
+                "signed_atom_count": 4,
+                "state_count": 3
+              },
+              "split_distinct": {
+                "member_count": 0,
+                "signed_atom_count": 0,
+                "state_count": 0
+              },
+              "split_repeated": {
+                "member_count": 5,
+                "signed_atom_count": 1,
+                "state_count": 1
+              }
+            },
+            "certificate": "an even n<=24 with powered polynomial (X-q^(n/2))^4; then every normalized Frobenius root is an n-th root of unity",
+            "certified_states": [
+              {
+                "a_D_squared": 0,
+                "b_D": -10,
+                "echo_B1_B2": [
+                  [
+                    -4,
+                    1
+                  ],
+                  [
+                    -4,
+                    1
+                  ]
+                ],
+                "factorization_type": "no_integral_q_elliptic_form_factorization",
+                "member_count": 1,
+                "minimum_even_power_to_identity": 2,
+                "signed_atom_count": 1
+              },
+              {
+                "a_D_squared": 0,
+                "b_D": 0,
+                "echo_B1_B2": [
+                  [
+                    0,
+                    1
+                  ],
+                  [
+                    -4,
+                    1
+                  ]
+                ],
+                "factorization_type": "no_integral_q_elliptic_form_factorization",
+                "member_count": 50,
+                "minimum_even_power_to_identity": 8,
+                "signed_atom_count": 1
+              },
+              {
+                "a_D_squared": 0,
+                "b_D": 10,
+                "echo_B1_B2": [
+                  [
+                    -4,
+                    1
+                  ],
+                  [
+                    -4,
+                    1
+                  ]
+                ],
+                "factorization_type": "split_repeated",
+                "member_count": 5,
+                "minimum_even_power_to_identity": 4,
+                "signed_atom_count": 1
+              },
+              {
+                "a_D_squared": 25,
+                "b_D": 15,
+                "echo_B1_B2": [
+                  [
+                    1,
+                    1
+                  ],
+                  [
+                    1,
+                    1
+                  ]
+                ],
+                "factorization_type": "no_integral_q_elliptic_form_factorization",
+                "member_count": 24,
+                "minimum_even_power_to_identity": 10,
+                "signed_atom_count": 2
+              }
+            ],
+            "maximum_power_checked": 24,
+            "nondetection_warning": "absence of this bounded certificate is not asserted to prove a noncyclotomic spectrum",
+            "status": "EXACT_POSITIVE_CERTIFICATES_WITH_BOUNDED_NONDETECTION"
+          }
+        },
+        "factorization_classification": {
+          "classes": {
+            "no_integral_q_elliptic_form_factorization": {
+              "member_count": 1795,
+              "member_fraction": [
+                359,
+                500
+              ],
+              "signed_coefficient_atom_count": 58,
+              "signed_coefficient_atom_fraction": [
+                58,
+                81
+              ],
+              "twist_quotiented_state_count": 32
+            },
+            "split_distinct": {
+              "member_count": 690,
+              "member_fraction": [
+                69,
+                250
+              ],
+              "signed_coefficient_atom_count": 20,
+              "signed_coefficient_atom_fraction": [
+                20,
+                81
+              ],
+              "twist_quotiented_state_count": 11
+            },
+            "split_repeated": {
+              "member_count": 15,
+              "member_fraction": [
+                3,
+                500
+              ],
+              "signed_coefficient_atom_count": 3,
+              "signed_coefficient_atom_fraction": [
+                1,
+                27
+              ],
+              "twist_quotiented_state_count": 2
+            }
+          },
+          "complete_classification_ledger_sha256": "3913a7266217b8484885f3a4f919a915b3281a388b4748bb9a1cbab40534acdd",
+          "integral_split_locus": {
+            "member_count": 705,
+            "member_fraction": [
+              141,
+              500
+            ],
+            "signed_coefficient_atom_count": 23,
+            "signed_coefficient_atom_fraction": [
+              23,
+              81
+            ],
+            "twist_quotiented_state_count": 13
+          },
+          "split_signed_coefficient_atoms": [
+            {
+              "B": [
+                54,
+                25
+              ],
+              "Delta": 9,
+              "F": [
+                -71,
+                25
+              ],
+              "a_D": -5,
+              "b_D": 14,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  54,
+                  25
+                ],
+                [
+                  434,
+                  625
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                1,
+                4
+              ],
+              "factorization": "(1-(1)*T+5*T^2)*(1-(4)*T+5*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 10,
+              "square_root_Delta": 3
+            },
+            {
+              "B": [
+                12,
+                5
+              ],
+              "Delta": 16,
+              "F": [
+                -4,
+                5
+              ],
+              "a_D": -4,
+              "b_D": 10,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  12,
+                  5
+                ],
+                [
+                  28,
+                  25
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                0,
+                4
+              ],
+              "factorization": "(1-(0)*T+5*T^2)*(1-(4)*T+5*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 30,
+              "square_root_Delta": 4
+            },
+            {
+              "B": [
+                -36,
+                25
+              ],
+              "Delta": 0,
+              "F": [
+                -116,
+                25
+              ],
+              "a_D": -4,
+              "b_D": 14,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -36,
+                  25
+                ],
+                [
+                  -196,
+                  625
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                2,
+                2
+              ],
+              "factorization": "(1-(2)*T+5*T^2)*(1-(2)*T+5*T^2)",
+              "factorization_type": "split_repeated",
+              "member_count": 5,
+              "square_root_Delta": 0
+            },
+            {
+              "B": [
+                54,
+                25
+              ],
+              "Delta": 25,
+              "F": [
+                9,
+                25
+              ],
+              "a_D": -3,
+              "b_D": 6,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  54,
+                  25
+                ],
+                [
+                  434,
+                  625
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -1,
+                4
+              ],
+              "factorization": "(1-(-1)*T+5*T^2)*(1-(4)*T+5*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 10,
+              "square_root_Delta": 5
+            },
+            {
+              "B": [
+                -2,
+                5
+              ],
+              "Delta": 9,
+              "F": [
+                -11,
+                5
+              ],
+              "a_D": -3,
+              "b_D": 10,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -2,
+                  5
+                ],
+                [
+                  98,
+                  25
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                0,
+                3
+              ],
+              "factorization": "(1-(0)*T+5*T^2)*(1-(3)*T+5*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 20,
+              "square_root_Delta": 3
+            },
+            {
+              "B": [
+                36,
+                25
+              ],
+              "Delta": 36,
+              "F": [
+                16,
+                25
+              ],
+              "a_D": -2,
+              "b_D": 2,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  36,
+                  25
+                ],
+                [
+                  -196,
+                  625
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -2,
+                4
+              ],
+              "factorization": "(1-(-2)*T+5*T^2)*(1-(4)*T+5*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 90,
+              "square_root_Delta": 6
+            },
+            {
+              "B": [
+                -12,
+                5
+              ],
+              "Delta": 4,
+              "F": [
+                -16,
+                5
+              ],
+              "a_D": -2,
+              "b_D": 10,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -12,
+                  5
+                ],
+                [
+                  28,
+                  25
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                0,
+                2
+              ],
+              "factorization": "(1-(0)*T+5*T^2)*(1-(2)*T+5*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 20,
+              "square_root_Delta": 2
+            },
+            {
+              "B": [
+                6,
+                25
+              ],
+              "Delta": 49,
+              "F": [
+                1,
+                25
+              ],
+              "a_D": -1,
+              "b_D": -2,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  6,
+                  25
+                ],
+                [
+                  -686,
+                  625
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -3,
+                4
+              ],
+              "factorization": "(1-(-3)*T+5*T^2)*(1-(4)*T+5*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 20,
+              "square_root_Delta": 7
+            },
+            {
+              "B": [
+                -6,
+                25
+              ],
+              "Delta": 25,
+              "F": [
+                -11,
+                25
+              ],
+              "a_D": -1,
+              "b_D": 4,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -6,
+                  25
+                ],
+                [
+                  -686,
+                  625
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -2,
+                3
+              ],
+              "factorization": "(1-(-2)*T+5*T^2)*(1-(3)*T+5*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 50,
+              "square_root_Delta": 5
+            },
+            {
+              "B": [
+                -54,
+                25
+              ],
+              "Delta": 9,
+              "F": [
+                -59,
+                25
+              ],
+              "a_D": -1,
+              "b_D": 8,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -54,
+                  25
+                ],
+                [
+                  434,
+                  625
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -1,
+                2
+              ],
+              "factorization": "(1-(-1)*T+5*T^2)*(1-(2)*T+5*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 50,
+              "square_root_Delta": 3
+            },
+            {
+              "B": [
+                -36,
+                25
+              ],
+              "Delta": 64,
+              "F": [
+                -36,
+                25
+              ],
+              "a_D": 0,
+              "b_D": -6,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -36,
+                  25
+                ],
+                [
+                  -196,
+                  625
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -4,
+                4
+              ],
+              "factorization": "(1-(-4)*T+5*T^2)*(1-(4)*T+5*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 30,
+              "square_root_Delta": 8
+            },
+            {
+              "B": [
+                -36,
+                25
+              ],
+              "Delta": 16,
+              "F": [
+                -36,
+                25
+              ],
+              "a_D": 0,
+              "b_D": 6,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -36,
+                  25
+                ],
+                [
+                  -196,
+                  625
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -2,
+                2
+              ],
+              "factorization": "(1-(-2)*T+5*T^2)*(1-(2)*T+5*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 60,
+              "square_root_Delta": 4
+            },
+            {
+              "B": [
+                -4,
+                1
+              ],
+              "Delta": 0,
+              "F": [
+                -4,
+                1
+              ],
+              "a_D": 0,
+              "b_D": 10,
+              "cyclotomic_power_to_identity_exponent": 4,
+              "echo_B1_B2": [
+                [
+                  -4,
+                  1
+                ],
+                [
+                  -4,
+                  1
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                0,
+                0
+              ],
+              "factorization": "(1-(0)*T+5*T^2)*(1-(0)*T+5*T^2)",
+              "factorization_type": "split_repeated",
+              "member_count": 5,
+              "square_root_Delta": 0
+            },
+            {
+              "B": [
+                6,
+                25
+              ],
+              "Delta": 49,
+              "F": [
+                1,
+                25
+              ],
+              "a_D": 1,
+              "b_D": -2,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  6,
+                  25
+                ],
+                [
+                  -686,
+                  625
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -4,
+                3
+              ],
+              "factorization": "(1-(-4)*T+5*T^2)*(1-(3)*T+5*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 20,
+              "square_root_Delta": 7
+            },
+            {
+              "B": [
+                -6,
+                25
+              ],
+              "Delta": 25,
+              "F": [
+                -11,
+                25
+              ],
+              "a_D": 1,
+              "b_D": 4,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -6,
+                  25
+                ],
+                [
+                  -686,
+                  625
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -3,
+                2
+              ],
+              "factorization": "(1-(-3)*T+5*T^2)*(1-(2)*T+5*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 50,
+              "square_root_Delta": 5
+            },
+            {
+              "B": [
+                -54,
+                25
+              ],
+              "Delta": 9,
+              "F": [
+                -59,
+                25
+              ],
+              "a_D": 1,
+              "b_D": 8,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -54,
+                  25
+                ],
+                [
+                  434,
+                  625
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -2,
+                1
+              ],
+              "factorization": "(1-(-2)*T+5*T^2)*(1-(1)*T+5*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 50,
+              "square_root_Delta": 3
+            },
+            {
+              "B": [
+                36,
+                25
+              ],
+              "Delta": 36,
+              "F": [
+                16,
+                25
+              ],
+              "a_D": 2,
+              "b_D": 2,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  36,
+                  25
+                ],
+                [
+                  -196,
+                  625
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -4,
+                2
+              ],
+              "factorization": "(1-(-4)*T+5*T^2)*(1-(2)*T+5*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 90,
+              "square_root_Delta": 6
+            },
+            {
+              "B": [
+                -12,
+                5
+              ],
+              "Delta": 4,
+              "F": [
+                -16,
+                5
+              ],
+              "a_D": 2,
+              "b_D": 10,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -12,
+                  5
+                ],
+                [
+                  28,
+                  25
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -2,
+                0
+              ],
+              "factorization": "(1-(-2)*T+5*T^2)*(1-(0)*T+5*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 20,
+              "square_root_Delta": 2
+            },
+            {
+              "B": [
+                54,
+                25
+              ],
+              "Delta": 25,
+              "F": [
+                9,
+                25
+              ],
+              "a_D": 3,
+              "b_D": 6,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  54,
+                  25
+                ],
+                [
+                  434,
+                  625
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -4,
+                1
+              ],
+              "factorization": "(1-(-4)*T+5*T^2)*(1-(1)*T+5*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 10,
+              "square_root_Delta": 5
+            },
+            {
+              "B": [
+                -2,
+                5
+              ],
+              "Delta": 9,
+              "F": [
+                -11,
+                5
+              ],
+              "a_D": 3,
+              "b_D": 10,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -2,
+                  5
+                ],
+                [
+                  98,
+                  25
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -3,
+                0
+              ],
+              "factorization": "(1-(-3)*T+5*T^2)*(1-(0)*T+5*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 20,
+              "square_root_Delta": 3
+            },
+            {
+              "B": [
+                12,
+                5
+              ],
+              "Delta": 16,
+              "F": [
+                -4,
+                5
+              ],
+              "a_D": 4,
+              "b_D": 10,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  12,
+                  5
+                ],
+                [
+                  28,
+                  25
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -4,
+                0
+              ],
+              "factorization": "(1-(-4)*T+5*T^2)*(1-(0)*T+5*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 30,
+              "square_root_Delta": 4
+            },
+            {
+              "B": [
+                -36,
+                25
+              ],
+              "Delta": 0,
+              "F": [
+                -116,
+                25
+              ],
+              "a_D": 4,
+              "b_D": 14,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -36,
+                  25
+                ],
+                [
+                  -196,
+                  625
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -2,
+                -2
+              ],
+              "factorization": "(1-(-2)*T+5*T^2)*(1-(-2)*T+5*T^2)",
+              "factorization_type": "split_repeated",
+              "member_count": 5,
+              "square_root_Delta": 0
+            },
+            {
+              "B": [
+                54,
+                25
+              ],
+              "Delta": 9,
+              "F": [
+                -71,
+                25
+              ],
+              "a_D": 5,
+              "b_D": 14,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  54,
+                  25
+                ],
+                [
+                  434,
+                  625
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -4,
+                -1
+              ],
+              "factorization": "(1-(-4)*T+5*T^2)*(1-(-1)*T+5*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 10,
+              "square_root_Delta": 3
+            }
+          ]
+        },
+        "input_member_count": 2500,
+        "input_signed_coefficient_atom_count": 81,
+        "q": 5,
+        "tail_and_extreme_shares": {
+          "B": {
+            "absolute_extreme": {
+              "member_count": 6,
+              "member_counts_by_factorization_type": {
+                "no_integral_q_elliptic_form_factorization": 1,
+                "split_distinct": 0,
+                "split_repeated": 5
+              },
+              "member_fraction": [
+                3,
+                1250
+              ],
+              "values": [
+                [
+                  -4,
+                  1
+                ]
+              ]
+            },
+            "absolute_moment_shares": {
+              "absolute_extreme_fibers": {
+                "10": [
+                  7500000000000000000,
+                  34317154038866919131
+                ],
+                "12": [
+                  75000000000000000000000,
+                  283245061446989238798971
+                ],
+                "2": [
+                  750,
+                  35321
+                ],
+                "4": [
+                  7500000,
+                  128617211
+                ],
+                "6": [
+                  75000000000,
+                  686445444251
+                ],
+                "8": [
+                  750000000000000,
+                  4536020102792891
+                ]
+              },
+              "integral_split_locus": {
+                "10": [
+                  7387580668359647232,
+                  34317154038866919131
+                ],
+                "12": [
+                  66313440600996824727552,
+                  283245061446989238798971
+                ],
+                "2": [
+                  783,
+                  1859
+                ],
+                "4": [
+                  43216272,
+                  128617211
+                ],
+                "6": [
+                  171830414592,
+                  686445444251
+                ],
+                "8": [
+                  971354369958912,
+                  4536020102792891
+                ]
+              },
+              "minimum_value_fiber": {
+                "10": [
+                  7500000000000000000,
+                  34317154038866919131
+                ],
+                "12": [
+                  75000000000000000000000,
+                  283245061446989238798971
+                ],
+                "2": [
+                  750,
+                  35321
+                ],
+                "4": [
+                  7500000,
+                  128617211
+                ],
+                "6": [
+                  75000000000,
+                  686445444251
+                ],
+                "8": [
+                  750000000000000,
+                  4536020102792891
+                ]
+              },
+              "repeated_factor_locus": {
+                "10": [
+                  6250457019805007872,
+                  34317154038866919131
+                ],
+                "12": [
+                  62500592297667290202112,
+                  283245061446989238798971
+                ],
+                "2": [
+                  787,
+                  35321
+                ],
+                "4": [
+                  6459952,
+                  128617211
+                ],
+                "6": [
+                  62772097792,
+                  686445444251
+                ],
+                "8": [
+                  625352638738432,
+                  4536020102792891
+                ]
+              }
+            },
+            "haar_endpoints": {
+              "minus_four": {
+                "member_count": 6,
+                "member_counts_by_factorization_type": {
+                  "no_integral_q_elliptic_form_factorization": 1,
+                  "split_distinct": 0,
+                  "split_repeated": 5
+                },
+                "member_fraction": [
+                  3,
+                  1250
+                ],
+                "values": [
+                  [
+                    -4,
+                    1
+                  ]
+                ]
+              },
+              "plus_four": {
+                "member_count": 0,
+                "member_counts_by_factorization_type": {
+                  "no_integral_q_elliptic_form_factorization": 0,
+                  "split_distinct": 0,
+                  "split_repeated": 0
+                },
+                "member_fraction": [
+                  0,
+                  1
+                ],
+                "values": [
+                  [
+                    4,
+                    1
+                  ]
+                ]
+              }
+            },
+            "maximum": {
+              "member_count": 20,
+              "member_counts_by_factorization_type": {
+                "no_integral_q_elliptic_form_factorization": 20,
+                "split_distinct": 0,
+                "split_repeated": 0
+              },
+              "member_fraction": [
+                1,
+                125
+              ],
+              "values": [
+                [
+                  96,
+                  25
+                ]
+              ]
+            },
+            "minimum": {
+              "member_count": 6,
+              "member_counts_by_factorization_type": {
+                "no_integral_q_elliptic_form_factorization": 1,
+                "split_distinct": 0,
+                "split_repeated": 5
+              },
+              "member_fraction": [
+                3,
+                1250
+              ],
+              "values": [
+                [
+                  -4,
+                  1
+                ]
+              ]
+            }
+          },
+          "F": {
+            "absolute_extreme": {
+              "member_count": 10,
+              "member_counts_by_factorization_type": {
+                "no_integral_q_elliptic_form_factorization": 0,
+                "split_distinct": 0,
+                "split_repeated": 10
+              },
+              "member_fraction": [
+                1,
+                250
+              ],
+              "values": [
+                [
+                  -116,
+                  25
+                ]
+              ]
+            },
+            "absolute_moment_shares": {
+              "absolute_extreme_fibers": {
+                "10": [
+                  27571469241561972736,
+                  53321470874239319953
+                ],
+                "12": [
+                  371001690114457905135616,
+                  598826630780182957326013
+                ],
+                "2": [
+                  841,
+                  16438
+                ],
+                "4": [
+                  11316496,
+                  79192573
+                ],
+                "6": [
+                  152274770176,
+                  575687324233
+                ],
+                "8": [
+                  70655493361664,
+                  178506271849817
+                ]
+              },
+              "integral_split_locus": {
+                "10": [
+                  34172562689500749016,
+                  53321470874239319953
+                ],
+                "12": [
+                  422788989687949290709606,
+                  598826630780182957326013
+                ],
+                "2": [
+                  15137,
+                  32876
+                ],
+                "4": [
+                  38807446,
+                  79192573
+                ],
+                "6": [
+                  299624787436,
+                  575687324233
+                ],
+                "8": [
+                  2975962852385626,
+                  5176681883644693
+                ]
+              },
+              "minimum_value_fiber": {
+                "10": [
+                  27571469241561972736,
+                  53321470874239319953
+                ],
+                "12": [
+                  371001690114457905135616,
+                  598826630780182957326013
+                ],
+                "2": [
+                  841,
+                  16438
+                ],
+                "4": [
+                  11316496,
+                  79192573
+                ],
+                "6": [
+                  152274770176,
+                  575687324233
+                ],
+                "8": [
+                  70655493361664,
+                  178506271849817
+                ]
+              },
+              "repeated_factor_locus": {
+                "10": [
+                  30696469241561972736,
+                  53321470874239319953
+                ],
+                "12": [
+                  402251690114457905135616,
+                  598826630780182957326013
+                ],
+                "2": [
+                  2307,
+                  32876
+                ],
+                "4": [
+                  14441496,
+                  79192573
+                ],
+                "6": [
+                  183524770176,
+                  575687324233
+                ],
+                "8": [
+                  2361509307488256,
+                  5176681883644693
+                ]
+              }
+            },
+            "far_negative_F_below_minus_4": {
+              "member_count": 10,
+              "member_counts_by_factorization_type": {
+                "no_integral_q_elliptic_form_factorization": 0,
+                "split_distinct": 0,
+                "split_repeated": 10
+              },
+              "member_fraction": [
+                1,
+                250
+              ],
+              "signed_atom_count": 2,
+              "signed_atom_counts_by_factorization_type": {
+                "no_integral_q_elliptic_form_factorization": 0,
+                "split_distinct": 0,
+                "split_repeated": 2
+              }
+            },
+            "maximum": {
+              "member_count": 60,
+              "member_counts_by_factorization_type": {
+                "no_integral_q_elliptic_form_factorization": 60,
+                "split_distinct": 0,
+                "split_repeated": 0
+              },
+              "member_fraction": [
+                3,
+                125
+              ],
+              "values": [
+                [
+                  29,
+                  25
+                ]
+              ]
+            },
+            "minimum": {
+              "member_count": 10,
+              "member_counts_by_factorization_type": {
+                "no_integral_q_elliptic_form_factorization": 0,
+                "split_distinct": 0,
+                "split_repeated": 10
+              },
+              "member_fraction": [
+                1,
+                250
+              ],
+              "values": [
+                [
+                  -116,
+                  25
+                ]
+              ]
+            }
+          }
+        },
+        "twist_quotiented_coefficient_state_count": 45
+      },
+      {
+        "affine_orbit_weighting": {
+          "bound_derivation": "each orbit stays in one (a^2,b) state, has between 1 and q*(q-1) members, and every nonempty class in a mixed B bucket needs an orbit",
+          "exact_split_orbits_from_homogeneous_B_buckets": 59,
+          "identifiability_note": "the source records orbit counts only after aggregation by B; singleton mixed-bucket bounds can nevertheless force an exact total, while a non-singleton interval records the remaining lost assignment",
+          "integral_split_locus_affine_orbit_count": null,
+          "integral_split_locus_affine_orbit_count_bounds": [
+            86,
+            88
+          ],
+          "mixed_B_buckets": [
+            {
+              "B_D": [
+                -100,
+                49
+              ],
+              "B_numerator_J": -100,
+              "no_q_elliptic_form_factorization_member_count": 126,
+              "source_affine_orbit_count": 11,
+              "split_member_count": 294,
+              "split_orbit_count_bounds": [
+                7,
+                8
+              ]
+            },
+            {
+              "B_D": [
+                -50,
+                49
+              ],
+              "B_numerator_J": -50,
+              "no_q_elliptic_form_factorization_member_count": 42,
+              "source_affine_orbit_count": 5,
+              "split_member_count": 168,
+              "split_orbit_count_bounds": [
+                4,
+                4
+              ]
+            },
+            {
+              "B_D": [
+                -22,
+                49
+              ],
+              "B_numerator_J": -22,
+              "no_q_elliptic_form_factorization_member_count": 672,
+              "source_affine_orbit_count": 20,
+              "split_member_count": 168,
+              "split_orbit_count_bounds": [
+                4,
+                4
+              ]
+            },
+            {
+              "B_D": [
+                -4,
+                49
+              ],
+              "B_numerator_J": -4,
+              "no_q_elliptic_form_factorization_member_count": 252,
+              "source_affine_orbit_count": 13,
+              "split_member_count": 252,
+              "split_orbit_count_bounds": [
+                6,
+                7
+              ]
+            },
+            {
+              "B_D": [
+                10,
+                49
+              ],
+              "B_numerator_J": 10,
+              "no_q_elliptic_form_factorization_member_count": 672,
+              "source_affine_orbit_count": 22,
+              "split_member_count": 252,
+              "split_orbit_count_bounds": [
+                6,
+                6
+              ]
+            }
+          ],
+          "source_total_affine_orbit_count": 349,
+          "split_orbits_forced_in_mixed_B_buckets": 14,
+          "status": "BOUNDED_NOT_IDENTIFIABLE_FROM_AGGREGATED_SOURCE",
+          "uniform_affine_orbit_fraction_bounds": [
+            [
+              86,
+              349
+            ],
+            [
+              88,
+              349
+            ]
+          ]
+        },
+        "detector_correlations": {
+          "B": {
+            "by_factorization_type": {
+              "no_integral_q_elliptic_form_factorization": {
+                "conditional_member_mean": [
+                  1511,
+                  6321
+                ],
+                "member_sign_counts": {
+                  "negative": 4788,
+                  "positive": 5712,
+                  "zero": 336
+                },
+                "signed_atom_sign_counts": {
+                  "negative": 48,
+                  "positive": 56,
+                  "zero": 1
+                }
+              },
+              "split_distinct": {
+                "conditional_member_mean": [
+                  -282,
+                  4067
+                ],
+                "member_sign_counts": {
+                  "negative": 1386,
+                  "positive": 2100,
+                  "zero": 0
+                },
+                "signed_atom_sign_counts": {
+                  "negative": 12,
+                  "positive": 18,
+                  "zero": 0
+                }
+              },
+              "split_repeated": {
+                "conditional_member_mean": [
+                  -148,
+                  49
+                ],
+                "member_sign_counts": {
+                  "negative": 84,
+                  "positive": 0,
+                  "zero": 0
+                },
+                "signed_atom_sign_counts": {
+                  "negative": 3,
+                  "positive": 0,
+                  "zero": 0
+                }
+              }
+            },
+            "covariance_with_split_indicator": [
+              -405994,
+              5764801
+            ],
+            "family_member_mean": [
+              2444,
+              16807
+            ],
+            "fiber_purity": {
+              "fiber_count": 55,
+              "interpretation": "a mixed fiber contains both a +q elliptic-form split state and a state without such an integral factorization, so it is an exact obstruction to recovering that split locus from this detector coordinate alone; a split-repeated/split-distinct collision alone is not counted as mixed",
+              "member_count_in_mixed_fibers": 2898,
+              "member_fraction_in_mixed_fibers": [
+                69,
+                343
+              ],
+              "mixed_factorization_fiber_count": 5,
+              "mixed_factorization_fibers": [
+                {
+                  "detector_value": [
+                    -100,
+                    49
+                  ],
+                  "factorization_types": [
+                    "split_repeated",
+                    "split_distinct",
+                    "no_integral_q_elliptic_form_factorization"
+                  ],
+                  "member_count": 420,
+                  "signed_atom_count": 4,
+                  "states": [
+                    {
+                      "a_D_squared": 0,
+                      "b_D": -10,
+                      "factorization_type": "no_integral_q_elliptic_form_factorization",
+                      "member_count": 126
+                    },
+                    {
+                      "a_D_squared": 0,
+                      "b_D": 10,
+                      "factorization_type": "split_distinct",
+                      "member_count": 252
+                    },
+                    {
+                      "a_D_squared": 16,
+                      "b_D": 18,
+                      "factorization_type": "split_repeated",
+                      "member_count": 42
+                    }
+                  ],
+                  "twist_quotiented_state_count": 3
+                },
+                {
+                  "detector_value": [
+                    -50,
+                    49
+                  ],
+                  "factorization_types": [
+                    "split_distinct",
+                    "no_integral_q_elliptic_form_factorization"
+                  ],
+                  "member_count": 210,
+                  "signed_atom_count": 4,
+                  "states": [
+                    {
+                      "a_D_squared": 1,
+                      "b_D": -8,
+                      "factorization_type": "no_integral_q_elliptic_form_factorization",
+                      "member_count": 42
+                    },
+                    {
+                      "a_D_squared": 1,
+                      "b_D": 8,
+                      "factorization_type": "split_distinct",
+                      "member_count": 168
+                    }
+                  ],
+                  "twist_quotiented_state_count": 2
+                },
+                {
+                  "detector_value": [
+                    -22,
+                    49
+                  ],
+                  "factorization_types": [
+                    "split_distinct",
+                    "no_integral_q_elliptic_form_factorization"
+                  ],
+                  "member_count": 840,
+                  "signed_atom_count": 4,
+                  "states": [
+                    {
+                      "a_D_squared": 1,
+                      "b_D": -6,
+                      "factorization_type": "split_distinct",
+                      "member_count": 168
+                    },
+                    {
+                      "a_D_squared": 1,
+                      "b_D": 6,
+                      "factorization_type": "no_integral_q_elliptic_form_factorization",
+                      "member_count": 672
+                    }
+                  ],
+                  "twist_quotiented_state_count": 2
+                },
+                {
+                  "detector_value": [
+                    -4,
+                    49
+                  ],
+                  "factorization_types": [
+                    "split_distinct",
+                    "no_integral_q_elliptic_form_factorization"
+                  ],
+                  "member_count": 504,
+                  "signed_atom_count": 2,
+                  "states": [
+                    {
+                      "a_D_squared": 0,
+                      "b_D": -2,
+                      "factorization_type": "split_distinct",
+                      "member_count": 252
+                    },
+                    {
+                      "a_D_squared": 0,
+                      "b_D": 2,
+                      "factorization_type": "no_integral_q_elliptic_form_factorization",
+                      "member_count": 252
+                    }
+                  ],
+                  "twist_quotiented_state_count": 2
+                },
+                {
+                  "detector_value": [
+                    10,
+                    49
+                  ],
+                  "factorization_types": [
+                    "split_distinct",
+                    "no_integral_q_elliptic_form_factorization"
+                  ],
+                  "member_count": 924,
+                  "signed_atom_count": 4,
+                  "states": [
+                    {
+                      "a_D_squared": 1,
+                      "b_D": -2,
+                      "factorization_type": "no_integral_q_elliptic_form_factorization",
+                      "member_count": 672
+                    },
+                    {
+                      "a_D_squared": 1,
+                      "b_D": 2,
+                      "factorization_type": "split_distinct",
+                      "member_count": 252
+                    }
+                  ],
+                  "twist_quotiented_state_count": 2
+                }
+              ],
+              "multi_factorization_label_fiber_count": 5,
+              "same_split_status_multi_label_fiber_count": 0
+            },
+            "integral_split_locus_conditional_member_mean": [
+              -34,
+              245
+            ]
+          },
+          "F": {
+            "by_factorization_type": {
+              "no_integral_q_elliptic_form_factorization": {
+                "conditional_member_mean": [
+                  -7093,
+                  12642
+                ],
+                "member_sign_counts": {
+                  "negative": 6468,
+                  "positive": 4032,
+                  "zero": 336
+                },
+                "signed_atom_sign_counts": {
+                  "negative": 72,
+                  "positive": 32,
+                  "zero": 1
+                }
+              },
+              "split_distinct": {
+                "conditional_member_mean": [
+                  -4839,
+                  4067
+                ],
+                "member_sign_counts": {
+                  "negative": 3150,
+                  "positive": 336,
+                  "zero": 0
+                },
+                "signed_atom_sign_counts": {
+                  "negative": 26,
+                  "positive": 4,
+                  "zero": 0
+                }
+              },
+              "split_repeated": {
+                "conditional_member_mean": [
+                  -204,
+                  49
+                ],
+                "member_sign_counts": {
+                  "negative": 84,
+                  "positive": 0,
+                  "zero": 0
+                },
+                "signed_atom_sign_counts": {
+                  "negative": 3,
+                  "positive": 0,
+                  "zero": 0
+                }
+              }
+            },
+            "covariance_with_split_indicator": [
+              -750821,
+              5764801
+            ],
+            "family_member_mean": [
+              -12340,
+              16807
+            ],
+            "fiber_purity": {
+              "fiber_count": 53,
+              "interpretation": "a mixed fiber contains both a +q elliptic-form split state and a state without such an integral factorization, so it is an exact obstruction to recovering that split locus from this detector coordinate alone; a split-repeated/split-distinct collision alone is not counted as mixed",
+              "member_count_in_mixed_fibers": 2856,
+              "member_fraction_in_mixed_fibers": [
+                68,
+                343
+              ],
+              "mixed_factorization_fiber_count": 5,
+              "mixed_factorization_fibers": [
+                {
+                  "detector_value": [
+                    -100,
+                    49
+                  ],
+                  "factorization_types": [
+                    "split_distinct",
+                    "no_integral_q_elliptic_form_factorization"
+                  ],
+                  "member_count": 378,
+                  "signed_atom_count": 2,
+                  "states": [
+                    {
+                      "a_D_squared": 0,
+                      "b_D": -10,
+                      "factorization_type": "no_integral_q_elliptic_form_factorization",
+                      "member_count": 126
+                    },
+                    {
+                      "a_D_squared": 0,
+                      "b_D": 10,
+                      "factorization_type": "split_distinct",
+                      "member_count": 252
+                    }
+                  ],
+                  "twist_quotiented_state_count": 2
+                },
+                {
+                  "detector_value": [
+                    -57,
+                    49
+                  ],
+                  "factorization_types": [
+                    "split_distinct",
+                    "no_integral_q_elliptic_form_factorization"
+                  ],
+                  "member_count": 210,
+                  "signed_atom_count": 4,
+                  "states": [
+                    {
+                      "a_D_squared": 1,
+                      "b_D": -8,
+                      "factorization_type": "no_integral_q_elliptic_form_factorization",
+                      "member_count": 42
+                    },
+                    {
+                      "a_D_squared": 1,
+                      "b_D": 8,
+                      "factorization_type": "split_distinct",
+                      "member_count": 168
+                    }
+                  ],
+                  "twist_quotiented_state_count": 2
+                },
+                {
+                  "detector_value": [
+                    -29,
+                    49
+                  ],
+                  "factorization_types": [
+                    "split_distinct",
+                    "no_integral_q_elliptic_form_factorization"
+                  ],
+                  "member_count": 840,
+                  "signed_atom_count": 4,
+                  "states": [
+                    {
+                      "a_D_squared": 1,
+                      "b_D": -6,
+                      "factorization_type": "split_distinct",
+                      "member_count": 168
+                    },
+                    {
+                      "a_D_squared": 1,
+                      "b_D": 6,
+                      "factorization_type": "no_integral_q_elliptic_form_factorization",
+                      "member_count": 672
+                    }
+                  ],
+                  "twist_quotiented_state_count": 2
+                },
+                {
+                  "detector_value": [
+                    -4,
+                    49
+                  ],
+                  "factorization_types": [
+                    "split_distinct",
+                    "no_integral_q_elliptic_form_factorization"
+                  ],
+                  "member_count": 504,
+                  "signed_atom_count": 2,
+                  "states": [
+                    {
+                      "a_D_squared": 0,
+                      "b_D": -2,
+                      "factorization_type": "split_distinct",
+                      "member_count": 252
+                    },
+                    {
+                      "a_D_squared": 0,
+                      "b_D": 2,
+                      "factorization_type": "no_integral_q_elliptic_form_factorization",
+                      "member_count": 252
+                    }
+                  ],
+                  "twist_quotiented_state_count": 2
+                },
+                {
+                  "detector_value": [
+                    3,
+                    49
+                  ],
+                  "factorization_types": [
+                    "split_distinct",
+                    "no_integral_q_elliptic_form_factorization"
+                  ],
+                  "member_count": 924,
+                  "signed_atom_count": 4,
+                  "states": [
+                    {
+                      "a_D_squared": 1,
+                      "b_D": -2,
+                      "factorization_type": "no_integral_q_elliptic_form_factorization",
+                      "member_count": 672
+                    },
+                    {
+                      "a_D_squared": 1,
+                      "b_D": 2,
+                      "factorization_type": "split_distinct",
+                      "member_count": 252
+                    }
+                  ],
+                  "twist_quotiented_state_count": 2
+                }
+              ],
+              "multi_factorization_label_fiber_count": 5,
+              "same_split_status_multi_label_fiber_count": 0
+            },
+            "integral_split_locus_conditional_member_mean": [
+              -5247,
+              4165
+            ]
+          },
+          "complete_frobenius_echo": {
+            "coordinates": "(B_1,B_2); the exact recurrence determines every B_r",
+            "fiber_purity": {
+              "fiber_count": 67,
+              "interpretation": "a mixed fiber contains both a +q elliptic-form split state and a state without such an integral factorization, so it is an exact obstruction to recovering that split locus from this detector coordinate alone; a split-repeated/split-distinct collision alone is not counted as mixed",
+              "member_count_in_mixed_fibers": 924,
+              "member_fraction_in_mixed_fibers": [
+                22,
+                343
+              ],
+              "mixed_factorization_fiber_count": 2,
+              "mixed_factorization_fibers": [
+                {
+                  "detector_value": {
+                    "B_1": [
+                      -100,
+                      49
+                    ],
+                    "B_2": [
+                      -4,
+                      2401
+                    ]
+                  },
+                  "factorization_types": [
+                    "split_repeated",
+                    "split_distinct",
+                    "no_integral_q_elliptic_form_factorization"
+                  ],
+                  "member_count": 420,
+                  "signed_atom_count": 4,
+                  "states": [
+                    {
+                      "a_D_squared": 0,
+                      "b_D": -10,
+                      "factorization_type": "no_integral_q_elliptic_form_factorization",
+                      "member_count": 126
+                    },
+                    {
+                      "a_D_squared": 0,
+                      "b_D": 10,
+                      "factorization_type": "split_distinct",
+                      "member_count": 252
+                    },
+                    {
+                      "a_D_squared": 16,
+                      "b_D": 18,
+                      "factorization_type": "split_repeated",
+                      "member_count": 42
+                    }
+                  ],
+                  "twist_quotiented_state_count": 3
+                },
+                {
+                  "detector_value": {
+                    "B_1": [
+                      -4,
+                      49
+                    ],
+                    "B_2": [
+                      -8836,
+                      2401
+                    ]
+                  },
+                  "factorization_types": [
+                    "split_distinct",
+                    "no_integral_q_elliptic_form_factorization"
+                  ],
+                  "member_count": 504,
+                  "signed_atom_count": 2,
+                  "states": [
+                    {
+                      "a_D_squared": 0,
+                      "b_D": -2,
+                      "factorization_type": "split_distinct",
+                      "member_count": 252
+                    },
+                    {
+                      "a_D_squared": 0,
+                      "b_D": 2,
+                      "factorization_type": "no_integral_q_elliptic_form_factorization",
+                      "member_count": 252
+                    }
+                  ],
+                  "twist_quotiented_state_count": 2
+                }
+              ],
+              "multi_factorization_label_fiber_count": 2,
+              "same_split_status_multi_label_fiber_count": 0
+            },
+            "powers_directly_cross_checked": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "cyclotomic_normalized_spectrum": {
+            "by_factorization_type": {
+              "no_integral_q_elliptic_form_factorization": {
+                "member_count": 336,
+                "signed_atom_count": 1,
+                "state_count": 1
+              },
+              "split_distinct": {
+                "member_count": 0,
+                "signed_atom_count": 0,
+                "state_count": 0
+              },
+              "split_repeated": {
+                "member_count": 42,
+                "signed_atom_count": 1,
+                "state_count": 1
+              }
+            },
+            "certificate": "an even n<=24 with powered polynomial (X-q^(n/2))^4; then every normalized Frobenius root is an n-th root of unity",
+            "certified_states": [
+              {
+                "a_D_squared": 0,
+                "b_D": 0,
+                "echo_B1_B2": [
+                  [
+                    0,
+                    1
+                  ],
+                  [
+                    -4,
+                    1
+                  ]
+                ],
+                "factorization_type": "no_integral_q_elliptic_form_factorization",
+                "member_count": 336,
+                "minimum_even_power_to_identity": 8,
+                "signed_atom_count": 1
+              },
+              {
+                "a_D_squared": 0,
+                "b_D": 14,
+                "echo_B1_B2": [
+                  [
+                    -4,
+                    1
+                  ],
+                  [
+                    -4,
+                    1
+                  ]
+                ],
+                "factorization_type": "split_repeated",
+                "member_count": 42,
+                "minimum_even_power_to_identity": 4,
+                "signed_atom_count": 1
+              }
+            ],
+            "maximum_power_checked": 24,
+            "nondetection_warning": "absence of this bounded certificate is not asserted to prove a noncyclotomic spectrum",
+            "status": "EXACT_POSITIVE_CERTIFICATES_WITH_BOUNDED_NONDETECTION"
+          }
+        },
+        "factorization_classification": {
+          "classes": {
+            "no_integral_q_elliptic_form_factorization": {
+              "member_count": 10836,
+              "member_fraction": [
+                258,
+                343
+              ],
+              "signed_coefficient_atom_count": 105,
+              "signed_coefficient_atom_fraction": [
+                35,
+                46
+              ],
+              "twist_quotiented_state_count": 57
+            },
+            "split_distinct": {
+              "member_count": 3486,
+              "member_fraction": [
+                83,
+                343
+              ],
+              "signed_coefficient_atom_count": 30,
+              "signed_coefficient_atom_fraction": [
+                5,
+                23
+              ],
+              "twist_quotiented_state_count": 16
+            },
+            "split_repeated": {
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ],
+              "signed_coefficient_atom_count": 3,
+              "signed_coefficient_atom_fraction": [
+                1,
+                46
+              ],
+              "twist_quotiented_state_count": 2
+            }
+          },
+          "complete_classification_ledger_sha256": "457a345cf6787493b167499482dac55a1b863db4799594060b08c69dcee1d43b",
+          "integral_split_locus": {
+            "member_count": 3570,
+            "member_fraction": [
+              85,
+              343
+            ],
+            "signed_coefficient_atom_count": 33,
+            "signed_coefficient_atom_fraction": [
+              11,
+              46
+            ],
+            "twist_quotiented_state_count": 18
+          },
+          "split_signed_coefficient_atoms": [
+            {
+              "B": [
+                110,
+                49
+              ],
+              "Delta": 9,
+              "F": [
+                -233,
+                49
+              ],
+              "a_D": -7,
+              "b_D": 24,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  110,
+                  49
+                ],
+                [
+                  -46,
+                  2401
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                2,
+                5
+              ],
+              "factorization": "(1-(2)*T+7*T^2)*(1-(5)*T+7*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 21,
+              "square_root_Delta": 3
+            },
+            {
+              "B": [
+                20,
+                49
+              ],
+              "Delta": 4,
+              "F": [
+                -232,
+                49
+              ],
+              "a_D": -6,
+              "b_D": 22,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  20,
+                  49
+                ],
+                [
+                  188,
+                  2401
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                2,
+                4
+              ],
+              "factorization": "(1-(2)*T+7*T^2)*(1-(4)*T+7*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 42,
+              "square_root_Delta": 2
+            },
+            {
+              "B": [
+                22,
+                7
+              ],
+              "Delta": 25,
+              "F": [
+                -3,
+                7
+              ],
+              "a_D": -5,
+              "b_D": 14,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  22,
+                  7
+                ],
+                [
+                  -46,
+                  49
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                0,
+                5
+              ],
+              "factorization": "(1-(0)*T+7*T^2)*(1-(5)*T+7*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 84,
+              "square_root_Delta": 5
+            },
+            {
+              "B": [
+                26,
+                49
+              ],
+              "Delta": 9,
+              "F": [
+                -149,
+                49
+              ],
+              "a_D": -5,
+              "b_D": 18,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  26,
+                  49
+                ],
+                [
+                  6674,
+                  2401
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                1,
+                4
+              ],
+              "factorization": "(1-(1)*T+7*T^2)*(1-(4)*T+7*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 63,
+              "square_root_Delta": 3
+            },
+            {
+              "B": [
+                4,
+                7
+              ],
+              "Delta": 16,
+              "F": [
+                -12,
+                7
+              ],
+              "a_D": -4,
+              "b_D": 14,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  4,
+                  7
+                ],
+                [
+                  188,
+                  49
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                0,
+                4
+              ],
+              "factorization": "(1-(0)*T+7*T^2)*(1-(4)*T+7*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 126,
+              "square_root_Delta": 4
+            },
+            {
+              "B": [
+                -100,
+                49
+              ],
+              "Delta": 0,
+              "F": [
+                -212,
+                49
+              ],
+              "a_D": -4,
+              "b_D": 18,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -100,
+                  49
+                ],
+                [
+                  -4,
+                  2401
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                2,
+                2
+              ],
+              "factorization": "(1-(2)*T+7*T^2)*(1-(2)*T+7*T^2)",
+              "factorization_type": "split_repeated",
+              "member_count": 21,
+              "square_root_Delta": 0
+            },
+            {
+              "B": [
+                110,
+                49
+              ],
+              "Delta": 49,
+              "F": [
+                47,
+                49
+              ],
+              "a_D": -3,
+              "b_D": 4,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  110,
+                  49
+                ],
+                [
+                  -46,
+                  2401
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -2,
+                5
+              ],
+              "factorization": "(1-(-2)*T+7*T^2)*(1-(5)*T+7*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 42,
+              "square_root_Delta": 7
+            },
+            {
+              "B": [
+                26,
+                49
+              ],
+              "Delta": 25,
+              "F": [
+                -37,
+                49
+              ],
+              "a_D": -3,
+              "b_D": 10,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  26,
+                  49
+                ],
+                [
+                  6674,
+                  2401
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -1,
+                4
+              ],
+              "factorization": "(1-(-1)*T+7*T^2)*(1-(4)*T+7*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 168,
+              "square_root_Delta": 5
+            },
+            {
+              "B": [
+                -10,
+                7
+              ],
+              "Delta": 9,
+              "F": [
+                -19,
+                7
+              ],
+              "a_D": -3,
+              "b_D": 14,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -10,
+                  7
+                ],
+                [
+                  146,
+                  49
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                0,
+                3
+              ],
+              "factorization": "(1-(0)*T+7*T^2)*(1-(3)*T+7*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 168,
+              "square_root_Delta": 3
+            },
+            {
+              "B": [
+                20,
+                49
+              ],
+              "Delta": 36,
+              "F": [
+                -8,
+                49
+              ],
+              "a_D": -2,
+              "b_D": 6,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  20,
+                  49
+                ],
+                [
+                  188,
+                  2401
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -2,
+                4
+              ],
+              "factorization": "(1-(-2)*T+7*T^2)*(1-(4)*T+7*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 378,
+              "square_root_Delta": 6
+            },
+            {
+              "B": [
+                -20,
+                7
+              ],
+              "Delta": 4,
+              "F": [
+                -24,
+                7
+              ],
+              "a_D": -2,
+              "b_D": 14,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -20,
+                  7
+                ],
+                [
+                  -4,
+                  49
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                0,
+                2
+              ],
+              "factorization": "(1-(0)*T+7*T^2)*(1-(2)*T+7*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 42,
+              "square_root_Delta": 2
+            },
+            {
+              "B": [
+                -22,
+                49
+              ],
+              "Delta": 81,
+              "F": [
+                -29,
+                49
+              ],
+              "a_D": -1,
+              "b_D": -6,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -22,
+                  49
+                ],
+                [
+                  2162,
+                  2401
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -4,
+                5
+              ],
+              "factorization": "(1-(-4)*T+7*T^2)*(1-(5)*T+7*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 84,
+              "square_root_Delta": 9
+            },
+            {
+              "B": [
+                10,
+                49
+              ],
+              "Delta": 49,
+              "F": [
+                3,
+                49
+              ],
+              "a_D": -1,
+              "b_D": 2,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  10,
+                  49
+                ],
+                [
+                  -6862,
+                  2401
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -3,
+                4
+              ],
+              "factorization": "(1-(-3)*T+7*T^2)*(1-(4)*T+7*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 126,
+              "square_root_Delta": 7
+            },
+            {
+              "B": [
+                -50,
+                49
+              ],
+              "Delta": 25,
+              "F": [
+                -57,
+                49
+              ],
+              "a_D": -1,
+              "b_D": 8,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -50,
+                  49
+                ],
+                [
+                  146,
+                  2401
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -2,
+                3
+              ],
+              "factorization": "(1-(-2)*T+7*T^2)*(1-(3)*T+7*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 84,
+              "square_root_Delta": 5
+            },
+            {
+              "B": [
+                -130,
+                49
+              ],
+              "Delta": 9,
+              "F": [
+                -137,
+                49
+              ],
+              "a_D": -1,
+              "b_D": 12,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -130,
+                  49
+                ],
+                [
+                  -142,
+                  2401
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -1,
+                2
+              ],
+              "factorization": "(1-(-1)*T+7*T^2)*(1-(2)*T+7*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 63,
+              "square_root_Delta": 3
+            },
+            {
+              "B": [
+                -4,
+                49
+              ],
+              "Delta": 64,
+              "F": [
+                -4,
+                49
+              ],
+              "a_D": 0,
+              "b_D": -2,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -4,
+                  49
+                ],
+                [
+                  -8836,
+                  2401
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -4,
+                4
+              ],
+              "factorization": "(1-(-4)*T+7*T^2)*(1-(4)*T+7*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 252,
+              "square_root_Delta": 8
+            },
+            {
+              "B": [
+                -100,
+                49
+              ],
+              "Delta": 16,
+              "F": [
+                -100,
+                49
+              ],
+              "a_D": 0,
+              "b_D": 10,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -100,
+                  49
+                ],
+                [
+                  -4,
+                  2401
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -2,
+                2
+              ],
+              "factorization": "(1-(-2)*T+7*T^2)*(1-(2)*T+7*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 252,
+              "square_root_Delta": 4
+            },
+            {
+              "B": [
+                -4,
+                1
+              ],
+              "Delta": 0,
+              "F": [
+                -4,
+                1
+              ],
+              "a_D": 0,
+              "b_D": 14,
+              "cyclotomic_power_to_identity_exponent": 4,
+              "echo_B1_B2": [
+                [
+                  -4,
+                  1
+                ],
+                [
+                  -4,
+                  1
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                0,
+                0
+              ],
+              "factorization": "(1-(0)*T+7*T^2)*(1-(0)*T+7*T^2)",
+              "factorization_type": "split_repeated",
+              "member_count": 42,
+              "square_root_Delta": 0
+            },
+            {
+              "B": [
+                -22,
+                49
+              ],
+              "Delta": 81,
+              "F": [
+                -29,
+                49
+              ],
+              "a_D": 1,
+              "b_D": -6,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -22,
+                  49
+                ],
+                [
+                  2162,
+                  2401
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -5,
+                4
+              ],
+              "factorization": "(1-(-5)*T+7*T^2)*(1-(4)*T+7*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 84,
+              "square_root_Delta": 9
+            },
+            {
+              "B": [
+                10,
+                49
+              ],
+              "Delta": 49,
+              "F": [
+                3,
+                49
+              ],
+              "a_D": 1,
+              "b_D": 2,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  10,
+                  49
+                ],
+                [
+                  -6862,
+                  2401
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -4,
+                3
+              ],
+              "factorization": "(1-(-4)*T+7*T^2)*(1-(3)*T+7*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 126,
+              "square_root_Delta": 7
+            },
+            {
+              "B": [
+                -50,
+                49
+              ],
+              "Delta": 25,
+              "F": [
+                -57,
+                49
+              ],
+              "a_D": 1,
+              "b_D": 8,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -50,
+                  49
+                ],
+                [
+                  146,
+                  2401
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -3,
+                2
+              ],
+              "factorization": "(1-(-3)*T+7*T^2)*(1-(2)*T+7*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 84,
+              "square_root_Delta": 5
+            },
+            {
+              "B": [
+                -130,
+                49
+              ],
+              "Delta": 9,
+              "F": [
+                -137,
+                49
+              ],
+              "a_D": 1,
+              "b_D": 12,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -130,
+                  49
+                ],
+                [
+                  -142,
+                  2401
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -2,
+                1
+              ],
+              "factorization": "(1-(-2)*T+7*T^2)*(1-(1)*T+7*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 63,
+              "square_root_Delta": 3
+            },
+            {
+              "B": [
+                20,
+                49
+              ],
+              "Delta": 36,
+              "F": [
+                -8,
+                49
+              ],
+              "a_D": 2,
+              "b_D": 6,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  20,
+                  49
+                ],
+                [
+                  188,
+                  2401
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -4,
+                2
+              ],
+              "factorization": "(1-(-4)*T+7*T^2)*(1-(2)*T+7*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 378,
+              "square_root_Delta": 6
+            },
+            {
+              "B": [
+                -20,
+                7
+              ],
+              "Delta": 4,
+              "F": [
+                -24,
+                7
+              ],
+              "a_D": 2,
+              "b_D": 14,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -20,
+                  7
+                ],
+                [
+                  -4,
+                  49
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -2,
+                0
+              ],
+              "factorization": "(1-(-2)*T+7*T^2)*(1-(0)*T+7*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 42,
+              "square_root_Delta": 2
+            },
+            {
+              "B": [
+                110,
+                49
+              ],
+              "Delta": 49,
+              "F": [
+                47,
+                49
+              ],
+              "a_D": 3,
+              "b_D": 4,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  110,
+                  49
+                ],
+                [
+                  -46,
+                  2401
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -5,
+                2
+              ],
+              "factorization": "(1-(-5)*T+7*T^2)*(1-(2)*T+7*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 42,
+              "square_root_Delta": 7
+            },
+            {
+              "B": [
+                26,
+                49
+              ],
+              "Delta": 25,
+              "F": [
+                -37,
+                49
+              ],
+              "a_D": 3,
+              "b_D": 10,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  26,
+                  49
+                ],
+                [
+                  6674,
+                  2401
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -4,
+                1
+              ],
+              "factorization": "(1-(-4)*T+7*T^2)*(1-(1)*T+7*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 168,
+              "square_root_Delta": 5
+            },
+            {
+              "B": [
+                -10,
+                7
+              ],
+              "Delta": 9,
+              "F": [
+                -19,
+                7
+              ],
+              "a_D": 3,
+              "b_D": 14,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -10,
+                  7
+                ],
+                [
+                  146,
+                  49
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -3,
+                0
+              ],
+              "factorization": "(1-(-3)*T+7*T^2)*(1-(0)*T+7*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 168,
+              "square_root_Delta": 3
+            },
+            {
+              "B": [
+                4,
+                7
+              ],
+              "Delta": 16,
+              "F": [
+                -12,
+                7
+              ],
+              "a_D": 4,
+              "b_D": 14,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  4,
+                  7
+                ],
+                [
+                  188,
+                  49
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -4,
+                0
+              ],
+              "factorization": "(1-(-4)*T+7*T^2)*(1-(0)*T+7*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 126,
+              "square_root_Delta": 4
+            },
+            {
+              "B": [
+                -100,
+                49
+              ],
+              "Delta": 0,
+              "F": [
+                -212,
+                49
+              ],
+              "a_D": 4,
+              "b_D": 18,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  -100,
+                  49
+                ],
+                [
+                  -4,
+                  2401
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -2,
+                -2
+              ],
+              "factorization": "(1-(-2)*T+7*T^2)*(1-(-2)*T+7*T^2)",
+              "factorization_type": "split_repeated",
+              "member_count": 21,
+              "square_root_Delta": 0
+            },
+            {
+              "B": [
+                22,
+                7
+              ],
+              "Delta": 25,
+              "F": [
+                -3,
+                7
+              ],
+              "a_D": 5,
+              "b_D": 14,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  22,
+                  7
+                ],
+                [
+                  -46,
+                  49
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -5,
+                0
+              ],
+              "factorization": "(1-(-5)*T+7*T^2)*(1-(0)*T+7*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 84,
+              "square_root_Delta": 5
+            },
+            {
+              "B": [
+                26,
+                49
+              ],
+              "Delta": 9,
+              "F": [
+                -149,
+                49
+              ],
+              "a_D": 5,
+              "b_D": 18,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  26,
+                  49
+                ],
+                [
+                  6674,
+                  2401
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -4,
+                -1
+              ],
+              "factorization": "(1-(-4)*T+7*T^2)*(1-(-1)*T+7*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 63,
+              "square_root_Delta": 3
+            },
+            {
+              "B": [
+                20,
+                49
+              ],
+              "Delta": 4,
+              "F": [
+                -232,
+                49
+              ],
+              "a_D": 6,
+              "b_D": 22,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  20,
+                  49
+                ],
+                [
+                  188,
+                  2401
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -4,
+                -2
+              ],
+              "factorization": "(1-(-4)*T+7*T^2)*(1-(-2)*T+7*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 42,
+              "square_root_Delta": 2
+            },
+            {
+              "B": [
+                110,
+                49
+              ],
+              "Delta": 9,
+              "F": [
+                -233,
+                49
+              ],
+              "a_D": 7,
+              "b_D": 24,
+              "cyclotomic_power_to_identity_exponent": null,
+              "echo_B1_B2": [
+                [
+                  110,
+                  49
+                ],
+                [
+                  -46,
+                  2401
+                ]
+              ],
+              "elliptic_traces_sorted": [
+                -5,
+                -2
+              ],
+              "factorization": "(1-(-5)*T+7*T^2)*(1-(-2)*T+7*T^2)",
+              "factorization_type": "split_distinct",
+              "member_count": 21,
+              "square_root_Delta": 3
+            }
+          ]
+        },
+        "input_member_count": 14406,
+        "input_signed_coefficient_atom_count": 138,
+        "q": 7,
+        "tail_and_extreme_shares": {
+          "B": {
+            "absolute_extreme": {
+              "member_count": 42,
+              "member_counts_by_factorization_type": {
+                "no_integral_q_elliptic_form_factorization": 0,
+                "split_distinct": 0,
+                "split_repeated": 42
+              },
+              "member_fraction": [
+                1,
+                343
+              ],
+              "values": [
+                [
+                  -4,
+                  1
+                ]
+              ]
+            },
+            "absolute_moment_shares": {
+              "absolute_extreme_fibers": {
+                "10": [
+                  5229265964080300097536,
+                  18324472850360309184905
+                ],
+                "12": [
+                  200887481276108808546942976,
+                  542337921781170548821362749
+                ],
+                "2": [
+                  2401,
+                  96050
+                ],
+                "4": [
+                  92236816,
+                  1367315309
+                ],
+                "6": [
+                  3543369523456,
+                  27658137434465
+                ],
+                "8": [
+                  136122083613085696,
+                  671699261400694229
+                ]
+              },
+              "integral_split_locus": {
+                "10": [
+                  7818768845003514327232,
+                  18324472850360309184905
+                ],
+                "12": [
+                  257857994290392025979828992,
+                  542337921781170548821362749
+                ],
+                "2": [
+                  100363,
+                  384200
+                ],
+                "4": [
+                  419997307,
+                  1367315309
+                ],
+                "6": [
+                  9557246539852,
+                  27658137434465
+                ],
+                "8": [
+                  257644086185486512,
+                  671699261400694229
+                ]
+              },
+              "minimum_value_fiber": {
+                "10": [
+                  5229265964080300097536,
+                  18324472850360309184905
+                ],
+                "12": [
+                  200887481276108808546942976,
+                  542337921781170548821362749
+                ],
+                "2": [
+                  2401,
+                  96050
+                ],
+                "4": [
+                  92236816,
+                  1367315309
+                ],
+                "6": [
+                  3543369523456,
+                  27658137434465
+                ],
+                "8": [
+                  136122083613085696,
+                  671699261400694229
+                ]
+              },
+              "repeated_factor_locus": {
+                "10": [
+                  307971527298841182208,
+                  1077910167668253481465
+                ],
+                "12": [
+                  200949981276108808546942976,
+                  542337921781170548821362749
+                ],
+                "2": [
+                  89,
+                  2825
+                ],
+                "4": [
+                  98486816,
+                  1367315309
+                ],
+                "6": [
+                  3605869523456,
+                  27658137434465
+                ],
+                "8": [
+                  136747083613085696,
+                  671699261400694229
+                ]
+              }
+            },
+            "haar_endpoints": {
+              "minus_four": {
+                "member_count": 42,
+                "member_counts_by_factorization_type": {
+                  "no_integral_q_elliptic_form_factorization": 0,
+                  "split_distinct": 0,
+                  "split_repeated": 42
+                },
+                "member_fraction": [
+                  1,
+                  343
+                ],
+                "values": [
+                  [
+                    -4,
+                    1
+                  ]
+                ]
+              },
+              "plus_four": {
+                "member_count": 0,
+                "member_counts_by_factorization_type": {
+                  "no_integral_q_elliptic_form_factorization": 0,
+                  "split_distinct": 0,
+                  "split_repeated": 0
+                },
+                "member_fraction": [
+                  0,
+                  1
+                ],
+                "values": [
+                  [
+                    4,
+                    1
+                  ]
+                ]
+              }
+            },
+            "maximum": {
+              "member_count": 42,
+              "member_counts_by_factorization_type": {
+                "no_integral_q_elliptic_form_factorization": 42,
+                "split_distinct": 0,
+                "split_repeated": 0
+              },
+              "member_fraction": [
+                1,
+                343
+              ],
+              "values": [
+                [
+                  181,
+                  49
+                ]
+              ]
+            },
+            "minimum": {
+              "member_count": 42,
+              "member_counts_by_factorization_type": {
+                "no_integral_q_elliptic_form_factorization": 0,
+                "split_distinct": 0,
+                "split_repeated": 42
+              },
+              "member_fraction": [
+                1,
+                343
+              ],
+              "values": [
+                [
+                  -4,
+                  1
+                ]
+              ]
+            }
+          },
+          "F": {
+            "absolute_extreme": {
+              "member_count": 42,
+              "member_counts_by_factorization_type": {
+                "no_integral_q_elliptic_form_factorization": 42,
+                "split_distinct": 0,
+                "split_repeated": 0
+              },
+              "member_fraction": [
+                1,
+                343
+              ],
+              "values": [
+                [
+                  -282,
+                  49
+                ]
+              ]
+            },
+            "absolute_moment_shares": {
+              "absolute_extreme_fibers": {
+                "10": [
+                  66259758067061942685888,
+                  105206297019196352621965
+                ],
+                "12": [
+                  585471222280559325572506368,
+                  797570369691811117670825621
+                ],
+                "2": [
+                  6627,
+                  137120
+                ],
+                "4": [
+                  131751387,
+                  802360189
+                ],
+                "6": [
+                  3492465766596,
+                  10592755311295
+                ],
+                "8": [
+                  833204542868340912,
+                  1686182334737958989
+                ]
+              },
+              "integral_split_locus": {
+                "10": [
+                  571882070210968971635873,
+                  1683300752307141641951440
+                ],
+                "12": [
+                  3238484918622880441824160417,
+                  12761125915068977882733209936
+                ],
+                "2": [
+                  234433,
+                  548480
+                ],
+                "4": [
+                  6612783113,
+                  12837763024
+                ],
+                "6": [
+                  85504653348251,
+                  169484084980720
+                ],
+                "8": [
+                  11653038009661804633,
+                  26978917355807343824
+                ]
+              },
+              "minimum_value_fiber": {
+                "10": [
+                  66259758067061942685888,
+                  105206297019196352621965
+                ],
+                "12": [
+                  585471222280559325572506368,
+                  797570369691811117670825621
+                ],
+                "2": [
+                  6627,
+                  137120
+                ],
+                "4": [
+                  131751387,
+                  802360189
+                ],
+                "6": [
+                  3492465766596,
+                  10592755311295
+                ],
+                "8": [
+                  833204542868340912,
+                  1686182334737958989
+                ]
+              },
+              "repeated_factor_locus": {
+                "10": [
+                  3338138244390912655360,
+                  63123778211517811573179
+                ],
+                "12": [
+                  716009778066009692875784192,
+                  21534399981678900177112291767
+                ],
+                "2": [
+                  521,
+                  10284
+                ],
+                "4": [
+                  218484512,
+                  2407080567
+                ],
+                "6": [
+                  1843489194496,
+                  19066959560331
+                ],
+                "8": [
+                  391137775538020352,
+                  5058547004213876967
+                ]
+              }
+            },
+            "far_negative_F_below_minus_4": {
+              "member_count": 210,
+              "member_counts_by_factorization_type": {
+                "no_integral_q_elliptic_form_factorization": 42,
+                "split_distinct": 126,
+                "split_repeated": 42
+              },
+              "member_fraction": [
+                5,
+                343
+              ],
+              "signed_atom_count": 8,
+              "signed_atom_counts_by_factorization_type": {
+                "no_integral_q_elliptic_form_factorization": 2,
+                "split_distinct": 4,
+                "split_repeated": 2
+              }
+            },
+            "maximum": {
+              "member_count": 42,
+              "member_counts_by_factorization_type": {
+                "no_integral_q_elliptic_form_factorization": 42,
+                "split_distinct": 0,
+                "split_repeated": 0
+              },
+              "member_fraction": [
+                1,
+                343
+              ],
+              "values": [
+                [
+                  59,
+                  49
+                ]
+              ]
+            },
+            "minimum": {
+              "member_count": 42,
+              "member_counts_by_factorization_type": {
+                "no_integral_q_elliptic_form_factorization": 42,
+                "split_distinct": 0,
+                "split_repeated": 0
+              },
+              "member_fraction": [
+                1,
+                343
+              ],
+              "values": [
+                [
+                  -282,
+                  49
+                ]
+              ]
+            }
+          }
+        },
+        "twist_quotiented_coefficient_state_count": 75
+      }
+    ],
+    "status": "EXACT_ONLY_FOR_Q_3_5_7"
+  },
+  "interpretation_firewall": {
+    "geometric_warning": "failure of the integral +q elliptic-form criterion at q does not prove geometric simplicity; factors or isogeny decompositions may appear after extending the base field",
+    "global_warning": "nothing here proves an all-q law, an equidistribution theorem, or an RH/GRH implication",
+    "imported_theorem_target_not_used": "turning polynomial factorization into an abelian-surface product-isogeny statement uses Honda-Tate/Tate theory and is not proved in this packet",
+    "native_exact_claim": "the displayed integral factorization of the Frobenius polynomial and every histogram-weighted finite count",
+    "polarization_warning": "an unpolarized isogeny to a product does not identify the canonical principal polarization with a product polarization and does not make the smooth genus-two curve or its principally polarized Jacobian a product"
+  },
+  "payload_sha256": "01ccb19f591f48682fa79dbef306880e924282184352cb992e3f66153ceae5c3",
+  "producer_and_source_locks": {
+    "input_member_ledger_sha256_required": {
+      "3": "e38543c4526e6b330f012274398a258f2d021ddae18442d2f0094d42ec229790",
+      "5": "69fe496e1cca2090ca62bf7622ff34c3ab3aef1b9268dfb41c4df94d380a9d0a",
+      "7": "c1d4ca30f45341de53af20ab4e4ca3f9bff79542146f1ac2230169eec9669655"
+    },
+    "input_payload_sha256_required": "50fd136eb0483387246766c5f2426c3e727c69cd9a89943f9268368db0f9d39c",
+    "locks": {
+      "input_fixture": {
+        "path": "research/l-families/atlas/function_field/balanced_control_family_scan.json",
+        "payload_sha256": "50fd136eb0483387246766c5f2426c3e727c69cd9a89943f9268368db0f9d39c",
+        "sha256_lf_normalized": "c3494ae852fda4e754b3b0da7cb30a26e3e38ec1c87e2619cd6fee6cdc68b68e"
+      },
+      "input_producer": {
+        "path": "research/l-families/atlas/function_field/balanced_control_family_scan.py",
+        "sha256_lf_normalized": "7192fa26b0ea17cb68cff288620ea4dfb124e07807986d9c74fbd37e66087d3b"
+      },
+      "note": {
+        "path": "research/l-families/atlas/function_field/GENUS2_ENDOSCOPIC_SPLIT_LOCUS.md",
+        "sha256_lf_normalized": "b6be33305cacf1b541aad630587be04375eddc527c64fd1eb9d5ce1337772ff7"
+      },
+      "producer": {
+        "path": "research/l-families/atlas/function_field/genus2_endoscopic_split_locus.py",
+        "sha256_lf_normalized": "4489c109f25f8e0ca3051dc9983a8738b7aaee941a351959c552aa19b001e4de"
+      },
+      "test": {
+        "path": "tests/test_genus2_endoscopic_split_locus.py",
+        "sha256_lf_normalized": "edb241308c1b7f61ec87931a0038e0a8bba5cbc2bd4c0c7ce146864ee971e0a4"
+      }
+    }
+  },
+  "quarantined_patterns_and_targets": {
+    "geometric_target": "after explicitly importing Honda-Tate/Tate and polarization results, determine which polynomial-split rows give F_q product isogeny classes, which principal polarizations are Jacobians, and which rows without a ground-field integral +q elliptic-form factorization acquire one after extension",
+    "status": "NO_ALL_Q_FREQUENCY_FORMULA_CLAIMED",
+    "three_field_member_counts": {
+      "3": 27,
+      "5": 705,
+      "7": 3570
+    },
+    "three_field_member_fractions": {
+      "3": [
+        1,
+        6
+      ],
+      "5": [
+        141,
+        500
+      ],
+      "7": [
+        85,
+        343
+      ]
+    },
+    "useful_exact_counting_target": "derive the all-q joint multiplicity of integral trace pairs (r,s) in the monic squarefree quintic family, keeping repeated and distinct factors separate",
+    "warning": "the q=3,5,7 values are a three-field census, not interpolation evidence, an asymptotic law, or a density theorem"
+  },
+  "raw_fixture_id": "FUNCTION_FIELD.GENUS2.ENDOSCOPIC_SPLIT_LOCUS.Q3_Q5_Q7.V1",
+  "resource_contract": {
+    "curve_or_family_member_enumeration": false,
+    "external_dependencies": "none; Python 3.11+ standard library",
+    "finite_field_enumeration": false,
+    "floating_point_arithmetic": false,
+    "frozen_q_values": [
+      3,
+      5,
+      7
+    ],
+    "guarded_transform_work_units": {
+      "classification_atom_visit": 251,
+      "classification_ledger_row_visit": 251,
+      "detector_fiber_state_visit": 56,
+      "detector_fiber_visit": 314,
+      "orbit_bucket_atom_visit": 251,
+      "orbit_support_bucket_visit": 102,
+      "powered_histogram_atom_step": 6024,
+      "state_classification_visit": 138,
+      "tail_aggregate_atom_visit": 502,
+      "tail_extrema_atom_visit": 502,
+      "total": 8529,
+      "twist_state_visit": 138
+    },
+    "input": "complete source-locked (a_D,b_D) histograms only",
+    "maximum_cyclotomic_certificate_power": 24,
+    "maximum_echo_power": 8,
+    "random_sampling": false,
+    "transform_work_unit_cap_exclusive": 20000,
+    "work_unit_definition": "one charged source-atom classification, atom-power Newton step, detector-fiber or state visit, tail atom pass, orbit-bucket visit, or output-ledger row; source parsing and constant-size dictionary bookkeeping are excluded"
+  },
+  "schema": "riemann.function_field.genus2_endoscopic_split_locus.v1",
+  "scope": "integral +q elliptic-form factor locus and exact detector correlations in the existing q=3,5,7 monic-squarefree-quintic coefficient histograms",
+  "status": "EXACT_BOUNDED_TRANSFORM_OF_SOURCE_LOCKED_COMPLETE_HISTOGRAMS",
+  "structural_findings": {
+    "cyclotomic_versus_split": "bounded power-to-identity certificates occur on both sides of the integral +q elliptic-form split criterion; normalized root-of-unity spectrum and this specific reciprocal-quadratic factorization are distinct finite predicates",
+    "detector_non_identifiability": "B, F, and even the complete two-coordinate echo each have at least one frozen fiber containing both an integral +q elliptic-form split state and a state without such a factorization",
+    "orbit_non_identifiability": "member and coefficient-atom counts are exact, while the source's orbit counts are aggregated by B across mixed split-status fibers; orbit-size constraints force exact totals at q=3,5 but leave only a rigorous interval at q=7"
+  }
+}

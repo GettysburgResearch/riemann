@@ -1,0 +1,498 @@
+{
+  "character_identities": {
+    "B": "2*e_1^2-e_2^2=chi_20-chi_02",
+    "B_torus": "-(x_1^2+x_1^-2)*(x_2^2+x_2^-2)",
+    "e_1_squared": "1+chi_01+chi_20",
+    "e_2_squared": "2+2*chi_01+chi_20+chi_02"
+  },
+  "coefficient_square_lattice": {
+    "haar_means": [
+      1,
+      2,
+      1
+    ],
+    "integer_basis": [
+      [
+        2,
+        -1,
+        0
+      ],
+      [
+        -1,
+        0,
+        1
+      ]
+    ],
+    "parameterization": "(a,b,c)=t*(2,-1,0)+s*(-1,0,1)",
+    "quotient_conclusion": "Every nonzero null class is an integer multiple of B.",
+    "quotient_null_generator": [
+      2,
+      -1,
+      0
+    ],
+    "raw_ordered_basis": [
+      "e_1^2",
+      "e_2^2",
+      "e_1*e_3"
+    ],
+    "reciprocity_relation": "e_1*e_3=e_1^2",
+    "relation_kernel_generator": [
+      -1,
+      0,
+      1
+    ],
+    "zero_mean_equation": "a+2*b+c=0"
+  },
+  "conclusion": {
+    "bounded": "B is the unique non-central survivor in all three frozen low-weight panels.",
+    "coefficient_span": "Modulo e_1*e_3=e_1^2, B is the unique primitive coefficient-square null direction.",
+    "global": "B is not globally isolated: it generates a certified infinite residue-null module; the center-odd graded sector is another structured symmetry lattice."
+  },
+  "exact_symmetry_certificates": {
+    "B_residue": {
+      "all_odd_moments": 0,
+      "compact_determinacy": "A bounded real class function with all odd moments zero has symmetric pushforward.",
+      "even_moment_formula": "Haar(B^(2r))=binomial(2r,r)^2/(r+1)",
+      "frozen_moments_1_through_10": [
+        0,
+        2,
+        0,
+        12,
+        0,
+        100,
+        0,
+        980,
+        0,
+        10584
+      ],
+      "residue_class_mod_4": [
+        2,
+        2
+      ],
+      "weyl_density_coefficients_on_possible_residue_support": []
+    },
+    "central_odd": {
+      "consequence": "The pushforward is exactly symmetric and every odd Haar moment is zero.",
+      "frozen_basis": [
+        "chi_10",
+        "chi_11",
+        "chi_30"
+      ],
+      "statement": "Every Z-linear combination of chi_(a,b) with odd a is odd under Haar-preserving U->-U."
+    },
+    "infinite_residue_null_module": {
+      "definition": "B*Z[u^2+v^2,u^2*v^2]",
+      "exhaustiveness_claimed": false,
+      "proof": "The multiplier ring has support in 4*Z^2, so every module element has support in (2,2)+4*Z^2; odd powers cannot meet the C2 Weyl-density support.",
+      "u": "x_1^2+x_1^-2",
+      "v": "x_2^2+x_2^-2"
+    }
+  },
+  "producer": {
+    "character_dependency": "usp_coefficient_minor_rank_scan.py",
+    "character_dependency_sha256_lf_normalized": "2480d71306a799add48038692d691f7f79ac3c9917db69a3852a0a823c7ff167",
+    "checker": "tests/test_virtual_character_null_directions.py",
+    "checker_sha256_lf_normalized": "19b00d5d1170e8c059f8f42903595c6b647e4b0e47f6189667bd069fc178bc2a",
+    "note": "VIRTUAL_CHARACTER_NULL_DIRECTIONS.md",
+    "note_sha256_lf_normalized": "831731d18f469100f95a80b857dc4aa0cb09caf3f6a6407cec9cdc81e453903c",
+    "script": "virtual_character_null_directions.py",
+    "source_sha256_lf_normalized": "9b9c7d33d679398e856962d7011f6cb8aef8e3dd6633ef1ff8639d0515fc8ca2"
+  },
+  "resource_contract": {
+    "character_engine_observed_counts": {
+      "character_weight_candidates": 273,
+      "constant_term_lookups": 0,
+      "decomposition_updates": 0,
+      "kostant_weyl_summands": 2184,
+      "laurent_pair_products": 96,
+      "partition_states": 490
+    },
+    "hard_caps": {
+      "candidate_vectors": 1500,
+      "constant_term_lookups": 4000000,
+      "laurent_pair_products": 60000000,
+      "linear_term_updates": 200000
+    },
+    "maximum_abs_exponent": 32,
+    "maximum_laurent_terms": 5000,
+    "maximum_wall_seconds": 15.0,
+    "observed_counts": {
+      "candidate_vectors": 897,
+      "constant_term_lookups": 1941073,
+      "laurent_pair_products": 24429178,
+      "linear_term_updates": 51067
+    }
+  },
+  "schema": "riemann.function_field.virtual_character_null_directions.v1",
+  "scope": {
+    "arithmetic_family_claims": false,
+    "finite_field_enumeration": false,
+    "group": "USp(4)",
+    "numerical_integration": false,
+    "random_sampling": false,
+    "usp6_searched": false
+  },
+  "search_panels": [
+    {
+      "candidate_count": 192,
+      "coefficient_box": [
+        -2,
+        2
+      ],
+      "l1_cap": 5,
+      "name": "square_character_span",
+      "odd_orders_screened": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "ordered_basis": [
+        "1",
+        "chi_01",
+        "chi_20",
+        "chi_02"
+      ],
+      "overall_sign_quotient": "first nonzero coefficient positive",
+      "primitive": true,
+      "survivor_count": 1,
+      "survivors": [
+        {
+          "coefficients": [
+            0,
+            0,
+            1,
+            -1
+          ],
+          "odd_moments": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "candidate_count": 469,
+      "coefficient_box": [
+        -1,
+        1
+      ],
+      "l1_cap": 4,
+      "name": "central_odd_extension",
+      "odd_orders_screened": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "ordered_basis": [
+        "1",
+        "chi_01",
+        "chi_20",
+        "chi_02",
+        "chi_10",
+        "chi_11",
+        "chi_30"
+      ],
+      "overall_sign_quotient": "first nonzero coefficient positive",
+      "primitive": true,
+      "survivor_count": 14,
+      "survivors": [
+        {
+          "coefficients": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "odd_moments": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficients": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -1
+          ],
+          "odd_moments": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficients": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "odd_moments": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficients": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "odd_moments": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficients": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            -1,
+            -1
+          ],
+          "odd_moments": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficients": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            -1,
+            0
+          ],
+          "odd_moments": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficients": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            -1,
+            1
+          ],
+          "odd_moments": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficients": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1
+          ],
+          "odd_moments": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficients": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "odd_moments": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficients": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "odd_moments": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficients": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            -1
+          ],
+          "odd_moments": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficients": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "odd_moments": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficients": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "odd_moments": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficients": [
+            0,
+            0,
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "odd_moments": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "candidate_count": 236,
+      "coefficient_box": [
+        -1,
+        1
+      ],
+      "l1_cap": 4,
+      "name": "even_weight_four_extension",
+      "odd_orders_screened": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "ordered_basis": [
+        "1",
+        "chi_01",
+        "chi_20",
+        "chi_02",
+        "chi_21",
+        "chi_40"
+      ],
+      "overall_sign_quotient": "first nonzero coefficient positive",
+      "primitive": true,
+      "survivor_count": 1,
+      "survivors": [
+        {
+          "coefficients": [
+            0,
+            0,
+            1,
+            -1,
+            0,
+            0
+          ],
+          "odd_moments": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "status": "EXACT_BOUNDED_USP4_SEARCH_PLUS_ALL_ORDER_CERTIFICATES",
+  "stopping_rule": "No weights, coefficient boxes, moments, ranks, or finite fields beyond the three declared USp(4) panels were searched.",
+  "verification": {
+    "character_method": "Capped exact C2 Kostant characters followed by Laurent reconstruction.",
+    "density_cross_check": "The complete density equals an independent product over all four positive C2 roots, and its full support avoids residue (2,2) modulo 4.",
+    "haar_method": "Exact C2 Weyl-density constant terms divided by Weyl order 8.",
+    "survivor_rule": "Finite odd-moment survivors are retained only when central oddness or the B residue proof supplies an all-order certificate."
+  }
+}

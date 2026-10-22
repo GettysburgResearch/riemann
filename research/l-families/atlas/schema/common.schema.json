@@ -1,0 +1,188 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/gfreund123/riemann/research/l-families/atlas/schema/common.schema.json",
+  "title": "Shared L-family atlas vocabulary",
+  "$defs": {
+    "semanticId": {
+      "type": "string",
+      "pattern": "^ATLAS\\.(LFUNC|DETECTOR|EVAL)\\.[A-Z0-9_.-]+\\.H[0-9a-f]{32}$"
+    },
+    "recordState": {
+      "enum": ["DRAFT", "RELEASED", "SUPERSEDED", "WITHDRAWN"]
+    },
+    "programmeRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["repository", "kind", "number", "url"],
+      "properties": {
+        "repository": {"const": "gfreund123/riemann"},
+        "kind": {"const": "GITHUB_ISSUE"},
+        "number": {"enum": [737, 738, 741]},
+        "url": {"type": "string", "pattern": "^https://github.com/gfreund123/riemann/issues/(737|738|741)$"}
+      }
+    },
+    "hash": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["algorithm", "value", "binds", "hash_mode"],
+      "properties": {
+        "algorithm": {"enum": ["sha256", "sha512", "git_blob_sha1", "git_commit_sha1", "other"]},
+        "value": {"type": "string", "minLength": 1},
+        "binds": {"type": "string", "minLength": 1},
+        "hash_mode": {"enum": ["RAW_BYTES", "CANONICAL_JSON_UTF8_NFC", "GIT_OBJECT"]}
+      }
+    },
+    "contentBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["semantic_id", "record_sha256"],
+      "properties": {
+        "semantic_id": {"$ref": "#/$defs/semanticId"},
+        "record_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$",
+          "description": "SHA-256 of the bound atlas record's canonical UTF-8 NFC JSON serialization."
+        }
+      }
+    },
+    "artifactBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["role", "path", "sha256", "hash_mode", "coverage_class", "media_type"],
+      "properties": {
+        "role": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+        "path": {"type": "string", "pattern": "^(?!/)(?!.*\\.\\.)(?!.*\\\\)[A-Za-z0-9._/-]+$"},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "hash_mode": {"enum": ["RAW_BYTES", "CANONICAL_JSON_UTF8_NFC"]},
+        "coverage_class": {"$ref": "#/$defs/coverageClass"},
+        "media_type": {"type": "string", "minLength": 1},
+        "schema_path": {"type": ["string", "null"]},
+        "notes": {"type": "string"}
+      }
+    },
+    "canonicalProvenanceRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_id", "record_path", "object_id", "record_sha256"],
+      "properties": {
+        "schema_id": {"const": "https://github.com/gfreund123/riemann/canonical/provenance.schema.json"},
+        "record_path": {"type": "string", "pattern": "^research/l-families/atlas/provenance/[A-Za-z0-9._-]+\\.json$"},
+        "object_id": {"$ref": "#/$defs/semanticId"},
+        "record_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$",
+          "description": "SHA-256 of the provenance sidecar's canonical UTF-8 NFC JSON serialization."
+        }
+      }
+    },
+    "rigorLevel": {
+      "enum": [
+        "RIGOROUS_CERTIFIED",
+        "RIGOROUS_GIVEN_IMPORTED_THEOREM",
+        "HEURISTIC_PRECISION",
+        "CONDITIONAL_ANALYTIC_CONTINUATION",
+        "DISCOVERY_ONLY"
+      ]
+    },
+    "arithmeticClass": {
+      "enum": [
+        "EXACT_RATIONAL",
+        "CERTIFIED_INTEGER_COVERAGE",
+        "DIRECTED_INTERVAL",
+        "NON_DIRECTED_HIGH_PRECISION",
+        "FLOATING_RECONNAISSANCE",
+        "SYNTHETIC_CONTROL",
+        "MIXED"
+      ]
+    },
+    "coverageClass": {
+      "enum": ["COMPLETE", "FINITE_COMPLETE", "WINDOW_COMPLETE", "SAMPLED", "PARTIAL", "UNKNOWN", "NOT_APPLICABLE"]
+    },
+    "inputType": {
+      "enum": [
+        "LFUNCTION_SPEC",
+        "ZERO_DATA",
+        "LOCAL_EULER_FACTORS",
+        "RECIPROCAL_COEFFICIENTS",
+        "LOG_DERIVATIVE_VALUES",
+        "ROOT_NUMBER",
+        "CENTRAL_ORDER",
+        "KERNEL_MATRIX",
+        "FAMILY_PARAMETER",
+        "SYNTHETIC_MATRIX",
+        "RAW_ARTIFACT"
+      ]
+    },
+    "assertionStatus": {
+      "enum": ["PROVED_NATIVE", "IMPORTED_THEOREM", "CONDITIONAL", "NUMERICAL_ONLY", "UNKNOWN"]
+    },
+    "centralZeroPolicy": {
+      "enum": [
+        "RAW_INCLUDED",
+        "FORCED_PARITY_DEFLATED",
+        "FULL_CERTIFIED_ORDER_DEFLATED",
+        "PARAMETERIZED",
+        "FORBIDDEN",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "softwareLock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version", "role"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "version": {"type": "string", "minLength": 1},
+        "role": {"type": "string", "minLength": 1}
+      }
+    },
+    "dataSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["role", "source_kind", "identifier", "locator", "version_or_retrieved_utc", "coverage", "rigor_level", "hashes"],
+      "properties": {
+        "role": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+        "source_kind": {"enum": ["DATABASE", "PUBLICATION", "REPOSITORY", "GENERATED_EXACT", "SYNTHETIC_CONTROL"]},
+        "identifier": {"type": "string", "minLength": 1},
+        "locator": {"type": "string", "minLength": 1},
+        "version_or_retrieved_utc": {"type": "string", "minLength": 1},
+        "coverage": {"type": "string", "minLength": 1},
+        "rigor_level": {"$ref": "#/$defs/rigorLevel"},
+        "hashes": {"type": "array", "items": {"$ref": "#/$defs/hash"}},
+        "retention": {"enum": ["CHECKED_IN", "DURABLE_EXTERNAL", "DYNAMIC_EXTERNAL", "GENERATED"]},
+        "notes": {"type": "string"}
+      }
+    },
+    "gammaFactor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "shift", "multiplicity", "scale"],
+      "properties": {
+        "kind": {"enum": ["GAMMA_R", "GAMMA_C", "FUNCTION_FIELD_NONE", "EXPLICIT_OTHER"]},
+        "shift": {"type": "string"},
+        "multiplicity": {"type": "integer", "minimum": 1},
+        "scale": {"type": "string"},
+        "notes": {"type": "string"}
+      }
+    },
+    "assumption": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "statement", "status"],
+      "properties": {
+        "code": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]*$"},
+        "statement": {"type": "string", "minLength": 1},
+        "status": {"enum": ["PROVED_NATIVE", "IMPORTED", "CONDITIONAL", "HEURISTIC", "NOT_APPLICABLE"]}
+      }
+    },
+    "firewall": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "statement"],
+      "properties": {
+        "code": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]*$"},
+        "statement": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}

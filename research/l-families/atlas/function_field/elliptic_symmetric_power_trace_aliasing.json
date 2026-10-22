@@ -1,0 +1,2928 @@
+{
+  "schema": "riemann.function_field.elliptic_symmetric_power_trace_aliasing.v1",
+  "packet_id": "FUNCTION_FIELD.ELLIPTIC.SYMMETRIC_POWER.SCALAR_TRACE_ALIASING.V1",
+  "status": "EXACT_INTEGER_THEOREM_PLUS_SOURCE_LOCKED_HISTOGRAM_TRANSFORMS",
+  "rigor_level": "PROVED_ALGEBRAIC_CLASSIFICATION_WITH_BOUNDED_EXACT_REPLAY",
+  "scalar_trace_definition": {
+    "notation": "tau_m(t;q)=E_m(t,q)",
+    "initial_values": {
+      "E_0": "1",
+      "E_1": "t"
+    },
+    "recurrence": "E_m=t*E_(m-1)-q*E_(m-2)",
+    "closed_formula": "sum_(j=0)^floor(m/2) (-1)^j binom(m-j,j) q^j t^(m-2j)",
+    "representation_meaning": "sum_(i=0)^m alpha^(m-i) beta^i for alpha+beta=t, alpha*beta=q",
+    "firewall": "one scalar trace, not the full degree-(m+1) Sym^m local factor"
+  },
+  "integer_collision_theorem": {
+    "scope": "every odd integer q and all x,y in Z; elliptic applications take q a positive odd prime power",
+    "odd_classes": "if m=1 or 3 mod 6, tau_m(x;q)=tau_m(y;q) iff x=y",
+    "even_class": "if m=2 mod 6, tau_m(x;q)=tau_m(y;q) iff x=+y or x=-y",
+    "hasse_bound_used": false,
+    "odd_quotient": {
+      "definition": "(tau_(2r+1)(x;q)-tau_(2r+1)(y;q))/(x-y)",
+      "expanded_term_s": "(-1)^(r-s) binom(r+s+1,2s+1) q^(r-s) H_(2s)(x,y)",
+      "after_x_2X_y_2Y": "same coefficient times 2^(2s) H_(2s)(X,Y)",
+      "constant_term": "(-1)^r (r+1) q^r"
+    },
+    "even_quotient": {
+      "definition": "(tau_(2r)(x;q)-tau_(2r)(y;q))/(x^2-y^2)",
+      "expanded_term_s": "(-1)^(r-s-1) binom(r+s+1,2s+2) q^(r-s-1) sum_(i=0)^s x^(2(s-i))y^(2i)",
+      "after_x_2X_y_2Y": "same coefficient times 2^(2s)",
+      "constant_term": "(-1)^(r-1) binom(r+1,2) q^(r-1)"
+    }
+  },
+  "mod_2_quotient_recurrence_certificate": {
+    "table_index": "r mod 12, with m=2r+1 in the odd column and positive m=2r in the even column",
+    "warning": "this is not a claim that the even quotient table has period 12 in m; its period is 12 in r",
+    "parity_column_order": [
+      "(0,0)",
+      "(0,1)",
+      "(1,0)",
+      "(1,1)"
+    ],
+    "recurrences": {
+      "odd": "A_r(z)=z A_(r-1)(z)+A_(r-2)(z), A_0=1,A_1=z over F_2",
+      "even": "F_r(z)=z F_(r-1)(z)+F_(r-2)(z), F_0=1,F_1=z+1 over F_2",
+      "diagonal_values": "formal derivatives at z=0,1; finite recurrence states return after 12 steps"
+    },
+    "target_conclusion": "every zero in a target row has parity (x,y)=(0,0)",
+    "rows": [
+      {
+        "r_mod_12": 0,
+        "odd_m_2r_plus_1_mod_2_values_at_00_01_10_11": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "odd_target_m_mod_6_in_1_3": true,
+        "odd_zero_parity_pairs": [],
+        "even_m_2r_positive_representative_r": 12,
+        "even_m_2r_mod_2_values_at_00_01_10_11": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "even_target_m_mod_6_eq_2": false,
+        "even_zero_parity_pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "r_mod_12": 1,
+        "odd_m_2r_plus_1_mod_2_values_at_00_01_10_11": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "odd_target_m_mod_6_in_1_3": true,
+        "odd_zero_parity_pairs": [
+          [
+            0,
+            0
+          ]
+        ],
+        "even_m_2r_positive_representative_r": 1,
+        "even_m_2r_mod_2_values_at_00_01_10_11": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "even_target_m_mod_6_eq_2": true,
+        "even_zero_parity_pairs": []
+      },
+      {
+        "r_mod_12": 2,
+        "odd_m_2r_plus_1_mod_2_values_at_00_01_10_11": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "odd_target_m_mod_6_in_1_3": false,
+        "odd_zero_parity_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "even_m_2r_positive_representative_r": 2,
+        "even_m_2r_mod_2_values_at_00_01_10_11": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "even_target_m_mod_6_eq_2": false,
+        "even_zero_parity_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "r_mod_12": 3,
+        "odd_m_2r_plus_1_mod_2_values_at_00_01_10_11": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "odd_target_m_mod_6_in_1_3": true,
+        "odd_zero_parity_pairs": [
+          [
+            0,
+            0
+          ]
+        ],
+        "even_m_2r_positive_representative_r": 3,
+        "even_m_2r_mod_2_values_at_00_01_10_11": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "even_target_m_mod_6_eq_2": false,
+        "even_zero_parity_pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "r_mod_12": 4,
+        "odd_m_2r_plus_1_mod_2_values_at_00_01_10_11": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "odd_target_m_mod_6_in_1_3": true,
+        "odd_zero_parity_pairs": [],
+        "even_m_2r_positive_representative_r": 4,
+        "even_m_2r_mod_2_values_at_00_01_10_11": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "even_target_m_mod_6_eq_2": true,
+        "even_zero_parity_pairs": [
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "r_mod_12": 5,
+        "odd_m_2r_plus_1_mod_2_values_at_00_01_10_11": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "odd_target_m_mod_6_in_1_3": false,
+        "odd_zero_parity_pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "even_m_2r_positive_representative_r": 5,
+        "even_m_2r_mod_2_values_at_00_01_10_11": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "even_target_m_mod_6_eq_2": false,
+        "even_zero_parity_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "r_mod_12": 6,
+        "odd_m_2r_plus_1_mod_2_values_at_00_01_10_11": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "odd_target_m_mod_6_in_1_3": true,
+        "odd_zero_parity_pairs": [],
+        "even_m_2r_positive_representative_r": 6,
+        "even_m_2r_mod_2_values_at_00_01_10_11": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "even_target_m_mod_6_eq_2": false,
+        "even_zero_parity_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "r_mod_12": 7,
+        "odd_m_2r_plus_1_mod_2_values_at_00_01_10_11": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "odd_target_m_mod_6_in_1_3": true,
+        "odd_zero_parity_pairs": [
+          [
+            0,
+            0
+          ]
+        ],
+        "even_m_2r_positive_representative_r": 7,
+        "even_m_2r_mod_2_values_at_00_01_10_11": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "even_target_m_mod_6_eq_2": true,
+        "even_zero_parity_pairs": [
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "r_mod_12": 8,
+        "odd_m_2r_plus_1_mod_2_values_at_00_01_10_11": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "odd_target_m_mod_6_in_1_3": false,
+        "odd_zero_parity_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "even_m_2r_positive_representative_r": 8,
+        "even_m_2r_mod_2_values_at_00_01_10_11": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "even_target_m_mod_6_eq_2": false,
+        "even_zero_parity_pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "r_mod_12": 9,
+        "odd_m_2r_plus_1_mod_2_values_at_00_01_10_11": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "odd_target_m_mod_6_in_1_3": true,
+        "odd_zero_parity_pairs": [
+          [
+            0,
+            0
+          ]
+        ],
+        "even_m_2r_positive_representative_r": 9,
+        "even_m_2r_mod_2_values_at_00_01_10_11": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "even_target_m_mod_6_eq_2": false,
+        "even_zero_parity_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "r_mod_12": 10,
+        "odd_m_2r_plus_1_mod_2_values_at_00_01_10_11": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "odd_target_m_mod_6_in_1_3": true,
+        "odd_zero_parity_pairs": [],
+        "even_m_2r_positive_representative_r": 10,
+        "even_m_2r_mod_2_values_at_00_01_10_11": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "even_target_m_mod_6_eq_2": true,
+        "even_zero_parity_pairs": []
+      },
+      {
+        "r_mod_12": 11,
+        "odd_m_2r_plus_1_mod_2_values_at_00_01_10_11": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "odd_target_m_mod_6_in_1_3": false,
+        "odd_zero_parity_pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "even_m_2r_positive_representative_r": 11,
+        "even_m_2r_mod_2_values_at_00_01_10_11": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "even_target_m_mod_6_eq_2": false,
+        "even_zero_parity_pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      }
+    ]
+  },
+  "two_adic_valuation_certificate": {
+    "odd": {
+      "numerator_interval": "[r-s+1,r+s+1] contains r+1",
+      "factorial_valuation": "v2((2s+1)!)=2s+1-popcount(2s+1)",
+      "margin": "v2(product of remaining interval terms)+popcount(2s+1)-1 >= 1 for s>=1",
+      "reason": "the odd integer 2s+1>=3 has popcount at least 2"
+    },
+    "even": {
+      "numerator_interval": "[r-s,r+s+1] contains r(r+1)",
+      "factorial_valuation": "v2((2s+2)!)=2s+2-popcount(2s+2)",
+      "margin": "v2(product after removing r,r+1)+popcount(2s+2)-1 >= 1",
+      "power_of_two_case": "if 2s+2 is a power of two, the interval has at least two even terms, so one remains after removing r,r+1"
+    },
+    "conclusion": "after the parity step, the constant term is the unique least-2-adic-valuation term, so neither quotient can vanish"
+  },
+  "sharp_complement": {
+    "classes": [
+      0,
+      4,
+      5
+    ],
+    "construction": "for k>=0 set q=3^(2k+1), t=3^(k+1), so t^2=3q",
+    "hasse_check": "t^2=3q<=4q",
+    "six_step_identity": "tau_(m+6)(t;q)=-q^3*tau_m(t;q)",
+    "initial_values_m_0_through_5_at_t_squared_3q": [
+      "1",
+      "t",
+      "2q",
+      "qt",
+      "q^2",
+      "0"
+    ],
+    "equality": "tau_m(0;q)=tau_m(t;q) for every positive m=0,4,5 mod 6",
+    "realization_firewall": "the construction supplies Hasse-admissible integer traces; only q=3 is source-witnessed here",
+    "q_3_locked_source_witness": {
+      "source_trace_weights": {
+        "-3": 1,
+        "0": 4,
+        "3": 1
+      },
+      "complementary_rows_through_m_18": [
+        {
+          "m": 4,
+          "common_scalar_trace_for_t_0_and_3": 9,
+          "t_0_vs_t_3_full_factor_equal": false,
+          "t_3_vs_t_minus_3_full_factor_equal": true,
+          "t_0_factor_sha256": "3dd680cdf4648b2b1bf3463e07bdda0bab7de62ce1c344897b30fb715407ef04",
+          "t_3_factor_sha256": "a71bb043b7daa098f4699d8003ae22126a3fec04fc3b5f2b97f85b3b5b72dd36",
+          "t_minus_3_factor_sha256": "a71bb043b7daa098f4699d8003ae22126a3fec04fc3b5f2b97f85b3b5b72dd36"
+        },
+        {
+          "m": 5,
+          "common_scalar_trace_for_t_0_and_3": 0,
+          "t_0_vs_t_3_full_factor_equal": false,
+          "t_3_vs_t_minus_3_full_factor_equal": true,
+          "t_0_factor_sha256": "baa08b8b865a3c7cbbf8d80878de19bf5fd782bf5f299e8a7949d31e247253f7",
+          "t_3_factor_sha256": "09b22abcbf00fcb31126509d883c9d2533197e80a9f557002408702fd832d857",
+          "t_minus_3_factor_sha256": "09b22abcbf00fcb31126509d883c9d2533197e80a9f557002408702fd832d857"
+        },
+        {
+          "m": 6,
+          "common_scalar_trace_for_t_0_and_3": -27,
+          "t_0_vs_t_3_full_factor_equal": false,
+          "t_3_vs_t_minus_3_full_factor_equal": true,
+          "t_0_factor_sha256": "46d7d366be8573fe00d2129573236329d7ca5d83ebc4256d963865496d954199",
+          "t_3_factor_sha256": "3f2e7109964f15ee8e6f169e32e98c870b5b470d842bfd76f5c8a83b97a145aa",
+          "t_minus_3_factor_sha256": "3f2e7109964f15ee8e6f169e32e98c870b5b470d842bfd76f5c8a83b97a145aa"
+        },
+        {
+          "m": 10,
+          "common_scalar_trace_for_t_0_and_3": -243,
+          "t_0_vs_t_3_full_factor_equal": false,
+          "t_3_vs_t_minus_3_full_factor_equal": true,
+          "t_0_factor_sha256": "a0efe5bfc511964a14acbb5ab0abad14370b9c218df8e9ba9b1129890962ffb8",
+          "t_3_factor_sha256": "59fb98e5dda7d31a61b694625cb25a63d626a7ef9488f19522a0d63faad57e19",
+          "t_minus_3_factor_sha256": "59fb98e5dda7d31a61b694625cb25a63d626a7ef9488f19522a0d63faad57e19"
+        },
+        {
+          "m": 11,
+          "common_scalar_trace_for_t_0_and_3": 0,
+          "t_0_vs_t_3_full_factor_equal": false,
+          "t_3_vs_t_minus_3_full_factor_equal": true,
+          "t_0_factor_sha256": "92c6ac492b94d09e202888ff2f48c0dbc3287f46ad50470b869327f7e0482a71",
+          "t_3_factor_sha256": "771eec49cd466d537bacb683723d80c0062ecc92a2194f816ae1b4116dda7b93",
+          "t_minus_3_factor_sha256": "771eec49cd466d537bacb683723d80c0062ecc92a2194f816ae1b4116dda7b93"
+        },
+        {
+          "m": 12,
+          "common_scalar_trace_for_t_0_and_3": 729,
+          "t_0_vs_t_3_full_factor_equal": false,
+          "t_3_vs_t_minus_3_full_factor_equal": true,
+          "t_0_factor_sha256": "0517d79f43f637eae67b1b71946235e18d1bdc063ea7a844efaeffbe13250c00",
+          "t_3_factor_sha256": "bcc4aafb65079edd2ef41dcc0529f77ca31562223478d2aed5e91f6ab499f438",
+          "t_minus_3_factor_sha256": "bcc4aafb65079edd2ef41dcc0529f77ca31562223478d2aed5e91f6ab499f438"
+        },
+        {
+          "m": 16,
+          "common_scalar_trace_for_t_0_and_3": 6561,
+          "t_0_vs_t_3_full_factor_equal": false,
+          "t_3_vs_t_minus_3_full_factor_equal": true,
+          "t_0_factor_sha256": "289fc3f0dd6f121c8329dcfa640d9b278d800a3b2c00b6f5c77093692de64ef6",
+          "t_3_factor_sha256": "a9d9ca71eea382c21778160f3ec57db844d66aed3a9178cfa1d199d956c26f57",
+          "t_minus_3_factor_sha256": "a9d9ca71eea382c21778160f3ec57db844d66aed3a9178cfa1d199d956c26f57"
+        },
+        {
+          "m": 17,
+          "common_scalar_trace_for_t_0_and_3": 0,
+          "t_0_vs_t_3_full_factor_equal": false,
+          "t_3_vs_t_minus_3_full_factor_equal": true,
+          "t_0_factor_sha256": "f58feefb559ca12ab7d45cb82756c54cc847c715d06bd5d6d43ceca47e68cfd2",
+          "t_3_factor_sha256": "467f3472329693c529c059b8943c703f4b40cb2d1136c784117a3d4a3c736f6d",
+          "t_minus_3_factor_sha256": "467f3472329693c529c059b8943c703f4b40cb2d1136c784117a3d4a3c736f6d"
+        },
+        {
+          "m": 18,
+          "common_scalar_trace_for_t_0_and_3": -19683,
+          "t_0_vs_t_3_full_factor_equal": false,
+          "t_3_vs_t_minus_3_full_factor_equal": true,
+          "t_0_factor_sha256": "8dac289e138d23ecf61b51974b7d07395d3928b87e805e780022ba8f7bfe3f4c",
+          "t_3_factor_sha256": "36400865015c4d55d361a46fa08f4796eeab80efe6d71264bcb692aa928017b4",
+          "t_minus_3_factor_sha256": "36400865015c4d55d361a46fa08f4796eeab80efe6d71264bcb692aa928017b4"
+        }
+      ]
+    }
+  },
+  "full_factor_diagnostics": {
+    "scope": "diagnostics only; the theorem above classifies scalar tau_m fibers, not full-factor fibers",
+    "general_zero_vs_nonzero_resolution": {
+      "second_root_power_sum_at_t_0": "(-1)^m (m+1) q^m",
+      "second_root_power_sum_at_t_squared_3q": "q^m U_m(1/2)",
+      "conclusion": "these differ for every positive m=0,4,5 mod 6, so the constructed t=0 versus t collision is not a full-factor collision"
+    },
+    "sign_nuance": {
+      "even_m": "t and -t always give the same full Sym^m factor",
+      "odd_m_5_mod_6_at_t_squared_3q": "the normalized spectrum is a union of complete six-cycles and is invariant under negation, so the t and -t full factors coincide"
+    },
+    "q_3_m_4": {
+      "common_scalar_trace": 9,
+      "t_0_raw_second_coefficient": -162,
+      "t_3_raw_second_coefficient": 81,
+      "t_0_normalized_second_coefficient": [
+        -2,
+        1
+      ],
+      "t_3_normalized_second_coefficient": [
+        1,
+        1
+      ],
+      "t_0_full_factor": [
+        1,
+        -9,
+        -162,
+        1458,
+        6561,
+        -59049
+      ],
+      "t_3_full_factor": [
+        1,
+        -9,
+        81,
+        -729,
+        6561,
+        -59049
+      ]
+    },
+    "q_3_m_5": {
+      "common_scalar_trace_for_t_minus3_0_3": 0,
+      "t_0_full_factor": [
+        1,
+        0,
+        729,
+        0,
+        177147,
+        0,
+        14348907
+      ],
+      "t_3_full_factor": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        14348907
+      ],
+      "t_minus_3_full_factor": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        14348907
+      ],
+      "t_3_equals_t_minus_3_but_not_t_0": true
+    },
+    "q_31_m_5_ordinary_looking_scalar_witness": {
+      "traces": [
+        -7,
+        3
+      ],
+      "hasse_check": {
+        "trace_squares": [
+          49,
+          9
+        ],
+        "four_q": 124,
+        "both_within_bound": true
+      },
+      "both_traces_prime_to_q": true,
+      "common_scalar_trace": 5544,
+      "t_minus_7_full_factor": [
+        1,
+        -5544,
+        29339640,
+        -142543380980,
+        839968983845640,
+        -4544019223021560744,
+        23465261991844685929951
+      ],
+      "t_3_full_factor": [
+        1,
+        -5544,
+        11744040,
+        -81567162180,
+        336221894510040,
+        -4544019223021560744,
+        23465261991844685929951
+      ],
+      "full_factors_equal": false,
+      "curve_realization_claimed": false
+    }
+  },
+  "m_5_collision_curve_target": {
+    "quotient_equation": "3q^2-4q(x^2+xy+y^2)+(x^4+x^3y+x^2y^2+xy^3+y^4)=0",
+    "elimination_substitution": "z=3q-2(x^2+xy+y^2)",
+    "binary_quartic_model": "z^2=x^4+5x^3y+9x^2y^2+5xy^3+y^4",
+    "dehomogenized_quartic_discriminant": 189,
+    "geometric_status": "the nonzero discriminant gives a nonsingular genus-one smooth projective model over characteristic zero",
+    "q_31_point": {
+      "x": -7,
+      "y": 3,
+      "q": 31,
+      "z": 19,
+      "quotient": 0,
+      "quartic_value": 361
+    },
+    "scope": "recorded as a future Diophantine target, not solved or claimed novel here"
+  },
+  "source_lock": {
+    "fixture": "research/l-families/atlas/function_field/genus1_cubic_family_laws.json",
+    "producer": "research/l-families/atlas/function_field/genus1_cubic_family_laws.py",
+    "schema": "riemann.function_field.genus1_cubic_family_laws.v1",
+    "payload_sha256": "183ffb31ae2f5776944e162e59390c40bd7081827b8731246e72e25a882e50df",
+    "fixture_sha256_lf_normalized": "b9016ae801cff40d15c53d96210b66a7d44fae7d916e827a0526b9dd42017227",
+    "producer_sha256_lf_normalized": "3d5baace952240c162c83bd5c66eb81db1704aee35e770de3d8df43fff669b79",
+    "normalization": {
+      "family": "H_3(q)={monic squarefree cubic D over F_q}",
+      "curve": "E_D:y^2=D(x), with the rational point at infinity",
+      "trace": "a_D=q+1-#E_D(F_q)=-sum_x quadratic_character(D(x))",
+      "l_polynomial": "L_D(T)=1-a_D*T+q*T^2",
+      "model_count": "q^2*(q-1)"
+    },
+    "consumed_measure": "uniform monic squarefree cubic models, equivalently normalized elliptic-moduli-stack measure; not uniform coarse isomorphism classes"
+  },
+  "frozen_histogram_transforms": [
+    {
+      "q": 3,
+      "source_histogram_atom_count": 7,
+      "source_member_count": 18,
+      "powers_1_through": 18,
+      "transforms": [
+        {
+          "m": 1,
+          "m_mod_6": 1,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 7,
+          "transformed_scalar_trace_histogram": {
+            "-3": 1,
+            "-2": 3,
+            "-1": 3,
+            "0": 4,
+            "1": 3,
+            "2": 3,
+            "3": 1
+          },
+          "transformed_support_size": 7,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 2,
+          "m_mod_6": 2,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 4,
+          "transformed_scalar_trace_histogram": {
+            "-3": 4,
+            "-2": 6,
+            "1": 6,
+            "6": 2
+          },
+          "transformed_support_size": 4,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 3,
+          "m_mod_6": 3,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 7,
+          "transformed_scalar_trace_histogram": {
+            "-9": 1,
+            "-5": 3,
+            "-4": 3,
+            "0": 4,
+            "4": 3,
+            "5": 3,
+            "9": 1
+          },
+          "transformed_support_size": 7,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 4,
+          "m_mod_6": 4,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 4,
+          "transformed_scalar_trace_histogram": {
+            "-11": 6,
+            "1": 6,
+            "9": 6
+          },
+          "transformed_support_size": 3,
+          "injective_after_expected_domain_quotient": false,
+          "extra_collision_fibers_after_expected_domain_quotient": [
+            {
+              "scalar_trace": 9,
+              "expected_domain_classes": [
+                {
+                  "class_representative": 0,
+                  "source_traces": [
+                    0
+                  ],
+                  "source_mass": 4
+                },
+                {
+                  "class_representative": 3,
+                  "source_traces": [
+                    -3,
+                    3
+                  ],
+                  "source_mass": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "m": 5,
+          "m_mod_6": 5,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 7,
+          "transformed_scalar_trace_histogram": {
+            "-16": 3,
+            "-10": 3,
+            "0": 6,
+            "10": 3,
+            "16": 3
+          },
+          "transformed_support_size": 5,
+          "injective_after_expected_domain_quotient": false,
+          "extra_collision_fibers_after_expected_domain_quotient": [
+            {
+              "scalar_trace": 0,
+              "expected_domain_classes": [
+                {
+                  "class_representative": -3,
+                  "source_traces": [
+                    -3
+                  ],
+                  "source_mass": 1
+                },
+                {
+                  "class_representative": 0,
+                  "source_traces": [
+                    0
+                  ],
+                  "source_mass": 4
+                },
+                {
+                  "class_representative": 3,
+                  "source_traces": [
+                    3
+                  ],
+                  "source_mass": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "m": 6,
+          "m_mod_6": 0,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 4,
+          "transformed_scalar_trace_histogram": {
+            "-27": 6,
+            "13": 12
+          },
+          "transformed_support_size": 2,
+          "injective_after_expected_domain_quotient": false,
+          "extra_collision_fibers_after_expected_domain_quotient": [
+            {
+              "scalar_trace": -27,
+              "expected_domain_classes": [
+                {
+                  "class_representative": 0,
+                  "source_traces": [
+                    0
+                  ],
+                  "source_mass": 4
+                },
+                {
+                  "class_representative": 3,
+                  "source_traces": [
+                    -3,
+                    3
+                  ],
+                  "source_mass": 2
+                }
+              ]
+            },
+            {
+              "scalar_trace": 13,
+              "expected_domain_classes": [
+                {
+                  "class_representative": 1,
+                  "source_traces": [
+                    -1,
+                    1
+                  ],
+                  "source_mass": 6
+                },
+                {
+                  "class_representative": 2,
+                  "source_traces": [
+                    -2,
+                    2
+                  ],
+                  "source_mass": 6
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "m": 7,
+          "m_mod_6": 1,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 7,
+          "transformed_scalar_trace_histogram": {
+            "-81": 1,
+            "-56": 3,
+            "-35": 3,
+            "0": 4,
+            "35": 3,
+            "56": 3,
+            "81": 1
+          },
+          "transformed_support_size": 7,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 8,
+          "m_mod_6": 2,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 4,
+          "transformed_scalar_trace_histogram": {
+            "-162": 2,
+            "-74": 6,
+            "73": 6,
+            "81": 4
+          },
+          "transformed_support_size": 4,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 9,
+          "m_mod_6": 3,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 7,
+          "transformed_scalar_trace_histogram": {
+            "-243": 1,
+            "-31": 3,
+            "-22": 3,
+            "0": 4,
+            "22": 3,
+            "31": 3,
+            "243": 1
+          },
+          "transformed_support_size": 7,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 10,
+          "m_mod_6": 4,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 4,
+          "transformed_scalar_trace_histogram": {
+            "-263": 6,
+            "-243": 6,
+            "253": 6
+          },
+          "transformed_support_size": 3,
+          "injective_after_expected_domain_quotient": false,
+          "extra_collision_fibers_after_expected_domain_quotient": [
+            {
+              "scalar_trace": -243,
+              "expected_domain_classes": [
+                {
+                  "class_representative": 0,
+                  "source_traces": [
+                    0
+                  ],
+                  "source_mass": 4
+                },
+                {
+                  "class_representative": 3,
+                  "source_traces": [
+                    -3,
+                    3
+                  ],
+                  "source_mass": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "m": 11,
+          "m_mod_6": 5,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 7,
+          "transformed_scalar_trace_histogram": {
+            "-460": 3,
+            "-160": 3,
+            "0": 6,
+            "160": 3,
+            "460": 3
+          },
+          "transformed_support_size": 5,
+          "injective_after_expected_domain_quotient": false,
+          "extra_collision_fibers_after_expected_domain_quotient": [
+            {
+              "scalar_trace": 0,
+              "expected_domain_classes": [
+                {
+                  "class_representative": -3,
+                  "source_traces": [
+                    -3
+                  ],
+                  "source_mass": 1
+                },
+                {
+                  "class_representative": 0,
+                  "source_traces": [
+                    0
+                  ],
+                  "source_mass": 4
+                },
+                {
+                  "class_representative": 3,
+                  "source_traces": [
+                    3
+                  ],
+                  "source_mass": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "m": 12,
+          "m_mod_6": 0,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 4,
+          "transformed_scalar_trace_histogram": {
+            "-599": 6,
+            "-131": 6,
+            "729": 6
+          },
+          "transformed_support_size": 3,
+          "injective_after_expected_domain_quotient": false,
+          "extra_collision_fibers_after_expected_domain_quotient": [
+            {
+              "scalar_trace": 729,
+              "expected_domain_classes": [
+                {
+                  "class_representative": 0,
+                  "source_traces": [
+                    0
+                  ],
+                  "source_mass": 4
+                },
+                {
+                  "class_representative": 3,
+                  "source_traces": [
+                    -3,
+                    3
+                  ],
+                  "source_mass": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "m": 13,
+          "m_mod_6": 1,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 7,
+          "transformed_scalar_trace_histogram": {
+            "-2187": 1,
+            "-1118": 3,
+            "-1079": 3,
+            "0": 4,
+            "1079": 3,
+            "1118": 3,
+            "2187": 1
+          },
+          "transformed_support_size": 7,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 14,
+          "m_mod_6": 2,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 4,
+          "transformed_scalar_trace_histogram": {
+            "-2187": 4,
+            "718": 6,
+            "2629": 6,
+            "4374": 2
+          },
+          "transformed_support_size": 4,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 15,
+          "m_mod_6": 3,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 7,
+          "transformed_scalar_trace_histogram": {
+            "-6561": 1,
+            "-3955": 3,
+            "-1904": 3,
+            "0": 4,
+            "1904": 3,
+            "3955": 3,
+            "6561": 1
+          },
+          "transformed_support_size": 7,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 16,
+          "m_mod_6": 4,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 4,
+          "transformed_scalar_trace_histogram": {
+            "-4079": 6,
+            "1801": 6,
+            "6561": 6
+          },
+          "transformed_support_size": 3,
+          "injective_after_expected_domain_quotient": false,
+          "extra_collision_fibers_after_expected_domain_quotient": [
+            {
+              "scalar_trace": 6561,
+              "expected_domain_classes": [
+                {
+                  "class_representative": 0,
+                  "source_traces": [
+                    0
+                  ],
+                  "source_mass": 4
+                },
+                {
+                  "class_representative": 3,
+                  "source_traces": [
+                    -3,
+                    3
+                  ],
+                  "source_mass": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "m": 17,
+          "m_mod_6": 5,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 7,
+          "transformed_scalar_trace_histogram": {
+            "-13870": 3,
+            "-10064": 3,
+            "0": 6,
+            "10064": 3,
+            "13870": 3
+          },
+          "transformed_support_size": 5,
+          "injective_after_expected_domain_quotient": false,
+          "extra_collision_fibers_after_expected_domain_quotient": [
+            {
+              "scalar_trace": 0,
+              "expected_domain_classes": [
+                {
+                  "class_representative": -3,
+                  "source_traces": [
+                    -3
+                  ],
+                  "source_mass": 1
+                },
+                {
+                  "class_representative": 0,
+                  "source_traces": [
+                    0
+                  ],
+                  "source_mass": 4
+                },
+                {
+                  "class_representative": 3,
+                  "source_traces": [
+                    3
+                  ],
+                  "source_mass": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "m": 18,
+          "m_mod_6": 0,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 4,
+          "transformed_scalar_trace_histogram": {
+            "-19683": 6,
+            "-15503": 6,
+            "-15467": 6
+          },
+          "transformed_support_size": 3,
+          "injective_after_expected_domain_quotient": false,
+          "extra_collision_fibers_after_expected_domain_quotient": [
+            {
+              "scalar_trace": -19683,
+              "expected_domain_classes": [
+                {
+                  "class_representative": 0,
+                  "source_traces": [
+                    0
+                  ],
+                  "source_mass": 4
+                },
+                {
+                  "class_representative": 3,
+                  "source_traces": [
+                    -3,
+                    3
+                  ],
+                  "source_mass": 2
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "q": 5,
+      "source_histogram_atom_count": 9,
+      "source_member_count": 100,
+      "powers_1_through": 18,
+      "transforms": [
+        {
+          "m": 1,
+          "m_mod_6": 1,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 9,
+          "transformed_scalar_trace_histogram": {
+            "-4": 5,
+            "-3": 10,
+            "-2": 15,
+            "-1": 10,
+            "0": 20,
+            "1": 10,
+            "2": 15,
+            "3": 10,
+            "4": 5
+          },
+          "transformed_support_size": 9,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 2,
+          "m_mod_6": 2,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 5,
+          "transformed_scalar_trace_histogram": {
+            "-5": 20,
+            "-4": 20,
+            "-1": 30,
+            "4": 20,
+            "11": 10
+          },
+          "transformed_support_size": 5,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 3,
+          "m_mod_6": 3,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 9,
+          "transformed_scalar_trace_histogram": {
+            "-24": 5,
+            "-12": 15,
+            "-9": 10,
+            "-3": 10,
+            "0": 20,
+            "3": 10,
+            "9": 10,
+            "12": 15,
+            "24": 5
+          },
+          "transformed_support_size": 9,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 4,
+          "m_mod_6": 4,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 5,
+          "transformed_scalar_trace_histogram": {
+            "-29": 20,
+            "-19": 30,
+            "11": 20,
+            "25": 20,
+            "41": 10
+          },
+          "transformed_support_size": 5,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 5,
+          "m_mod_6": 5,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 9,
+          "transformed_scalar_trace_histogram": {
+            "-72": 10,
+            "-56": 10,
+            "-44": 5,
+            "-22": 15,
+            "0": 20,
+            "22": 15,
+            "44": 5,
+            "56": 10,
+            "72": 10
+          },
+          "transformed_support_size": 9,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 6,
+          "m_mod_6": 0,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 5,
+          "transformed_scalar_trace_histogram": {
+            "-125": 20,
+            "-71": 20,
+            "-29": 10,
+            "1": 20,
+            "139": 30
+          },
+          "transformed_support_size": 5,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 7,
+          "m_mod_6": 1,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 9,
+          "transformed_scalar_trace_histogram": {
+            "-336": 5,
+            "-279": 10,
+            "-168": 15,
+            "-147": 10,
+            "0": 20,
+            "147": 10,
+            "168": 15,
+            "279": 10,
+            "336": 5
+          },
+          "transformed_support_size": 9,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 8,
+          "m_mod_6": 2,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 5,
+          "transformed_scalar_trace_histogram": {
+            "-1199": 10,
+            "-359": 30,
+            "-284": 20,
+            "625": 20,
+            "796": 20
+          },
+          "transformed_support_size": 5,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 9,
+          "m_mod_6": 3,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 9,
+          "transformed_scalar_trace_histogram": {
+            "-3116": 5,
+            "-1653": 10,
+            "-1558": 15,
+            "-1111": 10,
+            "0": 20,
+            "1111": 10,
+            "1558": 15,
+            "1653": 10,
+            "3116": 5
+          },
+          "transformed_support_size": 9,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 10,
+          "m_mod_6": 4,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 5,
+          "transformed_scalar_trace_histogram": {
+            "-6469": 10,
+            "-3125": 20,
+            "-1321": 30,
+            "979": 20,
+            "2531": 20
+          },
+          "transformed_support_size": 5,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 11,
+          "m_mod_6": 5,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 9,
+          "transformed_scalar_trace_histogram": {
+            "-10296": 5,
+            "-5328": 10,
+            "-5148": 15,
+            "-3024": 10,
+            "0": 20,
+            "3024": 10,
+            "5148": 15,
+            "5328": 10,
+            "10296": 5
+          },
+          "transformed_support_size": 9,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 12,
+          "m_mod_6": 0,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 5,
+          "transformed_scalar_trace_histogram": {
+            "-20879": 20,
+            "-15679": 20,
+            "-8839": 10,
+            "15625": 20,
+            "16901": 30
+          },
+          "transformed_support_size": 5,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 13,
+          "m_mod_6": 1,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 9,
+          "transformed_scalar_trace_histogram": {
+            "-35997": 10,
+            "-16124": 5,
+            "-8062": 15,
+            "-559": 10,
+            "0": 20,
+            "559": 10,
+            "8062": 15,
+            "16124": 5,
+            "35997": 10
+          },
+          "transformed_support_size": 9,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 14,
+          "m_mod_6": 2,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 5,
+          "transformed_scalar_trace_histogram": {
+            "-78125": 20,
+            "-68381": 30,
+            "-3596": 20,
+            "77836": 20,
+            "108691": 10
+          },
+          "transformed_support_size": 5,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 15,
+          "m_mod_6": 3,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 9,
+          "transformed_scalar_trace_histogram": {
+            "-354144": 5,
+            "-177072": 15,
+            "-169197": 10,
+            "-80631": 10,
+            "0": 20,
+            "80631": 10,
+            "169197": 10,
+            "177072": 15,
+            "354144": 5
+          },
+          "transformed_support_size": 9,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 16,
+          "m_mod_6": 4,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 5,
+          "transformed_scalar_trace_histogram": {
+            "-308549": 20,
+            "-12239": 30,
+            "390625": 20,
+            "525571": 20,
+            "873121": 10
+          },
+          "transformed_support_size": 5,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 17,
+          "m_mod_6": 5,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 9,
+          "transformed_scalar_trace_histogram": {
+            "-1721764": 5,
+            "-860882": 15,
+            "-730728": 10,
+            "-711704": 10,
+            "0": 20,
+            "711704": 10,
+            "730728": 10,
+            "860882": 15,
+            "1721764": 5
+          },
+          "transformed_support_size": 9,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 18,
+          "m_mod_6": 0,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 5,
+          "transformed_scalar_trace_histogram": {
+            "-1953125": 20,
+            "-435671": 20,
+            "831041": 20,
+            "1782959": 30,
+            "2521451": 10
+          },
+          "transformed_support_size": 5,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        }
+      ]
+    },
+    {
+      "q": 7,
+      "source_histogram_atom_count": 11,
+      "source_member_count": 294,
+      "powers_1_through": 18,
+      "transforms": [
+        {
+          "m": 1,
+          "m_mod_6": 1,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 11,
+          "transformed_scalar_trace_histogram": {
+            "-5": 7,
+            "-4": 28,
+            "-3": 21,
+            "-2": 42,
+            "-1": 28,
+            "0": 42,
+            "1": 28,
+            "2": 42,
+            "3": 21,
+            "4": 28,
+            "5": 7
+          },
+          "transformed_support_size": 11,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 2,
+          "m_mod_6": 2,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 6,
+          "transformed_scalar_trace_histogram": {
+            "-7": 42,
+            "-6": 56,
+            "-3": 84,
+            "2": 42,
+            "9": 56,
+            "18": 14
+          },
+          "transformed_support_size": 6,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 3,
+          "m_mod_6": 3,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 11,
+          "transformed_scalar_trace_histogram": {
+            "-55": 7,
+            "-20": 42,
+            "-15": 21,
+            "-13": 28,
+            "-8": 28,
+            "0": 42,
+            "8": 28,
+            "13": 28,
+            "15": 21,
+            "20": 42,
+            "55": 7
+          },
+          "transformed_support_size": 11,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 4,
+          "m_mod_6": 4,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 6,
+          "transformed_scalar_trace_histogram": {
+            "-59": 42,
+            "-31": 56,
+            "-19": 84,
+            "29": 56,
+            "49": 42,
+            "149": 14
+          },
+          "transformed_support_size": 6,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 5,
+          "m_mod_6": 5,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 11,
+          "transformed_scalar_trace_histogram": {
+            "-360": 7,
+            "-180": 28,
+            "-120": 28,
+            "-102": 42,
+            "-72": 21,
+            "0": 42,
+            "72": 21,
+            "102": 42,
+            "120": 28,
+            "180": 28,
+            "360": 7
+          },
+          "transformed_support_size": 11,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 6,
+          "m_mod_6": 0,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 6,
+          "transformed_scalar_trace_histogram": {
+            "-503": 56,
+            "-343": 42,
+            "-83": 56,
+            "197": 42,
+            "337": 84,
+            "757": 14
+          },
+          "transformed_support_size": 6,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 7,
+          "m_mod_6": 1,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 11,
+          "transformed_scalar_trace_histogram": {
+            "-1265": 7,
+            "-1095": 21,
+            "-923": 28,
+            "-752": 28,
+            "-40": 42,
+            "0": 42,
+            "40": 42,
+            "752": 28,
+            "923": 28,
+            "1095": 21,
+            "1265": 7
+          },
+          "transformed_support_size": 11,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 8,
+          "m_mod_6": 2,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 6,
+          "transformed_scalar_trace_histogram": {
+            "-2439": 84,
+            "-342": 56,
+            "513": 56,
+            "1026": 14,
+            "1906": 42,
+            "2401": 42
+          },
+          "transformed_support_size": 6,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 9,
+          "m_mod_6": 3,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 11,
+          "transformed_scalar_trace_histogram": {
+            "-7316": 28,
+            "-6119": 28,
+            "-4598": 42,
+            "-3725": 7,
+            "-1947": 21,
+            "0": 42,
+            "1947": 21,
+            "3725": 7,
+            "4598": 42,
+            "6119": 28,
+            "7316": 28
+          },
+          "transformed_support_size": 11,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 10,
+          "m_mod_6": 4,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 6,
+          "transformed_scalar_trace_histogram": {
+            "-25807": 14,
+            "-19183": 42,
+            "-16807": 42,
+            "7877": 84,
+            "8513": 56,
+            "25673": 56
+          },
+          "transformed_support_size": 6,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 11,
+          "m_mod_6": 5,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 11,
+          "transformed_scalar_trace_histogram": {
+            "-102960": 7,
+            "-51480": 28,
+            "-47940": 42,
+            "-43920": 21,
+            "-34320": 28,
+            "0": 42,
+            "34320": 28,
+            "43920": 21,
+            "47940": 42,
+            "51480": 28,
+            "102960": 7
+          },
+          "transformed_support_size": 11,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 12,
+          "m_mod_6": 0,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 6,
+          "transformed_scalar_trace_histogram": {
+            "-334151": 14,
+            "-93911": 56,
+            "2521": 42,
+            "26209": 56,
+            "40741": 84,
+            "117649": 42
+          },
+          "transformed_support_size": 6,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 13,
+          "m_mod_6": 1,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 11,
+          "transformed_scalar_trace_histogram": {
+            "-950035": 7,
+            "-315003": 21,
+            "-255524": 28,
+            "-254098": 42,
+            "-146329": 28,
+            "0": 42,
+            "146329": 28,
+            "254098": 42,
+            "255524": 28,
+            "315003": 21,
+            "950035": 7
+          },
+          "transformed_support_size": 11,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 14,
+          "m_mod_6": 2,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 6,
+          "transformed_scalar_trace_histogram": {
+            "-2411118": 14,
+            "-1205559": 56,
+            "-823543": 42,
+            "-793383": 84,
+            "803706": 56,
+            "927362": 42
+          },
+          "transformed_support_size": 6,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 15,
+          "m_mod_6": 3,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 11,
+          "transformed_scalar_trace_histogram": {
+            "-5405345": 7,
+            "-3033568": 28,
+            "-577065": 21,
+            "-220597": 28,
+            "-191920": 42,
+            "0": 42,
+            "191920": 42,
+            "220597": 28,
+            "577065": 21,
+            "3033568": 28,
+            "5405345": 7
+          },
+          "transformed_support_size": 11,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 16,
+          "m_mod_6": 4,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 6,
+          "transformed_scalar_trace_histogram": {
+            "-10148899": 14,
+            "-5846539": 56,
+            "-4760339": 42,
+            "-3695359": 56,
+            "5764801": 42,
+            "5937521": 84
+          },
+          "transformed_support_size": 6,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 17,
+          "m_mod_6": 5,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 11,
+          "transformed_scalar_trace_histogram": {
+            "-18320472": 21,
+            "-12907080": 7,
+            "-10531602": 42,
+            "-6453540": 28,
+            "-4302360": 28,
+            "0": 42,
+            "4302360": 28,
+            "6453540": 28,
+            "10531602": 42,
+            "12907080": 7,
+            "18320472": 21
+          },
+          "transformed_support_size": 11,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 18,
+          "m_mod_6": 0,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 6,
+          "transformed_scalar_trace_histogram": {
+            "-40353607": 42,
+            "-21639043": 42,
+            "-20499443": 84,
+            "6506893": 14,
+            "36623413": 56,
+            "51681673": 56
+          },
+          "transformed_support_size": 6,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        }
+      ]
+    },
+    {
+      "q": 11,
+      "source_histogram_atom_count": 13,
+      "source_member_count": 1210,
+      "powers_1_through": 18,
+      "transforms": [
+        {
+          "m": 1,
+          "m_mod_6": 1,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 13,
+          "transformed_scalar_trace_histogram": {
+            "-6": 55,
+            "-5": 55,
+            "-4": 110,
+            "-3": 110,
+            "-2": 110,
+            "-1": 55,
+            "0": 220,
+            "1": 55,
+            "2": 110,
+            "3": 110,
+            "4": 110,
+            "5": 55,
+            "6": 55
+          },
+          "transformed_support_size": 13,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 2,
+          "m_mod_6": 2,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 7,
+          "transformed_scalar_trace_histogram": {
+            "-11": 220,
+            "-10": 110,
+            "-7": 220,
+            "-2": 220,
+            "5": 220,
+            "14": 110,
+            "25": 110
+          },
+          "transformed_support_size": 7,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 3,
+          "m_mod_6": 3,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 13,
+          "transformed_scalar_trace_histogram": {
+            "-84": 55,
+            "-39": 110,
+            "-36": 110,
+            "-24": 110,
+            "-21": 55,
+            "-15": 55,
+            "0": 220,
+            "15": 55,
+            "21": 55,
+            "24": 110,
+            "36": 110,
+            "39": 110,
+            "84": 55
+          },
+          "transformed_support_size": 13,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 4,
+          "m_mod_6": 4,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 7,
+          "transformed_scalar_trace_histogram": {
+            "-151": 220,
+            "-95": 220,
+            "-79": 110,
+            "5": 220,
+            "89": 110,
+            "121": 220,
+            "229": 110
+          },
+          "transformed_support_size": 7,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 5,
+          "m_mod_6": 5,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 13,
+          "transformed_scalar_trace_histogram": {
+            "-560": 55,
+            "-450": 55,
+            "-406": 110,
+            "-340": 110,
+            "-320": 55,
+            "-144": 110,
+            "0": 220,
+            "144": 110,
+            "320": 55,
+            "340": 110,
+            "406": 110,
+            "450": 55,
+            "560": 55
+          },
+          "transformed_support_size": 13,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 6,
+          "m_mod_6": 0,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 7,
+          "transformed_scalar_trace_histogram": {
+            "-1931": 110,
+            "-1331": 220,
+            "-659": 110,
+            "181": 110,
+            "301": 220,
+            "757": 220,
+            "1477": 220
+          },
+          "transformed_support_size": 7,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 7,
+          "m_mod_6": 1,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 13,
+          "transformed_scalar_trace_histogram": {
+            "-4944": 110,
+            "-4179": 55,
+            "-3864": 55,
+            "-3495": 55,
+            "-2952": 110,
+            "-2847": 110,
+            "0": 220,
+            "2847": 110,
+            "2952": 110,
+            "3495": 55,
+            "3864": 55,
+            "4179": 55,
+            "4944": 110
+          },
+          "transformed_support_size": 13,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 8,
+          "m_mod_6": 2,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 7,
+          "transformed_scalar_trace_histogram": {
+            "-25175": 110,
+            "-14231": 220,
+            "-7706": 220,
+            "3070": 110,
+            "3766": 110,
+            "14641": 220,
+            "16465": 220
+          },
+          "transformed_support_size": 7,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 9,
+          "m_mod_6": 3,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 13,
+          "transformed_scalar_trace_histogram": {
+            "-108546": 55,
+            "-57275": 55,
+            "-54435": 110,
+            "-49039": 55,
+            "-11476": 110,
+            "-4010": 110,
+            "0": 220,
+            "4010": 110,
+            "11476": 110,
+            "49039": 55,
+            "54435": 110,
+            "57275": 55,
+            "108546": 55
+          },
+          "transformed_support_size": 13,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 10,
+          "m_mod_6": 4,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 7,
+          "transformed_scalar_trace_histogram": {
+            "-374351": 110,
+            "-161051": 220,
+            "-135211": 220,
+            "-78539": 220,
+            "15269": 110,
+            "164561": 220,
+            "244949": 110
+          },
+          "transformed_support_size": 7,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 11,
+          "m_mod_6": 5,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 13,
+          "transformed_scalar_trace_histogram": {
+            "-1052100": 55,
+            "-667080": 110,
+            "-594720": 55,
+            "-524160": 55,
+            "-363168": 110,
+            "-285012": 110,
+            "0": 220,
+            "285012": 110,
+            "363168": 110,
+            "524160": 55,
+            "594720": 55,
+            "667080": 110,
+            "1052100": 55
+          },
+          "transformed_support_size": 13,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 12,
+          "m_mod_6": 0,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 7,
+          "transformed_scalar_trace_histogram": {
+            "-2194739": 110,
+            "-1240147": 220,
+            "-1180999": 220,
+            "-692119": 110,
+            "279161": 110,
+            "1771561": 220,
+            "1953433": 220
+          },
+          "transformed_support_size": 7,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 13,
+          "m_mod_6": 1,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 13,
+          "transformed_scalar_trace_histogram": {
+            "-5615426": 110,
+            "-5146115": 55,
+            "-5073641": 55,
+            "-2613884": 110,
+            "-1865451": 110,
+            "-1595334": 55,
+            "0": 220,
+            "1595334": 55,
+            "1865451": 110,
+            "2613884": 110,
+            "5073641": 55,
+            "5146115": 55,
+            "5615426": 110
+          },
+          "transformed_support_size": 13,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 14,
+          "m_mod_6": 2,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 7,
+          "transformed_scalar_trace_histogram": {
+            "-28801346": 110,
+            "-19487171": 220,
+            "-15891410": 220,
+            "2410765": 220,
+            "12686950": 110,
+            "14570125": 110,
+            "23446525": 220
+          },
+          "transformed_support_size": 7,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 15,
+          "m_mod_6": 3,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 13,
+          "transformed_scalar_trace_histogram": {
+            "-104969424": 55,
+            "-87399465": 55,
+            "-68194191": 110,
+            "-66591216": 110,
+            "-65033376": 110,
+            "-43123101": 55,
+            "0": 220,
+            "43123101": 55,
+            "65033376": 110,
+            "66591216": 110,
+            "68194191": 110,
+            "87399465": 55,
+            "104969424": 55
+          },
+          "transformed_support_size": 13,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 16,
+          "m_mod_6": 4,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 7,
+          "transformed_scalar_trace_histogram": {
+            "-182679551": 110,
+            "-120182519": 110,
+            "-29777063": 220,
+            "2221729": 220,
+            "106664017": 220,
+            "214358881": 220,
+            "469545169": 110
+          },
+          "transformed_support_size": 7,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 17,
+          "m_mod_6": 5,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 13,
+          "transformed_scalar_trace_histogram": {
+            "-1662607350": 55,
+            "-706480220": 110,
+            "-660804912": 110,
+            "-519175342": 110,
+            "-360481520": 55,
+            "-291674560": 55,
+            "0": 220,
+            "291674560": 55,
+            "360481520": 55,
+            "519175342": 110,
+            "660804912": 110,
+            "706480220": 110,
+            "1662607350": 55
+          },
+          "transformed_support_size": 13,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 18,
+          "m_mod_6": 0,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 7,
+          "transformed_scalar_trace_histogram": {
+            "-2850359899": 220,
+            "-2357947691": 220,
+            "-2211654871": 220,
+            "2301149621": 110,
+            "2309962429": 220,
+            "3124415309": 110,
+            "4810647241": 110
+          },
+          "transformed_support_size": 7,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        }
+      ]
+    },
+    {
+      "q": 13,
+      "source_histogram_atom_count": 15,
+      "source_member_count": 2028,
+      "powers_1_through": 18,
+      "transforms": [
+        {
+          "m": 1,
+          "m_mod_6": 1,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 15,
+          "transformed_scalar_trace_histogram": {
+            "-7": 26,
+            "-6": 117,
+            "-5": 104,
+            "-4": 195,
+            "-3": 78,
+            "-2": 260,
+            "-1": 156,
+            "0": 156,
+            "1": 156,
+            "2": 260,
+            "3": 78,
+            "4": 195,
+            "5": 104,
+            "6": 117,
+            "7": 26
+          },
+          "transformed_support_size": 15,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 2,
+          "m_mod_6": 2,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 8,
+          "transformed_scalar_trace_histogram": {
+            "-13": 156,
+            "-12": 312,
+            "-9": 520,
+            "-4": 156,
+            "3": 390,
+            "12": 208,
+            "23": 234,
+            "36": 52
+          },
+          "transformed_support_size": 8,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 3,
+          "m_mod_6": 3,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 15,
+          "transformed_scalar_trace_histogram": {
+            "-161": 26,
+            "-60": 117,
+            "-51": 78,
+            "-44": 260,
+            "-40": 195,
+            "-25": 156,
+            "-5": 104,
+            "0": 156,
+            "5": 104,
+            "25": 156,
+            "40": 195,
+            "44": 260,
+            "51": 78,
+            "60": 117,
+            "161": 26
+          },
+          "transformed_support_size": 15,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 4,
+          "m_mod_6": 4,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 8,
+          "transformed_scalar_trace_histogram": {
+            "-199": 390,
+            "-181": 208,
+            "-101": 156,
+            "29": 520,
+            "61": 234,
+            "131": 312,
+            "169": 156,
+            "659": 52
+          },
+          "transformed_support_size": 8,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 5,
+          "m_mod_6": 5,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 15,
+          "transformed_scalar_trace_histogram": {
+            "-2520": 26,
+            "-840": 104,
+            "-630": 260,
+            "-456": 156,
+            "-414": 117,
+            "-360": 78,
+            "-276": 195,
+            "0": 156,
+            "276": 195,
+            "360": 78,
+            "414": 117,
+            "456": 156,
+            "630": 260,
+            "840": 104,
+            "2520": 26
+          },
+          "transformed_support_size": 15,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 6,
+          "m_mod_6": 0,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 8,
+          "transformed_scalar_trace_histogram": {
+            "-3277": 234,
+            "-2197": 156,
+            "-1847": 208,
+            "-1247": 312,
+            "883": 520,
+            "1483": 390,
+            "2393": 156,
+            "9073": 52
+          },
+          "transformed_support_size": 8,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 7,
+          "m_mod_6": 1,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 15,
+          "transformed_scalar_trace_histogram": {
+            "-30751": 26,
+            "-14280": 117,
+            "-9520": 195,
+            "-7175": 156,
+            "-6424": 260,
+            "-2499": 78,
+            "-1685": 104,
+            "0": 156,
+            "1685": 104,
+            "2499": 78,
+            "6424": 260,
+            "7175": 156,
+            "9520": 195,
+            "14280": 117,
+            "30751": 26
+          },
+          "transformed_support_size": 15,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 8,
+          "m_mod_6": 2,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 8,
+          "transformed_scalar_trace_histogram": {
+            "-43079": 234,
+            "-24327": 520,
+            "-23612": 156,
+            "9036": 312,
+            "18801": 390,
+            "28561": 156,
+            "32436": 208,
+            "97308": 52
+          },
+          "transformed_support_size": 8,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 9,
+          "m_mod_6": 3,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 15,
+          "transformed_scalar_trace_histogram": {
+            "-281393": 26,
+            "-140275": 104,
+            "-103323": 78,
+            "-102311": 156,
+            "-72834": 117,
+            "-48556": 195,
+            "-34858": 260,
+            "0": 156,
+            "34858": 260,
+            "48556": 195,
+            "72834": 117,
+            "102311": 156,
+            "103323": 78,
+            "140275": 104,
+            "281393": 26
+          },
+          "transformed_support_size": 15,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 10,
+          "m_mod_6": 4,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 8,
+          "transformed_scalar_trace_histogram": {
+            "-438637": 390,
+            "-371293": 156,
+            "-15157": 312,
+            "-3013": 156,
+            "123023": 234,
+            "279707": 208,
+            "385967": 520,
+            "704747": 52
+          },
+          "transformed_support_size": 8,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 11,
+          "m_mod_6": 5,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 15,
+          "transformed_scalar_trace_histogram": {
+            "-1684980": 117,
+            "-1345200": 156,
+            "-1334160": 78,
+            "-1275120": 26,
+            "-1123320": 195,
+            "-425040": 104,
+            "-318780": 260,
+            "0": 156,
+            "318780": 260,
+            "425040": 104,
+            "1123320": 195,
+            "1275120": 26,
+            "1334160": 78,
+            "1345200": 156,
+            "1684980": 117
+          },
+          "transformed_support_size": 15,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 12,
+          "m_mod_6": 0,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 8,
+          "transformed_scalar_trace_histogram": {
+            "-5761391": 208,
+            "-4380011": 520,
+            "-1148159": 312,
+            "-235871": 52,
+            "1209001": 390,
+            "4041649": 156,
+            "4826809": 156,
+            "8510581": 234
+          },
+          "transformed_support_size": 8,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 13,
+          "m_mod_6": 1,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 15,
+          "transformed_scalar_trace_histogram": {
+            "-29158746": 117,
+            "-23281435": 104,
+            "-19439164": 195,
+            "-18227657": 26,
+            "-16339441": 156,
+            "-12904162": 260,
+            "-5219133": 78,
+            "0": 156,
+            "5219133": 78,
+            "12904162": 260,
+            "16339441": 156,
+            "18227657": 26,
+            "19439164": 195,
+            "23281435": 104,
+            "29158746": 117
+          },
+          "transformed_support_size": 15,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 14,
+          "m_mod_6": 2,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 8,
+          "transformed_scalar_trace_histogram": {
+            "-124527276": 52,
+            "-68198836": 156,
+            "-62748517": 156,
+            "-41509092": 208,
+            "31131819": 520,
+            "31265508": 312,
+            "62039643": 390,
+            "64314923": 234
+          },
+          "transformed_support_size": 8,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 15,
+          "m_mod_6": 3,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 15,
+          "transformed_scalar_trace_histogram": {
+            "-634731391": 26,
+            "-230017744": 260,
+            "-181147225": 156,
+            "-136747779": 78,
+            "-95113195": 104,
+            "-6825840": 117,
+            "-4550560": 195,
+            "0": 156,
+            "4550560": 195,
+            "6825840": 117,
+            "95113195": 104,
+            "136747779": 78,
+            "181147225": 156,
+            "230017744": 260,
+            "634731391": 26
+          },
+          "transformed_support_size": 15,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 16,
+          "m_mod_6": 4,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 8,
+          "transformed_scalar_trace_histogram": {
+            "-2824265149": 52,
+            "-824717599": 390,
+            "-795138959": 234,
+            "-587598829": 312,
+            "55321841": 520,
+            "476341531": 156,
+            "815730721": 156,
+            "1015184171": 208
+          },
+          "transformed_support_size": 8,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 17,
+          "m_mod_6": 5,
+          "expected_domain_quotient": "singleton traces",
+          "expected_domain_class_count": 15,
+          "transformed_scalar_trace_histogram": {
+            "-11518347960": 26,
+            "-4859569674": 117,
+            "-3839449320": 104,
+            "-3239713116": 195,
+            "-3206745720": 78,
+            "-2879586990": 260,
+            "-1767315096": 156,
+            "0": 156,
+            "1767315096": 156,
+            "2879586990": 260,
+            "3206745720": 78,
+            "3239713116": 195,
+            "3839449320": 104,
+            "4859569674": 117,
+            "11518347960": 26
+          },
+          "transformed_support_size": 15,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        },
+        {
+          "m": 18,
+          "m_mod_6": 0,
+          "expected_domain_quotient": "quadratic-twist classes t~-t",
+          "expected_domain_class_count": 8,
+          "transformed_scalar_trace_histogram": {
+            "-43912988783": 52,
+            "-18820611577": 234,
+            "-10604499373": 156,
+            "-6478357913": 520,
+            "-2237523677": 390,
+            "3427797257": 156,
+            "5999852377": 208,
+            "9406099873": 312
+          },
+          "transformed_support_size": 8,
+          "injective_after_expected_domain_quotient": true,
+          "extra_collision_fibers_after_expected_domain_quotient": []
+        }
+      ]
+    }
+  ],
+  "frozen_extra_fiber_signature": [
+    {
+      "q": 3,
+      "m": 4,
+      "scalar_trace": 9,
+      "expected_domain_class_representatives": [
+        0,
+        3
+      ]
+    },
+    {
+      "q": 3,
+      "m": 5,
+      "scalar_trace": 0,
+      "expected_domain_class_representatives": [
+        -3,
+        0,
+        3
+      ]
+    },
+    {
+      "q": 3,
+      "m": 6,
+      "scalar_trace": -27,
+      "expected_domain_class_representatives": [
+        0,
+        3
+      ]
+    },
+    {
+      "q": 3,
+      "m": 6,
+      "scalar_trace": 13,
+      "expected_domain_class_representatives": [
+        1,
+        2
+      ]
+    },
+    {
+      "q": 3,
+      "m": 10,
+      "scalar_trace": -243,
+      "expected_domain_class_representatives": [
+        0,
+        3
+      ]
+    },
+    {
+      "q": 3,
+      "m": 11,
+      "scalar_trace": 0,
+      "expected_domain_class_representatives": [
+        -3,
+        0,
+        3
+      ]
+    },
+    {
+      "q": 3,
+      "m": 12,
+      "scalar_trace": 729,
+      "expected_domain_class_representatives": [
+        0,
+        3
+      ]
+    },
+    {
+      "q": 3,
+      "m": 16,
+      "scalar_trace": 6561,
+      "expected_domain_class_representatives": [
+        0,
+        3
+      ]
+    },
+    {
+      "q": 3,
+      "m": 17,
+      "scalar_trace": 0,
+      "expected_domain_class_representatives": [
+        -3,
+        0,
+        3
+      ]
+    },
+    {
+      "q": 3,
+      "m": 18,
+      "scalar_trace": -19683,
+      "expected_domain_class_representatives": [
+        0,
+        3
+      ]
+    }
+  ],
+  "literature_boundary": {
+    "references": [
+      {
+        "authors": "Stephen D. Cohen",
+        "title": "Dickson Polynomials of the Second Kind that Are Permutations",
+        "venue": "Canadian Journal of Mathematics 46 (1994), 225-238",
+        "doi": "10.4153/CJM-1994-009-8",
+        "url": "https://doi.org/10.4153/CJM-1994-009-8"
+      },
+      {
+        "authors": "Longjiang Qu and Cunsheng Ding",
+        "title": "Dickson Polynomials of the Second Kind that Permute Z_m",
+        "venue": "SIAM Journal on Discrete Mathematics 28 (2014), 722-735",
+        "doi": "10.1137/130942589",
+        "url": "https://doi.org/10.1137/130942589"
+      },
+      {
+        "authors": "Phil Martin and Mark Watkins",
+        "title": "Symmetric powers of elliptic curve L-functions",
+        "identifier": "arXiv:math/0604095",
+        "url": "https://arxiv.org/abs/math/0604095"
+      }
+    ],
+    "boundary": "Dickson second-kind permutation theory and elliptic symmetric-power computations are prior literature; no originality or priority claim is made for the recurrence, congruence phenomena, or packet calculations"
+  },
+  "resource_contract": {
+    "arithmetic": "exact integers only",
+    "new_curve_or_field_enumerations": 0,
+    "random_samples": 0,
+    "external_databases": 0,
+    "frozen_q_values": [
+      3,
+      5,
+      7,
+      11,
+      13
+    ],
+    "maximum_symmetric_power": 18,
+    "source_histogram_atoms": 55,
+    "source_members_represented": 3650,
+    "accounted_work_units": 1393,
+    "accounted_work_unit_ledger": {
+      "mod_2_recurrence_rows": 12,
+      "newton_coefficients_reconstructed": 336,
+      "source_atom_trace_transforms": 990,
+      "source_histogram_atoms_loaded": 55
+    },
+    "accounted_work_unit_cap_exclusive": 2000
+  },
+  "scope_firewall": {
+    "scalar_trace_aliasing_is_not_a_full_local_factor_classification": true,
+    "constructed_zero_vs_nonzero_aliases_are_resolved_by_full_factors": true,
+    "odd_m_5_mod_6_sign_pair_can_still_share_a_full_factor": true,
+    "even_sign_pair_full_factor_equality_is_expected": true,
+    "q_31_witness_is_not_claimed_to_be_realized_by_curves": true,
+    "frozen_histograms_are_transforms_not_new_enumerations": true,
+    "source_measure_is_not_uniform_coarse_isomorphism_classes": true,
+    "no_literature_priority_claim": true,
+    "no_automorphy_zero_free_region_rh_or_grh_claim": true
+  },
+  "producer": {
+    "script": "research/l-families/atlas/function_field/elliptic_symmetric_power_trace_aliasing.py",
+    "script_sha256_lf_normalized": "74d3f8cb65a99ab0c5c7943df6a4aba9f29ba91f6876ea935e0673cfd1dcf043",
+    "note": "research/l-families/atlas/function_field/ELLIPTIC_SYMMETRIC_POWER_TRACE_ALIASING.md",
+    "note_sha256_lf_normalized": "2eda8ab189c4292b51bb4dd7d6a0c261119e3b82502d3b1dfbc8d1ecea9aeaf7",
+    "test": "tests/test_elliptic_symmetric_power_trace_aliasing.py",
+    "test_sha256_lf_normalized": "9fd637c63532f99c322c98406e7e17cc64270c8d81940ec2e05c997632a9bc00"
+  },
+  "payload_sha256": "046f76f43a2af3ac296f5c18c258e61f138e122bee38ec618af489e7e3a9e50e"
+}

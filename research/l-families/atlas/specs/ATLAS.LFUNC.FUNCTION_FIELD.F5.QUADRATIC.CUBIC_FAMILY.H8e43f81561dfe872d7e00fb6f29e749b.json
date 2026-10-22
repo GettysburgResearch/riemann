@@ -1,0 +1,167 @@
+{
+  "analytic_properties": {
+    "analytic_continuation": "PROVED_NATIVE",
+    "euler_product": "PROVED_NATIVE",
+    "functional_equation": "PROVED_NATIVE",
+    "source_ref": "GENERATED:F5:T:MONIC_SQUAREFREE_CUBICS"
+  },
+  "assumptions": [],
+  "base_field": {
+    "characteristic": 5,
+    "constant_field_order": 5,
+    "label": "F_5(T)",
+    "variable": "T"
+  },
+  "central_data": {
+    "assertion": "UNKNOWN",
+    "notes": "No analytic-rank inference is made.",
+    "parity_forced": false,
+    "rigor_level": "DISCOVERY_ONLY",
+    "source_ref": "NONE",
+    "value": null
+  },
+  "classification": {
+    "automorphic_class": "GL1",
+    "degree": 1,
+    "domain": "FUNCTION_FIELD",
+    "family_id": "FF5.QUADRATIC.CUBIC",
+    "motivic_weight": 0,
+    "object_type": "FUNCTION_FIELD_DIRICHLET_L",
+    "self_duality": "SELF_DUAL",
+    "symmetry_type": "SYMPLECTIC"
+  },
+  "completed_normalization": {
+    "analytic_variable": "u=5^(-s)",
+    "conductor_factor": "degree(D)=3; L_D has degree 2",
+    "critical_center": "|u|=5^(-1/2)",
+    "exact_formula": "L_D(u)=sum_{f monic} chi_D(f)u^deg(f)=product_j(1-alpha_j u)",
+    "gamma_factors": [
+      {
+        "kind": "FUNCTION_FIELD_NONE",
+        "multiplicity": 1,
+        "scale": "1",
+        "shift": "0"
+      }
+    ],
+    "normalization_id": "FF.QUADRATIC.ODD_CONDUCTOR.POLYNOMIAL_U",
+    "notes": "Critical normalization is H_D(n)=5^(-n/2)B_D(n), stored in Q(sqrt(5))."
+  },
+  "conductor": {
+    "degree": 3,
+    "kind": "DEGREE_ONLY",
+    "norm_decimal": "125",
+    "status": "PROVED_NATIVE",
+    "value": "monic squarefree cubic D in F_5[T]"
+  },
+  "data_sources": [
+    {
+      "coverage": "Complete deterministic enumeration guarded at 100,000 monic objects per degree.",
+      "hashes": [
+        {
+          "algorithm": "sha256",
+          "binds": "raw pilot.py bytes",
+          "hash_mode": "RAW_BYTES",
+          "value": "c9b4873daa50e96859c2c079dc031ebcdb5193bd495656e7049bfc6836a93258"
+        }
+      ],
+      "identifier": "FUNCTION_FIELD.PILOT.V1",
+      "locator": "research/l-families/atlas/function_field/pilot.py",
+      "notes": "Standard-library exact modular and rational arithmetic only.",
+      "retention": "CHECKED_IN",
+      "rigor_level": "RIGOROUS_CERTIFIED",
+      "role": "exact_generator",
+      "source_kind": "GENERATED_EXACT",
+      "version_or_retrieved_utc": "2026-08-24T15:00:00Z"
+    },
+    {
+      "coverage": "All 100 monic squarefree cubic conductors.",
+      "hashes": [
+        {
+          "algorithm": "sha256",
+          "binds": "canonical JSON fixture",
+          "hash_mode": "CANONICAL_JSON_UTF8_NFC",
+          "value": "6c403dcc6e3f92aabfba43eb31a50886def89c48e467fbd93ce3e102af50e027"
+        }
+      ],
+      "identifier": "FUNCTION_FIELD.F5.CUBIC.EXACT.V1",
+      "locator": "research/l-families/atlas/function_field/fixtures.json",
+      "notes": "The checker regenerates every row; it does not trust the internal payload digest.",
+      "retention": "CHECKED_IN",
+      "rigor_level": "RIGOROUS_CERTIFIED",
+      "role": "finite_family_result",
+      "source_kind": "GENERATED_EXACT",
+      "version_or_retrieved_utc": "2026-08-24T15:00:00Z"
+    }
+  ],
+  "euler_product": {
+    "bad_factor_policy": "If P divides D then chi_D(P)=0, so the local reciprocal factor is 1.",
+    "coverage": "All 100 conductors and all monic f of degree at most 3 in the frozen run.",
+    "good_factor_formula": "L_D(u)=product_P(1-chi_D(P)u^deg(P))^(-1)",
+    "reciprocal_coefficient_definition": "B_D(n)=sum_deg(f)=n mu(f)chi_D(f)",
+    "rigor_level": "RIGOROUS_CERTIFIED",
+    "source_refs": [
+      "GENERATED:F5:T:MONIC_SQUAREFREE_CUBICS"
+    ]
+  },
+  "functional_equation": {
+    "exact_formula": "Each finite L_D(u)=1+A_D u+5u^2 is self-reciprocal after u -> 1/(5u).",
+    "root_number": "not used",
+    "root_number_status": "UNKNOWN",
+    "source_ref": "research/l-families/atlas/function_field/REPORT.md"
+  },
+  "identity_kernel": {
+    "base_field_label": "F_5(T)",
+    "construction": "Finite family D -> L(u,chi_D) for every monic squarefree cubic D in F_5[T]",
+    "slug": "FUNCTION_FIELD.F5.QUADRATIC.CUBIC_FAMILY",
+    "source_identifiers": [
+      "GENERATED:F5:T:MONIC_SQUAREFREE_CUBICS"
+    ],
+    "twist_parameters": [],
+    "version": 1
+  },
+  "identity_sha256": "8e43f81561dfe872d7e00fb6f29e749b7fb6e7e3d2d046bdecbeca0aad3235a2",
+  "notes": "This is a finite family template. Individual conductors are enumerated in the bound raw artifact, not promoted to 100 duplicate specs.",
+  "programme_refs": [
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 737,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/737"
+    },
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 741,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/741"
+    }
+  ],
+  "record_state": "DRAFT",
+  "record_type": "L_FUNCTION_SPEC",
+  "revision": 1,
+  "schema_version": "riemann.atlas.l_function_spec.v1",
+  "scope_boundary": "Phase-0 metadata and declared finite adapters only; no zero-set or global conclusion is inherited.",
+  "semantic_id": "ATLAS.LFUNC.FUNCTION_FIELD.F5.QUADRATIC.CUBIC_FAMILY.H8e43f81561dfe872d7e00fb6f29e749b",
+  "software": [
+    {
+      "name": "CPython",
+      "role": "exact integer point counts and rational moment aggregation",
+      "version": "3.12.10"
+    }
+  ],
+  "source_identifiers": [
+    "GENERATED:F5:T:MONIC_SQUAREFREE_CUBICS"
+  ],
+  "supersedes": [],
+  "title": "All monic squarefree cubic quadratic characters over F_5[T]",
+  "zero_data": {
+    "central_zero_policy": "NOT_APPLICABLE",
+    "coverage_class": "COMPLETE",
+    "precision": "exact quadratic discriminant and product certificate",
+    "rigor_level": "RIGOROUS_CERTIFIED",
+    "source_refs": [
+      "research/l-families/atlas/function_field/fixtures.json"
+    ],
+    "usage": "REQUIRED",
+    "window": "all two reciprocal roots for every family member"
+  }
+}
