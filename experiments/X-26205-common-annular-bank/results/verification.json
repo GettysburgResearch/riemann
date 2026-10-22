@@ -1,0 +1,65 @@
+{
+  "dilation_checks": 12,
+  "embedding_cases": [
+    {
+      "common_row": 223,
+      "seed": 1,
+      "support_size": 15,
+      "weighted_norm": "29755/12096"
+    },
+    {
+      "common_row": 279,
+      "seed": 2,
+      "support_size": 14,
+      "weighted_norm": "10709/3840"
+    },
+    {
+      "common_row": 279,
+      "seed": 3,
+      "support_size": 16,
+      "weighted_norm": "136357/172800"
+    },
+    {
+      "common_row": 279,
+      "seed": 4,
+      "support_size": 15,
+      "weighted_norm": "1889513/403200"
+    },
+    {
+      "common_row": 279,
+      "seed": 5,
+      "support_size": 17,
+      "weighted_norm": "68639/89600"
+    },
+    {
+      "common_row": 223,
+      "seed": 6,
+      "support_size": 14,
+      "weighted_norm": "35843/8064"
+    },
+    {
+      "common_row": 279,
+      "seed": 7,
+      "support_size": 16,
+      "weighted_norm": "2144953/179200"
+    },
+    {
+      "common_row": 279,
+      "seed": 8,
+      "support_size": 14,
+      "weighted_norm": "10362479/4838400"
+    },
+    {
+      "common_row": 279,
+      "seed": 9,
+      "support_size": 14,
+      "weighted_norm": "135343/26880"
+    }
+  ],
+  "proof_object_sha256": "a965f12f7bb2dad4e9186f8a83e5c0226b8d5ee14c60a8d448f1f566aaf51cad",
+  "rank_one_checks": 400,
+  "rank_one_identity": "det(vv*-T*vv*T)=-|v1 v2|^2|a-b|^2",
+  "scope": "finite exact algebra only; no quantitative bank bound and no RH claim",
+  "transition_warning": "quotient cells 2,3,4 correspond to 2^-s,3^-s,4^-s; they are not z^2,z^3,z^4 when z=2^-s",
+  "verdict": "PASS_EXACT_COMMON_WEIGHTED_ANNULAR_EMBEDDING_AND_PARITY_NO_GO"
+}

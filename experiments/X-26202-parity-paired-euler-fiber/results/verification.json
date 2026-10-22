@@ -1,0 +1,24 @@
+{
+  "complete_fiber_rows_checked": 26,
+  "frame_polynomial_terms": 9,
+  "local_coefficients_Q_sqrt2": [
+    ["1", "0"],
+    ["-3", "-2"],
+    ["4", "6"],
+    ["-6", "-4"],
+    ["4", "0"]
+  ],
+  "mutations": 1,
+  "normalized_coefficients_Q_sqrt2": [
+    ["1", "0"],
+    ["-2", "-3/2"],
+    ["2", "3"],
+    ["-2", "-3/2"],
+    ["1", "0"]
+  ],
+  "proof_object_sha256_without_digest": "660cf891a3e729c25dd16f830d6707838cb26e1a381be862890fbb9e22ea450d",
+  "scope": "Exact finite/filter/frame algebra only. No paired physical-block contraction, cofinal estimate, or RH result.",
+  "sharp_frame_lower_bound": "45/4",
+  "source_rows_checked": 1024,
+  "verdict": "PASS_EXACT_PARITY_PAIRED_EULER_FIBER_ALGEBRA"
+}
