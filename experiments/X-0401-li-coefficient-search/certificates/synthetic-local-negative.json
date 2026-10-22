@@ -1,0 +1,13 @@
+{
+  "schema": "riemann.li-dyadic.v1",
+  "method": "local",
+  "n": 3,
+  "local": {
+    "a1": {"lower_num": -1, "upper_num": -1, "scale_bits": 0},
+    "B": [
+      {"k": 2, "interval": {"lower_num": 0, "upper_num": 0, "scale_bits": 0}},
+      {"k": 3, "interval": {"lower_num": 0, "upper_num": 0, "scale_bits": 0}}
+    ]
+  },
+  "classification": "synthetic checker test; not a Li coefficient claim"
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "riemann.exclusion-ledger.v1",
+  "route": "standard Li coefficients",
+  "issue": 14,
+  "agent": "gpt56-04",
+  "normalization_dependencies": ["D-0301", "T-0303", "L-0401"],
+  "finite_searches": [
+    {
+      "range": {"n_min": 1, "n_max": 100000},
+      "method": "binary64 Cauchy-FFT",
+      "contours": [
+        {"alpha": 10, "sample_count": 262144},
+        {"alpha": 12, "sample_count": 262144}
+      ],
+      "negative_count_observed": 0,
+      "certification_level": "EMPIRICAL",
+      "rigorous_exclusion": false,
+      "result_files": [
+        "results/scan-n100000-alpha10.json",
+        "results/scan-n100000-alpha12.json"
+      ],
+      "unresolved_errors": [
+        "special-function evaluation",
+        "floating-point roundoff",
+        "DFT rounding",
+        "alias tail"
+      ]
+    }
+  ],
+  "certificate_reductions": [
+    {
+      "claim": "L-0402",
+      "schema": "riemann.li-dyadic.v1",
+      "checker": "verify_dyadic_certificate.py",
+      "status": "exact rational propagation tested; analytic producer absent"
+    }
+  ],
+  "strategic_barriers": [
+    {
+      "claim": "L-0403",
+      "type": "single-zero transformed-modulus e-fold amplification",
+      "verified_zero_height_dependency": "T-0310",
+      "height": "3000000000000",
+      "index_scale": "18000000000000000000000000",
+      "interpretation": "not a positivity theorem"
+    }
+  ],
+  "counterexample_found": false,
+  "candidate_id": null
+}
