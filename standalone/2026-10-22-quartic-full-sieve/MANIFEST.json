@@ -1,0 +1,98 @@
+{
+  "schema": "standalone-research-source-and-review-manifest/v1",
+  "date": "2026-10-22",
+  "repository": "GettysburgResearch/riemann",
+  "branch": "research/zero-free-quartic-full-sieve-20261022",
+  "status": "standalone research; no new zero-free boundary; internal agent review only",
+  "frozen_source_commit": "193c3d79f0522f08f62afc5c24c29f139d889080",
+  "frozen_source_tree": "1e71897b46a6b7b75fe8694c48b7d08911260276",
+  "parent_commit": "e87c5f669f81fe6371af926917d1c5b21023bce8",
+  "previous_pr": "https://github.com/GettysburgResearch/riemann/pull/1015",
+  "source_files": [
+    {
+      "path": "standalone/2026-10-22-quartic-full-sieve/CORRECTED_QUARTIC_CODEC.md",
+      "sha256": "cf82e4e81c15c16814d49d4415301207e30c4152829e03ad55280ad6148f1754",
+      "git_blob": "3f0f225501061bea8c63241084ed5029286004de",
+      "bytes": 6710
+    },
+    {
+      "path": "standalone/2026-10-22-quartic-full-sieve/DIRECT_PRINCIPAL_TARGET.md",
+      "sha256": "5f87538ea5dbc9c858ae867969ee9170ccdc303e384fecaa1cee7aa8bf3a63cb",
+      "git_blob": "01011586e52d807ed1d82ba818ecd2565436d7be",
+      "bytes": 4600
+    },
+    {
+      "path": "standalone/2026-10-22-quartic-full-sieve/EXACT_COLUMN_MARKED_INVERSE.md",
+      "sha256": "aa318fc58f8b8ba2a37d23eb69cf0e91e918a321192e28795ed1ffb2c2bc15fd",
+      "git_blob": "eb8c68e393edafd0cfcac2ad846754766fef562f",
+      "bytes": 16813
+    },
+    {
+      "path": "standalone/2026-10-22-quartic-full-sieve/QUARTIC_ALL_ROW_COMPLETION.md",
+      "sha256": "5e89202a6a9c72382ab01e38a6444a80c1c31199e030a01c92b19700d52620f4",
+      "git_blob": "6a8cf0125d12990952e2d518942412d74f1afdaf",
+      "bytes": 10984
+    },
+    {
+      "path": "standalone/2026-10-22-quartic-full-sieve/QUARTIC_PRIMITIVE_SIEVE_TAIL.md",
+      "sha256": "7500879e7fd62776ab4c06c55f3de2777fac9c8983e3acd62a6ef75943a8ee64",
+      "git_blob": "5ec3f275a98de8a063e187e625cf9efe773f68eb",
+      "bytes": 11067
+    },
+    {
+      "path": "standalone/2026-10-22-quartic-full-sieve/QUARTIC_SPECTRAL_INTERFACE.md",
+      "sha256": "c02d2f9cb36a0c2b76c6a24b5ab37d9efb3a85b19ddef573c34dae612075b63c",
+      "git_blob": "b682c43ed933e589e6875033caf79377e64bcb82",
+      "bytes": 20888
+    },
+    {
+      "path": "standalone/2026-10-22-quartic-full-sieve/README.md",
+      "sha256": "d2d4db8df9309fd16cfeb3ff58fdaf5b1454a85417e9897264edd2b1756b3d44",
+      "git_blob": "93a50a7d5d5c899bd6c2b0974369bd49376cbed2",
+      "bytes": 8364
+    },
+    {
+      "path": "standalone/2026-10-22-quartic-full-sieve/REFINED_POWERFUL_ROW_ENERGY.md",
+      "sha256": "e1d0628a608a10412a43a0516aad7ca453f4bfbb5ccfb75ba1207ef664129ef7",
+      "git_blob": "200e384b63ef43003f7cc27dcb184efdad34f663",
+      "bytes": 9995
+    }
+  ],
+  "review_files": [
+    {
+      "path": "standalone/2026-10-22-quartic-full-sieve/REVIEW.md",
+      "sha256": "2c28d4059d967ebb1e128f260d146e4e73df7dde07788d0bb9848c6772426e82",
+      "bytes": 5586
+    },
+    {
+      "path": "standalone/2026-10-22-quartic-full-sieve/REVIEW_EXACT_SOURCE.md",
+      "sha256": "3ffbee9c28444a5851849333975d83a4e0e587d5feed359d02433d0756b688e7",
+      "bytes": 8185
+    },
+    {
+      "path": "standalone/2026-10-22-quartic-full-sieve/REVIEW_QUARTIC_COMPLETION.md",
+      "sha256": "bee2458e0fdd39d55d7c626df13d8b2ddb73fe08965030239a285aaa42f7448f",
+      "bytes": 7182
+    },
+    {
+      "path": "standalone/2026-10-22-quartic-full-sieve/REVIEW_SPECTRAL.md",
+      "sha256": "b134dc7dd8d10d414be621dcc6748d1e55552c35596665560918adcf176e5496",
+      "bytes": 11419
+    },
+    {
+      "path": "standalone/2026-10-22-quartic-full-sieve/REVIEW_TAIL_AND_PRINCIPAL.md",
+      "sha256": "c0ca5c98a43a33ca3eb128c97026383f72447c14845abbbc6419166926ea24f2",
+      "bytes": 9563
+    }
+  ],
+  "source_qualification": {
+    "pinned_quasi_rh_source_commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "pinned_quasi_rh_source_sha256": "42a5ee0febca59fd1def55cfd6c6808c322ef4237d7726303ea52f711deac6a3",
+    "scope": "Imported analytic machinery is assumed by the marked notes; internal review checks the native changes and identified source use sites."
+  },
+  "verification_scope": [
+    "Hash identity authenticates reviewed bytes, not mathematical truth.",
+    "Review commit adds records only; frozen source files are unchanged.",
+    "No human peer review, formal proof, or new boundary is claimed."
+  ]
+}
