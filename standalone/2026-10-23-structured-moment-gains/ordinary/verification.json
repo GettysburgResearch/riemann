@@ -1,0 +1,111 @@
+{
+  "analytic_certification": false,
+  "arithmetic": "EXACT_RATIONAL",
+  "checks": 725,
+  "finite_prime_norms": [
+    5,
+    5,
+    9,
+    13
+  ],
+  "rows": [
+    {
+      "R": 1,
+      "dimension": 1,
+      "evaluation_norm_squared": "1",
+      "sieve_norm_squared": "1",
+      "tail_norm_squared": "1194331/14742000"
+    },
+    {
+      "R": 4,
+      "dimension": 1,
+      "evaluation_norm_squared": "1",
+      "sieve_norm_squared": "1",
+      "tail_norm_squared": "1194331/14742000"
+    },
+    {
+      "R": 5,
+      "dimension": 3,
+      "evaluation_norm_squared": "59",
+      "sieve_norm_squared": "421/450",
+      "tail_norm_squared": "244291/14742000"
+    },
+    {
+      "R": 8,
+      "dimension": 3,
+      "evaluation_norm_squared": "59",
+      "sieve_norm_squared": "421/450",
+      "tail_norm_squared": "244291/14742000"
+    },
+    {
+      "R": 9,
+      "dimension": 4,
+      "evaluation_norm_squared": "148",
+      "sieve_norm_squared": "25/27",
+      "tail_norm_squared": "102331/14742000"
+    },
+    {
+      "R": 13,
+      "dimension": 5,
+      "evaluation_norm_squared": "329",
+      "sieve_norm_squared": "11318/12285",
+      "tail_norm_squared": "33931/14742000"
+    },
+    {
+      "R": 25,
+      "dimension": 6,
+      "evaluation_norm_squared": "1170",
+      "sieve_norm_squared": "3391169/3685500",
+      "tail_norm_squared": "5669/4914000"
+    },
+    {
+      "R": 45,
+      "dimension": 8,
+      "evaluation_norm_squared": "6332",
+      "sieve_norm_squared": "251/273",
+      "tail_norm_squared": "487/1134000"
+    },
+    {
+      "R": 65,
+      "dimension": 10,
+      "evaluation_norm_squared": "16830",
+      "sieve_norm_squared": "846799/921375",
+      "tail_norm_squared": "223/2948400"
+    },
+    {
+      "R": 117,
+      "dimension": 11,
+      "evaluation_norm_squared": "32939",
+      "sieve_norm_squared": "250889/273000",
+      "tail_norm_squared": "337/14742000"
+    },
+    {
+      "R": 225,
+      "dimension": 12,
+      "evaluation_norm_squared": "107788",
+      "sieve_norm_squared": "17369/18900",
+      "tail_norm_squared": "151/14742000"
+    },
+    {
+      "R": 325,
+      "dimension": 13,
+      "evaluation_norm_squared": "260009",
+      "sieve_norm_squared": "846733/921375",
+      "tail_norm_squared": "59/14742000"
+    },
+    {
+      "R": 585,
+      "dimension": 15,
+      "evaluation_norm_squared": "1194331",
+      "sieve_norm_squared": "451589/491400",
+      "tail_norm_squared": "1/14742000"
+    },
+    {
+      "R": 2925,
+      "dimension": 16,
+      "evaluation_norm_squared": "14742000",
+      "sieve_norm_squared": "13547669/14742000",
+      "tail_norm_squared": "0"
+    }
+  ]
+}

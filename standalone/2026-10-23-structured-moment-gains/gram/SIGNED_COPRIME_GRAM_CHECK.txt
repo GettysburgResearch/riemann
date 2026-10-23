@@ -1,0 +1,25 @@
+Commands, from the gram/ directory:
+  python -I -S -B check_signed_coprime_gram.py
+  python -I -S -B -O check_signed_coprime_gram.py
+Date: 23 October 2026
+Exit status: 0 for both runs
+Outputs: byte-for-byte identical
+Checks use explicit demand/raise conditions and remain enabled under -O.
+
+Exact sextic final-digit correlations: 2298 passed
+Independent original-modulus enumerations: 42 passed
+Local branch coverage: {'nonprincipal_equal': 96, 'principal_equal': 16, 'unequal_left': 40, 'unequal_right': 40, 'zero': 2106}
+Coprime Euler factors and deleted-prime corrections: 6 passed
+Physical direct-exponent comparison:
+  ell: 1/6
+  b: 2/5
+  lx: 13/60
+  ly: 37/60
+  old_nonprincipal: 11/60
+  principal: 1/15
+  new_nonprincipal: -19/160
+  central_nonprincipal: -13/60
+  old_direct: 1/5
+  new_direct: 17/120
+  direct_gain: 7/120
+Finite checks passed. Analytic implications remain dependent on the stated source inputs.
