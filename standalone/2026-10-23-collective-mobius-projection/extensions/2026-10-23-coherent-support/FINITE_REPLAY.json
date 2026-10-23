@@ -1,0 +1,206 @@
+[
+  {
+    "checker": "verify_coherent_vector_exponents.py",
+    "normal_equals_optimized": true,
+    "result": {
+      "status": "PASS",
+      "checks": 67,
+      "scope": "exact finite exponent algebra for the full-series C1 theorem; no primitive extension certified",
+      "full_vector_benchmark": {
+        "h": "6/7",
+        "k": "1/9",
+        "terms": [
+          "25/27",
+          "26/27"
+        ],
+        "old": "41/42",
+        "saving": "5/378"
+      },
+      "hypothetical_primitive_KU_consumer": {
+        "exponent": "61/63",
+        "saving": "1/126",
+        "analytic_status": "not proved here"
+      }
+    }
+  },
+  {
+    "checker": "verify_local_support_exponents.py",
+    "normal_equals_optimized": true,
+    "result": {
+      "status": "PASS",
+      "checks": 76,
+      "local_branches": [
+        {
+          "a": 1,
+          "epsilon": 0,
+          "j": 2,
+          "omega": "-1",
+          "kind": "nonprincipal",
+          "exponents": [
+            "-1",
+            "-1",
+            "-1",
+            "-1"
+          ]
+        },
+        {
+          "a": 1,
+          "epsilon": 1,
+          "j": 3,
+          "omega": "-2",
+          "kind": "nonprincipal",
+          "exponents": [
+            "-2",
+            "-3/2",
+            "-19/12",
+            "-11/6"
+          ]
+        },
+        {
+          "a": 2,
+          "epsilon": 0,
+          "j": 3,
+          "omega": "-1",
+          "kind": "nonprincipal",
+          "exponents": [
+            "-1",
+            "-3/2",
+            "-17/12",
+            "-7/6"
+          ]
+        },
+        {
+          "a": 2,
+          "epsilon": 1,
+          "j": 4,
+          "omega": "-2",
+          "kind": "nonprincipal",
+          "exponents": [
+            "-2",
+            "-2",
+            "-2",
+            "-2"
+          ]
+        },
+        {
+          "a": 3,
+          "epsilon": 0,
+          "j": 4,
+          "omega": "-1",
+          "kind": "nonprincipal",
+          "exponents": [
+            "-1",
+            "-2",
+            "-11/6",
+            "-4/3"
+          ]
+        },
+        {
+          "a": 3,
+          "epsilon": 1,
+          "j": 5,
+          "omega": "-2",
+          "kind": "nonprincipal",
+          "exponents": [
+            "-2",
+            "-5/2",
+            "-29/12",
+            "-13/6"
+          ]
+        },
+        {
+          "a": 4,
+          "epsilon": 0,
+          "j": 5,
+          "omega": "-1",
+          "kind": "nonprincipal",
+          "exponents": [
+            "-1",
+            "-5/2",
+            "-9/4",
+            "-3/2"
+          ]
+        },
+        {
+          "a": 4,
+          "epsilon": 1,
+          "j": 6,
+          "omega": "-3",
+          "kind": "principal",
+          "exponents": [
+            "-3",
+            "-4",
+            "-23/6",
+            "-10/3"
+          ]
+        },
+        {
+          "a": 5,
+          "epsilon": 0,
+          "j": 6,
+          "omega": "-2",
+          "kind": "principal",
+          "exponents": [
+            "-2",
+            "-4",
+            "-11/3",
+            "-8/3"
+          ]
+        },
+        {
+          "a": 5,
+          "epsilon": 1,
+          "j": 7,
+          "omega": "-2",
+          "kind": "nonprincipal",
+          "exponents": [
+            "-2",
+            "-7/2",
+            "-13/4",
+            "-5/2"
+          ]
+        },
+        {
+          "a": 5,
+          "epsilon": 1,
+          "j": 6,
+          "omega": "-1",
+          "kind": "principal",
+          "exponents": [
+            "-1",
+            "-3",
+            "-8/3",
+            "-5/3"
+          ]
+        }
+      ],
+      "scope": "finite local and affine exponent checks only; primitive extension is not proved by this script",
+      "conditional_primitive_benchmark": {
+        "h": "6/7",
+        "k": "1/12",
+        "terms": [
+          "79/84",
+          "133/144",
+          "11/12",
+          "20/21"
+        ]
+      },
+      "source_sha256": "fc30da71bcff7067e446264c8114bfb5ae3c48ed4f438636263975f222a16b54"
+    }
+  },
+  {
+    "checker": "verify_extension_consumers.py",
+    "normal_equals_optimized": true,
+    "result": {
+      "status": "PASS",
+      "checks": 23,
+      "scope": "exact exponent and integer arithmetic only; analytic inputs assumed",
+      "primitive_projection_terms": [
+        "79/84",
+        "133/144",
+        "67/72",
+        "20/21"
+      ]
+    }
+  }
+]
