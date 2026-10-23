@@ -1,0 +1,32 @@
+[
+  {
+    "checker": "verify_natural_projection_exponents.py",
+    "normal_equals_optimized": true,
+    "result": {
+      "checks": 89,
+      "scope": "exact rational exponent algebra only",
+      "status": "pass"
+    }
+  },
+  {
+    "checker": "verify_volume_and_progression.py",
+    "normal_equals_optimized": true,
+    "result": {
+      "status": "PASS",
+      "checks": 79,
+      "scope": "finite exponent algebra only; analytic identities require the separate proofs and reviews",
+      "squarefree_projection_terms": [
+        "6/7",
+        "37/40",
+        "19/20",
+        "20/21"
+      ],
+      "natural_projection_terms": [
+        "7/8",
+        "89/96",
+        "23/24",
+        "23/24"
+      ]
+    }
+  }
+]
