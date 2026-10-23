@@ -1,0 +1,161 @@
+{
+  "status": "PASS",
+  "manifest_components": 65,
+  "scope": "finite algebra only; no analytic theorem or zero-free bound certified",
+  "checkers": [
+    {
+      "checker": "verify_label_exponents.py",
+      "normal_equals_optimized": true,
+      "result": {
+        "scope": "exact finite exponent algebra, not analytic proof",
+        "checks": 95,
+        "projection_exponent": "20/21",
+        "inherited_exponent": "41/42",
+        "saving": "1/42"
+      }
+    },
+    {
+      "checker": "verify_structural_exponents.py",
+      "normal_equals_optimized": true,
+      "result": {
+        "status": "PASS",
+        "rational_predicates": 121,
+        "sixth_free_local_branches": [
+          [
+            1,
+            0,
+            2,
+            "-1",
+            "nonprincipal"
+          ],
+          [
+            1,
+            1,
+            3,
+            "-2",
+            "nonprincipal"
+          ],
+          [
+            2,
+            0,
+            3,
+            "-1",
+            "nonprincipal"
+          ],
+          [
+            2,
+            1,
+            4,
+            "-2",
+            "nonprincipal"
+          ],
+          [
+            3,
+            0,
+            4,
+            "-1",
+            "nonprincipal"
+          ],
+          [
+            3,
+            1,
+            5,
+            "-2",
+            "nonprincipal"
+          ],
+          [
+            4,
+            0,
+            5,
+            "-1",
+            "nonprincipal"
+          ],
+          [
+            4,
+            1,
+            6,
+            "-3",
+            "Ramanujan"
+          ],
+          [
+            5,
+            0,
+            6,
+            "-2",
+            "Ramanujan"
+          ],
+          [
+            5,
+            1,
+            7,
+            "-2",
+            "nonprincipal"
+          ],
+          [
+            5,
+            1,
+            6,
+            "-1",
+            "Ramanujan"
+          ]
+        ],
+        "projection_benchmark": {
+          "U_exponent": "6/7",
+          "K_exponent": "1/32",
+          "terms": [
+            "199/224",
+            "365/384",
+            "20/21"
+          ],
+          "bound": "20/21",
+          "old_resource": "41/42",
+          "saving": "1/42"
+        },
+        "quartic_conditional_cutoff": "11/75",
+        "scope": "finite exponents and affine-domain coverage only; no analytic theorem or fixed boundary certified",
+        "source_sha256": "c251b32fd7ad9104f3e301a8d35c6782277e6fb59d4fed958816759f9f197325"
+      }
+    },
+    {
+      "checker": "verify_quartic_orientation.py",
+      "normal_equals_optimized": true,
+      "result": {
+        "analytic_estimate_certified": false,
+        "negativecontrols": [
+          "native-k scalar identification rejected"
+        ],
+        "scope": "exact prime-5 physical/native quartic Fourier orientation",
+        "status": "pass",
+        "totalchecks": 20
+      }
+    },
+    {
+      "checker": "verify_signed_completion_exponents.py",
+      "normal_equals_optimized": true,
+      "result": {
+        "benchmark": {
+          "beta": "7/8",
+          "h": "6/7",
+          "k": "1/24",
+          "nonvolume": "7643/8064",
+          "pole": "20/21",
+          "saving": "1/42",
+          "volume": "151/168"
+        },
+        "beta_endpoint_checks": [
+          "2/3",
+          "7/8",
+          "1"
+        ],
+        "negative_controls": {
+          "claim_all_projection_mass_below_volume_rejected": true,
+          "incorrect_benchmark_rejected": true,
+          "missing_inverse_U_gain_rejected": true
+        },
+        "scope": "Exact affine local exponents and conditional projection benchmark only",
+        "status": "pass",
+        "total_checks": 142
+      }
+    }
+  ]
+}

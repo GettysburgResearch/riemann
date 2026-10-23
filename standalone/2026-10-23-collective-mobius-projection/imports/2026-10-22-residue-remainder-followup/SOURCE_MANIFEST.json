@@ -1,0 +1,198 @@
+{
+  "date": "2026-10-22",
+  "scope": "Proposed source-dependent power saving for the actual Mobius primitive Gauss pairing, with full primitive scalar remainder, supporting means and finite Gauss operator; no smaller zero-free boundary.",
+  "repository": "GettysburgResearch/riemann",
+  "repository_base_commit": "ff620ffe983f086eaab070311ab304a994bbf0d4",
+  "repository_base_tree": "3bfaaf48a037a9f491b6e5aa31f2146dbb6c2ab7",
+  "prior_pr": "https://github.com/GettysburgResearch/riemann/pull/1013",
+  "inherited_boundary": {
+    "value": "0.874886647039964...",
+    "changed": false,
+    "status": "Inherited source-qualified numerical reference, not independently re-proved here."
+  },
+  "sources": [
+    {
+      "id": "paper10_v2",
+      "title": "Primitive sextic Kubota means and a sharp sixth-power-free large sieve",
+      "version": "rStation paper 10 v2",
+      "url": "https://rstation.ai/api/v1/papers/riemann_hypothesis_10/versions/2/download",
+      "download_sha256": "525c899dd4dd5cb0ed15db43f63fb6e25cc140f98358e9d41ddfe897f5a23a7a",
+      "download_bytes": 51670,
+      "used_sections": [
+        "2: finite-vector normalization, functional equation and growth",
+        "3: exact primitive inversion with every numerator valuation",
+        "4: full-modulus finite bound, especially (4.8)",
+        "5: continued weighted mean and absorption",
+        "7: exact primitive adjoint and uniform numerator-shift remainder mean"
+      ],
+      "reproved_here": false
+    },
+    {
+      "id": "paper8_v1",
+      "title": "Averaged Type-I estimates for primitive sextic Kubota residues",
+      "version": "rStation paper 8 v1",
+      "url": "https://rstation.ai/api/v1/papers/riemann_hypothesis_8/versions/1/download",
+      "download_sha256": "f1f9aed624908ccb9b6842911d898916230545ff76dc123187d7eadc3558def1",
+      "download_bytes": 38054,
+      "used_sections": [
+        "3: exact residue density at every numerator valuation",
+        "4: fixed-form residual square sum"
+      ],
+      "scope": "Fixed ray characters modulo 36 of trivial infinity type and order dividing six, with the stated fixed finite conversions; no automatic extension to all 216 components.",
+      "reproved_here": false
+    },
+    {
+      "id": "bh_v1",
+      "authors": [
+        "Reinier Broeker",
+        "Jeff Hoffstein"
+      ],
+      "title": "Fourier coefficients of sextic theta series",
+      "version": "arXiv:1312.0568v1",
+      "url": "https://arxiv.org/html/1312.0568v1",
+      "download_sha256": "2dabda8ba741c1d43fd3cf81ea36a8b059fa5febf98b3840fd0af487055e1b34",
+      "used_sections": [
+        "Theorem 2.4: meromorphic continuation and pole scope",
+        "(3.1), (3.8)-(3.10): exact completed finite-vector reflection",
+        "Local gamma formulas following (3.10)"
+      ],
+      "native_deductions": [
+        "Laurent-polynomial transition factor for fixed bad-place numerator valuations",
+        "Theta-pole cancellation and common smooth reflected kernel",
+        "Exact completed and reciprocal-completion scales"
+      ],
+      "reproved_here": false,
+      "pdf_url": "https://arxiv.org/pdf/1312.0568v1",
+      "pdf_sha256": "9cde7f9e144457da23a557986e15514ac0d3e80a1664d1e526b1ffae93c8adaf",
+      "source_notation_clarification": "Equation (3.10) prints an h-index without the numerator star. COMPLETED_FE_KERNEL.md explicitly derives the finite S-unit quotient used in the transition projection from Lemmas 2.1-2.2 and Remark 2.3; this is not a literal infinite S-integer sum."
+    },
+    {
+      "id": "defaveri_v1",
+      "author": "Alexandre de Faveri",
+      "title": "Optimal large sieve for fixed order characters",
+      "version": "arXiv:2610.04045v1",
+      "url": "https://arxiv.org/html/2610.04045v1",
+      "used_sections": [
+        "Theorem 1.1 at order six",
+        "Lemmas 4.4, 5.1, 6.1 and Proposition 7.1, for the transfer audit only"
+      ],
+      "reproved_here": false
+    },
+    {
+      "id": "liu_inverse",
+      "author": "Baiying Liu",
+      "title": "Zero-free half-planes for Hecke L-functions over number fields",
+      "version": "arXiv:2610.26835v1",
+      "url": "https://arxiv.org/html/2610.26835v1",
+      "used_sections": [
+        "Theorem 11.2, no selected prime slots, with the stated smooth and norm-twist uniformity"
+      ],
+      "scope": "Inverse moment input only; the final zero-free theorem is not needed to prove the new scalar bounds.",
+      "reproved_here": false
+    },
+    {
+      "id": "inherited_inverse_adapter",
+      "commit": "64cb43c038d1828a478cb97cbc32e435e111d2d2",
+      "path": "standalone/2026-10-20-boundary-iteration/mixed/MARKED_CANONICAL_MEAN.md",
+      "sha256": "3e3c8c123f29fdedcf6afd987341ba31b481be096f3d421be4b7409dfe8234d9",
+      "used_sections": [
+        "Sections 1-3, P=1 in (2.1)",
+        "Fixed-during-the-row-sum puncture via all supported prime powers",
+        "Unrestricted rows via u=v t^6, retaining natural zeros"
+      ],
+      "scope": "Prescribed pure Mobius coefficients and permitted fixed ray filters; not arbitrary coefficients.",
+      "reproved_here": false
+    },
+    {
+      "id": "inherited_gram",
+      "commit": "509eb03fae09a7e9f1c945866290b63d1e9efba6",
+      "path": "standalone/2026-10-22-gram-conditioning-followup/HYPERBOLIC_PUNCTURE_GRAM.md",
+      "sha256": "c75ca666d0b9600eb00fd1be79bd9fba8721d8b5f9101beb3d036f760bd910ed",
+      "used_result": "Upper Gram norm at a freely chosen reference scale, for the optional vector pole extension.",
+      "reproved_here": false
+    },
+    {
+      "id": "signed_return_interface",
+      "commit": "64cb43c038d1828a478cb97cbc32e435e111d2d2",
+      "files": [
+        {
+          "path": "standalone/2026-10-20-boundary-iteration/mixed/CENTERED_INVERSE_INTERFACE.md",
+          "sha256": "040f5b9dec130aa5154db73d69c8d1a27236a5f39057dad35f8824f9010038b3"
+        },
+        {
+          "path": "standalone/2026-10-20-boundary-iteration/mixed/WEAKER_CENTERED_TARGET.md",
+          "sha256": "706902e835d1c5ffe5591c82fc672f9636e7e02137a64db2e977238a55b019d6"
+        }
+      ],
+      "scope": "Exact diagonal reconstruction and still-unproved sufficient endpoint improvement; no new transfer claimed."
+    }
+  ],
+  "claim_files": [
+    {
+      "path": "MOBIUS_PRIMITIVE_POLE_REFERENCE_SCALE.md",
+      "sha256": "c812ecc8bddd899c11f8c9175f9399cd7807ec70111786828bc7a87466886875",
+      "bytes": 9180
+    },
+    {
+      "path": "MOBIUS_FULL_SERIES_SCALAR_REMAINDER.md",
+      "sha256": "b45267a73c0123cb0a1d83c161ae5fe995e4493d7395bfcb21a67a790d54fcaf",
+      "bytes": 17016
+    },
+    {
+      "path": "MOBIUS_PRIMITIVE_SCALAR_REMAINDER.md",
+      "sha256": "60a1615eefca1ed6c19572b2fa2296e2dbbf7146654b77a940ef1ecec469cf86",
+      "bytes": 17307
+    },
+    {
+      "path": "COMPLETED_FE_KERNEL.md",
+      "sha256": "6f050d0e66769b4989a4b7c42f1a555ee10a2ee05a14ea1585595c784425066e",
+      "bytes": 13641
+    },
+    {
+      "path": "PRIMITIVE_INVERSION_EMPTY_MODULUS_TAIL.md",
+      "sha256": "c67365a48624d4983e8a476185902443f74be27138d74b40c90c881c68785f8e",
+      "bytes": 10977
+    },
+    {
+      "path": "REFINED_WEIGHTED_FULL_MEAN.md",
+      "sha256": "84febb2db3a5aab80c45ac31f5f54bd755f5817e163a60e99ff34296200c7d69",
+      "bytes": 7127
+    },
+    {
+      "path": "FINITE_FULL_GAUSS_OPERATOR.md",
+      "sha256": "9d95cb27a11804cd553d7b836b3dcecaeb52bee633fbdc7cfe4893d9c59a6d8b",
+      "bytes": 7704
+    },
+    {
+      "path": "DE_FAVERI_CORRECTION_TRANSFER_AUDIT.md",
+      "sha256": "d44c50460723bc29cb66ce36cc79be70c8da64bb8edee690a7533e360c3503fe",
+      "bytes": 4817
+    },
+    {
+      "path": "check_full_gauss_algebra.py",
+      "sha256": "e5f161389609b26d503020c1fe27e0d736810d4dbf60479107fc2963faa206e8",
+      "bytes": 15007
+    },
+    {
+      "path": "FINITE_FULL_GAUSS_ALGEBRA_CHECKS.json",
+      "sha256": "89055f804af781d731d8a1f1ee44ab5f64557aab2a665cad99bed7c72e7d6798",
+      "bytes": 20943
+    },
+    {
+      "path": "FULL_GAUSS_FINITE_CHECK.md",
+      "sha256": "82f6ce6b040c0c6e322f40d3f61889e8da3c130d46024aed44e0311a25fbd291",
+      "bytes": 3575
+    }
+  ],
+  "verification": {
+    "finite_checker": "check_full_gauss_algebra.py",
+    "finite_result": "FINITE_FULL_GAUSS_ALGEBRA_CHECKS.json",
+    "arithmetic": "Exact integer-pair arithmetic in Z[omega], with Python assertions enabled.",
+    "checker_scope": "Only the enumerated finite Gauss push-forward and character orthogonality identities.",
+    "root_replay": "Byte-identical saved JSON reproduced independently by the coordinating agent.",
+    "analytic_review": "See the separate exact-commit REVIEW.md added after the mathematics is frozen.",
+    "upstream_papers_reproved": false,
+    "high_conductor_inverse_improvement_proved": false,
+    "achieved_zero_free_improvement": false
+  }
+}
