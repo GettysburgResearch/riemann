@@ -1,0 +1,441 @@
+{
+  "scope": "byte-identical components; assembled theorem in PROOF.md",
+  "preserved_predecessor_commit": "6a91afe84aa3d53394de83c307d25912eee43807",
+  "files": [
+    {
+      "path": "BASELINE_PROOF.md",
+      "bytes": 10162,
+      "sha256": "a71bdca17daec0ae64d96fd50e6902d7f0997da83e8a0df7a7f6541ace3ea3e2"
+    },
+    {
+      "path": "BASELINE_SOURCES.md",
+      "bytes": 3095,
+      "sha256": "71830b7b23e3e9fb67ebe2253d374b62eb48ee3ee2625df9e3b7e3464fdb939d"
+    },
+    {
+      "path": "PREDECESSOR_SOURCES.md",
+      "bytes": 2248,
+      "sha256": "60cb3b503df0b34431d432cd939c0f6ded21308826285de2b5a07bb8cbe475ae"
+    },
+    {
+      "path": "three-hour-boundary/LOGISTIC_CURVATURE_51.md",
+      "bytes": 2244,
+      "sha256": "35d02f5d1efff830c36788c446722250b8db4cd58321c08684079c7ce6b0e37c"
+    },
+    {
+      "path": "three-hour-boundary/LOGISTIC_CURVATURE_CERTIFICATE.json",
+      "bytes": 632,
+      "sha256": "39fbbb78cf1eaa56632e29216d7672997a263a54ca4c211b182b76b1a1b5a876"
+    },
+    {
+      "path": "three-hour-boundary/LOGISTIC_DEGREE12_PRIME_CERTIFICATE.json",
+      "bytes": 16764,
+      "sha256": "d49a59c11704874470b8debff1d89887bf3a08cb29fa180803f7677aa7e1cdee"
+    },
+    {
+      "path": "three-hour-boundary/LOGISTIC_DEGREE12_PRIME_GAIN.md",
+      "bytes": 3860,
+      "sha256": "bccdc8825518319ca252995a9ccab657e18d9ffd468978d9a636f5c19b56054f"
+    },
+    {
+      "path": "three-hour-boundary/LOGISTIC_FOUR_PRIME_REFINEMENT.json",
+      "bytes": 13726,
+      "sha256": "5a2190b859393d8373c061a7ca01049ef8bd32717b87b5914f17a1a8df1c2023"
+    },
+    {
+      "path": "three-hour-boundary/LOGISTIC_FOUR_PRIME_REFINEMENT.md",
+      "bytes": 2013,
+      "sha256": "aec17566d845d5e760c0d51309dc146595a21404e6467c0036e422dea409bc87"
+    },
+    {
+      "path": "three-hour-boundary/LOGISTIC_PRIME_MINIMA.json",
+      "bytes": 3336,
+      "sha256": "2275eb0148a8dfee8e23477d39a8f0569f8be75f60c27782825e824bb3b56e52"
+    },
+    {
+      "path": "three-hour-boundary/LOGISTIC_TWO_PRIME_GAIN.md",
+      "bytes": 3899,
+      "sha256": "fd4773be0ce4d54ac8ec845c1cb3904a01224008660460973d7056066bde1405"
+    },
+    {
+      "path": "three-hour-boundary/QUADRATIC_SIGMA_LOGISTIC_DETECTOR.md",
+      "bytes": 7079,
+      "sha256": "2922cbb84355ead8db6af9bcce8cf35bfb71cf5051798b2bf521296f1dadf68a"
+    },
+    {
+      "path": "three-hour-boundary/REVIEW_LOGISTIC_482_EXTENSION.md",
+      "bytes": 2835,
+      "sha256": "2778c48ced2776d5c4fa613edd023d564bc7b74e9be01bb4fd0cbca9655622f6"
+    },
+    {
+      "path": "three-hour-boundary/REVIEW_LOGISTIC_BASELINE.md",
+      "bytes": 4312,
+      "sha256": "a788b5ca6f09a94cfe749f5187a85f63dcbdf982abbd34eb6d37e0e88f18f472"
+    },
+    {
+      "path": "three-hour-boundary/SHIFTED_SECH_POSITIVITY.md",
+      "bytes": 3636,
+      "sha256": "2a0143aad2ab349843dc27a0a52ee6cff9a4edc1b41619b9d903901e75a62964"
+    },
+    {
+      "path": "three-hour-boundary/VARIABLE_SIGMA_LOGISTIC_DETECTOR.md",
+      "bytes": 7310,
+      "sha256": "b996d3f1ee0e5f674b0fda0f00ec60c90c9d7886e622233ceabfde86541a9f4c"
+    },
+    {
+      "path": "three-hour-boundary/verify_logistic_curvature.py",
+      "bytes": 1124,
+      "sha256": "7f2abc98ebb5660ab1b663f462d657787da90228c39d639a8e65ffe9d76582fe"
+    },
+    {
+      "path": "three-hour-boundary/verify_logistic_degree12_primes.py",
+      "bytes": 3652,
+      "sha256": "59de1ebb048b94c3f8aa91918378cfdafd07cfbe622d52ed2842a7d2eae4a9c8"
+    },
+    {
+      "path": "three-hour-boundary/verify_logistic_four_prime_refinement.py",
+      "bytes": 2828,
+      "sha256": "a2881f6ac3a6c5bccf7ab0b905dabeb8886ff53802a310af497d261a888ffc27"
+    },
+    {
+      "path": "three-hour-boundary/verify_logistic_prime_minima.py",
+      "bytes": 4393,
+      "sha256": "059c9c069618e2d8988faea5465403bb85442e513ab580d0233822b1c7dacda6"
+    },
+    {
+      "path": "three-hour-global/LOGISTIC_DEGREE12_GLOBAL_WRAPPER.md",
+      "bytes": 5279,
+      "sha256": "0b664beb0bb701469acb2895efc3757a5be5461a70e5ee18cc3d294e6cb6edd9"
+    },
+    {
+      "path": "three-hour-global/LOGISTIC_GLOBAL_WRAPPER.md",
+      "bytes": 9194,
+      "sha256": "acb4b29ef72c031eb78ec27f41c8f4169e648f554a35badc559472077a8b36cb"
+    },
+    {
+      "path": "three-hour-global/LOGISTIC_PRIME_EXTENSION_WRAPPER.md",
+      "bytes": 4735,
+      "sha256": "bd20c964884886bbebc8b38a185de69c1c2b08b5bca8eee85a4cbed4871e3fcb"
+    },
+    {
+      "path": "three-hour-global/REVIEW_LOGISTIC_ADMISSIBILITY.md",
+      "bytes": 2835,
+      "sha256": "2864d730fd121e106c8f9ab2827ac2a61ab54bbefecf9f8fcf82b107d36bca1f"
+    },
+    {
+      "path": "three-hour-global/REVIEW_LOGISTIC_CONSTANTS.md",
+      "bytes": 2076,
+      "sha256": "f588aacd86ba2c1b1351a5e4d1e80f7eae1c5b5554c6bb9972c604d7631965a0"
+    },
+    {
+      "path": "three-hour-global/REVIEW_LOGISTIC_KERNEL_AND_NEGATIVE_ERROR.md",
+      "bytes": 2594,
+      "sha256": "280e8424ef0c8da44471fafc04ef78f383ebdabc95ac98da90f3380735656031"
+    },
+    {
+      "path": "three-hour-global/REVIEW_LOGISTIC_MASTER.md",
+      "bytes": 4775,
+      "sha256": "436a3b915f69cf0041eff7c9a87d6396a838e9b1d1d31b98b5f81b46d08a1127"
+    },
+    {
+      "path": "three-hour-global/REVIEW_LOGISTIC_PRIME_EXTENSION.md",
+      "bytes": 2864,
+      "sha256": "e0fbb7d5221fe89925e976a8a4b0fcbd83a258cc84de09698c918cbdddaadd94"
+    },
+    {
+      "path": "three-hour-global/REVIEW_LOGISTIC_TWO_PRIMES.md",
+      "bytes": 2363,
+      "sha256": "1621580d409dd48636dbeaf7539a5a9bd8799b89997ca597b35ac568e9f5e6f2"
+    },
+    {
+      "path": "three-hour-global/REVIEW_QUADRATIC_SIGMA_ANALYTIC.md",
+      "bytes": 3232,
+      "sha256": "db8bcfddfaf0ec5c073a1767e582a2994aec20e905c6b796e97daee6640b3c91"
+    },
+    {
+      "path": "three-hour-global/REVIEW_VARIABLE_SIGMA_ANALYTIC.md",
+      "bytes": 3281,
+      "sha256": "5b403c9d913d7ab488ca63b6daa615dc23c5d2792e93962cfcf8277514c493fb"
+    },
+    {
+      "path": "three-hour-root/LOGISTIC_DEGREE12_CERTIFICATE.json",
+      "bytes": 12330,
+      "sha256": "667f839a258512acdcba4121d9c0aec7f1c52193c296f349eb6037f33690921f"
+    },
+    {
+      "path": "three-hour-root/LOGISTIC_DEGREE12_REDUCTION.md",
+      "bytes": 3897,
+      "sha256": "704f2664503c0f4e5021d5abb7af11752c425949115405c4246b6987bbd97093"
+    },
+    {
+      "path": "three-hour-root/LOGISTIC_KERNEL_AUTOCORRELATION.md",
+      "bytes": 2142,
+      "sha256": "26dca6795b0fc64f4030f0c271f3f8fdec43c5a796bdae12647e3afdac26ca43"
+    },
+    {
+      "path": "three-hour-root/LOGISTIC_MASTER_CERTIFICATE.json",
+      "bytes": 8959,
+      "sha256": "bac091574f8f6a1dc5f2a9c00ac7b3ea9caf200d6f27823d05f788a53d08c166"
+    },
+    {
+      "path": "three-hour-root/LOGISTIC_MASTER_REDUCTION.md",
+      "bytes": 5862,
+      "sha256": "87e4cb2825d198d49cf27ac652ff4cb89d8e891880cd9674db26b44f7ed3bfdb"
+    },
+    {
+      "path": "three-hour-root/LOGISTIC_PRIME_EXTENSION_CERTIFICATE.json",
+      "bytes": 12068,
+      "sha256": "aee690cd4b54e7be1929bdd30385a9e3894cac7fb7f4f4ac42ef59bb9c495da9"
+    },
+    {
+      "path": "three-hour-root/REVERS_SHIFTED_ENVELOPE.md",
+      "bytes": 3927,
+      "sha256": "1f17190a8fff5d0b4c18ee2dfd926045a2812b1615e97fb00d19c1024eaa4e32"
+    },
+    {
+      "path": "three-hour-root/certify_logistic_degree12.py",
+      "bytes": 3918,
+      "sha256": "350b5dc73787cb6f9925833e19ebaaa9256ed273c44da27e5bb35192be4a83f6"
+    },
+    {
+      "path": "three-hour-root/certify_logistic_master.py",
+      "bytes": 4872,
+      "sha256": "3200651b87fc5a04f79d793c8b86313a6ac3cf6c86331a95c76bc0668d7cd5cf"
+    },
+    {
+      "path": "three-hour-root/certify_logistic_prime_extension.py",
+      "bytes": 2040,
+      "sha256": "662d90cd10e659a11a419df845f7fa9c5ff7e0803095cdf009c2579124d80e6c"
+    },
+    {
+      "path": "three-hour-type/LOGISTIC_ADMISSIBILITY.md",
+      "bytes": 8686,
+      "sha256": "a06963aef0863ef1cdf63e93aab27c4b8f0c8051cbab7f159d468e7596d7a25f"
+    },
+    {
+      "path": "three-hour-type/LOGISTIC_DEGREE12_FRACTION_CERTIFICATE.json",
+      "bytes": 32312,
+      "sha256": "56d17fffe63e61bb6724c5b90a4a89146ea31712ed65c73ca6922bff6f4765ad"
+    },
+    {
+      "path": "three-hour-type/LOGISTIC_DEGREE12_FRACTION_REPLAY.md",
+      "bytes": 2941,
+      "sha256": "1281cffeb634b561760f2beca6c74068f551119da8def622f4c149b0b9398a76"
+    },
+    {
+      "path": "three-hour-type/LOGISTIC_FRACTION_CERTIFICATE.json",
+      "bytes": 18653,
+      "sha256": "3f1722d0579df61561b18ca3e1dabc66b01826d68837adf7ff951021cb18fbe6"
+    },
+    {
+      "path": "three-hour-type/LOGISTIC_FRACTION_REPLAY.md",
+      "bytes": 5419,
+      "sha256": "7849149e4f9a8a14ff14d3d4cb820957f0c49bcbb85c60dfbee2c472f842cc34"
+    },
+    {
+      "path": "three-hour-type/LOGISTIC_NEGATIVE_ARCHIMEDEAN.md",
+      "bytes": 2041,
+      "sha256": "88d8dba1316e61aa3cd67e2bb81a2c04d1ac114985593ecde9082aeae766182f"
+    },
+    {
+      "path": "three-hour-type/LOGISTIC_POLY12_AND_CURVATURE.md",
+      "bytes": 3197,
+      "sha256": "da4e104b4f4b9b861a4a174c3119c14a91b18583a25fab7102735a648665ca7c"
+    },
+    {
+      "path": "three-hour-type/LOGISTIC_PRIME_FRACTION_CERTIFICATE.json",
+      "bytes": 30779,
+      "sha256": "fb6f0752051047df05c42ec6ebedc0ee36c11f3e1a92fcc46c0916baa6ff92cf"
+    },
+    {
+      "path": "three-hour-type/LOGISTIC_REAL_AXIS_CONSTANTS.md",
+      "bytes": 4063,
+      "sha256": "9da9ad7051fcf3deb94db3d951051425c549313074d0ee5bd0dcfae3312c8139"
+    },
+    {
+      "path": "three-hour-type/REVIEW_LOGISTIC_DEGREE12_INPUTS.md",
+      "bytes": 2429,
+      "sha256": "8f03816e59cc3b5c9e2ca7e9c61f7c62e09de37348729bc312a05f5b0905fbb6"
+    },
+    {
+      "path": "three-hour-type/REVIEW_LOGISTIC_TWO_PRIMES.md",
+      "bytes": 1703,
+      "sha256": "39917c2ff0ad284c8208a5028f3091ae8fd69579dd6a74bd105dc6b75288df79"
+    },
+    {
+      "path": "three-hour-type/REVIEW_QUADRATIC_SIGMA_DETECTOR.md",
+      "bytes": 2927,
+      "sha256": "00c9b9ffd01e47aaff8f0cd498a9a96e052b428d527ad61d69c22b6f16843706"
+    },
+    {
+      "path": "three-hour-type/REVIEW_VARIABLE_SIGMA_DETECTOR.md",
+      "bytes": 4159,
+      "sha256": "e0ffb2bcdd52b3c33305c6a29790f4185e37e0507b59733f364fd2860d8a0b7d"
+    },
+    {
+      "path": "three-hour-type/verify_logistic_constants.py",
+      "bytes": 5644,
+      "sha256": "50a2373d94a19406cb51c081958dab7772ec939e2d34f5033f58745735f689fb"
+    },
+    {
+      "path": "three-hour-type/verify_logistic_degree12_fraction.py",
+      "bytes": 4758,
+      "sha256": "1e509ab10b892542c398f3e6110236a69ace4aca435c9cacd42a5949be7c3ae6"
+    },
+    {
+      "path": "three-hour-type/verify_logistic_master_fraction.py",
+      "bytes": 8563,
+      "sha256": "cefd18641114b6fedd8cf3334bcdd2857da7d4694bbbbc951238603e90fc2413"
+    },
+    {
+      "path": "three-hour-type/verify_logistic_negative_arch.py",
+      "bytes": 1301,
+      "sha256": "5fa012a255a111546c8bd226111d6b422a9e6f85da8e887194b901317babf2a6"
+    },
+    {
+      "path": "three-hour-type/verify_logistic_poly12_constants.py",
+      "bytes": 2404,
+      "sha256": "7789003c073661f9be78afe6782e1ed26f75597896c1721596f2d3cf50890e66"
+    },
+    {
+      "path": "three-hour-type/verify_logistic_prime_extension_fraction.py",
+      "bytes": 3433,
+      "sha256": "b2c09c2b4c9af34a2e460bb4bbec6360044d798892ad3471cd0e18c5c40db425"
+    },
+    {
+      "path": "three-hour-type/verify_quadratic_sigma_fraction.py",
+      "bytes": 5271,
+      "sha256": "68f31c13bbc906e99dfdb283648415cf52473861b825ffa15ee608c301fafb3a"
+    },
+    {
+      "path": "two-hour-global-20261023/GENERAL_FORD_REPLAY.md",
+      "bytes": 1977,
+      "sha256": "7da78a825da4b69db3e0f1bc7a9303c7ddc13b8bbda2ef13da19ba0d608046e7"
+    },
+    {
+      "path": "two-hour-global-20261023/GENERAL_WEIGHTED_FORD_DETECTOR.md",
+      "bytes": 9462,
+      "sha256": "c52fa826706a26aec19cf0ed448ca4944dd86ad45ec67cc69da106fef5e6bf50"
+    },
+    {
+      "path": "two-hour-global-20261023/POISSON_KERNEL_ZERO_TAIL.md",
+      "bytes": 6408,
+      "sha256": "c862b1e3087fd4d8e8cf52c7463f9e5786121a3f71cae1dc602bf18948b35c3b"
+    },
+    {
+      "path": "two-hour-global-20261023/REVIEW_PRIME_AND_PAIRED_KERNEL.md",
+      "bytes": 4243,
+      "sha256": "9b6546604b115d6208a2fc1c965b7c2138c3c11fc598107da57382c5a97f7cd5"
+    },
+    {
+      "path": "two-hour-global-20261023/REVIEW_REVERS_SHIFTED_ENVELOPE.md",
+      "bytes": 4165,
+      "sha256": "0c0dbda29ad944c126a6065bef2d083571c168916d134f2e2787bbd2665f3e17"
+    },
+    {
+      "path": "two-hour-global-20261023/SHIFTED_CENTER_FORD_DETECTOR.md",
+      "bytes": 13549,
+      "sha256": "a25dc862eb72cf29a4dc14b9d3dc71f15dce32cf89416106b1dd6a2e7012c024"
+    },
+    {
+      "path": "two-hour-global-20261023/SHIFTED_FORD_CERTIFICATE.json",
+      "bytes": 2757,
+      "sha256": "312cb67fdaeb27243a781e2f6b487aeda48613c99e7565aa1e0d49f99b89ad98"
+    },
+    {
+      "path": "two-hour-global-20261023/SHIFTED_FORD_REPLAY.md",
+      "bytes": 2675,
+      "sha256": "f818069d0dbedcc50f541694227069ac78150a57607e5e9a1201b973842b4e1a"
+    },
+    {
+      "path": "two-hour-global-20261023/verify_general_ford.py",
+      "bytes": 9391,
+      "sha256": "da64b1b653dfb771773efc530e2ffbe605f665f835251e578891f888c89cfa27"
+    },
+    {
+      "path": "two-hour-global-20261023/verify_shifted_ford.py",
+      "bytes": 3270,
+      "sha256": "d8093aceece06c1f0b6314b571559cdd523eb3826887a357311ab60774b8cb9f"
+    },
+    {
+      "path": "two-hour-root-20261023/FORD_COMBINED_PRIME_GAIN.md",
+      "bytes": 3331,
+      "sha256": "67df2f838807e94e01d51cd821a524b00428328ebd7a9d3ecf5ccaf490ee09d1"
+    },
+    {
+      "path": "two-hour-root-20261023/FORD_PRIME_GAIN_CERTIFICATE.json",
+      "bytes": 11067,
+      "sha256": "106314dc47ccde399165077b29b6161432ffb692bebeebb6ac073dc905421926"
+    },
+    {
+      "path": "two-hour-root-20261023/P12_472_FRACTION_CERTIFICATE.json",
+      "bytes": 16114,
+      "sha256": "f83ed356819fb6d3e93a107ff64c32ee47a464bbc2fbbd4253379b692afb2217"
+    },
+    {
+      "path": "two-hour-root-20261023/P12_475_FRACTION_CERTIFICATE.json",
+      "bytes": 17257,
+      "sha256": "da296619225f33ed0c1f7a7327b3b6e3ce75c23b467f21fed6bf5da17f7b6065"
+    },
+    {
+      "path": "two-hour-root-20261023/REVIEW_GENERAL_WEIGHTED_FORD.md",
+      "bytes": 3056,
+      "sha256": "87dbfaa71f7695485b42d1ca50682cde47213a4f9c22cb647af21e4cb0d3b6b5"
+    },
+    {
+      "path": "two-hour-root-20261023/REVIEW_SHIFTED_CENTER_FORD.md",
+      "bytes": 2944,
+      "sha256": "91b7880eb2bd91bb84913e07ea4a52ee510080ffb8a0561d653c957ce9a916ed"
+    },
+    {
+      "path": "two-hour-root-20261023/SHIFTED_EULER_BOUNDS.md",
+      "bytes": 1666,
+      "sha256": "1200a2c5cca62cdb240a00b7d90dccec5d5a181c3e5198f15bfb235293699b6e"
+    },
+    {
+      "path": "two-hour-root-20261023/SHIFTED_EULER_CERTIFICATE.json",
+      "bytes": 851,
+      "sha256": "6d581bb9d46dfdd626eb30d49ebc6d59d6a2648637037a0a8e6576db372dcdb9"
+    },
+    {
+      "path": "two-hour-root-20261023/verify_ford_prime_gain.py",
+      "bytes": 4001,
+      "sha256": "5170c59e8c35fe842af4e315aca8376f2fb234b49c1986a8732deb53843e2c59"
+    },
+    {
+      "path": "two-hour-root-20261023/verify_p12_472_fraction.py",
+      "bytes": 4965,
+      "sha256": "50d75fee1e1a01feebab763fe8086dcd6d464ef4b306c3e68afcc02be0e57ab6"
+    },
+    {
+      "path": "two-hour-root-20261023/verify_p12_475_fraction.py",
+      "bytes": 4961,
+      "sha256": "02dfaf5ae18becb4688d80ba79bef8ca76752ec7d95749c1ff465ec0c520837d"
+    },
+    {
+      "path": "two-hour-root-20261023/verify_shifted_euler.py",
+      "bytes": 2054,
+      "sha256": "aa9f8bc15a384712d14eb6037837769c3b82ecc8d8dc2ef023985c2a688d01bc"
+    },
+    {
+      "path": "two-hour-type-20261023/REVIEW_P12_472_RECTANGLE.md",
+      "bytes": 1949,
+      "sha256": "eba7928ca4494eae1841c80a902b2493122003526ba448a07f6c1e8c4375652b"
+    },
+    {
+      "path": "two-hour-type-20261023/REVIEW_P12_475_RECTANGLE.md",
+      "bytes": 2474,
+      "sha256": "2108559d9d472907907d16a84845807042f2e6367b353dee661db930189ad65f"
+    },
+    {
+      "path": "two-hour-type-20261023/REVIEW_SHIFTED_CENTER_FORD.md",
+      "bytes": 4273,
+      "sha256": "a64c8fb196878eff5e3bb6de002dbc703d68015d567063f2510950612b84bd88"
+    },
+    {
+      "path": "two-hour-type-20261023/REVIEW_WEIGHTED_FORD_AND_POISSON_TAIL.md",
+      "bytes": 4513,
+      "sha256": "5fa2b1399799b1db0f68ea3d404331796d042c3d3cb036a5e486f7b82ddf792d"
+    }
+  ]
+}
