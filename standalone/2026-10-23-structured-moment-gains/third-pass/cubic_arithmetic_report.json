@@ -1,0 +1,64 @@
+{
+  "analytic_certification": false,
+  "arithmetic": "EXACT_INTEGER_CYCLOTOMIC_AND_MONOID",
+  "checks": 943,
+  "gauss_checks": 408,
+  "gauss_fields": [
+    {
+      "prime": 13,
+      "primitive_root": 2,
+      "square_substitution_rejections": 8
+    },
+    {
+      "prime": 37,
+      "primitive_root": 2,
+      "square_substitution_rejections": 24
+    },
+    {
+      "prime": 61,
+      "primitive_root": 2,
+      "square_substitution_rejections": 40
+    },
+    {
+      "prime": 73,
+      "primitive_root": 5,
+      "square_substitution_rejections": 48
+    }
+  ],
+  "monoid": {
+    "cutoffs": [
+      {
+        "cutoff": 49,
+        "ideal_count": 8
+      },
+      {
+        "cutoff": 50,
+        "ideal_count": 8
+      },
+      {
+        "cutoff": 169,
+        "ideal_count": 13
+      },
+      {
+        "cutoff": 343,
+        "ideal_count": 18
+      },
+      {
+        "cutoff": 1000,
+        "ideal_count": 25
+      },
+      {
+        "cutoff": 2401,
+        "ideal_count": 35
+      }
+    ],
+    "formal_prime_norms": [
+      7,
+      7,
+      13,
+      19
+    ]
+  },
+  "monoid_checks": 535,
+  "scope": "Finite identities and rejection of the square-index substitution only"
+}

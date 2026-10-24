@@ -1,0 +1,19 @@
+{
+  "conductor_exponent": "-3/2+(5/2)*delta; convergence delta<1/5",
+  "critical_hyperplane_checks": 28,
+  "does_not_verify": [
+    "fixed cusp identities",
+    "Mellin contour interchange",
+    "finite support continuation",
+    "powerful row reassembly",
+    "non-square quadratic correlation",
+    "any zero-free boundary improvement"
+  ],
+  "regular_delta": "1/7",
+  "regular_threshold": "4/5",
+  "residue_exponent": "-2+3*eta; convergence eta<1/3",
+  "residue_table_checks": 28,
+  "scope": "finite rational algebra and exponent bookkeeping only",
+  "status": "exact_local_algebra_checks_passed",
+  "two_variable_local_checks": 252
+}

@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-24",
+  "status": "Proposed source-dependent mathematics; agent review is not external peer review or formal verification.",
+  "repository_snapshot": {
+    "repository": "GettysburgResearch/riemann",
+    "main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+    "branch": "research/structured-moment-gains-20261023",
+    "pull_request": 1020,
+    "parent_of_fourth_pass": "b8127aa7ed2581d5d16ac9267795593bc19c9876",
+    "pr1019_head": "3bcc1daaeb51c71cb2785b9744cde0d641f68f4c",
+    "pr1018_head": "591c880b68ba3de4850941ac7b6be002a6e6e025",
+    "pr1015_head": "e87c5f669f81fe6371af926917d1c5b21023bce8",
+    "pr1014_head": "845225c2e7713b69766b95c5e6964d44bb62f6bb",
+    "pr1012_dependency_commit": "64cb43c038d1828a478cb97cbc32e435e111d2d2",
+    "recent_prs_rechecked": "2026-10-24 before fourth-pass publication"
+  },
+  "scope": {
+    "coefficient_class": "mu(n) d_K(n), every fixed positive integer K; common moving natural sextic presentation and fixed angular order.",
+    "long_row_range": "A >= B >= 2, total natural presentation radical NR <= B^(2/3).",
+    "short_row_range": "1 <= A <= B, C comparable to (B/A)^(1/3), total natural presentation radical NR <= (B/C)^(2/3).",
+    "hypothesis": "ZF_beta for all primitive finite twists of the fixed angular type, plus the pinned analytic inputs.",
+    "saving": "A positive exponent exists. No numerical full-moment exponent is assigned.",
+    "fourth_moment": "Power saving only for the specified signed small-squarefree-core component, squarefree physical rows, fixed initial arithmetic data and a sufficiently small growing height range.",
+    "sixth_moment": "Exact reductions and coefficient extension only; no sixth-moment exponent proved.",
+    "global_zero_free_boundary_changed": false,
+    "rh_claimed": false
+  },
+  "inherited_mathematical_sources": [
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "f11e86684905c6417683a9f45ac75c223da6a162",
+      "path": "standalone/2026-10-23-structured-moment-gains/third-pass/FULL_MOBIUS_CUBIC_MOMENT.md",
+      "sha256": "2de89fd74098dd0b6c952c2f771c1c291553920d23f34d161aef3ee76877b66c"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "f11e86684905c6417683a9f45ac75c223da6a162",
+      "path": "standalone/2026-10-23-structured-moment-gains/third-pass/MOBIUS_EXCEPTIONAL_CUBIC_MEAN.md",
+      "sha256": "72e750857893d789f3478a31ed9c2ff2ad49cc2fc5b72d87621f94789bbe434d"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "f11e86684905c6417683a9f45ac75c223da6a162",
+      "path": "standalone/2026-10-23-structured-moment-gains/third-pass/QUANTIFIED_MOBIUS_EXCEPTIONAL_MEAN.md",
+      "sha256": "55943b6fc23c49e8ce0137758da6d579c9bd41193772994fe76ee8d58b2b6297"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "f11e86684905c6417683a9f45ac75c223da6a162",
+      "path": "standalone/2026-10-23-structured-moment-gains/third-pass/CUBIC_FOURTH_POWER_ORIENTATION.md",
+      "sha256": "e27fb4fa560e473bb954b178cf3a8c3cea42aa3c37403f8b8a94d91f6e484bd6"
+    }
+  ],
+  "sources": [
+    {
+      "repository": "openai/math",
+      "commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "path": "preprints/An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026/build/sections/dual.tex",
+      "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026/build/sections/dual.tex",
+      "git_blob_sha1": "8dcddce96894146ca745b8227c922c34f5990dcf",
+      "sha256": "1209fd17cee79f4a21b71d66d3d8b60b210216fa783ec555959d2ebff2fba483",
+      "role": "Imported ordinary cubic character mean, smooth full-sum duality, off-diagonal Gram estimate and large-value argument."
+    },
+    {
+      "repository": "openai/math",
+      "commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "path": "preprints/An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026/build/sections/dispersion.tex",
+      "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026/build/sections/dispersion.tex",
+      "git_blob_sha1": "033c7021b8bf7ef3d22253e1e8dabf237f177a04",
+      "sha256": "9a04b892feb99a79ec4e825bcd5096d3adb994c53d539c41d2da35f0a77f317c",
+      "role": "Imported literal uncorrected Poisson formula, common-divisor estimates, frequency separation and nonexceptional frequency bounds."
+    },
+    {
+      "repository": "openai/math",
+      "commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "path": "preprints/An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026/build/sections/angular.tex",
+      "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026/build/sections/angular.tex",
+      "git_blob_sha1": "e93fbddf626ab532b7e8fbfac830f1b45370b0e3",
+      "sha256": "f14a7c1c4f0b19b70d6705c8a2adcb658bfbc77814edb61cd57edb2465f38510",
+      "role": "Imported fixed-angular smooth duality and exceptional character argument. Angular order is fixed."
+    },
+    {
+      "repository": "openai/math",
+      "commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "path": "preprints/An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026/build/sections/background-type1.tex",
+      "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026/build/sections/background-type1.tex",
+      "git_blob_sha1": "3d31d5791ef3cf55c9608066997f9dc6c6bb861a",
+      "sha256": "1c7be908c862dc440772964cfdd59e095e7b0f079cec11d99f5c7a9644198dd1",
+      "role": "Imported ordinary and cubic large sieves, including the unrestricted-inner and unrestricted-outer extensions."
+    },
+    {
+      "repository": "openai/math",
+      "commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "path": "preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/build/paper.tex",
+      "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/build/paper.tex",
+      "git_blob_sha1": "268c4e3206d460c617d3d2129742a72b831b3def",
+      "sha256": "42a5ee0febca59fd1def55cfd6c6808c322ef4237d7726303ea52f711deac6a3",
+      "role": "Pinned sextic/cubic Gauss identities and conventions for the physical fourth-power orientation audit."
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "64cb43c038d1828a478cb97cbc32e435e111d2d2",
+      "path": "standalone/2026-10-20-boundary-iteration/global/ALL_UNITARY_REFINED_BOUNDARY.md",
+      "url": "https://github.com/GettysburgResearch/riemann/blob/64cb43c038d1828a478cb97cbc32e435e111d2d2/standalone/2026-10-20-boundary-iteration/global/ALL_UNITARY_REFINED_BOUNDARY.md",
+      "git_blob_sha1": "b34d93c8b6d311ec7fb3a9ee9f5371a9b8fd3f2e",
+      "sha256": "bbb5249e121473433c1bbed0d4aece56fa3cf38fe85f8e692a20cf87acdd1555",
+      "role": "PR1012 proposed source-dependent all-unitary boundary; an optional supplier of the explicit ZF_beta premise. Not independently certified by this packet."
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "3bcc1daaeb51c71cb2785b9744cde0d641f68f4c",
+      "path": "standalone/2026-10-23-collective-mobius-projection/extensions/2026-10-23-natural-projection/NATURAL_LABEL_PRIMITIVE_PROJECTION.md",
+      "url": "https://github.com/GettysburgResearch/riemann/blob/3bcc1daaeb51c71cb2785b9744cde0d641f68f4c/standalone/2026-10-23-collective-mobius-projection/extensions/2026-10-23-natural-projection/NATURAL_LABEL_PRIMITIVE_PROJECTION.md",
+      "git_blob_sha1": "072af5914386506b0de6bee983de3828ab33f5a1",
+      "sha256": "623253614f939fd071a131499eed8fd401429dcc6e4f6ad6a8561b121e7ce0a1",
+      "role": "PR1019 natural-label projection theorem and its explicit uncontrolled complementary projection; relevant comparison, not a transfer theorem."
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "3bcc1daaeb51c71cb2785b9744cde0d641f68f4c",
+      "path": "standalone/2026-10-23-collective-mobius-projection/PHYSICAL_QUARTIC_CUBIC_ROW_MEAN.md",
+      "url": "https://github.com/GettysburgResearch/riemann/blob/3bcc1daaeb51c71cb2785b9744cde0d641f68f4c/standalone/2026-10-23-collective-mobius-projection/PHYSICAL_QUARTIC_CUBIC_ROW_MEAN.md",
+      "git_blob_sha1": "3d3d1e148a7e2c4cad639c2f1d68b3f2c89299be",
+      "sha256": "eea3bd9425f35ab198795ab50febd650ff098f26c2fe5ca716d204346a52f1b8",
+      "role": "PR1019 physical k^3 quartic mean, annular D^(2 delta) conversion and its stated D^(17/12) consumer; relevant comparison."
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "845225c2e7713b69766b95c5e6964d44bb62f6bb",
+      "path": "standalone/2026-10-22-inverse-length-consumer/PROOF.md",
+      "url": "https://github.com/GettysburgResearch/riemann/blob/845225c2e7713b69766b95c5e6964d44bb62f6bb/standalone/2026-10-22-inverse-length-consumer/PROOF.md",
+      "git_blob_sha1": "50f611b563446d32838721d05d4c693e7b9b310b",
+      "sha256": "16fcf9c1d827c023f768080e1a7720ca8cc609023a138f724c6325de55033891",
+      "role": "Conditional 0.874 native inverse consumer; its analytic input is not proved here."
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "e87c5f669f81fe6371af926917d1c5b21023bce8",
+      "path": "standalone/2026-10-22-residue-remainder-followup/MOBIUS_PRIMITIVE_SCALAR_REMAINDER.md",
+      "url": "https://github.com/GettysburgResearch/riemann/blob/e87c5f669f81fe6371af926917d1c5b21023bce8/standalone/2026-10-22-residue-remainder-followup/MOBIUS_PRIMITIVE_SCALAR_REMAINDER.md",
+      "git_blob_sha1": "40581a2add1fc62594f68f505d7b30d68183ef68",
+      "sha256": "60a1615eefca1ed6c19572b2fa2296e2dbbf7146654b77a940ef1ecec469cf86",
+      "role": "Complete primitive scalar pairing; not a bound for the continued complementary inverse."
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "e87c5f669f81fe6371af926917d1c5b21023bce8",
+      "path": "standalone/2026-10-22-residue-remainder-followup/FINITE_FULL_GAUSS_OPERATOR.md",
+      "url": "https://github.com/GettysburgResearch/riemann/blob/e87c5f669f81fe6371af926917d1c5b21023bce8/standalone/2026-10-22-residue-remainder-followup/FINITE_FULL_GAUSS_OPERATOR.md",
+      "git_blob_sha1": "1743a5b780c43969e578b42d09f744f269696e12",
+      "sha256": "9d95cb27a11804cd553d7b836b3dcecaeb52bee633fbdc7cfe4893d9c59a6d8b",
+      "role": "Finite full-Gauss operator comparison; no transfer to an uncontrolled continued remainder."
+    }
+  ],
+  "additional_primary_references": [
+    {
+      "identifier": "arXiv:2610.26835v1",
+      "url": "https://arxiv.org/html/2610.26835v1",
+      "role": "Source-qualified benchmark, refined numerator consumer and critical scalar geometry. Not independently certified here."
+    },
+    {
+      "identifier": "arXiv:2201.01885v2",
+      "url": "https://arxiv.org/pdf/2201.01885v2",
+      "role": "Primitive sextic root-number normalization, Section 2.4 equation (2.8)."
+    },
+    {
+      "identifier": "arXiv:2610.04045v1",
+      "url": "https://arxiv.org/html/2610.04045v1",
+      "role": "Comparison with cubic conductor coupling; its second moment is not imported as a sixth-moment theorem."
+    },
+    {
+      "identifier": "arXiv:2306.11875v5",
+      "url": "https://arxiv.org/html/2306.11875v5",
+      "role": "Quartic completion conventions retained from the second pass."
+    },
+    {
+      "identifier": "GettysburgResearch/riemann PR1018 metadata",
+      "url": "https://github.com/GettysburgResearch/riemann/pull/1018",
+      "head": "591c880b68ba3de4850941ac7b6be002a6e6e025",
+      "role": "Recent-work scope check only. Its classical region is not used as a fixed-boundary improvement."
+    }
+  ],
+  "benchmark_reference": {
+    "author": "Liu",
+    "arxiv": "2610.26835v1",
+    "theorem": "17.1",
+    "url": "https://arxiv.org/html/2610.26835v1",
+    "reported_boundary": "0.874886647039964...",
+    "role": "Source-qualified numerical benchmark only; not a new result of this packet."
+  },
+  "components": {
+    "CUBIC_POWER_RECTANGULAR_EXTENSION.md": {
+      "bytes": 5941,
+      "sha256": "30b3df5f463bf6735b04dc22dfb2bf62f5287d5ae3b827870302eef43ebfc96e",
+      "git_blob_sha1": "76c918569c74899cd9fab17fa6716066a9f41d96"
+    },
+    "CUBIC_RAW_CONSUMER.md": {
+      "bytes": 8350,
+      "sha256": "5a2b2627dea424665ad5b1733a6a1e307ff4503a83819d23b3a94eb017c035e0",
+      "git_blob_sha1": "4402fd254e92503029e4f6c23480bc4d2dda9d61"
+    },
+    "M2_CAPACITY_AND_RECIPROCAL_CHECKS.md": {
+      "bytes": 7269,
+      "sha256": "5fdea43698ea35e7d50d56bbbb937ae18c2e8084d0c2abcf3861c9685dedd4df",
+      "git_blob_sha1": "35bd2d7449112a17598cd11989f5092d46546dfb"
+    },
+    "MOBIUS_DIVISOR_COEFFICIENT_ADAPTER.md": {
+      "bytes": 20242,
+      "sha256": "8d2b8e49149008a4541b8d6e8b993254252f124c2259241d24d65f4d6ce1bb7d",
+      "git_blob_sha1": "47e4b309a4aaee51875392349c465724e79d71ea"
+    },
+    "MOVING_SEXTIC_TWIST_EXTENSION.md": {
+      "bytes": 9946,
+      "sha256": "b43ee0452b171420aad77f5dc345c65b12ada1a269c8228ea9bebf95c804ee23",
+      "git_blob_sha1": "f3dc04185843af6407d23a9acce2ebe457df1303"
+    },
+    "NATURAL_PRESENTATION_TWIST_EXTENSION.md": {
+      "bytes": 12291,
+      "sha256": "fda494d598fa01a5f6c652b9bf503bad2fc95f4fe1a3af7e594b41b43ce6775f",
+      "git_blob_sha1": "56bd05436cb342741bf571fa4dc489009a19c48c"
+    },
+    "PRIME_AMPLIFIER_COMPLETION_AND_KERNEL.md": {
+      "bytes": 21824,
+      "sha256": "c16494980a4c5a9264cad605150cf38ce9839652fdf5f183c76dba7a500ae623",
+      "git_blob_sha1": "d9350e6ab3ad0847939a6f47774fd907f9b1060e"
+    },
+    "README.md": {
+      "bytes": 12358,
+      "sha256": "0cd4600baf0a407fae3f5b8a89361c2dc9375fd3094ffbf58cdb99374598aa3a",
+      "git_blob_sha1": "4097ccb54140e69807c09d8a88d8e3e85b5f4ba8"
+    },
+    "RECTANGULAR_EXPONENT_OBSTRUCTION.md": {
+      "bytes": 7221,
+      "sha256": "543b36ecc9171594957ac895510bc3156db84b5d8af69efa75f89bb7251f5b56",
+      "git_blob_sha1": "7df1292e36c7461b1882e6b1eb871d43d9f622d3"
+    },
+    "ROOT_NUMBER_FOURTH_MOMENT_SMALL_CORE.md": {
+      "bytes": 12264,
+      "sha256": "a12398f93f73d1f769fd97e95490ab4648894cba899c41c836f17b06f8846546",
+      "git_blob_sha1": "cdd4680d862ba7f84eba38802d6ed4f5895efc94"
+    },
+    "SIXTH_MOMENT_ROOT_NUMBER_REDUCTION.md": {
+      "bytes": 18267,
+      "sha256": "071bf3c7f9d6ec109e92e016f8fbeb8dd0ad75356e538ebb39316eee7ee1c10f",
+      "git_blob_sha1": "6af12589ad6ec03e34d49eaa4733abdc92f393fa"
+    },
+    "check_cube_amplification.py": {
+      "bytes": 4967,
+      "sha256": "9c0ab571a8d3acf0af34fa7fa9d3c3bdfb11a47418ab8fdf739074307785fcd0",
+      "git_blob_sha1": "2ccb86e092a0f5efcf7daaf9938f00b64a63a75b"
+    },
+    "cube_amplification_report.json": {
+      "bytes": 423,
+      "sha256": "f4598895d8947823d1a446cc30116b277efc1beb1c8affee1851355a553b1811",
+      "git_blob_sha1": "781afa54c322730e186051d616448ac417fb54bc"
+    }
+  },
+  "finite_validation": {
+    "script": "check_cube_amplification.py",
+    "report": "cube_amplification_report.json",
+    "arithmetic_class": "Exact integer Z[omega] formal reciprocity model.",
+    "multiplicativity_pairs": 27,
+    "amplification_identities": 6912,
+    "fibre_bounds": 1331,
+    "missing_divisor_rejections": 174,
+    "normal_command": "python3 -I -S -B check_cube_amplification.py",
+    "optimized_command": "python3 -I -S -B -O check_cube_amplification.py",
+    "primitive_gauss_certification": false,
+    "analytic_certification": false
+  },
+  "review_policy": "Freeze these mathematical bytes, independently fetch and review that exact commit, then add only REVIEW.md in a separate successor. Preserve all prior passes."
+}

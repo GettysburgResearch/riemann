@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-24",
+  "status": "Proposed source-dependent mathematics; independent agent review is not external peer review or formal verification.",
+  "repository_snapshot": {
+    "repository": "GettysburgResearch/riemann",
+    "main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+    "parent_of_third_pass": "7e07d3f27fc7a07dc0caab08c53540e0e2dce787",
+    "pr1012_head": "64cb43c038d1828a478cb97cbc32e435e111d2d2",
+    "pr1019_head": "3bcc1daaeb51c71cb2785b9744cde0d641f68f4c"
+  },
+  "scope": {
+    "full_moment": "All rows and all frequencies for the stated fixed-twist Mobius cubic Gauss coefficient, A >= B >= 2, under ZF_beta and pinned analytic inputs.",
+    "initial_punctures": "Fixed. Internally generated punctures and natural zero masks are retained.",
+    "full_moment_saving": "A fixed positive exponent exists; no numerical value is asserted.",
+    "exceptional_mean_saving": "eta = 10^-6 in exponent neighborhoods of radius delta = 10^-9. This ordinary-character estimate has no zero-free premise.",
+    "global_zero_free_boundary_changed": false,
+    "rh_claimed": false
+  },
+  "sources": [
+    {
+      "repository": "openai/math",
+      "commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "path": "preprints/An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026/build/sections/dual.tex",
+      "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026/build/sections/dual.tex",
+      "git_blob_sha1": "8dcddce96894146ca745b8227c922c34f5990dcf",
+      "sha256": "1209fd17cee79f4a21b71d66d3d8b60b210216fa783ec555959d2ebff2fba483",
+      "role": "Imported ordinary cubic character mean, smooth full-sum duality, off-diagonal Gram estimate and large-value argument."
+    },
+    {
+      "repository": "openai/math",
+      "commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "path": "preprints/An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026/build/sections/dispersion.tex",
+      "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026/build/sections/dispersion.tex",
+      "git_blob_sha1": "033c7021b8bf7ef3d22253e1e8dabf237f177a04",
+      "sha256": "9a04b892feb99a79ec4e825bcd5096d3adb994c53d539c41d2da35f0a77f317c",
+      "role": "Imported literal uncorrected Poisson formula, common-divisor estimates, frequency separation and nonexceptional frequency bounds."
+    },
+    {
+      "repository": "openai/math",
+      "commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "path": "preprints/An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026/build/sections/angular.tex",
+      "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026/build/sections/angular.tex",
+      "git_blob_sha1": "e93fbddf626ab532b7e8fbfac830f1b45370b0e3",
+      "sha256": "f14a7c1c4f0b19b70d6705c8a2adcb658bfbc77814edb61cd57edb2465f38510",
+      "role": "Imported fixed-angular smooth duality and exceptional character argument. Angular order is fixed."
+    },
+    {
+      "repository": "openai/math",
+      "commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "path": "preprints/An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026/build/sections/background-type1.tex",
+      "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026/build/sections/background-type1.tex",
+      "git_blob_sha1": "3d31d5791ef3cf55c9608066997f9dc6c6bb861a",
+      "sha256": "1c7be908c862dc440772964cfdd59e095e7b0f079cec11d99f5c7a9644198dd1",
+      "role": "Imported ordinary and cubic large sieves, including the unrestricted-inner and unrestricted-outer extensions."
+    },
+    {
+      "repository": "openai/math",
+      "commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "path": "preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/build/paper.tex",
+      "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/build/paper.tex",
+      "git_blob_sha1": "268c4e3206d460c617d3d2129742a72b831b3def",
+      "sha256": "42a5ee0febca59fd1def55cfd6c6808c322ef4237d7726303ea52f711deac6a3",
+      "role": "Pinned sextic/cubic Gauss identities and conventions for the physical fourth-power orientation audit."
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "64cb43c038d1828a478cb97cbc32e435e111d2d2",
+      "path": "standalone/2026-10-20-boundary-iteration/global/ALL_UNITARY_REFINED_BOUNDARY.md",
+      "url": "https://github.com/GettysburgResearch/riemann/blob/64cb43c038d1828a478cb97cbc32e435e111d2d2/standalone/2026-10-20-boundary-iteration/global/ALL_UNITARY_REFINED_BOUNDARY.md",
+      "git_blob_sha1": "b34d93c8b6d311ec7fb3a9ee9f5371a9b8fd3f2e",
+      "sha256": "bbb5249e121473433c1bbed0d4aece56fa3cf38fe85f8e692a20cf87acdd1555",
+      "role": "PR1012 proposed source-dependent all-unitary boundary; an optional supplier of the explicit ZF_beta premise. Not independently certified by this packet."
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "3bcc1daaeb51c71cb2785b9744cde0d641f68f4c",
+      "path": "standalone/2026-10-23-collective-mobius-projection/extensions/2026-10-23-natural-projection/NATURAL_LABEL_PRIMITIVE_PROJECTION.md",
+      "url": "https://github.com/GettysburgResearch/riemann/blob/3bcc1daaeb51c71cb2785b9744cde0d641f68f4c/standalone/2026-10-23-collective-mobius-projection/extensions/2026-10-23-natural-projection/NATURAL_LABEL_PRIMITIVE_PROJECTION.md",
+      "git_blob_sha1": "072af5914386506b0de6bee983de3828ab33f5a1",
+      "sha256": "623253614f939fd071a131499eed8fd401429dcc6e4f6ad6a8561b121e7ce0a1",
+      "role": "PR1019 natural-label projection theorem and its explicit uncontrolled complementary projection; relevant comparison, not a transfer theorem."
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "3bcc1daaeb51c71cb2785b9744cde0d641f68f4c",
+      "path": "standalone/2026-10-23-collective-mobius-projection/PHYSICAL_QUARTIC_CUBIC_ROW_MEAN.md",
+      "url": "https://github.com/GettysburgResearch/riemann/blob/3bcc1daaeb51c71cb2785b9744cde0d641f68f4c/standalone/2026-10-23-collective-mobius-projection/PHYSICAL_QUARTIC_CUBIC_ROW_MEAN.md",
+      "git_blob_sha1": "3d3d1e148a7e2c4cad639c2f1d68b3f2c89299be",
+      "sha256": "eea3bd9425f35ab198795ab50febd650ff098f26c2fe5ca716d204346a52f1b8",
+      "role": "PR1019 physical k^3 quartic mean, annular D^(2 delta) conversion and its stated D^(17/12) consumer; relevant comparison."
+    }
+  ],
+  "benchmark_reference": {
+    "author": "Liu",
+    "arxiv": "2610.26835v1",
+    "theorem": "17.1",
+    "url": "https://arxiv.org/html/2610.26835v1",
+    "reported_boundary": "0.874886647039964...",
+    "role": "Source-qualified numerical benchmark only; not a new result of this packet."
+  },
+  "finite_validation": {
+    "script": "check_cubic_arithmetic.py",
+    "report": "cubic_arithmetic_report.json",
+    "checks": 943,
+    "exact_cyclotomic_checks": 408,
+    "finite_ideal_monoid_checks": 535,
+    "normal_command": "python3 -I -S -B check_cubic_arithmetic.py",
+    "optimized_command": "python3 -I -S -B -O check_cubic_arithmetic.py",
+    "reports_identical": true,
+    "analytic_certification": false
+  },
+  "review_policy": "Freeze the mathematical commit, review its exact files, then add REVIEW.md in a separate review-only commit. No source result is promoted merely because an agent accepts this conditional deduction."
+}
