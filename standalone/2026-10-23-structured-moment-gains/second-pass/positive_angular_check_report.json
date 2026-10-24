@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "note_sha256": "5c3fe727d5a50de4edb4f94692c0de89343b34289d54d5de887d4f8dabd9a7df",
+  "check_count": 1662,
+  "checks": {
+    "dirac_inversion_principal": 768,
+    "dirac_inversion_zero_order": 256,
+    "dirac_fourier_column_1": 320,
+    "wronskian_column_algebra": 128,
+    "canonical_valuation": 65,
+    "primitive_reindex": 97,
+    "e_sum_exponent": 5,
+    "f_sum_exponent": 5,
+    "external_Q_exponent": 5,
+    "convergent_scale_sums": 5,
+    "cube_character_orientation": 8
+  },
+  "scope": "Exact matrix/Dirac algebra and primitive row exponents only",
+  "polynomial_certificate": "Dirac inversion only: the displayed cleared principal-symbol and zero-order expressions have degree at most three in each of x,b,y; vanishing on the four-point tensor grid therefore proves those polynomial identities. The finite Bessel-recurrence checks are algebra samples, not an analytic special-function proof.",
+  "not_certified": [
+    "analytic continuation and elliptic estimates",
+    "sparse cube-indexed mean square",
+    "zero-free boundary improvement"
+  ]
+}
