@@ -339,8 +339,7 @@ bound on `Nk_*` is needed: `Nk_*>=1`. Summing all units and
 `S`-supported factors, for every `H>0`,
 
 \[
- \sum_{k\ {
-m principal}}(1+Nk/H)^{-R_0}\ll H^{1/6}.
+ \sum_{k\ {\rm principal}}(1+Nk/H)^{-R_0}\ll H^{1/6}.
  \tag{21}
 \]
 

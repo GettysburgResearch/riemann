@@ -1,6 +1,6 @@
 {
   "scope": "Mathematical files and finite checker receipts for the second pass; manifest excludes itself and later review reports.",
-  "parent_commit": "00d36f61ae7898846579840e6a68f9a06bd8295c",
+  "parent_commit": "3b47783a7c775bc8133f6601cb9bb97b1b38678a",
   "files": [
     {
       "path": "CAPPED_NATIVE_MOMENT.md",
@@ -28,9 +28,9 @@
     },
     {
       "path": "MOVING_TWIST_MOMENT.md",
-      "bytes": 15256,
-      "sha256": "e741c1dd5109111eb3489d361251dbff2d18f318dbf0a5b1e3e03370c04f74d4",
-      "git_blob": "0691fb95a91b81f33f85e95bc9ba936d3845063e"
+      "bytes": 15257,
+      "sha256": "51490a1139f6a466de69d10faa15570b3b26e67976360fc75f7bcb4374bb629a",
+      "git_blob": "0efad91ee54db8f7f264614f18d8d2815f028016"
     },
     {
       "path": "NATIVE_GAIN.md",
@@ -74,5 +74,6 @@
       "sha256": "c270026e16d88976da7230139655852a8d197eeefc4b903f4eeeb7733f278d86",
       "git_blob": "a129a5b3f17ad3d6d140c58d151ecf02a30e14ae"
     }
-  ]
+  ],
+  "repair": "One LaTeX carriage-return control byte in equation (21) replaced by the intended literal backslash-rm; no mathematical formula changed."
 }
