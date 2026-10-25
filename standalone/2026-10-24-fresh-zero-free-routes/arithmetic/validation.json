@@ -1,0 +1,84 @@
+{
+  "analytic_moment_input_proved_by_this_checker": false,
+  "density_envelope_numeric_diagnostics": [
+    {
+      "maximum_exponent": 1.0,
+      "r": "1/2",
+      "sigma_max": 0.5,
+      "z": 0
+    },
+    {
+      "maximum_exponent": 1.0,
+      "r": "1/2",
+      "sigma_max": 0.5,
+      "z": 0.05
+    },
+    {
+      "maximum_exponent": 1.0,
+      "r": "2/3",
+      "sigma_max": 0.5,
+      "z": 0
+    },
+    {
+      "maximum_exponent": 1.000263723645,
+      "r": "2/3",
+      "sigma_max": 0.515723896367,
+      "z": 0.05
+    },
+    {
+      "maximum_exponent": 1.006132760734,
+      "r": "3/4",
+      "sigma_max": 0.571488698022,
+      "z": 0
+    },
+    {
+      "maximum_exponent": 1.008939989058,
+      "r": "3/4",
+      "sigma_max": 0.586313329686,
+      "z": 0.05
+    },
+    {
+      "maximum_exponent": 1.039887094291,
+      "r": "8/9",
+      "sigma_max": 0.667468245269,
+      "z": 0
+    },
+    {
+      "maximum_exponent": 1.046637471892,
+      "r": "8/9",
+      "sigma_max": 0.68108553897,
+      "z": 0.05
+    },
+    {
+      "maximum_exponent": 1.084183762028,
+      "r": "1",
+      "sigma_max": 0.72937927384,
+      "z": 0
+    },
+    {
+      "maximum_exponent": 1.093871125851,
+      "r": "1",
+      "sigma_max": 0.742217781463,
+      "z": 0.05
+    },
+    {
+      "maximum_exponent": 1.15945171909,
+      "r": "8/7",
+      "sigma_max": 0.795296730218,
+      "z": 0
+    },
+    {
+      "maximum_exponent": 1.172684820286,
+      "r": "8/7",
+      "sigma_max": 0.807306054438,
+      "z": 0.05
+    }
+  ],
+  "exact_chebyshev_cost_checks": 33,
+  "exact_coefficient_mass_checks": 33,
+  "exact_counterexample_values": 561,
+  "exact_density_identity_checks": 38,
+  "exact_interpolation_monomials": 561,
+  "native_density_deficit_at_three_quarters": "5/48",
+  "zero_free_region_certified": false
+}

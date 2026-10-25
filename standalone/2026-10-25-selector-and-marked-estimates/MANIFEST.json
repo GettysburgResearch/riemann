@@ -1,0 +1,171 @@
+{
+  "format": 1,
+  "date": "2026-10-25",
+  "scope": "Frozen second-pass mathematical packet. Excludes this manifest itself and a possible later PUBLICATION_REVIEW.md. Git commit and tree identities bind the complete publication.",
+  "parent_commit": "a00d68e9f0e7ada5462e6be45c123cfaa6b3ffb0",
+  "first_pass_mathematical_commit": "742e952be4ef7843de86ea12678c0bdd3d3579c3",
+  "new_zero_free_region_claimed": false,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 13433,
+      "sha256": "136bea7d5fda5c3fbd6ea5195a51e5dcaaec851f57f8e65344e7593f820dbac8",
+      "git_blob_sha1": "48ea62c56ee6209a99a39545ed4e37d7f1b5850e",
+      "mode": "100644"
+    },
+    {
+      "path": "SOURCES.md",
+      "bytes": 4080,
+      "sha256": "369c3958f68bb1e19a677715891b74ac8278d0356c482b041a9b6470b995d418",
+      "git_blob_sha1": "bffe9c929e5b7196fc3a9e0cdd3dd9e90932e140",
+      "mode": "100644"
+    },
+    {
+      "path": "fractional/NORM_TWIST_AND_BAND_TRANSFER.md",
+      "bytes": 11429,
+      "sha256": "836be1511e47c4dc2f6848e0bab1393af0659327253f607d601b97c5627f950e",
+      "git_blob_sha1": "8977202773091758ab7515174278769c1f64c583",
+      "mode": "100644"
+    },
+    {
+      "path": "fractional/UNIFORM_FRACTIONAL_WINDOW.md",
+      "bytes": 10847,
+      "sha256": "18df393da1423c33256237a7f739409b4cbe26bae6d2b63ede6dbc05b118b6e0",
+      "git_blob_sha1": "15378a3d56ec8a0d16ee185f16dbc00482910079",
+      "mode": "100644"
+    },
+    {
+      "path": "marked/GEVREY_INTEGER_WINDOW.md",
+      "bytes": 10938,
+      "sha256": "2eabc9818994e00d8113c237d95eb76a7dae46675000c45adf60f97279d9d216",
+      "git_blob_sha1": "515016d2041b7264d47d69606115ba451b19f81c",
+      "mode": "100644"
+    },
+    {
+      "path": "marked/GROWING_INTEGER_RESONANCE.md",
+      "bytes": 12526,
+      "sha256": "5a42b1ce61200a33e5bef112f5691fe03e3b9a9457779f8515952e46875347d2",
+      "git_blob_sha1": "a7115a0b715be35463387f15a1e5de6b0461cbfe",
+      "mode": "100644"
+    },
+    {
+      "path": "marked/MATCHED_PRIME_SQUAREFREE_REMAINDER.md",
+      "bytes": 14717,
+      "sha256": "6cf6a71909f23fa29f7b1d7a0833da477fc2b1a58d9c81aeab8bdc19032348b0",
+      "git_blob_sha1": "5b9947c67f63be3aa7667e23648e9e5fa9786527",
+      "mode": "100644"
+    },
+    {
+      "path": "marked/check_marked_convolution.py",
+      "bytes": 4492,
+      "sha256": "1a210b97ce3f9f921ee702b70984b66d8e1e6fe1ecd354472ad453f8fa691c01",
+      "git_blob_sha1": "af3be99db0d46e9907b7924916ec5eb74e55aea4",
+      "mode": "100644"
+    },
+    {
+      "path": "marked/marked_convolution_checks.json",
+      "bytes": 1838,
+      "sha256": "bc65833e77f89f0b558d94dbbdc80e50f4fa39d253646ed37ab2e37523b1b0f6",
+      "git_blob_sha1": "cd8771e35c5e717841a094ee6e7f515b64d26c1f",
+      "mode": "100644"
+    },
+    {
+      "path": "reviews/OVERVIEW_REVIEW.md",
+      "bytes": 11654,
+      "sha256": "c431315d3770b8f9fd164a8c1ba0204454d9f48353704db40d08e2d5ddab4bd5",
+      "git_blob_sha1": "5b1a49f149bf9cdd810f2f174292bf22dffda053",
+      "mode": "100644"
+    },
+    {
+      "path": "reviews/REVIEW_FRACTIONAL_2026-10-25.md",
+      "bytes": 7032,
+      "sha256": "4b5b27ca696a1eb0935c00d24b13820f416ec97e254dad71d5925c0d972604d7",
+      "git_blob_sha1": "aed31e011ff6f1fdeef4aae899ba0edccb195e1d",
+      "mode": "100644"
+    },
+    {
+      "path": "reviews/REVIEW_OF_MARKED_COMPONENTS.md",
+      "bytes": 11482,
+      "sha256": "9d9dea0fadb325e0a10b3b5a23bffe87f80fc78b83cfde972ebd52dfa73ea7e8",
+      "git_blob_sha1": "27b7fd7093f0a20e340a4ef5c269f1e446338276",
+      "mode": "100644"
+    },
+    {
+      "path": "reviews/ROOT_REPLAY.json",
+      "bytes": 1945,
+      "sha256": "4b6f497bc06e90d0e97766946341f47378254f938c3b4a16a928cd59786c99e0",
+      "git_blob_sha1": "ffa7ef41bedb706816280d729391f47320b5d849",
+      "mode": "100644"
+    },
+    {
+      "path": "reviews/SPECTRAL_CONSUMERS_REVIEW.md",
+      "bytes": 9808,
+      "sha256": "9ce62609098f402074f346a66aabcf3e36258c7734eb546a9ca2a792c5d3ed9b",
+      "git_blob_sha1": "f9bf1f857ec0c49d113b1dee8456effc6399bf6a",
+      "mode": "100644"
+    },
+    {
+      "path": "spectral/EVEN_FINITE_SELECTOR_CONSUMER.md",
+      "bytes": 13707,
+      "sha256": "6c0a67ede84942a31287716661d5fe85644445a0517a296eed36be23c8036e74",
+      "git_blob_sha1": "916abee0b89a46c7e0d8ba4b5c4d9c562803cb40",
+      "mode": "100644"
+    },
+    {
+      "path": "spectral/NUMERICAL_SELECTOR_DIAGNOSTICS.md",
+      "bytes": 7002,
+      "sha256": "703fe30fbba0648d1bb5915963512b07a4addd63ce324b12a5d187a6e412bb60",
+      "git_blob_sha1": "ce74a719d15ead9ff3533d3022a7fa2d47625b9c",
+      "mode": "100644"
+    },
+    {
+      "path": "spectral/SPECTRAL_GROWTH_AND_TIGHT_POSITIVE_SELECTION.md",
+      "bytes": 14011,
+      "sha256": "4db61773b675f4926731360eee769cd49cb66690a56f2a66cd02f902bf38e083",
+      "git_blob_sha1": "43f2a7d41e35064e486b05b31eea5a9b0c157c65",
+      "mode": "100644"
+    },
+    {
+      "path": "spectral/selector_experiment.py",
+      "bytes": 6609,
+      "sha256": "45277fb3500b1bb45724eb4f06bf618e1a1bdeb47f5784925fe3cf452713fa68",
+      "git_blob_sha1": "eb9377becfe541a7d39698a70647a9af2b81b1aa",
+      "mode": "100644"
+    },
+    {
+      "path": "spectral/selector_n16.json",
+      "bytes": 15117,
+      "sha256": "a1b0dfa9a4532fbc8be2f493b1c8eaf3a5abd7ebbc70c61a8d8fb6a0eff6063e",
+      "git_blob_sha1": "c2363e94bfb0023d7585d5db83029aaf7d99a49c",
+      "mode": "100644"
+    },
+    {
+      "path": "spectral/selector_n32.json",
+      "bytes": 11664,
+      "sha256": "d64ff1df0b40b578063681beaebf8d11d1aba38760ac15bcab1dfa1e59e4ae67",
+      "git_blob_sha1": "5c28b3970c46234d35f16d931bcd5729c876eec3",
+      "mode": "100644"
+    },
+    {
+      "path": "spectral/selector_root_replay.json",
+      "bytes": 3718,
+      "sha256": "ed09c4d8441962209009b75b8e35eeb623458c37696c1c9dcc7d1de077f622e4",
+      "git_blob_sha1": "67dd6d6f933e9dc1b17455a2fa9fbbc4d3f612b7",
+      "mode": "100644"
+    },
+    {
+      "path": "spectral/source/NUMERICS.md",
+      "bytes": 5860,
+      "sha256": "7bcd7d3ef3889ba582dea04a062a2c94e9f6fc2f13be4894c14ca8ef4ea7e1ec",
+      "git_blob_sha1": "ce5d614fcea767f964fa847c7bfdec03bc170b43",
+      "mode": "100644"
+    },
+    {
+      "path": "spectral/source/experiment.py",
+      "bytes": 9128,
+      "sha256": "79563f448d916f400ecc22f3461d6d3583c5604100cba6c7c61c705ebf500463",
+      "git_blob_sha1": "b0d2b2f72fed1db9632fb910f37acb849ba60784",
+      "mode": "100644"
+    }
+  ]
+}

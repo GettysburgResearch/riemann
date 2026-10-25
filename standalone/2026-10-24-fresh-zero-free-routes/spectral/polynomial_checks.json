@@ -1,0 +1,59 @@
+{
+  "analytic_scope": "Global polynomial positivity for the explicit theta-derivative density; theta/Weil identities are analytic premises proved in the notes.",
+  "bernstein_coefficients": [
+    "1551429/8",
+    "6801147/16",
+    "4709161/6",
+    "18462881/16",
+    "8691051/8",
+    "3777125/48",
+    "21472625/4"
+  ],
+  "checks": [
+    "second derivative polynomial",
+    "fourth derivative polynomial",
+    "complete Bernstein coefficient identity on [3,10]",
+    "strict positivity throughout [3,10]",
+    "complete tail polynomial identity at u=10+y",
+    "strict positivity for every y>=0",
+    "explicit quartet real polynomial equation",
+    "explicit quartet imaginary polynomial equation",
+    "explicit quartet is nonreal and off the imaginary axis",
+    "exact variance decrement",
+    "prescribed-width quartet identity 1/100",
+    "prescribed-width quartet identity 1/10000",
+    "prescribed-width quartet identity 2/7"
+  ],
+  "quartet_examples": [
+    {
+      "delta": "1601/640000",
+      "epsilon": "1/100",
+      "eta_squared": "1/16",
+      "real_part_squared": "1601/16"
+    },
+    {
+      "delta": "9000081/250000000000",
+      "epsilon": "1/10000",
+      "eta_squared": "9/100",
+      "real_part_squared": "1000009/100"
+    },
+    {
+      "delta": "4040/8281",
+      "epsilon": "2/7",
+      "eta_squared": "5/13",
+      "real_part_squared": "101/26"
+    }
+  ],
+  "status": "EXACT_POLYNOMIAL_CHECKS_PASS",
+  "tail_coefficients": [
+    "7872625/4",
+    "30350625/8",
+    "7550805/4",
+    "422000",
+    "48360",
+    "2784",
+    "64"
+  ],
+  "theta_quadrature_performed": false,
+  "zero_free_region_certified": false
+}

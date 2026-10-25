@@ -1,0 +1,843 @@
+{
+  "scope": "EXACT_FINITE_ALGEBRA_AND_EXPLORATORY_SHARP_ANNULI",
+  "asymptotic_zero_free_claim": false,
+  "checks": {
+    "factor_reconstructions": 88,
+    "local_multiplicativity_checks": 7500,
+    "split_and_inert_prime_examples": [
+      [
+        7,
+        [
+          -2,
+          -3
+        ]
+      ],
+      [
+        7,
+        [
+          1,
+          3
+        ]
+      ],
+      [
+        13,
+        [
+          1,
+          -3
+        ]
+      ],
+      [
+        13,
+        [
+          4,
+          3
+        ]
+      ],
+      [
+        19,
+        [
+          -5,
+          -3
+        ]
+      ],
+      [
+        19,
+        [
+          -2,
+          3
+        ]
+      ],
+      [
+        25,
+        [
+          -5,
+          0
+        ]
+      ],
+      [
+        31,
+        [
+          -5,
+          -6
+        ]
+      ],
+      [
+        31,
+        [
+          1,
+          6
+        ]
+      ],
+      [
+        37,
+        [
+          4,
+          -3
+        ]
+      ],
+      [
+        37,
+        [
+          7,
+          3
+        ]
+      ],
+      [
+        43,
+        [
+          1,
+          -6
+        ]
+      ]
+    ]
+  },
+  "cases": [
+    {
+      "U": 64,
+      "D": 128,
+      "row_count": 19,
+      "column_count": 37,
+      "max_omega": 2,
+      "collision_zeros_retained": 32,
+      "energy_polynomial_integer_coefficients": [
+        0,
+        0,
+        433,
+        -112,
+        343
+      ],
+      "diagonal_polynomial_integer_coefficients": [
+        0,
+        0,
+        418,
+        0,
+        253
+      ],
+      "centered_polynomial_integer_coefficients": [
+        0,
+        0,
+        15,
+        -112,
+        90
+      ],
+      "exact_interpolation_verified": true,
+      "equal_grid_extrapolation_weight_sum": "13441",
+      "values": [
+        {
+          "z": "-1",
+          "moment_exact": "111/16",
+          "diagonal_exact": "671/128",
+          "moment_over_U_float": 0.1083984375,
+          "centered_over_U_float": 0.0264892578125
+        },
+        {
+          "z": "1/4",
+          "moment_exact": "6823/32768",
+          "diagonal_exact": "6941/32768",
+          "moment_over_U_float": 0.003253459930419922,
+          "centered_over_U_float": -5.626678466796875e-05
+        },
+        {
+          "z": "1/2",
+          "moment_exact": "1851/2048",
+          "diagonal_exact": "1925/2048",
+          "moment_over_U_float": 0.01412200927734375,
+          "centered_over_U_float": -0.0005645751953125
+        },
+        {
+          "z": "3/4",
+          "moment_exact": "78039/32768",
+          "diagonal_exact": "80685/32768",
+          "moment_over_U_float": 0.03721189498901367,
+          "centered_over_U_float": -0.0012617111206054688
+        },
+        {
+          "z": "1",
+          "moment_exact": "83/16",
+          "diagonal_exact": "671/128",
+          "moment_over_U_float": 0.0810546875,
+          "centered_over_U_float": -0.0008544921875
+        },
+        {
+          "z": "2",
+          "moment_exact": "1581/32",
+          "diagonal_exact": "715/16",
+          "moment_over_U_float": 0.77197265625,
+          "centered_over_U_float": 0.07373046875
+        }
+      ]
+    },
+    {
+      "U": 128,
+      "D": 256,
+      "row_count": 39,
+      "column_count": 74,
+      "max_omega": 2,
+      "collision_zeros_retained": 172,
+      "energy_polynomial_integer_coefficients": [
+        0,
+        0,
+        1281,
+        422,
+        1194
+      ],
+      "diagonal_polynomial_integer_coefficients": [
+        0,
+        0,
+        1599,
+        0,
+        1115
+      ],
+      "centered_polynomial_integer_coefficients": [
+        0,
+        0,
+        -318,
+        422,
+        79
+      ],
+      "exact_interpolation_verified": true,
+      "equal_grid_extrapolation_weight_sum": "13441",
+      "values": [
+        {
+          "z": "-1",
+          "moment_exact": "2053/256",
+          "diagonal_exact": "1357/128",
+          "moment_over_U_float": 0.062652587890625,
+          "centered_over_U_float": -0.020172119140625
+        },
+        {
+          "z": "1/4",
+          "moment_exact": "11689/32768",
+          "diagonal_exact": "26699/65536",
+          "moment_over_U_float": 0.002786874771118164,
+          "centered_over_U_float": -0.00039589405059814453
+        },
+        {
+          "z": "1/2",
+          "moment_exact": "3581/2048",
+          "diagonal_exact": "7511/4096",
+          "moment_over_U_float": 0.013660430908203125,
+          "centered_over_U_float": -0.0006656646728515625
+        },
+        {
+          "z": "3/4",
+          "moment_exact": "163377/32768",
+          "diagonal_exact": "320571/65536",
+          "moment_over_U_float": 0.03895211219787598,
+          "centered_over_U_float": 0.0007370710372924805
+        },
+        {
+          "z": "1",
+          "moment_exact": "2897/256",
+          "diagonal_exact": "1357/128",
+          "moment_over_U_float": 0.088409423828125,
+          "centered_over_U_float": 0.005584716796875
+        },
+        {
+          "z": "2",
+          "moment_exact": "6901/64",
+          "diagonal_exact": "6059/64",
+          "moment_over_U_float": 0.8424072265625,
+          "centered_over_U_float": 0.102783203125
+        }
+      ]
+    },
+    {
+      "U": 256,
+      "D": 512,
+      "row_count": 80,
+      "column_count": 139,
+      "max_omega": 3,
+      "collision_zeros_retained": 662,
+      "energy_polynomial_integer_coefficients": [
+        0,
+        0,
+        6400,
+        376,
+        4235,
+        182,
+        219
+      ],
+      "diagonal_polynomial_integer_coefficients": [
+        0,
+        0,
+        6080,
+        0,
+        4170,
+        0,
+        208
+      ],
+      "centered_polynomial_integer_coefficients": [
+        0,
+        0,
+        320,
+        376,
+        65,
+        182,
+        11
+      ],
+      "exact_interpolation_verified": true,
+      "equal_grid_extrapolation_weight_sum": "2907647",
+      "values": [
+        {
+          "z": "-1",
+          "moment_exact": "1287/64",
+          "diagonal_exact": "5229/256",
+          "moment_over_U_float": 0.07855224609375,
+          "centered_over_U_float": -0.0012359619140625
+        },
+        {
+          "z": "1/4",
+          "moment_exact": "1731171/2097152",
+          "diagonal_exact": "101463/131072",
+          "moment_over_U_float": 0.003224557265639305,
+          "centered_over_U_float": 0.00020072422921657562
+        },
+        {
+          "z": "1/2",
+          "moment_exact": "122931/32768",
+          "diagonal_exact": "14271/4096",
+          "moment_over_U_float": 0.01465451717376709,
+          "centered_over_U_float": 0.001044631004333496
+        },
+        {
+          "z": "3/4",
+          "moment_exact": "21220443/2097152",
+          "diagonal_exact": "1222767/131072",
+          "moment_over_U_float": 0.03952615521848202,
+          "centered_over_U_float": 0.0030848588794469833
+        },
+        {
+          "z": "1",
+          "moment_exact": "2853/128",
+          "diagonal_exact": "5229/256",
+          "moment_over_U_float": 0.087066650390625,
+          "centered_over_U_float": 0.0072784423828125
+        },
+        {
+          "z": "2",
+          "moment_exact": "7263/32",
+          "diagonal_exact": "3261/16",
+          "moment_over_U_float": 0.8865966796875,
+          "centered_over_U_float": 0.0904541015625
+        }
+      ]
+    },
+    {
+      "U": 512,
+      "D": 1024,
+      "row_count": 150,
+      "column_count": 294,
+      "max_omega": 3,
+      "collision_zeros_retained": 2621,
+      "energy_polynomial_integer_coefficients": [
+        0,
+        0,
+        17649,
+        -6530,
+        19195,
+        -208,
+        1471
+      ],
+      "diagonal_polynomial_integer_coefficients": [
+        0,
+        0,
+        20850,
+        0,
+        18964,
+        0,
+        1665
+      ],
+      "centered_polynomial_integer_coefficients": [
+        0,
+        0,
+        -3201,
+        -6530,
+        231,
+        -208,
+        -194
+      ],
+      "exact_interpolation_verified": true,
+      "equal_grid_extrapolation_weight_sum": "2907647",
+      "values": [
+        {
+          "z": "-1",
+          "moment_exact": "45053/1024",
+          "diagonal_exact": "41479/1024",
+          "moment_over_U_float": 0.08593177795410156,
+          "centered_over_U_float": 0.006816864013671875
+        },
+        {
+          "z": "1/4",
+          "moment_exact": "4407983/4194304",
+          "diagonal_exact": "5642689/4194304",
+          "moment_over_U_float": 0.0020526270382106304,
+          "centered_over_U_float": -0.0005749547854065895
+        },
+        {
+          "z": "1/2",
+          "moment_exact": "307979/65536",
+          "diagonal_exact": "411121/65536",
+          "moment_over_U_float": 0.009178489446640015,
+          "centered_over_U_float": -0.00307387113571167
+        },
+        {
+          "z": "3/4",
+          "moment_exact": "55126359/4194304",
+          "diagonal_exact": "73829529/4194304",
+          "moment_over_U_float": 0.025670211296528578,
+          "centered_over_U_float": -0.00870934221893549
+        },
+        {
+          "z": "1",
+          "moment_exact": "31577/1024",
+          "diagonal_exact": "41479/1024",
+          "moment_over_U_float": 0.06022834777832031,
+          "centered_over_U_float": -0.018886566162109375
+        },
+        {
+          "z": "2",
+          "moment_exact": "103241/256",
+          "diagonal_exact": "61673/128",
+          "moment_over_U_float": 0.7876663208007812,
+          "centered_over_U_float": -0.15338897705078125
+        }
+      ]
+    },
+    {
+      "U": 256,
+      "D": 4096,
+      "row_count": 80,
+      "column_count": 1145,
+      "max_omega": 3,
+      "collision_zeros_retained": 5853,
+      "energy_polynomial_integer_coefficients": [
+        0,
+        0,
+        26188,
+        -13876,
+        29845,
+        -1028,
+        7339
+      ],
+      "diagonal_polynomial_integer_coefficients": [
+        0,
+        0,
+        36720,
+        0,
+        41301,
+        0,
+        7726
+      ],
+      "centered_polynomial_integer_coefficients": [
+        0,
+        0,
+        -10532,
+        -13876,
+        -11456,
+        -1028,
+        -387
+      ],
+      "exact_interpolation_verified": true,
+      "equal_grid_extrapolation_weight_sum": "2907647",
+      "values": [
+        {
+          "z": "-1",
+          "moment_exact": "19569/1024",
+          "diagonal_exact": "85747/4096",
+          "moment_over_U_float": 0.07464981079101562,
+          "centered_over_U_float": -0.007124900817871094
+        },
+        {
+          "z": "1/4",
+          "moment_exact": "6296811/16777216",
+          "diagonal_exact": "5034431/8388608",
+          "moment_over_U_float": 0.0014660905580967665,
+          "centered_over_U_float": -0.0008782490622252226
+        },
+        {
+          "z": "1/2",
+          "moment_exact": "432663/262144",
+          "diagonal_exact": "380225/131072",
+          "moment_over_U_float": 0.0064471811056137085,
+          "centered_over_U_float": -0.004884406924247742
+        },
+        {
+          "z": "3/4",
+          "moment_exact": "79389459/16777216",
+          "diagonal_exact": "71880615/8388608",
+          "moment_over_U_float": 0.018484298838302493,
+          "centered_over_U_float": -0.014987720875069499
+        },
+        {
+          "z": "1",
+          "moment_exact": "12117/1024",
+          "diagonal_exact": "85747/4096",
+          "moment_over_U_float": 0.046222686767578125,
+          "centered_over_U_float": -0.035552024841308594
+        },
+        {
+          "z": "2",
+          "moment_exact": "28377/128",
+          "diagonal_exact": "81385/256",
+          "moment_over_U_float": 0.865997314453125,
+          "centered_over_U_float": -0.3758392333984375
+        }
+      ]
+    },
+    {
+      "U": 400,
+      "D": 8000,
+      "row_count": 124,
+      "column_count": 2252,
+      "max_omega": 4,
+      "collision_zeros_retained": 17317,
+      "energy_polynomial_integer_coefficients": [
+        0,
+        0,
+        107139,
+        -30828,
+        91874,
+        -4234,
+        27603,
+        478,
+        504
+      ],
+      "diagonal_polynomial_integer_coefficients": [
+        0,
+        0,
+        106020,
+        0,
+        126534,
+        0,
+        28841,
+        0,
+        536
+      ],
+      "centered_polynomial_integer_coefficients": [
+        0,
+        0,
+        1119,
+        -30828,
+        -34660,
+        -4234,
+        -1238,
+        478,
+        -32
+      ],
+      "exact_interpolation_verified": true,
+      "equal_grid_extrapolation_weight_sum": "665387009",
+      "values": [
+        {
+          "z": "-1",
+          "moment_exact": "32713/1000",
+          "diagonal_exact": "261931/8000",
+          "moment_over_U_float": 0.0817825,
+          "centered_over_U_float": -7.09375e-05
+        },
+        {
+          "z": "1/4",
+          "moment_exact": "13467697/16384000",
+          "diagonal_exact": "58389077/65536000",
+          "moment_over_U_float": 0.002055007476806641,
+          "centered_over_U_float": -0.00017235904693603516
+        },
+        {
+          "z": "1/2",
+          "moment_exact": "463649/128000",
+          "diagonal_exact": "2231431/512000",
+          "moment_over_U_float": 0.00905564453125,
+          "centered_over_U_float": -0.0018400146484375
+        },
+        {
+          "z": "3/4",
+          "moment_exact": "329121333/32768000",
+          "diagonal_exact": "859006053/65536000",
+          "moment_over_U_float": 0.025109964981079102,
+          "centered_over_U_float": -0.007658515434265136
+        },
+        {
+          "z": "1",
+          "moment_exact": "24067/1000",
+          "diagonal_exact": "261931/8000",
+          "moment_over_U_float": 0.0601675,
+          "centered_over_U_float": -0.0216859375
+        },
+        {
+          "z": "2",
+          "moment_exact": "868307/2000",
+          "diagonal_exact": "276979/500",
+          "moment_over_U_float": 1.08538375,
+          "centered_over_U_float": -0.29951125
+        }
+      ]
+    },
+    {
+      "U": 576,
+      "D": 13824,
+      "row_count": 175,
+      "column_count": 3898,
+      "max_omega": 4,
+      "collision_zeros_retained": 39996,
+      "energy_polynomial_integer_coefficients": [
+        0,
+        0,
+        177483,
+        -114710,
+        302691,
+        9184,
+        68657,
+        1244,
+        1803
+      ],
+      "diagonal_polynomial_integer_coefficients": [
+        0,
+        0,
+        240275,
+        0,
+        316178,
+        0,
+        83232,
+        0,
+        2469
+      ],
+      "centered_polynomial_integer_coefficients": [
+        0,
+        0,
+        -62792,
+        -114710,
+        -13487,
+        9184,
+        -14575,
+        1244,
+        -666
+      ],
+      "exact_interpolation_verified": true,
+      "equal_grid_extrapolation_weight_sum": "665387009",
+      "values": [
+        {
+          "z": "-1",
+          "moment_exact": "163729/3456",
+          "diagonal_exact": "321077/6912",
+          "moment_over_U_float": 0.0822487662358539,
+          "centered_over_U_float": 0.0016027379918981482
+        },
+        {
+          "z": "1/4",
+          "moment_exact": "229563097/301989888",
+          "diagonal_exact": "1066442149/905969664",
+          "moment_over_U_float": 0.001319736386016931,
+          "centered_over_U_float": -0.000723888403870196
+        },
+        {
+          "z": "1/2",
+          "moment_exact": "12883639/3538944",
+          "diagonal_exact": "20771845/3538944",
+          "moment_over_U_float": 0.006320368115303448,
+          "centered_over_U_float": -0.0038697425230049794
+        },
+        {
+          "z": "3/4",
+          "moment_exact": "393118097/33554432",
+          "diagonal_exact": "1822309085/100663296",
+          "moment_over_U_float": 0.020339986568109855,
+          "centered_over_U_float": -0.011088857668693419
+        },
+        {
+          "z": "1",
+          "moment_exact": "9299/288",
+          "diagonal_exact": "321077/6912",
+          "moment_over_U_float": 0.05605589313271605,
+          "centered_over_U_float": -0.02459013511123971
+        },
+        {
+          "z": "2",
+          "moment_exact": "2486011/3456",
+          "diagonal_exact": "2994715/3456",
+          "moment_over_U_float": 1.2488400808577675,
+          "centered_over_U_float": -0.25554591049382713
+        }
+      ]
+    },
+    {
+      "U": 1600,
+      "D": 64000,
+      "row_count": 484,
+      "column_count": 18061,
+      "max_omega": 4,
+      "collision_zeros_retained": 518044,
+      "energy_polynomial_integer_coefficients": [
+        0,
+        0,
+        2627486,
+        -918134,
+        4181428,
+        -326376,
+        1144563,
+        -35046,
+        115751
+      ],
+      "diagonal_polynomial_integer_coefficients": [
+        0,
+        0,
+        2692492,
+        0,
+        4013248,
+        0,
+        1409143,
+        0,
+        108597
+      ],
+      "centered_polynomial_integer_coefficients": [
+        0,
+        0,
+        -65006,
+        -918134,
+        168180,
+        -326376,
+        -264580,
+        -35046,
+        7154
+      ],
+      "exact_interpolation_verified": true,
+      "equal_grid_extrapolation_weight_sum": "665387009",
+      "values": [
+        {
+          "z": "-1",
+          "moment_exact": "584299/4000",
+          "diagonal_exact": "205587/1600",
+          "moment_over_U_float": 0.09129671875,
+          "centered_over_U_float": 0.010989296875
+        },
+        {
+          "z": "1/4",
+          "moment_exact": "10889859519/4194304000",
+          "diagonal_exact": "2415698721/838860800",
+          "moment_over_U_float": 0.001622715520709753,
+          "centered_over_U_float": -0.00017712028115987778
+        },
+        {
+          "z": "1/2",
+          "moment_exact": "207694567/16384000",
+          "diagonal_exact": "1938213/131072",
+          "moment_over_U_float": 0.007922918968200684,
+          "centered_over_U_float": -0.0013192008209228516
+        },
+        {
+          "z": "3/4",
+          "moment_exact": "166908409263/4194304000",
+          "diagonal_exact": "39924696897/838860800",
+          "moment_over_U_float": 0.024871291110366584,
+          "centered_over_U_float": -0.004874926093518734
+        },
+        {
+          "z": "1",
+          "moment_exact": "848709/8000",
+          "diagonal_exact": "205587/1600",
+          "moment_over_U_float": 0.066305390625,
+          "centered_over_U_float": -0.01400203125
+        },
+        {
+          "z": "2",
+          "moment_exact": "19752761/8000",
+          "diagonal_exact": "2412099/800",
+          "moment_over_U_float": 1.543184453125,
+          "centered_over_U_float": -0.341267890625
+        }
+      ]
+    },
+    {
+      "U": 2500,
+      "D": 125000,
+      "row_count": 762,
+      "column_count": 35284,
+      "max_omega": 5,
+      "collision_zeros_retained": 1613010,
+      "energy_polynomial_integer_coefficients": [
+        0,
+        0,
+        7452406,
+        -1212360,
+        12362714,
+        -1515024,
+        4636511,
+        -113450,
+        491765,
+        -12458,
+        2461
+      ],
+      "diagonal_polynomial_integer_coefficients": [
+        0,
+        0,
+        7863840,
+        0,
+        12126213,
+        0,
+        4827867,
+        0,
+        453174,
+        0,
+        2304
+      ],
+      "centered_polynomial_integer_coefficients": [
+        0,
+        0,
+        -411434,
+        -1212360,
+        236501,
+        -1515024,
+        -191356,
+        -113450,
+        38591,
+        -12458,
+        157
+      ],
+      "exact_interpolation_verified": true,
+      "equal_grid_extrapolation_weight_sum": "157092995071",
+      "values": [
+        {
+          "z": "-1",
+          "moment_exact": "27799149/125000",
+          "diagonal_exact": "12636699/62500",
+          "moment_over_U_float": 0.0889572768,
+          "centered_over_U_float": 0.0080824032
+        },
+        {
+          "z": "1/4",
+          "moment_exact": "518811372229/131072000000",
+          "diagonal_exact": "17696149179/4096000000",
+          "moment_over_U_float": 0.0015832866584136963,
+          "centered_over_U_float": -0.00014485290984802247
+        },
+        {
+          "z": "1/2",
+          "moment_exact": "514117593/25600000",
+          "diagonal_exact": "358535193/16000000",
+          "moment_over_U_float": 0.008033087390625,
+          "centered_over_U_float": -0.000930292434375
+        },
+        {
+          "z": "3/4",
+          "moment_exact": "8484156854397/131072000000",
+          "diagonal_exact": "300317884443/4096000000",
+          "moment_over_U_float": 0.02589159196288147,
+          "centered_over_U_float": -0.003436326439755249
+        },
+        {
+          "z": "1",
+          "moment_exact": "4418513/25000",
+          "diagonal_exact": "12636699/62500",
+          "moment_over_U_float": 0.070696208,
+          "centered_over_U_float": -0.0101786656
+        },
+        {
+          "z": "2",
+          "moment_exact": "71710239/15625",
+          "diagonal_exact": "81603762/15625",
+          "moment_over_U_float": 1.8357821184,
+          "centered_over_U_float": -0.2532741888
+        }
+      ]
+    }
+  ]
+}
