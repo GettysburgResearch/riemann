@@ -164,6 +164,13 @@ the native/projected affine identity using actual Eisenstein primary
 ideals and sextic residue symbols. None of those finite checks supplies
 an all-scale correlation estimate.
 
+The mathematical files are frozen at
+[14aba2d9af60f2c2849dfe31bab10f5c6996c8aa](https://github.com/GettysburgResearch/riemann/commit/14aba2d9af60f2c2849dfe31bab10f5c6996c8aa).
+The separate [shift-bridge review](REVIEW_SHIFT_BRIDGE.md) and
+[variance/affine review](REVIEW_VARIANCE_AFFINE.md) fetched the load-bearing
+files at that exact commit and verified the reviewed bytes. Their stated
+independence limits and conditional scope remain part of the record.
+
 The useful next task is to bound the **full signed average in (1)** or
 the **complete affine sum in (4)**. Estimating another centered error
 after deleting the Möbius main term would not advance the zero-free
