@@ -1,0 +1,192 @@
+{
+  "scope": "Exact finite algebra checks only; no asymptotic or global zero-free claim.",
+  "root_execution_date": "2026-10-25",
+  "runs": [
+    {
+      "script": "check_optimal_unmarking.py",
+      "command": "python -I check_optimal_unmarking.py",
+      "exit_code": 0,
+      "result": {
+        "status": "PASS",
+        "arithmetic": "exact rational",
+        "finite_CRT": [
+          {
+            "bands": [
+              [
+                3
+              ],
+              [
+                5
+              ],
+              [
+                7
+              ]
+            ],
+            "rho": "1/2",
+            "modulus": 105,
+            "reduced_residues": 48,
+            "cases": [
+              {
+                "minimum_degree": 1,
+                "residual_squared": "5/16",
+                "orthogonality_conditions": 7
+              },
+              {
+                "minimum_degree": 2,
+                "residual_squared": "19/24",
+                "orthogonality_conditions": 4
+              },
+              {
+                "minimum_degree": 3,
+                "residual_squared": "47/48",
+                "orthogonality_conditions": 1
+              }
+            ]
+          },
+          {
+            "bands": [
+              [
+                3,
+                5
+              ],
+              [
+                7
+              ],
+              [
+                11
+              ],
+              [
+                13
+              ]
+            ],
+            "rho": "1/2",
+            "modulus": 15015,
+            "reduced_residues": 5760,
+            "cases": [
+              {
+                "minimum_degree": 1,
+                "residual_squared": "33/128",
+                "orthogonality_conditions": 15
+              },
+              {
+                "minimum_degree": 2,
+                "residual_squared": "1519/1920",
+                "orthogonality_conditions": 11
+              },
+              {
+                "minimum_degree": 3,
+                "residual_squared": "5627/5760",
+                "orthogonality_conditions": 5
+              },
+              {
+                "minimum_degree": 4,
+                "residual_squared": "1151/1152",
+                "orthogonality_conditions": 1
+              }
+            ]
+          },
+          {
+            "bands": [
+              [
+                3
+              ],
+              [
+                5,
+                7
+              ],
+              [
+                11
+              ]
+            ],
+            "rho": "2/3",
+            "modulus": 1155,
+            "reduced_residues": 480,
+            "cases": [
+              {
+                "minimum_degree": 1,
+                "residual_squared": "249/880",
+                "orthogonality_conditions": 7
+              },
+              {
+                "minimum_degree": 2,
+                "residual_squared": "1009/1320",
+                "orthogonality_conditions": 4
+              },
+              {
+                "minimum_degree": 3,
+                "residual_squared": "2591/2640",
+                "orthogonality_conditions": 1
+              }
+            ]
+          }
+        ],
+        "symmetric_controls": [
+          {
+            "N": 8,
+            "minimum_degree": 1,
+            "R": "2",
+            "residual_squared": "1/256"
+          },
+          {
+            "N": 8,
+            "minimum_degree": 3,
+            "R": "2",
+            "residual_squared": "37/256"
+          },
+          {
+            "N": 8,
+            "minimum_degree": 5,
+            "R": "3/2",
+            "residual_squared": "1697/6561"
+          },
+          {
+            "N": 10,
+            "minimum_degree": 4,
+            "R": "5/2",
+            "residual_squared": "3733209/9765625"
+          }
+        ]
+      }
+    },
+    {
+      "script": "check_fractional_prefix.py",
+      "command": "python -I check_fractional_prefix.py",
+      "exit_code": 0,
+      "result": {
+        "status": "pass",
+        "arithmetic": "exact rational",
+        "integer_convolution_cases": 48000,
+        "local_series_cases": 15,
+        "local_series_degree": 20,
+        "binomial_mark_convolution_cases": 11200,
+        "negative_control": "dropping repeated-prime correction fails at n=25",
+        "scope": "finite coefficient algebra only; no asymptotic moment verification"
+      }
+    },
+    {
+      "script": "check_native_gain.py",
+      "command": "python -I check_native_gain.py",
+      "exit_code": 0,
+      "result": {
+        "arithmetic": "exact Q(zeta_6); synthetic bilinear symbol, not native Gauss data",
+        "twisted_inverse_coefficients": 3000,
+        "finite_Heath_Brown": [
+          {
+            "k": 2,
+            "y": 17,
+            "checked": 289
+          },
+          {
+            "k": 3,
+            "y": 7,
+            "checked": 343
+          }
+        ],
+        "exact_row_transport_cases": 72,
+        "wrong_row_twist_power_rejections": 70,
+        "omitted_cocycle_rejections": 43,
+        "analytic_claim": "none; no asymptotic cancellation tested"
+      }
+    }
+  ]
+}
