@@ -1,0 +1,360 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-10-25",
+  "repository": "GettysburgResearch/riemann",
+  "pull_request": 1022,
+  "branch": "research/hlc-zero-free-transfer-20261025",
+  "path": "standalone/2026-10-25-hlc-zero-free-transfer/third-pass",
+  "previous_branch_head": "08769810374603b926d995fdc6ff0254e4267ea5",
+  "core_math_commit": "438d23565ea81d5803cb2afd7f3bdfd0861d4229",
+  "final_math_commit": "820b99562e3b458021a6de74802293baafbe5190",
+  "final_math_tree": "cb6c96fe64933409b0fcafb086069e94435e61af",
+  "main_at_prepublication_check": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "outcome": {
+    "rh_proof": false,
+    "new_unconditional_zero_free_region": false,
+    "conditional_boundary": "8748856/10000000",
+    "open_input": "ASYMMETRIC_HB_TAIL.md hypothesis (M), or a compatible complete alternative inverse estimate",
+    "external_analytic_premises_independently_certified": false
+  },
+  "verification": "Internal mathematical reviews and exact finite/scalar checkers; not external peer review or formal verification of analytic premises.",
+  "self_binding_exclusions": [
+    "MANIFEST.json",
+    "PUBLICATION_REVIEW.md"
+  ],
+  "source_pins": [
+    {
+      "kind": "user_paper",
+      "url": "https://arxiv.org/pdf/2610.20242v1",
+      "title": "On the Hardy--Littlewood--Chowla conjecture",
+      "pdf_sha256": "32ef255566d4f3611d2d89c3a5f3db94c792883cc713d77a7f9d33b163f55e88"
+    },
+    {
+      "kind": "primary_analytic_source",
+      "repository": "openai/math",
+      "commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "path": "preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/build/paper.tex",
+      "git_blob": "268c4e3206d460c617d3d2129742a72b831b3def",
+      "sha256": "42a5ee0febca59fd1def55cfd6c6808c322ef4237d7726303ea52f711deac6a3"
+    },
+    {
+      "kind": "primitive_functional_equation_source",
+      "repository": "openai/math",
+      "commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "path": "preprints/An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026/build/sections/angular.tex",
+      "git_blob": "e93fbddf626ab532b7e8fbfac830f1b45370b0e3"
+    },
+    {
+      "kind": "repository_sieve_input",
+      "repository": "GettysburgResearch/riemann",
+      "commit": "c690f96fe6876f945398b3e2779810c563a64743",
+      "path": "standalone/2026-10-23-structured-moment-gains/fifth-pass/SEXTIC_ROW_PHASE_CANCELLATION.md",
+      "git_blob": "3a5d7adcc24ec8907be5c8fd6879d81736d44788"
+    },
+    {
+      "kind": "original_Eisenstein_consumer",
+      "url": "https://arxiv.org/html/2610.15291v2"
+    },
+    {
+      "kind": "buffered_density_and_moment_scope",
+      "url": "https://arxiv.org/html/2610.17675v2"
+    },
+    {
+      "kind": "scalar_comparison_data_only_for_Eisenstein_work",
+      "url": "https://arxiv.org/html/2610.26835v1"
+    },
+    {
+      "kind": "additional_oscillatory_input_audited",
+      "url": "https://arxiv.org/html/2610.15989v2"
+    }
+  ],
+  "files": [
+    {
+      "path": "ASYMMETRIC_HB_TAIL.md",
+      "role": "mathematical_note",
+      "bytes": 20324,
+      "sha256": "8d13f547d0beda762f313b76f428ae6cd94f0e8d0af7fec8d3be64502c770c12",
+      "git_blob": "863354900bbbbbfaf8e7c7685976441199a18132"
+    },
+    {
+      "path": "AVERAGED_HLC.md",
+      "role": "mathematical_note",
+      "bytes": 26420,
+      "sha256": "fb04005fe40e7f809e0b548503351efed6d294d88e25fe0e1be44a1a335363fb",
+      "git_blob": "a8ebf7488836bab8300ba46a1fa053bfebcec037"
+    },
+    {
+      "path": "CHECKS.json",
+      "role": "captured_root_executions",
+      "bytes": 15148,
+      "sha256": "07be86b49d9064690278c6dcf8a822245bda0d90e9a0a989263cfeb7a29b22d4",
+      "git_blob": "e346f658df20409f63a777cc9d7cf537622e9bfb"
+    },
+    {
+      "path": "CONDITIONAL_CONSUMER.md",
+      "role": "mathematical_note",
+      "bytes": 21818,
+      "sha256": "e8df7950354cc5f977704c148b1030fd7fd7a98edc5853730444bcc8526b65d0",
+      "git_blob": "ad625275f1999853eb9947475496eb1400075b37"
+    },
+    {
+      "path": "CONDITIONAL_CONSUMER_CHECKS.json",
+      "role": "exact_scalar_certificate",
+      "bytes": 5474,
+      "sha256": "88cfb26cd1401df1558f2345cd51ab6c5946c224f7a7259f2032838f41e07bec",
+      "git_blob": "7b877f8cea39df6f215ede8a8e3bd14dc112de62"
+    },
+    {
+      "path": "GCD_FOURTH_COMPONENT.md",
+      "role": "mathematical_note",
+      "bytes": 20400,
+      "sha256": "375aa810def5b44673ab551528c6c10449418fdc8adc7430240c0697fc98ca6a",
+      "git_blob": "656613a66ce65b814ce19fc29b1c3f995ed43a4a"
+    },
+    {
+      "path": "GCD_NATIVE_COEFFICIENT.md",
+      "role": "mathematical_note",
+      "bytes": 23719,
+      "sha256": "515e0cc01061507d1de50f8dab73424c82f97d8c9db67e2201213ae046bb7c45",
+      "git_blob": "2cac689a44863471e9a46576e096c45e93d89a35"
+    },
+    {
+      "path": "INVERSE_POWER_COMPONENT.md",
+      "role": "mathematical_note",
+      "bytes": 29610,
+      "sha256": "46821c4854806910b434c11c7a3560fd2f5a75ef5e52c35414f01e83e86d7437",
+      "git_blob": "44db72c707a2c64f07e66c890a93c6d3a06e6cb8"
+    },
+    {
+      "path": "MIXED_NUMERATOR.md",
+      "role": "mathematical_note",
+      "bytes": 15992,
+      "sha256": "b14afb2e2a197fda1f275383e8d96b54326f1188614a0a96e2b00ebe29970935",
+      "git_blob": "cc622f746ca4dca7ba79068e5de251570f1ebeb4"
+    },
+    {
+      "path": "MIXED_NUMERATOR_CHECKS.json",
+      "role": "exact_scalar_certificate",
+      "bytes": 7806,
+      "sha256": "489b42882112a32202f6a39f52eb4a81ce5eeab79ed26b5595ad4c6e6c6b3837",
+      "git_blob": "bbfdd8968d6326b64056d8011ac6049bf6f28ae9"
+    },
+    {
+      "path": "PROJECTED_AFFINE_OPERATOR.md",
+      "role": "mathematical_note",
+      "bytes": 13149,
+      "sha256": "1ab0c4c72f203921a63714c59f15f49b26839b93ff0f1962fedef9294e94d2ad",
+      "git_blob": "963ae27dec0f02d3df011fed12ea29e49eea6126"
+    },
+    {
+      "path": "RATIO_CUTOFF_RETURN.md",
+      "role": "mathematical_note",
+      "bytes": 11398,
+      "sha256": "0c1abc65e71d0300ecac44234337be6b0ebc797db055b3f51a68a3dd91adc02a",
+      "git_blob": "1b58867a7d611b18f24a8470679638f57efb6e17"
+    },
+    {
+      "path": "README.md",
+      "role": "overview",
+      "bytes": 19325,
+      "sha256": "d244ab31489c69d0eca6441153a58a6bed8154ed838aeade79629591b30e41eb",
+      "git_blob": "b3e2e92df7008558fb26debacd4cc67dd62f23bf"
+    },
+    {
+      "path": "REVIEW_ASYMMETRIC_HB_TAIL.md",
+      "role": "internal_mathematical_review",
+      "bytes": 10615,
+      "sha256": "bb7d23fd516c542882ca526d9ad004bad6ec695e5f0126a1a4fd697d740068dc",
+      "git_blob": "5e00695f58835a26abf25bc399c3fd95fe7eab58"
+    },
+    {
+      "path": "REVIEW_AVERAGED_HLC.md",
+      "role": "internal_mathematical_review",
+      "bytes": 11217,
+      "sha256": "801f410604d1f0ab10d93e3e1bd783002cfab136f26e9c740a2866c465a7e4c2",
+      "git_blob": "6a961e3c99c8b07ed78197448e599438e2e3afd2"
+    },
+    {
+      "path": "REVIEW_CONDITIONAL_CONSUMER.md",
+      "role": "internal_mathematical_review",
+      "bytes": 7858,
+      "sha256": "3715dd48fdeb8fd633d60f8ab1f5dc9513fdaea673c46daa7bee34c394d346be",
+      "git_blob": "94845ac71063f0a47449edf6ac69d7c4e0b890cd"
+    },
+    {
+      "path": "REVIEW_GCD_FOURTH_COMPONENT.md",
+      "role": "internal_mathematical_review",
+      "bytes": 15103,
+      "sha256": "521a80f336dda87e8150ab5fd23e6adda2ed8b5a72154f746823706a37f08cf9",
+      "git_blob": "1c9b0431d6b4fa00988a88b44468c56797d9f392"
+    },
+    {
+      "path": "REVIEW_GCD_NATIVE_COEFFICIENT.md",
+      "role": "internal_mathematical_review",
+      "bytes": 7755,
+      "sha256": "c7b9205a15e3c5cfe8520bc9a0063a76ea426634c9686db6545822fb1aa1f641",
+      "git_blob": "302060366f9db7988a0b3a87e5466b2cecf6dd15"
+    },
+    {
+      "path": "REVIEW_GCD_NATIVE_FRACTIONAL.md",
+      "role": "internal_mathematical_review",
+      "bytes": 9275,
+      "sha256": "d136b6f200883f68ad393e782402a3e22ec1f1c4e7ee2696c41578ae23223b03",
+      "git_blob": "cff5d860146864fad0c4ed449dd7d56e9944b080"
+    },
+    {
+      "path": "REVIEW_INVERSE_POWER_COMPONENT.md",
+      "role": "internal_mathematical_review",
+      "bytes": 13370,
+      "sha256": "abe780f523acf2c74ce698df35f145444f69365ddee77c9be257a432109d432f",
+      "git_blob": "03e0a65b1223c881d2ee510144e1f87a8623a791"
+    },
+    {
+      "path": "REVIEW_MIXED_NUMERATOR.md",
+      "role": "internal_mathematical_review",
+      "bytes": 9212,
+      "sha256": "d986ab6b341c81f31025c872ce13cfdd4c09c771766114b20e559f0937a46bb9",
+      "git_blob": "fdf02e85028067dc5e89c2ac4c6220269fc08e89"
+    },
+    {
+      "path": "REVIEW_PROJECTED_AFFINE_OPERATOR.md",
+      "role": "internal_mathematical_review",
+      "bytes": 10530,
+      "sha256": "fee9f14d37dce3af7b13daffb1b3a59badcc339a1ae75fcf54a48939dd7f498b",
+      "git_blob": "7e6deb4313d476faee9ec41a5e9d092468b744b1"
+    },
+    {
+      "path": "REVIEW_RATIO_CUTOFF_RETURN.md",
+      "role": "internal_mathematical_review",
+      "bytes": 5138,
+      "sha256": "6de9c903ddd839a1eceaf9d17e90684fae4f6082f38d0539feedccae7032a419",
+      "git_blob": "613783050e7545ee87e5e4f0c4168f96358cc7cc"
+    },
+    {
+      "path": "REVIEW_SHORT_INVERSE.md",
+      "role": "internal_mathematical_review",
+      "bytes": 5250,
+      "sha256": "d74e3b99223fc335de76c1f1c56a191747c3390c851f6e1105af5ba8f1f47f35",
+      "git_blob": "c2862c822d5aa3c8bd5dde7fcfdc50cef5447966"
+    },
+    {
+      "path": "REVIEW_SIGNED_NATIVE.md",
+      "role": "internal_mathematical_review",
+      "bytes": 7934,
+      "sha256": "efad44062e05a79d60f6f7952ef454389e8c4642c346a11c4f49fdc1fcb849a6",
+      "git_blob": "cb659c4937547beef4c4b7aeecc792e2100ef7b1"
+    },
+    {
+      "path": "REVIEW_TAIL_RETURN.md",
+      "role": "internal_mathematical_review",
+      "bytes": 9903,
+      "sha256": "3f44ce6616cbab192b5067d80e36154940471ee372d9b6b8b6727c3dbf6a6ae4",
+      "git_blob": "0dee7823bbbdd2cd63456ccb14a8035205845d38"
+    },
+    {
+      "path": "SHORT_INVERSE.md",
+      "role": "mathematical_note",
+      "bytes": 18813,
+      "sha256": "95c31d1af71ea7e7895eb61dbf6d1407eba1f93bf232041243a4e3498b130a9f",
+      "git_blob": "5edde29e8a4a6e6746f1d8cd1dd024a8065594a1"
+    },
+    {
+      "path": "SIGNED_NATIVE.md",
+      "role": "mathematical_note",
+      "bytes": 32953,
+      "sha256": "d9426e96884b725f3db2467e62527eed204df931e72fe583d3681571e47e75f3",
+      "git_blob": "f10fc34928e22b77d9c681d46b8ec75bad40e7f5"
+    },
+    {
+      "path": "TAIL_RETURN.md",
+      "role": "mathematical_note",
+      "bytes": 11575,
+      "sha256": "857916fd4dc98b89749e172ccab4f13005594e0a9e38cd41d31ec784c3484da4",
+      "git_blob": "6f23b05dcde927022ed690898cd93767b61b0583"
+    },
+    {
+      "path": "check_asymmetric_hb_tail.py",
+      "role": "finite_checker",
+      "bytes": 8432,
+      "sha256": "b363213fc727ccaddd30ad2ff550d6ba31ba417fb7ee2437172e53b21ea51903",
+      "git_blob": "edb3a6a0ab9c4434ea4639b66d00f5a2141140e8"
+    },
+    {
+      "path": "check_averaged_hlc.py",
+      "role": "finite_checker",
+      "bytes": 5802,
+      "sha256": "2f8cc80138abb8018b212ac7cda8765fc1028cbabb3ce057f2b2d39d74da63b0",
+      "git_blob": "1bd16d0d9338cead0a448a09cfa422d89c9754be"
+    },
+    {
+      "path": "check_conditional_consumer.py",
+      "role": "finite_checker",
+      "bytes": 11618,
+      "sha256": "c611bedacf374e4ee58f19d2f52e09e07e8933d092f20947be1a01cc10d2349f",
+      "git_blob": "92a23a3ee97794d6d185b77414b4827a4497b25a"
+    },
+    {
+      "path": "check_gcd_fourth_component.py",
+      "role": "finite_checker",
+      "bytes": 11271,
+      "sha256": "e9d7015d4ec514bb3f92abae255d623a650fc3ad330b3bbbbc3b97757c0cb5c6",
+      "git_blob": "61c2d006dff4d044cfc5e5eb4376a85338667d06"
+    },
+    {
+      "path": "check_gcd_native.py",
+      "role": "finite_checker",
+      "bytes": 12228,
+      "sha256": "82f35606a0d220e3053e225c6d6f0495d26c4125eee14e1a34bf2a5dc7f18ee0",
+      "git_blob": "e69128edb0e5af8911df565bc5933e6b53d7291b"
+    },
+    {
+      "path": "check_inverse_power_component.py",
+      "role": "finite_checker",
+      "bytes": 13146,
+      "sha256": "08028aa0c0af4f30ddf8743707e3d3eb4d02eea2990b9b0d4a0060e50e6c96c8",
+      "git_blob": "1a3e98a21d0a0e308e05af8b1bd7e67eea0d9803"
+    },
+    {
+      "path": "check_mixed_numerator.py",
+      "role": "finite_checker",
+      "bytes": 9164,
+      "sha256": "cfdfce4a3af0793cf063ddc0801655d586aca6a32a3a548a018e1850d3cb12e7",
+      "git_blob": "c71c5cb8e337e49f6dea137014cb059b5c2facd3"
+    },
+    {
+      "path": "check_projected_affine_operator.py",
+      "role": "finite_checker",
+      "bytes": 6662,
+      "sha256": "0c2ed2324da70591db54af16a9a176c6805310a3e325699a88c4e87d51a96749",
+      "git_blob": "f0d9d5abfcd197bda5c35cd5b22d07c6dd009d63"
+    },
+    {
+      "path": "check_ratio_cutoff_return.py",
+      "role": "finite_checker",
+      "bytes": 8437,
+      "sha256": "97306a93cc7b2f6a94f1044bf5195b9aa9f5c7bf3331a5687ee59d9693a40687",
+      "git_blob": "406b08c6d0fbf76acc89bc28f35f0b12d40b7ae1"
+    },
+    {
+      "path": "check_short_inverse.py",
+      "role": "finite_checker",
+      "bytes": 7329,
+      "sha256": "3554ab9af98ea9b88665a8a210a9c647027f206aa8029603602cdf18efcade91",
+      "git_blob": "8361f1686aee9b5d6feaeef3249fe0199bc34588"
+    },
+    {
+      "path": "check_signed_native.py",
+      "role": "finite_checker",
+      "bytes": 11048,
+      "sha256": "f42962007a14c071390fffcf4d841e9b66aaf0ef474ca82d62053f6a3931de02",
+      "git_blob": "e1d5b2b90880a119c4fd782a2e828c3b73a1b495"
+    },
+    {
+      "path": "check_tail_return.py",
+      "role": "finite_checker",
+      "bytes": 7046,
+      "sha256": "b3a380994c7c27aa1b4afda5f8a218a73edececeb12a7a48c5d7078863c1aed8",
+      "git_blob": "dd0390dcea00cb2048b4249cc9df2d3068ccf556"
+    }
+  ]
+}
