@@ -1,0 +1,35 @@
+{
+  "status": "INDEPENDENT_FINITE_REVIEW_CHECKS_PASS",
+  "ideal_norm_count_comparisons": 300,
+  "prime_ideals_tested": 59,
+  "local_residue_comparisons": 9971,
+  "natural_nonunit_cases": 179,
+  "orientation_sensitive_cases": 6548,
+  "small_annulus_independent_energies": [
+    {
+      "z": "-1",
+      "full_energy": "888"
+    },
+    {
+      "z": "1/4",
+      "full_energy": "6823/256"
+    },
+    {
+      "z": "1/2",
+      "full_energy": "1851/16"
+    },
+    {
+      "z": "3/4",
+      "full_energy": "78039/256"
+    },
+    {
+      "z": "1",
+      "full_energy": "664"
+    },
+    {
+      "z": "2",
+      "full_energy": "6324"
+    }
+  ],
+  "scope": "Executed finite Eisenstein cases only; no asymptotic estimate."
+}

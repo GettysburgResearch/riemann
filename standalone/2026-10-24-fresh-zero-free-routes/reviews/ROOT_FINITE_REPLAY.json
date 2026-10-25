@@ -1,0 +1,35 @@
+{
+  "scope": "Independent root replay of finite checkers only; no analytic theorem or zero-free certification",
+  "checks": [
+    {
+      "script": "arithmetic/check_continuation.py",
+      "source_sha256": "7f7f2c00b5e31592cb28b921626bcc1dcaddb9dc7ac42c2a75619bb7b42830ca",
+      "recorded_output": "arithmetic/validation.json",
+      "recorded_output_sha256": "d8ef6215df69877c704c7feabb88e6669c30eb9fadd25ddb50dbb19e0215b108",
+      "ordinary_pass": true,
+      "optimized_pass": true,
+      "normal_optimized_stdout_identical": true,
+      "matches_recorded_json": true
+    },
+    {
+      "script": "family/check_log_transport.py",
+      "source_sha256": "44f8018a39b8feaf1d9f58443e512d54240c92d8c35d5e2278090734f7b493ac",
+      "recorded_output": "family/check_log_transport_results.json",
+      "recorded_output_sha256": "d3e56fb1ebb874f95a12aa2c5432a4278e5a291bb22a2025b3a837d489d81ade",
+      "ordinary_pass": true,
+      "optimized_pass": true,
+      "normal_optimized_stdout_identical": true,
+      "matches_recorded_json": true
+    },
+    {
+      "script": "spectral/check_polynomial_identities.py",
+      "source_sha256": "4c2a0387fa998155ba0c98eb9c59a8f51a01600e3c1948e87848cf2183ce7b03",
+      "recorded_output": "spectral/polynomial_checks.json",
+      "recorded_output_sha256": "1cb937b06dcbf1a1db45475d7b1645943e83ab5fac736539c614cf3fb4928103",
+      "ordinary_pass": true,
+      "optimized_pass": true,
+      "normal_optimized_stdout_identical": true,
+      "matches_recorded_json": true
+    }
+  ]
+}
