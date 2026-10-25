@@ -1,0 +1,56 @@
+{
+  "status": "FINITE_REPLAYS_AND_SOURCE_AUTHENTICATION_COMPLETE",
+  "source_commit": "450dd8abecf58dfe60b3bc39bda0f792ea82ce95",
+  "archive_sha256": "8185bfe6f9a5e2899cae78083a2d9e232f7b723d02a76eb88fb6116c0db03646",
+  "archived_source_matches": {
+    "experiment.py": {
+      "bytes": 9128,
+      "sha256": "79563f448d916f400ecc22f3461d6d3583c5604100cba6c7c61c705ebf500463",
+      "matches_exact_archive_member": true
+    },
+    "NUMERICS.md": {
+      "bytes": 5860,
+      "sha256": "7bcd7d3ef3889ba582dea04a062a2c94e9f6fc2f13be4894c14ca8ef4ea7e1ec",
+      "matches_exact_archive_member": true
+    }
+  },
+  "marked_exact_checker": {
+    "normal_optimized_recorded_bytes_equal": true,
+    "report_sha256": "bc65833e77f89f0b558d94dbbdc80e50f4fa39d253646ed37ab2e37523b1b0f6",
+    "coefficient_cases": 2048,
+    "prime_power_terms": 340,
+    "smoothing_cases": 17,
+    "prime_only_mutation_failures": 418
+  },
+  "spectral_replay": {
+    "halfwidth": "0.4",
+    "modes": 16,
+    "original_dps": 110,
+    "replay_dps": 125,
+    "original_order": 160,
+    "replay_order": 192,
+    "unchanged_printed_matrix_values": {
+      "even_min": true,
+      "odd_min": true,
+      "second_even": true,
+      "target_xi_variance": true,
+      "safe_shift": true,
+      "safe_variance": true,
+      "near_finite_bottom_shift": true,
+      "near_finite_bottom_variance": true
+    },
+    "unchanged_printed_selector_values": {
+      "shift": true,
+      "finite_spectral_margin": true,
+      "variance": true,
+      "variance_residual": true,
+      "linear_system_off_forcing_residual": false,
+      "normalized_even_coefficients": true,
+      "physical_grid": true
+    },
+    "replay_sha256": "ed09c4d8441962209009b75b8e35eeb623458c37696c1c9dcc7d1de077f622e4",
+    "interval_certified": false,
+    "independent_matrix_implementation": false
+  },
+  "limits": "Reproduction of finite diagnostics, not validation of asymptotic inputs or a new zero-free boundary."
+}

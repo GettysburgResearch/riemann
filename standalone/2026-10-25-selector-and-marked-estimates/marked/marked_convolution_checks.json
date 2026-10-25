@@ -1,0 +1,83 @@
+{
+  "analytic_error_estimate_verified": false,
+  "coefficient_cases": 2048,
+  "finite_profile_cases": 17,
+  "first_mutation_failure": 4,
+  "growing_order_resonance_numerically_certified": false,
+  "prime_only_mutation_failures": 418,
+  "prime_power_terms_retained": 340,
+  "profile_note": "Rational compact C3 profile used only for finite identities",
+  "profile_receipts": [
+    {
+      "X": "1/2",
+      "marked_sum_exact": "0"
+    },
+    {
+      "X": "3/4",
+      "marked_sum_exact": "0"
+    },
+    {
+      "X": "1",
+      "marked_sum_exact": "0"
+    },
+    {
+      "X": "3/2",
+      "marked_sum_exact": "16/6561"
+    },
+    {
+      "X": "2",
+      "marked_sum_exact": "1/256"
+    },
+    {
+      "X": "5/2",
+      "marked_sum_exact": "256/390625"
+    },
+    {
+      "X": "3",
+      "marked_sum_exact": "16/6561"
+    },
+    {
+      "X": "5",
+      "marked_sum_exact": "1808/390625"
+    },
+    {
+      "X": "8",
+      "marked_sum_exact": "47249/4194304"
+    },
+    {
+      "X": "13",
+      "marked_sum_exact": "14590528/815730721"
+    },
+    {
+      "X": "21",
+      "marked_sum_exact": "515766560/12607619787"
+    },
+    {
+      "X": "34",
+      "marked_sum_exact": "19555254165/446448476224"
+    },
+    {
+      "X": "55",
+      "marked_sum_exact": "8115619492688/83733937890625"
+    },
+    {
+      "X": "89",
+      "marked_sum_exact": "607657210589600/3936588805702081"
+    },
+    {
+      "X": "144",
+      "marked_sum_exact": "52745892382326209/184884258895036416"
+    },
+    {
+      "X": "233",
+      "marked_sum_exact": "3767810003623703040/8686550888106661441"
+    },
+    {
+      "X": "377",
+      "marked_sum_exact": "302720089942919652976/408066367122340274881"
+    }
+  ],
+  "scope": "Finite convolution identities, not analytic asymptotics",
+  "status": "EXACT_FINITE_IDENTITIES_PASS",
+  "zero_free_boundary_certified": false
+}
