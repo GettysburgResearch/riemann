@@ -68,7 +68,7 @@ This is stronger than simply assuming uniform estimates on an interval. It also 
 The source-dependent endpoint adapter at `z=1` is proved using the full ordinary moment explicitly stated in Xu--Sang. What is still missing is the noninteger mean, for example
 
 \[
-\sum_{u\ {m sixth\text{-}power\text{-}free}}w(u)|V(z;u)|^2
+\sum_{u\ {\rm sixth\text{-}power\text{-}free}}w(u)|V(z;u)|^2
  \ll (UD)^\epsilon(1+T)^A p_J(W)^2
        \left(U+U^{1/6}D^{4/5}\right),
 \]
