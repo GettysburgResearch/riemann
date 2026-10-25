@@ -1,0 +1,51 @@
+{
+  "hlc_paper": {
+    "authors": "Guangshi Lü, Zhiwei Wang, Jie Wu",
+    "title": "On the Hardy–Littlewood–Chowla Conjecture",
+    "version": "arXiv:2610.20242v1",
+    "url": "https://arxiv.org/pdf/2610.20242v1",
+    "pdf_sha256": "32ef255566d4f3611d2d89c3a5f3db94c792883cc713d77a7f9d33b163f55e88",
+    "uses": [
+      "Original state measure, symmetrizer and raw kernel in Section 4.2",
+      "Root variables and once-only projective-line distribution in Section 4.3",
+      "Appendix A equations (A.1)–(A.5), with the original quantitative discrepancy kept separate from the refinement"
+    ],
+    "scope": "Only the explicitly identified source constructions and estimates are used; the complete HLC proof is not certified by this pass."
+  },
+  "native_analytic_framework": {
+    "repository": "openai/math",
+    "commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/build/paper.tex",
+    "git_blob": "268c4e3206d460c617d3d2129742a72b831b3def",
+    "sha256": "42a5ee0febca59fd1def55cfd6c6808c322ef4237d7726303ea52f711deac6a3",
+    "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/build/paper.tex",
+    "scope": "Imported analytic premises, including marked moments, detector and finite-order Eisenstein framework; not proved or formally verified in this pass."
+  },
+  "companion_analytic_sources": [
+    {
+      "version": "arXiv:2610.17675v2",
+      "url": "https://arxiv.org/html/2610.17675v2",
+      "scope": "Companion analytic premises as itemized in the mathematical notes."
+    },
+    {
+      "version": "arXiv:2610.15291v2",
+      "url": "https://arxiv.org/html/2610.15291v2",
+      "scope": "Amplified-moment and consumer premises as itemized in the mathematical notes."
+    }
+  ],
+  "classical_kloosterman_input": {
+    "authors": "Valentin Blomer, Siu Hang Man",
+    "title": "Bounds for Kloosterman sums on GL(n)",
+    "publication": "Mathematische Annalen 390 (2024), 1171–1200",
+    "doi": "10.1007/s00208-023-02777-6",
+    "url": "https://link.springer.com/article/10.1007/s00208-023-02777-6",
+    "location": "Equation (1.2), classical Weil bound with Salié for powerful moduli",
+    "scope": "The full-modulus classical bound is explicitly imported only for the stronger root-counting variant. The elementary variant reproduces its own fourth-moment input."
+  },
+  "unchanged_third_pass_consumer": {
+    "publication_head": "3a07737bb7b802a5671acaa22a8f86e6b0acbd40",
+    "mathematical_freeze": "820b99562e3b458021a6de74802293baafbe5190",
+    "checker_sha256": "c611bedacf374e4ee58f19d2f52e09e07e8933d092f20947be1a01cc10d2349f",
+    "scope": "The actual pinned producer is replayed; its report-writing section is excluded to preserve all prior bytes. The zero-free conclusion remains conditional on the unproved thin-band estimate and the analytic imports."
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "schema": "riemann.fourth-pass.math-payload.v1",
+  "parent_commit": "3a07737bb7b802a5671acaa22a8f86e6b0acbd40",
+  "parent_tree": "c1d4bfeab1a8db43a77e55884c325fbfeb077e39",
+  "repository": "GettysburgResearch/riemann",
+  "branch": "research/hlc-zero-free-transfer-20261025",
+  "path_prefix": "standalone/2026-10-25-hlc-zero-free-transfer/fourth-pass/",
+  "file_count": 29,
+  "files": [
+    {
+      "path": "ATTEMPT_AUDIT.md",
+      "bytes": 8206,
+      "sha256": "5209ac000a0646d07fc923f3a9c943236489c2645763c14f713d6993830a08ea",
+      "git_blob": "5a242ae15925c0c0a58e2686e46436981d40e1fe"
+    },
+    {
+      "path": "CHECKS.json",
+      "bytes": 17783,
+      "sha256": "0bb7799b1ed1526c0930bf382807d82001fccfd18b9e07b92a9be646502d016f",
+      "git_blob": "5c53e18b25226a10b642991905c7e457d1e71c07"
+    },
+    {
+      "path": "CLOSED_TRIANGLE_WEIGHT.md",
+      "bytes": 15616,
+      "sha256": "169112b8b41ede59ba23009e5b23d06184e19c03cad209d40940edf1568f7e37",
+      "git_blob": "999510900504d8ee0e3e318dc79a856f29e28bd4"
+    },
+    {
+      "path": "COHERENT_IDENTITY.md",
+      "bytes": 19728,
+      "sha256": "5bd8db8047d5474fd2d33c4691d94e9f38f97b7b97b67ad215ee0ac4fb45a068",
+      "git_blob": "db0ff0799e983bc43f20dd1b1a9f292f6dbc1490"
+    },
+    {
+      "path": "COMMON_D_TRIANGLE_EXTENSION.md",
+      "bytes": 10714,
+      "sha256": "67769f6a6f2a9c6c8beca1aad4c94f7150d71b4d11253515e355df84c3ff7bc9",
+      "git_blob": "1ec8c0f0444c2d4353454ac2d7a7fce31fd9143f"
+    },
+    {
+      "path": "DETECTOR_LOCALIZATION.md",
+      "bytes": 29469,
+      "sha256": "aa77d6158d7997801257f947574c08b9efb3f0cfea0b971dc616289f5ce68917",
+      "git_blob": "b9a47c8abcea7f2784568b8bf70a811bd57bb814"
+    },
+    {
+      "path": "DETECTOR_LOCALIZATION_CHECKS.json",
+      "bytes": 33436,
+      "sha256": "de85ea08076ae610b3885fae742b8b2412e0d4335474cd3d372397a2dc2faf14",
+      "git_blob": "a522a9279b867d2e32d1c3c2c7ceb25171b0bf03"
+    },
+    {
+      "path": "HLC_PATH_CANCELLATION.md",
+      "bytes": 28232,
+      "sha256": "dc806ea8c6b26b6419ae90a3fa8003bd971c7358ed4dba7babb8c82dd8b2fc9b",
+      "git_blob": "adbe598b517ad5c6c45385b4adc5e5e20eba25f7"
+    },
+    {
+      "path": "HLC_ROOT_AVERAGING.md",
+      "bytes": 19671,
+      "sha256": "1f3cd6e20936830ee91ab8591c5d289133ecdcdf1339633df3231e47fd8f80b0",
+      "git_blob": "81b749827db0683341b82bab0ebd73a4fb17255b"
+    },
+    {
+      "path": "MIDDLE_JOINT.md",
+      "bytes": 40772,
+      "sha256": "9b88dcfc5ab18d3c469a1ec30a283c44dfa8cb226b4bab2f890d24e5500c5813",
+      "git_blob": "d9ce2fcb948343122790744ccd38d1159dfd4e91"
+    },
+    {
+      "path": "OFF_DIAGONAL_TRANSFER.md",
+      "bytes": 15258,
+      "sha256": "e7ea068397e9c3b18e5ac31123d876c81bf3c3f73de0fd0b5a5c551ca2307626",
+      "git_blob": "3ead6e25fdb589ae49b65cc98e8f3eb09d77be25"
+    },
+    {
+      "path": "README.md",
+      "bytes": 20190,
+      "sha256": "1d17ecbfaaf47bc3cc00e47eab914c85f6383110be6630794d0998a50f477dcc",
+      "git_blob": "c31b75a931e1c850a984f7514a1b188d5e1e75d3"
+    },
+    {
+      "path": "ROOT_COUNT_REFINEMENT.md",
+      "bytes": 17561,
+      "sha256": "9749fc016f0247446f312bc48a51718840026644122b1685763fba62c06f4512",
+      "git_blob": "6297a0da2c2fb0a9c486fd9997934fd6f38ce9ac"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "bytes": 2958,
+      "sha256": "b5f9e60f09eea17f8dd4643f2997ded430e126216dc4778944d076c8b8c91c7d",
+      "git_blob": "061ead2d99abef00e3949d910d633e78d5c0b521"
+    },
+    {
+      "path": "THIN_BAND.png",
+      "bytes": 181022,
+      "sha256": "659a2f6c43160dda659a4db821c1cdccce2c4d79aac8ae8e9f6219d96c6c74c2",
+      "git_blob": "047387da93544c9c29ebc5498636d9f1afcbd61d"
+    },
+    {
+      "path": "THIN_BAND.svg",
+      "bytes": 15886,
+      "sha256": "c558b3e87402f6bee0eb8657d5dee802d70ebcf0b97d0b7f5744f46371084508",
+      "git_blob": "dd792d50a885b8951c1187cc8ac3591c95f7415c"
+    },
+    {
+      "path": "THREE_EDGE_INTEGER_BRIDGE.md",
+      "bytes": 20934,
+      "sha256": "9f4f7e2c327a30b8ce530da9d588d671367eb9d8bb1778c3c3dc8bccb68ff067",
+      "git_blob": "481645aba5dc6d87455f7a69b7421c979b43a7d5"
+    },
+    {
+      "path": "check_closed_triangle_weight.py",
+      "bytes": 9726,
+      "sha256": "3aed0d03eda009fbe93b2f17de320c89d7ce94b93f5487c843114d9e8d6a6d1b",
+      "git_blob": "9467a1a1766e945e43a66bfe9c3fcc61c39a0840"
+    },
+    {
+      "path": "check_coherent_identity.py",
+      "bytes": 11498,
+      "sha256": "dc31cbdf26e3ac1da2c3917e63b9a42e736909c2ef8e0d9dcf15f6a59189e0ee",
+      "git_blob": "6becd4af41e58928a997471a100c627fed34f850"
+    },
+    {
+      "path": "check_common_d_triangle_extension.py",
+      "bytes": 9256,
+      "sha256": "1e449d9aa11395fc9cf6dd76f86cb49ac3a26bf6dd897b079f16217408cfb400",
+      "git_blob": "1bdc7ba47731f803739955c40a2dbb4d23150c0f"
+    },
+    {
+      "path": "check_detector_localization.py",
+      "bytes": 14203,
+      "sha256": "c91b5d531dd84f7b1d5c69aa70bb1ceb43c2c83a968a9b63c0d1e9f450db00ed",
+      "git_blob": "9055ed771075e197c701f29b4d86fae1107f74e8"
+    },
+    {
+      "path": "check_hlc_path_cancellation.py",
+      "bytes": 16340,
+      "sha256": "92f80b303bf21ebcf60470d85176213b2f76ce36017db3f456b9666ea4b61c58",
+      "git_blob": "618a293bf2b1c7acb7afd2209d31decc7404dc01"
+    },
+    {
+      "path": "check_hlc_root_averaging.py",
+      "bytes": 17477,
+      "sha256": "22ca022f856927eaf1dd9ee9490797c95e941bddf8dc9a0ecddcd8d5a3e04c59",
+      "git_blob": "008c5bb5d9cb80e5641761716df623f679f30cbd"
+    },
+    {
+      "path": "check_middle_joint.py",
+      "bytes": 18845,
+      "sha256": "d6af41d2f3a34a1369624156360aaf8e909740ffc7cc97805f3758bcc1ec4044",
+      "git_blob": "61cc89e0162a3668883234a740eba5591813428e"
+    },
+    {
+      "path": "check_off_diagonal_transfer.py",
+      "bytes": 15961,
+      "sha256": "46c7f59ed6acfc3bc2d006f40eac5a54198943fc0a805367fec74fcdfef53a3e",
+      "git_blob": "8f425487c8def88e5df0e8c3f78a040b3024dc95"
+    },
+    {
+      "path": "check_root_count_refinement.py",
+      "bytes": 13364,
+      "sha256": "4e5d458069528fc6cfcda10978bb339934a73f6a9c21af6c5b7bb39955dd591b",
+      "git_blob": "920e064efa6f0f2052299f66aeca39b539fdde32"
+    },
+    {
+      "path": "check_three_edge_integer_bridge.py",
+      "bytes": 16557,
+      "sha256": "65b15c1ed27765285347b85b0235f2524ceab33b52229957dba4b5f206909866",
+      "git_blob": "ca5e38f028b1c39bb12deae087e4844e52d8a786"
+    },
+    {
+      "path": "plot_thin_band.py",
+      "bytes": 4253,
+      "sha256": "7578aae8975f45d734f154c896a6761392e4b9d0b46a7f90729f19d929e15a75",
+      "git_blob": "6c67d882ee87434be0db2afb6392d9e04359403a"
+    },
+    {
+      "path": "run_checks.py",
+      "bytes": 2857,
+      "sha256": "7a5587f1fdaeb150bc4b51d130ac83546d84717039c76249bf755ec71a62bda6",
+      "git_blob": "c080b80affa8cde6c71823d2001836b5a984ca78"
+    }
+  ],
+  "scope": "Mathematical notes, finite checkers, exact reports, source pins and illustrative figure. Excludes this self-describing manifest and later review/publication records. Native analytic statements depend on their explicit imports; the thin-band estimate, RH and a new unconditional zero-free region remain open."
+}

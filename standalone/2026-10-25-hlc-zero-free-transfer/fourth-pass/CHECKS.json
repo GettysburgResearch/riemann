@@ -1,0 +1,150 @@
+{
+  "status": "PASS",
+  "python_version": "3.12.14",
+  "optimized_predicates_retained": true,
+  "third_pass_file_hashes_unchanged": true,
+  "third_pass_files_compared": 43,
+  "runs": [
+    {
+      "checker": "check_middle_joint.py",
+      "checker_sha256": "d6af41d2f3a34a1369624156360aaf8e909740ffc7cc97805f3758bcc1ec4044",
+      "arguments": [
+        "-I",
+        "-S",
+        "-B",
+        "-O",
+        "check_middle_joint.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"counts\": {\n    \"band_ratio_return_equivalence_identities\": 480,\n    \"exact_fixed_k_d_g_allocations\": 3456,\n    \"exact_radical_certificates\": 1,\n    \"far_exponent_cases\": 5304,\n    \"inverse_puncture_restorations\": 1000,\n    \"low_returned_critical_box_cases\": 4851,\n    \"low_returned_weighted_fourth_cases\": 303,\n    \"marked_critical_box_cases\": 4851,\n    \"marked_puncture_capacity_cases\": 2121,\n    \"masked_finite_returns_and_three_part_partitions\": 630,\n    \"natural_primitive_mask_identities\": 15400,\n    \"new_identity_exact_corner_certificates\": 8,\n    \"normalization_cases\": 360,\n    \"rational_joint_envelope_identities\": 7701,\n    \"rational_resource_contact_certificates\": 6,\n    \"selector_support_cases\": 10143\n  },\n  \"exact_contact_resource_gap\": \"1583/164500\",\n  \"exact_head_squared_comparison\": \"42839/36000000\",\n  \"far_saving\": \"1/750\",\n  \"head_cutoff_exponent\": \"101/100\",\n  \"low_returned_count_gap\": \"7427/1440000\",\n  \"low_returned_threshold\": \"73/100\",\n  \"marked_long_gap\": \"1099/192000\",\n  \"marked_returned_threshold\": \"79/100\",\n  \"marked_short_gap\": \"372257/153600000\",\n  \"minimum_alpha_resource_gap\": \"6007/717220\",\n  \"negative_controls\": {\n    \"excessive_far_saving\": true,\n    \"false_marked_endpoint_overlap\": true,\n    \"g_allocation\": true,\n    \"incorrect_square_root_k_weight\": true,\n    \"long_puncture\": true,\n    \"missing_k_mask\": true,\n    \"mu_m\": true,\n    \"short_puncture\": true,\n    \"unmarked_critical_box\": true,\n    \"unmarked_low_returned\": true\n  },\n  \"new_identity_alpha\": \"1/250\",\n  \"new_identity_margins\": [\n    \"371959/307200000\",\n    \"1099/768000\",\n    \"23/16000\"\n  ],\n  \"new_primal_band\": [\n    \"147/200\",\n    \"773/1000\"\n  ],\n  \"open_estimate_proved\": false,\n  \"scope\": \"Finite arithmetic and rational certificates; no analytic premise certified.\",\n  \"small_k_cutoff_exponent\": \"1/100\",\n  \"status\": \"passed\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "checker": "check_coherent_identity.py",
+      "checker_sha256": "dc31cbdf26e3ac1da2c3917e63b9a42e736909c2ef8e0d9dcf15f6a59189e0ee",
+      "arguments": [
+        "-I",
+        "-S",
+        "-B",
+        "-O",
+        "check_coherent_identity.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"certificate\": {\n    \"exact_squared_margin_over_1_over_1000\": \"42839/36000000\",\n    \"minimum_overlap_gain_interval\": [\n      \"3405958272919169/3000000000000000000\",\n      \"851489568229793/750000000000000000\"\n    ]\n  },\n  \"counts\": {\n    \"coherent_exact_corner_identity\": 4,\n    \"envelope_floor_identity\": 1,\n    \"envelope_floor_lower_bound\": 1,\n    \"exact_corner_coefficient_return\": 140,\n    \"exact_masked_gcd_grouping\": 20,\n    \"far_divisibility_return\": 140,\n    \"finite_masked_harmonic_euler\": 256,\n    \"full_divisibility_return\": 140,\n    \"full_head_coefficient_error\": 1,\n    \"gap_radical_threshold\": 1,\n    \"head_stronger_than_overlap\": 1,\n    \"increasing_gap_interval\": 1,\n    \"negative_control_deleted_gcd_mask\": 1,\n    \"negative_control_deleted_overlap\": 1,\n    \"negative_control_excess_saving\": 1,\n    \"negative_control_repeated_prime\": 1,\n    \"nested_ratio_selectors\": 1433,\n    \"overlap_coefficient_error\": 1,\n    \"overlap_cutoff_gain\": 1,\n    \"positive_exact_squared_margin\": 1,\n    \"printed_floor_dominated\": 1,\n    \"radical_branch_interval\": 1,\n    \"rational_radical_isolation\": 1,\n    \"strict_consumer_margin\": 1,\n    \"symbolic_mellin_local_shift\": 3,\n    \"termwise_exact_corner_identity\": 1433,\n    \"termwise_support_cover\": 1433\n  },\n  \"limits\": \"Finite algebra and exact scalar comparisons only; analytic premises and the remaining corner are not proved by this checker.\",\n  \"models\": [\n    {\n      \"corner_nonzero\": true,\n      \"overlap_nonzero\": true,\n      \"parameters\": [\n        2,\n        5,\n        3,\n        1,\n        3\n      ]\n    },\n    {\n      \"corner_nonzero\": true,\n      \"overlap_nonzero\": true,\n      \"parameters\": [\n        3,\n        7,\n        5,\n        2,\n        3\n      ]\n    },\n    {\n      \"corner_nonzero\": true,\n      \"overlap_nonzero\": true,\n      \"parameters\": [\n        3,\n        8,\n        6,\n        3,\n        2\n      ]\n    },\n    {\n      \"corner_nonzero\": true,\n      \"overlap_nonzero\": true,\n      \"parameters\": [\n        4,\n        9,\n        7,\n        3,\n        3\n      ]\n    }\n  ],\n  \"status\": \"pass\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "checker": "check_detector_localization.py",
+      "checker_sha256": "c91b5d531dd84f7b1d5c69aa70bb1ceb43c2c83a968a9b63c0d1e9f450db00ed",
+      "arguments": [
+        "-I",
+        "-S",
+        "-B",
+        "-O",
+        "check_detector_localization.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"scope\": \"Finite algebra and conditional endpoint coverage; residual estimates OPEN\",\n  \"counts\": {\n    \"coefficient_returns\": 1785,\n    \"coherent_primal_returns\": 90,\n    \"selector_partitions\": 4692,\n    \"support_implications\": 1461,\n    \"far_envelopes\": 303,\n    \"marked_corners\": 8,\n    \"thin_band_partitions\": 3570,\n    \"thin_band_returns\": 3570,\n    \"thin_label_supports\": 1564,\n    \"thin_box_corners\": 8\n  },\n  \"old_box_minimum_Bernstein_coefficient\": \"799945092153101/1119744000000000000\",\n  \"marked_short_gap\": \"372257/153600000\",\n  \"marked_long_gap\": \"1099/192000\",\n  \"thin_low_high_short_high_long_gaps\": [\n    \"23/16000\",\n    \"371959/307200000\",\n    \"1099/768000\"\n  ],\n  \"open_hypotheses_tested\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "checker": "check_hlc_path_cancellation.py",
+      "checker_sha256": "92f80b303bf21ebcf60470d85176213b2f76ce36017db3f456b9666ea4b61c58",
+      "arguments": [
+        "-I",
+        "-S",
+        "-B",
+        "-O",
+        "check_hlc_path_cancellation.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"passed\",\n  \"arithmetic\": \"integer and exact rational\",\n  \"counts\": {\n    \"bridge_marginal_counts\": 408,\n    \"exact_exponent_comparisons\": 1,\n    \"fock_schedule_cases\": 20,\n    \"integer_backtrack_cases\": 37430,\n    \"largest_group_phase_cases\": 5,\n    \"line_return_matrix_entries\": 2476,\n    \"list_symmetrization_cases\": 25,\n    \"negative_controls\": 3,\n    \"polynomial_band_hierarchies\": 8,\n    \"projector_error_checks\": 720,\n    \"separation_measure_cases\": 12,\n    \"short_return_schedules\": 88,\n    \"telescoping_product_cases\": 16,\n    \"two_step_mask_cases\": 110,\n    \"two_step_matrix_entries\": 1532416,\n    \"zero_step_entries\": 936\n  },\n  \"scope\": \"finite identities only; no integer completion or new zero-free region\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "checker": "check_hlc_root_averaging.py",
+      "checker_sha256": "22ca022f856927eaf1dd9ee9490797c95e941bddf8dc9a0ecddcd8d5a3e04c59",
+      "arguments": [
+        "-I",
+        "-S",
+        "-B",
+        "-O",
+        "check_hlc_root_averaging.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"passed\",\n  \"counts\": {\n    \"ambiguity_factorial_cases\": 18,\n    \"conditional_history_checks\": 12,\n    \"eisenstein_area_normalizers\": 8,\n    \"eisenstein_crt_families\": 2,\n    \"eisenstein_fourier_lift_checks\": 162,\n    \"eisenstein_grid_identities\": 206,\n    \"exact_actual_root_integrals\": 8,\n    \"exact_lift_and_grid_cases\": 18,\n    \"exact_repeated_position_checks\": 45,\n    \"fixed_path_divisor_checks\": 5940,\n    \"fourier_relation_checks\": 2847,\n    \"line_normalizer_checks\": 22,\n    \"marginal_arc_checks\": 42,\n    \"negative_controls\": 3,\n    \"root_periodicity_checks\": 54,\n    \"source_image_cases\": 65,\n    \"source_jacobian_checks\": 195\n  },\n  \"arithmetic\": \"exact rational arc integrals and integer identities\",\n  \"scope\": \"no conditional-history theorem for the full HLC operator; no new zero-free region\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "checker": "check_three_edge_integer_bridge.py",
+      "checker_sha256": "65b15c1ed27765285347b85b0235f2524ceab33b52229957dba4b5f206909866",
+      "arguments": [
+        "-I",
+        "-S",
+        "-B",
+        "-O",
+        "check_three_edge_integer_bridge.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"constants\": {\n    \"eisenstein_associates\": 6,\n    \"integer_associates\": 2,\n    \"source_general\": \"4080\",\n    \"source_global_root\": \"255/16\"\n  },\n  \"counts\": {\n    \"closed_triangle_congruence_classes\": 216,\n    \"closed_triangle_congruence_instances\": 3192,\n    \"closed_triangle_exact_gcd_root_densities\": 756,\n    \"closed_triangle_exact_multiplicity_integrals\": 756,\n    \"closed_triangle_no_decay_examples\": 8,\n    \"closed_triangle_nontrivial_gcd_savings\": 682,\n    \"eisenstein_area_dilations\": 288,\n    \"eisenstein_divisor_ideals_checked\": 54,\n    \"eisenstein_nonresonant_data\": 12312,\n    \"eisenstein_unit_return_cases\": 25128,\n    \"exact_root_jacobians\": 576,\n    \"gcd_inner_sum_inequalities\": 2080,\n    \"harmonic_divisor_sum_inequalities\": 64,\n    \"independent_eisenstein_bridges\": 54072,\n    \"independent_integer_bridges\": 12856,\n    \"integer_nonresonant_data\": 5880,\n    \"large_nontrivial_root_measure_examples\": 2,\n    \"positive_first_backtracks\": 890,\n    \"positive_last_backtracks\": 494,\n    \"rational_phase_union_checks\": 5880,\n    \"weighted_distinct_product_triples\": 54540,\n    \"weighted_triangle_sum_scales\": 9\n  },\n  \"scope\": \"finite algebra, root measures and weighted triangle sums; no full HLC/native moment theorem\",\n  \"status\": \"passed\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "checker": "check_off_diagonal_transfer.py",
+      "checker_sha256": "46c7f59ed6acfc3bc2d006f40eac5a54198943fc0a805367fec74fcdfef53a3e",
+      "arguments": [
+        "-I",
+        "-S",
+        "-B",
+        "-O",
+        "check_off_diagonal_transfer.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"PASS: exact finite identities only; HLC-thin remains unproved\",\n  \"primary_ideals\": 71,\n  \"prime_ideals\": 50,\n  \"physical_rows\": 16,\n  \"prime_identity_cases\": 71,\n  \"core_factorizations\": 169,\n  \"resonance_pair_cases\": 3376,\n  \"unequal_resonance_pair_cases\": 1408,\n  \"core_zero_negative_control\": true,\n  \"coprimality_negative_control\": true,\n  \"finite_cases\": [\n    {\n      \"parameters\": [\n        4,\n        40,\n        14,\n        30,\n        30,\n        1\n      ],\n      \"columns\": 9,\n      \"active_columns\": 9,\n      \"prime_extracted_summands\": 112,\n      \"determinant_cases\": 104,\n      \"natural_phase_cases\": 1664,\n      \"nontrivial_contents\": 0,\n      \"repeated_prime_m\": 2,\n      \"mean\": \"65431300613022101/68890500000000000\",\n      \"diagonal\": \"4864550634301139/3572100000000000\",\n      \"negative_controls\": {\n        \"short_mobius_signs\": true,\n        \"conjugate_kernel\": true,\n        \"repeated_prime_m\": true,\n        \"gcd_natural_mask\": false,\n        \"determinant_content\": false,\n        \"overall_prime_sign\": true\n      }\n    },\n    {\n      \"parameters\": [\n        4,\n        40,\n        14,\n        30,\n        30,\n        -1\n      ],\n      \"columns\": 9,\n      \"active_columns\": 9,\n      \"prime_extracted_summands\": 112,\n      \"determinant_cases\": 104,\n      \"natural_phase_cases\": 1664,\n      \"nontrivial_contents\": 0,\n      \"repeated_prime_m\": 2,\n      \"mean\": \"65335901489460281/68890500000000000\",\n      \"diagonal\": \"4864550634301139/3572100000000000\",\n      \"negative_controls\": {\n        \"short_mobius_signs\": true,\n        \"conjugate_kernel\": true,\n        \"repeated_prime_m\": true,\n        \"gcd_natural_mask\": false,\n        \"determinant_content\": false,\n        \"overall_prime_sign\": true\n      }\n    },\n    {\n      \"parameters\": [\n        8,\n        110,\n        20,\n        70,\n        90,\n        1\n      ],\n      \"columns\": 30,\n      \"active_columns\": 21,\n      \"prime_extracted_summands\": 1268,\n      \"determinant_cases\": 1024,\n      \"natural_phase_cases\": 16384,\n      \"nontrivial_contents\": 40,\n      \"repeated_prime_m\": 0,\n      \"mean\": \"21738853400974974813653/173694117106125000000000\",\n      \"diagonal\": \"75552844734579997208447/347388234212250000000000\",\n      \"negative_controls\": {\n        \"short_mobius_signs\": true,\n        \"conjugate_kernel\": true,\n        \"repeated_prime_m\": false,\n        \"gcd_natural_mask\": true,\n        \"determinant_content\": true,\n        \"overall_prime_sign\": true\n      }\n    },\n    {\n      \"parameters\": [\n        8,\n        110,\n        20,\n        70,\n        90,\n        -1\n      ],\n      \"columns\": 30,\n      \"active_columns\": 21,\n      \"prime_extracted_summands\": 1268,\n      \"determinant_cases\": 1024,\n      \"natural_phase_cases\": 16384,\n      \"nontrivial_contents\": 40,\n      \"repeated_prime_m\": 0,\n      \"mean\": \"21800545986403841167853/173694117106125000000000\",\n      \"diagonal\": \"75552844734579997208447/347388234212250000000000\",\n      \"negative_controls\": {\n        \"short_mobius_signs\": true,\n        \"conjugate_kernel\": true,\n        \"repeated_prime_m\": false,\n        \"gcd_natural_mask\": true,\n        \"determinant_content\": true,\n        \"overall_prime_sign\": true\n      }\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "checker": "check_closed_triangle_weight.py",
+      "checker_sha256": "3aed0d03eda009fbe93b2f17de320c89d7ce94b93f5487c843114d9e8d6a6d1b",
+      "arguments": [
+        "-I",
+        "-S",
+        "-B",
+        "-O",
+        "check_closed_triangle_weight.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"passed\",\n  \"counts\": {\n    \"actual_prime_line_averages\": 3050,\n    \"complete_label_weight_checks\": 24,\n    \"discrete_root_budgets\": 21,\n    \"exact_multiplicity_integrals\": 24,\n    \"excluded_shared_list_sums\": 720,\n    \"explicit_polynomial_examples\": 1,\n    \"factorial_cancellations\": 15,\n    \"literal_ordered_triangle_paths\": 14049,\n    \"negative_controls\": 6,\n    \"ordered_quotient_normalizations\": 12,\n    \"primitive_retained_triangle_paths\": 560\n  },\n  \"arithmetic\": \"exact rational weights, root interval lengths and integer identities\",\n  \"scope\": \"restricted raw common-D rooted triangle; imported finite-residue estimate not proved here\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "checker": "check_common_d_triangle_extension.py",
+      "checker_sha256": "1e449d9aa11395fc9cf6dd76f86cb49ac3a26bf6dd897b079f16217408cfb400",
+      "arguments": [
+        "-I",
+        "-S",
+        "-B",
+        "-O",
+        "check_common_d_triangle_extension.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"passed\",\n  \"counts\": {\n    \"excluded_cross_collision_paths\": 28,\n    \"extension_discrepancy_budgets\": 7,\n    \"insoluble_closed_families\": 20,\n    \"literal_active_line_averages\": 1892,\n    \"negative_controls\": 2,\n    \"partial_return_gcd_reductions\": 27,\n    \"reduced_endpoint_pair_counts\": 210,\n    \"return_subset_normalizers\": 6,\n    \"soluble_closed_families\": 94,\n    \"surviving_primitive_paths\": 305,\n    \"weighted_four_product_scales\": 15,\n    \"weighted_four_product_terms\": 162826\n  },\n  \"scope\": \"common-D raw rooted triangles; no arbitrary history or full native moment\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "checker": "check_root_count_refinement.py",
+      "checker_sha256": "4e5d458069528fc6cfcda10978bb339934a73f6a9c21af6c5b7bb39955dd591b",
+      "arguments": [
+        "-I",
+        "-S",
+        "-B",
+        "-O",
+        "check_root_count_refinement.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"PASS: exact finite identities; analytic estimates are proved in the note\",\n  \"counts\": {\n    \"CRT_fourier_phase_checks\": 81258,\n    \"CRT_line_normalizations\": 8,\n    \"all_frequency_gcd_checks\": 211840,\n    \"common_D_exponent_budgets\": 32,\n    \"explicit_triangle_examples\": 6,\n    \"fixed_u_congruence_cases\": 1549,\n    \"fourth_moment_moduli\": 31,\n    \"harmonic_progression_checks\": 2816,\n    \"local_line_cardinality_checks\": 44,\n    \"matrix_cardinality_moduli\": 6,\n    \"negative_controls\": 3,\n    \"progression_gcd_cases\": 123070,\n    \"scale_swap_completions\": 2392,\n    \"scale_swap_moduli\": 14352,\n    \"triangle_exponent_budgets\": 32,\n    \"unit_orbit_cardinalities\": 11439,\n    \"unit_orbit_phase_checks\": 172248,\n    \"unit_quadruple_eliminations\": 92349\n  },\n  \"scope\": \"root counting and the stated fixed-depth raw triangle; no full HLC or zero-free claim\"\n}\n",
+      "stderr": ""
+    }
+  ],
+  "scope": "Finite algebra, exact scalar certificates and regression controls. No analytic import, residual estimate, RH proof or new zero-free region is certified by these executions."
+}

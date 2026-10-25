@@ -1,0 +1,214 @@
+{
+  "status": "PASS",
+  "scope": "Conditional consumer only; the coherent-tail moment is OPEN",
+  "boundary": "1093607/1250000",
+  "boundary_decimal": 0.8748856,
+  "input_tail_saving": "1/1000",
+  "input_tail_outer_product_cutoff": "U^(13/20)",
+  "input_tail_decomposition": "smooth two-factor Heath-Brown, same fixed cutoff w_0",
+  "proved_short_component_exponent": "83/24-sqrt(195)/6",
+  "short_component_radical_comparison_margin": "14379/62500",
+  "input_inverse_length_interval": [
+    "29/25",
+    "117/100"
+  ],
+  "proved_endpoint_margin": "1/1000000",
+  "geometry": {
+    "b": "43267/500000",
+    "ell": "156679/937500",
+    "lx": "5597563/15000000",
+    "ly": "6895573/15000000",
+    "h": "3969767/5000000",
+    "K": "20679931/135000000",
+    "C0": "-80017/3000000",
+    "zeta": "1/1000000000"
+  },
+  "denominator_Bernstein_lower_bound": "35/54",
+  "f_inequality_Bernstein_margins": {
+    "P>=7/9": "0",
+    "f>=14/37": "0",
+    "f_prime<=0": "214/81",
+    "-f_prime<=2/3": "85/486"
+  },
+  "old_x_monotonicity_margin": "1242854411/199692000000",
+  "new_x_monotonicity_margin": "245870047/13500000000",
+  "small_rectangle_Bernstein_coefficients": [
+    "748073/9600000",
+    "10308922507/155520000000",
+    "39807677483/699840000000",
+    "22943241031/466560000000",
+    "222799/3840000",
+    "3535894577/77760000000",
+    "538373107/14580000000",
+    "811748669/25920000000",
+    "85987/1600000",
+    "1403678647/38880000000",
+    "4469457253/174960000000",
+    "2326099811/116640000000"
+  ],
+  "six_interval_certificate": [
+    {
+      "delta_interval": [
+        "1/4",
+        "473/1024"
+      ],
+      "method": "old",
+      "polynomial_order": [
+        "old"
+      ],
+      "bernstein_coefficients": [
+        [
+          "2326099811/116640000000",
+          "6554573011/9953280000000",
+          "54089157199/7644119040000000"
+        ]
+      ]
+    },
+    {
+      "delta_interval": [
+        "473/1024",
+        "953/2048"
+      ],
+      "method": "581/500",
+      "polynomial_order": [
+        "short",
+        "improved_long",
+        "old_floor"
+      ],
+      "bernstein_coefficients": [
+        [
+          "1083174558257/2488320000000000",
+          "163468642577/4976640000000000"
+        ],
+        [
+          "8586604007/55296000000000",
+          "303854956579/552960000000000"
+        ],
+        [
+          "29772749/13824000000000",
+          "10846448429/27648000000000"
+        ]
+      ]
+    },
+    {
+      "delta_interval": [
+        "953/2048",
+        "15/32"
+      ],
+      "method": "291/250",
+      "polynomial_order": [
+        "short",
+        "improved_long",
+        "old_floor"
+      ],
+      "bernstein_coefficients": [
+        [
+          "1154268105397/2488320000000000",
+          "167401949/2592000000000"
+        ],
+        [
+          "6151259053/55296000000000",
+          "733730117/1440000000000"
+        ],
+        [
+          "10846448429/27648000000000",
+          "22534741/28800000000"
+        ]
+      ]
+    },
+    {
+      "delta_interval": [
+        "15/32",
+        "967/2048"
+      ],
+      "method": "583/500",
+      "polynomial_order": [
+        "short",
+        "improved_long",
+        "old_floor"
+      ],
+      "bernstein_coefficients": [
+        [
+          "2585661787/5184000000000",
+          "510866852029/4976640000000000"
+        ],
+        [
+          "216983629/2880000000000",
+          "52830297811/110592000000000"
+        ],
+        [
+          "22534741/28800000000",
+          "32420254291/27648000000000"
+        ]
+      ]
+    },
+    {
+      "delta_interval": [
+        "967/2048",
+        "487/1024"
+      ],
+      "method": "146/125",
+      "polynomial_order": [
+        "short",
+        "improved_long",
+        "old_floor"
+      ],
+      "bernstein_coefficients": [
+        [
+          "671861607673/1244160000000000",
+          "91479246553/622080000000000"
+        ],
+        [
+          "51388357/1080000000000",
+          "24516829/54000000000"
+        ],
+        [
+          "32420254291/27648000000000",
+          "21603578611/13824000000000"
+        ]
+      ]
+    },
+    {
+      "delta_interval": [
+        "487/1024",
+        "5/6"
+      ],
+      "method": "old",
+      "polynomial_order": [
+        "old"
+      ],
+      "bernstein_coefficients": [
+        [
+          "4370247119/7644119040000000",
+          "4166126909/4478976000000",
+          "192320023/3499200000"
+        ]
+      ]
+    }
+  ],
+  "source_side_margins": {
+    "b>0": "43267/500000",
+    "ell>1/6": "143/312500",
+    "ell<1/5": "30821/937500",
+    "B>437/500": "1107/1250000",
+    "lx>ell": "1030233/5000000",
+    "ly-ell>11b/6": "31391/234375",
+    "6kappa ell>3/4": "2747463/1562500000",
+    "ell/h<1/(6kappa)": "418942/35727903",
+    "ell/(h+zeta)>21/100": "118215737/238186020300",
+    "h/2<ly": "376369/6000000",
+    "ly<1/2": "604427/15000000",
+    "small-delta endpoint margin over 1/250": "498496197937/2858232240000000",
+    "floor endpoint margin over 1/100": "621977/375000000",
+    "small-row margin over 1/20": "5558461/250000000",
+    "2zeta<margin/2": "249/500000000",
+    "maximal numerator capacity": "1279/750000"
+  },
+  "kappa_flat_interval": [
+    "93721661759991/125000000000000",
+    "749773294079929/1000000000000000"
+  ],
+  "improvement_over_B_flat_lower_bound": "261759991/250000000000000",
+  "zero_gain_negative_control_endpoint": "15170625416611/2506734000000000000",
+  "warning": "No new tail estimate, imported analytic theorem, or unconditional zero-free region is verified."
+}

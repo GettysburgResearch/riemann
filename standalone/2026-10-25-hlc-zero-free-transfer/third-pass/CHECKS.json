@@ -1,0 +1,110 @@
+{
+  "recorded_at_utc": "2026-10-25",
+  "reviewer": "root research agent",
+  "status": "PASS within stated finite scope",
+  "ci_run": false,
+  "scope": "Captured independent local checker executions for the third pass. These do not prove RH, the complete tail estimate, or the imported analytic framework.",
+  "runs": [
+    {
+      "script": "check_short_inverse.py",
+      "script_sha256": "3554ab9af98ea9b88665a8a210a9c647027f206aa8029603602cdf18efcade91",
+      "exit_code": 0,
+      "optimization_mode": "ordinary Python interpreter",
+      "scope": "Exact envelope identities, rational contact parametrization, restricted exponent, and a negative crossing mutation; no full-family inverse moment or zero-free certification.",
+      "stdout": "EXACT polynomial identities: 4 PASS\nEXACT negative crossing mutation: detected\nEXACT rational parameterization/contact cases: 6300 PASS\nEXACT restricted exponent: 2065793/1550560\nEXACT saving: 4861/4651680\nEXACT first contact: 107567/77528\nEXACT derivative margin at r=7/5: 8/245\nDECIMAL DIAGNOSTICS ONLY (not a global maximum certificate):\n  kappa_flat = 0.74977329407992826188922800106036129899776992377979484447609\n  delta_c = 0.469344858698143067493599783847507590834414051255922143506890\n  g_c = 0.234672429349071533746799891923753795417207025627961071753445\n  t_c = 1.16395357650901095631525150446777530966572803869578084336266\n  R_c = 0.590332353526355793593003037172517821839560357453199549507871\n  old inverse at t_c = 1.13662798042417579692937625372314609138810669891315070280222\n  stationary delta = 0.662048872837352074364460861818961687698779659429113607670425\n  stationary competitor = 1.16364407660206469922541845502163489608745648223088822099490\n  excess over old = 0.02701609617788890229604220129848880469934978331773751819268\nNo native moment, imported theorem, zero-free boundary, or RH certified.\n"
+    },
+    {
+      "script": "check_signed_native.py",
+      "script_sha256": "f42962007a14c071390fffcf4d841e9b66aaf0ef474ca82d62053f6a3931de02",
+      "exit_code": 0,
+      "optimization_mode": "ordinary Python interpreter",
+      "scope": "Finite convolution, masks, gcd inversion, additive residue sums, interpolation, exponent predicates, and weighted prime marks; no analytic mean-value certification.",
+      "stdout": "{\n  \"complete_gcd_inversions\": 10000,\n  \"eisenstein_additive_class_sums\": 6,\n  \"exact_exponent_predicates\": 286,\n  \"fixed_interval_interpolations\": 16,\n  \"hb_coefficients\": 1352,\n  \"native_masked_row_identities\": 108,\n  \"negative_controls\": {\n    \"beyond_licensed_support\": 42,\n    \"discarded_prime_overlap_terms\": 220,\n    \"dropped_nonsquarefree_outer_terms\": 82,\n    \"restricted_mark_replaced_by_full_log_mark\": 546,\n    \"wrong_coprime_outer_identity\": 527,\n    \"wrong_primary_frequency_restriction\": 6\n  },\n  \"scope\": \"exact finite algebra only; no asymptotic moment verification\",\n  \"status\": \"PASS\",\n  \"weighted_prime_mark_identities\": 1500\n}\n"
+    },
+    {
+      "script": "check_averaged_hlc.py",
+      "script_sha256": "2f8cc80138abb8018b212ac7cda8765fc1028cbabb3ce057f2b2d39d74da63b0",
+      "exit_code": 0,
+      "optimization_mode": "ordinary Python interpreter",
+      "scope": "Exact mixed summation, formal-log Vaughan identities, complete affine finite-group identities, and broad-prime selection; no asymptotic cancellation certified by computation.",
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"scope\": \"exact finite identities; no summatory or zero-free assertion\",\n  \"mixed_summation\": [\n    {\n      \"M\": 4,\n      \"N\": 6,\n      \"H\": 6,\n      \"exact_T\": \"-28561535/2421656911872\"\n    },\n    {\n      \"M\": 5,\n      \"N\": 8,\n      \"H\": 10,\n      \"exact_T\": \"111532840733/5200000000000000\"\n    }\n  ],\n  \"smooth_vaughan\": [\n    {\n      \"nmax\": 400,\n      \"U\": 7,\n      \"V\": 11,\n      \"arithmetic\": \"formal prime logarithms\"\n    },\n    {\n      \"nmax\": 512,\n      \"U\": 13,\n      \"V\": 5,\n      \"arithmetic\": \"formal prime logarithms\"\n    }\n  ],\n  \"affine_group\": [\n    {\n      \"prime\": 3,\n      \"exact_energy\": \"1048/27\",\n      \"nonconstant_energy\": \"1694/81\"\n    },\n    {\n      \"prime\": 5,\n      \"exact_energy\": \"217039/125\",\n      \"nonconstant_energy\": \"150909/125\"\n    },\n    {\n      \"prime\": 7,\n      \"exact_energy\": \"8518770/49\",\n      \"nonconstant_energy\": \"2627768/49\"\n    },\n    {\n      \"prime\": 11,\n      \"exact_energy\": \"25734655488/605\",\n      \"nonconstant_energy\": \"3776057238/605\"\n    }\n  ],\n  \"broad_selector\": [\n    {\n      \"nmax\": 2000,\n      \"y\": 3\n    },\n    {\n      \"nmax\": 2000,\n      \"y\": 7\n    },\n    {\n      \"nmax\": 2000,\n      \"y\": 13\n    }\n  ]\n}\n"
+    },
+    {
+      "script": "check_mixed_numerator.py",
+      "script_sha256": "cfdfce4a3af0793cf063ddc0801655d586aca6a32a3a548a018e1850d3cb12e7",
+      "exit_code": 0,
+      "optimization_mode": "ordinary Python interpreter",
+      "scope": "Exact polynomial identities and rational dual certificates for the fixed-cap scalar system; no impossibility claim for stronger analytic inputs.",
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"scope\": \"fixed-kappa expanded scalar comparison only\",\n  \"exact_polynomial_identities\": 3,\n  \"smallest_strict_margin\": 1.7908701921183294e-06,\n  \"negative_control\": true\n}\n"
+    },
+    {
+      "script": "check_conditional_consumer.py",
+      "script_sha256": "c611bedacf374e4ee58f19d2f52e09e07e8933d092f20947be1a01cc10d2349f",
+      "exit_code": 0,
+      "optimization_mode": "ordinary Python interpreter",
+      "isolated": {
+        "copied_to_temporary_directory": true,
+        "report_matches_author": true
+      },
+      "scope": "Exact rational Bernstein certificate for a conditional zero-free consumer. The specified tail estimate and all imported analytic premises remain assumptions.",
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"scope\": \"Conditional consumer only; the coherent-tail moment is OPEN\",\n  \"boundary\": \"1093607/1250000\",\n  \"proved_endpoint_margin\": \"1/1000000\",\n  \"improvement_over_B_flat_lower_bound\": \"261759991/250000000000000\"\n}\n"
+    },
+    {
+      "script": "check_gcd_native.py",
+      "script_sha256": "82f35606a0d220e3053e225c6d6f0495d26c4125eee14e1a34bf2a5dc7f18ee0",
+      "exit_code": 0,
+      "optimization_mode": "python -O",
+      "scope": "Exact smooth convolution, three-way prime allocation, masked-character gcd grouping, Euler masks, and rational exponents; no scalar zero-free or sieve theorem certified.",
+      "stdout": "{\n  \"allocation\": {\n    \"cases_with_a_above_both_cutoff_scales\": 2767,\n    \"identities\": 3105,\n    \"negative_drop_both_allocation\": 184,\n    \"negative_drop_gcd_mask\": 365,\n    \"negative_truncate_smooth_outer_support\": 649,\n    \"repeated_prime_cases\": 495\n  },\n  \"exponents\": {\n    \"critical_interval_role\": \"imported decimal enclosure; source root not reproved here\",\n    \"rational_predicates\": 2130\n  },\n  \"gcd_grouping\": {\n    \"masked_character_identities\": 30,\n    \"negative_false_dual_Q_mask\": 24,\n    \"negative_missing_gcd_mask\": 30\n  },\n  \"row_mask_separation\": {\n    \"coprime_factorizations\": 81,\n    \"negative_overlapping_Euler_masks\": 175\n  },\n  \"scope\": \"finite exact algebra only; no analytic theorem or zero-free certification\",\n  \"weighted_HB_identities\": 98\n}\n",
+      "reporting_only_change": "The output counter now names its exact predicate a>max(y1,y2); calculations and acceptance predicates are unchanged."
+    },
+    {
+      "script": "check_inverse_power_component.py",
+      "script_sha256": "08028aa0c0af4f30ddf8743707e3d3eb4d02eea2990b9b0d4a0060e50e6c96c8",
+      "exit_code": 0,
+      "optimization_mode": "python -O",
+      "scope": "Exact finite convolution, natural phases, normalized reflection factors, density envelopes, radical margins, and critical-length brackets; no imported analytic theorem or complete tail certified.",
+      "stdout": "EXACT smooth-HB coefficient cases: 1820 PASS\nEXACT zero-extended phase/coefficient cases: 5694 PASS\nEXACT normalized reflection cases: 648 PASS\nEXACT envelope comparison cases: 6868 PASS\nEXACT contact identities: 101 PASS\nEXACT printed-floor audit: PASS\nEXACT radical margin: 14379/62500 PASS\nEXACT critical length bracket: 174882826/150272989 6994/6007 PASS\nNEGATIVE CONTROLS: repeated primes, puncture factor, excessive margin PASS\nDECIMAL DIAGNOSTICS (not the exact margin proof):\n  Gamma0 = 1.1309599927051764716860125764856039965599700460125259982994022238\n  kappa_c = 0.7497732940799282618892280010603612989977699237797948444760832961\n  delta_c = 0.46934485869814306749359978384750759083441405125592214350826516578\n  r_c = 1.1639535765090109563152515044677753096657280386957808433633953977\n  old inverse exponent = 1.1366279804241757969293762537231460913881066989131507028028294981\n  component saving = 0.0056679877189993252433636772375420948281366529006247045034272743\n  old critical count = 0.59033235352635579359300303717251782183956035745319954950653903580\n  low-supplied count = 0.58466436580735646834963935993497572701142370455257484500311176153\n  outer contact rho = 0.65792573433601434790400112351534840024920819606708247763628454543\nNo imported analytic theorem, full tail, new zero-free region, or RH certified.\n"
+    },
+    {
+      "script": "check_asymmetric_hb_tail.py",
+      "script_sha256": "b363213fc727ccaddd30ad2ff550d6ba31ba417fb7ee2437172e53b21ea51903",
+      "exit_code": 0,
+      "optimization_mode": "python -O",
+      "scope": "Exact unequal-cutoff convolution, generic affine far-tail inequalities, rational range cases, and critical-block resource contacts; no imported moment or open middle estimate certified.",
+      "stdout": "EXACT unequal-cutoff HB cases: 586 PASS\nEXACT repeated-prime cases: 113 PASS\nNEGATIVE repeated-prime failures detected: 170\nEXACT generic affine gap identities: 4 PASS\nEXACT far-tail range cases: 9393 PASS\nEXACT saving: 1/750 ; consumer margin: 1/3000\nNEGATIVE excessive-saving endpoint control: PASS\nEXACT generic critical-pair contacts: 300 PASS\nEXACT individual resource compatibility cases: 12600 PASS\nDECIMAL DIAGNOSTICS (resource comparison only):\n  critical r = 1.16395357650901095631525150446777530966572803869578084336340\n  critical inverse-product length = 0.745699942724290163368651502753923722092332688138164560553173\n  critical plain length = 0.418253633784720792946600001713851587573395350557616282810224\n  critical row count = 0.590332353526355793593003037172517821839560357453199549506538\n  old full inverse exponent = 1.13662798042417579692937625372314609138810669891315070280283\n  proved far-tail exponent = 1.13529464709084246359604292038981275805477336557981736946950\nNo imported analytic theorem, open middle band, new region, or RH certified.\n"
+    },
+    {
+      "script": "check_tail_return.py",
+      "script_sha256": "b3a380994c7c27aa1b4afda5f8a218a73edececeb12a7a48c5d7078863c1aed8",
+      "exit_code": 0,
+      "optimization_mode": "python -O",
+      "scope": "Exact coherent local Euler polynomial, local correction zero, and contour scale-resource arithmetic; no unlicensed global contour shift or actual moment lower bound.",
+      "stdout": "{\n  \"density_resource\": {\n    \"minimum_gap_to_proposed_target\": \"499/14250\",\n    \"rational_predicates\": 23,\n    \"scope\": \"upper-bound resource comparison, not an actual moment lower bound\"\n  },\n  \"local_identity\": {\n    \"coherent_numerator_nonzero_monomials\": 12,\n    \"exact_polynomial_coefficient_identities\": 2,\n    \"negative_drop_reduced_coprimality\": true,\n    \"negative_drop_repeated_prime\": true\n  },\n  \"local_polynomial_zero\": {\n    \"left_polynomial_value\": \"11/529\",\n    \"ordinary_factor_lower_bound_on_bracket\": \"3/8\",\n    \"predicates\": 6,\n    \"rational_root_bracket\": [\n      \"2/5\",\n      \"1/2\"\n    ],\n    \"right_polynomial_value\": \"-229/2116\"\n  },\n  \"scale_envelope\": {\n    \"negative_ignored_required_displacement\": 1224,\n    \"rational_predicates\": 8100\n  },\n  \"scope\": \"exact finite algebra only; no global contour or tail moment certification\"\n}\n"
+    },
+    {
+      "script": "check_projected_affine_operator.py",
+      "script_sha256": "0c2ed2324da70591db54af16a9a176c6805310a3e325699a88c4e87d51a96749",
+      "exit_code": 0,
+      "optimization_mode": "python -O",
+      "scope": "Exact finite centered affine variance, projection errors, conditioned determinant fibres, compressed Gram matrices, and mean-zero lower bounds; no full arithmetic HLC contraction certified.",
+      "stdout": "EXACT fixed-projector affine identities: 80 PASS\nEXACT varying-projector errors: 334 PASS\nEXACT dirty incidence constraints: 2988 PASS\nEXACT compressed Gram cases: 504 PASS\nEXACT mean-zero lower bounds: 480 PASS\nNEGATIVE CONTROL: omitted centered comparison PASS\nNo full HLC dirty-edge estimate or Möbius correlation certified.\n"
+    },
+    {
+      "script": "check_gcd_fourth_component.py",
+      "script_sha256": "e9d7015d4ec514bb3f92abae255d623a650fc3ad330b3bbbbc3b97757c0cb5c6",
+      "exit_code": 0,
+      "optimization_mode": "python -O",
+      "scope": "Exact modified Euler factors, direct harmonic coefficient comparisons, coherent zero-masked coprimality inversion, k normalizers, envelope margins and negative controls; no imported analytic theorem or complementary tail certified.",
+      "stdout": "Generic cleared-denominator polynomial identities: 2 PASS\nDirect gcd / modified Euler coefficient cases: 243 PASS\nExact b_p=0, b_(p^2)!=0 local configuration: PASS\nExact coherent coprimality inversions: 72 PASS\nWrong-weight and wrong-mask detections: 46 50\nExact normalization cases: 96 PASS\nExact scale / convergence cases: 216 PASS\nExact smooth-head saving: 17/6300 ; consumer reserve: 107/63000\nNegative repeated-prime, p^2, square-root k, and .78-margin controls: PASS\nDECIMAL DIAGNOSTICS ONLY: critical head exponent = 1.129646526507667895841822044517976807504202910960970635\nDECIMAL DIAGNOSTICS ONLY: critical saving = 0.006981453916507901087554209205169283883903787952196032\nNo imported theorem, complementary tail, new zero-free region, or RH certified.\n"
+    },
+    {
+      "script": "check_ratio_cutoff_return.py",
+      "script_sha256": "97306a93cc7b2f6a94f1044bf5195b9aa9f5c7bf3331a5687ee59d9693a40687",
+      "exit_code": 0,
+      "optimization_mode": "python -O",
+      "scope": "Exact ratio-selector inversion, natural and primitive zero-mask returns, squarefree coefficients and scalar power margins; no row-mean lower bound or complete native saving certified.",
+      "stdout": "{\n  \"finite_inversion\": {\n    \"exact_predicates\": 6247,\n    \"negative_deleted_k_mask\": 198,\n    \"negative_false_high_support\": 113\n  },\n  \"masked_reflected_returns\": 120,\n  \"scope\": \"finite exact algebra only; no row-mean lower bound or analytic certification\",\n  \"squarefree_and_scale_predicates\": 50\n}\n"
+    }
+  ]
+}
