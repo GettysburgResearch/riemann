@@ -23,7 +23,7 @@ Here `M_sixth` is the nonnegative sub-sum of (1) over `u=v⁶`, including the or
     Θ_E ≤ 1/2 + (5/12)(21/20−1/6)
         = 125/144 = 0.8680555555….                        (4)
 
-Equivalently ζ_E would have no nontrivial zero with real part greater than `125/144`; The factorization `ζ_E=ζ·L(s,χ_{−3})` gives the same boundary for both ζ and the Dirichlet L-function `L(s,χ_{−3})`. This extraction does not require a detector, any other character family, or a claim that the source benchmark is attained. The exact limsup uses the nonvanishing Mellin profile and the standard reciprocal-ζ analytic input stated in the sector note.
+Equivalently ζ_E would have no nontrivial zero with real part greater than `125/144`. The factorization `ζ_E=ζ·L(s,χ_{−3})` gives the same boundary for both ζ and the Dirichlet L-function `L(s,χ_{−3})`. This extraction does not require a detector, any other character family, or a claim that the source benchmark is attained. The exact limsup uses the nonvanishing Mellin profile and the standard reciprocal-ζ analytic input stated in the sector note.
 
 The sharper isolated Lean candidate currently has bound `4369347/5000000=0.8738694`, subject to the separate tracker admission and semantic status described in its [packet](../2026-10-29-return-retune-8738694/README.md). The numerical improvement in (4) would be
 

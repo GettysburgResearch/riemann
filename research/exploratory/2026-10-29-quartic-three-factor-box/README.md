@@ -24,9 +24,10 @@ Writing Q=X^x gives the common inverse-block exponent
 
 The ordinary block has the same exponent as an upper bound by the standard `q=q₁v²` squarefree-kernel decomposition, original row multiplier `χ_g(v²)`, Minkowski and divisor/small-power bounds. For the buffered detector take δ=2σ−1=3/5 and `f(x)=E(x)−δx`. If its source-qualified witnesses have `r+m≥t`, `m≤1/2`, `0≤r≤t` up to arbitrarily small losses, the exponent supplied by these moments is
 
-    F(t)=sup_(max(0,t−1/2)≤r≤t) min{f(r), f(t−r)}.            (5)
+    F(t)=sup_(max(0,t−1/2)≤r≤t; max(0,t−r)≤m≤1/2)
+           min{f(r), f(m)}.                                  (5)
 
-The second moment must first be reduced to a common row-independent coefficient vector by the fixed-dimensional Sobolev/profile replay; t, bin, dyadic and polynomial-height losses are chosen before τ. Equation (5) is a **relaxed upper-bound optimization**: it does not claim that its extreme witnesses occur for an actual zero.
+The second moment must first be reduced to a common row-independent coefficient vector by the fixed-dimensional Sobolev/profile replay; t, bin, dyadic and polynomial-height losses are chosen before τ. Equation (5) is a **relaxed upper-bound optimization**: it does not claim that its extreme witnesses occur for an actual zero. In general it is not legitimate to replace m by t−r: f need not decrease throughout [0,1/2].
 
 ## A continuum of three-factor boxes
 
@@ -43,6 +44,12 @@ Indeed the three inverse faces are `1−3r/5`, `(4/15+2b/3)+2r/5`, and `(11/15+b
 More precisely, for each fixed `0<b≤1/20`, prime A,B,C in fixed positive-width boxes provide `≫X/(log X)³` distinct cyclic quartic fields after the at-most-two-character fiber, with `N f(χ_g)≈X` and `N f(χ_g²)≈X^(1−b)`. At any sufficiently small fixed power height the relative-quotient exception count is `O(X^(17/25+2b/5+ε))`. Their absolute discriminants are ≍X^(3−b), so the cumulative discriminant exception exponent is `(17/25+2b/5)/(3−b)` and the elementary field-count exponent is `1/(3−b)`, each with the same small-dyad height split used below. At b=0 take B=(1): this returns the two-prime family and its `≫X/(log X)²` lower count. Constants and the permitted height power can depend on the chosen b.
 
 At the upper endpoint b=1/20, one has `(a,b,c)=(1/40,1/20,37/40)`, `t=1`, order-four exception exponent `7/10`, quadratic-core exponent `68/125`, and `|D_L|≈X^(59/20)`. The discriminant-order bound is therefore `O(Y^(14/59+ε))`, against `≫Y^(20/59)/(log Y)³` distinct fields. The order-four and quadratic detector height powers are both required; take the common power below the order-four power and 19/20 times the quadratic-core power.
+
+### Refinement with the powered ordinary witness
+
+The later [fourth-moment detector calculation](../2026-10-29-quartic-fourth-detector/README.md) improves this entire continuum, under its additional common-profile/powered-block replay. Keep the same exponents `(a,b,c)=(u,b,v)` and use t=1. For `r≥2/3`, each face of `E(r)−3r/5` is at most `2/3+2b/3`; for `r≤2/3`, the actual constraint `r+m≥1` with `m≤1/2` gives `m∈[1/3,1/2]`, and each face of the fourth-moment count exponent `E(2m)−6m/5` is at most the same value. Here (4) is no larger than the quartic pair expression `max{1,c₀+x,d₀+x/2}`, which suffices for this upper bound. At the feasible point r=m=1/2, the inverse second-moment exponent is 7/10 and the ordinary fourth-moment exponent is exactly `2/3+2b/3` for `0≤b≤1/20`; hence this bound is also the exact maximum of this particular relaxed calculation.
+
+Consequently the conditional conductor exception exponent is `2/3+2b/3`, strictly smaller than (6) when b<1/20 and equal at b=1/20. The quadratic-core count is unchanged and smaller, while the discriminant exception exponent becomes `(2/3+2b/3)/(3−b)`. For b=1/100 this is `202/897≈0.22520`, versus the earlier `342/1495≈0.22876`; for b=0 it is 2/9, and the elementary family lower bounds remain as above. The two-moment optimum discussion below continues to describe only the earlier second-moment calculation, not this fourth-moment refinement.
 
 ## A three-prime example
 

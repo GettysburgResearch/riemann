@@ -1,0 +1,26 @@
+sha256 /workspace/scratch/lean-4.34.1-linux/bin/lean e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550
+sha256 /workspace/scratch/lean-4.34.1-linux/bin/leanchecker ccef1bfe9bfeecea65137d94a69033c1a89f360711f50fa3178e7ba3e696fcbe
+sha256 /workspace/scratch/retune_project/src/Candidate/Main.lean ed6819a865798ca2e02b0f95b83c0351acde00f29c6419837de7a8771ec349dc
+sha256 /workspace/scratch/retune_project/isolated-olean-v2/Candidate/Main.olean 823e29ed18a2cc44adfe13b1bc9f9eef6d14ad9412c87766fd6f9d0c2e41bf42
+sha256 /workspace/scratch/retune_project/import-plan-v3.json 1bdceb8ac0e91356f432cb04df1dbce935e8e1b36a156df0cae8b8cd6f3a9f61
+LEAN_PATH=/workspace/scratch/retune_project/isolated-olean-v2:/workspace/scratch/qproject/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/PrimeNumberTheoremAnd/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/rellich-kondrachov/.lake/build/lib/lean
+cgroup events before:
+low 0
+high 0
+max 26008
+oom 0
+oom_kill 0
+oom_group_kill 0
+
+command: ['leanchecker', '--fresh', '--verbose', 'Candidate.Main'] timeout_seconds=10800
+replaying Candidate.Main with --fresh
+wall_seconds=3191.251 user_seconds=3152.069 system_seconds=33.390 max_rss_kib=11831360
+cgroup events after:
+low 0
+high 0
+max 59198
+oom 0
+oom_kill 0
+oom_group_kill 0
+
+exit=0

@@ -1,6 +1,6 @@
 # Isolated retune with two expanded count windows
 
-**Status:** The isolated Lean dependency closure has compiled, and the candidate and Riemann-zeta corollary report only the standard axioms. A fresh kernel replay of this retune, tracker admission and the semantic/source audit remain outstanding. It uses the same count and physical sources and the same `1/250` floor-budget change as [the prior candidate](../2026-10-29-arvi-return/README.md). The active prior candidate and build were not modified.
+**Status:** The isolated Lean dependency closure has compiled, the candidate and Riemann-zeta corollary report only the standard axioms, and `leanchecker --fresh` replayed `Candidate.Main` successfully. Tracker admission and the semantic/source audit remain outstanding. It uses the same count and physical sources and the same `1/250` floor-budget change as [the prior candidate](../2026-10-29-arvi-return/README.md). The active prior candidate and build were not modified.
 
 Set `theta=4369347/5000000 = 0.8738694`, `h=80599/100000 = 0.80599`, and physical numerator cap `619/10000`. The geometry checker verifies the existing parameter and non-row schedule conditions with the smaller floor reserve. The proposed result would be only `8·10^(−7)` below the prior `0.8738702` candidate.
 
@@ -35,7 +35,7 @@ The checked [edge-certificates.json](edge-certificates.json) records all 71 leav
 
 The six original `Edge_*.lean` modules are restored byte-for-byte to PR94 and are not imported by the retuned Candidate.Main graph, which instead uses `RetuneEdge01` through `RetuneEdge04`. Since those obsolete files refer to the original constants, they are not asserted to compile independently under the changed constants. The verifier's submission dependency procedure must be run on the altered graph, including new `Admission32` and `RetuneEdge` modules, before trying to compile the target. The prior candidate's build remains separate.
 
-The files can be regenerated in an isolated copy of the prior 0.8738702 candidate source using `generate_constants.py`, `generate_admissions.py`, `generate_windows.py`, and `generate_edges.py`; inspect their `--help` arguments. Their baseline source inputs and the original window source are pinned by SHA-256. The admission generator checks all 30 Bernstein identities by exact symbolic reconstruction, and the edge generator checks all 71 identities and the complete dyadic leaf traversal. Their output has been compiled in the isolated build; source semantics and an independent fresh replay remain separate checks.
+The files can be regenerated in an isolated copy of the prior 0.8738702 candidate source using `generate_constants.py`, `generate_admissions.py`, `generate_windows.py`, and `generate_edges.py`; inspect their `--help` arguments. Their baseline source inputs and the original window source are pinned by SHA-256. The admission generator checks all 30 Bernstein identities by exact symbolic reconstruction, and the edge generator checks all 71 identities and the complete dyadic leaf traversal. Their output has been compiled in the isolated build and the candidate passed a fresh kernel replay; source semantics and tracker admission remain separate checks.
 
 ## Isolated build and replay status
 
@@ -58,4 +58,4 @@ CandidateZetaRetuned.zeta_ne_zero {s : ℂ} (hs : 4369347 / 5000000 < s.re)
   (h1 : s ≠ 1) : riemannZeta s ≠ 0
 ```
 
-Both the candidate and this corollary report the standard axioms `[propext, Classical.choice, Quot.sound]`, with no `sorryAx`. The baseline 0.8738702 candidate has separately passed `leanchecker --fresh`; **this retune has not yet received a fresh kernel replay**. Neither compilation nor that baseline replay establishes tracker admission or completes the semantic audit of the imported formal source.
+Both the candidate and this corollary report the standard axioms `[propext, Classical.choice, Quot.sound]`, with no `sorryAx`. The baseline 0.8738702 candidate has separately passed `leanchecker --fresh`. This retune also passed `leanchecker --fresh --verbose Candidate.Main` with exit 0, 3191.251 seconds wall time, 11,831,360 KiB maximum resident memory, and no cgroup OOM event; the exact command, environment and preflight hashes are recorded in [leanchecker-fresh.log](leanchecker-fresh.log) (SHA-256 `3621900674227fb2fc17ca26d778b27fd6aad612ad3c62b5eb3993e509d847a6`). This is a fresh replay by the same Lean kernel, not a separate external verifier. Neither compilation nor replay establishes tracker admission or completes the semantic audit of the imported formal source.

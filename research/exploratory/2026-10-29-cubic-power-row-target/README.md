@@ -7,7 +7,7 @@ Let K=Q(ω), fix the source good set S, and let χ_n(u) be a zero-extended cubic
     M_u(D)=D^(−1/2) Σ_(n good) μ_K(n)ν(n)χ_n(u)W(Nn/D),
     I₃(Y,D)=Σ_(0<Nu≤Y) |M_u(D)|²,                            (1)
 
-where ν is a fixed finite-order Hecke character supported at the fixed bad set and W=W₀ is the single fixed nonnegative smooth annular profile from the linked n-th-power note, whose Mellin transform is nonzero on Re s>0; retain the original zero masks. More generally one may assume the bound uniformly for all fixed admissible profiles, but an arbitrary one-profile bound need not detect a zero at which its Mellin transform vanishes. All row and column presentations must be compatible with a finite ray decomposition; the energy in (1) must count all natural rows, including cubes. A single primary element per good principal ideal provides the relevant rows, and bounded unit multiplicity is harmless in this fixed field.
+where ν is a fixed finite-order Hecke character supported at the fixed bad set and W=W₀ is the single fixed nonnegative smooth annular profile from the linked n-th-power note, whose Mellin transform is nonzero on Re s>0; retain the original zero masks. More generally one may assume the bound uniformly for all fixed admissible profiles, but an arbitrary one-profile bound need not detect a zero at which its Mellin transform vanishes. In (1) take one good primary element per good ideal, in the convention of the cited source; the energy counts all such natural rows, including cubes. Moving to other unit representatives can introduce an additional finite ray twist, so bounded unit multiplicity by itself does not transfer a principal-twist estimate to those sectors.
 
 On every cube row u=v³,
 
@@ -49,7 +49,7 @@ For the **principal finite twist**, the more specialized [rStation paper 52 v5, 
 
     I₃(Y,D) ≪ (YD)^ε [Y+Y^(1/3)D],                           (5a)
 
-including every good natural row and its original cube/deletion masks, for fixed common smooth profiles and polynomial-length data. This source and its cited Type I/II and sieve inputs have not been independently verified here. At D=Y^(9/10), (5a) gives `Y^(37/30+ε)`, leaving a Y^(7/30) saving to (3). For `r≥2/3`, its exponent is E=1/3+r; the cube-row extraction only forces `Θ_K≤1/2+(E−1/3)/(2r)=1`, so (5a) yields no nontrivial boundary through this route. Its principal-twist restriction must not be dropped when discussing general ν.
+including every good primary natural row and its original cube/deletion masks, for fixed common smooth profiles and polynomial-length data. This source and its cited Type I/II and sieve inputs have not been independently verified here. At D=Y^(9/10), (5a) gives `Y^(37/30+ε)`, leaving a Y^(7/30) saving to (3). For `r≥2/3`, its exponent is E=1/3+r; the cube-row extraction only forces `Θ_K≤1/2+(E−1/3)/(2r)=1`, so (5a) yields no nontrivial boundary through this route. Its principal-twist and primary-row restrictions must not be dropped when discussing general ν or other unit sectors.
 
 This loss cannot be removed by merely proving a better arbitrary-coefficient cubic sieve. De Faveri–Dunn–Hoffstein, [arXiv:2607.07911v2, Theorem 1.1](https://arxiv.org/abs/2607.07911v2), prove the cubic operator lower bound
 
@@ -88,3 +88,22 @@ There is a precise sixfold-metaplectic connection. Chinta–Friedberg–Hoffstei
 At the schematic first-Poisson scales for D=Y^(9/10), the column length remains D while the dual row norm is `H≈D²/Y=Y^(4/5)`. The target primal Y-bound would require a corresponding signed dual correlation of size `≲D`, after retaining its physical prefactor Y/D, nonfactorized Fourier kernel, gcd/divisor expansions and diagonal cancellation. No result in the cited sixfold-Eisenstein or rStation estimates has been identified that supplies that exact estimate. The cubic Gauss-square/sixfold identity is an exact arithmetic match and a potential method, not an upper bound or an assertion that the metaplectic residual spectrum has been removed.
 
 Equation (9) also places the missing coefficient one angular step from a printed structured theorem. The coefficient `α⁻¹γ₁` is, up to the fixed ray factor χ_n(−1), the complex conjugate of `αγ₋₁`. Paper 5 (1.6) rewrites `αγ₋₁` as `μγ₂` times a fixed ray factor. Thus, after conjugation and finite-ray decomposition, the missing cubic-twist polynomial has the `D_j=μα^jγ₂` form with **j=0**, whereas Theorem 1 states its bound for j=±2. Extending the coefficient theorem to j=0 would require a proof; it is not a parameter choice permitted by the printed theorem. Even if the same displayed upper bound `N+B³/N+N^(2/3)B^(1/2)` were established at j=0, its B³/N term is Y^(19/10) at `N=Y^(4/5), B=Y^(9/10)`, still much larger than the desired dual Y^(9/10) size. A meaningful improvement would need additional use of the signed kernel or stronger scale-specific arithmetic, not merely the same long-range upper bound.
+
+A closer source than paper 5 is [rStation paper 52 v5, Proposition 3.8, displayed estimate (R3)](https://rstation.ai/problems/riemann_hypothesis/papers/52/v5). It asserts for the prescribed coefficient `μ(n)G(n)` (G the normalized cubic Gauss sum), a common deletion D₀ and a fixed nonzero cubic twist c,
+
+    Σ_(0<Nh≤H) |Z^(−1/2) Σ_(n,D₀)=1
+          μ(n)G(n) overline(χ_n(ch)) V(Nn/Z)|²
+       ≪ (HZ N(c) N(D₀))^ε
+          [H+(HZ)^(2/3)+H^(1/3)Z^(5/6)
+                 +H^(1/3)Z^(7/9)N(c)^(1/6)].                (10)
+
+This is the **j=0 coefficient** discussed above, not a coefficient-uniform cubic sieve. In the quasi-RH notation, `(5.10)` identifies the trace-normalized cubic Gauss sum as `G(n)=χ₆,n(λ)^(−2)γ₂(n)`. Conjugating (7) gives `μ(n)γ₂(n)`. Writing χ₃,n=χ₆,n², the identity is exactly `μγ₂ overline(χ₃,n(h)) = μG overline(χ₃,n(λ²h))`, because `χ₃,n(λ)^(−2)=χ₃,n(λ)`; therefore choose c=λ² in (10). The R3 statement allows arbitrary fixed nonzero c, and its proof after (R5b) explicitly restores the prime above 3 and fixed numerator multipliers. Matching the source's full physical profile, unit and mask conventions remains necessary. Thus (10) is a source-qualified **exact-coefficient candidate** for the one-column dual, more relevant than paper 5's j=±2 theorem; that source match is not silently promoted to a bound for the complete physical signed gcd sum.
+
+At the schematic target scales H=Y^(4/5), Z=Y^(9/10), and fixed c, the four terms in (10) have exponents 4/5, 17/15, 61/60 and 29/30. The resulting positive mean is `≪Y^(17/15+ε)`, while a schematic unsigned dual bound sufficient after multiplying by Y/Z would require `Y^(9/10+ε)`. The loss is exactly Y^(7/30), agreeing with the principal-twist natural inverse bound (5a). Thus even complete verification of this direct R3 match does not prove (3); further signed physical cancellation or a sharper coefficient-sensitive mean would still be needed.
+
+For comparison with the staged candidate θ₀=4369347/5000000, an all-row bound `I₃(Y,Y^(9/10))≪Y^(E+ε)` would improve θ₀ through the same cube-row argument as soon as
+
+    E < 1/3 + (9/5)(θ₀−1/2)
+      = 75472369/75000000 ≈ 1.0062982533.                   (11)
+
+Thus an exact Y-sized bound is stronger than necessary to improve that candidate, but even this relaxed target requires a saving just over 0.227 in the exponent relative to paper 52's 37/30 bound. The limiting all-row bound remains unproved; the formula is only a conditional extraction.

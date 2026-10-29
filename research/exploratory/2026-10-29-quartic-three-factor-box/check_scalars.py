@@ -24,6 +24,12 @@ assert (1-B-Ucurve).subs(B,R(1,20))==R(37,40)
 assert rcurve.subs(B,R(1,20))==R(7,10)
 assert (B+(1-B)*R(13,25)).subs(B,R(1,20))==R(68,125)
 assert (rcurve/(3-B)).subs(B,R(1,20))==R(14,59)
+r4=R(2,3)+2*B/3
+assert s.factor(C.subs(U,Ucurve)+R(2,5)-r4)==0
+assert s.factor((D.subs(U,Ucurve)-R(1,15))-(R(2,3)+B/3))==0
+assert r4.subs(B,R(1,100))==R(101,150)
+assert (r4/(3-B)).subs(B,R(1,100))==R(202,897)
+assert r4.subs(B,R(1,20))==rcurve.subs(B,R(1,20))==R(7,10)
 upper=s.factor((R(17,25)-C)/(R(2,5)))
 lower=s.factor(R(10)*(D+R(1,20)-R(17,25)))
 assert s.factor(upper-(R(43,40)-15*B/8-5*U/4))==0
