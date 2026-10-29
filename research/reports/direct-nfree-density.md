@@ -6,7 +6,7 @@ For a fixed integer n≥4 and a fixed number field containing μ_n, we combine t
 
 ## 1. Statement and inputs
 
-Fix n≥4, a number field K containing μ_n, and the fixed FHL family data and finite bad-prime set S in [de Faveri, *Optimal large sieve for fixed order characters*, arXiv:2610.04045v1](https://arxiv.org/abs/2610.04045v1). Ideals below are integral and coprime to S. Write `N a` for the ideal norm and call an ideal n-free if all its prime exponents are less than n. Let χ_u be the source character indexed by u, with the original zero extension at the primes dividing its presentation, and let `L(s,χ_u^*)` be its primitive inducing Hecke L-function. For `1/2<σ<1` and T≥1, let
+Fix n≥3, a number field K containing μ_n, and the fixed FHL family data and finite bad-prime set S in [de Faveri, *Optimal large sieve for fixed order characters*, arXiv:2610.04045v1](https://arxiv.org/abs/2610.04045v1). Ideals below are integral and coprime to S. Write `N a` for the ideal norm and call an ideal n-free if all its prime exponents are less than n. Let χ_u be the source character indexed by u, with the original zero extension at the primes dividing its presentation, and let `L(s,χ_u^*)` be its primitive inducing Hecke L-function. For `1/2<σ<1` and T≥1, let
 
     N_u(σ,T) = #{ρ : L(ρ,χ_u^*)=0, Re ρ≥σ, |Im ρ|≤T},
 
@@ -14,7 +14,7 @@ with zeros counted with multiplicity.
 
 We use the following named inputs.
 
-1. **FHL family and local data.** The source's multiplicative character identities and zero conventions hold. For good n-free u, the primitive conductor and the radical of the presentation's deleted Euler factors have norms `≪_{K,S,n} Nrad(u)`. Every good prime dividing a nonunit u contributes a nontrivial tame local character; the good conductor support is therefore exactly the support of u. The archimedean type belongs to a fixed finite set. These are source inputs, not derived here from the sieve.
+1. **FHL family and local data.** The source's multiplicative character identities and zero conventions hold. For good n-free u, the primitive conductor and the radical of the presentation's deleted Euler factors have norms `≪_{K,S,n} Nrad(u)`. At a good prime with exponent e in u, the tame local character is the e-th power of an exact order-n residue character; hence exponents 1,…,n−1 are distinct, and the good conductor support is exactly the support of u. The archimedean type belongs to a fixed finite set. These are source inputs, not derived here from the sieve.
 2. **Classical fixed-field Hecke theory.** Primitive finite-order Hecke L-functions have their standard analytic continuation, Euler products, functional equations, fixed-strip polynomial growth in conductor and height, and individual zero-count bounds. The principal pole is treated separately. We use the standard finite-ideal counting and divisor bounds, Mellin inversion, Borel–Carathéodory, three-circles, and Sobolev inequalities.
 3. **The printed n-th-order sieve.** De Faveri’s Theorem 1.1, including its stated reciprocity and fixed ray-sector conventions, applies to n-free row and column ideals with arbitrary complex column coefficients. Explicitly, for a column supported on n-free ideals `Na≤D`,
 
@@ -24,26 +24,29 @@ We use the following named inputs.
 
 The source allows fixed finite ray partitions and the original noncoprime zeros. Its preprint proof and the local FHL statements have not been independently verified in this work.
 
-**Theorem 1.** Fix
+**Theorem 1.** Fix n≥4 and
 
-    1/2+1/n < σ < 1−1/(2n),       δ=2σ−1.
+    1/2+1/n < σ < 1,       δ=2σ−1.
 
-Define
+Define, with h=1−δ,
 
-    R_n(σ)=2/n + 3(n−3)(1−1/n−δ)/[n(3−δ)−7].                  (1.2)
+    R_n(σ) = 2/n + 3(n−3)(1−1/n−δ)/[n(3−δ)−7]  if δ≤1−1/n,
+             10h/(4+nh)                           if δ≥1−1/n.  (1.2)
+
+The two formulas agree at δ=1−1/n; the endpoint is obtained from the first interval with a small ε loss, as explained below.
 
 Under inputs 1–3, for every ε>0 there exists τ>0 such that, for X≥2,
 
     Σ_{u n-free, Nu≤X} N_u(σ,X^τ)
        ≪_{K,S,n,σ,ε} X^(R_n(σ)+ε).                            (1.3)
 
-The constants and τ may depend on the fixed field, order, σ and ε. The estimate is ordered by the natural label Nu; it does not count all Hecke characters by conductor. Good squarefree labels alone give `≫X` distinct primitive characters: their good conductor support is their label, and squarefree ideal counting has positive density. Here `1−R_n(σ)=[δn(2n−7)−n+5]/[n(n(3−δ)−7)]>0`, using δ>2/n. Thus (1.3) gives a density-one zero-free rectangle in this specified family at a sufficiently small power height.
+The constants and τ may depend on the fixed field, order, σ and ε. The estimate is ordered by the natural label Nu; it does not count all Hecke characters by conductor. Good squarefree labels alone give `≫X` distinct primitive characters: their good conductor support is their label, and squarefree ideal counting has positive density. For δ≤1−1/n, `1−R_n(σ)=[δn(2n−7)−n+5]/[n(n(3−δ)−7)]>0`, using δ>2/n. In the high-δ range, `R_n≤2/n<1`. Thus (1.3) gives a density-one zero-free rectangle in this specified family at a sufficiently small power height.
 
 ## 2. Uniform long-cutoff detector
 
-We record the detector in the form used in the proof. The derivation is included here; full contour and profile details, with an independent source-level review, are in [the detector proof](../exploratory/2026-10-29-direct-nfree-density/UNIFORM-DETECTOR-PROOF.md) and [its review](../exploratory/2026-10-29-direct-nfree-density/DETECTOR-INDEPENDENT-REVIEW.md). It is based on the gamma-convolution method and buffering in [OpenAI, Lemmas 4.9–4.10 and 8.1–8.3](https://github.com/openai/math/blob/main/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/paper.pdf); we need only 1<t<3/2.
+We record the detector in the form used in the proof. The derivation is included here; full contour and profile details, with an independent source-level review, are in [the detector proof](../exploratory/2026-10-29-direct-nfree-density/UNIFORM-DETECTOR-PROOF.md) and [its review](../exploratory/2026-10-29-direct-nfree-density/DETECTOR-INDEPENDENT-REVIEW.md). It is based on the gamma-convolution method and buffering in [OpenAI, Lemmas 4.9–4.10 and 8.1–8.3](https://github.com/openai/math/blob/main/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/paper.pdf); we use only the fixed bounded range 1<t<5/2; the extension beyond the source’s printed range is checked in [the long-cutoff review](../exploratory/2026-10-29-direct-nfree-density/LONG-CUTOFF-REVIEW.md).
 
-**Detector lemma.** Fix `1<t<3/2`, `1/2<σ₀<1`, and a prescribed small loss η>0. For sufficiently small τ>0, every nonprincipal row u with `Nu≤X` and a primitive zero in `Re s≥σ₀`, `|Im s|≤X^τ` has, after a finite binning, a parameter `a≥σ₀−η`, two dyadic scales D=X^r and N=X^m, and a common real frequency h such that, up to arbitrarily small prescribed endpoint losses,
+**Detector lemma.** Fix `1<t<5/2`, `1/2<σ₀<1`, and a prescribed small loss η>0. For sufficiently small τ>0, every nonprincipal row u with `Nu≤X` and a primitive zero in `Re s≥σ₀`, `|Im s|≤X^τ` has, after a finite binning, a parameter `a≥σ₀−η`, two dyadic scales D=X^r and N=X^m, and a common real frequency h such that, up to arbitrarily small prescribed endpoint losses,
 
     0≤r≤t,       0≤m≤1/2,       r+m≥t,                         (2.1)
     |M_u(D)|² ≥ X^[(2a−1)r−η],
@@ -113,11 +116,26 @@ Consequently the maximum of the four faces throughout [L,t] is at most
 
     max{f₂(L),f₃(t)}=R_n(σ).                                   (4.3)
 
-For a row with a detector witness, if r≥L use the inverse second moment. If r<L, (2.1) gives `2m≥2(t−r)>L`, while `2m≤1≤t`; use the ordinary fourth moment. Both cases give the exponent (4.3). Fixed detector overflows are absorbed by the preliminary loss. Summing bins, dyads and orientations, then applying the uniform zero count, proves (1.3). □
+For a row with a detector witness, if r≥L use the inverse second moment. If r<L, (2.1) gives `2m≥2(t−r)>L`, while `2m≤1≤t`; use the ordinary fourth moment. Both cases give the exponent (4.3). Fixed detector overflows are absorbed by the preliminary loss. Summing bins, dyads and orientations, then applying the uniform zero count, proves (1.3) in the first open interval. □
+
+**High-δ range.** Suppose `1−1/n<δ<1`, put `h=1−δ`, and choose
+
+    t=10/(4+nh) ∈(2,5/2),    L=4t/5,    R=ht.                 (4.4)
+
+The inverse witness gives the count exponent f(r); the ordinary **eighth** moment gives f(4m). For the latter, convolve four common ordinary blocks, write the resulting column as `a=a₁v²`, and retain χ_u(v²) as a fixed-v row contraction. The divisor-bounded coefficients, fixed Sobolev derivatives and Minkowski argument of §3 give exactly the bracket in (1.1) at length N⁴. On `[L,2]`, f=f₃ decreases; on `[2,t]`, f=f_D increases, and `f₃(L)=f_D(t)=R`. If r≥L, the inverse witness gives R. Otherwise `4m≥4(t−r)>L` and `4m≤2`, so the ordinary eighth witness gives R. This uses the entire allowed m interval; it does not assume m=t−r.
+
+At δ=1−1/n the two formulas both give `R=2/n`. For each requested ε apply the first-range estimate at a fixed slightly smaller σ; its zero count dominates the count at the endpoint, and its exponent differs from 2/n by less than ε. Its resulting positive height power is fixed after that choice.
+
+**Theorem 2 (cubic high range).** Under the same three named inputs with n=3, for each fixed `5/6<σ<1` and ε>0 there is τ>0 such that
+
+    Σ_{u cube-free, Nu≤X} N_u(σ,X^τ)
+       ≪ X^[10h/(4+3h)+ε],       h=2(1−σ).                     (4.5)
+
+The argument in the preceding high-δ paragraph remains valid for n=3: f₂=f₃, with f₃ dominating until x=2 and f_D thereafter. All cutoff, height and masks have the same fixed-field qualifications. The cubic assertion concerns this high range only; the middle-range formula (1.2) was derived for n≥4.
 
 ## 5. One named-source comparison
 
-In this σ interval the middle branch of de Faveri’s Corollary 1.5 gives the natural-label fixed-height exponent
+In the middle interval `2/n<δ<1−1/n`, the middle branch of de Faveri’s Corollary 1.5 gives the natural-label fixed-height exponent
 
     D_n(σ)=1−δ[δn²−(1+3δ)n+3]
                     /[n²δ(2−δ)−2n(1+δ)+2].                     (5.1)
@@ -129,15 +147,44 @@ Algebra yields
 
 The first two numerator factors are positive by the σ interval. The third is 1 for n=4 and exceeds n−3 for n≥5. The last denominator factor is concave in δ and has positive endpoint values `2(n−3)` and `(n−3)(n−1)`; the other denominator factors are positive. Thus `D_n(σ)>R_n(σ)` for every fixed admissible pair. The strict gap persists at a sufficiently small polynomial height after taking account of both bounds' height losses. This comparison addresses that named preprint, not every possible prior or later result; it is conditional on the stated source inputs. At σ=4/5, for example, `R_5=16/25` whereas the cited source exponent is `23/35`.
 
+In the high interval `0<h=1−δ<1/n`, the cited source's upper branch and its difference from (4.4) are
+
+    D_high=h[3−(n+2)h]/(1−nh²),
+    D_high−R_high=h(1−nh)[2+(n−8)h]/[(4+nh)(1−nh²)] > 0.          (5.3)
+
+The last numerator factor is positive: for 3≤n<8 it is at least `3−8/n>0` at h=1/n, and for n≥8 it is at least 2. Thus the inequality is strict for every n≥3 in its high range. At δ=1−1/n the two rates agree; no strict comparison is claimed there.
+
+A second named comparison is available only in the fixed Galois-field, finite-order setting of [Khale–O’Kuhn–Panidapu–Sun–Zhang](https://arxiv.org/abs/2008.09677v3). Their fixed-height conductor-family exponent can be written
+
+    K(δ)=6(1−δ)/(3−δ)  for δ≤3/5,
+         4(1−δ)/(1+δ)  for δ≥3/5.                              (5.4)
+
+The natural n-free labels inject into this larger conductor family by their good local characters, and their conductors are `≪Nu`. In the middle interval K>R_n. For δ≤3/5 this follows from K≥1>R_n. For δ≥3/5, clearing positive denominators gives
+
+    K−R_n = P_n(δ)/[n(1+δ)(n(3−δ)−7)],
+    P_n=7n(n−1)δ²−(16n²−27n−5)δ+9n²−22n+5.
+
+On the relevant interval P_n decreases to the positive value `4(n−3)/n` at δ=1−1/n. In the high interval,
+
+    K−R_high=2h[(2n+5)h−2]/[(2−h)(4+nh)].                     (5.5)
+
+The bracket is strictly increasing on `(0,1/n)` and has the unique root
+
+    h_c=2/(2n+5).
+
+Thus R_high is smaller than that named bound for h>h_c, equal at h_c and larger for h<h_c. These are comparisons of displayed exponents, with sufficiently small polynomial heights and the named source's field hypotheses; they are not exhaustive priority claims.
+
+For n≥4 the entire high-δ interval has σ>7/8. Recent preprints of Liu and Hu claim individual all-height regions to the right of approximately 0.874886647 and 7/8 respectively; if validated with the applicable character scope, those individual regions supersede the corresponding n≥4 high-interval family-density conclusion. Their claims have not been independently verified here. For n=3 the high range starts at 5/6, so it is not wholly covered by those claimed individual regions. It nevertheless has stronger known *claimed density* comparators in important cases: at θ=0.8738694, (4.5) gives `6306530/11891959≈0.530319`, whereas [rStation paper 52 v5, Theorem 1](https://rstation.ai/problems/riemann_hypothesis/papers/52/v5), for its Eisenstein cubic family with fixed finite twist, gives `1891959/4564490≈0.414495` at sufficiently small polynomial height. That comparison is source-dependent and does not imply the same bound over arbitrary cubic fields.
+
 ## 6. A cyclic quintic full-zeta family
 
 Take p=5 and `K=Q(ζ₅)`. Let θ=4369347/5000000=0.8738694. Assume, in addition to inputs 1–3, that replacing the FHL root-of-unity embedding by its j-th power gives the same indexed family for χ_u^j, for each j=1,2,3,4, with the same label cutoff and masks. This is a source compatibility input: replacing u by an exponent-reduced label is not sufficient, since that can change Nu. Assume also the conventional analytic interpretation and tracker admission of the separately kernel-replayed [Dirichlet candidate at θ](../exploratory/2026-10-29-return-retune-8738694/README.md), which asserts zero-freeness for Dirichlet L-functions in Re s>θ, apart from their principal pole.
 
 For each nonunit good fifth-free u, χ_u has exact order five, since any good prime dividing u carries a nontrivial local character. Let L_u/K be its cyclic degree-five class field. Artin factorization gives
 
-    ζ_(L_u)(s)=ζ_K(s) ∏_(j=1)^4 L(s,χ_u^j).                  (6.1)
+    ζ_(L_u)(s)=ζ_K(s) ∏_(j=1)^4 L(s,(χ_u^j)^*).              (6.1)
 
-The primitive and original factors have the same zeros in Re s>0 because their deleted Euler factors do not vanish there. Apply Theorem 1 at σ=θ separately to the four fixed embedding families and take their finite union. For some τ>0, all but
+The Artin factorization uses primitive all-place Hecke factors. The primitive and original factors have the same zeros in Re s>0 because their deleted Euler factors do not vanish there. Apply Theorem 1 at σ=θ separately to the four fixed embedding families and take their finite union. For some τ>0, all but
 
     O_ε(X^[5045224/10653265+ε])                                (6.2)
 

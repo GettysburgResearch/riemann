@@ -63,7 +63,7 @@ Set `δ₀=2σ−1` and now choose `t=1/(2−δ₀)=1/(3−2σ)`, which lies in 
 
 ## Relative-zeta consequence
 
-For ν=1, each nontrivial cubic character gives a cyclic cubic extension L/K, and class field theory gives `ζ_L/ζ_K=L(χ_g)L(conjugate(χ_g))`. The symmetric height window and (1) imply that, with at most O(X^{1−(2σ−1)²/2+ε}) exceptions, fields in this family with character-conductor norm ≤X have a zero-free relative quotient on the same rectangle. Distinct good prime conductor supports supply ≫X/log X such fields. The conductor–discriminant identity `|D_L|=|D_K|³ (N f_g)²` changes the exceptional exponent to `1/2−(2σ−1)²/4+ε` under discriminant ordering, with a suitably shrunk power height. Base ζ_K zeros remain; neither an individual uniform region nor a zero-free statement for ζ_L itself follows.
+For ν=1, each nontrivial cubic character gives a cyclic cubic extension L/K, and class field theory gives `ζ_L/ζ_K=L((χ_g)^*)L((conjugate(χ_g))^*)` using primitive all-place factors. The symmetric height window and (1) imply that, with at most O(X^{1−(2σ−1)²/2+ε}) exceptions, fields in this family with character-conductor norm ≤X have a zero-free relative quotient on the same rectangle. Distinct good prime conductor supports supply ≫X/log X such fields. The conductor–discriminant identity `|D_L|=|D_K|³ (N f_g)²` changes the exceptional exponent to `1/2−(2σ−1)²/4+ε` under discriminant ordering, with a suitably shrunk power height. Base ζ_K zeros remain; neither an individual uniform region nor a zero-free statement for ζ_L itself follows.
 
 ## Restricted families of arbitrary fixed order
 

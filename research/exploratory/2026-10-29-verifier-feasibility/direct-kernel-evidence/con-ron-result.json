@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/workspace/scratch/lean-4.35.0-rc2-linux/bin/con-ron",
+    "--jobs=1",
+    "/workspace/scratch/direct-kernel-retune/candidate.export"
+  ],
+  "kernel_sha256": "4e5616d94374cae37324dad2594f6230c2bb2297240249fc78ff508f3bc5acef",
+  "export_sha256": "51061d264b3d859d8e0a0079c357404f4a08ec5c3bc517a3f6f3358b2a3b3b3b",
+  "max_sampled_rss_kib": 13631488,
+  "timeout_seconds": 7200,
+  "exit_code": 0,
+  "termination_reason": null,
+  "wall_seconds": 1766.606,
+  "sampled_peak_rss_kib": 6765068,
+  "log_sha256": "87bd7b94c2f758fefcdbd1f4958221746d664efa2c68671597f579367e6609a1",
+  "cgroup_events_before": "low 0\nhigh 0\nmax 113916\noom 0\noom_kill 0\noom_group_kill 0\n",
+  "cgroup_events_after": "low 0\nhigh 0\nmax 139758\noom 0\noom_kill 0\noom_group_kill 0\n"
+}

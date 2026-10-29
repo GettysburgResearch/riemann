@@ -1,5 +1,7 @@
 # A local mixed-moment target for a strict density improvement
 
+**Stronger sixth-order source:** for sextic rows over the specific Liu field range and assuming the indicated source matching, Liu’s claimed inverse moment already beats the generic Θ₆ baseline considered below. [The source-level minimax note](../2026-10-29-liu-source-minimax-barrier.md) gives the correspondingly stronger local target. This earlier general-n reduction remains applicable where no such stronger inverse input is available.
+
 **Status.** This is a rigorous reduction conditional on the source-qualified [direct density and detector inputs](../2026-10-29-direct-nfree-density/README.md) and the additional mixed-moment hypothesis below. The mixed-moment hypothesis is **unproved** here. The conclusion is a stronger family density bound, not an individual zero-free region.
 
 Fix n≥4, K, S and FHL data as in the direct note, and fix `1/2+1/n<σ<1−1/(2n)`. Put δ=2σ−1, and

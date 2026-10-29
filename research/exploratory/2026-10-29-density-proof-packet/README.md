@@ -61,7 +61,7 @@ For r≤1/2 this is at most `1−δ₀ max(r,t−r)≤1−δ₀t/2`. For r≥1/2
 
 ## 4. Consequences and comparison
 
-For ν=1, every nontrivial cubic χ_g cuts out a cyclic cubic extension L/K and Artin factorization gives `ζ_L/ζ_K=L(s,χ_g)L(s,conjugate(χ_g))`. Thus the same exceptional-count bound applies to fields in this constructed family, with at most two character labels per extension. The relative discriminant is `f_g²`, so under absolute-discriminant ordering the exceptional exponent is `R(σ)/2`; at `σ=4/5` it is `11/28`. This concerns the quotient, not the base zeta factor or an individual L/K.
+For ν=1, every nontrivial cubic χ_g cuts out a cyclic cubic extension L/K and Artin factorization gives `ζ_L/ζ_K=L(s,(χ_g)^*)L(s,(conjugate(χ_g))^*)` (primitive all-place factors). Thus the same exceptional-count bound applies to fields in this constructed family, with at most two character labels per extension. The relative discriminant is `f_g²`, so under absolute-discriminant ordering the exceptional exponent is `R(σ)/2`; at `σ=4/5` it is `11/28`. This concerns the quotient, not the base zeta factor or an individual L/K.
 
 For K imaginary quadratic, finite χ_g not fixed by complex conjugation induce irreducible odd dihedral Artin representations over Q and weight-one theta forms, with conductor `|D_K|Nf_g`. Split-prime labels give `≫X/log X` distinct forms up to the two possible inducing characters. The same conditional exceptional exponent therefore gives density-one zero-free rectangles for this degree-two family. The [dihedral note](../2026-10-29-dihedral-density/README.md) records the extension to suitable CM quadratic fields and its independent internal review.
 

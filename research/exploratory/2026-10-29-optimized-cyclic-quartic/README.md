@@ -14,9 +14,9 @@ is `O_ε(X^(17/25+ε))`. There are `≫X/(log X)²` distinct fields in fixed non
 
 The quotient means the entire product of its nontrivial class-field L-functions,
 
-    ζ_L(s)/ζ_K(s)=L_K(s,χ_g)L_K(s,χ_g²)L_K(s,χ_g³).          (2)
+    ζ_L(s)/ζ_K(s)=L_K(s,(χ_g)^*)L_K(s,(χ_g²)^*)L_K(s,(χ_g³)^*).  (2)
 
-It is understood by this Artin factorization. No estimate here removes a zero of the fixed base ζ_K from ζ_L.
+These are primitive all-place factors; their zeros in Re s>0 agree with those of the original S-deleted presentations. No estimate here removes a zero of the fixed base ζ_K from ζ_L.
 
 ## The quadratic core and the field count
 

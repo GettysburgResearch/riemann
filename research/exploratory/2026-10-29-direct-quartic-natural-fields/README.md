@@ -42,7 +42,7 @@ because Q<1/2. The number of c choices per w is `≪X^(1/2+ε)(Nw)^(−1/2)`, he
 
 ## Full zeta, labels and comparison
 
-Artin factorization gives `ζ_L/ζ_K=L_K(χ_u)L_K(χ_u²)L_K(χ_u³)`. Outside the three-factor exception set it has no zeros for Re s≥θ within the height window. The Dirichlet candidate, if admitted with its conventional semantics, makes `ζ_K=ζ·L(s,χ₋₄)` nonzero only in the **open** half-plane Re s>θ. Their product therefore gives (1) on that open rectangle; no base nonvanishing on Re s=θ is claimed.
+Artin factorization uses primitive all-place factors: `ζ_L/ζ_K=L_K((χ_u)^*)L_K((χ_u²)^*)L_K((χ_u³)^*)`. These have the same zeros in Re s>0 as the original S-deleted presentations. Outside the three-factor exception set it has no zeros for Re s≥θ within the height window. The Dirichlet candidate, if admitted with its conventional semantics, makes `ζ_K=ζ·L(s,χ₋₄)` nonzero only in the **open** half-plane Re s>θ. Their product therefore gives (1) on that open rectangle; no base nonvanishing on Re s=θ is claimed.
 
 Distinct fourth-free labels have distinct local inertia exponents at good primes and hence distinct primitive source characters. Each cyclic quartic field has two order-four generators. Squarefree good u alone supply ≫X labels and ≫X fields. The fixed S factors give `Nf(χ_u),Nf(χ_u²)≪rad(u)≤Nu`, so the conductor–discriminant formula gives |D_L|≪X³, with no need to assert a matching lower bound for nonsquarefree labels.
 

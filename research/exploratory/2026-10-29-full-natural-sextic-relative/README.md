@@ -8,7 +8,7 @@ Let E=ℚ(ω), S the fixed good set including primes over 6, and u range over pr
 
 of the **distinct fields** L_u have a zero of `ζ_(L_u)/ζ_E` in `Re s≥4/5`, `|Im s|≤X^τ`. There are `≫X` distinct such fields: good squarefree u have primitive conductor `(u)` and order 6, so squarefree ideal counting gives ≫X distinct characters and each cyclic sextic field has exactly two generators. Thus (1) is a density-one relative-zeta rectangle in this natural-label family, with a sufficiently small height power. It is a count by natural label X, not by absolute discriminant. The fixed base ζ_E factor is not covered by (1).
 
-Artin factorization gives five nontrivial factors. χ_u and χ_u⁵ have the same symmetric-height zero counts; their exceptional-label sum is `O(X^(49/78+ε))` under the proposed full-family input. The remaining powers reduce to lower-order natural families with their original masks:
+Artin factorization gives five nontrivial primitive all-place factors induced by the indicated original presentations; fixed deleted Euler factors are nonzero in Re s>0. χ_u and χ_u⁵ have the same symmetric-height zero counts; their exceptional-label sum is `O(X^(49/78+ε))` under the proposed full-family input. The remaining powers reduce to lower-order natural families with their original masks:
 
 * Write `(u)=v b³` with v cube-free, no coprimality assumption. Then on good a,
 

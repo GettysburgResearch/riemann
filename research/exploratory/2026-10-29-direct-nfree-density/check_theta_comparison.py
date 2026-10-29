@@ -45,4 +45,40 @@ K=4*(1-d)/(1+d)
 assert s.factor(K-R-P/(n*(1+d)*(n*(3-d)-7)))==0
 assert s.factor(s.diff(P,d).subs(d,1-1/n)-(-2*n**2-n+19))==0
 assert s.factor(P.subs(d,1-1/n)-4*(n-3)/n)==0
-print('All four-face, continuum and exact-boundary identities passed.')
+h=s.symbols('h', positive=True)
+dhi=1-h
+thi=(5-n*h)/2
+Rhi=h*(5-n*h)/2
+f3hi=lambda x:2/n+(1-1/n-dhi)*x
+fdhi=lambda x:(1-dhi)*x
+assert s.factor(f3hi(thi-s.Rational(1,2))-Rhi)==0
+assert s.factor(fdhi(thi)-Rhi)==0
+Dhi=h*(3-(n+2)*h)/(1-n*h*h)
+assert s.factor(Dhi-Rhi-h*(1-n*h)*(n*h*h-4*h+1)/(2*(1-n*h*h)))==0
+Khi=4*h/(2-h)
+assert s.factor(Khi-Rhi-h*(-n*h*h+(2*n+5)*h-2)/(2*(2-h)))==0
+Dlow=1-d/(4-n*d)
+assert s.factor((1+1/n-d)-Dlow-(n*d-2)**2/(n*(4-n*d)))==0
+h3=1-2*s.Rational(4369347,5000000)+1
+assert s.factor(thi.subs({n:3,h:h3})-s.Rational(10608041,5000000))==0
+assert s.factor(Rhi.subs({n:3,h:h3})-s.Rational(6689992880773,12500000000000))==0
+assert s.factor(Dhi.subs({n:3,h:h3})-s.Rational(2741281467955,5056830380773))==0
+assert s.factor((n*h*h-4*h+1).subs(n,3)-(1-h)*(1-3*h))==0
+t8=10/(4+n*h); L8=4*t8/5; R8=h*t8
+assert s.factor(f3hi(L8)-R8)==0 and s.factor(fdhi(t8)-R8)==0
+assert s.factor(Rhi-R8-n*h*h*(1-n*h)/(2*(4+n*h)))==0
+assert s.factor(Dhi-R8-h*(1-n*h)*(2+(n-8)*h)/((4+n*h)*(1-n*h*h)))==0
+assert s.factor(Khi-R8-2*h*((2*n+5)*h-2)/((2-h)*(4+n*h)))==0
+assert s.factor(t8.subs({n:3,h:h3})-s.Rational(25000000,11891959))==0
+assert s.factor(R8.subs({n:3,h:h3})-s.Rational(6306530,11891959))==0
+v=2/(4+n*h)
+dh=1-h
+f0h=lambda x:1-dh*x
+f2h=lambda x:1-1/n+(2/n-dh)*x
+f3h=lambda x:2/n+(1-1/n-dh)*x
+fdh=lambda x:h*x
+Rstar=5*h*v
+assert s.factor(f3h(4*v)-Rstar)==0 and s.factor(fdh(5*v)-Rstar)==0
+assert s.factor(f0h(v)-Rstar-(2+(n-8)*h)/(4+n*h))==0
+assert s.factor(f2h(2*v)-Rstar-(4+n*(n-7)*h)/(n*(4+n*h)))==0
+print('All four-face, high-cutoff, continuum and exact-boundary identities passed.')

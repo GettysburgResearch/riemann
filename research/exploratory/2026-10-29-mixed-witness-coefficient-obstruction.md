@@ -23,3 +23,17 @@ The prime ideal theorem gives ≫D/log D and ≫N/log N choices of l and k in th
 The implied constant depends on K, S, W₁,W₂, the fixed β interval and the chosen nonempty ray sectors, but is uniform in h₁,h₂ and in X. The same conclusion holds if the coefficient sequences are multiplied by fixed unit-modulus character factors. In the detector's cutoff profile `W₁(y)V≤(D y/X^t)`, the cutoff is identically 1 on the fixed annulus for all sufficiently large X because r<t, so it does not change the lower bound.
 
 Thus no estimate of the form `Σ_{j squarefree}|c_j|²≪X^(−η)` with fixed η>0 can follow for this mixed coefficient vector merely by retaining its exact Möbius convolution. Any such saving would contradict the prime-pair terms. This does **not** preclude a smaller norm on a particular row subset, cancellation in the subsequent character sum, a genuinely arithmetic mixed-moment estimate, or a detector that avoids this witness configuration. If either profile is allowed to shrink with X or to vanish on all admissible primes, the uniform lower bound must be reconsidered.
+
+## What the diagonal of a natural-row average shows
+
+Let the outer family consist of all good n-free FHL labels u with Nu≤X, with fixed n≥3 and the usual original zero extensions. Expanding the nonnegative row moment gives the exact diagonal expression
+
+    Diag = Σ_j |c_j|² Σ_{u good n-free; Nu≤X} |χ_u(j)|².
+
+For every selected prime pair j=lk in (2), the inner factor equals the number of rows coprime to lk. The good squarefree labels alone have cardinality ≫X, while the numbers divisible by l or k are respectively `≪X/Nl` and `≪X/Nk` by fixed-field ideal counting (and are zero if the prime norm exceeds X). These losses are o(X) uniformly for the chosen positive-power annuli. Hence
+
+    Diag ≫ X/[(log D)(log N)].                              (4)
+
+This verifies a non-negligible diagonal for the *actual* natural family, even with the Möbius convolution and the original masks. It does **not** lower-bound the whole moment: the real offdiagonal sum can have either sign and can cancel part of the diagonal. For a concrete abstract model, take a unit vector v with N equal coordinates and the positive semidefinite Gram matrix `G=I−vv*`. Its diagonal entries all equal `1−1/N`, yet `v*Gv=0`. Thus positive diagonals and a positive semidefinite total quadratic form do not by themselves rule out exact cancellation for one distinguished coefficient vector. A real saving or lower bound for the actual character matrix needs additional arithmetic control of the offdiagonal; the model does not assert that the sextic matrix has this null vector.
+
+**Independent review.** Families checked the normalization, prime-pair uniqueness, polynomial-norm common masks, uniformity in β and the frequencies, and the distinction from a row-moment lower bound.

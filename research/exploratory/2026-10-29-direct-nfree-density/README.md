@@ -62,6 +62,39 @@ Throughout the same interval, `K(δ)>R_n(σ)`. For δ≤3/5, K≥1>R: indeed `1�
 
 P′ is increasing but its value at δ=1−1/n is `−2n²−n+19<0`; hence P decreases across the relevant interval, and its endpoint value is `4(n−3)/n>0`. Good local-character injectivity and `Ncond≪Nu` place the source family inside that conductor family. This is a named-bound comparison rather than a proof of priority over every subsequent result; choose a sufficiently small height power after both sources’ T losses. The comparison requires the named Galois-field and finite-order hypotheses and is not asserted for general K outside that source's scope.
 
+For n=6 and Liu's restricted field scope F⊃μ₁₂, [Liu's claimed inverse and ordinary moments](../2026-10-29-liu-source-minimax-barrier.md), if matched to the same rows and profiles, give the stronger exponent `(15−16δ)/(15−6δ)` throughout the present interval. Thus the strict comparison above to de Faveri does not constitute an improvement over Liu in that overlapping sextic setting. The recent Liu source and its exact generator-to-FHL bridge remain unverified here.
+
+## Above the middle branch: an eighth ordinary moment
+
+For every fixed n≥3, the same source-qualified detector proof also gives a separate bound for `1−1/n<δ<1`. Put `h=1−δ`, so `0<h<1/n`, and choose
+
+    t=10/(4+nh),    L=4t/5,    R_high=10h/(4+nh).             (8)
+
+Here `2<t<5/2` and `3/2<L<2<t`. The Γ-convolution and common-profile proof in [UNIFORM-DETECTOR-PROOF.md](UNIFORM-DETECTOR-PROOF.md) extends to this fixed bounded cutoff range by increasing its fixed tail order B before choosing τ; Families and High_match independently checked this replay. On `[L,t]`, the Θₙ count face is the decreasing f₃ up to 2 and the increasing f_D thereafter, and `f₃(L)=f_D(t)=R_high`. If r≥L, use the inverse second moment. If r<L, the actual detector constraints imply `4m≥4(t−r)>4(t−L)=L` and `4m≤2`; use the ordinary **eighth** moment, obtained by expanding S⁴ and applying Θₙ after the same squarefree-column extraction, original row masks and fixed-power divisor losses. Thus the whole actual m interval is covered; no equality m=t−r is assumed. The fixed-power Sobolev and height orders are selected before τ.
+
+The inverse-only cutoff `t=(5−nh)/2` gives the weaker rate `h(5−nh)/2`; the difference between it and (8) is the strictly positive `nh²(1−nh)/[2(4+nh)]`. The new rate is valid but is not claimed to be optimal over all moments or cutoffs.
+
+The relevant upper branch of de Faveri's Corollary 1.5 has `D_high=h[3−(n+2)h]/(1−nh²)`. The exact difference is
+
+    D_high−R_high = h(1−nh)[2+(n−8)h]/[(4+nh)(1−nh²)] > 0.  (9)
+
+For 3≤n<8 the bracket decreases to `3−8/n>0` at h=1/n; for n≥8 it is plainly positive. The rate agrees with de Faveri at h=1/n and is strictly smaller inside the high-δ range. Fixed polynomial-height losses are handled as above.
+
+For the Khale et al. fixed Galois-field finite-order comparator `K=4h/(2−h)`, the sign is
+
+    K−R_high = 2h[(2n+5)h−2]/[(2−h)(4+nh)].                 (10)
+
+Thus (8) beats that named bound for `h>2/(2n+5)`, ties there, and is weaker for smaller h. No exhaustive priority claim is made. For n≥4 this entire open high-δ interval has σ>7/8. For n=3 it starts at σ>5/6. Liu’s claimed finite-order individual boundary `0.874886647…` and Hu’s claimed unitary boundary 7/8, if validated with the applicable scope, would supersede the density estimate strictly above their respective boundaries. Neither recent claim has been independently verified here.
+
+At n=3 and the tracker boundary θ, (8) gives
+
+    t=25000000/11891959,
+    R₃(θ)=6306530/11891959≈0.53031885.
+
+The same natural-label de Faveri upper-branch exponent is `2741281467955/5056830380773≈0.54209480`, a strict gap of about .01177595. This general fixed-K comparison is not the strongest known claim for every specific field: [rStation paper 52 v5, Theorem 1](https://rstation.ai/problems/riemann_hypothesis/papers/52/v5), claims a stronger cube-free Q(ω) exponent `1891959/4564490≈0.41449516` at θ, with fixed finite S-supported twists and small polynomial height. That recent source has not been independently verified here and does not automatically cover general K.
+
+For K=Q(ω), although the preceding bound is weaker than that claimed paper 52 density rate, the same argument illustrates the source-qualified field consequence. The nonunit cube-free FHL labels give cyclic cubic extensions L_u/K. The two nontrivial relative factors are conjugates; apply the same source estimate to both orientations without changing the label norm. Assuming the candidate's conventional interpretation, `ζ_K=ζ L(s,χ_{−3})` has no zeros in `Re(s)>θ`, and hence all but `O(X^(R₃(θ)+ε))` labels `Nu≤X` have `ζ_{L_u}` zero-free in `Re(s)>θ, |Im(s)|≤X^τ`. Squarefree labels provide ≫X distinct fields up to the two generators per field. The conductor–discriminant formula gives `|D_{L_u}|≪X²`; choosing `X≈c Y^(1/2)` with fixed c small yields a specified family of ≫Y^(1/2) fields of discriminant ≤Y, with at most `O(Y^(3153265/11891959+ε))` exceptions at a suitably scaled polynomial height. This is a source-qualified family result conditional on the candidate interpretation, not an all-height result or a count of all cubic extensions by discriminant.
+
 ## Exact retuned boundary and source comparison
 
 At the separately kernel-replayed tracker value `θ=4369347/5000000`, δ=`1869347/2500000`. For every fixed n≥4, θ satisfies the hypotheses above, and (1) becomes
@@ -119,3 +152,30 @@ is admissible because `L_*<1≤t` and `m<1/2`. For (a,b)=(0,1), `f₂(m)≥f₂(
 If `t_*≤t≤3/2`, the admissible witness `(r,m)=(t,0)` has every a=0 monomial exponent at least f₀(0)=1, and each a≥1 monomial exponent at least `f₃(at)≥f₃(t_*)=R`. Here R<1 by the positive numerator for 1−R given in the comparison above. At t=t_* both witnesses apply. These two cases establish an exact scalar obstruction for all fixed mixed monomial moments estimated by the displayed generic Θ_n bound. They are **not** a lower bound for actual selected rows or zeros, and do not rule out mixed estimates exploiting arithmetic coefficient cancellation, a stronger detector, or a different cutoff range. Families independently checked the full mixed-monomial argument, the coefficient and mask reduction, and the Khale comparison; the obstruction remains confined to the stated generic estimate.
 
 [A separate local reduction](../2026-10-29-critical-mixed-moment/README.md) identifies a concrete stronger input: a fixed power saving for the actual mixed Möbius–ordinary moment only near `(r,m)=(L_*,L_*/2)` would yield a strictly smaller density exponent. That mixed estimate is not proved; the accompanying coefficient lower bound shows that a saving cannot come from a power-small ℓ² norm alone.
+
+## The lower-δ limit of generic long-cutoff moments
+
+For fixed n≥3 and `0<δ≤2/n`, de Faveri's lower branch is `D=1−δ/(4−nδ)`. For every hypothetical detector cutoff t≥1, the relaxed witness `(r,m)=(t,0)` is admissible. On x≥1, the generic Θₙ face f₃ is increasing, and every fixed mixed monomial with a≥1 inverse factors has exponent at least `f₃(at)≥f₃(1)=1+1/n−δ`. Ordinary-only monomials and the trivial family count have exponent at least 1. Therefore this generic long-cutoff relaxation has lower bound
+
+    min(1,1+1/n−δ).                                           (11)
+
+For δ≤1/n this equals 1>D. For `1/n<δ≤2/n`, its difference from D is exactly `(nδ−2)²/[n(4−nδ)]≥0`. Thus this particular generic mechanism cannot improve the named source below the middle interval, even with finitely many higher mixed powers and arbitrarily long fixed t. It does not exclude short cutoffs, arithmetic coefficient savings, stronger source moments, or a better bound on actual rows.
+
+High_match independently checked the high-δ endpoint comparison and the fixed-cutoff extension in [LONG-CUTOFF-REVIEW.md](LONG-CUTOFF-REVIEW.md).
+
+## High-δ generic mixed-moment limitation
+
+The high-δ rate (8) is also the exact worst-case limit of this detector relaxation with **any fixed finite collection of generic mixed monomial moments**, for every t≥1 in the abstract relaxation, whether or not a detector at that cutoff has been proved. This is a statement about the available scalar upper bounds, not about actual zeros. Put
+
+    v=2/(4+nh),   L=4v,   t*=5v,   R=5hv.                    (12)
+
+Then 2/5<v<1/2, `2v<1`, `4v<2<5v`, and `f(4v)=f(5v)=R`. For each fixed nonzero pair of nonnegative integers (a,b), the generic moment of M^aS^b has count exponent `f(ar+bm)` after expanding the product, extracting squarefree columns, retaining original zero masks and applying fixed-order divisor bounds. It is enough to exhibit one admissible relaxed witness for each t at which every such exponent is at least R:
+
+* If `1≤t≤3v`, choose `(r,m)=(2v,v)`. Then r≤1≤t and r+m=3v≥t. Each length is `(2a+b)v`. For k=1, `f₀(v)−R=[2+(n−8)h]/(4+nh)>0`; for k=2, `f₂(2v)−R=[4+n(n−7)h]/[n(4+nh)]>0`. The second numerator is positive on the open h interval: for n<7 its endpoint at h=1/n is n−3≥0, and for n≥7 it is plainly positive. At k=3, `f₃(3v)≥f₃(4v)=R`; at k=4 equality holds; and for k≥5, `f_D(kv)≥f_D(5v)=R`.
+* If `3v≤t≤4v`, choose `(r,m)=(t,0)`. For a=1, f₃(t)≥f₃(4v)=R; for a≥2, `at≥6v>5v`, so f_D(at)>R. Ordinary-only monomials have f(0)=1>R.
+* If `4v≤t≤5v`, choose `(r,m)=(4v,v)`. Then r≤t, r+m=5v≥t, and all lengths are `(4a+b)v`; the preceding integer cases apply.
+* If `t≥5v`, choose `(r,m)=(t,0)`. Every a≥1 monomial has `f_D(at)≥f_D(t)≥R`; ordinary-only monomials again have f(0)=1>R.
+
+These witnesses also cover the endpoints. Thus no number of fixed higher ordinary or inverse moments, nor their generic mixed products, can improve (8) within this scalar detector/Θₙ mechanism. The obstruction does not rule out arithmetic cancellation, non-generic source moments, detector restrictions or improvements for actual selected families.
+
+Families independently checked all four high-δ mixed-monomial witness cases, the integer-length inequalities for n≥3, endpoints and the fixed-power coefficient/mask reductions. The conclusion remains a limitation of the generic Θₙ scalar mechanism.
