@@ -59,3 +59,30 @@ Applying (5) to m≤P²D² and summing over b₁,b₂ with the ℓ¹ bound gives
 For the lower side of (3), the first moment of M_d is governed by `Ŵ(s)/[(1−2^(−s))ζ(s)]`. Every nontrivial ζ zero β+iγ gives, along a sequence, unmarked energy at least `Y^{1+2r(β−1/2−η)}`; its averaging error is negligible because r<1/2. The diagonal in (2) carries this bound with only a logarithmic loss, and the O(Y^{1−δ}) off-diagonal is negligible. Let β approach Θ_ζ, treating Θ_ζ=1/2 using a critical-line zero. For the upper side, the cited quadratic large-sieve identity bounds the unmarked energy by `Y^{1+r(2Θ_ζ−1)+ε}`, including Θ_ζ=1 via its trivial endpoint. The diagonal and `O(Y^{1−δ})` error then give the matching limsup. □
 
 **Independent review.** The squarefree inversion, Burgess r=2 and Pólya–Vinogradov estimates, nonprincipal kernel and masks for distinct slot primes, ℓ¹ coefficient bound, off-diagonal exponent, uniformity in the prescribed frequency, and limsup inference were checked independently. The growth identity still depends on the cited quadratic inverse result and its analytic inputs; it gives no unconditional marked-moment bound.
+
+## Weyl-subconvexity extension
+
+The fixed-frequency identity and equivalence also hold in the larger range
+
+    0<r<z,       r+z<3/8,                                      (6)
+
+subject to [Nelson's quadratic Hecke subconvexity theorem](https://arxiv.org/abs/1911.06310v3), Theorem 1.1 and its stated polynomial dependence on the Eisenstein representation's analytic conductor. Specifically, (2)'s error improves to
+
+    O_ε(Y^(1/2+ε)(PD)^(4/3)),                                 (7)
+
+uniformly in the slot frequency. The previously proved Burgess `4/11` range remains an independent alternative.
+
+For the squarefree row covariance in (5), write its exact Dirichlet series after the mod-4 projection. Each term is a nonprincipal primitive quadratic Dirichlet L-function times a reciprocal `L(2s,ψ²)`, fixed 2-factors and the original finite deletion factors at primes of h. For `Re s>1/2`, the denominator reciprocal is uniformly bounded, while the deleted factors cost `h^ε`. Nelson's theorem applied to the unitary Eisenstein representation `|.|^(it)⊞|.|^(−it)` gives
+
+    L(1/2+it,ψ) ≪_ε Q_ψ^(1/6+ε)(1+|t|)^A.
+
+The conductor `Q_ψ` is `≪m`, including the fixed mod-4 twist; the theorem permits arbitrary quadratic conductor, so no cube-free qualification is needed. Interpolating to `Re s=1/2+η` and shifting the Mellin contour of V gives, with fixed profile constants,
+
+    Σ_(d sf, d≡1(4), (d,h)=1) V(d/Y) (d/m)
+       ≪_ε Y^(1/2+ε)m^(1/6+ε)h^ε.                         (8)
+
+For distinct p,q, the already established `r<z` condition ensures the squarefree kernel m is nontrivial and `m≪(PD)²`. The ℓ¹ coefficient masses contribute D and the ordered prime pair count with slot normalization contributes P, giving (7). If r+z<3/8, (7) is `O(Y^(1−δ))` for some δ>0. The unchanged positive diagonal and the cited unmarked inverse limsup then prove (3)–(4) for the larger range (6). The input theorem is stronger than the elementary Burgess character-sum bound and is a separate imported analytic result; this remains an equivalence, not a proof of RH or of the marked moment.
+
+**Independent review of the Weyl extension.** Families checked the mod-4 characters, their nonprincipality, fixed 2-factors and moving deletion masks, the Nelson/Mellin bound, the exponent `4/3` and the enlarged range. The result remains conditional on the cited analytic input and does not establish the marked moment or RH.
+
+High_match independently checked the Weyl extension's quadratic characters, finite masks and `4/3` and `3/8` exponents.

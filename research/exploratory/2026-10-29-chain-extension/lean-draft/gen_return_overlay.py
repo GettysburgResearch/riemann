@@ -7,6 +7,11 @@ from fractions import Fraction as F
 src=Path('/workspace/scratch/pr94-prepared/submission/src/Submissions/arvi_density/Return')
 dst=Path('/workspace/scratch/chain131-candidate/return-overlay')
 dst.mkdir(parents=True,exist_ok=True)
+# Windows.lean itself defines returnWindow33 below.  An earlier standalone
+# draft used the same declaration, so retaining it would cause a duplicate if
+# a full source glob imported both modules.
+duplicate=dst/'Window33.lean'
+if duplicate.exists(): duplicate.unlink()
 expected={'Formulas.lean':'e7dfed2c335372dde5a609ec2b53bf268d6fe7c40807bdb7ee83c5d7f3f3216b',
  'Constants.lean':'96f2a770b68bc4d3ba34e896995514c040315dbc8584e19dbfe479dced8ce4b7'}
 for f,h in expected.items():assert hashlib.sha256((src/f).read_bytes()).hexdigest()==h,f
