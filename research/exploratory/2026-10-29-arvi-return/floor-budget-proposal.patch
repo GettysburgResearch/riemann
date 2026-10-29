@@ -1,0 +1,131 @@
+diff --git a/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/Transport/CubeFloorCollected.lean b/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/Transport/CubeFloorCollected.lean
+index f7bcc66d..53e4a899 100644
+--- a/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/Transport/CubeFloorCollected.lean
++++ b/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/Transport/CubeFloorCollected.lean
+@@ -52,7 +52,7 @@ theorem actual_floor_rows_saving (N n : ℕ) (e eps c b A R dmin dmax rmin τ ε
+     (hp0 : ∀y,0≤(W0 y).re) (hp1 : ∀y,0≤(W1 y).re) (hn0 : W0≠0) (hn1 : W1≠0)
+     (nu : ℝ) (hnu : 0 < nu)
+     (saving : ℝ) (hsaving : 0 < saving)
+-    (htotal : 26*e+(N+8)*eps+loss+mesh*QRH.ArviDensity.ReturnT.Transport.Arithmetic.ell+nu+saving≤1/200) :
++    (htotal : 26*e+(N+8)*eps+loss+mesh*QRH.ArviDensity.ReturnT.Transport.Arithmetic.ell+nu+saving≤1/250) :
+     letI : NeZero (∏P∈S,P) := ⟨fixedPrimeProduct_ne_zero S hS.prime⟩
+     ∃C : ℝ,0 < C ∧ ∀η : Character,∀ᶠ Z : ℝ in atTop,
+       ∀d : ℝ,dmin ≤ d → d ≤ dmax → ∀(v : ℝ),0 ≤ v → v ≤ QRH.ArviDensity.ReturnT.Transport.Arithmetic.h+QRH.ArviDensity.ReturnT.Transport.Transport.rowExtension → ∀rows : Finset FreeRow,
+diff --git a/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/Transport/CubeFloorSaving.lean b/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/Transport/CubeFloorSaving.lean
+index e9a13b30..7a510dc6 100644
+--- a/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/Transport/CubeFloorSaving.lean
++++ b/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/Transport/CubeFloorSaving.lean
+@@ -52,7 +52,7 @@ theorem actual_floor_cube_saving (N n : ℕ) (e eps c b A R dmin dmax rmin τ ε
+     (hp0 : ∀y,0≤(W0 y).re) (hp1 : ∀y,0≤(W1 y).re) (hn0 : W0≠0) (hn1 : W1≠0)
+     (nu : ℝ) (hnu : 0 < nu)
+     (saving : ℝ) (_hsaving : 0 < saving)
+-    (htotal : 26*e+(N+8)*eps+loss+mesh*QRH.ArviDensity.ReturnT.Transport.Arithmetic.ell+nu+saving≤1/200) :
++    (htotal : 26*e+(N+8)*eps+loss+mesh*QRH.ArviDensity.ReturnT.Transport.Arithmetic.ell+nu+saving≤1/250) :
+     letI : NeZero (∏P∈S,P) := ⟨fixedPrimeProduct_ne_zero S hS.prime⟩
+     ∃C : ℝ,0 < C ∧ ∀η : Character,∀ᶠ Z : ℝ in atTop,
+       ∀d : ℝ,dmin≤d → d≤dmax → ∀(v : ℝ),0≤v → v≤QRH.ArviDensity.ReturnT.Transport.Arithmetic.h+QRH.ArviDensity.ReturnT.Transport.Transport.rowExtension → ∀rows : Finset FreeRow,
+diff --git a/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/Transport/FloorExponent.lean b/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/Transport/FloorExponent.lean
+index 55c83efb..22abc88c 100644
+--- a/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/Transport/FloorExponent.lean
++++ b/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/Transport/FloorExponent.lean
+@@ -22,7 +22,7 @@ def floorSourceExponent (v : ℝ) : ℝ := centralScale (51/100) 0+v*(67/100)-3*
+ def floorRealLoss (N : ℕ) (v e eps loss mesh : ℝ) : ℝ :=
+   (16-6*ly)*e+v*(12*e+eps*(N+8))+loss+mesh*ell
+ lemma floor_source_margin {v : ℝ} (hv : v≤h+rowExtension) :
+-    floorSourceExponent v≤ signal theta-1/200 := by
++    floorSourceExponent v≤ signal theta-1/250 := by
+   have hb := QRH.ArviDensity.Return.Geometry.BoundsN.floor_margin
+   dsimp [floorSourceExponent,centralScale]
+   dsimp [QRH.Record1252270103Return.Geometry.dPlus] at hb
+diff --git a/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/Transport/HighApproximation.lean b/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/Transport/HighApproximation.lean
+index 9a892045..c4638bda 100644
+--- a/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/Transport/HighApproximation.lean
++++ b/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/Transport/HighApproximation.lean
+@@ -119,7 +119,7 @@ theorem normalizedProbe_high_of_finite_nonfloor_numerator (K : ℕ) (e δ a b B
+     (hcap : QRH.ArviDensity.ReturnT.Transport.Arithmetic.h+ζ ≤ dmax-margin)
+     (helllo : ∀j,dmax*rmin ≤ ell j) (hellhi : ∀j,ell j ≤ dmin*R)
+     (hζcap : ζ ≤ QRH.ArviDensity.ReturnT.Transport.Transport.rowExtension)
+-    (hfloorbudget : 26*e+(K+8)*eps+loss+mesh*QRH.ArviDensity.ReturnT.Transport.Arithmetic.ell+nu+sigma≤1/200)
++    (hfloorbudget : 26*e+(K+8)*eps+loss+mesh*QRH.ArviDensity.ReturnT.Transport.Arithmetic.ell+nu+sigma≤1/250)
+     (hfinite : ∀n : ℕ,0<n → ∀η : Character,
+       FiniteNonfloorNumeratorBound M H hH S hS hmax ell a b ζ e τ sigma W W0 W1 n η) :
+     let : NeZero (∏P∈S,P) := ⟨fixedPrimeProduct_ne_zero S hS.prime⟩
+@@ -196,7 +196,7 @@ theorem normalizedProbe_high_of_finite_nonfloor_numerator_at (K : ℕ) (e δ a b
+     (hcap : QRH.ArviDensity.ReturnT.Transport.Arithmetic.h+ζ ≤ dmax-margin)
+     (helllo : ∀j,dmax*rmin ≤ ell j) (hellhi : ∀j,ell j ≤ dmin*R)
+     (hζcap : ζ ≤ QRH.ArviDensity.ReturnT.Transport.Transport.rowExtension)
+-    (hfloorbudget : 26*e+(K+8)*eps+loss+mesh*QRH.ArviDensity.ReturnT.Transport.Arithmetic.ell+nu+sigma≤1/200)
++    (hfloorbudget : 26*e+(K+8)*eps+loss+mesh*QRH.ArviDensity.ReturnT.Transport.Arithmetic.ell+nu+sigma≤1/250)
+     (η : Character)
+     (hfinite : ∀n : ℕ,0<n →
+       FiniteNonfloorNumeratorBound M H hH S hS hmax ell a b ζ e τ sigma W W0 W1 n η) :
+diff --git a/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/Transport/NonfloorTransport.lean b/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/Transport/NonfloorTransport.lean
+index 320758b5..b7ed2281 100644
+--- a/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/Transport/NonfloorTransport.lean
++++ b/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/Transport/NonfloorTransport.lean
+@@ -56,7 +56,7 @@ theorem actual_nonfloor_probe_transport (K : ℕ) (e δ a b B ζ saving τ ellMi
+     (hcap : QRH.ArviDensity.ReturnT.Transport.Arithmetic.h+ζ ≤ dmax-margin)
+     (helllo : ∀j,dmax*rmin ≤ ell j) (hellhi : ∀j,ell j ≤ dmin*R)
+     (hζcap : ζ ≤ QRH.ArviDensity.ReturnT.Transport.Transport.rowExtension)
+-    (hfloorbudget : 26*e+(K+8)*eps+loss+mesh*QRH.ArviDensity.ReturnT.Transport.Arithmetic.ell+nu+sigma≤1/200) :
++    (hfloorbudget : 26*e+(K+8)*eps+loss+mesh*QRH.ArviDensity.ReturnT.Transport.Arithmetic.ell+nu+sigma≤1/250) :
+     let : NeZero (∏P∈S,P) := ⟨fixedPrimeProduct_ne_zero S hS.prime⟩
+     ∃n : ℕ,0 < n ∧ ∀η : Character,∃C : ℝ,0 < C ∧ ∀ᶠ Z : ℝ in atTop,
+       let Yp := fun j=>Z^(ell j)
+diff --git a/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/Transport/SharedNonfloor.lean b/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/Transport/SharedNonfloor.lean
+index 934e7762..9432ea70 100644
+--- a/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/Transport/SharedNonfloor.lean
++++ b/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/Transport/SharedNonfloor.lean
+@@ -52,7 +52,7 @@ theorem actual_shared_nonfloor_probe_transport (K : ℕ) (e δ a b B ζ saving 
+     (hcap : QRH.ArviDensity.ReturnT.Transport.Arithmetic.h+ζ ≤ dmax-margin)
+     (helllo : ∀j,dmax*rmin ≤ ell j) (hellhi : ∀j,ell j ≤ dmin*R)
+     (hζcap : ζ ≤ QRH.ArviDensity.ReturnT.Transport.Transport.rowExtension)
+-    (hfloorbudget : 26*e+(K+8)*eps+loss+mesh*QRH.ArviDensity.ReturnT.Transport.Arithmetic.ell+nu+sigma≤1/200) :
++    (hfloorbudget : 26*e+(K+8)*eps+loss+mesh*QRH.ArviDensity.ReturnT.Transport.Arithmetic.ell+nu+sigma≤1/250) :
+     let : NeZero (∏P∈S,P) := ⟨fixedPrimeProduct_ne_zero S hS.prime⟩
+     ∃n : ℕ,0 < n ∧ ∀η : Character,∃C : ℝ,0 < C ∧ ∀ᶠ Z : ℝ in atTop,
+       let Yp := fun j=>Z^(ell j)
+diff --git a/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/TransportParameters.lean b/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/TransportParameters.lean
+index 4f63dd01..2c55a2db 100644
+--- a/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/TransportParameters.lean
++++ b/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/TransportParameters.lean
+@@ -69,7 +69,7 @@ structure TransportParameters (D : BaselineData) where
+   geometric_budget : sigma+8*D.e+nu≤1/20
+   principal_budget : sigma+nu≤1/4000
+   window_budget : sigma+D.e≤ QRH.Record1252270103Return.Geometry.theta*ellMin
+-  floor_budget : 26*D.e+(D.N+8)*eps+D.t+mesh*QRH.Record1252270103Return.Geometry.ell+nu+sigma≤1/200
++  floor_budget : 26*D.e+(D.N+8)*eps+D.t+mesh*QRH.Record1252270103Return.Geometry.ell+nu+sigma≤1/250
+ 
+ /-- All genuine baseline data and phase parameters are fixed before source or height. -/
+ theorem exists_compatible_data {κ budget : ℝ} (hk : 7/10≤κ) (hk1 : κ≤3/4)
+@@ -156,7 +156,7 @@ theorem exists_compatible_data {κ budget : ℝ} (hk : 7/10≤κ) (hk1 : κ≤3/
+         exact (mul_le_mul_of_nonneg_left hel hmesh.le).trans (by simpa using hme)
+       have hepsmul : (D.N+8:ℝ)*eps=D.t/100 := by
+         dsimp [eps];field_simp
+-      change 26*e+(D.N+8)*eps+D.t+mesh*QRH.Record1252270103Return.Geometry.ell+D.t/8+sigma≤1/200
++      change 26*e+(D.N+8)*eps+D.t+mesh*QRH.Record1252270103Return.Geometry.ell+D.t/8+sigma≤1/250
+       rw [hepsmul]
+       linarith }⟩⟩
+ 
+@@ -252,7 +252,7 @@ theorem exists_compatible_data_with_mesh {κ budget : ℝ} (hk : 7/10≤κ) (hk1
+         exact (mul_le_mul_of_nonneg_left hel hmesh.le).trans (by simpa using hme)
+       have hepsmul : (D.N+8:ℝ)*eps=D.t/100 := by
+         dsimp [eps];field_simp
+-      change 26*e+(D.N+8)*eps+D.t+mesh*QRH.Record1252270103Return.Geometry.ell+D.t/8+sigma≤1/200
++      change 26*e+(D.N+8)*eps+D.t+mesh*QRH.Record1252270103Return.Geometry.ell+D.t/8+sigma≤1/250
+       rw [hepsmul]
+       linarith }⟩⟩
+ 
+diff --git a/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/TransportGeometry.lean b/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/TransportGeometry.lean
+index e4bf3edf..03d5e5ec 100644
+--- a/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/TransportGeometry.lean
++++ b/submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/TransportGeometry.lean
+@@ -26,7 +26,7 @@ class BoundsN : Prop where
+  ly_coarse : 440/1000<QRH.Record1252270103Return.Geometry.y ∧ QRH.Record1252270103Return.Geometry.y<467/1000
+  ell_interval : 1672/10000<QRH.Record1252270103Return.Geometry.ell ∧ QRH.Record1252270103Return.Geometry.ell<175/1000
+  small_saving : 6/100<QRH.Record1252270103Return.Geometry.y/2-QRH.Record1252270103Return.Geometry.h*(17/50-1/6)-1/50
+- floor_margin : 4/25*QRH.Record1252270103Return.Geometry.x-3/20-51/100*QRH.Record1252270103Return.Geometry.y+67/100*QRH.Record1252270103Return.Geometry.dPlus-3/20*QRH.Record1252270103Return.Geometry.ell ≤ QRH.Record1252270103Return.Geometry.signal QRH.Record1252270103Return.Geometry.theta-1/200
++ floor_margin : 4/25*QRH.Record1252270103Return.Geometry.x-3/20-51/100*QRH.Record1252270103Return.Geometry.y+67/100*QRH.Record1252270103Return.Geometry.dPlus-3/20*QRH.Record1252270103Return.Geometry.ell ≤ QRH.Record1252270103Return.Geometry.signal QRH.Record1252270103Return.Geometry.theta-1/250
+ end
+ end QRH.ArviDensity.Return.Geometry
+ 

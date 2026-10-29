@@ -1,0 +1,335 @@
+compile Submissions.hailey_collet_1252270103.Record1252270103Finite.ReturnConstants
+result Submissions.hailey_collet_1252270103.Record1252270103Finite.ReturnConstants 0 seconds 6.6 
+ 
+compile Submissions.hailey_collet_1252270103.Record1252270103Return.Geometry
+result Submissions.hailey_collet_1252270103.Record1252270103Return.Geometry 0 seconds 2.7 
+ Submissions/hailey_collet_1252270103/Record1252270103Return/Geometry.lean:39:0: warning: Definition `QRH.Record1252270103Return.Geometry.finalParameters` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+'QRH.Record1252270103Return.Geometry.finalParameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+compile Submissions.hailey_collet_1252270103.Record1252270103Return.IntermediateGeometry
+result Submissions.hailey_collet_1252270103.Record1252270103Return.IntermediateGeometry 0 seconds 2.3 
+ 'QRH.Record1252270103Return.Geometry.intermediateParameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+compile Submissions.hailey_collet_1252270103.Record1252270103Return.TransportGeometry
+result Submissions.hailey_collet_1252270103.Record1252270103Return.TransportGeometry 0 seconds 3.6 
+ Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:29:0: warning: automatically included section variable(s) unused in theorem `Record1252270103Return.Transport.Arithmetic.ell_eq`:
+  [Geometry.Bounds]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Geometry.Bounds] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:33:0: warning: automatically included section variable(s) unused in theorem `Record1252270103Return.Transport.Arithmetic.x_eq`:
+  [Geometry.Bounds]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Geometry.Bounds] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:34:0: warning: automatically included section variable(s) unused in theorem `Record1252270103Return.Transport.Arithmetic.y_eq`:
+  [Geometry.Bounds]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Geometry.Bounds] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:35:0: warning: automatically included section variable(s) unused in theorem `Record1252270103Return.Transport.Arithmetic.dPlus_eq`:
+  [Geometry.Bounds]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Geometry.Bounds] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:36:0: warning: automatically included section variable(s) unused in theorem `Record1252270103Return.Transport.Arithmetic.ell_pos`:
+  [Geometry.Bounds]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Geometry.Bounds] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:37:0: warning: automatically included section variable(s) unused in theorem `Record1252270103Return.Transport.Arithmetic.ell_lt_x`:
+  [Geometry.Bounds]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Geometry.Bounds] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:38:0: warning: automatically included section variable(s) unused in theorem `Record1252270103Return.Transport.Arithmetic.x_lt_y`:
+  [Geometry.Bounds]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Geometry.Bounds] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:39:0: warning: automatically included section variable(s) unused in theorem `Record1252270103Return.Transport.Arithmetic.y_lt_two_x`:
+  [Geometry.Bounds]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Geometry.Bounds] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:43:0: warning: automatically included section variable(s) unused in theorem `Record1252270103Return.Transport.Arithmetic.y_lt_half`:
+  [Geometry.Bounds]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Geometry.Bounds] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:46:0: warning: automatically included section variable(s) unused in theorem `Record1252270103Return.Transport.Arithmetic.sixth_lt_ell`:
+  [Geometry.Bounds]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Geometry.Bounds] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:47:0: warning: automatically included section variable(s) unused in theorem `Record1252270103Return.Transport.Arithmetic.ell_lt_fifth`:
+  [Geometry.Bounds]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Geometry.Bounds] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:52:0: warning: automatically included section variable(s) unused in theorem `Record1252270103Return.Transport.Arithmetic.x_add_y`:
+  [Geometry.Bounds]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Geometry.Bounds] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:53:0: warning: automatically included section variable(s) unused in theorem `Record1252270103Return.Transport.Arithmetic.h_lt_dPlus`:
+  [Geometry.Bounds]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Geometry.Bounds] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:77:7: warning: The namespace `Transport` is duplicated in the declaration `Record1252270103Return.Transport.Transport.theta`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:78:7: warning: The namespace `Transport` is duplicated in the declaration `Record1252270103Return.Transport.Transport.lx`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:79:7: warning: The namespace `Transport` is duplicated in the declaration `Record1252270103Return.Transport.Transport.ly`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:80:7: warning: The namespace `Transport` is duplicated in the declaration `Record1252270103Return.Transport.Transport.ell`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:81:7: warning: The namespace `Transport` is duplicated in the declaration `Record1252270103Return.Transport.Transport.h`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:82:4: warning: The namespace `Transport` is duplicated in the declaration `Record1252270103Return.Transport.Transport.b`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:83:7: warning: The namespace `Transport` is duplicated in the declaration `Record1252270103Return.Transport.Transport.signal`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:84:4: warning: The namespace `Transport` is duplicated in the declaration `Record1252270103Return.Transport.Transport.rowExtension`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:85:8: warning: The namespace `Transport` is duplicated in the declaration `Record1252270103Return.Transport.Transport.ell_interval`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:86:8: warning: The namespace `Transport` is duplicated in the declaration `Record1252270103Return.Transport.Transport.h_pos`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:87:8: warning: The namespace `Transport` is duplicated in the declaration `Record1252270103Return.Transport.Transport.extended_h_lt_one`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:88:8: warning: The namespace `Transport` is duplicated in the declaration `Record1252270103Return.Transport.Transport.theta_lower`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:89:8: warning: The namespace `Transport` is duplicated in the declaration `Record1252270103Return.Transport.Transport.theta_bounds`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:90:8: warning: The namespace `Transport` is duplicated in the declaration `Record1252270103Return.Transport.Transport.h_interval`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:91:8: warning: The namespace `Transport` is duplicated in the declaration `Record1252270103Return.Transport.Transport.ly_coarse`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:92:8: warning: The namespace `Transport` is duplicated in the declaration `Record1252270103Return.Transport.Transport.length_sum`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:93:8: warning: The namespace `Transport` is duplicated in the declaration `Record1252270103Return.Transport.Transport.row_endpoint`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:94:8: warning: The namespace `Transport` is duplicated in the declaration `Record1252270103Return.Transport.Transport.small_saving`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:95:8: warning: The namespace `Transport` is duplicated in the declaration `Record1252270103Return.Transport.Transport.signalShift_eq`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/hailey_collet_1252270103/Record1252270103Return/TransportGeometry.lean:96:8: warning: The namespace `Transport` is duplicated in the declaration `Record1252270103Return.Transport.Transport.extended_row_cutoff`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+
+compile Submissions.arvi_density.ReturnD.TransportGeometry
+result Submissions.arvi_density.ReturnD.TransportGeometry 0 seconds 3.9 
+ Submissions/arvi_density/ReturnD/TransportGeometry.lean:43:0: warning: automatically included section variable(s) unused in theorem `QRH.ArviDensity.ReturnT.Transport.Arithmetic.ell_eq`:
+  [Return.Geometry.BoundsN]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Return.Geometry.BoundsN] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:47:0: warning: automatically included section variable(s) unused in theorem `QRH.ArviDensity.ReturnT.Transport.Arithmetic.x_eq`:
+  [Return.Geometry.BoundsN]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Return.Geometry.BoundsN] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:48:0: warning: automatically included section variable(s) unused in theorem `QRH.ArviDensity.ReturnT.Transport.Arithmetic.y_eq`:
+  [Return.Geometry.BoundsN]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Return.Geometry.BoundsN] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:49:0: warning: automatically included section variable(s) unused in theorem `QRH.ArviDensity.ReturnT.Transport.Arithmetic.dPlus_eq`:
+  [Return.Geometry.BoundsN]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Return.Geometry.BoundsN] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:50:0: warning: automatically included section variable(s) unused in theorem `QRH.ArviDensity.ReturnT.Transport.Arithmetic.ell_pos`:
+  [Return.Geometry.BoundsN]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Return.Geometry.BoundsN] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:51:0: warning: automatically included section variable(s) unused in theorem `QRH.ArviDensity.ReturnT.Transport.Arithmetic.ell_lt_x`:
+  [Return.Geometry.BoundsN]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Return.Geometry.BoundsN] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:52:0: warning: automatically included section variable(s) unused in theorem `QRH.ArviDensity.ReturnT.Transport.Arithmetic.x_lt_y`:
+  [Return.Geometry.BoundsN]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Return.Geometry.BoundsN] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:53:0: warning: automatically included section variable(s) unused in theorem `QRH.ArviDensity.ReturnT.Transport.Arithmetic.y_lt_two_x`:
+  [Return.Geometry.BoundsN]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Return.Geometry.BoundsN] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:57:0: warning: automatically included section variable(s) unused in theorem `QRH.ArviDensity.ReturnT.Transport.Arithmetic.y_lt_half`:
+  [Return.Geometry.BoundsN]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Return.Geometry.BoundsN] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:60:0: warning: automatically included section variable(s) unused in theorem `QRH.ArviDensity.ReturnT.Transport.Arithmetic.sixth_lt_ell`:
+  [Return.Geometry.BoundsN]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Return.Geometry.BoundsN] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:61:0: warning: automatically included section variable(s) unused in theorem `QRH.ArviDensity.ReturnT.Transport.Arithmetic.ell_lt_fifth`:
+  [Return.Geometry.BoundsN]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Return.Geometry.BoundsN] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:66:0: warning: automatically included section variable(s) unused in theorem `QRH.ArviDensity.ReturnT.Transport.Arithmetic.x_add_y`:
+  [Return.Geometry.BoundsN]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Return.Geometry.BoundsN] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:67:0: warning: automatically included section variable(s) unused in theorem `QRH.ArviDensity.ReturnT.Transport.Arithmetic.h_lt_dPlus`:
+  [Return.Geometry.BoundsN]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Return.Geometry.BoundsN] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:91:7: warning: The namespace `Transport` is duplicated in the declaration `QRH.ArviDensity.ReturnT.Transport.Transport.theta`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:92:7: warning: The namespace `Transport` is duplicated in the declaration `QRH.ArviDensity.ReturnT.Transport.Transport.lx`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:93:7: warning: The namespace `Transport` is duplicated in the declaration `QRH.ArviDensity.ReturnT.Transport.Transport.ly`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:94:7: warning: The namespace `Transport` is duplicated in the declaration `QRH.ArviDensity.ReturnT.Transport.Transport.ell`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:95:7: warning: The namespace `Transport` is duplicated in the declaration `QRH.ArviDensity.ReturnT.Transport.Transport.h`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:96:4: warning: The namespace `Transport` is duplicated in the declaration `QRH.ArviDensity.ReturnT.Transport.Transport.b`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:97:7: warning: The namespace `Transport` is duplicated in the declaration `QRH.ArviDensity.ReturnT.Transport.Transport.signal`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:98:4: warning: The namespace `Transport` is duplicated in the declaration `QRH.ArviDensity.ReturnT.Transport.Transport.rowExtension`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:99:8: warning: The namespace `Transport` is duplicated in the declaration `QRH.ArviDensity.ReturnT.Transport.Transport.ell_interval`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:100:8: warning: The namespace `Transport` is duplicated in the declaration `QRH.ArviDensity.ReturnT.Transport.Transport.h_pos`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:101:8: warning: The namespace `Transport` is duplicated in the declaration `QRH.ArviDensity.ReturnT.Transport.Transport.extended_h_lt_one`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:102:8: warning: The namespace `Transport` is duplicated in the declaration `QRH.ArviDensity.ReturnT.Transport.Transport.theta_lower`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:103:8: warning: The namespace `Transport` is duplicated in the declaration `QRH.ArviDensity.ReturnT.Transport.Transport.theta_bounds`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:104:8: warning: The namespace `Transport` is duplicated in the declaration `QRH.ArviDensity.ReturnT.Transport.Transport.h_interval`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:105:8: warning: The namespace `Transport` is duplicated in the declaration `QRH.ArviDensity.ReturnT.Transport.Transport.ly_coarse`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:106:8: warning: The namespace `Transport` is duplicated in the declaration `QRH.ArviDensity.ReturnT.Transport.Transport.length_sum`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:107:8: warning: The namespace `Transport` is duplicated in the declaration `QRH.ArviDensity.ReturnT.Transport.Transport.row_endpoint`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:108:8: warning: The namespace `Transport` is duplicated in the declaration `QRH.ArviDensity.ReturnT.Transport.Transport.small_saving`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:109:8: warning: The namespace `Transport` is duplicated in the declaration `QRH.ArviDensity.ReturnT.Transport.Transport.signalShift_eq`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/arvi_density/ReturnD/TransportGeometry.lean:110:8: warning: The namespace `Transport` is duplicated in the declaration `QRH.ArviDensity.ReturnT.Transport.Transport.extended_row_cutoff`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+
+compile Submissions.arvi_density.Return.Geometry
+result Submissions.arvi_density.Return.Geometry 0 seconds 2.3 
+ Submissions/arvi_density/Return/Geometry.lean:10:0: warning: Definition `QRH.ArviDensity.Return.Geometry.finalParameters` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+
+compile Submissions.arvi_density.Return.TransportInstances
+result Submissions.arvi_density.Return.TransportInstances 0 seconds 2.2 
+ Submissions/arvi_density/Return/TransportInstances.lean:10:0: warning: Definition `QRH.ArviDensity.Return.Geometry.finalBounds` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+Submissions/arvi_density/Return/TransportInstances.lean:10:0: warning: Definition `finalBounds` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`
+
+compile Submissions.arvi_density.ReturnD.Transport.Transport.FloorExponent
+result Submissions.arvi_density.ReturnD.Transport.Transport.FloorExponent 0 seconds 3.4 
+ Submissions/arvi_density/ReturnD/Transport/Transport/FloorExponent.lean:15:4: warning: The namespace `Transport` is duplicated in the declaration `QRH.ArviDensity.ReturnT.Transport.Transport.centralScale`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/arvi_density/ReturnD/Transport/Transport/FloorExponent.lean:16:0: warning: automatically included section variable(s) unused in theorem `QRH.ArviDensity.ReturnT.Transport.Transport.physical_scale_identity`:
+  [Return.Geometry.BoundsN]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Return.Geometry.BoundsN] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Submissions/arvi_density/ReturnD/Transport/Transport/FloorExponent.lean:16:6: warning: The namespace `Transport` is duplicated in the declaration `QRH.ArviDensity.ReturnT.Transport.Transport.physical_scale_identity`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/arvi_density/ReturnD/Transport/Transport/FloorExponent.lean:21:4: warning: The namespace `Transport` is duplicated in the declaration `QRH.ArviDensity.ReturnT.Transport.Transport.floorSourceExponent`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/arvi_density/ReturnD/Transport/Transport/FloorExponent.lean:22:4: warning: The namespace `Transport` is duplicated in the declaration `QRH.ArviDensity.ReturnT.Transport.Transport.floorRealLoss`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/arvi_density/ReturnD/Transport/Transport/FloorExponent.lean:24:6: warning: The namespace `Transport` is duplicated in the declaration `QRH.ArviDensity.ReturnT.Transport.Transport.floor_source_margin`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+Submissions/arvi_density/ReturnD/Transport/Transport/FloorExponent.lean:37:6: warning: The namespace `Transport` is duplicated in the declaration `QRH.ArviDensity.ReturnT.Transport.Transport.floor_loss_bound`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+
