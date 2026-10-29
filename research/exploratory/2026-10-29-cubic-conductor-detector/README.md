@@ -11,41 +11,43 @@ Fix K containing μ₃, fixed good-prime set S as in De Faveri, and a fixed unit
 
 Here N counts primitive L-zeros with multiplicity in `Re s≥σ`, `|Im s|≤X^τ`; a norm-character presentation's pole is not a zero. Constants and τ may depend on the fixed ν and σ, and no uniformity over an unbounded moving family of twists is claimed. The exponent is below one for σ>3/4, and as in the [conductor-density note](../2026-10-29-cubic-conductor-density/README.md), prime-ideal labels give ≫X/log X distinct characters, so (1) gives density-one zero-free rectangles. The family is ordered by conductor and the result is a density statement, not a zero-free region for each member.
 
-## Inverse moment from De Faveri Proposition 8.1
+## A single global-base inverse moment
 
-Write g=a b² with a,b good squarefree and coprime. On dyads `Na≈A`, `Nb≈B`, set U=AB, order A≤B, and write A=U^γ with 0≤γ≤1/2. The primitive conductor of νχ_g lies between U and a fixed multiple of U: at every good p|ab, cubic ramification is nontrivial and ν is unramified, while fixed S-conductor exponents are uniformly bounded.
+Write each good cube-free index uniquely as `g=a b²`, with a,b squarefree and coprime. Let F(X) contain all such labels with `N cond(νχ_g)≤X`. At every good p|ab the cubic character is ramified and ν is unramified; hence `N(ab)≤X`, while fixed S-local conductor exponents are uniformly bounded. In particular every primitive conductor and every original deleted Euler-factor radical in this family is at most a fixed multiple of X. There is **no lower conductor restriction**.
 
-For a normalized inverse block of length D=U^r,
+For a normalized inverse block of length D=X^r,
 
     M_g(D)=D^(−1/2) Σ_{q good} μ(q) ν(q)χ_g(q) W(Nq/D),
 
-Proposition 8.1 yields, uniformly in the bounded real-length ranges,
+De Faveri Proposition 8.1 implies the global estimate
 
-    Σ_{a≈A,b≈B, μ²(ab)=1} |M_g(D)|²
-       ≪ U^ε ( U + U^((1+γ)/3) D
-                         + U^((2−γ)/3) D^(2/3) ).        (2)
+    Σ_{g∈F(X)} |M_g(D)|² ≪ X^ε [X+X^(1/2)D],              (2)
 
-The proof is direct. The squarefree Möbius support is exactly the q-support of Proposition 8.1 and the coefficient squared mass is O(1). Its source kernel is χ_q(ab²); source (2.5) changes this to χ_(ab²)(q) at a finite cost: partition the row parameter by its finite reciprocity ray class and absorb the resulting fixed class function of q into the coefficient vector. The original noncoprime zero masks agree. Positivity permits removing μ²(ab)=1 from the outer sum when applying the proposition. A fixed ν(q), a fixed profile, and a fixed norm-twist frequency remain row-independent coefficient factors. The separately reviewed [Sobolev reduction](../2026-10-29-cubic-detector-sobolev/README.md) controls the detector's rowwise real exponent and norm-twist height using only common differentiated coefficient vectors, with a factor O(1+T). It assumes the witness profile has the specific finite-dimensional source form described there; it does not cover arbitrary rowwise coefficients.
+for fixed bounded ranges of r, with the fixed polynomial profile/height cost stated below. To prove it, cover `N(ab)≤X` by O(log² X) dyadic rectangles `Na≈A`, `Nb≈B`; write M=min(A,B), N=max(A,B). On each rectangle the source gives
+
+    ≪ (X D)^ε [MN + M^(2/3)N^(1/3)D
+                       + M^(1/3)N^(2/3)D^(2/3)].
+
+Since MN≤X, the first nontrivial coefficient is at most X^(1/2). The other term is at most `X^(2/3)D^(2/3)`, which is at most X when D≤X^(1/2), and at most X^(1/2)D when D≥X^(1/2). Sum the boxes and absorb logarithms and fixed endpoint factors.
+
+The squarefree Möbius support is exactly the q-support of Proposition 8.1, and the coefficient squared mass is O(1). The source kernel is χ_q(ab²); source (2.5) changes this to χ_(ab²)(q) at a finite cost by partitioning the row parameter into reciprocity ray classes and absorbing each fixed class function of q into the coefficient vector. Original noncoprime zero masks agree. Positivity permits removing μ²(ab)=1 and the condition N(ab)≤X within each outer box. A fixed ν(q), profile and norm-twist frequency are row-independent coefficient factors. The separately reviewed [Sobolev reduction](../2026-10-29-cubic-detector-sobolev/README.md) controls the detector's rowwise real exponent and norm-twist height using common differentiated coefficient vectors, with a fixed polynomial height factor; it assumes the specific finite-dimensional witness-profile form given there.
 
 ## Detector and count
 
-Use the same nested zero-free bins as OpenAI §8. Each row with a zero of real part at least σ in the retained height interval has a bin left endpoint a≥σ−O(e), where e is an arbitrarily small fixed preliminary loss chosen before U tends to infinity. Put δ=2a−1. The `t=1` simultaneous saturated detector yields an inverse witness of a dyadic length U^r with
+Use X itself as the detector base for the entire family, including small-conductor rows. The fixed-field nested zero-free bins and t=1 saturated detector, under the stated source-transfer hypothesis, give for every row with a zero of real part at least σ in `|Im s|≤X^τ` a bin endpoint `a≥σ−O(e)` and an inverse witness with
 
-    1/2−O(ε_det)≤r≤1+O(1/log U),   |M_g(U^r)|²≥U^{δr−ε_det}.    (3)
+    1/2−O(ε_det)≤r≤1+O(1/log X),
+    |M_g(X^r)|²≥X^{(2a−1)r−ε_det}.                     (3)
 
-For the fixed-field adaptation, choose the detector smoothing length Y*=U^B with a sufficiently large fixed B depending on the field and the fixed strip-growth estimate; do not assume the source’s Eisenstein choice B=20 works uniformly in K. The pre-saturation dyadic lengths are then bounded in [0,B+1+o(1)]; choose internal profile orders and τ after B. The lower length bound comes from the second, plain witness and its pointwise bound; it is not inferred from the inverse moment. Presentation, zero, twist frequency and smooth profile are grouped/handled using the fixed finite presentation set and the fixed-order Sobolev and common-height allowance. Exclude the possible pole-bearing presentation at g=1 before applying the detector, including a pure norm twist of the principal character; its ordinary zero count is separately negligible at the small heights used below.
+Here e and ε_det are arbitrarily small **fixed** preliminary losses, chosen before X grows. The possible pole-bearing g=1 presentation, including a pure norm twist of the principal character, is handled separately. Both the primitive conductor and deleted radical need only be O(X): a smaller conductor decreases the reflected functional-equation factor, so no comparison from below is used. The smoothing length in the general-field convolution is X^B for a sufficiently large fixed B depending on K and the fixed strip bound, chosen before internal profile orders and τ.
 
-Let
+Let δ=2a−1. After partitioning the finite presentation choices and O(log² X) dyadic witness lengths, and applying the common-profile Sobolev bound, (2) and Chebyshev count the rows by
 
-    E_γ(r)=max{1, r+(1+γ)/3, 2r/3+(2−γ)/3}.
+    X^{max(1,1/2+r)−δr+ε}
+       ≤ X^{3/2−δ+O(ε_det)+ε}
+       ≤ X^{5/2−2σ+O(e+ε_det)+ε}.
 
-From (2)–(3), Chebyshev bounds the row count for each fixed witness subdivision by U^{E_γ(r)−δr+O(ε_det)}. This exponent is convex in r, so its maximum on [1/2,1] is at an endpoint. At r=1/2 it is `1−δ/2`, while at r=1 it is `(4+γ)/3−δ`. Since γ≤1/2 and δ≤1, both are at most `3/2−δ`. Thus every retained dyadic box contributes at most
-
-    U^{3/2−δ+ε} ≤ U^{5/2−2σ+O(e)+ε}
-
-rows, up to the fixed polynomial height cost. This calculation uses the *actual* witness length; it does not assume r=1/2. The height cutoff is a sufficiently small U-power chosen after the detector losses and polynomial height orders. The individual Hecke zero count contributes at most a further small power of the height when passing from rows to zeros, which can be absorbed by shrinking the cutoff.
-
-Finally partition the conductor range into dyadic A,B boxes, swapping names only in the bound of Proposition 8.1, not in the character presentation. There are O(log²X) boxes. For boxes U≥X^λ, take the global height X^τ below the local detector cutoff by choosing τ sufficiently small in terms of λ and the fixed detector order. The total of U^{5/2−2σ+ε} over these boxes is at most X^{5/2−2σ+ε}. Boxes U<X^λ contain O(X^{λ+ε}) labels and have at most O((X^τ+1)log(X(T+3)^d)) zeros per label; choose λ,τ>0 with λ+τ<5/2−2σ. Absorb dyadic logarithms and height powers into ε. This proves (1), provided the explicitly stated detector transfer and source bounds hold. □
+The middle inequality uses r≥1/2−O(ε_det), r≤1+O(1/log X) and δ≤1; it does not fix r=1/2. Choose e and ε_det below the requested final loss. A fixed small power-height X^τ is permitted even for a character of bounded conductor: the buffered detector sees the actual zero up to that height, while its gamma and profile costs are bounded by a fixed polynomial in X^τ. Choose τ only after those orders are fixed, small enough to absorb both this cost and the individual zero-count factor `O((X^τ+1) log(X(T+3)^d))`. The number of bins and dyadic choices is finite or logarithmic. This proves (1) under the explicitly stated detector transfer and source bounds. □
 
 ## Scope and comparison
 
@@ -80,7 +82,7 @@ which is minimized at t=1 (with equality for all t only at δ=1). The pair r=t,m
 
 The following gives a proposed derivation of the remaining detector input from standard fixed-field Hecke analytic facts and the source's convolution argument. It is included to make the dependency reviewable, not to claim that the source theorem has already been independently established in this generality.
 
-Fix a dyad U=AB and a finite family of presentations `νχ_g` and their conjugates. Their conductors and deleted radicals are O_{K,S,ν}(U), and only g=1 can induce a principal or pure norm-character presentation. Choose a detector loss e>0, a small height exponent τ>0 later, and T₁=U^τ. The finite-family nested-maxima construction of OpenAI Lemma 8.1 applies using ordinary Hecke continuation. It gives a bin `(i,a)` with a genuine zero ρ=σ_ρ+iγ when a>51/100, `a≤σ_ρ<a+e`, `|γ|≤3iT₁`, and a zero-free buffered rectangle for every presentation and conjugate. For a row with a zero at real part ≥σ and height below T₁, monotonicity gives a≥σ−e.
+Fix a global base U=X and the finite set of relevant presentations `νχ_g` and their conjugates. Their conductors and deleted radicals are O_{K,S,ν}(U), and only g=1 can induce a principal or pure norm-character presentation. Choose a detector loss e>0, a small height exponent τ>0 later, and T₁=U^τ. The finite-family nested-maxima construction of OpenAI Lemma 8.1 applies using ordinary Hecke continuation. It gives a bin `(i,a)` with a genuine zero ρ=σ_ρ+iγ when a>51/100, `a≤σ_ρ<a+e`, `|γ|≤3iT₁`, and a zero-free buffered rectangle for every presentation and conjugate. For a row with a zero at real part ≥σ and height below T₁, monotonicity gives a≥σ−e.
 
 The fixed-type logarithmic-control proof in the [buffered detector note](../2026-10-29-fixed-type-buffered-detector.md) applies: it uses a fixed strip-growth polynomial, Euler convergence, Borel–Carathéodory and three circles. Together with the fixed-type functional equation and the O(U) deleted-radical bound, it gives the OpenAI Lemma 8.2 pointwise estimates, with δ=2a−1 and any prescribed small loss η,
 
@@ -104,7 +106,7 @@ Comparing this with the two pointwise bounds forces m≤1/2+O(η), since δ≥2�
 
 A full line-by-line independent verification of this replay, including the original zero masks and the precise Hecke strip bound used on the shifted line, remains requested. It is the same finite-height issue as in the [fixed-type detector note](../2026-10-29-fixed-type-buffered-detector.md); no extrapolation of a global zero-free boundary is used.
 
-For principal ν over the Eisenstein field, rStation paper 52 v5 also states a natural-row norm-ordered exponent `(8−7σ)/(3(2−σ))` for every 1/2<σ<1 at some small power height. The generic conjugate reordering gives conductor exponent `(8−7σ)/(2(2−σ))`, which is 1 at σ=4/5, versus 9/10 from (1). This compares only those displayed consequences; it does not exclude stronger direct conductor estimates elsewhere in the literature or establish a priority claim. The proof of (1) is conditional on its fixed-field detector replay and source sieve.
+The displayed rStation paper 52 v5 **Theorem 1** covers `5/6≤σ<1`; a separate theorem in the same paper is relevant below that range. Its **Theorem 5.7** claims, for principal finite twist and every fixed `1/2<σ<1`, a cumulative natural-index bound `P^{D(σ)+ε}` at height `P^h`, where `D(σ)=(8−7σ)/(3(2−σ))` and h is sufficiently small. For its standard Eisenstein cubic-residue normalization with ν=1, choose the smaller of conjugate labels `a b²` and `b a²`. Its norm is at most X^{3/2} for conductor norm at most X, each chosen label has at most two preimages, and symmetric-height zero counts are preserved. Applying Theorem 5.7 once with P=X^{3/2} yields the conductor exponent `(3/2)D(σ)=(8−7σ)/(2(2−σ))`; at `σ=4/5` this is 1. Since the source bound is cumulative, this application includes small indices directly and needs no small-index split; choose the global height exponent τ≤3h/2. The different, **dyadic** Theorem 1 comparison above does require a small-index split, detailed in [the review](../2026-10-29-cubic-conductor-density-review.md). These are conditional comparisons with separate source and twist hypotheses, not independent verification or a priority claim. The proof of (1) is conditional on its fixed-field detector replay and source sieve.
 
 ## Relative-zeta consequence for cyclic cubic extensions
 

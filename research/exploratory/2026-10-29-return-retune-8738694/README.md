@@ -47,10 +47,10 @@ The packet covers Lean sources only. A future tracker submission must also updat
 
 **Independent source-level audit:** A second researcher extracted pristine PR94 files directly from the pinned commit and reran geometry, both 15-guard admissions, the fixed-window failure witness, and all four edge covers. The checker formulas match `Formulas.lean` and the availability conditions match `CountWindow.lean`. All admission and row-margin Bernstein minima are strictly positive; the smallest row-margin minimum is approximately `3.68·10^(−8)`. This does not substitute for Lean compilation or verification of the analytic source inputs.
 
-A no-execution runner, `build_isolated.py`, SHA-256 `24a95c6cd294a0e20e3183f9989d19f3dbe7783f28d1a4bb5234d221950b0206`, is prepared for a later one-worker replay. It requires an explicit `--execute`, the full active-baseline success marker, the exact plan and Lean binary hashes, all reachable source hashes, an empty output library, and all unaffected baseline OLeans. It records pinned package revisions, source diffs and hashes of reused baseline and package OLeans, logs each affected module's result, then checks the `Candidate.bound` type and reported standard axiom set. One possible invocation, **only after the baseline has finished successfully and provenance is reviewed**, is:
+A no-execution runner, `build_isolated.py`, SHA-256 `6a08aa644e2b0a2dd2b872ad9812922832f86d6bbd7654c0045ae90f6356e90e`, is prepared for a later one-worker replay. It requires an explicit `--execute`, the full active-baseline success marker, the exact plan and Lean binary hashes, all reachable source hashes, an empty output library, and all unaffected baseline OLeans. It records pinned package revisions, source diffs and hashes of reused baseline and package OLeans, logs each affected module's result, then checks the `Candidate.bound` type and reported standard axiom set. One possible invocation, **only after the baseline has finished successfully and provenance is reviewed**, is:
 
 ```sh
-python research/exploratory/2026-10-29-return-retune-8738694/build_isolated.py --execute \
+PYTHONDONTWRITEBYTECODE=1 python research/exploratory/2026-10-29-return-retune-8738694/build_isolated.py --execute \
   --plan /workspace/scratch/retune_project/import-plan.json \
   --baseline-log /workspace/scratch/qproject/build_endpoint.log \
   --baseline-lib /workspace/scratch/qproject/.lake/build/lib/lean \
@@ -58,8 +58,10 @@ python research/exploratory/2026-10-29-return-retune-8738694/build_isolated.py -
   --lake-manifest /workspace/scratch/qproject/lake-manifest.json \
   --lean-toolchain /workspace/scratch/qproject/lean-toolchain \
   --lean /workspace/scratch/lean-4.34.1-linux/bin/lean \
-  --output-lib /workspace/scratch/retune_project/isolated-olean \
-  --results-dir /workspace/scratch/retune_project/lean-results
+  --output-lib /workspace/scratch/retune_project/isolated-olean-v2 \
+  --results-dir /workspace/scratch/retune_project/lean-results-v2
 ```
 
 This runner has not been executed. Source/package cache provenance and final challenge/metadata checks remain separate from its success predicate.
+
+The first retune replay failed at `Return.Geometry`: Lean treated the partially populated isolated `Submissions` namespace as shadowing the baseline namespace, so an unaffected imported OLean could not be found. This was a library-layout failure; the initial logs remain in `/workspace/scratch/retune_project/lean-results/`. The revised runner populates the isolated namespace with symlinks for all unaffected baseline OLeans and their sidecars, while never linking an affected output. It uses new empty v2 output directories and records the overlay inventory.

@@ -107,7 +107,7 @@ Because `#F≪Y^(1/3)`, the row-sum bound yields `||E_W||≪Y^(2/3+ε) log(2L)`,
 This calculation does not assert sharp-cutoff character cancellation or the unweighted fourth-cycle bound. The earlier draft's arbitrary rapid-decay claim is withdrawn because the norm-4 Euler factor can differ from that of the primitive Hecke character; the fixed-prime decomposition above avoids that issue. The argument does not extend to generic physical pairs, whose conductor can be ≍Y² and for which L≥Y is too short to gain from (6).
 ## Small-radical families
 
-The same smooth argument suggests the following more general consequence of standard sextic Kummer and Hecke-character inputs. It has not yet been independently audited. Let F consist of sixth-power-free Eisenstein element rows u with nonzero radical ideals of norm at most R≥2. Let S be any finite set of nonzero ideals of norm at most L≥1. Then, with the source's sextic character and zero masks,
+The same smooth argument suggests the following more general consequence of standard sextic Kummer and Hecke-character inputs. It has not yet been independently audited. Let F consist of sixth-power-free Eisenstein element rows u with nonzero radical ideals of norm at most R≥2. Let S be any finite set of nonzero ideals of norm at most L≥1; a zero ideal, if present in the source interface, contributes a zero column. Then, with the source's sextic character and zero masks,
 
     selectedNorm(F,S) ≪_ε (L+R²)(LR)^ε.                     (7)
 
@@ -197,3 +197,113 @@ Now let F be an arbitrary finite family of sixth-power-free rows of norm ≤Y, a
 For L≥Y, all equal-a₁ interactions are controlled at the desired long-source size, without any amplitude, density or zero-location hypothesis. This includes the a₁=1 low-radical family and arbitrary fixed high-radical A. The complementary matrix `G_S−G_same` is Hermitian and need not be positive. It remains sufficient, but unproved, to control its one-sided quadratic form by `O(L Z^ε)` on the actual selected rows. Thus (12) isolates cross-a₁ interactions; it does not establish a complete long-source bound or a zero-free region.
 
 **Independent review of (11)–(12):** A second researcher checked the squarefree-factor count, cancellation of the common a₁ from Q, treatment of the bounded wild/unit blocks, the PSD majorization, and the operator norm of the direct sum. The result controls only same-a₁ row pairs; it does not supply the remaining cross-block bound.
+
+## The positive conductor graph can be large on selected rows
+
+The deterministic graph bound (10) cannot by itself prove the broad arbitrary-prime-slot selected norm, even at the target σ=223/500. Fix `0<σ<1`, a small fixed width `0<w<1`, `P=Y^w`, and `0<c<(1−σ)/2`. Choose `M=floor(P^c)` distinct good prime rows u₁,…,u_M with norms in `[Y/2,Y]`, in one fixed admissible ray class. Prime-ideal counting and a finite-class pigeonhole supply such a fixed class along an unbounded sequence of Y. Every slot prime p with norm in `[P,2P]` is coprime to every row. Set
+
+    H_ij = Σ_{p : P≤Np≤2P} χ_p(u_i) overline(χ_p(u_j)).
+
+H is Hermitian positive semidefinite, and each diagonal entry equals the number `N≫P/log P` of slot primes. Choose `ζ∈(S¹)^M` maximizing the continuous function `ζ*Hζ`. Holding all other coordinates fixed, coordinatewise maximality shows that
+
+    overline(ζ_i) Σ_{j≠i} H_ij ζ_j ≥ 0  as a real number,
+    |(Hζ)_i| ≥ H_ii = N.
+
+Define one fixed row-independent prime-slot vector by
+
+    a_p = (Σ_j ζ_j overline(χ_p(u_j))) / (M√P).
+
+Then `|a_p|≤P^(−1/2)` and its squared mass is O(1/log P), while each row response is
+
+    Q(u_i)=(Hζ)_i/(M√P),
+    |Q(u_i)|² ≫ P/(M² log²P) ≥ P^σ
+
+for sufficiently large Y. Thus the entire F is selected at slope σ even though the coefficients are common to all rows.
+
+For i≠j the row ideals are distinct good primes of norms at least Y/2, so `Q(u_i,u_j)=Nu_i Nu_j≥Y²/4`. The nonnegative conductor matrix of (10) dominates `(Y/2)` times the adjacency matrix of the complete graph, and hence `||C||≥(M−1)Y/2`. Since M is a fixed positive power of Y, the right side in (10) is much larger than the desired `Y^(1+ε)` for sufficiently small ε. This does **not** imply that the actual selected operator norm is large: (10) takes absolute values and can lose essential cancellation. The example proves that amplitude selection alone does not make this particular graph estimate sufficient. It uses prime coefficients tailored to F; it does not establish the same obstruction for fixed smooth physical slots or for rows satisfying additional detector-zero conditions.
+
+**Independent review:** A second researcher checked the coordinatewise torus maximization, both common-slot coefficient bounds, the amplitude exponents and the conductor-graph eigenvalue. The result concerns the positive graph majorant, not the true selected norm.
+
+**Second independent review of the graph obstruction:** A further researcher checked the phase maximization, coefficient normalization, slope threshold, finite-ray pigeonhole, and conductor eigenvalue. The result remains limited to the positive graph majorant.
+
+For another explicit consequence, suppose all rows have norm ≤Y and the same positive valuations at every prime of a fixed squarefree good ideal D. Since D divides every row, ideal counting gives `M≪(Y/ND)(LY)^ε`, and cancellation of the common D gives `sqrt(Q(u,v))≤Y/ND`. Thus
+
+    selectedNorm(F,S) ≪_ε [L+(Y/ND)²](LY)^ε.
+
+Whenever `ND≥sqrt(Y)` and L≥Y, the whole block has the desired O(L) bound, regardless of its individual radicals or selection. A collection of such blocks still requires control of cross-block correlations.
+
+For a family of distinct prime rows, the exponent-one supports are all different, so `G_same` is only the diagonal. The reduction therefore does not itself improve the worst squarefree-prime case; it is valuable for removing repeated-power structure before addressing genuinely distinct supports.
+
+## Fixed-field, fixed-order form
+
+The proof is not specific to six except for notation. Let n≥3 and let K be a fixed number field containing μ_n; then K is totally imaginary. Fix a finite bad set S containing the primes over n. Consider element rows u with nonzero n-th-power-free principal ideals of norm at most Y, and assume a fixed bound B₀ on the number of row labels representing any one ideal. Use the standard n-th Kummer residue character on good source ideals, with its coprime zero masks; at the finitely many primes in S allow the actual bounded multiplicative local factors. For good primes define
+
+    Q_n(u,v)=∏_{p∉S : v_p(u)≠v_p(v) (mod n)} Np,
+
+and let g_S(u) be the good part of `(u)`. The same argument, conditional on the standard Kummer reciprocity and Hecke functional equation for this fixed field, gives
+
+    selectedNorm(F,Sources) ≪_{K,n,S,B₀,ε}
+       [L + max_u Σ_{v: g_S(v)≠g_S(u)} sqrt(Q_n(u,v))] (LY)^ε.
+
+The good-valuation blocks have size at most `B₀ n^|S|`. At a good prime the conductor exponent of a ramified one-dimensional finite-order character is 1, while unit Kummer classes are unramified; the wild conductor is bounded because each local group `K_p×/(K_p×)^n` is finite. There are O((log 2L)^|S|) bad-source exponent vectors. The completed nonprincipal finite-order Hecke L-function has a factor `Γ_C(s)^([K:Q]/2)` and is entire, so its L-value at s=0 cancels the smooth cutoff's simple Mellin pole. Variable deleted factors and the finite ray presentations are handled as before.
+
+If `N(rad(u))≤R`, the number of rows is `≪R^(1+ε)` and the stronger cardinality form `≪(L+MR)(LR)^ε` follows. If the good factorization is `a₁ a₂²⋯a_{n−1}^{n−1}`, then fixing `a₁=A` still makes the remaining radical norm at most `(Y/NA)^(1/2)`; there are only `(n−2)^ω` possible higher exponents. Consequently the same-a₁ row-Gram direct sum is `≪(L+Y)(LY)^ε` for any source cutoff L. The bounded-multiplicity hypothesis is essential over fields with infinitely many units. These are operator estimates for structured Kummer families, not zero-free regions; neither arbitrary ramified source conventions nor growing field/order are covered.
+
+**Independent review of the fixed-field extension:** A further researcher checked total imaginarity, the gamma factor and zero at 0, tame and wild conductor bounds, fixed-prime splitting, variable Euler deletions, bounded-multiplicity blocks, and exponent-one support counting. Global Kummer reciprocity and the Hecke functional equation remain standard imported inputs, not independently machine-checked here.
+
+The softened target (4) is strictly stronger than the desired norm even for abstract Gram matrices. For even M take a direct sum of M/2 copies of `L [[1,t],[t,1]]`, where 0<t<1. This matrix is positive semidefinite and has norm `(1+t)L`, but its off-diagonal E satisfies `Tr(E⁴)=M t⁴ L⁴`. For `1≪M≪L^(2/3)` this exceeds `L⁴+L²M³` by a power. Thus (4) rules out many O(L)-sized modes even though they are compatible with the desired norm. This example is abstract; it does not establish an arithmetic violation of (4).
+
+## A cross-support bound when the number of supports is small
+
+The fixed-support estimate also yields an unconditional-on-selection bound for a union of supports. Let `𝒜` be the distinct exponent-one support ideals occurring in F, and put K=#𝒜. The source-to-row matrix is the vertical stack of its restrictions to the disjoint row sets F_A. For every source coefficient vector, the squared row norm is the sum of the squared norms of these restrictions. Consequently
+
+    selectedNorm(F,S) ≤ Σ_{A∈𝒜} selectedNorm(F_A,S)
+      ≪_ε [K L + Y Σ_{A∈𝒜} 1/NA] (LY)^ε
+      ≪_ε [K L + Y log(2Y)] (LY)^ε.                         (13)
+
+The last inequality is the fixed-field harmonic ideal-counting estimate; each A has norm at most Y. For L≥Y, a family with `K=(LY)^{o(1)}` has the desired long-source bound `O(L(LY)^ε)` for every ε>0. More generally, at L=Y, `K≤Y^(1/6−δ)` for fixed δ>0 gives a power improvement over the unrestricted sixth-order `Y^(7/6+ε)` large-sieve upper bound, after choosing the loss smaller than δ. These are real bounds for structured families, conditional on the standard Kummer/Hecke inputs used above. They do not bound K for physical detector-selected rows; in the prime-row case K=M, and the torus example shows that broad prime-slot selection can retain polynomially many different supports.
+
+**Independent review:** A second researcher checked the vertical stacking, the harmonic ideal sum, and the stated exponent ranges. No uniform selected-family or zero-free conclusion follows without additional control of the number of supports.
+
+The same stacking and harmonic-sum argument applies to the fixed-field, fixed-order version above, with constants depending on the field and fixed row multiplicity.
+
+## A cross-support gcd graph
+
+There is a stronger deterministic bound that handles some cross-a₁ interactions. Let 𝒜 be the distinct exponent-one supports in F. For `A,B∈𝒜` put `a=NA`, `b=NB`, and `g=N gcd(A,B)`. Define the symmetric nonnegative matrix H by
+
+    H(A,A)=1/a,       H(A,B)=1/g  for A≠B.
+
+Then, under the same Kummer/Hecke inputs,
+
+    selectedNorm(F,S) ≪_ε [L + Y ||H||_{2→2}] (LY)^ε.       (14)
+
+For u∈F_A and v∈F_B with A≠B, write T_u,T_v for their good higher-exponent radicals. The primes of gcd(A,B) have exponent 1 in both rows and contribute neither to Q(u,v) nor to T_u,T_v. Every other prime contributing to Q divides `AB T_u T_v/gcd(A,B)²`, even if a prime of A also occurs in T_v. Hence
+
+    Q(u,v) ≤ (ab/g²) NT_u NT_v ≤ Y sqrt(ab)/g².
+
+With the earlier `#F_A≪(Y/a)^(1/2+ε)` and analogous B bound, the Hilbert–Schmidt norm of the **smooth weighted** cross block is at most
+
+    sqrt(#F_A #F_B) · max_{u∈F_A,v∈F_B}|G_W(u,v)|
+       ≪_ε Y/g · (LY)^ε.                                    (15)
+
+Different A,B guarantee different good-valuation blocks, so the pair character is nonprincipal. The within-A smooth block has norm `≪(L+Y/a)(LY)^ε`: bound its weights by a fixed multiple of the complete source cutoff at 2L and apply (11). Apply the block Rayleigh inequality with the vector of row-block ℓ² norms, then PSD domination of each sharp source set by G_W; the scalar comparison matrix is `L·Id+Y·H`, giving (14). □
+
+For example, if all K support ideals contain a fixed squarefree good ideal D, then `H(A,B)≤1/ND` for every pair and `||H||≤K/ND`. Thus K≤ND already gives O(L(LY)^ε) for L≥Y, even when K grows polynomially and the individual radicals are large. More generally weighted Schur bounds on H capture uneven support clusters. For distinct prime supports, every off-diagonal gcd is 1 and `||H||` is about K, so this deterministic estimate still fails to reach O(L) for large K; signed arithmetic cancellation or additional physical selection structure is needed there.
+
+**Independent review:** A second researcher checked the exact gcd accounting, including primes appearing in A but in the other row's higher-power radical; such overlaps are only overcounted on the right. The counting, Hilbert–Schmidt block bound, bounded bad/unit blocks and scalar block-Rayleigh comparison were also checked. This is an operator bound for structured families and does not establish a zero-free region.
+
+In the torus-maximization example above, each exponent-one support is a different prime ideal, so every off-diagonal gcd is 1 and `||H||≥M−1`. Thus that same selected-family construction also shows that the gcd-graph criterion (14) alone cannot prove the broad arbitrary-prime-slot selected norm. It remains a sufficient bound for families whose support-gcd graph is spectrally small.
+
+The gcd graph can retain the actual number of selected rows in each support block. Set `m_A=#F_A` and
+
+    w_A = sqrt(m_A) · (NA/Y)^(1/4),      D_w=diag(w_A).
+
+Then the same argument gives the sharper bound
+
+    selectedNorm(F,S) ≪_ε [L + Y ||D_w H D_w||_{2→2}] (LY)^ε.  (16)
+
+For A≠B, the exact cardinalities in the Hilbert–Schmidt step give the bound `Y w_A w_B / N gcd(A,B)`. Within one A block, good-valuation subblocks each have bounded size and contribute O(L), while all other entries have magnitude `≪sqrt(Y/NA)(LY)^ε`; the row-sum bound is `m_A sqrt(Y/NA)=Y w_A²/NA`. The same block-Rayleigh argument proves (16). It may improve (14) for supports much less populated than the generic `(Y/NA)^(1/2+ε)` bound, while retaining the actual cross-support conductor geometry.
+
+If all supports contain D, the nonnegative entries satisfy `H(A,B)≤1/ND`, so `||D_w H D_w||≤(Σ_A w_A²)/ND`. In particular, `Σ_A m_A sqrt(NA/Y)≤ND` is sufficient for O(L(LY)^ε) when L≥Y. The prime-row adversarial example still has w_A comparable to 1 and gcd 1, so this weighted criterion also requires genuinely new information in the general selected family.
+
+**Independent review of (16):** A second researcher checked the cross-block Hilbert–Schmidt powers, the bounded same-good-valuation subblocks, the diagonal term, and the block comparison with all source masks retained.

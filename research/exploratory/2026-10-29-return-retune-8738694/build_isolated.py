@@ -58,6 +58,20 @@ def main():
         status=subprocess.check_output(['git','-C',str(path),'status','--porcelain'],text=True)
         package_info[name]={'revision':actual,'tracked_diff_sha256':hashlib.sha256(diff).hexdigest(),'status':status}
     out.mkdir(parents=True,exist_ok=True);results.mkdir(parents=True,exist_ok=True)
+    # Lean resolves a namespace from the first library that contains it. Populate
+    # the isolated tree with symlinks for unaffected modules so Submissions and
+    # Candidate do not shadow missing baseline modules. Never link an affected
+    # destination: those are newly compiled in this tree.
+    overlay={}
+    for name in baseline_oleans:
+        rel=Path(name.replace('.','/'))
+        original=base/(str(rel)+'.olean')
+        for item in sorted(original.parent.glob(original.name+'*')):
+            if not item.is_file(): continue
+            target=out/item.relative_to(base);target.parent.mkdir(parents=True,exist_ok=True)
+            target.symlink_to(item.resolve())
+            overlay[str(target.relative_to(out))]={'baseline_path':str(item.resolve()),'sha256':digest(item)}
+    (results/'overlay-inventory.json').write_text(json.dumps(overlay,indent=2)+'\n')
     env=dict(os.environ,LEAN_PATH=os.pathsep.join([str(out),str(base),*packages]));done=set();items=[]
     (results/'environment.json').write_text(json.dumps({'lean':str(Path(args.lean).resolve()),'lean_sha256':LEAN_SHA,'plan_sha256':PLAN_SHA,'lake_manifest_sha256':LAKE_SHA,'lean_toolchain_sha256':TOOLCHAIN_SHA,'lean_path':env['LEAN_PATH'],'baseline_log_sha256':digest(args.baseline_log),'source_root':str(src),'packages':package_info},indent=2)+'\n')
     (results/'baseline-olean-inventory.json').write_text(json.dumps(baseline_oleans,indent=2)+'\n')

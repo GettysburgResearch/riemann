@@ -1,0 +1,520 @@
+{
+  "scope": "package source trees only; not compiled-cache authentication",
+  "manifest_sha256": "5c6d8777513f3fa9eee95a8475ea8d2109e7efaff4b315d8c22d4d2714ec9c79",
+  "packages": [
+    {
+      "name": "mathlib",
+      "pinned_revision": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+      "head": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+      "changes": [],
+      "ignored_lean_outside_lake": [],
+      "matches_pinned_tree": true
+    },
+    {
+      "name": "checkdecls",
+      "pinned_revision": "3d425859e73fcfbef85b9638c2a91708ef4a22d4",
+      "head": "3d425859e73fcfbef85b9638c2a91708ef4a22d4",
+      "changes": [],
+      "ignored_lean_outside_lake": [],
+      "matches_pinned_tree": true
+    },
+    {
+      "name": "doc-gen4",
+      "pinned_revision": "953c8992d174b4e56955e01e101d46668c68f2bb",
+      "head": "953c8992d174b4e56955e01e101d46668c68f2bb",
+      "changes": [],
+      "ignored_lean_outside_lake": [],
+      "matches_pinned_tree": true
+    },
+    {
+      "name": "PrimeCert",
+      "pinned_revision": "0803c2f6bd289c09704c7d352bb8fcf770cbb9b2",
+      "head": "0803c2f6bd289c09704c7d352bb8fcf770cbb9b2",
+      "changes": [],
+      "ignored_lean_outside_lake": [],
+      "matches_pinned_tree": true
+    },
+    {
+      "name": "LeanArchitect",
+      "pinned_revision": "468e8f58fb4ad6e6ad672a08da6d0d0531e95a97",
+      "head": "468e8f58fb4ad6e6ad672a08da6d0d0531e95a97",
+      "changes": [],
+      "ignored_lean_outside_lake": [],
+      "matches_pinned_tree": true
+    },
+    {
+      "name": "leancert",
+      "pinned_revision": "7f91b6eb3567437f6cfac03ed279706603ee22f4",
+      "head": "7f91b6eb3567437f6cfac03ed279706603ee22f4",
+      "changes": [],
+      "ignored_lean_outside_lake": [],
+      "matches_pinned_tree": true
+    },
+    {
+      "name": "PrimeNumberTheoremAnd",
+      "pinned_revision": "c39a751132c88b6e8080b74c74023fd95b3d8be0",
+      "head": "c39a751132c88b6e8080b74c74023fd95b3d8be0",
+      "changes": [
+        {
+          "status": " M",
+          "path": "PrimeNumberTheoremAnd/Fourier.lean",
+          "sha256": "4d32bf7900ceb3268a44857603eec12333ef605d0d3c966ee6b6261590e9134b"
+        },
+        {
+          "status": " M",
+          "path": "PrimeNumberTheoremAnd/IEANTN/Mertens.lean",
+          "sha256": "4a9ddd7da153e38aca60a9e3cfdb7a60b4644aab3a8b40655a1bd7b16ccd6641"
+        },
+        {
+          "status": " M",
+          "path": "PrimeNumberTheoremAnd/PerronFormula.lean",
+          "sha256": "a313abaf7da9b40872d8b9aeba1c731d3314b2010516d873f025213114c9ba30"
+        },
+        {
+          "status": " M",
+          "path": "PrimeNumberTheoremAnd/SmoothExistence.lean",
+          "sha256": "8f36ada60efb4e835f8f2eb92993b899311dd21607459497d58824d9bc034555"
+        },
+        {
+          "status": " M",
+          "path": "PrimeNumberTheoremAnd/Sobolev.lean",
+          "sha256": "a635e667b7a0228f8eb923f210c08598f61d91880855762540431abe3003f95e"
+        },
+        {
+          "status": " M",
+          "path": "PrimeNumberTheoremAnd/Wiener.lean",
+          "sha256": "20c2be97a648f6f6d190db5cb862efaf4b58de8dba66188b801e2bf625686902"
+        },
+        {
+          "status": " M",
+          "path": "lakefile.toml",
+          "sha256": "96aab01d7a49e28475e0c3f274ae6140c3dee4e42fc91c0828282fefbc6e1d53"
+        },
+        {
+          "status": " M",
+          "path": "lean-toolchain",
+          "sha256": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/Catalan.lean",
+          "sha256": "f802a93312fa749619c67b2fb65f5e76b2ccc3edba874a22260f4b21192ff044"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/Catalan/Consequences.lean",
+          "sha256": "329ef6ec0409039d5bea829eafdb4990b7d514084480d171fde1d69b155244b9"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/Catalan/OrdinaryZetaContinuation.lean",
+          "sha256": "a4cdb4c4da5e511e6fa195d2f6e6c7c64fd710b6922bf4c0c4860358b039ef76"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/Catalan/OrdinaryZetaZeroFree.lean",
+          "sha256": "a7f2eb0f488ecb48488a9b3d7a68abd677d223e74474b3bba078cc8889ec0284"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/Catalan/Wiener.lean",
+          "sha256": "02cb6784ac598b99db13f759cee46287db914c831c61146a9b03e04ff94bce27"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/Catalan/WienerBounds.lean",
+          "sha256": "d3e4cca15d61fbc802fa82a937bfce2d4732b4193e27a65f121c79402572c95d"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/Catalan/WienerFourier.lean",
+          "sha256": "6f02b85bf6ecec997fb6aa6605361a7749d4635b95cfdc71a8288ae2a5cb3b22"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/Catalan/WienerLimits.lean",
+          "sha256": "1e41177cc9f85f99d80f4b6e98da594d46e9d7c59a5c6a90abc0c0ec2aed4f55"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/Erdos970.lean",
+          "sha256": "768577401f1ddb0c2b3aa81713b362da71b59a7d8ff164583d39427d79845268"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/Erdos970/Auxiliary.lean",
+          "sha256": "e22d13e51a1c5c9b6b7e8649469b95d81e54edd1afc126152061242e60423b5a"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/Erdos970/Consequences.lean",
+          "sha256": "98ee935f8b00b09fa1535b448679444dbbcf621f496e0a46ff4bdadc02f7986e"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/Erdos970/Defs.lean",
+          "sha256": "eee486ed4274d4b35446dc149f871ef7e5492d0c4b7ae5412b37b8f9b44b4975"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/Erdos970/EulerMaclaurin.lean",
+          "sha256": "a7df60d3653cb8660b82aeae4d2aaa7145dc824ee643b4741e315bcc674ec4cc"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/Erdos970/Fourier.lean",
+          "sha256": "a21d6432f41a3cada598dba1ad9ceae6a48819be7cb99b06de65ab15c7b66fda"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/Erdos970/HadamardSupport.lean",
+          "sha256": "a0f61289b82b68afc3b06080bf01c94f4460f3c95d27fe447a0dde427960d2e4"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/Erdos970/Mathlib/Algebra/Notation/Support.lean",
+          "sha256": "cae01d85a685b04574a3e7e973493583bdbde5d3fabd2b4dab07f88df49a00f1"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/Erdos970/Mathlib/Analysis/Asymptotics/Asymptotics.lean",
+          "sha256": "ed6a6f94e8ffa4e044348a1c42962ebb929955c9082643139205ce369141d321"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/Erdos970/Mathlib/Analysis/SpecialFunctions/Log/Basic.lean",
+          "sha256": "7a92a2aebfed9eaedaabdb4089cde4af4f85137d816790d68cc46b5cad56fbb1"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/Erdos970/MellinCalculus.lean",
+          "sha256": "7930ab19123821aff6a6192cca50b43182282cb69484b0753bc7992735973912"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/Erdos970/MertensClassical.lean",
+          "sha256": "37b0afe031bec4dea9fe77843b63ba2274c1718510c3e7b52678380bcbb9ae01"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/Erdos970/Rectangle.lean",
+          "sha256": "c1ac1588f8aa36ca6cce8a224f03f9293d6aa86add4bcef856b6fbbb7d684a62"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/Erdos970/ResidueCalcOnRectangles.lean",
+          "sha256": "85d3dbda748e0068a094261d833f20fa3e924867778ed0772b647bbd64ebf3a6"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/Erdos970/SmoothExistence.lean",
+          "sha256": "358de0d82ac0575776c34dd6e66092f16580f8844f1843c6521e4e30a107a93b"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/Erdos970/Sobolev.lean",
+          "sha256": "7eb6ec9ffffd0bfd8447e38b56dbeede8e7c5e2cefd71c0b47210c02d8223165"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/Erdos970/Tactic/AdditiveCombination.lean",
+          "sha256": "80bc9e124e078093078d3d425e3099fcada4017ed590f09aae78873d0298eef9"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/Erdos970/Wiener.lean",
+          "sha256": "f2fe424c422598a1ca2c63ac1035472115bfc749440c2a90d019ededf033c2fc"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/Erdos970/ZetaBounds.lean",
+          "sha256": "9ef231a799661c1427f23283f97705934edcf3edfd9fdc931c9b517dea2cf676"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/Erdos970/ZetaConj.lean",
+          "sha256": "a8fb9c968edce35203fd8af8202d958b9dc54e86303dfdddc149c3ad33b79397"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/SiegelZeros/CartanBounds.lean",
+          "sha256": "914619b42f2d408d5a6dcb082a3a0bf40be7dc90664bd041335ae3cfe4ace11a"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/SiegelZeros/Counting.lean",
+          "sha256": "8a4baf358e02792fc9353abf86a99f8e2981aca45e075b2b240abce6057c038b"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/SiegelZeros/DivisorBasics.lean",
+          "sha256": "b876999e5337224b5680fa7f7da9769e2f4e48f30f40ee5d7f2d473aa17574b9"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/SiegelZeros/DivisorLimits.lean",
+          "sha256": "1f6c1fde75de0b2ca22384db91dc0d4bd9199f81483293181191acee0b0f5a7f"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/SiegelZeros/DivisorProducts.lean",
+          "sha256": "c588e788d6d7218b7faffb54c0770cf33503238529802cb8cba526e0dcca6d0c"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/SiegelZeros/Exponential.lean",
+          "sha256": "fc5275b5bb345d4a9b496e2f6f69f3bd4674893727552031584de67dddcdf9c9"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/SiegelZeros/Factorization.lean",
+          "sha256": "e4569bce8a761f4dca00d2fee525e58083729b7fa109a59cb35ba344cf83cdf8"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/SiegelZeros/Growth.lean",
+          "sha256": "a5b0f5651308176e72d2166ea626ed1121c6575438582a4f3d962c69cc93a42b"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/SiegelZeros/HadamardSupport.lean",
+          "sha256": "18cc872b37afa250e674a9069c3ff21872975cba4d6235bd613edfa9919ac720"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/SiegelZeros/NOTICE.md",
+          "sha256": "e5694c7f17e7ae32b47caa40151160883f396df908fc0af8fc6038c92cec1833"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/SiegelZeros/ProductBounds.lean",
+          "sha256": "969770fb4bb3cfe708fcf612a6f222645696a3d4a4193e0ea251ed04aae4b735"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/SiegelZeros/Products.lean",
+          "sha256": "542f14e2a572a28b6b93ccbf6d046493b5692745ba31635728a2bd4271f0026a"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/SiegelZeros/Summability.lean",
+          "sha256": "c9958f6fbf5c10738310fda29acd5716f38a69feb0d2ddaf4c9f32b724f55c30"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/ZetaFive.lean",
+          "sha256": "ba8a0597a806e147e0d3c4f10be69a3299a456687624e7a87ce9604add508051"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/ZetaFive/Consequences.lean",
+          "sha256": "710d46d025836a04fda90446bf9f5106f4a9cd74e1794b53b2433999114967c3"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/ZetaFive/Fourier.lean",
+          "sha256": "3cd55283eee80e442445b7c40d17a64aad3202e4da9fa18f147e101d896015b7"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/ZetaFive/SmoothExistence.lean",
+          "sha256": "a89bad992677d4b52da9a98641501e5b7b31f1adcddc288a03f565e2dc51791f"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/ZetaFive/Sobolev.lean",
+          "sha256": "3f134aff16357219284ffd5ba6cb891d4a16382f0f7115ebac5fae8c77d7695e"
+        },
+        {
+          "status": "??",
+          "path": "PrimeNumberTheoremAnd/ZetaFive/Wiener.lean",
+          "sha256": "3c5de31f6b4df2072cacd77928c6fccff69a76493cc7ba5a8a76ea7bb97ecda0"
+        }
+      ],
+      "ignored_lean_outside_lake": [],
+      "tracker_patch_sha256": "0890432340c0025973bcfe070b634355fa366cc831595f68526e4c73c8903d82",
+      "matches_pinned_plus_tracker_patch": true
+    },
+    {
+      "name": "rellich-kondrachov",
+      "pinned_revision": "70f85d4c1bf99c6e7d61e8be4daa6f3664d08d23",
+      "head": "70f85d4c1bf99c6e7d61e8be4daa6f3664d08d23",
+      "changes": [
+        {
+          "status": " M",
+          "path": "RellichKondrachov/Analysis/FunctionalSpaces/Sobolev/Euclidean/H1.lean",
+          "sha256": "58ebcc368094602f29b9ff956930bf37f38f9299fc8acec204cfa9c1b4ff94fc"
+        },
+        {
+          "status": " M",
+          "path": "RellichKondrachov/Analysis/FunctionalSpaces/Sobolev/Euclidean/L2Compactness/Approximation.lean",
+          "sha256": "ab8bdb450d98348b0296453ba5d75b8208f6c5ac37702a3c1255c6d67d9457dd"
+        },
+        {
+          "status": " M",
+          "path": "RellichKondrachov/Analysis/FunctionalSpaces/Sobolev/Euclidean/L2Compactness/ArzelaAscoli.lean",
+          "sha256": "bef72fc1a747e7cef82ed3d662176887dd133bca3489e71cf395a665ad5da492"
+        },
+        {
+          "status": " M",
+          "path": "RellichKondrachov/Analysis/FunctionalSpaces/Sobolev/Euclidean/L2Compactness/Compactness.lean",
+          "sha256": "2404e4a331186212aa7ce2f069a56c621cee6514c9e711ed5f3e61b52300341b"
+        },
+        {
+          "status": " M",
+          "path": "RellichKondrachov/Analysis/FunctionalSpaces/Sobolev/Euclidean/L2Compactness/FrechetKolmogorov.lean",
+          "sha256": "5ef1afc6a6142cd33e4d8f261ceda91df81ef08ba4b409b33daaf3fd5a3d9d07"
+        },
+        {
+          "status": " M",
+          "path": "RellichKondrachov/Analysis/FunctionalSpaces/Sobolev/Euclidean/L2Compactness/Kernels.lean",
+          "sha256": "ae7d26c575370d8414f8a873f45adbe21d123a2ef33da4b7c2dae3ddab272a79"
+        },
+        {
+          "status": " M",
+          "path": "RellichKondrachov/Analysis/FunctionalSpaces/Sobolev/Euclidean/L2Compactness/Smoothing.lean",
+          "sha256": "7a4539df7c96315d597940be033af0823c62be1f5c28cbff3d5ded047f1106e7"
+        },
+        {
+          "status": " M",
+          "path": "RellichKondrachov/Analysis/FunctionalSpaces/Sobolev/Euclidean/L2Compactness/Transfer.lean",
+          "sha256": "9e302cfdae869cb4ce5d8516749a4765c4e005a83572c210de64182632aacff2"
+        },
+        {
+          "status": " M",
+          "path": "RellichKondrachov/Analysis/FunctionalSpaces/Sobolev/Euclidean/L2Compactness/TranslationIntegral.lean",
+          "sha256": "4238889df823be7edadedb5943769077937bf390d2bfa614741de49d97bf8097"
+        },
+        {
+          "status": " M",
+          "path": "RellichKondrachov/Analysis/FunctionalSpaces/Sobolev/Euclidean/Rellich.lean",
+          "sha256": "82e17a8ce458d7f2df61fb5d4f545a0c2257b11dfa5254c72ba3c9caff51da4b"
+        },
+        {
+          "status": " M",
+          "path": "RellichKondrachov/Analysis/FunctionalSpaces/Sobolev/Euclidean/Translation.lean",
+          "sha256": "ffc94cb6b55811801735847c6678e83c19aee5f59bcf522cd113d1dadd9702e5"
+        },
+        {
+          "status": " M",
+          "path": "RellichKondrachov/Analysis/FunctionalSpaces/Sobolev/Euclidean/TranslationEstimate.lean",
+          "sha256": "1a53acd973c16616f86d5a8eadbae7132831b09d39ff0876d6635c5914208480"
+        },
+        {
+          "status": " M",
+          "path": "RellichKondrachov/Analysis/FunctionalSpaces/Sobolev/Euclidean/TranslationEstimateH1.lean",
+          "sha256": "1a525d749b4616a4ce6043587ad004603c4d799cfb5e989f1b0795bf76640165"
+        },
+        {
+          "status": " M",
+          "path": "RellichKondrachov/Analysis/FunctionalSpaces/Sobolev/Euclidean/TranslationEstimateL2.lean",
+          "sha256": "1701e17610f9d77f999c88e6d846c646b264ff5478556f6014d3b656b8ea9399"
+        },
+        {
+          "status": " M",
+          "path": "RellichKondrachov/MeasureTheory/Function/LpSpace/Restrict.lean",
+          "sha256": "481877b5f297a98b1c8e3d7b8efc1864d0c92f3b9f8ec43faf90f44112330f87"
+        }
+      ],
+      "ignored_lean_outside_lake": [],
+      "tracker_patch_sha256": "0c121d8517dfeadc93ef24fe2deb56beec7cb3998e2552dee8f61c780b1408c8",
+      "matches_pinned_plus_tracker_patch": true
+    },
+    {
+      "name": "plausible",
+      "pinned_revision": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+      "head": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+      "changes": [],
+      "ignored_lean_outside_lake": [],
+      "matches_pinned_tree": true
+    },
+    {
+      "name": "LeanSearchClient",
+      "pinned_revision": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+      "head": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+      "changes": [],
+      "ignored_lean_outside_lake": [],
+      "matches_pinned_tree": true
+    },
+    {
+      "name": "importGraph",
+      "pinned_revision": "e928b72544873815af278d38681b31c0293588e3",
+      "head": "e928b72544873815af278d38681b31c0293588e3",
+      "changes": [],
+      "ignored_lean_outside_lake": [],
+      "matches_pinned_tree": true
+    },
+    {
+      "name": "proofwidgets",
+      "pinned_revision": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+      "head": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+      "changes": [],
+      "ignored_lean_outside_lake": [],
+      "matches_pinned_tree": true
+    },
+    {
+      "name": "aesop",
+      "pinned_revision": "355695d523e41d0554926416cba2a2b3544fbbc9",
+      "head": "355695d523e41d0554926416cba2a2b3544fbbc9",
+      "changes": [],
+      "ignored_lean_outside_lake": [],
+      "matches_pinned_tree": true
+    },
+    {
+      "name": "Qq",
+      "pinned_revision": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+      "head": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+      "changes": [],
+      "ignored_lean_outside_lake": [],
+      "matches_pinned_tree": true
+    },
+    {
+      "name": "batteries",
+      "pinned_revision": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+      "head": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+      "changes": [],
+      "ignored_lean_outside_lake": [],
+      "matches_pinned_tree": true
+    },
+    {
+      "name": "leansqlite",
+      "pinned_revision": "f9cdb9eacb5c8b8ecc02ee9fd9e568d7d28c1416",
+      "head": "f9cdb9eacb5c8b8ecc02ee9fd9e568d7d28c1416",
+      "changes": [],
+      "ignored_lean_outside_lake": [],
+      "matches_pinned_tree": true
+    },
+    {
+      "name": "Cli",
+      "pinned_revision": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204",
+      "head": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204",
+      "changes": [],
+      "ignored_lean_outside_lake": [],
+      "matches_pinned_tree": true
+    },
+    {
+      "name": "UnicodeBasic",
+      "pinned_revision": "0e569d08b6443ce0908d356884c765397253e2f0",
+      "head": "0e569d08b6443ce0908d356884c765397253e2f0",
+      "changes": [],
+      "ignored_lean_outside_lake": [],
+      "matches_pinned_tree": true
+    },
+    {
+      "name": "BibtexQuery",
+      "pinned_revision": "4d8616fd4870d0a3453d845770833eac7951fe1c",
+      "head": "4d8616fd4870d0a3453d845770833eac7951fe1c",
+      "changes": [],
+      "ignored_lean_outside_lake": [],
+      "matches_pinned_tree": true
+    },
+    {
+      "name": "MD4Lean",
+      "pinned_revision": "31907cc18f48a95384f99cee5582c00fb39e0f67",
+      "head": "31907cc18f48a95384f99cee5582c00fb39e0f67",
+      "changes": [],
+      "ignored_lean_outside_lake": [],
+      "matches_pinned_tree": true
+    }
+  ]
+}
