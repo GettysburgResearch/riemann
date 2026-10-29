@@ -129,3 +129,37 @@ Writing `D₀=Y^d`, `B=Y^b`, (18) is at most `Y^(21/20+ε)` when
     d/3 + 7b/6 ≤ 37/60.                                         (19)
 
 It lies strictly below the staged θ threshold when `d/3+7b/6<11824123/18750000`, with all fixed source losses chosen inside the margin. As before, b is the sixth-free dual core and this control cannot be extended to the remaining frequencies or to the full signed core without further input.
+
+## Growing k: source-qualified small-core bound
+
+For an original gcd/divisor dyad `Nd₀≈D₀`, `Nk≈K`, write `d₀=k d′`. Assume the exact source physical fixed-sector correlation and its common-profile Fourier separation, as in the earlier sections and [the mask-preserving ledger](../2026-10-29-mask-preserving-second-poisson.md). For good `v=b a⁶` with b sixth-free, `Nb≈B` and `Nv≈H`, the k-dependent sextic factors obey the exact identity including zeros
+
+    χ_n(g)^4 χ_n(k)^5 χ_n(b) = χ_n(gk)^4 χ_n(bk).              (20)
+
+The source's g is coprime to d₀; the a⁶ dual mask also requires `(g,a)=1`. Combine the remaining source puncture d′ and a-mask into `1_{(n,rad(a d′))=1}` and expand once over `e|rad(a d′)`. Since d₀ is squarefree, `(k,d′)=1`; if e meets k, the factor `χ_e(k)^5` makes that entire term zero. On surviving terms `f=gke` is therefore squarefree. The source χ_m(f)^4 factor retains all its zeros. The e-dependent factor is `χ_e(b)χ_e(k)^5=χ_e(bk)χ_e(k)^4`: the first factor is a bounded b-row multiplier and the second is a fixed e,k phase. Shared b,k or a,b primes are allowed. The residual column scale is `D≈P/(D₀G)` and the Poisson dual cutoff is `H≲Y^ε P²K/(Y D₀²)`.
+
+Fix k before applying the b-average. The map `b↦bk` is injective, so positivity allows its source row sum to be enlarged to all row labels of norm `≪BK`. Proposition `prop:R`, cube inversion and the e-divisor Minkowski step give
+
+    Σ_(Nb≈B) |S_{g,k}(D;a,b)|²
+       ≪ Y^ε [BK+B^(3/2)K²sqrt(G)].                            (21)
+
+The row label and f may share primes; the source's original zero extension is retained. In a **separate** estimate do not enlarge the b set: direct absolute counting of the D-annular source gives `|S_{g,k}|²≪D`, and there are only `O(B)` actual b labels. Thus the same mean is also `≪Y^ε BD`. This elementary branch is uniform in k and all the masks.
+
+The physical factor is `(Y/P)/(KG)`. There are `O(D₀/K)` choices for d′, `O(K)` for k and `O(G)` for g, up to small powers. The a-root ball has size `≪(H/B)^(1/6)`. After Cauchy/absolute values and these sums, the total is
+
+    ≪ Y^ε (Y/P)(D₀/K)(H/B)^(1/6)
+       · min{B P/(D₀G), BK+B^(3/2)K²sqrt(G)}.                 (22)
+
+Since B,K,G≥1, the second summand in the theta branch dominates BK. The elementary minimax inequality
+
+    min{B P/(D₀G), B^(3/2)K²sqrt(G)}
+       ≪ (P/D₀)^(1/3) B^(4/3) K^(4/3)                       (23)
+
+holds even if its formal crossing lies outside the nonempty G range. Inserting the dual cutoff gives
+
+    |B_(D₀,K; Nb≈B)|
+       ≪ Y^(13/30+ε) D₀^(1/3) K^(1/2) B^(7/6).               (24)
+
+The roots and b-labels are enlarged independently only after Cauchy, so no extra multiplicity of a given dual ideal is assumed. The source's artificial principal restoration and rapid tails must be handled as in the cited ledger; (24) bounds this specified nonzero-frequency, small-core contribution and does not control its complement. It remains conditional on the exact original physical phase, fixed-sector matching and source Fourier/profile uniformity.
+
+**Growing-k arithmetic review.** Other_families checked the zero-preserving identity (20), the vanishing of e meeting k, the squarefree source label gke and the injection b↦bk. The sharper K^(1/2) power uses the actual B-row trivial bound before enlarging the row set; the fixed-sector physical identity, principal restoration and Fourier-profile replay remain source inputs.
