@@ -13,7 +13,7 @@ Use the same compensated unitary Hecke probe, prime windows, target family and g
 Let β be the common zero supremum for the buffered family used in the detector, and suppose B₀<β≤7/8. Fix ζ=10^(−7), dmin=1/100 and a sufficiently fine fixed slot mesh. Suppose all of the following source interfaces hold for this **same** probe and slot system:
 
 1. The physical finite-row Mellin formula, original zero masks, retained-height contour moves, and integrated and trace-tail bounds in Hu §6.6 and Xu–Sang Appendix C.3 apply at these variable scales, with one cumulative buffered height allowance. In particular the original full correction is holomorphic throughout each move before selected factors are divided by unselected ones, and the amplitude partition is made at fixed z before shifting w.
-2. The finite-row detector and count in [the witness-count note](../2026-10-29-hu-witness-count/README.md) apply to each retained nonfloor class; the relevant class cardinality is U^(R(δ,x)+ε) times a fixed height polynomial, and its original prime-slot amplitudes are the lower bounds used in the numerator moment. The detector floor uses the trivial row count.
+2. The finite-row detector and count in [the witness-count note](../2026-10-29-hu-witness-count/README.md) apply to each retained nonfloor class; the relevant class cardinality is U^(R(δ,x)+ε) times a fixed height polynomial. Its physical amplitude bins provide both the lower bounds used in the numerator moment and the matching upper bounds: with individual relative widths ℓᵢ/d, every main slot is at most U^((gᵢ+ε₀)ℓᵢ/d), including zero bins. The total width-weighted bin loss is small. The detector floor uses the trivial row count.
 3. Hu's paired fourth moment at κ=3/4, its finite-order zero-free premise, Kummer conductor identification and the physical slot matching hold with the stated mesh/profile quantifiers. Then [the amplified-numerator note](../2026-10-29-unitary-amplified-numerator/README.md) applies. The local selected-error bound and simultaneous conductor-deficit arithmetic in [the raised-line note](../2026-10-29-raised-line-error/README.md) also apply to every term of the full main/error expansion.
 
 For a retained intermediate row dyad U=Z^d with dmin≤d≤h+ζ, the total nonprincipal contribution is, after the fixed normalization and for sufficiently small real losses,
@@ -21,7 +21,7 @@ For a retained intermediate row dyad U=Z^d with dmin≤d≤h+ζ, the total nonpr
     ≪ Z^(C_b(β)−ρ) (1+T₁)^A,
     C_b(s)=s−(4+b)/6,
 
-for some ρ>0 independent of the target and of the finite row class. Here A and the implicit constant may depend on the fixed field, target and slot system, while the numerical saving and choice of mesh are independent of a later fixed target twist. The same bound holds after summing the logarithmically many intermediate dyads. This statement does not cover principal, small or distant rows, nor does it establish the trace-tail assumptions in item 1.
+for some ρ>0 independent of the later finite-order target twist and of the finite row class within the fixed infinity-type orbit. The field and orbit are fixed before the mesh and losses are chosen. Here A and the implicit constant may depend on the fixed field, target and slot system. The same bound holds after summing the logarithmically many intermediate dyads. This statement does not cover principal, small or distant rows, nor does it establish the trace-tail assumptions in item 1.
 
 ## Exponent calculation
 

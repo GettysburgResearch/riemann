@@ -17,3 +17,5 @@ Holding the conductor line and all other row terms fixed, an additional valid co
 Run `python research/exploratory/2026-10-29-arvi-return/check_joint_gate.py` to reproduce the rational comparisons and the hypothetical gap. The equation linking PR #94's amplitude bins to a prospective PR #93 selected norm is a source-interface interpretation; it has not been implemented as a new Lean interface.
 
 The existing PR #93 selected-norm contraction also does not extend to this slope by simply running more iterations. Its scalar recurrence is `e_0=1+delta`, `e_(n+1)=2*delta-1+((1-delta)/delta)*e_n`, so `e_n=delta+((1-delta)/delta)^n`. At `delta=223/500` the multiplier is `277/223 > 1`, and every `e_n >= 1+delta`; the iteration moves away from its fixed point. This is a barrier to that recurrence, not a counterexample to any stronger selected-norm estimate.
+
+An independent agent checked the source definitions of the squared selected slope, the two zero-level gates, and the rational comparison. That review does not establish any extension of the selected norm or the detector count.
