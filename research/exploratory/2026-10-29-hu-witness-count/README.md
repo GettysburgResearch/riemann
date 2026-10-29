@@ -29,7 +29,7 @@ OpenAI Proposition 8.3's smoothed truncated-inverse identity applies to these fi
     r≤t+o(1),   r+m≥t−o(1),   0≤m≤1/2+O(ε),
     |M_r|² ≳ U^{δr−ε},   |S_m|² ≳ U^{δm−ε}.
 
-The proof compares the lower bound for their product at the zero with the two individual pointwise upper bounds. Presentation choices are finite, and the dyadic length choices cost only O((log U)²); rowwise profile and height choices are controlled by the uniform Sobolev bounds in Hu Proposition 4.14. This is the detector argument in the proof of Hu Proposition 6.3, used here separately from that proposition's printed hypothesis B>7/8. The deduction does not require that hypothesis: its bin proof only uses a≤1 and the fixed-type estimates just listed. The zero used must be nonprincipal; bounded exceptional rows are already excluded.
+For the general fixed field choose the detector smoothing length U^B with B a sufficiently large fixed constant depending on the fixed strip-growth bounds; the pre-saturation dyadic lengths then lie in [0,B+1+o(1)]. Choose B before profile and tail orders and the height exponent. The proof compares the lower bound for the product at the zero with the two individual pointwise upper bounds. Presentation choices are finite, and the dyadic length choices cost only O((log U)²); rowwise profile and height choices are controlled by the uniform Sobolev bounds in Hu Proposition 4.14. This is the detector argument in the proof of Hu Proposition 6.3, used here separately from that proposition's printed hypothesis B>7/8. The deduction does not require that hypothesis: its bin proof only uses a≤1 and the fixed-type estimates just listed. The zero used must be nonprincipal; bounded exceptional rows are already excluded.
 
 ## Moment matching and numerical count
 

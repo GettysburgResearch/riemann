@@ -55,3 +55,16 @@ PR94: (B,lambda) = (49283557/50000000,           4503/2000),
 with crossing `3311893113/200402000000 = 0.0165262478069081...`. A midpoint face has `(B,lambda) = (7888681013113/8000000000000, 9106201/4000000)`.
 
 These faces cross, so neither original full global domain contains the other. A new return should keep each relevant physical and count window in whichever original face is valid; it may also choose any convex-combination face. In particular, a source-union result by itself does not bound the nonprincipal return, establish a better exponent, or justify replacing a restricted marked-count theorem with a broader one. Full admission guards, source identities and a rigorous continuum return certificate must still be checked. Exploratory numerical comparisons performed independently so far have not shown a meaningful improvement at the sampled bottleneck.
+
+## Scalar interpolation at a concrete bottleneck
+
+At `delta=223/500` and `p=1/2`, interpolate the two *count* face coefficient pairs with `t∈[0,1]`, taking t=0 for PR94 and t=1 for PR93. When the PR94 uncapped-C scalar formula is applied formally to the interpolated face, exact arithmetic gives
+
+    R(t) = 23(212955579632671607 t+1195464006788200000)
+           / (5000000000(1601312443 t+9024279000)),
+    R'(t) = 171561047617394341596319
+            / (5000000(1601312443 t+9024279000)^2) > 0.
+
+Therefore this interpolation cannot improve PR94's C value at that point; potential admission restrictions only reduce which t can be used. `check_bottleneck_interpolation.py` verifies the identities exactly. This is a comparison of the recorded scalar faces and does not prove either source, the applicability of their interpolation to the physical family, or a barrier against a new analytic face or a different count formula.
+
+**Independent review:** A second researcher checked both face coefficients, the uncapped-C transcription, and the exact derivative. The conclusion is limited to this point and formula.

@@ -40,3 +40,17 @@ python research/exploratory/2026-10-29-arvi-return/independent_obstruction.py --
 ```
 
 At the illustrative corner `theta=0.87386`, `h=0.806`, the same bin requires capacity at least `2467396034273387/50310355425000000 ≈ 0.04904350235`, whereas the current physical line supplies only `8215820413/168862500000 ≈ 0.04865390725`. With the count envelope held fixed at `R_C`, this one row would require `physicalB >= 80026480008237061661/81100292945100000000 ≈ 0.9867594444` if `physicalLambda` stays `4503/2000`; alternatively, holding physicalB fixed would require `physicalLambda <= 5511211267813337207/2467396034273387000 ≈ 2.233614382`. These are necessary comparisons at this one parameter point, not sufficient conditions for an improved source or a zero-free theorem. Changing source faces or available count branches may invalidate the fixed-envelope assumption.
+
+## Variable marked cap at the bottleneck
+
+Even allowing a new capped-count branch with an arbitrary marked cap `z` cannot improve the existing uncapped C count at the fixed point `delta=223/500`, `p=1/2` when it uses the same count face. Let `m(z)=MN/DJ` be that capped branch's saddle plain length, and abbreviate its necessary upper-face condition by `G(z)=(B−Λz)/2−m(z)≥0`. Omitting the source's positive safety margin only makes this condition easier. Exact calculation gives
+
+    G(z) = −(451213950000 z−42115935877)/848600000000,
+    R_cap(z)−R_C = (1036504/9024279) G(z),
+    R_C = 137478360780643/225606975000000.
+
+Thus `G(z)≥0` forces `R_cap(z)≥R_C` for every real z, with equality only at `z=42115935877/451213950000≈0.0933391706462`. Additional admission guards can only restrict z. The original 1e−7 source safety margin makes the inequality strict. This rules out a new optimum from cap retuning on this fixed face at this point, independent of the list of PR94 windows. It does not apply to a new analytic face or to a source with a different count formula.
+
+`check_variable_cap.py --formulas /path/to/Return/Formulas.lean` checks both identities with exact rational arithmetic and verifies the pinned PR94 source hash.
+
+**Independent review:** A second researcher checked `Formulas.lean` and the exact identities. The source guard `upperM·DJ−MN>0`, together with the upper bound on `upperM` and positivity of DJ at this point, implies the relaxed necessary condition G(z)>0. The conclusion is restricted to this count face and scalar branch.

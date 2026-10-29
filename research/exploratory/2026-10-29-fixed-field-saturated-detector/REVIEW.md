@@ -1,0 +1,21 @@
+# Independent review of the fixed-field saturated detector
+
+**Status:** Source-level and algebraic review, not an independent proof of every imported Hecke estimate, the original detector, or the field/sector identification. No individual zero-free region follows from the lemma.
+
+## Analytic steps checked
+
+The nested maxima include a zero with `Re rho>=sigma0` in the first height rectangle, so rounding a plateau down by a fixed mesh `e` gives `a>=sigma0-e`; the loss is a fixed chosen quantity, not automatically `o(1)` as U grows. A finite number of presentations and their conjugates fit the same nested buffer. Principal primitive presentations must be separated before using a holomorphic logarithm or the entire-function contour shift.
+
+On the positive half-plane, deleted factors of radical norm `O(U)` and their reciprocals cost `U^eta`. On the reflected line `Re s=1-a-6e>=-6e`, the deleted-factor upper bound costs `U^(6e+eta)`, and the functional equation costs at most `U^(a-1/2+6e)` for a finite conductor `O(U)`; this reproduces `a-1/2+12e+eta`. The fixed archimedean type contributes fixed polynomial height factors. All extra Fourier and Mellin frequencies need a share of the same buffer.
+
+At the zero integral, the integrand contains `Gamma(z)`, not `Gamma(z)/z`. Moving from `Re z=2` to `-1/4` crosses only the simple gamma pole at zero; its residue vanishes because the original presented L-function vanishes at the selected primitive zero. Since `Re(rho-1/4)>1/4`, the imprimitive deletion factors are in a positive-real-part strip there. Any fixed polynomial conductor/height growth can be dominated by choosing the exponent B in `Y*=U^B` sufficiently large, then choosing the height exponent and external decay order in the stated order. The finite inverse truncation is entire in z. On the original line, complete multiplicativity including zeros gives `sum_(d|n) mu(d) psi(n)=0` for every nonunit ideal with norm at most `U`; hence the unit term is `1+o(1)` and a tail must have positive size. Gaussian/exponential decay permits the terminal cutoff above a fixed larger power of U.
+
+The pointwise plain-block exponent `delta min(m,1-m)` is exactly OpenAI Lemma 8.2's stated form, including `m>1`; its proof uses the reflected line and chooses an external tail order large enough even when that exponent is negative. Comparing it with the common product spike forces `m<=1/2+O(eta/delta)` and hence `r>=1/2-O(eta/delta)` at detector length parameter `t=1`. Here `delta>=2sigma0-1-2e>0`; constants may depend on the fixed sigma0. The upper bound `r<=1+O(1/log U)` comes from the inverse cutoff. Dividing by the plain upper bound yields the claimed inverse spike after the preliminary losses are reduced.
+
+## Common-coefficient interface
+
+For a fixed dyadic inverse length D and target cutoff `D*=U`, the source inverse window has the form `W_1(x) V_<= (D x/D*) x^(-Re rho) x^(-it)` on a fixed annulus. The shape parameters `D/D*` and `Re rho` range over compact sets, so their untwisted derivatives are uniformly bounded; the twist t ranges over a finite interval `O(T1)`. A fixed-dimensional Sobolev bound reduces rowwise choices to common coefficient functions and their finitely many derivatives, at a polynomial cost in T1 and logarithms. This is a conditional transfer: the applied arithmetic moment must hold for every resulting **common** differentiated coefficient, and row-dependent presentations, sectors and zero masks must first be grouped so the coefficient truly is common. The detector lemma by itself does not furnish that moment uniformity.
+
+## Remaining source gates
+
+The standard fixed-field unitary Hecke continuation, strip and gamma bounds must be available uniformly for the specified moving conductors and fixed archimedean types. The finite set of presentations, their conductor/deleted-radical `O(U)` bounds, and exclusion of principal cases must be verified for the actual cubic family. The full density proof must separately apply the cubic rectangular sieve after fixing reciprocity classes and must make one compatible height choice across all rowwise profile parameters. Subject to these imports, no further algebraic or contour contradiction was found in the stated detector.

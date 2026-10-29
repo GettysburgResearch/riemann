@@ -102,3 +102,13 @@ For K=Q(√−3), choose De Faveri's primary sextic family as in Xu–Sang [Rema
 This lower bound also imports Xu–Sang [Theorem 1.1](https://arxiv.org/html/2610.17675v2), whose squarefree row and column matrix is a submatrix of ours. That theorem supplies the four terms other than `B U^(1/6)`. If B≤U, the missing term is no larger than `U^(5/6)B^(1/3)`.
 
 If B≥U, consider rows a=v⁶, with good ideals v of norm at most U^(1/6). Their number is ≫U^(1/6) for sufficiently large U by ideal counting with a fixed finite set of excluded primes. The exact sixth-power identity shows that each such row has character χ₁(c) on columns coprime to v; this is one fixed character η. Choose as columns all good prime ideals p with B/2≤Np≤B. For U sufficiently large, B≥U implies Np>U^(1/6), so no such p divides v. The prime ideal theorem gives N≫B/log B columns. Set b_p=conjugate(η(p))/√N. Every selected row then has inner sum √N, while the squared coefficient norm is one. The resulting squared operator norm is ≫U^(1/6)B/log B. Absorb the logarithm in `(UB)^ε`; bounded U are covered by the B term. Combining this with the squarefree lower bound proves (7). An independent internal review checked the sixth-power-row construction and comparison of exponents; the lower result, like the upper one, is conditional on its cited preprint.
+
+## General n-th order ideal-row corollary
+
+For any fixed integer n≥3 and fixed K containing μ_n, take De Faveri's exact n-th-order family, fixed S, and arbitrary coefficients supported on good n-th-power-free columns of norm at most B. The same n-th-power decomposition and source multiplicativity yield
+
+    Σ_{a good, Na≤U} |Σ_{c good, Nc≤B} b_c χ_a(c)|²
+      ≪_{K,S,n,ε} (UB)^ε [U+B U^(1/n)
+                 +U^(1−1/n)B^(2/n)+U^(2/n)B^(1−1/n)] Σ_c|b_c|².
+
+Indeed a=w v^n with w n-th-power-free gives the row mask 1_(c,v)=1. Apply De Faveri Theorem 1.1 at A=U/(Nv)^n and sum v. The corresponding v-exponents are n, 0, n−1 and 2; all nonzero ones exceed one, while the number of v is O(U^(1/n)). This is a direct corollary of the cited theorem and its n-th-power removal, without a priority claim. When B≤U^(1/2), the bracket is O_n(U). No matching lower bound in arbitrary fields or zero-free region is claimed. An independent internal review checked the n-th-power mask, all four summed exponents, and the endpoint B≤U^(1/2).

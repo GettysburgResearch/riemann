@@ -2,7 +2,7 @@
 
 **Status:** Exact scalar comparison, independently checked internally and conditional on the usual saturated-witness and moment interfaces. It is not a lower bound for actual row counts and does not rule out a different detector, a stronger moment, or a joint estimate. No priority claim. It explains why the new sixth-power-sieve inverse face does not by itself improve the existing Xu–Sang count by choosing a shorter detector parameter.
 
-Normalize the row length to one. Assume a detector at a parameter t∈[0,2/3] yields nonnegative lengths r,m with r≤t, r+m≥t, m≤1/2 (up to small losses), and the separate spikes |M_r|²≥U^(δr−o(1)) and |S_m|²≥U^(δm−o(1)). Suppose prime selection of total relative width z gives gain 2qz in squared magnitude, with x=q/δ∈[0,1/2]. Put κ=3/4 and c=1/(3κ)=4/9. In addition to the ordinary inverse and plain moment capacities, grant the newly derived inverse face r+z≤1/2. Ignore any shortage of physical prime slots, so this grants the hypothetical count the strongest benefit available from these separate estimates.
+Normalize the row length to one. Assume a detector at a parameter t∈[0,2/3] yields nonnegative lengths r,m with r≤t, r+m≥t, m≤1/2 (up to small losses), and the separate spikes |M_r|²≥U^(δr−o(1)) and |S_m|²≥U^(δm−o(1)). Suppose prime selection of total relative width z gives gain 2qz in squared magnitude, with x=q/δ∈[0,1/2]. Take any κ in [13/18,1] and put c=1/(3κ), so 1/3≤c≤6/13. In addition to the ordinary inverse and plain moment capacities, grant the newly derived inverse face r+z≤1/2. Ignore any shortage of physical prime slots, so this grants the hypothetical count the strongest benefit available from these separate estimates.
 
 Then the worst-case row-count exponent obtainable by taking the better of the separate inverse and plain estimates cannot be strictly smaller than the existing Xu–Sang exponent Rκ(δ,x), for 0<δ≤5/6. This is a limitation of this scalar optimization: an actual family may have more structure than these necessary witness constraints.
 
@@ -34,7 +34,7 @@ If 0≤t≤1/3, consider the admissible witness pair r=t,m=0. For r≤1/6, the n
 
     r+2x z_M(r) = x+(1−2x)r ≤ 1/6+2x/3 ≤ 1/2.
 
-For 1/6≤r≤1/3, the old second face dominates and the same quantity is at most 1/3+7x/12≤5/8. The plain gain is at most 2x/(6κ)=cx≤2/9. Thus the better of A_I and A_P is at least 1−(2/3)δ≥R.
+For 1/6≤r≤1/3, the old second face dominates and the same quantity is at most 1/3+7x/12≤5/8. The plain gain is at most 2x/(6κ)=cx≤3/13. Thus the better of A_I and A_P is at least 1−(2/3)δ≥R.
 
 If 1/3≤t≤2/3, consider r=1/3,m=t−1/3. This pair satisfies all the witness length constraints and m≤1/3. The inverse gain is at most 1/3+7x/12≤5/8. The plain gain is increasing in m on [0,1/3] and is at most
 
