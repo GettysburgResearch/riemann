@@ -37,6 +37,8 @@ There is also an abstract common-row obstruction. On N rows, let X_i=Z_i=√N fo
 
 The self-loop pinpoints a concrete analytic target: either improve the source bound (2) for its actual inverse coefficients at the unequal scale T=Y, P=Y^(6/5), or prove an arithmetic joint estimate that preserves the signed auxiliary projector and rules out concentration in H>P. A shorter-factor identity and separate source-size second moments alone do neither.
 
+There is also a concrete saturation example using actual Möbius coefficients restricted to prime columns. In the [prime-only sixth-power calculation](2026-10-29-prime-only-sixth-power-obstruction.md), the sixth-power rows force energy `≫Y^(41/30)/(log Y)²`, while the diagonal is `O(Y/log Y)`. Distinct prime columns have unit gcd, so their exact auxiliary projector has only g=1. Thus gcd-sign recombination or restriction-stable bounds alone cannot yield E=21/20. This is not a lower bound for the complete Möbius polynomial: cancellation with composite columns can be essential, and the calculation does not isolate the long dual-frequency wedge.
+
 ## A weaker target that would still improve the boundary
 
 An all-row exponent of 1 is not necessary to obtain a substantial conditional improvement. For the special fixed profile W and empty prime-slot product of the independently reviewed [sixth-power sector identity](2026-10-29-mobius-marked-boundary/README.md), an all-element-row bound

@@ -102,7 +102,7 @@ The continuum (9) is not always the best fourth-moment choice. Put `δ_c=3/5+4/(
     c=1/n,  a=0,  t=3(n−2)/[n(3−δ)−4],  L=2t/3,
     R=1/n+(1−δ)t.                                           (10)
 
-This uses the squarefree-index subfamily `A=(1)`, `NB≈X`. In the present δ>4/n regime one has `1<t<3/2`, `L>1/2`, and δ>2/n. Hence the first and third faces of f decrease, the second increases, and
+This uses the squarefree-index subfamily `A=(1)`, `NB≈X`. For n≥4 and δ≥δ_c one has δ>2/n, and consequently `1<t<3/2` and `L>1/2`. Hence the first and third faces of f decrease, the second increases, and
 
     f₂(L)=f₁(t)=R,   f₀(L)≤f₂(L).
 
@@ -147,7 +147,7 @@ The following completes the scalar optimization for fixed n≥4 and every `0<δ<
 
   Here δ>2/n makes the third face of `f(x)=E(x)−δx` decrease, and δ≤4/n makes its value at 2/3 dominate the first face. The second face at 1 and third face at 2/3 both equal R. Split at r=2/3 exactly as above, retaining the whole interval of possible m.
 
-  This is globally optimal in the scalar relaxation even when the ordinary second moment is also allowed. Let c* be the value in (14). For t≤1 and c≥c*, use the feasible point `(t−1/2,1/2)`: its inverse first face and ordinary second bound exceed R, while its ordinary fourth bound is at least `c+1−δ≥R`. For t≤1 and c<c*, use `(2t/3,t/3)`: the common third face of inverse and ordinary fourth bounds exceeds R, and the ordinary second bound is at least `1−δ/2>R`. For t≥1, the lower envelope in (11) has nonnegative middle slope because δ≤δ_c, and its value at t=1 equals (14). Again `P₂(m)≥1−δ/2>R`, so including the ordinary second moment cannot reduce this lower witness.
+  This is globally optimal in the scalar relaxation even when the ordinary second moment is also allowed. Let c* be the value in (14). For t≤1 and c≥c*, use the feasible point `(t−1/2,1/2)`: its inverse first face and ordinary second bound are at least R, while its ordinary fourth bound is at least `c+1−δ≥R`. For t≤1 and c<c*, use `(2t/3,t/3)`: the common third face of inverse and ordinary fourth bounds exceeds R, and the ordinary second bound is at least `1−δ/2≥R`, with strictness for δ>2/n. For t≥1, the lower envelope in (11) has nonnegative middle slope because δ≤δ_c, and its value at t=1 equals (14). Again `P₂(m)≥1−δ/2≥R`, strictly for δ>2/n, so including the ordinary second moment cannot reduce this lower witness.
 
 * If `4/n≤δ≤δ_c`, use the balanced long-cutoff branch (9).
 * If `δ≥max(2/n,δ_c)`, use the a=0 high-σ branch (10).

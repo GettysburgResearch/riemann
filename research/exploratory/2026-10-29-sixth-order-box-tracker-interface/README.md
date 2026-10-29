@@ -32,3 +32,37 @@ For `L=2t/3`, the decreasing third face of `E(x)−δx` at L equals the increasi
 Thus the unmarked relaxation is larger by `30735481372499889/212897782075000000≈0.144367316`. Filtering a row family by amplitude can only reduce its count, so (1) remains a valid but weaker upper bound for that subset; it does not provide the count improvement required at the existing return bottleneck. The comparison does not rule out a new genuinely marked fourth-moment estimate, a different count face, or a different endpoint argument. The physical source theorem, selected moments, finite common profile, detector height, and conductor-to-row transport all remain separate obligations.
 
 **Independent reviews.** Families and High_match checked the row-norm sparsity, optimized box scaling, pinned physical-source quantifiers, scalar witness calculation and exact selected-count comparison. The moving-twist and marked-source interfaces remain open.
+
+## A collapsed physical-mark test at the bottleneck
+
+The unmarked comparison can be strengthened against one specific marked construction. Work in the squarefree-row subfamily, retain the source-qualified arbitrary-coefficient sextic rectangular sieve `E(x)` above, and **grant** a same-orientation match between a detector witness and any finite product of physical prime slots. Conjugating the ordinary witness preserves its magnitude; if the actual source family or reciprocity sector does not furnish this match, that is an additional interface rather than an improvement of the following bound.
+
+The pinned source's `Hecke/PrimeRow.lean`, definition `canonicalPrimeAmplitude`, is
+
+    Q(P,z)=P^(−1/2) Σ_p overline(χ_p(u)) W(Np/P)(Np/P)^(z−1).
+
+Thus Q is **already ℓ²-normalized**. The `Re z=17/50` factor is an annular function of `Np/P`; it does not introduce a power of P. At the boundary p=1/2 every positively weighted amplitude bin is at the cap `q=δ/2=223/1000`. A product of finitely many such slots with total normalized length exponent z therefore has squared-amplitude gain `2qz=δz`.
+
+For fixed product multiplicities, collapse the inverse witness times the slot product, the ordinary witness times that product, or the square of the ordinary witness times that product, into a single column polynomial. Multiplicativity with zeros, divisor-bounded convolution coefficients, and `q=q₁v²` followed by a fixed-v row contraction yield generic-sieve count exponents
+
+    I_z(r)=E(r+z)−δ(r+z),
+    P_z^{(2)}(m)=E(m+z)−δ(m+z),
+    P_z^{(4)}(m)=E(2m+z)−δ(2m+z).                                 (3)
+
+The original unmarked second/fourth estimates may also be used. This permits finite slot powers and arbitrary fixed z≥0; profile/height and orientation matching are assumed for the comparison. It does not claim that these generic moments are the tracker’s sharper marked inputs.
+
+At `δ=223/500`, the envelope is explicitly
+
+    E(x)=1                  for 0≤x≤1/2,
+         5/6+x/3            for 1/2≤x≤1,
+         1/6+x              for x≥1.
+
+Because `1/3<δ<1`, the function `f(x)=E(x)−δx` decreases up to x=1 and increases thereafter. Therefore every expression in (3), and every unmarked inverse or ordinary-fourth face of the same type, is at least
+
+    f(1)=7/6−δ=1081/1500≈0.7206667.                         (4)
+
+The unmarked ordinary-second face is at least `1−δ/2`, which is larger. Thus, even granting the same-orientation matching, no count assembled solely from these generic collapsed-moment faces can reach the actual source129 selected envelope (2). This is a lower bound on the **scalar relaxation**, not on actual selected row counts. A genuinely stronger marked moment, a different detector, or a different endpoint argument is not excluded.
+
+**Correction.** An earlier draft incorrectly treated `(Np/P)^(z−1)` as an unnormalized `Np^(−17/50)` weight, introducing a spurious `4/25` loss and `63/500` gain. The pinned source definition above is the correct normalization; (3)–(4) replace that calculation.
+
+**Independent corrected-normalization review.** Families and High_match checked the pinned `canonicalPrimeAmplitude`, cap gain δz and minimum `1081/1500`; their earlier approvals of the incorrect normalization are retracted. Orientation/profile matching and imported sieve assumptions remain as stated.

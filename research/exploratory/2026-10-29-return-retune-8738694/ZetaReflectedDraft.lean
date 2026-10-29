@@ -15,8 +15,8 @@ theorem left_ne_zero {s : ℂ} (hpos : 0 < s.re)
     (hs : s.re < (630653 / 5000000 : ℝ)) : riemannZeta s ≠ 0 := by
   have hn : ∀ n : ℕ, s ≠ -n := by
     intro n heq
-    have h := congrArg Complex.re heq
-    simp only [Complex.neg_re, Complex.natCast_re] at h
+    have h : s.re = -(n : ℝ) := by
+      simpa using congrArg Complex.re heq
     have hn : (0 : ℝ) ≤ n := Nat.cast_nonneg n
     linarith
   have h1 : s ≠ 1 := by

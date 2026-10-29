@@ -46,3 +46,22 @@ The later general-σ optimization in the [fourth-moment box note](../2026-10-29-
 For the **same new boxes**, conjugation reorders the natural label to `A^(p−1)B`. De Faveri's stated natural-index bound at σ=4/5 gives X-exponents `23/30` for p=5 and `436/519` for p=7, before their explicit height losses; the gaps from (1) are `2/15` and `623/2595`. The comparison applies to all p−1 factors via the same powered-family bridge, and is with this named source only.
 
 **Independent review.** Other_families checked the scalar formulas, fourth-moment coefficient mass and actual detector range, powered FHL family and masks, conductor and field fibers, one-box height, and comparator arithmetic. The cited analytic inputs remain conditional. An [exact scalar check](../2026-10-29-quartic-fourth-detector/check_general.py) accompanies the general-n calculation.
+
+## A conditional full-zeta example at σ=437/500
+
+The t=1 fourth-witness formula holds beyond σ=4/5. At `p=5`, choose
+
+    σ=437/500,  δ=187/250,  a=(5δ−2)/18=29/300,
+    R=1−5δ/6+2/15=51/100.                                    (6)
+
+The admissible range is `2/5<δ<4/5`. Use **all** good coprime squarefree A,B in the two positive-power boxes, not only prime pairs. The same inverse-second/ordinary-fourth source calculation and powered-family bridge give `O(X^(51/100+ε))` relative-quotient exceptions. The [squarefree-box count](../2026-10-29-squarefree-box-count/README.md) gives `≫X` labels and, using tame local exponents and the at-most-four-character fiber, `≫X` distinct cyclic quintic fields. Equivalently, one top-scale discriminant box has `O(Y^(51/400+ε))` exceptions against `≫Y^(1/4)` fields, at a sufficiently small fixed Y-power height. The degree-five base is K=Q(ζ₅).
+
+Assume additionally the conventional Dirichlet interpretation and admission of the [replayed θ=0.8738694 candidate](../2026-10-29-return-retune-8738694/README.md). Its all-Dirichlet statement gives nonvanishing of
+
+    ζ_K(s)=ζ(s)∏_(χ mod 5, χ≠1)L(s,χ)                         (7)
+
+for `Re s>θ` at all heights, with the usual pole at s=1. Since σ−θ=`653/5000000>0`, every field with the relative rectangle in (6) has **full ζ_L zero-free** in that rectangle, except for its pole at s=1. This base step uses the Dirichlet candidate, not an E-Hecke corollary; tracker admission and the imported formal/source-chain audit remain separate from the local Lean replay.
+
+For this exact box, de Faveri Corollary 1.5 and the conjugate natural-label scale give the order-p factor exponent `6181293/9915500`; the broader fixed-height Hecke-family comparator of [Khale et al.](https://arxiv.org/abs/2008.09677v3), under its stated hypotheses, gives `252/437`. Both exceed 51/100; sufficiently small height powers preserve the strict gaps. This is not an exhaustive priority comparison. Hu's claimed all-height `Re s>7/8` and Liu's stated boundary `0.874886647…` are both to the right of 437/500 and therefore do not themselves give this σ=0.874 rectangle. Their analytic claims, and the fourth-moment replays used here, are not independently verified in this note.
+
+**Independent full-zeta review.** Other_families checked the p=5 box, powered factors and fibers, discriminant/height conversion, the base Dirichlet factorization, exact fractions and the strict boundary comparisons. The cited analytic inputs and candidate admission remain qualified as stated.

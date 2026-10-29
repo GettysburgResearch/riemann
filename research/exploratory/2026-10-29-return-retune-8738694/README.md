@@ -59,3 +59,9 @@ CandidateZetaRetuned.zeta_ne_zero {s : ℂ} (hs : 4369347 / 5000000 < s.re)
 ```
 
 Both the candidate and this corollary report the standard axioms `[propext, Classical.choice, Quot.sound]`, with no `sorryAx`. The baseline 0.8738702 candidate has separately passed `leanchecker --fresh`. This retune also passed `leanchecker --fresh --verbose Candidate.Main` with exit 0, 3191.251 seconds wall time, 11,831,360 KiB maximum resident memory, and no cgroup OOM event; the exact command, environment and preflight hashes are recorded in [leanchecker-fresh.log](leanchecker-fresh.log) (SHA-256 `3621900674227fb2fc17ca26d778b27fd6aad612ad3c62b5eb3993e509d847a6`). This is a fresh replay by the same Lean kernel, not a separate external verifier. Neither compilation nor replay establishes tracker admission or completes the semantic audit of the imported formal source.
+
+## Direct independent-kernel experiment
+
+A separate, **unprotected** declaration-closure experiment exported `Candidate.bound` from this retune using source-pinned lean4export and checked it with the tracker's pinned NanoDa binary. NanoDa exited 0 with `unpermitted_axiom_hard_error` enabled and only `propext`, `Classical.choice`, and `Quot.sound` permitted; it emitted no textual success banner. The export is 2,823,653,408 bytes, SHA-256 `51061d264b3d859d8e0a0079c357404f4a08ec5c3bc517a3f6f3358b2a3b3b3b`. NanoDa took 1,220.993 s, sampled peak RSS was 3,149,900 KiB, and there were no cgroup OOM events. [The commands, configuration and measured results](../2026-10-29-verifier-feasibility/README.md) are preserved with their input and binary hashes. A serial con-ron check is underway.
+
+This direct check does not compare the statement against the separately frozen canonical challenge, run the protected sandbox or controls, establish the classical semantic interpretation, or constitute tracker admission. The export remains in local scratch rather than the repository because of its size.
