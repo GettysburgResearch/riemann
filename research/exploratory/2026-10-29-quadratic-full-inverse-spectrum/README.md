@@ -102,7 +102,7 @@ Thus the zero-free-to-moment implication holds for every fixed r<1 (indeed for D
 
 The large sieve controls only the zero-free-to-moment direction; it does not supply the reciprocal-zeta estimate (9) without the corresponding zero-free hypothesis. Therefore this extension does not prove RH. It is an exact conditional reformulation using the classical quadratic large sieve, and its possible prior appearance in the literature has not been exhaustively checked.
 
-For the staged Dirichlet candidate `θ=4369351/5000000`, its asserted nonvanishing for the principal character away from its pole would give ζ's θ-strip, subject to the candidate's cache and conventional-L-function interpretation qualifications. The classical quadratic-sieve converse would then give, for every fixed `0<r<1/2`,
+For the staged Dirichlet candidate `θ=4369351/5000000`, its asserted nonvanishing for the principal character away from its pole would give ζ's θ-strip, subject to the candidate's conventional-L-function interpretation and independent analytic-review qualifications; its imported constants passed `leanchecker --fresh` in the same Lean kernel. The classical quadratic-sieve converse would then give, for every fixed `0<r<1/2`,
 
     Σ_d V(d/X)|M_d(X^r;W)|² ≪_ε X^(1+0.7477404 r+ε).
 

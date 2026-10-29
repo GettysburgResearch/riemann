@@ -1,6 +1,6 @@
 # Fixed Dirichlet strips for abelian Dedekind zeta and Artin L-functions
 
-**Status.** This is the classical Artin–Dirichlet factorization applied to an assumed fixed Dirichlet strip. It does not supply an independent zero-free theorem, a new proof of the source strip, or a priority claim. The staged θ=4369351/5000000 Lean candidate in [the return audit](../2026-10-29-arvi-return/README.md) has compiled using cached dependencies; its interpretation as the conventional Dirichlet and Riemann L-functions and a fresh replay of its entire dependency closure remain verification gates. Nothing below asserts a fresh Lean formalization of the transfers.
+**Status.** This is the classical Artin–Dirichlet factorization applied to an assumed fixed Dirichlet strip. It does not supply an independent zero-free theorem, a new proof of the source strip, or a priority claim. The staged θ=4369351/5000000 Lean candidate in [the return audit](../2026-10-29-arvi-return/README.md) has compiled and its imported constants have passed `leanchecker --fresh` using the same Lean kernel. Its conventional Dirichlet and Riemann L-function interpretation, external verification and tracker admission remain separate gates. Nothing below asserts a fresh Lean formalization of the transfers.
 
 ## Transfer statement
 

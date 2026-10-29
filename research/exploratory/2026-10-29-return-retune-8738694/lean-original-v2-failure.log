@@ -1,0 +1,19 @@
+Submissions/arvi_density/Return/EdgeCertificates.lean:540:1: error: Type mismatch
+  envelope_retuneRow001 (Eq.mpr (id Set.mem_Icc._simp_1) (Eq.mp Set.mem_Icc._simp_1 hδ))
+    (Eq.mpr
+      (id (Eq.trans (congrFun' (congrArg Membership.mem (congrArg (Set.Icc 0) (one_div 2))) p) Set.mem_Icc._simp_1))
+      (Eq.mp (Eq.trans (congrFun' (congrArg Membership.mem (congrArg (Set.Icc 0) (one_div 2))) p) Set.mem_Icc._simp_1)
+        hp))
+has type
+  Ebase (edgeD Edge.oldSmall) (edgeC Edge.oldSmall) δ p +
+      3 / 4 * edgeD Edge.oldSmall * GenericCount.envelope kappa δ p <
+    theta - reserve
+but is expected to have type
+  Ebase (edgeD Edge.newTop) (edgeC Edge.newTop) δ p + 3 / 4 * edgeD Edge.newTop * GenericCount.envelope kappa δ p <
+    theta - reserve
+Submissions/arvi_density/Return/EdgeCertificates.lean:545:8: error: `QRH.ArviDensity.Return.FinalEdges.edge_newTop_certificate` has already been declared
+Submissions/arvi_density/Return/EdgeCertificates.lean:551:8: error: `QRH.ArviDensity.Return.FinalEdges.edge_newTop_certificate` has already been declared
+Submissions/arvi_density/Return/EdgeCertificates.lean:813:8: error: `QRH.ArviDensity.Return.FinalEdges.edge_newTop_certificate` has already been declared
+Submissions/arvi_density/Return/EdgeCertificates.lean:818:21: error(lean.unknownIdentifier): Unknown identifier `edge_oldSmall_certificate`
+Submissions/arvi_density/Return/EdgeCertificates.lean:819:22: error(lean.unknownIdentifier): Unknown identifier `edge_oldSwitch_certificate`
+Submissions/arvi_density/Return/EdgeCertificates.lean:820:22: error(lean.unknownIdentifier): Unknown identifier `edge_newSwitch_certificate`

@@ -1,0 +1,100 @@
+[
+  {
+    "module": "Submissions.arvi_density.Return.EdgeCertificates",
+    "exit_code": 0,
+    "seconds": 39.778,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "command": [
+      "/workspace/scratch/lean-4.34.1-linux/bin/lean",
+      "-j1",
+      "-o",
+      "/workspace/scratch/retune_project/isolated-olean-v2/Submissions/arvi_density/Return/EdgeCertificates.olean",
+      "Submissions/arvi_density/Return/EdgeCertificates.lean"
+    ],
+    "olean_sha256": "2043d2a438812830c23b2f4e6d96ebfd42d59ae10e1232490ef63b8caf71a3b2"
+  },
+  {
+    "module": "Submissions.arvi_density.Return.FinalRows",
+    "exit_code": 0,
+    "seconds": 3.426,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "command": [
+      "/workspace/scratch/lean-4.34.1-linux/bin/lean",
+      "-j1",
+      "-o",
+      "/workspace/scratch/retune_project/isolated-olean-v2/Submissions/arvi_density/Return/FinalRows.olean",
+      "Submissions/arvi_density/Return/FinalRows.lean"
+    ],
+    "olean_sha256": "215a55c9e2015c1afabcf12255f7e255aaafb6f1e1d6a91ecb1819347b563e66"
+  },
+  {
+    "module": "Submissions.arvi_density.Return.FinalSchedule",
+    "exit_code": 0,
+    "seconds": 3.173,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "command": [
+      "/workspace/scratch/lean-4.34.1-linux/bin/lean",
+      "-j1",
+      "-o",
+      "/workspace/scratch/retune_project/isolated-olean-v2/Submissions/arvi_density/Return/FinalSchedule.olean",
+      "Submissions/arvi_density/Return/FinalSchedule.lean"
+    ],
+    "olean_sha256": "ca60502de9f6c399e6cb3dde5645b3a68619377f61ce5755d42331602fe7338b"
+  },
+  {
+    "module": "Submissions.arvi_density.Return.EndpointFromSources",
+    "exit_code": 0,
+    "seconds": 5.081,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "command": [
+      "/workspace/scratch/lean-4.34.1-linux/bin/lean",
+      "-j1",
+      "-o",
+      "/workspace/scratch/retune_project/isolated-olean-v2/Submissions/arvi_density/Return/EndpointFromSources.olean",
+      "Submissions/arvi_density/Return/EndpointFromSources.lean"
+    ],
+    "olean_sha256": "e34bcb19d5889f2093e65df32db1dbde27c703ef5d583bc6c0c990c45a76a7c0"
+  },
+  {
+    "module": "Submissions.arvi_density.Return.Endpoint",
+    "exit_code": 0,
+    "seconds": 5.254,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "command": [
+      "/workspace/scratch/lean-4.34.1-linux/bin/lean",
+      "-j1",
+      "-o",
+      "/workspace/scratch/retune_project/isolated-olean-v2/Submissions/arvi_density/Return/Endpoint.olean",
+      "Submissions/arvi_density/Return/Endpoint.lean"
+    ],
+    "olean_sha256": "070263315f3c70c1a9888fde964f61ef8caa479a9bd0a678435bef3c80ea6ef1"
+  },
+  {
+    "module": "Submissions.arvi_density.FinalF50",
+    "exit_code": 0,
+    "seconds": 5.586,
+    "log_sha256": "5a6ab188adb3b37a77f31b6d481a80642815b162695859e9a9b171672cf2f512",
+    "command": [
+      "/workspace/scratch/lean-4.34.1-linux/bin/lean",
+      "-j1",
+      "-o",
+      "/workspace/scratch/retune_project/isolated-olean-v2/Submissions/arvi_density/FinalF50.olean",
+      "Submissions/arvi_density/FinalF50.lean"
+    ],
+    "olean_sha256": "cea0ae5780a90010e301c9f2e2661701a87511ff0421d307d85fc7be6983ccda"
+  },
+  {
+    "module": "Candidate.Main",
+    "exit_code": 0,
+    "seconds": 5.492,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "command": [
+      "/workspace/scratch/lean-4.34.1-linux/bin/lean",
+      "-j1",
+      "-o",
+      "/workspace/scratch/retune_project/isolated-olean-v2/Candidate/Main.olean",
+      "Candidate/Main.lean"
+    ],
+    "olean_sha256": "823e29ed18a2cc44adfe13b1bc9f9eef6d14ad9412c87766fd6f9d0c2e41bf42"
+  }
+]

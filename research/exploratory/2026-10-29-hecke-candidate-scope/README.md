@@ -1,8 +1,8 @@
 # Scope of the candidate Eisenstein Hecke bound
 
-**Status:** Source-level and classical arithmetic identification; the separately prepared Lean Hecke corollary has not yet been compiled, the fresh kernel replay is pending, and the semantic bridge to the standard Hecke theory is not formalized here. No new numerical bound is claimed independent of those checks.
+**Status:** The 0.8738702 candidate and its separate Hecke corollary compiled in pinned Lean, and `leanchecker --fresh` replayed the candidate’s imported constants in the same Lean kernel. The semantic bridge to standard Hecke theory is a classical argument below, not a formalized equivalence; independent analytic review, external verification, and tracker admission remain open.
 
-The `0.8738702` candidate's `Return.Endpoint.beta_le_theta_of_sources`, together with `ChainF50.final_source` and `source_64`, proposes a bound on `HeckeZeroSupremum.beta`. Its defining zero set ranges over `HeckeFamily.Character` for `K=CyclotomicField 3 ℚ`, hence K≅E=ℚ(ω). A proposed direct Lean corollary is [HeckeCorollary.lean](../2026-10-29-arvi-return/HeckeCorollary.lean). This is a stronger formal scope than the Dirichlet-only type of `Candidate.bound`, but it must be separately compiled and inspected.
+The `0.8738702` candidate's `Return.Endpoint.beta_le_theta_of_sources`, together with `ChainF50.final_source` and `source_64`, bounds `HeckeZeroSupremum.beta`. Its defining zero set ranges over `HeckeFamily.Character` for `K=CyclotomicField 3 ℚ`, hence K≅E=ℚ(ω). The direct Lean corollary [HeckeCorollary.lean](../2026-10-29-arvi-return/HeckeCorollary.lean) compiled successfully; [lean-hecke-corollary.log](../2026-10-29-arvi-return/lean-hecke-corollary.log) records its exact type and the three reported axioms `propext`, `Classical.choice`, and `Quot.sound`. Its source comment records its earlier uncompiled state. This is a broader formal scope than the Dirichlet-only type of `Candidate.bound`.
 
 ## Character and L-function identification
 
@@ -22,7 +22,7 @@ Each factor is nonzero for `Re s>0`, so imprimitive presentation cannot create o
 
 ## Conditional classical consequences
 
-If the candidate β theorem is compiled, its fresh replay succeeds and the semantic/source audit closes, then every finite-order Hecke L-function of E is nonzero for `Re s>0.8738702`, away from the principal pole at s=1. This includes the Kummer/sextic character family over E as well as arbitrary finite-order ray characters over E, subject to the matching above.
+If the semantic/source audit closes, then every finite-order Hecke L-function of E is nonzero for `Re s>0.8738702`, away from the principal pole at s=1. This includes the Kummer/sextic character family over E as well as arbitrary finite-order ray characters over E, subject to the matching above.
 
 For every finite abelian extension L/E, global class field theory identifies each one-dimensional Artin character of `Gal(L/E)` with such a Hecke character, and the Artin factorization gives
 
@@ -32,4 +32,4 @@ Consequently every such ζ_L has no zero in `Re s>0.8738702` away from its pole 
 
 The same source argument is already available in tracker PR94 at θ=`43693617/50000000=0.87387234`: its endpoint also bounds this Hecke supremum, not merely its displayed Dirichlet transfer. Thus the candidate's improvement within this E/abelian-extension scope is exactly `107/50000000=0.00000214`, not a new arbitrary-number-field or infinite-type Hecke result. The original PR94 theorem and current candidate remain subject to their own source and kernel verification.
 
-**Independent review:** High_match checked the ray-class identification, trivial infinity component, analytic-continuation and Euler-factor argument, abelian-extension consequence, and PR94 comparison. The reviewer noted and the text now handles the trivial-conductor modulus by choosing a proper presentation modulus. The formal Hecke corollary and abstract-character bridge remain uncompiled/unformalized.
+**Independent review:** High_match checked the ray-class identification, trivial infinity component, analytic-continuation and Euler-factor argument, abelian-extension consequence, and PR94 comparison. The reviewer noted and the text now handles the trivial-conductor modulus by choosing a proper presentation modulus. The Hecke corollary has since compiled; the abstract-character bridge remains unformalized.
