@@ -48,3 +48,21 @@ Thus all but `O(X^(201/260+ε))` good fourth-free indices have the claimed polyn
 **Independent review.** High_match checked the ray-class Q² union bound, the uniform-height and pole quantifiers, the numerical examples, and the sharper quadratic O_K(Q) count via unique odd-prime quadratic inertia and the finite fixed 2-ramified subgroup. The moving-twist and source assumptions remain inputs.
 
 [The expanded conductor-range calculation](../2026-10-29-moving-unitary-twist-density/EXPANDED-KAPPA.md) retains the endpoint face for larger κ and optimizes a fixed ordinary moment order. At n=3 and θ it yields, subject to the same source uniformity, density-one simultaneous nonvanishing for all finite-order twists when any fixed `κ<4346735/18783918≈.231407`, and for all quadratic twists when any fixed `κ<3108041/6891959≈.450966`. These thresholds concern one-per-X common-twist estimates followed by the indicated finite union; they are not all-height claims.
+
+## Stronger finite-order comparisons in Galois fields
+
+For n=3 and fixed Galois K, the broad conductor-family estimate of [Khale et al., Lemma 3.3](https://arxiv.org/abs/2008.09677v3) can be stronger than the union bounds above. Let `ψ=νχ_u` be the primitive Hecke character. If ν is quadratic then `ψ³=ν` and `χ_u=ψ/ν`; the tame FHL local characters recover u. Thus the bad pair `(u,ν)` is determined by ψ. Its conductor norm is `≪X^(1+κ)`, so at fixed θ the broad-family bound gives exponent `(1+κ)K(θ)`, where
+
+    K(θ)=2522612/4369347≈0.57734302.                         (6)
+
+For arbitrary finite-order ν, fix ψ and one root ν₀ of `ν³=ψ³` with `Nf_{ν₀}≤Q`. Every other root is ν₀μ with μ cubic. Away from the support of f_{ν₀} and the fixed primes over 3, each prime where μ is ramified must divide the conductor of ν₀μ, so its squarefree product has norm ≤Q. There are `O_K(Q)` choices for that new support; the bounded cubic local inertia choices, the choices on the fixed support of f_{ν₀}, and the finite unramified/3-wild subgroup cost `Q^ε`. Hence the number of eligible roots is `O_{K,ε}(Q^(1+ε))`. Once ψ and ν are fixed, the FHL character and its label are fixed. If the named broad source excludes the principal ψ, treat that case separately. For arbitrary ν its root fibre costs at most `X^(κ+ε)`, and the individual ζ_K zero count adds `X^(τ+ε)`, so its total is `O(X^(κ+τ+ε))`. For quadratic ν, ψ=1 implies ν=1 and u is the unique principal label, leaving only `O(X^(τ+ε))`. Both are absorbed by the displayed exponents after τ is chosen sufficiently small.
+
+The resulting broad-source exponent is therefore
+
+    κ+(1+κ)K(θ)                                               (7)
+
+for all finite-order twists. This uses fixed Galois K, finite-order characters and the named source's height factor; it is not asserted for arbitrary angular types or nongalois fields.
+
+At κ=1/10, (7) is `32118079/43693470≈0.735077`, slightly below the k=3 union exponent `34618079/46959795≈0.737185`. In the quadratic case the broad-source exponent is `13874366/21846735≈0.635077`, below the k=3 union exponent `59844199/93919590≈0.637185`. At κ=1/20, by contrast, the k=4 all-twist exponent `≈0.630319` is below (7), `≈0.656210`, and the k=4 quadratic exponent `≈0.580319` is below the quadratic comparison `≈0.606210`. These are fixed-height comparisons; in every strict case τ is chosen small enough to absorb both sources' height costs. They do not constitute an exhaustive priority search. The recent paper 52 cubic estimate has a different fixed-twist/field scope.
+
+High_match independently checked the cube-root fibre bound, the quadratic injectivity, the exact comparison exponents and this principal-ψ treatment. The source height and fixed-Galois qualifications remain essential.

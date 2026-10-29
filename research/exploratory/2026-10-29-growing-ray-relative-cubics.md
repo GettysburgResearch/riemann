@@ -47,6 +47,19 @@ The per-ν exceptional exponent is E; the conductor-ball count costs `2κ=1/5`, 
 
 For elementary abelian 2-extensions H the characters ν are quadratic or trivial. Over this fixed K their conductor ball has only `O(Q^(1+ε))` such characters: the tame quadratic inertia character is unique at each prime outside the fixed primes above 2, and characters with the same tame data differ by one of finitely many quadratic characters unramified outside those fixed primes. Thus, for this restricted H class, take the larger ball `Nf_H≤X^(1/5)`. The same k=3 argument still works because `3(1+1/5)/2=9/5<t`; its per-ν exponent remains E and the union costs only `1/5`. Hence (4) also applies simultaneously to this elementary-2 ball. For each such H the field count is ≫X^(4/5); as `34618079/46959795<4/5`, the exceptional proportion tends to zero. The same source and uniformity qualifications apply.
 
+This elementary-2 exponent is **not** the strongest named-source bound. For ψ=χ_u^jν with j=1 or 2 and ν²=1, one has `ψ³=ν`, so ψ determines ν and then χ_u^j, and the tame exponent data distinguish the good labels. The primitive conductor of ψ is `≪X^(6/5)`. [Khale–O'Kuhn–Panidapu–Sun–Zhang, Lemma 3.3](https://arxiv.org/abs/2008.09677), applied over the fixed Galois field K, gives the fixed-height conductor exponent `4h/(2−h)=2522612/4369347`; after conductor conversion its exponent is
+
+    (6/5)·2522612/4369347 = 5045224/7282245 ≈ 0.692812,     (5a)
+
+which is smaller than (4). Its height loss can be absorbed into ε by shrinking τ. Thus the elementary-2 case also follows with (5a) from that named density input and the same character/field algebra; the moving-moment argument above is recorded as a separate derivation, not as an improvement over that comparator.
+
+The same named conductor theorem also improves (4) for the general `X^(1/10)` twist ball after accounting for collisions. Fix a primitive ψ and an exact conductor ideal f of ν. Outside f the inertia of ψ determines each good local exponent of u; at each good prime in f there are at most three choices. The number of good labels per f is therefore `≪(Nf)^ε`, with fixed bad sectors absorbed into the constant. Summing over `Nf≤Q` gives `≪Q^(1+ε)` labels for each ψ. Since `Nf_ψ≪XQ`, the named bound yields exponent
+
+    κ+(1+κ)·2522612/4369347,
+    κ=1/10: 32118079/43693470≈0.735077,                      (5b)
+
+strictly smaller than (4), again after absorbing height and divisor losses. At κ=1/20 this comparator is `19114733/29128980≈0.656210`, larger than the moving-moment exponent in (1), so it does not subsume that smaller-ball result. This is a comparison against the named general finite-order bound, not an exhaustive literature search.
+
 There is also a per-H version for **all** finite abelian H/K with `Nf_H≤X^(1/5)`, without imposing exponent 2. For one H its character group has cardinality `[H:K]≪X^(1/5)`, so the union over its characters gives the same exception bound (4), uniformly in H. The ≫X^(4/5) distinct-compositum count still applies. The exceptional labels in this per-H conclusion may depend on H; the smaller exception set simultaneously valid for every H was proved only for the conductor balls stated above. The constants and τ remain uniform in H, so H may vary with X.
 
 The per-H range extends to `Nf_H≤X` if the degree is controlled. Put `d=[H:K]`, `h=630653/2500000`, and choose the ordinary fourth-moment cutoff
@@ -67,6 +80,18 @@ One can allow the still larger conductor ball `Nf_H≤X³` with a weaker exponen
     L=t/2,    E₁=4h/(1+3h)=2522612/4391959.                 (8)
 
 Again `2<t<5/2`, and f≤E₁ on `[L,t]`: the decreasing mixed face at L and increasing face at t agree. For `r<L`, the detector gives `m≥t−r>L` and `m≤2<t`, so the ordinary second moment suffices; otherwise use the inverse second moment. Hence the per-H exception count is `≪d X^(E₁+ε)` and the squarefree-label compositum count is `≫X/d`. The proportion tends to zero uniformly for bounded d, or for `d≤X^α` with any fixed `α<(1−E₁)/2=1869347/8783918`. This version has a larger conductor range and a weaker exponent than (7), and it still requires the same uniform moving-detector/source inputs.
+
+For comparison, applying the named Khale et al. all-character conductor bound separately to each fixed ν gives the X-exponents `2·2522612/4369347=5045224/4369347≈1.154686` at κ=1 and `4·2522612/4369347=10090448/4369347≈2.309372` at κ=3, before the same d factor and height losses. Both are weaker than the displayed E₂ and E₁, and can be worse than trivial row counting. De Faveri's original untwisted family theorem is not automatically uniform for these moving ν. This is a comparison with named bounds from a targeted, nonexhaustive search, conditional on the source matching and moving-detector replay above.
+
+## Base-changed Hecke L-functions
+
+For each H/K and u, Artin induction and class field theory give the primitive all-place identity
+
+    L_H(s,χ_u∘N_{H/K})=∏_{ν∈Gal(H/K)^} L_K(s,χ_uν).        (9)
+
+If `L_u∩H=K`, the pullback `χ_u∘N_{H/K}` has order three and every factor on the right occurs in the relative quotient (2). The per-H results above therefore also show that this base-changed Hecke L-function is zero-free in their stated closed rectangles for all but the same exceptional labels. The displayed identity uses primitive Hecke characters and includes all local places; omitting S-good Euler factors does not change zeros for `Re s>0`.
+
+For the degree-sensitive `Nf_H≤X³` result, restrict to squarefree u. At most O(d) such labels have `L_u⊂H`, because H has at most d characters and good conductors distinguish the labels; for the allowed `d≤X^α` this leaves ≫X labels disjoint from H. Two such χ_u can have the same pullback only if their quotient is a character of H/K, so at most d labels give the same pulled-back character. Thus there are ≫X/d distinct order-three Hecke characters of H in this family, and at most `≪dX^(E₁+ε)` of their character-labelled L-functions are exceptional. Their exceptional proportion is controlled by the same `d²X^(E₁−1+ε)` bound. This counts characters, without claiming that all their L-functions are different as complex functions. If `L_u⊂H`, the pullback is instead trivial and the left side of (9) is `ζ_H`; no relative-quotient argument alone controls its zeros.
 
 ## Conditional full-zeta consequence
 
