@@ -73,3 +73,28 @@ It implies `||D H D||≪(LY)^ε` by Schur's test and gives the desired long-sour
 by the Frobenius norm. Neither condition is proved for the actual detector rows. Establishing one would require new information about how the fixed prime spike and zero-location constraints distribute their exponent-one supports; if those supports can be nearly coprime, a proof must exploit signed character cancellation beyond (1).
 
 **Independent review:** Families checked the Kummer conductor masks, cross-overlap primes, weighted Hilbert–Schmidt exponents, bounded 216-row local blocks and PSD/block-Rayleigh argument. High_match separately checked the unweighted gcd graph and its source normalization; the weighted refinement is explicitly the subject of the first review. The fixed-field Kummer/Hecke facts are analytic inputs, not a Lean proof of this theorem.
+
+**Second independent review:** High_match separately checked the actual-count weighted diagonal and cross-block inequalities, the PSD and block-Rayleigh transfer, the prime-factor example and its exponents, and the Schur/Frobenius conditions. Both reviews leave the physical selected-support distribution open.
+
+The interaction between row count and support distribution can also be stated in the opposite direction. Put
+
+    T=Σ_A w_A² = Σ_A m_A sqrt(NA/Y),
+    C=Σ_{A,B : gcd(A,B)=1} w_A² w_B²,
+
+where the second sum is over ordered pairs. The Rayleigh quotient of `D H D` at the vector w gives `||D H D||≥C/T` when F is nonempty. Since NA≥1, `T≥M/sqrt(Y)`. Therefore, if `M≥Y^(1/2+η)` and a fixed κ>0 of the weighted support pairs are coprime, in the sense `C≥κ T²`, then
+
+    ||D H D|| ≥ κ Y^η.
+
+If every occurring support additionally has `NA≥Y^t`, this lower bound improves to `κ M Y^((t−1)/2)`. These are lower bounds on the **positive majorant**, not on the true selected operator. They show that a large selected family with broadly coprime supports cannot be treated by (1) at arbitrary power savings: one needs either fewer rows, substantial gcd concentration, or signed cancellation in the actual character Gram matrix. The PR94 exponent α≈0.609371 is an upper count only; it does not establish a lower count or the coprimality condition. A second researcher checked this Rayleigh argument and its ordered-pair convention.
+
+The graph estimate also applies to short sources. For any fixed σ∈[0,1], the sufficient condition
+
+    ||D H D|| ≤ (L/Y)^σ
+
+turns (1) directly into `N(F,S)≪[L+Y^(1−σ)L^σ](LY)^ε`. In the explicit `D p_j R²` example, `||D H D||≪Y^(−3/20)/log Y`; for the detector slope `σ=223/500`, the desired envelope therefore holds, without any selection, for every
+
+    L ≥ Y^(1−(3/20)/(223/500)) = Y^(148/223) ≈ Y^0.663677.
+
+This supplies a nontrivial short-source range for that structured family. It does not establish the graph condition for generic physical rows.
+
+**Short-source audit:** High_match independently checked the graph-to-envelope implication and the exact exponent 148/223, subject to the stated structured-family scope.

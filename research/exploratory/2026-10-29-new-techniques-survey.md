@@ -4,7 +4,7 @@
 
 ## Current benchmark
 
-The [QuasiRiemannTracker pull requests](https://github.com/GTimG/QuasiRiemannTracker/pulls?q=is%3Apr) have no PR newer than #94 at this check. [PR 94](https://github.com/GTimG/QuasiRiemannTracker/pull/94), merged at 07:51:58 UTC, states `Re(s)>0.87387234` for all Dirichlet L-functions. Its reported CI checks passed; this observation does not independently audit the mathematical-to-Lean interface. A proposed threshold `0.8738702` in this workspace is an unsubmitted, conditional candidate and must not be treated as a new proved benchmark.
+The [QuasiRiemannTracker pull requests](https://github.com/GTimG/QuasiRiemannTracker/pulls?q=is%3Apr) had no PR newer than #94 at the time of this check. [PR 94](https://github.com/GTimG/QuasiRiemannTracker/pull/94), merged at 07:51:58 UTC, states `Re(s)>0.87387234` for all Dirichlet L-functions. Its reported CI checks passed; this observation does not independently audit the mathematical-to-Lean interface. Subsequently, the local [0.8738702 candidate](2026-10-29-arvi-return/README.md) compiled in the pinned Lean environment, with no explicit analytic premises and only standard axioms reported. The build reused cached dependencies, and independent cache replay, interpretation review, other tracker checks, and tracker admission remain outstanding. This is a small unsubmitted improvement, not the major new region sought here.
 
 ## Structured sixth-order estimates
 

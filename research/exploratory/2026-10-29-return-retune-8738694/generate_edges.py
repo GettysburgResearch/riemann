@@ -72,6 +72,7 @@ for ei,leaf,name,_ in leaves:
 # Reconstruct and prove the original closed dyadic subdivision, bottom-up.
 node=0
 for ei in range(4):
+ edge=edge_names[ei]
  lookup={tuple(map(R,v['box'])):n for j,v,n,_ in leaves if j==ei}
  assert len(lookup)==sum(j==ei for j,_,_,_ in leaves)
  visited=set()

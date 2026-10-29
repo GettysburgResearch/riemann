@@ -76,6 +76,10 @@ A separate `lean --stdin` query exited 0 and reports the target and its transiti
 
 This is native Lean compilation evidence for the staged formal theorem, not a fresh `leanchecker` replay of the entire dependency closure and not tracker admission. Comparator, NanoDa and con-ron have not been run on this candidate, and an independent audit of the imported analytic framework and its interpretation remains outstanding. The arithmetic gain over PR94 is `2.14·10^(−6)`, and no claim of a significant new analytic zero-free region is made on that basis.
 
+## Riemann zeta corollary
+
+The explicit [ZetaCorollary.lean](ZetaCorollary.lean) specializes `Candidate.bound` to the modulus-one character and applies mathlib's `DirichletCharacter.LFunction_modOne_eq`. The pinned Lean check in [lean-zeta-corollary.log](lean-zeta-corollary.log) establishes `riemannZeta s ≠ 0` when `Re s > 4369351/5000000` and `s ≠ 1`; the reported transitive axioms are `propext`, `Classical.choice`, and `Quot.sound`. This is a corollary in the same cached-dependency build, with the same independent-audit limitations. The excluded point is the pole of the conventional meromorphic zeta function. The source comment describes the earlier pending state; the retained source and hash are exactly those checked.
+
 ## Full target compilation
 
 The active pinned Lean 4.34.1 build subsequently completed `Candidate.Main`: `lean-endpoint-build.log` ends with `all modules compiled successfully 1614`, after reuse of the separately verified tracker build cache and compilation of the remaining modules. `lean-candidate-axioms.log` records `Candidate.bound` at `4369351/5000000` for all mathlib Dirichlet characters with the principal pole excluded, with `[propext, Classical.choice, Quot.sound]` as its reported transitive axioms. This is one Lean kernel build using compiled dependency caches; independent full rechecking of the cache, correspondence with conventional L-functions, the other tracker kernels, and tracker admission remain separate evidence gates. It is an incremental candidate improvement, not an assertion of a significant new region or of external peer review.
