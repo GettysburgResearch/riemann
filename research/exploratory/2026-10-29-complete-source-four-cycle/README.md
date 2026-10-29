@@ -309,3 +309,19 @@ If all supports contain D, the nonnegative entries satisfy `H(A,B)≤1/ND`, so `
 **Independent review of (16):** A second researcher checked the cross-block Hilbert–Schmidt powers, the bounded same-good-valuation subblocks, the diagonal term, and the block comparison with all source masks retained.
 
 The extension to n=2 and arbitrary fixed K, including the all-real-signs-odd residue at s=0, was independently checked conditional on the standard fixed-field functional equation and L(1) bound.
+
+## Why individual square-root bounds still do not close the many-row problem
+
+At the difficult balanced scale `L≈Y`, the physical count can allow `M≈Y^α` with `α≈0.609371>1/2`. Even the hypothetical estimate
+
+    |G_W(u,v)| ≪_ε L^(1/2)(LY)^ε                 (u≠v)
+
+for every selected pair would yield only `||G_W||≪[L+M L^(1/2)](LY)^ε` by entrywise Schur, or `Y^(α+1/2+ε)` when `L=Y`. Thus pointwise square-root cancellation alone is too weak by a fixed power when the selected set is large. Small blocks of identical good valuations can first be removed as in the proof above; they cost O(L) and do not affect the conclusion.
+
+This is a logical limitation of using only the diagonal, positivity and such individual bounds. For any integer `M` and `L≥1`, the abstract Gram matrix
+
+    G = (L−sqrt(L)) I_M + sqrt(L) · 1_M 1_M^*
+
+is positive semidefinite, has diagonal entries L and off-diagonal entries `sqrt(L)`, and has largest eigenvalue `L+(M−1)sqrt(L)`. An explicit Gram representation uses vectors `sqrt(L−sqrt(L)) e_i + L^(1/4)e_0`. This matrix need not arise from the sextic characters. It demonstrates that any successful argument in this range must also establish collective cancellation, spectral structure, or a stronger restriction on the selected rows; even an ideal individual-pair estimate does not imply the required operator bound by itself.
+
+The same barrier persists even when every underlying matrix entry has modulus one. For integer L, set `k=floor(sqrt(L))` and suppose `M≤L−k`. Form an `M×L` matrix whose first k columns are all ones and whose remaining `L−k` columns are M distinct rows of the unnormalized `(L−k)`-point Fourier matrix. Its Gram matrix is exactly `(L−k) I_M+k·1_M 1_M^*`. Thus all entries of the original row-source matrix have modulus one, all row norms squared equal L, and all pair correlations equal k, while the operator norm squared is `L+(M−1)k`. This, too, is an abstract construction rather than an arithmetic character example.

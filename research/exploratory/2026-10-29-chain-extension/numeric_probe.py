@@ -1,16 +1,16 @@
 import numpy as np
 from scipy.optimize import minimize
-B0=0.96232839;L0=1.9265;L=L0-.005;c0=c=.1
+B0=0.96232839;L0=1.9265;c0=c=.1
 vgrid=np.linspace(0,1,13);pgrid=np.linspace(0,.5,17);tgrid=np.linspace(0,1,13)
 
 def vals(x,grid=(vgrid,pgrid,tgrid)):
- cross,A,D=x;vg,pg,tg=grid
+ cross,A,D=x[:3]; delta=x[3] if len(x)>3 else .001;L=L0-delta;vg,pg,tg=grid
  v=vg*(c-cross);w=cross+v;u=A*v/(1+D*v);H=1-6*u
- dens=.999*L0*A/(.005*(1+D*v)+(6*B0-L0)*A)
- out=[cross, c-cross, A,D,*list(1+D*v),*list(dens-.5),*list(.75-dens),*list(H-.9),*list(c0*H-(w-u)),*list(w-u),*list(1/3-2*w-3*u),*list(1-(B0-.005*cross)+(L-2)*w-4.5*u),*list(.05+1.5*(1-(B0-.005*cross))+(1.5*L-2.5)*w-4.5*u),*list(1-(B0-.005*cross)+(L-1)*w-4*u)]
+ dens=.999*L0*A/(delta*(1+D*v)+(6*B0-L0)*A)
+ out=[cross, c-cross, A,D,*list(1+D*v),*list(dens-.5),*list(.75-dens),*list(H-.9),*list(c0*H-(w-u)),*list(w-u),*list(1/3-2*w-3*u),*list(1-(B0-delta*cross)+(L-2)*w-4.5*u),*list(.05+1.5*(1-(B0-delta*cross))+(1.5*L-2.5)*w-4.5*u),*list(1-(B0-delta*cross)+(L-1)*w-4*u)]
  v=v[:,None,None];w=w[:,None,None];u=u[:,None,None];H=H[:,None,None];dens=dens[:,None,None]
  p=pg[None,:,None];nu=dens+(0.75-dens)*tg[None,None,:]
- base=10/(15-6*nu);ww=5-6*nu;B=B0-.005*cross;S=w-u
+ base=10/(15-6*nu);ww=5-6*nu;B=B0-delta*cross;S=w-u
  j=base*nu -nu*B+nu*(L-1)*w-(6*base*nu-nu-1)*u
  for i in (0,1):
   invs=1 if i==0 else 1/(1-p)
@@ -30,4 +30,4 @@ if __name__=='__main__':
   print('success',res.success,'x',res.x,'sample min',min(vals(res.x)),'message',res.message,flush=True)
   if res.success:
    fine=vals(res.x,(np.linspace(0,1,121),np.linspace(0,.5,121),np.linspace(0,1,41)))
-   print('fine minimum',min(fine),'child B',B0-.005*res.x[0],flush=True)
+   print('fine minimum',min(fine),'child B',B0-.001*res.x[0],flush=True)
