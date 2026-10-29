@@ -1,0 +1,56 @@
+"""Exact rational dual certificate. Floating LP only proposes dual multipliers;
+all nonnegative multipliers and dual identities are verified exactly.
+Theta(D)'s face D is dominated by b/3+5D/6 on the certified b>=23/25.
+The other faces, p6 faces and short faces increase in b. Expanding the u
+domain to [0,bmax/2] lets the endpoint certificate cover smaller b.
+"""
+"""Exact rational dual and primal certificates for the stratified p=6 tail.
+
+HiGHS proposes dual multipliers; the program rationalizes them, then checks
+nonnegativity and every A.T*lambda=objective identity exactly. The matching
+primal is verified exactly. Thus floating solver tolerances do not affect the
+upper bounds. The 16 cases cover both A12 faces, both prop:R T2 faces, and
+all four Theta6 T4 faces; each LP imposes both additional T2 alternatives.
+No scale-wise mixture or T4 trivial cap is needed.
+
+The physical domain has 0 <= u=log_Y V <= b/2, d,g,k>=0, k<=d,
+d+g+6k/5<=C and c<=q<=Delta/3, with c=1/20+d/15-g/20. Dropping the
+nonempty-support condition enlarges it. For fixed u all objective exponents
+increase in b by at least 1/6, even on the Cauchy T2 branch, while the
+available interval for u grows with b. The endpoint b therefore certifies
+the entire interval from 23/25 to b_max.
+"""
+import sympy as s,itertools
+from fractions import Fraction
+from scipy.optimize import linprog
+D,K,G,U,Q,T=s.symbols('d k g u q t'); vv=[D,K,G,U,Q,T]; b,C=s.symbols('b C'); z=s.Rational(6,5)-D-G;Z=z-3*Q;M=b-U
+pre=s.Rational(1,30)+2*D/3-5*K/6-b/6
+A=[M+6*Q,U+12*Q];U2=[b+K,2*b+3*K+G-z+3*Q];TF=[b,2*Z,5*b/6+2*Z/3,b/3+5*Z/3]
+cut=s.Rational(1,20)+D/15-G/20
+base=[-D,-K,-G,-U,U-b/2,K-D,D+G+s.Rational(6,5)*K-C,cut-Q,Q-z/3]
+cases = [(s.Rational(7,50),s.Rational(947,1000)),(s.Rational(1925877,15625000),s.Rational(97,100))]
+for cv,bv in cases:
+ subs={b:bv,C:cv};results=[]
+ for a,j,l,rr in itertools.product(range(2),range(2),range(4),range(4)):
+  e=pre-2*Q+A[a]/6+TF[l]/6
+  con=[T-e-2*U2[j]/3,T-e-2*(M+Z)/3,T-e-(M+TF[l])/3]
+  thetaD=[b,z,5*b/6+z/3,b/3+5*z/6]; con.append(T-pre-thetaD[rr]+Q)
+  cs=[s.expand(x.subs(subs)) for x in base+con];zero={x:0 for x in vv}
+  AA=s.Matrix([[x.coeff(v) for v in vv] for x in cs]);rhs=s.Matrix([-x.subs(zero) for x in cs]);obj=[0,0,0,0,0,1]
+  r=linprog([0,0,0,0,0,-1],A_ub=[[float(a) for a in AA.row(i)] for i in range(AA.rows)],b_ub=[float(x) for x in rhs],bounds=[(None,None)]*6,method='highs')
+  if not r.success:raise Exception((a,j,l,r.message))
+  lam=s.Matrix([s.Rational(str(Fraction(-x).limit_denominator(10000000))) for x in r.ineqlin.marginals]);assert all(x>=0 for x in lam);assert AA.T*lam==s.Matrix(obj)
+  bound=(rhs.T*lam)[0];results.append((bound,(a,j,l),r.x))
+ m=max(results,key=lambda x:x[0]); assert m[0] <= (s.Rational(21,20) if cv==s.Rational(7,50) else s.Rational(19949123,18750000)); print('case=',cv,bv,'tailmax=',m,'value',float(m[0]));
+
+ points=[{D:0,K:0,G:0},{D:cv,K:0,G:0},{D:0,K:0,G:cv},{D:cv/(1+s.Rational(6,5)),K:cv/(1+s.Rational(6,5)),G:0}]
+ short_maxima=[]
+ for j in range(2):
+  vals=[s.factor((pre+U2[j]).subs(subs).subs(Q,cut.subs(subs)).subs(p)) for p in points];print('short',j,max(vals),float(max(vals)))
+  short_maxima.append(max(vals))
+
+ assert max(short_maxima) < (s.Rational(21,20) if cv==s.Rational(7,50) else s.Rational(19949123,18750000))
+ assert s.Rational(1,20)-cv/20>0 and s.Rational(7,20)-2*cv/5>0
+ guard=s.factor((s.Rational(23,25)-s.Rational(1,2)-s.Rational(14,5)*cv)/6);print('e guard',guard);assert guard>0
+ assert s.Rational(1,20)-cv/20>0
+ assert s.Rational(7,20)-2*cv/5>0

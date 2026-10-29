@@ -9,7 +9,8 @@ wintext=Path('/workspace/scratch/chain131-candidate/return-overlay/Windows.lean'
 pat=r'def returnWindow(\d+) : ReturnCountWindow where\s+branch := \.(\w+)\s+nonold := by decide\s+deltaLo := \(([^:]+):ℝ\)\s+deltaHi := \(([^:]+):ℝ\)\s+pLo := \(([^:]+):ℝ\)'
 wins={int(i):(name,F(lo),F(hi),F(pl)) for i,name,lo,hi,pl in re.findall(pat,wintext)}
 assert len(wins)==33
-def q(v):return f'({v.numerator}/{v.denominator}:ℝ)'
+def q(v):
+ return f'({v.numerator}:ℝ)' if v.denominator==1 else f'({v.numerator}/{v.denominator}:ℝ)'
 edges=['oldSmall','oldSwitch','newSwitch','newTop']
 def statement(edge,a,b,c,d):return f'{{δ p:ℝ}} (hδ:δ∈Set.Icc {q(a)} {q(b)}) (hp:p∈Set.Icc {q(c)} {q(d)}) : Ebase (edgeD .{edge}) (edgeC .{edge}) δ p+3/4*edgeD .{edge}*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve'
 out=['/- Generated candidate dyadic cover; UNCOMPILED. -/',

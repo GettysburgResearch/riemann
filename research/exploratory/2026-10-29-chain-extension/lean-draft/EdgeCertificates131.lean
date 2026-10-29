@@ -39,7 +39,7 @@ theorem window30_mem : returnWindow30∈returnWindows := by simp [returnWindows]
 theorem window31_mem : returnWindow31∈returnWindows := by simp [returnWindows]
 theorem window32_mem : returnWindow32∈returnWindows := by simp [returnWindows]
 theorem window33_mem : returnWindow33∈returnWindows := by simp [returnWindows]
-theorem envelope_edge131_0_000 {δ p:ℝ} (hδ:δ∈Set.Icc (0/1:ℝ) (3/4:ℝ)) (hp:p∈Set.Icc (0/1:ℝ) (1/2:ℝ)) : Ebase (edgeD .oldSmall) (edgeC .oldSmall) δ p+3/4*edgeD .oldSmall*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
+theorem envelope_edge131_0_000 {δ p:ℝ} (hδ:δ∈Set.Icc (0:ℝ) (3/4:ℝ)) (hp:p∈Set.Icc (0:ℝ) (1/2:ℝ)) : Ebase (edgeD .oldSmall) (edgeC .oldSmall) δ p+3/4*edgeD .oldSmall*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
  have hd0 : δ∈Set.Icc 0 (3/4) := by constructor <;> linarith [hδ.1,hδ.2]
  have hp0 : p∈Set.Icc 0 (1/2) := by constructor <;> linarith [hp.1,hp.2]
  have hR := finiteEnvelope_le_old hd0 hp0
@@ -47,34 +47,34 @@ theorem envelope_edge131_0_000 {δ p:ℝ} (hδ:δ∈Set.Icc (0/1:ℝ) (3/4:ℝ))
 theorem edge_oldSmall_certificate {δ p:ℝ} (hδ:δ∈Set.Icc 0 (3/4)) (hp:p∈Set.Icc 0 (1/2)) :
  Ebase (edgeD .oldSmall) (edgeC .oldSmall) δ p+3/4*edgeD .oldSmall*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
  exact envelope_edge131_0_000 (by simpa using hδ) (by simpa using hp)
-theorem envelope_edge131_1_000 {δ p:ℝ} (hδ:δ∈Set.Icc (3/8:ℝ) (3/4:ℝ)) (hp:p∈Set.Icc (0/1:ℝ) (1/2:ℝ)) : Ebase (edgeD .oldSwitch) (edgeC .oldSwitch) δ p+3/4*edgeD .oldSwitch*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
+theorem envelope_edge131_1_000 {δ p:ℝ} (hδ:δ∈Set.Icc (3/8:ℝ) (3/4:ℝ)) (hp:p∈Set.Icc (0:ℝ) (1/2:ℝ)) : Ebase (edgeD .oldSwitch) (edgeC .oldSwitch) δ p+3/4*edgeD .oldSwitch*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
  have hd0 : δ∈Set.Icc 0 (3/4) := by constructor <;> linarith [hδ.1,hδ.2]
  have hp0 : p∈Set.Icc 0 (1/2) := by constructor <;> linarith [hp.1,hp.2]
  have hR := finiteEnvelope_le_old hd0 hp0
  exact exponent_lt_of_margin (countJ_pos .old hd0 hp0) (edge131_1_000_pos hδ hp) hR
-theorem envelope_edge131_1_001 {δ p:ℝ} (hδ:δ∈Set.Icc (0/1:ℝ) (3/8:ℝ)) (hp:p∈Set.Icc (0/1:ℝ) (1/2:ℝ)) : Ebase (edgeD .oldSwitch) (edgeC .oldSwitch) δ p+3/4*edgeD .oldSwitch*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
+theorem envelope_edge131_1_001 {δ p:ℝ} (hδ:δ∈Set.Icc (0:ℝ) (3/8:ℝ)) (hp:p∈Set.Icc (0:ℝ) (1/2:ℝ)) : Ebase (edgeD .oldSwitch) (edgeC .oldSwitch) δ p+3/4*edgeD .oldSwitch*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
  have hd0 : δ∈Set.Icc 0 (3/4) := by constructor <;> linarith [hδ.1,hδ.2]
  have hp0 : p∈Set.Icc 0 (1/2) := by constructor <;> linarith [hp.1,hp.2]
  have hR := finiteEnvelope_le_old hd0 hp0
  exact exponent_lt_of_margin (countJ_pos .old hd0 hp0) (edge131_1_001_pos hδ hp) hR
-theorem cover131_1_001 {δ p:ℝ} (hδ:δ∈Set.Icc (0/1:ℝ) (3/4:ℝ)) (hp:p∈Set.Icc (0/1:ℝ) (1/2:ℝ)) : Ebase (edgeD .oldSwitch) (edgeC .oldSwitch) δ p+3/4*edgeD .oldSwitch*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
+theorem cover131_1_001 {δ p:ℝ} (hδ:δ∈Set.Icc (0:ℝ) (3/4:ℝ)) (hp:p∈Set.Icc (0:ℝ) (1/2:ℝ)) : Ebase (edgeD .oldSwitch) (edgeC .oldSwitch) δ p+3/4*edgeD .oldSwitch*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
  rcases le_total δ (3/8:ℝ) with hsplit | hsplit
  · exact envelope_edge131_1_001 ⟨hδ.1,hsplit⟩ hp
  · exact envelope_edge131_1_000 ⟨hsplit,hδ.2⟩ hp
 theorem edge_oldSwitch_certificate {δ p:ℝ} (hδ:δ∈Set.Icc 0 (3/4)) (hp:p∈Set.Icc 0 (1/2)) :
  Ebase (edgeD .oldSwitch) (edgeC .oldSwitch) δ p+3/4*edgeD .oldSwitch*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
  exact cover131_1_001 (by simpa using hδ) (by simpa using hp)
-theorem envelope_edge131_2_000 {δ p:ℝ} (hδ:δ∈Set.Icc (3/8:ℝ) (3/4:ℝ)) (hp:p∈Set.Icc (0/1:ℝ) (1/2:ℝ)) : Ebase (edgeD .newSwitch) (edgeC .newSwitch) δ p+3/4*edgeD .newSwitch*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
+theorem envelope_edge131_2_000 {δ p:ℝ} (hδ:δ∈Set.Icc (3/8:ℝ) (3/4:ℝ)) (hp:p∈Set.Icc (0:ℝ) (1/2:ℝ)) : Ebase (edgeD .newSwitch) (edgeC .newSwitch) δ p+3/4*edgeD .newSwitch*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
  have hd0 : δ∈Set.Icc 0 (3/4) := by constructor <;> linarith [hδ.1,hδ.2]
  have hp0 : p∈Set.Icc 0 (1/2) := by constructor <;> linarith [hp.1,hp.2]
  have hR := finiteEnvelope_le_old hd0 hp0
  exact exponent_lt_of_margin (countJ_pos .old hd0 hp0) (edge131_2_000_pos hδ hp) hR
-theorem envelope_edge131_2_001 {δ p:ℝ} (hδ:δ∈Set.Icc (0/1:ℝ) (3/8:ℝ)) (hp:p∈Set.Icc (0/1:ℝ) (1/2:ℝ)) : Ebase (edgeD .newSwitch) (edgeC .newSwitch) δ p+3/4*edgeD .newSwitch*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
+theorem envelope_edge131_2_001 {δ p:ℝ} (hδ:δ∈Set.Icc (0:ℝ) (3/8:ℝ)) (hp:p∈Set.Icc (0:ℝ) (1/2:ℝ)) : Ebase (edgeD .newSwitch) (edgeC .newSwitch) δ p+3/4*edgeD .newSwitch*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
  have hd0 : δ∈Set.Icc 0 (3/4) := by constructor <;> linarith [hδ.1,hδ.2]
  have hp0 : p∈Set.Icc 0 (1/2) := by constructor <;> linarith [hp.1,hp.2]
  have hR := finiteEnvelope_le_old hd0 hp0
  exact exponent_lt_of_margin (countJ_pos .old hd0 hp0) (edge131_2_001_pos hδ hp) hR
-theorem cover131_2_001 {δ p:ℝ} (hδ:δ∈Set.Icc (0/1:ℝ) (3/4:ℝ)) (hp:p∈Set.Icc (0/1:ℝ) (1/2:ℝ)) : Ebase (edgeD .newSwitch) (edgeC .newSwitch) δ p+3/4*edgeD .newSwitch*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
+theorem cover131_2_001 {δ p:ℝ} (hδ:δ∈Set.Icc (0:ℝ) (3/4:ℝ)) (hp:p∈Set.Icc (0:ℝ) (1/2:ℝ)) : Ebase (edgeD .newSwitch) (edgeC .newSwitch) δ p+3/4*edgeD .newSwitch*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
  rcases le_total δ (3/8:ℝ) with hsplit | hsplit
  · exact envelope_edge131_2_001 ⟨hδ.1,hsplit⟩ hp
  · exact envelope_edge131_2_000 ⟨hsplit,hδ.2⟩ hp
@@ -671,7 +671,7 @@ theorem envelope_edge131_3_075 {δ p:ℝ} (hδ:δ∈Set.Icc (3/8:ℝ) (9/16:ℝ)
  have hp0 : p∈Set.Icc 0 (1/2) := by constructor <;> linarith [hp.1,hp.2]
  have hR := finiteEnvelope_le_old hd0 hp0
  exact exponent_lt_of_margin (countJ_pos .old hd0 hp0) (edge131_3_075_pos hδ hp) hR
-theorem envelope_edge131_3_076 {δ p:ℝ} (hδ:δ∈Set.Icc (3/8:ℝ) (3/4:ℝ)) (hp:p∈Set.Icc (0/1:ℝ) (1/4:ℝ)) : Ebase (edgeD .newTop) (edgeC .newTop) δ p+3/4*edgeD .newTop*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
+theorem envelope_edge131_3_076 {δ p:ℝ} (hδ:δ∈Set.Icc (3/8:ℝ) (3/4:ℝ)) (hp:p∈Set.Icc (0:ℝ) (1/4:ℝ)) : Ebase (edgeD .newTop) (edgeC .newTop) δ p+3/4*edgeD .newTop*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
  have hd0 : δ∈Set.Icc 0 (3/4) := by constructor <;> linarith [hδ.1,hδ.2]
  have hp0 : p∈Set.Icc 0 (1/2) := by constructor <;> linarith [hp.1,hp.2]
  have hR := finiteEnvelope_le_old hd0 hp0
@@ -710,22 +710,22 @@ theorem envelope_edge131_3_081 {δ p:ℝ} (hδ:δ∈Set.Icc (3/16:ℝ) (3/8:ℝ)
  have hp0 : p∈Set.Icc 0 (1/2) := by constructor <;> linarith [hp.1,hp.2]
  have hR := finiteEnvelope_le_old hd0 hp0
  exact exponent_lt_of_margin (countJ_pos .old hd0 hp0) (edge131_3_081_pos hδ hp) hR
-theorem envelope_edge131_3_082 {δ p:ℝ} (hδ:δ∈Set.Icc (0/1:ℝ) (3/16:ℝ)) (hp:p∈Set.Icc (1/4:ℝ) (1/2:ℝ)) : Ebase (edgeD .newTop) (edgeC .newTop) δ p+3/4*edgeD .newTop*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
+theorem envelope_edge131_3_082 {δ p:ℝ} (hδ:δ∈Set.Icc (0:ℝ) (3/16:ℝ)) (hp:p∈Set.Icc (1/4:ℝ) (1/2:ℝ)) : Ebase (edgeD .newTop) (edgeC .newTop) δ p+3/4*edgeD .newTop*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
  have hd0 : δ∈Set.Icc 0 (3/4) := by constructor <;> linarith [hδ.1,hδ.2]
  have hp0 : p∈Set.Icc 0 (1/2) := by constructor <;> linarith [hp.1,hp.2]
  have hR := finiteEnvelope_le_old hd0 hp0
  exact exponent_lt_of_margin (countJ_pos .old hd0 hp0) (edge131_3_082_pos hδ hp) hR
-theorem envelope_edge131_3_083 {δ p:ℝ} (hδ:δ∈Set.Icc (3/16:ℝ) (3/8:ℝ)) (hp:p∈Set.Icc (0/1:ℝ) (1/4:ℝ)) : Ebase (edgeD .newTop) (edgeC .newTop) δ p+3/4*edgeD .newTop*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
+theorem envelope_edge131_3_083 {δ p:ℝ} (hδ:δ∈Set.Icc (3/16:ℝ) (3/8:ℝ)) (hp:p∈Set.Icc (0:ℝ) (1/4:ℝ)) : Ebase (edgeD .newTop) (edgeC .newTop) δ p+3/4*edgeD .newTop*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
  have hd0 : δ∈Set.Icc 0 (3/4) := by constructor <;> linarith [hδ.1,hδ.2]
  have hp0 : p∈Set.Icc 0 (1/2) := by constructor <;> linarith [hp.1,hp.2]
  have hR := finiteEnvelope_le_old hd0 hp0
  exact exponent_lt_of_margin (countJ_pos .old hd0 hp0) (edge131_3_083_pos hδ hp) hR
-theorem envelope_edge131_3_084 {δ p:ℝ} (hδ:δ∈Set.Icc (0/1:ℝ) (3/16:ℝ)) (hp:p∈Set.Icc (0/1:ℝ) (1/4:ℝ)) : Ebase (edgeD .newTop) (edgeC .newTop) δ p+3/4*edgeD .newTop*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
+theorem envelope_edge131_3_084 {δ p:ℝ} (hδ:δ∈Set.Icc (0:ℝ) (3/16:ℝ)) (hp:p∈Set.Icc (0:ℝ) (1/4:ℝ)) : Ebase (edgeD .newTop) (edgeC .newTop) δ p+3/4*edgeD .newTop*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
  have hd0 : δ∈Set.Icc 0 (3/4) := by constructor <;> linarith [hδ.1,hδ.2]
  have hp0 : p∈Set.Icc 0 (1/2) := by constructor <;> linarith [hp.1,hp.2]
  have hR := finiteEnvelope_le_old hd0 hp0
  exact exponent_lt_of_margin (countJ_pos .old hd0 hp0) (edge131_3_084_pos hδ hp) hR
-theorem cover131_3_001 {δ p:ℝ} (hδ:δ∈Set.Icc (0/1:ℝ) (3/8:ℝ)) (hp:p∈Set.Icc (0/1:ℝ) (1/4:ℝ)) : Ebase (edgeD .newTop) (edgeC .newTop) δ p+3/4*edgeD .newTop*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
+theorem cover131_3_001 {δ p:ℝ} (hδ:δ∈Set.Icc (0:ℝ) (3/8:ℝ)) (hp:p∈Set.Icc (0:ℝ) (1/4:ℝ)) : Ebase (edgeD .newTop) (edgeC .newTop) δ p+3/4*edgeD .newTop*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
  rcases le_total δ (3/16:ℝ) with hsplit | hsplit
  · exact envelope_edge131_3_084 ⟨hδ.1,hsplit⟩ hp
  · exact envelope_edge131_3_083 ⟨hsplit,hδ.2⟩ hp
@@ -745,11 +745,11 @@ theorem cover131_3_005 {δ p:ℝ} (hδ:δ∈Set.Icc (3/16:ℝ) (3/8:ℝ)) (hp:p�
  rcases le_total p (3/8:ℝ) with hsplit | hsplit
  · exact envelope_edge131_3_081 hδ ⟨hp.1,hsplit⟩
  · exact cover131_3_004 hδ ⟨hsplit,hp.2⟩
-theorem cover131_3_006 {δ p:ℝ} (hδ:δ∈Set.Icc (0/1:ℝ) (3/8:ℝ)) (hp:p∈Set.Icc (1/4:ℝ) (1/2:ℝ)) : Ebase (edgeD .newTop) (edgeC .newTop) δ p+3/4*edgeD .newTop*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
+theorem cover131_3_006 {δ p:ℝ} (hδ:δ∈Set.Icc (0:ℝ) (3/8:ℝ)) (hp:p∈Set.Icc (1/4:ℝ) (1/2:ℝ)) : Ebase (edgeD .newTop) (edgeC .newTop) δ p+3/4*edgeD .newTop*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
  rcases le_total δ (3/16:ℝ) with hsplit | hsplit
  · exact envelope_edge131_3_082 ⟨hδ.1,hsplit⟩ hp
  · exact cover131_3_005 ⟨hsplit,hδ.2⟩ hp
-theorem cover131_3_007 {δ p:ℝ} (hδ:δ∈Set.Icc (0/1:ℝ) (3/8:ℝ)) (hp:p∈Set.Icc (0/1:ℝ) (1/2:ℝ)) : Ebase (edgeD .newTop) (edgeC .newTop) δ p+3/4*edgeD .newTop*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
+theorem cover131_3_007 {δ p:ℝ} (hδ:δ∈Set.Icc (0:ℝ) (3/8:ℝ)) (hp:p∈Set.Icc (0:ℝ) (1/2:ℝ)) : Ebase (edgeD .newTop) (edgeC .newTop) δ p+3/4*edgeD .newTop*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
  rcases le_total p (1/4:ℝ) with hsplit | hsplit
  · exact cover131_3_001 hδ ⟨hp.1,hsplit⟩
  · exact cover131_3_006 hδ ⟨hsplit,hp.2⟩
@@ -1053,11 +1053,11 @@ theorem cover131_3_082 {δ p:ℝ} (hδ:δ∈Set.Icc (3/8:ℝ) (3/4:ℝ)) (hp:p�
  rcases le_total δ (9/16:ℝ) with hsplit | hsplit
  · exact cover131_3_081 ⟨hδ.1,hsplit⟩ hp
  · exact envelope_edge131_3_000 ⟨hsplit,hδ.2⟩ hp
-theorem cover131_3_083 {δ p:ℝ} (hδ:δ∈Set.Icc (3/8:ℝ) (3/4:ℝ)) (hp:p∈Set.Icc (0/1:ℝ) (1/2:ℝ)) : Ebase (edgeD .newTop) (edgeC .newTop) δ p+3/4*edgeD .newTop*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
+theorem cover131_3_083 {δ p:ℝ} (hδ:δ∈Set.Icc (3/8:ℝ) (3/4:ℝ)) (hp:p∈Set.Icc (0:ℝ) (1/2:ℝ)) : Ebase (edgeD .newTop) (edgeC .newTop) δ p+3/4*edgeD .newTop*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
  rcases le_total p (1/4:ℝ) with hsplit | hsplit
  · exact envelope_edge131_3_076 hδ ⟨hp.1,hsplit⟩
  · exact cover131_3_082 hδ ⟨hsplit,hp.2⟩
-theorem cover131_3_084 {δ p:ℝ} (hδ:δ∈Set.Icc (0/1:ℝ) (3/4:ℝ)) (hp:p∈Set.Icc (0/1:ℝ) (1/2:ℝ)) : Ebase (edgeD .newTop) (edgeC .newTop) δ p+3/4*edgeD .newTop*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
+theorem cover131_3_084 {δ p:ℝ} (hδ:δ∈Set.Icc (0:ℝ) (3/4:ℝ)) (hp:p∈Set.Icc (0:ℝ) (1/2:ℝ)) : Ebase (edgeD .newTop) (edgeC .newTop) δ p+3/4*edgeD .newTop*(@GenericCount.envelope finalCountScheme kappa δ p)<theta-reserve := by
  rcases le_total δ (3/8:ℝ) with hsplit | hsplit
  · exact cover131_3_007 ⟨hδ.1,hsplit⟩ hp
  · exact cover131_3_083 ⟨hsplit,hδ.2⟩ hp

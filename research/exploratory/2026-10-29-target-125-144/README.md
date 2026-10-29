@@ -55,3 +55,11 @@ If the claimed all-unitary `7/8` strip of Hu and its stated uniform Hecke conseq
 An alternative [averaged quadratic-sieve tail](../2026-10-29-quadratic-sieve-theta-tail/README.md) avoids Hu's strip and, under its stated quadratic-sieve, theta, Poisson and profile inputs, extends the corresponding cutoffs further to `b≤2257/2950` and fixed `b<723364487/921875000`. It does not estimate the remaining large-core frequencies and therefore does not prove (2).
 
 Keeping the quadratic prefix and completed theta factor together and applying fourth moments gives a further [source-qualified reduction](../2026-10-29-fourth-moment-theta-tail/README.md): the corresponding cutoffs become `b≤223/250` and fixed `b<1357811867/1484375000`. The bound still leaves a nonempty large-core complement; the physical identities and cited moment inputs remain external assumptions.
+
+A [sixth/third Hölder refinement](../2026-10-29-sixth-third-holder-tail/README.md) reaches `b≤1208/1325` for the 21/20 target and fixed `b<96729607/103515625` for the θ threshold, with the same source qualifications. It also leaves the full inverse moment open.
+
+The [eighth- and tenth-moment refinement](../2026-10-29-eighth-holder-tail/README.md) further reaches `b≤10283/11000` and fixed `b<3294802253/3437500000`, respectively. The cutoff uses a scale-by-scale minimum and exact rational verification; the same imported physical and analytic inputs remain necessary.
+
+Finally, separating the square part of the sixth-free row and using a twelfth prefix moment yields the [stratified bound](../2026-10-29-squarepart-stratified-tail/README.md) through `b≤4213/4450` and fixed `b<1348218883/1390625000`, respectively. This is still a restricted source-qualified estimate, and the remaining large-core frequencies are not controlled.
+
+Applying two different mean-square bounds scale by scale to the [complete theta cube sum](../2026-10-29-complete-theta-two-sieves/README.md) improves these cutoffs to `b≤554/575` and fixed `b<88917107/89843750`. This removes no need for the stated source inputs and still leaves a nonempty high-core complement.
