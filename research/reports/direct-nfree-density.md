@@ -37,7 +37,7 @@ Under inputs 1–3, for every ε>0 there exists τ>0 such that, for X≥2,
     Σ_{u n-free, Nu≤X} N_u(σ,X^τ)
        ≪_{K,S,n,σ,ε} X^(R_n(σ)+ε).                            (1.3)
 
-The constants and τ may depend on the fixed field, order, σ and ε. The estimate is ordered by the natural label Nu; it does not count all Hecke characters by conductor. Good squarefree labels alone give `≫X` distinct primitive characters: their good conductor support is their label, and squarefree ideal counting has positive density. Since R_n(σ)<1, (1.3) gives a density-one zero-free rectangle in this specified family at a sufficiently small power height.
+The constants and τ may depend on the fixed field, order, σ and ε. The estimate is ordered by the natural label Nu; it does not count all Hecke characters by conductor. Good squarefree labels alone give `≫X` distinct primitive characters: their good conductor support is their label, and squarefree ideal counting has positive density. Here `1−R_n(σ)=[δn(2n−7)−n+5]/[n(n(3−δ)−7)]>0`, using δ>2/n. Thus (1.3) gives a density-one zero-free rectangle in this specified family at a sufficiently small power height.
 
 ## 2. Uniform long-cutoff detector
 
