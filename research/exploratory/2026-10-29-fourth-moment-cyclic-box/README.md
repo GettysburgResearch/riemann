@@ -18,7 +18,7 @@ Use detector cutoff t=1. Its simultaneous inverse and ordinary witnesses satisfy
     0≤r≤1,   0≤m≤1/2,   r+m≥1,
     |M_r(g)|²≥X^(δr−O(η)),   |S_m(g)|²≥X^(δm−O(η)).       (3)
 
-The full interval for m is essential; there is no asserted equality `r+m=1`. Markov using the second moment of M or the fourth moment (2), whichever is better, gives a count exponent at most
+The full interval for m is essential; there is no asserted equality `r+m=1`. The central normalization uses `(Nq/D)^(−β−ih)` on an annulus of scale D, not `(Nq)^(−β−ih)`: multiplying the original unnormalized block by `D^(β+ih−1/2)` yields this form and produces the exponent δ times its logarithmic length. Markov using the second moment of M or the fourth moment (2), whichever is better, gives a count exponent at most
 
     min{E(r)−δr, E(2m)−2δm}.                                  (4)
 
@@ -80,7 +80,7 @@ For example, n=7 gives `a=9/130`, `t=105/104`, `R=31/52`; n=8 gives `a=11/174`, 
     3n(n+10)/[50(n+2)(3n+5)]                   for 7≤n≤10,
     (3n³+150n−500)/[50n(n−2)(3n+5)]           for n≥11,
 
-which is strictly positive throughout those ranges. The comparison uses different explicit a-boxes. The n=4,5,6 results above remain the t=1 bounds; no assertion about their global optimum is needed for the stated theorem.
+which is strictly positive throughout those ranges. The comparison uses different explicit a-boxes. For the new a-box itself, the conjugated natural index has exponent `1+(n−2)a=5n/(3n+5)`; at σ=4/5 the de Faveri natural-index exponent minus R is `(57n³−350n²+700n−500)/[2(3n+5)(21n²−80n+50)]>0` for every n≥7. The broader fixed-height Khale exponent is 1 at σ=4/5 and is also larger. These direct comparators use the principal finite twist and have their own stated height factors. The n=4,5,6 results above remain the t=1 bounds; no assertion about their global optimum is needed for the stated theorem.
 
 ## A continuum of fourth-moment boxes
 
@@ -106,7 +106,7 @@ This uses the squarefree-index subfamily `A=(1)`, `NB≈X`. In the present δ>4/
 
     f₂(L)=f₁(t)=R,   f₀(L)≤f₂(L).
 
-The same inverse/ordinary-fourth split at L proves the bound for every feasible witness pair. At n=7, σ=9/10 this gives `t=25/19`, `R=54/133`, improving the prior a=0 exponent `363/875`; at n=5, σ=19/20 it gives `t=18/13`, `R=22/65`, improving `41/120`.
+The same inverse/ordinary-fourth split at L proves the bound for every feasible witness pair. At n=7, σ=9/10 this gives `t=25/19`, `R=54/133`, improving the prior a=0 exponent `363/875`; at n=5, σ=19/20 it gives `t=18/13`, `R=22/65`, improving `41/120` within the prior long-detector mechanism. These high-σ examples do **not** improve the available de Faveri natural-index zero-density theorem on the same squarefree family: its exponents are `57/149<54/133` and `23/95<22/65`, respectively.
 
 In fact the balanced branch (9) for `4/n<δ≤δ_c` and the a=0 branch (10) for `δ_c≤δ<1` are the exact scalar minimax over the full detector range, among these two moments and conjugate boxes. For general δ the feasible witnesses `(t,0)` and `(2t/3,t/3)` imply, whenever the relaxed exponent is <1,
 
@@ -123,3 +123,67 @@ For `δ≥δ_c`, the older optimized long-detector calculation is minimized at `
 All comparisons retain the prior and new source replay assumptions. For composite n, this proves the statement for the order-n factor only unless the lower-order powered factors are separately controlled.
 
 **Independent review.** High_match checked the high-σ branch, global scalar lower envelope, threshold `δ_c`, source-admissible cutoff and exact comparator (12). The zero-density result remains conditional on the named detector/sieve inputs.
+
+## The combined ordinary-second and ordinary-fourth envelope
+
+The following completes the scalar optimization for fixed n≥4 and every `0<δ<1`, **provided** the source detector is also available for the selected `t<1` when the first branch uses it. That short-cutoff extension is the separately stated replay in the [short-detector note](../2026-10-29-short-cubic-conductor-detector/README.md), not a printed range of the cited proposition. Retain the inverse second moment, the ordinary second moment `P₂(m)=1−δm`, and (2)'s ordinary fourth moment. Define `δ_c=3/5+4/(5n)`.
+
+* For `0<δ≤2/n`, take
+
+      t=1/(1+2/n−δ),
+      c=(4/n−δ)/(2+4/n−2δ),
+      R=1−δ/[2(1+2/n−δ)].                                  (13)
+
+  The existing ordinary-second detector attains this bound. Adding the fourth moment does not improve its scalar minimax. Indeed for any c set
+
+      m₀=min{(1−c)/(2−δ), c/(4/n−δ)} ≤ 1/2.
+
+  At m₀ the fourth-moment exponent is at least `P₂(m₀)=1−δm₀`. For `t≤2m₀`, the feasible scalar point `(r,m)=(t−m₀,m₀)` has inverse first face at least that number. For `t≥2m₀`, use `(r,m)=(t,m₀)`; whichever term defines m₀ makes the corresponding increasing inverse second or third face at least the same number, since `δ≤2/n`. Maximizing m₀ over c gives (13), so the fourth moment cannot lower this scalar relaxation.
+
+* For `2/n≤δ≤min(4/n,δ_c)`, take
+
+      t=1,  c=δ/6+2/(3n),  a=(nδ−2)/[6(n−2)],
+      R=1−5δ/6+2/(3n).                                    (14)
+
+  Here δ>2/n makes the third face of `f(x)=E(x)−δx` decrease, and δ≤4/n makes its value at 2/3 dominate the first face. The second face at 1 and third face at 2/3 both equal R. Split at r=2/3 exactly as above, retaining the whole interval of possible m.
+
+  This is globally optimal in the scalar relaxation even when the ordinary second moment is also allowed. Let c* be the value in (14). For t≤1 and c≥c*, use the feasible point `(t−1/2,1/2)`: its inverse first face and ordinary second bound exceed R, while its ordinary fourth bound is at least `c+1−δ≥R`. For t≤1 and c<c*, use `(2t/3,t/3)`: the common third face of inverse and ordinary fourth bounds exceeds R, and the ordinary second bound is at least `1−δ/2>R`. For t≥1, the lower envelope in (11) has nonnegative middle slope because δ≤δ_c, and its value at t=1 equals (14). Again `P₂(m)≥1−δ/2>R`, so including the ordinary second moment cannot reduce this lower witness.
+
+* If `4/n≤δ≤δ_c`, use the balanced long-cutoff branch (9).
+* If `δ≥max(2/n,δ_c)`, use the a=0 high-σ branch (10).
+
+The intervals with reversed endpoints are empty. The formulas agree at the boundaries. In both long branches the optimum R is below `1−δ/2`: in the balanced branch `R=1−δL` with L>1/2, and in the a=0 branch `R≤1/2<1−δ/2`. Thus the ordinary second moment cannot invalidate the scalar lower witnesses in (11). This is an exact minimax **of the displayed moment bounds and detector relaxation**, not a lower bound for actual zero counts.
+
+In the new t=1 branch (14), compare only with the prior long-detector mechanism, whose optimal c is `(1+δ)/(n+2)` when `δ≤1/2+1/n` and `1/n` when δ is larger. The prior exponent minus (14) factors as
+
+    (nδ−2)(2n+4−3nδ) / [6n(n+2)]              in the first case,
+    (nδ−2)(2n+2−3nδ) / [6n(n−2)]              in the second.  (15)
+
+Both are positive in the relevant open subranges. This demonstrates an improvement over that particular conditional detector mechanism; it does not establish novelty over every density theorem. In particular the same-index de Faveri bound and the broader Khale–O’Kuhn–Panidapu–Sun–Zhang bound can be stronger, as already illustrated above. All analytic source, ray-sector and height qualifications continue to apply.
+
+### Selected fixed-height prior comparisons in the t=1 branch
+
+For the principal-twist families over the conventional Galois bases `K=ℚ(i), ℚ(ζ₅), ℚ(ω)` for n=4,5,6 respectively, the [Khale–O'Kuhn–Panidapu–Sun–Zhang bound](https://arxiv.org/abs/2008.09677v3) has fixed-height conductor exponent
+
+    K(δ)=6(1−δ)/(3−δ)  for δ≤3/5,
+         4(1−δ)/(1+δ)  for δ≥3/5.
+
+De Faveri's natural-label theorem applies to the conjugated label `A^(n−1)B`, whose norm is `X^[1+(n−2)a]`; hence its fixed-height comparator is that power times the cited natural exponent. Direct factorization gives:
+
+* n=4: the new t=1 branch beats this de Faveri comparator throughout `1/2<δ<4/5`, and beats K(δ) for `1/2<δ<(13−2√21)/5`; in σ these are respectively `(3/4,9/10)` and `(3/4,(9−√21)/5)`.
+* n=5: both comparators are larger throughout `2/5<δ<19/25`, i.e. `7/10<σ<22/25`.
+* n=6: both comparators are larger throughout `1/3<δ<2/3`, i.e. `2/3<σ<5/6`.
+
+For instance, the natural-label differences in the source's middle δ-branch are
+
+    n=4: (2δ−1)(40δ²−43δ+9) / [6(8δ²−12δ+3)],
+    n=5: 2(5δ−2)(75δ²−80δ+14) / [15(25δ²−40δ+8)],
+    n=6: (3δ−1)(252δ²−267δ+40) / [18(18δ²−30δ+5)],
+
+with their signs interpreted on the stated intervals; the n=4 final portion `3/4≤δ<4/5` uses de Faveri's last branch, where the difference is `(2δ−1)(11δ−9)/[6(2δ−3)]`. Strict fixed-height gaps persist for sufficiently small polynomial-height exponents after the two sources' height losses are included. These comparisons use the specified boxes and cited theorem versions; they are not exhaustive priority claims. The new estimates remain conditional on the stated detector and rectangular-sieve replays.
+
+A further source-qualified limitation is that [Hu's preprint](https://hexagonmath.org/2610.00216v1) claims all-height nonvanishing for unitary Weil L-functions in `Re s>7/8`, with its stated pole exceptions. If that claim and the character identifications hold, it would give zero exceptions for every fixed `σ>7/8`, superseding positive-power density estimates in that range. Its proof has not been independently verified here; it does not cover the boundary line or the σ=4/5 examples.
+
+**Independent prior comparison review.** Literature and Other_families checked the n=4,5,6 natural-index reordering and de Faveri branch signs, Khale conductor comparison and n=4 crossover, subject to the cited source statements and finite-height losses.
+
+**Independent combined-envelope review.** High_match checked the low-δ m₀ lower witnesses, the middle t=1 witness cases, the complete m interval, the piecewise transitions and exact comparator factors (15). Families independently checked the general-σ upper branches and fixed-loss order. The short-t branch requires the separately stated detector extension, and all claims retain the source qualifications above.

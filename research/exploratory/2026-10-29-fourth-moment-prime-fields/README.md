@@ -41,6 +41,8 @@ These are density-one relative-quotient rectangles in the specified box-generate
 
 For comparison, the earlier conditional optimized-box exponents were `23/35` and `47/75` in X, or `23/140` and `47/450` in discriminant; the reductions in (5) are `1/168` and `1/225` respectively. These are comparisons of different fixed boxes and rely on the cited fourth-moment source replay. The [targeted prior-art survey](../2026-10-29-optimized-cyclic-prior-art/README.md) records natural-index comparators; no complete literature or novelty claim is made.
 
+The later general-σ optimization in the [fourth-moment box note](../2026-10-29-fourth-moment-cyclic-box/README.md) gives a stronger source-qualified p=7 example at σ=4/5: in a different box it has X-exponent `31/52` and discriminant exponent `31/312`. Thus the p=7 exponent `1/10` in (5) is a simpler consequence, not the strongest bound obtained by that calculation.
+
 For the **same new boxes**, conjugation reorders the natural label to `A^(p−1)B`. De Faveri's stated natural-index bound at σ=4/5 gives X-exponents `23/30` for p=5 and `436/519` for p=7, before their explicit height losses; the gaps from (1) are `2/15` and `623/2595`. The comparison applies to all p−1 factors via the same powered-family bridge, and is with this named source only.
 
 **Independent review.** Other_families checked the scalar formulas, fourth-moment coefficient mass and actual detector range, powered FHL family and masks, conductor and field fibers, one-box height, and comparator arithmetic. The cited analytic inputs remain conditional. An [exact scalar check](../2026-10-29-quartic-fourth-detector/check_general.py) accompanies the general-n calculation.
