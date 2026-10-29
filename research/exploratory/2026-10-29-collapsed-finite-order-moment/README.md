@@ -20,7 +20,7 @@ For smooth nonnegative row weight V, or a row ball by dyadic majorants,
     Σ_{u good} V(Nu/Y)|Σ_c b_c χ_c(u)|²
       ≪_{K,S,n,ε} (YL)^ε [Y + Y^(1/2)L^(359/256)].          (3)
 
-The exponent 359/256 uses Wu's Hecke-conductor exponent α=103/512. The result is uniform in a fixed finite number of sectors and fixed profiles. A fixed finite-order row twist common to every term cancels after opening the square; nontrivial changing coefficients require their own uniformity.
+The exponent 359/256 uses Wu's Hecke-conductor exponent α=103/512. The result is uniform in a fixed finite number of sectors and fixed profiles. A fixed finite-order row twist common to every term contributes its modulus-squared coprimality mask after opening the square; its fixed conductor can be included in S. Nontrivial changing coefficients require their own uniformity.
 
 **Proof.** If c₁≠c₂ are both n-free, a good prime has distinct exponents in {0,…,n−1}; the quotient character χ_{c₁}overline(χ_{c₂}) has a nontrivial local character there, hence its primitive inducing character is nonprincipal. Its conductor norm is ≪_S N rad(c₁c₂)≪L². The original extra zero masks cost at most (Nc₁c₂)^ε after primitivization. Wu's [Theorem 1.1](https://doi.org/10.1112/S0010437X19007309), followed by smooth Mellin inversion on Re s=1/2+ε, gives the off-diagonal row sum ≪(YL)^εY^(1/2)L^(2α). The diagonal row sum is ≪Y for each c. Opening the square and applying (2) gives (3), since 1+2α=359/256. A fixed ray restriction on u can be expanded into finitely many S-supported characters; it does not remove the nontrivial local component. Row unit sectors, if working with elements instead of ideal rows, must likewise be separated finitely before this argument.
 

@@ -83,3 +83,5 @@ Since B*B=I+o(1), Ky Fan's variational inequality bounds the left-hand side by (
 Now t is a fixed multiple of Y^(8/7+δ/6), and H^(5/6)=Y^(5/42−5δ/6). Choosing δ and η sufficiently small in terms of ε and absorbing the logarithm proves the stated thresholds.
 
 The argument shows that a fixed-dimensional or sub-Y^(5/42−ε)-dimensional orthogonal projection cannot eliminate every eigenvalue above the stated threshold. It does not identify an invariant theta spectrum, show how much of the Möbius vector lies in it, or control the rest of the operator.
+
+The separate [partial-frame result](../2026-10-29-theta-partial-frame/README.md) uses an inverse-oriented family containing the prime profiles p⁵, but selects a high-Gram spectral subspace rather than proving control of each prime profile or identifying this subspace with the large-eigenvalue directions of T_Y* T_Y. Its longer-source application and this balanced all-row growing-rank lower bound have different scales.

@@ -6,9 +6,15 @@ simple tm1Y interval covers in y. This is a producer, not authentication;
 Lean's checkF must verify generated values against the pinned Lean source.
 """
 import sympy as s
+import hashlib
 from itertools import product
 from math import comb, lcm
 from pathlib import Path
+src=Path('/workspace/scratch/pr94-prepared/submission/src/Submissions/arvi_density')
+for rel,digest in [('Cert/Reflect.lean','d1446ca16ebb3edc7a8b70c98b841208421464fe89a729a85e9756e7e0bb13ca'),
+ ('Source/HybridGates.lean','a726377f3252b355f1f2d988190950e6200ca7cf31a3dfd681c041c992304ef1'),
+ ('Source/HybridGatesMarked.lean','347e17ea4cd90ab4380cccb6809fbfe356da9335f452f00a7f98a7831b589bd7')]:
+ assert hashlib.sha256((src/rel).read_bytes()).hexdigest()==digest, rel
 R=s.Rational
 y,t,p=s.symbols('y t p')
 STEPS=[
@@ -59,6 +65,14 @@ for idx,B0,L0,B,L,A,D in STEPS:
    q=s.expand(72*sum(p2.nth(i,j)*R(comb(I,i),comb(3,i))*R(comb(J,j),comb(3,j))
       for i in range(I+1) for j in range(J+1))*den)
    trees.append(cover(q))
+  # At the unsplit t,p root, pb33 is a nonnegative linear combination
+  # of at most 16 inputs, with integer weights ≤72. Each input has ≤5
+  # coefficient magnitudes. Bound both positive and negative pack sums.
+  maxcoef=max(abs(int(c*den)) for c in poly.coeffs())
+  maxdepth=max(e for tree in trees for _,e in tree)
+  packed_sum_bound=16*72*5*maxcoef
+  # tm1Y multiplies coefficient sums by 2^(e*(L−1)), L=5.
+  assert 2**(4*maxdepth)*packed_sum_bound < 10**500-2**maxdepth
   data.append((den,trees))
   print('  ',len(data), 'den digits',len(str(den)),'intervals',sum(map(len,trees)),
         'max depth',max(e for tree in trees for _,e in tree),flush=True)
