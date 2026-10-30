@@ -1,0 +1,19 @@
+QRH.ArviDensity.Return.beta_le_theta_of_sources
+  (hC :
+    51 / 100 ≤ OAI.SevenEighths.HeckeZeroSupremum.beta →
+      QRH.Record1252270103Source.GlobalSource (96232839 / 100000000) (3853 / 2000) (1 / 10))
+  (hP :
+    51 / 100 ≤ OAI.SevenEighths.HeckeZeroSupremum.beta →
+      QRH.Record1252270103Source.GlobalSource (49283557 / 50000000) (4503 / 2000) (1 / 10)) :
+  OAI.SevenEighths.HeckeZeroSupremum.beta ≤ 4369351 / 5000000
+'QRH.ArviDensity.Return.beta_le_theta_of_sources' depends on axioms: [propext, Classical.choice, Quot.sound]
+QRH.ArviDensity.Return.dirichlet_of_sources
+  (hC :
+    51 / 100 ≤ OAI.SevenEighths.HeckeZeroSupremum.beta →
+      QRH.Record1252270103Source.GlobalSource (96232839 / 100000000) (3853 / 2000) (1 / 10))
+  (hP :
+    51 / 100 ≤ OAI.SevenEighths.HeckeZeroSupremum.beta →
+      QRH.Record1252270103Source.GlobalSource (49283557 / 50000000) (4503 / 2000) (1 / 10))
+  {q : ℕ} [NeZero q] (χ : DirichletCharacter ℂ q) {s : ℂ} (hs : 4369351 / 5000000 < s.re) (hpole : ¬(χ = 1 ∧ s = 1)) :
+  DirichletCharacter.LFunction χ s ≠ 0
+'QRH.ArviDensity.Return.dirichlet_of_sources' depends on axioms: [propext, Classical.choice, Quot.sound]

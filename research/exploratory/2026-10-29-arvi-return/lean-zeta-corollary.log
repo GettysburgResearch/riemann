@@ -1,0 +1,4 @@
+lean --stdin < ZetaCorollary.lean
+CandidateZeta.zeta_ne_zero {s : ℂ} (hs : 4369351 / 5000000 < s.re) (h1 : s ≠ 1) : riemannZeta s ≠ 0
+'CandidateZeta.zeta_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit=0

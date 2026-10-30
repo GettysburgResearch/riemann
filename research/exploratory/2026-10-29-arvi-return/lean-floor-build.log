@@ -1,0 +1,78 @@
+cached 3210 pending 1709
+candidate Submissions.arvi_density.ReturnD.TransportGeometry ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.SignalShift ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.PrincipalRemainderRayThresholds ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.PrincipalRemainderRegion ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.TailScales ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.CubeSlotExponent ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.FloorExponent ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.CubeFloorArithmetic ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.LargeDyad ok
+compiled 25 remaining 1682 running 2 seconds 42
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.GeometricTail ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.SmallTail ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.LargeTail ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.PhysicalSmallTail ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.LargeSaving ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.PrincipalSlots ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.CentralErrorSaving ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.PhysicalLargeTail ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.CanonicalTails ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.PrincipalSignal ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.CentralFiniteError ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.CanonicalReduction ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.PrincipalRemainderFiniteProduct ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.CubeErrorSaving ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.PrincipalRemainderFiniteProductX ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.PrincipalRemainderResidueActual ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.CubeFiniteError ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.CanonicalCubeReduction ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.CanonicalCubeChoice ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.CanonicalRayCube ok
+compiled 50 remaining 1657 running 2 seconds 85
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.PrincipalRemainderContours ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.LowNormalizer ok
+candidate Submissions.arvi_density.ReturnD.Transport.Normalizer ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.PrincipalRemainderTransport ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.ProbeDefinition ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.PrincipalRemainderPhysical ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.CubeFloorGlobal ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.CubeFloorGlobalIntegral ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.CubeFloorNormalized ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.CubeFloorSaving ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.PrincipalRemainderBounds ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.CubeFloorCollected ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.PrincipalRemainderPhysicalBounds ok
+candidate Submissions.arvi_density.Density.PriceMarked ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.PrincipalRemainderNormalized ok
+candidate Submissions.arvi_density.Return.Geometry ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.CommonProbe ok
+candidate Submissions.arvi_density.Return.TransportInstances ok
+compiled 75 remaining 1632 running 2 seconds 136
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.NormalizedTransport ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.SourceCorrection ok
+candidate Submissions.arvi_density.Return.Formulas ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.NormalizedTransportSaving ok
+candidate Submissions.arvi_density.Return.Facts ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.NonfloorTransport ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.SharedNonfloor ok
+candidate Submissions.arvi_density.ReturnD.Transport.TransportParameters ok
+candidate Submissions.arvi_density.ReturnD.Transport.Transport.HighApproximation ok
+candidate Submissions.arvi_density.ReturnD.Transport.FinalHeight ok
+candidate Submissions.arvi_density.Return.Rows.Admission01 ok
+candidate Submissions.arvi_density.Return.Rows.Admission02 ok
+candidate Submissions.arvi_density.Return.Rows.Admission03 ok
+candidate Submissions.arvi_density.Return.Rows.Admission04 ok
+Traceback (most recent call last):
+  File "/workspace/scratch/qproject/build_pr94_priority.py", line 14, in <module>
+    fin,_=concurrent.futures.wait(running,timeout=1,return_when=concurrent.futures.FIRST_COMPLETED)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 305, in wait
+    waiter.event.wait(timeout)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/threading.py", line 655, in wait
+    signaled = self._cond.wait(timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/threading.py", line 359, in wait
+    gotit = waiter.acquire(True, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

@@ -1,0 +1,9 @@
+command: /workspace/scratch/lean-4.34.1-linux/bin/lean --stdin < /workspace/riemann/research/exploratory/2026-10-29-arvi-return/HeckeCorollary.lean
+source_sha256=88b49f773a374b0ae3b7fb29932e4571e246b6c2b76c7b0a93608a98f03753dc
+candidate_olean_sha256=f970820a5269b7756ac3d6d6eba7f3769060b29db02a4a48abd8410433d623f4
+LEAN_PATH=/workspace/scratch/qproject/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/PrimeNumberTheoremAnd/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/rellich-kondrachov/.lake/build/lib/lean
+CandidateHecke.beta_le : OAI.SevenEighths.HeckeZeroSupremum.beta ≤ 4369351 / 5000000
+CandidateHecke.finite_hecke_ne_zero (χ : OAI.SevenEighths.HeckeFamily.Character) {s : ℂ} (hs : 4369351 / 5000000 < s.re)
+  (hpole : s ≠ 1 ∨ χ.residue ≠ 1) : OAI.SevenEighths.HeckeFamily.LFunction χ s ≠ 0
+'CandidateHecke.finite_hecke_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit=0

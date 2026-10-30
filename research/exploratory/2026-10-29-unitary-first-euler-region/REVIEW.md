@@ -1,0 +1,11 @@
+# Independent internal review
+
+Reviewed the proposed all-height first-region correction bound against the rendered Hu (6.11)–(6.13) and OpenAI Lemma 7.1, including its ramified table and the power `V^(1_(j≤1))`. The review checks the calculation conditional on the source local identities and their field/unit-sector transfer; it does not derive those local identities or prove the complete physical contour theorem.
+
+A symbolic expansion of Hu's unramified formula, including both apparent `(1−W)` cancellations, reproduces exactly the displayed numerator for `Q(D−1)(R−1)(H_p−1)`. On the stated region, `|W|≤Q^.01`, `|R|≤Q^−1.10`, `|D|≤Q^−.51`, and `|DW|≤Q^(−1−e)`. The remaining monomials are bounded respectively by `Q^−1.53` and `Q^−1.08`; these remain summable even when Re(w)<0. Neither the proof nor the selected factor requires `|W|<1`.
+
+At a row prime the displayed six-class table and the distinct `W_loc` give the listed T_j. Using σ+ω≥1+e, the worst j=3 term has exponent at most −1/50−e and the worst j=4 term at most −3/100−e; all other terms have a fixed negative exponent or at least the −e margin. Thus the finite row-prime product is O_ε((Nu)^ε), including the corrected common term for j≥2. Fixed-field prime-ideal counting gives normal convergence away from the row.
+
+Hu (6.13) defines selected `G_p` without dividing by `H_p`; after replacing `P_p*` using the source formulas, its only relevant denominators are `1−V`, `1−R`, and `1−D`. Their moduli are bounded away from zero on the claimed compact box after the fixed cutoff. All numerators are finite sums of monomials in Q with unit phases, so `G_p=O(Q^C)` there uniformly in imaginary parts. A finite tuple sum over polynomial-size prime windows therefore has the claimed polynomial Z bound even at local zeros. The strict e-margin gives a neighborhood of normal convergence. No further algebraic error was found.
+
+The scope should explicitly retain Hu's fixed-field hypotheses, in particular K containing the twelfth roots of unity, and the imported full ramified table. The exact finite-operation identity, target denominator's buffered height bounds, and applicability of the abstract trace-tail lemma are separate inputs; the calculation does not establish them.

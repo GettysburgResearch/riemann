@@ -1,0 +1,13 @@
+# Independent review of the common-coefficient Sobolev bound
+
+**Status:** Conditional review. The Sobolev algebra below is correct assuming De Faveri Proposition 8.1, its stated finite-ray reciprocity and original zero masks. It does not prove the source sieve or the fixed-field saturated detector.
+
+For fixed compact `v` and an annular `W(Nq/D)`, each `v` or `t` derivative multiplies the column coefficient by a power of `log(Nq/D)`, which is bounded on the support. The factor `(Nq/D)^(-v)` is also uniformly bounded. The fixed cutoff `V(Nq/U)` is bounded, and its dependence on `D/U` is common to the whole dyadic row box. Consequently the squared coefficient norm is `O(D^-1 # {Nq << D})=O_K(1)`. If `D/U` is added as a parameter, its derivatives introduce fixed compact-support factors and remain bounded in the source's `t=1` regime. The phase `nu(q)` is unitary, and `mu(q)` supplies the squarefree q-support.
+
+De Faveri's reciprocity factor depends on both ray classes. Fixing the finite class of `g=a b²` makes it a fixed function of the q class, which can be absorbed into the common column vector. At `(q,g)!=1` both zero-extended sides vanish. Conjugating a witness conjugates the entire coefficient/kernel product; splitting the two orientations and finitely many row classes costs a fixed factor. Dropping the row coprimality restriction is valid only after taking the nonnegative squared norm.
+
+For each unit rectangle in the bounded real parameter v and the interval `|t|<=T`, successive one-dimensional Sobolev inequalities bound each rowwise squared supremum by the integral of the four squared derivatives with orders `(i,j) in {0,1}²`. Sum over rows first, then apply the fixed-parameter sieve to those common differentiated vectors, and sum the `O(1+T)` rectangles. This proves the stated `1+T` cost under the input hypotheses; a pointwise moment without these derivative bounds would not by itself control rowwise suprema.
+
+The source saturated inverse profile has the form `W_1(x) V_<= (D x/U) x^(-sigma_rho-i t)` after a dyadic length is fixed. The real zero coordinate `sigma_rho` is covered by v, the combined zero and separating frequency by t, and `D/U` is common on the dyadic box. Uniform finite-parameter control of any additional source profile choices remains an input, as does the detector's common height allowance. No omission of the zero's real part or norm scale was found in this mapping.
+
+No additional algebraic error was found. This review does not establish the fixed-field theta/Hecke detector, the Kummer conductor and original presentation matching, or De Faveri's arithmetic proposition.

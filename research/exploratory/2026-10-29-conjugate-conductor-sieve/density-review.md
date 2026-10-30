@@ -1,0 +1,11 @@
+# Internal review of the conditional density corollary
+
+The source-conditional density section was checked separately from the proposed rectangular-sieve proof. This is not an independent proof of De Faveri's analytic inputs or the fixed-field saturated detector.
+
+For M≤N and MN≤X, the inverse-sieve term M^(1−1/n)N^(1/n)Q is at most √X·Q. The other nontrivial term is at most X^(1−1/n)Q^(2/n), which is bounded by X for Q≤√X and by √X·Q for Q≥√X. Summing the logarithmically many dyadic a,b boxes gives (9), with the common profile, finite reciprocity-class coefficients and polynomial height/Sobolev factors supplied by the stated input. The source's squarefree q condition is met by the Möbius coefficient.
+
+It is legitimate to use X as a common detector base even for rows with much smaller conductor: the primitive conductor and deleted radical are at most a fixed multiple of X, so the pointwise reflected estimates become only weaker. The moment is likewise summed over the whole family with N(ab)≤X. A pole-bearing principal or pure norm presentation can occur only for a=b=1 when ψ is fixed and its finite conductor is supported on S; it must be isolated. Row-varying witnesses still require Sobolev control and one cumulative frequency allowance, not mere pointwise uniformity of the sieve.
+
+The original use of o(1) for the binned zero location, the upper bound on m and the witness spike should be interpreted as arbitrarily small **fixed** preliminary detector losses: choose e and η relative to final ε before X grows, rather than assuming constants remain uniform as they tend to zero with X. With this qualification, r∈[1/2−O(η),1+O(1/logX)], and `max(1,1/2+r)−δr≤3/2−δ+O(η)` for δ≤1. A zero at real part ≥σ yields a≥σ−O(e), giving exponent 5/2−2σ after absorbing fixed losses and height factors. The individual zero-count factor is absorbed by choosing τ after all fixed height orders.
+
+The prime-label denominator and density-one implication are correct for the specified ±1-exponent subfamily. The claim does not extend to other local exponents for n>3, nor does it give an individual zero-free region. The generalized sieve, fixed-field detector, profile Sobolev bridge and cited Hecke analytic facts remain the substantive conditional inputs.

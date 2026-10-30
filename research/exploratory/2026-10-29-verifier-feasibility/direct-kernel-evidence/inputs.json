@@ -1,0 +1,23 @@
+{
+  "exporter_sha256": "8c5d64ba68f4d3a68b3bcb7e1c5f188e35ae573b29470b8d4530a62324c9ddd1",
+  "lean_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+  "plan_sha256": "1bdceb8ac0e91356f432cb04df1dbce935e8e1b36a156df0cae8b8cd6f3a9f61",
+  "candidate_olean_sha256": "823e29ed18a2cc44adfe13b1bc9f9eef6d14ad9412c87766fd6f9d0c2e41bf42",
+  "candidate_source_sha256": "ed6819a865798ca2e02b0f95b83c0351acde00f29c6419837de7a8771ec349dc",
+  "lean_path": "/workspace/scratch/retune_project/isolated-olean-v2:/workspace/scratch/qproject/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/PrimeNumberTheoremAnd/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/rellich-kondrachov/.lake/build/lib/lean",
+  "command": [
+    "/workspace/scratch/retune-exporter-src/.lake/build/bin/lean4export",
+    "Candidate.Main",
+    "--",
+    "Candidate.bound",
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "max_output_bytes": 4294967296,
+  "max_sampled_rss_kib": 13631488,
+  "timeout_seconds": 3600,
+  "disk_min_free_bytes": 1073741824,
+  "cwd": "/workspace/scratch/retune_project/src",
+  "cgroup_events_before": "low 0\nhigh 0\nmax 59198\noom 0\noom_kill 0\noom_group_kill 0\n"
+}

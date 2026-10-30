@@ -1,0 +1,17 @@
+python resource wrapper: timeout 3600 leanchecker --fresh --verbose Candidate.Main
+low 0
+high 0
+max 24520
+oom 0
+oom_kill 0
+oom_group_kill 0
+command: ['leanchecker', '--fresh', '--verbose', 'Candidate.Main']
+replaying Candidate.Main with --fresh
+wall_seconds=3198.034 user_seconds=3164.326 system_seconds=30.880 max_rss_kib=12099352
+exit=0
+low 0
+high 0
+max 26008
+oom 0
+oom_kill 0
+oom_group_kill 0

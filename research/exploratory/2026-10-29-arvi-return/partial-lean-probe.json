@@ -1,0 +1,39 @@
+{
+  "status": "partial_probe",
+  "compiler_version": "Lean 4.34.1, commit 5045d0056413266e57c625dcd7c365b10e377c52",
+  "compiler_binary_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+  "candidate_manifest_patch_sha256": "f1dfd0f0c04677e331568ceb038dc0a91b8262110f48260502f4218f6febc2d7",
+  "note": "Successful compilation reported by probe operator; stdout was not retained. Hashes identify resulting .olean files but do not independently authenticate their origin. Full DAG compile pending.",
+  "modules": [
+    {
+      "name": "Submissions.arvi_density.Return.Rows.Edge_newSwitch",
+      "source_sha256": "85639a18d3966fc35c433bb93245460373ac7ba4c0c028fc5d5fc55180b6a366",
+      "olean_sha256": "b84a71ac53bd605acdf82811739e0276608320e822bb9c9dd042e155277e90d6"
+    },
+    {
+      "name": "Submissions.arvi_density.Return.Rows.Edge_newTop_1",
+      "source_sha256": "4cd80af73e03188f8b43515573abc394cec1c521adb251c1a6e288a9fa11a8b6",
+      "olean_sha256": "02d905b1462fa0c077eacbdc71d88bea32a635f33e8ae4938d5e761cca533ef4"
+    },
+    {
+      "name": "Submissions.arvi_density.Return.Rows.Edge_newTop_2",
+      "source_sha256": "edd05ca117411f32fc666cbe36bb527c3379e6b58bcf808878118c91dce59d03",
+      "olean_sha256": "2301bb5f7a43e22779b46a5ea2e053f94d56d5b5cc78df5155130b5d9b072917"
+    },
+    {
+      "name": "Submissions.arvi_density.Return.Rows.Edge_newTop_3",
+      "source_sha256": "8913bd0458df9def1a35bf5d211b6e47f6a500383d083b6f476c1727152d4211",
+      "olean_sha256": "026abeb932549408b5a2106bced31cd38d1b0d1ee982414eb3124576182a1bc9"
+    },
+    {
+      "name": "Submissions.arvi_density.Return.Rows.Edge_oldSmall",
+      "source_sha256": "105099d67f2b0e633d723e76fee5c25074f6bbd8fe00894d5ae6ec4f0c2e5100",
+      "olean_sha256": "c4a4647b00b9af0cdc51749bf43afb8fc119c9a1797dfafd9b668e32bf967825"
+    },
+    {
+      "name": "Submissions.arvi_density.Return.Rows.Edge_oldSwitch",
+      "source_sha256": "c1cf1791c76f7b806c59a259dba255ad30fe9d759f04180366b06c305d80defd",
+      "olean_sha256": "210393463cdc4738e6c0b7cfd4f6c73c4de5eeb21f8591027ce5d8d76460d0d7"
+    }
+  ]
+}

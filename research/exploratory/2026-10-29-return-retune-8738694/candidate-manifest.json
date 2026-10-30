@@ -1,0 +1,108 @@
+{
+  "status": "compiled across isolated v2/v3 split build and passed leanchecker --fresh; tracker admission and semantic audit pending",
+  "source_repository": "https://github.com/GTimG/QuasiRiemannTracker",
+  "source_commit": "e5a82f72d8ff39a3cc1ad044e6acd727e77a3fc4",
+  "target": "4369347/5000000",
+  "files": [
+    {
+      "path": "submissions/2026-10-29-arvi-density/src/Candidate/Main.lean",
+      "original_sha256": "97c3524e924155ba6d71d1585b60630deedc48dc3d497f5d2af27c3fa07ad613",
+      "candidate_sha256": "ed6819a865798ca2e02b0f95b83c0351acde00f29c6419837de7a8771ec349dc"
+    },
+    {
+      "path": "submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/FinalF50.lean",
+      "original_sha256": "996ffd9d3faa17888193950f4466a6ebe1aef39e47690804691e9e33309572a9",
+      "candidate_sha256": "f2e0c600bc63da51c532df4c99304e03ff1b2d81c413061013c6511c2582dafe"
+    },
+    {
+      "path": "submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/Return/Constants.lean",
+      "original_sha256": "96f2a770b68bc4d3ba34e896995514c040315dbc8584e19dbfe479dced8ce4b7",
+      "candidate_sha256": "361c3305edd01c9d1120764f981eb86a035ef5bf12b18be0523c5ada31193a45"
+    },
+    {
+      "path": "submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/Return/EdgeCertificates.lean",
+      "original_sha256": "5ccc3da2447879fab630f95b1448c34fd8ce57dcd089ea723385c9e79bce9264",
+      "candidate_sha256": "80f35e6d6f4af1096527d3101e64fae443df7040acd3c36d71154c6bf88659a1"
+    },
+    {
+      "path": "submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/Return/Endpoint.lean",
+      "original_sha256": "897cdedb529223aff6f818b77907bd9fa78d9c469f1fe9ae8cfec6040a5b2d25",
+      "candidate_sha256": "a8f927577cdcb1d68d155b12e197188ae5b9488dd32a5cc947e1457e7052efad"
+    },
+    {
+      "path": "submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/Return/Rows/Admission09.lean",
+      "original_sha256": "6907de5af6e774570f4a7cbfa9d38d3b2875bfce73acbf718504d66fd546d320",
+      "candidate_sha256": "feee5333e08ed82c07480feb65c29274bfc010a296e4dd18b2f7a05dce418b73"
+    },
+    {
+      "path": "submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/Return/Rows/Admission32.lean",
+      "original_sha256": null,
+      "candidate_sha256": "15b55e72a5f88fcf1fee5bff129aa4384e0e29167f4773b4f1a8f2be52129587"
+    },
+    {
+      "path": "submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/Return/Rows/RetuneEdge01.lean",
+      "original_sha256": null,
+      "candidate_sha256": "2749e1b8202cdcdd7836fc99de2243cffb5b69cfe6b95e6e12ac204cffd1b3a9"
+    },
+    {
+      "path": "submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/Return/Rows/RetuneEdge02.lean",
+      "original_sha256": null,
+      "candidate_sha256": "46b6a07a8d5153342064ce22d35ca5ef9dca1b881bb8c3338e5eb5c87b543713"
+    },
+    {
+      "path": "submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/Return/Rows/RetuneEdge03.lean",
+      "original_sha256": null,
+      "candidate_sha256": "2b4154223bb397175e501d84ac241539e3151bf96697fe04f8b7b7290d9d346b"
+    },
+    {
+      "path": "submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/Return/Rows/RetuneEdge04.lean",
+      "original_sha256": null,
+      "candidate_sha256": "3d4be4f16b530a169f928e2a7fdbab1ffed21c66ce0c0ac011e272033457508a"
+    },
+    {
+      "path": "submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/Return/Windows.lean",
+      "original_sha256": "3d436434bf8a76f2246f12bb942840f33e4d8ce3d2155660e4572dccab15a799",
+      "candidate_sha256": "b8ef24890708ba78c38feb88c23775e80950094276ea0640551377d3012e61b0"
+    },
+    {
+      "path": "submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/Transport/CubeFloorCollected.lean",
+      "original_sha256": "3d211609ad2ce2fe354d69c571c24e1fa4e7dcb682fa7e6cde3c10bcbfa31b82",
+      "candidate_sha256": "c3b4bb57e1f5b10d4235f602f614d4cc95b720902f42550a898e50a07d894b92"
+    },
+    {
+      "path": "submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/Transport/CubeFloorSaving.lean",
+      "original_sha256": "80fcc9cf23e4158e9481dd06d60f27cdadaca1f1117b243913c27fd1294429ee",
+      "candidate_sha256": "38a4e08fe4010e4d5d8c21fa030a064a4b24089be8d3d7fb67b255728df175f1"
+    },
+    {
+      "path": "submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/Transport/FloorExponent.lean",
+      "original_sha256": "a580f8bc82a7a4e6ad1a593807ecf822d1e0be391a0fdb489ef4eaffd46c617e",
+      "candidate_sha256": "5fb9b65a7d8d86b8dd17207dc78adb6b729e2f3af1ef085e8e09daaea056cc54"
+    },
+    {
+      "path": "submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/Transport/HighApproximation.lean",
+      "original_sha256": "1ca383431acd3634fc0037a7069501b05bdb83055314a8a7642ff7cb49c08724",
+      "candidate_sha256": "fb841ca0eee438d9769cda80d393d82ec3bfcb2e70e5e933c28f7738527b2581"
+    },
+    {
+      "path": "submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/Transport/NonfloorTransport.lean",
+      "original_sha256": "37ca1cb16671a636848b88d7ac4726d0335d6a1c6cf2a2373b7200d54f8a8012",
+      "candidate_sha256": "d44de7ade5205fac262d31a34f105527ef76afcc79dacd22a187f800c912946d"
+    },
+    {
+      "path": "submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/Transport/SharedNonfloor.lean",
+      "original_sha256": "243f0b7425754dfaebf6c4851f03820449a248781806f362ec543e4c5fd1b78d",
+      "candidate_sha256": "0959bf5e54b7ad9dada36d98144889bd70a14efbacda672ab82abec0e531a19e"
+    },
+    {
+      "path": "submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/Transport/TransportParameters.lean",
+      "original_sha256": "d7485a4a7df3f9c56c54046c2d0f059702442a4f0b884717ca5f46702908bd04",
+      "candidate_sha256": "f34941798c16e48b49facc6e8ebe3bd393cce1dd71a927af5c1adb96c4af1ba9"
+    },
+    {
+      "path": "submissions/2026-10-29-arvi-density/src/Submissions/arvi_density/ReturnD/TransportGeometry.lean",
+      "original_sha256": "a51e09e617b302d6b1b725406ecb78e2cfaec7bd522f882c94925538224df65e",
+      "candidate_sha256": "8764b0ae2b9a05d8c82ed0a04c4878a83d64690b4c73e5a86d62ec8063ef168d"
+    }
+  ]
+}

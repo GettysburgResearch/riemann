@@ -1,0 +1,9 @@
+command: /workspace/scratch/lean-4.34.1-linux/bin/lean --stdin < /workspace/riemann/research/exploratory/2026-10-29-return-retune-8738694/ZetaReflectedDraft.lean
+source_sha256=89a04952263ae81fbf8bf7b33e331f8f987616e08a41a00b6a40e7147d9361aa
+candidate_olean_sha256=823e29ed18a2cc44adfe13b1bc9f9eef6d14ad9412c87766fd6f9d0c2e41bf42
+LEAN_PATH=/workspace/scratch/retune_project/isolated-olean-v2:/workspace/scratch/qproject/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/PrimeNumberTheoremAnd/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/qproject/.lake/packages/rellich-kondrachov/.lake/build/lib/lean
+CandidateZetaReflected.left_ne_zero {s : ℂ} (hpos : 0 < s.re) (hs : s.re < 630653 / 5000000) : riemannZeta s ≠ 0
+CandidateZetaReflected.zero_localization {s : ℂ} (hpos : 0 < s.re) (hupper : s.re < 1) (hζ : riemannZeta s = 0) :
+  630653 / 5000000 ≤ s.re ∧ s.re ≤ 4369347 / 5000000
+'CandidateZetaReflected.zero_localization' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit=0

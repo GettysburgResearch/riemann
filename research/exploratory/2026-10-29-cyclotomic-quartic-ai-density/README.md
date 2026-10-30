@@ -1,0 +1,9 @@
+# Independent review: cyclotomic monomial automorphic induction
+
+This reviews [the canonical fifth-order/GL₄ note](../2026-10-29-cyclic-quartic-gl4-induction.md). Under its named fifth-order FHL source, detector, Hecke analytic theory, and cyclic automorphic-induction/Artin compatibility inputs, the GL₄ construction and density transfer are consistent.
+
+For each good rational split prime \(p\), the four primes of \(\mathbb Q(\zeta_5)\) above p are distinct. The primitive fifth-order source character attached to one has tame local conductor exponent 1 there and is unramified at the other three good primes, so its Galois orbit has size four. Cyclic automorphic induction is therefore cuspidal and irreducible, and the primitive standard L-function is the Hecke L-function under the stated compatibility theorem. Its arithmetic conductor is \(125N\mathfrak f_\chi\asymp p\), not necessarily exactly 125p, since the bounded fixed bad factor can vary. Different rational p give different good ramification supports and hence nonisomorphic inductions. The split-prime theorem gives \(\gg X/\log X\) members of conductor ≤X.
+
+The source's zero-count **sum** over all fifth-free labels restricts to this prime subfamily without loss; conductor scaling and a smaller fixed height exponent handle the constant in the analytic conductor bound. The exact values \(R_5(4/5)=16/25\) and \(R_5(4369347/5000000)=5045224/10653265\) match the source report. The comparison to de Faveri's original fifth-order source exponents is arithmetically correct at sufficiently small height; it is not an exhaustive comparison to automorphic density literature. No individual zero-free result follows.
+
+This is an internal source-level review, not an independent proof of the imported automorphic-induction theorem, FHL local identities, printed sieve or detector.
