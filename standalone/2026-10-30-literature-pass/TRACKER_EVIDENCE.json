@@ -1,0 +1,77 @@
+{
+  "purpose": "Bibliographic provenance extract; upstream verification inspected, not rerun in this pass",
+  "checked_on": "2026-10-30",
+  "source": {
+    "repository": "GTimG/QuasiRiemannTracker",
+    "pr": 97,
+    "head_sha": "62b12e08066b0269a01f34696ace896e3cb5eb32",
+    "merge_commit": "e02df3d2254ddfa92097924c21cead4a5cef737f",
+    "merged": true,
+    "merged_at": "2026-10-30T07:47:37Z",
+    "source_path": "submissions/2026-10-30-arvi-selected-leaf/src",
+    "source_tree": "43f4b9fd506a0da61333adbbb83ee405587f59d9",
+    "metadata_blob_sha": "544a7298d7b2b4b8eb3c1661b6e7b667bd437fcb"
+  },
+  "claim": {
+    "result_id": "arvi-selected-leaf",
+    "theta_exact": "43670599/50000000",
+    "theta_decimal": "0.87341198",
+    "family": "all Dirichlet characters, including zeta; principal pole excluded",
+    "general_number_field_transfer": "not established by this literature pass"
+  },
+  "admission_record": {
+    "branch": "admission-records",
+    "path": "records/97/62b12e08066b0269a01f34696ace896e3cb5eb32/arvi-selected-leaf/40993815914-1.json",
+    "git_blob_sha": "ee07bd80ed40290370d249462a5f049f4a1e68ac",
+    "url": "https://github.com/GTimG/QuasiRiemannTracker/blob/admission-records/records/97/62b12e08066b0269a01f34696ace896e3cb5eb32/arvi-selected-leaf/40993815914-1.json"
+  },
+  "certificate": {
+    "schema_version": 1,
+    "result_id": "arvi-selected-leaf",
+    "theta_exact": "43670599/50000000",
+    "verified_at": "2026-10-30T03:47:52.807528+00:00",
+    "source_repository": "GTimG/QuasiRiemannTracker",
+    "source_commit": "62b12e08066b0269a01f34696ace896e3cb5eb32",
+    "kernels": [
+      "Lean default",
+      "nanoda",
+      "con-ron"
+    ],
+    "report_url": "https://github.com/GTimG/QuasiRiemannTracker/actions/runs/40993815914/attempts/1",
+    "report_sha256": "6ade0a945402bce85534f7a91383f570d5446915bf88e742d269e2ef4bbda81f"
+  },
+  "verification": {
+    "status": "PASS",
+    "verified_at": "2026-10-30T03:47:52.807528+00:00",
+    "reviewed_pr_head": "62b12e08066b0269a01f34696ace896e3cb5eb32",
+    "source_commit": "62b12e08066b0269a01f34696ace896e3cb5eb32",
+    "result_id": "arvi-selected-leaf",
+    "theta_exact": "43670599/50000000",
+    "targets": [
+      "QRH.canonical_bound"
+    ],
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "kernels": [
+      "Lean default",
+      "nanoda",
+      "con-ron"
+    ],
+    "judge_exit_code": 0,
+    "sandbox_preflight": "PASS",
+    "candidate_mount_preflight": "PASS",
+    "challenge_exported_before_candidate_execution": true,
+    "receipt_outside_candidate": true,
+    "library_inventory_sha256": "a3c90b0ab9782dfa41d19233fefe9d89177be775f070949e87e79a39c8afe879",
+    "driver_sha256": "3aaed233fd7cbd52b420f79b49d7c2805cb6000f2b81b43de437063823fae3f6",
+    "palomar_sha256": "c575759d82c506f181b3736a110950fd32931c08a1be454262027d6205f178a2"
+  },
+  "limitations": [
+    "No local Lean, NanoDa, con-ron, or Comparator replay in this literature pass.",
+    "No complete source-semantic or analytic dependency audit by this pass.",
+    "A cached web PR page reported open; the live API merged state controls this snapshot."
+  ]
+}
