@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "scope": "Packaging and parent exact-certificate replays; not an analytic theorem checker",
+  "python": "3.12.14",
+  "content_files_checked_before_receipt_and_manifest": 35,
+  "python_files_parsed": 9,
+  "json_files_parsed": 9,
+  "local_markdown_links_checked": 41,
+  "frozen_primary_hash_bindings_checked": 13,
+  "frozen_primary_files": {
+    "spectral/MOVING_ANCHOR_THEOREM.md": "d0ef707b0155db0427edfde869f5ff6522192ed304d4bd997d17b4282088d82d",
+    "spectral/BESSEL_SELFADJOINT_GATE.md": "f6692c936a5448d47fd5853475c537556cfc20f7a8899a379d9540e2bc3e50f6",
+    "spectral/ANCHOR_FLOW.md": "a102e9fad7b496913abcf92b4651b07e7fcbc34ffa97c67474f58bcdb17ac09e",
+    "spectral/verify_spectral.py": "5f982b18b9864bb648d0e8baceb51fd1217c5633ce1c81f6cc3cab335af36c19",
+    "spectral/verify_anchor_flow.py": "68acb088fc9d6672ce250818d77352c7d6eab28ebab574a406030b68097ee77c",
+    "theta/PROOF.md": "35b85c39bec2c69f5cffba0986bf61c416d873696829479cc00737cb94b55f37",
+    "theta/BESSEL_BOUNDARY.md": "c2e2d3a9db19238d7e802b9f1288546e115d0f6430eb05358ccf4ea92b44498a",
+    "theta/verify_polya_obstruction.py": "cb4f9cb91d4595295974aae955e7782ac9aa8d1fa83c9a4f80f39ae1e7e30989",
+    "theta/verify_bessel_m3.py": "2623eb5e893cbc7cf764f0855eb72faf494868f6e91afa126bc9ed0166db81a8",
+    "theta/BESSEL_M3_CERTIFICATE.json": "d336bb929a85518794306e1a9a8ea52917ebdc0214d9abc17333a54b6e1469a2",
+    "arithmetic/ARITHMETIC_KERNEL.md": "631bffd147dc3d58d3eef6ad9e7535d89b56311bc91dfc39e6c52447b335f8d9",
+    "arithmetic/verify.py": "c785283b3e2813114e057e550b035c78d2893960b66591de1ac3ee1eaa1fd6c8",
+    "arithmetic/verification.json": "6eb1d361954dd97c6ccbaf01b8920e9a1d4edfe4bde73cfcdc659bdd1e97acc1"
+  },
+  "byte_identical_parent_replays": [
+    "theta/POLYA_OBSTRUCTION_CERTIFICATE.json",
+    "arithmetic/verification.json",
+    "spectral/ANCHOR_FLOW_CHECKS.json",
+    "theta/BESSEL_M3_CERTIFICATE.json",
+    "theta/THETA_DERIVATIVE_CROSSCHECK.json"
+  ],
+  "errors": [],
+  "excluded_from_claims": [
+    "external human peer review",
+    "formal proof-assistant verification",
+    "complete zero or pole census",
+    "repository-wide test suite",
+    "RH or an improved zero-free boundary"
+  ]
+}

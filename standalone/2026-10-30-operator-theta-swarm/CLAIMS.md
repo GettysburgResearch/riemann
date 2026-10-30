@@ -1,0 +1,36 @@
+# Claim ledger and first missing implications
+
+Status: proposed component mathematics from the October 30, 2026 research swarm. A written proof and an independent AI-agent review are research evidence; they do not constitute external peer review, proof-assistant verification, or promotion to the repository's accepted baseline.
+
+## Proved components at the stated scopes
+
+| ID | Statement | Scope and evidence | First implication not established |
+|---|---|---|---|
+| S1 | For any prescribed sequence of integers `N_j>=0` and reals `a_j>=1` with `N_j/a_j -> infinity`, eventual positive semidefiniteness of the actual-xi Toeplitz matrices is equivalent to RH | [Moving-anchor theorem](spectral/MOVING_ANCHOR_THEOREM.md), Theorem 1; finite Herglotz interpolation, Schwarz contraction, normal-family continuation | Positivity of those actual matrices in that scaling |
+| S2 | `a>=100(N+1)` implies `T_N(a) > (a/6)I` for every order | Same proof, Theorem 2; a uniform bound on the complete arithmetic remainder | This unconditional family has bounded `N/a`; it does not satisfy S1's hypothesis |
+| S3 | The Laguerre projections converge strongly to the identity iff `N_j/a_j -> infinity` when `a_j>=1` | Same proof, Theorem 3; exact exponential projection-error formula and density | Strong L2 convergence alone does not justify passage through an unbounded Weil form |
+| S4 | The moving-anchor criterion extends to exclusion of zeros in `Re(s)>b`, for fixed `1/2<=b<1` | Same proof, Corollary 4 | No value `b<1` is newly certified by source positivity |
+| S5 | Anchor transport is an internal skew-adjoint change of basis plus an explicit rank-at-most-two boundary term | [Anchor flow](spectral/ANCHOR_FLOW.md); exact coefficient recurrence and matrix identity, checked in 96 rational cases | The integrated positive-part loss must be smaller than the starting margin; the packet does not prove this in a complete regime |
+| T1 | The eighth derivative of `exp(2*pi*cosh(2t))*Phi(t)` at zero lies strictly between `-8951861` and `-8951860` | [Theta proof](theta/PROOF.md), Theorem 1; rational outward intervals and an analytic bound for the full infinite source tail | Excludes that positive multiplier mechanism, not RH |
+| T2 | No fixed envelope `exp(-a*cosh(2t))` admits an entire multiplier equal to the theta source; successful positive finite-cosh approximations require both `a` and `bandwidth/a` to escape | Same proof, Theorem 2; modular cusp and positive-coefficient bounds | Other envelopes and non-entire multipliers remain possible |
+| T3 | The explicit source-sampled Skellam kernels converge to `Phi` in every exponentially weighted L1 norm if `a->infinity` and `M/a->infinity`; their complete Bessel transforms converge locally uniformly to Xi | Same proof, Theorem 3; exact tilted expectation, compact convergence, uniform double-exponential tails | A zero-location theorem for that cofinal family |
+| T4 | The associated finite coefficient polynomial cannot have all roots on the unit circle eventually along a cofinal sequence | Same proof, Theorem 4; central/leading coefficient inequality and a full Bessel-series bound | This is not a statement that the Bessel transform has nonreal zeros |
+| B1 | A coprime rational boundary function `r(E)=h-bE+sum gamma_j/(E-lambda_j)` with `b>=0`, `gamma_j>0`, `lambda_j>0` has all reduced Bessel zeros at nonnegative energy iff `r(0)>=-a*K_1(a)/K_0(a)` | [Self-adjoint gate](spectral/BESSEL_SELFADJOINT_GATE.md); closed form, exact eigenvalue correspondence including poles, ground-state identity | The actual high-order boundary functions need not belong to this rational class |
+| B2 | Positive Bessel mixtures through order two have only real z zeros | [Boundary reduction](theta/BESSEL_BOUNDARY.md); reduction to a positive endpoint mass and positive Robin constant | Fixed order cannot supply T3's cofinal approximation |
+| B3 | For actual source weights at `M=3`, the sufficient rational boundary gate passes at `a=1/4,1/2,1,2,5,10` and fails at `a=20,50`; it also fails eventually as `a->infinity` at this fixed order | Same note and [exact certificate](theta/BESSEL_M3_CERTIFICATE.json); full theta/Bessel tail enclosures plus an asymptotic argument | Failure of this sufficient gate does not prove a nonreal transform zero; equal coefficients give an explicit control |
+| B4 | Local rational sign conditions on energy disks, with negative-energy and common-factor control, suffice for real transform zeros on corresponding z disks; expanding disks plus locally uniform convergence suffice in the limit | [Self-adjoint gate](spectral/BESSEL_SELFADJOINT_GATE.md), Section 4 | Those local conditions have not been established for an unbounded sequence of the actual theta coefficients |
+| A1 | The native logarithmic arithmetic law has a nonzero characteristic function but is not infinitely divisible | [Arithmetic proof](arithmetic/ARITHMETIC_KERNEL.md); explicit signed Levy density and Fourier uniqueness | Does not exclude every probabilistic model or operator interpolation |
+| A2 | The specified log-gamma noise repairs infinite divisibility iff its convolution-semigroup strength is at least one | Same proof; exact jump-density cancellation | Undoing the noise costs exponential Fourier amplification, for which no native-source bound is supplied |
+| A3 | The symmetrized law is infinitely divisible, so all real-coefficient logarithmic tests pass; a three-point complex-coefficient test at `alpha=3/2` fails | Same proof and [exact witness](arithmetic/verification.json); rational finite prefix plus a signed infinite tail | A finite phase obstruction is not an upper bound on the original approximation error |
+
+## Computations that are explicitly not theorems
+
+The safe-half-plane matrix eigenvalues, synthetic-zero spectra, Skellam quadratures and located transform roots use ordinary floating-point arithmetic. The higher-order Bessel J-fraction signs and low-pole residue probes use ordinary high-precision Decimal arithmetic. Agreement at 180 and 360 digits is a stability diagnostic, not directed enclosure or a completeness theorem.
+
+In particular, no sampled grid establishes the local sign condition B4. Almost common numerator/denominator zeros can make pole residues extremely small, and sign-changing real-root searches can miss even-multiplicity or complex poles. The exact finite M=3 certificate B3 is separate from those diagnostics.
+
+## Attribution and originality
+
+Classical Li/Herglotz/Laguerre, Sturm–Liouville, special-function, and probability results are inputs. RH Game 10 already gives the Laguerre/Cayley/Toeplitz/Schur representation and a qualitative large-anchor warning. Scott Schubr's recent paper contains stronger high-height kernel asymptotics than Sections 2–4 of our arithmetic note. Those components are attributed reconstructions. See [source context](SOURCE_CONTEXT.md) for the sources actually retrieved and the limits of the comparison.
+
+The remaining results are developed and proved here, but the search does not establish exhaustive worldwide novelty. No numerical RH boundary, L-function-family zero-free region, accepted theorem, or formal verification status is changed by this packet.

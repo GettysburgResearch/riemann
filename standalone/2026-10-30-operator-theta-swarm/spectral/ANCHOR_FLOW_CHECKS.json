@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "arithmetic": "exact rational",
+  "matrix_cases": 96,
+  "maximum_dimension": 25,
+  "checks": [
+    "complete transport identity",
+    "trace identity",
+    "shared-corner mutation rejection",
+    "rank-two spectral invariants"
+  ],
+  "scope": "finite algebra only; no actual xi coefficient or global sign check"
+}
