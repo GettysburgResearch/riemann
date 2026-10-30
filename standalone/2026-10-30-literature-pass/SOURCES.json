@@ -1,0 +1,591 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-30",
+  "repository": "GettysburgResearch/riemann",
+  "entry_count": 28,
+  "verification_policy": "Source screening only; no external proof, kernel closure, or numerical census rerun. Each record preserves its inspection depth.",
+  "entries": [
+    {
+      "id": "L01",
+      "title": "Dirichlet nonvanishing at 0.87341198 with a selected-norm leaf",
+      "authors": [
+        "ArviFoxy"
+      ],
+      "namespace": "GitHub",
+      "identifier": "GTimG/QuasiRiemannTracker#97",
+      "version": "62b12e08066b0269a01f34696ace896e3cb5eb32",
+      "first_date": "2026-10-30",
+      "date": "2026-10-30",
+      "priority": "P1",
+      "status": "upstream protected formal admission inspected; not replayed here",
+      "scope": "all-moduli Dirichlet nonvanishing",
+      "overlap": "newer than inspected PR1023 candidate",
+      "url": "https://github.com/GTimG/QuasiRiemannTracker/pull/97",
+      "primary_url": "https://github.com/GTimG/QuasiRiemannTracker/blob/62b12e08066b0269a01f34696ace896e3cb5eb32/submissions/2026-10-30-arvi-selected-leaf/src/Candidate/Main.lean",
+      "inspection": "Live PR API; archived protected receipt; final theorem; frozen canonical target and pinned standard definitions.",
+      "retrieved_on": "2026-10-30"
+    },
+    {
+      "id": "L02",
+      "title": "Zero-free half-planes for Hecke L-functions over number fields and Quasi-Riemann Hypothesis",
+      "authors": [
+        "Baiying Liu"
+      ],
+      "namespace": "arXiv",
+      "identifier": "2610.26835",
+      "version": "v2",
+      "first_date": "2026-10-19",
+      "date": "2026-10-29",
+      "priority": "P1",
+      "status": "primary preprint statements and revision sections inspected",
+      "scope": "finite-order Hecke functions over arbitrary number fields",
+      "overlap": "v1 imported in PR1009 and cited by PR1021",
+      "url": "https://arxiv.org/abs/2610.26835v2",
+      "primary_url": "https://arxiv.org/html/2610.26835v2",
+      "inspection": "Version history; Theorem 17.1; sections 5.1 and 13; Appendix C; comparison with v1.",
+      "retrieved_on": "2026-10-30"
+    },
+    {
+      "id": "L03",
+      "title": "On some positivity properties of the Riemann Xi function",
+      "authors": [
+        "Suvrit Sra"
+      ],
+      "namespace": "author-site",
+      "identifier": "riem-xi",
+      "version": "v2 (author-site)",
+      "first_date": "2026-10-20",
+      "date": "2026-10-29",
+      "priority": "P1",
+      "status": "primary PDF theorem statements inspected",
+      "scope": "reciprocal-xi densities; finite PF order and bounded-domain Laguerre inequalities",
+      "overlap": "connects to xi/Weil work; not the original-kernel countermodel",
+      "url": "https://suvrit.github.io/papers/riem-xi/",
+      "primary_url": "https://suvrit.github.io/papers/riem-xi/riem-xi-v2.pdf",
+      "inspection": "Version table; Theorems 1.1–1.3; source normalization; prior-work discussion.",
+      "retrieved_on": "2026-10-30"
+    },
+    {
+      "id": "L04",
+      "title": "Zero-density estimates from an improved large-values bound",
+      "authors": [
+        "Mark Lewko"
+      ],
+      "namespace": "Palomar/GitHub",
+      "identifier": "PALOMAR-2026-10-11-000010",
+      "version": "registry v1; source ee2a8a32be49a4f73c7386e9dffdea24d7e3d8c0",
+      "first_date": "2026-10-11",
+      "date": "2026-10-11",
+      "priority": "P1",
+      "status": "formal source endpoints inspected; registry verification reported",
+      "scope": "zeta zero density and bounded-coefficient large values",
+      "overlap": "no match in inspected PR descriptions; plausible new method input",
+      "url": "https://palomar-registry.org/entry?id=PALOMAR-2026-10-11-000010&version=1",
+      "primary_url": "https://github.com/mrklwk/zeta-density-39-over-17-lean/blob/ee2a8a32be49a4f73c7386e9dffdea24d7e3d8c0/lean/Solution.lean",
+      "inspection": "Challenge, Solution, actual-zero/multiplicity definitions, MiddleLargeValues and historical verification file; no dependency replay.",
+      "retrieved_on": "2026-10-30"
+    },
+    {
+      "id": "L05",
+      "title": "Higher order uniformity of the primes and cancellation of the Möbius function in shorter intervals",
+      "authors": [
+        "Kaisa Matomäki",
+        "Mayank Pandey",
+        "Javier Pliego",
+        "Joni Teräväinen",
+        "Mengdi Wang"
+      ],
+      "namespace": "arXiv",
+      "identifier": "2610.09567",
+      "version": "v1",
+      "first_date": "2026-10-07",
+      "date": "2026-10-07",
+      "priority": "P1",
+      "status": "primary theorem statements and method inspected",
+      "scope": "short intervals; fixed-order Gowers uniformity; Möbius cancellation",
+      "overlap": "method candidate for signed polynomial estimates",
+      "url": "https://arxiv.org/abs/2610.09567v1",
+      "primary_url": "https://arxiv.org/html/2610.09567v1",
+      "inspection": "Theorems 1.1–1.4 and section 3 reduction.",
+      "retrieved_on": "2026-10-30"
+    },
+    {
+      "id": "L06",
+      "title": "Large value estimates for Dirichlet polynomials and trilinear sums over short intervals",
+      "authors": [
+        "Runbo Li"
+      ],
+      "namespace": "arXiv",
+      "identifier": "2610.18923",
+      "version": "v1",
+      "first_date": "2026-10-12",
+      "date": "2026-10-12",
+      "priority": "P2",
+      "status": "primary theorem statement inspected",
+      "scope": "restricted trilinear mean values",
+      "overlap": "worked range-matching example",
+      "url": "https://arxiv.org/abs/2610.18923v1",
+      "primary_url": "https://arxiv.org/html/2610.18923v1",
+      "inspection": "Theorem 1, setup and named large-value inputs; not all casewise proofs.",
+      "retrieved_on": "2026-10-30"
+    },
+    {
+      "id": "L07",
+      "title": "Large Value Estimates for Dirichlet Polynomials with Characters and Zero Density of Dirichlet L-Functions",
+      "authors": [
+        "Bin Chen",
+        "Vishal Gupta",
+        "Yung Chi Li"
+      ],
+      "namespace": "arXiv",
+      "identifier": "2507.08296",
+      "version": "v2",
+      "first_date": "2025-07-11",
+      "date": "2026-07-27",
+      "priority": "P2",
+      "status": "background dependency; primary theorem statements inspected",
+      "scope": "character-twisted large values and family density",
+      "overlap": "background for L06, not an October discovery",
+      "url": "https://arxiv.org/abs/2507.08296v2",
+      "primary_url": "https://arxiv.org/html/2507.08296v2",
+      "inspection": "Theorems 1.1–1.2 and proof outline.",
+      "retrieved_on": "2026-10-30"
+    },
+    {
+      "id": "L08",
+      "title": "Small values of the Riemann zeta-function near the critical line",
+      "authors": [
+        "Hung M. Bui",
+        "Alexandra Florea",
+        "André Heycock"
+      ],
+      "namespace": "arXiv",
+      "identifier": "2610.27591",
+      "version": "initial indexed record; full text unavailable",
+      "first_date": "2026-10-20",
+      "date": "2026-10-20",
+      "priority": "P2",
+      "status": "RH-conditional; primary indexed abstract only",
+      "scope": "negative moments and conditional Möbius summatory bound",
+      "overlap": "benchmark for reciprocal-moment programme",
+      "url": "https://arxiv.org/abs/2610.27591",
+      "primary_url": "https://arxiv.org/abs/2610.27591",
+      "inspection": "Primary indexed abstract and author seminar abstract; direct abs/HTML/PDF retrieval failed.",
+      "retrieved_on": "2026-10-30"
+    },
+    {
+      "id": "L09",
+      "title": "Half-sized gaps between zeros of the Riemann zeta function",
+      "authors": [
+        "Andriy Bondarenko",
+        "Winston Heap"
+      ],
+      "namespace": "arXiv",
+      "identifier": "2610.26038",
+      "version": "v1",
+      "first_date": "2026-10-19",
+      "date": "2026-10-19",
+      "priority": "P2",
+      "status": "RH-conditional; primary theorem and key lemmas inspected",
+      "scope": "normalized consecutive-zero gaps",
+      "overlap": "possible signed numerator-denominator technique",
+      "url": "https://arxiv.org/abs/2610.26038v1",
+      "primary_url": "https://arxiv.org/html/2610.26038v1",
+      "inspection": "Theorem 1, Lemmas 1–2, quotient identities and discussion of contour hypotheses.",
+      "retrieved_on": "2026-10-30"
+    },
+    {
+      "id": "L10",
+      "title": "Landau-Siegel zeros over a base field and effective Brauer-Siegel",
+      "authors": [
+        "William D. Banks"
+      ],
+      "namespace": "arXiv",
+      "identifier": "2610.31402",
+      "version": "v2",
+      "first_date": "2026-10-22",
+      "date": "2026-10-26",
+      "priority": "P2",
+      "status": "primary theorem scope inspected; v2 mathematics unchanged",
+      "scope": "real zeros in (0,1) of quadratic relative Hecke L-functions; effective base-field arithmetic",
+      "overlap": "determinant and Artin/descent applications",
+      "url": "https://arxiv.org/abs/2610.31402v2",
+      "primary_url": "https://arxiv.org/html/2610.31402v2",
+      "inspection": "Version history, introduction/main results, section 7.1 and dependencies.",
+      "retrieved_on": "2026-10-30"
+    },
+    {
+      "id": "L11",
+      "title": "Exceptional zeros of Hecke L-functions",
+      "authors": [
+        "Christopher Frei",
+        "Wataru Kai"
+      ],
+      "namespace": "Hexagon",
+      "identifier": "2610.00466",
+      "version": "v2",
+      "first_date": "2026-10-22",
+      "date": "2026-10-29",
+      "priority": "P2",
+      "status": "primary PDF theorem statements inspected",
+      "scope": "real zeros in (0,1) of real-valued Hecke characters over a fixed field, nonunit conductor",
+      "overlap": "new parallel arithmetic method",
+      "url": "https://hexagonmath.org/2610.00466v2",
+      "primary_url": "https://hexagonmath.org/pdf/2610.00466v2",
+      "inspection": "Version history; Theorem 1.1; Proposition 1.2; Lemma 4.2.",
+      "retrieved_on": "2026-10-30"
+    },
+    {
+      "id": "L12",
+      "title": "Zeros of quadratic Dirichlet L-functions",
+      "authors": [
+        "Dave Platt",
+        "Tim Trudgian"
+      ],
+      "namespace": "arXiv",
+      "identifier": "2610.29018",
+      "version": "v1",
+      "first_date": "2026-10-21",
+      "date": "2026-10-21",
+      "priority": "P2",
+      "status": "primary computational theorem inspected; computation not replayed",
+      "scope": "positive real zeros at bounded conductor",
+      "overlap": "explicit quadratic tests and low-conductor evidence",
+      "url": "https://arxiv.org/abs/2610.29018v1",
+      "primary_url": "https://arxiv.org/html/2610.29018v1",
+      "inspection": "Theorem 1 and rigorous computation description.",
+      "retrieved_on": "2026-10-30"
+    },
+    {
+      "id": "L13",
+      "title": "Full-source Schur certificates for Weil positivity at support radius two",
+      "authors": [
+        "bramble_trace"
+      ],
+      "namespace": "rStation",
+      "identifier": "riemann_hypothesis/papers/60",
+      "version": "v1",
+      "first_date": "2026-10-26",
+      "date": "2026-10-26",
+      "priority": "P2 audit",
+      "status": "AI-community manuscript; full text inspected; certificate not replayed",
+      "scope": "claimed fixed-window Weil positivity",
+      "overlap": "Weil-resolvent and Schur-complement programmes",
+      "url": "https://rstation.ai/problems/riemann_hypothesis/papers/60",
+      "primary_url": "https://rstation.ai/problems/riemann_hypothesis/papers/60",
+      "inspection": "Full online manuscript, theorem, domain, Schur constructions and reproduction section.",
+      "retrieved_on": "2026-10-30"
+    },
+    {
+      "id": "L14",
+      "title": "Zeta Lab: finite-height Lean verification through height 100",
+      "authors": [
+        "teal-sea"
+      ],
+      "namespace": "GitHub",
+      "identifier": "teal-sea/zeta-lab:rh_height_lean",
+      "version": "42a0e011468801531010404c4c98a07e82b480e0",
+      "first_date": "2026-10-23",
+      "date": "2026-10-30",
+      "priority": "P2",
+      "status": "actual source inspected; upstream checker acceptance reported; no fresh replay",
+      "scope": "29 simple critical-line zeros through positive height 100",
+      "overlap": "actual-xi formalization and source-fidelity controls",
+      "url": "https://github.com/teal-sea/zeta-lab/blob/42a0e011468801531010404c4c98a07e82b480e0/hunts/rh_height_lean/RESULTS.md",
+      "primary_url": "https://github.com/teal-sea/zeta-lab/blob/42a0e011468801531010404c4c98a07e82b480e0/hunts/rh_height_lean/lean/RHHeight100/Main100.lean",
+      "inspection": "Main100 assembly and CheckMain100 unfolded-type checks; public results log.",
+      "retrieved_on": "2026-10-30"
+    },
+    {
+      "id": "L15",
+      "title": "CA2 numbers and the Riemann hypothesis: a numerical investigation of Ramanujan's inequalities",
+      "authors": [
+        "Dmitry R. Leshchiner",
+        "Oleg R. Musin",
+        "James Thompson"
+      ],
+      "namespace": "arXiv",
+      "identifier": "2610.39120",
+      "version": "v1",
+      "first_date": "2026-10-29",
+      "date": "2026-10-29",
+      "priority": "P3",
+      "status": "new primary numerical study inspected",
+      "scope": "Robin/CA2 experiments and conditional asymptotics",
+      "overlap": "repository Robin and canonical-arithmetic programme",
+      "url": "https://arxiv.org/abs/2610.39120v1",
+      "primary_url": "https://arxiv.org/html/2610.39120v1",
+      "inspection": "Metadata and full HTML, especially mathematical framework and experiment qualifications.",
+      "retrieved_on": "2026-10-30"
+    },
+    {
+      "id": "L16",
+      "title": "More than 8/9 zeros of the Riemann zeta function are simple or on the critical line",
+      "authors": [
+        "Cristian Cobeli",
+        "Alexandru Zaharescu"
+      ],
+      "namespace": "arXiv",
+      "identifier": "2610.23467",
+      "version": "v1",
+      "first_date": "2026-10-16",
+      "date": "2026-10-16",
+      "priority": "P2",
+      "status": "primary theorem and proof components inspected; interval calculation not replayed",
+      "scope": "unconditional union proportion, with multiplicities",
+      "overlap": "Gram/kernel diagnostics; compare prior seven-point repository certificate",
+      "url": "https://arxiv.org/abs/2610.23467v1",
+      "primary_url": "https://arxiv.org/pdf/2610.23467v1",
+      "inspection": "Theorem 1, sections 3–6, Lemma 5.2 and Appendix A computation description.",
+      "retrieved_on": "2026-10-30"
+    },
+    {
+      "id": "L17",
+      "title": "An explicit elementary proof of no Landau-Siegel zeros",
+      "authors": [
+        "Victor Zhenyu Guo"
+      ],
+      "namespace": "arXiv",
+      "identifier": "2610.30476",
+      "version": "v1",
+      "first_date": "2026-10-21",
+      "date": "2026-10-21",
+      "priority": "P2",
+      "status": "primary theorem statement inspected; proof not reconstructed",
+      "scope": "explicit separation of real quadratic Dirichlet zeros",
+      "overlap": "determinant and explicit-real-zero route",
+      "url": "https://arxiv.org/abs/2610.30476v1",
+      "primary_url": "https://arxiv.org/html/2610.30476v1",
+      "inspection": "Theorem 1.1 and Remark 1.2; abstract and version history.",
+      "retrieved_on": "2026-10-30"
+    },
+    {
+      "id": "L18",
+      "title": "The Möbius function at N-p",
+      "authors": [
+        "Jizhou Guo"
+      ],
+      "namespace": "author-GitHub",
+      "identifier": "aster2024/openai-math-followups:mobius-goldbach-shift",
+      "version": "v2 (author repository)",
+      "first_date": "2026-10-22",
+      "date": "2026-10-23",
+      "priority": "P2",
+      "status": "explicitly conditional; author catalogue inspected",
+      "scope": "signed/reflected shifted-prime Möbius sums",
+      "overlap": "follow-up to already-imported HLC source",
+      "url": "https://github.com/aster2024/openai-math-followups/tree/main/mobius-goldbach-shift",
+      "primary_url": "https://github.com/aster2024/openai-math-followups",
+      "inspection": "Author catalogue, version and explicit dependencies; full 65-page proof not audited.",
+      "retrieved_on": "2026-10-30"
+    },
+    {
+      "id": "L19",
+      "title": "On the Hardy-Littlewood-Chowla conjecture",
+      "authors": [
+        "Guangshi Lü",
+        "Zhiwei Wang",
+        "Jie Wu"
+      ],
+      "namespace": "arXiv",
+      "identifier": "2610.20242",
+      "version": "v1",
+      "first_date": "2026-10-14",
+      "date": "2026-10-14",
+      "priority": "baseline",
+      "status": "already imported; version refreshed",
+      "scope": "fixed shifted-prime Möbius cancellation",
+      "overlap": "already present in PR1022",
+      "url": "https://arxiv.org/abs/2610.20242v1",
+      "primary_url": "https://arxiv.org/html/2610.20242v1",
+      "inspection": "Version history, Theorems 1–2 and method provenance; no complete proof audit.",
+      "retrieved_on": "2026-10-30"
+    },
+    {
+      "id": "L20",
+      "title": "Weil's quadratic form via the screw function",
+      "authors": [
+        "Masatoshi Suzuki"
+      ],
+      "namespace": "arXiv",
+      "identifier": "2606.09096",
+      "version": "v3",
+      "first_date": "2026-06-08",
+      "date": "2026-09-23",
+      "priority": "baseline refresh",
+      "status": "primary latest version framework inspected",
+      "scope": "continuous/operator realization and conjectural limiting spectral model",
+      "overlap": "PR1021 cites v1",
+      "url": "https://arxiv.org/abs/2606.09096v3",
+      "primary_url": "https://arxiv.org/html/2606.09096v3",
+      "inspection": "Version history, operator framework and limiting conjecture.",
+      "retrieved_on": "2026-10-30"
+    },
+    {
+      "id": "L21",
+      "title": "A seven-eighths zero-free half-plane for unitary Weil L-functions",
+      "authors": [
+        "Boyang Hu"
+      ],
+      "namespace": "Hexagon",
+      "identifier": "2610.00216",
+      "version": "v1",
+      "first_date": "2026-10-13",
+      "date": "2026-10-13",
+      "priority": "baseline / audit",
+      "status": "broad preprint claim; author discloses incomplete independent human verification",
+      "scope": "claimed unitary Hecke/Weil extension",
+      "overlap": "already used as an explicit conditional interface in PR1023",
+      "url": "https://hexagonmath.org/2610.00216v1",
+      "primary_url": "https://hexagonmath.org/2610.00216v1",
+      "inspection": "Primary abstract/provenance plus repository's source-interface audit; not complete proof.",
+      "retrieved_on": "2026-10-30"
+    },
+    {
+      "id": "L22",
+      "title": "A quasi-Riemann hypothesis for Dedekind zeta functions",
+      "authors": [
+        "Dean Cureton",
+        "Jesse Thorner"
+      ],
+      "namespace": "Hexagon",
+      "identifier": "2610.00200",
+      "version": "v2",
+      "first_date": "2026-10-12",
+      "date": "2026-10-14",
+      "priority": "baseline",
+      "status": "known source; identity/version checked",
+      "scope": "31/32 number-field quasi-RH source",
+      "overlap": "known general-field precursor",
+      "url": "https://hexagonmath.org/2610.00200v2",
+      "primary_url": "https://hexagonmath.org/2610.00200v2",
+      "inspection": "Primary abstract, provenance and version history; no formal replay.",
+      "retrieved_on": "2026-10-30"
+    },
+    {
+      "id": "L23",
+      "title": "A two-slot sextic-cubic probe claiming the boundary 1049/1250",
+      "authors": [
+        "liqsweep (blueberryvertigo)"
+      ],
+      "namespace": "GitHub",
+      "identifier": "GTimG/QuasiRiemannTracker#96",
+      "version": "ab4c5cc7882a47608a63a9967f72d99040833042",
+      "first_date": "2026-10-30",
+      "date": "2026-10-30",
+      "priority": "watchlist",
+      "status": "explicitly no Lean proof; closed unmerged; not an accepted boundary",
+      "scope": "unreviewed paper claim 0.8392",
+      "overlap": "possible alternative architecture requiring independent analytic audit",
+      "url": "https://github.com/GTimG/QuasiRiemannTracker/pull/96",
+      "primary_url": "https://github.com/blueberryvertigo/zero-free-1049-1250",
+      "inspection": "Live PR metadata, author claim, proof-status disclosure and linked repository; full 224-page proof not audited.",
+      "retrieved_on": "2026-10-30"
+    },
+    {
+      "id": "L24",
+      "title": "Sharpness and uniqueness for positive solutions of the explicit formula for zeta(s)",
+      "authors": [
+        "Nic Johns"
+      ],
+      "namespace": "Zenodo/GitHub",
+      "identifier": "23246727",
+      "version": "v1.3",
+      "first_date": "2026-10-08",
+      "date": "2026-10-08",
+      "priority": "watchlist",
+      "status": "AI-authored unreviewed preprint; axiom-dependent formal spine",
+      "scope": "positive explicit-formula solutions and equivalence",
+      "overlap": "possible Weil/linear-programming duality connection",
+      "url": "https://zenodo.org/records/23246727",
+      "primary_url": "https://github.com/nic410/zeta-sharpness-uniqueness",
+      "inspection": "Author deposit and repository scope/axiom-ledger descriptions; not full proof.",
+      "retrieved_on": "2026-10-30"
+    },
+    {
+      "id": "L25",
+      "title": "Discorrelation of the Möbius function with linear phases in short intervals",
+      "authors": [
+        "Javier Pliego",
+        "Mengdi Wang"
+      ],
+      "namespace": "arXiv",
+      "identifier": "2610.11487",
+      "version": "v1 indexed; v2 revision lead unconfirmed",
+      "first_date": "2026-10-08",
+      "date": "2026-10-08",
+      "reported_revision_date": "2026-10-22",
+      "priority": "access-limited lead",
+      "status": "primary indexed abstract; primary v2 unavailable",
+      "scope": "short-interval Möbius exponential sums",
+      "overlap": "possible additive-phase input",
+      "url": "https://arxiv.org/abs/2610.11487",
+      "primary_url": "https://arxiv.org/abs/2610.11487",
+      "inspection": "Primary indexed abstract; direct history/HTML/PDF unavailable; v2 date observed only through a mirror.",
+      "retrieved_on": "2026-10-30"
+    },
+    {
+      "id": "L26",
+      "title": "Zero density in short strips and short-interval bounds toward Hypothesis S",
+      "authors": [
+        "Yangbo Ye"
+      ],
+      "namespace": "arXiv",
+      "identifier": "2610.15989",
+      "version": "initial indexed record; full text unavailable",
+      "first_date": "2026-10-11",
+      "date": "2026-10-11",
+      "priority": "access-limited lead",
+      "status": "primary indexed abstract only",
+      "scope": "ordinate-local zero density",
+      "overlap": "possible localized exceptional-set estimate",
+      "url": "https://arxiv.org/abs/2610.15989",
+      "primary_url": "https://arxiv.org/abs/2610.15989",
+      "inspection": "Indexed primary abstract; full text and version history inaccessible.",
+      "retrieved_on": "2026-10-30"
+    },
+    {
+      "id": "L27",
+      "title": "Amplified moments of the Riemann zeta function",
+      "authors": [
+        "Benjamin Durkan",
+        "Timothy Page"
+      ],
+      "namespace": "arXiv",
+      "identifier": "2606.27323",
+      "version": "v2",
+      "first_date": "2026-06-25",
+      "date": "2026-08-05",
+      "priority": "background correction",
+      "status": "primary theorem statements inspected",
+      "scope": "amplified moment asymptotics and lower bounds",
+      "overlap": "normalization/benchmark for moments",
+      "url": "https://arxiv.org/abs/2606.27323v2",
+      "primary_url": "https://arxiv.org/html/2606.27323v2",
+      "inspection": "Theorems 1–9 and introduction; not a complete proof audit.",
+      "retrieved_on": "2026-10-30"
+    },
+    {
+      "id": "L28",
+      "title": "Fourier optimization and pair correlation problems",
+      "authors": [
+        "Mithun Kumar Das",
+        "Tolibjon Ismoilov",
+        "Antonio Pedro Ramos"
+      ],
+      "namespace": "journal/arXiv",
+      "identifier": "10.4171/RMI/1656",
+      "version": "online journal publication; preprint 2502.05106v1",
+      "first_date": "2025-02-07",
+      "date": "2026-10-22",
+      "priority": "P3",
+      "status": "journal metadata and abstract inspected",
+      "scope": "extremal Fourier problems and correlation averages",
+      "overlap": "kernel design, not a new strip",
+      "url": "https://ems.press/journals/rmi/articles/14300132",
+      "primary_url": "https://arxiv.org/abs/2502.05106",
+      "inspection": "Journal date/abstract and arXiv metadata; full theorem body not audited.",
+      "retrieved_on": "2026-10-30"
+    }
+  ]
+}
