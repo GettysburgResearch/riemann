@@ -1,0 +1,58 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "dependencies": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "runs": [
+    {
+      "script": "arithmetic/replay.py",
+      "exit": 0,
+      "matches_recorded_json": true,
+      "seconds": 1.944,
+      "stderr": ""
+    },
+    {
+      "script": "arithmetic/profile_experiment.py",
+      "exit": 0,
+      "matches_recorded_json": true,
+      "seconds": 0.355,
+      "stderr": ""
+    },
+    {
+      "script": "dynamics/experiments.py",
+      "exit": 0,
+      "matches_recorded_json": true,
+      "seconds": 0.134,
+      "stderr": ""
+    },
+    {
+      "script": "positivity/countermodel.py",
+      "exit": 0,
+      "matches_recorded_json": true,
+      "seconds": 0.458,
+      "stderr": ""
+    },
+    {
+      "script": "positivity/xi_probe.py",
+      "exit": 0,
+      "matches_recorded_json": true,
+      "seconds": 0.336,
+      "stderr": ""
+    },
+    {
+      "script": "heat_trace/check_constants.py",
+      "exit": 0,
+      "matches_recorded_json": true,
+      "seconds": 0.026,
+      "stderr": ""
+    },
+    {
+      "script": "positivity/near_cutoff_check.py",
+      "exit": 0,
+      "matches_recorded_json": true,
+      "stderr": ""
+    }
+  ],
+  "all_passed": true
+}

@@ -1,0 +1,20 @@
+{
+  "status": "exact_rational_constants_passed",
+  "verified_height": 3000000000000,
+  "deletion_height": 2999999999930,
+  "retained_first_upper_offset": 15,
+  "retained_second_interval_offsets": [
+    30,
+    45
+  ],
+  "minimum_retained_rate_gap": 15,
+  "minimum_tail_gap": 25,
+  "exp_three_fourths_lower_rational": "269/128",
+  "derivative_tail_upper_rational": "1108646392822265625/18889465931478580854784",
+  "derivative_tail_upper_decimal": 5.869125134844328e-05,
+  "numerator_tail_upper_rational": "22705078125/154742504910672534362390528",
+  "numerator_tail_upper_decimal": 1.467281283711082e-16,
+  "interval_zero_count_lower_rational": "21/4",
+  "illustrative_binary64_direct_derivative_bound": 5.546154321420398e-09,
+  "limitation": "No new zero verification; no finite-to-cofinal inference."
+}

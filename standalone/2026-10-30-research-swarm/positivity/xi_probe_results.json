@@ -1,0 +1,122 @@
+{
+  "status": "exploratory_only",
+  "target": "xi(1/2)/xi(1/2+u), multiplied by first real-zero factors",
+  "quadrature": "even Fourier trapezoid, binary64; steps/cutoffs (0.25,128), (0.125,256)",
+  "maximum_density_difference": 2.220446049250313e-16,
+  "maximum_relative_density_difference": 3.685856877965622e-16,
+  "all_sampled_curvatures_positive": true,
+  "all_sampled_removal_K_positive": true,
+  "samples": [
+    {
+      "removed_factors": 0,
+      "x": 0.0,
+      "density": 1.8994210510239016,
+      "minus_log_second_derivative": 23.65746056066808,
+      "removal_K": 5236853.9919180805,
+      "removed_density_via_operator": 2.124334091240958
+    },
+    {
+      "removed_factors": 0,
+      "x": 0.1,
+      "density": 1.6881581313810468,
+      "minus_log_second_derivative": 23.207653212117773,
+      "removal_K": 3863275.1330525493,
+      "removed_density_via_operator": 1.8375629729321918
+    },
+    {
+      "removed_factors": 0,
+      "x": 0.2,
+      "density": 1.1905017021266033,
+      "minus_log_second_derivative": 21.892053797578573,
+      "removal_K": 1563260.058700484,
+      "removed_density_via_operator": 1.194172412954317
+    },
+    {
+      "removed_factors": 0,
+      "x": 0.3,
+      "density": 0.6749142391775295,
+      "minus_log_second_derivative": 19.812711108181574,
+      "removal_K": 355086.3286619382,
+      "removed_density_via_operator": 0.5900377878259012
+    },
+    {
+      "removed_factors": 0,
+      "x": 0.4,
+      "density": 0.31400571544219263,
+      "minus_log_second_derivative": 17.140035989531654,
+      "removal_K": 46974.298491175985,
+      "removed_density_via_operator": 0.22590873602462047
+    },
+    {
+      "removed_factors": 1,
+      "x": 0.0,
+      "density": 2.1243340912409585,
+      "minus_log_second_derivative": 29.07202992439719,
+      "removal_K": 32872199.378794707,
+      "removed_density_via_operator": 2.2640830157835476
+    },
+    {
+      "removed_factors": 1,
+      "x": 0.1,
+      "density": 1.8375629729321918,
+      "minus_log_second_derivative": 28.663004052875273,
+      "removal_K": 23394877.679168027,
+      "removed_density_via_operator": 1.921932178898653
+    },
+    {
+      "removed_factors": 1,
+      "x": 0.2,
+      "density": 1.194172412954317,
+      "minus_log_second_derivative": 27.46298200528568,
+      "removal_K": 8500022.80094907,
+      "removed_density_via_operator": 1.1803980833566556
+    },
+    {
+      "removed_factors": 1,
+      "x": 0.3,
+      "density": 0.5900377878259013,
+      "minus_log_second_derivative": 25.551995854682936,
+      "removal_K": 1613591.9015197172,
+      "removed_density_via_operator": 0.5307872648379031
+    },
+    {
+      "removed_factors": 1,
+      "x": 0.4,
+      "density": 0.22590873602462047,
+      "minus_log_second_derivative": 23.059228911382235,
+      "removal_K": 166094.72883045103,
+      "removed_density_via_operator": 0.17810270714091014
+    },
+    {
+      "removed_factors": 2,
+      "x": 0.0,
+      "density": 2.264083015783547,
+      "minus_log_second_derivative": 32.83557804616283
+    },
+    {
+      "removed_factors": 2,
+      "x": 0.1,
+      "density": 1.921932178898653,
+      "minus_log_second_derivative": 32.42987388398543
+    },
+    {
+      "removed_factors": 2,
+      "x": 0.2,
+      "density": 1.1803980833566559,
+      "minus_log_second_derivative": 31.236595721787285
+    },
+    {
+      "removed_factors": 2,
+      "x": 0.3,
+      "density": 0.530787264837903,
+      "minus_log_second_derivative": 29.326032687839742
+    },
+    {
+      "removed_factors": 2,
+      "x": 0.4,
+      "density": 0.17810270714091012,
+      "minus_log_second_derivative": 26.811147743641918
+    }
+  ],
+  "limitations": "No rigorous truncation or rounding bounds; no global positivity or RH inference; zero centers rounded."
+}
