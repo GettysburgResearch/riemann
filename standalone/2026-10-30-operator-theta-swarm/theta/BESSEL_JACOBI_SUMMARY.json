@@ -1,0 +1,145 @@
+{
+  "scope": "ordinary rounded Decimal signs, not directed certificates",
+  "rows": [
+    {
+      "a": "1",
+      "M": 3,
+      "failure_at_180_digits": null,
+      "failure_at_360_digits": null,
+      "agreement": true,
+      "passed_numerical_gate": true,
+      "number_of_stages_at_360_digits": 1,
+      "first_or_final_stage_gamma_at_360_digits": "46868789.01371856473269785392982558795299"
+    },
+    {
+      "a": "5",
+      "M": 3,
+      "failure_at_180_digits": null,
+      "failure_at_360_digits": null,
+      "agreement": true,
+      "passed_numerical_gate": true,
+      "number_of_stages_at_360_digits": 1,
+      "first_or_final_stage_gamma_at_360_digits": "9.027214979679272484463912514602516984206"
+    },
+    {
+      "a": "10",
+      "M": 3,
+      "failure_at_180_digits": null,
+      "failure_at_360_digits": null,
+      "agreement": true,
+      "passed_numerical_gate": true,
+      "number_of_stages_at_360_digits": 1,
+      "first_or_final_stage_gamma_at_360_digits": "1.111560255556724538691551950246571913973"
+    },
+    {
+      "a": "20",
+      "M": 3,
+      "failure_at_180_digits": "nonpositive residue mass at stage 0",
+      "failure_at_360_digits": "nonpositive residue mass at stage 0",
+      "agreement": true,
+      "passed_numerical_gate": false,
+      "number_of_stages_at_360_digits": 1,
+      "first_or_final_stage_gamma_at_360_digits": "-1.263521942742924552397051901132093349614"
+    },
+    {
+      "a": "1",
+      "M": 8,
+      "failure_at_180_digits": "nonpositive residue mass at stage 0",
+      "failure_at_360_digits": "nonpositive residue mass at stage 0",
+      "agreement": true,
+      "passed_numerical_gate": false,
+      "number_of_stages_at_360_digits": 1,
+      "first_or_final_stage_gamma_at_360_digits": "-693382305.1723447761563394013044863011126"
+    },
+    {
+      "a": "5",
+      "M": 8,
+      "failure_at_180_digits": null,
+      "failure_at_360_digits": null,
+      "agreement": true,
+      "passed_numerical_gate": true,
+      "number_of_stages_at_360_digits": 3,
+      "first_or_final_stage_gamma_at_360_digits": "1.179258065894360244719445565179876136065"
+    },
+    {
+      "a": "20",
+      "M": 20,
+      "failure_at_180_digits": "nonpositive residue mass at stage 8",
+      "failure_at_360_digits": "nonpositive residue mass at stage 8",
+      "agreement": true,
+      "passed_numerical_gate": false,
+      "number_of_stages_at_360_digits": 9,
+      "first_or_final_stage_gamma_at_360_digits": "-0.0001090276427800881249054139843923892055426"
+    },
+    {
+      "a": "50",
+      "M": 20,
+      "failure_at_180_digits": null,
+      "failure_at_360_digits": null,
+      "agreement": true,
+      "passed_numerical_gate": true,
+      "number_of_stages_at_360_digits": 9,
+      "first_or_final_stage_gamma_at_360_digits": "0.02460016593949387063894191816311977898130"
+    },
+    {
+      "a": "10",
+      "M": 30,
+      "failure_at_180_digits": "nonpositive residue mass at stage 10",
+      "failure_at_360_digits": "nonpositive residue mass at stage 10",
+      "agreement": true,
+      "passed_numerical_gate": false,
+      "number_of_stages_at_360_digits": 11,
+      "first_or_final_stage_gamma_at_360_digits": "-0.5932938333598706911358960723863912250016"
+    },
+    {
+      "a": "10",
+      "M": 50,
+      "failure_at_180_digits": "nonpositive residue mass at stage 19",
+      "failure_at_360_digits": "nonpositive residue mass at stage 19",
+      "agreement": true,
+      "passed_numerical_gate": false,
+      "number_of_stages_at_360_digits": 20,
+      "first_or_final_stage_gamma_at_360_digits": "-199.9649212810111221923025954764927973810"
+    },
+    {
+      "a": "20",
+      "M": 60,
+      "failure_at_180_digits": "nonpositive residue mass at stage 25",
+      "failure_at_360_digits": "nonpositive residue mass at stage 25",
+      "agreement": true,
+      "passed_numerical_gate": false,
+      "number_of_stages_at_360_digits": 26,
+      "first_or_final_stage_gamma_at_360_digits": "-0.3058899700344856400845623780331827072321"
+    },
+    {
+      "a": "20",
+      "M": 100,
+      "failure_at_180_digits": "nonpositive residue mass at stage 41",
+      "failure_at_360_digits": "nonpositive residue mass at stage 41",
+      "agreement": true,
+      "passed_numerical_gate": false,
+      "number_of_stages_at_360_digits": 42,
+      "first_or_final_stage_gamma_at_360_digits": "-6.212763108299090457889415925529935569953"
+    },
+    {
+      "a": "50",
+      "M": 150,
+      "failure_at_180_digits": "nonpositive residue mass at stage 69",
+      "failure_at_360_digits": "nonpositive residue mass at stage 69",
+      "agreement": true,
+      "passed_numerical_gate": false,
+      "number_of_stages_at_360_digits": 70,
+      "first_or_final_stage_gamma_at_360_digits": "-0.00003219281509381951493053644341581210629370"
+    },
+    {
+      "a": "50",
+      "M": 250,
+      "failure_at_180_digits": "nonpositive residue mass at stage 114",
+      "failure_at_360_digits": "nonpositive residue mass at stage 114",
+      "agreement": true,
+      "passed_numerical_gate": false,
+      "number_of_stages_at_360_digits": 115,
+      "first_or_final_stage_gamma_at_360_digits": "-0.008318466224056617537932184426151532571363"
+    }
+  ]
+}

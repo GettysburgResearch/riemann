@@ -1,0 +1,104 @@
+{
+  "status": "PASS",
+  "arithmetic": "rational outward intervals; full theta and Bessel tails bounded",
+  "criterion_orientation": "Delta<0 gives positive residue; Delta>0 gives negative residue",
+  "rows": [
+    {
+      "a": "1/4",
+      "M": 3,
+      "coefficients_normalized_by_c0": true,
+      "Delta_definition": "(c0+2*c2+8*c3/a)*(8*c3/a^2) - (4*c2/a^2+24*c3/a^3)*(2*c1+4*c2/a+2*c3+16*c3/a^2)",
+      "Delta_lower_rational": "-63256881997133063265572151763707751073628699/5000000000000000000000000000000000000000000000000000000000000000000000",
+      "Delta_upper_rational": "-126513763994266126531144303489456233788002903/10000000000000000000000000000000000000000000000000000000000000000000000",
+      "Delta_lower_float_display": -1.2651376399426613e-26,
+      "Delta_upper_float_display": -1.2651376399426613e-26,
+      "strict_sign": "negative",
+      "sufficient_positive_boundary_gate": true
+    },
+    {
+      "a": "1/2",
+      "M": 3,
+      "coefficients_normalized_by_c0": true,
+      "Delta_definition": "(c0+2*c2+8*c3/a)*(8*c3/a^2) - (4*c2/a^2+24*c3/a^3)*(2*c1+4*c2/a+2*c3+16*c3/a^2)",
+      "Delta_lower_rational": "-74554701078013551630372709265062730577468928797922836842343/5000000000000000000000000000000000000000000000000000000000000000000000",
+      "Delta_upper_rational": "-149109402156027103260745418485193035340930077404967753663143/10000000000000000000000000000000000000000000000000000000000000000000000",
+      "Delta_lower_float_display": -1.491094021560271e-11,
+      "Delta_upper_float_display": -1.491094021560271e-11,
+      "strict_sign": "negative",
+      "sufficient_positive_boundary_gate": true
+    },
+    {
+      "a": "1",
+      "M": 3,
+      "coefficients_normalized_by_c0": true,
+      "Delta_definition": "(c0+2*c2+8*c3/a)*(8*c3/a^2) - (4*c2/a^2+24*c3/a^3)*(2*c1+4*c2/a+2*c3+16*c3/a^2)",
+      "Delta_lower_rational": "-836966401546324693872422507269335639008684564341690905865721733049/10000000000000000000000000000000000000000000000000000000000000000000000",
+      "Delta_upper_rational": "-836966401546324693872422507008370852587064004820528599920815937077/10000000000000000000000000000000000000000000000000000000000000000000000",
+      "Delta_lower_float_display": -8.369664015463248e-05,
+      "Delta_upper_float_display": -8.369664015463248e-05,
+      "strict_sign": "negative",
+      "sufficient_positive_boundary_gate": true
+    },
+    {
+      "a": "2",
+      "M": 3,
+      "coefficients_normalized_by_c0": true,
+      "Delta_definition": "(c0+2*c2+8*c3/a)*(8*c3/a^2) - (4*c2/a^2+24*c3/a^3)*(2*c1+4*c2/a+2*c3+16*c3/a^2)",
+      "Delta_lower_rational": "-178901882014666803916660038361969247969375747978508259428826283947359/5000000000000000000000000000000000000000000000000000000000000000000000",
+      "Delta_upper_rational": "-2862430112234668862666560612726048855718398089515090411119921122271/80000000000000000000000000000000000000000000000000000000000000000000",
+      "Delta_lower_float_display": -0.03578037640293336,
+      "Delta_upper_float_display": -0.03578037640293336,
+      "strict_sign": "negative",
+      "sufficient_positive_boundary_gate": true
+    },
+    {
+      "a": "5",
+      "M": 3,
+      "coefficients_normalized_by_c0": true,
+      "Delta_definition": "(c0+2*c2+8*c3/a)*(8*c3/a^2) - (4*c2/a^2+24*c3/a^3)*(2*c1+4*c2/a+2*c3+16*c3/a^2)",
+      "Delta_lower_rational": "-135445166777322281370311739610714415719588938540814010738191992688327/1000000000000000000000000000000000000000000000000000000000000000000000",
+      "Delta_upper_rational": "-1354451667773222813703117394907255042474722774504448428136479129661947/10000000000000000000000000000000000000000000000000000000000000000000000",
+      "Delta_lower_float_display": -0.13544516677732227,
+      "Delta_upper_float_display": -0.13544516677732227,
+      "strict_sign": "negative",
+      "sufficient_positive_boundary_gate": true
+    },
+    {
+      "a": "10",
+      "M": 3,
+      "coefficients_normalized_by_c0": true,
+      "Delta_definition": "(c0+2*c2+8*c3/a)*(8*c3/a^2) - (4*c2/a^2+24*c3/a^3)*(2*c1+4*c2/a+2*c3+16*c3/a^2)",
+      "Delta_lower_rational": "-91606273007445387553507321256400283395734400570534023112320717156493/5000000000000000000000000000000000000000000000000000000000000000000000",
+      "Delta_upper_rational": "-183212546014890775107014641695165839359626366937806874989288591160933/10000000000000000000000000000000000000000000000000000000000000000000000",
+      "Delta_lower_float_display": -0.018321254601489076,
+      "Delta_upper_float_display": -0.018321254601489076,
+      "strict_sign": "negative",
+      "sufficient_positive_boundary_gate": true
+    },
+    {
+      "a": "20",
+      "M": 3,
+      "coefficients_normalized_by_c0": true,
+      "Delta_definition": "(c0+2*c2+8*c3/a)*(8*c3/a^2) - (4*c2/a^2+24*c3/a^3)*(2*c1+4*c2/a+2*c3+16*c3/a^2)",
+      "Delta_lower_rational": "28700735610034862453253129828354211614135235046299804407858987365169/5000000000000000000000000000000000000000000000000000000000000000000000",
+      "Delta_upper_rational": "57401471220069724906506259939899652383687837532372126182504620301977/10000000000000000000000000000000000000000000000000000000000000000000000",
+      "Delta_lower_float_display": 0.005740147122006972,
+      "Delta_upper_float_display": 0.005740147122006972,
+      "strict_sign": "positive",
+      "sufficient_positive_boundary_gate": false
+    },
+    {
+      "a": "50",
+      "M": 3,
+      "coefficients_normalized_by_c0": true,
+      "Delta_definition": "(c0+2*c2+8*c3/a)*(8*c3/a^2) - (4*c2/a^2+24*c3/a^3)*(2*c1+4*c2/a+2*c3+16*c3/a^2)",
+      "Delta_lower_rational": "904922821808626389328059511152650096806306115855766998897654606939/400000000000000000000000000000000000000000000000000000000000000000000",
+      "Delta_upper_rational": "2827883818151957466650185978974498377427388967662261306549774635889/1250000000000000000000000000000000000000000000000000000000000000000000",
+      "Delta_lower_float_display": 0.002262307054521566,
+      "Delta_upper_float_display": 0.002262307054521566,
+      "strict_sign": "positive",
+      "sufficient_positive_boundary_gate": false
+    }
+  ],
+  "scope": "exact signs for finite M=3 actual source approximants; no RH, no global cofinal result; failed sufficient gate does not imply nonreal zeros"
+}
