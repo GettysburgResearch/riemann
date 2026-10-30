@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "scope": "exact rational constant and algebra checks only",
+  "checks": {
+    "exp3_gt_17_from_e_gt_8_over_3": true,
+    "4pi_lt_13_from_pi_lt_22_over_7": true,
+    "central_interval_log_ratio": true,
+    "log_X_gt_9_from_X_ge_20000_and_e_lt_3": true,
+    "central_count_coefficient": true,
+    "local_count_coefficient": true,
+    "central_phase_lt_half": true,
+    "cos_phase_gt_half_using_one_minus_phase_squared_over_two": true,
+    "tail_geometric_series": true,
+    "tail_below_half_central_mass": true,
+    "positive_remaining_coefficient": true,
+    "shell_identity_10": true,
+    "shell_identity_11": true,
+    "shell_identity_17": true,
+    "shell_identity_100": true,
+    "shell_identity_1000000": true,
+    "retained_exponent_margin": true,
+    "low_order_negative_phase": true,
+    "low_order_log_decay": true,
+    "low_order_envelope_decreasing_at_U1000": true,
+    "low_order_error_lt_one_at_U1000": true,
+    "low_order_error_decreases": true,
+    "large_time_exponent_margin": true,
+    "large_time_gaussian_decreases_at_U1e6": true,
+    "large_time_error_lt_one_at_U1e6": true,
+    "large_time_error_decreases": true,
+    "all_low_orders_covered": true,
+    "published_height_endpoint": true
+  },
+  "check_count": 28,
+  "small_time_phase_bound": "900000001/30000000000",
+  "verified_height_input": 3000000000000,
+  "finite_derivative_endpoint": 1125000000000000000,
+  "unperformed": [
+    "No zeta zero census or external certificate replay",
+    "No evaluation of the high derivatives",
+    "No numerical substitute for the infinite proof or source assumptions"
+  ]
+}
