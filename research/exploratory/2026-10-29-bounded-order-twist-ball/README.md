@@ -106,4 +106,6 @@ For comparison, if \(\psi=\chi_u^j\nu\) with \(\nu^3=1\) and \(j=1,2,3\), then \
 \]
 which is larger than (11), after absorbing a sufficiently small height loss. This is a comparison with that named input, not an exhaustive novelty claim. It remains conditional on the source and candidate interpretations specified above.
 
-**Independent review.** Other_families checked the bounded-order local inertia and fixed-conductor counts, fibre-product and compositum fibers, the corrected named-source comparisons, and the θ/m=3 full-zeta example. The cited moving-density/source and staged-candidate inputs remain external qualifications.
+The [targeted quartic prior-art comparison](../2026-10-29-quartic-theta-twist-prior-art.md) records the scopes and height factors of these and other named results, including the slightly weaker untwisted de Faveri exponent at θ. It is not an exhaustive literature search.
+
+**Independent review.** High_match and Other_families independently checked the bounded-order local inertia and fixed-conductor counts, fibre-product and compositum fibers, the corrected named-source comparisons, and the θ/m=3 full-zeta example. The cited moving-density/source and staged-candidate inputs remain external qualifications.

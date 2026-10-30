@@ -2,6 +2,8 @@
 
 **Status:** External exact-rational Bernstein certificates for source transitions and a conditional return calculation. These are not Lean-compiled source theorems or an established zero-free region. The candidate uses the pinned PR94 chain, the already proposed 1/250 floor-budget patch, source-specific physical/count transfer, and their imported dependencies. Do not treat the numerical work as an independent verification of those inputs or as a proof that the new modules have been implemented.
 
+An isolated v6 closure attempt compiled or hash-reused 176 modules but stopped on the next module at its sampled-memory guard. The [run evidence](v6-failure-evidence/README.md) records the failure and makes clear that no fresh replay of this candidate has been completed.
+
 Starting from step 129 `G(96232839/10^8,3853/2000,1/10)`, consider
 
     step 130b: crossing=831/10000, A=401/1000, D=51/100,
