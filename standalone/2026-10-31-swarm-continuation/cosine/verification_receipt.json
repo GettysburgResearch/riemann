@@ -1,0 +1,23 @@
+{
+  "arithmetic": "exact integers and rational intervals only",
+  "checker_sha256": "bf7a854f2b76e82e57b6e90e273eee35cadc96dbbefa0a0e3e176284990a36cf",
+  "checks": {
+    "checks_active_under_optimization": 1,
+    "exact_dilation_norm_blocks": 1472,
+    "formal_sine_summation_by_parts": 128,
+    "frequency_tail_constant": 1,
+    "log_compensator_inside_native_tail": 23,
+    "mobius_divisor_identity": 4096,
+    "mobius_exact_native_prefix": 354,
+    "mobius_exact_prefix_energy": 9,
+    "native_dilation_cocycle": 24200,
+    "odd_source_moment_interval_overlap": 136,
+    "prefix_compensation_exact_zeros": 354,
+    "prefix_compensation_scalar": 9
+  },
+  "manuscript_sha256": "17b4a55c7cb0845a8f20395d40dbb71fafb1154bf27b01421c4c637db7b9031d",
+  "scope": "Finite normalization and native identity checks. Analytic universal theorems are proved in the manuscript, not certified by this script. No RH proof, norm convergence, or new zero-free boundary is claimed.",
+  "sources_sha256": "d80a792c51286728be9538a8536d6545f7ec195e5eb5229762bf31d743361450",
+  "status": "PASS",
+  "total_checks": 30783
+}

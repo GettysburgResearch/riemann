@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "scope": "Coordinator replay after relocation of the four finite checkers, both normal and optimized. Analytic theorems are reviewed separately. Whole-disk runs are documented in their own certificates and reviews.",
+  "runs": [
+    {
+      "checker": "anchor/verify_anchor_followup.py",
+      "optimized": false,
+      "exit_code": 0,
+      "receipt": "anchor/ANCHOR_FOLLOWUP_CHECKS.json",
+      "byte_identical": true,
+      "output_sha256": "7a479b437c29fb3140ca226b0a2997fcc70b0ac6eaed9020d85a65fe727fe1b2",
+      "elapsed_seconds": 0.062
+    },
+    {
+      "checker": "anchor/verify_anchor_followup.py",
+      "optimized": true,
+      "exit_code": 0,
+      "receipt": "anchor/ANCHOR_FOLLOWUP_CHECKS.json",
+      "byte_identical": true,
+      "output_sha256": "7a479b437c29fb3140ca226b0a2997fcc70b0ac6eaed9020d85a65fe727fe1b2",
+      "elapsed_seconds": 0.106
+    },
+    {
+      "checker": "bessel/verify_companion_structure.py",
+      "optimized": false,
+      "exit_code": 0,
+      "receipt": "bessel/STRUCTURE_CHECKS.json",
+      "byte_identical": true,
+      "output_sha256": "8f0822b2de165dbb2d70e6afdb745e40f9d9ee96009437cf2f3c34934dee907e",
+      "elapsed_seconds": 0.056
+    },
+    {
+      "checker": "bessel/verify_companion_structure.py",
+      "optimized": true,
+      "exit_code": 0,
+      "receipt": "bessel/STRUCTURE_CHECKS.json",
+      "byte_identical": true,
+      "output_sha256": "8f0822b2de165dbb2d70e6afdb745e40f9d9ee96009437cf2f3c34934dee907e",
+      "elapsed_seconds": 0.106
+    },
+    {
+      "checker": "cosine/verify_cosine_native.py",
+      "optimized": false,
+      "exit_code": 0,
+      "receipt": "cosine/verification_receipt.json",
+      "byte_identical": true,
+      "output_sha256": "8560eaff56b747a5f73cff03855fd50c902ba078d69bec5e64adf315713db2f8",
+      "elapsed_seconds": 0.364
+    },
+    {
+      "checker": "cosine/verify_cosine_native.py",
+      "optimized": true,
+      "exit_code": 0,
+      "receipt": "cosine/verification_receipt.json",
+      "byte_identical": true,
+      "output_sha256": "8560eaff56b747a5f73cff03855fd50c902ba078d69bec5e64adf315713db2f8",
+      "elapsed_seconds": 0.461
+    },
+    {
+      "checker": "local_gate/verify_local_gate_controls.py",
+      "optimized": false,
+      "exit_code": 0,
+      "receipt": "local_gate/LOCAL_GATE_CONTROLS.json",
+      "byte_identical": true,
+      "output_sha256": "e72b76cb41de30cec4708408b18e81875931b1548cc011a6bb2bdae8c2b9a125",
+      "elapsed_seconds": 0.522
+    },
+    {
+      "checker": "local_gate/verify_local_gate_controls.py",
+      "optimized": true,
+      "exit_code": 0,
+      "receipt": "local_gate/LOCAL_GATE_CONTROLS.json",
+      "byte_identical": true,
+      "output_sha256": "e72b76cb41de30cec4708408b18e81875931b1548cc011a6bb2bdae8c2b9a125",
+      "elapsed_seconds": 0.612
+    }
+  ]
+}

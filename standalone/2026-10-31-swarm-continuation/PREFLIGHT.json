@@ -1,0 +1,137 @@
+{
+  "status": "PASS",
+  "scope": "Artifact parsing, local links, review identity bindings, receipt consistency and complete primitive replay status. These packaging checks do not prove mathematical claims.",
+  "input_files": 37,
+  "python_ast_parsed": [
+    "anchor/verify_anchor_followup.py",
+    "bessel/companion_probe.py",
+    "bessel/residue_scaling_diagnostic.py",
+    "bessel/source_polynomials.py",
+    "bessel/summarize_residue_scaling.py",
+    "bessel/verify_companion_structure.py",
+    "cosine/verify_cosine_native.py",
+    "local_gate/certify_bessel_window.py",
+    "local_gate/verify_local_gate_controls.py"
+  ],
+  "json_parsed": [
+    "EXACT_REPLAYS.json",
+    "LOCAL_RELOCATED_REPLAY.json",
+    "anchor/ANCHOR_FOLLOWUP_CHECKS.json",
+    "bessel/COMPANION_PROBE.json",
+    "bessel/RESIDUE_SCALING_240.json",
+    "bessel/RESIDUE_SCALING_360.json",
+    "bessel/RESIDUE_SCALING_SUMMARY.json",
+    "bessel/STRUCTURE_CHECKS.json",
+    "cosine/verification_receipt.json",
+    "local_gate/LOCAL_CERTIFICATE_10_50_500.json",
+    "local_gate/LOCAL_CERTIFICATE_20_100_500.json",
+    "local_gate/LOCAL_GATE_CONTROLS.json"
+  ],
+  "local_markdown_links_checked": 19,
+  "review_source_bindings_checked": [
+    {
+      "review": "anchor/REVIEW_ANCHOR.md",
+      "source": "LAGUERRE_WINDOW_BRIDGE.md",
+      "sha256": "a4400b5ef341afecdcbe2a84e050ff5f706b259822b9aeaf8edbd7aa17089fca"
+    },
+    {
+      "review": "anchor/REVIEW_ANCHOR.md",
+      "source": "ANCHOR_BUDGET_OBSTRUCTION.md",
+      "sha256": "60b317d3d85c0e71aa4004ba045ac23d7c030ec597fe94b06adf763ff9c0dd33"
+    },
+    {
+      "review": "anchor/REVIEW_ANCHOR.md",
+      "source": "verify_anchor_followup.py",
+      "sha256": "703e9fcd4cbbe722cafb7f68d4c7648092e53d472fef0dbf61b19f66ce3af7e8"
+    },
+    {
+      "review": "anchor/REVIEW_ANCHOR.md",
+      "source": "ANCHOR_FOLLOWUP_CHECKS.json",
+      "sha256": "7a479b437c29fb3140ca226b0a2997fcc70b0ac6eaed9020d85a65fe727fe1b2"
+    },
+    {
+      "review": "bessel/REVIEW_COFINAL.md",
+      "source": "COFINAL_COMPANION.md",
+      "sha256": "2a66e0ebe6cd9654162e0c1505e478a0ccf4b740f0854192dc34ed6c076116fc"
+    },
+    {
+      "review": "bessel/REVIEW_COFINAL.md",
+      "source": "verify_companion_structure.py",
+      "sha256": "a6b840b7c6a96eb7de8f86127e37b25b899e581d1a72ed3d6a8d73375cf29a17"
+    },
+    {
+      "review": "bessel/REVIEW_COFINAL.md",
+      "source": "STRUCTURE_CHECKS.json",
+      "sha256": "8f0822b2de165dbb2d70e6afdb745e40f9d9ee96009437cf2f3c34934dee907e"
+    },
+    {
+      "review": "bessel/REVIEW_COFINAL.md",
+      "source": "theta/PROOF.md",
+      "sha256": "35b85c39bec2c69f5cffba0986bf61c416d873696829479cc00737cb94b55f37"
+    },
+    {
+      "review": "bessel/REVIEW_COFINAL.md",
+      "source": "theta/BESSEL_BOUNDARY.md",
+      "sha256": "c2e2d3a9db19238d7e802b9f1288546e115d0f6430eb05358ccf4ea92b44498a"
+    },
+    {
+      "review": "cosine/REVIEW_COSINE.md",
+      "source": "COSINE_PHASE_AND_NATIVE_SYNTHESIS.md",
+      "sha256": "17b4a55c7cb0845a8f20395d40dbb71fafb1154bf27b01421c4c637db7b9031d"
+    },
+    {
+      "review": "cosine/REVIEW_COSINE.md",
+      "source": "SOURCES.md",
+      "sha256": "d80a792c51286728be9538a8536d6545f7ec195e5eb5229762bf31d743361450"
+    },
+    {
+      "review": "cosine/REVIEW_COSINE.md",
+      "source": "verify_cosine_native.py",
+      "sha256": "bf7a854f2b76e82e57b6e90e273eee35cadc96dbbefa0a0e3e176284990a36cf"
+    },
+    {
+      "review": "cosine/REVIEW_COSINE.md",
+      "source": "verification_receipt.json",
+      "sha256": "8560eaff56b747a5f73cff03855fd50c902ba078d69bec5e64adf315713db2f8"
+    },
+    {
+      "review": "local_gate/REVIEW_LOCAL_GATE.md",
+      "source": "LOCAL_WINDOW_CERTIFICATE.md",
+      "sha256": "22d7dff1fea511238c036c967bd74d799ffb59dfe4a317185e04715e36de81bc"
+    },
+    {
+      "review": "local_gate/REVIEW_LOCAL_GATE.md",
+      "source": "certify_bessel_window.py",
+      "sha256": "ab83d07bb742ccf2ed3af90168d943b4f3544b33f1433c284b0f220644ae6306"
+    },
+    {
+      "review": "local_gate/REVIEW_LOCAL_GATE.md",
+      "source": "verify_local_gate_controls.py",
+      "sha256": "b88ee0876a6ac64bb270226d4d91964881e7606964c3c798b443d7b88687db84"
+    },
+    {
+      "review": "local_gate/REVIEW_LOCAL_GATE.md",
+      "source": "LOCAL_CERTIFICATE_10_50_500.json",
+      "sha256": "d143656f550fae5822cd9efcbf750b4bbfde11a405452c0f8030d9e040d5ec04"
+    },
+    {
+      "review": "local_gate/REVIEW_LOCAL_GATE.md",
+      "source": "LOCAL_CERTIFICATE_20_100_500.json",
+      "sha256": "1c0323a10287804ef39b5a39f6a0b60acd8e5bedd515c5311b097270f4eb4953"
+    },
+    {
+      "review": "local_gate/REVIEW_LOCAL_GATE.md",
+      "source": "LOCAL_GATE_CONTROLS.json",
+      "sha256": "e72b76cb41de30cec4708408b18e81875931b1548cc011a6bb2bdae8c2b9a125"
+    }
+  ],
+  "primitive_dependency_sha256": "cb4f9cb91d4595295974aae955e7782ac9aa8d1fa83c9a4f80f39ae1e7e30989",
+  "primitive_receipt_consistency": true,
+  "relocated_order_100_optimized_replay": "PASS",
+  "cosine_receipt_source_bindings": true,
+  "diagnostic_summary_source_bindings": true,
+  "excluded_generated_files": [
+    "PREFLIGHT.json",
+    "MANIFEST.json"
+  ]
+}

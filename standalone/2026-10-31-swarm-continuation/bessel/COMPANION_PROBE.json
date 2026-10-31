@@ -1,0 +1,38 @@
+{
+  "scope": "ordinary binary64 quadrature with finite integration and theta cutoffs; not directed or certified; only the first three diagnostic rows are retained",
+  "special_value_control": {
+    "energy": -0.0625,
+    "quadrature": -0.11253953951964073,
+    "exact_special_value_as_binary64": -0.11253953951963826,
+    "absolute_difference": 2.4702462297909733e-15
+  },
+  "rows": [
+    {
+      "E": 49.94761370809682,
+      "z": 14.134725141734709,
+      "Xprime": -0.00019564852876177404,
+      "J": -2906766.4597376287,
+      "angular": 98623887.20868643,
+      "sine": -101530653.66842405,
+      "J_over_Xprime": 14857083148.71599
+    },
+    {
+      "E": 110.48153764352826,
+      "z": 21.02203963877228,
+      "Xprime": 1.68868259313389e-06,
+      "J": 855714416.699562,
+      "angular": 3107358400541.4517,
+      "sine": -3106502686124.7524,
+      "J_over_Xprime": 506734906949867.06
+    },
+    {
+      "E": 156.38574922350386,
+      "z": 25.01085758013938,
+      "Xprime": -1.0117235580868927e-07,
+      "J": -37105503892.52372,
+      "angular": 1354437102457171.0,
+      "sine": -1354474207961063.5,
+      "J_over_Xprime": 3.667553611451725e+17
+    }
+  ]
+}
