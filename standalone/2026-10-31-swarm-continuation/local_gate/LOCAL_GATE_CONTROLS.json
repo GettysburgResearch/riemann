@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "arithmetic": "exact rational intervals",
+  "complex_pole_control": {
+    "boundary_passes": true,
+    "interior_zero_count": 2,
+    "missing_real_coverage_rejected": true
+  },
+  "negative_residue_control": {
+    "boundary_passes": true,
+    "interior_real_poles": 1,
+    "negative_residue_rejected": true
+  },
+  "scope": "Verifies rejection of two mathematically distinct false local-sign shortcuts; no RH assertion."
+}

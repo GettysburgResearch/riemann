@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "checker": "local_gate/certify_bessel_window.py",
+  "checker_sha256": "ab83d07bb742ccf2ed3af90168d943b4f3544b33f1433c284b0f220644ae6306",
+  "parameters": {
+    "a": 20,
+    "M": 100,
+    "energy_radius": 500
+  },
+  "optimized": true,
+  "exit_code": 0,
+  "byte_identical_to_original_receipt": true,
+  "output_sha256": "1c0323a10287804ef39b5a39f6a0b60acd8e5bedd515c5311b097270f4eb4953",
+  "elapsed_seconds": 134.234,
+  "scope": "Coordinator replay of the complete primitive-source certificate after relocation, with optimization enabled. The independent reviewer replayed the order-50 case separately."
+}

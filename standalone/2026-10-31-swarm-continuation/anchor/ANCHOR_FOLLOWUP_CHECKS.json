@@ -1,0 +1,27 @@
+{
+  "arithmetic": "Python Fraction; no floats in acceptance predicates",
+  "certified_scalar_margins": {
+    "fejer_constant": "5419/7600",
+    "log2_positive_series_lower": "842/1215",
+    "ratio_128_margin_lower": "43/4860",
+    "relative_counterexample_lower": "245/121"
+  },
+  "counts": {
+    "budget_safe_constant": 1,
+    "control_null_direction": 1,
+    "cross_projection_geometric_identity": 135,
+    "dilation_column_norm_exact": 15,
+    "dilation_row_norm_majorant": 15,
+    "laguerre_dilation_polynomial_identity": 48,
+    "log2_lower_above_two_thirds": 1,
+    "pole_autocorrelation_moment_identity": 12,
+    "positive_part_control_polynomial": 1,
+    "ratio_128_excludes_old_budget": 1,
+    "relative_budget_control_lower_bound": 1,
+    "weighted_gram_identity": 360,
+    "weighted_schur_majorant": 15
+  },
+  "scope": "Finite algebra, normalization, and rational margins supporting the manuscripts; not a proof of infinite-dimensional convergence, imported compact-window certificates, or RH.",
+  "status": "PASS",
+  "total_exact_checks": 606
+}

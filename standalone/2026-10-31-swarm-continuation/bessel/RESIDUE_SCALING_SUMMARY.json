@@ -1,0 +1,142 @@
+{
+  "scope": "ordinary rounded diagnostics only; agreement at two precisions is not an error bound, a residue-sign proof, or a complete pole census",
+  "cofinal_schedule": "M=ceil(a*(3+2*log(a)))",
+  "working_precisions": [
+    240,
+    360
+  ],
+  "compared_numeric_fields": 48,
+  "largest_relative_difference": "3.965590643223E-106",
+  "source_sha256": {
+    "RESIDUE_SCALING_240.json": "c467bc58bd71f824b684fc7d8ec4e32e1945693bbdfdde73ad551d09114b7599",
+    "RESIDUE_SCALING_360.json": "aa6b32416f09fa50845042a5ff214f90d828c9ed7452cdf6f142f57e08ee0a3d",
+    "source_polynomials.py": "159da4719ec55e5729b6bb1bda505182f4308d6c09b162b8e4af8dc8800e980d",
+    "residue_scaling_diagnostic.py": "0ea07bb393533d6c90c5a0c8ba605127e554a4f6ced173a59eeabe6d02dde984"
+  },
+  "rows": [
+    {
+      "a": 20,
+      "M": 180,
+      "M_over_a": "9",
+      "poles": [
+        {
+          "real_sign_change_index": 1,
+          "energy": "3.705817089548E+1",
+          "residue": "3.171349724362E-8",
+          "residue_divided_by_2pi_a_exp_minus_2a": "5.940370724460E+7",
+          "ratio_to_rounded_limiting_companion_diagnostic": "3.998337982823E-3",
+          "largest_240_vs_360_relative_difference": "1.720063024012E-227"
+        },
+        {
+          "real_sign_change_index": 2,
+          "energy": "7.998890007585E+1",
+          "residue": "2.938481956755E-5",
+          "residue_divided_by_2pi_a_exp_minus_2a": "5.504177623857E+10",
+          "ratio_to_rounded_limiting_companion_diagnostic": "1.086204352148E-4",
+          "largest_240_vs_360_relative_difference": "1.014036712741E-229"
+        },
+        {
+          "real_sign_change_index": 3,
+          "energy": "1.278449942750E+2",
+          "residue": "4.003149231427E-3",
+          "residue_divided_by_2pi_a_exp_minus_2a": "7.498444689759E+12",
+          "ratio_to_rounded_limiting_companion_diagnostic": "2.044537822186E-5",
+          "largest_240_vs_360_relative_difference": "1.870488847757E-228"
+        }
+      ]
+    },
+    {
+      "a": 40,
+      "M": 416,
+      "M_over_a": "10.4",
+      "poles": [
+        {
+          "real_sign_change_index": 1,
+          "energy": "4.233731011255E+1",
+          "residue": "2.733068726576E-24",
+          "residue_divided_by_2pi_a_exp_minus_2a": "6.025169171458E+8",
+          "ratio_to_rounded_limiting_companion_diagnostic": "4.055414025253E-2",
+          "largest_240_vs_360_relative_difference": "9.222363252913E-210"
+        },
+        {
+          "real_sign_change_index": 2,
+          "energy": "9.146134926451E+1",
+          "residue": "1.277466014706E-20",
+          "residue_divided_by_2pi_a_exp_minus_2a": "2.816229527839E+12",
+          "ratio_to_rounded_limiting_companion_diagnostic": "5.557598207818E-3",
+          "largest_240_vs_360_relative_difference": "1.233744153752E-210"
+        },
+        {
+          "real_sign_change_index": 3,
+          "energy": "1.442951613454E+2",
+          "residue": "7.602580553722E-18",
+          "residue_divided_by_2pi_a_exp_minus_2a": "1.676022030855E+15",
+          "ratio_to_rounded_limiting_companion_diagnostic": "4.569868252253E-3",
+          "largest_240_vs_360_relative_difference": "1.255630716723E-211"
+        }
+      ]
+    },
+    {
+      "a": 80,
+      "M": 942,
+      "M_over_a": "11.775",
+      "poles": [
+        {
+          "real_sign_change_index": 1,
+          "energy": "4.574362479854E+1",
+          "residue": "4.112182066265E-58",
+          "residue_divided_by_2pi_a_exp_minus_2a": "2.511421361384E+9",
+          "ratio_to_rounded_limiting_companion_diagnostic": "1.690384638580E-1",
+          "largest_240_vs_360_relative_difference": "1.407545178139E-175"
+        },
+        {
+          "real_sign_change_index": 2,
+          "energy": "9.936879948947E+1",
+          "residue": "5.093119366865E-54",
+          "residue_divided_by_2pi_a_exp_minus_2a": "3.110506433787E+13",
+          "ratio_to_rounded_limiting_companion_diagnostic": "6.138329568290E-2",
+          "largest_240_vs_360_relative_difference": "2.642124175266E-176"
+        },
+        {
+          "real_sign_change_index": 3,
+          "energy": "1.530952309660E+2",
+          "residue": "4.938588564907E-51",
+          "residue_divided_by_2pi_a_exp_minus_2a": "3.016130272719E+16",
+          "ratio_to_rounded_limiting_companion_diagnostic": "8.223828639607E-2",
+          "largest_240_vs_360_relative_difference": "1.660700189215E-176"
+        }
+      ]
+    },
+    {
+      "a": 160,
+      "M": 2105,
+      "M_over_a": "13.15625",
+      "poles": [
+        {
+          "real_sign_change_index": 1,
+          "energy": "4.772526450298E+1",
+          "residue": "6.205547386076E-127",
+          "residue_divided_by_2pi_a_exp_minus_2a": "5.817206146137E+9",
+          "ratio_to_rounded_limiting_companion_diagnostic": "3.915438508280E-1",
+          "largest_240_vs_360_relative_difference": "3.965590643223E-106"
+        },
+        {
+          "real_sign_change_index": 2,
+          "energy": "1.043279928708E+2",
+          "residue": "1.291360271611E-122",
+          "residue_divided_by_2pi_a_exp_minus_2a": "1.210547344421E+14",
+          "ratio_to_rounded_limiting_companion_diagnostic": "2.388915990450E-1",
+          "largest_240_vs_360_relative_difference": "8.104364704611E-107"
+        },
+        {
+          "real_sign_change_index": 3,
+          "energy": "1.561751351429E+2",
+          "residue": "1.229548806842E-119",
+          "residue_divided_by_2pi_a_exp_minus_2a": "1.152604022037E+17",
+          "ratio_to_rounded_limiting_companion_diagnostic": "3.142708407621E-1",
+          "largest_240_vs_360_relative_difference": "5.108617996172E-107"
+        }
+      ]
+    }
+  ]
+}
