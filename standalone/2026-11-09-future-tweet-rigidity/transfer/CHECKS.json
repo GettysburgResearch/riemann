@@ -1,0 +1,184 @@
+{
+  "arithmetic": "exact integers in Q(zeta_6,zeta_q)",
+  "arithmetic_dependency_sha256": "d53793f80b4495ccbb766a05751a524f59be2f1138ab737b340c4bb3e8040267",
+  "cases": [
+    {
+      "checks": {
+        "affine_nonunit_mask": 3,
+        "affine_reindexing": 3,
+        "axis_separated_completion": 1,
+        "chirp_nonzero_permutation": 2,
+        "distinct_vector_moyal": 1,
+        "exact_chirp_support": 98,
+        "negative_erased_diagonal": 1
+      },
+      "chirp": [
+        {
+          "c": 1,
+          "multiplicity": 6,
+          "nonzero_matrix_rank": 6,
+          "nuclear_over_frobenius_squared": 6,
+          "singular_value": 7
+        },
+        {
+          "c": 2,
+          "multiplicity": 6,
+          "nonzero_matrix_rank": 6,
+          "nuclear_over_frobenius_squared": 6,
+          "singular_value": 7
+        }
+      ],
+      "orientation": 1,
+      "q": 7
+    },
+    {
+      "checks": {
+        "affine_nonunit_mask": 3,
+        "affine_reindexing": 3,
+        "axis_separated_completion": 1,
+        "chirp_nonzero_permutation": 2,
+        "distinct_vector_moyal": 1,
+        "exact_chirp_support": 98,
+        "negative_erased_diagonal": 1
+      },
+      "chirp": [
+        {
+          "c": 1,
+          "multiplicity": 6,
+          "nonzero_matrix_rank": 6,
+          "nuclear_over_frobenius_squared": 6,
+          "singular_value": 7
+        },
+        {
+          "c": 2,
+          "multiplicity": 6,
+          "nonzero_matrix_rank": 6,
+          "nuclear_over_frobenius_squared": 6,
+          "singular_value": 7
+        }
+      ],
+      "orientation": 5,
+      "q": 7
+    },
+    {
+      "checks": {
+        "affine_nonunit_mask": 3,
+        "affine_reindexing": 3,
+        "axis_separated_completion": 1,
+        "chirp_nonzero_permutation": 2,
+        "distinct_vector_moyal": 1,
+        "exact_chirp_support": 338,
+        "negative_erased_diagonal": 1
+      },
+      "chirp": [
+        {
+          "c": 1,
+          "multiplicity": 12,
+          "nonzero_matrix_rank": 12,
+          "nuclear_over_frobenius_squared": 12,
+          "singular_value": 13
+        },
+        {
+          "c": 2,
+          "multiplicity": 12,
+          "nonzero_matrix_rank": 12,
+          "nuclear_over_frobenius_squared": 12,
+          "singular_value": 13
+        }
+      ],
+      "orientation": 1,
+      "q": 13
+    },
+    {
+      "checks": {
+        "affine_nonunit_mask": 3,
+        "affine_reindexing": 3,
+        "axis_separated_completion": 1,
+        "chirp_nonzero_permutation": 2,
+        "distinct_vector_moyal": 1,
+        "exact_chirp_support": 338,
+        "negative_erased_diagonal": 1
+      },
+      "chirp": [
+        {
+          "c": 1,
+          "multiplicity": 12,
+          "nonzero_matrix_rank": 12,
+          "nuclear_over_frobenius_squared": 12,
+          "singular_value": 13
+        },
+        {
+          "c": 2,
+          "multiplicity": 12,
+          "nonzero_matrix_rank": 12,
+          "nuclear_over_frobenius_squared": 12,
+          "singular_value": 13
+        }
+      ],
+      "orientation": 5,
+      "q": 13
+    },
+    {
+      "checks": {
+        "affine_nonunit_mask": 3,
+        "affine_reindexing": 3,
+        "axis_separated_completion": 1,
+        "chirp_nonzero_permutation": 2,
+        "distinct_vector_moyal": 1,
+        "exact_chirp_support": 722,
+        "negative_erased_diagonal": 1
+      },
+      "chirp": [
+        {
+          "c": 1,
+          "multiplicity": 18,
+          "nonzero_matrix_rank": 18,
+          "nuclear_over_frobenius_squared": 18,
+          "singular_value": 19
+        },
+        {
+          "c": 2,
+          "multiplicity": 18,
+          "nonzero_matrix_rank": 18,
+          "nuclear_over_frobenius_squared": 18,
+          "singular_value": 19
+        }
+      ],
+      "orientation": 1,
+      "q": 19
+    },
+    {
+      "checks": {
+        "affine_nonunit_mask": 3,
+        "affine_reindexing": 3,
+        "axis_separated_completion": 1,
+        "chirp_nonzero_permutation": 2,
+        "distinct_vector_moyal": 1,
+        "exact_chirp_support": 722,
+        "negative_erased_diagonal": 1
+      },
+      "chirp": [
+        {
+          "c": 1,
+          "multiplicity": 18,
+          "nonzero_matrix_rank": 18,
+          "nuclear_over_frobenius_squared": 18,
+          "singular_value": 19
+        },
+        {
+          "c": 2,
+          "multiplicity": 18,
+          "nonzero_matrix_rank": 18,
+          "nuclear_over_frobenius_squared": 18,
+          "singular_value": 19
+        }
+      ],
+      "orientation": 5,
+      "q": 19
+    }
+  ],
+  "scope": "finite identity and separation-cost checks; no native asymptotic claim",
+  "source_sha256": "a27e2691601d76f83fdc3a09e98ca30d32bf5657718344853e59611820282748",
+  "status": "PASS",
+  "total_predicates": 2382
+}

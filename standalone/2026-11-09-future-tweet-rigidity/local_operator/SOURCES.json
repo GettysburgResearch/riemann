@@ -1,0 +1,32 @@
+{
+  "read_date": "2026-11-09",
+  "repository": "GettysburgResearch/riemann",
+  "sources": [
+    {
+      "commit": "de3403df774ae0eaddfaeb9bae045ea7c9250b69",
+      "path": "standalone/2026-10-23-structured-moment-gains/fifth-pass/SEXTIC_ROW_PHASE_CANCELLATION.md",
+      "git_blob": "3a5d7adcc24ec8907be5c8fd6879d81736d44788",
+      "url": "https://github.com/GettysburgResearch/riemann/blob/de3403df774ae0eaddfaeb9bae045ea7c9250b69/standalone/2026-10-23-structured-moment-gains/fifth-pass/SEXTIC_ROW_PHASE_CANCELLATION.md",
+      "usage": "Exact Gauss-phase coefficient and original natural-zero conventions; no full zero-free claim imported."
+    },
+    {
+      "commit": "de3403df774ae0eaddfaeb9bae045ea7c9250b69",
+      "path": "standalone/2026-10-23-structured-moment-gains/fifth-pass/PR1019_COEFFICIENT_TRANSFER_AUDIT.md",
+      "git_blob": "945847ee7d1bc1ba0836f916dfabb01b9ae56a9b",
+      "url": "https://github.com/GettysburgResearch/riemann/blob/de3403df774ae0eaddfaeb9bae045ea7c9250b69/standalone/2026-10-23-structured-moment-gains/fifth-pass/PR1019_COEFFICIENT_TRANSFER_AUDIT.md",
+      "usage": "Actual raw-inverse coefficient differs by a free-column Mobius factor from the structured moment theorem."
+    },
+    {
+      "commit": "1319373815ee408146705b25a426fba6b22ed755",
+      "path": "standalone/2026-10-18-five-route-zero-preserving-attack/PAIRED_PROBES.md",
+      "git_blob": "97456319ca96968ce599440a3fe41762c9429ca7",
+      "url": "https://github.com/GettysburgResearch/riemann/blob/1319373815ee408146705b25a426fba6b22ed755/standalone/2026-10-18-five-route-zero-preserving-attack/PAIRED_PROBES.md",
+      "usage": "Prior scalar notch/source-pole preservation; not claimed as new here."
+    }
+  ],
+  "external_analytic_warning": {
+    "url": "https://arxiv.org/html/2511.09459v2",
+    "sections_read": ["Theorem 1.1", "Remark 1.2", "Theorem 9.1"],
+    "usage": "Cross-review of sibling analytic interface only; no FKMS theorem is needed for the local frame proof. Remark 1.2 excludes assuming an available polynomial complexity dependence."
+  }
+}
