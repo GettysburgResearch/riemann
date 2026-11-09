@@ -1,0 +1,80 @@
+{
+  "part_A_exact_identities": {
+    "A1_codec_moduli": 12,
+    "A2_orientation_pairs": 62,
+    "A2_pairs_where_native_differs_from_physical": 43,
+    "A3_local_values": "g(m p^3, p^j) = 0, 0, 0, -N(p)^3, 0 for j = 1..5",
+    "A4_twisted_multiplicativity_pairs": 7,
+    "A5_poisson_instances": 11,
+    "A6_local_factor": "1 - N(p)^(3-4s) on raw moduli, i.e. 1 - N(p)^(1-4s) normalized"
+  },
+  "part_B_exponents": {
+    "B1_sextic_control": {
+      "min_exponent_of_M1_squared": "5/6",
+      "at_a": "1",
+      "zero_free_abscissa": "11/12"
+    },
+    "B1_quartic": {
+      "min_exponent_of_M1_squared": "1",
+      "attained_for_a_in": "[0, 1]",
+      "E(1)": "5/4",
+      "E(4/3)": "17/12",
+      "sqrt_cancellation_from_a": "15/11",
+      "amplifier_nontrivial_below_a": "4/3"
+    },
+    "B1b_quartic_direct_sieve_only": {
+      "sqrt_cancellation_from_a": "3/2",
+      "same_as_best_case_for_a_up_to": "4/3"
+    },
+    "B1c_versus_PR1019_Q12": {
+      "Q12_at_a=1": "17/12",
+      "direct_sieve_at_a=1": "5/4",
+      "target_at_a=1": "1"
+    },
+    "B2_quartic_with_ideal_dual_sieve": {
+      "min_exponent_of_M1_squared": "1",
+      "sqrt_cancellation_from_a": "4/3"
+    },
+    "B2_hypothetical_degree_2_quartic": {
+      "min_exponent_of_M1_squared": "6/7",
+      "at_a": "8/7"
+    },
+    "B3_sextic_control": {
+      "least_abscissa": "11/12",
+      "at": "lx = ly = 1/2",
+      "LOW": "11/12",
+      "HIGH_threshold": "5/6"
+    },
+    "B3_quartic": {
+      "least_abscissa": "1",
+      "at": "lx = ly = 1/2",
+      "LOW": "1",
+      "HIGH_threshold": "3/4",
+      "LOW_below_1_requires": "lx + ly < 2/3",
+      "HIGH_below_1_requires": "lx + ly > 2/3"
+    },
+    "B4_criterion": {
+      "sextic over Q(omega)": {
+        "amplifier_needs_K_above_D^": "4/5",
+        "reflection_needs_K_below_D^": "1",
+        "verdict": "open window"
+      },
+      "quartic over Q(i)": {
+        "amplifier_needs_K_above_D^": "2/3",
+        "reflection_needs_K_below_D^": "2/3",
+        "verdict": "zero margin"
+      },
+      "order 10 over Q(zeta_5)": {
+        "amplifier_needs_K_above_D^": "8/9",
+        "reflection_needs_K_below_D^": "1/2",
+        "verdict": "closed"
+      },
+      "order 14 over Q(zeta_7)": {
+        "amplifier_needs_K_above_D^": "12/13",
+        "reflection_needs_K_below_D^": "1/3",
+        "verdict": "closed"
+      }
+    },
+    "B5_reviving_lemma": "sum_{N(k)<=K} |S_k(D)|^2 << D^(-eta) K^(3/4) D^(1/2) for some D^(2/3) < K < D^2"
+  }
+}
