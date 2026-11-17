@@ -27,7 +27,7 @@ def taylor_X(j, K, dps=200):
         term = (-1)**l * r**(2 * l) / mp.factorial(2 * l)
         while True:
             s += term
-            if abs(term) < mp.mpf(10)**(-dps + 5) * (abs(s) + mp.mpf(10)**(-dps)) and l > r:
+            if l > r and abs(term) < mp.mpf(10)**(-dps + 5) * abs(s):   # purely relative tolerance (bug fix: no absolute floor)
                 break
             l += 1; term = term * (-1) * r**2 / ((2 * l) * (2 * l - 1))
         return s / r**(2 * n + 2)
@@ -61,7 +61,7 @@ def count_sign_changes(alpha, d, M_per=40, prec=2000):
 if __name__ == "__main__":
     t0 = time.time()
     res = []
-    plan = {10: [110, 118, 119, 125], 20: [400, 470, 480, 490, 520, 600, 700, 749, 750, 760]}
+    plan = {10: list(range(116, 124)), 20: [400, 470, 475, 478, 479, 480, 481, 482, 485, 490, 520, 600, 700, 749, 750, 760], 40: [1880, 1890, 1895, 1897, 1898, 1900]}
     for j, ds in plan.items():
         alpha, ab = taylor_X(j, max(ds) + 2, dps=400)
         for d in ds:

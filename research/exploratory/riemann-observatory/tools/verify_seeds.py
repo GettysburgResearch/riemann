@@ -66,6 +66,8 @@ def match_pool(seed, index):
 def match_zbmath(seed):
     sn = surname(seed["authors"][0]) if seed.get("authors") else ""
     words = [w for w in norm(seed["title"]).split() if w not in STOP][:6]
+    if len(words) < 2:
+        words = [w for w in norm(seed.get("title_en") or "").split() if w not in STOP][:6]
     if not words:
         return None
     q = "ti:" + " ".join(words) + (f" & au:{sn}" if sn else "")
@@ -130,10 +132,10 @@ def main(seeds_path, pool_path, out_path):
     done = set()
     if os.path.exists(out_path):
         done = {json.loads(l)["seed_id"] for l in open(out_path)}
-    with open(out_path, "a") as f:
-        for s in seeds:
-            if s["seed_id"] in done:
-                continue
+    import concurrent.futures, threading
+    lock = threading.Lock()
+    f = open(out_path, "a")
+    def work(s):
             res = {"seed_id": s["seed_id"], "status": "unverified"}
             m = match_pool(s, index)
             if m:
@@ -150,7 +152,13 @@ def main(seeds_path, pool_path, out_path):
                         a = match_arxiv(s)
                         if a:
                             res.update(status="verified", **a)
-            f.write(json.dumps(res, ensure_ascii=False) + "\n"); f.flush()
+            res.pop("raw", None)
+            with lock:
+                f.write(json.dumps(res, ensure_ascii=False) + "\n"); f.flush()
+    todo = [s for s in seeds if s["seed_id"] not in done]
+    with concurrent.futures.ThreadPoolExecutor(6) as ex:
+        list(ex.map(work, todo))
+    f.close()
 
 if __name__ == "__main__":
     main(*sys.argv[1:4])
