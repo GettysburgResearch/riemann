@@ -78,6 +78,26 @@ class TestFunction:
             out[s:s + chunk] = np.cos(np.outer(zz, self.u)) @ wp
         return out.reshape(z.shape)
 
+    def hat_real(self, x, chunk=2000):
+        """phihat at REAL arguments (real arithmetic, faster)."""
+        x = np.asarray(x, dtype=float)
+        flat = x.ravel()
+        out = np.empty(flat.shape, dtype=float)
+        wp = 2.0 * self.w * self.phiu
+        for s in range(0, flat.size, chunk):
+            out[s:s + chunk] = np.cos(np.outer(flat[s:s + chunk], self.u)) @ wp
+        return out.reshape(x.shape)
+
+    def F_of_x(self, x, al, alp):
+        """F = (phi e^{i al .}) * (phi e^{i alp .}) (convolution), so that F^(tau) = phihat(tau-al) phihat(tau-alp)."""
+        x = np.atleast_1d(np.asarray(x, dtype=float))
+        uu = np.concatenate([-self.u[::-1], self.u]); ww = np.concatenate([self.w[::-1], self.w])
+        pu = phi(uu, self.L, self.window)
+        res = []
+        for xv in x:
+            res.append(np.sum(ww * pu * np.exp(1j * al * uu) * phi(xv - uu, self.L, self.window) * np.exp(1j * alp * (xv - uu))))
+        return np.array(res)
+
     def hat_phi2(self, z, chunk=4000):
         """(phi^2)^(z) = 2 int_0^{L/2} phi(u)^2 cos(u z) du."""
         z = np.asarray(z, dtype=complex)

@@ -17,8 +17,11 @@ import json, os, re, sys, collections
 FAM_FLOOR = {"A": 200, "B": 170, "C": 100, "D": 70, "E": 100, "F": 70, "G": 40, "H": 35}
 ST_FLOOR = {"S1": 15, "S2": 90, "S3": 100, "S4": 150, "S5": 170, "S6": 150, "S7": 80}
 
+import unicodedata
 def norm(s):
-    return re.sub(r"[^a-z0-9]", "", (s or "").lower())[:50]
+    s = unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode().lower()
+    s = re.sub(r"\\[a-z]+|\$|[{}]", "", s)
+    return re.sub(r"[^a-z0-9]", "", s)[:60]
 
 def main(wd, target):
     C = {json.loads(l)["cand_id"]: json.loads(l) for l in open(os.path.join(wd, "candidates.jsonl"))}
@@ -26,12 +29,17 @@ def main(wd, target):
     l1 = set(open(os.path.join(wd, "l1_cands.txt")).read().split()) if os.path.exists(os.path.join(wd, "l1_cands.txt")) else set()
     sel, seen, notes = [], {}, {}
     def key(c):
-        return (norm(c.get("title")), norm(((c.get("authors") or [""])[0]).split(",")[0])[:12])
+        return norm(c.get("title"))
+    def yr(c):
+        try:
+            return int(str(c.get("year"))[:4])
+        except Exception:
+            return 0
     def add(cid, why):
         c = C[cid]
         k = key(c)
-        if k in seen:
-            notes[cid] = f"duplicate of {seen[k]}"
+        if k in seen and abs(yr(C[seen[k]]) - yr(c)) <= 3 and len(k) >= 15:
+            notes[cid] = f"duplicate of {seen[k]} (same work, other index/version)"
             return False
         seen[k] = cid
         sel.append(cid)
@@ -40,6 +48,11 @@ def main(wd, target):
     for cid in order:
         if cid in l1:
             add(cid, "L1")
+    ov = json.load(open(os.path.join(wd, "overrides.json"))) if os.path.exists(os.path.join(wd, "overrides.json")) else {}
+    for cid in order:
+        if cid in ov and cid not in sel:
+            if add(cid, "override"):
+                notes[cid] = ov[cid]
     for cid in order:
         t = T.get(cid)
         if t and t["decision"] == "include" and t["relevance"] >= 4 and cid not in sel:
@@ -85,7 +98,9 @@ def main(wd, target):
         notes[cid] = "crank_cap"
     for cid in C:
         t = T.get(cid)
-        if cid not in sel and cid not in notes and t:
+        if cid in sel:
+            continue
+        if cid not in notes and t:
             notes[cid] = ("rejected: " + t.get("reject_reason", "")) if t["decision"] == "reject" else f"not selected ({t['decision']}, relevance {t['relevance']}): below fill threshold"
     fam, st = counts()
     json.dump({"selected": sel, "notes": notes, "family_counts": dict(fam), "stratum_counts": dict(st)}, open(os.path.join(wd, "selection.json"), "w"), indent=0)
