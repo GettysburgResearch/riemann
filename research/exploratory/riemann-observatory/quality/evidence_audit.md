@@ -30,7 +30,7 @@ All verification in this archive was done by **AI agents**. Independence means a
 * **Level 0**: all 1,000 selected works (identifier resolved in zbMATH, Crossref or arXiv, or an authoritative digitization).
 * **Level 0+**: 373 works have content summaries from index content only (arXiv abstract / zbMATH review). These are not readings.
 * **Level 1**: 108 full-text and 46 partial-text readings. Partial means OCR-limited scans, long monographs read in part, or extraction losses (see §4).
-* **Level 2**: targeted audits of specific claims in 12 works (8 flag targets, the OpenAI 11/12 manuscript, Alpöge–Furman, Lamzouri (comparison), the Landau–Siegel papers of OpenAI/Banks/Kerr/Guo), plus campaign-level checks.
+* **Level 2**: targeted audits of specific claims in 15 works (8 flag targets, the OpenAI 11/12 manuscript, Alpöge–Furman, Lamzouri (comparison), and the Landau–Siegel papers of OpenAI, Banks, Kerr and Guo), plus campaign-level checks.
 * **Level 3** (advocate/skeptic/adjudicator): 5 adjudications in the 2026-claims audit, 4 in the flag audits, and campaign adjudications.
 
 No work in the corpus was audited completely at Level 2 except the OpenAI 11/12 manuscript (section by section, with imported results checked against statements but not re-proved).
