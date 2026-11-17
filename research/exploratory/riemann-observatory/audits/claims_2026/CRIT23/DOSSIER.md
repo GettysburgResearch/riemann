@@ -29,7 +29,8 @@ Exact sources or dependencies:
 What was actually run:
         Earlier audits:
           - line-by-line reading of AF and LZ in full, KN (Sections 2, 3, 5, 6, App. A) and BGSTB24 (Sections 2-3);
-          - hand re-derivation of every load-bearing step S1-S10, except the error terms of BGSTB24 Thm 1 / [GM87];
+          - hand re-derivation of every load-bearing step S1-S10, except the error terms of BGSTB24 Thm 1 / [GM87]
+            and KN's three computer searches (S10e);
           - 11 part-1/part-2 audit scripts and 2 adjudication scripts (floating point, sympy exact, Lipschitz grids).
         This dossier:
           - arXiv API status check;
@@ -54,7 +55,7 @@ Smallest remaining gap:
 * **Proofs.** Two proofs exist and they share no unverified lemma.
   * AF: the argument was "discovered and written by Claude"; the human authors verified it.
   * LZ: an independent, human-written proof composed after reading AF.
-* **Audit result.** All ten load-bearing steps were re-derived. The headline constants were recomputed, and now also enclosed in ball arithmetic. One local error in a proof step was found, with explicit witnesses (P1-F1, AF Prop 4.2), and repaired; the Proposition and every theorem are unaffected. Every other finding is presentation-level.
+* **Audit result.** All ten load-bearing steps were re-derived, except the BGSTB24 Thm 1 error terms and KN's computer searches. The headline constants were recomputed, and now also enclosed in ball arithmetic. One local error in a proof step was found, with explicit witnesses (P1-F1, AF Prop 4.2), and repaired; the Proposition and every theorem are unaffected. Every other finding is presentation-level.
 * **Refinements.** KN's improvements (0.6735382…, 0.8390045…) additionally depend on three unreplayed computer searches. All the algebra and data around those searches were reproduced.
 * **What the mechanism is.** It is Montgomery's 1973 pair-correlation second-moment argument with RH replaced by an inertia / rank–trace (equivalently Bessel) inequality. The 2/3 is Montgomery's RH-conditional number; it is not an increment over the mollifier method.
 * **Limits.** The method's ceiling with Fourier support [−1, 1] is about 0.682 for zeros on the line (author-stated, not audited). It is insensitive to o(N) off-line zeros, so even a 100% version would not imply RH.
@@ -243,7 +244,7 @@ In closed form:
 **The positivity barrier (our reading).**
 * BGSTB24 Thm 1 proves F(α) ≥ 0 for **all** α unconditionally.
 * That sign goes the wrong way for these certificates. They need an *upper* bound on ΣK², and the relevant Fourier weight r = f∗f (up to LZ's lower-order Q″ term) is nonnegative because f = η² ≥ 0. Knowing F ≥ 0 off [−1, 1] therefore only bounds ΣK² from below.
-* Chirre–Gonçalves–de Laat's RH-conditional gain to 0.6792 uses positivity inside a termwise SDP. AF state that it is "a regime the present method does not enter".
+* Chirre–Gonçalves–de Laat's RH-conditional gain to 0.6792 uses this positivity in a semidefinite programme built on the RH (termwise) reading of the zero side. AF state that it is "a regime the present method does not enter" (AF §1.1).
 * Exploiting it unconditionally would need non-square kernels, and those lose the operator identity ΣK² = tr A² on which the inertia/Bessel step rests.
 
 ### 7.4 Higher moments
@@ -256,8 +257,8 @@ The unverified report D-2 claims otherwise. We have not inspected it.
 
 ### 7.5 Even 100% would not be RH
 
-* The extremal behaviour is insensitive to o(N) off-line zeros: rank P ≤ d = N(1 + o(1)) is the only ceiling.
-* So even an unconditional "100%" from this mechanism would leave RH open. AF §7.2(f): "RH itself is out of reach of the mechanism."
+* The trivial ceiling of the mechanism is rank P ≤ d = N(1 + o(1)), i.e. 100% (AF §7.2(a)).
+* A 100% lim inf statement still allows o(N), possibly infinitely many, off-line zeros. So even an unconditional "100%" from this mechanism would exclude no individual off-line zero and would leave RH open. AF §7.2(f): "RH itself is out of reach of the mechanism."
 
 ### 7.6 Note on the "Siegel method" clause of the task template
 

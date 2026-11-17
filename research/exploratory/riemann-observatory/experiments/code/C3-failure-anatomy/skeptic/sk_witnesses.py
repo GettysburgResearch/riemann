@@ -94,9 +94,22 @@ def atiyah():
     return {"degree": D, "matrix_lower_triangular_in_c_{m-1}": True, "det": str(det)[:40], "nonsingular": det != 0}
 
 def bbm():
+    # mpmath Hurwitz zeta for x <= 1e6 (mpmath's sieve overflows memory for a ~ 1e10); for larger x an explicit
+    # Euler-Maclaurin sum: zeta(s,a) = sum_{n<M} (a+n)^{-s} + (a+M)^{1-s}/(s-1) + (a+M)^{-s}/2
+    #   + sum_k B_{2k}/(2k)! (s)_{2k-1} (a+M)^{-s-2k+1}   with M = 0 (a is huge), 8 Bernoulli terms.
     mp.mp.dps = 30
-    rho = mp.zetazero(1)
-    return {str(x): mp.nstr(abs(mp.zeta(rho, x+1))*abs(rho-1)/mp.sqrt(x), 15) for x in (1e2, 1e4, 1e6, 1e8, 1e10)}
+    rho = mp.zetazero(1); out = {}
+    for x in (1e2, 1e4, 1e6, 1e8, 1e10):
+        a = mp.mpf(x) + 1
+        if x <= 1e6:
+            z = mp.zeta(rho, a); how = "mpmath.zeta(s,a)"
+        else:
+            z = a**(1-rho)/(rho-1) + a**(-rho)/2
+            for k in range(1, 9):
+                z += mp.bernoulli(2*k)/mp.factorial(2*k)*mp.rf(rho, 2*k-1)*a**(-rho-2*k+1)
+            how = "explicit Euler-Maclaurin"
+        out[str(x)] = [mp.nstr(abs(z)*abs(rho-1)/mp.sqrt(x), 15), how]
+    return out
 
 def queme():
     mp.mp.dps = 30
