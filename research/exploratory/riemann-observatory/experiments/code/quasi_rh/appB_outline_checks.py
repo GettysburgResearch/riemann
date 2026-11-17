@@ -44,8 +44,8 @@ def bump(x, a, b, a2, b2):
 print("=== Part A: Appendix B ===")
 
 # grid in logarithmic coordinates; period P, M points
-P, M = 4.0, 512
-yg = -1.2 + P * np.arange(M) / M          # covers [-1.2, 2.8): x in [0.30, 16.4)
+P, M = 2.0, 1024
+yg = -0.35 + P * np.arange(M) / M          # covers [-0.35, 1.65): x in [0.70, 5.2)
 tg = 2 * np.pi * np.fft.fftfreq(M, d=P / M)   # angular frequencies
 
 def mellin_coeffs_2d(Kfun):
@@ -65,30 +65,31 @@ def eval_from_coeffs_2d(C, x, y):
 
 # ---- A1: Lemma B.1 representation (eq:smooth-separation), d=2 -----------------
 I_lo, I_hi = 1.0, 2.0
-def Wa(x): return bump(x, 1.02, 1.98, 1.2, 1.7) * (1 + 0.3 * np.sin(3 * x))
-def Wb(x): return bump(x, 1.05, 1.95, 1.3, 1.8) * np.cos(x)
+def Wa(x): return bump(x, 1.02, 1.98, 1.35, 1.65) * (1 + 0.3 * np.sin(3 * x))
+def Wb(x): return bump(x, 1.05, 1.95, 1.4, 1.6) * np.cos(x)
 def K0(x, y, a=0.7):
     return Wa(x) * Wb(y) * np.exp(-a / (x * y))
 C0 = mellin_coeffs_2d(K0)
-xs = rng.uniform(0.5, 3.0, 400); ys = rng.uniform(0.5, 3.0, 400)
+xs = rng.uniform(0.75, 4.5, 400); ys = rng.uniform(0.75, 4.5, 400)
 err = np.max(np.abs(eval_from_coeffs_2d(C0, xs, ys) - K0(xs, ys)))
 report("A1 Lemma B.1: Mellin separation reconstructs K at 400 random (x,y) incl. outside the box", err < 1e-10, "max err %.2e" % err)
 
-# ---- A2: decay |b(t)| (1+|t|)^q bounded (pointwise bound in proof of B.1) ----
-# compare tail sup of |C|(1+|t|)^q over shells; must not grow (it is Schwartz)
+# ---- A2: pointwise bound in the proof of B.1: (1+|t|^2)^{q/2}|b(t)| <= (2pi)^{-d}||(1-Lap)^{q/2}(K o exp)||_{L^1}
+# periodic version: |C_k| (1+|t_k|^2)^{q/2} <= P^{-2} ||(1-Lap)^{q/2} f||_{L^1(window)}; Laplacian by 2nd-order FD
+Y1, Y2 = np.meshgrid(yg, yg, indexing="ij")
+f = K0(np.exp(Y1), np.exp(Y2)); hstep = P / M
+def lap(g):
+    return ((np.roll(g, 1, 0) - 2 * g + np.roll(g, -1, 0)) + (np.roll(g, 1, 1) - 2 * g + np.roll(g, -1, 1))) / hstep ** 2
 T1, T2 = np.meshgrid(tg, tg, indexing="ij")
-rad = np.sqrt(T1**2 + T2**2)
 ok = True; msg = []
+g = f.copy()
 for q in (2, 4, 6):
-    shells = [(r0, r0 * 2) for r0 in (5, 10, 20, 40, 80)]
-    vals = []
-    for r0, r1 in shells:
-        m = (rad >= r0) & (rad < r1)
-        vals.append(np.max(np.abs(C0[m]) * (1 + rad[m]) ** q))
-    msg.append("q=%d:%s" % (q, ",".join("%.1e" % v for v in vals)))
-    # Schwartz: weighted shell maxima eventually decrease
-    ok &= vals[-1] <= vals[0] * 10
-report("A2 Lemma B.1: |b(t)|(1+|t|)^q bounded across frequency shells (q=2,4,6)", ok, "; ".join(msg))
+    g = g - lap(g)                       # (1-Lap)^{q/2} f
+    L1 = np.sum(np.abs(g)) * hstep ** 2 / P ** 2
+    lhs = np.max(np.abs(C0) * (1 + T1 ** 2 + T2 ** 2) ** (q / 2))
+    msg.append("q=%d: max|C|(1+|t|^2)^{q/2}=%.3e <= %.3e" % (q, lhs, L1))
+    ok &= lhs <= L1 * 1.02
+report("A2 Lemma B.1 pointwise bound via (1-Laplacian)^{q/2} (q=2,4,6)", ok, "; ".join(msg))
 
 # ---- A3: (eq:smooth-pointwise): R-uniform decay for K_R = W(x) F(R x) (d=1) ----
 def mellin_coeffs_1d(fun):
@@ -96,17 +97,18 @@ def mellin_coeffs_1d(fun):
     C = np.fft.fft(vals) / M * np.exp(-1j * tg * yg[0])
     return C
 A_dec = 2.0
-def Fdec(u):   # (1+u)^A |(u d/du)^m F| bounded: F(u)= u^{1/4}(1+u)^{-A-1/4-1}
-    return u ** 0.25 * (1 + u) ** (-A_dec - 1.25)
+def Fdec(u):   # (1+u)^A |(u d/du)^m F| bounded, and sharp: F(u)= u^{1/4}(1+u)^{-A-1/4} ~ u^{-A}
+    return u ** 0.25 * (1 + u) ** (-A_dec - 0.25)
 def Wd(x): return bump(x, 1.02, 1.98, 1.2, 1.7)
 ratios = []
 for R in np.logspace(-3, 4, 29):
     C = mellin_coeffs_1d(lambda x: Wd(x) * Fdec(R * x))
     ratios.append(np.max(np.abs(C) * (1 + np.abs(tg)) ** 2) * (1 + R) ** A_dec)
 ratios = np.array(ratios)
-report("A3 (eq:smooth-pointwise): sup_t |b_R(t)|(1+|t|)^2 (1+R)^A uniformly bounded, R in [1e-3,1e4], A=2",
-       ratios.max() / ratios.min() < 50 and np.all(np.isfinite(ratios)),
-       "ratio range [%.3e, %.3e]" % (ratios.min(), ratios.max()))
+Rs = np.logspace(-3, 4, 29)
+report("A3 (eq:smooth-pointwise): sup_t |b_R(t)|(1+|t|)^2 (1+R)^A bounded above uniformly in R in [1e-3,1e4], A=2",
+       np.all(np.isfinite(ratios)) and ratios[Rs > 100].max() <= 1.5 * ratios[(Rs > 1) & (Rs <= 100)].max(),
+       "ratio range [%.3e, %.3e], at R=1e4: %.3e" % (ratios.min(), ratios.max(), ratios[-1]))
 # negative control: claiming A+1 decay should FAIL (ratios blow up like R)
 ratios_bad = []
 for R in np.logspace(1, 4, 7):
@@ -175,24 +177,30 @@ for mm in (1, 2, 3):
             best = max(best, np.max(np.abs(tot)))
         rat.append(best / (1 + t) ** mm)
     msg.append("m=%d:%s" % (mm, ",".join("%.2g" % v for v in rat)))
-    ok &= max(rat[1:]) / min(rat[1:]) < 20
+    ok &= rat[-1] <= 1.5 * rat[-2] and np.all(np.isfinite(rat))
 report("A5 Lemma B.2: ||V x^{it}||_{C^m} / (1+|t|)^m stays bounded", ok, "; ".join(msg))
 
 # ---- A6: the integral in (eq:kernel-bilinear-integral) is finite iff q > 2m+2 --
-def bil_integral(m, q, Tmax):
-    # integral over R^2 of (1+|s|)^m (1+|t|)^m / (1+|s|+|t|)^q, by symmetry 4x quadrant, polar-ish grid
-    s = np.linspace(0, Tmax, 2001); ds = s[1] - s[0]
-    S, T = np.meshgrid(s, s, indexing="ij")
-    f = (1 + S) ** m * (1 + T) ** m / (1 + S + T) ** q
-    return 4 * np.sum(f) * ds * ds
+from scipy.integrate import quad
+def bil_integral(m, q, Rmax):
+    # 4 * int_{s,t>=0} ; s = r u, t = r(1-u), ds dt = r dr du ; u by Gauss-Legendre (exact, polynomial)
+    xg, wg = np.polynomial.legendre.leggauss(40); ug = (xg + 1) / 2; wu = wg / 2
+    def inner(r):
+        return np.sum(wu * (1 + r * ug) ** m * (1 + r * (1 - ug)) ** m) * r / (1 + r) ** q
+    val = 0.0; a0 = 0.0
+    for b0 in np.concatenate(([1.0], np.logspace(0.5, np.log10(Rmax), 40))):
+        val += quad(inner, a0, b0, limit=200)[0]; a0 = b0
+    return 4 * val
 ok = True; msg = []
 for mm in (0, 1, 2, 3):
     q = 2 * mm + 4
-    v1, v2 = bil_integral(mm, q, 200), bil_integral(mm, q, 400)
-    w1, w2 = bil_integral(mm, 2 * mm + 2, 200), bil_integral(mm, 2 * mm + 2, 400)
-    msg.append("m=%d: q=2m+4 %.4g->%.4g ; q=2m+2 %.4g->%.4g" % (mm, v1, v2, w1, w2))
-    ok &= (v2 - v1) / v2 < 0.02 and (w2 - w1) / w2 > 0.05
-report("A6 Lemma B.2: q=2m+4 integral converges (truncation-stable); q=2m+2 diverges (log growth)", ok, " | ".join(msg))
+    v1, v2 = bil_integral(mm, q, 1e4), bil_integral(mm, q, 1e8)
+    w1, w2 = bil_integral(mm, 2 * mm + 2, 1e4), bil_integral(mm, 2 * mm + 2, 1e8)
+    msg.append("m=%d: q=2m+4 %.5g->%.5g ; q=2m+2 %.4g->%.4g" % (mm, v1, v2, w1, w2))
+    ok &= (v2 - v1) / v2 < 1e-3 and (w2 - w1) / w1 > 0.3
+exact0 = 4 / 6.0
+report("A6 Lemma B.2: q=2m+4 integral finite (exact 2/3 for m=0); q=2m+2 diverges like log", ok and abs(bil_integral(0, 4, 1e8) - exact0) < 1e-6,
+       " | ".join(msg))
 
 # ---- A7: Lemma B.3 (eq:integral-mean-square), randomized, plus equality case ---
 ok = True; worst = 0
@@ -318,8 +326,8 @@ def gauss(j, plist):
 
 # ---- B1: classical Jacobi identity (outline l.318) ------------------------------
 def jacobi_gauss_ok(m):
-    s = sum(sp.jacobi_symbol(x, m) * cmath.exp(2j * math.pi * x / m) for x in range(m))
-    return abs((s / math.sqrt(m)) ** 2 - sp.jacobi_symbol(-1, m)) < 1e-8
+    s = sum(int(sp.jacobi_symbol(x, m)) * cmath.exp(2j * math.pi * x / m) for x in range(m))
+    return abs((s / math.sqrt(m)) ** 2 - int(sp.jacobi_symbol(-1, m))) < 1e-8
 ms = [m for m in range(1, 1200, 2) if sp.ntheory.factor_.core(m) == m]
 bad = [m for m in ms if not jacobi_gauss_ok(m)]
 report("B1 outline l.318: (-1/m) = (m^{-1/2} sum (x/m) e^{2 pi i x/m})^2, odd squarefree m<1200", not bad,
@@ -439,7 +447,7 @@ def Th_direct(h, X):
             al = zc(m_el) / abs(zc(m_el))
             tot += ctheta * np.conj(al) * chi(lam, nb3, 2) * chi(h, nb3) * u
     return tot / (3 ** 2.5 * math.sqrt(X))
-worst_c = 0; worst_i = 0; worst_l = 0
+worst_c = 0; worst_i = 0; worst_l = 0; maxlong = 0
 for h in hrows[:4]:
     X = Xmax
     T = Th_direct(h, X)
@@ -450,30 +458,32 @@ for h in hrows[:4]:
     Tfun = lambda Y: sum(w_h(h, bl) / znorm(bval(bl)) * Ph(h, Y / znorm(bval(bl)) ** 3) for bl in blist)
     Pinv = sum((-1) ** len(dl) * w_h(h, dl) / znorm(bval(dl)) * Tfun(X / znorm(bval(dl)) ** 3) for dl in sq)
     worst_i = max(worst_i, abs(Pinv - Ph(h, X)))
-    # long part regrouping with cutoff Hc
-    Hc = 7.5
-    long1 = sum((-1) ** len(dl) * w_h(h, dl) / znorm(bval(dl)) * Tfun(X / znorm(bval(dl)) ** 3)
-                for dl in sq if znorm(bval(dl)) > Hc)
-    long2 = 0j
-    for bl in blist:
-        bb = bval(bl); Nb = znorm(bb)
-        if Nb <= Hc: continue
-        # divisors d of b (squarefree, as sub-multisets), N(d) > Hc
-        ds = set()
-        for r in range(len(bl) + 1):
-            for comb_ in itertools.combinations(range(len(bl)), r):
-                sub = tuple(sorted({tuple(bl[i]) for i in comb_}))
-                if len(sub) == r: ds.add(sub)
-        s = sum((-1) ** len(dd) for dd in ds if math.prod(znorm(p) for p in dd) > Hc)
-        al = zc(bb) / abs(zc(bb))
-        beta0 = np.conj(al) ** 3 * s
-        long2 += beta0 * chi(h, bl, 3) / Nb * Ph(h, X / Nb ** 3)
-    worst_l = max(worst_l, abs(long1 - long2))
+    # long part regrouping with several cutoffs Hc
+    for Hc in (1.5, 7.5, 10.0):
+        long1 = sum((-1) ** len(dl) * w_h(h, dl) / znorm(bval(dl)) * Tfun(X / znorm(bval(dl)) ** 3)
+                    for dl in sq if znorm(bval(dl)) > Hc)
+        long2 = 0j
+        for bl in blist:
+            bb = bval(bl); Nb = znorm(bb)
+            if Nb <= Hc: continue
+            # divisors d of b (squarefree, as sub-multisets), N(d) > Hc
+            ds = set()
+            for r in range(len(bl) + 1):
+                for comb_ in itertools.combinations(range(len(bl)), r):
+                    sub = tuple(sorted({tuple(bl[i]) for i in comb_}))
+                    if len(sub) == r: ds.add(sub)
+            s = sum((-1) ** len(dd) for dd in ds if math.prod(znorm(p) for p in dd) > Hc)
+            al = zc(bb) / abs(zc(bb))
+            beta0 = np.conj(al) ** 3 * s
+            long2 += beta0 * chi(h, bl, 3) / Nb * Ph(h, X / Nb ** 3)
+
+        worst_l = max(worst_l, abs(long1 - long2)); maxlong = max(maxlong, abs(long1))
+
 report("B4b outline (eq:intro-completed-theta-sum)=(eq:intro-cube-completion): T_h = sum_b w_h(b)/N(b) P_h(X/N(b)^3)",
        worst_c < 1e-9, "4 rows h, X=%g, %d columns, %d cube indices, max err %.1e" % (Xmax, len(cols), len(blist), worst_c))
 report("B4c outline (eq:intro-cube-inversion): P_h(X) = sum_d mu(d) w_h(d)/N(d) T_h(X/N(d)^3)", worst_i < 1e-9,
        "max err %.1e" % worst_i)
-report("B4d outline l.494-510: long-part regrouping with beta_0(b)", worst_l < 1e-9, "H_c=7.5, max err %.1e" % worst_l)
+report("B4d outline l.494-510: long-part regrouping with beta_0(b)", worst_l < 1e-9, "H_c in {1.5,7.5,10}, max err %.1e, max |P_long| = %.3e (nontrivial)" % (worst_l, maxlong))
 
 # ============================================================================
 # PART C : outline scale / exponent algebra

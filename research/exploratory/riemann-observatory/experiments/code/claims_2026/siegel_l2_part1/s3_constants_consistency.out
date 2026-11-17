@@ -1,0 +1,71 @@
+PASS (G2.2) log 2 < 0.694444 <= 7/10 from (x,m)=(2,1)
+PASS (G2.2) 13/12 <= 1.083333 < log 3 < 1.100000 <= 11/10 from (3,2) (both ends attained exactly: L=13/12, L+R=11/10)
+PASS (G2.2) log 5 < 1.613639 <= 13/8 from (5,3)
+PASS (G2.2) 35/18 <= 1.944996 < log 7 < 1.946013 <= 39/20 from (7,9)
+PASS (G2.2) log 100 = 2log2 + 2log5 < 7/5 + 13/4 = 4.65 < 5
+PASS (G2.5) certificate = 30607/88200 = 0.347018 (stated 30607/88200) < 7/20; exact-log value 0.34535612
+PASS (G2.6) V bound 7/20 + 11/360 + 7/16 = 589/720 < 33/40
+PASS (G2.6) loss certificate = 1343/675 = 2 - 7/675; with exact logs (V kept at 33/40): 1.9719912
+PASS (G2.6) true V = sum_p log p/(p(p-1)) = 0.75536162 (+tail < 1e-5) < 33/40
+PASS (G3.12) 2 sum_s min(k, s0-1-s) >= (2s0-1)k - k^2, equality for k<s0, difference (k-s0)(k-s0+1) otherwise (s0<25, k<60)
+PASS (G3.13-3.14) floor-sum identity and both inequalities, all p0 < 400, odd primes p <= p0
+PASS (G3.11) log b0 + (1/30)(2 log p0 - log b0) = 29*l2/30 + 11*lp0/20 + 29*lq/60
+PASS (G3.11) sum_{r<p0, s<s0} (r+s) = p0 s0 (p0+s0-2)/2
+PASS (G3.16) term1 14040/9999 = 1.404140 < 141/100 (exact logs at p0=1e4: 1.390118)
+PASS (G3.16) term2 (301/10)(10+7/5)/20000 = 0.017157 < 1/50
+PASS (G3.16) term3 7/60*301/10 = 2107/600 = 3.511667 < 53/15
+PASS (G3.16) term4 (22/15)(7/10) = 77/75; (22/15) = 29/30 + 1/2 collects both log 2 terms
+PASS (G3.16) 141/100 + 1/50 + 53/15 + 77/75 = 599/100 < 6
+PASS (G3.16) p0/s0 < 30 + 30/333 < 301/10
+PASS (G3) small cases: (9/20)*10 + 7/5 = 59/10; (89/60)(7/5) = 623/300
+PASS (G3.16) t/(t-1), log t/(t-1), (log t + log 4)/t decreasing on t >= 10^4 (grid)
+PASS (G5.6) sum_{m<=7} 1/m^2 + int_8^28 dt/t^2 = 282431/176400 = 1.601083 > 8/5
+PASS (G5.6) sum_{m<=27} 1/m^2 >= that certificate
+PASS (G5.7) (4 + 3 log 3)/27 < (4 + 33/10)/27 = 73/270; exact 0.27021618
+PASS (G5.8) (4 + 38 log 3) 3^-38 = 3.3865e-17 < 50*3^-38 < 1e-4
+PASS (G5.9) (73/135 + 2/27)(12/13) = 332/585 < 4/7
+PASS (G5) kappa/log^2 q = 70*6 + 70^2/2 = 2870; eps*kappa/log q = 2870 delta <= 28.7
+PASS (G5.10) error certificate = 1176629/118125 = 9.960880 < 10
+PASS (G5.11) J/log q < 287/10 + (5/8)*10 = 699/20 < 35
+PASS (G5.12-5.14) 93/2 vs 2339/60, gap 451/60
+PASS (G5.15) (451/60)(13/12) = 8 + 103/720; with exact log 3: 8.2579024 > 8
+PASS (G5) f_k(q) decreasing on [3, 1003] for k in {4,6,50,76} and the derivative bracket is negative
+PASS (GA) B(y) <= (8 + 2 log 7)/49 < (8+39/10)/49 = 17/70 exactly (strict via log 7 < 39/20); exact 0.24269021
+PASS (GA) B(xy) <= (8+25 log 7) 7^-25 < 57*7^-25 < 1e-4
+PASS (GA) kappa = 1242 log^2 q, eps kappa/log q <= 621/32
+PASS (GA) error certificate = 3270937/548800 = 6 - 21863/548800 = 5.960162
+PASS (GA) J/log q < 741/32
+PASS (GA) gap 4453/960, (4453/960)(35/18) = 8 + 3523/3456; exact log 7: 9.0261853 > 8
+PASS (GA) eps log(xy) = 50 delta <= 25/32; sqrt(y) = q^2 >= 49 >= 27
+PASS (B) omega = ceil(8(C2+8/5)) = ceil(21.763378) = 22
+PASS (B) delta0 = 9/(128*23*C1) = 81/(5888 e^1.5) = 0.003069555532 >= 3.0e-3
+PASS (B) H = 9216*97^2 = 86713344 >= 8*97^3 = 7301384, so H^(2/3) >= 4*97^2
+PASS (B) S23/S1 <= 768*97^2/H = 1/12
+PASS (B/O) Banks H = 12 * C0/c0 of OAI Lemma 6 (C0 = 192, c0 = 1/(4*97^2)): the OAI choice (C0/c0)/H <= 1/12 made explicit
+PASS (B) L >= log 1e10 = 23.0259 > 23; log H + 3 + (13/12) log 8 = 23.5308 < 24 < (24/23) L
+PASS (B) 1/(2H) + 13/24 + 24/23 = 1.5851449 < 8/5
+PASS (B) (3/2) N^4 log M <= S1 needs 3 log M/(2M) <= 1 for M >= 8
+INFO (B) Banks's recipe optimized over lambda in [1/4,2], integer omega: best delta0 = 0.00310774 at lambda=1.45, omega=22 (stated: 3.0696e-3 at lambda=3/2, omega=22)
+PASS (O) Cor 4: (4N-3)^4 < 4096 N^4 = T1T2T3/8, and T_j >= 32N >= 6(N-1) gives T_j - 3(N-1) >= T_j/2
+PASS (O) master: (3/4)(1 + 1/12) = 13/16; 13/16 + 1/16 = 7/8 < 1
+INFO (K) D=2000: r/(D^3/384) = 1.01355, W/(5D^4/6144) = 1.01568, E_11/(D^4/(1536*11)) = 1.00699, E_101/(D^4/(1536*101)) = 0.91831
+INFO (K) D=8000: r/(D^3/384) = 1.00338, W/(5D^4/6144) = 1.00390, E_11/(D^4/(1536*11)) = 1.00175, E_101/(D^4/(1536*101)) = 0.97933
+PASS (K) threshold ratio W/(D^4/1536) -> 5/4 < 13/10 < 4/3; needs gamma/30 > 13/20 + C + o(1)
+PASS (K) det(g1,g2,g3) = 4*sqrt(2)*sqrt(q); v = (sqrt(2q), sqrt2, -sqrt q, -1) in ker (q>0 branch)
+INFO (X) q=3: best delta excluded by Guo's chain = 0.01018 at (A,B)=(69.5, 6);  fixed (70,6): 0.01018;  fixed (46,4): 0.00000
+INFO (X) q=4: best delta excluded by Guo's chain = 0.01247 at (A,B)=(57.0, 5);  fixed (70,6): 0.01211;  fixed (46,4): 0.01180
+INFO (X) q=5: best delta excluded by Guo's chain = 0.01408 at (A,B)=(52.5, 5);  fixed (70,6): 0.01314;  fixed (46,4): 0.01392
+INFO (X) q=7: best delta excluded by Guo's chain = 0.01646 at (A,B)=(43.5, 4);  fixed (70,6): 0.01316;  fixed (46,4): 0.01642
+INFO (X) q=8: best delta excluded by Guo's chain = 0.01734 at (A,B)=(42.0, 4);  fixed (70,6): 0.01316;  fixed (46,4): 0.01723
+INFO (X) q=11: best delta excluded by Guo's chain = 0.01924 at (A,B)=(37.0, 3.5);  fixed (70,6): 0.01316;  fixed (46,4): 0.01881
+INFO (X) q=100: best delta excluded by Guo's chain = 0.02873 at (A,B)=(26.5, 3);  fixed (70,6): 0.01316;  fixed (46,4): 0.02000
+INFO (X) q=1e+04: best delta excluded by Guo's chain = 0.03820 at (A,B)=(19.5, 2.5);  fixed (70,6): 0.01316;  fixed (46,4): 0.02000
+INFO (X) q=1e+10: best delta excluded by Guo's chain = 0.04810 at (A,B)=(16.0, 2.25);  fixed (70,6): 0.01316;  fixed (46,4): 0.02000
+INFO (X) q=1e+30: best delta excluded by Guo's chain = 0.05515 at (A,B)=(14.0, 2.1);  fixed (70,6): 0.01316;  fixed (46,4): 0.02000
+INFO (X) q=1e+100: best delta excluded by Guo's chain = 0.05787 at (A,B)=(13.5, 2.1);  fixed (70,6): 0.01316;  fixed (46,4): 0.02000
+PASS (X) at q=3 with Guo's (A,B)=(70,6): delta* = 0.01018 > 1/100 (consistent with the 8.258 > 8 margin)
+PASS (X) min_{7<=q<2000} delta*(q; 46, 4) = 0.01642 > 1/64
+PASS (X) min_{3<=q<2000} delta*(q; 70, 6) = 0.01018 > 1/100
+INFO (X) q -> infinity limit of Guo's chain (B -> 2+): sup_A min(2((9/20)A - B - 29/60)/(AB + A^2/2), 1/(A+B)) = 0.06095
+
+SUMMARY: 54 PASS, 0 FAIL

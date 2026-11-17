@@ -1,0 +1,28 @@
+(a) certificate data parsed from the LaTeX tables
+   window 1, labels 11: budget sums by distance s=1..6: [1.999996, 1.999998, 1.999998, 2.0, 2.0, 2.0] <= 2: True
+   window 1, labels 12: budget sums by distance s=1..6: [3.999998, 3.999999, 3.999998, 3.999998, 4.0, 4.0] <= 4: True
+   window 1, labels 22: budget sums by distance s=1..6: [7.999998, 7.999999, 7.999998, 7.999998, 8.0, 8.0] <= 8: True
+   window 1: x1 = 0.054350 (0.054350), x2 = 0.069433 (0.069433), kappa_i1 <= kappa_i2: True
+   window 1: Omega = 0.015882 (stated 0.015882); sum_r max(-B_r) = 0.009902; trivial spread >= (x2 + that)/alpha = 12.757
+   window 2 (8 points): budget sums s=1..7: [1.999996, 1.999998, 1.999998, 1.999998, 1.999999, 2.0, 2.0] <= 2: True
+   window 2: Omega = 0.003882 (stated 0.003882); sum_r max(-B_r) = 0.001294 (stated 0.001294); trivial spread = 15.974 (stated 15.975)
+   window 3: budget sums s=1..6: [1.999998, 1.999998, 1.999998, 1.999998, 2.0, 2.0] <= 2: True
+   window 3: Omega = 0.075420 (stated 0.075420); sum_r max(-B_r) = 0.038198 (stated 0.038198); trivial spread = 14.926 (stated 14.927)
+(b) beta = min_{0<=t<=theta} K(t)^2 by a Lipschitz grid (|dK^2/dt| <= 2 pi), h = 1e-6
+   window 1: grid min K^2 = 0.065799248 at t = 0.850000; Lipschitz-grid lower bound (double precision, not directed rounding) 0.065796106 >= beta = 0.065746434: True
+   window 2: grid min K^2 = 0.051085849 at t = 0.850000; Lipschitz-grid lower bound (double precision, not directed rounding) 0.051082707 >= beta = 0.051066060: True
+   window 3: grid min K^2 = 0.066829257 at t = 0.850000; Lipschitz-grid lower bound (double precision, not directed rounding) 0.066826116 >= beta = 0.066807553: True
+(c) majorant: f <= g on [0,1/2] (Lipschitz grid, h = 1e-6) and Lambda = (2 gamma0/theta)(1 + sinc theta)
+   window 1: min(g-f) on grid = 5.014495e-04 at u = 0.500000; Lipschitz const <= 11.10, so min >= 4.959012e-04 (stated margin >= 1e-4: True); Lambda = 1.671052 < 1.675: True; g(1/2)=0.8309, f(1/2)=0.8304
+   window 2: min(g-f) on grid = 5.163829e-02 at u = 0.500000; Lipschitz const <= 9.87, so min >= 5.163336e-02 (stated margin >= 1e-4: True); Lambda = 1.789429 < 2.0: True; g(1/2)=0.8898, f(1/2)=0.8382
+   window 3: min(g-f) on grid = 2.035229e-03 at u = 0.500000; Lipschitz const <= 8.71, so min >= 2.030876e-03 (stated margin >= 1e-4: True); Lambda = 1.679310 < 2.0: True; g(1/2)=0.8350, f(1/2)=0.8330
+(d) Lemma 2.3: lambda_max (K(y_i - y_j)) <= Lambda on theta-separated sets (random + near-lattice)
+   window 1: max lambda_max over 4000 sets = 1.441884  <=  Lambda = 1.671052: True
+   window 2: max lambda_max over 4000 sets = 1.473510  <=  Lambda = 1.789429: True
+   window 3: max lambda_max over 4000 sets = 1.437191  <=  Lambda = 1.679310: True
+(e) local inequalities: sampling (2e6 frames) + Nelder-Mead from the worst samples; slack must be >= 0
+   window 1 (7 points, 128 labellings x 2000000 gap samples, + 1 Nelder-Mead per labelling, exact K at the end): min slack = 9.757e-05 at labels [1, 1, 1, 1, 1, 1, 1], gaps [1.0395, 1.0298, 1.035, 1.0384, 1.0536, 1.8612]; labellings with min slack < 1e-3: 58
+   window 2 (8 points, 2000000 samples + 30 local minimisations): min slack = 1.265e-05 at gaps [1.0327, 1.0375, 1.9661, 1.0449, 1.9661, 1.0375, 1.0327]
+   window 3 (7 points, 2000000 samples + 30 local minimisations): min slack = 1.650e-04 at gaps [1.0305, 1.0286, 1.0333, 1.0533, 1.8774, 1.0646]
+(f) transfer Lemma 2.5 end-to-end on random theta-separated labelled sequences (window 1):
+   min (lhs - rhs) over 3000 sequences (m = 7..59) = 4.9954e-01  (>= 0 expected)

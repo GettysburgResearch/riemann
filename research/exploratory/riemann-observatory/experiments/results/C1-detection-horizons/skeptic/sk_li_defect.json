@@ -1,0 +1,176 @@
+{
+ "t_s": 74921.56043112824,
+ "rows": [
+  {
+   "T": 17.578382390253125,
+   "delta": 0.45,
+   "a": 0.0014541844204234104,
+   "n_lo(window)": 6227,
+   "n_amp": 6355.470774433834,
+   "first_negative_direct": 6406,
+   "investigator_n*": 6406,
+   "diff": 0,
+   "lambdaRH-trend range in window": [
+    -5.068998646343971,
+    5.0510328651434975
+   ],
+   "phase_period_2piT": 110.44823395842282,
+   "sec": 0.1
+  },
+  {
+   "T": 17.578382390253125,
+   "delta": 0.2,
+   "a": 0.0006466433878971047,
+   "n_lo(window)": 15633,
+   "n_amp": 15916.410599191313,
+   "first_negative_direct": 16016,
+   "investigator_n*": 16016,
+   "diff": 0,
+   "lambdaRH-trend range in window": [
+    -19.863806524190295,
+    23.894856178041664
+   ],
+   "phase_period_2piT": 110.44823395842282,
+   "sec": 0.2
+  },
+  {
+   "T": 17.578382390253125,
+   "delta": 0.1,
+   "a": 0.0003233530242615811,
+   "n_lo(window)": 33972,
+   "n_amp": 34532.37853424105,
+   "first_negative_direct": 34578,
+   "investigator_n*": 34578,
+   "diff": 0,
+   "lambdaRH-trend range in window": [
+    -22.190301407885272,
+    26.48755088431062
+   ],
+   "phase_period_2piT": 110.44823395842282,
+   "sec": 0.4
+  },
+  {
+   "T": 51.37207697769338,
+   "delta": 0.45,
+   "a": 0.00017048407229947588,
+   "n_lo(window)": 69087,
+   "n_amp": 70139.88010671941,
+   "first_negative_direct": 70361,
+   "investigator_n*": 70361,
+   "diff": 0,
+   "lambdaRH-trend range in window": [
+    -36.42577292356873,
+    21.271668645204045
+   ],
+   "phase_period_2piT": 322.78027926554176,
+   "sec": 0.9
+  },
+  {
+   "T": 51.37207697769338,
+   "delta": 0.1,
+   "a": 3.7888112204351666e-05,
+   "n_lo(window)": 358847,
+   "n_amp": 363510.36614815914,
+   "first_negative_direct": 363780,
+   "investigator_n*": 363780,
+   "diff": 0,
+   "lambdaRH-trend range in window": [
+    -69.94303538883105,
+    42.874248285312206
+   ],
+   "phase_period_2piT": 322.78027926554176,
+   "sec": 2.5
+  },
+  {
+   "T": 100.07452261196254,
+   "delta": 0.45,
+   "a": 4.493097447920797e-05,
+   "n_lo(window)": 298073,
+   "n_amp": 302010.81244356715,
+   "first_negative_direct": 302437,
+   "investigator_n*": 302437,
+   "diff": 0,
+   "lambdaRH-trend range in window": [
+    -48.422036605887115,
+    43.8187689173501
+   ],
+   "phase_period_2piT": 628.7867700984942,
+   "sec": 2.6
+  },
+  {
+   "T": 100.07452261196254,
+   "delta": 0.2,
+   "a": 1.996964598896168e-05,
+   "n_lo(window)": 718824,
+   "n_amp": 727626.8545108046,
+   "first_negative_direct": 728131,
+   "investigator_n*": 728131,
+   "diff": 0,
+   "lambdaRH-trend range in window": [
+    -87.85453856363893,
+    68.03755317814648
+   ],
+   "phase_period_2piT": 628.7867700984942,
+   "sec": 5.1
+  },
+  {
+   "T": 300.74482575795776,
+   "delta": 0.45,
+   "a": 4.975239739896045e-06,
+   "n_lo(window)": 3211231,
+   "n_amp": 3246247.9853090085,
+   "first_negative_direct": 3246393,
+   "investigator_n*": 3246393,
+   "diff": 0,
+   "lambdaRH-trend range in window": [
+    -133.9460994116962,
+    102.07150682806969
+   ],
+   "phase_period_2piT": 1889.635470412685,
+   "sec": 16.3
+  }
+ ],
+ "fluct_sample": {
+  "1000": {
+   "lambda_model": 2326.0530372633175,
+   "minus_trend": 2.506098526155256
+  },
+  "5000": {
+   "lambda_model": 15639.091998876766,
+   "minus_trend": -2.2374758943005872
+  },
+  "20000": {
+   "lambda_model": 76437.94721112991,
+   "minus_trend": 9.68570084674866
+  },
+  "50000": {
+   "lambda_model": 213974.92944780714,
+   "minus_trend": -2.9926247546682134
+  },
+  "100000": {
+   "lambda_model": 462580.0163011949,
+   "minus_trend": -33.186871925892774
+  },
+  "200000": {
+   "lambda_model": 994504.9282972529,
+   "minus_trend": -36.196104983449914
+  },
+  "400000": {
+   "lambda_model": 2127694.321731171,
+   "minus_trend": -17.363185290247202
+  },
+  "1000000": {
+   "lambda_model": 5777485.940061768,
+   "minus_trend": 61.361833536066115
+  },
+  "2000000": {
+   "lambda_model": 12248000.450496841,
+   "minus_trend": 4.113480435684323
+  }
+ },
+ "runtime_s": 28.333934783935547,
+ "versions": {
+  "numpy": "2.5.3",
+  "mpmath": "1.3.0"
+ }
+}

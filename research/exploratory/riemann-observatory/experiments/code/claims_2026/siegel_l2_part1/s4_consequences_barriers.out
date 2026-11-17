@@ -1,0 +1,16 @@
+PASS (C1) at q=10, k=4: L(1,chi) log q >= 0.007671 (ARCHITECTURE.md quotes 0.00767); optimized k: 0.009253 at k=6.9
+INFO (C1) g(q) = implied lower bound for L(1,chi) log q from c=1/100 (k optimized): q=3e+00: 0.00869, q=4e+00: 0.00890, q=5e+00: 0.00902, q=7e+00: 0.00915, q=8e+00: 0.00919, q=1e+01: 0.00925, q=2e+01: 0.00938, q=1e+02: 0.00952, q=1e+04: 0.00965, q=1e+08: 0.00972, q=1e+20: 0.00976; limit c e^(-2c) = 0.00980
+PASS (C1) g(q) nondecreasing on 10 <= q <= 400 (so 0.00767/log q is valid for every q >= 10 with k=4 or better)
+PASS (C2) h=1 fundamental |D| <= 60000: [3, 4, 7, 8, 11, 19, 43, 67, 163] (Heegner-Baker-Stark)
+PASS (C2) counts/maxima for h<=7 match Watkins Table 4 (as recalled): h=1: 9 fields, max 163; h=2: 18 fields, max 427; h=3: 16 fields, max 907; h=4: 54 fields, max 1555; h=5: 25 fields, max 2683; h=6: 51 fields, max 3763; h=7: 31 fields, max 5923
+PASS (C2) implied L(1,chi) log q >= 0.00767 (q >= 10): 0 violations among 18238 imaginary fundamental D; min L(1)log q = 0.6642 at D=-3; min over q>=10 of ratio to the bound = 163.4 at D=-163
+INFO (C2) implied h(D) > N for |D| >= T_N with T_N: N=1: 5.308e+07, N=100: 1.306e+12, N=2000: 7.896e+14  (cf. Kimura 2610.21511v2 Table 1, with his own Lean-certified gap c_2000 = 0.005965 < 1/100: h > 2000 for |d| >= 1.6069e15)
+PASS (C3) real D <= 3000 (909 fields): min L(1,chi) log D = 0.6927 at D=5; formula cross-check D=5: 2 log eps/sqrt5 = 0.430408940964
+PASS (C4) Prop 3.1 on 20 inert-heavy D, all primes x <= 1e+07: max excess -6.566 (D=-3, x=2)
+INFO (C4) Barreto/van Dijk shape S_- - (1/2 log x + 1/4 log q + loglog 3x): max -0.858 (D=-3, x=2); it is O(1) as claimed (no constant is asserted there)
+INFO (C5) fake 'all primes inert' pattern with q=2e+02: Prop 3.1 bound fails for x > q^4.27 (= e^21.8); real characters cannot keep chi(p) = -1 that long (least prime with chi(p)=1 is << q^(1/4+o(1)), Linnik-Vinogradov)
+INFO (C5) fake 'all primes inert' pattern with q=1e+06: Prop 3.1 bound fails for x > q^2.25 (= e^31.1); real characters cannot keep chi(p) = -1 that long (least prime with chi(p)=1 is << q^(1/4+o(1)), Linnik-Vinogradov)
+INFO (C5) fake 'all primes inert' pattern with q=1e+12: Prop 3.1 bound fails for x > q^1.66 (= e^46.0); real characters cannot keep chi(p) = -1 that long (least prime with chi(p)=1 is << q^(1/4+o(1)), Linnik-Vinogradov)
+INFO (C5) first split prime for Heegner D: -3:7, -4:5, -7:2, -8:3, -11:3, -19:5, -43:11, -67:17, -163:41 (x^2+x+41 phenomenon: the longest inert runs among h=1 fields)
+
+SUMMARY: 7 PASS, 0 FAIL

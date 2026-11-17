@@ -430,8 +430,8 @@ b09ae9e335d5cbf1a98e6d281854c77ea6a01011ae529712276cfb0be7f1a9e1  s7_weight_remo
 16ae22c4900719700c004b2d8e17a76d642a8ee030bd4bce0a00b58965b3578a  s8_window_constants.out
 42c263b46c07b56373f9226c37d7f78e6732260687491caa33f2322f50685ec4  s9_counting.py
 4700511a66a388d6dc3d494aa2773b2e77a7a3e6cf3a9df29798ac4c86601ef1  s9_counting.out
-S10_PY_HASH  s10_kn_local.py
-S10_OUT_HASH  s10_kn_local.out
+669b81c1490f34ef3368bb775380ce696878d960189e4875d64cd3207f8ed1c8  s10_kn_local.py
+c42da067ffbca2b08521cd0b12dc23b2552a2a0751f1ddff99340cf32d5aec08  s10_kn_local.out
 ```
 
 The scripts were corrected in three places during the audit. All three were numerical or wording artefacts in the audit's own scripts, not issues in any paper:

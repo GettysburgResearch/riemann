@@ -6,7 +6,7 @@
   "sympy": "1.14.0",
   "numpy": "2.5.3",
   "arb_prec_bits": 512,
-  "runtime_s": 232.7,
+  "runtime_s": 197.0,
   "note": "zero-eigenvalue count for N=2g+1 = balls not excluding 0 (rump enclosure)"
  },
  "cases": [
@@ -18,7 +18,7 @@
    "checked": 69,
    "agree_2g": 69,
    "agree_2g1": 69,
-   "rigorous_2g": 56,
+   "rigorous_2g": 69,
    "rigorous_2g1": 64,
    "disagreements": [],
    "nonsquarefree_examples": [
@@ -93,7 +93,7 @@
      ]
     }
    ],
-   "runtime_s": 1.1
+   "runtime_s": 1.3
   },
   {
    "q": 4,
@@ -103,7 +103,7 @@
    "checked": 155,
    "agree_2g": 155,
    "agree_2g1": 155,
-   "rigorous_2g": 132,
+   "rigorous_2g": 155,
    "rigorous_2g1": 149,
    "disagreements": [],
    "nonsquarefree_examples": [
@@ -178,7 +178,7 @@
      ]
     }
    ],
-   "runtime_s": 2.0
+   "runtime_s": 1.9
   },
   {
    "q": 5,
@@ -188,7 +188,7 @@
    "checked": 317,
    "agree_2g": 317,
    "agree_2g1": 317,
-   "rigorous_2g": 288,
+   "rigorous_2g": 317,
    "rigorous_2g1": 314,
    "disagreements": [],
    "nonsquarefree_examples": [
@@ -263,7 +263,7 @@
      ]
     }
    ],
-   "runtime_s": 2.8
+   "runtime_s": 3.0
   },
   {
    "q": 7,
@@ -273,7 +273,7 @@
    "checked": 869,
    "agree_2g": 869,
    "agree_2g1": 869,
-   "rigorous_2g": 798,
+   "rigorous_2g": 869,
    "rigorous_2g1": 866,
    "disagreements": [],
    "nonsquarefree_examples": [
@@ -348,7 +348,7 @@
      ]
     }
    ],
-   "runtime_s": 6.8
+   "runtime_s": 9.5
   },
   {
    "q": 2,
@@ -358,7 +358,7 @@
    "checked": 163,
    "agree_2g": 163,
    "agree_2g1": 163,
-   "rigorous_2g": 143,
+   "rigorous_2g": 163,
    "rigorous_2g1": 154,
    "disagreements": [],
    "nonsquarefree_examples": [
@@ -438,7 +438,7 @@
      ]
     }
    ],
-   "runtime_s": 30.6
+   "runtime_s": 26.7
   },
   {
    "q": 3,
@@ -448,7 +448,7 @@
    "checked": 1727,
    "agree_2g": 1727,
    "agree_2g1": 1727,
-   "rigorous_2g": 1668,
+   "rigorous_2g": 1726,
    "rigorous_2g1": 1701,
    "disagreements": [],
    "nonsquarefree_examples": [
@@ -528,7 +528,7 @@
      ]
     }
    ],
-   "runtime_s": 189.4
+   "runtime_s": 154.6
   }
  ]
 }

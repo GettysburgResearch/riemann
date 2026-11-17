@@ -248,7 +248,7 @@ def guo_delta_star(q, A, B):
 def best_delta(q):
     best = (0.0, None)
     for A in [a / 2 for a in range(4, 401)]:
-        for B in [1.0, 1.5, 2, 3, 4, 5, 6, 8]:
+        for B in [1.0, 1.5, 2, 2.1, 2.25, 2.5, 3, 3.5, 4, 5, 6, 8]:
             d = guo_delta_star(q, A, B)
             if d > best[0]:
                 best = (d, (A, B))
@@ -264,8 +264,10 @@ for q in [3, 4, 5, 7, 8, 11, 100, 10 ** 4, 10 ** 10, 10 ** 30, 10 ** 100]:
 rep(guo_delta_star(3, 70, 6) > 0.01, f"(X) at q=3 with Guo's (A,B)=(70,6): delta* = {guo_delta_star(3, 70, 6):.5f} > 1/100 (consistent with the 8.258 > 8 margin)")
 rep(min(guo_delta_star(q, 46, 4) for q in range(7, 2000)) > 1 / 64, f"(X) min_{{7<=q<2000}} delta*(q; 46, 4) = {min(guo_delta_star(q, 46, 4) for q in range(7, 2000)):.5f} > 1/64")
 rep(min(guo_delta_star(q, 70, 6) for q in range(3, 2000)) > 0.01, f"(X) min_{{3<=q<2000}} delta*(q; 70, 6) = {min(guo_delta_star(q, 70, 6) for q in range(3, 2000)):.5f} > 1/100")
-asym = max((0.9 * A / 2 * 2 - 2 * 1 - 29 / 30) / (A * 1 + A * A / 2) for A in [a / 100 for a in range(300, 3000)])
-out.append(f"INFO (X) q -> infinity limit of Guo's chain (B=1): sup_A 2((9/20)A - 1 - 29/60)/(A + A^2/2) = {asym:.5f}")
+# q -> infinity: B(y) -> 0 requires y = q^B with B > 2 (B(y) ~ q^{1-B/2}); the constants -2, +6 become negligible.
+asym = max(min(2 * (0.45 * A - Bq - 29 / 60) / (A * Bq + A * A / 2), 1 / (A + Bq))
+           for A in [a / 100 for a in range(300, 4000)] for Bq in [2.0001])
+out.append(f"INFO (X) q -> infinity limit of Guo's chain (B -> 2+): sup_A min(2((9/20)A - B - 29/60)/(AB + A^2/2), 1/(A+B)) = {asym:.5f}")
 
 print("\n".join(out))
 print(f"\nSUMMARY: {sum(1 for o in out if o.startswith('PASS'))} PASS, {fails} FAIL")

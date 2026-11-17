@@ -41,10 +41,10 @@ def W_true(T0, L, N, asym=False):
     pole term dropped (O(1/T0)); prime part exact."""
     ww = window(L, N)
     if not asym:
-        return ww.matrix(T0)
+        return ww.matrix(float(T0))
     pi = pi_moments(T0, L, ww.M, ww.pp)
     X = np.tensordot(ww.q, pi, axes=([2], [0]))
-    W = psi_arch(T0) * np.eye(N) - X - X.conj().T
+    W = psi_arch(float(T0)) * np.eye(N) - X - X.conj().T
     return 0.5 * (W + W.conj().T)
 
 

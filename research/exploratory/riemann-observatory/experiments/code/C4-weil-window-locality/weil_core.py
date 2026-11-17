@@ -162,7 +162,16 @@ def pi_moments(T, L, M, pp=None):
     ln = np.array([math.log(n) for n, _ in pp])
     lam = np.array([l for _, l in pp])
     amp = lam / np.sqrt(np.array([float(n) for n, _ in pp]))
-    phase = np.exp(-1j * np.mod(T * ln, 2 * np.pi))
+    if abs(float(T)) > 1e6:
+        # phases T log n mod 2pi computed in 60-digit arithmetic (T may be passed as a decimal string)
+        import mpmath as mp
+        with mp.workdps(60):
+            Tm = mp.mpf(T)
+            twopi = 2 * mp.pi
+            ph = [float(mp.fmod(Tm * mp.log(n), twopi)) for n, _ in pp]
+        phase = np.exp(-1j * np.array(ph))
+    else:
+        phase = np.exp(-1j * np.mod(float(T) * ln, 2 * np.pi))
     P = legendre_table(ln / L - 1.0, M)
     return P @ (amp * phase)
 
