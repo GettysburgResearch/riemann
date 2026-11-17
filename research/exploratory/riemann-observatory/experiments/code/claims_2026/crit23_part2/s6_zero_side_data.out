@@ -1,0 +1,12 @@
+(A) Alpoge-Furman normalisation on actual zeros
+   flat T=   5000 L=6.679 N(I)=5622 (smooth 5623): Z/N = 1.48014, M/N = 1.48012, Mm/N = 1.48033, M[mu,mu]-only/N = 1.25198; R(psi) = 1.33333; (Z-M)/N = +2.34e-05
+   flat T=  15000 L=7.778 N(I)=19491 (smooth 19491): Z/N = 1.45332, M/N = 1.45329, Mm/N = 1.45343, M[mu,mu]-only/N = 1.21090; R(psi) = 1.33333; (Z-M)/N = +3.27e-05
+   flat T=  30000 L=8.471 N(I)=42290 (smooth 42291): Z/N = 1.44138, M/N = 1.44138, Mm/N = 1.44133, M[mu,mu]-only/N = 1.19131; R(psi) = 1.33333; (Z-M)/N = +5.46e-10
+   MT   T=   5000 L=6.679 N(I)=5622 (smooth 5623): Z/N = 1.48532, M/N = 1.48529, Mm/N = 1.48551, M[mu,mu]-only/N = 1.26347; R(psi) = 1.32750; (Z-M)/N = +2.54e-05
+   MT   T=  15000 L=7.778 N(I)=19491 (smooth 19491): Z/N = 1.45687, M/N = 1.45684, Mm/N = 1.45696, M[mu,mu]-only/N = 1.22148; R(psi) = 1.32750; (Z-M)/N = +3.29e-05
+   MT   T=  30000 L=8.471 N(I)=42290 (smooth 42291): Z/N = 1.44409, M/N = 1.44409, Mm/N = 1.44404, M[mu,mu]-only/N = 1.20146; R(psi) = 1.32750; (Z-M)/N = -4.21e-08
+(B) Lamzouri / BGSTB24 normalisation (0 < gamma <= T, L = log T)
+   window: MT with smooth taper delta=0.05: C_delta = 1.365753;  |K_delta(u)| at u=50,150,300: 5.5e-04, 4.3e-07, 2.6e-08
+   T= 10000.0: N(T)=10142, (T/2pi)logT=14659 (ratio N/main = 0.6919);  S_w/main = 0.78013, S/main = 0.79691, S/N = 1.15182  [C_delta = 1.36575];  Fejer S_w/main = 0.77070, /N = 1.11393  [4/3]
+   T= 30000.0: N(T)=35673, (T/2pi)logT=49222 (ratio N/main = 0.7247);  S_w/main = 0.83241, S/main = 0.84887, S/N = 1.17127  [C_delta = 1.36575];  Fejer S_w/main = 0.82104, /N = 1.13287  [4/3]
+   T= 74920.8: N(T)=100000, (T/2pi)logT=133837 (ratio N/main = 0.7472);  S_w/main = 0.86946, S/main = 0.88551, S/N = 1.18515  [C_delta = 1.36575];  Fejer S_w/main = 0.85647, /N = 1.14628  [4/3]

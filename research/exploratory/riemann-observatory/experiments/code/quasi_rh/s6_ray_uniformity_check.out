@@ -1,0 +1,39 @@
+--- case (c,lambda)=1 with nonzero cusp (v_lambda(h0)=3) ---
+h0 lam^3         N=[7] j=[1]: case 3 cusp 0 kappa0=w^0 CRT err 5.0e-14 sum err 2.0e-14
+h0 lam^3         N=[13] j=[4]: case 3 cusp 0 kappa0=w^0 CRT err 7.5e-14 sum err 3.4e-14
+h0 lam^3         N=[7, 13] j=[1, 0]: case 3 cusp 0 kappa0=w^0 CRT err 1.0e-13 sum err 1.7e-14
+h0 lam^3(2+3w)   N=[7] j=[1]: case 3 cusp 0 kappa0=w^0 CRT err 6.4e-14 sum err 3.5e-14
+h0 lam^3(2+3w)   N=[13] j=[4]: case 3 cusp 0 kappa0=w^0 CRT err 1.3e-13 sum err 5.3e-14
+h0 lam^3(2+3w)   N=[7, 13] j=[1, 0]: case 3 cusp 0 kappa0=w^0 CRT err 1.0e-13 sum err 1.2e-14
+h0 lam^3(-1+3w)  N=[7] j=[1]: case 3 cusp 0 kappa0=w^0 CRT err 3.8e-14 sum err 2.7e-14
+h0 lam^3(-1+3w)  N=[13] j=[4]: case 3 cusp 0 kappa0=w^0 CRT err 8.4e-14 sum err 5.0e-14
+h0 lam^3(-1+3w)  N=[7, 13] j=[1, 0]: case 3 cusp 0 kappa0=w^0 CRT err 1.1e-13 sum err 1.8e-14
+h0 lam^3*w       N=[7] j=[1]: case 3 cusp - kappa0=w^0 CRT err 3.6e-14 sum err 1.6e-14
+h0 lam^3*w       N=[13] j=[4]: case 3 cusp - kappa0=w^0 CRT err 1.2e-13 sum err 3.9e-14
+h0 lam^3*w       N=[7, 13] j=[1, 0]: case 3 cusp - kappa0=w^0 CRT err 1.1e-13 sum err 1.2e-14
+--- Lemma 6.3: dependence on r only through r mod M^2 ---
+h0=(1, 1) r=[7]: case 1 cusp 0 kappa0=w^2  [checked against 3 large primes r' = r mod M^2, N(r') ~ 1e48]
+h0=(1, 1) r=[13]: case 1 cusp 0 kappa0=w^1  [checked against 3 large primes r' = r mod M^2, N(r') ~ 1e48]
+h0=(1, 1) r=[7, 13]: case 1 cusp 0 kappa0=w^0  [checked against 3 large primes r' = r mod M^2, N(r') ~ 1e48]
+h0=(2, 4) r=[7]: case 1 cusp 0 kappa0=w^2  [checked against 3 large primes r' = r mod M^2, N(r') ~ 1e47]
+h0=(2, 4) r=[13]: case 1 cusp 0 kappa0=w^0  [checked against 3 large primes r' = r mod M^2, N(r') ~ 1e48]
+h0=(2, 4) r=[7, 13]: case 1 cusp 0 kappa0=w^2  [checked against 3 large primes r' = r mod M^2, N(r') ~ 1e47]
+h0=(-6, 0) r=[7]: case 2 cusp + kappa0=w^0  [checked against 3 large primes r' = r mod M^2, N(r') ~ 1e47]
+h0=(-6, 0) r=[13]: case 2 cusp + kappa0=w^1  [checked against 3 large primes r' = r mod M^2, N(r') ~ 1e48]
+h0=(-6, 0) r=[7, 13]: case 2 cusp + kappa0=w^1  [checked against 3 large primes r' = r mod M^2, N(r') ~ 1e48]
+h0=(6, -9) r=[7]: case 2 cusp - kappa0=w^1  [checked against 3 large primes r' = r mod M^2, N(r') ~ 1e48]
+h0=(6, -9) r=[13]: case 2 cusp - kappa0=w^1  [checked against 3 large primes r' = r mod M^2, N(r') ~ 1e47]
+h0=(6, -9) r=[7, 13]: case 2 cusp - kappa0=w^0  [checked against 3 large primes r' = r mod M^2, N(r') ~ 1e48]
+h0=(-3, -6) r=[7]: case 3 cusp 0 kappa0=w^0  [checked against 3 large primes r' = r mod M^2, N(r') ~ 1e48]
+h0=(-3, -6) r=[13]: case 3 cusp 0 kappa0=w^0  [checked against 3 large primes r' = r mod M^2, N(r') ~ 1e48]
+h0=(-3, -6) r=[7, 13]: case 3 cusp 0 kappa0=w^0  [checked against 3 large primes r' = r mod M^2, N(r') ~ 1e46]
+h0=(12, -3) r=[7]: case 3 cusp 0 kappa0=w^0  [checked against 3 large primes r' = r mod M^2, N(r') ~ 1e48]
+h0=(12, -3) r=[13]: case 3 cusp 0 kappa0=w^0  [checked against 3 large primes r' = r mod M^2, N(r') ~ 1e48]
+h0=(12, -3) r=[7, 13]: case 3 cusp 0 kappa0=w^0  [checked against 3 large primes r' = r mod M^2, N(r') ~ 1e48]
+h0=(-36, -45) r=[7]: case 3 cusp 0 kappa0=w^0  [checked against 3 large primes r' = r mod M^2, N(r') ~ 1e48]
+h0=(-36, -45) r=[13]: case 3 cusp 0 kappa0=w^0  [checked against 3 large primes r' = r mod M^2, N(r') ~ 1e48]
+h0=(-36, -45) r=[7, 13]: case 3 cusp 0 kappa0=w^0  [checked against 3 large primes r' = r mod M^2, N(r') ~ 1e46]
+h0=(0, 0) r=[7]: case 3 cusp 0 kappa0=w^0  [checked against 3 large primes r' = r mod M^2, N(r') ~ 1e47]
+h0=(0, 0) r=[13]: case 3 cusp 0 kappa0=w^0  [checked against 3 large primes r' = r mod M^2, N(r') ~ 1e48]
+h0=(0, 0) r=[7, 13]: case 3 cusp 0 kappa0=w^0  [checked against 3 large primes r' = r mod M^2, N(r') ~ 1e48]
+uniformity checks: 216 mismatches: 0

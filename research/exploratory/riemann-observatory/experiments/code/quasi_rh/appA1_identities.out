@@ -1,0 +1,70 @@
+primes tested: 77 max norm 397 inert: [(-5, 0), (-11, 0), (-17, 0)]
+prime identities done 40.8s
+Gamma_quad: 1618 moduli c (2 not | c, N(c) <= 700) checked
+square classes / R table done 41.4s
+composite squarefree n: 237
+composite identities done 75.5s
+primary elements coprime to 6 with N<=600: 179
+reciprocity pairs: 29870 77.0s
+ray-class identities done 79.6s
+Gaussian FT: quadrature (-0.036340109557057784-0.07207630741639644j) closed form (-0.036340109557057604-0.07207630741638195j)
+
+SUMMARY (check: number of cases)
+  A1.GJ_112                        77
+  A1.GJ_134                        77
+  A1.GJ_all_pairs                1540
+  A1.G_inverse                     12
+  A1.G_is_class_fn                150
+  A1.G_is_class_fn_prime           77
+  A1.G_mult_classes               144
+  A1.Gquad=gamma3_prime            77
+  A1.Gquad=gamma3_sqfree          237
+  A1.Gquad_closed                1618
+  A1.Gquad_mod4                    12
+  A1.Gquad_poisson               1618
+  A1.Gquad_square_inv             144
+  A1.Gquad_table                    4
+  A1.Gquad_twisted              29870
+  A1.J22=-1mod3                    77
+  A1.J22=-p                        77
+  A1.J22_div_p                     77
+  A1.J22_vs_complex                77
+  A1.R(c,c)=chi_c(-1)             179
+  A1.R=(a/b)2(b/a)2             29870
+  A1.R_bichar                    1728
+  A1.R_formula                    144
+  A1.R_symmetric                  144
+  A1.chi4=(-2/d)_3                179
+  A1.chi4=(d/-2)_3                179
+  A1.chi4J                         77
+  A1.class_rep                     12
+  A1.convert1                     237
+  A1.convert2                     237
+  A1.count                      14309
+  A1.crt-a                        474
+  A1.cubic_recip                29870
+  A1.g                            237
+  A1.g_prime                       77
+  A1.gamma2^3=-alpha               77
+  A1.gamma2^3=mu*alpha            237
+  A1.gamma2gamma4                  77
+  A1.gauss_FT_formula             140
+  A1.gauss_FT_quadrature            1
+  A1.gauss_minus                  385
+  A1.gj                           237
+  A1.gj_prime                      77
+  A1.inverse_char                 385
+  A1.lambda_sym_period9           179
+  A1.powersum_vanish             1444
+  A1.prod_x(1-x)=1                 77
+  A1.quotient                     144
+  A1.sextic_recip               29870
+  A1.step_g1g2                     77
+  A1.sum_jx=0mod3                  77
+  A1.supp_lambda                  179
+  A1.supp_omega                   179
+  A1.twisted_mult                 711
+  A1.unimodular                   385
+  A1.units_mod4_count               1
+TOTAL cases: 148857  FAILURES: 0
+time 80.8s

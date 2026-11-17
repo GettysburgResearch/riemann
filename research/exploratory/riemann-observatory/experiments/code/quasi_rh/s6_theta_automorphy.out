@@ -1,0 +1,43 @@
+theta terms: 1318 R = 7.0 build 16.8s
+period 1      : rel diff 9.83e-18
+period 3omega : rel diff 4.74e-16
+shift omega (should NOT be invariant): rel diff 9.93e-01
+period 1      : rel diff 1.72e-16
+period 3omega : rel diff 6.45e-16
+shift omega (should NOT be invariant): rel diff 9.84e-01
+E-invariance at v=0.93 -> v'=0.93 : rel diff 1.83e-16
+E-invariance at v=0.60 -> v'=1.13 : rel diff 4.45e-15
+E-invariance at v=0.50 -> v'=1.08 : rel diff 4.12e-15
+gamma a=(1, 3) b=(3, 3) c=(3, 0) d=(1, -3)  heights 0.333->0.323  ratio=(-0.5+0.8660254038j)  |ratio|=1.000000000005  (c/a)_3=w^1 (c/d)_3=w^2 (b/d)_3=w^1
+     |ratio-(c/a)| = 6.05e-12   |ratio-(c/d)| = 1.73e+00
+gamma a=(1, 3) b=(3, 3) c=(3, 0) d=(1, -3)  heights 0.333->0.327  ratio=(-0.5+0.8660254038j)  |ratio|=1.000000000002  (c/a)_3=w^1 (c/d)_3=w^2 (b/d)_3=w^1
+     |ratio-(c/a)| = 1.88e-12   |ratio-(c/d)| = 1.73e+00
+gamma a=(4, 3) b=(0, -3) c=(3, 0) d=(-2, -3)  heights 0.333->0.323  ratio=(-0.5+0.8660254038j)  |ratio|=1.000000000005  (c/a)_3=w^1 (c/d)_3=w^2 (b/d)_3=w^1
+     |ratio-(c/a)| = 6.05e-12   |ratio-(c/d)| = 1.73e+00
+gamma a=(4, 3) b=(0, -3) c=(3, 0) d=(-2, -3)  heights 0.333->0.327  ratio=(-0.5+0.8660254038j)  |ratio|=1.000000000002  (c/a)_3=w^1 (c/d)_3=w^2 (b/d)_3=w^1
+     |ratio-(c/a)| = 1.89e-12   |ratio-(c/d)| = 1.73e+00
+gamma a=(1, 3) b=(0, -3) c=(0, 3) d=(1, -3)  heights 0.333->0.323  ratio=(1+0j)  |ratio|=1.000000000001  (c/a)_3=w^0 (c/d)_3=w^0 (b/d)_3=w^0
+     |ratio-(c/a)| = 5.91e-13   |ratio-(c/d)| = 5.91e-13
+gamma a=(1, 3) b=(0, -3) c=(0, 3) d=(1, -3)  heights 0.333->0.327  ratio=(1+0j)  |ratio|=1.000000000000  (c/a)_3=w^0 (c/d)_3=w^0 (b/d)_3=w^0
+     |ratio-(c/a)| = 2.39e-13   |ratio-(c/d)| = 2.39e-13
+gamma a=(-2, 0) b=(0, 3) c=(3, 3) d=(4, 0)  heights 0.333->0.323  ratio=(-0.5-0.8660254038j)  |ratio|=0.999999999999  (c/a)_3=w^2 (c/d)_3=w^1 (b/d)_3=w^2
+     |ratio-(c/a)| = 5.09e-13   |ratio-(c/d)| = 1.73e+00
+gamma a=(-2, 0) b=(0, 3) c=(3, 3) d=(4, 0)  heights 0.333->0.327  ratio=(-0.5-0.8660254038j)  |ratio|=1.000000000001  (c/a)_3=w^2 (c/d)_3=w^1 (b/d)_3=w^2
+     |ratio-(c/a)| = 1.27e-12   |ratio-(c/d)| = 1.73e+00
+gamma a=(4, 6) b=(9, 6) c=(-3, 0) d=(-2, 3)  heights 0.333->0.323  ratio=(-0.5-0.8660254038j)  |ratio|=1.000000000011  (c/a)_3=w^2 (c/d)_3=w^1 (b/d)_3=w^2
+     |ratio-(c/a)| = 1.22e-11   |ratio-(c/d)| = 1.73e+00
+gamma a=(4, 6) b=(9, 6) c=(-3, 0) d=(-2, 3)  heights 0.333->0.327  ratio=(-0.5-0.8660254038j)  |ratio|=1.000000000013  (c/a)_3=w^2 (c/d)_3=w^1 (b/d)_3=w^2
+     |ratio-(c/a)| = 3.66e-11   |ratio-(c/d)| = 1.73e+00
+gamma a=(7, 3) b=(-6, -3) c=(6, 3) d=(-5, -3)  heights 0.192->0.176  ratio=(1.000000186+4.13e-08j)  |ratio|=1.000000185970  (c/a)_3=w^0 (c/d)_3=w^0 (b/d)_3=w^0
+     |ratio-(c/a)| = 1.90e-07   |ratio-(c/d)| = 1.90e-07
+gamma a=(7, 3) b=(-6, -3) c=(6, 3) d=(-5, -3)  heights 0.192->0.183  ratio=(1.0000001721+2.61e-08j)  |ratio|=1.000000172062  (c/a)_3=w^0 (c/d)_3=w^0 (b/d)_3=w^0
+     |ratio-(c/a)| = 1.74e-07   |ratio-(c/d)| = 1.74e-07
+gamma a=(1, -3) b=(3, 6) c=(3, 6) d=(-8, -6)  heights 0.192->0.176  ratio=(1.000001127-6.4967e-06j)  |ratio|=1.000001127055  (c/a)_3=w^0 (c/d)_3=w^0 (b/d)_3=w^0
+     |ratio-(c/a)| = 6.59e-06   |ratio-(c/d)| = 6.59e-06
+gamma a=(1, -3) b=(3, 6) c=(3, 6) d=(-8, -6)  heights 0.192->0.183  ratio=(1.000001933-3.1383e-06j)  |ratio|=1.000001932990  (c/a)_3=w^0 (c/d)_3=w^0 (b/d)_3=w^0
+     |ratio-(c/a)| = 3.69e-06   |ratio-(c/d)| = 3.69e-06
+gamma a=(-5, -3) b=(6, 0) c=(3, 0) d=(-2, 3)  heights 0.333->0.323  ratio=(-0.5-0.8660254038j)  |ratio|=1.000000000000  (c/a)_3=w^2 (c/d)_3=w^1 (b/d)_3=w^2
+     |ratio-(c/a)| = 7.11e-12   |ratio-(c/d)| = 1.73e+00
+gamma a=(-5, -3) b=(6, 0) c=(3, 0) d=(-2, 3)  heights 0.333->0.327  ratio=(-0.5-0.8660254038j)  |ratio|=1.000000000000  (c/a)_3=w^2 (c/d)_3=w^1 (b/d)_3=w^2
+     |ratio-(c/a)| = 4.08e-13   |ratio-(c/d)| = 1.73e+00
+total 16.8s
