@@ -229,7 +229,9 @@ def main(case):
             # evaluate at the (decimal) midpoint, then widen by |h'| * radius, with the rigorous bound
             # |h'(z)| <= int |x||p(x)| dx <= L sqrt(2L) ||p||_2 for real z (Cauchy-Schwarz)
             gmid = arb(m)
-            hp_bound = Lh * (2 * Lh).sqrt() * arb(a0).sqrt() * arb(r)
+            # certified enclosure of gamma from EXP-0001: [mid - rad - 5e-21, mid + rad + 5e-21]
+            # (midpoints printed to 25 significant digits; see experiments/reproducibility.md)
+            hp_bound = Lh * (2 * Lh).sqrt() * arb(a0).sqrt() * (arb(r) + arb("5e-21"))
             for sgn in [1, -1]:
                 hv = h(acb(sgn * gmid))
                 hv = acb(arb(hv.real.mid(), hv.real.rad() + hp_bound), arb(hv.imag.mid(), hv.imag.rad() + hp_bound))

@@ -191,7 +191,7 @@ where d is the divisor function and K_0 is the Macdonald function.
 
 (b) At k0 = 4πe^{-γ}, Z_{k0}(1/2) = 8 Σ d(N) K_0(2πNk0) > 0. So k0 is not a zero, and k* < k0.
 
-(c) In BST's normalisation, ζ^{(2)}(s, Δ) = (1/2)Σ'(j² + Δ²k²)^{-s} = (1/2)Δ^{-2s}Z_{1/Δ}(s), so the unique solution of ζ^{(2)}(1/2, Δ) = 0 in (0,1) is Δ* = 1/k* = (e^γ/(4π))·exp(4 Σ d(N)K_0(2πN/Δ*)) > e^γ/(4π). Numerically, Δ* - e^γ/(4π) = 5.947e-21, a relative gap of 4.196e-20 [NN]. Conjecture 1.1 of arXiv:2110.09368v2 (p. 3) is therefore **false**. Their reported agreement "by at least 22 decimal digits" (p. 22) is inconsistent with the exact formula. The two numbers agree to 19 decimal places and differ in the 20th (the skeptic's "21st" is a miscount).
+(c) In BST's normalisation, ζ^{(2)}(s, Δ) = (1/2)Σ'_{(j,l)}(j² + Δ²l²)^{-s} = (1/2)Δ^{-2s}Z_{1/Δ}(s), so the unique solution of ζ^{(2)}(1/2, Δ) = 0 in (0,1) is Δ* = 1/k* = (e^γ/(4π))·exp(4 Σ d(N)K_0(2πN/Δ*)) > e^γ/(4π). Numerically, Δ* - e^γ/(4π) = 5.947e-21, a relative gap of 4.196e-20 [NN]. Conjecture 1.1 of arXiv:2110.09368v2 (p. 3) is therefore **false**. Their reported agreement "by at least 22 decimal digits" (p. 22) is inconsistent with the exact formula. The two numbers agree to 19 decimal places and differ in the 20th (the skeptic's "21st" is a miscount).
 
 (d) For every k > k*, Z_k has a real zero in (1/2, 1), and its mirror in (0, 1/2). At k = k*, Z_k has a zero of even order at s = 1/2.
 
@@ -223,7 +223,7 @@ Proof (the classical sign-change argument, written out here).
 
 - Choose c > 0 and A > 0 so that e(v) = Ae^{-cv} has the same (p ± h)-moments as g. Such c exists and is unique, because M_e(p+h)/M_e(p-h) = (Γ(p+h+1)/Γ(p-h+1))c^{-2h} decreases bijectively in c. Set D = g - e.
 - log g - log e is concave, so {D > 0} is an interval (v1, v2) and D ≤ 0 off it. If D ≡ 0 we are done, so assume not.
-- If v1 = 0, then ∫v^{p-h}(v^{2h} - v2^{2h})D < 0, because the integrand is negative on (0, v2) and ≤ 0 beyond. But this integral equals ∫v^{p+h}D - v2^{2h}∫v^{p-h}D = 0, a contradiction. The case v2 = ∞ fails the same way, so 0 < v1 < v2 < ∞.
+- If v1 = 0 and v2 = ∞, then D > 0 a.e., which contradicts ∫v^{p-h}D = 0. If v1 = 0 < v2 < ∞, then ∫v^{p-h}(v^{2h} - v2^{2h})D < 0, because the integrand is negative on (0, v2) and ≤ 0 beyond. But this integral equals ∫v^{p+h}D - v2^{2h}∫v^{p-h}D = 0, a contradiction. The case v2 = ∞ fails the same way, so 0 < v1 < v2 < ∞.
 - With w = v^h and w_i = v_i^h, put u(v) = -v^{p-h}(w - w1)(w - w2) = -v^{p+h} + (w1 + w2)v^p - w1w2 v^{p-h}. Then uD ≥ 0, and uD > 0 on a set of positive measure. So 0 < ∫uD = (w1 + w2)∫v^p D, i.e. M_g(p) > M_e(p).
 - Hence λ_g(p) > λ_e(p) = Ac^{-p-1} = (λ_e(p-h)λ_e(p+h))^{1/2} = (λ_g(p-h)λ_g(p+h))^{1/2}. ∎
 
@@ -266,7 +266,7 @@ The zoo's Missing sets are not singletons: Missing(DH) = {P2, P3, P4, P5, P6, P8
 ### 3.7 Detection statements (Li coefficients, ξ~)
 
 - THEOREM (identity): λ_n(ξ~) - λ_n(ξ) = 4 - 2Re[(1-1/ρ0)^n] - 2Re[(ρ0/(ρ0-1))^n].
-- The last term has modulus e^{n·rate}, rate = (1/2)log((β² + γ0²)/((1-β)² + γ0²)) ≈ 2δ/γ0² (δ = β - 1/2). So the injected quadruple is invisible to λ_n until n ≈ rate^{-1}log(λ_n(ξ)/2) ≈ (γ0²/(2δ))·log n. This is HEURISTIC, and checked against the 4 exact thresholds (C2-ADJ-8).
+- The last term has modulus e^{n·rate}, rate = (1/2)log((β² + γ0²)/((1-β)² + γ0²)) ≈ δ/γ0² (δ = β - 1/2). So the injected quadruple is invisible to λ_n until n ≈ rate^{-1}log(λ_n(ξ)/2) ≈ (γ0²/δ)·log(λ_n(ξ)/2). This is HEURISTIC, and checked against the 4 exact thresholds (C2-ADJ-8).
 - For an off-line zero like DH's first (β = 0.8085, γ0 = 85.7), the predicted threshold is n ≈ 3.2e5, beyond the computed range.
 
 ## 4. Adjudicated stress-test protocol
@@ -397,4 +397,4 @@ python3 code/C2-countermodel-zoo/skeptic/sk_bst_threshold.py OUT
 5. **A protocol member between M10 and the Selberg class.** Is there an RH-false F with P1, P3, P5 (Λ_F ≥ 0) and P7 that is not in S? Λ_F ≥ 0 rules out polynomial local factors with zeros of the M10 type, and placing them in the denominator creates poles instead of zeros. A precise version: classify S^#_1 elements with an Euler product and Λ_F ≥ 0 (Kaczorowski-Perelli structure theorem for S^#_1). Either an RH-false example exists or the class reduces to Dirichlet L-functions. Either answer sharpens SP-1c.
 6. **Restricted Weil positivity for ξ~.** Certify, for the Yoshida/Bombieri support range, whether the Weil functional stays positive for an injected quadruple at height γ0 (open question in REPORT).
 7. **DH zero with σ > 1.** Use Kronecker/LLL targeting on the phases t log p for p ≡ 2, 3 mod 5, p ≤ 157, to locate and certify a DH zero with σ > 1. Compare its height with the heuristic in C2-06.
-8. **Independent replay before external citation.** C2-07 (Liu-Wu) has an independent witness already (skeptic). C2-ADJ-2 (BST) has a complete proof plus two codes. Under methodology sect. 6(iv), still record both in `audits/unresolved_findings.md` until a different agent re-derives the Chowla-Selberg constant term.
+8. **Independent replay before external citation.** Both external refutations already meet methodology sect. 6(i). C2-07 (Liu-Wu) has certificates by two agents using different methods. C2-ADJ-2 (BST) has a complete proof re-derived by the adjudicator, independently of the skeptic who raised it, plus two independent codes. Before anything is cited outside the Observatory, a further agent should still do an L2 check of the Chowla-Selberg constant term (sect. 3.2) and of the Liu-Wu failing step against the full text.
