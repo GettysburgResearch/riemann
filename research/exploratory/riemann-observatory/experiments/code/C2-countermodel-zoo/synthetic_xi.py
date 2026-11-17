@@ -112,10 +112,62 @@ def poly_mul(a, b, K):
     return out
 
 
-def jensen_experiment(cases, K=120, prec=1200, dmax=30, nmax=30):
+def dh_taylor(K, prec):
+    """Arb coefficients of xi_f(1/2+z), xi_f(s) = (5/pi)^{s/2} Gamma((s+1)/2) f(s), f = Davenport-Heilbronn."""
+    flint.ctx.prec = prec
+    z = acb_series([acb("0.5"), 1], prec=K)
+    k = ((10 - 2 * arb(5).sqrt()).sqrt() - 2) / (arb(5).sqrt() - 1)
+    I = acb(0, 1)
+    chi, chib = flint.dirichlet_char(5, 2), flint.dirichlet_char(5, 3)
+    f = acb_series.dirichlet_l(z, chi) * ((1 - I * k) / 2) + acb_series.dirichlet_l(z, chib) * ((1 + I * k) / 2)
+    pref = (z * ((acb(5) / acb.pi()).log() / 2)).exp() * acb_series.gamma((z + 1) * acb("0.5"))
+    return (pref * f).coeffs()
+
+
+def epstein5_taylor(K, prec):
+    """Arb coefficients of xi_Q(1/2+z), xi_Q(s) = s(s-1)(sqrt20/(2pi))^s Gamma(s) Z_Q(s), Q = x^2+5y^2,
+    Z_Q = zeta L_-20 + L_-4 L_5 (see epstein_zeros.py)."""
+    import epstein_zeros as E          # (module import sets prec = 128; reset afterwards)
+    flint.ctx.prec = prec
+    z = acb_series([acb("0.5"), 1], prec=K)
+    Zs = E.Lser(z, 1) * E.Lser(z, -20) + E.Lser(z, -4) * E.Lser(z, 5)
+    pref = z * (z - 1) * (z * (arb(20).sqrt() / (2 * arb.pi())).log()).exp() * acb_series.gamma(z)
+    return (pref * Zs).coeffs()
+
+
+def jensen_table(cc, K, dmax, nmax):
+    odd_max = max(float(abs(cc[j]).upper()) for j in range(1, K, 2))
+    g = [cc[2 * k].real * arb.fac_ui(k) for k in range(K // 2)]
+    tur = [(g[k] ** 2 - g[k - 1] * g[k + 1]) for k in range(1, len(g) - 1)]
+    tur_pos = [bool(x > 0) for x in tur]
+    tur_neg = [bool(x < 0) for x in tur]
+    mp.mp.dps = 80
+    gm = [mp.mpf(x.mid().str(80, radius=False)) for x in g]
+    hyp = {}
+    for d in range(2, dmax + 1):
+        row = []
+        for n in range(0, nmax + 1):
+            if n + d >= len(gm):
+                break
+            coeffs = [mp.binomial(d, j) * gm[n + j] for j in range(d + 1)]
+            roots = mp.polyroots(coeffs[::-1], maxsteps=500, extraprec=800)
+            row.append(float(max(abs(mp.im(r)) / (1 + abs(r)) for r in roots)))
+        hyp[d] = row
+    nonhyp = [(d, n) for d, row in hyp.items() for n, v in enumerate(row) if v > 1e-10]
+    return dict(odd_coeff_max_abs=odd_max, n_g=len(g),
+                turan_all_positive_arb=all(tur_pos),
+                turan_indices_certified_negative=[k + 1 for k, b in enumerate(tur_neg) if b],
+                turan_indices_undecided=[k + 1 for k in range(len(tur)) if not tur_pos[k] and not tur_neg[k]],
+                nonhyperbolic_pairs_d_n=nonhyp[:300],
+                smallest_d_nonhyperbolic_at_n0=min([d for d, n in nonhyp if n == 0], default=None),
+                largest_n_with_some_nonhyperbolic_d=max([n for d, n in nonhyp], default=None),
+                max_rel_imag_root_at_n0={str(d): hyp[d][0] for d in hyp if hyp[d]})
+
+
+def jensen_experiment(cases, K=120, prec=1500, dmax=30, nmax=30):
     c = xi_taylor(K, prec)
     res = {}
-    for label, beta, gam0 in [('xi', None, None)] + [(f'beta={b},gamma0={g}', b, g) for b, g in cases]:
+    for label, beta, gam0 in [('xi', None, None)] + [(f'xi~ beta={b},gamma0={g}', b, g) for b, g in cases]:
         cc = list(c)
         if beta is not None:
             # P(1/2+z) = prod (1 - (1/2+z)/rho) = prod ((rho-1/2) - z)/rho  as polynomial in z
@@ -123,33 +175,14 @@ def jensen_experiment(cases, K=120, prec=1200, dmax=30, nmax=30):
             for r in (acb(beta, gam0), acb(beta, -gam0), acb(1 - beta, -gam0), acb(1 - beta, gam0)):
                 P = poly_mul(P, [(r - acb("0.5")) / r, acb(-1) / r], 5)
             cc = poly_mul(cc, P, K)
-        # g(k) = c_{2k} k!  (even part; odd coefficients vanish)
-        odd_max = max(float(abs(cc[j]).upper()) for j in range(1, K, 2))
-        g = [cc[2 * k].real * arb.fac_ui(k) for k in range(K // 2)]
-        tur = [(g[k] ** 2 - g[k - 1] * g[k + 1]) for k in range(1, len(g) - 1)]
-        tur_ok = [bool(x > 0) for x in tur]
-        gm = [mp.mpf(x.mid().str(60, radius=False)) for x in g]
-        mp.mp.dps = 60
-        hyp = {}
-        for d in range(2, dmax + 1):
-            row = []
-            for n in range(0, nmax + 1):
-                if n + d >= len(gm):
-                    break
-                coeffs = [mp.binomial(d, j) * gm[n + j] for j in range(d + 1)]
-                roots = mp.polyroots(coeffs[::-1], maxsteps=400, extraprec=600)
-                mx = max(abs(mp.im(r)) / (1 + abs(r)) for r in roots)
-                row.append(float(mx))
-            hyp[d] = row
-        nonhyp = [(d, n) for d, row in hyp.items() for n, v in enumerate(row) if v > 1e-12]
-        res[label] = dict(odd_coeff_max=odd_max, n_g=len(g),
-                          turan_all_positive=all(tur_ok), turan_first_failure=(tur_ok.index(False) + 1) if not all(tur_ok) else None,
-                          turan_proven_by_arb=all(tur_ok),
-                          nonhyperbolic_pairs_d_n=nonhyp[:200],
-                          smallest_d_nonhyperbolic_at_n0=min([d for d, n in nonhyp if n == 0], default=None),
-                          max_rel_imag_by_d_at_n0={str(d): hyp[d][0] for d in hyp})
-        print('jensen', label, res[label]['turan_all_positive'], res[label]['smallest_d_nonhyperbolic_at_n0'],
-              len(nonhyp), flush=True)
+        res[label] = jensen_table(cc, K, dmax, nmax)
+        print('jensen', label, res[label]['turan_all_positive_arb'], res[label]['smallest_d_nonhyperbolic_at_n0'],
+              res[label]['largest_n_with_some_nonhyperbolic_d'], flush=True)
+    for label, fn in [('davenport_heilbronn xi_f', dh_taylor), ('epstein x2+5y2 xi_Q', epstein5_taylor)]:
+        cc = fn(K, prec)
+        res[label] = jensen_table(cc, K, dmax, nmax)
+        print('jensen', label, res[label]['turan_all_positive_arb'], res[label]['smallest_d_nonhyperbolic_at_n0'],
+              res[label]['largest_n_with_some_nonhyperbolic_d'], flush=True)
     return res
 
 
