@@ -1,0 +1,11 @@
+PASS (C1) L(1,chi) routine agrees with the exact digamma formula -(1/q) sum chi(a) psi(a/q) to 2.2e-12
+PASS (C1) analytic class numbers for all 911 imaginary fundamental |D| <= 3000: all integral to 1e-6; h=1 list [3, 4, 7, 8, 11, 19, 43, 67, 163]; (count, max|D|) for h=1..5 = {1: (9, 163), 2: (18, 427), 3: (16, 907), 4: (54, 1555), 5: (25, 2683)} = Watkins Table 4
+PASS (C2) re-derived bound at q=10, k=4, c=1/100: L(1,chi) log q >= 0.007671 (part 1 / ARCHITECTURE: 0.00767)
+PASS (C2) implied L(1,chi) lower bounds for all four constants: 0 violations over 1820 fundamental discriminants (imaginary |D| <= 3000, real D <= 3000, q >= 10); smallest ratio data/bound for c=1/100: 131.3 at D = -163
+PASS (C3) |D| beyond which the implied bound h(D) >= sqrt|D| g(q)/(pi log|D|) exceeds 1 and 100 (D < -4): Guo 1/100: h>1 for |D| >= 3.11e+07, h>100 for |D| >= 7.8e+11; Guo App.A 1/64: h>1 for |D| >= 1.17e+07, h>100 for |D| >= 3.07e+11; Banks 3.0e-3: h>1 for |D| >= 4.42e+08, h>100 for |D| >= 9.98e+12; Kimura 5.811e-4: h>1 for |D| >= 1.62e+10, h>100 for |D| >= 3.28e+14. Ordering is monotone in c; every threshold lies far beyond the Heegner range (163), so class-number tables cannot contradict any of the constants.
+
+SUMMARY: 5 PASS, 0 FAIL
+
+real	1m56.618s
+user	1m20.992s
+sys	0m0.223s

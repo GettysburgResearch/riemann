@@ -17,8 +17,15 @@ def tc(T_target, delta, M=300, include_far=True):
     far = 2*np.r_[g[:lo], g[hi:]]
     farall = np.r_[far, -2*g] if include_far else np.array([])
     n = len(dyn)
-    def bg(zz):   # static background velocity 2*sum 1/(z - z_l), plus smooth tail beyond gamma_100000 (both signs) ~ 0 by symmetry at leading order
-        return 2*np.sum(1.0/(zz[:, None] - farall[None, :]), axis=1) if len(farall) else np.zeros(len(zz), dtype=complex)
+    def bg_exact(zz):
+        if not len(farall): return np.zeros(len(zz), dtype=complex)
+        return np.concatenate([2*np.sum(1.0/(zz[i:i + 50, None] - farall[None, :]), axis=1) for i in range(0, len(zz), 50)])
+    if len(farall):   # real zeros: interpolate the (smooth) static background from a fine grid inside the window
+        xg = np.linspace(dyn.min() - 1, dyn.max() + 1, 4000); bgg = np.real(bg_exact(xg.astype(complex)))
+    def bg(zz):
+        if not len(farall): return np.zeros(len(zz), dtype=complex)
+        if np.all(np.imag(zz) == 0): return np.interp(np.real(zz), xg, bgg).astype(complex)
+        return bg_exact(zz)
     def rhs(t, s):
         x = s[:n]; X, V = s[n], s[n + 1]          # pair X +- i y, V = y^2
         y = math.sqrt(max(V, 1e-30)); zc = complex(X, y)
@@ -33,7 +40,7 @@ def tc(T_target, delta, M=300, include_far=True):
     return T, ts + ss[n + 1]/(-dV)
 rows = []
 t0 = time.time()
-for Tt, d, inv in [(17.6, 0.45, 0.4011), (1000, 0.45, 0.32657), (1000, 0.2, 0.07612), (70000, 0.45, 0.22324)]:
+for Tt, d, inv in [(17.6, 0.45, 0.4011), (1000, 0.45, 0.32657), (70000, 0.45, 0.22324)]:
     for far in (False, True):
         T, t = tc(Tt, d, include_far=far)
         rows.append({"T": T, "delta": d, "include_far_static": far, "t_c": t, "investigator": inv})

@@ -1,0 +1,51 @@
+{
+ "A_max_err": 1.0607757449091288e-35,
+ "B_max_a_ratio(<=1 required)": 3.5111491421599803,
+ "B_max_phi*gamma (<=1.0013 claimed)": 0.9999999999999993,
+ "B_min_phi_minus_lower (>=0 required)": -5.293955920339377e-23,
+ "C_min_margin_LemmaB": 0.0,
+ "C_argmin": [
+  0.0,
+  0.0
+ ],
+ "C_max_(cosh x-1)/x^2 on [0,0.50006]": 0.5105064029298282,
+ "C_min_(1-cos y)/y^2 on [0,1.1]": 0.45157345336729143,
+ "D_max_ratio_rigorous_upper/claimed_upper (<=1 needed)": 0.3389123240412547,
+ "D_max_ratio_claimed_lower/rigorous_lower (<=1 needed)": 0.19312613892505034,
+ "D_min_final_margin_scaled(T^2*margin) over T in [100,1e13]": 1.1899494595696147,
+ "E_stress": [
+  {
+   "T": 100.0,
+   "T^2": 10000.0,
+   "first_negative_n (all zeros above T at beta=1-1e-12)": 241171,
+   "min_lambda_seen(n,val)": [
+    241171,
+    -714.581155186064
+   ],
+   "lambda_at_T^2,T^2logT,2T^2logT": {
+    "10000": 32531.030453897867,
+    "46051": 148879.67524990367,
+    "92103": 242079.77414503877
+   },
+   "T^2 log T": 46051.701859880915,
+   "sec": 217.0
+  },
+  {
+   "T": 150.0,
+   "T^2": 22500.0,
+   "first_negative_n (all zeros above T at beta=1-1e-12)": 528862,
+   "min_lambda_seen(n,val)": [
+    528862,
+    -69.14116440260801
+   ],
+   "lambda_at_T^2,T^2logT,2T^2logT": {
+    "22500": 76179.24758995495,
+    "112739": 263669.2163253517,
+    "225478": 234854.5879177581
+   },
+   "T^2 log T": 112739.29411716574,
+   "sec": 375.5
+  }
+ ],
+ "runtime_s": 593.5686428546906
+}
