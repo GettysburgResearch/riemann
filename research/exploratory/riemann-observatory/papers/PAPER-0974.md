@@ -14,6 +14,7 @@
 | Evidence level of this record | **L0** |
 | Full text | not_attempted — https://doi.org/10.1016/j.jnt.2006.09.013 |
 | Selection | score 4.4476, in-pool citations 14, seed lists 0, triage relevance 3 |
+| Published updates (Crossref) | ['erratum'] 10.1016/j.jnt.2009.10.010 |
 
 ## Content (index-level record — the paper itself was NOT read)
 
