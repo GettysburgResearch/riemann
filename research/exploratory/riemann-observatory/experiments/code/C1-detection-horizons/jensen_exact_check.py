@@ -61,7 +61,7 @@ def count_sign_changes(alpha, d, M_per=40, prec=2000):
 if __name__ == "__main__":
     t0 = time.time()
     res = []
-    plan = {10: list(range(116, 124)), 20: [400, 470, 475, 478, 479, 480, 481, 482, 485, 490, 520, 600, 700, 749, 750, 760], 40: [1880, 1890, 1895, 1897, 1898, 1900]}
+    plan = {10: list(range(116, 124)), 20: [470, 475, 476, 477, 478, 480, 600, 700, 749, 750]}
     for j, ds in plan.items():
         alpha, ab = taylor_X(j, max(ds) + 2, dps=400)
         for d in ds:
