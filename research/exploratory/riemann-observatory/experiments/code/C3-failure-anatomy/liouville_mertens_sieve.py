@@ -141,6 +141,7 @@ def run(N, seglog=22, track=True):
                 "min_T_x_ge1": minT, "argmin_T": argminT,
                 "T_fixedpoint_rigorous_lower_bound_min": minTF_lower / 2.0 ** 56,
                 "T_fixedpoint_argmin_of_lower_bound": argminTF,
+                "T_fixedpoint_min_lower_bound_integer_times_2^56": minTF_lower,
                 "T_fixedpoint_note": "T(x) >= (TF(x)-x)/2^56 with TF(x)=sum_{n<=x} lam(n)*floor(2^56/n) exact int64",
                 "ambiguous_residual_decisions": ambiguous})
     res["Mertens_ratio_records"] = {str(f): {"max_|M(x)|/sqrt(x)": v[0], "x": v[1], "M(x)": v[2]}
