@@ -1,0 +1,30 @@
+{
+ "campaign": "C1-detection-horizons",
+ "role": "adjudicator",
+ "date": "2026-11-17",
+ "env": {
+  "python": "3.13.18",
+  "python-flint": "0.9.0",
+  "mpmath": "1.3.0",
+  "cores_used": 1
+ },
+ "runs": [
+  {
+   "code": "code/C1-detection-horizons/adjudicator/adj_numbers.py",
+   "code_sha256": "326f747547df569b716ab642db2d3ffe94ee1408bcb1255752a1add4600b0d24",
+   "output": "results/C1-detection-horizons/adjudicator/adj_numbers.json",
+   "output_sha256": "35acfbaf0de771b46d09e7360ad57aae968e2a8b5c3b6c01554fa9c706d78eb2",
+   "runtime_s": 0.13,
+   "class": "NUMERICAL-NONRIGOROUS (mpmath 50 digits)"
+  },
+  {
+   "code": "code/C1-detection-horizons/adjudicator/adj_farmer_x10.py",
+   "code_sha256": "4d3184b5e5d6ffbb36debe8d7c414e88385be9a75d6051918156b04655590647",
+   "output": "results/C1-detection-horizons/adjudicator/adj_farmer_x10.json",
+   "output_sha256": "4e9d0a5ec0838a30e5925f9472122f80f0b9511f6201fd57e08fff6aace7bff2",
+   "runtime_s": 103.2,
+   "class": "NUMERICAL-RIGOROUS (Arb 4000 bits; sign-change and Krawczyk certificates)"
+  }
+ ],
+ "verified_upstream_hashes": "all 9 investigator outputs and 8 skeptic outputs re-hashed on 2026-11-17; all match REPORT.md / SKEPTIC_REVIEW.md (sk_j10_gap.txt: 46c8ba2591c2c063876702584fb897f775b0016918ebd1c403bbc7f8816aa112, not listed by the skeptic)"
+}

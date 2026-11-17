@@ -1,0 +1,238 @@
+{
+ "points": [
+  {
+   "T": "3000175332800",
+   "delta": "0.49",
+   "L": "6.490",
+   "margin": "[45.669669 +/- 1.37e-7]",
+   "certified_positive": true
+  },
+  {
+   "T": "3000175332800",
+   "delta": "0.4",
+   "L": "7.938",
+   "margin": "[89.970357 +/- 9.65e-8]",
+   "certified_positive": true
+  },
+  {
+   "T": "3000175332800",
+   "delta": "0.3",
+   "L": "10.565",
+   "margin": "[62.401332 +/- 4.15e-7]",
+   "certified_positive": true
+  },
+  {
+   "T": "3000175332800",
+   "delta": "0.2",
+   "L": "15.819",
+   "margin": "[51.772046 +/- 1.49e-8]",
+   "certified_positive": true
+  },
+  {
+   "T": "3000175332800",
+   "delta": "0.1",
+   "L": "31.581",
+   "margin": "[352.52529 +/- 2.80e-7]",
+   "certified_positive": true
+  },
+  {
+   "T": "1e100",
+   "delta": "0.49",
+   "L": "8.262",
+   "margin": "[4422.4952 +/- 1.26e-5]",
+   "certified_positive": true
+  },
+  {
+   "T": "1e100",
+   "delta": "0.4",
+   "L": "10.102",
+   "margin": "[82.244154 +/- 1.28e-7]",
+   "certified_positive": true
+  },
+  {
+   "T": "1e100",
+   "delta": "0.3",
+   "L": "13.443",
+   "margin": "[4315.6894 +/- 4.27e-5]",
+   "certified_positive": true
+  },
+  {
+   "T": "1e100",
+   "delta": "0.2",
+   "L": "20.123",
+   "margin": "[5062.9275 +/- 2.30e-5]",
+   "certified_positive": true
+  },
+  {
+   "T": "1e100",
+   "delta": "0.1",
+   "L": "40.162",
+   "margin": "[14614.354 +/- 2.07e-4]",
+   "certified_positive": true
+  },
+  {
+   "T": "1e100",
+   "delta": "0.05",
+   "L": "80.239",
+   "margin": "[56450.948 +/- 4.91e-4]",
+   "certified_positive": true
+  },
+  {
+   "T": "1e1000",
+   "delta": "0.49",
+   "L": "10.734",
+   "margin": "[602310.68 +/- 1.36e-3]",
+   "certified_positive": true
+  },
+  {
+   "T": "1e1000",
+   "delta": "0.1",
+   "L": "52.318",
+   "margin": "[1443734.7 +/- 0.0399]",
+   "certified_positive": true
+  }
+ ],
+ "delta_star": [
+  {
+   "L": "L_N(T_PT)-1e-6",
+   "delta": "0.2355",
+   "margin": "[860.61902 +/- 4.03e-6]",
+   "certified_positive": true
+  },
+  {
+   "L": "L_N(T_PT)-1e-6",
+   "delta": "0.24",
+   "margin": "[84219.747 +/- 3.15e-4]",
+   "certified_positive": true
+  },
+  {
+   "L": "L_N(T_PT)-1e-6",
+   "delta": "0.3",
+   "margin": "[1.0899381e+7 +/- 0.465]",
+   "certified_positive": true
+  },
+  {
+   "L": "L_N(T_PT)-1e-6",
+   "delta": "0.4",
+   "margin": "[1.6859288e+9 +/- 42.2]",
+   "certified_positive": true
+  },
+  {
+   "L": "L_N(T_PT)-1e-6",
+   "delta": "0.49",
+   "margin": "[1.4485041e+11 +/- 2.43e+3]",
+   "certified_positive": true
+  },
+  {
+   "L": "L_N(T_PT)",
+   "delta": "0.2354",
+   "margin": "[-716.18261 +/- 3.39e-6]",
+   "certified_negative": true
+  },
+  {
+   "L": "L_N(T_PT)",
+   "delta": "0.22",
+   "margin": "[-143000.50 +/- 3.09e-3]",
+   "certified_negative": true
+  }
+ ],
+ "intervals": [
+  {
+   "L": "6",
+   "delta": "0.49",
+   "log10T_range": [
+    2.0,
+    4.94
+   ],
+   "certified_positive_on_whole_range": true,
+   "ball_evaluations": 15
+  },
+  {
+   "L": "8",
+   "delta": "0.49",
+   "log10T_range": [
+    2.0,
+    76.97
+   ],
+   "certified_positive_on_whole_range": true,
+   "ball_evaluations": 511
+  },
+  {
+   "L": "8",
+   "delta": "0.4",
+   "log10T_range": [
+    2.0,
+    13.5
+   ],
+   "certified_positive_on_whole_range": true,
+   "ball_evaluations": 63
+  },
+  {
+   "L": "10",
+   "delta": "0.49",
+   "log10T_range": [
+    2.0,
+    513.14
+   ],
+   "certified_positive_on_whole_range": true,
+   "ball_evaluations": 4095
+  },
+  {
+   "L": "10",
+   "delta": "0.4",
+   "log10T_range": [
+    2.0,
+    92.06
+   ],
+   "certified_positive_on_whole_range": true,
+   "ball_evaluations": 511
+  },
+  {
+   "L": "10",
+   "delta": "0.3",
+   "log10T_range": [
+    2.0,
+    6.68
+   ],
+   "certified_positive_on_whole_range": true,
+   "ball_evaluations": 31
+  },
+  {
+   "L": "12",
+   "delta": "0.49",
+   "log10T_range": [
+    2.0,
+    3152.4
+   ],
+   "certified_positive_on_whole_range": true,
+   "ball_evaluations": 32767
+  },
+  {
+   "L": "12",
+   "delta": "0.4",
+   "log10T_range": [
+    2.0,
+    431.0
+   ],
+   "certified_positive_on_whole_range": true,
+   "ball_evaluations": 4095
+  },
+  {
+   "L": "12",
+   "delta": "0.3",
+   "log10T_range": [
+    2.0,
+    39.58
+   ],
+   "certified_positive_on_whole_range": true,
+   "ball_evaluations": 255
+  }
+ ],
+ "L_N(T_PT)": "[13.4459073904 +/- 2.70e-11]",
+ "meta": {
+  "python": "3.13.18",
+  "python-flint": "0.9.0",
+  "prec_bits": 256,
+  "runtime_s": 0.86
+ }
+}

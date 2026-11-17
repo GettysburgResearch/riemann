@@ -32,7 +32,7 @@ import mpmath as mp
 
 t_start = time.time()
 flint.ctx.prec = 4000
-mp.mp.dps = 400
+mp.mp.dps = 100
 
 pi = arb.pi()
 A = (5 * pi / 2) ** 2
@@ -63,7 +63,7 @@ def Rcoeffs(d):
     return [arb(ffall(d, 2 * k)) * c[k] for k in range(d // 2 + 1)]
 
 def to_mp(x):
-    return mp.mpf(x.mid().str(380, radius=False))
+    return mp.mpf(x.mid().str(120, radius=False))
 
 def certify(d):
     co = Rcoeffs(d)
@@ -72,7 +72,7 @@ def certify(d):
     poly = arb_poly(co)
     # approximate roots in the scaled variable v = d^2 u (better conditioned for polyroots)
     sc = [to_mp(co[k]) / mp.mpf(d) ** (2 * k) for k in range(deg + 1)]
-    roots = mp.polyroots(list(reversed(sc)), maxsteps=2000, extraprec=4000)
+    roots = mp.polyroots(list(reversed(sc)), maxsteps=400, extraprec=300)
     roots = sorted(roots, key=lambda r: (mp.re(r), mp.im(r)))
     nonreal = [r for r in roots if abs(mp.im(r)) > mp.mpf(10) ** -100 * (1 + abs(r))]
     rec = {"d": d, "deg_R": deg, "max_rel_coeff_radius": maxrad, "n_approx_nonreal": len(nonreal),
@@ -83,7 +83,7 @@ def certify(d):
         pts = [mp.mpf(0)] + [(re_roots[i] + re_roots[i + 1]) / 2 for i in range(deg - 1)] + [2 * re_roots[-1]]
         signs = []
         for v in pts:
-            x = arb(mp.nstr(v / mp.mpf(d) ** 2, 300))       # test point in u (a tiny ball around a decimal)
+            x = arb(mp.nstr(v / mp.mpf(d) ** 2, 90))       # test point in u (a tiny ball around a decimal)
             val = poly(x)
             if val > 0: signs.append(1)
             elif val < 0: signs.append(-1)
@@ -102,7 +102,7 @@ def certify(d):
             u0 = u0 - f(u0) / fp(u0)
         apoly = acb_poly([acb(x) for x in co])
         dpoly = apoly.derivative()
-        U0 = acb(arb(mp.nstr(mp.re(u0), 350)), arb(mp.nstr(mp.im(u0), 350)))
+        U0 = acb(arb(mp.nstr(mp.re(u0), 95)), arb(mp.nstr(mp.im(u0), 95)))
         U0 = acb(U0.real.mid(), U0.imag.mid())
         r = abs(float(mp.im(u0))) * 1e-30
         D = acb(arb(U0.real.mid(), r), arb(U0.imag.mid(), r))

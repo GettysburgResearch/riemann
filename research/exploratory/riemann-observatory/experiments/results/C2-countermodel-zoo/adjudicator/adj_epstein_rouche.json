@@ -1,0 +1,53 @@
+{
+ "script": "adj_epstein_rouche.py",
+ "prec_bits": 192,
+ "versions": {
+  "python_flint": "0.9.0"
+ },
+ "identity_check_s3": {
+  "direct_truncated": "2.0783968688554550371",
+  "genus_hurwitz": "[2.0783968688659127192 +/- 2.46e-20]",
+  "truncation_bound_est": "~pi/(2*sqrt5*N^4) ~ 1e-11"
+ },
+ "certificates": [
+  {
+   "ok": true,
+   "centre_re": "1.011049334043550716471649081436461447751",
+   "centre_im": "1193.946404528846107533071379516320454503",
+   "r": 1e-12,
+   "R": 0.0001,
+   "abs_f_c_upper": "6.5679e-54",
+   "abs_df_c_lower": "4.110986418",
+   "M_upper": "0.01583877558",
+   "lhs_lower": "4.110986418e-12",
+   "rhs_upper": "1.583877590e-18",
+   "re_lower_bound": "1.011049334042550716471649",
+   "sigma_gt_1_certified": true,
+   "candidate": [
+    1.0110493,
+    1193.9464
+   ],
+   "runtime_s": 0.1
+  },
+  {
+   "ok": true,
+   "centre_re": "1.015070737693118293624685455318346820029",
+   "centre_im": "4108.108282536442521132941379840181765893",
+   "r": 1e-12,
+   "R": 0.0001,
+   "abs_f_c_upper": "2.0223e-53",
+   "abs_df_c_lower": "3.990246303",
+   "M_upper": "0.01920069725",
+   "lhs_lower": "3.990246303e-12",
+   "rhs_upper": "1.920069763e-18",
+   "re_lower_bound": "1.015070737692118293624685",
+   "sigma_gt_1_certified": true,
+   "candidate": [
+    1.0150707,
+    4108.10828
+   ],
+   "runtime_s": 0.2
+  }
+ ],
+ "runtime_s": 2.6
+}
