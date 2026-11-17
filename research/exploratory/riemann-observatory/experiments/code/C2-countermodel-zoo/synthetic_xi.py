@@ -92,6 +92,7 @@ def li_experiment(gam, cases, nmax=200000):
 def xi_taylor(K, prec):
     """Arb coefficients c_j of xi(1/2+z) = sum c_j z^j, j < K."""
     flint.ctx.prec = prec
+    flint.ctx.cap = K
     z = acb_series([acb("0.5"), 1], prec=K)
     zeta = acb_series.zeta(z)
     gam = acb_series.gamma(z * acb("0.5"))
@@ -115,6 +116,7 @@ def poly_mul(a, b, K):
 def dh_taylor(K, prec):
     """Arb coefficients of xi_f(1/2+z), xi_f(s) = (5/pi)^{s/2} Gamma((s+1)/2) f(s), f = Davenport-Heilbronn."""
     flint.ctx.prec = prec
+    flint.ctx.cap = K
     z = acb_series([acb("0.5"), 1], prec=K)
     k = ((10 - 2 * arb(5).sqrt()).sqrt() - 2) / (arb(5).sqrt() - 1)
     I = acb(0, 1)
@@ -129,6 +131,7 @@ def epstein5_taylor(K, prec):
     Z_Q = zeta L_-20 + L_-4 L_5 (see epstein_zeros.py)."""
     import epstein_zeros as E          # (module import sets prec = 128; reset afterwards)
     flint.ctx.prec = prec
+    flint.ctx.cap = K
     z = acb_series([acb("0.5"), 1], prec=K)
     Zs = E.Lser(z, 1) * E.Lser(z, -20) + E.Lser(z, -4) * E.Lser(z, 5)
     pref = z * (z - 1) * (z * (arb(20).sqrt() / (2 * arb.pi())).log()).exp() * acb_series.gamma(z)
