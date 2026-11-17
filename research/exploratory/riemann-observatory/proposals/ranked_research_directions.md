@@ -86,7 +86,7 @@ Smallest remaining gap: the three highest-ranked directions (D-01 kernel replay,
 | 20 | D-20 | Conjecture G: CM elliptic curves with j = 0 | QRH-EXT / M8 | 5 | 2 | 10 | angular version of Prop 3.1 unverified |
 | 21 | D-21 | Conditional consequences of a half-plane, as lemmas | QRH-CONSEQ / M4 | 2 | 5 | 10 | unrefereed half-plane |
 | 22 | D-22 | Host: corrected Euler products and smooth numbers | HOST / M1, M3 | 2 | 5 | 10 | unrefereed half-plane for part (b) |
-| 23 | D-23 | Function fields: finite-window theorem without RH | FF / C5 | 2 | 5 | 10 | window corollary is a PPS |
+| 23 | D-23 | Function fields: finite-window theorem without RH | FF / C5 | 2 | 5 | 10 | window theorem is adjudicated (THEOREM C5-ADJ-W) |
 | 24 | D-24 | Extending and limiting the Siegel-exclusion method | SIEGEL | 3 | 3 | 9 | larger-kernel zero estimate unchecked |
 | 25 | D-25 | Persistence lemma for the de Bruijn-Newman converse | DBN / C1 / M2 | 3 | 3 | 9 | far-field estimate |
 | 26 | D-26 | The Beurling frontier for RH and quasi-RH | OBSTR / M7 / C2 | 3 | 3 | 9 | constructions stop at alpha < 2/3 |
@@ -521,7 +521,7 @@ Certified witnesses in the archive:
 - RH implies Pos(L) for every L (Zhu Prop. 2.3).
 - λ_min(L) decays like exp(−c e^{2L}). This is the C5 skeptic's correction of OB-9; Zhu's empirical law is −ln λ* ≈ 2π² N(T*)/ln N(T*) with T* = 2πe^{2L}.
 - The C4-P Galerkin values are Rayleigh-Ritz upper bounds, 0.3-6% above the infimum, and replicate Zhu's Table 1 (C4 skeptic).
-- Over F_q a finite window decides RH (C5-T3, D-23). Over Q, "no finite window suffices" is not a theorem (C5 skeptic §3.3).
+- Over F_q a finite window decides RH (C5-T3, D-23). Over Q, "no finite window suffices" is false as stated (C5-ADJ-LOG); its true content is C5-ADJ-MODEL (zero-side positivity plus counting cannot force RH) and the open EFR target (C5 FINAL §3.5, §5).
 
 **Targets.**
 
@@ -714,7 +714,7 @@ The explicit q₀(θ,ε) remains open.
 - Then inertia(T_N) = (r − m, m, N − r) for every N ≥ r.
 - Hence RH(C) ⇔ T_{2g} ⪰ 0, with no squarefree hypothesis. This corrects the hypothesis of C5-T3.
 
-**(b) Window corollary without RH** (PROPOSITION-PROOF-SKETCH; C5 skeptic §3.2).
+**(b) Window theorem without RH** (THEOREM C5-ADJ-W, adjudicated; sharpness C5-ADJ-SHARP; C5 FINAL §3.3–§3.4).
 
 - Via Suzuki's fibre decomposition (arXiv:2610.41115, Prop. 4.3, not in corpus), with off-circle ζ_j allowed: RH(C) ⇔ W ≥ 0 on C_c^∞(−a, a) for any single a > (g − 1/2) log q.
 - This is sharp for the formal class: for q = 3, g = 3, h = x³ − 10x − 7, T₅ ≻ 0 while T₆ is indefinite.
@@ -731,7 +731,7 @@ The explicit q₀(θ,ε) remains open.
 
 - (b) is the precise function-field statement behind "a finite window decides RH over F_q".
 - (c) is a test bed for any argument claiming "formal axioms imply RH".
-- Over Q, no finite-rank mechanism is known, and no theorem says that none exists.
+- Over Q, no finite-rank mechanism is known, and C5-ADJ-MODEL (THEOREM) shows that zero-side window positivity plus counting asymptotics cannot supply one: any effective finite reduction must use prime-side structure (C5 FINAL §3.5).
 
 **Next steps.**
 
@@ -921,11 +921,11 @@ Sra's PF_k and Laguerre horizons are linear in the height (C1-ADJ-LOCAL), the op
   - Asymptotically, e^{2δL}/(4δ) ≈ (0.5 + 0.704L) log T. The investigator's 1.407L was a factor-2 slip.
   - At T = 3·10¹², the rigorous window is below the Nyquist window L_N = (1/2) log(T/2π) only for δ ≥ 0.2354.
 - **REFUTED** (C4-R): the brief's heuristic that a window is blind for T ≫ 2πe^{2L}, up to O(log 1/δ), fails for every fixed δ.
-- **Not established** (skeptic): "Nyquist locality" for κ = δ log(T/2π) < κ_c = 2.1773. The collision model contradicts it, with detection 0.42-0.85 below L_N at T₀ ≈ 10⁴.
+- **REFUTED as a universal law** (C4 FINAL C4-R, C4-ADJ-WIT): "Nyquist locality" for κ = δ log(T/2π) < κ_c = 2.1773. Arb-certified witnesses detect near-line defects below L_N in the collision model (κ = 0.22, 0.74, 1.47 at 0.016, 0.386, 0.486 below L_N, T₀ ≈ 10⁴) and in the additive model (κ = 1.86 at 0.159 below L_N); it survives only as a HEURISTIC for additive-model upper bounds.
 
 **Open.**
 
-1. Interpolation-regime detection L* ≤ L_N + C for every δ (AC-19).
+1. Interpolation-regime detection L* ≤ L_N + C with C absolute or O(log 1/δ) (AC-19). Under H1, C4-ADJ-C (THEOREM) already gives L_N(T) + C(δ) with certified C(δ) ≈ (2.1–3.1)/δ.
 2. Remove the (1 + 1.41L) loss using S₁(t) bounds.
 3. Remove H1: a localised version assuming no other off-line zeros within (log T)^{C/δ}.
 4. Relate detection to Andrews-Connes-La Gatta's reconstruction of zeros up to ≈ 2T*: does a window reconstruct heights at which it cannot detect off-line defects?
@@ -988,7 +988,7 @@ C5-ML-W (Connes' Lemma 2.1; PAPER-0007) shows that the general version is RH-equ
 | Short-interval PNT exponents from any half-plane θ₀ ≥ 7/10 | the binding point is σ = 7/10 | CON-0028; CON-0019 |
 | Simple critical zeros for an individual GL(2) L-function from bandwidth-1/2 data | the certificate is negative for λ ≤ 0.5502; a doubled lattice is consistent | CON-0011; CON-0035 |
 | Large criterion computations (Li, Jensen, ψ/π, Robin, Mertens, Nyman-Beurling, Λ) as tests of RH beyond T₀ | they lie inside an implication horizon of RH(T₀) or below every single-defect scale | C1 FINAL §4-§5 |
-| "Nyquist locality" as guidance for host window families | blindness is unproved and the collision model contradicts it | C4 skeptic (C4-R, C4-REL) |
+| "Nyquist locality" as guidance for host window families | REFUTED as a universal law: certified model witnesses detect near-line defects below L_N in both injection models, and blindness is proved only in an astronomically thin neighbourhood of the line | C4 FINAL (C4-R, C4-ADJ-WIT, C4-ADJ-BLIND; C4-REL point (2) withdrawn) |
 | Constraining Siegel's 1932 R(s) through the 2026 theorem | vocabulary only without an open attribution lemma | CON-0022 (vocabulary_only) |
 | Turán's partial-sum route; Pólya's and Turán's T(x) conjectures; Mertens | refuted | C2 SP-7; C3 D5-D7; LED-ARITH-7, -9 |
 | Turán, fixed-degree Jensen or infinite log-concavity of Taylor coefficients as a proof of RH | Turán holds for every H_t (THEOREM given Csordas-Varga); infinite log-concavity is expected to hold for small t < 0 (AC-24) | C2-29 (skeptic F5); CON-0033 (corrected) |
@@ -1013,7 +1013,7 @@ C5-ML-W (Connes' Lemma 2.1; PAPER-0007) shows that the general version is RH-equ
 - **Siegel exclusion.** It gives a gap c/log q at s = 1 only. It is not Chowla's conjecture, says nothing about complex zeros, and leaves Linnik's constant unchanged (SIEGEL §6).
 - **Lean.** "Lean claimed" does not mean "replayed". Knausgard's Lean has three run-axioms. Lamzouri's Lean assumes BGSTB24 Lemma 5 and Riemann-von Mangoldt. The Observatory compiled nothing.
 - **Zhu's Pos(0.8).** It is unrefereed, and the archive's connection verifier labels it high-precision computation with an error budget, not directed rounding (CON-0010).
-- **Finite windows.** "Over Q no finite Weil window suffices" is not a theorem (C5 skeptic §3.3).
+- **Finite windows.** "Over Q no finite Weil window suffices" is false as stated (C5-ADJ-LOG); what is true is that no explicit window is known and that zero-side positivity plus counting cannot force RH (C5-ADJ-MODEL).
 - **Λ.** A proved Λ ≤ 0.2 adds nothing beyond RH(T₀) plus unconditional theory (C1 FINAL, item 8).
 - **Finite criterion computations.** Below T₀-derived horizons they are logical consequences of RH(T₀) (C1 FINAL §4).
 

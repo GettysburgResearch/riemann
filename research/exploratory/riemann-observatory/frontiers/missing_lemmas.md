@@ -93,11 +93,11 @@ Conventions used throughout:
 - **Growth detection C4-B.** Observatory-proposed THEOREM, conditional on the single-defect hypothesis H1 (one quadruple off the line, every other zero on it); skeptic: upheld with corrections.
   - Conclusion: λ_min(L) < 0 once L ≥ L_B(T, δ) = (1/(2δ))[log log T + log log log T + O_δ(1)].
   - At T = 3·10¹², L_B < L_N = (1/2) log(T/2π) for δ ≥ 0.2354 (skeptic correction).
-- **Function-field analogue.** C5-T3 inertia (THEOREM) plus the skeptic's confluent version (THEOREM): RH(C) ⇔ T_{2g} ⪰ 0, with no squarefree hypothesis. Window corollary (PROPOSITION-PROOF-SKETCH, without RH): RH(C) ⇔ W ≥ 0 on C_c^∞(−a, a) for any one a > (g − 1/2) log q.
+- **Function-field analogue.** C5-T3 inertia (THEOREM) plus the skeptic's confluent version (THEOREM): RH(C) ⇔ T_{2g} ⪰ 0, with no squarefree hypothesis. Window theorem C5-ADJ-W (THEOREM, adjudicated; no RH, no Euler product, no squarefreeness): W ≥ 0 on C_c^∞(−a, a) ⇔ T_{⌈2a/log q⌉} ⪰ 0, so RH(C) ⇔ W ≥ 0 for one (every) a > (d − 1)(log q)/2, in particular a > (g − 1/2) log q; sharp over the formal class (C5-ADJ-SHARP; C5 FINAL §3.3–§3.4).
 - **Reality theorem.** THEOREM per LED-OPS-7 (Connes–van Suijlekom, arXiv:2511.23257): a simple, isolated, even ground state of a window form forces all zeros of ξ̂ to be real, for every finite-prime window.
 
 **Missing statements that are genuinely weaker but infinite.**
-- (W-a) Pos(L) for all L ≤ L1, for some fixed L1 > (log 2)/2. This follows from RH. That no finite window implies RH over Q is **not a theorem** (C5 skeptic §3.3); it is a heuristic, stated in meta-mathematical or model-theoretic form.
+- (W-a) Pos(L) for all L ≤ L1, for some fixed L1 > (log 2)/2. This follows from RH. The sentence "no finite window implies RH over Q" is **false as stated** (C5-ADJ-LOG: an L0 with Pos(L) ⇒ RH for all L ≥ L0 exists, non-constructively). Its true content is that no explicit L0 is known, plus C5-ADJ-MODEL (THEOREM): zero-side window positivity with zeta-like counting (error O(T)) cannot force RH (C5 FINAL §3.5).
 - (W-b) The three gaps of the Connes semilocal programme (OPS frontier §3), with (H1) + (H2) ⇒ RH (CON-0010 correction: Thm 6.1 plus Hurwitz):
   - (H1) simple, isolated, ι-even lowest eigenvalue of QW_λ for all large λ;
   - (H2) convergence of the normalized ground states in weighted L¹;

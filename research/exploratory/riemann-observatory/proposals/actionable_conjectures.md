@@ -64,14 +64,14 @@ Smallest remaining gap: most statements in Sections 2.1-2.2 are conditional on u
 | AC-18 | Rate 1/2 for de Branges failures | C3-ADJ-RATE | CONJECTURE | low |
 | AC-19 | Interpolation-regime window detection | C4 | CONJECTURE | medium |
 | AC-20 | Flat window law for almost all heights | C4 | CONJECTURE; upper half THEOREM under H1 | high |
-| AC-21 | Function-field window criterion without RH | C5 skeptic | PPS | low |
+| AC-21 | Function-field window criterion without RH | C5 skeptic; C5-ADJ-W | THEOREM (C5-ADJ-W, adjudicated) | low |
 | AC-22 | Function-field detection horizon | C5 open question; this file | PROPOSITION (elementary) plus open question | low |
 | AC-23 | Realisability of fakes as quadratic-type Euler products | C5-E4 | CONJECTURE (weak) | low |
 | AC-24 | Heat-open infinite log-concavity | M7, CON-0033 | CONJECTURE | medium |
 | AC-25 | Pólya's approximant: Λ* ≤ −4 | M5, CON-0024 | CONJECTURE (empirical) | medium |
 | AC-26 | Möbius Nyman-Beurling decay exponent −2(α − Θ) | M5, CON-0021 | PPS | low |
 | AC-27 | Beurling [α,β]-systems with α ≥ 2/3, β < 1/2 | M7, CON-0032 | OPEN; T2 to verify | medium |
-| AC-28 | Rectangular Epstein threshold (BST Conjecture 1.1 false) | C2 skeptic F7 | skeptic finding, not adjudicated | low |
+| AC-28 | Rectangular Epstein threshold (BST Conjecture 1.1 false) | C2 skeptic F7; C2-ADJ-2 | THEOREM C2-ADJ-2 (adjudicated); external citation awaits the C2 FINAL §7.8 replay | low |
 
 ## 2. Statements
 
@@ -487,7 +487,7 @@ On Farmer's toy functions X_j the bridge is within 2.6% of the certified thresho
 
 **Statement.** Fix δ ∈ (0, 1/2). Assume H1 at height T: one off-line quadruple at 1/2 ± δ ± iT, and all other zeros on the line. Then λ_min(L) < 0 for every L ≥ (1/2) log(T/2π) + C, with C absolute (independent of T and δ).
 
-**Status.** CONJECTURE (OBSERVATORY-PROPOSED; a C4 open question).
+**Status.** CONJECTURE (OBSERVATORY-PROPOSED; a C4 open question). Under H1 the form with a δ-dependent constant is THEOREM C4-ADJ-C (certified C(δ) from 4.40 at δ = 0.49 to 313.17 at δ = 0.01, i.e. ≈ (2.1–3.1)/δ); an absolute or O(log 1/δ) constant remains open (C4 FINAL §3.3, §6.2).
 
 **Evidence.**
 
@@ -528,7 +528,7 @@ On Farmer's toy functions X_j the bridge is within 2.6% of the certified thresho
 
 **Statement.** Let C have genus g over F_q, and let W(u) = Σ_ρ m_ρ û(γ_ρ) conj(û(γ̄_ρ)) be the zero side of the explicit formula for u ∗ ũ. Then RH(C) holds iff W ≥ 0 on C_c^∞(−a, a) for any single a > (g − 1/2) log q. The bound is sharp for the formal class of fake zeta functions.
 
-**Status.** PROPOSITION-PROOF-SKETCH (C5 skeptic §3.2). It rests on the confluent inertia theorem (C5 skeptic §3.1, THEOREM, exact checks) and on Suzuki's fibre decomposition (arXiv:2610.41115 Prop. 4.3; not in corpus), redone without RH.
+**Status.** THEOREM C5-ADJ-W (adjudicated; C5 FINAL §3.3), with sharpness over the formal class C5-ADJ-SHARP (§3.4). It rests on the confluent inertia theorem (C5 skeptic §3.1, THEOREM, exact checks) and on Suzuki's fibre decomposition (arXiv:2610.41115 Prop. 4.3; not in corpus), redone without RH.
 
 **Evidence.**
 
@@ -672,7 +672,7 @@ k* ≤ ⌊arccosh(2g − 1)/log|β|⌋ + 1.
 - it is not e^γ/(4π) = 0.141733239663887191389…, so Betermin-Samaj-Travenec Conjecture 1.1 is false by a relative 4.2·10⁻²⁰;
 - real off-line zeros exist for every rectangular form with k > 4πe^{−γ}.
 
-**Status.** A finding of the C2 skeptic (F7), not adjudicated. The "every k > 4πe^{−γ}" part is stated by the skeptic as a THEOREM via the formula and monotonicity in k ≥ 1. This is a side result: Epstein functions matter here only as countermodels.
+**Status.** THEOREM C2-ADJ-2 (adjudicated; C2 FINAL §3.2), with two independent numerical codes. Z_k(1/2) is strictly increasing in k ≥ 1 with a unique zero k* = 7.0555079554… < 4πe^{−γ}; BST Conjecture 1.1 is false (no numerics needed), and a real zero in (1/2, 1) exists for every k > k*. The formula may already be in Bateman–Grosswald 1964 (not accessed); external citation needs the further L2 check of C2 FINAL §7.8. This is a side result: Epstein functions matter here only as countermodels.
 
 **Evidence.** At k = 4πe^{−γ} the sum gives 8Σd(N)K₀(…) = 8.3917·10⁻²⁰ > 0. Two independent evaluations agree (the closed form and Riemann's theta integral).
 

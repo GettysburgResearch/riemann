@@ -922,12 +922,12 @@ One further warning from the CAUSAL_EULER verifier: recommended action 4 would c
 ### 5.4 Campaign downgrades
 
 - **C4-H** downgraded.
-- **C4-REL(2)** downgraded.
-- **C4-R:** its 'corrected statement' is unestablished.
-- **C5:** 'over Q no finite window suffices' is not a theorem. This affects C5-T3, OB-2c, ML-E1 and C5-A.
+- **C4-REL(2)** withdrawn as guidance (C4 FINAL §3.6, §4).
+- **C4-R:** the brief's Nyquist heuristic is REFUTED for every fixed δ, and its 'corrected statement' is REFUTED as a universal law (C4 FINAL, C4-ADJ-WIT).
+- **C5:** 'over Q no finite window suffices' is false as stated (C5-ADJ-LOG); its content is replaced by C5-ADJ-MODEL and EFR. This affects C5-T3, OB-2c, ML-E1 and C5-A.
 - **C5-OB9:** the decay law is a misquote of an upper bound; the actual decay is about exp(−c e^{2L}).
 - **C2-31:** a non sequitur.
-- **C2-17, C2-28:** downgraded.
+- **C2-17, C2-28:** the uniform-in-d statement is CONDITIONAL on ζ having finitely many off-line zeros; the unconditional analogue is THEOREM C2-ADJ-6. Also: C2-14 is upgraded to THEOREM (given Csordas–Varga), and C2-ADJ-2 refutes BST Conjecture 1.1.
 
 ### 5.5 Recurrent obstructions (abandoned_approaches Sec. 2)
 

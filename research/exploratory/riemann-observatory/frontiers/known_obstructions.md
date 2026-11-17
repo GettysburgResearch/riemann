@@ -115,7 +115,7 @@ A valid Li or Jensen proof must use positivity for **all** n (or hyperbolicity a
 - a pole at 1;
 - a self-dual degree-1 functional equation with Γ_R.
 
-A valid proof must use at least one of: the Selberg local condition (|α_p| ≤ 1, θ < 1/2), von Mangoldt positivity Λ_F ≥ 0, or conductor 1 with Hamburger rigidity. This refutes the campaign's stated blind spot (C2-00(i), C2-31). The real blind spot is the full Selberg class, not "Euler product + FE + Dirichlet series".
+A valid proof must use at least one of: the Selberg local condition (|α_p| ≤ 1, θ < 1/2), von Mangoldt positivity Λ_F ≥ 0, conductor 1 with Hamburger rigidity, or another property that F_c lacks, e.g. primitivity (no Dirichlet-polynomial factor) or no zeros on vertical progressions (C2 FINAL §3.1). This refutes the campaign's stated blind spot (C2-00(i), C2-31). The real blind spot is the full Selberg class, not "Euler product + FE + Dirichlet series".
 
 ### OB-5. Selberg, Ihara and Hurwitz zeta functions
 
@@ -250,7 +250,7 @@ Multiplicative truncations behave differently (finite Euler products are zero-fr
 - (a) No argument can prove RH by establishing real zeros of H_t at some negative time. There is no slack.
 - (b) C2-29, THEOREM given Rodgers–Tao. Take a class of kernels that contains Φ and is closed under K ↦ e^{−εu²}K for some ε > 0. The assertion that every member has a real-rooted cosine transform is false.
   - So no argument using only properties of Φ that survive multiplication by e^{−εu²} can prove RH. Such properties include positivity, evenness, super-exponential decay, and strict log-concavity of Φ(√v) (THEOREM, Csordas–Varga 1988, per C2 skeptic F5).
-  - They also include the moment Turán inequalities b_m² ≥ ((2m−1)/(2m+1))b_{m−1}b_{m+1}, which hold for every H_t (C2-14; THEOREM given Csordas–Varga and the moment lemma; the range p ∈ (−1, ∞) of the moment lemma is still to be confirmed).
+  - They also include the moment Turán inequalities b_m² ≥ ((2m−1)/(2m+1))b_{m−1}b_{m+1}, which hold for every H_t (C2-14; THEOREM given IMPORTED Csordas–Varga 1988, read at L0+; the moment lemma, including the range needed at p = m − 1/2, is proved in C2-ADJ-3, C2 FINAL §3.3).
   - A Fourier-side proof must use a property of Φ that fails for e^{−εu²}Φ for every ε > 0, e.g. exact theta modularity.
 - (c) For host heat positivity (First-Hermite): the proof must use an input that arbitrarily small backward deformation destroys, such as the exact Euler product or Λ(n). This assumes a horizontal-strip bound and subquadratic counting for H_t, t < 0, which have not been checked from a source (BRG-OPERATORS_HEAT-O4 corrected).
 - (d) CONJECTURE (CON-0033 corrected; restricted to infinite log-concavity of λ_n and its truncations). If (λ_n(t)) is strictly infinitely log-concave for all t ∈ (−t₀, 0], then infinite log-concavity cannot imply RH. Turán, higher Turán and all-degree Jensen are removed from this claim; all-degree Jensen hyperbolicity is equivalent to RH.
@@ -380,10 +380,10 @@ The single-defect column is model-world only.
   - Certified variational upper bounds reach 3.2·10⁻²⁸³ at L = 2.
 - **(c) Galerkin truncations give upper sections only.** A finite-basis positive matrix certifies nothing about the continuum (Groskin Cor. 3.3; BRG-OPERATORS_HEAT-O3). Rayleigh–Ritz can only bound detection thresholds from above, never prove non-detection (C4 skeptic, general issue 2). The C4-P profile values are 0.3–6% above the infimum (skeptic).
 - **(d) Detection is not height-local for large δ.** C4-B: THEOREM conditional on H1. C4-LAT: THEOREM in the lattice model; the crossover κ_c = 2.1773190 is the root of sinh k = 2k.
-  - A window L detects defects with δ log(T/2π) > κ_c up to doubly exponential heights.
+  - Under H1, for fixed L the C4-B condition, once satisfied, holds up to log T ≈ e^{2δL}/(4δ(0.5 + 0.704L)), i.e. up to doubly exponential heights: no window is height-local for large-δ defects (C4 FINAL §3.6 item 3). In the lattice/flat model the growth regime beats the Nyquist window iff κ > κ_c (C4-LAT).
   - The brief's heuristic "blind for T ≫ 2πe^{2L}" is REFUTED (C4-R; the skeptic upheld the refutation).
-  - The "Nyquist locality for near-line defects" replacement is **not established**: the collision model contradicts it, with detection up to 0.85 below L_N (C4 skeptic).
-  - C4-H and C4-REL are **downgraded**.
+  - The "Nyquist locality for near-line defects" replacement is **REFUTED as a universal law** (C4 FINAL C4-R, C4-ADJ-WIT): Arb-certified model witnesses detect near-line defects below L_N in the collision model (κ = 0.22, 0.74, 1.47 at 0.016, 0.386, 0.486 below L_N) and in the additive model (κ = 1.86 at 0.159 below L_N). Blindness is a THEOREM only in an astronomically thin neighbourhood of the line (C4-ADJ-BLIND).
+  - C4-H is HEURISTIC (additive model only; its normalised conjecture is WITHDRAWN as a corollary of C4-B; a narrowed CONJECTURE is in C4 FINAL §2a). C4-REL is rewritten and its point (2) is WITHDRAWN as guidance.
 
 **Eliminates.**
 - No pointwise-envelope certificate can cover windows L ≳ 2 at feasible cost.
@@ -490,9 +490,9 @@ The single-defect column is model-world only.
 
 **Statement.**
 - **OB1. No Frobenius and no nontrivial self-product.** Spec ℤ ×_{Spec ℤ} Spec ℤ = Spec ℤ. Under total commutativity the arithmetic surface collapses to the diagonal (Haran Rem. 4.12). The arithmetic-site correspondences compose with a defect: Ψ(λ)∘Ψ(λ′) = Id_ε∘Ψ(λλ′) (PAPER-0086 Thm 7.7). IMPORTED.
-- **OB2. Infinite genus.** Weil's 2×2 inequality needs finite defect def(Δ) = 2g. Only smeared divisors D(f) have finite defect, and for them the inequality is Cauchy–Schwarz for the Weil form, which is RH itself. THEOREM (part (a)); labelling Σ 1/|ρ| as the defect analogue is HEURISTIC. Part (c), "over ℚ no finite window suffices", is **not a theorem** (skeptic §3.3).
+- **OB2. Infinite genus.** Weil's 2×2 inequality needs finite defect def(Δ) = 2g. Only smeared divisors D(f) have finite defect, and for them the inequality is Cauchy–Schwarz for the Weil form, which is RH itself. THEOREM (part (a)); labelling Σ 1/|ρ| as the defect analogue is HEURISTIC. Part (c), "over ℚ no finite window suffices", is **false as stated** (C5-ADJ-LOG, trivial and non-constructive); its precise replacements are C5-ADJ-MODEL (THEOREM: zero-side window positivity plus counting asymptotics cannot force RH) and the open target EFR (C5 FINAL §3.5, §5).
 - **OB3. The archimedean place.** Γ_R must come from geometry; archimedean-only positivity is known only for supports in (1/2, 2).
-- **OB4. Deninger 2022, Thm 2.13.** No real-coefficient Weil cohomology for arithmetic curves can realize ord_{s=1/2}L(V_π, s) functorially: a symplectic π with root number −1 would appear with odd multiplicity. Positivity must therefore be quaternionic.
+- **OB4. Deninger 2022, Thm 2.13.** No real-coefficient Weil cohomology for arithmetic curves can realize ord_{s=1/2}L(V_π, s) functorially: a symplectic π with root number −1 would appear with odd multiplicity. A cohomological positivity source would therefore have to be quaternionic (ML-Den); C5 FINAL §6 (HEURISTIC) names a surface with W1–W3 (ML-F1, ML-W0) as the alternative source.
 - **OB6. The polynomial method over ℤ.** Gorshkov's barrier; bracket 0.4222286 ≤ t_ℤ([0,1]) ≤ 0.4226847, above 1/e. Corrected: this rules out only fixed weights; sequences of weights w_n with B(w_n) → 1 remain open (Pritsker).
 - **OB7. No family through Spec ℤ.** Deligne's Rankin-squaring positivity engine transfers to automorphic L-functions but yields Ramanujan (local purity), not RH (HEURISTIC; Langlands' remark verified).
 - **OB9.** Finite Weil windows over ℚ have a near-radical whose margin decays like exp(−c·e^{2L}) (corrected).
