@@ -25,7 +25,7 @@
    "c9": "0"
   },
   "conclusion": "c_1 = ... = c_{D-1} = 0: T is constant near 1 (exact algebra up to degree D-1)",
-  "runtime_s": 0.12
+  "runtime_s": 0.18
  },
  "queme": {
   "rho1": "(0.5 + 14.13472514173469379045725198356247027078j)",
@@ -66,81 +66,61 @@
    0.9999995947256902
   ],
   "note": "non-rigorous mpmath numerics; the rigorous statement is Cauchy-Hadamard + Abel (see report)",
-  "runtime_s": 196.27
+  "runtime_s": 191.13
  },
  "oliva": {
   "PMAX": 20000000,
   "num_steps": 1270606,
-  "min_h": 1.250792067475388e-10,
+  "min_h": 1.2507911421120102e-10,
   "p_at_min": 17991383.0,
   "all_h_positive": true,
   "max_E_over_range": -1.208240530771945,
-  "first_order_law_median_rel_err_p>1000": 0.00033463390871319316,
-  "first_order_law_max_rel_err_p>1000": 0.051366632601064464,
-  "lemma22_derivative_signs": {
+  "first_order_law_median_rel_err_p>1000": 0.00033463479262845527,
+  "first_order_law_max_rel_err_p>1000": 0.05136663260096593,
+  "lemma22_derivative_signs_mpmath60": {
    "10000": {
-    "x": [
-     5000.0,
-     10000.0,
-     20000.0,
-     50000.0,
-     92103.40371976183,
-     276310.2111592855,
-     2763102.1115928553
-    ],
-    "sign_of_df/dx": [
-     "-",
-     "-",
-     "-",
-     "-",
-     "-",
-     "+",
-     "+"
-    ]
+    "0.5b": "-",
+    "b": "-",
+    "2b": "-",
+    "5b": "-",
+    "b log b": "-",
+    "3 b log b": "+",
+    "30 b log b": "+",
+    "turning_point_x/(b log b)": 1.1203888920714309
    },
    "1000000": {
-    "x": [
-     500000.0,
-     1000000.0,
-     2000000.0,
-     5000000.0,
-     13815510.557964273,
-     41446531.67389282,
-     414465316.7389282
-    ],
-    "sign_of_df/dx": [
-     "-",
-     "-",
-     "-",
-     "-",
-     "-",
-     "+",
-     "+"
-    ]
+    "0.5b": "-",
+    "b": "-",
+    "2b": "-",
+    "5b": "-",
+    "b log b": "-",
+    "3 b log b": "+",
+    "30 b log b": "+",
+    "turning_point_x/(b log b)": 1.0850068570894165
    },
    "100000000": {
-    "x": [
-     50000000.0,
-     100000000.0,
-     200000000.0,
-     500000000.0,
-     1842068074.3952367,
-     5526204223.18571,
-     55262042231.8571
-    ],
-    "sign_of_df/dx": [
-     "-",
-     "-",
-     "-",
-     "-",
-     "-",
-     "-",
-     "+"
-    ]
+    "0.5b": "-",
+    "b": "-",
+    "2b": "-",
+    "5b": "-",
+    "b log b": "-",
+    "3 b log b": "+",
+    "30 b log b": "+",
+    "turning_point_x/(b log b)": 1.0660013617588529
+   },
+   "1000000000000": {
+    "0.5b": "-",
+    "b": "-",
+    "2b": "-",
+    "5b": "-",
+    "b log b": "-",
+    "3 b log b": "+",
+    "30 b log b": "+",
+    "turning_point_x/(b log b)": 1.045827922160079
    }
   },
   "note": "float64, non-rigorous; h_n>0 here only because theta(p)<p throughout this range",
-  "runtime_s": 0.61
+  "runtime_s": 0.91
  },
  "micheas": {
   "s0": "1/2 + i t_1",
@@ -155,7 +135,7 @@
    "100000": "[-0.0014185196361316133789349 +/- 3.10e-26]"
   },
   "note": "factors are in (0,1) for n>=2 and the product converges absolutely (C3); the limit is nonzero, while xi(s0)=0: Theorem 1 (17) fails for this admissible sequence",
-  "runtime_s": 0.43
+  "runtime_s": 0.41
  },
  "bbm": {
   "z": "0.50000000000000000000000000000000000000 + [14.134725141734693790457251983562470271 +/- 2.99e-37]j",
@@ -182,7 +162,7 @@
    }
   },
   "conclusion": "|psi_z(x)| ~ x^{1/2}/|z-1| (DLMF 25.11.43), so psi_z is not in L^2(0,inf) for Re z = 1/2",
-  "runtime_s": 0.0
+  "runtime_s": 0.01
  },
  "chengraham": {
   "theta": "0.02",
@@ -195,7 +175,7 @@
   "Landau_sharp_bound_cot(pi theta/2)": "[31.820515953773958039339549431936565405 +/- 8.84e-37]",
   "violates_CG04": true,
   "respects_Landau": true,
-  "runtime_s": 0.04
+  "runtime_s": 0.07
  },
  "turan": {
   "N": 19,
@@ -213,5 +193,5 @@
   "off_line_certified": true,
   "runtime_s": 0.02
  },
- "total_runtime_s": 197.5
+ "total_runtime_s": 192.73
 }

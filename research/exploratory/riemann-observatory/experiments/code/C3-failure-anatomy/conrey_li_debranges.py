@@ -13,7 +13,7 @@ Conrey-Li Theorem 2 condition for F(W), W = 1/xi(1-iz): Re{ xi(1+it)/xi(2+it) } 
 Every reported sign is certified by Arb balls (the ball for the zero contains the true zero; the
 quantity is evaluated on that ball, so its true value lies in the output ball).
 
-Usage: python3 conrey_li_debranges.py K outjson
+Usage: python3 conrey_li_debranges.py K outjson [ZEROS_TSV[,ZEROS_TSV2]]
 """
 import sys, json, time, platform
 import flint
@@ -102,7 +102,19 @@ def main():
     res["CL_chi4_3.8"] = {"Re{xi4(1+8714.2i)/xi4(2+8714.2i)}": str(v4), "sign": sign_of(v4),
                           "conrey_li_value": "-0.000422340607"}
     # --- scan: sign of -Re{xi'(rho)xi(1+rho)} for the first K zeros
-    zs = acb.zeta_zeros(1, K)
+    if len(sys.argv) > 3:
+        # certified ordinates (n, midpoint, radius) from TSV files produced by zeros_arb.py (Arb zeta_zeros)
+        zs = []
+        for path in sys.argv[3].split(","):
+            for line in open(path):
+                parts = line.split()
+                if len(parts) >= 3 and len(zs) < K:
+                    assert int(parts[0]) == len(zs) + 1
+                    zs.append(acb(arb("0.5"), arb(parts[1], parts[2])))
+        res["zeros_source"] = sys.argv[3]
+    else:
+        zs = acb.zeta_zeros(1, K)
+        res["zeros_source"] = "flint.acb.zeta_zeros"
     neg = []; pos = 0; und = []
     for n, rho in enumerate(zs, start=1):
         dd = xi_series(rho, 2).coeffs()[1]
