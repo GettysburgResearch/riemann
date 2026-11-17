@@ -146,16 +146,16 @@ def farmer_case(j, Mz=400):
     # mirror pair -j +- i is at log|.| + i(pi - atan(1/j)): include as additional fixed-symmetry pair? It lies
     # at distance ~ pi - 2/j in Im from the upper pair; we include it by symmetry: it mirrors the pair, so we
     # approximate its effect by adding it as two more "complex" zeros moving consistently (same real part).
-    tau = collapse_w_full(wpos, wneg, wpair, tail2=cos_tail2(Mz))
+    tau = collapse_w_full(wpos, wneg, wpair, tail2=cos_tails(Mz))
     return {"j": j, "moved_zeros": [float(c[m]) for m in moved], "tau_c": tau, "d*_pred=1/(2tau_c)": 1 / (2 * tau)}
 
-def collapse_w_full(wpos, wneg, wpair, y_stop_frac=0.02, tail2=0.0):
+def collapse_w_full(wpos, wneg, wpair, y_stop_frac=0.02, tail2=(0, 0, 0, 0)):
     """Even function: zeros come in +- pairs. Upper pair member wc = log(j+i); its partners: conj (log(j-i)),
     and the mirrored ones -j+-i -> log|.| + i(pi -+ atan(1/j)). Re parts of all four coincide by symmetry,
     Im parts are +-y and pi -+ y."""
     a, b = len(wpos), len(wneg)
     y0 = wpair.imag
-    Rdyn = 0.3 * math.exp(max(wpos.max(), wneg.max()))
+    Rdyn = 0.2 * math.exp(max(wpos.max(), wneg.max()))
     dynp = np.exp(wpos) <= Rdyn; dynn = np.exp(wneg) <= Rdyn
     def rhs(t, s):
         wp = s[:a].astype(complex); wn = s[a:a + b] + 1j * math.pi
@@ -166,7 +166,8 @@ def collapse_w_full(wpos, wneg, wpair, y_stop_frac=0.02, tail2=0.0):
         np.fill_diagonal(Dm, 1.0)
         K = 1.0 / np.tanh(Dm / 2.0) + 1.0
         np.fill_diagonal(K, 0.0)
-        v = K.sum(1) - 4.0 * np.exp(2 * allw) * tail2   # omitted symmetric pairs +-c_l, l >= L: -4 z^2 sum 1/c_l^2
+        z2 = np.exp(2 * allw)
+        v = K.sum(1) - 4.0 * sum(z2**m * tail2[m - 1] for m in range(1, 5))   # omitted pairs +-c_l: -4 sum_m z^{2m} sum_l c_l^{-2m}
         v[:a][~dynp] = 0.0; v[a:a + b][~dynn] = 0.0     # outer zeros frozen (they are stationary for cos; avoids edge stiffness)
         return np.concatenate([v[:a].real, v[a:a + b].real, [v[a + b].real, v[a + b].imag]])
     ev = lambda t, s: s[a + b + 1] - y_stop_frac * y0
@@ -178,16 +179,18 @@ def collapse_w_full(wpos, wneg, wpair, y_stop_frac=0.02, tail2=0.0):
     return ts + y * y / (-2 * y * dy)
 
 import mpmath as _mp
-def cos_tail2(L):
-    """sum_{l>=L} 1/c_l^2, c_l=(l+1/2)pi  = psi'(L+1/2)/pi^2"""
-    return float(_mp.psi(1, L + 0.5)) / math.pi**2
+def cos_tail2(L, m=1):
+    """sum_{l>=L} 1/c_l^(2m), c_l=(l+1/2)pi  = psi^(2m-1)(L+1/2)/((2m-1)! pi^(2m))"""
+    return float(_mp.psi(2 * m - 1, L + 0.5) / _mp.factorial(2 * m - 1)) / math.pi**(2 * m)
+def cos_tails(L):
+    return [cos_tail2(L, m) for m in range(1, 5)]
 
 # sanity check: for cos itself the first-order velocities must vanish at the zeros
 c = (np.arange(400) + 0.5) * math.pi
 allw = np.concatenate([np.log(c).astype(complex), np.log(c) + 1j * math.pi])
 Dm = allw[:, None] - allw[None, :]; np.fill_diagonal(Dm, 1.0)
 K = 1.0 / np.tanh(Dm / 2.0) + 1.0; np.fill_diagonal(K, 0.0)
-v = K.sum(1) - 4.0 * np.exp(2 * allw) * cos_tail2(400)
+v = K.sum(1) - 4.0 * sum(np.exp(2 * allw)**m * cos_tail2(400, m) for m in range(1, 5))
 sanity = {"max|v| over first 20 positive cos zeros (should be ~0, truncation 400 zeros)": float(np.abs(v[:20]).max()),
           "v[0..4]": [complex(x).real for x in v[:5]]}
 print("sanity", sanity, flush=True)
