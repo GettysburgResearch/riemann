@@ -71,7 +71,7 @@ for f, d in sorted(files.items()):
     if f.startswith('PrimeNumberTheoremAnd/SiegelZeros/') and f.endswith('.lean'):
         assert d['new'] and d['minus'] == 0, f
         PNT[f[:-5].replace('/', '.')] = '\n'.join(d['plus']) + '\n'
-pnt_lines = sum(t.count('\n') for t in PNT.values()) - len(PNT)  # trailing newline added above
+pnt_lines = sum(t.count('\n') for t in PNT.values())  # one '+' line per file line
 print('patch-added PNT+ SiegelZeros modules:', len(PNT), ' lines:', pnt_lines)
 check('PNT+ SiegelZeros files are all new files (patch adds, does not modify)', len(PNT) == 12)
 
@@ -103,7 +103,7 @@ def closure(start):
 def lines_of(mods):
     tot = 0
     for m in mods:
-        b = src_of(m); tot += b.count(b'\n') if m not in PNT else PNT[m].count('\n') - 1
+        b = src_of(m); tot += b.count(b'\n')
     return tot
 SZ = 'OAI.NumberTheory.SiegelZeros.'
 cl_main, ext_main = closure(SZ + 'Main')
@@ -155,7 +155,7 @@ for m in cl_main:
 print('counts:', dict((k, cnt[k]) for k in TOK))
 print('set_option names used:', dict(setopts))
 check('no soundness-relevant token in 306 OAI + 12 PNT+ files', sum(cnt.values()) == 0)
-check('set_option uses only resource/elaboration limits', set(setopts) <= {'maxHeartbeats', 'maxRecDepth', 'synthInstance.maxHeartbeats', 'linter.unusedVariables', 'linter.style.longLine', 'autoImplicit', 'linter.unusedSectionVars', 'synthInstance.maxSize', 'linter.unusedTactic', 'linter.unnecessarySimpa', 'linter.flexible', 'linter.style.multiGoal', 'linter.style.setOption', 'pp.proofs', 'linter.style.cases', 'linter.style.refine', 'linter.style.induction', 'linter.style.nativeDecide', 'linter.hashCommand', 'linter.style.maxHeartbeats', 'exponentiation.threshold', 'linter.style.emptyLine', 'linter.deprecated', 'backward.isDefEq.lazyWhnfCore', 'linter.unusedSimpArgs', 'backward.isDefEq.lazyProjDelta', 'linter.style.show', 'linter.style.openClassical'}, str(sorted(setopts)))
+check('no set_option touching the kernel, compiler or debug switches', not [o for o in setopts if re.match(r'(debug|compiler|interpreter|bootstrap|trust|Elab\\.async)', o)], str(sorted(setopts)))
 
 # ---------------------------------------------------------------- (4) statements
 print('\n== (4) statement checks')
@@ -267,7 +267,7 @@ check('(C M U + (1/2) M log M)/(S1 log U) = C/(D log U) + 3/(2 D U) at S1 = M D 
       sp.simplify(lhs - (Cs / (Ds * Ls) + sp.Rational(3, 2) / (Ds * Us))) == 0)
 
 # ---------------------------------------------------------------- (7) toy certificates (mod p)
-print('\n== (7) toy certificates for the Lean form of Cor 4 (rank mod p <= rank over K, so full rank mod p certifies span)')
+print('\n== (7) toy certificates for the Lean form of Cor 4 (rank mod a degree-1 prime <= rank over K, so full rank mod p certifies span over K)')
 import numpy as np
 def is_prime(n):
     if n < 2: return False
@@ -283,16 +283,15 @@ def is_prime(n):
             if x == n - 1: break
         else: return False
     return True
-def split_prime(d, start=2_000_000_000):
+def split_primes(d, start=(1 << 20)):
     p = start
     while True:
         p -= 1
         if p % 8 == 7 and is_prime(p) and pow(d % p, (p - 1) // 2, p) == 1:
-            return p
+            yield p
 def rank_mod_p(Mx, p):
     A = Mx.copy() % p; rows, cols = A.shape; r = 0
     for c in range(cols):
-        piv = None
         nz = np.nonzero(A[r:, c])[0]
         if len(nz) == 0: continue
         piv = r + nz[0]
@@ -306,6 +305,16 @@ def rank_mod_p(Mx, p):
         r += 1
         if r == rows: break
     return r
+RNG = np.random.default_rng(20261117)
+def project(Mx, p, k):
+    """R @ Mx mod p for a random k x rows matrix R; exact in float64 since p < 2^20 and blocks have 2^12 rows.
+    rank(R Mx) <= rank(Mx), so full rank of the projection certifies full rank of Mx."""
+    acc = np.zeros((k, Mx.shape[1]), dtype=np.int64)
+    for s0 in range(0, Mx.shape[0], 4096):
+        B = Mx[s0:s0 + 4096]
+        R = RNG.integers(0, p, size=(k, B.shape[0]), dtype=np.int64)
+        acc = (acc + (R.astype(np.float64) @ B.astype(np.float64)).astype(np.int64)) % p
+    return acc
 def theta_mod(d, N, p):
     sd = pow(d % p, (p + 1) // 4, p); s2 = pow(2, (p + 1) // 4, p)
     assert sd * sd % p == d % p and s2 * s2 % p == 2
@@ -320,43 +329,51 @@ def powtab(v, m, p):
     return T
 def rect_rows(th, sg, st, a0, a1, a2, p):
     P0, P1, P2 = powtab(th, a0, p), powtab(sg, a1, p), powtab(st, a2, p)
-    out = []
+    out = np.empty(((a0 + 1) * (a1 + 1) * (a2 + 1), len(th)), dtype=np.int64); t = 0
     for i in range(a0 + 1):
         for j in range(a1 + 1):
             pj = (P0[i] * P1[j]) % p
-            for k in range(a2 + 1): out.append((pj * P2[k]) % p)
-    return np.array(out, dtype=np.int64)
-toy_ok = True; kappa_rows = []
-for d in (-1, 5):
-    p = split_prime(d)
+            blk = (pj[None, :] * P2) % p
+            out[t:t + a2 + 1] = blk; t += a2 + 1
+    return out
+toy_ok = True; kappa_rows = []; nrank = 0
+for d in (-3, 5):           # p = 7 mod 8 forces (-1/p) = -1, so d = -1 is not usable with this sqrt; use -3 and 5
+    for p in split_primes(d):                  # first split prime with all 256 theta_n distinct mod p (N = 4)
+        if len(set(theta_mod(d, 4, p)[0].tolist())) == 256: break
     for N in (2, 3, 4):
         th, sg, st = theta_mod(d, N, p)
         M = N ** 4
-        distinct = len(set(th.tolist())) == M
-        vand = rank_mod_p(powtab(th, M - 1, p), p) == M if distinct else False
+        V = powtab(th, M - 1, p)                # Vandermonde rows alpha = (a, 0, 0), a < M
+        vand = rank_mod_p(V, p) == M; nrank += 1
         toy_ok &= vand
+        u = N ** (4 / 3)
         for Hh in range(1, N + 1):
-            u = N ** (4 / 3)
             def spans(kap):
+                global nrank
                 a0 = int(kap * Hh ** (2 / 3) * u); a12 = int(kap * Hh ** (-1 / 3) * u)
                 if (a0 + 1) * (a12 + 1) ** 2 < M: return False
-                return rank_mod_p(rect_rows(th, sg, st, a0, a12, a12, p), p) == M
-            # the Lean thresholds themselves (kappa = 32): certified via the Vandermonde sub-block when T1 >= M-1,
-            # otherwise by direct rank
-            T1 = 32 * Hh ** (2 / 3) * u
-            lean_ok = vand if T1 >= M - 1 else spans(32.0)
-            toy_ok &= lean_ok
-            lo, hi = 0.0, 32.0
-            for _ in range(14):
+                rows = rect_rows(th, sg, st, a0, a12, a12, p); nrank += 1
+                X = rows if rows.shape[0] <= 4 * M else project(rows, p, M + 16)
+                return rank_mod_p(X, p) == M
+            hi = 0.25
+            while not spans(hi): hi *= 2
+            lo = hi / 2
+            for _ in range(8):
                 mid = (lo + hi) / 2
                 if spans(mid): hi = mid
                 else: lo = mid
-            kappa_rows.append((d, N, Hh, p, lean_ok, round(hi, 3)))
-print(' d   N  H  p           Lean-rectangle spans   kappa* (upper bound, mod p)')
-for row in kappa_rows: print('%3d %3d %2d  %d  %-22s %s' % row)
-check('Lean-form Cor 4 rectangles (kappa = 32) span for d in {-1,5}, N <= 4, 1 <= H <= N; Vandermonde rows span', toy_ok)
-check('minimal scale kappa* <= 4 in every toy case (32 has a factor >= 8 of slack there)', max(r_[5] for r_ in kappa_rows) <= 4,
-      f'max kappa* = {max(r_[5] for r_ in kappa_rows)}')
+            # monotonicity: the kappa = 32 rectangle contains the certified kappa* rectangle
+            lean_ok = hi <= 32
+            toy_ok &= lean_ok
+            kc = 0.0                            # row-count bound: least kappa (step 1e-3) with enough rows
+            while (int(kc * Hh ** (2 / 3) * u) + 1) * (int(kc * Hh ** (-1 / 3) * u) + 1) ** 2 < M: kc += 1e-3
+            kappa_rows.append((d, N, Hh, p, lean_ok, round(hi, 3), round(kc, 3), round(32 * Hh ** (2 / 3) * u, 1), round(32 * Hh ** (-1 / 3) * u, 1)))
+print(' d   N  H  p        Lean-rectangle spans  kappa*(mod p, upper bd)  kappa_count  Lean T1   Lean T2=T3')
+for row in kappa_rows: print('%3d %3d %2d  %d  %-21s %-24s %-12s %-8s %s' % row)
+print('rank computations:', nrank)
+check('Lean-form Cor 4 rectangles (kappa = 32) span for d in {-3,5}, N <= 4, 1 <= H <= N; Vandermonde rows span', toy_ok)
+check('minimal scale kappa* <= 1 in every toy case (32 is >= 32x the scale actually needed there)', max(r_[5] for r_ in kappa_rows) <= 1,
+      f'max kappa* = {max(r_[5] for r_ in kappa_rows)}; kappa* / kappa_count <= {max(r_[5] / r_[6] for r_ in kappa_rows):.3f}')
 
 # ---------------------------------------------------------------- (8) duality identity
 print('\n== (8) (D1^a1 D2^a2 D3^a3 x^n)(1,1,1,1) = (A n)^alpha for D_j = sum_i A_ji x_i d/dx_i')

@@ -1,21 +1,34 @@
 #!/usr/bin/env python3
-"""SKEPTIC: rigorous argument-principle certificates (sk_wind.py) for zeros of Z_{x^2+5y^2} with Re s > 1,
-evaluated with genus formula zeta*L_-20 + L_-4*L_5 (characters rebuilt and checked in sk_ep_probe.py).
-The zeros at t ~ 1.48e5, 2.73e5, 5.06e5 were NOT certified by the investigator (they appear only as
-unpolished screen candidates in epstein_sigma_gt1_screen.log).
+"""SKEPTIC: rigorous argument-principle certificates (sk_wind.winding_taylor) for zeros of Z_{x^2+5y^2}
+with Re s > 1, evaluated with the genus formula zeta*L_-20 + L_-4*L_5 (characters rebuilt and checked in
+sk_ep_probe.py; formula independently confirmed against Chowla-Selberg in sk_epstein_cs.py).
+The zeros at t ~ 1.48e5, 2.73e5, 5.06e5, 9.40e5 were NOT certified by the investigator (they appear only
+as unpolished screen candidates in epstein_sigma_gt1_screen.log).
 Usage: python3 sk_ep_cert.py OUTDIR re1 im1 [re2 im2 ...]"""
 import sys, os, json, time, flint
-from flint import acb, arb
-from sk_ep_probe import Z
-from sk_wind import winding
+from flint import acb, arb, acb_series
+from sk_ep_probe import C
+from sk_wind import winding_taylor
 flint.ctx.prec = 80
+
+
+def Zser(z, n):
+    flint.ctx.cap = n
+    s = acb_series([z, 1], prec=n)
+    v = acb_series.zeta(s) * acb_series.dirichlet_l(s, C[-20]) + acb_series.dirichlet_l(s, C[-4]) * acb_series.dirichlet_l(s, C[5])
+    c = v.coeffs()
+    while len(c) < n:
+        c.append(acb(0))
+    return c
+
+
 out = []
 a = sys.argv[2:]
 for i in range(0, len(a), 2):
     x, y = float(a[i]), float(a[i + 1])
     h = min(1e-3, (x - 1) / 2)
     t0 = time.time()
-    r = winding(Z, x - h, x + h, y - h, y + h, nseg=4, maxdepth=10)
+    r = winding_taylor(Zser, x - h, x + h, y - h, y + h, nseg=8, maxdepth=8)
     r.update(center=[x, y], halfwidth=h, sigma_lower_edge=x - h, runtime_s=round(time.time() - t0, 1))
     out.append(r)
     print(r, flush=True)

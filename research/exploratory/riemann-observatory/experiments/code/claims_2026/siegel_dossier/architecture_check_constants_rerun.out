@@ -1,0 +1,73 @@
+PASS G(2.2) 13/12<log3<11/10 (mpf('1.09861228866810969139524523692252570464749'),)
+PASS G(2.2) log2<7/10 
+PASS G(2.2) log5<13/8 
+PASS G(2.2) 35/18<log7<39/20 
+PASS G(2.2) log100<5 
+PASS G(2.5) certificate == 30607/88200 30607/88200
+PASS G(2.5) 30607/88200 < 7/20 
+PASS G(2.5) true sum_{p odd<=2e6} log p/p^2 < 7/20 0.3198038143805896
+PASS G(2.5) convexity bound (exact logs) < 7/20 0.3453561175946994
+PASS G V certificate 589/720 < 33/40 
+PASS G V true value < 33/40 0.7553661109833746
+PASS G (2.6) loss certificate = 2-7/675 
+PASS G (2.6) loss with exact logs < 2 1.9719912357655507
+PASS G (2.6) numeric spot check margin > 0 1.806754673850758
+PASS G (2.3) theta(1e6) <= log4 * 1e6 0.9984841750256322
+PASS G (2.4) M(x) <= log x + log 4 (spot) -1.7328679513998633
+PASS G (3.11) coefficients 11/20, 29/60, 29/30 
+PASS G (3.17) term1 14040/9999 < 141/100 
+PASS G (3.17) term1 with exact logs < 141/100 1.390117509019583
+PASS G (3.17) term2 < 1/50 0.017157
+PASS G (3.17) term3 = 2107/600 < 53/15 
+PASS G (3.17) (22/15) log2 < 77/75 
+PASS G (3.17) sum = 599/100 < 6 
+PASS G p0/s0 < 301/10 for s0>=333 
+PASS G small case 59/10<6 and 623/300<6 
+PASS G (5.7) 282431/176400 > 8/5 1.6010827664399092
+PASS G (5.7) sum_{m<=27} 1/m^2 >= that 
+PASS G (5.8) B(y)<=(4+3log3)/27 < 73/270 0.2702161802223826
+PASS G f_k decreasing (k=4,6,76) on q in [3,2000] 
+PASS G (5.9) B(xy)<1/10000 3.386549861164144e-17
+PASS G (5.10) 332/585 < 4/7 
+PASS G kappa = 2870 
+PASS G (5.11) 1176629/118125 < 10 9.960880423280424
+PASS G (5.12) 699/20 < 35 
+PASS G (5.13)/(5.14) 93/2 and 2339/60 
+PASS G (5.15) (451/60) log 3 > 8 8.257902369821958
+PASS G (5.15) rational 451/60*13/12 = 8+103/720 
+PASS G A: B(y)<=(8+2log7)/49 < 17/70 0.242690210165523
+PASS G A: kappa=1242 
+PASS G A (A.1) = 6-21863/548800 < 6 
+PASS G A J < 741/32 
+PASS G A difference 4453/960 and >8 at log7 9.026185305982615
+PASS B C1=2e^{3/2}/9=0.99593 0.99593090451957
+PASS B C2=1.12042 1.1204222675845161
+PASS B kappa=0.5541 0.5541199559354119
+PASS B e^lam kappa/2 - 1/log319 > 0 
+PASS B omega = 22 22
+PASS B delta0 = 81/(5888 e^{3/2}) = 3.069e-3 0.003069555531933223
+PASS B H = 9216*97^2 = 12*C0/c0 of OpenAI Lemma 4 (C0=192,c0=1/(4*97^2)) 86713344
+PASS B H >= 8*97^3 => H^{2/3} >= 4*97^2 
+PASS B S23<=S1/12: 768*97^2/H = 1/12 
+PASS B log H+3+13/12 log 8 < 24 23.53084667676226
+PASS B L>23 for q>=1e10 
+PASS B 1/(2H)+13/24+24/23 < 8/5 
+PASS B 3(C2+8/5)/(4 omega) <= 3/32 
+PASS B -zeta'/zeta(s) < 1/(s-1) on (1,2] (grid) -0.4300390069054672
+PASS B Rosser-Schoenfeld (3.21)/(3.22) for x<1e6 0
+PASS B Chebyshev theta(x)<=2x (x=1e6) 
+PASS O Cor3: 32^3/8 = 4096 >= 256 > ((4N-3)/N)^4 
+PASS O Lemma4 C0/c0 = 7226112 
+PASS O first term (3/4)(1+1/12) = 13/16 
+PASS O final 13/16+1/16=7/8<1 
+PASS O |nu(theta_n)|<=(N-1)(1+sqrt q)(1+sqrt2)<=8N sqrt q (worst q=3) 
+PASS K r ~ D^3/384 (deviation halves when D doubles: O(D^3) error) (0.03406324999999999, 0.01695321875000011, 0.00845704296875005)
+PASS K W ~ 5D^4/6144 (deviation halves when D doubles: O(D^3) error) (0.03947180000000006, 0.01961772500000003, 0.00977940312500003)
+PASS K E_p ~ D^4/(1536p) (deviation halves when D doubles: O(D^3) error) (-0.19913766999999993, -0.10169552124999992, -0.051365876391601506)
+PASS K ratio W/(sum i) -> 5/4 < 13/10 < 4/3 
+PASS K (1+sqrt2)(1+sqrt|q|) <= 8 sqrt|q| for |q|>=3 
+PASS K det(gamma1,gamma2,gamma3) = 4 sqrt(2q) (sympy) 4*sqrt(2)*sqrt(q)
+PASS K kernel vector (sqrt(2q), sqrt2, -sqrt q, -1) (sympy) 
+PASS O minor of first three columns = 4ab and kernel (ab,b,-a,-1) (sympy) 
+
+SUMMARY: 71 checks, 0 failures

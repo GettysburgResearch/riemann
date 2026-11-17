@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/eisSTq4lMm2BE45x25t3Mwo7Gvw</id>
+  <title>arXiv Query: search_query=&amp;id_list=2610.15483,2610.21099,2610.30476,2610.21511,2602.03626&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-17T20:23:47Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2610.15483,2610.21099,2610.30476,2610.21511,2602.03626" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>5</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2610.30476v1</id>
+    <title>An explicit elementary proof of no Landau--Siegel zeros</title>
+    <updated>2026-10-21T21:48:17Z</updated>
+    <link href="https://arxiv.org/abs/2610.30476v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.30476v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We give an elementary proof of the absence of Landau--Siegel zeros with the explicit constant $c=1/100$. For every primitive quadratic Dirichlet character $χ$ of conductor $q\ge3$, each real zero $β\in(0,1)$ of $L(s,χ)$ satisfies $(1-β)\log q&gt;c$. The proof combines integer coefficient counting, polynomial congruences, a paired-tail hyperbola estimate, and a logarithmically weighted comparison of positive sums. All required constants are explicit, and one choice of parameters covers every conductor. The argument uses elementary arithmetic and real summation and integration, without separate zero computations for small conductors.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-21T21:48:17Z</published>
+    <arxiv:comment>Comments are welcome</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Victor Zhenyu Guo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.21511v2</id>
+    <title>Imaginary quadratic fields of class number at most 2000</title>
+    <updated>2026-10-22T07:25:00Z</updated>
+    <link href="https://arxiv.org/abs/2610.21511v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.21511v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We determine all imaginary quadratic fields with class number at most 2000, unconditionally: there are
+  16,453,493 of them, and the largest $|d_K|$ among them is 1,062,350,083. To our knowledge, such a list was
+  previously known only for class number at most 100. We make explicit a recent argument, released by OpenAI and
+  not refereed, that excludes Landau-Siegel zeros: every real zero $β$ of $L(s,χ)$, for a primitive real
+  character $χ$ of conductor $q\ge3$, satisfies $(1-β)\log q\ge5.8\cdot10^{-4}$. An elementary lower bound
+  for $L(1,χ)$ then shows that a field with class number at most 2000 has $|d_K|&lt;1.61\cdot10^{15}$. The fields
+  with $6\cdot2^{28}\le|d_K|\le1.65\cdot10^{15}$ are excluded by Watkins' sieve, and those below are read from the
+  class group tables of Mosunov and Jacobson. As a consequence, the lists of Cremona and Sutherland of imaginary
+  quadratic orders with class number at most 1000, and the counts of Holmin, Jones, Kurlberg, McLeman and Petersen
+  for odd class numbers up to 1999, previously known under the generalized Riemann hypothesis, hold
+  unconditionally. The two steps, the bound for $β$ and the bound for $|d_K|$, are proved in Lean, building on
+  the existing formalization of that argument, and the proofs are checked by two independent kernels. The
+  contributions of AI systems to this work are stated in the paper.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-15T08:46:50Z</published>
+    <arxiv:comment>21 pages. Added references to prior and related work. Code, Lean formalization and lists: https://github.com/iwaokimura/cln-imq-2k</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Iwao Kimura</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.21099v1</id>
+    <title>A simpler proof that there are no Landau--Siegel zeros</title>
+    <updated>2026-10-15T02:01:25Z</updated>
+    <link href="https://arxiv.org/abs/2610.21099v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.21099v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper simplifies the recent OpenAI proof that there are no Landau--Siegel zeros.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-15T02:01:25Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Bryce Kerr</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.15483v1</id>
+    <title>On the OpenAI proof that Landau-Siegel zeros do not exist</title>
+    <updated>2026-10-11T09:35:35Z</updated>
+    <link href="https://arxiv.org/abs/2610.15483v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.15483v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A recent manuscript of OpenAI asserts that Landau-Siegel zeros do not exist. Here, we give a detailed account of its argument, arranged as a direct proof with explicit constants. There are absolute constants $q_0$ and $δ_0&gt;0$ such that, for every primitive real Dirichlet character $χ$ of conductor $q\ge q_0$, every real zero $β\in(0,1)$ of $L(s,χ)$ satisfies $(1-β)\log q\geδ_0$, and one can take $q_0=10^{10}$ and $δ_0=3.0\times 10^{-3}$. Combined with a recent computation of Lu, Zaman, and Zhao, this result yields the bound $(1-β)\log q\ge 3.0\times 10^{-3}$ for every conductor $q\ge 3$. The proof is an interpolation determinant argument in the biquadratic field generated by $\sqrt{2}$ over the quadratic field attached to $χ$. A real zero close to one forces $χ(p)=-1$ for most primes $p$, and the Frobenius congruence at these primes makes a certain nonzero determinant divisible by higher powers of these primes than its Archimedean size allows. The underlying ideas are those of the OpenAI manuscript. The explicit constants, and the presentation, are new.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-11T09:35:35Z</published>
+    <arxiv:comment>19 pages; 1 figure; comments welcome!</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>William D. Banks</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.03626v2</id>
+    <title>Numerical computations concerning Landau-Siegel zeros</title>
+    <updated>2026-10-20T19:05:38Z</updated>
+    <link href="https://arxiv.org/abs/2602.03626v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.03626v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We computationally verify that if $L(s,χ)$ is a quadratic Dirichlet $L$-function modulo $q \leq 10^{10}$ then $L(σ,χ) \neq 0$ for real $σ\ge 1-1/(5\log q)$. The number of verified moduli exceeds benchmarks due to Watkins (2004), Platt (2016), and Languasco (2023) by a factor between 66 and 25,000. Our new algorithm draws from zero-free region arguments.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-03T15:15:20Z</published>
+    <arxiv:comment>21 pages, 2 figures, and 1 table</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Rick F. Lu</name>
+    </author>
+    <author>
+      <name>Asif Zaman</name>
+    </author>
+    <author>
+      <name>Haonan Zhao</name>
+    </author>
+    <arxiv:doi>10.1090/mcom/4268</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1090/mcom/4268" title="doi"/>
+  </entry>
+</feed>

@@ -1,0 +1,62 @@
+== (H) source hashes ==
+PASS sha256 home/user/openai/math/preprints/Uniform-exclusion-of-Landau-Siegel-zeros-October-1-2026/paper.pdf  fab9f6e84ece2a37...
+PASS sha256 home/user/openai/math/preprints/Uniform-exclusion-of-Landau-Siegel-zeros-October-1-2026/build/paper.tex  b011ba9c1f55ee21...
+PASS sha256 home/user/openai/math/lean/ComparatorChallenges/SiegelZeros.lean  bedaac0248a64191...
+PASS sha256 home/user/openai/math/lean/ComparatorChallenges/SiegelZeros.json  620696740156c450...
+PASS sha256 tmp/claude-0/-home-user-riemann/e62aa4cb-6226-5e37-8f52-ea0fa055746f/scratchpad/fulltext/arxiv/2610.15483/paper.pdf  54891704515ba9d5...
+PASS sha256 tmp/claude-0/-home-user-riemann/e62aa4cb-6226-5e37-8f52-ea0fa055746f/scratchpad/fulltext/arxiv/2610.21099/paper.pdf  30dc40c959735eaa...
+PASS sha256 tmp/claude-0/-home-user-riemann/e62aa4cb-6226-5e37-8f52-ea0fa055746f/scratchpad/fulltext/arxiv/2610.30476/paper.pdf  f3058ae2a77e5c8e...
+PASS sha256 tmp/claude-0/-home-user-riemann/e62aa4cb-6226-5e37-8f52-ea0fa055746f/scratchpad/fulltext/arxiv/2610.21511/paper.pdf  5987fa4df134c5d9...
+
+== (A) headline constants (arb, 200 bits) ==
+PASS Banks delta0 = 81/(5888 e^{3/2}) > 3.0e-3  [0.0030695555319332228504748162588119929056922387870664785374067 +/- 2.02e-63]
+PASS Banks delta0 = 9/(128*23*C1) (same number)
+PASS Banks omega = ceil(8(C2+8/5)) = 22  [21.763378140676129645204110920238551638011499736739334113545 +/- 2.89e-58]
+PASS Guo (5.15): (451/60) log 3 - 8 > 0  [0.25790236982195784698759336420098487993363735963433337887244 +/- 4.88e-60]
+PASS Guo App. A: (4453/960) log 7 - 8 > 0  [1.0261853059826147371188914234921659750770190633625290335517 +/- 1.39e-59]
+PASS Guo (5.7): sum_{m<=7} 1/m^2 + int_8^28 dt/t^2 = 282431/176400 > 8/5
+PASS Guo (5.11): 73/270*(287/10+6)+76/10000+4/7 = 1176629/118125 < 10
+PASS Guo (5.12)-(5.14): 70-6-35/2 = 93/2 and 11/20*70+29/60 = 2339/60, gap 451/60
+PASS OAI Lem 6: C0/c0 = 192*4*97^2 = 7226112
+PASS Banks H = 12*C0/c0 = 9216*97^2 = 86713344
+PASS OAI master: (3/4)(1+1/12) = 13/16 and 13/16 + 1/16 = 7/8 < 1
+PASS OAI Cor 4: 4096 N^4 = (8N)^4 > (4N-3)^4 for N >= 1, since 8N - (4N-3) = 4N+3 > 0 and 4N-3 >= 1
+PASS Kimura Rem. 7: max_eta eta^2 e^-eta/(16+8e^eta) ~ 1.02e-2 at eta ~ 1.23  max=0.010196328 at eta=1.22675
+
+== (B) method ceilings ==
+PASS Banks chain continuous optimum (3/16)^2/(4 C1 (C2+8/5)) = 3.244e-3 (audit_part2 §4.3)  [0.0032439714449712162331973393947032353273396287145525737006171 +/- 1.60e-63]
+INFO Guo as stated (11/20, 29/60), y >= q^{2+}          ceiling 0.06095 at A = 12.766, B = 2.000
+INFO Barreto/van Dijk shape (1/2, 1/4), y >= q^{2+}     ceiling 0.07884 at A = 10.685, B = 2.000
+INFO ideal arithmetic (1/2, 0), y >= q^{2+}             ceiling 0.08579 at A = 9.657, B = 2.000
+INFO Guo (11/20, 29/60), hypothetical y -> q            ceiling 0.10620 at A = 7.475, B = 1.000
+INFO Barreto shape (1/2, 1/4), hypothetical y -> q      ceiling 0.14590 at A = 5.854, B = 1.000
+INFO ideal arithmetic (1/2, 0), hypothetical y -> q     ceiling 0.17157 at A = 4.828, B = 1.000
+PASS Guo chain ceiling as stated reproduces audit_part1/part2 value 0.0609
+PASS ideal-arithmetic ceiling with y -> q equals 3 - 2 sqrt 2 = 0.171573 (numerics)
+PASS closed form: argmax A = 2 + 2 sqrt 2, value 3 - 2 sqrt 2, equal to the cap 1/(A+1) there
+PASS every ceiling in the table is below LZZ's computed 1/5 and below (1/2) log 3
+INFO r=2 (degree  4 field), m= 2 coords: size slope 3/4, usable inert fraction 1, kappa 3/4 = 0.7500
+INFO r=3 (degree  8 field), m= 2 coords: size slope 3/8, usable inert fraction 1/2, kappa 3/4 = 0.7500
+INFO r=3 (degree  8 field), m= 3 coords: size slope 1/2, usable inert fraction 3/4, kappa 2/3 = 0.6667
+INFO r=3 (degree  8 field), m= 4 coords: size slope 5/8, usable inert fraction 1, kappa 5/8 = 0.6250
+INFO r=4 (degree 16 field), m= 2 coords: size slope 3/16, usable inert fraction 1/4, kappa 3/4 = 0.7500
+INFO r=4 (degree 16 field), m= 3 coords: size slope 1/4, usable inert fraction 3/8, kappa 2/3 = 0.6667
+INFO r=4 (degree 16 field), m= 8 coords: size slope 9/16, usable inert fraction 1, kappa 9/16 = 0.5625
+INFO r=5 (degree 32 field), m= 2 coords: size slope 3/32, usable inert fraction 1/8, kappa 3/4 = 0.7500
+INFO r=5 (degree 32 field), m= 3 coords: size slope 1/8, usable inert fraction 3/16, kappa 2/3 = 0.6667
+INFO r=5 (degree 32 field), m=16 coords: size slope 17/32, usable inert fraction 1, kappa 17/32 = 0.5312
+INFO r=6 (degree 64 field), m= 2 coords: size slope 3/64, usable inert fraction 1/16, kappa 3/4 = 0.7500
+INFO r=6 (degree 64 field), m= 3 coords: size slope 1/16, usable inert fraction 3/32, kappa 2/3 = 0.6667
+INFO r=6 (degree 64 field), m=32 coords: size slope 33/64, usable inert fraction 1, kappa 33/64 = 0.5156
+PASS heuristic kappa(m) = (1+m)/(2m): m=2 gives 3/4 (OAI l.131-132), m>1 needed, kappa -> 1/2
+
+== (C) consequences (auditor's derivations; conditional on the theorem with the stated c) ==
+PASS g(10) with c = 1/100, k = 4 equals 0.007671 (audit_part1 §9)  [0.0076709024990108409903761203554956378486824787789331766850920 +/- 4.35e-62]
+PASS h(D) >= (0.00767/pi) sqrt|D|/log|D| = 0.00244 sqrt|D|/log|D| for D < -4
+INFO no exponent-2 class group at all once |D| >= p_15# = 6.1489e+17 (there omega <= k forces h <= 2^(k-1) < h_lower)
+INFO explicit bound: exponent-2 class group => |D| < X0 = 1.5655e+16 (omega <= 14 there)
+INFO fields with omega >= 12 (h >= 2048, beyond Kimura's h <= 2000 list) need |D| >= 1.4841e+13
+PASS X0 is finite, lies in the omega = 14 range and below 2e16  1.5655e+16
+
+SUMMARY: 30 PASS / 0 FAIL, 0.4 s
+versions: python 3.13.18, python-flint 0.9.0, mpmath 1.3.0, sympy 1.14.0
