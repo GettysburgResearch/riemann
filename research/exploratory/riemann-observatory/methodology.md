@@ -93,3 +93,13 @@ The Observatory lives in `research/exploratory/` of the GettysburgResearch RH pr
 ## 10. Incremental updates
 
 All identifiers are stable (`PAPER-####`, `THM-PAPER-####-k`, `FND-####`, `CON-####`, `LED-<AREA>-k`). New works append new ids; removed works keep their ids with `status: withdrawn_from_corpus`. Harvest scripts are idempotent (`.done` markers); rerunning `tools/build_corpus.py` with a later cutoff produces a diff rather than a rebuild.
+
+## Addendum A (2026-11-17, during execution)
+
+1. **Stratum S0.** Four selected works predate Riemann's memoir (Euler 1737, Dirichlet 1837, Chebyshev 1852 ×2). They are labelled `S0 pre-1859 antecedents` rather than forced into S1.
+2. **Curator overrides.** Twelve 2026 works were force-included with the documented reason "curator override: 2026 frontier claim/follow-up audited or tracked by the Observatory" (the OpenAI 11/12 quasi-RH manuscript, human follow-ups to the 7/8 claim, human re-proofs of Landau–Siegel exclusion, Knausgård's critical-line refinement, Bellotti–Trudgian–Yang 2026). The triage agent had wrongly rejected several as "duplicates". Overrides are listed in `corpus/selection_decisions.csv`.
+3. **Deduplication.** Cross-index duplicates (zbMATH vs arXiv vs scan records of the same work) are removed by normalized title within a ±3-year window; 68 duplicates were removed and recorded as "duplicate of CAND-…".
+4. **Model tiering.** Index-content triage and Level-1 reading used a lighter model (Sonnet); frontier analysis, verification, audits, campaigns and discovery used Opus. Level-1 records are extraction-level evidence; any finding that matters is re-checked at Level 2 by a different agent.
+5. **Sub-agent outputs.** The execution harness sometimes refused sub-agents' writes of report files. Those agents' structured returns were rendered to the expected paths by `tools/materialize_results.py`; such files begin with a `materialized from workflow result` comment.
+6. **Lean replay.** Building third-party Lean code (the OpenAI quasi-RH formalization) was blocked by the session's safety policy; see `audits/lean_replay/README.md`.
+7. **Theorem database scope.** `theorems/theorems.jsonl` contains statements only from works whose text was actually read (full or partial). Records with no legitimate full-text access contribute no theorem nodes.

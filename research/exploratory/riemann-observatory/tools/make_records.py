@@ -58,8 +58,8 @@ def main(wd, root):
                          "arxiv": c.get("arxiv", ""), "zbl": c.get("zbl") or "", "fulltext_url": access_url,
                          "fulltext_status": rec["access"]["fulltext_status"], "audit_level": level,
                          "content_basis": ("full text" if level.startswith("L1") else (t.get("basis") or "metadata"))})
-        # theorems
-        if r:
+        # theorems (only from works whose text was actually read)
+        if r and r.get('access', {}).get('status') in ('fulltext_read', 'partial_fulltext'):
             for k, th in enumerate(r.get("main_results") or [], 1):
                 tid = f"THM-{p}-{k}"
                 thm_rows.append({"thm_id": tid, "paper_id": p, "kind": th.get("kind"), "label_in_source": th.get("label_in_source"),
