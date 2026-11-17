@@ -104,7 +104,9 @@ def scan(T_MAX, SIGMA_MAX, eta=0.02, dt=0.05, ds=0.02):
         T2 = min(T + 10.0, T_MAX)
         sig = list(np.arange(0.5 + eta, SIGMA_MAX + 1e-9, ds))
         tt = list(np.arange(T - 0.5, T2 + 0.5, dt))
+        flint.ctx.prec = 53     # grid only (non-rigorous screening); Newton + certificates run at 128 bits
         A = np.array([[abs(complex(f_val(acb(a, b)))) for b in tt] for a in sig])
+        flint.ctx.prec = 128
         for i in range(len(sig)):
             for j in range(1, len(tt) - 1):
                 v = A[i, j]
@@ -115,8 +117,10 @@ def scan(T_MAX, SIGMA_MAX, eta=0.02, dt=0.05, ds=0.02):
                         if all(abs(z - c) > 1e-8 for c in cands):
                             cands.append(z)
         # argument principle count in the block (non-rigorous)
+        flint.ctx.prec = 53
         w = winding_number(f_val, [complex(0.5 + eta, T), complex(SIGMA_MAX, T), complex(SIGMA_MAX, T2),
                                    complex(0.5 + eta, T2)], n_per_edge=600)
+        flint.ctx.prec = 128
         blocks.append(dict(t_lo=T, t_hi=T2, winding=round(w, 4)))
         T = T2
     return sorted(cands, key=lambda z: z.imag), blocks

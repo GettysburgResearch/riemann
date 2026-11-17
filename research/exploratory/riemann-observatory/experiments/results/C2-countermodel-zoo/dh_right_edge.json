@@ -1,0 +1,32 @@
+{
+ "P": 100000000,
+ "n_primes_2_3_mod5": 2880970,
+ "target_pi_minus_2alpha": "[2.5880182946927479870 +/- 4.59e-20]",
+ "float_root_partial_sum_only": 1.1151350377277667,
+ "heuristic_root_with_PNT_tail": 1.1203624672123986,
+ "zero_free_for_sigma_ge": 1.1351350377277667,
+ "S_upper_at_that_sigma": "[2.55024301355317 +/- 2.23e-15]",
+ "S_exceeds_target_at_sigma": 1.1146350377277667,
+ "S_lower_at_that_sigma": "[2.59155905409136 +/- 4.34e-15]",
+ "primes_needed_at_sigma_1": {
+  "K": 20,
+  "largest_prime": 157
+ },
+ "primes_needed_at_sigma_1.01": {
+  "K": 24,
+  "largest_prime": 193
+ },
+ "primes_needed_at_sigma_1.05": {
+  "K": 68,
+  "largest_prime": 733
+ },
+ "primes_needed_at_sigma_1.1": {
+  "K": 4457,
+  "largest_prime": 91957
+ },
+ "runtime_s": 32.7,
+ "versions": {
+  "python_flint": "0.9.0",
+  "numpy": "2.5.3"
+ }
+}
