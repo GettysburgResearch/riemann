@@ -1,0 +1,34 @@
+TZ24: 2*sum (-1)^j log zeta(j+3/2) in [ [1.498793383 +/- 3.75e-10] , [1.498793383 +/- 3.75e-10] ]  (stated <= 1.4988)
+TZ24: sup_t exp(...) attained near t = 0.0  value = 2.97654438427  (stated <= 2.97655)
+k=1: sup_t P attained at t=0.0 (h(tb)=0.0576985677083, h(0)=0.0576985677083);  C_4 = [5.137806345 +/- 2.40e-10]
+k=2: sup_t P attained at t=0.0 (h(tb)=0.0150922139486, h(0)=0.0150922139486);  C_8 = [9.495616563 +/- 1.46e-10]
+k=3: sup_t P attained at t=0.0 (h(tb)=0.00386931498845, h(0)=0.00386931498845);  C_16 = [18.23873011 +/- 7.64e-10]
+stated: C4=5.13781, C8=9.49562, C16=18.23874
+Lemma 4.4 bracket at b=7/8: [1.91194493104 +/- 2.80e-12]  (stated <= 1.912)
+   direct quadrature: 1.91194493104
+
+Table 1 rows (lambda=1.6,1.3,1.2,1.1) plus code presets lambda=1.4, 1.0 (presets.c, c=0.1 runs) recomputation (phi, E must be <= the stated values for the stated table to be valid upper bounds):
+lambda=1.4: r=[0.060801227 +/- 4.67e-10]  phi=[0.2294553466 +/- 3.45e-11] (stated 0.22946)  rho=[0.0044964767 +/- 3.34e-11]  K=[1.1611193 +/- 2.47e-8]  E=[1.173975515 +/- 5.91e-11] (stated 1.1740)  phi_ok=True E_ok=True
+lambda=1.0: r=[0.043429448 +/- 1.91e-10]  phi=[0.2350329927 +/- 1.04e-12] (stated 0.23504)  rho=[0.0039051662 +/- 2.21e-12]  K=[1.1877698 +/- 4.86e-8]  E=[1.200184881 +/- 1.86e-12] (stated 1.2002)  phi_ok=True E_ok=True
+lambda=1.6: r=[0.069487117 +/- 1.05e-10]  phi=[0.2267481057 +/- 1.49e-11] (stated 0.22675)  rho=[0.0047942248 +/- 3.54e-12]  K=[1.1481956 +/- 2.96e-8]  E=[1.161302048 +/- 3.22e-10] (stated 1.1614)  phi_ok=True E_ok=True
+lambda=1.3: r=[0.056458283 +/- 3.53e-10]  phi=[0.2308290915 +/- 3.00e-11] (stated 0.23083)  rho=[0.0043480195 +/- 1.12e-11]  K=[1.1676802 +/- 2.44e-8]  E=[1.180416287 +/- 1.65e-10] (stated 1.1805)  phi_ok=True E_ok=True
+lambda=1.2: r=[0.052115338 +/- 1.72e-10]  phi=[0.2322164917 +/- 2.90e-11] (stated 0.23222)  rho=[0.0041999325 +/- 6.24e-12]  K=[1.1743083 +/- 4.81e-8]  E=[1.186929464 +/- 2.41e-10] (stated 1.1870)  phi_ok=True E_ok=True
+lambda=1.1: r=[0.047772393 +/- 9.37e-12]  phi=[0.2336177301 +/- 4.27e-11] (stated 0.23362)  rho=[0.0040522891 +/- 5.23e-12]  K=[1.1810045 +/- 8.74e-9]  E=[1.193517854 +/- 3.91e-10] (stated 1.1936)  phi_ok=True E_ok=True
+
+With our recomputed C4, C8:
+lambda=1.4: E=[1.173975223 +/- 2.68e-10] (stated 1.1740)
+lambda=1.0: E=[1.200184583 +/- 3.55e-10] (stated 1.2002)
+lambda=1.6: E=[1.161301760 +/- 4.44e-10] (stated 1.1614)
+lambda=1.3: E=[1.180415994 +/- 1.70e-11] (stated 1.1805)
+lambda=1.2: E=[1.186929169 +/- 1.26e-10] (stated 1.1870)
+lambda=1.1: E=[1.193517557 +/- 4.76e-10] (stated 1.1936)
+
+Banks: delta0 = 81/(5888 e^1.5) = 0.00306955553193  >= 3.0e-3: True ;  9/(128*23*C1) = 0.00306955553193
+LZZ gives c0 > 1/5 = 0.2  > 3.0e-3: True
+Banks Step 3 bounded term K = log H + 3 + (13/12) log 8 = 23.53084668 ; H = 86713344
+omega=22 bookkeeping closes for L >= 21.629385  i.e. q >= 2.4747e+9 (also needs q >= H = 86713344 )
+  q=86713344: omega=24, delta0=9/(128(omega+1)C1)=0.00282399
+  q=100000000: omega=24, delta0=9/(128(omega+1)C1)=0.00282399
+  q=1000000000: omega=23, delta0=9/(128(omega+1)C1)=0.00294166
+  q=2.4747e+9: omega=22, delta0=9/(128(omega+1)C1)=0.00306956
+Bordignon-type bound gives (1-beta)log q >= 3.0e-3 only for q <= 3.17308e+6

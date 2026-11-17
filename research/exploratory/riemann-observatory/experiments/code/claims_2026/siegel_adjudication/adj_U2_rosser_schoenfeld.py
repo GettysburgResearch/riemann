@@ -65,13 +65,12 @@ L319 = mp.log(319)
 rep(abs(kappa - mp.mpf("0.5541")) < 1e-4 and kappa / 2 > mp.mpf("0.277"),
     f"(1a) kappa = (1/2)log pi - (1/2)psi(3/2) = {mp.nstr(kappa, 10)}; kappa/2 = {mp.nstr(kappa/2, 8)} > 0.277")
 rep(1 / L319 < mp.mpf("0.174"), f"(1b) 1/log 319 = {mp.nstr(1/L319, 8)} < 0.174")
-# If |sum - log x - E| <= c_l/log x (lower side) and c_u/log x (upper side, x >= 319), (2.7) becomes
-#   sum_{H<p<=X} > log X - log H - (c_l + c_u)/log H,
-# and the last step of Lemma 2.1 needs e^lam*kappa/2 - (c_l+c_u)/(2 log H) ... more precisely
-# e^lam kappa/2 - (c_l+c_u)/(2 * 1/2) * (1/log H)/... we keep Banks's form: loss = (c_l+c_u)/log H.
+# If sum - log x - E > -c_l/log x (x > 1) and < c_u/log x (x >= 319), then (2.7) becomes
+#   sum_{H<p<=X} > log X - log H - c_l/log X - c_u/log H > log X - log H - (c_l + c_u)/log H,
+# and the last step of Lemma 2.1 needs e^lam kappa/2 - (c_l + c_u)/log H > 0 for all H >= 319.
 crit_all_lambda = kappa * L319 / 2           # need (c_l + c_u)/log 319 < kappa/2   (lambda -> 0)
 crit_lambda_3_2 = mp.e ** 1.5 * kappa * L319 / 2
-info(f"(1c) Lemma 2.1 closes for every lambda in (0,2] iff c_l + c_u < kappa log 319 / 2 = {mp.nstr(crit_all_lambda, 6)} "
+info(f"(1c) last step of Lemma 2.1 closes for every lambda in (0,2] provided c_l + c_u < kappa log 319 / 2 = {mp.nstr(crit_all_lambda, 6)} "
      f"(RS62 gives c_l + c_u = 1); at lambda = 3/2 the threshold is {mp.nstr(crit_lambda_3_2, 6)}")
 info(f"(1d) final positivity with RS constants at lambda=3/2: e^1.5 kappa/2 - 1/log 319 = "
      f"{mp.nstr(mp.e**1.5*kappa/2 - 1/L319, 6)}; at lambda -> 0: kappa/2 - 1/log 319 = {mp.nstr(kappa/2 - 1/L319, 6)}")
@@ -88,7 +87,7 @@ for p in P.tolist():
 Nn = arb(N)
 tail = Nn.log() / (Nn - 1) + (Nn / (Nn - 1)).log()   # >= sum_{n>N} log n/(n(n-1))
 mid = -arb.const_euler() - S2 - tail / 2
-E_arb = mid + arb(0, tail.mid() / 2 * (1 + 1e-9) + float(tail.rad()) + float(mid.rad()))
+E_arb = mid + arb(0, (float(tail.mid()) / 2) * (1 + 1e-6) + float(tail.rad()) + float(mid.rad()) + 1e-25)
 E_ref = mp.mpf("-1.332582275733220881765828776071027748")   # value used in the part-1 audit (OEIS A083343)
 # mpmath: sum_p log p/(p(p-1)) = sum_{n>=2} sum_p log p p^{-n} = sum_{n>=2} sum_{k>=1} mu(k) (-zeta'/zeta)(kn)
 
@@ -118,8 +117,10 @@ for n in range(2, 160):
 E_mp = -mp.euler - acc
 info(f"(2a) E (arb enclosure, primes <= 1e7 + tail bound) = {E_arb}")
 info(f"(2b) E (mpmath, prime-zeta series, 40 dps) = {mp.nstr(E_mp, 30)}")
-rep(abs(E_mp - E_ref) < mp.mpf(10) ** -25 and (E_arb - float(E_ref)).contains(0) if hasattr(E_arb, 'contains') else True,
-    f"(2c) E agrees with -1.33258227573322088176582877607... (part-1 constant, OEIS A083343); |mp - ref| = {mp.nstr(abs(E_mp - E_ref), 3)}")
+contains_ref = abs(float(E_arb.mid()) - float(E_ref)) <= float(E_arb.rad())
+rep(abs(E_mp - E_ref) < mp.mpf(10) ** -25 and contains_ref,
+    f"(2c) E agrees with -1.33258227573322088176582877607... (part-1 constant, OEIS A083343): |mp - ref| = "
+    f"{mp.nstr(abs(E_mp - E_ref), 3)}; arb enclosure contains it: {contains_ref}")
 rep(float(E_arb.rad()) < 2e-6, f"(2d) rigorous E enclosure radius {float(E_arb.rad()):.2e} (<< the smallest margin found below)")
 
 # ---------------------------------------------------------------- (3) rigorous finite check
@@ -183,46 +184,49 @@ E = E_mp
 
 
 def up_fail_set(c):
-    """x-intervals (as primes p with the failing sub-interval [p, x*)) where sum >= log x + E + c/log x."""
+    """Maximal x-intervals in (1, 2000) on which sum_{p<=x} log p/p >= log x + E + c/log x.
+    On [p, q) the sum is constant and RHS(u) = u + E + c/u (u = log x) is minimal at u = sqrt(c)."""
     out = []
-    for i, p in enumerate(Pm[:-1]):
-        f = lambda x: mp.log(x) + E + c / mp.log(x) - Sm[i]
-        if f(p) <= 0:   # fails at x = p (RHS increasing on [p, p_next) for p >= 3)
-            # crossing inside [p, p_next) ?
-            q = Pm[i + 1]
-            if f(q) > 0:
-                xs = mp.findroot(f, (p, q), solver='anderson')
-            else:
-                xs = q
-            out.append((p, xs))
+    bounds = [(mp.mpf(1) + mp.mpf(10) ** -20, mp.mpf(0), mp.mpf(2))] + \
+             [(mp.mpf(Pm[i]), Sm[i], mp.mpf(Pm[i + 1])) for i in range(len(Pm) - 1)]
+    for a, s_, b in bounds:
+        rhs = lambda x: mp.log(x) + E + c / mp.log(x) - s_
+        xm = min(max(mp.e ** mp.sqrt(c), a), b)
+        if rhs(xm) <= 0:
+            lo = a if rhs(a) <= 0 else mp.findroot(rhs, (a, xm), solver='anderson')
+            hi = b if rhs(b) <= 0 else mp.findroot(rhs, (xm, b), solver='anderson')
+            out.append((lo, hi))
     return out
 
 
 def low_fail_set(c):
+    """x-intervals in (1, 2000) on which sum_{p<=x} log p/p <= log x + E - c/log x (RHS increasing)."""
     out = []
-    for i, p in enumerate(Pm[:-1]):
-        q = Pm[i + 1]
-        f = lambda x: Sm[i] - (mp.log(x) + E - c / mp.log(x))
-        if f(q) <= 0:   # fails as x -> q^-
-            xs = mp.findroot(f, (p, q), solver='anderson') if f(p) > 0 else p
-            out.append((xs, q))
+    bounds = [(mp.mpf(1) + mp.mpf(10) ** -20, mp.mpf(0), mp.mpf(2))] + \
+             [(mp.mpf(Pm[i]), Sm[i], mp.mpf(Pm[i + 1])) for i in range(len(Pm) - 1)]
+    for a, s_, b in bounds:
+        f = lambda x: s_ - (mp.log(x) + E - c / mp.log(x))
+        if f(b) <= 0:
+            lo = a if f(a) <= 0 else mp.findroot(f, (a, b), solver='anderson')
+            out.append((lo, b))
     return out
 
 
+fmt = lambda L: ", ".join(f"[{mp.nstr(a, 8)}, {mp.nstr(b, 8)})" for a, b in L) or "nothing"
 uf = up_fail_set(mp.mpf(1) / 2)
-info(f"(4a) (3.22) [1/(2 log x)] fails exactly on: " +
-     ", ".join(f"[{p}, {mp.nstr(xs, 8)})" for p, xs in uf))
+info(f"(4a) (3.22)-form upper bound [+1/(2 log x)] fails exactly on: {fmt(uf)}")
 last = uf[-1]
-rep(last[0] == 317 and 318 < last[1] < 319,
-    f"(4b) last failure of the 1/(2 log x) upper bound is x in [317, {mp.nstr(last[1], 10)}); "
+rep(abs(last[0] - 317) < 1e-12 and 318 < last[1] < 319,
+    f"(4b) last failure of the +1/(2 log x) upper bound is x in [317, {mp.nstr(last[1], 10)}); "
     f"so 319 is exactly the least integer from which (3.22) holds (fingerprint of the quoted threshold)")
 lf = low_fail_set(mp.mpf(1) / 2)
-rep(len(lf) == 0, f"(4c) (3.21) [1/(2 log x)] has no failure for 1 < x < 2000 (consistent with 'x > 1')")
+rep(len(lf) == 0, f"(4c) (3.21)-form lower bound [-1/(2 log x)] has no failure for 1 < x < 2000 (consistent with 'x > 1'); "
+                  f"failures: {fmt(lf)}")
 uf1 = up_fail_set(mp.mpf(1))
-info(f"(4d) upper bound with 1/log x fails on: {', '.join(f'[{p}, {mp.nstr(xs, 8)})' for p, xs in uf1) or 'nothing'} "
-     f"(x in (1,2) has sum 0 < RHS) -> consistent with the (3.23) form 'sum < log x + E + 1/log x' quoted by arXiv:2201.06184")
+info(f"(4d) upper bound with +1/log x fails on: {fmt(uf1)} "
+     f"-> consistent with the '(3.23)' form 'sum < log x + E + 1/log x' quoted by arXiv:2201.06184")
 lf1 = low_fail_set(mp.mpf(1))
-info(f"(4e) lower bound with 1/log x fails on: {', '.join(f'({mp.nstr(a, 8)}, {b})' for a, b in lf1) or 'nothing'}")
+info(f"(4e) lower bound with -1/log x fails on: {fmt(lf1)}")
 
 # ---------------------------------------------------------------- (5) partial summation identity
 # sum_{p<=x} log p/p = theta(x)/x + int_2^x theta(t)/t^2 dt   (theta a step function: exact)
