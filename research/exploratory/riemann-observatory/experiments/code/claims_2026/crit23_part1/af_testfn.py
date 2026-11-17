@@ -118,5 +118,31 @@ class TestFunction:
         return float(np.sum(np.abs(d2)) * du)
 
 
+class HatTable:
+    """Fast phihat(x + i y) for a FIXED imaginary part y and real x in [-xmax, xmax]:
+    phihat(x+iy) = int phi(u) e^{u y} e^{-i u x} du is the Fourier transform of phi(u) e^{uy}; computed by FFT
+    (trapezoid rule, spectrally accurate since phi is C^inf with compact support) and cubic-spline interpolated
+    (real and imaginary parts).  Validate against TestFunction.hat before use."""
+
+    def __init__(self, L, window, y, xmax=250.0, dx=0.004, du=2e-3):
+        from scipy.interpolate import CubicSpline
+        U = np.pi / dx
+        n = 1 << int(np.ceil(np.log2(2 * U / du)))
+        du = 2 * U / n
+        u = -U + du * np.arange(n)
+        g = phi(u, L, window) * np.exp(u * y)
+        F = np.fft.fft(np.fft.ifftshift(g)) * du
+        x = 2 * np.pi * np.fft.fftfreq(n, d=du)
+        o = np.argsort(x); x = x[o]; F = F[o]
+        keep = np.abs(x) <= xmax
+        self.re = CubicSpline(x[keep], F[keep].real)
+        self.im = CubicSpline(x[keep], F[keep].imag)
+        self.y, self.xmax = y, xmax
+
+    def __call__(self, x):
+        x = np.asarray(x, dtype=float)
+        return self.re(x) + 1j * self.im(x)
+
+
 def grid(T0, L, d):
     return T0 + 2.0 * np.pi * np.arange(d) / L

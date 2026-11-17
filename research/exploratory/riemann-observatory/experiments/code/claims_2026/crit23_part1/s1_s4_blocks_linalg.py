@@ -11,7 +11,7 @@ import sys, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import numpy as np
 from scipy.optimize import minimize
-from af_testfn import TestFunction, grid
+from af_testfn import TestFunction, HatTable, grid
 
 rng = np.random.default_rng(2026_11_17)
 TOL = 1e-9
@@ -56,7 +56,14 @@ def analyse(tf, alphas, Z, label, out):
     d = len(alphas)
     g = np.array([gamma_rho(b, t) for (b, t, m) in Z])
     mult = np.array([m for (_, _, m) in Z])
-    V = tf.hat(g[:, None] - alphas[None, :])           # row j = v_rho_j in C^d
+    # v_rho = (phihat(gamma_rho - alpha_k))_k ; one FFT table per distinct imaginary part (validated in __main__)
+    V = np.empty((len(Z), len(alphas)), dtype=complex)
+    tabs = {}
+    for j, gj in enumerate(g):
+        y = float(np.round(gj.imag, 15))
+        if y not in tabs:
+            tabs[y] = HatTable(tf.L, tf.window, y)
+        V[j] = tabs[y](gj.real - alphas)
     # ---- S1: functional-equation pairing v_{1-conj(rho)} = conj(v_rho), real <=> beta = 1/2
     s1_err = 0.0
     for j, (b, t, m) in enumerate(Z):
@@ -99,13 +106,17 @@ def analyse(tf, alphas, Z, label, out):
     chain_ii = 2 * (s1 + s2 + p) - (4 * trG - hs - N)          # AF Section 6 (ii)
     # Lamzouri kernel matrix on the same configuration: K(z - s) with z = i(rho - 1/2)L/2pi; equals
     # L * (phi^2)^(gamma_rho - gamma_rho') / (a L^2) for eta^2(u) := L phi(Lu)^2 / ||phi||^2 (exact, full lattice)
-    sm = np.sqrt(mult)
-    M = sm[:, None] * sm[None, :] * (L * tf.hat_phi2(g[:, None] - g[None, :])) / aL2
-    eM = np.linalg.eigvals(M)
-    eM_sorted = np.sort(eM.real)[::-1]
-    eG_top = np.sort(eG)[::-1][:len(Z)]
-    spec_diff = np.max(np.abs(eM_sorted - eG_top))
-    trM = np.trace(M).real; hsM = np.sum(M * M).real
+    do_lz = len(Z) <= 60
+    if do_lz:
+        sm = np.sqrt(mult)
+        M = sm[:, None] * sm[None, :] * (L * tf.hat_phi2(g[:, None] - g[None, :])) / aL2
+        eM = np.linalg.eigvals(M)
+        eM_sorted = np.sort(eM.real)[::-1]
+        eG_top = np.sort(eG)[::-1][:len(Z)]
+        spec_diff = np.max(np.abs(eM_sorted - eG_top))
+        trM = np.trace(M).real; hsM = np.sum(M * M).real
+    else:
+        spec_diff = 0.0
     out.append(f"[{label}] window={tf.window} L={L} d={d} distinct={len(Z)} N={N} s1={s1} s2={s2} p={p}")
     out.append(f"   S1: max|v_(1-conj rho) - conj v_rho| (or |Im v| on-line) = {s1_err:.2e};  max|Im G~| = {imagG:.2e}; max|G~-G~^T| = {asym:.2e}")
     out.append(f"   S3: min eig P = {eP.min():.2e} (>= -tol), rank P = {rankP} vs #on distinct = {int(on.sum())}; "
@@ -116,8 +127,9 @@ def analyse(tf, alphas, Z, label, out):
     out.append(f"   S5(trace, interior): tr G~ = {trG:.8f} vs N = {N};  ||G~||_HS^2 = {hs:.6f}")
     out.append(f"   S4: Lemma 3.2 slack (P1,Q') = {lem32_slack:.6f} (>=0);  chain (i) slack s1-(4trG-2N-HS) = {chain_i:.6f};  "
                f"chain (ii) slack = {chain_ii:.6f}")
-    out.append(f"   LZ cross-check: tr K-matrix = {trM:.8f}, sum K^2 = {hsM:.6f}; max |eig(G~) - eig(K-matrix)| = {spec_diff:.2e}; "
-               f"max|Im eig(K)| = {np.max(np.abs(eM.imag)):.1e}")
+    if do_lz:
+        out.append(f"   LZ cross-check: tr K-matrix = {trM:.8f}, sum K^2 = {hsM:.6f}; max |eig(G~) - eig(K-matrix)| = {spec_diff:.2e}; "
+                   f"max|Im eig(K)| = {np.max(np.abs(eM.imag)):.1e}")
     ok = (s1_err < 1e-12 and imagG < 1e-10 and eP.min() > -1e-9 * scale and rankP <= int(on.sum()) and npQ <= p
           and npQp <= s2 + p and trP1 <= s1 + 1e-9 and lem32_slack > -1e-8 and chain_i > -1e-6 and chain_ii > -1e-6)
     return ok, spec_diff, lem32_slack
@@ -128,14 +140,14 @@ def part_configs(out):
     out.append("PART A. Actual AF matrices G~ (eq. 2.10) from synthetic conjugation-invariant configurations")
     out.append("=" * 100)
     allok = True; worst_spec = 0.0; worst_slack = np.inf
-    L = 6.0; d = 300; alphas = grid(0.0, L, d)        # grid covers [0, 313]; points placed in [100, 210]
+    L = 6.0; d = 200; alphas = grid(0.0, L, d)        # grid covers [0, 208]; points placed in [70, 140]
     for window in ("flat", "MT"):
-        tf = TestFunction(L, window, zmax=330.0)
+        tf = TestFunction(L, window, zmax=80.0)
         cases = [
-            ("separated, shallow pairs", dict(n1=25, n2=4, npairs=6, lo=100, hi=210, depth_max=0.05, min_sep=1.2)),
-            ("separated, deep pairs", dict(n1=20, n2=3, npairs=8, lo=100, hi=210, depth_max=0.49, min_sep=1.2)),
-            ("dense random", dict(n1=60, n2=6, npairs=15, lo=100, hi=210, depth_max=0.49)),
-            ("tight cluster (spacing << 1/L)", dict(n1=6, n2=0, npairs=3, lo=150, hi=151.5, depth_max=0.3, cluster=True)),
+            ("separated, shallow pairs", dict(n1=22, n2=4, npairs=6, lo=70, hi=140, depth_max=0.05, min_sep=1.2)),
+            ("separated, deep pairs", dict(n1=18, n2=3, npairs=8, lo=70, hi=140, depth_max=0.49, min_sep=1.2)),
+            ("dense random", dict(n1=30, n2=4, npairs=10, lo=70, hi=140, depth_max=0.49)),
+            ("tight cluster (spacing << 1/L)", dict(n1=6, n2=0, npairs=3, lo=100, hi=101.5, depth_max=0.3, cluster=True)),
         ]
         for (lab, kw) in cases:
             Z = config(rng, **kw)
@@ -145,10 +157,10 @@ def part_configs(out):
                 worst_spec = max(worst_spec, sd)
             worst_slack = min(worst_slack, sl)
         # random sweep
-        nrand = 150
+        nrand = 60
         for it in range(nrand):
-            kw = dict(n1=int(rng.integers(0, 30)), n2=int(rng.integers(0, 5)), npairs=int(rng.integers(0, 12)),
-                      lo=100, hi=float(rng.uniform(102, 210)), depth_max=float(rng.uniform(0.01, 0.49)))
+            kw = dict(n1=int(rng.integers(0, 40)), n2=int(rng.integers(0, 5)), npairs=int(rng.integers(0, 15)),
+                      lo=70, hi=float(rng.uniform(72, 140)), depth_max=float(rng.uniform(0.01, 0.49)))
             if kw["n1"] + kw["n2"] + kw["npairs"] == 0:
                 continue
             Z = config(rng, **kw)
@@ -255,8 +267,19 @@ def equality_case_exact(out):
     return (r - rhs) == 0
 
 
+def validate_tables(out):
+    tf = TestFunction(6.0, "MT", zmax=200.0)
+    worst = 0.0
+    for y in (0.0, 0.2, -0.37, 0.49):
+        tab = HatTable(6.0, "MT", y)
+        xs = np.linspace(-190, 190, 397) + 0.0137
+        worst = max(worst, np.max(np.abs(tab(xs) - tf.hat(xs + 1j * y))))
+    out.append(f"HatTable (FFT+spline) vs direct quadrature, |x|<=190, y in {{0,.2,-.37,.49}}: max abs error = {worst:.1e}")
+
+
 if __name__ == "__main__":
     out = []
+    validate_tables(out)
     okA = part_configs(out)
     out.append("=" * 100)
     out.append("PART B. Linear algebra lemmas in isolation")

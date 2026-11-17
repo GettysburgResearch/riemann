@@ -140,3 +140,12 @@ for D in range(5, RMAX + 1):
 mnr = min(rrows, key=lambda r: r[2])
 print('    real fundamental D <=', RMAX, ':', len(rrows), 'fields; min L(1,chi) log q =', round(mnr[2], 4), 'at D =', mnr[0],
       '; all positive:', all(r[1] > 0 for r in rrows))
+
+# (3) the auditor-derived constant: with c=1/100, eps=c/log q, t=q^4, u=q^2 (see ARCHITECTURE.md sec. 11)
+#     1 <= L(1,chi) e^{4c}/eps + [(1.505 + e^c log q) e^{2c} + (q + 1 + 2 log q) e^{4c}] q^{-2}
+c = 0.01
+def bracket(q):
+    return ((1 + math.exp(c) / 2 + math.exp(c) * math.log(q)) * math.exp(2 * c) + (q + 1 + 2 * math.log(q)) * math.exp(4 * c)) / q**2
+mono = all(bracket(q) >= bracket(q + 1) for q in range(10, 10**5))
+const = c * math.exp(-4 * c) * (1 - bracket(10))
+print('(3) error bracket at q=10: %.4f (decreasing in q: %s); implied L(1,chi) log q >= %.5f for q >= 10' % (bracket(10), mono, const))
