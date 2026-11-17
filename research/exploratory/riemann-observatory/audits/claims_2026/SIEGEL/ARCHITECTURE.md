@@ -114,7 +114,7 @@ The technical enablers differ by proof:
 - OAI: a rank-4 lattice viewed through 3 Galois coordinates (the √2 trick), which gives 3/4<1; plus a heavy weight H on the two conjugate coordinates, so the divisible coordinate carries almost all the degree.
 - Guo: Stepanov multiplicities, which give 1/2+1/20.
 
-Before October 2026, an unconditional bound S_−(x) ≤ κ log x + O(log q) with any κ<1 was not known. It is equivalent in strength to the theorem; see the barrier discussion in §12.
+An unconditional bound S_−(x) ≤ κ log x + O(log q) with any fixed κ<1, valid for x up to a large power of q, already implies the theorem through step 1 of §5. So no such bound was available before October 2026; see the barrier discussion in §12.
 
 ## 5. Load-bearing steps (numbered), with their locations in each independent proof
 
