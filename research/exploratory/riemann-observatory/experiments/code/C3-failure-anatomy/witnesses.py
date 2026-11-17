@@ -87,26 +87,36 @@ def oliva(PMAX=20_000_000):
     L1 = theta[1:]                               # log N_{n+1}
     L0 = theta[:-1]                              # log N_n
     # h_n = (1 - 1/p) log L1 - log L0, computed stably: = -(log L1)/p + log(L1/L0)
-    h = -np.log(L1) / p1 + np.log1p((L1 - L0) / L0)
+    h = -np.log(L1) / p1 + np.log1p(np.log(p1) / L0)   # L1 - L0 = log p_{n+1} exactly
     E = L1 - p1
     approx = (-(1 + np.log(p1)) * E + np.log(p1) ** 2 / 2) / p1 ** 2
     sel = p1 > 1000
     rel = np.abs(h[sel] - approx[sel]) / np.abs(approx[sel])
     # Lemma 2.2 non-uniformity: f(x) = (1 - a/log x - 1/b)/(1 - a/log(x - log b)), a = e^-gamma
-    a = math.exp(-0.5772156649015329)
+    mpmath.mp.dps = 60
+    a = mpmath.exp(-mpmath.euler)
     out_l22 = {}
-    for b in (1e4, 1e6, 1e8):
-        xs = np.array([0.5 * b, b, 2 * b, 5 * b, b * math.log(b), 3 * b * math.log(b), 30 * b * math.log(b)])
-        def fval(x):
-            return (1 - a / math.log(x) - 1 / b) / (1 - a / math.log(x - math.log(b)))
-        der = [(fval(x * (1 + 1e-6)) - fval(x * (1 - 1e-6))) / (2e-6 * x) for x in xs]
-        out_l22[str(int(b))] = {"x": xs.tolist(), "sign_of_df/dx": ["+" if d > 0 else "-" for d in der]}
+    for b in (10**4, 10**6, 10**8, 10**12):
+        bb = mpmath.mpf(b)
+        f = lambda x: (1 - a / mpmath.log(x) - 1 / bb) / (1 - a / mpmath.log(x - mpmath.log(bb)))
+        mults = [("0.5b", bb / 2), ("b", bb), ("2b", 2 * bb), ("5b", 5 * bb), ("b log b", bb * mpmath.log(bb)),
+                 ("3 b log b", 3 * bb * mpmath.log(bb)), ("30 b log b", 30 * bb * mpmath.log(bb))]
+        out_l22[str(b)] = {k: ("+" if mpmath.diff(f, x) > 0 else "-") for k, x in mults}
+        # locate the sign change of f' numerically (bisection in log x between b and 100 b log b)
+        lo, hi = mpmath.log(bb), mpmath.log(100 * bb * mpmath.log(bb))
+        for _ in range(60):
+            mid = (lo + hi) / 2
+            if mpmath.diff(f, mpmath.exp(mid)) > 0:
+                hi = mid
+            else:
+                lo = mid
+        out_l22[str(b)]["turning_point_x/(b log b)"] = float(mpmath.exp(hi) / (bb * mpmath.log(bb)))
     imin = int(np.argmin(h))
     return {"PMAX": PMAX, "num_steps": int(len(h)), "min_h": float(h[imin]), "p_at_min": float(p1[imin]),
             "all_h_positive": bool((h > 0).all()), "max_E_over_range": float(E.max()),
             "first_order_law_median_rel_err_p>1000": float(np.median(rel)),
             "first_order_law_max_rel_err_p>1000": float(rel.max()),
-            "lemma22_derivative_signs": out_l22,
+            "lemma22_derivative_signs_mpmath60": out_l22,
             "note": "float64, non-rigorous; h_n>0 here only because theta(p)<p throughout this range"}
 
 

@@ -1,0 +1,47 @@
+zero table: 100000 zeros up to gamma = 74920.827
+====================================================================================================
+(A) d = floor(LT/2pi) vs N(T,2T)   [AF Sec 2.2 claims d = N(T,2T) + O(L)]
+   T=    1000  L=5.0699  d=    806  N(T,2T)=    868  d-N=    -62  -(2log2-1)T/2pi=    -61.5  (d-N)/L=    -12.2  (d-N)/N=-0.0714  smooth N - N = 0.4
+   T=    5000  L=6.6793  d=   5315  N(T,2T)=   5622  d-N=   -307  -(2log2-1)T/2pi=   -307.4  (d-N)/L=    -46.0  (d-N)/N=-0.0546  smooth N - N = 0.6
+   T=   10000  L=7.3725  d=  11733  N(T,2T)=  12349  d-N=   -616  -(2log2-1)T/2pi=   -614.8  (d-N)/L=    -83.6  (d-N)/N=-0.0499  smooth N - N = -0.6
+   T=   30000  L=8.4711  d=  40446  N(T,2T)=  42290  d-N=  -1844  -(2log2-1)T/2pi=  -1844.4  (d-N)/L=   -217.7  (d-N)/N=-0.0436  smooth N - N = 0.8
+====================================================================================================
+(B) alpha_d = T + 2 pi d / L  versus [T, 2T)
+   T=    1000: LT/2pi=806.8962, alpha_(d-1)=1997.6500, alpha_d=1998.8894 IN [T,2T)  (2T - alpha_d = 1.1106, h = 1.2393)
+   T=    2000: LT/2pi=1834.4280, alpha_(d-1)=3998.4432, alpha_d=3999.5334 IN [T,2T)  (2T - alpha_d = 0.4666, h = 1.0903)
+   T=   10000: LT/2pi=11733.6398, alpha_(d-1)=19998.6025, alpha_d=19999.4547 IN [T,2T)  (2T - alpha_d = 0.5453, h = 0.8523)
+   T=   30000: LT/2pi=40446.4066, alpha_(d-1)=59998.9567, alpha_d=59999.6984 IN [T,2T)  (2T - alpha_d = 0.3016, h = 0.7417)
+====================================================================================================
+(C) Prop 4.2 per-zero tail for a REAL point gamma = T - sqrt(T)/2 (in I' \ I)
+   [flat] T=2000 (FFT table max err 1.2e-11): gamma = T - sqrt(T)/2, D_rho = 22.36: head/aL^2 = 2.677e-07, tail/aL^2 = 0.9999997323;  AF bound shape X^(1/2) L D^-3 / (aL^2) = 3.488e-04  -> ratio actual/claimed-shape = 2.867e+03
+   [flat] T=10000 (FFT table max err 4.8e-11): gamma = T - sqrt(T)/2, D_rho = 50.00: head/aL^2 = 1.595e-10, tail/aL^2 = 0.9999999998;  AF bound shape X^(1/2) L D^-3 / (aL^2) = 5.161e-05  -> ratio actual/claimed-shape = 1.938e+04
+   [MT] T=2000 (FFT table max err 1.1e-11): gamma = T - sqrt(T)/2, D_rho = 22.36: head/aL^2 = 2.315e-07, tail/aL^2 = 0.9999997685;  AF bound shape X^(1/2) L D^-3 / (aL^2) = 3.681e-04  -> ratio actual/claimed-shape = 2.717e+03
+   [MT] T=10000 (FFT table max err 4.5e-11): gamma = T - sqrt(T)/2, D_rho = 50.00: head/aL^2 = 1.367e-10, tail/aL^2 = 0.9999999999;  AF bound shape X^(1/2) L D^-3 / (aL^2) = 5.478e-05  -> ratio actual/claimed-shape = 1.825e+04
+   asymptotically: actual tail/aL^2 -> 1 while X^(1/2) L D^-3/(aL^2) ~ T^(1/2) T^(-3/2) / L -> 0, so no fixed implied
+   constant can make the displayed per-zero inequality true for zeros in I' \ I.
+====================================================================================================
+(D) Real zeta zeros: tr G~ = sum_{Re gamma in I'} ||v_rho||^2 / (aL^2)   (all zeros here are simple, on the line)
+   [flat] T=2000 L=5.763 d=1834: N(I)=1957, N(I')=2044, tr G~=1956.3628;  tr G~ - N(I) = -0.6372,  tr G~ - N(I') = -87.6372;  sum over I'\I zeros = 0.7025 (#=87);  min/max per-zero in I: 0.075515/1.000000
+   [flat] T=6000 L=6.862 d=6552: N(I)=6921, N(I')=7100, tr G~=6920.7579;  tr G~ - N(I) = -0.2421,  tr G~ - N(I') = -179.2421;  sum over I'\I zeros = 0.1717 (#=179);  min/max per-zero in I: 0.735754/1.000000
+   [flat] T=20000 L=8.066 d=25673: N(I)=26904, N(I')=27282, tr G~=26902.8213;  tr G~ - N(I) = -1.1787,  tr G~ - N(I') = -379.1787;  sum over I'\I zeros = 0.1539 (#=378);  min/max per-zero in I: 0.053741/1.000000
+   [MT] T=2000 L=5.763 d=1834: N(I)=1957, N(I')=2044, tr G~=1956.3580;  tr G~ - N(I) = -0.6420,  tr G~ - N(I') = -87.6420;  sum over I'\I zeros = 0.6854 (#=87);  min/max per-zero in I: 0.078033/1.000000
+   [MT] T=6000 L=6.862 d=6552: N(I)=6921, N(I')=7100, tr G~=6920.7468;  tr G~ - N(I) = -0.2532,  tr G~ - N(I') = -179.2532;  sum over I'\I zeros = 0.1468 (#=179);  min/max per-zero in I: 0.732736/1.000000
+   [MT] T=20000 L=8.066 d=25673: N(I)=26904, N(I')=27282, tr G~=26902.8310;  tr G~ - N(I) = -1.1690,  tr G~ - N(I') = -379.1690;  sum over I'\I zeros = 0.1470 (#=378);  min/max per-zero in I: 0.055937/1.000000
+====================================================================================================
+(E) per-zero tail at the window edge, D_rho = 0, complex gamma = 2T - i y:  sum_{k>=d} |phihat|^2 / (e^{L|y|} L^2)
+   L= 4.0 y=0.00: tail =    10.1228,  tail/(e^(L y) L^2) = 0.6327,  tail/(e^(L y) L^4) = 0.03954
+   L= 4.0 y=0.25: tail =    10.8341,  tail/(e^(L y) L^2) = 0.2491,  tail/(e^(L y) L^4) = 0.01557
+   L= 4.0 y=0.49: tail =    13.0505,  tail/(e^(L y) L^2) = 0.1149,  tail/(e^(L y) L^4) = 0.00718
+   L= 6.0 y=0.00: tail =    26.9342,  tail/(e^(L y) L^2) = 0.7482,  tail/(e^(L y) L^4) = 0.02078
+   L= 6.0 y=0.25: tail =    32.4556,  tail/(e^(L y) L^2) = 0.2012,  tail/(e^(L y) L^4) = 0.00559
+   L= 6.0 y=0.49: tail =    52.6135,  tail/(e^(L y) L^2) = 0.0773,  tail/(e^(L y) L^4) = 0.00215
+   L= 8.0 y=0.00: tail =    51.7456,  tail/(e^(L y) L^2) = 0.8085,  tail/(e^(L y) L^4) = 0.01263
+   L= 8.0 y=0.25: tail =    74.0358,  tail/(e^(L y) L^2) = 0.1566,  tail/(e^(L y) L^4) = 0.00245
+   L= 8.0 y=0.49: tail =   176.3608,  tail/(e^(L y) L^2) = 0.0547,  tail/(e^(L y) L^4) = 0.00085
+   L=10.0 y=0.00: tail =    84.5571,  tail/(e^(L y) L^2) = 0.8456,  tail/(e^(L y) L^4) = 0.00846
+   L=10.0 y=0.25: tail =   150.4535,  tail/(e^(L y) L^2) = 0.1235,  tail/(e^(L y) L^4) = 0.00123
+   L=10.0 y=0.49: tail =   554.2609,  tail/(e^(L y) L^2) = 0.0413,  tail/(e^(L y) L^4) = 0.00041
+====================================================================================================
+(F) Prop 4.3: ||E~||_1 <= sum_{Re gamma notin I'} ||v_rho||^2/(aL^2), real zeros from the table (both signs)
+   T=2000: sum over zeros with sqrt(T) <= dist(gamma, I) <= 390: 3.003e-09  (AF bound shape X^(1/2)/T = 8.921e-03; zeros farther than 390 contribute < 1e-20 each in this table)
+   T=6000: sum over zeros with sqrt(T) <= dist(gamma, I) <= 390: 5.308e-12  (AF bound shape X^(1/2)/T = 5.150e-03; zeros farther than 390 contribute < 1e-20 each in this table)
