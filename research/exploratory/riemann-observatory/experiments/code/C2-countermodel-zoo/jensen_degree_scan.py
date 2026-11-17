@@ -38,10 +38,12 @@ def main():
             F = fractions.Fraction(x.mid().str(60, radius=False))
             return fmpq(F.numerator, F.denominator)
         gq = [q(x) for x in g]
+        relrad = [float(x.rad() / abs(x.mid())) if not x.mid().is_zero() else float('inf') for x in g]
         first = None
         rows = []
         for d in DLIST:
-            if d >= len(gq):
+            if d >= len(gq) or max(relrad[:d + 1]) > 1e-60:
+                rows.append((d, 'coefficients not accurate enough'))
                 break
             Pd = fmpq_poly([fmpz(math.comb(d, j)) * gq[j] for j in range(d + 1)])
             rr = Pd.numer().complex_roots()
