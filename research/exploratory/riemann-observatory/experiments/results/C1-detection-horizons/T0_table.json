@@ -1,0 +1,128 @@
+{
+ "campaign": "C1-detection-horizons",
+ "experiment": "T0 translation table",
+ "env": {
+  "python": "3.13.18",
+  "numpy": "2.5.3",
+  "mpmath": "1.3.0",
+  "scipy": "1.18.1",
+  "python-flint": "0.9.0"
+ },
+ "T0": 3000175332800.0,
+ "s_H(T0)": 0.4672935135399028,
+ "rows": [
+  {
+   "delta": 1e-06,
+   "Li: a=-log|z|": 1.11098124634785e-31,
+   "Li: n*(model, amplitude crossing)": 7.070140253192952e+32,
+   "Li: n_2 formula": 7.058776955167497e+32,
+   "dBN: t_c (gap-lattice model)": 1.9999999999315043e-12,
+   "Jensen(even): d* = T0^2/(2 t_c)": 2.2502630069624642e+36,
+   "NB: floor F": 4.4439249853914e-31,
+   "NB: log N* = beta/F": 1.039428390085071e+29,
+   "psi/Schoenfeld: log10 x*": 26341592.202243153,
+   "Nicolas: log10 x* (= log10 log n* for Robin, heuristic)": 24954293.272000972,
+   "Mertens: log10 x* for |zeta'(rho0)| = 1e-2, 1, 1e2": [
+    9875086.644672524,
+    11875086.644672524,
+    13875086.644672524
+   ]
+  },
+  {
+   "delta": 0.001,
+   "Li: a=-log|z|": 1.11098124634785e-28,
+   "Li: n*(model, amplitude crossing)": 6.430810671850788e+29,
+   "Li: n_2 formula": 6.418654799401406e+29,
+   "dBN: t_c (gap-lattice model)": 1.9999315081273947e-06,
+   "Jensen(even): d* = T0^2/(2 t_c)": 2.250340071888159e+30,
+   "NB: floor F": 4.4439249853914e-28,
+   "NB: log N* = beta/F": 1.0394283900850712e+26,
+   "psi/Schoenfeld: log10 x*": 20107.00283642746,
+   "Nicolas: log10 x* (= log10 log n* for Robin, heuristic)": 24954.293272000974,
+   "Mertens: log10 x* for |zeta'(rho0)| = 1e-2, 1, 1e2": [
+    9875.086644672525,
+    11875.086644672525,
+    13875.086644672525
+   ]
+  },
+  {
+   "delta": 0.01,
+   "Li: a=-log|z|": 1.1109812463478502e-27,
+   "Li: n*(model, amplitude crossing)": 6.217289047071133e+28,
+   "Li: n_2 formula": 6.204840074104479e+28,
+   "dBN: t_c (gap-lattice model)": 0.0001993183675368508,
+   "Jensen(even): d* = T0^2/(2 t_c)": 2.257958495941785e+28,
+   "NB: floor F": 4.443924985391401e-27,
+   "NB: log N* = beta/F": 1.0394283900850712e+25,
+   "psi/Schoenfeld: log10 x*": 1801.140325756709,
+   "Nicolas: log10 x* (= log10 log n* for Robin, heuristic)": 2495.4293272000973,
+   "Mertens: log10 x* for |zeta'(rho0)| = 1e-2, 1, 1e2": [
+    987.5086644672524,
+    1187.5086644672524,
+    1387.5086644672524
+   ]
+  },
+  {
+   "delta": 0.1,
+   "Li: a=-log|z|": 1.1109812463478501e-26,
+   "Li: n*(model, amplitude crossing)": 6.003536063561908e+27,
+   "Li: n_2 formula": 5.99077739748928e+27,
+   "dBN: t_c (gap-lattice model)": 0.01532480477200461,
+   "Jensen(even): d* = T0^2/(2 t_c)": 2.9367591174749365e+26,
+   "NB: floor F": 4.4439249853914004e-26,
+   "NB: log N* = beta/F": 1.0394283900850711e+24,
+   "psi/Schoenfeld: log10 x*": 159.0328165946252,
+   "Nicolas: log10 x* (= log10 log n* for Robin, heuristic)": 249.54293272000973,
+   "Mertens: log10 x* for |zeta'(rho0)| = 1e-2, 1, 1e2": [
+    98.75086644672524,
+    118.75086644672524,
+    138.75086644672524
+   ]
+  },
+  {
+   "delta": 0.25,
+   "Li: a=-log|z|": 2.7774531158696256e-26,
+   "Li: n*(model, amplitude crossing)": 2.3673627691042484e+27,
+   "Li: n_2 formula": 2.3622080279748746e+27,
+   "dBN: t_c (gap-lattice model)": 0.05161903811418499,
+   "Jensen(even): d* = T0^2/(2 t_c)": 8.718732812911607e+25,
+   "NB: floor F": 1.1109812463478502e-25,
+   "NB: log N* = beta/F": 4.157713560340284e+23,
+   "psi/Schoenfeld: log10 x*": 60.240331454394415,
+   "Nicolas: log10 x* (= log10 log n* for Robin, heuristic)": 99.8171730880039,
+   "Mertens: log10 x* for |zeta'(rho0)| = 1e-2, 1, 1e2": [
+    39.5003465786901,
+    47.5003465786901,
+    55.5003465786901
+   ]
+  },
+  {
+   "delta": 0.4937382388276492,
+   "Li: a=-log|z|": 5.485339239423343e-26,
+   "Li: n*(model, amplitude crossing)": 1.1858821852536418e+27,
+   "Li: n_2 formula": 1.1832524566212128e+27,
+   "dBN: t_c (gap-lattice model)": 0.10129843791782583,
+   "Jensen(even): d* = T0^2/(2 t_c)": 4.442838513878823e+25,
+   "NB: floor F": 2.194135695769337e-25,
+   "NB: log N* = beta/F": 2.105221569536784e+23,
+   "psi/Schoenfeld: log10 x*": 29.229993680979845,
+   "Nicolas: log10 x* (= log10 log n* for Robin, heuristic)": 50.54154470849451,
+   "Mertens: log10 x* for |zeta'(rho0)| = 1e-2, 1, 1e2": [
+    20.000651900327398,
+    24.05138130048258,
+    28.102110700637763
+   ]
+  }
+ ],
+ "implication_horizons": {
+  "T0": 3000175332800.0,
+  "delta_max(T0) from zero-free region": 0.4937382388276492,
+  "Li: n <= T0^2 (Theorem L1)": 9.00105202754159e+24,
+  "Jensen: d <= floor(T0)^2 (Chasse; GORTTW Thm 1.2)": 9.00105202754159e+24,
+  "psi/theta/pi Schoenfeld bounds: x <= (Buthe Thm 2)": 2.169313558663671e+25,
+  "log10": 25.33632233069341,
+  "Nicolas worst-case sketch: x <= (1.9 pi T0/log(T0/2pi))^2": 4.434656609509678e+23,
+  "dBN: max_delta t_c(T0,delta) (model)": 0.10129843791782583,
+  "NB: min_delta log N*": 2.105221569536784e+23
+ }
+}

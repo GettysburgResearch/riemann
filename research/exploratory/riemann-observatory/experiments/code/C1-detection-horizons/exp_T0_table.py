@@ -24,11 +24,16 @@ def li_nstar(T, d):
     rho = mp.mpc(mp.mpf(1) / 2 + d, T); z = 1 - 1 / rho
     a = -mp.log(abs(z))
     trend = lambda n: n / 2 * (mp.log(n) - 1 + EG - mp.log(2 * mp.pi))
-    f = lambda n: 4 * mp.cosh(n * a) - trend(n)
+    f = lambda n: mp.log(4 * mp.cosh(n * a)) - mp.log(trend(n))
     X = 1 / a
     lo, hi = X, X
     while f(hi) < 0: hi *= 2
-    n = mp.findroot(f, (lo, hi), solver='anderson')
+    while f(lo) > 0: lo /= 2
+    for _ in range(200):
+        mid = (lo + hi) / 2
+        if f(mid) < 0: lo = mid
+        else: hi = mid
+    n = (lo + hi) / 2
     LX = mp.log(X)
     return a, n, X * (LX + 2 * mp.log(LX) - mp.log(4))
 
@@ -60,7 +65,12 @@ for d in deltas:
     u_nic = mp.log(abs(rho * (1 - rho))) / d
     # Schoenfeld psi: 2 x^d/|rho| = log^2 x/(8 pi)
     g = lambda u: mp.log(2 / abs(rho)) + d * u - mp.log(u * u / (8 * mp.pi))
-    u_psi = mp.findroot(g, (mp.mpf(10), 10 * u_nic + 1000), solver='anderson')
+    lo, hi = mp.mpf(6), 10 * u_nic + 1000
+    for _ in range(300):
+        mid = (lo + hi) / 2
+        if g(mid) < 0: lo = mid
+        else: hi = mid
+    u_psi = (lo + hi) / 2
     # Mertens: 2 x^d / |rho zeta'| = 0.5, |zeta'(rho0)| in [1e-2, 1e2]
     u_mer = [mp.log(mp.mpf('0.25') * abs(rho) * zp) / d for zp in (mp.mpf('1e-2'), 1, mp.mpf(100))]
     rows.append({"delta": float(d),
