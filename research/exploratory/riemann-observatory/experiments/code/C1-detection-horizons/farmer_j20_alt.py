@@ -7,7 +7,7 @@ import numpy as np, mpmath as mp, flint
 sys.path.insert(0, __file__.rsplit('/', 1)[0])
 import common
 src = open(__file__.rsplit('/', 1)[0] + '/exp_dbn_jensen.py').read()
-ns = {}
+ns = {'__file__': __file__}
 exec(src.split('# ---------------- Part A')[0], ns)          # imports, collapse()
 partB = src.split('# ---------------- Part B: Farmer')[1].split('# sanity check')[0]
 exec('import mpmath as _mp\n' + partB.split('\n', 1)[1], ns)
