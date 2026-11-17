@@ -136,6 +136,7 @@ def epstein5_taylor(K, prec):
 
 
 def jensen_table(cc, K, dmax, nmax):
+    cc = list(cc) + [acb(0)] * max(0, K - len(cc))     # acb_series.coeffs() drops trailing exact zeros
     odd_max = max(float(abs(cc[j]).upper()) for j in range(1, K, 2))
     g = [cc[2 * k].real * arb.fac_ui(k) for k in range(K // 2)]
     tur = [(g[k] ** 2 - g[k - 1] * g[k + 1]) for k in range(1, len(g) - 1)]
