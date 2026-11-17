@@ -1,0 +1,43 @@
+============================== T1  Lemma 7.1 (first Poisson summation, in k)
+columns 28  twists f: [7, 7, 13, 13]
+row points 1734  dual points 11640
+T1 Lemma 7.1: A(W) = Z + displayed sum                     lhs=17.1528860398+0j               rhs=17.1528860398+8.72900097691e-16j relerr=2.1e-16 OK
+  Z = 17.93077403439791  |A - Z| = 0.7778879946447326
+  negative control (mu(t) dropped)                                err/|lhs-Z|=7.87e+01  (fails as it should)
+  negative control (N(d) dropped from w_{C,d})                    err/|lhs-Z|=1.68e+01  (fails as it should)
+  negative control (G(x2/x1) instead of G(x1/x2))                 err/|lhs-Z|=2.10e+00  (fails as it should)
+  [T1 time 10.5s]
+============================== T2  Lemma 7.2 (second Poisson identity, in y)
+T2 Lemma 7.2: N(C)=1 N(d)=1 N(t)=1 ell=30 Y=12             lhs=254.632224966+0j               rhs=254.632224966+1.61740968157e-14j relerr=6.4e-17 OK
+T2 Lemma 7.2: N(C)=7 N(d)=7 N(t)=1 ell=30 Y=7.5            lhs=110.007745771+0j               rhs=110.007745771+1.23118875805e-14j relerr=9.1e-16 OK
+T2 Lemma 7.2: N(C)=7 N(d)=1 N(t)=13 ell=22 Y=3.3           lhs=25.2028739392+0j               rhs=25.2028739392+2.40873302777e-15j relerr=4.2e-15 OK
+T2 Lemma 7.2: N(C)=91 N(d)=13 N(t)=7 ell=9 Y=0.42          lhs=0.589863496161+0j              rhs=0.589863496161-6.24654397965e-17j relerr=1.4e-14 OK
+T2 Lemma 7.2: N(C)=19 N(d)=1 N(t)=49 ell=4 Y=25            lhs=38.8756428722+0j               rhs=38.8756428722-2.04131036502e-59j relerr=1.8e-16 OK
+T2 Lemma 7.2: N(C)=13 N(d)=1 N(t)=1 ell=45 Y=9             lhs=161.403892095+0j               rhs=161.403892095-2.95494273938e-15j relerr=8.8e-16 OK
+T2 Lemma 7.2: N(C)=19 N(d)=19 N(t)=1 ell=50 Y=9            lhs=190.750208331+0j               rhs=190.750208331+8.23919084064e-15j relerr=1.6e-15 OK
+  negative control T2 (restriction (h,w)=1 dropped)               err/|lhs-Z|=9.27e-01  (fails as it should)
+  negative control T2 (chi_n(e)^4 instead of ^5), case 7          err/|lhs-Z|=3.33e-04  (fails as it should)
+  [T2 time 16.2s]
+============================== T3  Lemma 7.3 (regrouping into the (r,f',k') form)
+(C,t) pairs: 73   min Y_{C,d} = 0.01515 (Y < 1 occurs)
+(r,f') pairs: 73
+T3 Lemma 7.3: Q = calZ + (r,f',k') form                    lhs=168.227861681+0j               rhs=168.227861681-4.17532778756e-15j relerr=8.5e-16 OK
+  calZ = 159.46961707350437  |Q - calZ| = 8.758244607438087
+  negative control T3 (tau(r) replaced by 1)                      err/|lhs-Z|=1.05e-03  (fails as it should)
+  negative control T3 (restriction f'|k' dropped)                 err/|lhs-Z|=1.55e+00  (fails as it should)
+  [T3 time 17.5s]
+============================== T4  per-prime preimage count (l.2550-2568)
+T4 cases 206208 failures 0
+============================== T5  symbolic scale identities
+X'_0 = ell/(N g N w) = L/(N r N f')                              OK
+w Y N(g)/(N(e) ell) = c_I Sigma N(r)/L^2                         OK
+Y N(h) N(g)^2/(N(e) ell^2) = c_I Sigma F N(k') N(r)^2/(H L)      OK
+w Y ell = c_I Sigma/(N(C)^2 N(t))                                OK
+(H/(LF)) /(N(d) sqrt(Nu1 Nu2)) = w_{C,d} (z1 z2)^{-1/2}          OK
+H N(h)/(N(d) Nu1 Nu2) = H N(h) N(C)^2/(L^2 N(d) z1 z2)           OK
+Sigma' = X'F' = L/R                                              OK
+H'/Sigma' = H/(Sigma F R)                                        OK
+(Sigma R/L^2) R (Sigma')^2 = Sigma                               OK
+N(y)max / Y_{C,d} = 4 C_Phi v^2 L F/(c_I Sigma)                  OK
+==============================
+TOTAL tests 20 failures 0   (time 57.2s)

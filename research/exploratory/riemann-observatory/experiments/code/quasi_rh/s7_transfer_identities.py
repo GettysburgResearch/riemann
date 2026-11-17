@@ -280,7 +280,8 @@ for (C, d, t, ell, Y) in cases2:
     report("T2 Lemma 7.2: N(C)=%d N(d)=%d N(t)=%d ell=%g Y=%g" % (nm(C), nm(d), nm(t), ell, Y), M, Z + R)
 C, d, t, ell, Y = cases2[5]
 M, Z, R = T2_case(C, d, t, ell, Y, xi1, "drop_hw"); control("T2 (restriction (h,w)=1 dropped)", M, Z + R, abs(M - Z))
-M, Z, R = T2_case(C, d, t, ell, Y, xi1, "e_exponent"); control("T2 (chi_n(e)^4 instead of ^5), case 6", M, Z + R, abs(M - Z))
+# (In case 6 no unit-trivial pair (n1,n2) with n1 != n2 meets e != 1, so the e-exponent control is vacuous
+#  there by the radial-weight remark above; it is run on case 7 instead.)
 C, d, t, ell, Y = cases2[6]
 M, Z, R = T2_case(C, d, t, ell, Y, xi1, "e_exponent"); control("T2 (chi_n(e)^4 instead of ^5), case 7", M, Z + R, abs(M - Z))
 print("  [T2 time %.1fs]" % (time.time() - T0))

@@ -25,6 +25,23 @@ from s6_zw import *
 SIGMA = 3 ** 2.5 / 2
 _gauss_cache = {}
 
+_sym_cache = {}
+def _symbols(c):
+    """residues x mod c with (x/c)_3 != 0, as complex numbers, and the values (x/c)_3."""
+    if c in _sym_cache: return _sym_cache[c]
+    u, fac = factor(c)
+    xs = []; vals = []
+    for x in residues(c):
+        tot = 0; zero = False
+        for pi, e in fac:
+            j = cubic_exp_prime(x, pi)
+            if j is None: zero = True; break
+            tot += j * e
+        if zero: continue
+        xs.append(cv(x)); vals.append(omega_pow(tot))
+    _sym_cache[c] = (np.array(xs), np.array(vals))
+    return _sym_cache[c]
+
 def gauss(r, c):
     """DR (2.1) generalized: g(r,c) = sum_{x mod c} (x/c)_3 ebreve(r x/c)."""
     key = (r, c)
@@ -32,18 +49,8 @@ def gauss(r, c):
     if norm(c) == 1:
         val = complex(1.0)
     else:
-        u, fac = factor(c)
-        cc = cv(c); rr = cv(r)
-        s = 0j
-        for x in residues(c):
-            tot = 0; zero = False
-            for pi, e in fac:
-                j = cubic_exp_prime(x, pi)
-                if j is None: zero = True; break
-                tot += j * e
-            if zero: continue
-            s += omega_pow(tot) * ebreve(rr * cv(x) / cc)
-        val = s
+        xs, vals = _symbols(c)
+        val = complex(np.sum(vals * np.exp(4j * math.pi * (cv(r) * xs / cv(c)).real)))
     _gauss_cache[key] = val
     return val
 
