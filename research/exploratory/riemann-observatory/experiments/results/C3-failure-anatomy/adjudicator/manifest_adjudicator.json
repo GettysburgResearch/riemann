@@ -1,0 +1,60 @@
+{
+ "campaign": "C3-failure-anatomy",
+ "role": "adjudicator",
+ "date": "2026-11-17",
+ "versions": {
+  "python": "3.13.18",
+  "python_flint": "0.9.0",
+  "mpmath": "1.3.0",
+  "numpy": "2.5.3",
+  "sympy": "1.14.0"
+ },
+ "cpu_note": "<=2 cores, nice 10",
+ "code": {
+  "adj_debranges_S.py": "e314b987919abc1d0eb44aa6cb674548de6881eea30467bd85165e4dad333138",
+  "adj_debranges_highblocks.py": "3c3a2515a9f09bdc205cabb22628f068e0b82e6d612b25dce37e29404e8e9640",
+  "adj_mertens_point.py": "bec2d04ed923f06c9430cbe28af37de4f3eb396c99408f1976ba733feb879d14",
+  "adj_misc_checks.py": "98055e72c9589dccd74784ba36e954b3a804f8fc60506122ed700e8829cf82e6"
+ },
+ "inputs": {
+  "zeros_1_50000.tsv": "6a7eb7aba930ac0c6911b4625c5420feae422ac27074f96a3174ddac9c9ecc88",
+  "zeros_50001_100000.tsv": "494b5c1058fc2cc8fdb5602e44a9833a8b74a95e28ed2143a91891b338a65e5a"
+ },
+ "outputs": {
+  "adj_debranges_S_K100000.json": {
+   "sha256": "4a332c67cb17b2f5970a1c7b90c71f0249df03c04f448d5730eb668685d1536f",
+   "cmd": "python3 adj_debranges_S.py 100000 20000 <scratchpad>/data/zeros_1_50000.tsv,<scratchpad>/data/zeros_50001_100000.tsv <out>",
+   "runtime_s": 261.4,
+   "label": "NUMERICAL-RIGOROUS (Arb 128-bit on certified ordinate balls)",
+   "key": "15567 failures for n<=1e5, 0 undetermined; 195 (n<=2000), 2724 (n<=20000); first 60 indices = investigator's; direct xi(3/2+ig) cross-check 0 mismatches n<=20000; fail-index list sha256 d8dfc93cbb3c2bbaa063ad57d960e778cdbb414dee1b6776738c840ec77ef65c"
+  },
+  "adj_debranges_highblocks.json": {
+   "sha256": "bd351e5d6b1585c0c82e8521492e9f00324296b3e8bb905584482ee3506c1e52",
+   "cmd": "python3 adj_debranges_highblocks.py 1000 1,10001,99001,1000000,10000000,100000000,1000000000,10000000000 <scratchpad>/data/zeros_1_50000.tsv,<scratchpad>/data/zeros_50001_100000.tsv <out>",
+   "runtime_s": 371.6,
+   "label": "per-zero verdicts NUMERICAL-RIGOROUS; Gaussian model columns HEURISTIC",
+   "key": "failures/1000: 80,131,167,193,194,209,227,224 at n0=1,1e4,1e5,1e6,1e7,1e8,1e9,1e10"
+  },
+  "adj_mertens_point.json": {
+   "sha256": "b0d3708e0f309cb578e83200c27915b6ca79769867568a3b2341c1a7cf34dfdf",
+   "cmd": "python3 adj_mertens_point.py 2e7 1000000000,7766842813,10000000000 <out>",
+   "runtime_s": 3.3,
+   "label": "NUMERICAL-RIGOROUS (exact integers)",
+   "key": "M(1e9)=-222, M(7766842813)=50286, M(1e10)=-33722"
+  },
+  "adj_misc_checks.json": {
+   "sha256": "61e8fb4bfd85b7d40ecdf408ef06082e3d5146eaff3fe2b5f19168dda4c2e56d",
+   "cmd": "python3 adj_misc_checks.py <scratchpad>/data/zeros_1_50000.tsv <out>",
+   "runtime_s": 0.9,
+   "label": "oliva_algebra exact (sympy); oliva_H and oliva_failure_bound and micheas Arb; cheng_graham longdouble; dh, zeta19 mpmath non-rigorous"
+  }
+ },
+ "sources_fetched_sha256": {
+  "arxiv:1407.1914": "cb4ee24a1f9416252e46e0ffdd8feab2d96ea2e10420d54371ec8ba8514097e0"
+ },
+ "metadata_checked": [
+  "arXiv API: 0807.0090, 1807.06447, 2004.00460, 2607.04338, 2608.13637, 2609.02882, 2609.15329, 2609.24167, 2610.08965, 1106.0516, 0811.0883, math/0511092, 1911.03190",
+  "zbMATH 1425.32011 (Atiyah-Kouneiher 2019)",
+  "Crossref 10.1142/S0219887819500919; 10.1090/mcom/3021"
+ ]
+}

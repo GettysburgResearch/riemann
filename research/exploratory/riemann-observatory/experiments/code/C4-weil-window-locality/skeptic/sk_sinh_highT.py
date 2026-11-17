@@ -6,7 +6,7 @@ W_true(g0) = pole + arch - sum_{log n < 2L} 2 Lambda(n) n^{-1/2} a(log n) cos(T 
   arch = (1/2pi) int |what(s)|^2 Phi(T+s) ds, Phi(r) = Re psi(1/4+ir/2) - log pi
        = s2*Phi(T) + (1/2pi) int |what(s)|^2 [Phi(T+s)-Phi(T)] ds  (second term evaluated for T <= 1e5: exact on
          |s|<=S1, averaged tail 2 sinh^2(dL)/s^2 beyond; dropped for T > 1e5, where it is o(1/T))
-  pole = int 2cosh(y/2) cos(Ty) a(y) dy  (computed for T <= 1e5, dropped above: O(1/T^2))
+  pole = int 2cosh(y/2) cos(Ty) a(y) dy  (closed form for T <= 1e5, dropped above: O(1/T^2))
 W_mod(g0) = W_true(g0) - 2 s2^2 (+T pair; -T pair O(Ac^2/T^2) dropped for T > 1e5, included below).
 Validation: at T = 1e4, 3e4 compare W_true(g0) with the zeros-side value from sk_thmB.json.
 L_sinh = smallest L with W_mod(g0) < 0.  mpmath (phases at 90 digits) + numpy; non-rigorous.
@@ -67,12 +67,23 @@ class Height:
         return s2 * self.Phi + float((core + tail) / (2 * mp.pi))
 
     def pole(self, d, L):
+        """int_{-2L}^{2L} 2cosh(y/2) cos(Ty) a(y) dy in closed form (sums of y^k e^{beta y}, k <= 1)."""
         T = float(self.T)
         if T > 1e5:
             return 0.0
-        f = lambda y: 2 * mp.cosh(y / 2) * mp.cos(T * y) * (mp.sinh(d * (2 * L - y)) / (2 * d) - (2 * L - y) * mp.cosh(d * y) / 2)
-        n = int(2 * L * T / math.pi) + 2
-        return float(2 * mp.quad(f, list(np.linspace(0, 2 * L, n + 1))))
+        X = mp.mpf(2 * L); d = mp.mpf(d)
+        def I(beta, k):
+            e = mp.exp(beta * X)
+            return (e - 1) / beta if k == 0 else X * e / beta - (e - 1) / beta ** 2
+        tot = mp.mpc(0)
+        for s1 in (1, -1):
+            for s2 in (1, -1):
+                b = mp.mpf(s1) / 2 + 1j * s2 * T
+                # a(y) = (e^{d(X-y)} - e^{-d(X-y)})/(4d) - (X - y)(e^{dy} + e^{-dy})/4
+                t = (mp.exp(d * X) * I(b - d, 0) - mp.exp(-d * X) * I(b + d, 0)) / (4 * d)
+                t -= (X * (I(b + d, 0) + I(b - d, 0)) - (I(b + d, 1) + I(b - d, 1))) / 4
+                tot += t / 2
+        return float(2 * mp.re(tot))
 
     def primes(self, d, L):
         m = self.ln < 2 * L
