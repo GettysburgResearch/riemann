@@ -209,7 +209,7 @@ def scan_Q1(T_MAX, SIGMA_MAX, eta=0.02, dt=0.05, ds=0.02):
         for i in range(len(sig)):
             for j in range(1, len(tt) - 1):
                 lo_i, hi_i = max(0, i - 1), min(len(sig), i + 2)
-                if A[i, j] <= A[lo_i:hi_i, j - 1:j + 2].min() and T <= tt[j] < T2:
+                if A[i, j] <= A[lo_i:hi_i, j - 1:j + 2].min() and T <= tt[j] < T2 and A[i, j] < 0.25 and i > 0:
                     z, res = newton_polish(fdd, complex(sig[i], tt[j]))
                     if res < 1e-20 and 0.5 + eta / 2 < z.real <= SIGMA_MAX + 0.05 and T - 1 <= z.imag <= T2 + 1:
                         if all(abs(z - c) > 1e-8 for c in cands):
