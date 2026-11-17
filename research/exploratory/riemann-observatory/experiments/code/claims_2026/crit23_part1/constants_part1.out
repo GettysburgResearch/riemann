@@ -1,0 +1,22 @@
+R(psi0) by quadrature        = 1.33333333333333333333333333333   (exact 4/3: diff 0.0)
+R(psiMT) by quadrature       = 1.3274992963205883542656202092
+C_MT = 1/2 + cot(1/v2)/v2    = 1.3274992963205883542656202092   diff 0.0
+sympy: iint_[-1/2,1/2]^2 |u-v| = 1/3  =>  R(psi0) = 1 + 1/3 = 4/3
+
+Theorem A(i)  flat: 2 - 4/3        = 2/3
+Theorem A(ii) flat: (3 - 4/3)/2    = 5/6
+Theorem A(i)  MT  : 2 - C_MT       = 0.6725007036794116457343798   (stated 0.67250...)
+Theorem A(ii) MT  : (3 - C_MT)/2   = 0.8362503518397058228671899   (stated 0.83625...; abstract rounds to 0.8362)
+LZ C0 = 3/2 - cot(1/v2)/v2     = 0.6725007036794116457343798;  LZ C1 = (C0+1)/2 = 0.8362503518397058228671899
+AF Lean cMT = v2 tan(1/v2)/(1+tan(1/v2)/v2) = 0.7532960678560706772165846;  1/cMT - C_MT = 0.0
+   Lean constants: 2 - 1/cMT = 0.67250070367941164573;  3/2 - 1/(2 cMT) = 0.83625035183970582287
+
+MT stationarity G(0) = 1.2196072820084143701
+MT stationarity G(0.17) = 1.2196072820084143701
+MT stationarity G(0.33) = 1.2196072820084143701
+MT stationarity G(0.5) = 1.2196072820084143701
+   G(0) predicted cos(1/v2) + sin(1/v2)/v2 = 1.2196072820084143701;  int psiMT = v2 sin(1/v2) = 0.91872536986556843778 (quad 0.91872536986556843778)
+
+App. B.4 Cauchy-Schwarz stage: 2/R - 1:  flat 0.5 (claimed 1/2),  MT 0.506592135712141 (claimed 0.5066)
+Rem. 6.1: H(lambda) = 2 - 1/lambda - lambda/3; H'(lambda) = -1/3 + lambda**(-2) > 0 on (0,1]; H(1) = 2/3
+   check R_lambda(psi0) via (1/lambda^2)[lambda + 2 int_0^lambda (lambda-a) a da] = lambda/3 + 1/lambda
