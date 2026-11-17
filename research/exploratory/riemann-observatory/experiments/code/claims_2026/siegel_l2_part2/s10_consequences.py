@@ -57,9 +57,13 @@ def L1(D, Kp=20):
 
 
 # validation
-verr = max(abs(L1(D) - float(mp.dirichlet(1, [int(sp.kronecker_symbol(D, k)) for k in range(abs(D))])))
-           for D in (-3, -4, -7, -163, -2683, 5, 2993))
-rep(verr < 1e-9, f"(C1) L(1,chi) routine agrees with mpmath.dirichlet to {verr:.1e}")
+def L1_exact(D):
+    q = abs(D)
+    return -mp.fsum(int(sp.kronecker_symbol(D, a)) * mp.digamma(mp.mpf(a) / q) for a in range(1, q)) / q
+
+
+verr = max(abs(L1(D) - float(L1_exact(D))) for D in (-3, -4, -7, -163, -2683, 5, 2993))
+rep(verr < 1e-9, f"(C1) L(1,chi) routine agrees with the exact digamma formula -(1/q) sum chi(a) psi(a/q) to {verr:.1e}")
 
 hs = {}
 L1s = {}

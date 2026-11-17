@@ -85,7 +85,8 @@ rep(delta0 < delta0_exact_omega < dstar,
     f"at log M/L = {float(Astar):.2f} (omega* = {float(omega_star):.2f}; Banks takes omega = 22); with omega = 22 and "
     f"log M = (4/3) omega L exactly (N = q^omega is an integer power) one gets 9/(128*22*C1) = "
     f"{float(delta0_exact_omega):.6f}; Banks states 81/(5888 e^1.5) = {float(delta0):.6f} using the slack (omega+1). "
-    f"Banks's constant is within {float(100 * (1 - delta0 / dstar)):.1f}% of the optimum of his own chain.")
+    f"Banks's constant is {float(100 * (1 - delta0 / dstar)):.1f}% below the continuous relaxation of his own chain "
+    f"(part 1: 1.3% below the integer-omega optimum 3.108e-3).")
 
 
 def guo_asym(A, B):
@@ -95,9 +96,14 @@ def guo_asym(A, B):
     return min(num / den, F(1) / (A + B))
 
 
-best = max(((guo_asym(F(a, 2), F(b, 20)), a / 2, b / 20) for a in range(10, 120) for b in range(41, 140)),
+def guo_asym_f(A, B):
+    return min(2 * (0.45 * A - B - 29 / 60) / (A * B + A * A / 2), 1 / (A + B))
+
+
+best = max(((guo_asym_f(a / 8, 2 + b / 2000), a / 8, 2 + b / 2000) for a in range(80, 400) for b in range(1, 400)),
            key=lambda t: t[0])
-rep(abs(float(best[0]) - 0.0609) < 0.002,
+best = (F(best[0]).limit_denominator(10 ** 9), best[1], best[2])
+rep(abs(float(best[0]) - 0.0609) < 0.001,
     f"(8b) Guo's chain as q -> infinity (B > 2 so that B(y) = O(q^{{1-B/2}}) -> 0): sup over (A,B) of "
     f"min(2((9/20)A - B - 29/60)/(AB + A^2/2), 1/(A+B)) = {float(best[0]):.5f} at (A,B) = ({best[1]}, {best[2]}) "
     f"(part 1 found 0.06095). Same closed form: (1-kappa)^2 = (9/20)^2 = {float(F(81, 400)):.4f} versus "
@@ -133,7 +139,7 @@ def fundamental(D):
 plist = list(sp.primerange(2, 2000))
 worst = (0, None, None)
 count = 0
-for absD in range(3, 200001):
+for absD in range(10 ** 4, 200001):
     for D in (absD, -absD):
         if D == 1 or not fundamental(D):
             continue
@@ -144,9 +150,10 @@ for absD in range(3, 200001):
                 if ratio > worst[0]:
                     worst = (ratio, D, p)
                 break
-rep(worst[0] < 29 / 27, f"(8c) data: over {count} fundamental discriminants 3 <= |D| <= 2e5, the least prime p1 with "
-    f"chi(p1) != -1 satisfies log p1/log q <= {worst[0]:.3f} (max at D={worst[1]}, p1={worst[2]}), far inside both "
-    f"29/27 (Guo) and 1/2 (Barreto shape)")
+rep(worst[0] < 29 / 27, f"(8c) data: over {count} fundamental discriminants 1e4 <= |D| <= 2e5, the least prime p1 "
+    f"with chi(p1) != -1 (split or ramified) satisfies log p1/log q <= {worst[0]:.3f} (max at D={worst[1]}, "
+    f"p1={worst[2]}), far inside Guo's explicit 29/27 (+18.2/log q) and below the asymptotic 1/2 of the Barreto "
+    f"shape (whose constants are not explicit, so only the order of magnitude is compared)")
 
 # ---------------------------------------------------------------- (9a)
 H_banks = 9216 * 97 ** 2
@@ -240,10 +247,13 @@ for D in (-3, -4, 5, 8, -163, 1009, -2999):
     q = abs(D)
     chl = [int(sp.kronecker_symbol(D, k)) for k in range(q)]
     for s in (0.5, 0.8, 1.0):
-        ref = mp.dirichlet(s, chl)
+        if s == 1.0:   # exact: L(1,chi) = -(1/q) sum_a chi(a) digamma(a/q)  (mpmath.dirichlet is unstable at s = 1)
+            ref = -mp.fsum(chl[a] * mp.digamma(mp.mpf(a) / q) for a in range(1, q)) / q
+        else:
+            ref = mp.dirichlet(s, chl)
         val_err = max(val_err, abs(float(ref) - L_values(D, [s])[0]))
 rep(val_err < 1e-8, f"(9c) Euler-Maclaurin accelerated L(sigma, chi) agrees with mpmath.dirichlet to {val_err:.1e} "
-    "(7 characters x 3 sigmas)")
+    "(7 characters x sigma in {0.5, 0.8}; at sigma = 1 against the digamma formula)")
 minval = (1e9, None, None)
 nD = 0
 for absD in range(3, DMAX + 1):

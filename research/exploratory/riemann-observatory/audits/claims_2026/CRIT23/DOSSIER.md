@@ -28,7 +28,7 @@ Exact sources or dependencies:
         audit_part1.md, audit_part2.md and adjudication_P1-F1.md.
 What was actually run:
         Earlier audits:
-          - line-by-line reading of AF, LZ, KN (Sections 2, 3, 5, 6, App. A) and BGSTB24 (Sections 2-3);
+          - line-by-line reading of AF and LZ in full, KN (Sections 2, 3, 5, 6, App. A) and BGSTB24 (Sections 2-3);
           - hand re-derivation of every load-bearing step S1-S10, except the error terms of BGSTB24 Thm 1 / [GM87];
           - 11 part-1/part-2 audit scripts and 2 adjudication scripts (floating point, sympy exact, Lipschitz grids).
         This dossier:
@@ -141,7 +141,7 @@ The finding IDs are those of the underlying records. "Effect" means effect on a 
 | P2-N2 | no_issue_found (finite-T calibration) | normalisations | On the first 10⁵ zeros, AF's zero side equals its prime side to 3e−5. LZ-normalised sums converge slowly from below: S/N = 1.185 vs C_δ = 1.366 at T = 7.5·10⁴. | s6_zero (A), (B) | Guards against any finite-height reading |
 | P2-N3 | no_issue_found_in_inspected_portion | KN §3, §5, §6, App. A data | All budgets, x₁, x₂, Ω, β, Λ, f ≤ g, C(f) and the six rationals were reproduced. Local inequalities were sampled (2·10⁶ frames per window) with no violation. | s8–s10 | — |
 | D-1 (new) | no_issue_found_in_inspected_portion | AF App. A, KN §8 | Lean statement fidelity (Section 1). | reading | — |
-| D-2 (new) | unresolved_ambiguity (outside CRIT23) | KN §1, ref. [50] | KN reports an unverified Yang–Yang preprint claiming 0.7962 (simple, on line) from trace moments up to order six. That is above the ≈ 0.682 bandwidth-one ceiling and conflicts with AF §7.2(e), which says higher moments add nothing unconditionally; that remark is itself stated informally. We did not inspect the report and draw no conclusion about it. | — | None on CRIT23 |
+| D-2 (new) | unresolved_ambiguity (outside CRIT23) | KN §1, ref. [50] | KN reports an unverified Yang–Yang preprint claiming 0.7962 (simple, on line) and 0.8981 (distinct) from trace moments up to order six; its authors grade it a candidate. Exceeding the ≈ 0.682 two-moment ceiling would require higher moments to contribute unconditionally, which AF §7.2(e) state (informally) they do not. We did not inspect the report and draw no conclusion about it. | — | None on CRIT23 |
 
 No finding is classified verified_error at the level of a statement, suspected_gap, or (for the mathematics) missing_hypothesis.
 
@@ -163,7 +163,7 @@ Assuming AF/LZ (and, where marked, KN) are correct:
    * KN would give 0.8893150 and 0.8367691.
 5. **Relation to conditional results.**
    * The unconditional bounds now equal the classical RH-conditional pair-correlation constants: Montgomery's 2/3, Montgomery–Taylor's 0.6725, and Conrey–Ghosh–Gonek's 5/6.
-   * They remove the "box hypothesis" |β − ½| ≪ 1/log T used by BGSTB25 and Goldston–Suriajaya for 2/3 and 5/6.
+   * They remove the box hypotheses used before for 2/3 and 5/6: |β − ½| < b/(2 log T) (BGSTB25, b = 0.3185 for 2/3) and |β − ½| = o(1/log T) (Goldston–Suriajaya).
    * They remain **below** the best RH-conditional values: 19/27 = 0.7037 simple (Bui–Heath-Brown, RH); 0.6792 simple and 0.8477 distinct (Chirre–Gonçalves–de Laat, RH).
    * They do not reach the box-hypothesis value (2 + C₀)/3 = 0.8908 for "simple or on the line". LZ get 0.8876 and KN 0.8893.
 
@@ -216,7 +216,7 @@ These are the authors' figures; we did not audit them.
 | Any frame length (pair energy of simple points / first window) | 0.67383 | 0.83998 | KN Prop 7.3, §7 |
 | Eight-point (N₀ˢ) and seven-point (N_d) frames | 0.67357 | 0.83916 | KN §7 |
 
-So KN's 0.67354 and 0.83900 are within about 0.0003 and 0.001 of their own schemes' ceilings, and every refinement of this type stays below ≈ 0.682 / ≈ 0.841. These ceilings bound methods, not zeros.
+KN's 0.673538 is 0.00003 below its eight-point ceiling and 0.0003 below its any-frame ceiling. Its 0.839005 is 0.0019 below the any-window ceiling 0.84093 (KN: "less than 0.002 is left"). Every two-moment refinement of this type stays below ≈ 0.682 (on the line) and ≈ 0.841 (distinct). These ceilings bound methods, not zeros.
 
 ### 7.3 The support barrier is the real obstruction to "2/3 → 100%" (check (D), conditional)
 
@@ -286,7 +286,7 @@ That clause belongs to the separate claim audited in `../SIEGEL/`: exclusion of 
    * (a) Any unconditional *upper* information on the all-zeros form factor F(α) for some α > 1, even on average over [1, 1 + δ], feeds directly into the certificate (7.3).
    * (b) Decide whether an inertia-compatible certificate can use the unconditional sign F ≥ 0 off [−1, 1] (7.3, last item).
    * (c) Look for unconditional third-moment (triple-correlation) information for complex zeros in a range usable at X ≍ T, against AF §7.2(e).
-   * (d) Audit the unverified higher-moment report D-2, since it is in direct tension with (c) and with the ≈ 0.682 ceiling.
+   * (d) Audit the unverified higher-moment report D-2, since it is in tension with AF §7.2(e).
 8. **Out-of-scope audits, if wanted:** AF Thm B, Rem 7.1 (ξ′: 0.85838), Rem 7.2, the AF §7.2 ceiling (Lean + EnclOK), and KN §7.
 
 ## 9. Reproduction and hashes
