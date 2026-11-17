@@ -1,0 +1,35 @@
+(a) AF Lemma 5.1 (5.5): Mertens-type sums
+   x=    10000: S1-(log x)^2/2 =   -1.4907  (/log x = -0.1619);  S2-(log x)^3/6 =   -8.6145  (/log^2 x = -0.1015)
+   x=   100000: S1-(log x)^2/2 =   -1.5429  (/log x = -0.1340);  S2-(log x)^3/6 =  -12.1405  (/log^2 x = -0.0916)
+   x=  1000000: S1-(log x)^2/2 =   -1.5702  (/log x = -0.1137);  S2-(log x)^3/6 =  -15.7285  (/log^2 x = -0.0824)
+   x= 10000000: S1-(log x)^2/2 =   -1.5724  (/log x = -0.0976);  S2-(log x)^3/6 =  -19.3387  (/log^2 x = -0.0744)
+   x= 20000000: S1-(log x)^2/2 =   -1.5704  (/log x = -0.0934);  S2-(log x)^3/6 =  -20.4274  (/log^2 x = -0.0723)
+(b) Thm 5.7 partial summation: sum_{n<=X} Lambda^2/n (psi*psi)(log n/L) vs L^2 int_0^1 w(psi*psi)
+   X=    10000 flat: sum =      13.2031, L^2*I =      14.1384, diff/L =  -0.1015
+   X=    10000 MT  : sum =      10.7021, L^2*I =      11.5054, diff/L =  -0.0872
+   X=   100000 flat: sum =      21.0367, L^2*I =      22.0912, diff/L =  -0.0916
+   X=   100000 MT  : sum =      17.0655, L^2*I =      17.9772, diff/L =  -0.0792
+   X=  1000000 flat: sum =      30.6729, L^2*I =      31.8114, diff/L =  -0.0824
+   X=  1000000 MT  : sum =      24.8990, L^2*I =      25.8871, diff/L =  -0.0715
+   X= 10000000 flat: sum =      42.0990, L^2*I =      43.2988, diff/L =  -0.0744
+   X= 10000000 MT  : sum =      34.1916, L^2*I =      35.2352, diff/L =  -0.0647
+   X= 20000000 flat: sum =      45.8879, L^2*I =      47.1030, diff/L =  -0.0723
+   X= 20000000 MT  : sum =      37.2736, L^2*I =      38.3309, diff/L =  -0.0629
+(c) Thm 5.7 main constant (int psi^2 + 2 int_0^1 w (psi*psi)) / (int psi)^2 versus R(psi)
+   flat: value = 1.333333333333333333333333, R claimed = 1.333333333333333333333333, diff = 0.0; closed-form (psi*psi)(0.37) check diff = 0.0
+   MT: value = 1.32749929632058835426562, R claimed = 1.32749929632058835426562, diff = 1.97e-31; closed-form (psi*psi)(0.37) check diff = 0.0
+(d) Prop 5.2: the displayed bounds, implied constants set to 1, divided by (a L^2)^2 and by N ~ X L
+    T          L      E1/(L^4 N)   E2/(L^4 N)   logL/L^2    logL/L
+      1e+04     7.37    6.437e-01    4.745e+00   3.675e-02   2.710e-01
+      1e+06    11.98    2.811e-01    3.367e+00   1.731e-02   2.073e-01
+      1e+08    16.58    1.637e-01    2.715e+00   1.021e-02   1.694e-01
+      1e+12    25.79    7.817e-02    2.016e+00   4.885e-03   1.260e-01
+      1e+20    44.21    3.101e-02    1.371e+00   1.938e-03   8.570e-02
+      1e+40    90.27    8.842e-03    7.981e-01   5.526e-04   4.988e-02
+    -> E2/(a^2 L^4) ~ 16 X log L = (16 log L / L) N: the proof yields O(N log L / L), not O(N log L / L^2); still o(N).
+(e) Prop 5.5: sup-bound for M[P_X,Pi_X] = T * (3 sqrt X/T) * (3 sqrt X/pi) * 2 pi b L = 18 b L X  vs  L^2 sqrt X
+   T=   1e+04: 18 L X =  2.112e+05,  L^2 sqrt X =  2.168e+03,  ratio = 9.740e+01;  18 L X/(L^2 N) = 3.312e-01 (relative size after normalisation)
+   T=   1e+08: 18 L X =  4.751e+09,  L^2 sqrt X =  1.097e+06,  ratio = 4.330e+03;  18 L X/(L^2 N) = 6.546e-02 (relative size after normalisation)
+   T=   1e+12: 18 L X =  7.389e+13,  L^2 sqrt X =  2.654e+08,  ratio = 2.784e+05;  18 L X/(L^2 N) = 2.706e-02 (relative size after normalisation)
+   T=   1e+20: 18 L X =  1.267e+22,  L^2 sqrt X =  7.799e+12,  ratio = 1.624e+09;  18 L X/(L^2 N) = 9.208e-03 (relative size after normalisation)
+   direct main part at T=3e4 (L=8.471, X=4774.6, 682 prime powers): M[P_X,Pi_X] ~ 5.3949e-03;  L^2 sqrt X = 4.958e+03,  L X = 4.045e+04,  N(T,2T) ~ 4.045e+04
