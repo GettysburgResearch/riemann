@@ -1,0 +1,84 @@
+{
+ "campaign": "C3-failure-anatomy",
+ "date": "2026-11-17",
+ "versions": {
+  "python": "3.13.18",
+  "python_flint": "0.9.0",
+  "mpmath": "1.3.0",
+  "numpy": "2.5.3",
+  "sympy": "1.14.0",
+  "scipy": "1.18.1"
+ },
+ "cpu_note": "<=2 cores used (nice 10); single runs < 10 min",
+ "code": {
+  "conrey_li_debranges.py": "c180967d25d9c99c54a07f18d98be7f74cb4b1bc0b9fad6989a7e515efcab9db",
+  "liouville_mertens_sieve.py": "f06db5ff01f67e0533e13708bb1dbb33b1b2ed54c7bd2db0128562c51cf63c27",
+  "witnesses.py": "a03c46dd128f49e23b57af43e57d324860b1040af38892883e15b5c51d59a97b"
+ },
+ "outputs": {
+  "liouville_mertens_1e9.json": {
+   "sha256": "e3d0abe4e4852647ddaa649c31bc700ece8a01f7768b9824600a7188e753a2c7",
+   "cmd": "python3 liouville_mertens_sieve.py 1000000000 22 <out>",
+   "runtime_s": 153.5,
+   "label": "NUMERICAL-RIGOROUS (exact int) for L,M and fixed-point T lower bound; float64 T non-rigorous"
+  },
+  "conrey_li_debranges.json": {
+   "sha256": "4806263042595d74df77d928bdbe4b7c06f035f1fc1369b2cce3fd7aa7cbf80f",
+   "cmd": "python3 conrey_li_debranges.py 2000 <out>",
+   "runtime_s": 16.2,
+   "prec_bits": 192,
+   "zeros": "flint.acb.zeta_zeros(1,2000)",
+   "label": "NUMERICAL-RIGOROUS"
+  },
+  "conrey_li_debranges_K20000.json": {
+   "sha256": "a8af1a3814bb8583c9ba5925700ae04f46392d545517d9c91a8189695dd1fbee",
+   "cmd": "python3 conrey_li_debranges.py 20000 <out> (code version before the optional TSV argument was added; zeros from flint.acb.zeta_zeros)",
+   "runtime_s": 590.4,
+   "prec_bits": 192,
+   "label": "NUMERICAL-RIGOROUS"
+  },
+  "witnesses.json": {
+   "sha256": "7abd8ec7adb1260d7c117e895ad6568e5a9429364a8189e6706703649ada3ad6",
+   "cmd": "python3 witnesses.py zeros_1_50000.tsv,zeros_50001_100000.tsv <out>",
+   "runtime_s": 192.7,
+   "label": "per section: atiyah exact sympy; queme mpmath non-rigorous; oliva float64/mpmath non-rigorous; micheas, bbm, chengraham, turan, dh Arb rigorous"
+  }
+ },
+ "inputs": {
+  "zeros_1_50000.tsv": "6a7eb7aba930ac0c6911b4625c5420feae422ac27074f96a3174ddac9c9ecc88",
+  "zeros_50001_100000.tsv": "494b5c1058fc2cc8fdb5602e44a9833a8b74a95e28ed2143a91891b338a65e5a"
+ },
+ "sources_fetched_sha256": {
+  "arxiv:0903.1885": "e8d021a3c083d0f07427760661478e47390d446d06714257dee702246facc878",
+  "arxiv:1507.01340": "2247e4515daa535d600ce9e8f654758e9f8b51ef237235efb0a808f9af5e6d9c",
+  "arxiv:1610.08551": "18bdf91da4578ba13e17bc57c9ef5f375e21ac723f09e2d06b47422afc3674e8",
+  "arxiv:1704.02644": "36244a8e472749c1fdf26d5053c6ef3f1b1a84d47af0b480a9d55b334d3eb92e",
+  "arxiv:1705.06767": "1ce2c49ac27c975a060d39f5e504d7414cde95835db8035b958148c2974ca908",
+  "arxiv:1802.10521": "147187ac00831b06e674a99705b0798181eb03024b1b09fc2b740610c80b90aa",
+  "arxiv:1807.06447v1": "16ee55e7fed8f7262640e72fabe80e16d40a6e2fc200fd42908de643543ec0e6",
+  "arxiv:1908.08613": "ce04b3c9fa9a081bcf6d74480aeeef135706b0ff186af333f46629b131697837",
+  "arxiv:1910.08205": "df92c2e7fd3aa54634258c4e803c63c4eaea210c5b3faab1abcb7128700194f4",
+  "arxiv:1910.08205v1": "cf695a47ba643972929c56101284975a5003368a32317f6ff69fba4b2cf3a11e",
+  "arxiv:2004.00460v1": "938548dc7f601fec0ffbb1036e0f6977b422bbbf24cb8ba19f4e085e0166a822",
+  "arxiv:2207.02366": "b4cc7b26c5ede3c96e9ddb30113b73c73f6e77283c2ac0a8fa78648937b1b9bf",
+  "arxiv:2502.21021": "3141e044428b0ec955407ef0ef44682faed61c36cc8b8cfec3b26587b5818f54",
+  "arxiv:2607.04338v1": "3b4a5a9f4c26cb737ecaad07b21d2f7a5da3f3015056ad79a81754e8a32f71ab",
+  "arxiv:math_9812166": "bdb68ede69e41939be0c2b740cbe1955da8b24940e30eb8c8f4554878dfb4568",
+  "url:atiyah_RH": "55c05e2f923cea333e1ece1b654253984026d0c80ed128f971701ba1e4465f08",
+  "url:lipton_atiyah": "e80696795506c3ff39fe19b9e0bb1a51cf235abace1ca790fe0f4805467c26a1",
+  "url:tao_sr_p1": "b566f1f66afd4a99228d6966bdfaf49227c7e4608efcb87164a5bba742217400",
+  "url:tao_structure_randomness": "06c4198f41911b63a9f265b2851a02240062d0a06ff1c31191554df23b993f01",
+  "url:woit_707": "3777081dfea461a3f0c1a8d1c81dbf76bd2de1b405f3e8dcdbc185ff8f17a3f2"
+ },
+ "sources_note": "sha256 of the fetched PDF/HTML (arXiv: PDF of latest or stated version as fetched 2026-11-17); url:atiyah_RH = sites.math.rutgers.edu/~zeilberg/akherim/atiyah_RH.pdf; url:tao_sr_p1 = terrytao.wordpress.com/2008/02/07/structure-and-randomness-in-the-prime-numbers/comment-page-1/; url:woit_707 = math.columbia.edu/~woit/wordpress/?p=707; url:lipton_atiyah = rjlipton.com/2018/09/26/reading-into-atiyahs-proof/",
+ "key_results": {
+  "polya_first_positive_L": "L(906150257)=1, L(x)<=0 for 2<=x<906150257; #{x<=1e9: L(x)>0}=305426; max L=829 at 906316571; last positive 906488079",
+  "turan_T_lower_bound": "T(x) >= 1.4205e-6 > 0 for 1<=x<=1e9 (fixed-point certificate 102357542618/2^56)",
+  "mertens_1e9": "M(1e9)=-222; max M=10246 @903087703; min M=-8565 @456877618; max_{1e4<=x<=1e9}|M|/sqrt x=0.46416 @179919749",
+  "conrey_li_scan": "de Branges necessary condition fails at 195/2000 and 2724/20000 zeros (first at n=34); 0 undetermined",
+  "zeta19_zero": "[1.0010955115364762904215 +/- 2.2e-23] + [600884.2034277757127423323526 +/- 2.9e-23]i",
+  "dh_zero": "[0.808517182456637385553351961 +/- 5.4e-28] + [85.699348485377592171929267709 +/- 2.1e-28]i",
+  "cheng_graham_witness": "|S|=31.598085273673954 > 1/(pi*0.02)+1=16.9155 (theta=0.02, w=0.05, n in [975,1025])",
+  "micheas_partial_product_N1e5": "-0.0014185196361316 (Arb)"
+ }
+}
