@@ -112,7 +112,9 @@ def analyse(tf, alphas, Z, label, out):
         M = sm[:, None] * sm[None, :] * (L * tf.hat_phi2(g[:, None] - g[None, :])) / aL2
         eM = np.linalg.eigvals(M)
         eM_sorted = np.sort(eM.real)[::-1]
-        eG_top = np.sort(eG)[::-1][:len(Z)]
+        # rank G~ <= #distinct points, so its #distinct largest-|lambda| eigenvalues contain all nonzero ones
+        # (negative eigenvalues from off-line pairs included); compare those with the K-matrix spectrum
+        eG_top = np.sort(eG[np.argsort(np.abs(eG))[::-1][:len(Z)]])[::-1]
         spec_diff = np.max(np.abs(eM_sorted - eG_top))
         trM = np.trace(M).real; hsM = np.sum(M * M).real
     else:
