@@ -155,6 +155,8 @@ def collapse_w_full(wpos, wneg, wpair, y_stop_frac=0.02, tail2=0.0):
     Im parts are +-y and pi -+ y."""
     a, b = len(wpos), len(wneg)
     y0 = wpair.imag
+    Rdyn = 0.3 * math.exp(max(wpos.max(), wneg.max()))
+    dynp = np.exp(wpos) <= Rdyn; dynn = np.exp(wneg) <= Rdyn
     def rhs(t, s):
         wp = s[:a].astype(complex); wn = s[a:a + b] + 1j * math.pi
         X, Y = s[a + b], s[a + b + 1]
@@ -165,6 +167,7 @@ def collapse_w_full(wpos, wneg, wpair, y_stop_frac=0.02, tail2=0.0):
         K = 1.0 / np.tanh(Dm / 2.0) + 1.0
         np.fill_diagonal(K, 0.0)
         v = K.sum(1) - 4.0 * np.exp(2 * allw) * tail2   # omitted symmetric pairs +-c_l, l >= L: -4 z^2 sum 1/c_l^2
+        v[:a][~dynp] = 0.0; v[a:a + b][~dynn] = 0.0     # outer zeros frozen (they are stationary for cos; avoids edge stiffness)
         return np.concatenate([v[:a].real, v[a:a + b].real, [v[a + b].real, v[a + b].imag]])
     ev = lambda t, s: s[a + b + 1] - y_stop_frac * y0
     ev.terminal = True; ev.direction = -1
@@ -206,6 +209,8 @@ def xi_even_case(T_target, delta, M=300):
     lo = max(0, k - M)
     idx = np.r_[lo:k, k + 2:min(k + 2 + M, len(g))]
     w = 2 * np.log(g[idx])
+    Md = 100
+    dynC = (idx >= k - Md) & (idx <= k + 1 + Md)
     wpair = 2 * np.log(complex(T, delta))   # = 2log|T+i delta| + 2i atan(delta/T)
     a = len(w)
     y0 = wpair.imag
@@ -224,6 +229,7 @@ def xi_even_case(T_target, delta, M=300):
             v = v + (1.0 / np.tanh((allw[:, None] - w_in[None, :]) / 2.0) + 1.0).sum(1)
         ex = np.exp(allw)
         v = v - 2.0 * ex * S1 - 2.0 * ex**2 * S2      # omitted outer zeros: coth+1 = -2q-2q^2-..., q = x/gamma^2
+        v[:a][~dynC] = 0.0
         return np.concatenate([v[:a].real, [v[a].real, v[a].imag]])
     ev = lambda t, s: s[a + 1] - 0.02 * y0
     ev.terminal = True; ev.direction = -1
