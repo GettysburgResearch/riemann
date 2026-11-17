@@ -13,3 +13,7 @@ PASS (9c) Euler-Maclaurin accelerated L(sigma, chi) agrees with mpmath.dirichlet
 PASS (9c) uncertified: for all 1820 fundamental discriminants 3 <= |D| <= 3000, L(sigma, chi_D) > 0 at 23 grid points in [1/2, 1] (including 1 - 1/(5 log q) and 1 - 1/(100 log q)); min value 0.0225 at D = -2787, sigma = 0.500. Includes D = 8 (the field all four papers exclude from the construction). Consistent with every stated constant; not a certificate (grid only).
 
 SUMMARY: 11 PASS, 0 FAIL
+
+real	0m45.232s
+user	0m36.168s
+sys	0m0.098s
