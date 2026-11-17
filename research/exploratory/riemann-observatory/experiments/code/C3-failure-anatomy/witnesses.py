@@ -14,7 +14,7 @@ Sections (each writes a sub-dict of the output JSON):
   chengraham Cheng-Graham 2004 Lemma 2 (S <= 1/(pi theta) + 1) violated by a smooth monotone phase (Arb)
   turan      independent Krawczyk certification of a zero of zeta_19 with Re s > 1 (C2 witness replay)
   dh         independent Krawczyk certification of a Davenport-Heilbronn zero off the line (C2 witness replay)
-Usage: python3 witnesses.py ZEROS_TSV out.json
+Usage: python3 witnesses.py ZEROS_TSV[,ZEROS_TSV2] out.json
 """
 import sys, json, time, math, platform, hashlib
 import numpy as np
@@ -110,16 +110,18 @@ def oliva(PMAX=20_000_000):
             "note": "float64, non-rigorous; h_n>0 here only because theta(p)<p throughout this range"}
 
 
-def load_zeros(path, nmax):
+def load_zeros(paths, nmax):
     t = []
-    with open(path) as f:
-        for line in f:
-            parts = line.split()
-            if len(parts) < 3:
-                continue
-            t.append((parts[1], parts[2]))
-            if len(t) >= nmax:
-                break
+    for path in paths.split(","):
+        with open(path) as f:
+            for line in f:
+                parts = line.split()
+                if len(parts) < 3:
+                    continue
+                assert int(parts[0]) == len(t) + 1, "zero files must be consecutive"
+                t.append((parts[1], parts[2]))
+                if len(t) >= nmax:
+                    return t
     return t
 
 

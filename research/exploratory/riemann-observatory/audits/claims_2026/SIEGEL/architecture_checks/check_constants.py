@@ -158,5 +158,14 @@ for idx, name in enumerate(['r ~ D^3/384', 'W ~ 5D^4/6144', 'E_p ~ D^4/(1536p)']
     chk('K ' + name + ' (deviation halves when D doubles: O(D^3) error)', abs(d3) < abs(d2) < abs(d1) and 0.4 < d3/d2 < 0.6, (d1, d2, d3))
 chk('K ratio W/(sum i) -> 5/4 < 13/10 < 4/3', F(5,4) < F(13,10) < F(4,3))
 chk('K (1+sqrt2)(1+sqrt|q|) <= 8 sqrt|q| for |q|>=3', (1+math.sqrt(2))*(1+math.sqrt(3)) <= 8*math.sqrt(3))
-chk('K det(g1,g2,g3)=4 sqrt(2q) (symbolic)', True)
+qs, a_, b_ = sympy.symbols('q a b', positive=True)
+sq = sympy.sqrt(qs); s2 = sympy.sqrt(2)
+G = sympy.Matrix([[1, sq, s2], [1, -sq, s2], [1, -sq, -s2]])  # columns gamma1,gamma2,gamma3
+chk('K det(gamma1,gamma2,gamma3) = 4 sqrt(2q) (sympy)', sympy.simplify(G.det() - 4*sympy.sqrt(2*qs)) == 0, G.det())
+Pi = sympy.Matrix([[1, sq, s2, sympy.sqrt(2*qs)], [1, -sq, s2, -sympy.sqrt(2*qs)], [1, -sq, -s2, sympy.sqrt(2*qs)]])
+v = sympy.Matrix([sympy.sqrt(2*qs), s2, -sq, -1])
+chk('K kernel vector (sqrt(2q), sqrt2, -sqrt q, -1) (sympy)', sympy.simplify(Pi*v) == sympy.zeros(3,1))
+A = sympy.Matrix([[1, a_, b_, a_*b_], [1, -a_, b_, -a_*b_], [1, -a_, -b_, a_*b_]])
+chk('O minor of first three columns = 4ab and kernel (ab,b,-a,-1) (sympy)',
+    sympy.expand(A[:, :3].det()) == 4*a_*b_ and sympy.expand(A*sympy.Matrix([a_*b_, b_, -a_, -1])) == sympy.zeros(3,1))
 print('\nSUMMARY: %d checks, %d failures' % (len(ok), sum(1 for _, c in ok if not c)))
