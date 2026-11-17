@@ -212,7 +212,10 @@ def run():
     log(f"C5 |gamma_2(p)| range over {len(g2p)} primes: [{min(abs(v) for v in g2p.values()):.12f}, {max(abs(v) for v in g2p.values()):.12f}]")
 
     # ---------- C1/C2/C3 core ------------------------------------------------------------
-    def cube_inversion_test(primes, coeff, X, u, v, k, f, xi, Hc_list, label):
+    def cube_inversion_test(primes, coeff, X, u, v, k, f, xi, Hc_list, label, hpow=1.0, bconj=True):
+        # hpow, bconj: negative controls (hpow=0.5, or alpha^3 instead of conj(alpha)^3 on the h-side
+        # only, must make C1 FAIL).  NB: changing the cube weight consistently on BOTH sides keeps
+        # the identity (it is formal in any completely multiplicative cube weight).
         W = bump(u, v)
         Vstar = lambda y: np.sqrt(np.asarray(y, float)) * W(y)
         ns = squarefree_ideals(primes, int(v * X) + 1)
@@ -238,7 +241,7 @@ def run():
         terms = {}
         for hg, hidx in hs:
             Nh = float(norm(hg)); mu = (-1) ** len(hidx)
-            terms[(hg, tuple(hidx))] = mu * np.conj(alpha(hg)) ** 3 * psi_of(hidx) ** 3 / Nh * T(X / Nh ** 3)
+            terms[(hg, tuple(hidx))] = mu * (np.conj(alpha(hg)) ** 3 if bconj else alpha(hg) ** 3) * psi_of(hidx) ** 3 / Nh ** hpow * T(X / Nh ** 3)
         rhs = sum(terms.values())
         err1 = abs(lhs - rhs)
         nb_nonsqf = sum(1 for bg, bidx in bs if len(set(bidx)) < len(bidx) and norm(bg) ** 3 <= v * X)
@@ -300,9 +303,13 @@ def run():
     pi7b = [P for P in primes_big if P.N == 7]; pi13b = [P for P in primes_big if P.N == 13]
     pi19b = [P for P in primes_big if P.N == 19]
     k_b = mul((-1, -1), mul(pi19b[0].pi, (1, 2)))          # omega^2 * pi_19 * lambda
-    f_b = mul(pi13b[1].pi, pi7b[0].pi)
+    f_b = mul(pi13b[1].pi, pi19b[1].pi)                  # leaves pi7*pi7' (composite h) alive
     for xi, xl in ((lambda x: 1.0 + 0j, "xi=1"), (xi_mod2, "xi=cubic mod 2")):
         cube_inversion_test(primes_big, randc, 130000.0, 0.0005, 1.0, k_b, f_b, xi, [1, 7, 13, 30], "random-coeff," + xl)
+    # negative controls: a wrong h-normalisation N(h)^{-1/2}, or alpha(h)^3 instead of
+    # conj(alpha(h))^3 on the h-side only, must break C1 (shows the test is sensitive)
+    cube_inversion_test(primes_big, randc, 130000.0, 0.0005, 1.0, k_b, f_b, xi_mod2, [], "CONTROL hpow=1/2", hpow=0.5)
+    cube_inversion_test(primes_small, genuine, 3000.0, 0.002, 1.0, k_a, f_a, xi_mod2, [], "CONTROL h-side alpha^3 (no conj)", bconj=False)
 
     # ---------- C4: Prop 5.2 reduction ---------------------------------------------------
     plist = primes_small[:300]
