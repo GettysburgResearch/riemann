@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """ADJUDICATOR (C2-countermodel-zoo), skeptic finding F4.  NUMERICAL-RIGOROUS (Arb ball arithmetic, python-flint).
 
-Third, independent certificate for zeros of Z_Q, Q = x^2 + 5y^2, with Re s > 1 at low height
+Second, independent certificate (after the skeptic's winding-number certificate) for zeros of Z_Q, Q = x^2 + 5y^2, with Re s > 1 at low height
 (skeptic located t ~ 1193.9464 and t ~ 4108.1083; investigator's lowest certified one was at t ~ 3.59e6).
 
 Evaluation route (different from both earlier codes): Hurwitz-zeta form of the genus decomposition
