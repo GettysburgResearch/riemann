@@ -10,8 +10,9 @@ Integer quantities (L, M) are exact (int8/int64 arithmetic).  The only floating-
 decision is "does n have a prime factor > sqrt(N)?", decided by comparing log(n) with the
 float32 sum of log p over the prime powers p^k <= N dividing n (p <= sqrt(N)).  The residual
 cofactor is either 1 (difference ~ 0, |float error| < 1e-3) or a prime > sqrt(N) >= 30000
-(difference >= log(30000) > 10), so the threshold 1.0 decides exactly.  The script asserts that
-no difference falls in the ambiguous band [0.01, 9].
+(difference >= log(sqrt(N)+1), > 10 for N = 1e9), so the threshold 1.0 decides exactly.  The script
+counts differences in the ambiguous band [0.01, log(sqrt(N)+1) - 0.01] and the run is valid only if
+that count is 0.
 
 T(x) is accumulated in float64 with numpy cumsum (sequential add.accumulate) plus a carried
 offset; a crude a-priori bound on its rounding error is |err| <= 2 * N * 2^-53 * H_N, which is
@@ -78,7 +79,7 @@ def run(N, seglog=22, track=True):
                         nsq[st::pk] = True
                 pk *= p; k += 1
         diff = np.log(n.astype(np.float64)) - slog.astype(np.float64)
-        amb = np.count_nonzero((diff > 0.01) & (diff < 9.0))
+        amb = np.count_nonzero((diff > 0.01) & (diff < math.log(R + 1) - 0.01))
         ambiguous += int(amb)
         big = diff > 1.0
         par ^= big.astype(np.uint8)

@@ -21,7 +21,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from zoo_common import certify_zero, versions
 
 # ---------------- non-rigorous (mpmath) ----------------
-mp.mp.dps = 30
+mp.mp.dps = 25
 
 
 def Phi_mp(u, N=8):
@@ -37,27 +37,31 @@ def H_mp(t, z, deriv=False):
     return mp.quad(f, [0, 0.25, 0.5, 0.75, 1.0, 1.5])
 
 
-def find_zeros_mp(t, xmax=60, ymax=12, nx=31, ny=7):
-    zs = []
+def find_zeros_mp(t, xmin=0.0, xmax=90.0, ymax=24.0, dx=2.0, dy=2.0):
+    """NON-RIGOROUS: local minima of |H_t| on a grid in [xmin,xmax] x [0,ymax], then Newton (mpmath)."""
+    nx, ny = int((xmax - xmin) / dx) + 1, int(ymax / dy) + 1
+    A = [[abs(H_mp(t, mp.mpc(xmin + i * dx, j * dy))) for j in range(ny)] for i in range(nx)]
+    starts = []
     for i in range(nx):
         for j in range(ny):
-            z0 = mp.mpc(2 + (xmax - 2) * i / (nx - 1), ymax * j / (ny - 1))
-            z = z0
-            ok = False
-            for _ in range(40):
-                try:
-                    step = H_mp(t, z) / H_mp(t, z, True)
-                except ZeroDivisionError:
-                    break
-                z -= step
-                if abs(step) < mp.mpf(10) ** (-20):
-                    ok = True
-                    break
-                if abs(z) > 4 * xmax:
-                    break
-            if ok and z.real > 0 and -1e-15 < z.imag and z.real < xmax + 5:
-                if all(abs(z - w) > 1e-8 for w in zs):
-                    zs.append(z)
+            nb = [A[a][b] for a in range(max(0, i - 1), min(nx, i + 2)) for b in range(max(0, j - 1), min(ny, j + 2))]
+            if A[i][j] <= min(nb):
+                starts.append(mp.mpc(xmin + i * dx, j * dy))
+    zs = []
+    for z in starts:
+        ok = False
+        for _ in range(40):
+            step = H_mp(t, z) / H_mp(t, z, True)
+            z -= step
+            if abs(step) < mp.mpf(10) ** (-18):
+                ok = True
+                break
+            if abs(z) > 4 * xmax:
+                break
+        if ok:
+            z = mp.mpc(abs(z.real), abs(z.imag))      # H_t even and real: zeros symmetric under z -> -z, conj
+            if all(abs(z - w) > 1e-8 for w in zs):
+                zs.append(z)
     zs.sort(key=lambda w: float(w.real))
     return [(float(w.real), float(w.imag), float(abs(H_mp(t, w)))) for w in zs]
 
