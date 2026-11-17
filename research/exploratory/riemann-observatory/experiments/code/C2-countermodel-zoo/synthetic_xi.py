@@ -145,19 +145,27 @@ def jensen_table(cc, K, dmax, nmax):
     tur = [(g[k] ** 2 - g[k - 1] * g[k + 1]) for k in range(1, len(g) - 1)]
     tur_pos = [bool(x > 0) for x in tur]
     tur_neg = [bool(x < 0) for x in tur]
-    mp.mp.dps = 80
-    gm = [mp.mpf(x.mid().str(80, radius=False)) for x in g]
+    # Jensen polynomials: midpoints rounded to 50 significant digits -> exact rationals -> integer polynomial;
+    # roots isolated rigorously by FLINT/Arb (fmpz_poly.complex_roots).  A root whose imaginary-part ball
+    # excludes 0 is a certified non-real root OF THE ROUNDED POLYNOMIAL (rounding not propagated).
+    import fractions
+    from flint import fmpq, fmpq_poly, fmpz
+
+    def q(x):
+        F = fractions.Fraction(x.mid().str(50, radius=False))
+        return fmpq(F.numerator, F.denominator)
+    gq = [q(x) for x in g]
     hyp = {}
     for d in range(2, dmax + 1):
         row = []
         for n in range(0, nmax + 1):
-            if n + d >= len(gm):
+            if n + d >= len(gq):
                 break
-            coeffs = [mp.binomial(d, j) * gm[n + j] for j in range(d + 1)]
-            roots = mp.polyroots(coeffs[::-1], maxsteps=500, extraprec=800)
-            row.append(float(max(abs(mp.im(r)) / (1 + abs(r)) for r in roots)))
+            P = fmpq_poly([fmpz(math.comb(d, j)) * gq[n + j] for j in range(d + 1)])
+            rr = P.numer().complex_roots()
+            row.append(sum(m for r, m in rr if not r.imag.contains(0)))
         hyp[d] = row
-    nonhyp = [(d, n) for d, row in hyp.items() for n, v in enumerate(row) if v > 1e-10]
+    nonhyp = [(d, n) for d, row in hyp.items() for n, v in enumerate(row) if v > 0]
     return dict(odd_coeff_max_abs=odd_max, n_g=len(g),
                 turan_all_positive_arb=all(tur_pos),
                 turan_indices_certified_negative=[k + 1 for k, b in enumerate(tur_neg) if b],
@@ -165,10 +173,10 @@ def jensen_table(cc, K, dmax, nmax):
                 nonhyperbolic_pairs_d_n=nonhyp[:300],
                 smallest_d_nonhyperbolic_at_n0=min([d for d, n in nonhyp if n == 0], default=None),
                 largest_n_with_some_nonhyperbolic_d=max([n for d, n in nonhyp], default=None),
-                max_rel_imag_root_at_n0={str(d): hyp[d][0] for d in hyp if hyp[d]})
+                n_nonreal_roots_at_n0={str(d): hyp[d][0] for d in hyp if hyp[d]})
 
 
-def jensen_experiment(cases, K=120, prec=1500, dmax=30, nmax=30):
+def jensen_experiment(cases, K=160, prec=2000, dmax=40, nmax=40):
     c = xi_taylor(K, prec)
     res = {}
     for label, beta, gam0 in [('xi', None, None)] + [(f'xi~ beta={b},gamma0={g}', b, g) for b, g in cases]:

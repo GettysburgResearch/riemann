@@ -153,7 +153,10 @@ class Prime:
 
     def sym_arr(self, A, B):
         """vectorised: exponents (int, -1 for zero)"""
-        t = np.array([(-1 if v is None else v) for v in self.tab], dtype=np.int64)
+        t = getattr(self, "_tarr", None)
+        if t is None:
+            t = np.array([(-1 if v is None else v) for v in self.tab], dtype=np.int64)
+            self._tarr = t
         return t[self.idx_arr(A, B)]
 
     def __repr__(self):

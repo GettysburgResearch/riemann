@@ -60,7 +60,7 @@ def check(F, re, im):
     z = mp.mpc(mp.mpf(re), mp.mpf(im))
     f0 = abs(F(z))
     fn = min(abs(F(z + d)) for d in (mp.mpf('1e-6'), -mp.mpf('1e-6'), mp.mpc(0, '1e-6'), mp.mpc(0, '-1e-6')))
-    return dict(re=re[:22], im=im[:22], abs_F_mid=mp.nstr(f0, 5), min_abs_F_at_dist_1e-6=mp.nstr(fn, 5),
+    return dict(re=re[:22], im=im[:22], abs_F_mid=mp.nstr(f0, 5), min_abs_F_at_dist_1em6=mp.nstr(fn, 5),
                 ratio=mp.nstr(f0 / fn, 5))
 
 

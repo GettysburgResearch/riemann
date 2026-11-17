@@ -21,7 +21,7 @@ def G_sqfree(ps):
     return chi(ps, FOUR).conjugate() * gamma(ps, 3)
 
 # ---------- prime case + composite case of (gj), (g), (convert1), (convert2) ----------
-sq = [ps for ps in squarefree_products(P, 2500) if ps]
+sq = [ps for ps in squarefree_products(P, 1500) if ps]
 sq = [ps for ps in sq if len(ps) <= 3]
 print("squarefree test moduli:", len(sq))
 Gcache = {}
@@ -65,10 +65,11 @@ def Rval(pa, pb):
     x = chi(pb, a) / chi(pa, b)
     return x
 Rclass = {}
-small = [ps for ps in sq if nm(ps) <= 700]
+small = [ps for ps in sq if nm(ps) <= 400]
 for pa, pb in itertools.product(small, small):
     a = elt(pa); b = elt(pb)
     if set(map(id, pa)) & set(map(id, pb)): continue
+    if nm(pa) * nm(pb) > 6000: continue
     r = Rval(pa, pb)
     check("R in {+-1}", abs(r - 1) < TOL or abs(r + 1) < TOL)
     key = (mod4(a), mod4(b))

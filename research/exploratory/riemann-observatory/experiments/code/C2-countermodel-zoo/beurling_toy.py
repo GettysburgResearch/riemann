@@ -30,16 +30,30 @@ def E1(w):
     return w.gamma_upper(0)
 
 
+def Ein(w, K=80):
+    """Entire function Ein(w) = sum_{k>=1} (-1)^{k+1} w^k/(k k!) with a rigorous tail bound (|w| <= 1)."""
+    tot, term = acb(0), acb(1)
+    for k in range(1, K + 1):
+        term = term * w / k                       # w^k / k!
+        tot += (term / k) * (1 if k % 2 else -1)
+    r = arb(abs(w).upper())
+    tail = r ** (K + 1) / arb.fac_ui(K + 1) * 2   # crude: sum_{k>K} r^k/(k k!) <= 2 r^{K+1}/(K+1)!  for r <= 1
+    return tot + acb(arb(0, tail), arb(0, tail))
+
+
+def zero_factor(w):
+    """exp(-E1(w)) = e^{gamma_E} w exp(-Ein(w)): entire, simple zero at w = 0 only."""
+    if abs(w).upper() <= 1:
+        return arb.const_euler().exp() * w * (-Ein(w)).exp()
+    return (-E1(w)).exp()
+
+
 def zeta_entire_form(s, beta, gamma, x0):
-    """s/(s-1) * prod_{r in {rho, conj rho}} e^{gamma_E} (s-r)L exp(-Ein((s-r)L)), Ein(w) = E1(w)+gamma_E+log w.
-    Evaluated through E1 away from w = 0; at w = 0 the factor is 0 exactly."""
+    """zeta_Pi(s) = s/(s-1) * zero_factor((s-rho)L) * zero_factor((s-conj rho)L), valid on C minus {1}."""
     rho = acb(arb(beta), arb(gamma)); L = acb(x0).log()
     out = s / (s - 1)
     for r in (rho, rho.conjugate()):
-        w = (s - r) * L
-        if w.is_zero():
-            return acb(0)
-        out *= (-E1(w)).exp()
+        out *= zero_factor((s - r) * L)
     return out
 
 
