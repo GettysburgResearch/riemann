@@ -303,17 +303,21 @@ Implication horizons: {"T0": 3000175332800.0, "delta_max(T0) from zero-free regi
 
 | j | d | positive sign changes | needed for real-rootedness | verdict |
 |---|---|---|---|---|
-| 10 | 110 | 55 | 55 | real-rooted (certified count) |
+| 10 | 116 | 58 | 58 | real-rooted (certified count) |
+| 10 | 117 | 58 | 58 | real-rooted (certified count) |
 | 10 | 118 | 59 | 59 | real-rooted (certified count) |
 | 10 | 119 | 59 | 59 | real-rooted (certified count) |
-| 10 | 125 | 60 | 62 | fewer sign changes -> non-real zeros indicated |
-| 20 | 400 | 200 | 200 | real-rooted (certified count) |
+| 10 | 120 | 58 | 60 | fewer sign changes -> non-real zeros indicated |
+| 10 | 121 | 58 | 60 | fewer sign changes -> non-real zeros indicated |
+| 10 | 122 | 59 | 61 | fewer sign changes -> non-real zeros indicated |
+| 10 | 123 | 59 | 61 | fewer sign changes -> non-real zeros indicated |
 | 20 | 470 | 235 | 235 | real-rooted (certified count) |
+| 20 | 475 | 237 | 237 | real-rooted (certified count) |
+| 20 | 476 | 238 | 238 | real-rooted (certified count) |
+| 20 | 477 | 238 | 238 | real-rooted (certified count) |
+| 20 | 478 | 237 | 239 | fewer sign changes -> non-real zeros indicated |
 | 20 | 480 | 238 | 240 | fewer sign changes -> non-real zeros indicated |
-| 20 | 490 | 243 | 245 | fewer sign changes -> non-real zeros indicated |
-| 20 | 520 | 258 | 260 | fewer sign changes -> non-real zeros indicated |
 | 20 | 600 | 298 | 300 | fewer sign changes -> non-real zeros indicated |
-| 20 | 700 | 274 | 350 | fewer sign changes -> non-real zeros indicated |
-| 20 | 749 | 218 | 374 | fewer sign changes -> non-real zeros indicated |
-| 20 | 750 | 217 | 375 | fewer sign changes -> non-real zeros indicated |
-| 20 | 760 | 212 | 380 | fewer sign changes -> non-real zeros indicated |
+| 20 | 700 | 348 | 350 | fewer sign changes -> non-real zeros indicated |
+| 20 | 749 | 372 | 374 | fewer sign changes -> non-real zeros indicated |
+| 20 | 750 | 373 | 375 | fewer sign changes -> non-real zeros indicated |
