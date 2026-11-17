@@ -39,7 +39,9 @@ def run(N, seglog=22, track=True):
     primes = small_primes(R)
     logp = np.log(primes.astype(np.float64)).astype(np.float32)
     S = 1 << seglog
-    Lc = 0; Mc = 0; Tc = 0.0
+    Lc = 0; Mc = 0; Tc = 0.0; TFc = 0
+    SCALE = np.int64(1) << np.int64(56)
+    minTF_lower = None; argminTF = None
     res = {
         "N": N, "sqrtN": R, "num_small_primes": int(len(primes)), "segment": S,
         "first_x_ge2_L_pos": None, "L_at_first_pos": None,
@@ -88,6 +90,8 @@ def run(N, seglog=22, track=True):
         L = Lc + np.cumsum(lam)
         M = Mc + np.cumsum(mu)
         T = Tc + np.cumsum(lam.astype(np.float64) / n.astype(np.float64))
+        # exact fixed-point companion: TF(x) = sum lam(n)*floor(2^56/n), |TF - 2^56 T| < x
+        TF = TFc + np.cumsum(lam * (SCALE // n))
         # Polya
         pos = (L > 0) & (n >= 2)
         cpos = int(np.count_nonzero(pos))
@@ -106,6 +110,10 @@ def run(N, seglog=22, track=True):
         i = int(np.argmin(M))
         if minM is None or M[i] < minM:
             minM = int(M[i]); argminM = int(n[i])
+        lowerTF = TF - n          # 2^56 * T(x) >= TF(x) - x  (rigorous)
+        i = int(np.argmin(lowerTF))
+        if minTF_lower is None or lowerTF[i] < minTF_lower:
+            minTF_lower = int(lowerTF[i]); argminTF = int(n[i])
         i = int(np.argmin(T))
         if minT is None or T[i] < minT:
             minT = float(T[i]); argminT = int(n[i])
@@ -120,8 +128,10 @@ def run(N, seglog=22, track=True):
         for c in checkpoints:
             if lo <= c < hi:
                 res["checkpoints"][str(c)] = {"L": int(L[c - lo]), "M": int(M[c - lo]),
-                                              "T_float64": float(T[c - lo])}
-        Lc = int(L[-1]); Mc = int(M[-1]); Tc = float(T[-1])
+                                              "T_float64": float(T[c - lo]),
+                                              "T_fixed_lo": (int(TF[c - lo]) - c) / 2.0 ** 56,
+                                              "T_fixed_hi": (int(TF[c - lo]) + c) / 2.0 ** 56}
+        Lc = int(L[-1]); Mc = int(M[-1]); Tc = float(T[-1]); TFc = int(TF[-1])
         if track and (lo // S) % 20 == 0:
             print(f"lo={lo:,} L={Lc} M={Mc} elapsed={time.time()-t0:.1f}s", flush=True)
         lo = hi
@@ -129,6 +139,9 @@ def run(N, seglog=22, track=True):
                 "last_x_L_pos": last_pos, "max_L": maxL, "argmax_L": argmaxL,
                 "max_M": maxM, "argmax_M": argmaxM, "min_M": minM, "argmin_M": argminM,
                 "min_T_x_ge1": minT, "argmin_T": argminT,
+                "T_fixedpoint_rigorous_lower_bound_min": minTF_lower / 2.0 ** 56,
+                "T_fixedpoint_argmin_of_lower_bound": argminTF,
+                "T_fixedpoint_note": "T(x) >= (TF(x)-x)/2^56 with TF(x)=sum_{n<=x} lam(n)*floor(2^56/n) exact int64",
                 "ambiguous_residual_decisions": ambiguous})
     res["Mertens_ratio_records"] = {str(f): {"max_|M(x)|/sqrt(x)": v[0], "x": v[1], "M(x)": v[2]}
                                     for f, v in best.items()}
