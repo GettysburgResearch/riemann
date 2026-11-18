@@ -79,3 +79,24 @@ To see this, integrate the odd polynomial termwise. It yields a rational functio
 Finally the classical Mertens product with zero-free-region remainder is $P(y)=(2e^{-\gamma}/\log y)(1+O_A((\log y)^{-A}))$ for each fixed $A$. Here the factor two removes the prime two. Expanding at the specified $y=e^\lambda N^{e^{-\gamma}}$ gives $U_{j,y}=2b_j[\log(jt/N)-e^\gamma\lambda]/(\log N)^2+O_{L^2}((\log N)^{-3})$. From the factorial expression in TC26 (3), $b_j^2=\pi+O(1/j)$. Squaring and taking the Riemann sum in $j/N$ gives (2). Minimizing the integral amounts to centering $\log(zt)$ at its mean for uniform $z,t$ on $[1,2]\times[1,3]$.
 
 **Verification scope.** This argument imports classical PNT and Mertens estimates and TC26's column normalization. The estimates concern the full source limit on the stated sectors, followed by a degree-block limit. The incomplete scope is the lack of a power saving on the recombined vector.
+
+## The positive and negative covariance among rough parts
+
+The same split prices three separate entries of the complete ordered covariance. Let $Q=\prod_{3\le p\le y}p$. For each odd squarefree $s$ with $(s,Q)=1$, group all $n=sd$, $d\mid Q$, into the block vector
+$$
+ V_s(j,t)=\frac{\mu(s)}s\sum_{d\mid Q}\frac{\mu(d)}d\psi_j(t/(sd)),
+ \qquad N\le j<2N .
+$$
+Use the norm of $\bigoplus_{N\le j<2N} L^2(1,3)$. Here $V_1=U$ and the complete native nonsmooth vector is $W$. Summing the squared norms across all groups gives the quantity $G_N(y)$ of [the ratio note](trace-nov18.md). For $s>1$ necessarily $s>y$. By the uniform interior bound (10) of that note and the elementary Mertens product $\sum_{d\mid Q}1/d=\prod_{p\mid Q}(1+1/p)\ll\log(2y)$,
+$$
+ \sum_{s>1}\|V_s\|^2\ll N(\log(2y))^2/y.
+$$
+The sum converges absolutely. Its common-square-cutoff interpretation follows by dominated convergence with the same majorant for every finite source cutoff, also when only some divisors $d$ fit a group's remaining horizon. The total nonsmooth vector uses the original common cutoff, without exchanging conditionally convergent group sums.
+
+For the generic fixed $u\ne e^\gamma$ and the tuned $y=e^\lambda N^{e^{-\gamma}}$ above, write $H=\|U\|^2$. Respectively $H\asymp N/(\log N)^2$ and $H\asymp N/(\log N)^4$. Thus at both cutoffs the following ratios are unconditional, with limits through all degree blocks:
+$$
+ \frac{G_N(y)}H\to1,\qquad
+ \frac{2\Re\langle U,W\rangle}{H}\to-2,\qquad
+ \frac{\|W\|^2-\sum_{s>1}\|V_s\|^2}{H}\to1.
+$$
+The second ratio counts both directions of every smooth–nonsmooth pair. The third counts precisely all ordered pairs of *different* nontrivial rough parts, including their full source-cutoff limit. Their sum supplies an asymptotic $-H$ compensation for the positive common-rough-part contribution. The relative cancellation comes from the classical inverse-log size of $U+W$; it does not control its residual at the subpower scale required by the trace criterion.

@@ -131,3 +131,25 @@ $$
 A=-m_\rho W(\rho)/\rho\ne0.
 $$
 The errors are $O(X^\alpha)$ when $t=\log X+O(1)$, uniformly in $0<\delta\le1$ by the preceding multiplier estimate. Since $|U_\delta(\rho)|\ge\beta$, both phases can separately be made to attain each extremal sign as $t$ runs through $[\log X+S,\log X+S+2\pi/\gamma]$. Each signed smoothed value has magnitude $\gg X^\beta$ there. Positivity and unit integral of the kernel yield sample points of each sign in $[X,CX]$, for $C=\exp(S+2\pi/\gamma)$. The fixed additive constant 2 in $B$ is negligible for large $X$. Boundedness of $K$ also bounds each signed average by $\|K\|_\infty$ times the logarithmic integral of the corresponding one-sided part, giving the integral assertion.
+
+## An unconditional bounded-gap consequence at fixed amplitude
+
+For every fixed $H>0$ there exist $C_H>1$ and $X_H$ such that every interval $[X,C_H X]$, $X\ge X_H$, contains points $y_+,y_-$ for which
+$$
+\vartheta(y_+)-y_+>H\sqrt{y_+},\qquad
+\vartheta(y_-)-y_-<-H\sqrt{y_-}.
+\tag{5}
+$$
+The constants are qualitative. The argument imports Littlewood's classical unbounded oscillation theorem $\psi(y)-y=\Omega_\pm(\sqrt y\log\log\log y)$ as well as the von Mangoldt explicit formula. Equation (5) concerns bounded logarithmic gaps at each fixed amplitude and gives no uniform growth rate for $H$ as a function of $X$.
+
+If RH fails, the preceding signed theorem gives (5), since $X^\beta/\sqrt{C X}\to\infty$. Suppose now that RH holds. In the distributional form of the classical explicit formula on $t>0$,
+$$
+F(t)=e^{-t/2}(\psi(e^t)-e^t)
+=-\sum_\rho e^{i\gamma t}/\rho +r(t),\qquad
+r(t)=-e^{-t/2}\left(\log(2\pi)+\tfrac12\log(1-e^{-2t})\right).
+$$
+The convention at isolated prime-power discontinuities is immaterial. For every fixed nonnegative smooth compactly supported kernel $K$ of integral 1, the smoothed zero sum converges uniformly and absolutely on the whole real line: integration by parts gives rapid decay of its Fourier multiplier and the zero count is $O(T\log T)$. Hence this smoothed sum is a uniformly almost periodic function of $t$. Also $K*r(t)\to0$ as $t\to\infty$, and if $K$ has support in $[-1,1]$ its absolute value for $t\ge2$ is at most $\sup_{u\ge t-1}|r(u)|$.
+
+By Littlewood choose large continuity points at which $F$ exceeds $H+5$ and falls below $-H-5$ respectively, with $|r|<1$ on their unit neighborhoods. Such continuity points can be chosen because a strict one-sided inequality at a prime power persists on a neighboring one-sided open interval. Choose a smooth nonnegative kernel supported sufficiently close to 0 that the two smoothed values still exceed $H+4$ and fall below $-H-4$. The almost periodic function contributed by the zeros has values exceeding $H+3$ and below $-H-3$ at those two points. Its 1-almost periods are relatively dense, so each inequality with margin $H+2$ occurs in every sufficiently long real interval. At all sufficiently large times the vanishing remainder transfers the claims to the convolution of $F$ with thresholds $\pm(H+1)$, and positivity of $K$ transfers them to values of $F$ in an interval longer by at most 2. One may start the argument with $H+2$ in place of $H$ to absorb the prime powers, since $(\psi(y)-\vartheta(y))/\sqrt y=1+o(1)$ by the prime number theorem and the elementary bound for powers of order at least three. Exponentiating the resulting fixed length gives (5).
+
+This argument establishes no effective numerical value of $C_H$ or $X_H$, and makes no claim of historical priority.

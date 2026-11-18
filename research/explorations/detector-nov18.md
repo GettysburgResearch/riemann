@@ -2,7 +2,7 @@
 
 Status — Proposed analytic result with a reproducible finite arithmetic constant.
 
-For the fixed 5:3 detector, subtract the affine function of log scale supplied by its Mellin transform at zero. Each sign of the residual has cumulative logarithmic mass exceeding \(0.0536\log Y\) along an unbounded sequence. This holds unconditionally. It obstructs an approach that would approximate the detector by this affine function with one-sided \(o(\log Y)\) cumulative error. Subpower negative mass for the original detector remains open.
+For the fixed 5:3 detector, subtract the affine function of log scale supplied by its Mellin transform at zero. For every sufficiently large \(Y\), each sign of the residual has cumulative logarithmic mass exceeding \(0.0536\log Y\). The same mean lower bound holds on every fixed-fraction subinterval of the logarithmic horizon. This holds unconditionally. It obstructs an approach that would approximate the detector by this affine function with one-sided \(o(\log Y)\) cumulative error. Subpower negative mass for the original detector remains open.
 
 ## Arithmetic source and normalization
 
@@ -53,6 +53,52 @@ For any real phase \(\phi\), the test \(h(u)=(1+p(\gamma_1 u+\phi))/2\) lies bet
 \]
 This is a finite Fourier sum of radial limits. The constant in \(h\) has zero limit after multiplication by \(\sigma\). Choose \(\phi\) so that \(\Re(e^{-i\phi}C)=-|C|\). The preceding pointwise inequality gives
 \(\liminf_{\sigma\downarrow0}\sigma\,\mathcal L v_-(\sigma)\ge b_1|C|\). Step 1 now proves (1).
+
+## Every sufficiently large block in logarithmic time
+
+In fact, for all fixed \(0\le l<r\), writing \(c_0=(2/\pi)(127/128)|P(\rho_1)/[(i\gamma_1)^2\zeta'(\rho_1)]|\),
+\[
+ \liminf_{T\to\infty}\frac{1}{(r-l)T}\int_{lT}^{rT}e(u)_\pm\,du
+ \ \ge c_0>0.0536 .
+ \tag{3}
+\]
+If RH fails, the [positive compact isolation theorem](detector-positive-isolation-nov18.md) gives exponential one-sided masses in a fixed-length log window ending at \(rT\), for both signs of \(w\). Subtracting \(Au+B\) costs only \(O(T)\) on that window. Thus the liminf in (3) is infinite in this case.
+
+Suppose RH holds. Keep the test \(h\) and \(v=\pm e\) from Step 2. Fix \(\epsilon\in(0,1/4)\) and define the probability density
+\[
+ G_U(x)=(4\pi\epsilon U)^{-1/2}\exp[-(x-U)^2/(4\epsilon U)]
+ \qquad(U>0).
+\]
+For each tested harmonic \(k\), including zero, the Gaussian mean
+\(\int_0^\infty G_U(x)e^{ik\gamma_1 x}v(x)\,dx\) tends as \(U\to\infty\) to the residue at zero of \(\pm D(s-ik\gamma_1)\), interpreting a regular point as zero. Here every pole at that particular point is simple by the finite checks.
+
+To verify this localization, write the integral as
+\[
+ \frac{1}{2\pi i}\int_{1-i\infty}^{1+i\infty}
+           \exp[U(s+\epsilon s^2)]\,(\pm D(s-ik\gamma_1))\,ds .
+\]
+This follows by Fubini from the absolutely integrable exponentially damped physical source and the Gaussian Fourier identity. Truncate at fixed heights \(\pm H\), chosen away from poles and sufficiently large that \(1+\epsilon-\epsilon H^2<-1\). On the original line the transform is bounded by the damped absolute integral, so the discarded Gaussian tails are exponentially small in \(U\) (integrate the additional factor \(\exp[-\epsilon U(t^2-H^2)]\) for \(|t|\ge H\)). Shift this finite rectangle to \(\Re s=-1\). Its horizontal sides give \(O_H(e^{-U})\), since the maximum of \(\sigma+\epsilon\sigma^2\) on \([-1,1]\) is \(1+\epsilon\). The bounded left segment contributes \(O_H(e^{(-1+\epsilon)U})\). Under RH all crossed poles are on the imaginary axis; the first shifted trivial zero has real part \(-5/2\), outside the rectangle. A pole of order \(m'\) at \(it\ne0\) contributes \(O((1+U)^{m'-1}e^{-\epsilon t^2U})\). There are finitely many such poles at fixed \(H\). A simple pole at zero supplies exactly its residue. These estimates prove the localization claim, including the case where other critical zeros have arbitrary multiplicities.
+
+Consequently \(\int_0^\infty G_U(x)h(x)v(x)\,dx\to-c_0\) for the phase chosen in Step 2. Positivity of \(h\) and \(1-h\) gives for every sufficiently large center
+\[
+ \int_0^\infty G_U(x)v(x)_-\,dx\ge c_0-o(1).
+\]
+To transfer this to each interval, the exact identity for \(x\ge0\) is
+\[
+ \int_0^\infty G_U(x)\,dU=1 .
+\]
+Completing the square in the exponent reduces it to the elementary integral
+\(\int_0^\infty u^{-1/2}e^{-pu-q/u}du=\sqrt{\pi/p}\,e^{-2\sqrt{pq}}\) for \(p>0,q\ge0\).
+
+Fix \(0<2d<r-l\) and integrate the center bounds over \((l+d)T\le U\le(r-d)T\). The part outside \(lT\le x\le rT\) is negligible when \(\epsilon\) is chosen sufficiently small depending only on \(d/r\). Indeed \(|v(x)|\ll e^x\) for \(x\ge0\) by the finite arithmetic sum. Outside this interval \(|x-U|\ge(d/r)U\). Completing the square in \(G_U(x)e^x\) gives a Gaussian of mean \((1+2\epsilon)U\), times \(e^{(1+\epsilon)U}\). Its integral over this exceptional set is \(O(e^{-U})\), for example when \(\epsilon<(d/r)^2/100\). Tonelli and the exact identity bound the contribution inside the interval from above by \(\int_{lT}^{rT}v_-\,dx\). After division by \(T\), this proves a lower limit of \(c_0(r-l-2d)\). Let \(d\downarrow0\) to prove (3). Each choice of \(d,\epsilon,H\) precedes the limit \(T\to\infty\).
+
+The same localization gives a multiplicity-sensitive version without any finite harmonic checks. Suppose \(\rho=1/2+i\gamma\) is a critical-line zero of order \(m\), and put \(C_m=m!P(\rho)/[(i\gamma)^2\zeta^{(m)}(\rho)]\). Then, for both signs,
+\[
+ \liminf_{T\to\infty}\frac1{T^m}\int_{lT}^{rT}e(u)_\pm\,du
+ \ \ge \frac{|C_m|}{2m!}(r^m-l^m).
+ \tag{4}
+\]
+Off RH the fixed-window exponential bound dominates this scale. Under RH use \(h(u)=(1+\cos(\gamma u+\phi))/2\) with the phase minimizing the leading coefficient. At the shifted zero the residue after Gaussian weighting is a polynomial in \(U\) of degree \(m-1\) with leading coefficient \(C_m/(m-1)!\), since \((s+\epsilon s^2)'|_{s=0}=1\). Its conjugate supplies the conjugate coefficient and the unshifted transform is regular at zero. Thus the Gaussian lower bound is \((|C_m|/[2(m-1)!]+o(1))U^{m-1}\); integration over centers proves (4). For \(m>2\) the affine shift costs only \(O(T^2)\), so (4) holds with \(w\) in place of \(e\). In particular a single unbounded sequence of proportional log-time blocks with \(O(T^2)\) original negative mass excludes every zero of multiplicity greater than two and, by the fixed-window argument, every off-line zero.
 
 ## What a hypothetical off-line zero would cost
 
