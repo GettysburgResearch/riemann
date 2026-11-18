@@ -99,3 +99,22 @@ factors alone would give a squared local inverse derivative product of
 size $T^{8/3+o(1)}$ in the geometry of equation (12). This illustrates
 the logical gap in using a pair bound alone; no such cluster is asserted
 for zeta.
+
+## Only dyadic neighbor ranks are required
+
+To deduce weak Mertens it suffices to impose (1) for
+$j=1,2,4,\ldots\le J$ with $\nu_j=j(j+2)$. For $j\le k<2j$ the rank
+ordering gives $Y_k\le Y_j+\log2$. Hence the full crowding sum is at
+most $\sum_{j\ {\rm dyadic}}jY_j+O(J)$. Apply Hölder with weights
+$\lambda j/(\theta\nu_j)$ in the previous proof. Its reciprocal budget is
+$$
+ H_{\rm dyad}=\sum_{k\ge0}\frac{1}{2^k+2}<1:
+ \qquad \sum_{k=0}^3\frac1{2^k+2}=\frac{17}{20},
+ \quad \sum_{k\ge4}\frac1{2^k+2}<\frac18 .
+$$
+The rank-dependent prefactors now cost
+$\exp(O(\sum_{j\ {\rm dyadic},j\le J}j))=\exp(O(J))$.
+In particular one can take $\lambda>1$, proving a power saving in the
+inverse-square moment under these $O(\log\log T)$ marginal tests. The
+condition accepts arbitrary joint dependence and does not demand the
+unitary rank bound at any intermediate rank.

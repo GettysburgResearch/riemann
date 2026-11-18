@@ -92,3 +92,54 @@ $$
 For each fixed $a>0$, combining this exact loss with (2) on $[aU,U]$ leaves at most $(a+o(1))U\log U/(2\pi)$ missing roots. Send $a$ to zero, using $U\log U\asymp\sqrt{d\log d}$, to obtain (1).
 
 This argument estimates a count. It permits a sublinear, unbounded exceptional set and supplies no evidence that every Jensen polynomial is hyperbolic.
+
+## Quantitative refinement
+
+The argument can be made uniform as the bottom of the transition band decreases. In particular the number of exceptional roots, including multiplicities beyond the first at each distinct negative real root, is
+$$
+ d-\#\{x<0:J_d(x)=0\}\ \ll\ \sqrt d\,(\log d)^{1/4}.
+ \tag{6}
+$$
+Here are details.
+
+Write $L=\log U$, and split $[U L^{-1/4},U]$ into dyadic intervals $I_Y=[Y,2Y]$, possibly moving the lower endpoint by a factor in $[1,2]$ so that only full dyadic intervals are used. Put $h=Y^2 L/d$. In this range $L^{-1/2}\ll h\ll1$ with absolute implicit constants depending on the fixed matching point. Uniformly on $I_Y$ one has $c(y)\asymp h$, $\tau\asymp h/L$, and $\log y=L+O(\log L)$. Set $K=\lfloor Y^{1/10}\rfloor$ and let $A_K,B_K$ be as above. Use quadratic means normalized by $Y$. Then
+$$
+ \|A-A_K\|_2\ll \frac1{Lh^{3/2}},\qquad
+ \|A_K'\|_2\ll h^{-3/2},\qquad
+ \|B_K\|_2\ll h^{-1/2},\qquad
+ \|A_KB_K-1\|_2\ll L^{-10}.
+ \tag{7}
+$$
+
+For a direct proof use the following elementary mean-value bound for moving coefficients. Suppose each $b_k(y)$ on $I_Y$ has supremum at most $D_k$, and total variation at most $D_k L^C$, for $k\le N\ll\sqrt Y$ with fixed $C$. Then
+$$
+ Y^{-1}\int_{I_Y}\Big|\sum_{k\le N}b_k(y)k^{-iy}\Big|^2dy
+ \le(1+O(NL^{C+1}/Y))\sum D_k^2 .
+ \tag{8}
+$$
+Integration by parts bounds each off-diagonal integral before division by $Y$ by $O(L^CD_jD_k/|\log(j/k)|)$. The absolute row sums of $1/|\log(j/k)|$ are $O(N\log(2N))$ because $|\log(j/k)|\ge |j-k|/N$. Apply $2D_jD_k\le D_j^2+D_k^2$. Moving monotone cutoff indicators contribute a single jump to the total variation.
+
+For (7), write $\delta=b_0h$ with a sufficiently small fixed $b_0>0$ so that $c(y)-\tau\log N(y)\ge2\delta$. All smooth coefficient weights below, after removing $k^{-iy}$, have variation at most $L^{C}$ times the stated majorant. In fact $|c'|\ll h/Y$, $|c''|\ll h/Y^2$, $|\tau'|\ll h/(YL)$, $|\tau''|\ll h/(Y^2L)$, and differentiating $\alpha(1/2+iy)$ costs $O(1/Y)$ beyond its constant-size imaginary part. For $k\le K$, $|e^w-1|\le |w|\max(1,e^{\Re w})$ applied to $w=\tau\log^2 k-2i\tau\Im\alpha(s)\log k$ bounds the heat-weight difference by
+$$
+ D_k\ll (h/L)k^{-1/2-\delta}(1+\log k)^2.
+$$
+Differentiating this difference costs at most $L^C/Y$ times the same majorant by the product rule (with the term $w'e^w$ estimated directly). For $K<k\le N(y)$ take $D_k\ll k^{-1/2-\delta}$. Since $h\log K\gg\sqrt L$, this tail has exponentially small quadratic mean. For $A_K'$ and $B_K$ take respectively $D_k\ll k^{-1/2-\delta}(1+\log k)$ and $D_k\ll k^{-1/2-\delta}$. The first three bounds of (7) follow from (8) and
+$\sum k^{-1-2\delta}(1+\log k)^j\ll_j1+\delta^{-j-1}$.
+For the product take $D_k\le d(k)k^{-1/2-\delta}$ on $K<k\le K^2$. One has $\sum_{k\le X}d(k)^2\ll X\log^3(2X)$ from $d(k)^2\le d_4(k)$ and the elementary divisor sum bound. Thus its squared tail norm is $\ll e^{-\delta\log K}(1+\delta^{-4})$ and gives the last estimate.
+
+Take $\lambda=L^{-1/4}$ and split $I_Y$ into chunks of length $\ell=h/\sqrt L$. The proportion of the interval with $|A_K|<2\lambda$ is $O(1/(h\sqrt L))$ by the last two bounds in (7), using the same mollifier argument as for (5). Independently discard each chunk on which the oscillation of $A_K$ exceeds $\lambda/10$. Cauchy–Schwarz bounds its oscillation by $\sqrt{\ell\int_{\rm chunk}|A_K'|^2}$, so the total fraction removed in this step is
+$$
+ O(\ell^2 h^{-3}/\lambda^2)=O(1/(h\sqrt L)).
+$$
+Among the others discard any chunk where $|A_K|<\lambda$ at some point; its entirety has $|A_K|<2\lambda$. As before freeze the value at the midpoint, now at cost at most $\lambda/10$. In the retained chunks count the full arcs around phase extrema. Endpoints cost $O(Y/\ell)$ arcs, a fraction $O(1/(h\sqrt L))$. Each failed arc consumes $\gg\lambda^2/L$ of the squared error integral. Therefore the fraction lost through failed arcs is
+$$
+ O(\|A-A_K\|_2^2/\lambda^2)\ll h^{-3}L^{-3/2}
+ \ll 1/(h\sqrt L),
+$$
+since $h\gg L^{-1/2}$. The $o(1)$ in (4) is $o(\lambda)$ uniformly here by its displayed error estimates. Two adjacent sign crossings at most are lost per failed arc. The relative variation of the phase speed from $L/2$ is $O(\log L/L)$ uniformly. Thus $I_Y$ supplies at least $YL/(2\pi)$ distinct roots with error
+$$
+ O\big(YL/(h\sqrt L)+Y\log L+1\big).
+$$
+If the implicit constant makes this vacuous on the smallest interval, the inequality still holds and suffices when summed.
+
+By $h=Y^2L/d$ the sum of the first errors over these dyadic intervals is $\ll d/(\sqrt L\, U L^{-1/4})\ll U L^{3/4}$. The unfilled range below their smallest endpoint likewise costs $O(U L^{3/4})$ reference oscillations. The earlier endpoint calculation sharpens to $d(\pi-S(Q))=U\log U/2+O(U)$: use $r=Q^{-1/2}(1+O(1/\Lambda))$ in (3.4), giving $\cos\alpha=\kappa r(1/4+O(1/\Lambda))$ at $Q=c_0T$. All remaining endpoint errors, including $O(d^{1/4}(\log d)^{3/4})$ from the far edge, are smaller. This proves (6) since $U L^{3/4}\asymp\sqrt d\,(\log d)^{1/4}$.
