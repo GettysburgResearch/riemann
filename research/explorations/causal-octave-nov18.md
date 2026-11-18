@@ -50,3 +50,23 @@ $$
 Here the starred sum ranges over every prime $p$ and every integer $k\ge2$. It converges locally absolutely for $\Re s>1/2$. The rational-exponential term cancels the pole of the logarithmic derivative at 1. Thus the meromorphic continuation of $Q'$ in this half-plane has precisely the zeta zeros as poles, with residues their multiplicities. The identity theorem applied to the derivative difference shows that a zero $\beta+i\gamma$ with $\beta>a$ forces zeros at every $\beta+i(\gamma+mh)$ for positive integers $m$, with the same multiplicity. Their number at heights in $(0,T]$ grows at least as $T/h-O_\gamma(1)$, contradicting $N(\beta,T)=o(T)$. This proves the assertion.
 
 The least-squares choice is the logarithmic average of $E$ on each block. Equivalently one may project the rescaled first-octave residual $y^a(G_{X,a}-F_a)(\log y)$ off constants on dyadic blocks, since the $E(X)$ term vanishes under that projection. This removes every block's unknown level from the target. A sufficient source estimate remains square-root-scale within-block variation on all large dyadic blocks with arbitrary positive exponent slack.
+
+## An unconditional lower bound for the actual dyadic prime error
+
+Let $X_j=2^j$, $L=\log2$, and let $V_j$ be the $L^2([X_j,2X_j],dy/y)$ distance of $E$ from the constants. Then
+$$
+\limsup_{j\to\infty}\frac{\log X_j}{\sqrt{X_j}}V_j>0.046 .
+$$
+This constrains the strength of any proposed upper bound after optimal recentering. No zero-free half-plane beyond the classical one is assumed.
+
+To see this, use the lowest positive ordinate $14<\gamma_1<15$ on the critical line, put $z=1/2+i\gamma_1$ and $w=z-ih$ with $h=2\pi/L$. There is no zero at $w$ since $0<\Im w<\gamma_1$. These low-zero facts may be imported from the verified-height census and the classical first-zero enclosure. Write $m\ge1$ for the multiplicity at $z$. For real $\eta>0$ put $s=z+\eta$ and $s'=w+\eta$. The function $Q'(s)-Q'(s')$ has principal part $m/\eta$ at $\eta=0$, by its meromorphic formula above.
+
+Suppose the limsup in the assertion is finite, say $B$. Choose $C(y)$ to be the least-squares block constant. The transform of $E-C$ and its differentiated integral converge in $\Re s>1/2$ under this finite-limsup assumption. The periodic cancellation gives $Q'(s)-Q'(s')=R'(s)-R'(s')$ there as a meromorphic identity; possible individual poles away from the boundary therefore cause no problem in using the difference. On a block write $y=X_j e^u$, $0\le u\le L$. In the difference of the differentiated kernels the term proportional to $\log X_j$ is, up to sign and a common factor $X_j^{-s}$,
+$$
+(\log X_j) K_\eta(u),\qquad K_\eta(u)=s e^{-su}-s'e^{-s'u}.
+$$
+The two remaining terms (the derivatives of the prefactors and the terms involving $u$) have uniformly bounded $L^2[0,L]$ norm as $\eta\downarrow0$. For any $b>B$ all sufficiently large blocks have $V_j\le b\sqrt{X_j}/\log X_j$. By Cauchy–Schwarz the leading terms in the difference are bounded by $b\|K_\eta\|_2\sum_j e^{-j\eta L}$. The remainder is $O(\sum_{j\ge1}e^{-j\eta L}/j)$ plus finitely many bounded terms, hence vanishes after multiplication by $\eta$. Taking $\eta\downarrow0$ and then $b\downarrow B$ gives
+$$
+ B\ge m L/\|K_0\|_2.
+$$
+Now $\|K_0\|_2\le(|z|+|w|)\sqrt{1-e^{-L}}<21.1/\sqrt2$, using $14<\gamma_1<15$ and $9<h<9.1$ (so $|z|<15.01$ and $|w|<6.03$). Thus $B\ge L\sqrt2/21.1>0.046$. If the limsup is infinite the assertion is immediate. This argument proves a lower bound on a subsequence and makes no assertion that the normalized variance stays bounded.
