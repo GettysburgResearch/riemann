@@ -1,0 +1,31 @@
+theta: 2688 nonzero coefficients with |mu| <= 10.0, build 12.4s
+coefficient identity done 12.4s
+automorphy tests: 42  12.5s
+  max |ratio - (c/a)_3| = 5.54e-10 ; min |ratio - (c/d)_3| over nontrivial symbols = 1.732 ; nontrivial cases 30 ; min height 0.186
+H reduction done 12.6s
+cusp coefficient tables: 5934 indices, 23.8s
+cusp expansions done 23.8s
+max |d_0(ell)| / (27 3^{m/6} |b|) = 1.000000 (equality case m = 3k-3)
+  j=1: 216 translates; Theta_Psi at a sample point = (-1.080481127933672-2.258374680299727j)
+  j=0: 252 translates; Theta_Psi at a sample point = (1.9631517291867504+2.1095879969526115j)
+  j=4: 216 translates; Theta_Psi at a sample point = (0.9760352807601027-1.7515990384123044j)
+
+SUMMARY (check: number of cases)
+  T.E invariance                                          6
+  T.automorphy multiplier (c/a)_3                        42
+  T.coeff_identity (no coprimality n,b)                 434
+  T.conjugate multiplier (c/d)_3 rejected                30
+  T.cusp expansion gamma_+ (no constant term)             5
+  T.cusp expansion gamma_- (no constant term)             5
+  T.factorized shifts Theta_Psi = sum c_F conj theta(z+z_h)      9
+  T.not period omega                                      6
+  T.period Z+3O                                          18
+  T.support m = -4 (d_+)                               1770
+  T.support m = -4 (d_-)                               1770
+  T.support m >= -4 (d_0)                              2688
+  T.tau_even                                            301
+  T.theta(Hw)=theta(gamma_sigma w)                       33
+  T.|d_0| <= 27*3^(m/6)|b|                             2688
+  T.|d_pm| <= 9|b| <= 27*3^(-4/6)|b|                   3540
+TOTAL cases: 13345  FAILURES: 0
+time 28.8s

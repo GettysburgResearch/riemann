@@ -1,0 +1,102 @@
+{
+ "campaign": "C1-detection-horizons",
+ "role": "adjudicator",
+ "script": "adj_farmer_x10.py",
+ "env": {
+  "python": "3.13.18",
+  "python-flint": "0.9.0",
+  "mpmath": "1.3.0"
+ },
+ "arb_prec_bits": 4000,
+ "sanity": {
+  "series_at_z=1": "[0.74284833639056918494 +/- 2.32e-21]",
+  "closed_form_at_z=1": "[0.74284833639056918494 +/- 2.32e-21]"
+ },
+ "results": [
+  {
+   "d": 117,
+   "deg_R": 58,
+   "max_rel_coeff_radius": 0.0,
+   "n_approx_nonreal": 0,
+   "approx_roots_v_first5": [
+    "2.46882198154",
+    "22.4058846725",
+    "98.1084066719",
+    "103.030613311",
+    "201.613498192"
+   ],
+   "certified_signs_all_nonzero": true,
+   "certified_sign_changes_on_[0,inf)": 58,
+   "verdict": "REAL-ROOTED (certified)"
+  },
+  {
+   "d": 118,
+   "deg_R": 59,
+   "max_rel_coeff_radius": 0.0,
+   "n_approx_nonreal": 0,
+   "approx_roots_v_first5": [
+    "2.4688075567",
+    "22.4040852842",
+    "98.7841051126",
+    "102.329684293",
+    "201.576250277"
+   ],
+   "certified_signs_all_nonzero": true,
+   "certified_sign_changes_on_[0,inf)": 59,
+   "verdict": "REAL-ROOTED (certified)"
+  },
+  {
+   "d": 119,
+   "deg_R": 59,
+   "max_rel_coeff_radius": 0.0,
+   "n_approx_nonreal": 0,
+   "approx_roots_v_first5": [
+    "2.46879341406",
+    "22.4023180618",
+    "100.024781094",
+    "101.064210229",
+    "201.539979616"
+   ],
+   "certified_signs_all_nonzero": true,
+   "certified_sign_changes_on_[0,inf)": 59,
+   "verdict": "REAL-ROOTED (certified)"
+  },
+  {
+   "d": 120,
+   "deg_R": 60,
+   "max_rel_coeff_radius": 0.0,
+   "n_approx_nonreal": 2,
+   "approx_roots_v_first5": [
+    "2.46877954555",
+    "22.4005821514",
+    "(100.532306991 - 1.6005932966j)",
+    "(100.532306991 + 1.6005932966j)",
+    "201.504653423"
+   ],
+   "u0_approx": "(0.0069814102077352036289 + 0.00011115231226355949897j)",
+   "box_halfwidth": 1.1115231226355952e-34,
+   "krawczyk_inside": true,
+   "box_disjoint_from_real_axis": true,
+   "verdict": "HAS A NON-REAL ZERO (certified)"
+  },
+  {
+   "d": 121,
+   "deg_R": 60,
+   "max_rel_coeff_radius": 0.0,
+   "n_approx_nonreal": 2,
+   "approx_roots_v_first5": [
+    "2.46876594345",
+    "22.398876729",
+    "(100.520323037 - 2.31389006685j)",
+    "(100.520323037 + 2.31389006685j)",
+    "201.470240266"
+   ],
+   "u0_approx": "(0.0068656733172172701375 + 0.00015804180498964481336j)",
+   "box_halfwidth": 1.5804180498964481e-34,
+   "krawczyk_inside": true,
+   "box_disjoint_from_real_axis": true,
+   "verdict": "HAS A NON-REAL ZERO (certified)"
+  }
+ ],
+ "runtime_s": 103.21691107749939
+}

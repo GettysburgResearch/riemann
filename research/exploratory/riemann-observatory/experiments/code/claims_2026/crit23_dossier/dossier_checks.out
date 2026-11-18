@@ -1,0 +1,73 @@
+CRIT23 dossier checks
+python-flint 0.9.0 | mpmath 1.3.0 | sympy 1.14.0 | working precision 256 bits
+
+(A) Arb enclosures of the AF / LZ constants
+  C_MT = 1/2 + cot(1/sqrt2)/sqrt2                [1.32749929632058835426562020920 +/- 3.30e-30]
+  C0 = 2 - C_MT                                  [0.672500703679411645734379790803 +/- 2.96e-31]
+  C1 = (3 - C_MT)/2                              [0.836250351839705822867189895402 +/- 3.53e-31]
+  C2 = (1+2sqrt2+2C0)/(3+2sqrt2)                 [0.887620008173354339866075859448 +/- 4.92e-33]
+  (2 + C0)/3  (box value, not unconditional)     [0.890833567893137215244793263601 +/- 9.85e-32]
+  1/c_MT(Lean form) - C_MT                       [+/- 2.64e-76]
+  1/c_MT(Lean) - C_MT contains 0: True
+  C1 - (C0 + 1)/2 contains 0: True
+  C0 > 0.6725  (AF '0.6725', LZ 'more than 67.25%')        proved by enclosure: True
+  C0 > 2/3                                                 proved by enclosure: True
+  C1 > 0.8362  (AF '0.8362', LZ 'more than 83.62%')        proved by enclosure: True
+  C1 > 5/6                                                 proved by enclosure: True
+  C2 > 0.8876  (LZ 'more than 88.76%')                     proved by enclosure: True
+  C0 > 0.417293 (PRZZ20 on-line record)                    proved by enclosure: True
+
+(B) KN constants (exact rationals from the Lean statements, KN Section 8)
+  distinct_zeros_839      q            1645064/1960733 = 0.8390045967502969552713194504300177535646
+  simple_zeros_678        2q-1         1329395/1960733 = 0.6780091935005939105426389008600355071292
+  simple_critical_zeros_673  s0        1669159/2478195 = 0.6735382001819872931710377916184965267059
+  average_simple_and_critical_8367     2073677/2478195 = 0.836769100090993646585518895809248263353
+  simple_or_critical_8891              3376433/3797325 = 0.8891609224914907204413633281323036611299
+  simple_or_critical_8893              50652159/56956375 = 0.8893150064413333889314409493230564620729
+  2q - 1 == 1329395/1960733 : True
+  (1 + s0)/2 == 2073677/2478195 : True
+  q  > C1 (LZ/AF distinct)                     True   gap = 0.0027542449
+  2q-1 > C0 (simple zeros, any location)       True   gap = 0.0055084898
+  s0 > C0 (simple on the line)                 True   gap = 0.0010374965
+  (1+s0)/2 > C1 (LZ average)                   True   gap = 0.00051874825
+  50652159/56956375 > C2 (LZ simple-or-line)   True   gap = 0.0016949983
+  q >= 0.83900459675 (KN Thm 1.1 decimal)      True
+  2q-1 >= 0.67800919 (KN Cor 1.2 decimal)      True
+  s0 >= 0.673538 (KN Thm 1.3 decimal)          True
+
+(C) Sharpness of the flat-window certificate for the information it uses (illustration)
+    Rescaled points on Z (flat window: K(x) = sin(pi x)/(pi x) vanishes at nonzero integers).
+    Each block of 6 consecutive integers: 4 simple on-line points, 1 'heavy' site, 1 empty site.
+    Heavy site = an on-line double, or an off-line pair n +/- i*eps (two simple off-line zeros).
+  heavy=double eps=0      N=150 N0s=100 Nd=125 |Im S|=0.0e+00 S/N=1.333333 2N-S=100.0000 (N0s=100) (3N-S)/2=125.0000 (Nd=125)
+  heavy=pair   eps=0.1    N=150 N0s=100 Nd=150 |Im S|=6.1e-42 S/N=1.364492 2N-S=95.3262 (N0s=100) (3N-S)/2=122.6631 (Nd=150)
+  heavy=pair   eps=0.01   N=150 N0s=100 Nd=150 |Im S|=2.1e-45 S/N=1.333625 2N-S=99.9562 (N0s=100) (3N-S)/2=124.9781 (Nd=150)
+  heavy=pair   eps=0.001  N=150 N0s=100 Nd=150 |Im S|=1.2e-48 S/N=1.333336 2N-S=99.9996 (N0s=100) (3N-S)/2=124.9998 (Nd=150)
+  same 'double' configuration, MT window: S/N = 1.338504 vs C_MT = [1.327499296 +/- 3.21e-10]: exceeds C_MT -> excluded by the MT second moment: True
+  (floating point, mpmath 40 digits; K_flat(n)=0 exactly at nonzero integers, so the eps=0
+   case is exact: S/N = (4 + 4)/6 = 4/3 and 2N - S = N0s.)
+
+(D) HYPOTHETICAL (conditional) input: flat window of Fourier support Delta, form factor
+    min(|alpha|,1) on [-Delta,Delta] for the sum over all zeros. Only Delta <= 1 is known
+    unconditionally (BGSTB24 Lemma 5; AF Section 5). Delta > 1 is beyond current knowledge.
+  C(Delta) for Delta <= 1 : Delta/3 + 1/Delta    (AF Rem 6.1: H = 2 - 1/l - l/3)
+  C(Delta) for Delta >= 1 : 1 + 1/(3*Delta**2)
+  Delta=1/2  C=13/6     quad=2.16666666667  2-C=-0.16666667 (3-C)/2=0.41666667
+  Delta=1    C=4/3      quad=1.33333333333  2-C=0.66666667  (3-C)/2=0.83333333
+  Delta=3/2  C=31/27    quad=1.14814814815  2-C=0.85185185  (3-C)/2=0.92592593
+  Delta=2    C=13/12    quad=1.08333333333  2-C=0.91666667  (3-C)/2=0.95833333
+  Delta=4    C=49/48    quad=1.02083333333  2-C=0.97916667  (3-C)/2=0.98958333
+  Delta=10   C=301/300  quad=1.00333333333  2-C=0.99666667  (3-C)/2=0.99833333
+
+(E) Re-check of the P1-F1 witnesses (AF Prop 4.2 proof), Arb arithmetic
+  zero #10085 from EXP-0001: [9949.990912111167754936463 +/- 5e-25]
+  T = 1e4: L = [7.372463306 +/- 4.34e-10]  h = [0.8522504686 +/- 3.72e-11]  d = floor(LT/2pi) = 11733.0000000  (LT/2pi = [11733.6397784458 +/- 3.45e-11] )
+  gamma in I' \ I = [T - sqrt T, T): True   D_rho = dist(gamma,{T,2T}) = [50.00908789 +/- 1.17e-9]
+  alpha_{-59} = [9949.71722235 +/- 4.09e-10]  |gamma - alpha_{-59}| = [0.27368976 +/- 7.61e-10]  < D_rho: True   (k = -59 is outside [0, d))
+  slip (b): alpha_d = T + d*h versus 2T
+    T=1000   d=806.0000000  alpha_d=[1998.88935104 +/- 4.33e-9] 2T-alpha_d=[1.11065 +/- 1.04e-6] alpha_d in [T,2T): True  floor unambiguous: True
+    T=2000   d=1834.000000  alpha_d=[3999.53341644 +/- 1.08e-9] 2T-alpha_d=[0.466584 +/- 4.42e-7] alpha_d in [T,2T): True  floor unambiguous: True
+    T=10000  d=11733.00000  alpha_d=[19999.4547485 +/- 1.98e-8] 2T-alpha_d=[0.545251 +/- 4.81e-7] alpha_d in [T,2T): True  floor unambiguous: True
+    T=30000  d=40446.00000  alpha_d=[59999.6983981 +/- 4.36e-8] 2T-alpha_d=[0.301602 +/- 5.66e-8] alpha_d in [T,2T): True  floor unambiguous: True
+
+done

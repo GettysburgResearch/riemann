@@ -1,0 +1,99 @@
+HatTable (FFT+spline) vs direct quadrature, |x|<=190, y in {0,.2,-.37,.49}: max abs error = 3.9e-11
+====================================================================================================
+PART A. Actual AF matrices G~ (eq. 2.10) from synthetic conjugation-invariant configurations
+====================================================================================================
+[separated, shallow pairs] window=flat L=6.0 d=200 distinct=38 N=60 s1=22 s2=4 p=6
+   S1: max|v_(1-conj rho) - conj v_rho| (or |Im v| on-line) = 7.49e-16;  max|Im G~| = 4.99e-16; max|G~-G~^T| = 4.44e-16
+   S3: min eig P = -1.62e-15 (>= -tol), rank P = 26 vs #on distinct = 26; n+(Q) = 6 <= p = 6; n+(Q') = 10 <= s2+p = 10; tr P1 = 22.000000 <= s1 = 22
+      pair depth |beta-1/2|=0.042 m=3: trace/(2m)=1.00000000, <a,b>/aL2=1.8e-13, (|a|^2-|b|^2)/aL2=1.00000000, eig range [-0.021, 6.021], signature (1,1)
+      pair depth |beta-1/2|=0.041 m=3: trace/(2m)=1.00000000, <a,b>/aL2=1.7e-13, (|a|^2-|b|^2)/aL2=1.00000000, eig range [-0.020, 6.020], signature (1,1)
+      pair depth |beta-1/2|=0.014 m=1: trace/(2m)=1.00000000, <a,b>/aL2=-3.4e-14, (|a|^2-|b|^2)/aL2=1.00000000, eig range [-0.001, 2.001], signature (1,1)
+      pair depth |beta-1/2|=0.033 m=2: trace/(2m)=1.00000000, <a,b>/aL2=-7.4e-14, (|a|^2-|b|^2)/aL2=1.00000000, eig range [-0.009, 4.009], signature (1,1)
+   S5(trace, interior): tr G~ = 60.00000000 vs N = 60;  ||G~||_HS^2 = 196.816067
+   S4: Lemma 3.2 slack (P1,Q') = 62.816067 (>=0);  chain (i) slack s1-(4trG-2N-HS) = 98.816067;  chain (ii) slack = 80.816067
+   LZ cross-check: tr K-matrix = 60.00000000, sum K^2 = 196.816067; max |eig(G~) - eig(K-matrix)| = 3.18e-11; max|Im eig(K)| = 1.1e-16
+[separated, deep pairs] window=flat L=6.0 d=200 distinct=37 N=61 s1=18 s2=3 p=8
+   S1: max|v_(1-conj rho) - conj v_rho| (or |Im v| on-line) = 1.79e-15;  max|Im G~| = 5.65e-16; max|G~-G~^T| = 1.11e-16
+   S3: min eig P = -1.46e-15 (>= -tol), rank P = 21 vs #on distinct = 21; n+(Q) = 8 <= p = 8; n+(Q') = 11 <= s2+p = 11; tr P1 = 18.000000 <= s1 = 18
+      pair depth |beta-1/2|=0.471 m=2: trace/(2m)=1.00000000, <a,b>/aL2=2.2e-12, (|a|^2-|b|^2)/aL2=1.00000000, eig range [-2.241, 6.241], signature (1,1)
+      pair depth |beta-1/2|=0.203 m=2: trace/(2m)=1.00000000, <a,b>/aL2=6.5e-13, (|a|^2-|b|^2)/aL2=1.00000000, eig range [-0.337, 4.337], signature (1,1)
+      pair depth |beta-1/2|=0.352 m=3: trace/(2m)=1.00000000, <a,b>/aL2=9.8e-13, (|a|^2-|b|^2)/aL2=1.00000000, eig range [-1.679, 7.679], signature (1,1)
+      pair depth |beta-1/2|=0.478 m=2: trace/(2m)=1.00000000, <a,b>/aL2=1.3e-12, (|a|^2-|b|^2)/aL2=1.00000000, eig range [-2.323, 6.323], signature (1,1)
+   S5(trace, interior): tr G~ = 61.00000000 vs N = 61;  ||G~||_HS^2 = 317.982291
+   S4: Lemma 3.2 slack (P1,Q') = 171.982291 (>=0);  chain (i) slack s1-(4trG-2N-HS) = 213.982291;  chain (ii) slack = 192.982291
+   LZ cross-check: tr K-matrix = 61.00000000, sum K^2 = 317.982291; max |eig(G~) - eig(K-matrix)| = 6.73e-11; max|Im eig(K)| = 5.8e-16
+[dense random] window=flat L=6.0 d=200 distinct=54 N=84 s1=30 s2=4 p=10
+   S1: max|v_(1-conj rho) - conj v_rho| (or |Im v| on-line) = 9.93e-16;  max|Im G~| = 8.11e-16; max|G~-G~^T| = 8.88e-16
+   S3: min eig P = -8.55e-16 (>= -tol), rank P = 33 vs #on distinct = 34; n+(Q) = 10 <= p = 10; n+(Q') = 14 <= s2+p = 14; tr P1 = 30.000000 <= s1 = 30
+      pair depth |beta-1/2|=0.169 m=2: trace/(2m)=1.00000000, <a,b>/aL2=4.5e-13, (|a|^2-|b|^2)/aL2=1.00000000, eig range [-0.229, 4.229], signature (1,1)
+      pair depth |beta-1/2|=0.328 m=3: trace/(2m)=1.00000000, <a,b>/aL2=4.6e-13, (|a|^2-|b|^2)/aL2=1.00000000, eig range [-1.427, 7.427], signature (1,1)
+      pair depth |beta-1/2|=0.248 m=1: trace/(2m)=1.00000000, <a,b>/aL2=3.6e-13, (|a|^2-|b|^2)/aL2=1.00000000, eig range [-0.258, 2.258], signature (1,1)
+      pair depth |beta-1/2|=0.108 m=1: trace/(2m)=1.00000000, <a,b>/aL2=-2.5e-13, (|a|^2-|b|^2)/aL2=1.00000000, eig range [-0.046, 2.046], signature (1,1)
+   S5(trace, interior): tr G~ = 84.00000000 vs N = 84;  ||G~||_HS^2 = 507.485133
+   S4: Lemma 3.2 slack (P1,Q') = 317.485133 (>=0);  chain (i) slack s1-(4trG-2N-HS) = 369.485133;  chain (ii) slack = 343.485133
+   LZ cross-check: tr K-matrix = 84.00000000, sum K^2 = 507.485133; max |eig(G~) - eig(K-matrix)| = 1.15e-10; max|Im eig(K)| = 5.6e-16
+[tight cluster (spacing << 1/L)] window=flat L=6.0 d=200 distinct=12 N=20 s1=6 s2=0 p=3
+   S1: max|v_(1-conj rho) - conj v_rho| (or |Im v| on-line) = 1.11e-15;  max|Im G~| = 4.61e-16; max|G~-G~^T| = 2.22e-16
+   S3: min eig P = -2.72e-15 (>= -tol), rank P = 5 vs #on distinct = 6; n+(Q) = 3 <= p = 3; n+(Q') = 3 <= s2+p = 3; tr P1 = 6.000000 <= s1 = 6
+      pair depth |beta-1/2|=0.151 m=2: trace/(2m)=1.00000000, <a,b>/aL2=-6.3e-13, (|a|^2-|b|^2)/aL2=1.00000000, eig range [-0.181, 4.181], signature (1,1)
+      pair depth |beta-1/2|=0.146 m=3: trace/(2m)=1.00000000, <a,b>/aL2=7.8e-14, (|a|^2-|b|^2)/aL2=1.00000000, eig range [-0.255, 6.255], signature (1,1)
+      pair depth |beta-1/2|=0.137 m=2: trace/(2m)=1.00000000, <a,b>/aL2=-1.5e-14, (|a|^2-|b|^2)/aL2=1.00000000, eig range [-0.150, 4.150], signature (1,1)
+   S5(trace, interior): tr G~ = 20.00000000 vs N = 20;  ||G~||_HS^2 = 240.647674
+   S4: Lemma 3.2 slack (P1,Q') = 190.647674 (>=0);  chain (i) slack s1-(4trG-2N-HS) = 206.647674;  chain (ii) slack = 198.647674
+   LZ cross-check: tr K-matrix = 20.00000000, sum K^2 = 240.647674; max |eig(G~) - eig(K-matrix)| = 6.18e-11; max|Im eig(K)| = 1.7e-16
+   [flat] random sweep of 60 configurations: all assertions hold = True
+[separated, shallow pairs] window=MT L=6.0 d=200 distinct=38 N=56 s1=22 s2=4 p=6
+   S1: max|v_(1-conj rho) - conj v_rho| (or |Im v| on-line) = 9.09e-16;  max|Im G~| = 3.93e-16; max|G~-G~^T| = 2.22e-16
+   S3: min eig P = -1.17e-15 (>= -tol), rank P = 26 vs #on distinct = 26; n+(Q) = 6 <= p = 6; n+(Q') = 10 <= s2+p = 10; tr P1 = 22.000000 <= s1 = 22
+      pair depth |beta-1/2|=0.026 m=2: trace/(2m)=1.00000000, <a,b>/aL2=1.0e-14, (|a|^2-|b|^2)/aL2=1.00000000, eig range [-0.005, 4.005], signature (1,1)
+      pair depth |beta-1/2|=0.016 m=1: trace/(2m)=1.00000000, <a,b>/aL2=-7.4e-15, (|a|^2-|b|^2)/aL2=1.00000000, eig range [-0.001, 2.001], signature (1,1)
+      pair depth |beta-1/2|=0.016 m=2: trace/(2m)=1.00000000, <a,b>/aL2=3.5e-14, (|a|^2-|b|^2)/aL2=1.00000000, eig range [-0.002, 4.002], signature (1,1)
+      pair depth |beta-1/2|=0.037 m=3: trace/(2m)=1.00000000, <a,b>/aL2=-7.2e-14, (|a|^2-|b|^2)/aL2=1.00000000, eig range [-0.015, 6.015], signature (1,1)
+   S5(trace, interior): tr G~ = 56.00000000 vs N = 56;  ||G~||_HS^2 = 163.119925
+   S4: Lemma 3.2 slack (P1,Q') = 45.119926 (>=0);  chain (i) slack s1-(4trG-2N-HS) = 73.119926;  chain (ii) slack = 59.119926
+   LZ cross-check: tr K-matrix = 56.00000000, sum K^2 = 163.119926; max |eig(G~) - eig(K-matrix)| = 6.69e-11; max|Im eig(K)| = 1.2e-16
+[separated, deep pairs] window=MT L=6.0 d=200 distinct=37 N=56 s1=18 s2=3 p=8
+   S1: max|v_(1-conj rho) - conj v_rho| (or |Im v| on-line) = 7.67e-15;  max|Im G~| = 3.56e-15; max|G~-G~^T| = 2.22e-16
+   S3: min eig P = -7.67e-16 (>= -tol), rank P = 21 vs #on distinct = 21; n+(Q) = 8 <= p = 8; n+(Q') = 11 <= s2+p = 11; tr P1 = 18.000000 <= s1 = 18
+      pair depth |beta-1/2|=0.243 m=3: trace/(2m)=1.00000000, <a,b>/aL2=-7.9e-14, (|a|^2-|b|^2)/aL2=1.00000000, eig range [-0.703, 6.703], signature (1,1)
+      pair depth |beta-1/2|=0.191 m=3: trace/(2m)=1.00000000, <a,b>/aL2=4.4e-13, (|a|^2-|b|^2)/aL2=1.00000000, eig range [-0.422, 6.422], signature (1,1)
+      pair depth |beta-1/2|=0.426 m=2: trace/(2m)=1.00000000, <a,b>/aL2=-1.4e-12, (|a|^2-|b|^2)/aL2=1.00000000, eig range [-1.658, 5.658], signature (1,1)
+      pair depth |beta-1/2|=0.180 m=1: trace/(2m)=1.00000000, <a,b>/aL2=6.2e-13, (|a|^2-|b|^2)/aL2=1.00000000, eig range [-0.125, 2.125], signature (1,1)
+   S5(trace, interior): tr G~ = 56.00000000 vs N = 56;  ||G~||_HS^2 = 258.811177
+   S4: Lemma 3.2 slack (P1,Q') = 132.811177 (>=0);  chain (i) slack s1-(4trG-2N-HS) = 164.811177;  chain (ii) slack = 148.811177
+   LZ cross-check: tr K-matrix = 56.00000000, sum K^2 = 258.811177; max |eig(G~) - eig(K-matrix)| = 8.15e-11; max|Im eig(K)| = 1.2e-16
+[dense random] window=MT L=6.0 d=200 distinct=54 N=69 s1=30 s2=4 p=10
+   S1: max|v_(1-conj rho) - conj v_rho| (or |Im v| on-line) = 1.11e-15;  max|Im G~| = 5.26e-16; max|G~-G~^T| = 1.11e-16
+   S3: min eig P = -9.23e-16 (>= -tol), rank P = 33 vs #on distinct = 34; n+(Q) = 10 <= p = 10; n+(Q') = 14 <= s2+p = 14; tr P1 = 30.000000 <= s1 = 30
+      pair depth |beta-1/2|=0.248 m=2: trace/(2m)=1.00000000, <a,b>/aL2=3.8e-13, (|a|^2-|b|^2)/aL2=1.00000000, eig range [-0.493, 4.493], signature (1,1)
+      pair depth |beta-1/2|=0.268 m=1: trace/(2m)=1.00000000, <a,b>/aL2=3.1e-13, (|a|^2-|b|^2)/aL2=1.00000000, eig range [-0.289, 2.289], signature (1,1)
+      pair depth |beta-1/2|=0.339 m=1: trace/(2m)=1.00000000, <a,b>/aL2=8.4e-13, (|a|^2-|b|^2)/aL2=1.00000000, eig range [-0.488, 2.488], signature (1,1)
+      pair depth |beta-1/2|=0.243 m=3: trace/(2m)=1.00000000, <a,b>/aL2=8.9e-13, (|a|^2-|b|^2)/aL2=1.00000000, eig range [-0.706, 6.706], signature (1,1)
+   S5(trace, interior): tr G~ = 69.00000000 vs N = 69;  ||G~||_HS^2 = 287.338614
+   S4: Lemma 3.2 slack (P1,Q') = 157.338614 (>=0);  chain (i) slack s1-(4trG-2N-HS) = 179.338614;  chain (ii) slack = 168.338614
+   LZ cross-check: tr K-matrix = 69.00000000, sum K^2 = 287.338614; max |eig(G~) - eig(K-matrix)| = 4.53e-11; max|Im eig(K)| = 3.0e-16
+[tight cluster (spacing << 1/L)] window=MT L=6.0 d=200 distinct=12 N=18 s1=6 s2=0 p=3
+   S1: max|v_(1-conj rho) - conj v_rho| (or |Im v| on-line) = 1.03e-15;  max|Im G~| = 9.74e-16; max|G~-G~^T| = 2.22e-16
+   S3: min eig P = -2.08e-15 (>= -tol), rank P = 4 vs #on distinct = 6; n+(Q) = 3 <= p = 3; n+(Q') = 3 <= s2+p = 3; tr P1 = 6.000000 <= s1 = 6
+      pair depth |beta-1/2|=0.119 m=2: trace/(2m)=1.00000000, <a,b>/aL2=-1.5e-14, (|a|^2-|b|^2)/aL2=1.00000000, eig range [-0.107, 4.107], signature (1,1)
+      pair depth |beta-1/2|=0.290 m=3: trace/(2m)=1.00000000, <a,b>/aL2=3.1e-13, (|a|^2-|b|^2)/aL2=1.00000000, eig range [-1.037, 7.037], signature (1,1)
+      pair depth |beta-1/2|=0.050 m=1: trace/(2m)=1.00000000, <a,b>/aL2=-2.6e-14, (|a|^2-|b|^2)/aL2=1.00000000, eig range [-0.009, 2.009], signature (1,1)
+   S5(trace, interior): tr G~ = 18.00000000 vs N = 18;  ||G~||_HS^2 = 303.132868
+   S4: Lemma 3.2 slack (P1,Q') = 261.132868 (>=0);  chain (i) slack s1-(4trG-2N-HS) = 273.132868;  chain (ii) slack = 267.132868
+   LZ cross-check: tr K-matrix = 18.00000000, sum K^2 = 303.132868; max |eig(G~) - eig(K-matrix)| = 1.08e-10; max|Im eig(K)| = 5.7e-16
+   [MT] random sweep of 60 configurations: all assertions hold = True
+PART A summary: all S1/S3/S4 assertions hold = True; min Lemma 3.2 slack = 0.8428; max spectral mismatch AF G~ vs LZ K-matrix (non-cluster) = 1.15e-10
+====================================================================================================
+PART B. Linear algebra lemmas in isolation
+====================================================================================================
+Lemma 3.1 (n+(A* Q0 A) <= n+(Q0)), 3000 random complex instances: max violation = 0 (must be <= 0)
+Lemma 3.2 proof steps on 20000 random Hermitian instances (min of LHS-RHS, all must be >= 0 up to rounding):
+   vN    : 0.000e+00
+   step1 : -5.821e-11
+   step2 : 0.000e+00
+   step3 : -6.821e-13
+   final : 1.192e-06
+Lemma 3.2 adversarial L-BFGS search, 400 starts (d<=6): min slack found = -7.105e-15 at (d,r,b,#neg)=(6, 0, 2, 2) (0 is attained by the stated equality case; negative beyond rounding would refute the lemma)
+Lemma 3.2 equality case P=Pi1 (rank 2), Q=2 Pi2 (rank 3), exact sympy: r - RHS = 0
+AF 7.2(b) extremal (per N): tr = 1, HS^2 = 4/3, s1 = 2/3, distinct = 5/6; certificate (i) 4tr-2-HS = 2/3, (ii) (4tr-HS-1)/2 = 5/6
+OVERALL: PART A ok=True; Lemma 3.1 ok=True; Lemma 3.2 steps ok=True; adversarial ok=True; equality exact=True

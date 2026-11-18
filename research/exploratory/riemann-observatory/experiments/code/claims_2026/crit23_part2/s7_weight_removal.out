@@ -1,0 +1,37 @@
+(a) sympy: r^(z) w(D) - K(z)^2 at z = i D log T/(2 pi)  -> 0
+    and r^(z) = (1 + pi^2 z^2/log^2 T) K(z)^2: 0
+(b) Lamzouri construction, delta = 0.1: A_delta = 0.898067918346888, int f_delta = 1.000000000000000
+    D = rho-rho' =     (0.3+0.7j): z = -1.5392+0.6596j, K(z)^2 = 3.720197e-01-6.952722e-02j, |r^(z) w(D) - K(z)^2|/|K(z)^2| = 2.84e-11
+    D = rho-rho' =    (-0.7+1.9j): z = -4.1777-1.5392j, K(z)^2 = -1.627061e+00-5.475035e+00j, |r^(z) w(D) - K(z)^2|/|K(z)^2| = 8.32e-13
+    D = rho-rho' =    (0.05-0.4j): z = 0.8795+0.1099j, K(z)^2 = 7.275529e-02-7.408085e-02j, |r^(z) w(D) - K(z)^2|/|K(z)^2| = 1.13e-10
+    D = rho-rho' =       (0.9+0j): z = 0.0000+1.9789j, K(z)^2 = 4.195430e+02+0.000000e+00j, |r^(z) w(D) - K(z)^2|/|K(z)^2| = 3.98e-14
+    D = rho-rho' =   (-0.45+3.3j): z = -7.2561-0.9895j, K(z)^2 = 7.057680e-02+2.741539e-02j, |r^(z) w(D) - K(z)^2|/|K(z)^2| = 9.97e-12
+    D = rho-rho' =            12j: z = -26.3857+0.0000j, K(z)^2 = 6.105548e-07+0.000000e+00j, |r^(z) w(D) - K(z)^2|/|K(z)^2| = 1.11e-05
+    max relative difference = 1.11e-05 (quadrature level)
+(c) Q(0) = 1.124266694366 (= int f_delta^2), Q''(0) = -42.2520433577; Q''(0) + 2 int_0^1 a Q''(a) da = -40.0035099695  vs  Q''(0) + 2 Q(0) = -40.0035099689
+    C_delta = Q(0) + 2 int_0^1 a Q(a) da = 1.410229326018  (C_MT = 1.327499296321; C_delta - C_MT = 8.273e-02, >= 0 as CCLM optimality predicts)
+(d) BGSTB24 Lemma 3 integral identity at complex a, |Im a| < 1 (breakpoints at the near-real poles t = -Re a):
+    a = (0.7 + 0.3j): |lhs - rhs| = 0.0
+    a = (-2.5 - 0.9j): |lhs - rhs| = 0.0
+    a = (5.0 + 0.99j): |lhs - rhs| = 2.76e-32
+    a = (0.0 + 0.5j): |lhs - rhs| = 4.93e-39
+    a = (-1.3 + 0.0j): |lhs - rhs| = 0.0
+(e) BGSTB24 Thm 1 proof, x = T: log(E/x) = -2 eta(T log^2 T) log T + 3 log log T, with l = log T
+    (E/x must be O(1); it is, for large T, with Korobov-Vinogradov, and is ~ e^{-2c} log^3 T with eta = c/log t)
+    c=0.05 log T=1e1 : log(E/x) KV =      6.78729   classical =    6.83929
+    c=0.05 log T=1e2 : log(E/x) KV =      13.5541   classical =    13.7239
+    c=0.05 log T=1e4 : log(E/x) KV =      26.6046   classical =    27.5312
+    c=0.05 log T=1e6 : log(E/x) KV =      37.2791   classical =    41.3465
+    c=0.05 log T=1e8 : log(E/x) KV =      37.6869   classical =     55.162
+    c=0.05 log T=1e10: log(E/x) KV =     -6.65131   classical =    68.9776
+    c=0.05 log T=1e12: log(E/x) KV =     -247.883   classical =    82.7931
+    c=0.05 log T=1e15: log(E/x) KV =     -2967.04   classical =    103.516
+    c= 0.5 log T=1e1 : log(E/x) KV =      5.70306   classical =    6.22307
+    c= 0.5 log T=1e2 : log(E/x) KV =      11.2014   classical =    12.8998
+    c= 0.5 log T=1e4 : log(E/x) KV =      17.3663   classical =    26.6329
+    c= 0.5 log T=1e6 : log(E/x) KV =    -0.227872   classical =    40.4466
+    c= 0.5 log T=1e8 : log(E/x) KV =     -120.489   classical =     54.262
+    c= 0.5 log T=1e10: log(E/x) KV =     -688.211   classical =    68.0776
+    c= 0.5 log T=1e12: log(E/x) KV =     -3224.87   classical =    81.8931
+    c= 0.5 log T=1e15: log(E/x) KV =     -30602.9   classical =    102.616
+    -> classical: log(E/x) ~ 3 log log T - 2c -> +inf; KV: -> -inf (eventually, for any fixed c > 0).

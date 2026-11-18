@@ -1,0 +1,164 @@
+<title>Riemann Observatory</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a single reading column (~68ch) with wide tables allowed to scroll; status chips encode evidence level. */
+:root {
+  --bg: #f6f7f9; --surface: #ffffff; --fg: #1b2230; --muted: #5b6577; --rule: #d9dee7;
+  --accent: #2f5d8a; --accent-soft: #e6eef7;
+  --ok: #2e7d4f; --ok-soft: #e4f3ea; --warn: #9a6500; --warn-soft: #fbf0db; --bad: #a33a2b; --bad-soft: #f8e5e1;
+  --f-display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --f-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11151c; --surface: #171d26; --fg: #e3e8f0; --muted: #9aa5b7; --rule: #2b3442;
+  --accent: #8fb6de; --accent-soft: #1d2a3a;
+  --ok: #7fcf9f; --ok-soft: #173025; --warn: #e5b45a; --warn-soft: #33281a; --bad: #ef8f80; --bad-soft: #3a1f1b; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11151c; --surface: #171d26; --fg: #e3e8f0; --muted: #9aa5b7; --rule: #2b3442;
+  --accent: #8fb6de; --accent-soft: #1d2a3a;
+  --ok: #7fcf9f; --ok-soft: #173025; --warn: #e5b45a; --warn-soft: #33281a; --bad: #ef8f80; --bad-soft: #3a1f1b; color-scheme: dark }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: var(--f-body); font-size: 15px; line-height: 1.6; }
+.wrap { max-width: 980px; margin: 0 auto; padding-block: 32px 64px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 36px; }
+header { display: grid; gap: 10px; }
+.eyebrow { font-family: var(--f-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h1 { font-family: var(--f-display); font-weight: 600; font-size: clamp(30px, 5vw, 44px); line-height: 1.12; margin: 0; text-wrap: balance; }
+h2 { font-family: var(--f-display); font-weight: 600; font-size: 24px; margin: 0 0 6px; text-wrap: balance; }
+h3 { font-size: 15px; font-weight: 600; margin: 0; }
+p { margin: 0; max-width: 68ch; }
+.lede { font-size: 17px; color: var(--fg); max-width: 70ch; }
+.status { border-left: 3px solid var(--accent); background: var(--accent-soft); padding: 12px 16px; font-size: 14px; max-width: 76ch; }
+section { display: grid; gap: 14px; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.stat { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 12px 14px; display: grid; gap: 2px; }
+.stat b { font-family: var(--f-mono); font-size: 22px; font-weight: 500; font-variant-numeric: tabular-nums; }
+.stat span { font-size: 12.5px; color: var(--muted); }
+.tbl { overflow-x: auto; border: 1px solid var(--rule); border-radius: 6px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; min-width: 640px; font-size: 14px; }
+th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--rule); }
+th { font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); font-weight: 600; background: var(--bg); }
+tr:last-child td { border-bottom: 0; }
+.chip { display: inline-block; font-family: var(--f-mono); font-size: 11.5px; padding: 1px 8px; border-radius: 999px; white-space: nowrap; border: 1px solid transparent; }
+.chip.ok { color: var(--ok); background: var(--ok-soft); border-color: color-mix(in srgb, var(--ok) 30%, transparent); }
+.chip.warn { color: var(--warn); background: var(--warn-soft); border-color: color-mix(in srgb, var(--warn) 30%, transparent); }
+.chip.bad { color: var(--bad); background: var(--bad-soft); border-color: color-mix(in srgb, var(--bad) 30%, transparent); }
+.chip.neutral { color: var(--accent); background: var(--accent-soft); }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+.card { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.card p { font-size: 14px; }
+ol.opps { margin: 0; padding-left: 1.4em; display: grid; gap: 8px; max-width: 76ch; }
+ol.opps li { padding-left: 4px; }
+ul.plain { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; max-width: 76ch; }
+code, .mono { font-family: var(--f-mono); font-size: 13px; }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.links { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 8px 16px; }
+.links a { display: block; padding: 8px 0; border-bottom: 1px solid var(--rule); text-decoration: none; }
+.links a span { display: block; color: var(--muted); font-size: 12.5px; }
+footer { color: var(--muted); font-size: 13px; border-top: 1px solid var(--rule); padding-top: 16px; }
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Evidence-graded research archive · search cutoff 2026-11-17</div>
+  <h1>The Riemann Observatory</h1>
+  <p class="lede">A map of Riemann Hypothesis research from Riemann (1859) and its antecedents to November 2026: a curated 1,000-work corpus, a verified ledger of frontier records, audits of the major 2026 claims, five adjudicated research campaigns, and registers of findings, connections and obstructions.</p>
+  <div class="status"><strong>RH remains open.</strong> Nothing here proves or disproves it. All verification was done by AI agents (different agent instances checking each other); no human expert has reviewed the archive. "No error found" means none was found in the inspected portion.</div>
+</header>
+
+<section aria-labelledby="numbers">
+  <h2 id="numbers">What was built</h2>
+  <div class="stats">
+    <div class="stat"><b>20,166</b><span>candidate works pooled (zbMATH, arXiv, citation expansion)</span></div>
+    <div class="stat"><b>3,373</b><span>candidates triaged, each with a recorded reason</span></div>
+    <div class="stat"><b>1,000</b><span>works selected across 8 families and strata 1737–2026</span></div>
+    <div class="stat"><b>154</b><span>works read in full or partial text (L1)</span></div>
+    <div class="stat"><b>1,635</b><span>theorem and lemma statements with source locations</span></div>
+    <div class="stat"><b>232</b><span>frontier records, each re-checked by a second agent</span></div>
+    <div class="stat"><b>16</b><span>audit findings in the register</span></div>
+    <div class="stat"><b>100,000</b><span>zeta zeros computed with certified Arb enclosures</span></div>
+  </div>
+</section>
+
+<section aria-labelledby="claims">
+  <h2 id="claims">The 2026 claims and what our audits found</h2>
+  <p>2026 moved the frontier near Re s = 1 and in density statements. None of these results bears on the critical line Re s = 1/2 itself.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Claim</th><th>Source and status</th><th>Observatory audit</th></tr></thead>
+    <tbody>
+      <tr><td>ζ and every Dirichlet L-function have no zeros in Re s &gt; 11/12</td><td>OpenAI manuscript, Oct 2026; AI-generated, human-edited; unrefereed</td><td><span class="chip ok">no error found</span> Section-by-section Level-2 audit; about 100 identity checks in ℤ[ω]. Imported metaplectic inputs checked against statements, not re-proved (FND-0009).</td></tr>
+      <tr><td>The same with Re s &gt; 7/8</td><td>OpenAI manuscript, Sept 2026, 199 pp.; Lean formalization claimed</td><td><span class="chip warn">not audited</span> Read for structure. Lean statement inspected statically; not compiled (blocked by session policy).</td></tr>
+      <tr><td>At least 2/3 of zeros are simple and on the critical line (0.6725 with the Montgomery–Taylor window)</td><td>Alpöge–Furman, Aug 2026 (argument found by an AI model); independent proof by Lamzouri; unrefereed</td><td><span class="chip ok">theorems unaffected</span> One proof step in Prop. 4.2 is wrong as written; a short repair restores it (FND-0004).</td></tr>
+      <tr><td>No Landau–Siegel zeros: (1 − β) log q ≥ c for all real primitive χ</td><td>OpenAI, Oct 2026; human re-proofs by Banks, Kerr, Guo; unrefereed</td><td><span class="chip ok">no issue found</span> Flagged items adjudicated as not issues; the all-q constant 3.0·10⁻³ depends on a disclosed, unreplayed computation (FND-0010).</td></tr>
+      <tr><td>Zero density A(σ) ≤ 30/13; primes in [x, x + x<sup>17/30+ε</sup>]</td><td>Guth–Maynard, Annals 2026</td><td><span class="chip neutral">refereed</span> Recorded in the ledger (LED-ZDE).</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section aria-labelledby="findings">
+  <h2 id="findings">Verified findings, in the wording the register allows</h2>
+  <div class="cards">
+    <div class="card"><h3><span class="chip bad">verified error</span> Hilbert–Pólya Hamiltonian (2024)</h3><p>The Stage-II similarity-transformation claim in Yakaboylu's J. Phys. A paper fails: the weight defines an indefinite form and the boundary condition admits spurious solutions where ζ ≠ 0. The paper does not claim RH. (FND-0001)</p></div>
+    <div class="card"><h3><span class="chip bad">verified error</span> Farmer, Table 4.1 (2022)</h3><p>Printed Jensen-polynomial thresholds do not match the configuration described (for j = 10: certified 120, printed 119). The paper's conclusion is unaffected. (FND-0002)</p></div>
+    <div class="card"><h3><span class="chip warn">localized, not load-bearing</span> Zero-free constant 4.896 (2026 preprint)</h3><p>One Table 1 entry is not a valid bound for the stated polynomial; with the corrected value the theorem still holds. We independently reproduced the constant 4.896. (FND-0003)</p></div>
+    <div class="card"><h3><span class="chip neutral">correct but misread</span> Three citation hazards</h3><p>Connes 1999 Theorem 5 is proved in positive characteristic only; Andrade–Keating's Theorem 1 rests on their Conjecture 5; an apparent "k ≥ 12" in Ng–Shen–Wong was our own text-extraction artifact. (FND-0006, -0007, -0008)</p></div>
+  </div>
+</section>
+
+<section aria-labelledby="campaigns">
+  <h2 id="campaigns">Research campaigns (investigator, skeptic, adjudicator)</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Campaign</th><th>Main adjudicated outcome</th></tr></thead>
+    <tbody>
+      <tr><td><b>C1</b> Detection horizons</td><td>Theorem: RH up to height T implies λ<sub>n</sub> &gt; 0 for n ≤ T². With the rigorous verification height T₀ ≈ 3·10¹², published Li, Jensen and ψ/π computations carry no information beyond T₀.</td></tr>
+      <tr><td><b>C2</b> Countermodel zoo</td><td>Certified off-line zeros for Davenport–Heilbronn and Epstein functions. F(s) = ζ(s)(1 + c·2⁻ˢ + 2·4⁻ˢ), c &gt; 2√2, has an Euler product and a functional equation yet zeros off the line, so "uses the Euler product" is not a sufficient sanity check.</td></tr>
+      <tr><td><b>C3</b> Failure anatomy</td><td>Exact failing steps of withdrawn proofs; a 15-mode failure taxonomy and checklist. The de Branges zero condition fails at 15,567 of the first 100,000 zeros, with an exact criterion in terms of S(γ<sub>n</sub>) mod 2.</td></tr>
+      <tr><td><b>C4</b> Weil-window locality</td><td><span class="chip bad">heuristic refuted</span> The proposed Nyquist threshold is false: under a single-defect hypothesis a window of length L ≈ (1/(2δ)) log log T already detects an off-line zero at height T. Blindness holds only extremely close to the line.</td></tr>
+      <tr><td><b>C5</b> Function-field transfer</td><td>Sharp window theorem over 𝔽<sub>q</sub>: Weil positivity on (−a, a) holds iff T<sub>⌈2a/log q⌉</sub> ≥ 0, so RH for a genus-g curve follows from any window with a &gt; (g − ½) log q.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section aria-labelledby="opps">
+  <h2 id="opps">Where to work first</h2>
+  <p>The first ten of the archive's 25 ranked opportunities. Verification gates come before new building.</p>
+  <ol class="opps">
+    <li>Kernel-replay the Lean formalizations of the 2026 statements (with an independent kernel).</li>
+    <li>Human verification of the imported inputs behind Prop. 3.1 of the 11/12 proof.</li>
+    <li>Bring one Landau–Siegel exclusion argument to version-of-record standard.</li>
+    <li>Close the residual gaps of the 2/3 critical-line audit.</li>
+    <li>A Level-2 audit of the 7/8 argument.</li>
+    <li>A falsification handle for Proposition 3.1.</li>
+    <li>Certified Weil positivity on a window that contains primes.</li>
+    <li>An explicit Nicolas/Robin implication theorem from partial RH.</li>
+    <li>An RH-free 19/27 simple-zero proportion via the off-line pair defect.</li>
+    <li>Distinct zeros of an individual GL(2) L-function via the rank–trace certificate.</li>
+  </ol>
+</section>
+
+<section aria-labelledby="read">
+  <h2 id="read">Read the archive</h2>
+  <div class="links">
+    <a href="https://github.com/GettysburgResearch/riemann/blob/claude/charming-mccarthy-7h4rdu/research/exploratory/riemann-observatory/START_HERE.md">START_HERE.md<span>One-day reading plan</span></a>
+    <a href="https://github.com/GettysburgResearch/riemann/blob/claude/charming-mccarthy-7h4rdu/research/exploratory/riemann-observatory/executive_report.md">executive_report.md<span>Counts, findings, recommendations</span></a>
+    <a href="https://github.com/GettysburgResearch/riemann/blob/claude/charming-mccarthy-7h4rdu/research/exploratory/riemann-observatory/final_synthesis/comprehensive_report.md">comprehensive_report.md<span>Answers to the ten synthesis questions</span></a>
+    <a href="https://github.com/GettysburgResearch/riemann/blob/claude/charming-mccarthy-7h4rdu/research/exploratory/riemann-observatory/audits/verified_findings.md">verified_findings.md<span>Findings register, scoped wording</span></a>
+    <a href="https://github.com/GettysburgResearch/riemann/blob/claude/charming-mccarthy-7h4rdu/research/exploratory/riemann-observatory/frontiers/records_ledger.md">records_ledger.md<span>232 verified frontier records</span></a>
+    <a href="https://github.com/GettysburgResearch/riemann/blob/claude/charming-mccarthy-7h4rdu/research/exploratory/riemann-observatory/audits/quasi_rh/DOSSIER.md">quasi_rh/DOSSIER.md<span>11/12 audit and method limits</span></a>
+  </div>
+</section>
+
+<section aria-labelledby="limits">
+  <h2 id="limits">Limits to keep in mind</h2>
+  <ul class="plain">
+    <li>846 of the 1,000 works have index-level records only; 78 Level-1 targets had no legitimate open full text.</li>
+    <li>No Lean development was compiled or replayed; building third-party code was blocked by the session's safety policy.</li>
+    <li>Text extraction drops fractions and overlines; check any load-bearing statement against the original source.</li>
+    <li>The 2024–2026 stratum is moving quickly; statuses may change after the cutoff.</li>
+  </ul>
+</section>
+
+<footer>Archive location: <span class="mono">research/exploratory/riemann-observatory/</span> on branch <span class="mono">claude/charming-mccarthy-7h4rdu</span> of GettysburgResearch/riemann. Exploration layer; no change to the repository's integrated results.</footer>
+</div>

@@ -1,0 +1,32 @@
+C5 gamma_2 CRT vs direct: 31 composite squarefree n with N(n)<=400, max |diff| = 7.58e-15
+C5 |gamma_2(p)| range over 448 primes: [1.000000000000, 1.000000000000]
+C1[genuine,xi=1] X=3000.0, supp W=[0.002,1.0], #n=850, #h=5, #b=5 (non-squarefree b in range: 0); |LHS|=0.059749, |LHS-RHS|=1.06e-16
+C3[genuine,xi=1] Psi_k(b)^3 = xi(b)^3 chi_b(k)^3 1_(b,f)=1 over 5 b (incl. prime powers): max err 1.94e-15
+C2[genuine,xi=1] H_c=1: |P_long(def) - P_long(b-form)| = 9.34e-18, |P_long|=0.022712, |beta_0|<=tau_div: True
+C2[genuine,xi=1] H_c=7: |P_long(def) - P_long(b-form)| = 0.00e+00, |P_long|=0.022022, |beta_0|<=tau_div: True
+C2[genuine,xi=1] H_c=10: |P_long(def) - P_long(b-form)| = 0.00e+00, |P_long|=0.022022, |beta_0|<=tau_div: True
+C1[genuine,xi=cubic mod 2] X=3000.0, supp W=[0.002,1.0], #n=850, #h=5, #b=5 (non-squarefree b in range: 0); |LHS|=0.225230, |LHS-RHS|=3.93e-17
+C3[genuine,xi=cubic mod 2] Psi_k(b)^3 = xi(b)^3 chi_b(k)^3 1_(b,f)=1 over 5 b (incl. prime powers): max err 1.83e-15
+C2[genuine,xi=cubic mod 2] H_c=1: |P_long(def) - P_long(b-form)| = 1.06e-17, |P_long|=0.017693, |beta_0|<=tau_div: True
+C2[genuine,xi=cubic mod 2] H_c=7: |P_long(def) - P_long(b-form)| = 0.00e+00, |P_long|=0.022022, |beta_0|<=tau_div: True
+C2[genuine,xi=cubic mod 2] H_c=10: |P_long(def) - P_long(b-form)| = 0.00e+00, |P_long|=0.022022, |beta_0|<=tau_div: True
+C1[random-coeff,xi=1] X=130000.0, supp W=[0.0005,1.0], #n=36699, #h=15, #b=17 (non-squarefree b in range: 2); |LHS|=0.272920, |LHS-RHS|=2.22e-16
+C3[random-coeff,xi=1] Psi_k(b)^3 = xi(b)^3 chi_b(k)^3 1_(b,f)=1 over 17 b (incl. prime powers): max err 3.66e-15
+C2[random-coeff,xi=1] H_c=1: |P_long(def) - P_long(b-form)| = 2.78e-17, |P_long|=0.023723, |beta_0|<=tau_div: True
+C2[random-coeff,xi=1] H_c=7: |P_long(def) - P_long(b-form)| = 1.41e-17, |P_long|=0.038097, |beta_0|<=tau_div: True
+C2[random-coeff,xi=1] H_c=13: |P_long(def) - P_long(b-form)| = 2.13e-17, |P_long|=0.039465, |beta_0|<=tau_div: True
+C2[random-coeff,xi=1] H_c=30: |P_long(def) - P_long(b-form)| = 1.45e-17, |P_long|=0.039952, |beta_0|<=tau_div: True
+C1[random-coeff,xi=cubic mod 2] X=130000.0, supp W=[0.0005,1.0], #n=36699, #h=15, #b=17 (non-squarefree b in range: 2); |LHS|=0.149297, |LHS-RHS|=6.41e-17
+C3[random-coeff,xi=cubic mod 2] Psi_k(b)^3 = xi(b)^3 chi_b(k)^3 1_(b,f)=1 over 17 b (incl. prime powers): max err 3.58e-15
+C2[random-coeff,xi=cubic mod 2] H_c=1: |P_long(def) - P_long(b-form)| = 1.06e-16, |P_long|=0.081580, |beta_0|<=tau_div: True
+C2[random-coeff,xi=cubic mod 2] H_c=7: |P_long(def) - P_long(b-form)| = 7.41e-18, |P_long|=0.036527, |beta_0|<=tau_div: True
+C2[random-coeff,xi=cubic mod 2] H_c=13: |P_long(def) - P_long(b-form)| = 1.59e-17, |P_long|=0.040727, |beta_0|<=tau_div: True
+C2[random-coeff,xi=cubic mod 2] H_c=30: |P_long(def) - P_long(b-form)| = 1.45e-17, |P_long|=0.039952, |beta_0|<=tau_div: True
+C1[CONTROL hpow=1/2] X=130000.0, supp W=[0.0005,1.0], #n=36699, #h=15, #b=17 (non-squarefree b in range: 2); |LHS|=0.149297, |LHS-RHS|=2.69e-01
+C3[CONTROL hpow=1/2] Psi_k(b)^3 = xi(b)^3 chi_b(k)^3 1_(b,f)=1 over 17 b (incl. prime powers): max err 3.58e-15
+C1[CONTROL h-side alpha^3 (no conj)] X=3000.0, supp W=[0.002,1.0], #n=850, #h=5, #b=5 (non-squarefree b in range: 0); |LHS|=0.225230, |LHS-RHS|=2.49e-02
+C3[CONTROL h-side alpha^3 (no conj)] Psi_k(b)^3 = xi(b)^3 chi_b(k)^3 1_(b,f)=1 over 5 b (incl. prime powers): max err 1.83e-15
+C4 chi_p(u0 s v^2)chi_p(f)^4 = chi_p(u0 s)chi_p(f v^2)^4: 60000 (row,prime) cases incl. v with 2|v or lambda|v, failures 0
+C4 T(X;u0 s v^2,f) vs T(X;u0 s,f v^2): |T|=0.091054, diff=0.00e+00
+C4 T(X;u0 s v^2,f) vs T(X;u0 s,f v^2): |T|=0.293364, diff=0.00e+00
+C4 T(X;u0 s v^2,f) vs T(X;u0 s,f v^2): |T|=0.291469, diff=0.00e+00

@@ -1,0 +1,11 @@
+terms: theta 1318, F+ 3171, F- 3171, build 92.9s
+support/size t_+: nonzero 3171, max |t|/(9|b|) = 1.000000000000
+support/size t_-: nonzero 3171, max |t|/(9|b|) = 1.000000000000
+gamma_+ (DR gamma_10) at z=(0.75+0.966j) v=0.50 (theta evaluated at height 1.55): theta(g w)=(10.01694517+0.00051147j)  series=(10.01694517+0.00051147j)  rel.err 8.88e-15
+gamma_+ (DR gamma_10) at z=(0.3+1.116j) v=0.50 (theta evaluated at height 1.42): theta(g w)=(9.63594884+0.00057131j)  series=(9.63594884+0.00057131j)  rel.err 5.54e-15
+gamma_+ (DR gamma_10) at z=(0.55+0.566j) v=0.50 (theta evaluated at height 1.46): theta(g w)=(10.21171552-0.00032744j)  series=(10.21171552-0.00032744j)  rel.err 4.23e-15
+gamma_- (DR gamma_19) at z=(0.75-0.766j) v=0.50 (theta evaluated at height 1.55): theta(g w)=(9.74227007+0.00096122j)  series=(9.74227007+0.00096122j)  rel.err 7.85e-15
+gamma_- (DR gamma_19) at z=(0.3-0.616j) v=0.50 (theta evaluated at height 1.42): theta(g w)=(10.81488339-4.1e-06j)  series=(10.81488339-4.1e-06j)  rel.err 6.59e-15
+gamma_- (DR gamma_19) at z=(0.55-1.166j) v=0.50 (theta evaluated at height 1.46): theta(g w)=(9.21455395-0.00183199j)  series=(9.21455395-0.00183199j)  rel.err 7.71e-15
+negative control (t_- series vs theta(gamma_+ w)): rel.err 1.12e+00
+total 93.1s

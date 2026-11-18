@@ -1,0 +1,95 @@
+{
+ "env": {
+  "python": "3.13.18",
+  "numpy": "2.5.3",
+  "mpmath": "1.3.0",
+  "scipy": "1.18.1",
+  "python-flint": "0.9.0"
+ },
+ "result": {
+  "A: moved 11pi/2,13pi/2 (17.28,20.42) [closest to 20]": {
+   "tau_c": 0.001040113001170806,
+   "pred_first_nonreal_d": 480.7169984772555,
+   "certify": {
+    "477": {
+     "certified_nonreal_roots_of_R": 0,
+     "negative_real_roots_of_R": 0,
+     "J_real_rooted": true
+    },
+    "479": {
+     "certified_nonreal_roots_of_R": 2,
+     "negative_real_roots_of_R": 0,
+     "J_real_rooted": false
+    },
+    "481": {
+     "certified_nonreal_roots_of_R": 2,
+     "negative_real_roots_of_R": 0,
+     "J_real_rooted": false
+    },
+    "483": {
+     "certified_nonreal_roots_of_R": 2,
+     "negative_real_roots_of_R": 0,
+     "J_real_rooted": false
+    },
+    "749": {
+     "certified_nonreal_roots_of_R": 2,
+     "negative_real_roots_of_R": 0,
+     "J_real_rooted": false
+    },
+    "750": {
+     "certified_nonreal_roots_of_R": 2,
+     "negative_real_roots_of_R": 0,
+     "J_real_rooted": false
+    },
+    "760": {
+     "certified_nonreal_roots_of_R": 2,
+     "negative_real_roots_of_R": 0,
+     "J_real_rooted": false
+    }
+   },
+   "sec": 79.3
+  },
+  "B: moved 9pi/2,11pi/2 (14.14,17.28)": {
+   "tau_c": 0.0006498530073792862,
+   "pred_first_nonreal_d": 769.404764342616,
+   "certify": {
+    "749": {
+     "certified_nonreal_roots_of_R": 0,
+     "negative_real_roots_of_R": 0,
+     "J_real_rooted": true
+    },
+    "750": {
+     "certified_nonreal_roots_of_R": 2,
+     "negative_real_roots_of_R": 0,
+     "J_real_rooted": false
+    },
+    "760": {
+     "certified_nonreal_roots_of_R": 2,
+     "negative_real_roots_of_R": 0,
+     "J_real_rooted": false
+    },
+    "766": {
+     "certified_nonreal_roots_of_R": 2,
+     "negative_real_roots_of_R": 0,
+     "J_real_rooted": false
+    },
+    "768": {
+     "certified_nonreal_roots_of_R": 2,
+     "negative_real_roots_of_R": 0,
+     "J_real_rooted": false
+    },
+    "770": {
+     "certified_nonreal_roots_of_R": 2,
+     "negative_real_roots_of_R": 0,
+     "J_real_rooted": false
+    },
+    "772": {
+     "certified_nonreal_roots_of_R": 2,
+     "negative_real_roots_of_R": 0,
+     "J_real_rooted": false
+    }
+   },
+   "sec": 114.3
+  }
+ }
+}

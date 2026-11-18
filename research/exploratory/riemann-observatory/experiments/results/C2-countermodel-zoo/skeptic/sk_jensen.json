@@ -1,0 +1,47 @@
+{
+ "check_xi_half": [
+  "0.49712077818831410991",
+  "0.99424155637662821983"
+ ],
+ "results": {
+  "xi": {
+   "turan_k_range": [
+    1,
+    80
+   ],
+   "turan_all_positive": true,
+   "turan_min_rel": "0.00622524",
+   "J_d0_nonhyperbolic_d<=40 (d: #nonreal)": {}
+  },
+  "xi~ beta=0.6,gamma0=14.0": {
+   "turan_k_range": [
+    1,
+    80
+   ],
+   "turan_all_positive": true,
+   "turan_min_rel": "0.00665285",
+   "J_d0_nonhyperbolic_d<=40 (d: #nonreal)": {}
+  },
+  "xi~ beta=0.9,gamma0=5.0": {
+   "turan_k_range": [
+    1,
+    80
+   ],
+   "turan_all_positive": true,
+   "turan_min_rel": "0.00666913",
+   "J_d0_nonhyperbolic_d<=40 (d: #nonreal)": {
+    "40": "2"
+   }
+  },
+  "xi~ beta=0.6,gamma0=5.0": {
+   "turan_k_range": [
+    1,
+    80
+   ],
+   "turan_all_positive": true,
+   "turan_min_rel": "0.00666911",
+   "J_d0_nonhyperbolic_d<=40 (d: #nonreal)": {}
+  }
+ },
+ "runtime_s": 563.3
+}

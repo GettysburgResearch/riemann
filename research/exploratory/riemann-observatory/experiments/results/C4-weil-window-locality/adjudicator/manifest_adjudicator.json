@@ -1,0 +1,84 @@
+{
+ "campaign": "C4-weil-window-locality",
+ "role": "adjudicator",
+ "date": "2026-11-17",
+ "versions": {
+  "python": "3.13.18",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "mpmath": "1.3.0",
+  "python-flint": "0.9.0"
+ },
+ "cores": "1 (OPENBLAS_NUM_THREADS=1)",
+ "code": {
+  "adj_Cdelta.py": "b541d4b91f22cdac805007eb3f71cc5e4d3052547905f1d93633b1bd58bf8d4b",
+  "adj_numbers.py": "2beaa350055824a92cf4f45853e9f3b48c84b6c0d59ef245876750b97b8398ce",
+  "adj_thmB_arb.py": "784248bb540dbddd498d84309db1a77d888959256dc3c66e77b01462ede51a0d",
+  "adj_witness.py": "24850785d45a9466798dfc470e26883fbfe90065a94d070a322203dda01eb07c"
+ },
+ "outputs": {
+  "adj_Cdelta.json": {
+   "sha256": "7e56566e974c8531d220df56d93643815a229d165e4242359d0cfa52c3b9a683",
+   "bytes": 4489,
+   "runtime_s": 118.7
+  },
+  "adj_numbers.json": {
+   "sha256": "1afc4c8db917e94af61bbd0ad85f8b2dad049d3fff317e3f1d4b8b0d924eb328",
+   "bytes": 8147,
+   "runtime_s": 5.56
+  },
+  "adj_thmB_arb.json": {
+   "sha256": "d53151195e5776d6f949666fb06873ee986a6f02c3f1f1ce817208fcd794ae9d",
+   "bytes": 4303,
+   "runtime_s": 0.86
+  },
+  "adj_witness_add_T1e3_d0.01.json": {
+   "sha256": "567a6364804bec5647775da94f3e601af5d3e9df1dbfaab7ce45a88511e55bfb",
+   "bytes": 1148,
+   "runtime_s": 0.7
+  },
+  "adj_witness_add_T1e4_d0.49.json": {
+   "sha256": "541e41f1ab4940e178557b52dbbe0115a624d8778ee6ff57dde2da6cb501d56d",
+   "bytes": 1132,
+   "runtime_s": 2.3
+  },
+  "adj_witness_add_T7e4_d0.2.json": {
+   "sha256": "e65d9727b43bb68f6b6375855754c405b28bd29ea15440d45356f4b3068697a9",
+   "bytes": 1135,
+   "runtime_s": 36.0
+  },
+  "adj_witness_add_T7e4_d0.2_L4.5.json": {
+   "sha256": "6de364306c4969d2699d2cf580de8088e4041ea0403798501a64d15f1c3e491b",
+   "bytes": 1140,
+   "runtime_s": 34.9
+  },
+  "adj_witness_coll_T1e4_d0.03_L3.67.json": {
+   "sha256": "e39c0956a483530132e1db050901858e5a877f50c6b1b963dfa7d3262bd02efb",
+   "bytes": 1182,
+   "runtime_s": 5.2
+  },
+  "adj_witness_coll_T1e4_d0.1.json": {
+   "sha256": "e39d40de78ccc46870e0205939ac1a493d1a6d409000aea72c1bf83323a23631",
+   "bytes": 1167,
+   "runtime_s": 3.3
+  },
+  "adj_witness_coll_T1e4_d0.1_L3.3.json": {
+   "sha256": "2f1325d6f98f0d24c9e0300c7e58957c4e531aaf7ed131887dbb110e2db0ef09",
+   "bytes": 1177,
+   "runtime_s": 3.3
+  },
+  "adj_witness_coll_T1e4_d0.2.json": {
+   "sha256": "7d1b031d1c921fd3303217eb0f1ab370eef8533bdc9ce8db24789810fb73bc9d",
+   "bytes": 1165,
+   "runtime_s": 3.3
+  }
+ },
+ "note": "output JSON files contain runtime fields, so byte hashes change on rerun; the reproducible content is the balls/values",
+ "inputs": {
+  "zeros": "scratchpad/data/zeros_{1_50000,50001_100000}.tsv (Arb-certified ordinates, EXP-0001; durable copy experiments/results/zeros/)",
+  "investigator_code_used_only_to_choose_test_functions": [
+   "detect_lib.py",
+   "weil_core.py"
+  ]
+ }
+}

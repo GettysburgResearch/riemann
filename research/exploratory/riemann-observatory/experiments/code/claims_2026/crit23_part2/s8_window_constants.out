@@ -1,0 +1,35 @@
+(a) sympy: R(psi0) = 4/3
+    C(f_MT) symbolic - C_MT simplifies to: (-2*(-1 + cos(sqrt(2)))**2*(1 + sqrt(2)/tan(sqrt(2)/2)) + cos(2*sqrt(2)) - 4*cos(sqrt(2)) - sqrt(2)*sin(2*sqrt(2)) + 2*sqrt(2)*sin(sqrt(2)) + 3)/(4*(-1 + cos(sqrt(2)))**2) ; numerically 0.e-165 ; C_MT = 1.327499296320588354265620
+    inner(t) + f(t)/c... stationarity: d^2/dt^2 [f + inner] = 0
+(b) Lamzouri Lemma 3.2: C_delta -> C_MT  (psi_delta = chi((1/2-|x|)/delta), f_delta = psi_delta^2 f0 / A_delta)
+    delta= 0.200: C_delta = 1.522458802849,  C_delta - C_MT = 1.950e-01,  (C_delta-C_MT)/delta = 0.9748
+    delta= 0.100: C_delta = 1.410228191862,  C_delta - C_MT = 8.273e-02,  (C_delta-C_MT)/delta = 0.8273
+    delta= 0.050: C_delta = 1.365751786232,  C_delta - C_MT = 3.825e-02,  (C_delta-C_MT)/delta = 0.7650
+    delta= 0.020: C_delta = 1.342114173129,  C_delta - C_MT = 1.461e-02,  (C_delta-C_MT)/delta = 0.7307
+    delta= 0.010: C_delta = 1.334696410385,  C_delta - C_MT = 7.197e-03,  (C_delta-C_MT)/delta = 0.7197
+    delta= 0.005: C_delta = 1.331070063677,  C_delta - C_MT = 3.571e-03,  (C_delta-C_MT)/delta = 0.7142
+    delta= 0.002: C_delta = 1.328920179242,  C_delta - C_MT = 1.421e-03,  (C_delta-C_MT)/delta = 0.7104
+    delta= 0.001: C_delta = 1.328207831785,  C_delta - C_MT = 7.085e-04,  (C_delta-C_MT)/delta = 0.7085
+(c) AF finite-L main-term ratio R_L = (b L^3 + 2 int_0^L y g(y) dy)/(a^2 L^3) -> R(psi)
+    flat L=    5.0: a=0.762282 b=0.731689  R_L = 1.5151457350  R_L - R = +1.818e-01  L(R_L-R) = +0.9091
+    flat L=   10.0: a=0.881141 b=0.865845  R_L = 1.4093095183  R_L - R = +7.598e-02  L(R_L-R) = +0.7598
+    flat L=   20.0: a=0.940571 b=0.932922  R_L = 1.3681580970  R_L - R = +3.482e-02  L(R_L-R) = +0.6965
+    flat L=   50.0: a=0.976228 b=0.973169  R_L = 1.3465646193  R_L - R = +1.323e-02  L(R_L-R) = +0.6616
+    flat L=  100.0: a=0.988114 b=0.986584  R_L = 1.3398371221  R_L - R = +6.504e-03  L(R_L-R) = +0.6504
+    flat L= 1000.0: a=0.998811 b=0.998658  R_L = 1.3339737446  R_L - R = +6.404e-04  L(R_L-R) = +0.6404
+    MT   L=    5.0: a=0.725376 b=0.669304  R_L = 1.5224593473  R_L - R = +1.950e-01  L(R_L-R) = +0.9748
+    MT   L=   10.0: a=0.825078 b=0.765348  R_L = 1.4102292477  R_L - R = +8.273e-02  L(R_L-R) = +0.8273
+    MT   L=   20.0: a=0.872707 b=0.808861  R_L = 1.3657530995  R_L - R = +3.825e-02  L(R_L-R) = +0.7651
+    MT   L=   50.0: a=0.900518 b=0.833464  R_L = 1.3421156441  R_L - R = +1.462e-02  L(R_L-R) = +0.7308
+    MT   L=  100.0: a=0.909655 b=0.841410  R_L = 1.3346979345  R_L - R = +7.199e-03  L(R_L-R) = +0.7199
+    MT   L= 1000.0: a=0.917821 b=0.848452  R_L = 1.3282094040  R_L - R = +7.101e-04  L(R_L-R) = +0.7101
+(d) KN (eq:C) symbolic check with 3 cosine terms (cross terms included):  C - formula = 0
+    first : closed form C(f) = 1.3327049582817 (stated 1.3327049582...), quadrature 1.332704768749; bound 266541/200000 = 1.3327050, margin 4.172e-08;  min f on grid = 0.7514
+    second: closed form C(f) = 1.3279472728446 (stated 1.32794727...), quadrature 1.327947085514; bound 6639737/5000000 = 1.3279474, margin 1.272e-07;  min f on grid = 0.8203
+    third : closed form C(f) = 1.3324636331671 (stated 1.33246363...), quadrature 1.332463443687; bound 6662319/5000000 = 1.3324638, margin 1.668e-07;  min f on grid = 0.8073
+(e) C(f) >= 1: lower bound from Remark LZ 2.2 / AF; spot values:
+    flat            : C = 1.3333331476
+    MT              : C = 1.3274991095
+    triangle        : C = 1.3708331322
+    cos(pi x)       : C = 1.4837003210
+    1+0.4cos(2pi x) : C = 1.3687518120

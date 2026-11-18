@@ -1,0 +1,84 @@
+== (1) PNT+ compatibility patch: files added under PrimeNumberTheoremAnd/SiegelZeros/
+patch sha256 0890432340c0025973bcfe070b634355fa366cc831595f68526e4c73c8903d82
+patch-added PNT+ SiegelZeros modules: 12  lines: 6754
+[PASS] PNT+ SiegelZeros files are all new files (patch adds, does not modify)
+
+== (2) static import closures
+solution module closure: 306 OAI modules (69818 lines) + 12 patch-added PNT+ modules (6754 lines); manifest sha256 15bdcfb59bb6b18b35192df58d211cdb4dc6e28c99edb83d3a8da9545ba0305d
+external roots: {'Mathlib': 322, 'Lean': 1}  non-Mathlib externals: ['Lean.Elab.Tactic.Omega']
+[PASS] closure of OAI.NumberTheory.SiegelZeros.Main = every file of the SiegelZeros directory (306) :: 306 vs 306
+[PASS] only externals are Mathlib, Lean core (omega) and the 12 patch-added PNT+ modules
+chain A (Conclusions.Theorem -> exists_absolute_real_zero_gap): 201 OAI modules, 37269 lines, PNT+ used: False
+chain B (DirichletRealZeroBoundProof -> dirichletRealZeroBound_proof): 67 OAI modules, 25995 lines, PNT+ used: True
+[PASS] the two challenge theorems are proved by module-disjoint chains :: intersection 0
+
+== (3) comment-stripped token scan of the full closure (318 files)
+counts: {'sorry': 0, 'admit': 0, 'axiom': 0, 'native_decide': 0, 'ofReduceBool/trustCompiler': 0, 'implemented_by': 0, '@[extern': 0, 'unsafe': 0, 'opaque': 0, 'skipKernelTC': 0, 'debug options': 0, 'macro': 0, 'elab': 0, 'syntax': 0, 'run_cmd/run_tac/#eval/#exit': 0, 'initialize': 0, 'open Lean': 0, 'Lean.Meta/Environment/addDecl': 0, '@[csimp': 0}
+set_option names used: {}
+[PASS] no soundness-relevant token in 306 OAI + 12 PNT+ files
+[PASS] no set_option touching the kernel, compiler or debug switches :: []
+
+== (4) statement checks
+challenge sha256 bedaac0248a641910f79a380d9702d82c6bfbbfd3760a69d27c72c5d8fb136ce  config {"challenge_module": "ComparatorChallenges.SiegelZeros", "definition_names": [], "enable_nanoda": false, "permitted_axioms": ["propext", "Classical.choice", "Quot.sound"], "solution_module": "OAI.NumberTheory.SiegelZeros.Main", "theorem_names": ["OAI.SiegelZeros.WeightedTorusJets.exists_absolute_real_zero_gap", "OAI.SiegelZeros.WeightedTorusJets.dirichletRealZeroBound_proof"]}
+[PASS] challenge imports only Mathlib
+[PASS] comparator: permitted axioms exactly {propext, Classical.choice, Quot.sound}
+[PASS] comparator: solution module is OAI.NumberTheory.SiegelZeros.Main
+comparator: enable_nanoda = False (no second kernel in the OAI config)
+[PASS] solution statement 1 is verbatim the challenge statement 1
+[PASS] Model.UniformSiegelZeroExclusion body is verbatim challenge statement 1 (so `exact` is syntactic)
+[PASS] solution statement 2 is verbatim the challenge statement 2
+statement 1 (normalized): ∃ c : ℝ, 0 < c ∧ ∀ (q : ℕ) [NeZero q], 3 ≤ q → ∀ χ : DirichletCharacter ℂ q, χ.IsPrimitive → χ ≠ 1 → (∀ a : ZMod q, (χ a).im = 0) → ∀ β : ℝ, 0 < β → β < 1 → χ.LFunction (β : ℂ) = 0 → c ≤ (1 - β) * Real.log (q : ℝ)
+Mathlib DirichletContinuation sha256 7ef38fb53f462e19dfd6746fc1826423e55bb5e2672c2b5667e2fd4889f401b6  DirichletCharacter/Basic sha256 f004670a9bedc23c4dfaeb61b90d5e613a6b604f9486640eb1ce4ae3699ef64e
+[PASS] Mathlib: LFunction χ s := ZMod.LFunction χ s
+[PASS] Mathlib: LFunction = LSeries for 1 < re s, and differentiable on ℂ when χ ≠ 1
+[PASS] Mathlib: IsPrimitive := conductor χ = n
+Kimura challenge B4ZeroGap.lean sha256 660573e68478c3effdc4a83223d07efb742c32e387968554a027003fd04e7166
+[PASS] Kimura's zero_gap_all has the OAI hypotheses with c = 5811/10^7 (hence implies OAI statement 1)
+
+== (5) Kimura v2 (cln-imq-2k v1.4) vendored upstream files vs openai/math @ 4eaee875
+SHA256SUMS sha256 cdc0bb74ce130f543bee9eb15a8217ba878df84ac2294f5c790af05b5c88e9a0  entries 329
+compared 266: identical 266, different/missing 0; not compared (other libraries) {'AINTLIB': 2, 'PrimeNumberTheoremAnd': 10, 'TauCeti': 51}
+[PASS] all 254 vendored OAI files and 12 PNT+ SiegelZeros files are byte-identical at 4eaee875
+[PASS] vendored OAI set = import closure of {UnconditionalPrimeBias, RealZeroUniformMasterBound} :: 254 vs 254
+solution-closure modules outside Kimura's checks: 52 (7270 lines), e.g. ['Characters.BoundedConductor', 'Characters.DirichletRealZeroBound', 'Characters.DirichletRealZeroBoundProof', 'Conclusions.Theorem', 'Estimates.ContrarySequence', 'Estimates.GeometricBoundary', 'Intersection.BezoutBoundary', 'Main', 'Model']
+[PASS] the deep arithmetic core (multiplicity estimate, rectangle span, pivot and master bounds) is vendored
+[PASS] the final assembly modules are NOT vendored (Kimura does not use the OAI final theorem)
+
+== (6) exact arithmetic: Cor 4 budget, H, thresholds, Lean master-bound constants vs paper (master)
+[PASS] H = 12*C0/c0 = 9216*97^2 = 86713344, i.e. (C0/c0)/H = 1/12 exactly
+[PASS] 18818 = 2*97^2 (Kimura: Lemma 6 needs H^(2/3) U >= 2*97^2)
+[PASS] Cor 4: 32^3/8 = 4096 and 4096 N^4 > (4N-3)^4 for N = 1..10^5 (and 4096 > 4^4 for all N)
+[PASS] 13/16 = (3/4)(1+1/12)
+[PASS] 13/24 = (1/2)(1+1/12)  [coefficient of l/log U]
+[PASS] 13/12 = 1+1/12  [coefficient of log 8 / log U]
+[PASS] 13/16 + 1/16 = 7/8 < 1 (the contradiction of the paper and of the Lean master bound)
+[PASS] (C M U + (1/2) M log M)/(S1 log U) = C/(D log U) + 3/(2 D U) at S1 = M D U, log M = 3 log U
+
+== (7) toy certificates for the Lean form of Cor 4 (rank mod a degree-1 prime <= rank over K, so full rank mod p certifies span over K)
+ d   N  H  p        Lean-rectangle spans  kappa*(mod p, upper bd)  kappa_count  Lean T1   Lean T2=T3
+ -3   2  1  1048447  True                  0.795                    0.794        80.6     80.6
+ -3   2  2  1048447  True                  1.0                      0.75         128.0    64.0
+ -3   3  1  1048447  True                  0.926                    0.925        138.5    138.5
+ -3   3  2  1048447  True                  0.875                    0.874        219.8    109.9
+ -3   3  3  1048447  True                  0.891                    0.889        288.0    96.0
+ -3   4  1  1048447  True                  0.945                    0.945        203.2    203.2
+ -3   4  2  1048447  True                  0.992                    0.993        322.5    161.3
+ -3   4  3  1048447  True                  0.91                     0.909        422.6    140.9
+ -3   4  4  1048447  True                  0.939                    0.938        512.0    128.0
+  5   2  1  1048559  True                  0.795                    0.794        80.6     80.6
+  5   2  2  1048559  True                  1.0                      0.75         128.0    64.0
+  5   3  1  1048559  True                  0.926                    0.925        138.5    138.5
+  5   3  2  1048559  True                  0.875                    0.874        219.8    109.9
+  5   3  3  1048559  True                  0.891                    0.889        288.0    96.0
+  5   4  1  1048559  True                  0.945                    0.945        203.2    203.2
+  5   4  2  1048559  True                  0.992                    0.993        322.5    161.3
+  5   4  3  1048559  True                  0.91                     0.909        422.6    140.9
+  5   4  4  1048559  True                  0.939                    0.938        512.0    128.0
+rank computations: 88
+[PASS] Lean-form Cor 4 rectangles (kappa = 32) span for d in {-3,5}, N <= 4, 1 <= H <= N; Vandermonde rows span
+[PASS] minimal scale kappa* <= 1 in every toy case (32 is >= 32x the scale actually needed there) :: max kappa* = 1.0; kappa* / kappa_count <= 1.333
+
+== (8) (D1^a1 D2^a2 D3^a3 x^n)(1,1,1,1) = (A n)^alpha for D_j = sum_i A_ji x_i d/dx_i
+[PASS] duality identity on 20 (n, alpha) pairs (exact, sympy)
+
+SUMMARY: 31 PASS / 0 FAIL, 13.3 s

@@ -1,0 +1,237 @@
+{
+ "meta": {
+  "script": "ff_curves_check.py",
+  "python": "3.13.18",
+  "flint": "0.9.0",
+  "sympy": "1.14.0",
+  "numpy": "2.5.3",
+  "runtime_s": 0.6
+ },
+ "curves": [
+  {
+   "name": "E: y^2=x^3+x+1 / F_5",
+   "smooth": true,
+   "N_bruteforce": [
+    9,
+    27,
+    108,
+    675
+   ],
+   "P_asc": [
+    1,
+    3,
+    5
+   ],
+   "N_predicted": [
+    9,
+    27,
+    108,
+    675
+   ],
+   "prediction_matches": true,
+   "h_asc": [
+    3,
+    1
+   ],
+   "rh_exact": [
+    true,
+    "1",
+    "0"
+   ],
+   "arb_moduli_contain_sqrtq": true,
+   "positivity": "positive_all_d",
+   "toeplitz_negative_witness_N_le_40": null
+  },
+  {
+   "name": "E: y^2=x^3+2x+3 / F_7",
+   "smooth": true,
+   "N_bruteforce": [
+    6,
+    60,
+    378,
+    2400
+   ],
+   "P_asc": [
+    1,
+    -2,
+    7
+   ],
+   "N_predicted": [
+    6,
+    60,
+    378,
+    2400
+   ],
+   "prediction_matches": true,
+   "h_asc": [
+    -2,
+    1
+   ],
+   "rh_exact": [
+    true,
+    "1",
+    "0"
+   ],
+   "arb_moduli_contain_sqrtq": true,
+   "positivity": "positive_all_d",
+   "toeplitz_negative_witness_N_le_40": null
+  },
+  {
+   "name": "NEGATIVE CONTROL (singular mod 3) y^2=x^5+x+1 / F_3",
+   "smooth": false,
+   "N_bruteforce": [
+    4,
+    14,
+    19,
+    74,
+    274
+   ],
+   "P_asc": [
+    1,
+    0,
+    2,
+    0,
+    9
+   ],
+   "N_predicted": [
+    4,
+    14,
+    28,
+    110,
+    244
+   ],
+   "prediction_matches": false,
+   "h_asc": [
+    -4,
+    0,
+    1
+   ],
+   "rh_exact": [
+    true,
+    "2",
+    "0"
+   ],
+   "arb_moduli_contain_sqrtq": true,
+   "positivity": "positive_all_d",
+   "toeplitz_negative_witness_N_le_40": null
+  },
+  {
+   "name": "C2: y^2=x^5-x+1 / F_3",
+   "smooth": true,
+   "N_bruteforce": [
+    7,
+    15,
+    19,
+    83,
+    232
+   ],
+   "P_asc": [
+    1,
+    3,
+    7,
+    9,
+    9
+   ],
+   "N_predicted": [
+    7,
+    15,
+    19,
+    83,
+    232
+   ],
+   "prediction_matches": true,
+   "h_asc": [
+    1,
+    3,
+    1
+   ],
+   "rh_exact": [
+    true,
+    "2",
+    "0"
+   ],
+   "arb_moduli_contain_sqrtq": true,
+   "positivity": "positive_all_d",
+   "toeplitz_negative_witness_N_le_40": null
+  },
+  {
+   "name": "C2: y^2=x^5+2x^2+1 / F_5",
+   "smooth": true,
+   "N_bruteforce": [
+    7,
+    35,
+    127,
+    675
+   ],
+   "P_asc": [
+    1,
+    1,
+    5,
+    5,
+    25
+   ],
+   "N_predicted": [
+    7,
+    35,
+    127,
+    675
+   ],
+   "prediction_matches": true,
+   "h_asc": [
+    -5,
+    1,
+    1
+   ],
+   "rh_exact": [
+    true,
+    "2",
+    "0"
+   ],
+   "arb_moduli_contain_sqrtq": true,
+   "positivity": "positive_all_d",
+   "toeplitz_negative_witness_N_le_40": null
+  },
+  {
+   "name": "C3: y^2=x^7+x+2 / F_3",
+   "smooth": true,
+   "N_bruteforce": [
+    4,
+    10,
+    10,
+    82,
+    244
+   ],
+   "P_asc": [
+    1,
+    0,
+    0,
+    -6,
+    0,
+    0,
+    27
+   ],
+   "N_predicted": [
+    4,
+    10,
+    10,
+    82,
+    244
+   ],
+   "prediction_matches": true,
+   "h_asc": [
+    -6,
+    -9,
+    0,
+    1
+   ],
+   "rh_exact": [
+    true,
+    "3",
+    "0"
+   ],
+   "arb_moduli_contain_sqrtq": true,
+   "positivity": "positive_all_d",
+   "toeplitz_negative_witness_N_le_40": null
+  }
+ ]
+}

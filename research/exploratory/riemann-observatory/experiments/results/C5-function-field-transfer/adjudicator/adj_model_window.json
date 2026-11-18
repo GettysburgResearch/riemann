@@ -1,0 +1,177 @@
+{
+ "meta": {
+  "script": "adj_model_window.py",
+  "python": "3.13.18",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "M": 6,
+  "NMAX": 20000,
+  "basis_size": 24,
+  "runtime_s": 2.8,
+  "arithmetic": "IEEE double (non-rigorous)"
+ },
+ "rows": [
+  {
+   "L": 0.5,
+   "T": 7.3,
+   "delta": 0.5,
+   "lambda_min_Z0_over_2L": 1.0000000000084555,
+   "lambda_min_Z": 0.9675566043746877,
+   "proven_lower_bound": 0.1756393646499359,
+   "bound_holds": true
+  },
+  {
+   "L": 0.5,
+   "T": 7.3,
+   "delta": 2.0,
+   "lambda_min_Z0_over_2L": 1.0000000000084555,
+   "lambda_min_Z": 0.3852448990470931,
+   "proven_lower_bound": -58.1124487914452,
+   "bound_holds": true
+  },
+  {
+   "L": 0.5,
+   "T": 7.3,
+   "delta": 6.0,
+   "lambda_min_Z0_over_2L": 1.0000000000084555,
+   "lambda_min_Z": -20.180720334967862,
+   "proven_lower_bound": -29045.87313147693,
+   "bound_holds": true
+  },
+  {
+   "L": 0.5,
+   "T": 50.0,
+   "delta": 0.5,
+   "lambda_min_Z0_over_2L": 1.0000000000084555,
+   "lambda_min_Z": 0.9727914162105976,
+   "proven_lower_bound": 0.1756393646499359,
+   "bound_holds": true
+  },
+  {
+   "L": 0.5,
+   "T": 50.0,
+   "delta": 2.0,
+   "lambda_min_Z0_over_2L": 1.0000000000084555,
+   "lambda_min_Z": 0.5001087206002889,
+   "proven_lower_bound": -58.1124487914452,
+   "bound_holds": true
+  },
+  {
+   "L": 0.5,
+   "T": 50.0,
+   "delta": 6.0,
+   "lambda_min_Z0_over_2L": 1.0000000000084555,
+   "lambda_min_Z": -12.838196377344502,
+   "proven_lower_bound": -29045.87313147693,
+   "bound_holds": true
+  },
+  {
+   "L": 1.0,
+   "T": 7.3,
+   "delta": 0.25,
+   "lambda_min_Z0_over_2L": 1.0000000000084537,
+   "lambda_min_Z": 1.9385422917166928,
+   "proven_lower_bound": 0.3512787292998718,
+   "bound_holds": true
+  },
+  {
+   "L": 1.0,
+   "T": 7.3,
+   "delta": 1.0,
+   "lambda_min_Z0_over_2L": 1.0000000000084537,
+   "lambda_min_Z": 0.852821783925653,
+   "proven_lower_bound": -116.2248975828904,
+   "bound_holds": true
+  },
+  {
+   "L": 1.0,
+   "T": 7.3,
+   "delta": 3.0,
+   "lambda_min_Z0_over_2L": 1.0000000000084537,
+   "lambda_min_Z": -34.15090966548682,
+   "proven_lower_bound": -58091.74626295386,
+   "bound_holds": true
+  },
+  {
+   "L": 1.0,
+   "T": 50.0,
+   "delta": 0.25,
+   "lambda_min_Z0_over_2L": 1.0000000000084537,
+   "lambda_min_Z": 1.9959842000102037,
+   "proven_lower_bound": 0.3512787292998718,
+   "bound_holds": true
+  },
+  {
+   "L": 1.0,
+   "T": 50.0,
+   "delta": 1.0,
+   "lambda_min_Z0_over_2L": 1.0000000000084537,
+   "lambda_min_Z": 1.918371293561512,
+   "proven_lower_bound": -116.2248975828904,
+   "bound_holds": true
+  },
+  {
+   "L": 1.0,
+   "T": 50.0,
+   "delta": 3.0,
+   "lambda_min_Z0_over_2L": 1.0000000000084537,
+   "lambda_min_Z": 0.14198866461666937,
+   "proven_lower_bound": -58091.74626295386,
+   "bound_holds": true
+  },
+  {
+   "L": 2.0,
+   "T": 7.3,
+   "delta": 0.125,
+   "lambda_min_Z0_over_2L": 1.0000000000084555,
+   "lambda_min_Z": 3.8812175268389093,
+   "proven_lower_bound": 0.7025574585997436,
+   "bound_holds": true
+  },
+  {
+   "L": 2.0,
+   "T": 7.3,
+   "delta": 0.5,
+   "lambda_min_Z0_over_2L": 1.0000000000084555,
+   "lambda_min_Z": 1.7968854273737014,
+   "proven_lower_bound": -232.4497951657808,
+   "bound_holds": true
+  },
+  {
+   "L": 2.0,
+   "T": 7.3,
+   "delta": 1.5,
+   "lambda_min_Z0_over_2L": 1.0000000000084555,
+   "lambda_min_Z": -61.87364437545614,
+   "proven_lower_bound": -116183.49252590771,
+   "bound_holds": true
+  },
+  {
+   "L": 2.0,
+   "T": 50.0,
+   "delta": 0.125,
+   "lambda_min_Z0_over_2L": 1.0000000000084555,
+   "lambda_min_Z": 4.00000000003383,
+   "proven_lower_bound": 0.7025574585997436,
+   "bound_holds": true
+  },
+  {
+   "L": 2.0,
+   "T": 50.0,
+   "delta": 0.5,
+   "lambda_min_Z0_over_2L": 1.0000000000084555,
+   "lambda_min_Z": 4.0000000000338405,
+   "proven_lower_bound": -232.4497951657808,
+   "bound_holds": true
+  },
+  {
+   "L": 2.0,
+   "T": 50.0,
+   "delta": 1.5,
+   "lambda_min_Z0_over_2L": 1.0000000000084555,
+   "lambda_min_Z": 4.000000000033486,
+   "proven_lower_bound": -116183.49252590771,
+   "bound_holds": true
+  }
+ ]
+}

@@ -1,0 +1,68 @@
+validated reciprocity-based cubic symbol 0.2s
+phi / phihat done 1.0s
+ray-fourier done (44 primes, N<=200) 30.7s
+cusp section: L = (-36, -54) N(L) = 2268 primes of M: [(1, 2), (-2, 0), (-2, -3)]
+h0 classes by v_lambda(c0): {0: 252, 1: 504, 2: 1512}
+configurations: 60
+  configs done: 15 33.5s
+  configs done: 30 38.3s
+  configs done: 45 42.0s
+  configs done: 60 47.7s
+cusp construction checks done 47.7s
+uniformity: 27 constructions, norms of k0' up to 6.13e+39  47.8s
+
+SUMMARY (check: number of cases)
+  A2.0 cubic_sym_recip==direct                                             3000
+  A2.1 Fourier inversion of phi                                             120
+  A2.1 phi periodic mod L                                                   800
+  A2.1 sum phihat = phi(0) = 0                                                2
+  A2.1 |phihat|<=1                                                            2
+  A2.10 summed identity -> scalar * psi * prod B                           2772
+  A2.11 case2 H gamma_+^-1 lower unipotent in Z+3O                            1
+  A2.11 case2 H gamma_-^-1 lower unipotent in Z+3O                            1
+  A2.11 case2 wrong pairing excluded                                          2
+  A2.11 case3 H = T_u0 E                                                      9
+  A2.11 case3 b=0 -> gamma_0                                                  3
+  A2.11 case3 b=1 -> gamma_- via SL2(Z)                                       3
+  A2.11 case3 b=2 -> gamma_+ via SL2(Z)                                       3
+  A2.12 (kappa0, cusp case, u0, c0, delta'_0, r^-1 mod D0) constant on the class of k0 mod M^2      9
+  A2.12 k0' primary prime == k0 mod M^2                                      27
+  A2.12 r == r_base mod M^2                                                  27
+  A2.2 local Fourier inversion                                             6168
+  A2.2 ray-fourier                                                        25464
+  A2.3 e(z)=ebreve(z/lambda)                                                500
+  A2.3 nondegenerate pairing O/q                                            375
+  A2.4 a = lambda^2 c (h0/L + sum h_p/p)                                   8487
+  A2.4 gcd(a,c)=1                                                          8487
+  A2.4 reduced denominator c = c0 r (unit)                                 8487
+  A2.4 rep h_p == h mod p, 0 mod M^2                                      16065
+  A2.5 b_g == -c^{-1} mod q^v(M) (q|M, q!|c0)                              4239
+  A2.5 b_g == 0 mod q^v(M) (q|c0)                                         21222
+  A2.5 case2 congruence a(c-u0 d') == -u0 mod (a-u0 b_g)                   2829
+  A2.5 case2 congruence b_g c == -1 mod a                                  2829
+  A2.5 case3 (d'/(-b_g c))_3 = 1                                           2829
+  A2.5 case3 -b_g c = 1 - a d' == 1 mod 9                                  2829
+  A2.5 delta' congruences                                                  8487
+  A2.5 det H = 1                                                           8487
+  A2.5 det g = 1                                                           8487
+  A2.5 g1 == I mod 3                                                       8487
+  A2.5 ray-multiplier formula (case 1)                                     2829
+  A2.5 ray-multiplier formula (case 2)                                     2829
+  A2.5 ray-multiplier formula (case 3)                                     2829
+  A2.5 u0 unique (case 2)                                                  2829
+  A2.6 a mod M c0 independent of h_p                                         60
+  A2.6 c, case independent of h_p                                            60
+  A2.6 delta'_0 mod D0 independent of h_p                                    60
+  A2.6 kappa0 independent of h_p                                             60
+  A2.7 a == sigma_p h_p mod p                                             16020
+  A2.8 additive CRT                                                       33264
+  A2.9 B_p1 = chi_p^3 real quadratic                                        900
+  A2.9 local transform (j=0)                                                564
+  A2.9 local transform (j=1)                                               1716
+  A2.9 local transform (j=2)                                                270
+  A2.9 local transform (j=3)                                                270
+  A2.9 local transform (j=4)                                                564
+  A2.9 local transform (j=5)                                                270
+  A2.9 |omega_pj|=1                                                          78
+TOTAL cases: 217011  FAILURES: 0
+time 47.8s

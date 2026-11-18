@@ -1,0 +1,65 @@
+CRIT23 adjudication P1-F1: independent checks (double precision, non-rigorous unless marked analytic)
+====================================================================================================
+(0) Implementation checks: Poisson-Gabor sum_k phihat(z-alpha_k)^2 = aL^2, and truncation error beyond W
+   chiA T=1e4 z=12345.678: sum_k phihat^2 / (aL^2) - 1 = 1.09e-13
+   chiA T=1e4 z=(12345.678+0.3j): sum_k phihat^2 / (aL^2) - 1 = 1.17e-13
+   chiA T=1e4 z=(14000.1-0.45j): sum_k phihat^2 / (aL^2) - 1 = 7.13e-14
+   chiA: a=0.838780  phihat(0)=6.372463 (L-1=6.372463)  max phihat(xi)^2 on [WZ, WZ+200] (WZ=150) = 1.30e-16
+   chiB T=1e4 z=12345.678: sum_k phihat^2 / (aL^2) - 1 = 1.09e-13
+   chiB T=1e4 z=(12345.678+0.3j): sum_k phihat^2 / (aL^2) - 1 = 1.20e-13
+   chiB T=1e4 z=(14000.1-0.45j): sum_k phihat^2 / (aL^2) - 1 = 9.94e-14
+   chiB: a=0.842920  phihat(0)=6.372463 (L-1=6.372463)  max phihat(xi)^2 on [WZ, WZ+200] (WZ=150) = 2.54e-18
+====================================================================================================
+(B) Slip (b): alpha_d = T + d h with d = floor(LT/2pi); AF Prop 4.2 proof asserts alpha_k notin [T,2T) for k notin [0,d)
+   T=   1000: LT/2pi=806.8962  alpha_(d-1)=1997.6500  alpha_d=1998.8894  in [T,2T)? True   2T-alpha_d=1.1106 < h=1.2393
+   T=   2000: LT/2pi=1834.4280  alpha_(d-1)=3998.4432  alpha_d=3999.5334  in [T,2T)? True   2T-alpha_d=0.4666 < h=1.0903
+   T=  10000: LT/2pi=11733.6398  alpha_(d-1)=19998.6025  alpha_d=19999.4547  in [T,2T)? True   2T-alpha_d=0.5453 < h=0.8523
+   T=  30000: LT/2pi=40446.4066  alpha_(d-1)=59998.9567  alpha_d=59999.6984  in [T,2T)? True   2T-alpha_d=0.3016 < h=0.7417
+   (analytic) d h = h floor(T/h) in (T-h, T], so alpha_d in (2T-h, 2T], with alpha_d < 2T iff LT/2pi is not an integer.
+   For Re gamma in [3T/2, alpha_d): |Re gamma - alpha_d| = D_rho - (2T - alpha_d) < D_rho, but >= D_rho - h.
+====================================================================================================
+(C) Slip (a), single real point gamma = T - sqrt(T)/2 in I'\I  (D_rho = dist(gamma,{T,2T}) = sqrt(T)/2)
+   chiA/flat T=    2000 L=5.763: head/aL^2=2.677e-07  tail/aL^2=0.999999732298  [analytic: tail/aL^2 >= 0.99207]  AF shape X^1/2 L D^-3/(aL^2)=3.488e-04  ratio=2.867e+03  (TL=1.153e+04)
+   chiA/flat T=   10000 L=7.372: head/aL^2=1.595e-10  tail/aL^2=0.999999999841  [analytic: tail/aL^2 >= 0.99759]  AF shape X^1/2 L D^-3/(aL^2)=5.161e-05  ratio=1.938e+04  (TL=7.372e+04)
+   chiA/flat T=  100000 L=9.675: head/aL^2=2.736e-18  tail/aL^2=0.999999999975  [analytic: tail/aL^2 >= 0.99947]  AF shape X^1/2 L D^-3/(aL^2)=3.761e-06  ratio=2.659e+05  (TL=9.675e+05)
+   chiA/flat T= 1000000 L=11.978: head/aL^2=0.000e+00  tail/aL^2=1.000000000022  [analytic: tail/aL^2 >= 0.99987]  AF shape X^1/2 L D^-3/(aL^2)=2.958e-07  ratio=3.381e+06  (TL=1.198e+07)
+   chiB/flat T=    2000 L=5.763: head/aL^2=3.716e-08  tail/aL^2=0.999999962836  [analytic: tail/aL^2 >= 0.99207]  AF shape X^1/2 L D^-3/(aL^2)=3.465e-04  ratio=2.886e+03  (TL=1.153e+04)
+   chiB/flat T=   10000 L=7.372: head/aL^2=4.285e-12  tail/aL^2=0.999999999996  [analytic: tail/aL^2 >= 0.99759]  AF shape X^1/2 L D^-3/(aL^2)=5.136e-05  ratio=1.947e+04  (TL=7.372e+04)
+   chiB/flat T=  100000 L=9.675: head/aL^2=3.421e-20  tail/aL^2=0.999999999975  [analytic: tail/aL^2 >= 0.99947]  AF shape X^1/2 L D^-3/(aL^2)=3.747e-06  ratio=2.669e+05  (TL=9.675e+05)
+   chiB/flat T= 1000000 L=11.978: head/aL^2=0.000e+00  tail/aL^2=1.000000000022  [analytic: tail/aL^2 >= 0.99987]  AF shape X^1/2 L D^-3/(aL^2)=2.950e-07  ratio=3.390e+06  (TL=1.198e+07)
+   chiA/MT   T=    2000 L=5.763: head/aL^2=2.315e-07  tail/aL^2=0.999999768508  [analytic: tail/aL^2 >= 0.98956]  AF shape X^1/2 L D^-3/(aL^2)=3.681e-04  ratio=2.717e+03  (TL=1.153e+04)
+   chiA/MT   T=   10000 L=7.372: head/aL^2=1.367e-10  tail/aL^2=0.999999999863  [analytic: tail/aL^2 >= 0.99683]  AF shape X^1/2 L D^-3/(aL^2)=5.478e-05  ratio=1.825e+04  (TL=7.372e+04)
+   chiA/MT   T=  100000 L=9.675: head/aL^2=2.370e-18  tail/aL^2=0.999999999975  [analytic: tail/aL^2 >= 0.99931]  AF shape X^1/2 L D^-3/(aL^2)=4.014e-06  ratio=2.491e+05  (TL=9.675e+05)
+   chiA/MT   T= 1000000 L=11.978: head/aL^2=0.000e+00  tail/aL^2=1.000000000023  [analytic: tail/aL^2 >= 0.99983]  AF shape X^1/2 L D^-3/(aL^2)=3.168e-07  ratio=3.156e+06  (TL=1.198e+07)
+   (analytic) tail/aL^2 -> 1 while the displayed per-zero bound X^{1/2} L D^-3/(aL^2) = 8(2pi)^{-1/2}/(a L T) -> 0,
+   so the ratio grows like T L and no fixed implied constant makes the displayed per-zero bound true on I'\I.
+====================================================================================================
+(D) Real zeta zeros (table EXP-0001; all on the line and simple): trace decomposition
+   zero table: 100000 zeros, max ordinate 74920.827
+   chiA T=  2000 L=5.763 d=1834: N(I)=1957 N(I')=2044 N(I'\I)=87 trG~=1956.3628  trG~-N(I)=-0.6372  trG~-N(I')=-87.6372
+        sum_I tail/aL^2=1.3398  sum_(I'\I) head/aL^2=0.7025  sum_(I', D>=1) tail/aL^2=85.26 (of which I'\I: 84.91)  X^1/2=17.84  ratio=4.78  vs L*sqrt(2/pi)=4.60
+   chiA T=  6000 L=6.862 d=6552: N(I)=6921 N(I')=7100 N(I'\I)=179 trG~=6920.7579  trG~-N(I)=-0.2421  trG~-N(I')=-179.2421
+        sum_I tail/aL^2=0.4139  sum_(I'\I) head/aL^2=0.1717  sum_(I', D>=1) tail/aL^2=177.30 (of which I'\I: 176.91)  X^1/2=30.90  ratio=5.74  vs L*sqrt(2/pi)=5.47
+   chiA T= 20000 L=8.066 d=25673: N(I)=26904 N(I')=27282 N(I'\I)=378 trG~=26902.8213  trG~-N(I)=-1.1787  trG~-N(I')=-379.1787
+        sum_I tail/aL^2=1.3326  sum_(I'\I) head/aL^2=0.1539  sum_(I', D>=1) tail/aL^2=376.31 (of which I'\I: 375.94)  X^1/2=56.42  ratio=6.67  vs L*sqrt(2/pi)=6.44
+   chiA T= 30000 L=8.471 d=40446: N(I)=42290 N(I')=42776 N(I'\I)=486 trG~=42290.7387  trG~-N(I)=+0.7387  trG~-N(I')=-485.2613
+        sum_I tail/aL^2=0.1964  sum_(I'\I) head/aL^2=0.9351  sum_(I', D>=1) tail/aL^2=483.02 (of which I'\I: 482.87)  X^1/2=69.10  ratio=6.99  vs L*sqrt(2/pi)=6.76
+   chiB T=  2000 L=5.763 d=1834: N(I)=1957 N(I')=2044 N(I'\I)=87 trG~=1956.3655  trG~-N(I)=-0.6345  trG~-N(I')=-87.6345
+        sum_I tail/aL^2=1.3552  sum_(I'\I) head/aL^2=0.7207  sum_(I', D>=1) tail/aL^2=85.26 (of which I'\I: 84.90)  X^1/2=17.84  ratio=4.78  vs L*sqrt(2/pi)=4.60
+   chiB T=  6000 L=6.862 d=6552: N(I)=6921 N(I')=7100 N(I'\I)=179 trG~=6920.7560  trG~-N(I)=-0.2440  trG~-N(I')=-179.2440
+        sum_I tail/aL^2=0.4363  sum_(I'\I) head/aL^2=0.1923  sum_(I', D>=1) tail/aL^2=177.30 (of which I'\I: 176.89)  X^1/2=30.90  ratio=5.74  vs L*sqrt(2/pi)=5.47
+   chiB T= 20000 L=8.066 d=25673: N(I)=26904 N(I')=27282 N(I'\I)=378 trG~=26902.8209  trG~-N(I)=-1.1791  trG~-N(I')=-379.1791
+        sum_I tail/aL^2=1.3509  sum_(I'\I) head/aL^2=0.1718  sum_(I', D>=1) tail/aL^2=376.32 (of which I'\I: 375.93)  X^1/2=56.42  ratio=6.67  vs L*sqrt(2/pi)=6.44
+   chiB T= 30000 L=8.471 d=40446: N(I)=42290 N(I')=42776 N(I'\I)=486 trG~=42290.7363  trG~-N(I)=+0.7363  trG~-N(I')=-485.2637
+        sum_I tail/aL^2=0.2177  sum_(I'\I) head/aL^2=0.9540  sum_(I', D>=1) tail/aL^2=483.02 (of which I'\I: 482.85)  X^1/2=69.10  ratio=6.99  vs L*sqrt(2/pi)=6.76
+   (analytic) N(T-sqrt T, T) + N(2T, 2T+sqrt T) = (sqrt T / pi) log(T/2pi) + O(log T) (Riemann-von Mangoldt), so the
+   D>=1 sum is >= (1-o(1)) sqrt(T) L / pi, which is not << X^{1/2} = (T/2pi)^{1/2}: the ratio tends to infinity like L.
+====================================================================================================
+(R) Repair input: for z in I'\I (real part at distance D from I, |Im z| = y), |head(z)| vs X^{1/2} min(L^2, L D^-3)
+   T=2000 y=0.0: D= 0.0: |head|/bound=4.14e-02  D= 0.5: |head|/bound=2.43e-02  D= 1.0: |head|/bound=2.88e-02  D= 3.0: |head|/bound=6.65e-02  D=10.0: |head|/bound=1.45e-02  D=30.0: |head|/bound=8.69e-05
+   T=2000 y=0.25: D= 0.0: |head|/bound=4.40e-02  D= 0.5: |head|/bound=2.74e-02  D= 1.0: |head|/bound=3.83e-02  D= 3.0: |head|/bound=8.96e-02  D=10.0: |head|/bound=1.98e-02  D=30.0: |head|/bound=6.11e-05
+   T=2000 y=0.49: D= 0.0: |head|/bound=5.25e-02  D= 0.5: |head|/bound=3.80e-02  D= 1.0: |head|/bound=7.84e-02  D= 3.0: |head|/bound=2.37e-01  D=10.0: |head|/bound=4.55e-02  D=30.0: |head|/bound=2.27e-04
+   T=20000 y=0.0: D= 0.0: |head|/bound=1.44e-02  D= 0.5: |head|/bound=5.04e-03  D= 1.0: |head|/bound=2.29e-03  D= 3.0: |head|/bound=2.60e-02  D=10.0: |head|/bound=2.32e-03  D=30.0: |head|/bound=2.63e-05
+   T=20000 y=0.25: D= 0.0: |head|/bound=1.64e-02  D= 0.5: |head|/bound=7.37e-03  D= 1.0: |head|/bound=8.26e-03  D= 3.0: |head|/bound=4.96e-02  D=10.0: |head|/bound=5.49e-03  D=30.0: |head|/bound=2.01e-05
+   T=20000 y=0.49: D= 0.0: |head|/bound=2.46e-02  D= 0.5: |head|/bound=1.77e-02  D= 1.0: |head|/bound=5.36e-02  D= 3.0: |head|/bound=2.20e-01  D=10.0: |head|/bound=3.15e-02  D=30.0: |head|/bound=2.53e-04
+   (all ratios bounded => |head_rho| << X^{1/2} min(L^2, L D^-3) is consistent; analytic proof in the adjudication)

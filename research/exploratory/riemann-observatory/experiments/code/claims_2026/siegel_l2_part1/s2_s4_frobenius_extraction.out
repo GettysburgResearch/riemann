@@ -1,0 +1,41 @@
+PASS (2a) OAI/Banks R=Z[sqrt d, sqrt 2]: theta^p == Frob_p(theta) mod pR in 11410 exact tests (class counts {'sigma*tau': 313, 'tau': 306, 'sigma': 290, '1': 232})
+PASS (2b) Kerr O=Z[sqrt D, sqrt 2]: theta^p == Frob_p(theta) mod pR in 9880 exact tests (class counts {'sigma*tau': 275, '1': 204, 'tau': 261, 'sigma': 248})
+PASS (2c) Guo (3.9): rho((u+vt)^p) == u - vt (mod p), 32340 cases; derivatives of z^p-w carry factor p
+PASS (2c) Guo (3.6): xi^p0 == 2u - xi mod (p0, f_uv) and f_uv irreducible, 1788 cases
+PASS (3a) Kerr Lem 2: G_ijk in L_D and unitriangular in weight order (D in {40,64,97}, p in {11,13,17,23}, l in {2,3}; up to 3094 monomials)
+PASS (3b) Guo (3.8): adapted polynomials stay in the rectangle and form an integer basis (det = +-1), (p0,s0) in {(31,3),(37,4),(41,5),(61,6)}, p in {3,5,7,11}
+PASS d=-163 N=2 H=1: M=16 rows, selection agrees mod 2 primes=True, skipped rows certified exactly=True, Delta != 0: True (CRT over 7 primes, verified at a fresh prime), S1=7, S2=27, max alpha1=2
+PASS d=-163 N=2 H=3: M=16 rows, selection agrees mod 2 primes=True, skipped rows certified exactly=True, Delta != 0: True (CRT over 7 primes, verified at a fresh prime), S1=22, S2=14, max alpha1=5
+   p=3 Frob=sigma*tau: v_p(Delta)=9, E_p=3, E_full=3
+   p=5 Frob=sigma*tau (admissible): v_p(Delta)=1, E_p=1, E_full=1
+PASS d=-7 N=2 H=2: M=16 rows, selection agrees mod 2 primes=True, skipped rows certified exactly=True, Delta != 0: True (CRT over 6 primes, verified at a fresh prime), S1=18, S2=16, max alpha1=4
+   p=3 Frob=sigma*tau (admissible): v_p(Delta)=2, E_p=2, E_full=2
+PASS d=5 N=2 H=4: M=16 rows, selection agrees mod 2 primes=True, skipped rows certified exactly=True, Delta != 0: True (CRT over 7 primes, verified at a fresh prime), S1=40, S2=8, max alpha1=7
+   p=3 Frob=sigma*tau: v_p(Delta)=5, E_p=9, E_full=9
+   p=7 Frob=sigma (admissible): v_p(Delta)=1, E_p=1, E_full=1
+PASS d=13 N=2 H=6: M=16 rows, selection agrees mod 2 primes=True, skipped rows certified exactly=True, Delta != 0: True (CRT over 8 primes, verified at a fresh prime), S1=45, S2=7, max alpha1=8
+   p=3 Frob=tau: v_p(Delta)=1, E_p=10, E_full=0
+   p=5 Frob=sigma*tau: v_p(Delta)=5, E_p=4, E_full=4
+   p=7 Frob=sigma (admissible): v_p(Delta)=3, E_p=2, E_full=2
+PASS d=-1 N=2 H=3: M=16 rows, selection agrees mod 2 primes=True, skipped rows certified exactly=True, Delta != 0: True (CRT over 5 primes, verified at a fresh prime), S1=22, S2=14, max alpha1=5
+   p=3 Frob=sigma*tau: v_p(Delta)=4, E_p=3, E_full=3
+   p=5 Frob=tau: v_p(Delta)=0, E_p=1, E_full=0
+PASS d=-3 N=2 H=5: M=16 rows, selection agrees mod 2 primes=True, skipped rows certified exactly=True, Delta != 0: True (CRT over 7 primes, verified at a fresh prime), S1=40, S2=8, max alpha1=7
+   p=5 Frob=sigma*tau: v_p(Delta)=3, E_p=3, E_full=3
+   p=7 Frob=1: v_p(Delta)=1, E_p=1, E_full=1
+PASS d=229 N=2 H=2: M=16 rows, selection agrees mod 2 primes=True, skipped rows certified exactly=True, Delta != 0: True (CRT over 7 primes, verified at a fresh prime), S1=18, S2=16, max alpha1=4
+   p=3 Frob=tau: v_p(Delta)=1, E_p=2, E_full=0
+PASS d=-163 N=3 H=2: M=81 rows, selection agrees mod 2 primes=True, skipped rows certified exactly=True, Delta != 0: True (CRT over 63 primes, verified at a fresh prime), S1=191, S2=187, max alpha1=9
+   p=3 Frob=sigma*tau (admissible): v_p(Delta)=73, E_p=41, E_full=54
+   p=5 Frob=sigma*tau (admissible): v_p(Delta)=19, E_p=15, E_full=16
+   p=7 Frob=sigma (admissible): v_p(Delta)=5, E_p=5, E_full=5
+PASS d=5 N=3 H=4: M=81 rows, selection agrees mod 2 primes=True, skipped rows certified exactly=True, Delta != 0: True (CRT over 59 primes, verified at a fresh prime), S1=360, S2=124, max alpha1=15
+   p=3 Frob=sigma*tau: v_p(Delta)=96, E_p=96, E_full=101
+   p=7 Frob=sigma (admissible): v_p(Delta)=24, E_p=24, E_full=24
+   p=11 Frob=tau: v_p(Delta)=1, E_p=7, E_full=0
+   p=13 Frob=sigma*tau (admissible): v_p(Delta)=3, E_p=3, E_full=3
+PASS (4) OAI Lem 7 in R: v_p(Delta) >= E_p for every admissible p in every toy case: 9 tests, 0 failures, equality in 6
+PASS (4) control/strengthening: v_p(Delta) >= E_full_p for all four Frobenius classes: 14 tests, 0 failures
+
+SUMMARY: 18 PASS, 0 FAIL
+exit=0

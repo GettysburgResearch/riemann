@@ -1,0 +1,27 @@
+{
+ "N": 19,
+ "TMAX": 2000000.0,
+ "screen": "Newton-step on sigma=1, dt=0.05",
+ "n_screen_points": 49,
+ "zeros_re_gt_1": [
+  [
+   1.0010955115440543,
+   600884.2034277758
+  ]
+ ],
+ "certificates": [
+  {
+   "ok": true,
+   "count": 1,
+   "enclosure": "[1.000000000 +/- 3e-15]",
+   "nevals": 64,
+   "center": [
+    1.0010955115440543,
+    600884.2034277758
+   ],
+   "halfwidth": 0.0005477557720271475,
+   "sigma_lower_edge": 1.0005477557720273
+  }
+ ],
+ "runtime_s": 29.1
+}

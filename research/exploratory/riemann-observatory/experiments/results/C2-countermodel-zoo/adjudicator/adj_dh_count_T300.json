@@ -1,0 +1,23 @@
+{
+ "script": "adj_dh_count.py",
+ "prec_bits": 96,
+ "python_flint": "0.9.0",
+ "T": 300.0,
+ "low_box_[-0.6,1.6]x[-1,1]": {
+  "ok": true,
+  "count": 0,
+  "enclosure": "[+/- 6.74e-24]",
+  "nevals": 13888
+ },
+ "box_[-0.6,1.6]x[1,T]": {
+  "ok": true,
+  "count": 214,
+  "enclosure": "[214.00000000000000000 +/- 3e-22]",
+  "nevals": 29704
+ },
+ "line_sign_changes": 204,
+ "uncertified_points": 0,
+ "line_step": 0.005,
+ "N_box_minus_line": 10,
+ "runtime_s": 50.8
+}

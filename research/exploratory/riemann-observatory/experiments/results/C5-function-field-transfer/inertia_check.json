@@ -1,0 +1,534 @@
+{
+ "meta": {
+  "script": "ff_inertia_check.py",
+  "python": "3.13.18",
+  "flint": "0.9.0",
+  "sympy": "1.14.0",
+  "numpy": "2.5.3",
+  "arb_prec_bits": 512,
+  "runtime_s": 197.0,
+  "note": "zero-eigenvalue count for N=2g+1 = balls not excluding 0 (rump enclosure)"
+ },
+ "cases": [
+  {
+   "q": 3,
+   "g": 2,
+   "admissible": 74,
+   "squarefree": 69,
+   "checked": 69,
+   "agree_2g": 69,
+   "agree_2g1": 69,
+   "rigorous_2g": 69,
+   "rigorous_2g1": 64,
+   "disagreements": [],
+   "nonsquarefree_examples": [
+    {
+     "h_asc": [
+      4,
+      -4,
+      1
+     ],
+     "n_out": "0",
+     "inertia_2g": [
+      0,
+      2,
+      2,
+      false
+     ]
+    },
+    {
+     "h_asc": [
+      1,
+      -2,
+      1
+     ],
+     "n_out": "0",
+     "inertia_2g": [
+      0,
+      2,
+      2,
+      false
+     ]
+    },
+    {
+     "h_asc": [
+      0,
+      0,
+      1
+     ],
+     "n_out": "0",
+     "inertia_2g": [
+      0,
+      2,
+      2,
+      false
+     ]
+    },
+    {
+     "h_asc": [
+      1,
+      2,
+      1
+     ],
+     "n_out": "0",
+     "inertia_2g": [
+      0,
+      2,
+      2,
+      false
+     ]
+    },
+    {
+     "h_asc": [
+      4,
+      4,
+      1
+     ],
+     "n_out": "0",
+     "inertia_2g": [
+      0,
+      2,
+      2,
+      false
+     ]
+    }
+   ],
+   "runtime_s": 1.3
+  },
+  {
+   "q": 4,
+   "g": 2,
+   "admissible": 172,
+   "squarefree": 155,
+   "checked": 155,
+   "agree_2g": 155,
+   "agree_2g1": 155,
+   "rigorous_2g": 155,
+   "rigorous_2g1": 149,
+   "disagreements": [],
+   "nonsquarefree_examples": [
+    {
+     "h_asc": [
+      4,
+      -5,
+      1
+     ],
+     "n_out": "0",
+     "inertia_2g": [
+      0,
+      1,
+      3,
+      true
+     ]
+    },
+    {
+     "h_asc": [
+      0,
+      -4,
+      1
+     ],
+     "n_out": "0",
+     "inertia_2g": [
+      0,
+      1,
+      3,
+      false
+     ]
+    },
+    {
+     "h_asc": [
+      4,
+      -4,
+      1
+     ],
+     "n_out": "0",
+     "inertia_2g": [
+      0,
+      2,
+      2,
+      false
+     ]
+    },
+    {
+     "h_asc": [
+      -4,
+      -3,
+      1
+     ],
+     "n_out": "0",
+     "inertia_2g": [
+      0,
+      1,
+      3,
+      true
+     ]
+    },
+    {
+     "h_asc": [
+      -8,
+      -2,
+      1
+     ],
+     "n_out": "0",
+     "inertia_2g": [
+      0,
+      1,
+      3,
+      true
+     ]
+    }
+   ],
+   "runtime_s": 1.9
+  },
+  {
+   "q": 5,
+   "g": 2,
+   "admissible": 326,
+   "squarefree": 317,
+   "checked": 317,
+   "agree_2g": 317,
+   "agree_2g1": 317,
+   "rigorous_2g": 317,
+   "rigorous_2g1": 314,
+   "disagreements": [],
+   "nonsquarefree_examples": [
+    {
+     "h_asc": [
+      9,
+      -6,
+      1
+     ],
+     "n_out": "0",
+     "inertia_2g": [
+      0,
+      2,
+      2,
+      false
+     ]
+    },
+    {
+     "h_asc": [
+      4,
+      -4,
+      1
+     ],
+     "n_out": "0",
+     "inertia_2g": [
+      0,
+      2,
+      2,
+      false
+     ]
+    },
+    {
+     "h_asc": [
+      1,
+      -2,
+      1
+     ],
+     "n_out": "0",
+     "inertia_2g": [
+      0,
+      2,
+      2,
+      false
+     ]
+    },
+    {
+     "h_asc": [
+      -20,
+      0,
+      1
+     ],
+     "n_out": "0",
+     "inertia_2g": [
+      0,
+      2,
+      2,
+      false
+     ]
+    },
+    {
+     "h_asc": [
+      0,
+      0,
+      1
+     ],
+     "n_out": "0",
+     "inertia_2g": [
+      0,
+      2,
+      2,
+      false
+     ]
+    }
+   ],
+   "runtime_s": 3.0
+  },
+  {
+   "q": 7,
+   "g": 2,
+   "admissible": 880,
+   "squarefree": 869,
+   "checked": 869,
+   "agree_2g": 869,
+   "agree_2g1": 869,
+   "rigorous_2g": 869,
+   "rigorous_2g1": 866,
+   "disagreements": [],
+   "nonsquarefree_examples": [
+    {
+     "h_asc": [
+      16,
+      -8,
+      1
+     ],
+     "n_out": "0",
+     "inertia_2g": [
+      0,
+      2,
+      2,
+      false
+     ]
+    },
+    {
+     "h_asc": [
+      9,
+      -6,
+      1
+     ],
+     "n_out": "0",
+     "inertia_2g": [
+      0,
+      2,
+      2,
+      false
+     ]
+    },
+    {
+     "h_asc": [
+      4,
+      -4,
+      1
+     ],
+     "n_out": "0",
+     "inertia_2g": [
+      0,
+      2,
+      2,
+      false
+     ]
+    },
+    {
+     "h_asc": [
+      1,
+      -2,
+      1
+     ],
+     "n_out": "0",
+     "inertia_2g": [
+      0,
+      2,
+      2,
+      false
+     ]
+    },
+    {
+     "h_asc": [
+      -28,
+      0,
+      1
+     ],
+     "n_out": "0",
+     "inertia_2g": [
+      0,
+      2,
+      2,
+      false
+     ]
+    }
+   ],
+   "runtime_s": 9.5
+  },
+  {
+   "q": 2,
+   "g": 3,
+   "admissible": 172,
+   "squarefree": 163,
+   "checked": 163,
+   "agree_2g": 163,
+   "agree_2g1": 163,
+   "rigorous_2g": 163,
+   "rigorous_2g1": 154,
+   "disagreements": [],
+   "nonsquarefree_examples": [
+    {
+     "h_asc": [
+      4,
+      0,
+      -3,
+      1
+     ],
+     "n_out": "0",
+     "inertia_2g": [
+      0,
+      2,
+      4,
+      false
+     ]
+    },
+    {
+     "h_asc": [
+      -1,
+      3,
+      -3,
+      1
+     ],
+     "n_out": "0",
+     "inertia_2g": [
+      0,
+      4,
+      2,
+      false
+     ]
+    },
+    {
+     "h_asc": [
+      8,
+      -4,
+      -2,
+      1
+     ],
+     "n_out": "0",
+     "inertia_2g": [
+      0,
+      2,
+      4,
+      false
+     ]
+    },
+    {
+     "h_asc": [
+      1,
+      -1,
+      -1,
+      1
+     ],
+     "n_out": "0",
+     "inertia_2g": [
+      0,
+      2,
+      4,
+      false
+     ]
+    },
+    {
+     "h_asc": [
+      -2,
+      -3,
+      0,
+      1
+     ],
+     "n_out": "0",
+     "inertia_2g": [
+      0,
+      2,
+      4,
+      false
+     ]
+    }
+   ],
+   "runtime_s": 26.7
+  },
+  {
+   "q": 3,
+   "g": 3,
+   "admissible": 1759,
+   "squarefree": 1727,
+   "checked": 1727,
+   "agree_2g": 1727,
+   "agree_2g1": 1727,
+   "rigorous_2g": 1726,
+   "rigorous_2g1": 1701,
+   "disagreements": [],
+   "nonsquarefree_examples": [
+    {
+     "h_asc": [
+      18,
+      -3,
+      -4,
+      1
+     ],
+     "n_out": "0",
+     "inertia_2g": [
+      0,
+      2,
+      4,
+      false
+     ]
+    },
+    {
+     "h_asc": [
+      0,
+      4,
+      -4,
+      1
+     ],
+     "n_out": "0",
+     "inertia_2g": [
+      0,
+      2,
+      4,
+      false
+     ]
+    },
+    {
+     "h_asc": [
+      -2,
+      5,
+      -4,
+      1
+     ],
+     "n_out": "0",
+     "inertia_2g": [
+      0,
+      2,
+      4,
+      false
+     ]
+    },
+    {
+     "h_asc": [
+      27,
+      -9,
+      -3,
+      1
+     ],
+     "n_out": "0",
+     "inertia_2g": [
+      0,
+      2,
+      4,
+      false
+     ]
+    },
+    {
+     "h_asc": [
+      0,
+      0,
+      -3,
+      1
+     ],
+     "n_out": "0",
+     "inertia_2g": [
+      0,
+      2,
+      4,
+      false
+     ]
+    }
+   ],
+   "runtime_s": 154.6
+  }
+ ]
+}

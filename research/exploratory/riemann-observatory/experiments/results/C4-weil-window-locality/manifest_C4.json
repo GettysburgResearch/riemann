@@ -1,0 +1,84 @@
+{
+ "python": "3.13.18",
+ "files": {
+  "check_flat_lattice.json": {
+   "sha256": "addf226e55dd95b12a16c2b00e34ed2e385368ccedeafe715626eb916c9ff55c",
+   "bytes": 3172
+  },
+  "detect_collision.json": {
+   "sha256": "bb0a0e60db9445a1e9390a5b1289ef613fbc9127dee0096dd55ee18ae95b7383",
+   "bytes": 13120,
+   "runtime_s": 44.1
+  },
+  "detect_convN15.json": {
+   "sha256": "a16707e953e04a5380381fa5a8ad2a50a314445a1250d9109feccf85eafb7388",
+   "bytes": 16842,
+   "runtime_s": 111.4
+  },
+  "detect_convN_T100.json": {
+   "sha256": "c34270f1af8fd95468dbbe78c5b270bfd695e9c50b9fbb86082f8540bbb4b989",
+   "bytes": 2856,
+   "runtime_s": 5.9
+  },
+  "detect_convN_T1000_s2.json": {
+   "sha256": "df3bf97169f0830e5d2f9d2679a78e925622c9f613cf0b13b921694db32b2e48",
+   "bytes": 3144,
+   "runtime_s": 22.1
+  },
+  "detect_convN_T1000_s3.json": {
+   "sha256": "a1ff950dea31dbca647e16786b50ab7e78475bc6250622b16515f147a631f429",
+   "bytes": 2330,
+   "runtime_s": 47.2
+  },
+  "detect_convN_T100_s3.json": {
+   "sha256": "6e7743109863209e3113a3b05625488e4dcc8de30a6b7f44fd73177396e0fc82",
+   "bytes": 2873,
+   "runtime_s": 21.9
+  },
+  "detect_highT.json": {
+   "sha256": "04d7ae79637fa4e2bc37bcfb1025a361906d9cb4cac5aad5b4d96000d78ce806",
+   "bytes": 14127,
+   "runtime_s": 40.0
+  },
+  "detect_lowT.json": {
+   "sha256": "0768eb39e5f1288c8c0bbdda33384c41ff570312e0c8d3a5ed77722b7df9fb0e",
+   "bytes": 34199,
+   "runtime_s": 69.6
+  },
+  "detect_midT.json": {
+   "sha256": "3a3342044e69e22150cdf0044a68b4d3f50f9073a611ef17e3ff857aed184519",
+   "bytes": 37340,
+   "runtime_s": 698.1
+  },
+  "detect_ultra.json": {
+   "sha256": "6a15e0dbb452d0b531b82ed8d264ace5c6b4c2ec10a5567fec04a6e8025008af",
+   "bytes": 4004,
+   "runtime_s": 140.3
+  },
+  "hp_spectral_check.json": {
+   "sha256": "1a99c939f35df9da1a3e0cdd4f0e98ccacf3b12fd86dfc13e87aeed90ac29b5b",
+   "bytes": 695
+  },
+  "lambda_profile_main.json": {
+   "sha256": "1dcdd50d1a44d8885df884bfdbf13a3c18993e551d9ab6e7afef2f9625c69b79",
+   "bytes": 11306,
+   "runtime_s": 626.9
+  },
+  "psi_eff_diag.json": {
+   "sha256": "b9e1ac4cec0e88ec192cdf2b08ca15222a03465e44c14e094e4d3a4b4e3ad8e9",
+   "bytes": 3051
+  },
+  "tables_C4.md": {
+   "sha256": "5a12131922c1f185256b3c94280acf806127ce3f0359246be447a97278111837",
+   "bytes": 23899
+  },
+  "thmB_table.json": {
+   "sha256": "3e6ee84ef06fa951f57833e9c0eb98730ec80a2be899da6712d33d1de580eb50",
+   "bytes": 16569
+  }
+ },
+ "numpy": "2.5.3",
+ "scipy": "1.18.1",
+ "mpmath": "1.3.0",
+ "python-flint": "0.9.0"
+}

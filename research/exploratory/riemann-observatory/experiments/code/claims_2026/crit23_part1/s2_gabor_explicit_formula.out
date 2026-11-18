@@ -1,0 +1,76 @@
+====================================================================================================
+PART A. AF Lemma 2.1 with the actual C^2 (here C^inf) taper, complex arguments
+====================================================================================================
+  flat L=5.0 z=2.339+0.270j z'=-0.349-0.196j: |lhs-rhs|=1.6e-15 (|rhs|=4.689); bilinear sum/aL^2 = 1.000000000000+0.000000000000j; sesquilinear sum/aL^2 = 1.189491 (pred 1.189491)
+  flat L=5.0 z=0.262+0.315j z'=3.430-0.031j: |lhs-rhs|=4.4e-15 (|rhs|=2.150); bilinear sum/aL^2 = 1.000000000000+0.000000000000j; sesquilinear sum/aL^2 = 1.262362 (pred 1.262362)
+  flat L=5.0 z=-2.068-0.240j z'=-1.402+0.004j: |lhs-rhs|=3.6e-15 (|rhs|=15.024); bilinear sum/aL^2 = 1.000000000000-0.000000000000j; sesquilinear sum/aL^2 = 1.148105 (pred 1.148105)
+  flat L=5.0 z=2.303+0.287j z'=0.810+0.479j: |lhs-rhs|=3.2e-15 (|rhs|=3.093); bilinear sum/aL^2 = 1.000000000000+0.000000000000j; sesquilinear sum/aL^2 = 1.215038 (pred 1.215038)
+  flat L=7.0 z=-3.067+0.110j z'=-3.532-0.455j: |lhs-rhs|=1.4e-14 (|rhs|=51.154); bilinear sum/aL^2 = 1.000000000000+0.000000000000j; sesquilinear sum/aL^2 = 1.070358 (pred 1.070358)
+  flat L=7.0 z=-0.046+0.409j z'=0.606+0.014j: |lhs-rhs|=5.0e-15 (|rhs|=31.227); bilinear sum/aL^2 = 1.000000000000-0.000000000000j; sesquilinear sum/aL^2 = 2.258640 (pred 2.258640)
+  flat L=7.0 z=-1.029-0.478j z'=-1.249+0.188j: |lhs-rhs|=2.9e-14 (|rhs|=69.021); bilinear sum/aL^2 = 1.000000000000+0.000000000000j; sesquilinear sum/aL^2 = 2.912978 (pred 2.912978)
+  flat L=7.0 z=-2.318-0.486j z'=-0.476-0.339j: |lhs-rhs|=1.1e-14 (|rhs|=6.734); bilinear sum/aL^2 = 1.000000000000-0.000000000000j; sesquilinear sum/aL^2 = 3.002130 (pred 3.002130)
+  MT   L=5.0 z=0.127+0.010j z'=-0.006+0.137j: |lhs-rhs|=3.9e-16 (|rhs|=18.121); bilinear sum/aL^2 = 1.000000000000-0.000000000000j; sesquilinear sum/aL^2 = 1.000217 (pred 1.000217)
+  MT   L=5.0 z=-0.183+0.040j z'=1.482+0.364j: |lhs-rhs|=1.1e-15 (|rhs|=3.475); bilinear sum/aL^2 = 1.000000000000+0.000000000000j; sesquilinear sum/aL^2 = 1.003831 (pred 1.003831)
+  MT   L=5.0 z=-0.440-0.432j z'=-1.282-0.173j: |lhs-rhs|=2.0e-15 (|rhs|=12.280); bilinear sum/aL^2 = 1.000000000000-0.000000000000j; sesquilinear sum/aL^2 = 1.503682 (pred 1.503682)
+  MT   L=5.0 z=-0.833-0.118j z'=-0.184+0.088j: |lhs-rhs|=2.0e-15 (|rhs|=14.446); bilinear sum/aL^2 = 1.000000000000-0.000000000000j; sesquilinear sum/aL^2 = 1.033191 (pred 1.033191)
+  MT   L=7.0 z=1.182+0.173j z'=-0.767-0.058j: |lhs-rhs|=5.0e-15 (|rhs|=5.662); bilinear sum/aL^2 = 1.000000000000+0.000000000000j; sesquilinear sum/aL^2 = 1.169408 (pred 1.169408)
+  MT   L=7.0 z=-1.953-0.395j z'=0.309-0.279j: |lhs-rhs|=9.9e-16 (|rhs|=2.036); bilinear sum/aL^2 = 1.000000000000-0.000000000000j; sesquilinear sum/aL^2 = 2.092223 (pred 2.092223)
+  MT   L=7.0 z=0.232+0.367j z'=1.679-0.361j: |lhs-rhs|=2.2e-14 (|rhs|=30.961); bilinear sum/aL^2 = 1.000000000000-0.000000000000j; sesquilinear sum/aL^2 = 1.906281 (pred 1.906281)
+  MT   L=7.0 z=3.850+0.396j z'=2.349-0.347j: |lhs-rhs|=7.3e-15 (|rhs|=31.317); bilinear sum/aL^2 = 1.000000000000+0.000000000000j; sesquilinear sum/aL^2 = 2.096463 (pred 2.096463)
+====================================================================================================
+PART B. Explicit formula (2.2) in AF's normalisation vs the first zeta zeros (Arb table)
+====================================================================================================
+  [flat] even F (al=al'=0)
+      zero side  sum_rho F^(gamma_rho)            = 0.000221458069
+      (2.2) int F^ nu_X (numerical quadrature)    = 0.000221458069   diff = 6.2e-15
+        pieces: int F^ mu = -8.9077424444; int F^ Pi_X = 20.3120416321 vs F^(i/2)+F^(-i/2) = 20.3120416321+0.0e+00i; int F^ P_X = -11.4040777297 vs -sum Lam/sqrt(n)(F(log n)+F(-log n)) = -11.4040777297-0.0e+00i
+      (2.1) applied literally (one-sided prime sum) = 0.0002214581+0.000e+00i   diff from zero side = 6.19e-15
+  [flat] non-even F (al=al'=30)
+      zero side  sum_rho F^(gamma_rho)            = 7.783928887618
+      (2.2) int F^ nu_X (numerical quadrature)    = 7.783928887618   diff = 8.0e-15
+        pieces: int F^ mu = 4.2556330076; int F^ Pi_X = -0.0000002780 vs F^(i/2)+F^(-i/2) = -0.0000002780+0.0e+00i; int F^ P_X = 3.5282961580 vs -sum Lam/sqrt(n)(F(log n)+F(-log n)) = 3.5282961580-7.4e-17i
+      (2.1) applied literally (one-sided prime sum) = 7.7839288876-3.916e+00i   diff from zero side = 3.92e+00
+  [flat] non-even complex F (al=30, al'=31.7)
+      zero side  sum_rho F^(gamma_rho)            = 3.133558913302
+      (2.2) int F^ nu_X (numerical quadrature)    = 3.133558913302   diff = 2.7e-15
+        pieces: int F^ mu = 1.3434910496; int F^ Pi_X = 0.0000000581 vs F^(i/2)+F^(-i/2) = 0.0000000581+0.0e+00i; int F^ P_X = 1.7900678056 vs -sum Lam/sqrt(n)(F(log n)+F(-log n)) = 1.7900678056-2.8e-17i
+      (2.1) applied literally (one-sided prime sum) = 3.1335589133+1.626e+00i   diff from zero side = 1.63e+00
+  [flat] AF entry (G~+E~)_kk' at T=2piX=314.16: k=10,k'=11
+      zero side  sum_rho F^(gamma_rho)            = 4.281424121929
+      (2.2) int F^ nu_X (numerical quadrature)    = 4.281424121929   diff = 1.4e-13
+        pieces: int F^ mu = 3.9370218090; int F^ Pi_X = 0.0000000000 vs F^(i/2)+F^(-i/2) = -0.0000000000+0.0e+00i; int F^ P_X = 0.3444023130 vs -sum Lam/sqrt(n)(F(log n)+F(-log n)) = 0.3444023130-3.8e-17i
+      (2.1) applied literally (one-sided prime sum) = 4.2814241219+1.915e+00i   diff from zero side = 1.92e+00
+      => (G~+E~)_kk' = 0.401855646028 (zero side) vs 0.401855646028 (prime side, eq. 2.11)
+  [flat] AF diagonal entry k=k'=20 at T=314.16
+      zero side  sum_rho F^(gamma_rho)            = 13.516381612454
+      (2.2) int F^ nu_X (numerical quadrature)    = 13.516381612454   diff = 1.4e-14
+        pieces: int F^ mu = 10.9192530976; int F^ Pi_X = -0.0000000000 vs F^(i/2)+F^(-i/2) = 0.0000000000+0.0e+00i; int F^ P_X = 2.5971285148 vs -sum Lam/sqrt(n)(F(log n)+F(-log n)) = 2.5971285148-2.4e-16i
+      (2.1) applied literally (one-sided prime sum) = 13.5163816125-2.866e+00i   diff from zero side = 2.87e+00
+      => (G~+E~)_kk' = 1.268651296892 (zero side) vs 1.268651296892 (prime side, eq. 2.11)
+  [MT] even F (al=al'=0)
+      zero side  sum_rho F^(gamma_rho)            = 0.000187284036
+      (2.2) int F^ nu_X (numerical quadrature)    = 0.000187284036   diff = 5.2e-15
+        pieces: int F^ mu = -8.5336163990; int F^ Pi_X = 19.2679187525 vs F^(i/2)+F^(-i/2) = 19.2679187525+0.0e+00i; int F^ P_X = -10.7341150695 vs -sum Lam/sqrt(n)(F(log n)+F(-log n)) = -10.7341150695-0.0e+00i
+      (2.1) applied literally (one-sided prime sum) = 0.0001872840+0.000e+00i   diff from zero side = 1.05e-14
+  [MT] non-even F (al=al'=30)
+      zero side  sum_rho F^(gamma_rho)            = 7.394045425027
+      (2.2) int F^ nu_X (numerical quadrature)    = 7.394045425027   diff = 8.0e-15
+        pieces: int F^ mu = 4.0810491569; int F^ Pi_X = -0.0000002281 vs F^(i/2)+F^(-i/2) = -0.0000002281+0.0e+00i; int F^ P_X = 3.3129964963 vs -sum Lam/sqrt(n)(F(log n)+F(-log n)) = 3.3129964963-2.2e-16i
+      (2.1) applied literally (one-sided prime sum) = 7.3940454250-3.707e+00i   diff from zero side = 3.71e+00
+  [MT] non-even complex F (al=30, al'=31.7)
+      zero side  sum_rho F^(gamma_rho)            = 3.099880010499
+      (2.2) int F^ nu_X (numerical quadrature)    = 3.099880010499   diff = 3.1e-15
+        pieces: int F^ mu = 1.3783557577; int F^ Pi_X = 0.0000000543 vs F^(i/2)+F^(-i/2) = 0.0000000543+0.0e+00i; int F^ P_X = 1.7215241984 vs -sum Lam/sqrt(n)(F(log n)+F(-log n)) = 1.7215241984+1.4e-17i
+      (2.1) applied literally (one-sided prime sum) = 3.0998800105+1.443e+00i   diff from zero side = 1.44e+00
+  [MT] AF entry (G~+E~)_kk' at T=2piX=314.16: k=10,k'=11
+      zero side  sum_rho F^(gamma_rho)            = 4.308524225869
+      (2.2) int F^ nu_X (numerical quadrature)    = 4.308524225869   diff = 1.3e-13
+        pieces: int F^ mu = 3.9861863461; int F^ Pi_X = 0.0000000000 vs F^(i/2)+F^(-i/2) = -0.0000000000+0.0e+00i; int F^ P_X = 0.3223378798 vs -sum Lam/sqrt(n)(F(log n)+F(-log n)) = 0.3223378798-1.3e-16i
+      (2.1) applied literally (one-sided prime sum) = 4.3085242259+1.896e+00i   diff from zero side = 1.90e+00
+      => (G~+E~)_kk' = 0.421707004070 (zero side) vs 0.421707004070 (prime side, eq. 2.11)
+  [MT] AF diagonal entry k=k'=20 at T=314.16
+      zero side  sum_rho F^(gamma_rho)            = 12.970702031791
+      (2.2) int F^ nu_X (numerical quadrature)    = 12.970702031791   diff = 1.2e-14
+        pieces: int F^ mu = 10.4711047407; int F^ Pi_X = -0.0000000000 vs F^(i/2)+F^(-i/2) = 0.0000000000+0.0e+00i; int F^ P_X = 2.4995972911 vs -sum Lam/sqrt(n)(F(log n)+F(-log n)) = 2.4995972911+3.4e-17i
+      (2.1) applied literally (one-sided prime sum) = 12.9707020318-2.658e+00i   diff from zero side = 2.66e+00
+      => (G~+E~)_kk' = 1.269538154541 (zero side) vs 1.269538154541 (prime side, eq. 2.11)
