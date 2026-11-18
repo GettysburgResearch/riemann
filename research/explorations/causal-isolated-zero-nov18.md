@@ -91,3 +91,43 @@ $$
 The first term is $o(t_j)$ by the strict bound on $r$. Along the subsequence attaining $\lambda$ the second term divided by $t_j$ tends to $r\lambda$: for $\lambda>0$, $n\sim\lambda t_j/\log t_j$, and for $\lambda=0$, $n=o(t_j/\log t_j)$ (including bounded $n$). Thus the derivative and shifted-contour costs have exponential rate at most $(r+1/q)\lambda$. Substitution into steps 2 and 3 contradicts the assumed $\beta$, proving (3). A subinterval of an actual first octave may be centered this way as long as it stays inside the octave in logarithmic coordinates.
 
 This is a bound for the variation of the cumulative prime error throughout each selected interval. The existence of many intervals having one accurate endpoint difference $\pi(x+h)-\pi(x)-\int_x^{x+h}du/\log u$ does not control that $L^2$ quantity. Nor does relative error $o(h/\log x)$ reach the exponent in the hypothesis when $h=x/(\log x)^{r+o(1)}$.
+
+## A lower bound on short-interval prime variance at every large center
+
+Suppose $\rho=\beta+i\gamma$ is any zero with $\beta>1/2$. Fix $w>0$. For all sufficiently large real $X$, uniformly for every real $0<\delta\le1$,
+$$
+\left(\int_{Xe^{-w}}^{Xe^w}
+\left|\vartheta(e^\delta y)-\vartheta(y)-(e^\delta-1)y\right|^2\frac{dy}{y}\right)^{1/2}
+\gg_{\rho,w} \delta X^\beta .
+\tag{4}
+$$
+Here $\vartheta(y)=\sum_{p\le y}\log p$, with no prime powers. This is a conditional lower bound on the actual source at each center, in a range that includes arbitrarily small multiplicative steps.
+
+Indeed put $B(v)=\vartheta(e^v)-e^v$ and take the isolating test of steps 1–2 with $1/2<\sigma_0<\alpha<\beta$. On our large-center windows $dB=\nu$. The convolution of $K'$ with $[B(\cdot+\delta)-B]/\delta$ at $t=\log X$ is the difference quotient of $(K*\nu)(t)$. Its integral on the line $\Re s=2$ uses the additional factor $U_\delta(s)=(e^{\delta s}-1)/\delta$. On the contour strip, $|U_\delta(s)|\le e^2 |s|$ by the integral representation $s\int_0^1e^{\delta s v}dv$. At $\rho$ one has $|U_\delta(\rho)|\ge (e^{\beta\delta}-1)/\delta\ge\beta$. The same shift therefore gives a main term of absolute size at least $m_\rho|W(\rho)|\beta X^\beta$ and a remainder $O_{\rho,w}(X^\alpha)$ uniformly in $\delta$. Cauchy–Schwarz against $K'$ proves (4).
+
+For example, let $X_j\to\infty$ be arbitrary and let $\delta_j=X_j^{-\eta+o(1)}$ with $0\le\eta\le1$ and $0<\delta_j\le1$. If the left side of (4) along the sequence has the root-interval-length bound $(X_j\delta_j)^{1/2}X_j^{o(1)}$, every zero satisfies $\beta\le(1+\eta)/2$. This is a sufficient arithmetic input. A classical almost-all prime asymptotic with relative $o(1)$ error in the interval length has a different error scale.
+
+## Positive tests and both signs on every sufficiently wide window
+
+If $\zeta$ has any zero of real part $\beta>1/2$, there are constants $C>1$, $c>0$, and $X_0$ such that for every $X\ge X_0$ the function $\vartheta(y)-y$ takes values $\ge cX^\beta$ and $\le-cX^\beta$ in $[X,CX]$. For every $0<\delta\le1$, the function
+$$
+D_\delta(y)=\vartheta(e^\delta y)-\vartheta(y)-(e^\delta-1)y
+$$
+takes values of both signs there at respective amplitudes at least $c\delta X^\beta$. The constants are uniform in $\delta$. Both positive and negative parts also have logarithmic integral $\gg\delta X^\beta$ on this interval. This signed statement uses a wider test whose support can depend on the actual zero set.
+
+Keep among zeros on the vertical line $\Re s=\beta$ one $\rho=\beta+i\gamma$ of smallest positive ordinate (there are no nontrivial real zeros). Choose $1/2<\alpha<\beta$ with the separation of step 1 and consider all distinct zeros $z=\beta_z+i\gamma_z$ with $\Re z>\alpha$, $\gamma_z>0$, other than $\rho$. For each set $\ell_z=\pi/\gamma_z$ and take the probability measure
+$$
+\mu_z=\frac{\delta_0+e^{\beta_z\ell_z}\delta_{\ell_z}}
+ {1+e^{\beta_z\ell_z}}.
+$$
+Its Laplace transform vanishes at $z$ and $\bar z$. It does not vanish at $\rho$: a vanishing would require $\beta_z=\beta$ and $\gamma/\gamma_z$ to be a positive odd integer, whereas each remaining zero on this same line has $\gamma_z>\gamma$. The density bound gives $\sum_z\ell_z<\infty$ by partial summation. The distribution of the sum of independent random variables with respective laws $\mu_z$ is therefore supported in $[0,\sum_z\ell_z]$. Its transform is the corresponding product and is nonzero at $\rho$, since on compact sets its factors differ from 1 by $O(\ell_z)$ apart from finitely many.
+
+Convolve this probability measure with a nonnegative smooth probability density supported in a sufficiently short interval $[0,\epsilon]$ so its transform is nonzero at $\rho$ (take $\gamma\epsilon<\pi/2$). The resulting real $K\ge0$ lies in $C_c^\infty([0,S])$ for some finite $S$. Its transform $W$ has every zero required in step 2 except the retained conjugate pair. It decays faster than any power on the contour strip by integration by parts.
+
+Extend $B(v)=\vartheta(e^v)-e^v+2$ by zero below $\log2$. Its distributional derivative is $\nu$, so its transform is $V(s)/s$. The compact smoothed $B$ and $[B(\cdot+\delta)-B]/\delta$ have contour shifts as in step 2, respectively with extra multipliers $1/s$ and $U_\delta(s)/s$. The main terms are the real conjugate-pair sums
+$$
+2\Re(A e^{\rho t}),\qquad
+2\Re(A U_\delta(\rho)e^{\rho t}),\qquad
+A=-m_\rho W(\rho)/\rho\ne0.
+$$
+The errors are $O(X^\alpha)$ when $t=\log X+O(1)$, uniformly in $0<\delta\le1$ by the preceding multiplier estimate. Since $|U_\delta(\rho)|\ge\beta$, both phases can separately be made to attain each extremal sign as $t$ runs through $[\log X+S,\log X+S+2\pi/\gamma]$. Each signed smoothed value has magnitude $\gg X^\beta$ there. Positivity and unit integral of the kernel yield sample points of each sign in $[X,CX]$, for $C=\exp(S+2\pi/\gamma)$. The fixed additive constant 2 in $B$ is negligible for large $X$. Boundedness of $K$ also bounds each signed average by $\|K\|_\infty$ times the logarithmic integral of the corresponding one-sided part, giving the integral assertion.

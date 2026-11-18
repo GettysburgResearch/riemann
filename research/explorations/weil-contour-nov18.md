@@ -8,15 +8,11 @@ The integrated cardinal construction captures a specified pair with adaptable co
 
 ## Statement
 
-Suppose $\Xi$ vanishes at $w$ with $\Re w=T\ge100$ and $0<|\Im w|=\delta<1/2$. There exists an absolute $C$ and $f\in C_c^\infty(-L,L)$ with $W(f)<0$ for
+Suppose $\Xi$ vanishes at $w$ with $\Re w=T\ge100$ and $0<|\Im w|=\delta<1/2$. Set $H=\log T(1+\log(1/\delta))$. There exists an absolute $C$ and a complex $f\in C_c^\infty(-L,L)$ with $W(f)<0$ for
 $$
- L={1\over2}\log\big[T/4+C\log T\,(1+\log(1/\delta))\big].
+ L={1\over2}\log\!\left[{T\over2\pi}+C(T^{1/3}H^{2/3}+H)\right].
 $$
-In particular, along any sequence of such defects with $\log(1/\delta)=o(T/\log T)$, the infimum of detectable window radii is at most
-$$
- \tfrac12\log(T/(2\pi))+\tfrac12\log(\pi/2)+o(1).
-$$
-The coefficient $1/4$ comes from the specific gamma-factor exponential and the theta-kernel tail in these Fourier coordinates.
+In particular, along any sequence of such defects with $\log(1/\delta)=o(T/\log T)$, the infimum of detectable window radii is at most $\tfrac12\log(T/(2\pi))+o(1)$. The proof first gives the bound with $T/4+CH$ inside the logarithm, then improves the leading constant by translating the theta kernel in its strip of analyticity.
 
 ## 1. A small contour with controlled reciprocal
 
@@ -77,5 +73,25 @@ $$
  W(f)\le -2m+2\sqrt{2m}/4+1/16<0
 $$
 for every $m\ge1$. This proves the theorem.
+
+## 4. Translate the source toward the edge of the theta strip
+
+For $0\le\theta<\pi/4$ put $\Phi_\theta(u)=\Phi(u+i\theta)$ and $F_\theta(z)=e^{\theta z}\Xi(z)$. The theta series defines an analytic function in $|\Im u|<\pi/4$ since $\Re e^{2u}>0$. The evenness identity extends there by analytic continuation. On each fixed closed substrip the double-exponential tail in both real directions justifies translating the Fourier integration contour, which gives $\widehat{\Phi_\theta}=F_\theta$. The multiplier is entire and zero-free, so the same contour formula selects the same clusters.
+
+Let $\eta=\pi/4-\theta=\min(1/4,(H/T)^{1/3})$. The reciprocal estimate becomes $\exp(\eta T+C_6'H)$ because $\Re v=T+O(1)$ on both circles. There are absolute constants $c_j',C_j'$ such that for $j\le2$, $x\ge1$ and $\sin(2\eta)e^{2x}\ge1$,
+$$
+ |\Phi_\theta^{(j)}(\pm x)|\le C'_j \exp(c'_j x-\pi\sin(2\eta)e^{2x}).
+$$
+For positive real part this follows from the same differentiated series, since $\Re e^{2(x+i\theta)}=\sin(2\eta)e^{2x}$. After extracting the $n=1$ exponential, the residual terms are bounded by a polynomial in $n$ times $\exp(-\pi(n^2-1))$. Evenness gives the bound on the other side. There is no loss in the constants as $\eta$ decreases under the stated tail condition.
+
+Take $D=T^{1/3}H^{2/3}+H$, $S=T/(2\pi)+CD$, and $L=(\log S)/2$. Throughout $x\ge L-2/S$ we have $\sin(2\eta)e^{2x}\gg\eta S$, and $\eta S$ can be made larger than any required fixed constant by increasing $C$, because $\eta D\gg H$. Repeat the truncation in §3 with these tilted sources. The upper bound there is now
+$$
+ C_9'(1+S)^{C_{10}'}\exp(\eta T+C_6'H-\pi\sin(2\eta)S).
+$$
+All polynomial factors and constants are uniform: integrating each tail uses $\sin(2\eta)e^{2x}\gg1$, and replacing $S$ by $Se^{-4/S}$ in the exponent costs at most $4\pi$. The excess at the leading term satisfies
+$$
+ \eta T-\tfrac12T\sin(2\eta)\ll T\eta^3\le H.
+$$
+Moreover $\sin(2\eta)D\gg \eta D\gg H$ in either branch of the definition of $\eta$. Since $\log(1+S)=O(\log(1+C)+H)$, increasing $C$ provides the same arbitrarily small evaluation error as before. The sign argument now proves the displayed theorem with its stated $L$.
 
 **Remaining burden.** The theorem locates a test detecting an assumed defect. Proving positivity of the actual arithmetic Weil form on the resulting unbounded set of windows remains open. No numerical inputs or zero separation assumptions are used.

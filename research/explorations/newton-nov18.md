@@ -137,3 +137,44 @@ $$
 using $\log^+u\le(2/e)\sqrt u$. Choose $\lambda$ with $(2/e)\lambda<c/2$. In partial summation of the tail with weight $(\log t/L)^j/t$, the derivative has at most the extra factor $1+j/v\le2$ for all large $L$. The boundary term and the integral of $2e^{-c\sqrt v/2}$ over $v\ge\eta L$ are both $O_\delta(e^{-c_3\sqrt L})$. The constant moment is treated the same way and vanishes. Summing over $j\le h$ still gives stretched exponential decay. This proves the bound in (6) with $S_h(L)$ in place of $\mathcal C(L)$. The preceding Taylor and endpoint bounds at this smaller $h$ give $|\mathcal C(L)-S_h(L)|\ll e^{-c_4\sqrt L}$, which proves (6).
 
 Together (5) and (6) identify the two errors in adaptive subtraction. The error from evaluating the deterministic correction can be made small enough for a bounded terminal-window energy. The remaining signed arithmetic error in (6), after squaring and summing, only has the proved bound $O_\delta(B e^{-c'_\delta\sqrt{\log B}})$. No estimate at subpower scale follows.
+
+## How much prime-location information the joint energy needs
+
+The following finite adapter uses the *actual* prime counts in a coarse grid. It applies to the signed sum with the smooth sector still in place. For $b\ge3$ construct integer grid points starting at $b$, setting
+
+$$
+ v'=\min(B,\,v+\lceil v/b\rceil)
+$$
+
+at each step until $B$ is reached. For every cell $(v,v']$ replace its primes by $\pi(v')-\pi(v)$ copies of its right endpoint, producing a nonnegative integer sequence $\widetilde P$. Let $P$ be the true prime indicator on $(b,B]$, extended by zero elsewhere, and set
+
+$$
+ \widetilde r=-(\mu\,1_{[1,b-1]})*\widetilde P,\qquad
+ \widetilde a=s+\widetilde r.
+$$
+
+The convolution is Dirichlet convolution. On $n\le B$ the same rule with $P$ is exactly $r$, because at most one prime greater than $b$ divides $n$. Both output sequences agree with $\mu$ through $b-1$.
+
+There are $O(b\log b)$ cells, since each step except the final one increases $v$ by a factor at least $1+1/b$. At the full output endpoint,
+
+$$
+ A_B(\widetilde a-\mu)\ll (\log(2b))^2,\qquad
+ \left|\sqrt{A_B(\widetilde a)}-\sqrt{A_B(\mu)}\right|\ll \log(2b).  \tag{7}
+$$
+
+In particular subpower growth of the native output is equivalent to subpower growth of this surrogate. The estimate is additive in the norm. An unqualified constant-factor comparison of small energies would be stronger.
+
+To prove (7), write $D(y)=\sum_{n\le y}(\widetilde P-P)(n)$. Only the cell containing $y$ contributes, and for $b\le y\le B$ its length is $\le 2y/b$. For the reciprocal discrepancy $d(y)=\sum_{n\le y}(\widetilde P-P)(n)/n$, the absolute error on this partial cell is $O(1/b)$. On all complete cells, rounding a prime $p$ up changes its reciprocal by at most $2/(bp)$. Mertens' prime harmonic sum gives $\sum_{b<p\le b^2}1/p=O(1)$, and hence $|d(y)|=O(1/b)$ uniformly. The discrepancies vanish below $b$. In the native convolution, for $b\le x\le B$,
+
+$$
+ |M_{\widetilde a-\mu}(x)|
+ \le\sum_{m\le x/b}|D(x/m)|
+ \ll \frac{x}{b}(1+\log(x/b)),\qquad
+ |m_{\widetilde a-\mu}(x)|
+ \le\sum_{m\le x/b}\frac{|d(x/m)|}{m}
+ \ll \frac{1+\log(x/b)}b .
+$$
+
+Inserting these bounds into both terms of $A_B$ gives (7), using $B<b^2$. The norm difference is the reverse triangle inequality. No signs of the discarded prime-position errors, or signs of the surviving smooth/rough covariance, have been assumed.
+
+The cell masses can be specified entirely from primes $\le b$. If $P_b=\prod_{p\le b}p$, every integer in $(b,B]$ coprime to $P_b$ is prime. Thus the mass on $(v,v']$ equals the finite sum $\sum_{d\mid P_b}\mu(d)(\lfloor v'/d\rfloor-\lfloor v/d\rfloor)$. This representation demonstrates information dependence, without a claim of improved running time. What remains is to estimate the signed pairing of these cell counts with the actual smooth sector at unbounded cutoffs.
