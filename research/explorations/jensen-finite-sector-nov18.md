@@ -6,6 +6,8 @@ $$
 $$
 This is a direct numerical refinement of the Chasse–Griffin–Ono–Rolen–Thorner–Tripp–Wagner sector argument. For comparison, the verified height $H=3\,000\,175\,332\,800$ alone gives $H^2=9\,001\,052\,027\,541\,590\,755\,840\,000$. The degree ratio is $1.0255255\ldots$.
 
+The branch's verified height of 3,000,176,224,460 gives the larger bound **9,230,814,244,255,759,202,196,269** by the same sector argument at every shift. The exact floor follows by directed interval arithmetic. From the zero archive directory, run `python jensen_sector.py historical/checkpoint-final.json`. [Historical census](../../experiments/X-nov18-verified-height/historical/README.md) · [Computed degree](../../experiments/X-nov18-verified-height/historical/jensen-sector-final.json)
+
 Indeed let $R=5.558691$. Platt–Trudgian's verified height in Johnston–Yang Lemma 2.1 and Mossinghoff–Trudgian–Yang Theorem 1.3 imply that for every zero of $\xi$ with $|\gamma|>H$,
 $$
  \frac{|\beta-1/2|}{|\gamma|}

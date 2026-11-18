@@ -1,6 +1,7 @@
 """Bound the finite all-shift Jensen hyperbolicity range using a verified RH height."""
 import argparse
 import json
+from fractions import Fraction
 from pathlib import Path
 
 from flint import arb, ctx
@@ -26,9 +27,17 @@ def main():
     parser.add_argument("checkpoint", type=Path)
     args = parser.parse_args()
     data = json.loads(args.checkpoint.read_text())
-    height, old = data["verified_integer_height"], data["published_height"]
-    if "independent_integer_height_count" not in data:
-        raise ValueError("An independently counted census checkpoint is required")
+    if "result" in data:
+        result = data["result"]
+        if result["modern_counts_rechecked"] is not True:
+            raise ValueError("An independently counted historical checkpoint is required")
+        # Flooring a rational endpoint preserves the verified-height implication.
+        endpoint = Fraction(result["contiguous_height"])
+        height, old = endpoint.numerator // endpoint.denominator, result["old_height"]
+    else:
+        if "independent_integer_height_count" not in data:
+            raise ValueError("An independently counted census checkpoint is required")
+        height, old = data["verified_integer_height"], data["published_height"]
     ctx.prec = 256
     new, previous = sector_degree(height), sector_degree(old)
     print(json.dumps({"verified_height": height, "simple_degree_range": height**2,
