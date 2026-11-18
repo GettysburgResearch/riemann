@@ -8,6 +8,8 @@ Let $\rho_0=\beta_0+i\gamma_0$ be a nontrivial zero of zeta with $\beta_0>1/2$. 
 \]
 The two signs hold on the same interval even if no zero attains the supremum $\Theta$ of real parts. If $\Theta$ is unattained, **every prescribed $C>1$ works** for each fixed $\rho_0$, with constants that also depend on $C$. The same short-interval statement then holds for $\vartheta(x)-x$ by subtracting the contribution of prime powers. The estimates here are qualitative. For comparison, Montgomery and Vorhauer give explicit interval factors for $\psi(x)-x$ on RH. [Montgomery–Vorhauer](https://doi.org/10.7169/facm/1229442626) · [Montgomery–Vaughan, Ch. 15](https://personal.science.psu.edu/rcv4/personal/Publications/MNTI/19.0_pp_463_485_Oscillations_of_error_terms.pdf)
 
+The earlier branch already used positive two-atom products to obtain signed prime excursions on a fixed-factor interval and studied compact reciprocal tests for Möbius sums. Here a positive measure dominates a complex isolating test. This gives one construction for both linear statistics, handles the multiplicity of an isolated reciprocal pole, and transfers fixed-factor oscillation to the sharp Goldbach Laplace masses. [Earlier prime construction](causal-isolated-zero-nov18.md) · [Earlier Möbius results](weak-mertens-sparse-windows-nov18.md)
+
 ## Sparse ordinates and short compact filters
 
 Fix $1/2<\alpha<\beta_0$. The Ingham zero-density estimate gives, for every fixed $\alpha$,
@@ -81,3 +83,19 @@ For $W=D$ or $V$, smoothed Perron inversion gives
 It follows by integrating the Perron kernel against the smooth compact density. Its horizontal integrals tend to zero by the square-root exponential decay, which dominates the reciprocal bound above. The integral on the displaced line is $O(X^{\sigma_1})$. Between these lines all reciprocal poles are removed for $D$. For $V$ only $\rho_0$ remains. Its residue is $X^{\rho_0}$ times a polynomial in $\log X$ of degree $m-1$ with nonzero leading coefficient, since $L_V(\rho_0)\ne0$, $\rho_0\ne0$ and $\zeta^{(m)}(\rho_0)\ne0$. The two-sign argument using $|V|\le D$ proves (3). To shrink the interval in the unattained case use a zero farther to the right as above, absorbing the original logarithmic power in the strictly larger exponent.
 
 In particular, a single displaced zero would force substantial *both-signed local average mass* in the actual partial sums of the Möbius function on every sufficiently late interval of a suitable fixed multiplicative width. The argument does not impose simplicity and does not expand $M(x)$ into an assumed absolutely convergent sum of reciprocal residues. No instance of the required square-root bound for the actual Möbius sums is proved here.
+
+## Exact support threshold for one leading conjugate pair
+
+Suppose the only distinct zeros on the attained edge $\Re s=\Theta>1/2$ are $\rho_*=\Theta+i\gamma_*$ and $\overline{\rho_*}$, with $\gamma_*>0$ and common multiplicity $m$. For every
+\[
+                         \log C>\pi/\gamma_* ,
+\]
+both signs in (1) hold on every sufficiently late $[X,CX]$ at exponent $\Theta$, for each of the two prime statistics. The Mertens estimate (3) holds there as well, with its full factor $(\log X)^{m-1}$. These conclusions permit zeros with real parts tending to $\Theta$ from below.
+
+Indeed, in the positive measure $\mu$ use a **single** two-atom factor at $0,\pi/\gamma_*$ with weights proportional to $1,\exp(-\Theta\pi/\gamma_*)$. Its real weights give a transform zero at both members of the conjugate pair. For all other zeros with $\Re\rho\ge\alpha$, use the full annihilating multiplicities. Their combined support length tends to zero as $\alpha\uparrow\Theta$, by (2), counting multiplicity and omitting the two edge zeros. Choose $\alpha$ so that the total fits strictly within $\log C$. The complex isolator $\nu$ for $\rho_*$, including the factors needed for $\overline{\rho_*}$, and the smoothing measure $g$ can use the remaining arbitrarily short interval. Define $D,V$ as before. On the two prime statistics $D$ removes both edge terms; $V$ isolates $\rho_*$. For $M$, the transform of $D$ vanishes at least once at each member of the pair and reduces the order of its reciprocal pole by at least one. If $m=1$ the contribution vanishes. If $m\ge2$ the two remaining residues have total size $O(X^\Theta(1+\log X)^{m-2})$, while $V$ retains a nonzero term of magnitude $\asymp X^\Theta(\log X)^{m-1}$. The contour error is $O(X^{\sigma_1})$ as above. Thus the signed $D$ integral is smaller than the lower bound from $|V|\le D$, which proves all the assertions.
+
+For the exponentially smoothed prime statistic $F$ this threshold is exact. Absolute summability of the coefficients $\Gamma(\rho)$ and dominated convergence give
+\[
+ e^{-\Theta v}F(v)=2\Re(c e^{i\gamma_*v})+o(1),\qquad c=-m\Gamma(\rho_*)\ne0 .
+\]
+The remainder tends uniformly to zero on every translated bounded interval as its left endpoint tends to infinity. If $\log C<\pi/\gamma_*$, choose the starting phase so that the entire interval lies in a strictly positive cosine arc, and repeat that phase along an unbounded sequence of starting heights. The negative part then vanishes throughout these intervals. At equality one can choose exactly a nonnegative half-wave. The uniform remainder then gives $\int_X^{CX}F_-(\log x)\,dx=o(X^{1+\Theta})$ along that sequence. The sharpness assertion uses the absolute convergence of the exponential smoothing and concerns $F$ alone.

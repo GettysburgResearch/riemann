@@ -26,7 +26,7 @@ The minimum occurs in the first row. The finite-head wall excludes the other phy
 
 Starting at $q_*+\epsilon$, use the solution of $Q'=-2-rQ$ while it is positive. Its initial separation persists for a sufficiently short interval by ordinary de Bruijn strip contraction. The positive-time compactness and multiple-contact lemma of the source apply afterward. At an alleged first contact (2) gives a strictly smaller derivative than $Q'$. At a row junction use the incoming cell. Letting the curve decrease to zero gives reality by continuity, or by paying $Q(t)/2$ at each positive intermediate height and taking a limit. Send $\epsilon$ to zero. If its hitting time lies beyond the known all-real time the assertion already follows from that known time. This proves (1).
 
-For sufficiently small $q_*$ the comparison returns to zero inside the first time cell. In that cell one may use the limiting rate $r(q_*)=2\{S_0(0)-O_0(q_*)\}$ by applying the same argument at $q_*+\epsilon$ before passage to the limit. The first row is analytic at zero, with $12.651018<r(0)<12.651019$. Consequently the leading refinement near the critical line is
+For sufficiently small $q_*$ the comparison returns to zero inside the first time cell. In that cell one may use the limiting rate $r(q_*)=2\{S_0(0)-O_0(q_*)\}$ by starting at $q_*+\epsilon$, taking a rate strictly below $2\{S_0(0)-O_0(q_*+\epsilon)\}$, and then letting both losses tend to zero. The first row is analytic at zero, with $12.651018<r(0)<12.651019$. Consequently the leading refinement near the critical line is
 \[
              \Lambda\le q_*/2-\frac{r(0)}8q_*^2+O(q_*^3).
 \]
@@ -47,3 +47,24 @@ If $q-(2+Rq)\Delta>0$, the true comparison arc remains strictly positive to its 
 Subtracting $(2+Rq)\Delta$ times the right side from $q$ and rounding upward to the height grid gives an admissible outward reset. The code checks strict decrease after rounding, all time joins and the cap at every incoming state. If the positivity test fails, the code stops before that step and adds the full $q/2$ de Bruijn cleanup to $t$. It checks the source and wall horizons. Hence the printed rational endpoint is an upper bound for $\Lambda$. No transcendental floating-point evaluation enters the integration.
 
 The reproduction packet contains Raymond's original two data files in compressed form with their published hashes and attribution. The subsequent explicit evaluations use their whole signed rational functions, including the joint derivatives in rows 0, 16 and 44. The checker obtains the joint derivative by the binomial expansion of the two reciprocal powers at $p\pm\sqrt q$. A separate implementation using their Newton recurrence gives the identical rational endpoint at $N=512000$ for the November seed. [Packet and commands](../../experiments/X-nov18b-heat-seed/README.md)
+
+With $N=8192000$, the following upper endpoints are rounded toward larger values. Each run ends at the start of the next inadmissible positive comparison step and pays the remaining squared height divided by two.
+
+| Imported zeta abscissa $\theta$ | Completed positive steps | Resulting bound for $\Lambda$ |
+|---|---:|---:|
+| $7/8$ | 884,448 | $<0.107964855684$ |
+| $10499/12000$ | 884,277 | $<0.107944035697$ |
+| $873345856107/10^{12}$ | 881,056 | $<0.107550815444$ |
+
+The first row uses the independently replayed OpenAI theorem. Its difference from Raymond's $0.107964910079$ comes from finer integration and using the licensed last time cell after Raymond's original stopping time. The second uses the abscissa in Levy's public Lean declaration. The third rounds *up* Liu's algebraic abscissa $0.8733458561067185768\ldots$ from the November 13 manuscript. It consequently depends on the analytic results invoked there. This session checked the finite arithmetic for all three and did not rebuild those latter two source theorems. The third row's exact upper endpoint is $2151016308875269172515792441/(2\cdot10^{28})$. [OpenAI theorem and exact external replay](nov18b-reciprocal-formal-audit.md) · [Levy's pinned Lean declarations](https://github.com/akashlevy/qrh/blob/dbb3714eea76c9c487a57ae53eaeddf0f89a58d7/08-weighted-numerator-10499-12000/lean/WeightedQRH/Statements.lean) · [Liu, Theorems 1.1 and 7.2](https://hexagonmath.org/2611.00421v1)
+
+The same calculation gives concrete converse implications. For example, **if $\Lambda\ge0.1$, there is a zeta zero with real part greater than $0.844278$**. These statements use only the indicated hypothetical supremum in each comparison and the same imported physical source and kernel bounds.
+
+| Trial upper bound on $\Theta$ | Certified upper bound for $\Lambda$ at $N=512000$ | Consequence |
+|---:|---:|---|
+| $0.62165$ | $0.024997819126$ | $\Lambda\ge0.025\implies\Theta>0.62165$ |
+| $0.68973$ | $0.049997315589$ | $\Lambda\ge0.05\implies\Theta>0.68973$ |
+| $0.76061$ | $0.074997006246$ | $\Lambda\ge0.075\implies\Theta>0.76061$ |
+| $0.844278$ | $0.099999758760$ | $\Lambda\ge0.1\implies\Theta>0.844278$ |
+
+To reproduce the final row, run the checker with rational argument $422139/500000$ and the option shown in the [replay instructions](../../experiments/X-nov18b-heat-seed/README.md). The converse follows by applying the forward implication to $\Theta$ and using the definition of a supremum, including when no zero attains it.

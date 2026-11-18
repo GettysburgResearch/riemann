@@ -181,7 +181,7 @@ There is a stronger estimate on the coherent test itself. For a zero \(\rho=\bet
 \[
        |\widehat v_c(t)|\le q^{-1/2+o(1)} .                       \tag{13}
 \]
-Indeed \(\zeta(s)=0\) by reflection. Apply the classical approximate functional equation at \(x=N_1\), \(y=\gamma/(2\pi N_1)\), whose error is \(O(x^{-\sigma}+\gamma^{1/2-\sigma}y^{\sigma-1})=q^{-\sigma/2+o(1)}\). Replacing \(y\) by \(N_2\) moves only \(L^{O(1)}\) terms, at the same cost after the factor \(\chi(s)\). Stirling's formula expanded at \(T\) gives a relative error \(q^{-1/2+o(1)}\) when \(\chi(s)\) is replaced by \(\eta q^{it}\exp(i\pi((T-t)/(2\pi r))^2)\). Multiplication by the absolute sum of the dual terms costs at most \(q^{1/2-\sigma+\sigma/2+o(1)}\), so its additive error is again \(q^{-\sigma/2+o(1)}\). The bracket in the displayed Mellin formula has this bound. Multiplying by \(r^{-1/2}\widehat\phi\) and the centering factor \(N_1^{\sigma-1/2}\) gives (13); the truncation errors are negligible. [Ivić, *The Riemann zeta-function*, equation (4.10)](https://bibliotheque.imo.universite-paris-saclay.fr/media/filer_public/86/6d/866d1cf0-a942-4f8a-9d30-7cb3b03e1b1c/i_ivic-66.pdf)
+Indeed \(\zeta(s)=0\) by reflection. Apply the classical approximate functional equation at \(x=N_1\), \(y=\gamma/(2\pi N_1)\), whose error is \(O(x^{-\sigma}+\gamma^{1/2-\sigma}y^{\sigma-1})=q^{-\sigma/2+o(1)}\). Replacing \(y\) by \(N_2\) moves only \(L^{O(1)}\) terms, at the same cost after the factor \(\chi(s)\). Stirling's formula expanded at \(T\) gives a relative error \(q^{-1/2+o(1)}\) when \(\chi(s)\) is replaced by \(\eta q^{it}\exp(i\pi((T-t)/(2\pi r))^2)\). Multiplication by the absolute sum of the dual terms costs at most \(q^{1/2-\sigma+\sigma/2+o(1)}\), so its additive error is again \(q^{-\sigma/2+o(1)}\). The bracket in the displayed Mellin formula has this bound. Multiplying by \(r^{-1/2}\widehat\phi\) and the centering factor \(N_1^{\sigma-1/2}\) gives (13); the truncation errors are negligible. [Ivić, *Topics in Recent Zeta-Function Theory*, equation (4.10)](https://bibliotheque.imo.universite-paris-saclay.fr/media/filer_public/86/6d/866d1cf0-a942-4f8a-9d30-7cb3b03e1b1c/i_ivic-66.pdf)
 
 Consequently one zero and its horizontal reflection have total absolute contribution \(q^{-1+o(1)}\) on the coherent unit test. This quantifies a difficulty with using this direction to rule out one off-line zero even once its own Weil value is known to be small.
 
@@ -203,3 +203,27 @@ Here \(v_c(u)=v(u+u_0)\). For example take
 using the full Gaussian \(\phi\). The extra factor kills the pole at \(t=i/2\) with negligible effect on the carrier band. The product is entire; on each bounded horizontal strip it and each fixed derivative have rapid decay in \(|\Re t|\) by the Gaussian and polynomial vertical-strip bounds for zeta. Fourier inversion and shifts therefore give rapid decay of every physical derivative against every fixed exponential weight. All prime, gamma, pole and zero sums in the bilinear explicit formula are admissible. At each zero evaluation \(t=\gamma-i(\beta-1/2)\) the zeta argument is \(1-\rho\), also a zero. This gives \(W(k_q,h)=0\) for every admissible test \(h\), independently of RH.
 
 The approximate-functional-equation calculation for (13) before setting \(\zeta(s)=0\) gives \(|\widehat v_c(t)-\widehat k_q(t)|\le q^{-1/2+o(1)}\) on \(|\Re t-T|\le r L^C\) for either of the two lines \(\Im t=\pm d_0\). Integrating its square over that band costs at most \(q^{-1/2+o(1)}\). Choose \(C\) sufficiently large: beyond the band the full Gaussian envelopes of both charts, including the quadratic phase at bounded imaginary shift, decay faster than any power of \(q\), even with the polynomial zeta bound and the two finite sums. To bound the truncation remainder there in \(L^2\), use Plancherel directly on each shifted line. The weighted physical tail of one discarded packet is \(O(q^{-90})\) before its center translation. The center weights and the sum of the absolute coefficients together cost only a fixed power of \(q\). The pole-killing factor at \(\Re t\) far from the carrier stays bounded on the lines under consideration. This proves the same integrated estimate on the full lines. Applying Plancherel with the exponential weights \(e^{\pm d_0u}\) yields (14). The exact null test lies in the unrestricted Weil domain. Its approximation rate explains why a nearly null vector in the finite section can occur regardless of the horizontal positions of the zeros.
+
+## Where a detecting direction lies
+
+The orthogonal complement retains essentially the whole negative direction of any *one* putative reflected pair. Let \(J_q\) be a closed interval containing the packet supports, of length \(S=\log q+o(1)\) and endpoints \(0+o(1)\), \(L+o(1)\). Fix \(0<d<1/2\) and real \(\gamma\). For a unit test \(h\) supported in \(J_q\) write
+\[
+ B_{\gamma,d}(h)=2\Re\left[
+ \widehat h_c(\gamma-id)\overline{\widehat h_c(\gamma+id)}\right].
+\]
+Then, uniformly in \(\gamma\),
+\[
+   \inf_{\substack{\|h\|_2=1,\ \operatorname{supp} h\subset J_q\\
+                       h\perp V_q}} B_{\gamma,d}(h)
+          =-(1+o_d(1))\,\frac{\sinh(dS)}{d}.                    \tag{15}
+\]
+The same relative asymptotic holds if smooth compactly supported tests in the interior are required, choosing \(J_q\) with the packet supports in its interior.
+
+Indeed the two evaluation representers in \(L^2(J_q)\) are
+\(f_\pm(u)=e^{-i\gamma(u-u_0)}e^{\pm d(u-u_0)}\).
+Their mutual inner product is \(S\) and their norm product is \(\sinh(dS)/d\). Both norms grow as \(q^{d/2+o(1)}\). By (12), their projections onto \(V_q\) have bounded norms. Consequently the projected complement representers \(b_\pm=f_\pm-\Pi_{V_q}f_\pm\) have norm product \((1+o_d(1))\sinh(dS)/d\), and their mutual inner product is \(S+O_d(1)\). The Hermitian rank-two operator for \(B_{\gamma,d}\) on the complement has lower eigenvalue
+\[
+ \Re\langle b_+,b_-\rangle-
+ \sqrt{\|b_+\|^2\|b_-\|^2-(\Im\langle b_+,b_-\rangle)^2}.
+\]
+This proves (15). Smooth approximation followed by subtraction of the finite-dimensional smooth projection preserves orthogonality and both evaluation limits. The full Weil form also includes all other zero pairs, so (15) isolates an individual sensitivity, without asserting a negative value for the full sum. In particular the finite-section gap gives no approximation to precisely this possible obstruction to positivity.

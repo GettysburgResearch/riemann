@@ -63,6 +63,13 @@ If $i\ne j$, the complete mean therefore vanishes at every nonzero frequency, ev
 \]
 The smooth cutoff is kept in this signed estimate. For equal indices the middle term of (2) becomes $(P/D^{j-1})^{1/6}$, by counting $k$ with $v_l(k)\equiv j-1\bmod 6$. Consequently $j=5$ both leaves the completed character fixed and gives the largest forced valuation among these five prime calibrations. Mixed pairs have no exceptional nonzero term in this complete-mean analysis. These are upper bounds; a matching diagonal asymptotic would be required to deduce an intrinsic lower bound for the arithmetic Gram form.
 
+The tempting remaining index \(j=0\) would force valuation five in the Gram count, but its local character is the principal unit mask, which is imprimitive modulo \(l\). Its transform on the physical side is the Ramanujan sum \(D1_{l\mid H}-1\), since \(s,A\) are units at \(l\); the fixed invertible factors in its additive argument do not affect this value. Relative to its value at a unit, the multiplier is \(1-D1_{l\mid H}\). In the putative principal row \(H=a^6\), the calibration now allows all valuations of \(a\) at \(l\). All other primal indices avoid \(l\), so the complete local sum over \(v_l(a)\) is
+\[
+ \sum_{m\ge0}D^{-6zm}(1-D1_{m\ge1})=
+                \frac{1-D^{1-6z}}{1-D^{-6z}}.
+\]
+The numerator has a simple zero at \(z=1/6\); multiplication by the remaining Euler product cancels its sixth-power pole. Hence the zero-cost endpoint suggested by the Gram valuation does not retain the original principal Mellin signal. This calculation also explains directly why the primitivity condition in §6 is material for this strategy.
+
 ## A high-side saving uniform in the physical row
 
 Let the calibration primes have norms in $[K,2K]$ and range over the identity class of $T$. Give them smooth nonnegative weights $W(q_l/K)\log q_l$, with a nonzero fixed $W$ supported inside $(1,2)$, and divide by their total weight. For a sixth-power-free $u$ divisible by a prime outside $S$, with $q_u\le Z^C$, one has

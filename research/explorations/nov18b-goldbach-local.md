@@ -65,3 +65,15 @@ The two choices of nodes use the same $w$. Since $w\ge V-\log V$, this implies (
 For (2), the compact zero filter supplies (3) with $|w-V|\ll_\rho1$ for $\beta>1/2$, and places a real zero of $F$ in each interval of some fixed sufficient length at all large centers. These are precisely the two inputs used to pack the nodes. Choose $D$ a sufficiently large fixed constant in the same construction, giving $W\ll\sqrt V$ and $e^w\asymp X$. This proves (2). If the real-zero gaps can be prescribed arbitrarily short, the slope-ratio requirement of two can be weakened to any fixed ratio greater than one: replace $2$ in the convergent product by that ratio. This changes the constants in (4)–(5)'s accompanying upper bound; no uniformity as the ratio tends to one is needed.
 
 For every $\epsilon>0$ choose $\beta$ within a sufficiently small fixed distance of $\Theta$. Estimate (1), together with the pointwise envelope $|B(n)|\ll_\delta n^{2\Theta+\delta}$, yields at least $X^{1-\epsilon}$ integers of each sign with $B_\pm(n)\ge n^{2\Theta-\epsilon}$ in the indicated window, for every sufficiently large $X$. Integer endpoints can be absorbed by any fixed enlargement of its constant. This describes the amount and location of oscillation that a proof of an RH-strength one-sided Goldbach bound would have to exclude.
+
+## A one-sided test on a subsequence
+
+In fact for every prescribed constant $c>0$, every fixed nontrivial zero of real part $\beta$, and both signs, one has
+\[
+ \int_{X\exp(-c\sqrt{\log X})}^{X\exp(c\sqrt{\log X})}
+                    B_\pm(x)\,dx \gg_{c,\rho}X^{1+2\beta}
+                  \qquad(X\ \hbox{sufficiently large}).               \tag{6}
+\]
+If the supremum is attained, (12) of the [first Goldbach argument](nov18b-variance-goldbach.md) already gives this in a fixed-factor interval contained in the displayed one. If it is unattained, it exceeds $1/2$ by the existence of critical-line zeros and zeta symmetry. The compact filter then provides strong witnesses for the given exponent and real zeros of $F$ in every sufficiently late interval of **any prescribed positive log length**. This includes the case $\beta\le1/2$ by using a zero farther right. In the node construction take a small constant $D>0$, use zero displacements at most $D/4$, and use the slope ratio $r=\exp(D)$ in the coefficient bound. The constants acquire the positive product $\prod_{j\ge1}(1-r^{-j})$. The exponent $kW\ge8V$ in the small-$x$ estimate is unaffected. The log half-width is $16\sqrt{VD}+O_D(1)$ plus the bounded witness displacement. Choosing $16\sqrt D<c$ proves (6).
+
+In particular, with $c$ fixed arbitrarily, RH is equivalent to the existence of an unbounded sequence $X_j$ on which the **negative-part mass** in the interval in (6) is $\le X_j^{2+o(1)}$. Replacing the negative part by the positive part gives a second individual equivalence. On RH the published pointwise bound $|B(n)|\ll n\log^3 n$ gives this on all sufficiently large scales. A right-hand zero with $\beta>1/2$ violates the proposed subsequence bound by (6).

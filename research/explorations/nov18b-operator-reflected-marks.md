@@ -80,3 +80,36 @@ Take zero rescaling, \(M+\ell=1+\kappa\), \(\kappa>0\), and the formal dyad
  H=M,\quad z=\ell,\quad v=T=2M+\ell-1=M+\kappa .
 \]
 This is the squarefree residual row, with every physical mark active and a unit cube factor. For \(M+\kappa\ge2\ell\), both the original hybrid saving and (2) give \(U=z\). The kernel saving vanishes, and the squared energy majorant is \(\max(H,v)=M+\kappa\). Thus this strengthening of the positive cubic large sieve still pays \(\kappa/2\) after Cauchy–Schwarz. It reproduces the difference \(L_K-L_0=(M+\ell-1)/2\) between the two direct planes in Liu's Proposition 6.5. This exhibited dyad saturates the **inequality**, and gives no lower bound on the actual arithmetic contribution. Saving a power there requires control of the squarefree quadratic transform with its actual cubic-theta coefficient, or an estimate that keeps its coupling to the additive factor. The [moving calibration calculation](nov18b-calibration-prime.md) gives the corresponding punctured-row upper bound.
+
+### Sharpness for bounded dual coefficients
+
+A single chosen quadratic row attains the long-dual bound to subpower accuracy once the dual coefficient is allowed to be any bounded function. This can be proved while keeping the squarefree support, the cubic mark characters, and the phases between marked primes.
+
+Let \(P\) range over squarefree products of primes in the fixed disjoint mark slots, of norms \(q_P\asymp L\). Absorb the mark–mark phases into \(c_P\), assume \(|c_P|\ll L^{-1/2}\), and suppose \(\sum_P |c_P|^2\ge Z^{-o(1)}\). The lengths are fixed positive powers of a common \(Z\), up to bounded factors. These hypotheses hold, for example, for actual fixed nonzero annular weights at every slot on fixed allowed prime ray classes, with arbitrary modulus-one mark phases: on interior subannuli the weights are bounded away from zero, and the prime ideal theorem in the fixed classes supplies the required mass. Individual mark supports and any fixed admissible ray-sector choices may be included in those lists. Put
+\[
+ A(n)=\sum_P c_P [P,n].
+\]
+Suppose \(N\ge L^4\), and let \(k_0\) be a good primary prime row of norm \(q_{k_0}\asymp K\), with \(K\ge L^{1+\sigma}\) for fixed \(\sigma>0\). Take it outside the mark supports. The prime ideal theorem supplies such rows in any fixed admissible ray class at the large lengths in question. Then
+\[
+ \sum_{\substack{n\ \mathrm{squarefree},\ q_n\asymp N\\(n,k_0)=1}}
+ |A(n)|\gg_\epsilon N Z^{-\epsilon} .                         \tag{4}
+\]
+Here and below the \(n\) are primary ideals outside the old fixed bad-prime set. One may restrict the sum to a fixed admissible ray class for \(n\).
+
+For the second moment choose a nonnegative smooth test \(V(q_n/N)\) supported in the indicated annulus and positive on a subinterval. The diagonal count of squarefree \(n\) coprime to \(P\) is
+\[
+ C_V N\prod_{p\mid P}(1+q_p^{-1})^{-1}+O_\epsilon(N^{1/2+\epsilon}L^\epsilon)
+\]
+with the fixed bad-prime or ray factors included in \(C_V>0\). This follows from the squarefree Dirichlet series for the ray characters, shifted to real part \(1/2+\epsilon\) after extracting the principal pole. At a nondiagonal pair \(P_1\ne P_2\), cubic reciprocity expresses its phase as a character of \(n\) ramified at a prime of the symmetric difference. Every old ray twist stays nonprincipal. The conductor norm is \(O_{\rm fixed}(L^2)\); the common prime divisors supply only zero masks. For a character \(\psi\) with these original masks its squarefree series is \(L(s,\psi)/L(2s,\psi^2)\). On the same line the inverse at \(2s\) is absolutely bounded, the extra deleted factors cost \(L^\epsilon\), and the classical conductor convexity bound for the degree-two Hecke numerator is \(O_\epsilon(L^{1/2+\epsilon}(1+|t|)^C)\). Mellin decay therefore bounds each smoothed off-diagonal sum by \(O_\epsilon(N^{1/2+\epsilon} L^{1/2+\epsilon})\). Since \((\sum_P|c_P|)^2\ll L^{1+\epsilon}\), the combined error is \(O_\epsilon(N^{1/2+\epsilon}L^{3/2+\epsilon})\). It is a power saving here. Excluding multiples of \(k_0\) costs at most \(O((N/K+1)L^{1+\epsilon})\), also a power saving. The weighted second moment on the required support is consequently \(\gg_\epsilon NZ^{-\epsilon}\).
+
+For the fourth moment expand \(A(n)^2\) and take \(d=(P_1,P_2)\), \(P_1P_2=d^2 r\). The residual \(r\) is squarefree. For each fixed \(d\), its coefficient is \(O_\epsilon(L^{-1+\epsilon})\) by the divisor bound, and \(q_r\ll L^2/q_d^2\). Its coefficient vector has \(\ell^2\) norm \(O_\epsilon(L^\epsilon/q_d)\). The factor \([d,n]^2\) has modulus at most one, including its zeros, so it can be discarded after squaring the norm of this individual \(d\)-sum. Heath–Brown's squarefree cubic large sieve bounds that norm by
+\[
+ \ll_\epsilon \frac{Z^\epsilon}{q_d}
+ \{N+L^2+(NL^2)^{2/3}\}^{1/2}\ll_\epsilon
+ \frac{N^{1/2}Z^\epsilon}{q_d}.
+\]
+Minkowski and \(\sum_{q_d\ll L}q_d^{-1}\ll 1+\log L\) give \(\sum_{n\ {\rm sf},\,q_n\ll N}|A(n)|^4\ll_\epsilon NZ^\epsilon\). Hölder between the first, second and fourth moments proves (4), with a reduction of the preliminary losses. [Squarefree cubic large sieve and its normalization in the pinned source, §14](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/build/paper.tex)
+
+In the separated quadratic–cubic norm set \(b=1\). Choose a single bounded coefficient \(\beta(n,1)\) on that squarefree annulus to be the conjugate phase of \(\chi_{k_0}(n)^3 A(n)\), set it to zero when the argument vanishes, and then use this *same* coefficient at every running row. It depends on the fixed list and \(k_0\), and is independent of both the running row and the running mark tuple. Since \(k_0\) is disjoint from the marks, its one summand in the squared norm alone is \(\gg_\epsilon N^2 Z^{-\epsilon}\). Restoring the dual normalization \(N^{-1}\) in the squared reflected energy gives \(\gg_\epsilon NZ^{-\epsilon}\). Near the limiting geometry above, \(v>4\ell\), so the length hypothesis used in (4) applies. This proves that any uniform improvement of the exhibited long-dual face must use a property lost when the original cubic-theta coefficient is replaced by a freely chosen bounded coefficient, or must retain another signed coupling before this norm is taken.
+
+The same lower bound holds with an arbitrary prescribed cube \(\beta(n,1)^3=b_n\), \(|b_n|=1\), on every squarefree index in the annulus. Choose among the three cube roots the one with argument nearest the aligned phase above. The real part of its contribution at \(k_0\) is at least \(|A(n)|/2\); the zero character terms contribute zero whatever root is chosen. In particular, the one-point identity for normalized cubic Gauss sums cannot by itself remove the adverse coefficient. For squarefree primary \(n\) the local identities \(\gamma_2(p)^3=-\alpha(p)\) and the Chinese remainder factors of order dividing three give \(\gamma_2(n)^3=\mu(n)\alpha(n)\). The freely chosen roots in this last argument need not obey the Gauss-sum identities that relate **different** indices \(n\).
