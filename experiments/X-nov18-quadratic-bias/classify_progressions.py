@@ -102,8 +102,9 @@ if __name__=='__main__':
         out = csv.writer(output,delimiter='\t',lineterminator='\n')
         out.writerow(('modulus','li_decision','panels','norm_lower_milli','norm_upper_milli'))
         for q in range(1,2000):
-            if conductor_bound(q) <= 2*arb(square_roots(q))/3:
-                out.writerow(classify(q))
+            if conductor_bound(q) > 2*arb(square_roots(q))/3:
+                continue
+            out.writerow(classify(q))
 
     with Path('progression-counterexamples.tsv').open('w') as output:
         out = csv.writer(output, delimiter='\t', lineterminator='\n')

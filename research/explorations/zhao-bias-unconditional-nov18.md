@@ -31,7 +31,7 @@ The [prime-tail calculation and its rational-error bounds](zhao-bias-kernel-nov1
 
 ## A finite census and correction to the proposed containment
 
-The [integer-interval census](../../experiments/X-nov18-quadratic-bias/README.md) gives unconditional sign changes for 5,941 of the 6,086 nonprincipal fundamental discriminants with \(1<|D|\le10,000\), by the same individual dichotomy. The 5,941 split into 2,939 negative and 3,002 positive discriminants. Of these, 4,977 lie strictly outside \([-1151,2161]\), the span reported for the 381 candidates in Zhao's concluding remark. There are substantive discrepancies inside that span.
+The first stage of the [integer-interval census](../../experiments/X-nov18-quadratic-bias/README.md) gives unconditional sign changes for 5,941 of the 6,086 nonprincipal fundamental discriminants with \(1<|D|\le10,000\), by the same individual dichotomy. The 5,941 split into 2,939 negative and 3,002 positive discriminants. Of these, 4,977 lie strictly outside \([-1151,2161]\), the span reported for the 381 candidates in Zhao's concluding remark. There are substantive discrepancies inside that span.
 
 In particular the [printed Table 3](https://link.springer.com/article/10.1007/s40993-025-00640-y/tables/3) lists \(D=-59\). Its integrated prime count nevertheless has positive values arbitrarily late. At \(X=1\) the simpler [independent Decimal checker](../../scripts/check_zhao_bias_witness_nov18.py) gives \(-0.804<K_{\chi_{-59}}(0)<-0.688\) on GRH. This formula can also be derived directly from the completed Hadamard product: \(K(0)=\Lambda'/\Lambda(-1)-\Lambda'/\Lambda(0)=\Lambda'/\Lambda(1)-\Lambda'/\Lambda(2)\), using the functional equation. Its digamma contribution is \(\log 2-1\) for this odd character. Invoke the real-zero certification for the complementary case. The asserted containment of the Tables 2 and 3 set in the eventual-negative set in §8(2) thus fails already at \(-59\). The comparison \(|\rho(\rho+1)|>|\rho(\rho-1)|\) there decreases the oscillatory majorant, but the constant in the normalized integrated prime-count mean is \(2/3\) where the normalized quantity in Theorem 3 has constant 2. This comparison concerns the two different observables. The theorem about the Mertens integrals in Theorem 3 has a separate statement and proof.
 
@@ -39,3 +39,5 @@ The small example can be replayed from the repository root with
 ```sh
 python -c 'from scripts.check_zhao_bias_witness_nov18 import witness; witness(-59)'
 ```
+
+The [completed finite classification](zhao-bias-classification-nov18.md) strengthens this to 6,067 unconditional exclusions through conductor 10,000. All remaining nineteen have eventual negative sign precisely if their respective GRH holds. Of the 1,009 nonprincipal fundamental discriminants in Zhao’s reported span from −1151 through 2161, exactly 990 have unconditional sign changes.

@@ -23,7 +23,7 @@ On each compact subinterval of \((-\pi/8,\pi/8)\), Taylor expansion with the bou
 
 ## The first kernel zero and the rest of the cusp
 
-The 192-bit Arb checker evaluates \(F\) on all 3,170 adjoining closed intervals of width \(10^{-4}\) from zero to 0.317. Each interval has strictly positive image. It proves \(F'<0\) throughout the next forty intervals to 0.321 and \(F(0.321)<0\). For orders zero, one and two it sums the first sixteen kernel terms; for the rest their absolute values are bounded by \(10^5 n^8 e^{-4n^2/5}\) throughout this range because \(\pi\cos(4y)>4/5\). The ratio of consecutive majorants for \(n\ge17\) is below one half. Bisection and a final evaluation give
+The 192-bit Arb checker evaluates \(F\) on all 3,170 adjoining closed intervals of width \(10^{-4}\) from zero to 0.317. Each interval has strictly positive image. It proves \(F'<0\) throughout the next forty intervals to 0.321 and \(F(0.321)<0\). For orders zero, one and two it sums the first sixteen kernel terms. For the rest their absolute values are bounded by \(10^5 n^8 e^{-4n^2/5}\) throughout this range because \(\pi\cos(4y)>4/5\). The ratio of consecutive majorants for \(n\ge17\) is below one half. Bisection and a final evaluation give
 \[
  y_0=0.31941502680029678874268674864352456556872\ \pm 6.0\cdot10^{-42},
  \qquad F'(y_0)=-259.1967971748293290413412681099013767324\ \pm 9\cdot10^{-38}.
@@ -39,7 +39,7 @@ Indeed for \(\tau=i e^{4iy}\), \(-1/(\tau+1)=-1/2+iY\). Applying the theta trans
 \[
  \epsilon_k e^{-P_kY}Q_k(Y),\qquad Q_k(Y)=3-12P_kY+P_k^2(1+4Y^2).
 \]
-For \(y\ge0.321\) one has \(Y\ge3.45\). Here \(Q_0/Y^2>1/50\) by direct evaluation at 3.45 and monotonicity. For \(k\ge1\), \(|Q_k|/Y^2<10P_k^2\). The ratio of the sum of absolute errors to the positive leading term is at most \(500\sum_{k\ge1} P_k^2 e^{-(P_k-P_0)Y}<1\). Indeed the first summand with its prefactor is below one half, and successive unscaled terms have ratio at most \((5/3)^4e^{-4\pi Y}<1/2\). These strict elementary inequalities are also checked with directed arithmetic. Thus \(F(y)<0\) on the entire remaining interval. This classifies all interior-ray positive real zeros; the contour argument degenerates as the saddle reaches \(\Im u=\pi/8\).
+For \(y\ge0.321\) one has \(Y\ge3.45\). Here \(Q_0/Y^2>1/50\) by direct evaluation at 3.45 and monotonicity. For \(k\ge1\), \(|Q_k|/Y^2<10P_k^2\). The ratio of the sum of absolute errors to the positive leading term is at most \(500\sum_{k\ge1} P_k^2 e^{-(P_k-P_0)Y}<1\). Indeed the first summand with its prefactor is below one half, and successive unscaled terms have ratio at most \((5/3)^4e^{-4\pi Y}<1/2\). These strict elementary inequalities are also checked with directed arithmetic. Thus \(F(y)<0\) on the entire remaining interval. This classifies all interior-ray positive real zeros. The contour argument degenerates as the saddle reaches \(\Im u=\pi/8\).
 
 The neighboring regimes have separate proofs. A [modular cusp and signed-moment argument](heat-real-cusp-nov18.md) forces many real crossings near speed \(\pi/4\). The [Airy expansion](heat-real-airy-edge-nov18.md) locates each fixed-index successor through four terms, and the [periodic theta profile](heat-real-half-integers-nov18.md) identifies one simple crossing per half integer in every fixed supercritical slope interval.
 

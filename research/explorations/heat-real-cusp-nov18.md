@@ -24,7 +24,7 @@ For each fixed \(h>0\), uniformly for \(x\) in the unit interval beginning at \(
       {\sqrt\pi\,F(c-d')}
  \longrightarrow \exp\{-A^2/(4h^4)\}>0. \tag{3}
 \]
-In fact the integrand after the change \(w=u/\sqrt b\) is \(e^{-u^2}F(c-d'-iu/\sqrt b)/F(c-d')\). For fixed \(u\), (1) gives limit \(e^{-u^2}e^{i A u/h^2}\). On \(|u|\le d'\sqrt b/2\) the quotient has magnitude \(\ll \exp(Au^2/(b d'^3))\) by (1) and the exact real part of \(1/(d'+iw)\); thus \(e^{-u^2/2}\) times a constant dominates for \(b\) large. On the complement (2), the Gaussian tail, and (1) at \(d'\) give total \(O(b^{O(1)}e^{-b d'^2/4+O(1/d')})=o(1)\). This proves (3) by the Gaussian Fourier transform, uniformly since \(d'=h b^{-1/4}+O(1/b)\).
+In fact the integrand after the change \(w=u/\sqrt b\) is \(e^{-u^2}F(c-d'-iu/\sqrt b)/F(c-d')\). For fixed \(u\), (1) gives limit \(e^{-u^2}e^{i A u/h^2}\). On \(|u|\le d'\sqrt b/2\) the quotient has magnitude \(\ll \exp(Au^2/(b d'^3))\) by (1) and the exact real part of \(1/(d'+iw)\). Thus \(e^{-u^2/2}\) times a constant dominates for \(b\) large. On the complement (2), the Gaussian tail, and (1) at \(d'\) give total \(O(b^{O(1)}e^{-b d'^2/4+O(1/d')})=o(1)\). This proves (3) by the Gaussian Fourier transform, uniformly since \(d'=h b^{-1/4}+O(1/b)\).
 
 ## Small signed moments and the cost of too few changes of sign
 
@@ -49,7 +49,7 @@ Suppose there are \(m\le\sqrt b\) sign changes in \([0,X]\), and let \(P(x)=\pro
  \left|\int P\,d\nu\right|\le b^{O(1)}(C'_\epsilon b)^m e^{-(A/3)\sqrt b}. \tag{5}
 \]
 
-For \(x\ge X\), shift the Fourier contour to height \(y'=c-d/2\) and apply (2). This bounds the absolute density by \(b^{O(1)}\exp[-(d/2)(x-b(y+y'))]\). At \(X\) its exponent is at most \(-\epsilon\sqrt b/2\). Since \(|P(x)|\le x^m\le X^m e^{m(x-X)/X}\), for \(m=o(\sqrt b)\) the integral over this tail is bounded by \(b^{O(1)}X^m e^{-\epsilon\sqrt b/2}\). On the other tail \(x\le0\), the original Fourier integral gives \(|H_{-b}(x)|\ll1\); using \(|P(x)|\le X^m e^{m|x|/X}\) gives an exponentially smaller bound \(O(X^m e^{-by^2})\).
+For \(x\ge X\), shift the Fourier contour to height \(y'=c-d/2\) and apply (2). This bounds the absolute density by \(b^{O(1)}\exp[-(d/2)(x-b(y+y'))]\). At \(X\) its exponent is at most \(-\epsilon\sqrt b/2\). Since \(|P(x)|\le x^m\le X^m e^{m(x-X)/X}\), for \(m=o(\sqrt b)\) the integral over this tail is bounded by \(b^{O(1)}X^m e^{-\epsilon\sqrt b/2}\). On the other tail \(x\le0\), the original Fourier integral gives \(|H_{-b}(x)|\ll1\). Using \(|P(x)|\le X^m e^{m|x|/X}\) gives an exponentially smaller bound \(O(X^m e^{-by^2})\).
 
 Remove from \(I\) intervals of radius \(1/(4(m+1))\) about each \(r_j\). At least one half of its length remains, with \(|P|\ge[4(m+1)]^{-m}\). By (4) and the single sign on \([0,X]\), its integral there has absolute value at least
 \[

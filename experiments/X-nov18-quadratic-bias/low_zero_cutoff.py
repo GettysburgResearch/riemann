@@ -54,7 +54,10 @@ def prime_cost():
         for composite in range(p*p, bound+1, p):
             primes[composite] = 0
         n = p
-        while arb(n).log() < 4*width:
+        while n <= bound:
+            if arb(n).log() >= 4*width:
+                break
+            assert arb(n).log() < 4*width
             total += 2*abs(transform(arb(n).log()))*arb(p).log()/arb(n).sqrt()
             n *= p
     return total

@@ -69,3 +69,7 @@ python spacing_census.py checkpoint-0200.json
 ```
 
 The [spacing counts](spacing-census-0200.json) compare successive pairs of **new** indices using outward-rounded endpoints on a \(2^{-32}\) lattice. Uncertain comparisons count in neither strict category. The heat and derivative scan skips block joins and tests only pairs whose initial upper bound for the gap is at most 0.09. Each report includes the ordered source digest. The heat report hashes the accepted left indices in increasing order with one ASCII decimal index and newline per row. Replaying the underlying zero isolation requires the separate [native verification procedure](README.md).
+
+## Final counted prefix
+
+At the [3,050,000-index checkpoint](checkpoint-0305.json), the same verifier gives **131 disjoint local double collisions** by backward time 1/5000 and **807 distinct simple zeros of the ordinary zeta derivative** strictly to the right of the critical line. Of these at least 17 lie within a horizontal distance of 0.001. The report also gives the digest of each accepted index list. [Final heat and derivative census](heat-pair-census-0305.json) · [Final counts for 3,049,999 neighboring gaps](spacing-census-0305.json)

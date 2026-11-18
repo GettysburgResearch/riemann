@@ -56,7 +56,7 @@ $$
 $$
 by the discriminant of the displayed quadratic. Thus $B_K\ge\mathcal{T}D$.
 
-The discriminant term disappears on differentiation. Every prime-ideal contribution to $\mathcal{T}(\zeta_K'/\zeta_K)$ is nonnegative by the absolutely convergent Euler series. Write $f(z)=z^{-2}+3z^{-3}+16z^{-4}$. The two rational poles contribute $-f(s)-f(s-1)$. Each complex place gives $\sum_{j\ge0} f(s+j)$ by the polygamma series. A real place gives at least half that amount: its derivatives involve the even shifts $s+2j$, while together the real gamma factors at $s$ and $s+1$ give the complex factor by duplication, and $f$ decreases. Consequently
+The discriminant term disappears on differentiation. Every prime-ideal contribution to $\mathcal{T}(\zeta_K'/\zeta_K)$ is nonnegative by the absolutely convergent Euler series. Write $f(z)=z^{-2}+3z^{-3}+16z^{-4}$. The two rational poles contribute $-f(s)-f(s-1)$. Each complex place gives $\sum_{j\ge0} f(s+j)$ by the polygamma series. A real place gives at least half that amount because its derivatives involve the even shifts $s+2j$, while together the real gamma factors at $s$ and $s+1$ give the complex factor by duplication, and $f$ decreases. Consequently
 $$
  B_K\ge \frac n2\sum_{j\ge0} f(s+j)- f(s)-f(s-1).
 $$

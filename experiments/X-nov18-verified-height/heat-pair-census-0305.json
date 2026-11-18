@@ -1,0 +1,40 @@
+{
+  "checkpoint": "checkpoint-0305.json",
+  "ordered_stream_digest": "456d020b0b5f40c5cb3e0f0b80c1f87b803b5ea784ffc6de7a7ea0587b50b3c3",
+  "backward_heat_time": "1/5000",
+  "disjoint_conjugate_pairs": {
+    "count": 131,
+    "first_indices": [
+      12363153460076,
+      12363153476424,
+      12363153519193,
+      12363153553290,
+      12363153557388,
+      12363153637112,
+      12363153638842,
+      12363153641982
+    ],
+    "indices_sha256": "fe80f38ebf64f955c47ae4c16a06c599ef516765b297d08b9ce77de8ceceb140"
+  },
+  "disjoint_simple_zeta_derivative_zeros_right_of_line": {
+    "count": 807,
+    "first_indices": [
+      12363153449929,
+      12363153454258,
+      12363153459567,
+      12363153460076,
+      12363153462307,
+      12363153466694,
+      12363153469037,
+      12363153472789
+    ],
+    "indices_sha256": "df2d3f02f88c9ae253fffcd228e776973138af30ffbaa2904feaca755d961593"
+  },
+  "derivative_zero_counts_by_strict_distance_in_millionths": {
+    "100": 0,
+    "500": 5,
+    "1000": 17,
+    "5000": 294,
+    "10000": 671
+  }
+}

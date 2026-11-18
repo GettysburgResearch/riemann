@@ -45,7 +45,7 @@ The leading prefactor of a single mode is \(-A_k^2 z^{-9/2}/16\). Powers are con
  \int_0^\infty v^{-9/2}e^{-v^2-A_k/v^2}
                   e^{iL(\beta v+A_k/v)}\,dv , \tag{2}
 \]
-up to the common factor \(-1/16\) and an absolute error \(o(L^{-1/2})\). Negative \(v\) supplies the conjugate; the factor \(1/2\) of the full Fourier representation converts their sum into the real part.
+up to the common factor \(-1/16\) and an absolute error \(o(L^{-1/2})\). Negative \(v\) supplies the conjugate. The factor \(1/2\) of the full Fourier representation converts their sum into the real part.
 
 For details of the error, choose \(\delta=1/40\). On \(L^{-\delta}\le v\le L^\delta\) and \(k+1\le 2L^\delta\), expand \(Y=1/(4z)+O(z)\),
 \[
@@ -92,7 +92,7 @@ For \(D_k(v)=v^{-9/2}\exp(-v^2-A_k/v^2)\), write \(l'=D_k'/D_k\). At \(v=v_k\) t
        +\frac{3v^2}{4A_k}l'+\frac{3v}{16A_k}
  =\frac43 A_k v+\frac{v^5}{A_k}+\frac{5v^3}{2A_k}.
 \]
-The first expression follows from the one-dimensional stationary-phase expansion using \(\phi''=2A_k/v^3\), \(\phi'''=-6A_k/v^4\), \(\phi''''=24A_k/v^5\); direct substitution of \(l'=-9/(2v)-2v+2A_k/v^3\) gives the second. To sum the higher-order remainder uniformly, rescale \(v=v_k u\). The phase becomes \(L\sqrt{A_k\beta}(u+1/u)\), with the stationary point always at one. On a fixed compact neighborhood of one, every fixed-order derivative of the amplitude is bounded by \((1+k)^C e^{-c_1 k}\) after including the rescaling factor, also for the correction amplitude. Standard stationary phase with two terms gives the same summable prefactor times \(O(L^{-5/2})\). Off this neighborhood integration by parts twice gives that prefactor times \(O(L^{-2})\). Indeed the differentiated amplitudes consist of powers of \(u,1/u,A_k\) times \(e^{-(A_k/\beta)u^2-\beta/u^2}\), whose integrated magnitudes have this bound; the derivatives of the reciprocal phase derivative have only polynomial growth there. This justifies a uniform normalized remainder \(o(1/L)\).
+The first expression follows from the one-dimensional stationary-phase expansion using \(\phi''=2A_k/v^3\), \(\phi'''=-6A_k/v^4\), \(\phi''''=24A_k/v^5\). Direct substitution of \(l'=-9/(2v)-2v+2A_k/v^3\) gives the second. To sum the higher-order remainder uniformly, rescale \(v=v_k u\). The phase becomes \(L\sqrt{A_k\beta}(u+1/u)\), with the stationary point always at one. On a fixed compact neighborhood of one, every fixed-order derivative of the amplitude is bounded by \((1+k)^C e^{-c_1 k}\) after including the rescaling factor, also for the correction amplitude. Standard stationary phase with two terms gives the same summable prefactor times \(O(L^{-5/2})\). Off this neighborhood integration by parts twice gives that prefactor times \(O(L^{-2})\). Indeed the differentiated amplitudes consist of powers of \(u,1/u,A_k\) times \(e^{-(A_k/\beta)u^2-\beta/u^2}\), whose integrated magnitudes have this bound. The derivatives of the reciprocal phase derivative have only polynomial growth there. This justifies a uniform normalized remainder \(o(1/L)\).
 
 Writing \(r=2k+1\) gives \(Q_k=p_1 r+p_3r^3\). The full result is therefore
 \[

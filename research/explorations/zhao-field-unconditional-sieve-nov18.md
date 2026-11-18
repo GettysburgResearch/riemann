@@ -19,4 +19,4 @@ $$
  \tfrac12 b_0(\psi((s+a)/2)-\log\pi)
  +\sum_{k\ge1}b_k 2^{-k-1}\zeta(k+1,(s+a)/2).
 $$
-Use $r_1+r_2$ copies with $a=0$ and $r_2$ copies with $a=1$. Add $b_0\log|\Delta_K|/2$ and the rational pole terms $b_0(1/s+1/(s-1))-\sum_{k\ge1}b_k(s^{-k-1}+(s-1)^{-k-1})$. The numerical helpers use Arb intervals; the finite rational-function checks use SymPy's rational Sturm implementation.
+Use $r_1+r_2$ copies with $a=0$ and $r_2$ copies with $a=1$. Add $b_0\log|\Delta_K|/2$ and the rational pole terms $b_0(1/s+1/(s-1))-\sum_{k\ge1}b_k(s^{-k-1}+(s-1)^{-k-1})$. The numerical helpers use Arb intervals. The finite rational-function checks use SymPy's rational Sturm implementation.

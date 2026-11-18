@@ -34,14 +34,16 @@ def coordinates(n):
 
 
 @cache
-def table(n,r2):
+def table(n,r2,boundary="2"):
+    if not 0 < arb(boundary) <= 2:
+        raise ValueError("Boundary outside the proved kernel range")
     pi=arb.pi()
     z=[]
     multipliers=[]
     for j in range(J+1):
         w=acb(2,arb(j)/16)
         gamma=(w/2).gamma()**(n-r2)*((w+1)/2).gamma()**r2
-        v=gamma*((w-arb(1)/2)**2/36).exp()*(2*w-1)*(1/(w*(w-1))-arb(37)/36)
+        v=gamma*((w-arb(1)/2)**2/36).exp()*(2*w-1)*(1/(w*(w-1))-(arb(boundary)/2+arb(1)/36))
         z.append(v*(1 if j==0 else 2)/(32*pi))
         multipliers.append(acb(0,-2*pi*j/M))
     # Distance from the exact coordinate, including coordinate rounding.
@@ -83,11 +85,11 @@ def parameters(item,target):
     return n,r2,c,L,nmax,strip+ends+tail/arb(nmax)**(arb(27)/4)
 
 
-def evaluate(item,coefs,pars):
+def evaluate(item,coefs,pars,boundary="2"):
     n,r2,c,L,nmax,err=pars
     if len(coefs)!=nmax or coefs[0]!=1 or min(coefs)<0:
         raise ValueError("Incomplete ideal coefficients")
-    poly,point_err,amplitude=table(n,r2)
+    poly,point_err,amplitude=table(n,r2,boundary)
     total=0
     for m,a in enumerate(coefs,1):
         if a:
@@ -104,7 +106,7 @@ def evaluate(item,coefs,pars):
     return approx+arb(0,err.upper())
 
 
-def process(rows,tolerance,stream):
+def process(rows,tolerance,stream,boundary="2"):
     for lo in range(0,len(rows),32):
         batch=rows[lo:lo+32]
         params=[parameters(r,arb(tolerance)) for r in batch]
@@ -118,7 +120,7 @@ def process(rows,tolerance,stream):
         if len(allcoefs)!=len(batch):
             raise ArithmeticError("Incomplete field batch")
         for item,cc,p in zip(batch,allcoefs,params):
-            w=evaluate(item,cc,p)
+            w=evaluate(item,cc,p,boundary)
             print(json.dumps([item["label"],True if w<0 else False if w>0 else None,str(w)]),
                   file=stream)
         stream.flush()
@@ -129,7 +131,8 @@ if __name__=="__main__":
     ap.add_argument("input",type=Path)
     ap.add_argument("output",type=Path)
     ap.add_argument("--tolerance",default="0.3")
+    ap.add_argument("--boundary",default="2",help="Test b_K against a positive threshold at most 2")
     args=ap.parse_args()
     ctx.prec=150
     with args.output.open("w") as stream:
-        process(json.loads(args.input.read_text()),args.tolerance,stream)
+        process(json.loads(args.input.read_text()),args.tolerance,stream,args.boundary)
