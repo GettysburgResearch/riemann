@@ -62,23 +62,26 @@ class NativeIsolator:
         try:
             index = ctypes.c_long(first)
             found = self.isolate(vector, ctypes.byref(index), requested, precision)
-            if not 0 <= found <= requested:
-                raise ArithmeticError("Invalid certified count from FLINT")
-            result = []
-            for i in range(found):
-                pair = []
-                for side in range(2):
-                    point = vector + (2 * i + side) * ctypes.sizeof(Arf)
-                    text = self.dump(point)
-                    try:
-                        mantissa, exponent = ctypes.string_at(text).split()
-                        pair.append((int(mantissa, 16), int(exponent, 16)))
-                    finally:
-                        self.free(text)
-                result.append(tuple(pair))
-            return result
+            return self.unpack(vector, requested, found)
         finally:
             self.release(vector, 2 * requested)
+
+    def unpack(self, vector, requested, found):
+        if not 0 <= found <= requested:
+            raise ArithmeticError("Invalid certified count from FLINT")
+        result = []
+        for i in range(found):
+            pair = []
+            for side in range(2):
+                point = vector + (2 * i + side) * ctypes.sizeof(Arf)
+                text = self.dump(point)
+                try:
+                    mantissa, exponent = ctypes.string_at(text).split()
+                    pair.append((int(mantissa, 16), int(exponent, 16)))
+                finally:
+                    self.free(text)
+            result.append(tuple(pair))
+        return result
 
 
 def compare(first, second):
@@ -112,7 +115,7 @@ def canonical(intervals):
                     for (a, e), (b, f) in intervals)
 
 
-def create_block(isolator, block, directory, precision):
+def create_block(isolator, block, directory, precision, shifted=None):
     first = ANCHOR + block * BLOCK_SIZE
     last = first + BLOCK_SIZE
     path = directory / f"{block:04d}.xz"
@@ -127,9 +130,12 @@ def create_block(isolator, block, directory, precision):
     while len(intervals) <= BLOCK_SIZE:
         start = first + max(len(intervals) - 1, 0)
         # A failed local search can be moved backward into a different certified anchor.
-        for backup, extra in ((0, 0), (0, 32), (8, 32), (64, 64)):
+        attempts = [(isolator, 0, 0), (isolator, 0, 32), (isolator, 8, 32), (isolator, 64, 64)]
+        if shifted is not None:
+            attempts.insert(0, (shifted, 0, 0))
+        for engine, backup, extra in attempts:
             requested = last - start + 1 + backup
-            raw = isolator.batch(start - backup, requested, precision + extra)
+            raw = engine.batch(start - backup, requested, precision + extra)
             check_brackets(raw)
             batch = raw[backup:]
             if len(batch) <= int(bool(intervals)):
@@ -137,6 +143,8 @@ def create_block(isolator, block, directory, precision):
             calls.append({"first_index": start - backup, "requested": requested,
                           "returned": len(raw), "precision": precision + extra,
                           "stream_sha256": hashlib.sha256(canonical(raw)).hexdigest()})
+            if shifted is not None and engine is shifted:
+                calls[-1]["shifted_parameters"] = dict(shifted.last_parameters)
             if intervals:
                 intervals[-1] = intersection(intervals[-1], batch[0])
                 intervals.extend(batch[1:])
@@ -172,15 +180,21 @@ def main():
     parser.add_argument("--output", type=Path, default=Path(__file__).parent / "blocks")
     parser.add_argument("--deadline-utc", type=int, default=None,
                         help="optional Unix timestamp after which no new block starts")
+    parser.add_argument("--shifted", action="store_true",
+                        help="try the explicitly centered native grid before the default grid")
     args = parser.parse_args()
     if not 0 <= args.first_block < args.stop_block or args.stride < 1:
         parser.error("invalid range")
     args.output.mkdir(parents=True, exist_ok=True)
     isolator = NativeIsolator()
+    shifted = None
+    if args.shifted:
+        from shifted_isolator import ShiftedIsolator
+        shifted = ShiftedIsolator()
     for block in range(args.first_block, args.stop_block, args.stride):
         if args.deadline_utc is not None and time.time() >= args.deadline_utc:
             break
-        create_block(isolator, block, args.output, args.precision)
+        create_block(isolator, block, args.output, args.precision, shifted)
 
 
 if __name__ == "__main__":

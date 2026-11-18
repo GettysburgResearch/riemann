@@ -1,5 +1,5 @@
 """Finite weighted Mertens induction and signed 5:3 deconvolution; python-flint."""
-from math import isqrt
+from math import ceil, isqrt
 
 from flint import arb, ctx
 
@@ -53,8 +53,10 @@ def main():
         # Bound using erfc's exact exponentially tilted integral.
         variation = (2*(t/arb.pi()).sqrt() + t/2) * (t/4).exp()
         ratio = (1 + hi.sqrt() * coeff * variation) / lo.log()
-        print(f'X <= {q*2**j}: correction/logX < {float(ratio.upper()):.6f}')
-        if j <= 15:
+        printed_ceiling = ceil(float(ratio.upper()) * 1_000_000) / 1_000_000
+        assert ratio < arb(str(printed_ceiling))
+        print(f'X <= {q*2**j}: correction/logX < {printed_ceiling:.6f}')
+        if j < limit:
             largest = max(largest, ratio)
     assert largest < arb('6.5')
     print(f'Proved strict positivity through {q*2**15}. Small sum {small}.')

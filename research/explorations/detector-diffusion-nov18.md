@@ -9,7 +9,9 @@ Let \(w(v)=5c_{e^v}(2)+3c_{e^v}(3)\) for \(v\ge0\), extended by zero for \(v<0\)
 \]
 Then **\(g_\epsilon(U)>0\) for every \(U>0\) and every \(\epsilon\ge10^{-6}\)**. The variance in logarithmic coordinates is \(2\epsilon U\). The kernel depends on the center, which changes the relation between the transform and the zeros.
 
-The finite spectral certificate also proves positivity of the **unsmoothed** row for every real \(2<X\le2\cdot10^{13}\), by the quantitative deconvolution in Section 4.\n\nThere is also an exact formula for the infimum of parameters giving *eventual* positivity:
+The finite spectral certificate also proves positivity of the **unsmoothed** row for every real \(2<X\le2\cdot10^{13}\), by the quantitative deconvolution in Section 4. Its height-20000 replay extends the prefix through \(2\cdot10^{17}\). [Signed deconvolution using verified prime and Mertens data](detector-prime-prefix-nov18.md) extends it through \(3.2768\cdot10^{20}\).
+
+There is also an exact formula for the infimum of parameters giving *eventual* positivity:
 \[
  \epsilon_*=\sup_{\rho=\beta+i\gamma}
     \frac{\max(\beta-1/2,0)}{\gamma^2-(\beta-1/2)^2}.

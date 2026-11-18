@@ -23,10 +23,18 @@ def decode(data):
 
 def replay(metadata, expected):
     native = NativeIsolator()
+    shifted = None
     accumulated = []
     first = metadata["first_index"]
     for call in metadata["calls"]:
-        raw = native.batch(call["first_index"], call["requested"], call["precision"])
+        args = (call["first_index"], call["requested"], call["precision"])
+        if "shifted_parameters" in call:
+            if shifted is None:
+                from shifted_isolator import ShiftedIsolator
+                shifted = ShiftedIsolator()
+            raw = shifted.batch_from_parameters(*args, call["shifted_parameters"])
+        else:
+            raw = native.batch(*args)
         check_brackets(raw)
         if len(raw) != call["returned"] or hashlib.sha256(canonical(raw)).hexdigest() != call["stream_sha256"]:
             raise ArithmeticError("Primitive Platt/Turing replay differs from its signed bracket stream")
