@@ -2,12 +2,51 @@
 import argparse
 import io
 import json
+from math import gcd
 from pathlib import Path
-from flint import ctx
+from flint import ctx,dirichlet_char
 from check_zhao_low_degree_unconditional_nov18 import verify_caps
+from check_zhao_quartic_fields_nov18 import polynomial
 from check_zhao_cubic_fields_nov18 import run_gp
 from check_zhao_field_threshold_nov18 import process
 from check_zhao_dedekind_contour_nov18 import weight
+
+
+def canonical_rows(rows):
+    out=[]
+    for start in range(0,len(rows),128):
+        chunk=rows[start:start+128]
+        v=','.join(polynomial(c) for _,_,c in chunk)
+        polys=run_gp(f'V=[{v}];\nfor(i=1,#V,print(Vec(polredabs(V[i]))));\n')
+        if len(polys)!=len(chunk):
+            raise ArithmeticError("Incomplete canonicalization")
+        out.extend([r,d,c] for (r,d,_),c in zip(chunk,polys))
+    return sorted(out)
+
+
+def check_match(report,n):
+    src=Path(__file__).resolve().parents[1]/"research"/"explorations"
+    abelian=json.loads((src/"zhao-abelian-fields-nov18.json").read_text())["fields"]
+    prior=[]
+    for row in abelian:
+        if row["degree"]!=n: continue
+        q=row["conductor"]
+        chars=[dirichlet_char(a,b) for a,b in row["characters"]]
+        ker=[u for u in range(1,q) if gcd(u,q)==1 and all(int(ch.chi_exponent(u))==0 for ch in chars)]
+        (coeff,)=run_gp(f'print(Vec(polredabs(galoissubcyclo({q},{ker}))));\n')
+        r=0 if row["totally_real"] else n//2
+        prior.append([r,(-1)**r*row["abs_discriminant"],coeff])
+    if n==3:
+        independent=json.loads((src/"zhao-cubic-fields-nov18.json").read_text())
+        prior+=canonical_rows([[int(d<0),d,c] for d,c in independent["accepted"]])
+    else:
+        independent=json.loads((src/"zhao-quartic-fields-nov18.json").read_text())
+        prior+=[v for group in independent.values() for v in group["accepted"]]
+    actual=canonical_rows(report["accepted"])
+    if actual!=sorted(prior):
+        raise ArithmeticError("Unconditional and spectral field inventories differ")
+    report["accepted"]=actual
+    return report
 
 
 def finish(report,n):
@@ -55,5 +94,5 @@ if __name__=='__main__':
     ap.add_argument('--output',type=Path,required=True)
     args=ap.parse_args()
     ctx.prec=150
-    report=finish(json.loads(args.input.read_text()),args.degree)
+    report=check_match(finish(json.loads(args.input.read_text()),args.degree),args.degree)
     args.output.write_text(json.dumps(report,separators=(',',':'))+'\n')

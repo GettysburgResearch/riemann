@@ -71,3 +71,6 @@ python scripts/check_zhao_quartic_tables_nov18.py --table-dir tables --output-di
 python scripts/check_zhao_quartic_fields_nov18.py --enumeration-cache quartic-replay --output-dir quartic-replay
 python scripts/check_zhao_quartic_contour_nov18.py --input-dir quartic-replay --output quartic-replay/fields.json
 ```
+
+
+The same list of 871 fields is the entire unconditional classification of \(2\Xi'_K(1)/\Xi_K(1)<2\), verified separately on all 81,145 candidates using larger discriminant bounds valid throughout the critical strip. Every one of these fields has no nontrivial real zero. [Unconditional classification and replay](zhao-low-degree-unconditional-nov18.md)

@@ -1,8 +1,10 @@
 # An unconditional classification at one for small-degree Dedekind zeta functions
 
-For \(B_K^*=2\Xi_K'(1)/\Xi_K(1)\), where \(\Xi_K\) is the entire pole-cancelled completed Dedekind zeta function, exactly 367 cubic fields satisfy \(B_K^*<2\). Their list agrees entry by entry with the [cubic spectral list](zhao-cubic-fields-nov18.md), including its seven cyclic fields. This test concerns an unconditional real number attached to the field. On GRH it equals the zero-ordinate sum used in Zhao's question. Every field passing the test has no nontrivial real zero, with no GRH assumption.
+For \(B_K^*=2\Xi_K'(1)/\Xi_K(1)\), where \(\Xi_K\) is the entire pole-cancelled completed Dedekind zeta function, exactly **367 cubic fields and 871 quartic fields** satisfy \(B_K^*<2\). Their lists agree entry by entry up to field isomorphism with the [cubic](zhao-cubic-fields-nov18.md) and [quartic](zhao-quartic-fields-nov18.md) spectral inventories. The [unconditional inventory](zhao-low-degree-unconditional-nov18.json) gives each passing field's number of complex places, signed discriminant and descending canonical defining polynomial coefficients. This test concerns an unconditional real number attached to the field. On GRH it equals the zero-ordinate sum used in Zhao's question. Every field passing the test has no nontrivial real zero, with no GRH assumption.
 
 The [Euler checker](../../scripts/check_zhao_low_degree_unconditional_nov18.py) reduces 13,818 non-Galois cubic candidates to 2,200 at \(P=16\), then to 1,195 at \(P=64\), and to 928 at \(P=256\). The [contour finisher](../../scripts/finish_zhao_low_degree_unconditional_nov18.py) tests these 928 and all 50 cyclic candidates. Its first target tolerance separates 977 strict comparisons; tightening from 0.03 to 0.0001 decides the last one.
+For quartics the enlarged discriminant caps give 81,145 fields over all Galois groups. The Euler sieve leaves 7,264 at \(P=8\), 3,509 at \(P=32\), and 2,384 at \(P=128\). At the first contour tolerance 2,377 comparisons separate strictly, and the tighter second tolerance settles all seven remaining comparisons. In both degrees the finisher uses PARI's canonical defining polynomial to compare all passing fields to the previous inventories. For an abelian character group it obtains the field directly as the cyclotomic subfield fixed by the common character kernel. Every isomorphism class matches. The collection of 1,184 nonabelian cubic and quartic passing fields was independently checked with the full logarithmic-derivative Euler contour.
+
 ## A finite Euler rejection with no zero hypothesis
 
 Let \(D(s)=\Xi_K'(s)/\Xi_K(s)\) for the pole-cancelled completed Dedekind zeta function. Its symmetry gives
@@ -39,4 +41,12 @@ From the repository root the cubic census can be reproduced with
 ```sh
 python scripts/check_zhao_low_degree_unconditional_nov18.py --degree 3 --limits 16 64 256 --output cubic-screen.json
 python scripts/finish_zhao_low_degree_unconditional_nov18.py --degree 3 --input cubic-screen.json --output cubic-unconditional.json
+```
+
+
+For quartics, put the three authenticated Bordeaux tables in the directory named tables and run
+
+```sh
+python scripts/check_zhao_low_degree_unconditional_nov18.py --degree 4 --table-dir tables --limits 8 32 128 --output quartic-screen.json
+python scripts/finish_zhao_low_degree_unconditional_nov18.py --degree 4 --input quartic-screen.json --output quartic-unconditional.json
 ```
