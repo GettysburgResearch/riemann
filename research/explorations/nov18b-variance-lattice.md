@@ -68,3 +68,44 @@ One may use real abscissa \(1/\log N_0\) in the finite Perron formula, whose end
 Each power of \(V'\) decreases sufficiently fast to absorb the pigeonholing cost using just \(V'\ge N_0^{\sigma-o(1)}\). Substitution of \(\sigma=3/4\) gives (6). [Guth and Maynard, Theorem 1.1](https://arxiv.org/abs/2405.20552)
 
 For instance, at \(a=2/5\) the bound (6) is \(T^{13/25+o(1)}\), below the general zero-density exponent \(5/9\). For \(H=T^{\eta+o(1)}\), (5) with \(k=3\) gives \(T^{3/5-2\eta+o(1)}\), reaching the density-hypothesis exponent at \(\eta=1/20\). If \(\eta>a(1-\sigma)\), the size requirement (2) exceeds even the length of \(I\), excluding the progression. At \(a=5/12\), (6) itself reaches the density-hypothesis exponent even for arbitrarily slowly growing duration. These conclusions use exact lattice zeros in the stated middle range. A short irregular cluster or an isolated off-line zero need not furnish the required samples.
+
+## Smoothly changing ordinates and real parts
+
+The detector survives smooth curvature on power-length plateaus. Here is one precise version allowing the local spacing to change by a fixed factor. Fix \(0<\eta\le 1/5\), \(H=T^\eta\), and an interval of indices \(|j|\le J\) with \(J\asymp H\log T\). Let
+\[
+ t_j=t_*+H\phi(j/J),\qquad
+ \beta_j=b(j/J),\qquad \zeta(\beta_j+it_j)=0 ,
+ \tag{7}
+\]
+where \(t_j\in[T,2T]\), \(1/2<\sigma\le b\le1\), and \(0<c\le\phi'\le C\). All derivatives of each fixed order of \(b,\phi\) are bounded independently of the plateau and \(T\). The functions can depend on \(T\). The local reciprocal spacing has exponent
+\[
+ a(v)=\frac{2\pi J}{H\phi'(v)\log T}.
+\]
+Require its range to stay in a fixed compact subset of \(\{1/3<a<1/2,\ 2a\sigma>1/2\}\). Arbitrarily many overlapping qualifying plateaus are allowed.
+
+For \(\sigma=3/4\), the number of zeta zeros with ordinates in the union of the middle portions \(\{t_*+H\phi(v):|v|\le1/2\}\) is at most
+\[
+ T^{\max(5/9-4\eta/9,\ (6/11)(1-\eta/2))+o(1)} . \tag{8}
+\]
+This is strictly below the general exponent \(5/9\) at each fixed \(\eta>0\). At \(\eta\ge1/6\) it gives the density-hypothesis exponent or better. For exact, constant mesh and fixed real part, the corresponding bound replaces \(\eta/2\) by \(\eta\) throughout the optimization below. In particular \(H\ge T^{1/12}\) suffices uniformly over the compact middle range in that case.
+
+**Local proof.** Put \(h=H^{1/2}\). At an interior index \(j_c\) take a window of \(J'=hJ/(H\phi'(j_c/J))\asymp h\log T\) indices on each side. Let \(v=(j-j_c)/J'\), \(t_c=t_{j_c}\), and write \(t_j=t_c+h\phi_c(v)\). On \(|v|\le1\) one has \(\phi_c'(v)=1+O(h/H)\) and all derivatives of orders at least two are \(O_r(h/H)\). The local mesh parameter is \(\log N_c=2\pi J'/h=a(j_c/J)\log T\). Freeze the approximate-functional-equation cutoff at \(\lfloor\sqrt{t_c/(2\pi)}\rfloor\) as in (3). In the dual use Stirling in the form
+\[
+ \chi(b_j+it_j)=(t_c/(2\pi))^{1/2-b_j} e^{i\theta_c}
+  e^{-i(t_j-t_c)\log(t_c/(2\pi))}\{1+O((1+h)^2/T)\},
+\]
+where \(b_j=b(j/J)\) and the constant phase is independent of \(j\) and \(b_j\). The total error is \(o(1)\), since \(h\le T^{1/10}\). Average over \(j\) with a fixed nonnegative smooth bump \(w(v)\) supported on \((-1,1)\), of integral one, and divide by \(J'\).
+
+Poisson summation in \(j-j_c\) gives phases \(h(\ell v\log N_c-\phi_c(v)\log n)\) on the direct side. Outside
+\[
+ |\log n-\ell\log N_c|\le C(h/H)\log T+T^\epsilon/h \tag{9}
+\]
+the phase derivative divided by \(h\) has magnitude comparable to \(D=|\log n-\ell\log N_c|\). Choose \(C\) larger than twice the derivative-drift constant. All higher derivatives of the phase divided by \(h\) are \(O_r(D)\). All fixed derivatives of its amplitude \(w(v)n^{-b((j_c+J'v)/J)}\) are \(O_r(n^{-\sigma}(1+\log T)^r)\). Repeated integration by parts bounds the transformed term by \(O_r(n^{-\sigma}(1+\log T)^r(hD)^{-r})\). The distant \(\ell\) tail is summable. For fixed \(\epsilon>0\), choosing \(r\) sufficiently large makes the total discarded contribution \(o(1)\). The \(\ell=0\) mode retains just \(n=1\) if \(\epsilon<\eta/2\). All other direct terms retained are in (9) with \(\ell=1\). The dual calculation replaces \(\log n\) by \(\log[t_c/(2\pi n)]\); its amplitude and derivatives are bounded by \(T^{1/2-\sigma}n^{\sigma-1}(1+\log T)^{O_r(1)}\). Only \(\ell=2\) can then remain, and its absolute sum is \(O(T^{1/2-2a(j_c/J)\sigma+o(1)})=o(1)\) uniformly by the compact-range hypothesis.
+
+Equivalently, discard the entire original averages for integers outside the surviving ranges, bounding each by the Poisson calculation. The resulting sum over the integers in the direct range (9) must cancel the constant \(1+o(1)\). Its absolute value is bounded above by the average, over \(j\) in the window, of partial unweighted zeta sums at \(t_j\) times \(T^{-a(j_c/J)\sigma+o(1)}\), by partial summation with \(n^{-b_j}\). Thus the mean of their maximal moduli is at least \(T^{a(j_c/J)\sigma-o(1)}\). Their summation intervals have length \(T^{a(j_c/J)-\eta/2+O(\epsilon)+o(1)}\).
+
+Choose local windows around grid points throughout the middle portions. A disjoint selection in height covers all middle ordinates after a bounded dilation, since the derivative of the spacing is bounded and each original window has length comparable to \(h\). Each selected window has \(\asymp h\log T\) sample points; its dilate contains \(O(h\log T)\) total zeta zeros. The union of the undilated samples can be partitioned into \(O(\log T)\) one-separated sets, using the lower bound on adjacent spacing and disjointness of the windows. Group windows by the dyadic scale of \(N_c\). Jensen's inequality on each window now permits the proof of (5) with the short length saving \(\eta/2-O(\epsilon)\). For (6), sum the mean-modulus lower bounds and use the same first-moment Perron argument. Its cost linear in the larger threshold is absorbed by the large-value inequality. Send \(\epsilon\) to zero.
+
+Finally set \(u=\eta/2\). At any given local exponent \(a\), (5) with \(k=2,3\) and (6) give the least of \(1-a-u,\ 3a/2-2u,\ \max(6a/5,1-6a/5)\). For \(a\le5/12\), the increasing line \(3a/2-2u\) intersects the decreasing line \(1-6a/5\) at height \(5/9-8u/9\). For \(a\ge5/12\), the increasing line \(6a/5\) intersects the decreasing line \(1-a-u\) at height \(6(1-u)/11\). The smaller line in each comparison never exceeds the intersection height. This proves (8), also when a crossing lies outside a particular compact range. In the exact case the same optimization uses \(u=\eta\).
+
+This extension permits power-length smooth drifts. Stationary-phase leakage from arbitrary nonsmooth microscopic jitter is a separate obstacle. For example, fixed-size errors on the scale of one zero spacing cannot be inserted in (7) without controlling their derivatives or their Fourier content.
