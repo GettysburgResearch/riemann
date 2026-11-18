@@ -70,6 +70,27 @@ Here and below the window, zero and parameters are fixed before the large-\(T\) 
 \]
 pointwise. It is negligible even if no small-prime cancellation is used. The small-ratio pairs still cost (2) in absolute value after either removal. This proves the simultaneous restriction. It supplies a growing range of prime relations that on their own cannot generate the energy forced by a hypothetical zero.
 
+A truncated Euler-product bound strengthens the prime cutoff to \(y=T^A\). Let
+\[
+ b_A=\max(0,1/2-1/A).
+\]
+Every fixed \(A>0\) with \((1+d)b_A<a\) is admissible. The three restrictions above hold with this \(y\) and any
+\[
+ 0<\tau<\frac{a-(1+d)b_A}{1/2-b_A}.
+\]
+In particular an off-line zero always requires two different rough parts above a prime cutoff with exponent *strictly greater than two*. To check the improvement, the \(d'\)-divisors in a term with a given rough part \(s\) satisfy \(d'\le e^{(1+d)T}/s\) by the kernel support. Rankin's inequality gives
+\[
+ \sum_{\substack{d'\mid P_y\\ d'\le e^{(1+d)T}/s}}\frac1{\sqrt{d'}}
+ \le (e^{(1+d)T}/s)^{b_A}
+       \prod_{3\le p\le y}(1+p^{-1/2-b_A}).
+\]
+The product is \(e^{o(T)}\) by the prime number theorem: its logarithm is
+\(O_A(1+y^{1/2-b_A}/\log y)\), and \(y^{1/2-b_A}\le T\).
+The small-\(s\) scalar now costs
+\(\exp([(1+d)b_A+\tau(1/2-b_A)+o(1)]T)\), since \(\sum_{s\le S}s^{-1/2-b_A}\ll_A S^{1/2-b_A}\).
+The equal-rough-part pair cost is at most \(\exp([2(1+d)b_A+o(1)]T)\), using \(\sum_{s\le e^{(1+d)T}}s^{-1-2b_A}=O(T)\).
+Both are negligible at the respective amplitude and squared-amplitude scales. Apply (2) for the third restriction as before.
+
 ## 3. A squarefree signed sequence with exactly the same dyadic rule defeats scale inversion
 
 Fix any \(0<a<1/2\). There exists a sequence \(b(n)\in\{-1,0,1\}\) with all of the following properties.

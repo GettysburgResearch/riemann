@@ -9,7 +9,7 @@ Let \(w(v)=5c_{e^v}(2)+3c_{e^v}(3)\) for \(v\ge0\), extended by zero for \(v<0\)
 \]
 Then **\(g_\epsilon(U)>0\) for every \(U>0\) and every \(\epsilon\ge10^{-6}\)**. The variance in logarithmic coordinates is \(2\epsilon U\). The kernel depends on the center, which changes the relation between the transform and the zeros.
 
-There is also an exact formula for the infimum of parameters giving *eventual* positivity:
+The finite spectral certificate also proves positivity of the **unsmoothed** row for every real \(2<X\le2\cdot10^{13}\), by the quantitative deconvolution in Section 4.\n\nThere is also an exact formula for the infimum of parameters giving *eventual* positivity:
 \[
  \epsilon_*=\sup_{\rho=\beta+i\gamma}
     \frac{\max(\beta-1/2,0)}{\gamma^2-(\beta-1/2)^2}.
@@ -83,7 +83,38 @@ Write \(d=4\epsilon U\le16\cdot10^{-6}\) and omit the common positive Gaussian n
 \]
 using \((v-U)^2\ge16+8(v-8)\). The ratio of this upper bound to the positive term is at most \(640 e^4e^{-7/d}<1\). All remaining contributions up to 8 are nonnegative. This proves the claimed strict sign on the entire small-center range.
 
-## 4. Increasing the variance preserves positivity
+## 4. Finite unsmoothing without enumerating the arithmetic interval
+
+The preceding spectral certificate implies a statement about the original arithmetic function at **every real** \(X\le2\cdot10^{13}\):
+\[
+ w(\log X)=0\quad(1\le X\le2),\qquad
+ w(\log X)>0\quad(2<X\le 2\cdot10^{13}).
+ \tag{5}
+\]
+In particular its cumulative negative mass is zero through that endpoint.
+
+More generally take an integer \(H\ge2000\) and assume the following two finite predicates: all positive ordinates below \(H\) are simple critical zeros with total signed-ordinate absolute \(F\)-residue sum below 1, and \(|F(\sigma+iH)|<1\) for \(-1\le\sigma\le0.51\), with no zero on that segment. Then (5) extends through \(X=5H^4/4\). The indexed root count must pass the height before termination. The earlier 2000-height checker verifies these predicates. The [height-parameterized checker](check_detector_unsmoothed_prefix_nov18.py) verifies them for additional heights.
+
+**Lower bound for the average.** Use \(\epsilon=2/(3H^2)\) and the same finite rectangle, now moving the right line in (2) to \(0.51\), still inside absolute convergence. On the right \(|F(0.51+it)|\le1200/|0.51+it|^2\), by \(\zeta(1.01)<101\) and the bounded dyadic numerator. The two omitted right tails and two horizontal segments together, including \(1/(2\pi)\), contribute at most \(e^{-0.15u}\) at center \(u>0\): their unweighted integrals total at most \(2(1200)/H+2(1.51)<2\pi\), and \(\max_{\sigma\in[-1,0.51]}(\sigma+\epsilon\sigma^2-\epsilon H^2)<-0.15\). The left estimate from Section 2 is at most \(500e^{-0.99u}\). Since the spectral residue sum is below 1 and the critical zeros have purely imaginary shifted frequencies, it follows that
+\[
+ g_\epsilon(u)\ge Au+B-1-500e^{-0.99u}-e^{-0.15u}>6.5u
+ \qquad(u\ge8).
+\]
+For the last strict comparison the checker gives \(A>6.77,\ B>-0.5\); at \(u=8\) the inequality holds and its margin increases thereafter.
+
+**Pointwise deconvolution.** Write \(t=\epsilon u\), \(X=e^u\). With the nonnegative hinge correction \(R_t\) in Section 6, the exact difference \(g_\epsilon(u)-w(u)\) is \(\sum q(n)n^{-1/2}R_t(u-\log n)\). To retain the arithmetic sparsity, the four residue classes \(n\equiv 2^j\pmod{2^{j+1}}\), \(0\le j\le3\), have \(|q(n)|\le v_j\) where \(v=(6,15,12,3)\); all other classes contribute zero. Thus \(\sum v_j=36\) and \(\sum v_j/2^{j+1}=135/16\).
+
+For \(f(x)=x^{-1/2}R_t(u-\log x)\), its sum on any positive arithmetic progression of spacing \(b\) is bounded by \(b^{-1}\int_0^\infty f(x)dx+\operatorname{Var}(f)\). Integrate the deviation from each sampled value on the interval extending one spacing to its right to see this bound. The integral is \(4\sqrt{X}(e^{t/4}-1)\). In fact \(R_t''=G_t-\delta_0\) with \(G_t\) the centered Gaussian of variance \(2t\). Integrating against \(e^{y/2}\) gives \(\int e^{y/2}R_t(y)dy=4(e^{t/4}-1)\); the boundary terms vanish by Gaussian decay. For the variation, differentiate \(f(e^v)\) in \(v\), substitute \(y=u-v\), and use
+\(|R_t'(y)|=\operatorname{erfc}(|y|/(2\sqrt t))/2\le e^{-y^2/(4t)}/2\). This bounds the variation by \(X^{-1/2}[2(e^{t/4}-1)+\sqrt{\pi t}e^{t/4}]\). Hence
+\[
+ g_\epsilon(u)-w(u)\le
+ \frac{135}4\sqrt X(e^{t/4}-1)
+ +36X^{-1/2}\left(2(e^{t/4}-1)+\sqrt{\pi t}\,e^{t/4}\right).
+ \tag{6}
+\]
+For \(8\le u\le\log(5H^4/4)\) and \(H\ge2000\), one has \(t<10^{-5}\), since \(\log(5H^4/4)/H^2\) decreases in this range. Use \(e^{t/4}-1\le(t/4)e^{t/4}\): the first term in (6) is at most \((45\sqrt5/16)e^{t/4}u<6.30u\). The second term is less than 0.01 since \(X^{-1/2}\le e^{-4}\). Subtracting (6) from the lower bound for the average proves strict positivity on this whole interval. The native arithmetic prefix through 3000 proves the assertion for \(u<8\), with its initial zero interval accounted for separately. No tabulation through \(5H^4/4\) is used.
+
+## 5. Increasing the variance preserves positivity
 
 For \(s\) real and sufficiently large,
 \[
@@ -105,7 +136,7 @@ Here \(\phi'(s)=k+(1-k)(1+4\eta s)^{-1/2}\) is the transform of a positive measu
 \]
 Its transform is \(e^{-zq_\eta(s)}\) by the same Gaussian integral. Thus the right side is the transform of a positive measure whenever \(g_\epsilon\ge0\). If \(g_\epsilon>0\) for all \(u>0\), the atom already contributes a strictly positive density at every positive time. More explicitly, near each \(U>0\) restrict \(u\) to a small fixed closed subinterval of \((0,U/k)\), where both the inverse Gaussian kernel and \(g_\epsilon\) have uniform positive lower bounds. Uniqueness of Laplace transforms and continuity of \(g_\eta\) give \(g_\eta(U)>0\) for all \(U>0\). Sections 2–3 at \(\epsilon=10^{-6}\) therefore prove the full all-center statement.
 
-## 5. An upper bound for the unsmoothed mass using only local signed curvature
+## 6. An upper bound for the unsmoothed mass using only local signed curvature
 
 Fix \(\epsilon=10^{-6}\), \(d=0.002\), \(X=e^u\), and write
 \[
@@ -147,12 +178,62 @@ for some \(c>0\), by partial summation in the fixed Möbius dilates and logarith
 
 The [backward-heat analysis](detector-backward-heat-nov18.md) evaluates the native primitive diagonal, isolates the necessary large reduced ratios, and gives a squarefree counterexample to scale inversion without odd-prime multiplicativity.
 
+## 7. A positive inversion using only one fixed annulus
+
+There is an unconditional upper bound for the unsmoothed mass in terms of a *fixed-width* arithmetic excess. Define
+\[
+ C_h(v)=\sum_{|\log n-v|\le h}\frac{q(n)}{\sqrt n}
+                          \frac{(h-|v-\log n|)^2}{4h}.
+\]
+For each line in the table there is a finite constant \(C\) such that for all \(T\ge1\),
+\[
+ \int_0^T w_-\,du
+ \le C+(1+cT)\int_{-h}^{(1+ch)T+h}\big(C_h(v)-k\big)_+\,dv .
+ \tag{7}
+\]
+
+| Log half-width \(h\) | Steps per unit center \(c\) | Threshold \(k\) | Imported critical zero census |
+|---:|---:|---:|---:|
+| \(1\) | \(1/14\) | \(94\) | height 2000, local checker |
+| \(1\) | \(1/56\) | \(379\) | height \(3\cdot10^{12}\) |
+| \(10^{-12}\) | \(1/2\) | \(13\) | height \(3\cdot10^{12}\) |
+
+The threshold applies **after** summing the signed primitive weights. For instance in the second row only excess above 379 within a factor \(e\) of the center is charged. Subpower growth of the right-hand integral even on an unbounded sequence of horizons suffices for RH, by applying (7) at the corresponding rescaled cutoffs and using the fixed-row [positive-isolation theorem](detector-positive-isolation-nov18.md). Under RH the Mertens bound gives subpower growth for \(C_h\) and hence the converse. The finite constant in (7) need not equal the 2400 in (4).
+
+**Positive iteration.** Let \(P_h\) denote the probability average on \([-h,h]\). Its Laplace multiplier is \(\Phi_h(s)=\sinh(hs)/(hs)\). The uniform-average hinge identity gives \(P_hw-w=C_h\) on the full real line, including negative centers. For the listed \(h,c\) and \(n(u)=\lfloor cu\rfloor\),
+\[
+ (P_h^{\,n(u)}w)(u)=Au+B+O(e^{-b_0u})\qquad(u\to\infty)
+ \tag{8}
+\]
+for some \(b_0>0\). Here the power is fixed while evaluating its convolution at a given \(u\). To prove (8) use the inverse integral of \(e^{su}\Phi_h(s)^{n(u)}F(s)\) on \(\Re s=1\). Truncate at fixed sufficiently large heights \(\pm H_1\) away from poles, and move the central segment to \(\Re s=-b\) for sufficiently small fixed \(b>0\). On the original tails and horizontal edges \(|\Phi_h|\le\cosh(h\max(1,b))/(hH_1)\), so \(e^u|\Phi_h|^{\lfloor cu\rfloor}\) decays exponentially after fixing \(H_1\). On the left \(|\Phi_h|\le\sinh(hb)/(hb)\) by the positive integral representation, and \(-b+c\log(\sinh(hb)/(hb))<0\) for small \(b\). Choose the finite contour away from poles. At zero the double-pole contribution is \(Au+B\) because \(\Phi_h(0)=1,\ \Phi'_h(0)=0\).
+
+At each crossed critical zero \(|\Phi_h(i\gamma)|=|\sin(h\gamma)/(h\gamma)|<1\). At each other nontrivial zero \(s_\rho=\rho-1/2\) we have
+\[
+ |\Phi_h(s_\rho)|\le \cosh(h/2)/(hH_*)\,,\qquad
+ \tfrac12+c\log\big(\cosh(h/2)/(hH_*)\big)<0
+\]
+using its census height \(H_*\) in the table. Thus all nonreal pole contributions decay exponentially. For order \(m\) they include at most polynomial factors in \(u,n(u)\) after differentiation; if \(\Phi_h\) vanishes at the pole, the pole is eventually canceled exactly. Only finitely many poles are crossed. This proves (8).
+
+In each row \(A>ck\), so (8) gives \(P_h^{n(u)}w(u)\ge k n(u)\) at all sufficiently large centers. Telescoping the actual positive operator,
+\[
+ w_-(u)\le\sum_{j<n(u)}P_h^j(C_h-k)_+(u).
+\]
+For \(u\le T\) the largest \(j\) is at most \(cT\). Each probability convolution is supported in \([-jh,jh]\), and \((C_h-k)_+=0\) below \(-h\). Integrate, enlarge to the single indicated interval, and add the finite initial negative mass to prove (7). This argument preserves one-sided information when removing the repeated smoothing.
+
 ## Verification scope
 
 Run the finite checker at the repository root with python-flint 0.9.0.
 
     python research/explorations/check_detector_diffusion_nov18.py
 
-The 96-bit ball computation returns total signed-ordinate absolute residue sum \(0.366816599536684361093675\) with printed radius \(5.57\cdot10^{-25}\). Coverage uses FLINT's consecutive indexed zero routine from index one through a certified height above 2000. Finite arithmetic and analytic continuation rely on Arb/FLINT; this is a single implementation. Checker SHA-256 is 992b00f9460823ce1153dd85f27cf32c323a299c38420d465c1d5f0baaf3d660.
+The 96-bit ball computation returns total signed-ordinate absolute residue sum \(0.366816599536684361093675\) with printed radius \(5.57\cdot10^{-25}\). Coverage uses FLINT's consecutive indexed zero routine from index one through a certified height above 2000. Finite arithmetic and analytic continuation rely on Arb/FLINT; this is a single implementation. Checker SHA-256 is 5588e799dccd8d35d45942ff4237f211e52e6d2300587bc78d0d9be5a95e3b5e.
 
 The proof supplies global positivity for the stated averages. As the variance is proportional to \(U\), it does not yield an upper bound for the negative mass of the unsmoothed source or exclude an off-line zero above the verified census.
+
+The separate height-parameterized replay at height 20000 completed at 96 bits. Its output was
+
+```text
+Completed 22491 zeros below 20000
+H=20000, 22491 positive ordinates, residue sum [0.36900019484777974138858 +/- 2.36e-24]
+Accepted horizontal boxes=360, certified upper X=200000000000000000
+```

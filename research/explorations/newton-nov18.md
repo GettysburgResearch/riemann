@@ -178,3 +178,31 @@ $$
 Inserting these bounds into both terms of $A_B$ gives (7), using $B<b^2$. The norm difference is the reverse triangle inequality. No signs of the discarded prime-position errors, or signs of the surviving smooth/rough covariance, have been assumed.
 
 The cell masses can be specified entirely from primes $\le b$. If $P_b=\prod_{p\le b}p$, every integer in $(b,B]$ coprime to $P_b$ is prime. Thus the mass on $(v,v']$ equals the finite sum $\sum_{d\mid P_b}\mu(d)(\lfloor v'/d\rfloor-\lfloor v/d\rfloor)$. This representation demonstrates information dependence, without a claim of improved running time. What remains is to estimate the signed pairing of these cell counts with the actual smooth sector at unbounded cutoffs.
+
+## Conditional leading coefficient and the endpoint balancing fee
+
+Write $E_N=\sum_{k\le N}M(k)^2/(k(k+1))$. Under the weak Mertens
+hypothesis the balanced Möbius energy obeys
+$$
+ A_N(\mu)= E_N+2G(\log(N+1))^2+O((N+1)^{-1/2}),\qquad
+ G(t)=\sum_\rho \frac{e^{i\gamma t}}{\rho(\rho-1)\zeta'(\rho)}.
+$$
+The sum includes both signs and converges absolutely and uniformly. Indeed
+partial summation gives exactly $u_\mu(N)=\int_1^{N+1}M(x)x^{-2}\,dx$.
+Apply [Inoue, Corollary 3](https://arxiv.org/abs/1705.00853) with $\kappa=2$:
+the constant term vanishes by the prime number theorem and the
+identity above as $N\to\infty$. The other error in that corollary is
+$O((N+1)^{-1})$ before multiplication by $\sqrt{N+1}$. Absolute
+convergence follows by Cauchy–Schwarz from the classical weak Mertens
+necessary condition $B=\sum_\rho |\rho\zeta'(\rho)|^{-2}<\infty$
+and $\sum_\rho|\rho-1|^{-2}<\infty$.
+
+Since $E_N=\int_1^{N+1}M(x)^2x^{-2}\,dx$, the
+[proposed mean-square converse, equation (6)](trace-weak-mertens-nov18.md)
+gives $A_N(\mu)\sim B\log N$ and $A_{b^2-1}(\mu)/A_{b-1}(\mu)\to2$.
+Even without that proposed converse, the first displayed formula and
+the classical weak Mertens upper bound imply $A_N(\mu)\ll\log(2N)$.
+Conversely this last estimate on all integers implies weak Mertens
+directly by positivity. The bounded fee in the first formula contrasts
+with the explicit size $2B_0/\log^2 B_0$ of each separated sector at
+a Newton endpoint $B_0=b^2-1$.

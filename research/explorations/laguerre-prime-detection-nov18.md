@@ -76,3 +76,5 @@ $$
 It is at least one, proving the assertion. No single zero derivative is used.
 
 **Scope.** The tested moments are based at the Euler-convergence line $\Re s=2$. Exclusion of a fixed displacement strip needs a uniform upper bound on the indicated arithmetic moments at every relevant center. Exclusion at arbitrarily small displacements also needs the dependence on $d$.
+
+**Related coordinates.** If $\log\xi(s_t(w))=\log\xi(2+it)+\sum_{n\ge1}\lambda_n(t)w^n/n$ and $\lambda_0(t)=0$, differentiation gives $3[w^n](\xi'/\xi)(s_t(w))=\lambda_{n+1}(t)-2\lambda_n(t)+\lambda_{n-1}(t)$ for $n\ge1$. Thus the completed coefficients are local second differences of shifted Li coefficients. The repository also has an earlier safe-line Laguerre transform on $\Re s=3/2$ for Hausdorff differences of first-Hermite heat moments, using a different weight. The specific estimate above concerns the arithmetic $L_n^{(-1)}(3\log k)$ coefficients on $\Re s=2$. [Earlier safe-line transform L-91002](https://github.com/GettysburgResearch/riemann/blob/ec118df8a133a1e4800f292641d42af1ba79f938/claims/lemmas/L-91002-safe-line-laguerre-euler-weights.md)

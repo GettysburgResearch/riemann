@@ -79,7 +79,7 @@ def main():
 
     z = acb_series([half, 1], prec=2)
     coefficients = 6 + numerator(z) / z.zeta()
-    assert coefficients[0].real > 6 and coefficients[1].real > -1
+    assert coefficients[0].real > arb(677) / 100 and coefficients[1].real > -half
 
     height = 2000
     residue_loss = arb(0)

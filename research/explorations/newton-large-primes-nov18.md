@@ -102,3 +102,33 @@ $$
 Here $D$ is the ordinary centered prime measure, since the argument remains above $U$. For any fixed off-line zero, apply the same compact contour construction to $D(z)$ alone, keeping the selected point and placing simple zeros at every other off-line pole to the right of $\alpha<\beta$. The selected residue is $-m$ times a nonzero test value, the left contour is $O(e^{(\alpha-1/2)t})$, and the kernel can have support in $(-(\log2)/4,(\log2)/4)$. Pair the last distributional identity at the midpoint of the interval with this kernel, transferring the derivative to the test. Cauchy–Schwarz gives the annular norm of $A_U(v)/v$ at least $c_\rho U^{\beta-1/2}/\log(2U)$, uniformly in $U$. For large $b$ the entire test lies in $[L,2L]$. Taking the supremum over $\beta$ and then letting $\delta\downarrow0$ proves the uniform lower exponent in (2).
 
 **Verification scope.** These are analytic implications for the signed native source and include the matching continuous term. The difficult estimate is still an unconditional subpower upper bound. No numerical data or zero-location assumptions beyond the named classical unconditional inputs enter the exponent identities.
+
+### Both signs survive deletion of the small primes
+
+Suppose a zero with real part above one half exists. Fix a deletion exponent
+$0<\kappa<1$, and choose a zero $\rho$ close enough to the supremal real
+part to satisfy the strict inequality following (5). There exist constants
+$C,w>0$ depending on this choice such that for every sufficiently large $t$
+and every $2\le U\le e^{\kappa t}$,
+$$
+ \min_{\pm}\int_{t-w}^{t+w}(\pm A_U(v))_+\,dv
+       \ge C e^{(\beta-1/2)t}.
+$$
+Indeed use the [positive compact filter](detector-positive-isolation-nov18.md)
+in place of the genus-zero product. For each competing conjugate pair use
+$m_\lambda+1$ copies of its annihilating probability measure. At the selected
+pair use exactly $m$ copies of the two-atom probability measure with masses
+proportional to $1,e^{(\beta-1/2)h}$ at $0,h$, where
+$h=\pi/|\Im\rho|$. Its transform has a simple zero at the target. Convolve
+with the compact positive smooth multiplier from that construction, chosen
+nonvanishing at the target. The kernel is bounded and nonnegative; compact
+support follows from the same multiplicity sum. The two surviving residues
+in (5) now sum to $2\Re(C_\rho e^{(\rho-1/2)t})$ with $C_\rho\ne0$.
+Within one period choose centers giving each extremal phase. The cutoff
+error bound of (5) remains uniform after bounded translations of the
+center by its strict exponent gap. A positive convolution of bounded
+density attaining each signed lower bound forces the corresponding signed
+mass in the union of its translated support intervals. Enlarging $w$ to
+contain them proves the assertion. This signed result concerns cutoffs
+with the fixed power gap above; the differentiated endpoint argument in
+(2) gives only the unsigned norm.

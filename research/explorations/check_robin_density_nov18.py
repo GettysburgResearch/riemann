@@ -90,6 +90,26 @@ def upper_masses():
     return masses
 
 
+def annihilator_width(i):
+    """Bound sum pi/gamma over positive-ordinate zeros with beta > i/6400."""
+    height = arb(3) * 10**12
+    log_h = height.log()
+    sigma = arb(i) / 6400
+
+    def integrated(coefficient, power, log_power):
+        gap = 1 - power - log_power / log_h
+        assert gap > 0
+        return coefficient * height ** (power - 1) * log_h**log_power / gap
+
+    a, b, c = map(arb, INGHAM[(i - 3200) // 200])
+    ingham = integrated(a, 3 * (1 - sigma) / (2 - sigma), (7 - 5 * sigma) / (2 - sigma))
+    ingham += integrated(b, 0, 2) + integrated(c, 0, 1)
+    _, a, b = max(row for row in KADIRI if row[0] <= i)
+    kadiri = integrated(arb(a), 8 * (1 - sigma) / 3, 2 * (3 - 2 * sigma))
+    kadiri += integrated(arb(b), 0, 2)
+    return arb.pi() * min(ingham, kadiri)
+
+
 def high_zero_bound(log_upper, masses):
     """Bound the full high-zero moment for 1<=x<=exp(log_upper)."""
     assert log_upper >= 0 and len(masses) == 3200
@@ -106,6 +126,10 @@ def high_zero_bound(log_upper, masses):
 
 def main():
     ctx.prec = 160
+    for i, ceiling in [(5200, "0.152"), (5600, "0.001282"), (6200, "0.000000263")]:
+        width = annihilator_width(i)
+        assert width < arb(ceiling)
+        print(f"Positive-annihilator support at sigma={i}/6400 <= {width}")
     masses = upper_masses()
     log_ten = arb(10).log()
     for exponent, limit in [(34, "0.0143"), (35, "0.0346"), (36, "0.0854"),
