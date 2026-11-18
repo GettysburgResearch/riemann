@@ -5,7 +5,7 @@ Put \(B(x)=\{x\}-1/2\) and \(S_N(u)=\sum_{n\le N}\mu(n)B(u/n)\). For every fixed
  \int_{N^{35/24+\eta}}^\infty |S_N(u)|^2\frac{du}{u^2}
       \ll_\eta N^{-c_\eta}.                                      \tag{1}
 \]
-The imported input is the zero-free half-plane \(\Re s>7/8\). Below we use it for short twisted Möbius factors, and derive the estimate for the native sharp arithmetic coefficients. The same conclusion holds with \(S_N\) replaced by its fixed linear combination of dilations. The interval starting at \(u=N\) remains open for this approximant. [Frozen theorem and kernel receipts](nov18b-reciprocal-formal-audit.md) · [Fourier reduction and previous tail bounds](nov18b-reciprocal-sawtooth.md)
+The imported input is the zero-free half-plane \(\Re s>7/8\). Below we use it for short twisted Möbius factors, and derive the estimate for the native sharp arithmetic coefficients. The same conclusion holds with \(S_N\) replaced by its fixed linear combination of dilations. The [first-shell calculation](nov18b-reciprocal-first-shell.md) gives a positive limsup for the filtered residual already on \(N<u<2N\). [Frozen theorem and kernel receipts](nov18b-reciprocal-formal-audit.md) · [Fourier reduction and previous tail bounds](nov18b-reciprocal-sawtooth.md)
 
 ## A twisted Möbius factor
 

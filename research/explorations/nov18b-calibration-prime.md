@@ -1,6 +1,6 @@
 # Inserting a moving calibration prime into the cubic-theta probe
 
-The auxiliary character in the Eisenstein-field zero-free probe can serve as a prime average on its transformed rows. A specific choice keeps the character in the completed cubic row fixed and forces an exceptional Fourier frequency in the additive Gram estimate to have valuation four modulo six. This gives complementary estimates on both sides of the same finite expression. The long reflected sum and its simultaneous use with the moving puncture require a further estimate for a new zero-free boundary.
+The auxiliary character in the Eisenstein-field zero-free probe can serve as a prime average on its transformed rows. A specific choice keeps the character in the completed cubic row fixed and forces an exceptional Fourier frequency in the additive Gram estimate to have valuation four modulo six. This gives complementary estimates on both sides of the same finite expression. The source also yields a uniform bound for the punctured completed row. Its long-dual term and the additive Gram loss determine what this calibration can save in the positive comparison.
 
 Use $F=\mathbb Q(\sqrt{-3})$ and the primary generators, fixed set $S$, ray group $T$, primitive calibration $\xi$, and $b_*$ of §§4 and 6 of the source. We write $q_a=N(a)$, including for prime ideals. Take a good prime $\mathfrak l$ of norm $D$ in the identity class of $T$. Enlarge $S$ by this one prime, use $b_*'=b_*l$, and use
 \[
@@ -48,6 +48,21 @@ For all other frequencies the norm of the period in the double column is $O_{\rm
 \]
 Summing over positive dyadic $C_0,d_0$ costs $O(Z^\epsilon D RP/Y')$ in the factor after $RP$. The rapidly decaying $R$ sum gives the last term in (2). This accounts also for the additional prime in the period when $l$ does not divide $k$.
 
+### Mixed calibrations at one auxiliary prime
+
+The same argument applies to $\xi'_j=\xi\chi_l^j$ for $1\le j\le5$. These are exactly the nonprincipal local characters of order dividing six at $l$. The completed character acquires the factor $\chi_l^{j+1}$ in $\Xi$, and the additive column acquires $\chi_l^{1-j}$ up to a constant of modulus one and the zero mask. For a pair of indices $i,j$, the kernel after opening $A_m^{(l,i)}\overline{A_m^{(l,j)}}$ has an additional unit-sum condition in **each** residual variable. At $l$, its two character exponents, up to conjugation in the second column, are
+\[
+              1-i+v_l(k),\qquad 1-j+v_l(k).
+\]
+If $i\ne j$, the complete mean therefore vanishes at every nonzero frequency, even when all other valuations are multiples of six. For a fixed smooth nonnegative radial row cutoff $V(q_m/Q)$, supported in a fixed ball, the same Poisson calculation, with its zero-frequency diagonal bounded absolutely, gives
+\[
+ \left|\sum_m V(q_m/Q) A_m^{(l,i)}
+                        \overline{A_m^{(l,j)}}\right|
+ \ll (1+|\nu|)^J \frac Q{Y'} Z^\epsilon
+                 \left(1+\frac{DP^2}{Y'}\right)\qquad(i\ne j).
+\]
+The smooth cutoff is kept in this signed estimate. For equal indices the middle term of (2) becomes $(P/D^{j-1})^{1/6}$, by counting $k$ with $v_l(k)\equiv j-1\bmod 6$. Consequently $j=5$ both leaves the completed character fixed and gives the largest forced valuation among these five prime calibrations. Mixed pairs have no exceptional nonzero term in this complete-mean analysis. These are upper bounds; a matching diagonal asymptotic would be required to deduce an intrinsic lower bound for the arithmetic Gram form.
+
 ## A high-side saving uniform in the physical row
 
 Let the calibration primes have norms in $[K,2K]$ and range over the identity class of $T$. Give them smooth nonnegative weights $W(q_l/K)\log q_l$, with a nonzero fixed $W$ supported inside $(1,2)$, and divide by their total weight. For a sixth-power-free $u$ divisible by a prime outside $S$, with $q_u\le Z^C$, one has
@@ -65,8 +80,54 @@ In the nonprincipal central region of (20.4), $s_r=a+16e$, $w_r=1-a-6e$, $z_r=17
  |D_l^{(z)}|=q_l^{-6z_r},\quad
  |W_l|=q_l^{-w_r},\quad |D_l^{(s)}|=q_l^{-s_r}.
 \]
-The unramified estimate in the proof of (7.14) bounds $H_l-1$ by $O(q_l^{-1-c_e})$ with $c_e>0$. Hence $P_l^{-1}=1+O(q_l^{-w_r})$ uniformly in the heights and row, since $w_r<s_r$. Equations (1) and (4) show that the actual high row multiplier is $O(K^{-1/8+6e}Z^\epsilon)$ after averaging. The principal multiplier on the residue $(w,z)=(1,1/6)$ equals $1+O(K^{-\min(s_r,1)})$ in the principal region (7.15). The original signal survives. Bounded unit rows can be treated separately as in the source. These assertions concern an average of the identical, unnormalized finite probes with the same $X,Y,Z$; there is no row-dependent choice of calibration.
+The unramified estimate in the proof of (7.14) bounds $H_l-1$ by $O(q_l^{-1-c_e})$ with $c_e>0$. Hence $P_l^{-1}=1+O(q_l^{-w_r})$ uniformly in the heights and row, since $w_r<s_r$. Equations (1) and (4) show that the actual high row multiplier is $O(K^{-1/8+6e}Z^\epsilon)$ after averaging. The principal multiplier on the residue $(w,z)=(1,1/6)$ equals $1+O(K^{-\min(s_r,1)})$ in the principal region (7.15). The original signal survives. Bounded unit rows can be treated separately as in the source. These assertions concern an average of unnormalized finite probes with the same $X,Y,Z$ and prescribed varying calibration. The weights in the average are independent of $u$.
 
-## The outstanding comparison
+There is a stronger estimate inside each original buffered zero bin. Suppose $K=Z^\lambda$, $\lambda>0$ fixed, with the calibration annulus disjoint from the physical marks. Fix the shared detector and height allocations of §§8, 19 for the **old** family. For the actual central high row in bin $(i,a)$ one obtains
+\[
+ \left|\operatorname{Avg}_{l:\,l\nmid u}\chi_l(u)P_l^{-1}\right|
+ \ll_{\epsilon,\lambda,e,\mathrm{fixed}} Z^\epsilon K^{a-1+O(e)}. \tag{5}
+\]
+Here the average includes zero for deleted $l\mid u$ and always has the original normalizer. To bound its first term, every ray twist of $\chi_\bullet(u)$ belongs to the old buffered family. The proof of the prime-bound lemma in §19.1 applies with norm twist zero and with the base weight $W$ itself in the von Mangoldt sum. Shifting its logarithmic derivative in the buffered rectangle and dividing by the mass $\asymp K$ gives $Z^\epsilon K^{a-1+O(e)}$. Prime powers cost $O(K^{-1/2+\epsilon})$. This uses the fixed polynomial annulus, so external Mellin tails can be discarded on the absolute line using the original $T_1$. The $P_l^{-1}-1$ term costs $O(K^{-w_r})=O(K^{a-1+6e})$ without cancellation. No new detector adapted to $l$ is involved.
 
-In the range $P\ge D^4$ and $DP^2/Y'\le(P/D^4)^{1/6}$, the square root of the right-hand side in (2) differs in its power from the fixed-calibration bound by just $D^{1/12}$, including the increase in $Q$. This is an additive-factor calculation. The completed cubic row now has a new puncture and a larger row ball, and the Cauchy prefactor also changes. Any comparison of complete exponents must include both effects. Moreover, the change to the principal multiplier is handled as a remainder in an attempted continuation argument, rather than identifying a $Z$-dependent factor with a fixed Mellin signal. Equations (1)–(4) establish the potential gain and the costs that have to be compared.
+## The punctured completed row and its long dual
+
+Write $D=Z^\lambda$ for the individual prime norm and $m=\log_Z Q+O(1/\log Z)$ for the row length after inclusion of $D$. In this paragraph $\ell'$ is the surviving physical mark length, and the completed scale is $Z^{1+\ell'}$ as in §15.1. Denote the completed factor by $B_k^{(l)}$. In the region $m\ge4\ell'$ one has the following uniform squared norm bound from the original quadratic–cubic estimate:
+\[
+ \sum_{\substack{0<q_k\ll Z^m\\l\nmid k}} |B_k^{(l)}|^2
+ \ll Z^{m+\max\{0,(1+3\ell'-2m)/4,\ m+\lambda+\ell'-1\}+\epsilon}.
+ \tag{6}
+\]
+A bounded factor in $D/Z^\lambda$ is absorbed by the stated loss. In the physical probe $\xi'(k)$ already vanishes at $l\mid k$. The old finite character $\nu$ and old modulus remain fixed: the source's marked completion has $f=1$ and varying puncture $\rho(n)=1_{l\nmid n}$. Indeed $\rho(n)\rho(b)^3=1_{l\nmid nb^3}$ on its primal squarefree and cube indices. Section 14 treats exactly this input with puncture exponent $\lambda$ and uniform constants. The disjoint mark lists and the Gaussian annular decomposition of §15.1 are unchanged.
+
+Here are the two branches of the estimate in the source notation. Tolerances and fixed dyadic offsets below cost at most $O(\epsilon)$ in the final exponent. Write $O,H$ for the powerful and residual row lengths, so $H+O\le m$. Write $z$ for the active marked length, $u_0=\min(v,z,(v+z)/3)$, $y=v+3\ell_b+e_\lambda$, and $T_d=2H+2A_0+2z-1-\ell'-N_0-3B_0$. The source gives $y\le T_d$ on retained dyads. The symbol $e_\lambda$ here is the dual ramified-prime valuation from §14, unrelated to $\log_ZD$; its negative part is $O(1/\log Z)$. The energy bound before summing the dyads is
+\[
+ E=\frac O2+\max(H,v+\ell_b)-S_0-B_0+z-u_0-\ell_b-2e_\lambda/3-(T_d-y)_+/2.
+\]
+If the maximum is $H$ and $u_0=z$, this is at most $m$. If the maximum is $H$ and $u_0<z$, then $u_0\ge v/2$. Consequently $u_0+\ell_b+2e_\lambda/3+(T_d-y)_+/2\ge T_d/4$ up to the stated tolerance. Substitution of $T_d$ and $H+O\le m$ gives
+\[
+ E-m\le (1+\ell'+2z-2m)/4-(2A_0-N_0+B_0+4S_0)/4.
+\]
+The subtracted numerator is nonnegative, and $z\le\ell'$.
+
+If the maximum is $v+\ell_b$ and $u_0<z$, then $v<2z$, so that $v+z-u_0=\max(v,z,2(v+z)/3)\le2z$. It follows that $E\le O/2+2\ell'\le m$. In the remaining branch $u_0=z$ one instead gets $E\le O/2+T_d-S_0-B_0$. The actual conductor-width inequality at the end of §14, with puncture exponent $\lambda$ and label exponent zero, gives
+\[
+ T_d-S_0-B_0\le 2m-O+\lambda-(1+\ell')+2z .
+\]
+It accounts for an active zero-exponent prime $l$ with its $D^{-1/2}$ column and the extra conductor width. This gives the third exponent in (6). The Gaussian translate lengths differ from $1+\ell'$ by an arbitrarily small tolerance on the retained annuli, as in the source. The uniformity in its reflected-energy lemma handles the Gaussian tails and all polynomially bounded punctures. [Pinned primary source, reflected energy and conductor-width inequality in §14, and §15.1](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/build/paper.tex)
+
+## Effect on the two direct bounds
+
+In the range $P\ge D^4$ and $DP^2/Y'\le(P/D^4)^{1/6}$, the square root in (2) costs $D^{1/12}$ relative to the fixed-calibration additive factor, including the increase in $Q$. In the Cauchy estimate the basic increase in the completed-row norm cancels against the prefactor $Q^{-1/2}$; its excess in (6) has to be paid separately. For zero rescaling, the old total length $M=l_x+l_y$ gives $m=M+\lambda$ and $\ell'=\ell$. Thus the long-dual excess in the **squared** norm in (6) is $(M+\ell+2\lambda-1)_+$. Near Liu's optimized geometry the other excess is strictly slack at zero rescaling.
+
+There is an elementary test for the return on (5). Liu's Proposition 6.5 combines the necessary comparison planes $L_0,L_K,H$ with respective positive weights
+\[
+ u=\frac{25\delta+8}{6(4\delta+3)},\qquad
+ v=\frac{4-\delta}{6(4\delta+3)},\qquad
+ w=\frac1{4\delta+3},
+\]
+at $\delta=\delta_*=0.4258300\ldots$. Consider the explicit relaxed comparison which pays only $\lambda/12$ on both direct planes, allows the whole improvement $(1-a)\lambda=(1-\delta)\lambda/2$ on $H$, and grants free control of any additional completed-row excess. Its weighted lower bound exceeds the original by
+\[
+ \lambda\left(\frac{u+v}{12}-w\,\frac{1-\delta}{2}\right)
+ =\lambda\,\frac{5\delta-2}{6(4\delta+3)}>0 .
+\]
+This calculation is about those three plane bounds. It shows why simply inserting (5) alongside the calibrated additive majorant is insufficient even under the favorable allowance on the long dual. A stronger joint estimate or a smaller actual cost on the additive side could change the calculation. A continuation theorem would also have to control contours away from the central bins and the $Z$-dependent principal remainder. [Liu, Proposition 6.5 and §7](https://hexagonmath.org/2611.00421v1)

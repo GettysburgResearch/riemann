@@ -7,7 +7,7 @@
 \]
 These functions extend across the gaps between the log integers. The case \(k=1\), \(\lambda_1=0\) is the ordinary running partial sum of zeta at the critical-line height, modulated by \(e^{-iTu}\). The unnormalized statement is
 \[
- W(g)\ \ge\ 2(U-\log2)\int_0^{\log2}|h(v)|^2,dv-o(1).
+ W(g)\ \ge\ 2(U-\log2)\int_0^{\log2}|h(v)|^2\,dv-o(1).
  \tag{1}
 \]
 In particular it is strictly positive for every sufficiently large carrier. Constants in the error may depend on the fixed poles. Step functions at jumps are evaluated up to null sets. They lie in the domain of the explicit formula by smooth approximation for the finite prime form, the poles and the logarithmically weighted Fourier norm.
@@ -56,7 +56,7 @@ To see the cancellation as an exact continuous calculation, let \(a>0\), let \(Z
 For this precisely matched pair one has
 \[
  2\int_0^{2U}(U-u)|S(u)|^2du+
-    \int_0^{2U}\!\int_0^{2U}e^{-a|u-v|}S(v)\overline{S(u)},dv,du=0.
+    \int_0^{2U}\!\int_0^{2U}e^{-a|u-v|}S(v)\overline{S(u)}\,dv\,du=0.
  \tag{3}
 \]
 Indeed the first integral equals \(-4a\int_0^U|Z|^2\) by integration by parts, since \(|Z'+aZ|^2-|Z'-aZ|^2=2a(|Z|^2)'\). Extend \(Z\) to \(F\) by \(F(2U-u)=\eta\overline{Z(u)}\) and zero outside. The matching trace at \(U\) and zero at the two outer endpoints give \(S=(\partial-a)F\) without a point mass. Plancherel for the Poisson kernel makes the second integral \(2a\|F\|^2=4a\|Z\|^2\).

@@ -71,3 +71,12 @@ Formula (3) and \(N_0\le A_0\) make every term after the first nonpositive. This
 For the common geometry \(M=1-\ell\), fixed rescaling length \(d\in[0,\ell]\) gives \(M'=1-\ell-2d\), \(\ell'=\ell-d\). The extra squared row exponent is at most \((\ell+d-1/3)_++O(\eta)\). In the final Cauchy bound its cost is half that exponent, while the rescaled tuple saves \(d\), as in the source's quantitative compensated-low estimate. Hence this particular loss is absorbed for every \(d\) when \(\ell\le1/3\), up to the freely chosen fine mesh. The low-only calculation also requires positive remaining probe scales and the separate additive Gram bound in its stated domain.
 
 Baiying Liu's November comparison has strict slack in the earlier completed-row constraint at its optimizing geometry. Its lower bound for the specified positive comparison also grants extra moment ranges. Thus the strengthened row lemma alone gives no improvement to the reported zero-free boundary \(0.8733458561\ldots\). The positive cubic norm in (1) concerns the completed arithmetic row and does not by itself correlate that row with the separate additive Gram factor. [Liu, §§5.2, 7](https://hexagonmath.org/2611.00421v1)
+
+## The long-dual face outside this geometry
+
+Take zero rescaling, \(M+\ell=1+\kappa\), \(\kappa>0\), and the formal dyad
+\[
+ O=A_0=N_0=B_0=S_0=\ell_b=e_\lambda=0,\qquad
+ H=M,\quad z=\ell,\quad v=T=2M+\ell-1=M+\kappa .
+\]
+This is the squarefree residual row, with every physical mark active and a unit cube factor. For \(M+\kappa\ge2\ell\), both the original hybrid saving and (2) give \(U=z\). The kernel saving vanishes, and the squared energy majorant is \(\max(H,v)=M+\kappa\). Thus this strengthening of the positive cubic large sieve still pays \(\kappa/2\) after Cauchy–Schwarz. It reproduces the difference \(L_K-L_0=(M+\ell-1)/2\) between the two direct planes in Liu's Proposition 6.5. This exhibited dyad saturates the **inequality**, and gives no lower bound on the actual arithmetic contribution. Saving a power there requires control of the squarefree quadratic transform with its actual cubic-theta coefficient, or an estimate that keeps its coupling to the additive factor. The [moving calibration calculation](nov18b-calibration-prime.md) gives the corresponding punctured-row upper bound.
