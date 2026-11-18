@@ -25,4 +25,6 @@ where \(\xi_K\) is the pole-cancelled completed Dedekind zeta function. No field
 
 Among all these fields, 229 are abelian and 233 are Galois. The remaining four Galois fields are normal closures of cubics. A small value of \(b_K\) independently excludes real zeros that could obstruct the converse from positivity. The [sign-equivalence proof](zhao-field-sign-equivalence-nov18.md) proves the individual and positive weighted criteria. Without an independence or phase argument the classification of the strict spectral bound does not classify eventual signs for all fields outside the inventory. [Degree and discriminant bounds](zhao-field-catalogue-bounds-nov18.md) · [Direct unconditional comparison](zhao-field-unconditional-replay-nov18.md) · [Independent unconditional cubic and quartic tests](zhao-low-degree-unconditional-nov18.md) · [Complete catalogue sources](zhao-field-catalog-source-nov18.md)
 
+The [low-ordinate argument for general fields](zhao-field-low-zeros-nov18.md) also constrains the eventual sign without a linear-independence hypothesis when the real segment is clear.
+
 These proposed mathematical results and finite certificates have internal checks. They leave the truth of RH open.

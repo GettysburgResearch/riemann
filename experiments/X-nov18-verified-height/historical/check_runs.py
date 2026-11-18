@@ -105,8 +105,11 @@ def supplemental_sign_grid():
     if len(signs) != 1+step*512*8//21 or set(signs) - set("+-?"):
         raise ValueError("Invalid supplemental signs")
     turing = LOOK.fullmatch(looked)
-    if not turing or not MISS.fullmatch(missed):
+    original = MISS.fullmatch(missed)
+    if not turing or not original:
         raise ValueError("Missing original Turing report")
+    if tuple(map(Fraction, original.groups())) != (left, left+step):
+        raise ValueError("Original Turing interval differs from the sampled interval")
     upper, lower, difference = map(int, turing.groups())
     definite = signs.replace("?", "")
     transitions = sum(a != b for a,b in zip(definite, definite[1:]))
