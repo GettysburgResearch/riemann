@@ -108,3 +108,40 @@ Start the backward heat process from such a point \((t_T,v)\) and stop at the gr
  \exp\{bT+o(T)-c_0 D/(2l_T)\}\qquad(b>\theta).
 \]
 Choose \(a\) sufficiently close to \(\theta\) and \(b\) sufficiently close above it so that \(b-a<(c_0/2)\liminf D/(Tl_T)\). The frozen signed peaks then force peaks \(e^{aT-o(T)}\) of \(h\) inside the protected region. The derivative argument gives integrated lower exponent \(2a-b\) inside \([T-D,T]\). Sending \(a,b\) to \(\theta\) proves the claim for diverging \(D\), since every fixed target kernel and period fit eventually. For fixed \(D\) and unattained edge, choose targets approaching the edge with arbitrarily short combined support and period, as proved in the isolation note. For an attained edge take \(a=\theta\) with its fixed kernel and period, then let \(b\downarrow\theta\). This proves the fixed-window assertions.
+
+## Constant heat and the growth of reciprocal derivatives
+
+There is also an exact diagnostic at fixed heat time \(t>0\). The infima of \(t\) for each of the following three centered conditions coincide:
+\[
+ H(t,u)-Au-B=O(1),\quad
+ \int_0^T|H(t,u)-Au-B|\,du=O(T),\quad
+ \int_0^T(H(t,u)-Au-B)_-\,du=O(T).
+\]
+If RH or simplicity fails, all three infima are \(+\infty\). Under RH and simplicity they equal
+\[
+ L=\limsup_{\gamma\to\infty}
+    \frac{\log^+|P(\rho)/((\rho-1/2)^2\zeta'(\rho))|}{\gamma^2}.
+\]
+This includes \(L=0\) and \(+\infty\). In particular reciprocal derivatives growing at most like \(e^{C\gamma^2}\) imply eventual strict positivity after a sufficiently large *constant* heat time, under RH and simplicity.
+
+For necessity assume only the last one-sided bound. The unilateral transform of the centered row equals
+\[
+ D_t(s)=e^{ts^2}F(s)-A/s^2-B/s-\int_{-\infty}^0 e^{-su}H(t,u)du
+\]
+initially in \(\Re s>1/2\). The last integral is entire by the Gaussian left tail. At zero the combined transform is regular because the multiplier is \(1+O(s^2)\). Landau's nonnegative-density argument from the centered detector note gives absolute convergence on \(\Re s>0\) and \(\sup_y |D_t(\sigma+iy)|=O(1/\sigma)\) for \(0<\sigma\le1\), by bounding its total variation transform by \(D_t(\sigma)+2\mathcal L(H-Au-B)_-(\sigma)\). The nonvanishing dyadic multiplier then forces RH and simplicity. Taking radial residues gives \(e^{-t\gamma^2}|C_\rho|\le C_t\) for every ordinate, hence \(L\le t\).
+
+Conversely, if \(t>L\) under RH and simplicity then \(\sum_\rho |C_\rho|e^{-t\gamma^2}<\infty\), by zero counting and the positive Gaussian margin. Invert on the initial line and shift to \(\Re s=-1\) as in the diffusion note. At cofinal safe heights the reciprocal costs at most \(\exp(O(\log^2 |\Im s|))\), dominated by the fixed Gaussian; on the left line the functional equation gives \(F(-1+iy)=O((1+y^2)^{-1})\). The critical residues converge absolutely and uniformly in the real center. Their sum and the \(O(e^{-u})\) remainder give the pointwise bounded condition. This proves the three infima without an assertion at equality.
+
+## An explicit fixed aperture for every possible right edge
+
+Add a secondary term to break any tie between the largest polynomial orders. For any fixed \(c,d>0\), take, for large \(u\),
+\[
+ t(u)=c\log(2+u)+d\log\log(e+u).
+\]
+For every fixed \(D>\pi/(3\cdot10^{12})\), however close to that value, the two native heat signs satisfy
+\[
+ \lim_{T\to\infty}\frac1T\log\!\left(1+\int_{T-D}^T H(t(u),u)_\pm\,du\right)=\theta.
+\]
+In multiplicative \(X\)-coordinates the aperture is the fixed ratio \(e^D\). The threshold uses the published verified zero census; the independently replayed prefix alone gives \(D>\pi/20000\).
+
+The upper bound and zero-exponent case follow as before. For an unattained positive edge the preceding section applies because \(T l_T=O_{c,d}(1)\). For an attained positive edge use the finite rectangle in (3). Every edge pole now has first exponent \(p_\rho=m_\rho-1+c(\theta^2-\gamma^2)\) in \(u\), and second exponent \(q_\rho=d(\theta^2-\gamma^2)\) in \(\log u\). Among the finitely many maximizing first exponents, the smallest positive ordinate \(\gamma_*\) uniquely maximizes the second. Thus precisely one conjugate pair leads, with common phase \(\gamma_*[u+2\theta t(u)]\) plus a constant and a nonzero amplitude asymptotic to a constant times \(e^{\theta u}u^{p_*}(\log u)^{q_*}\). All remaining terms are relatively \(o(1)\) before taking the real oscillation. The derivative of the phase tends to \(\gamma_*\). Every interval longer than \(\pi/\gamma_*\) therefore contains an interval of uniformly positive length on which each prescribed cosine sign has a uniform positive lower magnitude. Across that interval the exponential scale is comparable to its value at \(T\). Since \(\gamma_*>3\cdot10^{12}\), the claimed absolute aperture suffices in every case. In particular along arbitrarily sparse cofinal horizons, subpower negative mass on **one such short window per horizon** would already imply RH.

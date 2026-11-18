@@ -301,3 +301,436 @@ probability measure defining $U$. Lower terms are $O_\gamma((R+w)^{m-2})$.
 The Gram argument following (6) applies with conjugation of the complex
 test densities in the inner-product rows. All conclusions, including
 the density statement for the displayed slowly varying $w$, follow.
+
+## Arbitrarily slowly diverging widths and a spacing alternative
+
+Let $w(R)\to\infty$ have no prescribed rate. On weak Mertens, the
+corresponding short-window means always have lower liminf $B$ and,
+for measurable $w$, converge to $B$ in density on dyadic intervals.
+Conversely a finite lower liminf implies weak Mertens provided the
+ordinates counted **with multiplicity** satisfy, for some $0<\eta<1$,
+$$
+ \gamma_{j+1}-\gamma_j\ \ge\ \exp(-\gamma_j^{1-\eta})
+ \qquad\text{for all sufficiently large positive }\gamma_j .             \tag{7}
+$$
+In particular if boundedness holds cofinally and WMH fails, RH must hold
+and (7) must fail for every $\eta>0$ in this range. This is a conditional
+local-to-global implication. The spacing assumption itself does not assert
+a negative-derivative moment bound of weak Mertens strength.
+
+The off-line case is already excluded by the fixed compact filter (for
+$w>R$ put that filter near the upper endpoint of the window). On RH
+condition (7) allows only finitely many multiple zeros. At every sufficiently
+high simple zero the local product formula
+[(12)](trace-weak-mertens-nov18.md) and the unit-interval zero count show
+$$
+ |1/(\rho\zeta'(\rho))|\ll\exp(|\gamma|^{1-\eta/2}).
+$$
+There are $O(\log|\gamma|)$ relevant factors, and (7) bounds each of their
+positive logarithms by $O(|\gamma|^{1-\eta})$. Finite multiple zeros do
+not change the high-ordinate formula: their repeated factors in the
+Hadamard product are included with multiplicities and stay far from the
+target. On WMH itself $\sum|1/(\rho\zeta'(\rho))|^2<\infty$ gives this
+growth condition directly, with no spacing assumption or multiple zeros.
+
+For fixed $0<\delta<1/4$ take a positive smooth density $\phi$ on $[0,1]$
+of integral one, $\|\phi\|_\infty\le1/(1-\delta)$, whose transform on the
+imaginary axis satisfies $|\widehat\phi(y)|\le C\exp(-c|y|^\alpha)$ for
+some $1-\eta/2<\alpha<1$. Such a test is obtained by convolving a uniform
+density of length $1-\delta$ with a compact Gevrey density of width $\delta$;
+translate to $[0,1]$. For each target separately put the two-atom factors
+described above at all other **multiple** poles, with their multiplicities.
+They have a fixed finite support length $D_\gamma$. Convolve with
+$(w-D_\gamma)^{-1}\phi(v/(w-D_\gamma))\,dv$. For large $R$ the resulting
+probability measure is supported on $[0,w]$, and its scaled density
+in $L^2(dv/w)$ is $\phi(v/w)+o(1)$ by uniform continuity of $\phi$.
+
+Shift (6) to $\Re z=-1/4$ across the entire line, leaving the stated
+target and the other simple poles. For each fixed $R,w$ this is justified
+by the separated horizontal bounds used above and the Gevrey decay
+on each fixed horizontal-real-part strip for the transform. The latter
+follows by differentiating the compact Gevrey density times an exponential
+tilt, with constants allowed to depend on $w$ in passing the horizontal
+cutoffs to infinity. On the left line the error is uniformly $O(e^{-R/4})$:
+the tilted rescaled density and each fixed number of its physical derivatives
+have bounded $L^1$ norms for $w-D_\gamma\ge1$, and the extra translated
+atoms have bounded tilted mass. Polynomial vertical growth of $G$ is
+therefore integrable after sufficiently many integrations by parts.
+
+The contribution of the other simple poles is at most
+$$
+ \sum_{\gamma'\ne\gamma}
+ |c_{\gamma'}|\, C\exp[-c|(w-D_\gamma)(\gamma'-\gamma)|^\alpha]=o(1).
+$$
+This is absolute convergence with a fixed summable majorant when $w$
+is large, followed by dominated convergence, using the growth bound above.
+The target again returns $c_\gamma$ if simple. At a target of order $m>1$
+the lower polynomial terms are smaller by $O_\gamma(1/R)$ relative to the
+leading moment because $R+v\ge R$. The finite Gram argument now has
+largest eigenvalue tending to $\int_0^1\phi^2\le1/(1-\delta)$, since
+$\phi(v/w)e^{i\gamma(R+v)}$ have asymptotically orthogonal distinct
+frequencies. Send $\delta\downarrow0$ to get the lower liminf $B$ in
+the simple case. Any finite multiple zero forces divergence. This proves
+the converse under (7), and the unrestricted lower assertion on WMH.
+
+For the matching upper assertion on WMH the finite trigonometric sums
+$g_V(u)=\sum_{|\gamma|<V}c_\gamma e^{i\gamma u}$ approximate $g$ in
+Besicovitch mean square by the proof of
+[trace (6)](trace-weak-mertens-nov18.md). Thus
+$$
+ \lim_{V\to\infty}\limsup_{X\to\infty}X^{-1}
+ \int_0^X\big||g(u)|^2-|g_V(u)|^2\big|du=0
+$$
+by Cauchy–Schwarz. On $Y\le R\le2Y$, $w(R)\le R$, the exceptional
+measure where the average of this error over $[R,R+w(R)]$ exceeds
+$\epsilon$ is at most $C\epsilon^{-1}$ times its integral on $[Y,4Y]$,
+by the Hardy–Littlewood maximal weak-$(1,1)$ inequality. The moving
+means of each finite trigonometric square converge uniformly as the
+width tends to infinity, to $\sum_{|\gamma|<V}|c_\gamma|^2$.
+For $w(R)>R$ use the global mean $L(X)\sim BX$ directly, since
+$(R+w)/w\le2$. Taking $V$ large proves convergence in density for every
+measurable choice of diverging widths. Together with the lower bound it
+gives the stated liminf.
+
+### Sparse exceptions to the spacing bound
+
+It is enough to require, for some $0<\eta<1$, that
+$$
+ \sum_{\gamma\ {\rm bad}}\frac{m_\gamma}{1+|\gamma|}<\infty .             \tag{8}
+$$
+Here the sum is over distinct ordinates of either sign on RH. Mark a zero
+bad if it is multiple or if its distance to another distinct ordinate
+is less than $\exp(-|\gamma|^{1-\eta})$. Bounded ordinates may all be
+marked bad. Condition (8) allows arbitrarily small gaps at exceptional
+heights. At good zeros the product bound used for (7) applies verbatim
+with multiplicities counted in the remaining factors. For each fixed
+target, take the two-atom factors at **every** other bad ordinate with
+its multiplicity. Their support lengths have finite sum by (8).
+The weak limit of their finite convolutions exists (equivalently, sum
+independent bounded nonnegative random variables with summable upper
+bounds); its entire transform retains the required zeros and equals one
+at the target. Its transform on the left is bounded by one, and it
+retains finite total support in the window. The preceding Gevrey
+argument now applies to the good zeros alone after shifting, even if the
+bad reciprocal derivatives have no uniform growth bound. Thus (8) in
+place of (7) still gives the converse for every diverging width.
+
+For example a dyadic bound of $O(T/(\log T)^{1+\delta})$, $\delta>0$,
+on the bad count with multiplicity gives (8). It would already suffice
+to prove this count at the much larger gap scale $1/(\log T)^2$.
+A quantitative first-neighbor repulsion estimate
+$O(T\log T\,u^3+T^{1-\epsilon})$ at the single normalized scale
+$u=1/\log T$ would imply it, with no assumptions at smaller scales and
+no higher correlation bounds. Ordinary fixed-scale pair correlation
+does not supply that remainder. Under failure of WMH despite a cofinally
+bounded physical test on arbitrary diverging widths, (8) must therefore
+diverge for every choice of $\eta$.
+
+## An unconditional numerical local floor
+
+For the explicit compact width in the theta-truncation section the lower
+liminf of the actual window means is **at least $0.02840244$**,
+without assuming RH, simplicity or weak Mertens. Indeed the off-line
+and multiple-zero cases force infinite liminf, and otherwise the
+first 128 conjugate pairs alone force this floor. At 112 bits
+python-flint 0.9.0 gives their residue sum
+$0.0284024499442621162973690675848\ \pm 4.75\cdot10^{-32}$.
+The following finite Arb computation uses a Taylor ball for the
+derivative at each rigorously enclosed nontrivial zero.
+
+~~~python
+from flint import acb, acb_series, arb, ctx
+
+ctx.prec = 112
+ctx.cap = 2
+total = arb(0)
+for rho in acb.zeta_zeros(1, 128):
+    derivative = acb_series([rho, 1]).zeta()[1]
+    total += 2 / abs(rho * derivative)**2
+assert total > arb("0.02840244")
+~~~
+
+A support constraint explains the double logarithm in the explicit
+low-frequency annihilation method. If a measure of total variation at
+most $A$ on an interval of length $w$ has transform one at zero, translate
+its support to $[-w/2,w/2]$. Jensen's formula on the circle of radius
+$2V$ bounds its number of transform zeros of modulus at most $V$, with
+multiplicity, by $(\log A+wV)/\log2$. An exact annihilator of all other
+critical ordinates up to height $V$ must have $\gg V\log V$ such zeros
+on RH, by the Riemann–von Mangoldt formula. Thus uniformly bounded
+variation forces $w\gg\log V$ in this exact-annihilator class. This
+argument neither imposes a lower bound on the width needed for WMH nor
+excludes alternative arithmetic tests.
+
+## Both signs occur with unconditional positive mass in each compact window
+
+With the explicit theta width $w=(\log\log R)(\log\log\log R)$, in fact
+with any $w/\log\log R\to\infty$ and $w=o(R)$, one has
+$$
+ \liminf_{R\to\infty}\min_\pm\frac1w\int_R^{R+w}(\pm g(u))_+du
+ \ \ge\ \frac1{2|\rho_1\zeta'(\rho_1)|}>0.04457076 ,
+$$
+where $\rho_1$ is the first positive-ordinate zero. Its simplicity and
+the numerical lower bound follow from the same certified derivative
+calculation above.
+
+Off RH apply the [positive sparse-pole filter](detector-positive-isolation-nov18.md)
+to $G(s)=1/(s\zeta(s))$. Its compact probability factors remove all
+competing conjugate pairs to the right of the separating line, and its
+positive Gevrey multiplier preserves the selected pair. The resulting
+convolution has leading oscillation $e^{(\beta-1/2)u}u^{m-1}$ times a
+nonzero real sinusoid for a selected zero of order $m$. The separating
+line contributes an exponentially smaller error. The two opposite
+phases in a fixed period then force each original signed $L^1$ mass
+to grow exponentially on every sufficiently wide fixed window, exactly
+as in the linked construction.
+
+On RH use the theta-truncation argument at frequency zero with $m=0$,
+that is, $K_0(z)=\xi(1/2+z)/\xi(1/2)$. Its normalized theta density is
+positive: on the nonnegative axis every term of the classical theta
+kernel has the factor $2\pi n^2e^{2v}-3>0$, and evenness gives the
+other axis. All convolutions and the truncation normalization therefore
+remain positive. The exact product with $G$ has no pole at zero.
+Thus its final density $p_0$ has integral one, is supported on $[0,w]$,
+equals $1/(w-S_0)$ on $[S_0,w-S_0]$ and gives
+$\int g(R+v)p_0(v)dv=o(1)$, where $S_0=o(w)$. Also
+$p_0\le1/(w-S_0)$ everywhere.
+
+On the interior interval $[R+S_0,R+w-S_0]$, apply the nonzero-frequency
+theta test at $\rho_1$ using mean radius $R+S_0$ and length
+$w'=w-2S_0\sim w$. In its last convolution replace the long uniform
+by a smooth density $q_\delta$ rescaled to $[0,w'-S_1]$, of integral
+one, supremum at most $(1+\delta)/(w'-S_1)$ and Lipschitz constant
+$O_\delta(1/(w'-S_1)^2)$. Here $S_1=o(w)$ is the earlier filter's
+support length. The high-frequency decay comes from the short uniforms
+and the left contour uses only mass one of this last factor, so the
+extracted coefficient is still $c_{\gamma_1}+o(1)$. The preliminary
+complex measure has total mass one, total variation $O_{\gamma_1}(1)$
+and support length $S_1$. Its convolution differs uniformly from the
+last smooth density by $O_{\delta,\gamma_1}(S_1/(w'-S_1)^2)$ by the
+Lipschitz bound. Consequently the entire interior test has absolute
+density at most $(1+\delta+o(1))/w$. It follows that
+$\int |g|p_0\ge(|c_{\gamma_1}|-o(1))/(1+\delta+o(1))$.
+The negligible signed mean against $p_0$ divides this absolute mass
+equally between signs up to $o(1)$. The upper bound on $p_0$ transfers
+each lower mass to ordinary normalized Lebesgue measure. Send
+$\delta\downarrow0$ to complete the proof.
+
+## Transferring the finite Ingham witnesses to every sufficiently late window
+
+For every sufficiently large $X$, the interval
+$$
+ [X,\ X\exp((\log\log\log X)(\log\log\log\log X))]
+$$
+contains points $x_+,x_-$ with
+$$
+ M(x_+)/\sqrt{x_+}>1.82,\qquad M(x_-)/\sqrt{x_-}<-1.83 .                \tag{9}
+$$
+The numerical input is Hurst's published finite trigonometric witnesses;
+we do not recompute his 14,400-term sums. The transfer below applies to
+any nonnegative bandlimited smoothing kernel. It supplies no effective
+starting value of $X$. [Hurst, Theorems 4.2 and 6.1](https://arxiv.org/abs/1610.08551)
+
+Write $I_R=[R,R+w]$ with the explicit theta width. Suppose that on some
+sequence $R\to\infty$ the function $g$ is bounded above by a fixed $D>0$
+throughout $I_R$. If RH fails, the preceding positive-pole argument already
+contradicts this. On RH the positive zero-mean test $p_0$ from the preceding
+section gives $\int |g(R+v)|p_0(v)dv\le2D+o(1)$. Its flat core includes
+the middle three quarters of $I_R$ for all large $R$, so on that core
+$\int |g(u)|du=O_D(w)$.
+
+Choose a single smooth nonnegative density $q_R$ of integral one inside
+the middle half of $I_R$, by scaling and translating a fixed smooth compact
+probability density. It has supremum $O(1/w)$ and Lipschitz constant
+$O(1/w^2)$. At **each fixed real frequency** $\lambda$ use the
+theta-truncation proof with target $1/2+i\lambda$, taking $m=0$ if it
+is not a zero. Replace its final long uniform by $q_R$, with the
+translation included in the outer exponential as in (6). The preliminary
+compact measure has mass one, total variation $O_\lambda(1)$,
+and support length $S_\lambda=o(w)$. Its convolution with $q_R$ differs
+uniformly from $q_R$ by $O_\lambda(S_\lambda/w^2)$, and both are supported
+in the middle three quarters for large $R$. The replacement therefore
+changes the statistic by $o(1)$ on the putative bounded sequence, using
+the core $L^1$ bound. In particular a multiple zero is impossible since
+its target statistic would grow polynomially in $R$. With all zeros simple,
+we have along this same sequence
+$$
+ \int g(u)e^{-i\lambda u}q_R(u)\,du\ \longrightarrow\
+ c(\lambda)=
+ \begin{cases}1/(\rho\zeta'(\rho)),&\rho=1/2+i\lambda\text{ a zero},\\
+               0,&\text{otherwise}.
+ \end{cases}                                                               \tag{10}
+$$
+The common densities are essential. Limits for each finite set of
+frequencies follow on the original sequence; no countable enumeration
+of all real frequencies is needed.
+
+For clarity, view continuous almost periodic functions as continuous
+functions on the Bohr compactification of $\mathbb R$. Equation (10)
+defines a linear functional on the trigonometric polynomials bounded
+in the supremum norm, by the uniform bound on $\int |g|q_R$.
+By uniform approximation and the Riesz representation theorem it
+corresponds to a finite real signed measure $\mu$ on that compact group,
+with Fourier coefficients $c(\lambda)$ in the convention $e^{-i\lambda u}$.
+Since $g\le D$ throughout the supports and $q_R\,du$ converges on each
+trigonometric polynomial to normalized Haar measure $m_B$ (all nonzero
+fixed Fourier coefficients tend to zero), $\mu\le Dm_B$. The inequality
+extends to every nonnegative continuous function by uniform approximation.
+
+For any nonnegative probability density $k$ on the real line with
+compactly supported Fourier transform, push $k(u)du$ to the Bohr group
+to obtain a probability $\nu$. Then $\mu*\nu\le Dm_B$, and its Fourier
+coefficients $c(\lambda)\widehat k(\lambda)$ vanish outside a **finite**
+set: the only nonzero ones are zero ordinates in a compact interval.
+By uniqueness on trigonometric polynomials,
+$$
+ \mu*\nu=P_k\,m_B,\qquad
+ P_k(y)=\sum_{\gamma} c(\gamma)\widehat k(\gamma)e^{i\gamma y}.
+$$
+Consequently $P_k(y)\le D$ on the entire group, hence for every real $y$.
+The identical argument for $-g$ gives the lower version. Thus
+$\liminf_{R\to\infty}\sup_{u\in I_R}g(u)\ge\sup_yP_k(y)$ and
+$\limsup_{R\to\infty}\inf_{u\in I_R}g(u)\le\inf_yP_k(y)$ whenever the
+relevant finite critical ordinates and residues have been identified.
+The case distinctions above show that the resulting comparisons require
+no assumed global zero location or simplicity.
+
+For Hurst's kernel, $\widehat k(\gamma)=f(\gamma/\gamma_{14400})$ with
+$f(v)=(1-|v|)\cos(\pi v)+\sin(\pi|v|)/\pi$ on $|v|\le1$ and zero
+elsewhere. This is the normalized autocorrelation of
+$\cos(\pi x)\mathbf1_{|x|\le1/2}$: integration of the two cosines
+gives exactly the displayed formula. Thus it is the Fourier transform
+of a nonnegative probability density after scaling. Hurst reports
+explicit arguments with finite values approximately $1.826054$ and
+$-1.837625$. Conjugating all coefficients just reflects $y$, leaving
+the extrema unchanged. The conservative strict margins in (9) follow.
+
+### A narrower interval for the two published witness levels
+
+There is a fixed constant $A>0$ for which both inequalities (9) occur
+throughout the range of sufficiently large starting values, in the
+smaller interval
+$$
+       [X,\ A X(\log\log X)(\log\log\log X)].                             \tag{11}
+$$
+As in (9), this statement does not make the starting value or $A$
+effective. We detail why one-sided caps can be tested with a shorter
+window than the earlier square-mean comparison.
+
+Use the real center of the physical window as coordinate origin for its
+test densities. Take $R$ to be its left endpoint in the $u=\log x$
+coordinate and take
+$$
+ L=\tfrac12(\log\log R+\log\log\log R)+C_0,\qquad V=(\log R)^4 .
+$$
+In the theta-truncation proof the error $\exp(-c_2e^{2L})$ must absorb
+$\exp(C\log R\log V)$ times a polynomial in $V$. The constant $c_2>0$
+can be the same for each fixed frequency: the original theta density
+has a fixed double-exponential exponent, and each fixed number of
+primitives and each normalization merely changes its prefactor after
+decreasing that exponent once. Likewise (4) has an absolute exponent,
+with each fixed frequency translation bounded by $V$ eventually.
+Thus a sufficiently large fixed $C_0$ works for each fixed frequency in
+(10). Use the same $k$ short uniforms, now symmetrically supported about
+zero, of total length $s=k/\sqrt V=o(1)$. Their transform on the left
+line costs at most $e^{s/4}$, and on the right line at most $e^{s/R}$.
+The preceding frequency estimates are unaffected. Do not translate the
+truncated theta kernel, so the combined preliminary density has support
+in $[-L-s/2,L+s/2]$.
+
+Suppose a cofinal one-sided cap holds along windows of length
+$2L+s+J$ with $J\to\infty$ and $2L+s+J=o(R)$. In the centered coordinate
+let $p_0$ be the convolution of the positive preliminary theta density
+at frequency zero with the uniform probability on $[-J/2,J/2]$. Its
+signed mean is again $o(1)$ by the same contour; possible exponential
+growth from the two-sided supports on $\Re z=-1/4$ is absorbed by
+$e^{-R/4}$. Thus $\int |g|p_0=O(1)$, with $g$ evaluated at the translated
+coordinate. On $|v|\le J/3$ the density $p_0$ is at least $c/J$, since
+the preliminary measure gives a fixed positive mass to $[-1,1]$.
+
+As common test use a smooth probability $q$ on $[-J/8,J/8]$ with
+Lipschitz constant $O(J^{-2})$, again a scaled fixed test. At frequency
+$\lambda$ convolve it with the centered preliminary kernel to give
+$p_\lambda$. The latter preliminary kernel has integral one and first
+absolute moment $O_\lambda(1)$ uniformly in $R$: this follows by
+integrating the absolute moment of the fixed theta density or its
+primitives, and adding the $o(1)$ short-uniform width. Consequently
+$\|p_\lambda-q\|_\infty=O_\lambda(J^{-2})$. On $|v|\le J/3$ this costs
+$o(1)$ in the integral against $|g|$, since its integral there is $O(J)$.
+
+On $|v|>J/3$ we have $q(v)=0$ and
+$$
+    |p_\lambda(v)|=o(1)p_0(v)
+$$
+uniformly, interpreting the inequality directly at zeros of the denominator.
+Here are explicit bounds that permit $J$ to grow arbitrarily slowly.
+Where the numerator is nonzero one has $|v|\le J/8+L+s/2$, and
+$|p_\lambda(v)|\ll_\lambda
+\exp[-c e^{2(|v|-J/8-1)}]$ by the absolute tail of its preliminary
+kernel. In the denominator take the portion of the uniform probability
+within distance one of $\operatorname{sgn}(v)J/4$. Its mass is $\gg1/J$.
+Every argument of the underlying positive theta density in this portion,
+including convolution with the short uniforms, has absolute value at most
+$|v|-J/4+2<L$ for large $J$, so it was retained under truncation.
+The even positive theta series, already its first term on the positive
+axis, is bounded below by $c'\exp[-C'e^{2|u|}]$ for all real $u$.
+Therefore $p_0(v)\gg J^{-1}\exp[-C'e^{2(|v|-J/4+2)}]$.
+The ratio tends to zero uniformly on $|v|>J/3$ because the two exponential
+arguments differ by $J/8-O(1)$. This proves the outer estimate; its
+integral is $o(1)$ by the bound on $\int |g|p_0$.
+
+The common-density limit (10) and the measure domination now hold on
+these windows; the Fourier coefficients of $q$ away from zero tend to
+zero because $J\to\infty$. Thus there is no sequence of such windows
+on which either prescribed sign cap persists. If (11) failed for every
+constant $A$, choose counterexamples with $A_j\to\infty$ and $X_j\to\infty$
+sufficiently fast that their log widths are $o(\log X_j)$. Pass to one
+of the two signs. Their surplus $J_j=\log A_j-2C_0-o(1)$ tends to
+infinity, contradicting the preceding assertion. This proves (11).
+
+Pintz's earlier effective two-sign theorem gives fluctuations beyond
+$\pm\sqrt{x}/136000$ in every sufficiently late interval
+$[Y\exp(-5(\log\log Y)^{3/2}),Y]$. His earlier unsigned theorem gives
+$\max_{Y/(100\log Y)\le x\le Y}|M(x)|\ge\sqrt Y/17000$ effectively.
+The present coefficients and window transfer use different hypotheses
+on the test kernels; there is no worldwide priority claim.
+[Pintz, Part I](https://doi.org/10.4064/aa-42-1-49-55) ·
+[Pintz, Part III, theorem and Corollary 1](https://matwbn.icm.edu.pl/ksiazki/aa/aa43/aa4323.pdf)
+
+### Positive integrated excess above both numerical thresholds
+
+For every $\epsilon>0$ take $w=(1+\epsilon)\log\log R$. There is
+$c_\epsilon>0$ such that for all sufficiently large $R$,
+$$
+ \frac1w\int_R^{R+w}(g(u)-1.82)_+\,du\ge c_\epsilon,\qquad
+ \frac1w\int_R^{R+w}(-g(u)-1.83)_+\,du\ge c_\epsilon .
+$$
+The corresponding multiplicative interval is
+$[X,X(\log\log X)^{1+\epsilon}]$. This asserts a positive mean
+overshoot without estimating its numerical value.
+
+Indeed in the preceding narrow-window construction the surplus $J$
+is now comparable to $w$. If the first normalized excess tended to
+zero along a sequence, the positive $p_0$ has supremum at most
+$1/J=O_\epsilon(1/w)$ and its signed mean is $o(1)$ on RH. Consequently
+$\int |g|p_0\le2(1.82)+2\int (g-1.82)_+p_0+o(1)=O(1)$ exactly as
+required for common-density replacement. For every fixed nonnegative
+almost periodic test polynomial $Q$, the departure from the upper
+measure inequality is at most
+$\|Q\|_\infty\|q\|_\infty\int_I(g-1.82)_+=o(1)$.
+Thus the same measure is dominated by $1.82m_B$, contradicting the
+finite witness. Off RH the positive-pole argument gives divergence of
+the positive excess directly. Apply the argument to $-g$ for the other
+inequality. Nonnegativity implies the asserted strictly positive lower
+limits.
+
+In particular on weak Mertens both violation sets have strictly positive
+lower logarithmic density in the original $x$ variable. Cover a dyadic
+range of the log variable by disjoint successive windows of the stated
+width, discarding a final interval of length $o(R)$. The integrated
+excess is therefore $\gg R$. Cauchy–Schwarz and $\int_0^{2R}|g|^2=O(R)$
+give measure $\gg R$ to each exceedance set there. The same proof gives
+positive relative measure on individual windows where the normalized
+square mean stays bounded, which holds in density for the present widths
+under weak Mertens. No assertion about the existence of an ordinary
+logarithmic density is needed here.

@@ -1,0 +1,51 @@
+{
+  "first_index": 12363154047138,
+  "last_index": 12363154057138,
+  "count": 10001,
+  "calls": [
+    {
+      "first_index": 12363154047138,
+      "requested": 10001,
+      "returned": 5109,
+      "precision": 104,
+      "stream_sha256": "8647a8916859a42d6cbaee3a6d07c567e58e483acddee2bc8ebb4afe8c4f037f",
+      "shifted_parameters": {
+        "T": 3000175475864,
+        "A": 8,
+        "B": 4096,
+        "h_mantissa": 170,
+        "h_exponent": 0,
+        "J": 925000,
+        "K": 16,
+        "sigma_grid": 1965,
+        "Ns_max": 200,
+        "H_mantissa": 93,
+        "H_exponent": -6,
+        "sigma_interp": 25
+      }
+    },
+    {
+      "first_index": 12363154052246,
+      "requested": 4893,
+      "returned": 4893,
+      "precision": 104,
+      "stream_sha256": "3585ae9fec9e5c5502b7c1d944b1f3e51d0ceab0c8ce5c5c93bc3b712036dc8d",
+      "shifted_parameters": {
+        "T": 3000175477058,
+        "A": 8,
+        "B": 4096,
+        "h_mantissa": 170,
+        "h_exponent": 0,
+        "J": 925000,
+        "K": 16,
+        "sigma_grid": 1965,
+        "Ns_max": 200,
+        "H_mantissa": 93,
+        "H_exponent": -6,
+        "sigma_interp": 25
+      }
+    }
+  ],
+  "stream_sha256": "eb27e1d6f400f45bde85ecab08d7ae1aca58febf23024918411dfb914dc416a8",
+  "compressed_sha256": "2fbed25b73511a0c9f1aee71d39591a51c146eafee7b4fbe65b6a540cfc1f1b2"
+}

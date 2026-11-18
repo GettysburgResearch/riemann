@@ -47,3 +47,19 @@ $$
 There are $\exp((q+o(1))S)$ choices uniformly: the target $z=N/n'$ has $\log z=(q+o(1))S$, hence this interval contains $[z,z+z^{1-\epsilon}]$ for each fixed $\epsilon>0$ and all sufficiently large $x$. The prime number theorem in short intervals applies for $1-\epsilon>7/12$. Taking $\epsilon\downarrow0$ gives the stated log count. For the dyadic interval ordinary PNT alone suffices. All primes in $n'$ are at most $x+Mh$ whereas $P$ exceeds that bound, so outputs $P n'$ are distinct across all configurations and primes. Their log abundancy cannot decrease on multiplication, and the extra denominator cost is $(q+o(1))/L^3$ by the mean value theorem. Therefore all outputs satisfy the specified near equality.
 
 The lower constant is at least $H_M(t)+q$. Let $M\to\infty$; the limits are $b(t)=\pi^2/(6t^2)$ and $H(t)=\pi^2/(3t)$. For $\kappa>\pi^2/6$ take $t=1$ and $q\uparrow\kappa-\pi^2/6$. For $0<\kappa\le\pi^2/6$ take $t>\pi/\sqrt{6\kappa}$, choose positive $q<\kappa-b(t)$, then take $t\downarrow\pi/\sqrt{6\kappa}$. This attains (1) including the endpoint.
+
+## Other logarithmic tolerances and the limiting-density comparison
+
+For $A>1$, replace the tolerance by $(\log\log n)^{-A}$ on $[N,2N]$ and write the count as $C_A^*(N)$. The two outer regimes give
+$$
+ \log C_A^*(N)\sim\begin{cases}
+ xL^{1-A},&1<A<3,\\
+ \pi\sqrt{2/3}\,xL^{-(A+1)/2},&A>3.
+ \end{cases}
+ \tag{2}
+$$
+For $1<A<3$, the preceding upper bound with fixed $t>1$ is $t xL^{1-A}+O_t(x/L^2)$; send $t\downarrow1$. For a lower bound choose $D=q xL^{1-A}$ with $0<q<1$, start with the LCM at $x-D$, and multiply by any prime that places the result in $[N,2N]$. Its log is $(1+o(1))D$ by the quantitative PNT, so it costs $(q+o(1))L^{-A}$ in the denominator and provides $\exp((q+o(1))xL^{1-A})$ choices. The original LCM ratio is $\ge-o(L^{-A})$. Send $q\uparrow1$. This also works in the thin interval for $d=o(xL^{1-A})$.
+
+For $A>3$ take $h=x L^{(1-A)/2}$, $S=h/L$, $\lambda=tx^2/h$. Now $\lambda s=t L^{(A-3)/2}\to\infty$ for every fixed $t>0$. All prime intervals and starting LCM estimates needed in the [two-sided toggle proof](robin-census-constant-nov18.md) follow unconditionally from quantitative PNT with arbitrarily high fixed log saving. The small deficit $K(x)=o(L^{-A})$ and $\lambda L^{-A}=tS$ again give the unrestricted minimum at $t=\pi/\sqrt6$. The same lower tilt and rounding argument works throughout $d=o(xL^{1-A})$, since $\sqrt S L=o(xL^{1-A})$ and $xL^{1-A}=o(S)$.
+
+Weingartner's limiting-density expansion gives $\log A(t)=-\exp(t e^{-\gamma_E})(1-(\pi^2/6)e^{2\gamma_E}/t^2+O(t^{-3}))$, where $A(t)$ is the limit at each fixed threshold $t$ as the counting endpoint goes to infinity. Substituting the moving threshold $t=e^{\gamma_E}L\exp(-\kappa/L^3)$ into that expression gives $\log(NA(t))=(\kappa+\pi^2/6+o(1))x/L^2$. Formula (1) agrees with this prediction when $\kappa\ge\pi^2/6$. Below that value the predicted coefficient exceeds the finite-interval coefficient by $(\sqrt\kappa-\pi/\sqrt6)^2$. The new proof works with integer divisibility at the moving endpoint directly. [Weingartner, Theorem 1](https://arxiv.org/abs/1011.4262)

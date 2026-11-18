@@ -1,0 +1,34 @@
+{
+  "start_index": 12363153936138,
+  "configuration_boundary_index": 12363153937138,
+  "requested": 3500,
+  "precision": 104,
+  "archive_streams": {
+    "49": "32cb392c595c0b838125780d714d3f163e9963c456861bde1964d1151a4e917f",
+    "50": "a295750627ca3f1c875b796bba95044ac011e39062263f32e86486a76ac88faf"
+  },
+  "default": {
+    "matched_intervals": 1871,
+    "intervals_beyond_boundary": 870,
+    "raw_stream_sha256": "5ae3d0dc77fd475d6a3c83eebae78831eff835fd0d9d24d911a366c010517c3f"
+  },
+  "explicit": {
+    "matched_intervals": 3500,
+    "intervals_beyond_boundary": 2499,
+    "raw_stream_sha256": "4525c593c4df9daefaa5033aaa77ea495360b21a09758e67a33d5f34ad168000",
+    "grid_parameters": {
+      "T": 3000175449797,
+      "A": 8,
+      "B": 4096,
+      "h_mantissa": 170,
+      "h_exponent": 0,
+      "J": 925000,
+      "K": 16,
+      "sigma_grid": 1965,
+      "Ns_max": 200,
+      "H_mantissa": 93,
+      "H_exponent": -6,
+      "sigma_interp": 25
+    }
+  }
+}
