@@ -5,7 +5,7 @@ Fix a number field \(K\). Write \(C_K=e^{\gamma_E}\operatorname{Res}_{s=1}\zeta_
  T_K(X)=\int_2^X\left(\frac1{\log x}
    \prod_{N\mathfrak p\le x}(1-(N\mathfrak p)^{-1})^{-1}-C_K\right)dx .
 \]
-Each of the 2,580 fields in the [strict completed-derivative census](zhao-results-nov18.md), and also the [quaternionic example outside that census](zhao-quaternion-bias-nov18.md), has the following proposed equivalence without a zero-envelope regularity assumption:
+Each of the 2,580 fields in the [strict completed-derivative census](zhao-results-nov18.md), and each of the [twelve quaternionic fields outside that census](zhao-quaternion-bias-nov18.md), has the following proposed equivalence without a zero-envelope regularity assumption:
 \[
  \mathrm{RH}(\zeta_K)\quad\Longleftrightarrow\quad
  T_K(X)>0\quad\text{for all sufficiently large }X .

@@ -54,4 +54,18 @@ The same argument gives twelve explicit quaternion examples, three totally compl
 | 8.8.343064484000000.1 | 176400 | 16.868 |
 | 8.8.359729184374784.2 | 112896 | 17.853 |
 
-Each forced central multiplicity is at least two. Consequently the normalized mean has limiting inferior at least \(18-B_K>0\), while the central terms alone give \(B_K\ge8\). Under global Dedekind GRH, the 2,580 fields in the strict census and these twelve distinct additional fields give **at least 2,592 fields with eventually positive integrated prime-ideal harmonic Mertens error**. The unconditional exclusion of other real zeros and the individual equivalence above were proved separately for the first field.
+Each forced central multiplicity is at least two. Consequently the normalized mean has limiting inferior at least \(18-B_K>0\), while the central terms alone give \(B_K\ge8\). Under global Dedekind GRH, the 2,580 fields in the strict census and these twelve distinct additional fields give **at least 2,592 fields with eventually positive integrated prime-ideal harmonic Mertens error**. The independent real-axis check below establishes the individual Riemann-hypothesis equivalence for every field in the table.
+
+## Unconditional checks on all twelve fields
+
+For each field the checker also computes \(b_V=2\Lambda'(1)/\Lambda(1)\) using the negative-sign folded integrals displayed above. It verifies \(b_V<12\) with a positive enclosed denominator, \(b_\chi<8\) for each of the three primitive even quadratic characters of \(F\), and \(B_K^*=B_F^*+2b_V<18\). These evaluations use the analytic function at 1 without GRH. The self-dual plane representation has odd central order. Its central multiplicity must be exactly one and it cannot have a distinct real pair: a central zero costs four and a distinct real pair costs at least eight in \(b_V\). Each of the three quadratic completed functions has sign plus, so any central multiplicity would be even and cost at least eight; a real off-critical pair also costs at least eight. The rational factor has no real nontrivial zero. The factorization proves the asserted central multiplicity two and absence of other real zeros of \(\zeta_K\) in every case. Thus each of these twelve fields satisfies both the harmonic and the [third-product equivalence](zhao-field-product-nov18.md) individually.
+
+For the common real-axis quadrature, \(c>1/100\) throughout the table. Use mesh \(h=1/10\) and the strip \(|\Im u|\le1\). For either Bessel kernel on its positive half, the integral bound for \(K_0\) gives \(|H(cne^u)|\le20e^{-n e^{\Re u}/400}\), since \(\Re(cne^u)>n e^{\Re u}/200\). Reciprocity handles the negative half. Splitting this bound into \(20e^{-n/800}e^{-e^{|\Re u|}/800}\), the sum of the two boundary integrals is below \(10^{14}\) by \(\sum n e^{-n/800}<641000\) and \(\int_1^\infty(1+w)e^{-w/800}dw<641000\). Thus the alias error in either integral is below \(10^{14}/(e^{20\pi}-1)<10^{-12}\). At each retained node the truncation from \(n>N\) costs at most \(2\sum_{n>N}n e^{-cn t/2}\); this bound is used with the actual \(N,t\) in both folded sums. Once \(ct>512\), extract \(e^{-128}\) and bound the rest by \(2e^{-n/800}e^{-t/800}\). The omitted mesh error is below \(10^{14}e^{-128}\) by the same cell comparison as in the cubic proof, using \(800e^h<885\). Both integrals are inflated by an additional \(10^{-10}\). The reported balls include all these errors.
+
+To reproduce the single-field certificate and the twelve-field JSON Lines file, run from the repository root with PARI/GP and python-flint installed:
+
+```sh
+python scripts/check_zhao_quaternion_bias_nov18.py
+python scripts/check_zhao_quaternion_examples_nov18.py > quaternion-replay.jsonl
+cmp quaternion-replay.jsonl research/explorations/zhao-quaternion-bias-nov18.jsonl
+```

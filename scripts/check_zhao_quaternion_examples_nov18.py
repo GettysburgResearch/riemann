@@ -1,7 +1,8 @@
 """Certify twelve quaternion fields whose integrated harmonic mean is positive on GRH."""
 import json
 from math import isqrt
-from flint import arb,ctx
+from flint import arb,ctx,dirichlet_char
+from check_zhao_abelian_fields_nov18 import spectral_weight
 from check_zhao_cubic_fields_nov18 import run_gp
 from check_zhao_field_weight_nov18 import primes_through,weight_bounds
 
@@ -26,7 +27,7 @@ def certify(label,coeff):
     r2=(8-r1)//2
     p=primes_through(4096)
     pre=(f'K=nfinit(Pol({coeff}));G=galoisinit(K);H=nfsubfields(K,4,1)[1];E=nfinit(H);P={p};\n')
-    (order,disc,signature,df,degrees),=run_gp(pre+'print([galoisidentify(G),K.disc,K.sign,E.disc,vector(#P,j,my(v=idealprimedec(K,P[j]));vector(#v,k,v[k].f))]);\n')
+    (order,disc,signature,df,quadratics,degrees),=run_gp(pre+'print([galoisidentify(G),K.disc,K.sign,E.disc,vecsort(apply(nfdisc,nfsubfields(E,2,1))),vector(#P,j,my(v=idealprimedec(K,P[j]));vector(#v,k,v[k].f))]);\n')
     if order!=[8,4] or disc!=d or signature!=[r1,r2] or len(degrees)!=len(p):
         raise ArithmeticError('Quaternion field invariant mismatch')
     q=isqrt(d//df)
@@ -54,8 +55,40 @@ def certify(label,coeff):
     if not values[0]*values[1]<0: raise ArithmeticError('Root number unresolved')
     lo,hi=weight_bounds(d,r1,r2,4096,dict(zip(p,degrees)))
     if not hi<18: raise ArithmeticError('Noncentral weight unresolved')
+    # Fold the negative-root-number theta. Bound omitted coefficients at every node.
+    if not c>arb(1)/100: raise ArithmeticError('Conductor outside common strip bound')
+    den=num=arb(0)
+    for j in range(1,200):
+        u=arb(j)/10;t=u.exp();x=c*t
+        if x>512: break
+        last=min(N,int(62/float(x))+1)
+        if not (last+1)*x>60: raise ArithmeticError('Local theta tail not certified')
+        theta=arb(0)
+        for k,v in enumerate(a[:last],1):
+            if v:
+                z=x*k
+                theta+=v*z.bessel_k(0)*(z if r2 else 1)
+        e=(-x/2).exp()
+        tail=2*e**(last+1)*((last+1)-last*e)/(1-e)**2
+        theta+=arb(0,tail.upper())
+        den+=(t-1)*theta
+        num+=u*(t+1)*theta
+    else: raise ArithmeticError('Missing terminal theta samples')
+    den=den/10+arb(0,'1e-10');num=num/10+arb(0,'1e-10')
+    if not den>0: raise ArithmeticError('Unresolved theta denominator')
+    bplane=2*num/den
+    bbase=2+arb.const_euler()-(4*arb.pi()).log()
+    for dc in quadratics:
+        chs=[dirichlet_char(dc,k) for k in range(1,dc) if k*k%dc==1]
+        chars=[ch for ch in chs if ch.is_primitive() and not ch.parity()]
+        if len(chars)!=1: raise ArithmeticError('Unknown quadratic component')
+        bc=spectral_weight(chars[0])
+        if not bc<8: raise ArithmeticError('Quadratic real-zero exclusion failed')
+        bbase+=bc
+    total=bbase+2*bplane
+    if not bplane<12 or not total<18: raise ArithmeticError(f'Unconditional weight unresolved: {total}')
     return {'label':label,'conductor':q,'theta_checks':list(map(str,values)),
-            'spectral_lower':str(lo),'spectral_upper':str(hi)}
+            'spectral_lower':str(lo),'spectral_upper':str(hi),'unconditional_total':str(total),'plane_weight':str(bplane)}
 
 
 if __name__=='__main__':
