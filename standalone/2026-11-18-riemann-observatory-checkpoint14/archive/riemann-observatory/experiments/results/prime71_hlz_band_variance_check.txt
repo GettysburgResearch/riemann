@@ -1,0 +1,13 @@
+ratio J: (x + y - 1)*(x**2 - 4*x*y + x + y**2 + y - 2)/6
+ratio I plus reflection: -(2*x**3*y + 6*x**2*y**2 - 6*x**2*y + 2*x*y**3 - 6*x*y**2 - 2*x - 2*y + 3)/12
+ratio normalized kernel: -2*x**3*y + 2*x**3 - 6*x**2*y**2 - 2*x*y**3 + 12*x*y - 4*x + 2*y**3 - 4*y + 1
+product J: (x + y - 1)**2*(x + y + 2)/6
+product I plus reflection: -(2*x**3*y - 6*x**2*y**2 + 6*x**2*y + 2*x*y**3 + 6*x*y**2 - 12*x*y - 2*x - 2*y + 3)/12
+product normalized kernel: -2*x**3*y + 2*x**3 + 6*x**2*y**2 - 2*x*y**3 + 12*x*y - 4*x + 2*y**3 - 4*y + 1
+square J: (x + 1)*(2*x - 1)**2/3
+square I plus reflection: (x**4 - 6*x**3 + 6*x**2 + 4*x - 3)/12
+square normalized kernel: x**4 + 10*x**3 + 6*x**2 - 8*x + 1
+covariance correction integrand: -4*x**2*y**2 + 6*x**2 + 6*y**2 - 4
+integrated covariance correction: -4*(lower - upper)**2*(lower**4 + 2*lower**3*upper + 3*lower**2*upper**2 - 9*lower**2 + 2*lower*upper**3 - 9*lower*upper + upper**4 - 9*upper**2 + 9)/9
+CUE cosine correction: -4*x**3*y**3 + 6*x**3*y + 6*x*y**3 - 4*x*y
+CUE sine correction: -6*x**2*y**2

@@ -1,0 +1,134 @@
+{
+  "validation": "PASS",
+  "archive_sha256": "25d0735dd17499cb3b33b109209f91fb26a72c95cbe907ea8d46e033e2975a7b",
+  "archive_bytes": 20024472,
+  "stage_and_manifest_payloads": 2658,
+  "zip_members": 2659,
+  "renders": {
+    "pdf": {
+      "bytes": 251569,
+      "sha256": "36a0e61a3d8841b0cf4840a9015b7fa9177f7c863e2b993c55afdfdaa86f4a54"
+    },
+    "html": {
+      "bytes": 249357,
+      "sha256": "09d856f6cc786a429ff940403d2efb488e5a0a1e6e7462181beabcb865476137"
+    }
+  },
+  "raw_source_pins": [
+    {
+      "id": "PAPER-MN2026-VERTICAL",
+      "version": "arXiv 2610.03568v1",
+      "sha256": "ba5c1ab46edf1dbef9741dd1e999ec492c0be59bc65d82cc7ac7dfab8520c076"
+    },
+    {
+      "id": "PAPER-SM63-POS-040",
+      "version": "v1",
+      "sha256": "756288c39bfd743f08f24b1e5074bb8a4adbe8a959d42edd763af07678801830"
+    },
+    {
+      "id": "PAPER-R001",
+      "version": "v2, 2001-05-06",
+      "sha256": "49cd7ad205f153197c327fa2035dce5bd676738e06fa696ac5e15cca1e49e43c"
+    },
+    {
+      "id": "PAPER-GEO65-001",
+      "version": "arXiv:2204.02714v2, author manuscript",
+      "sha256": "abef52f91f14b13f53602c5af2add8e657caffbcee984b288d3eaf8adca50e37"
+    },
+    {
+      "id": "PAPER-E008",
+      "version": "1997 journal-typeset manifestation, pp. 325–333, recovered from Paperzz mirror",
+      "sha256": "8f5719751f869d71907c9da75270cb8c012b54f1453f54179461dbc331d255a1"
+    },
+    {
+      "id": "PAPER-E014",
+      "version": "2003 Lincei journal scan, pp. 5–11, with two BDIM front sheets",
+      "sha256": "9bfb3943ec8d7690d452b8ac7d50fb10614b4e814738dc091390e6ab4994f0b8"
+    },
+    {
+      "id": "PAPER-AN79-HR-ZETA",
+      "version": "2002 journal typeset version, C. R. Math. 335(8), 667–670",
+      "sha256": "b4572e5bdbf3cf7e891a4128aeb3bb56d151f2b16d23f9e63a94b1a2d2c09139"
+    }
+  ],
+  "index_table_counts": {
+    "papers": 1002,
+    "claims": 449,
+    "connections": 85,
+    "findings": 52,
+    "graph_nodes": 2614,
+    "graph_edges": 2492,
+    "paper_claims": 199,
+    "paper_findings": 84
+  },
+  "original_pdfs": [
+    "experiments/results/augmented_moment63_escape.pdf",
+    "experiments/results/prime_band_round11.pdf",
+    "experiments/results/probability_chains64.pdf",
+    "experiments/results/witness62_prefix_transition.pdf",
+    "experiments/results/witness62_weighted_criterion_phase.pdf",
+    "final_synthesis/synthesis.pdf"
+  ],
+  "lean_receipt_verified": true,
+  "unshipped_draft_sha256": "b4dd0747320ce2c8aa50650dc9fb5d4f60c3cad8fff9aeb47084e390dde6a181",
+  "validator_metrics": {
+    "metadata_candidates": 5203,
+    "metadata_candidates_rejected": 56,
+    "metadata_candidates_pending": 5147,
+    "curated_candidate_decisions": 89,
+    "curated_priority_candidates": 80,
+    "curated_provider_matches": 85,
+    "additional_curated_records_unreconciled": 4,
+    "catalogued_works": 1002,
+    "deferred_supporting_works": 1,
+    "selected_checkpoint_works": 1001,
+    "fulltexts_accessed_selected": 956,
+    "selected_primary_excerpt_accessed": 13,
+    "whole_work_or_translation_read": 126,
+    "whole_work_audit_levels": {
+      "0": 875,
+      "1": 119,
+      "3": 7
+    },
+    "scoped_level3_claim_groups": 103,
+    "theorem_or_exercise_records": 449,
+    "connection_records": 85,
+    "graph_nodes": 2614,
+    "graph_edges": 2492
+  },
+  "code_pin_count": 21,
+  "link_audit": {
+    "counts": {
+      "html_anchor_links": 7,
+      "html_local_links": 48,
+      "pdf_local_annotations": 53
+    },
+    "broken": []
+  },
+  "navigation_repair_diff": {
+    "changed": [
+      "final_synthesis/synthesis.html",
+      "final_synthesis/synthesis.pdf",
+      "scripts/render_and_package.py"
+    ],
+    "added": [
+      "quality/checkpoints/checkpoint10_navigation_repair.json"
+    ],
+    "removed": [],
+    "page_rasters_pixel_identical": 19
+  },
+  "pdf_visual_qa": {
+    "pages": 19,
+    "all_pages_reviewed": true,
+    "width_pt": 595.27,
+    "height_pt": 841.89,
+    "text_extent_pt": [
+      42.0,
+      48.26,
+      552.0,
+      820.81
+    ],
+    "out_of_page_text_spans": 0,
+    "replacement_characters": 0
+  }
+}

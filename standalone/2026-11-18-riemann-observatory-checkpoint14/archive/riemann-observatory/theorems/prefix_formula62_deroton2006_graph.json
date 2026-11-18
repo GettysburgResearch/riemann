@@ -1,0 +1,243 @@
+{
+  "paper_id": "PAPER-DR2006",
+  "source_path": "sources/prefix_formula62_generalL/deroton_lower.pdf",
+  "audit_path": "audits/prefix_formula62_deroton2006_full_reading.md",
+  "nodes": [
+    {
+      "id": "DR06-CUTOFF",
+      "title": "Continuous distance with lower dilation cutoff",
+      "locator": "§1 pp.417–420",
+      "kind": "definitions"
+    },
+    {
+      "id": "DR06-INT",
+      "title": "Unsmoothed complementary-function L² membership",
+      "locator": "Theorem 2, p.420",
+      "kind": "hypothesis"
+    },
+    {
+      "id": "DR06-OFFLINE",
+      "title": "Off-line branch pays the lower bound immediately",
+      "locator": "Theorem 1 and §6.1 p.434",
+      "kind": "source_argument"
+    },
+    {
+      "id": "DR06-MEANSQ",
+      "title": "Optional sufficient integrability for 0<d<4",
+      "locator": "Remark 1 p.419; Acta Arithmetica Theorem 2.2",
+      "kind": "external_proved_input"
+    },
+    {
+      "id": "DR06-GAMMA",
+      "title": "Complex Stirling and conjugated gamma quotient",
+      "locator": "§2 pp.421–424, equations (1)–(7)",
+      "kind": "source_argument"
+    },
+    {
+      "id": "DR06-BESSEL",
+      "title": "Detoured inverse Mellin contour for the Bessel quotient",
+      "locator": "§3 pp.424–427, Proposition 3.1",
+      "kind": "source_argument"
+    },
+    {
+      "id": "DR06-MULT",
+      "title": "Mellin phase and bounded invariant-operator integral",
+      "locator": "§4 pp.427–430, Proposition 4.1",
+      "kind": "source_argument"
+    },
+    {
+      "id": "DR06-PHASE",
+      "title": "Kernel and logarithmic derivative decay",
+      "locator": "§5 pp.430–433, Lemma 4 and Proposition 5.1",
+      "kind": "source_argument"
+    },
+    {
+      "id": "DR06-HARDY",
+      "title": "Pole cancellation and support in (0,1)",
+      "locator": "Proposition 6.1 pp.434–435",
+      "kind": "source_argument"
+    },
+    {
+      "id": "DR06-JETORTH",
+      "title": "Cutoff preserves each line-zero Mellin jet",
+      "locator": "Proposition 6.2 pp.436–437",
+      "kind": "source_argument"
+    },
+    {
+      "id": "DR06-JETEX",
+      "title": "Strong L² boundary limit of truncated phase jets",
+      "locator": "Propositions 6.3–6.5 pp.437–441",
+      "kind": "source_argument_with_derivative_correction"
+    },
+    {
+      "id": "DR06-GRAM",
+      "title": "Fixed-zero jet blocks converge to Hilbert matrices",
+      "locator": "Proposition 7.1 pp.441–442",
+      "kind": "source_argument"
+    },
+    {
+      "id": "DR06-TARGET",
+      "title": "Only the zeroth jet survives the scaled target pairing",
+      "locator": "Proposition 7.2 pp.443–444",
+      "kind": "source_argument"
+    },
+    {
+      "id": "DR06-HILBERT",
+      "title": "Inverse Hilbert Gram (0,0) entry is multiplicity squared",
+      "locator": "§7.2 p.444; independent shifted Legendre proof",
+      "kind": "source_argument"
+    },
+    {
+      "id": "DR06-FINITE",
+      "title": "Finite-zero quantitative distance lower bound",
+      "locator": "§7 with quantitative fixed-set remainder",
+      "kind": "derived_refinement"
+    },
+    {
+      "id": "DR06-LOWER",
+      "title": "Selberg-class multiplicity-squared lower bound",
+      "locator": "Theorem 2 p.420 and §7.2 p.444",
+      "kind": "source_theorem"
+    },
+    {
+      "id": "DR06-DISCRETE",
+      "title": "Ordinary n≤N fixed-character lower bound",
+      "locator": "Mellin Plancherel and subspace inclusion",
+      "kind": "derived_corollary"
+    }
+  ],
+  "edges": [
+    {
+      "source": "DR06-MEANSQ",
+      "target": "DR06-INT",
+      "relation": "supplies_for_positive_degree_below_four",
+      "evidence": "Dyadic weighted summation. This is optional, not a theorem degree restriction."
+    },
+    {
+      "source": "DR06-CUTOFF",
+      "target": "DR06-OFFLINE",
+      "relation": "defines_monotone_distance",
+      "evidence": "Nested spans and Theorem 1 make the log-scaled distance diverge when a right zero exists."
+    },
+    {
+      "source": "DR06-GAMMA",
+      "target": "DR06-PHASE",
+      "relation": "matches_Bessel_symbols",
+      "evidence": "Conjugated denominator shifts and the two-term matching expansion supply the complex order/phase."
+    },
+    {
+      "source": "DR06-BESSEL",
+      "target": "DR06-PHASE",
+      "relation": "computes_model_inverse_transforms",
+      "evidence": "Residue calculation and left-line decay give real-argument Bessel functions."
+    },
+    {
+      "source": "DR06-INT",
+      "target": "DR06-MULT",
+      "relation": "places_complement_in_Mellin_L2",
+      "evidence": "Analytic continuation gives almost-everywhere nonzero boundary Mellin transform."
+    },
+    {
+      "source": "DR06-MULT",
+      "target": "DR06-PHASE",
+      "relation": "defines_unitary_symbol",
+      "evidence": "The functional equation identifies the phase with the gamma quotient."
+    },
+    {
+      "source": "DR06-INT",
+      "target": "DR06-HARDY",
+      "relation": "supplies_boundary_vector",
+      "evidence": "The multiplier P cancels the pole. Hardy Paley–Wiener gives support (0,1); alternatively (1−H*)^m kills the residue-polynomial tail directly."
+    },
+    {
+      "source": "DR06-HARDY",
+      "target": "DR06-JETORTH",
+      "relation": "phase_maps_to_reflected_support",
+      "evidence": "The reflected contracted generator is supported above its dilation cutoff."
+    },
+    {
+      "source": "DR06-MULT",
+      "target": "DR06-JETEX",
+      "relation": "gives_truncated_convolution_identity",
+      "evidence": "Identify the integral on step functions and extend on compact input truncations."
+    },
+    {
+      "source": "DR06-PHASE",
+      "target": "DR06-JETEX",
+      "relation": "dominates_analytic_continuation_and_tail",
+      "evidence": "The truncated projector removes the sole singular endpoint."
+    },
+    {
+      "source": "DR06-JETEX",
+      "target": "DR06-JETORTH",
+      "relation": "supplies_strong_limit",
+      "evidence": "Projection preserves the Mellin pairing before the limit, and then zero jets vanish."
+    },
+    {
+      "source": "DR06-JETEX",
+      "target": "DR06-GRAM",
+      "relation": "supplies_log_monomials_and_integrable_remainders",
+      "evidence": "Fixed distinct frequencies yield an O(1/L) off-block term by integration by parts."
+    },
+    {
+      "source": "DR06-JETEX",
+      "target": "DR06-TARGET",
+      "relation": "permits_dominated_boundary_pairing",
+      "evidence": "Near-zero remainder and integrable Hardy tail justify the untruncated boundary pairing."
+    },
+    {
+      "source": "DR06-HARDY",
+      "target": "DR06-TARGET",
+      "relation": "sets_pole_removed_target",
+      "evidence": "The boundary value is P(ρ)^m/ρ; |P(ρ)|=1."
+    },
+    {
+      "source": "DR06-JETORTH",
+      "target": "DR06-FINITE",
+      "relation": "provides_exact_orthogonal_projection",
+      "evidence": "The rescaled zero jets annihilate every candidate in the continuous cutoff span."
+    },
+    {
+      "source": "DR06-GRAM",
+      "target": "DR06-FINITE",
+      "relation": "controls_finite_Gram_inverse",
+      "evidence": "Fixed finite block limit is positive definite; perturbation is O(1/L)."
+    },
+    {
+      "source": "DR06-TARGET",
+      "target": "DR06-FINITE",
+      "relation": "controls_finite_projection_vector",
+      "evidence": "The scaled target vector has only the zeroth jet at leading order."
+    },
+    {
+      "source": "DR06-HILBERT",
+      "target": "DR06-FINITE",
+      "relation": "sets_sharp_multiplicity_factor",
+      "evidence": "The endpoint reproducing kernel is m²."
+    },
+    {
+      "source": "DR06-FINITE",
+      "target": "DR06-LOWER",
+      "relation": "take_limit_before_enlarging_finite_set",
+      "evidence": "No uniform estimate for growing zero sets is required."
+    },
+    {
+      "source": "DR06-OFFLINE",
+      "target": "DR06-LOWER",
+      "relation": "handles_nonzero_limiting_distance",
+      "evidence": "Any off-line interior zero has a right-half companion by functional equation."
+    },
+    {
+      "source": "DR06-CUTOFF",
+      "target": "DR06-DISCRETE",
+      "relation": "contains_all_reciprocal_integer_dilates",
+      "evidence": "At λ=1/N the discrete space is a subspace of the continuous one."
+    },
+    {
+      "source": "DR06-LOWER",
+      "target": "DR06-DISCRETE",
+      "relation": "applies_lower_bound_to_smaller_span",
+      "evidence": "For nonprincipal fixed χ bounded partial sums certify the input integrability."
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+# Independent audit of the Riemann–von Mangoldt bounded-grid countermodel
+
+18 November 2026. The strengthened construction gives an even real entire function of order one and infinite exponential type, with the advertised simple zeros and counting law. The exponent satisfies every positive-power characteristic-matrix test on finite grids of diameter at most \(H\), but is unbounded above on the real axis. Both small-time cusp coefficients agree with the actual zeta exponent. The count matches the smooth main term up to \(O(1)\), which is distinct from matching the actual fluctuating zeta count. [Strengthened construction](positivity64_infdiv_rvm_strengthening.md) · [Bounded-grid precursor](geometry64_infdiv_skeptic.md)
+
+## Filling and enumeration
+
+Fix \(H>0\) and \(0<a<1/2\). Choosing \(b\) sufficiently small meets both \(b\sqrt2 H<2\pi\) and \(C_b=\pi(b^{-1}+(b\sqrt2)^{-1})>(1+2\cosh(aH))H\). Irrationality of \(\sqrt2\) prevents any nonzero collisions between the two full lattices. Let \(L\) denote their positive count and \(\lambda_0=b^{-1}+(b\sqrt2)^{-1}\). For \(D(x)=M(x)-L(x)\), choose \(x_0>2\pi+1\) away from the lattice, with \(M'(x)\ge\lambda_0\) for \(x\ge x_0\) and \(D(x_0)>2\). Since \(M'\) is increasing and \(M\) grows faster than \(L\), these conditions are compatible. From the floor differences follows \(L(x)-L(u)\le\lambda_0(x-u)+2\). Hence \(D(x)\ge D(u)-2\) for \(x\ge u\ge x_0\), and the running supremum \(B(x)=\sup_{[x_0,x]}D\) has \(0\le B(x)-D(x)\le2\).
+
+This is a supremum rather than necessarily a maximum. At a downward jump it includes the limiting pre-jump value through points below the jump. There are finitely many lattice jumps on each compact interval. On every interval between two jumps the running maximum is the larger of the previous record and the continuous \(D(x)\), so it is continuous across the interval and its endpoints. At \(x_0\) it is right-continuous. This also proves local boundedness. Since \(D(x)\to\infty\), \(B(x)\to\infty\).
+
+A single \(\theta\in(0,1)\) can avoid all residues modulo one of \(B(x_0)\) and the countably many \(B(\ell)\) at lattice points after \(x_0\). With \(K=\lfloor B(x_0)-\theta\rfloor\ge1\), place \(K\) distinct positive fillers before \(x_0\) in the stated open interval, outside the lattices, with their reflections. For \(k>K\), the level \(k+\theta\) exceeds \(B(x_0)\) and its first hitting time exists by continuity and unboundedness. Different levels cannot have the same first hitting time, and no level is hit first at a lattice point. A flat segment at a selected level would yield a single first hitting time and would not alter the counting rule. This proves local finiteness and simplicity of the real filling. For every \(x\ge x_0\), including a level hit, the added count is exactly \(\lfloor B(x)-\theta\rfloor\). The error in the total real count is
+\[
+ N_{\rm real}(x)-M(x)= B(x)-D(x)-\theta-\{B(x)-\theta\},
+\]
+which lies in \((-2,2)\) or at the allowed endpoints. This covers the \(7/8\) and any other noninteger offset in \(M\), and controls the large initial lattice count without deleting points. Before \(x_0\) the discrepancy is bounded on the fixed initial range. The eventual bound is independent of the later quartet location.
+
+## Entire product and exact transform
+
+The count \(\ll u\log(2+u)\) and the positive smallest zero imply \(\sum_{\lambda>0}\lambda^{-2}<\infty\). Thus \(\prod_\lambda(1-z^2/\lambda^2)\) converges normally and its tail is nonzero on compact sets away from prescribed zeros. It is the product of the paired genus-one factors, since the two linear exponent terms cancel exactly. The simple factors have no additional zeros from the normally convergent tail. At \(iy\) they are all positive and their logarithms have a finite sum at every fixed \(y\).
+
+Choose \(R\) larger than \(a\) and the prescribed height. Multiplication by the two displayed conjugate factors adds precisely the distinct simple quartet \(\pm(R\pm ia)\), disjoint from the real zeros, and contributes a nonzero absolute square at \(iy\). Both positive-real-part members enter the count at \(R\), so the discrepancy for \(x\ge x_0\) has absolute value at most four. Inclusion at the boundary uses the same \(\le x\) convention for both real and complex points. Under \(s=1/2-iz\), the count on positive \(\Re z\) corresponds to negative ordinate in \(s\), which equals the positive-ordinate count by reflection. The real symmetry of the product follows from real factors and conjugate pairing of the quartet.
+
+For the upper bound on the maximum modulus, summing \(\log(1+r^2/\lambda^2)\) gives the integral of \(2r^2N_{\rm real}(u)/(u(u^2+r^2))\) by integration by parts, with no boundary terms. The parts below and above \(r\) are \(O(r\log(2+r))\), using respectively integrals of \(O(\log(2+u))\) and \(O(r^2\log(2+u)/u^2)\). At \(ir\), the zeros \(\lambda\le r\) contribute at least \(N_{\rm real}(r)\log 2\), which is \(\gg r\log r\). The quartet adds \(O(\log r)\) to the log growth bound, and its log modulus on the imaginary axis is \(O(\log r)\) for large \(r\). Thus order is exactly one, with infinite exponential type at that order. The same product gives \(E(0)=1\) and strict positivity of \(\Xi(s)=E(i(s-1/2))\) on the entire real axis.
+
+With \(\gamma\) running over every signed zero once, the strip and inverse-square sum give absolute, locally uniform convergence of \(g_E\). Reflections give evenness and reality, and each summand vanishes at \(t=0\). For \(\Im z>a\), the integrable majorant is \((e^{at}+1)e^{-t\Im z}\sum|\gamma|^{-2}\). Each integrated term is
+\[
+ \frac{i}{\gamma^2}\left(\frac1{z-\gamma}-\frac1z\right)
+ =\frac{i}{z^2}\left(\frac1{z-\gamma}+\frac1\gamma\right).
+\]
+The logarithmic derivative sum is normally convergent away from the zeros by the \(O_z(|\gamma|^{-2})\) regularization. It equals \(E'/E\) without any undetermined linear term. Since \(\Xi(1/2-iz)=E(z)\), one has \((\Xi'/\Xi)(1/2-iz)=iE'(z)/E(z)\), with the same sign as Nakamura–Suzuki. This is the exact transform of the constructed zero exponent, independently of the zeta arithmetic formula. [Nakamura–Suzuki, (1.7) and Lemma 2.2](../../sources/suzuki_model63_positivity/suzuki_2306_candidate.pdf)
+
+## All bounded grids and the distant failure
+
+The periodic quadratic identity gives precisely \(-C_b|t|+t^2\) on \([-H,H]\) after each lattice and its reflection are included. For a zero-sum vector of complex grid weights the function \(F(x)=\sum_i u_i\mathbf1_{[t_i,\infty)}(x)\) has support in the span of the grid. Integrating twice, with the sign \(-k''(x-y)\) from the mixed derivative, gives \(Q_{-|t|}(u)=2\|F\|_2^2\) and \(Q_{t^2}(u)=-2|\int F|^2\). These identities also follow by smoothing and using the continuity of the kernels, including at coincident grid points. The quartic zero packet gives \(q_R''=-4\Re\cos((R+ia)t)\). Its contribution in absolute value is at most \(4\cosh(aH)(\int |F|)^2\le4H\cosh(aH)\|F\|_2^2\), independent of \(R\), number of points, or their mutual spacing. Every filler pair adds a sum of two squared Fourier magnitudes divided by \(\lambda^2\) on the zero-sum subspace. Absolute convergence permits their addition. The coefficient of \(\|F\|_2^2\) in the total lower bound is strictly positive by the choice of \(b\).
+
+Anchoring the finite matrix at a grid point converts this conditional inequality to an ordinary positive semidefinite one. Entrywise exponentiation of the anchored matrix is positive semidefinite for every \(c>0\) by the Schur product expansion, including the constant all-ones term. Diagonal congruence restores the unanchored exponential matrix, with real positive diagonal multipliers because \(g_E\) is real. This argument applies also to repeated grid locations and arbitrary translations of the grid. At \(t=2\pi n/R\) the quartet term is \(4\Re((R+ia)^{-2})(\cosh(at)-1)\), whose coefficient is positive precisely because \(R>a\). The entire real-zero exponent is uniformly bounded by inverse-square summability, so these values tend to positive infinity. Any positive exponential power therefore eventually violates the two-point unit-diagonal matrix bound.
+
+## Cusp with a bounded counting error
+
+Write \(\varepsilon=|t|\) and \(f(v)=2(\cos v-1)/v^2\), with \(f(0)=-1\). Then \(\phi_t(u)=t^2 f(\varepsilon u)\). For the Stieltjes discrepancy, \(f'(v)=-2\sin(v)/v^2-4(\cos v-1)/v^3\). At zero the terms of size \(1/v\) cancel exactly, and the Taylor expansion gives \(f'(v)=v/6+O(v^3)\). At infinity \(f'(v)=O(v^{-2})\). Thus \(\int|\phi_t'|=t^2\int|f'|=O(t^2)\). Estimating the two derivative terms separately at zero would fail. The discrepancy \(N_{\rm real}-M\) is bounded globally on \(u>0\), with limit \(-7/8\) at zero. Integration by parts has a boundary contribution of size at most \(O(t^2)\) there, and no boundary term at infinity. This justifies replacing the count measure by \(M'(u)du\) to \(O(t^2)\). The quartet contributes \(O(t^2)\) for fixed \(R\).
+
+For \(-1<\Re w<1\), the Mellin integral
+\[
+ J(w)=\int_0^\infty (1-\cos v)v^{w-2}\,dv
+\]
+is holomorphic by endpoint integrability, also after inserting one logarithm. For real \(w\) in the strip the Laplace representation and positive interchange integrate \(y^{1-w}/[y(1+y^2)]\) over \(y>0\), divided by \(\Gamma(2-w)\). The beta integral gives \(\pi/[2\Gamma(2-w)\cos(\pi w/2)]\), and analytic continuation extends within the strip. Hence \(J(0)=\pi/2\), \(J'(0)=J(0)\psi(2)=(\pi/2)(1-\gamma_{\rm E})\). Inserting the scaled density \(\log(v/(2\pi\varepsilon))/(2\pi)\) and the kernel gives
+\[
+ g_E(t)=-\tfrac12|t|\log(1/|t|)
+ +\tfrac12\bigl(\log(2\pi)+\gamma_{\rm E}-1\bigr)|t|+O(t^2).
+\]
+The \(-1\) in the linear coefficient comes from integrating the logarithmic cusp, or equivalently from \(\psi(2)=1-\gamma_{\rm E}\) in this Mellin formula.
+
+I also checked the actual arithmetic coefficient directly in Nakamura–Suzuki (1.5). At \(0<t<\log 2\) there is no prime contribution. With \(a_0=1/4\), the derivative of the Lerch term is \(-\tfrac12 S(t)\) for \(S(t)=\sum_{n\ge0}e^{-2(n+a_0)t}/(n+a_0)\). Comparison with \(\sum_{n\ge0}e^{-2(n+1)t}/(n+1)\) and the digamma series gives \(S(t)-\log(1/t)\to-\log 2-\psi(a_0)-\gamma_{\rm E}\). Moreover \(S'(t)=-2e^{-2a_0t}/(1-e^{-2t})=-1/t+O(1)\), so the remainder in this last expansion for \(S\) is \(O(t)\). The linear digamma term of (1.5) cancels \(\psi(a_0)\), and integrating the derivative adds the \(-1/2\) linear contribution. The even zeta exponent therefore has the same two coefficients with remainder \(O(t^2)\). Agreement here neither assumes RH nor identifies the two exponents away from zero. [Nakamura–Suzuki, (1.5), (3.2)](../../sources/suzuki_model63_positivity/suzuki_2306_candidate.pdf)
+
+Candidate SHA-256 efd0d6b67c8762cbff6aed64c9593052c7997b3fc5413d59042acbfd3b577a99. Precursor SHA-256 8a6d48ca3feeec8f51f1b42668b98388b48a606027d981b99dc4a0607d75d4c4. The main claims survived the checks for level plateaus, lattice collisions, cutoff equality, contour signs, order and type, and arbitrarily dense grids.

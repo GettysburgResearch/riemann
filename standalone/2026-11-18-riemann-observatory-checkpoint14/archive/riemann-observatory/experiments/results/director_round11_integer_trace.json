@@ -1,0 +1,9 @@
+{
+  "script": "scripts/geometry69_integer_toeplitz_checks.py",
+  "code_sha256": "cf0270f6eaebb78565270646c0ba9311e0e078e156c09e71bc9956c3ee2ad62a",
+  "args": [],
+  "exit_code": 0,
+  "elapsed_seconds": 0.02399970099941129,
+  "stdout": "one root, negative reciprocal factor: (1, 0, 0)\nsingular pure: (1, 0, 1)\nnonsquare pure: (2, 0, 0)\ntwo complex off-circle pairs: (2, 2, 0)\nrepeated off-circle pair: (1, 1, 2)\nzero Schur diagonal, nonzero row: (3, 1, 0)\npositive proper leading blocks: (3, 1, 0)\nExact congruence checks passed.\n",
+  "stderr": ""
+}

@@ -1,0 +1,1889 @@
+{
+  "height": 10000,
+  "calls": 313,
+  "status": [
+    "Maximum number of function evaluations has been exceeded.",
+    "Optimization terminated successfully."
+  ],
+  "best": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(143, 500), window=Fraction(22, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+  "attempts": [
+    {
+      "parameters": "Parameters(ratio=Fraction(19, 10), truncation=Fraction(6, 25), window=Fraction(160, 1), radii=(Fraction(4, 25), Fraction(8, 25)))",
+      "blocks": 24,
+      "upper_diagnostic": 10.0,
+      "failure": "positive Fourier mode may be stationary"
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(28, 25), truncation=Fraction(2, 5), window=Fraction(1400, 1), radii=(Fraction(4, 25), Fraction(8, 25)))",
+      "blocks": 132,
+      "upper_diagnostic": 10.0,
+      "failure": "transition exceeds a ratio block"
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(9, 5), truncation=Fraction(2, 5), window=Fraction(160, 1), radii=(Fraction(4, 25), Fraction(1, 2)))",
+      "blocks": 26,
+      "upper_diagnostic": 10.0,
+      "failure": "disk reaches outside the positive strip"
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(9, 5), truncation=Fraction(19, 50), window=Fraction(170, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 26,
+      "upper_diagnostic": 0.5399671225954036,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(213, 125), truncation=Fraction(19, 50), window=Fraction(170, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 28,
+      "upper_diagnostic": 0.5677154067873752,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1023, 500), truncation=Fraction(19, 50), window=Fraction(170, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.5057576986374228,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1129, 500), truncation=Fraction(19, 50), window=Fraction(170, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 19,
+      "upper_diagnostic": 0.558962224279035,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1991, 1000), truncation=Fraction(19, 50), window=Fraction(170, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.5088189785678486,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2043, 1000), truncation=Fraction(19, 50), window=Fraction(170, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.5058268611022745,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1029, 500), truncation=Fraction(19, 50), window=Fraction(170, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.5055115460974058,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(427, 200), truncation=Fraction(19, 50), window=Fraction(170, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 20,
+      "upper_diagnostic": 0.5091955537536929,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(261, 125), truncation=Fraction(19, 50), window=Fraction(170, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.5057639661703783,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(19, 50), window=Fraction(170, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.5054632498470009,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(83, 40), truncation=Fraction(19, 50), window=Fraction(170, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.5055097849089815,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(207, 100), truncation=Fraction(19, 50), window=Fraction(170, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.5054825875902418,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(517, 250), truncation=Fraction(19, 50), window=Fraction(170, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.5054722879197834,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(361, 1000), window=Fraction(170, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.5036642587557828,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(449, 1000), window=Fraction(170, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.5881538563280991,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(307, 1000), window=Fraction(170, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 10.0,
+      "failure": "positive Fourier mode may be stationary"
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(81, 200), window=Fraction(170, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.5292542403995801,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(87, 250), window=Fraction(170, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.5352519128583864,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(377, 1000), window=Fraction(170, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.5036869006737089,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(367, 1000), window=Fraction(170, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.5011714396750633,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(369, 1000), window=Fraction(170, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.5011643810446779,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(46, 125), window=Fraction(170, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.5011291394819611,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(46, 125), window=Fraction(184, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.5017824821143451,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(46, 125), window=Fraction(286, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.5058859050069907,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(46, 125), window=Fraction(122, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.4992305156796642,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(46, 125), window=Fraction(83, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.49767583051864334,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(46, 125), window=Fraction(59, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.49680723241942215,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(46, 125), window=Fraction(44, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.49614655042795064,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(46, 125), window=Fraction(35, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.4958510983573443,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(46, 125), window=Fraction(29, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.4956640064337521,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(46, 125), window=Fraction(26, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.49562198275779284,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(46, 125), window=Fraction(25, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.4955536319182155,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(46, 125), window=Fraction(23, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.49546703882787335,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(46, 125), window=Fraction(22, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.4954030765736911,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(46, 125), window=Fraction(21, 1), radii=(Fraction(17, 100), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.49550752743997817,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(46, 125), window=Fraction(22, 1), radii=(Fraction(22, 125), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.49514047203639405,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(46, 125), window=Fraction(22, 1), radii=(Fraction(28, 125), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.49460683942061756,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(46, 125), window=Fraction(22, 1), radii=(Fraction(253, 1000), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.49530747596065156,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(46, 125), window=Fraction(22, 1), radii=(Fraction(53, 250), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.4945180035556513,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(46, 125), window=Fraction(22, 1), radii=(Fraction(211, 1000), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.4945165194946948,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(46, 125), window=Fraction(22, 1), radii=(Fraction(197, 1000), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.49459979119331166,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(46, 125), window=Fraction(22, 1), radii=(Fraction(103, 500), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.4945235214800906,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(46, 125), window=Fraction(22, 1), radii=(Fraction(209, 1000), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.4945164082867134,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(46, 125), window=Fraction(22, 1), radii=(Fraction(207, 1000), Fraction(17, 50)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.4945201671697848,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(46, 125), window=Fraction(22, 1), radii=(Fraction(209, 1000), Fraction(67, 200)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.4947818881657557,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(46, 125), window=Fraction(22, 1), radii=(Fraction(209, 1000), Fraction(79, 200)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.49287600742250376,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(46, 125), window=Fraction(22, 1), radii=(Fraction(209, 1000), Fraction(431, 1000)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.49282718352367505,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2067, 1000), truncation=Fraction(46, 125), window=Fraction(22, 1), radii=(Fraction(209, 1000), Fraction(83, 200)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.49276270876913314,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(207, 100), truncation=Fraction(46, 125), window=Fraction(20, 1), radii=(Fraction(209, 1000), Fraction(52, 125)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.49315287852855655,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1683, 1000), truncation=Fraction(77, 200), window=Fraction(235, 1), radii=(Fraction(153, 1000), Fraction(307, 1000)))",
+      "blocks": 29,
+      "upper_diagnostic": 0.5885093200733786,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1831, 1000), truncation=Fraction(379, 1000), window=Fraction(153, 1), radii=(Fraction(87, 500), Fraction(349, 1000)))",
+      "blocks": 25,
+      "upper_diagnostic": 0.530470504211907,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(961, 500), truncation=Fraction(3, 8), window=Fraction(102, 1), radii=(Fraction(47, 250), Fraction(187, 500)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.5066171938665515,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1979, 1000), truncation=Fraction(93, 250), window=Fraction(71, 1), radii=(Fraction(49, 250), Fraction(39, 100)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.496347034344774,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1007, 500), truncation=Fraction(371, 1000), window=Fraction(51, 1), radii=(Fraction(201, 1000), Fraction(2, 5)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.49320495394612407,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2041, 1000), truncation=Fraction(369, 1000), window=Fraction(36, 1), radii=(Fraction(41, 200), Fraction(51, 125)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.4917708182182414,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(513, 250), truncation=Fraction(369, 1000), window=Fraction(30, 1), radii=(Fraction(207, 1000), Fraction(411, 1000)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.49205169397760745,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(51, 25), truncation=Fraction(369, 1000), window=Fraction(37, 1), radii=(Fraction(41, 200), Fraction(407, 1000)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.4917574021926387,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(203, 100), truncation=Fraction(37, 100), window=Fraction(42, 1), radii=(Fraction(203, 1000), Fraction(81, 200)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.4922008627981586,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2037, 1000), truncation=Fraction(369, 1000), window=Fraction(39, 1), radii=(Fraction(51, 250), Fraction(203, 500)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.4916592012775992,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1017, 500), truncation=Fraction(37, 100), window=Fraction(40, 1), radii=(Fraction(51, 250), Fraction(203, 500)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.4921320889187561,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(369, 1000), window=Fraction(38, 1), radii=(Fraction(51, 250), Fraction(407, 1000)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.49161900914183865,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(369, 1000), window=Fraction(38, 1), radii=(Fraction(51, 250), Fraction(67, 200)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.4934145483931425,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(369, 1000), window=Fraction(38, 1), radii=(Fraction(51, 250), Fraction(79, 200)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.49170214373549753,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(369, 1000), window=Fraction(38, 1), radii=(Fraction(51, 250), Fraction(431, 1000)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.4916664209452391,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(369, 1000), window=Fraction(38, 1), radii=(Fraction(51, 250), Fraction(207, 500)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.4916043194224298,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(369, 1000), window=Fraction(38, 1), radii=(Fraction(51, 250), Fraction(83, 200)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.49160418596523453,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(369, 1000), window=Fraction(38, 1), radii=(Fraction(51, 250), Fraction(421, 1000)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.49161347379571496,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(361, 1000), window=Fraction(38, 1), radii=(Fraction(51, 250), Fraction(83, 200)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.49013788962185584,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(449, 1000), window=Fraction(38, 1), radii=(Fraction(51, 250), Fraction(83, 200)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.5867871287677539,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(307, 1000), window=Fraction(38, 1), radii=(Fraction(51, 250), Fraction(83, 200)))",
+      "blocks": 21,
+      "upper_diagnostic": 10.0,
+      "failure": "positive Fourier mode may be stationary"
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(81, 200), window=Fraction(38, 1), radii=(Fraction(51, 250), Fraction(83, 200)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.5258387423689908,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(341, 1000), window=Fraction(38, 1), radii=(Fraction(51, 250), Fraction(83, 200)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.5332133840650704,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(187, 500), window=Fraction(38, 1), radii=(Fraction(51, 250), Fraction(83, 200)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.4944031146290518,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(357, 1000), window=Fraction(38, 1), radii=(Fraction(51, 250), Fraction(83, 200)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.49135935495984007,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(363, 1000), window=Fraction(38, 1), radii=(Fraction(51, 250), Fraction(83, 200)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.4901047372113787,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(181, 500), window=Fraction(38, 1), radii=(Fraction(51, 250), Fraction(83, 200)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.49008345569258166,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(181, 500), window=Fraction(184, 1), radii=(Fraction(51, 250), Fraction(83, 200)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.49562443364107056,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(181, 500), window=Fraction(286, 1), radii=(Fraction(51, 250), Fraction(83, 200)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.49976391690150784,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(181, 500), window=Fraction(122, 1), radii=(Fraction(51, 250), Fraction(83, 200)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.49317730706360596,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(181, 500), window=Fraction(83, 1), radii=(Fraction(51, 250), Fraction(83, 200)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.49167954926409974,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(181, 500), window=Fraction(59, 1), radii=(Fraction(51, 250), Fraction(83, 200)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.4908582951433903,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(181, 500), window=Fraction(44, 1), radii=(Fraction(51, 250), Fraction(83, 200)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.49031515534591363,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(181, 500), window=Fraction(35, 1), radii=(Fraction(51, 250), Fraction(83, 200)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.48990159684183243,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(181, 500), window=Fraction(29, 1), radii=(Fraction(51, 250), Fraction(83, 200)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.48971367927513215,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(181, 500), window=Fraction(26, 1), radii=(Fraction(51, 250), Fraction(83, 200)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.4896888237724876,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(181, 500), window=Fraction(26, 1), radii=(Fraction(22, 125), Fraction(83, 200)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.4903186296213729,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(181, 500), window=Fraction(26, 1), radii=(Fraction(28, 125), Fraction(83, 200)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.4897510954375755,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(181, 500), window=Fraction(26, 1), radii=(Fraction(253, 1000), Fraction(83, 200)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.49044019715570886,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(181, 500), window=Fraction(26, 1), radii=(Fraction(213, 1000), Fraction(83, 200)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.48967051390425226,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(181, 500), window=Fraction(26, 1), radii=(Fraction(211, 1000), Fraction(83, 200)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.4896677684486891,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1019, 500), truncation=Fraction(181, 500), window=Fraction(26, 1), radii=(Fraction(21, 100), Fraction(83, 200)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.4896678280027456,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(903, 500), truncation=Fraction(93, 250), window=Fraction(154, 1), radii=(Fraction(177, 1000), Fraction(7, 20)))",
+      "blocks": 26,
+      "upper_diagnostic": 0.5255968847978466,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1657, 1000), truncation=Fraction(379, 1000), window=Fraction(237, 1), radii=(Fraction(39, 250), Fraction(77, 250)))",
+      "blocks": 30,
+      "upper_diagnostic": 0.5877316493348849,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1899, 1000), truncation=Fraction(46, 125), window=Fraction(103, 1), radii=(Fraction(191, 1000), Fraction(47, 125)))",
+      "blocks": 24,
+      "upper_diagnostic": 0.5014427882735483,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(489, 250), truncation=Fraction(73, 200), window=Fraction(71, 1), radii=(Fraction(199, 1000), Fraction(49, 125)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.4915559746844103,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1991, 1000), truncation=Fraction(91, 250), window=Fraction(52, 1), radii=(Fraction(51, 250), Fraction(201, 500)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.48887460002527333,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2009, 1000), truncation=Fraction(363, 1000), window=Fraction(41, 1), radii=(Fraction(207, 1000), Fraction(407, 1000)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.4882436796924213,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1011, 500), truncation=Fraction(181, 500), window=Fraction(34, 1), radii=(Fraction(209, 1000), Fraction(41, 100)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.48835139568898867,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2013, 1000), truncation=Fraction(363, 1000), window=Fraction(40, 1), radii=(Fraction(207, 1000), Fraction(51, 125)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.4883208468342956,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1001, 500), truncation=Fraction(363, 1000), window=Fraction(45, 1), radii=(Fraction(103, 500), Fraction(81, 200)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.4881509831167878,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2, 1), truncation=Fraction(363, 1000), window=Fraction(47, 1), radii=(Fraction(41, 200), Fraction(101, 250)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.4882051597077253,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(501, 250), truncation=Fraction(363, 1000), window=Fraction(45, 1), radii=(Fraction(103, 500), Fraction(81, 200)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.488183397609429,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1001, 500), truncation=Fraction(363, 1000), window=Fraction(46, 1), radii=(Fraction(103, 500), Fraction(81, 200)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.48819286973213827,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(2003, 1000), truncation=Fraction(363, 1000), window=Fraction(45, 1), radii=(Fraction(103, 500), Fraction(81, 200)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.488189887831228,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(969, 500), truncation=Fraction(179, 500), window=Fraction(69, 1), radii=(Fraction(203, 1000), Fraction(79, 200)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.48655951597739727,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(43, 25), truncation=Fraction(171, 500), window=Fraction(148, 1), radii=(Fraction(193, 1000), Fraction(361, 1000)))",
+      "blocks": 28,
+      "upper_diagnostic": 0.5010881813837191,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(751, 500), truncation=Fraction(13, 40), window=Fraction(228, 1), radii=(Fraction(183, 1000), Fraction(41, 125)))",
+      "blocks": 37,
+      "upper_diagnostic": 0.555010350603745,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(927, 500), truncation=Fraction(44, 125), window=Fraction(99, 1), radii=(Fraction(199, 1000), Fraction(191, 500)))",
+      "blocks": 25,
+      "upper_diagnostic": 0.4886917554882596,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1891, 1000), truncation=Fraction(71, 200), window=Fraction(86, 1), radii=(Fraction(201, 1000), Fraction(97, 250)))",
+      "blocks": 24,
+      "upper_diagnostic": 0.4875130003535041,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(959, 500), truncation=Fraction(357, 1000), window=Fraction(76, 1), radii=(Fraction(101, 500), Fraction(49, 125)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.487018261146096,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1977, 1000), truncation=Fraction(361, 1000), window=Fraction(55, 1), radii=(Fraction(41, 200), Fraction(401, 1000)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.4872824851769356,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1939, 1000), truncation=Fraction(179, 500), window=Fraction(68, 1), radii=(Fraction(203, 1000), Fraction(79, 200)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.48646126655296834,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(389, 200), truncation=Fraction(359, 1000), window=Fraction(66, 1), radii=(Fraction(203, 1000), Fraction(99, 250)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.48698677036320637,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(483, 250), truncation=Fraction(179, 500), window=Fraction(71, 1), radii=(Fraction(101, 500), Fraction(197, 500)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.4869105496304025,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1941, 1000), truncation=Fraction(359, 1000), window=Fraction(68, 1), radii=(Fraction(203, 1000), Fraction(79, 200)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.4871298522851099,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(97, 50), truncation=Fraction(179, 500), window=Fraction(68, 1), radii=(Fraction(203, 1000), Fraction(79, 200)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.4863952953270962,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(97, 50), truncation=Fraction(179, 500), window=Fraction(68, 1), radii=(Fraction(203, 1000), Fraction(67, 200)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.4879949594472336,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(97, 50), truncation=Fraction(179, 500), window=Fraction(68, 1), radii=(Fraction(203, 1000), Fraction(431, 1000)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.4863345489664696,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(97, 50), truncation=Fraction(179, 500), window=Fraction(68, 1), radii=(Fraction(203, 1000), Fraction(52, 125)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.4862903779081135,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(97, 50), truncation=Fraction(179, 500), window=Fraction(68, 1), radii=(Fraction(203, 1000), Fraction(417, 1000)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.48629034355162776,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(97, 50), truncation=Fraction(179, 500), window=Fraction(68, 1), radii=(Fraction(203, 1000), Fraction(211, 500)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.486296641793792,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(97, 50), truncation=Fraction(179, 500), window=Fraction(68, 1), radii=(Fraction(203, 1000), Fraction(419, 1000)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.4862915748524112,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1753, 1000), truncation=Fraction(367, 1000), window=Fraction(172, 1), radii=(Fraction(22, 125), Fraction(91, 250)))",
+      "blocks": 27,
+      "upper_diagnostic": 0.5311780806593579,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(198, 125), truncation=Fraction(187, 500), window=Fraction(266, 1), radii=(Fraction(151, 1000), Fraction(317, 1000)))",
+      "blocks": 33,
+      "upper_diagnostic": 0.6121950361817026,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(929, 500), truncation=Fraction(181, 500), window=Fraction(114, 1), radii=(Fraction(191, 1000), Fraction(393, 1000)))",
+      "blocks": 25,
+      "upper_diagnostic": 0.5000623971652265,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(961, 500), truncation=Fraction(359, 1000), window=Fraction(78, 1), radii=(Fraction(1, 5), Fraction(103, 250)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.48841443760901276,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(981, 500), truncation=Fraction(179, 500), window=Fraction(56, 1), radii=(Fraction(103, 500), Fraction(423, 1000)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.4854353448690954,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1979, 1000), truncation=Fraction(357, 1000), window=Fraction(46, 1), radii=(Fraction(26, 125), Fraction(107, 250)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.48494891828628706,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1989, 1000), truncation=Fraction(89, 250), window=Fraction(41, 1), radii=(Fraction(21, 100), Fraction(43, 100)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.4850358106259949,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1981, 1000), truncation=Fraction(357, 1000), window=Fraction(46, 1), radii=(Fraction(209, 1000), Fraction(107, 250)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.48500619145983165,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1973, 1000), truncation=Fraction(357, 1000), window=Fraction(50, 1), radii=(Fraction(26, 125), Fraction(213, 500)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.48497809206683506,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(247, 125), truncation=Fraction(357, 1000), window=Fraction(48, 1), radii=(Fraction(26, 125), Fraction(427, 1000)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.48495758385581317,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(989, 500), truncation=Fraction(357, 1000), window=Fraction(47, 1), radii=(Fraction(26, 125), Fraction(427, 1000)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.4849646413431873,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(99, 50), truncation=Fraction(357, 1000), window=Fraction(46, 1), radii=(Fraction(209, 1000), Fraction(107, 250)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.4849952490313715,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1979, 1000), truncation=Fraction(357, 1000), window=Fraction(47, 1), radii=(Fraction(26, 125), Fraction(427, 1000)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.48497181226400904,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1979, 1000), truncation=Fraction(357, 1000), window=Fraction(46, 1), radii=(Fraction(209, 1000), Fraction(107, 250)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.48494676278969473,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1979, 1000), truncation=Fraction(357, 1000), window=Fraction(184, 1), radii=(Fraction(209, 1000), Fraction(107, 250)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.49024135633550725,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1979, 1000), truncation=Fraction(357, 1000), window=Fraction(286, 1), radii=(Fraction(209, 1000), Fraction(107, 250)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.4940932284809888,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1979, 1000), truncation=Fraction(357, 1000), window=Fraction(122, 1), radii=(Fraction(209, 1000), Fraction(107, 250)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.48785985307498336,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1979, 1000), truncation=Fraction(357, 1000), window=Fraction(83, 1), radii=(Fraction(209, 1000), Fraction(107, 250)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.48639535260802585,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1979, 1000), truncation=Fraction(357, 1000), window=Fraction(59, 1), radii=(Fraction(209, 1000), Fraction(107, 250)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.4854460240155575,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1979, 1000), truncation=Fraction(357, 1000), window=Fraction(44, 1), radii=(Fraction(209, 1000), Fraction(107, 250)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.4849384996134654,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1979, 1000), truncation=Fraction(357, 1000), window=Fraction(35, 1), radii=(Fraction(209, 1000), Fraction(107, 250)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.48457361348271716,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1979, 1000), truncation=Fraction(357, 1000), window=Fraction(29, 1), radii=(Fraction(209, 1000), Fraction(107, 250)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.48436087705367437,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1979, 1000), truncation=Fraction(357, 1000), window=Fraction(26, 1), radii=(Fraction(209, 1000), Fraction(107, 250)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.484328397684027,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1979, 1000), truncation=Fraction(357, 1000), window=Fraction(26, 1), radii=(Fraction(22, 125), Fraction(107, 250)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.48492584301484076,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1979, 1000), truncation=Fraction(357, 1000), window=Fraction(26, 1), radii=(Fraction(28, 125), Fraction(107, 250)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.4843981890501204,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1979, 1000), truncation=Fraction(357, 1000), window=Fraction(26, 1), radii=(Fraction(253, 1000), Fraction(107, 250)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.48501205666799996,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1979, 1000), truncation=Fraction(357, 1000), window=Fraction(26, 1), radii=(Fraction(213, 1000), Fraction(107, 250)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.48432868763886705,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1979, 1000), truncation=Fraction(357, 1000), window=Fraction(26, 1), radii=(Fraction(53, 250), Fraction(107, 250)))",
+      "blocks": 22,
+      "upper_diagnostic": 0.48432732051168137,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(209, 125), truncation=Fraction(333, 1000), window=Fraction(138, 1), radii=(Fraction(99, 500), Fraction(19, 50)))",
+      "blocks": 30,
+      "upper_diagnostic": 0.4992234087640414,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1473, 1000), truncation=Fraction(159, 500), window=Fraction(210, 1), radii=(Fraction(47, 250), Fraction(349, 1000)))",
+      "blocks": 39,
+      "upper_diagnostic": 0.5558018498562692,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(359, 200), truncation=Fraction(343, 1000), window=Fraction(93, 1), radii=(Fraction(203, 1000), Fraction(399, 1000)))",
+      "blocks": 26,
+      "upper_diagnostic": 0.4859772593260147,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(229, 125), truncation=Fraction(173, 500), window=Fraction(79, 1), radii=(Fraction(41, 200), Fraction(81, 200)))",
+      "blocks": 25,
+      "upper_diagnostic": 0.48399196312398635,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(947, 500), truncation=Fraction(7, 20), window=Fraction(57, 1), radii=(Fraction(26, 125), Fraction(207, 500)))",
+      "blocks": 24,
+      "upper_diagnostic": 0.4818595790821845,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(39, 20), truncation=Fraction(177, 500), window=Fraction(37, 1), radii=(Fraction(21, 100), Fraction(423, 1000)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.4825968401117971,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(953, 500), truncation=Fraction(351, 1000), window=Fraction(53, 1), radii=(Fraction(26, 125), Fraction(52, 125)))",
+      "blocks": 24,
+      "upper_diagnostic": 0.4818727105147007,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(949, 500), truncation=Fraction(351, 1000), window=Fraction(55, 1), radii=(Fraction(26, 125), Fraction(83, 200)))",
+      "blocks": 24,
+      "upper_diagnostic": 0.4823203728942234,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1871, 1000), truncation=Fraction(87, 250), window=Fraction(65, 1), radii=(Fraction(207, 1000), Fraction(411, 1000)))",
+      "blocks": 24,
+      "upper_diagnostic": 0.48180728483446,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(232, 125), truncation=Fraction(347, 1000), window=Fraction(71, 1), radii=(Fraction(103, 500), Fraction(409, 1000)))",
+      "blocks": 25,
+      "upper_diagnostic": 0.48229442103126546,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(47, 25), truncation=Fraction(349, 1000), window=Fraction(62, 1), radii=(Fraction(207, 1000), Fraction(103, 250)))",
+      "blocks": 24,
+      "upper_diagnostic": 0.4820214656425907,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(373, 200), truncation=Fraction(87, 250), window=Fraction(67, 1), radii=(Fraction(103, 500), Fraction(41, 100)))",
+      "blocks": 24,
+      "upper_diagnostic": 0.482361619807554,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(937, 500), truncation=Fraction(349, 1000), window=Fraction(64, 1), radii=(Fraction(207, 1000), Fraction(411, 1000)))",
+      "blocks": 24,
+      "upper_diagnostic": 0.4824112326323619,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(467, 250), truncation=Fraction(87, 250), window=Fraction(66, 1), radii=(Fraction(207, 1000), Fraction(41, 100)))",
+      "blocks": 24,
+      "upper_diagnostic": 0.4820553357762945,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(234, 125), truncation=Fraction(349, 1000), window=Fraction(65, 1), radii=(Fraction(207, 1000), Fraction(411, 1000)))",
+      "blocks": 24,
+      "upper_diagnostic": 0.4826013355817595,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(187, 100), truncation=Fraction(87, 250), window=Fraction(66, 1), radii=(Fraction(207, 1000), Fraction(411, 1000)))",
+      "blocks": 24,
+      "upper_diagnostic": 0.48193827531638805,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1871, 1000), truncation=Fraction(349, 1000), window=Fraction(65, 1), radii=(Fraction(207, 1000), Fraction(411, 1000)))",
+      "blocks": 24,
+      "upper_diagnostic": 0.48265321052123056,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(187, 100), truncation=Fraction(87, 250), window=Fraction(65, 1), radii=(Fraction(207, 1000), Fraction(411, 1000)))",
+      "blocks": 24,
+      "upper_diagnostic": 0.48187042034981614,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1739, 1000), truncation=Fraction(167, 500), window=Fraction(85, 1), radii=(Fraction(26, 125), Fraction(417, 1000)))",
+      "blocks": 27,
+      "upper_diagnostic": 0.4838273338480718,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1871, 1000), truncation=Fraction(87, 250), window=Fraction(65, 1), radii=(Fraction(207, 1000), Fraction(67, 200)))",
+      "blocks": 24,
+      "upper_diagnostic": 0.4834927432148099,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1871, 1000), truncation=Fraction(87, 250), window=Fraction(65, 1), radii=(Fraction(207, 1000), Fraction(79, 200)))",
+      "blocks": 24,
+      "upper_diagnostic": 0.48191314123960005,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1871, 1000), truncation=Fraction(87, 250), window=Fraction(65, 1), radii=(Fraction(207, 1000), Fraction(431, 1000)))",
+      "blocks": 24,
+      "upper_diagnostic": 0.48182843732650704,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1871, 1000), truncation=Fraction(87, 250), window=Fraction(65, 1), radii=(Fraction(207, 1000), Fraction(417, 1000)))",
+      "blocks": 24,
+      "upper_diagnostic": 0.4817963717324099,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1871, 1000), truncation=Fraction(87, 250), window=Fraction(65, 1), radii=(Fraction(207, 1000), Fraction(209, 500)))",
+      "blocks": 24,
+      "upper_diagnostic": 0.4817960203145028,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1871, 1000), truncation=Fraction(87, 250), window=Fraction(65, 1), radii=(Fraction(207, 1000), Fraction(419, 1000)))",
+      "blocks": 24,
+      "upper_diagnostic": 0.4817960828031512,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1679, 1000), truncation=Fraction(357, 1000), window=Fraction(172, 1), radii=(Fraction(179, 1000), Fraction(91, 250)))",
+      "blocks": 29,
+      "upper_diagnostic": 0.5364230357232327,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(151, 100), truncation=Fraction(73, 200), window=Fraction(265, 1), radii=(Fraction(77, 500), Fraction(317, 1000)))",
+      "blocks": 37,
+      "upper_diagnostic": 0.6357219074838498,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1783, 1000), truncation=Fraction(44, 125), window=Fraction(114, 1), radii=(Fraction(97, 500), Fraction(393, 1000)))",
+      "blocks": 26,
+      "upper_diagnostic": 0.4998092656668386,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(231, 125), truncation=Fraction(7, 20), window=Fraction(78, 1), radii=(Fraction(203, 1000), Fraction(411, 1000)))",
+      "blocks": 25,
+      "upper_diagnostic": 0.48624733967505934,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(236, 125), truncation=Fraction(87, 250), window=Fraction(56, 1), radii=(Fraction(209, 1000), Fraction(423, 1000)))",
+      "blocks": 24,
+      "upper_diagnostic": 0.4805631802851645,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(239, 125), truncation=Fraction(347, 1000), window=Fraction(42, 1), radii=(Fraction(213, 1000), Fraction(429, 1000)))",
+      "blocks": 24,
+      "upper_diagnostic": 0.478976073798022,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1927, 1000), truncation=Fraction(173, 500), window=Fraction(34, 1), radii=(Fraction(43, 200), Fraction(433, 1000)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.4788390075523493,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1923, 1000), truncation=Fraction(173, 500), window=Fraction(36, 1), radii=(Fraction(107, 500), Fraction(54, 125)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.4786106773087972,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(48, 25), truncation=Fraction(173, 500), window=Fraction(38, 1), radii=(Fraction(107, 500), Fraction(54, 125)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.4786074825623612,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(961, 500), truncation=Fraction(173, 500), window=Fraction(37, 1), radii=(Fraction(107, 500), Fraction(54, 125)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.47863373204146453,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1917, 1000), truncation=Fraction(173, 500), window=Fraction(39, 1), radii=(Fraction(213, 1000), Fraction(431, 1000)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.4785764903467108,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(383, 200), truncation=Fraction(347, 1000), window=Fraction(40, 1), radii=(Fraction(213, 1000), Fraction(43, 100)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.4790289055109016,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(959, 500), truncation=Fraction(173, 500), window=Fraction(39, 1), radii=(Fraction(107, 500), Fraction(431, 1000)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.4786221923205751,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1917, 1000), truncation=Fraction(173, 500), window=Fraction(40, 1), radii=(Fraction(213, 1000), Fraction(431, 1000)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.47865593062165407,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(959, 500), truncation=Fraction(173, 500), window=Fraction(39, 1), radii=(Fraction(213, 1000), Fraction(431, 1000)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.4786209873558075,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1917, 1000), truncation=Fraction(173, 500), window=Fraction(184, 1), radii=(Fraction(213, 1000), Fraction(431, 1000)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.48398334333003423,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1917, 1000), truncation=Fraction(173, 500), window=Fraction(286, 1), radii=(Fraction(213, 1000), Fraction(431, 1000)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.48783439024381187,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1917, 1000), truncation=Fraction(173, 500), window=Fraction(122, 1), radii=(Fraction(213, 1000), Fraction(431, 1000)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.4815195367132723,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1917, 1000), truncation=Fraction(173, 500), window=Fraction(83, 1), radii=(Fraction(213, 1000), Fraction(431, 1000)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.48010702522856064,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1917, 1000), truncation=Fraction(173, 500), window=Fraction(59, 1), radii=(Fraction(213, 1000), Fraction(431, 1000)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.479216126205886,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1917, 1000), truncation=Fraction(173, 500), window=Fraction(44, 1), radii=(Fraction(213, 1000), Fraction(431, 1000)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.47872144797215177,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1917, 1000), truncation=Fraction(173, 500), window=Fraction(35, 1), radii=(Fraction(213, 1000), Fraction(431, 1000)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.4783454492418557,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1917, 1000), truncation=Fraction(173, 500), window=Fraction(29, 1), radii=(Fraction(213, 1000), Fraction(431, 1000)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.4781535505847328,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1917, 1000), truncation=Fraction(173, 500), window=Fraction(26, 1), radii=(Fraction(213, 1000), Fraction(431, 1000)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.4781268395450819,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1917, 1000), truncation=Fraction(173, 500), window=Fraction(26, 1), radii=(Fraction(22, 125), Fraction(431, 1000)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.47875418567249584,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1917, 1000), truncation=Fraction(173, 500), window=Fraction(26, 1), radii=(Fraction(28, 125), Fraction(431, 1000)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.47818499521472135,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1917, 1000), truncation=Fraction(173, 500), window=Fraction(26, 1), radii=(Fraction(253, 1000), Fraction(431, 1000)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.4787639297938883,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1917, 1000), truncation=Fraction(173, 500), window=Fraction(26, 1), radii=(Fraction(107, 500), Fraction(431, 1000)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.47812806858085066,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(817, 500), truncation=Fraction(13, 40), window=Fraction(129, 1), radii=(Fraction(1, 5), Fraction(387, 1000)))",
+      "blocks": 31,
+      "upper_diagnostic": 0.4972915914750924,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1449, 1000), truncation=Fraction(311, 1000), window=Fraction(196, 1), radii=(Fraction(191, 1000), Fraction(179, 500)))",
+      "blocks": 41,
+      "upper_diagnostic": 0.5552722721797684,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(437, 250), truncation=Fraction(167, 500), window=Fraction(87, 1), radii=(Fraction(41, 200), Fraction(81, 200)))",
+      "blocks": 27,
+      "upper_diagnostic": 0.4824970294804379,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(449, 250), truncation=Fraction(337, 1000), window=Fraction(70, 1), radii=(Fraction(207, 1000), Fraction(103, 250)))",
+      "blocks": 26,
+      "upper_diagnostic": 0.47867287562874833,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(231, 125), truncation=Fraction(341, 1000), window=Fraction(51, 1), radii=(Fraction(209, 1000), Fraction(21, 50)))",
+      "blocks": 25,
+      "upper_diagnostic": 0.4771234723585661,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(463, 250), truncation=Fraction(341, 1000), window=Fraction(49, 1), radii=(Fraction(21, 100), Fraction(421, 1000)))",
+      "blocks": 25,
+      "upper_diagnostic": 0.47682366020843775,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1883, 1000), truncation=Fraction(43, 125), window=Fraction(38, 1), radii=(Fraction(211, 1000), Fraction(213, 500)))",
+      "blocks": 24,
+      "upper_diagnostic": 0.47739294228285967,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(233, 125), truncation=Fraction(171, 500), window=Fraction(45, 1), radii=(Fraction(21, 100), Fraction(423, 1000)))",
+      "blocks": 24,
+      "upper_diagnostic": 0.47691561173507235,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(929, 500), truncation=Fraction(171, 500), window=Fraction(47, 1), radii=(Fraction(21, 100), Fraction(211, 500)))",
+      "blocks": 25,
+      "upper_diagnostic": 0.4771468751770964,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(927, 500), truncation=Fraction(171, 500), window=Fraction(49, 1), radii=(Fraction(21, 100), Fraction(421, 1000)))",
+      "blocks": 25,
+      "upper_diagnostic": 0.4774428629439665,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1851, 1000), truncation=Fraction(341, 1000), window=Fraction(50, 1), radii=(Fraction(21, 100), Fraction(421, 1000)))",
+      "blocks": 25,
+      "upper_diagnostic": 0.47692473305687616,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1853, 1000), truncation=Fraction(341, 1000), window=Fraction(49, 1), radii=(Fraction(21, 100), Fraction(421, 1000)))",
+      "blocks": 25,
+      "upper_diagnostic": 0.47673922415011477,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1853, 1000), truncation=Fraction(171, 500), window=Fraction(49, 1), radii=(Fraction(21, 100), Fraction(421, 1000)))",
+      "blocks": 25,
+      "upper_diagnostic": 0.47751499311743106,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(367, 200), truncation=Fraction(167, 500), window=Fraction(33, 1), radii=(Fraction(213, 1000), Fraction(431, 1000)))",
+      "blocks": 25,
+      "upper_diagnostic": 0.47240102927164496,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(51, 25), truncation=Fraction(207, 500), window=Fraction(216, 1), radii=(Fraction(179, 1000), Fraction(79, 250)))",
+      "blocks": 21,
+      "upper_diagnostic": 0.5462920795534538,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(489, 250), truncation=Fraction(191, 500), window=Fraction(141, 1), radii=(Fraction(193, 1000), Fraction(363, 1000)))",
+      "blocks": 23,
+      "upper_diagnostic": 0.5124584860943271,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(238, 125), truncation=Fraction(361, 1000), window=Fraction(95, 1), radii=(Fraction(201, 1000), Fraction(49, 125)))",
+      "blocks": 24,
+      "upper_diagnostic": 0.4925210499646346,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(234, 125), truncation=Fraction(349, 1000), window=Fraction(66, 1), radii=(Fraction(103, 500), Fraction(41, 100)))",
+      "blocks": 24,
+      "upper_diagnostic": 0.4826745739858599,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(46, 25), truncation=Fraction(42, 125), window=Fraction(38, 1), radii=(Fraction(53, 250), Fraction(107, 250)))",
+      "blocks": 25,
+      "upper_diagnostic": 0.47357756872988593,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(229, 125), truncation=Fraction(167, 500), window=Fraction(31, 1), radii=(Fraction(213, 1000), Fraction(54, 125)))",
+      "blocks": 25,
+      "upper_diagnostic": 0.47234502758522917,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(457, 250), truncation=Fraction(83, 250), window=Fraction(27, 1), radii=(Fraction(107, 500), Fraction(87, 200)))",
+      "blocks": 25,
+      "upper_diagnostic": 0.47130177094578596,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(73, 40), truncation=Fraction(331, 1000), window=Fraction(24, 1), radii=(Fraction(107, 500), Fraction(437, 1000)))",
+      "blocks": 25,
+      "upper_diagnostic": 0.4708216521881417,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1823, 1000), truncation=Fraction(33, 100), window=Fraction(23, 1), radii=(Fraction(43, 200), Fraction(219, 500)))",
+      "blocks": 25,
+      "upper_diagnostic": 0.47033507082893566,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(911, 500), truncation=Fraction(329, 1000), window=Fraction(22, 1), radii=(Fraction(43, 200), Fraction(219, 500)))",
+      "blocks": 25,
+      "upper_diagnostic": 0.4698405710687123,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1821, 1000), truncation=Fraction(329, 1000), window=Fraction(21, 1), radii=(Fraction(43, 200), Fraction(439, 1000)))",
+      "blocks": 25,
+      "upper_diagnostic": 0.4698251943758521,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1821, 1000), truncation=Fraction(329, 1000), window=Fraction(21, 1), radii=(Fraction(43, 200), Fraction(219, 500)))",
+      "blocks": 25,
+      "upper_diagnostic": 0.46981822598951506,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1821, 1000), truncation=Fraction(329, 1000), window=Fraction(21, 1), radii=(Fraction(43, 200), Fraction(67, 200)))",
+      "blocks": 25,
+      "upper_diagnostic": 0.4718600167419945,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1821, 1000), truncation=Fraction(329, 1000), window=Fraction(21, 1), radii=(Fraction(43, 200), Fraction(79, 200)))",
+      "blocks": 25,
+      "upper_diagnostic": 0.4699494790120655,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1821, 1000), truncation=Fraction(329, 1000), window=Fraction(21, 1), radii=(Fraction(43, 200), Fraction(431, 1000)))",
+      "blocks": 25,
+      "upper_diagnostic": 0.4697815116960722,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1821, 1000), truncation=Fraction(329, 1000), window=Fraction(21, 1), radii=(Fraction(43, 200), Fraction(421, 1000)))",
+      "blocks": 25,
+      "upper_diagnostic": 0.469766632468341,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1821, 1000), truncation=Fraction(329, 1000), window=Fraction(21, 1), radii=(Fraction(43, 200), Fraction(423, 1000)))",
+      "blocks": 25,
+      "upper_diagnostic": 0.4697659936520156,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1821, 1000), truncation=Fraction(329, 1000), window=Fraction(21, 1), radii=(Fraction(43, 200), Fraction(211, 500)))",
+      "blocks": 25,
+      "upper_diagnostic": 0.4697660840166467,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1821, 1000), truncation=Fraction(329, 1000), window=Fraction(21, 1), radii=(Fraction(43, 200), Fraction(213, 500)))",
+      "blocks": 25,
+      "upper_diagnostic": 0.46976844985405175,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1821, 1000), truncation=Fraction(329, 1000), window=Fraction(21, 1), radii=(Fraction(43, 200), Fraction(53, 125)))",
+      "blocks": 25,
+      "upper_diagnostic": 0.46976635923638976,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1567, 1000), truncation=Fraction(31, 100), window=Fraction(114, 1), radii=(Fraction(203, 1000), Fraction(383, 1000)))",
+      "blocks": 34,
+      "upper_diagnostic": 0.494834886438348,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(176, 125), truncation=Fraction(149, 500), window=Fraction(172, 1), radii=(Fraction(49, 250), Fraction(359, 1000)))",
+      "blocks": 44,
+      "upper_diagnostic": 0.5543033304742828,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(833, 500), truncation=Fraction(317, 1000), window=Fraction(78, 1), radii=(Fraction(26, 125), Fraction(399, 1000)))",
+      "blocks": 30,
+      "upper_diagnostic": 0.47697236882318667,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(869, 500), truncation=Fraction(323, 1000), window=Fraction(52, 1), radii=(Fraction(211, 1000), Fraction(41, 100)))",
+      "blocks": 27,
+      "upper_diagnostic": 0.47129764502168264,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1767, 1000), truncation=Fraction(13, 40), window=Fraction(41, 1), radii=(Fraction(53, 250), Fraction(207, 500)))",
+      "blocks": 27,
+      "upper_diagnostic": 0.4699319735929916,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1789, 1000), truncation=Fraction(327, 1000), window=Fraction(33, 1), radii=(Fraction(213, 1000), Fraction(209, 500)))",
+      "blocks": 26,
+      "upper_diagnostic": 0.4697261417585087,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(223, 125), truncation=Fraction(163, 500), window=Fraction(35, 1), radii=(Fraction(213, 1000), Fraction(417, 1000)))",
+      "blocks": 26,
+      "upper_diagnostic": 0.4694143227637513,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1779, 1000), truncation=Fraction(163, 500), window=Fraction(37, 1), radii=(Fraction(213, 1000), Fraction(52, 125)))",
+      "blocks": 26,
+      "upper_diagnostic": 0.46968928456817133,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(223, 125), truncation=Fraction(163, 500), window=Fraction(184, 1), radii=(Fraction(213, 1000), Fraction(417, 1000)))",
+      "blocks": 26,
+      "upper_diagnostic": 0.4748452421756257,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(223, 125), truncation=Fraction(163, 500), window=Fraction(286, 1), radii=(Fraction(213, 1000), Fraction(417, 1000)))",
+      "blocks": 26,
+      "upper_diagnostic": 0.478585957420031,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(223, 125), truncation=Fraction(163, 500), window=Fraction(122, 1), radii=(Fraction(213, 1000), Fraction(417, 1000)))",
+      "blocks": 26,
+      "upper_diagnostic": 0.47255040984592483,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(223, 125), truncation=Fraction(163, 500), window=Fraction(83, 1), radii=(Fraction(213, 1000), Fraction(417, 1000)))",
+      "blocks": 26,
+      "upper_diagnostic": 0.4710765868516733,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(223, 125), truncation=Fraction(163, 500), window=Fraction(59, 1), radii=(Fraction(213, 1000), Fraction(417, 1000)))",
+      "blocks": 26,
+      "upper_diagnostic": 0.4702391475520354,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(223, 125), truncation=Fraction(163, 500), window=Fraction(44, 1), radii=(Fraction(213, 1000), Fraction(417, 1000)))",
+      "blocks": 26,
+      "upper_diagnostic": 0.4696775092127717,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(223, 125), truncation=Fraction(163, 500), window=Fraction(29, 1), radii=(Fraction(213, 1000), Fraction(417, 1000)))",
+      "blocks": 26,
+      "upper_diagnostic": 0.46923966505056414,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(223, 125), truncation=Fraction(163, 500), window=Fraction(26, 1), radii=(Fraction(213, 1000), Fraction(417, 1000)))",
+      "blocks": 26,
+      "upper_diagnostic": 0.4691025647040803,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(223, 125), truncation=Fraction(163, 500), window=Fraction(23, 1), radii=(Fraction(213, 1000), Fraction(417, 1000)))",
+      "blocks": 26,
+      "upper_diagnostic": 0.4690843609751627,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(223, 125), truncation=Fraction(163, 500), window=Fraction(24, 1), radii=(Fraction(213, 1000), Fraction(417, 1000)))",
+      "blocks": 26,
+      "upper_diagnostic": 0.46910707292926535,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(223, 125), truncation=Fraction(163, 500), window=Fraction(22, 1), radii=(Fraction(213, 1000), Fraction(417, 1000)))",
+      "blocks": 26,
+      "upper_diagnostic": 0.4690370329532515,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(223, 125), truncation=Fraction(163, 500), window=Fraction(21, 1), radii=(Fraction(213, 1000), Fraction(417, 1000)))",
+      "blocks": 26,
+      "upper_diagnostic": 0.46897699321487535,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(143, 500), window=Fraction(57, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.4602031008959031,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(39, 25), truncation=Fraction(143, 500), window=Fraction(57, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 34,
+      "upper_diagnostic": 0.4645867601094675,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(169, 100), truncation=Fraction(143, 500), window=Fraction(57, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 29,
+      "upper_diagnostic": 0.48528015717188655,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(37, 25), truncation=Fraction(143, 500), window=Fraction(57, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 39,
+      "upper_diagnostic": 0.4875832736890077,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1587, 1000), truncation=Fraction(143, 500), window=Fraction(57, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 33,
+      "upper_diagnostic": 0.46110207482675536,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1597, 1000), truncation=Fraction(143, 500), window=Fraction(57, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.4604513171941622,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(204, 125), truncation=Fraction(143, 500), window=Fraction(57, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 31,
+      "upper_diagnostic": 0.4617922762255306,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1603, 1000), truncation=Fraction(143, 500), window=Fraction(57, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.46028033377326344,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(321, 200), truncation=Fraction(143, 500), window=Fraction(57, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.46025851913876203,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(803, 500), truncation=Fraction(143, 500), window=Fraction(57, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.4602365174173307,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(289, 1000), window=Fraction(57, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.4607727756433461,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(79, 250), window=Fraction(57, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.48887009717324237,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(34, 125), window=Fraction(57, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.48331773119059707,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(293, 1000), window=Fraction(57, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.46280259110429117,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(36, 125), window=Fraction(57, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.46047204523159274,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(141, 500), window=Fraction(57, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.4612975958938638,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(143, 500), window=Fraction(54, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.4601789464846884,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(143, 500), window=Fraction(76, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.4609785897086093,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(143, 500), window=Fraction(41, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.459754509405771,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(143, 500), window=Fraction(33, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.4594743685659685,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(143, 500), window=Fraction(28, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.4592359318198825,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(143, 500), window=Fraction(25, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.45922570346546204,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(143, 500), window=Fraction(26, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.45929543659894667,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(143, 500), window=Fraction(23, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.45912279322028915,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(143, 500), window=Fraction(22, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.4590641036364429,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(143, 500), window=Fraction(21, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.45908192527355063,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(143, 500), window=Fraction(22, 1), radii=(Fraction(207, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.45913026201015766,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(143, 500), window=Fraction(22, 1), radii=(Fraction(223, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.4590698397918069,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(143, 500), window=Fraction(22, 1), radii=(Fraction(233, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.45914042110696973,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(143, 500), window=Fraction(22, 1), radii=(Fraction(11, 50), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.4590642870882701,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(143, 500), window=Fraction(22, 1), radii=(Fraction(43, 200), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.45907191148170035,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(143, 500), window=Fraction(22, 1), radii=(Fraction(109, 500), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.4590647664839729,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(143, 500), window=Fraction(22, 1), radii=(Fraction(219, 1000), Fraction(53, 125)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.4590834248533217,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(143, 500), window=Fraction(22, 1), radii=(Fraction(219, 1000), Fraction(223, 500)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.45910245067127453,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(143, 500), window=Fraction(22, 1), radii=(Fraction(219, 1000), Fraction(411, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.45918137399836,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(143, 500), window=Fraction(22, 1), radii=(Fraction(219, 1000), Fraction(219, 500)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.45906977806408306,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(143, 500), window=Fraction(22, 1), radii=(Fraction(219, 1000), Fraction(87, 200)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.4590649904964601,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(143, 500), window=Fraction(22, 1), radii=(Fraction(219, 1000), Fraction(217, 500)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.4590643152059151,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(803, 500), truncation=Fraction(143, 500), window=Fraction(20, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.4590984124438724,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(39, 25), truncation=Fraction(143, 500), window=Fraction(22, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 34,
+      "upper_diagnostic": 0.4634151764842099,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(169, 100), truncation=Fraction(143, 500), window=Fraction(22, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 29,
+      "upper_diagnostic": 0.48403462935264047,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(37, 25), truncation=Fraction(143, 500), window=Fraction(22, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 39,
+      "upper_diagnostic": 0.4863959385040668,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(397, 250), truncation=Fraction(143, 500), window=Fraction(22, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 33,
+      "upper_diagnostic": 0.45985844352129085,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1597, 1000), truncation=Fraction(143, 500), window=Fraction(22, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.45932204626075795,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(161, 100), truncation=Fraction(143, 500), window=Fraction(22, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.4591255478806431,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(321, 200), truncation=Fraction(143, 500), window=Fraction(22, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.4591240267811574,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(289, 1000), window=Fraction(22, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.45968030095892704,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(79, 250), window=Fraction(22, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.4877680387624208,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(34, 125), window=Fraction(22, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.48201671766003495,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(293, 1000), window=Fraction(22, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.4616933145457029,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(36, 125), window=Fraction(22, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.4593335355605693,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(1607, 1000), truncation=Fraction(141, 500), window=Fraction(22, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.46015256029011453,
+      "failure": ""
+    },
+    {
+      "parameters": "Parameters(ratio=Fraction(201, 125), truncation=Fraction(143, 500), window=Fraction(76, 1), radii=(Fraction(219, 1000), Fraction(433, 1000)))",
+      "blocks": 32,
+      "upper_diagnostic": 0.4609665214527026,
+      "failure": ""
+    }
+  ]
+}

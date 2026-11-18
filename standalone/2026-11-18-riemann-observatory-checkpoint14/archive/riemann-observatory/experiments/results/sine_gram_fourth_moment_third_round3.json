@@ -1,0 +1,651 @@
+{
+  "kind": "exact_DPP_coincidence_and_determinant_combinatorics_with_polynomial_integrals",
+  "normalization": "(1/R) expectation Tr G_R^j, not expectation of normalization by random N_R",
+  "partition_counts": {
+    "3": {
+      "single": 1,
+      "two_k2": 3,
+      "triangle": 1
+    },
+    "4": {
+      "single": 1,
+      "two_k2": 6,
+      "triangle": 4,
+      "two_k4": 1,
+      "double_spoke": 2,
+      "four_cycle": 1
+    }
+  },
+  "kernel_integrals": {
+    "I2": "1",
+    "I4": "2/3",
+    "I6": "11/20",
+    "triangle_squared_J": "1/2",
+    "triangle_31_L": "9/20",
+    "four_cycle_squared_U": "2/5",
+    "K4_doubled_matching_V": "11/30"
+  },
+  "fourth_determinant_classes": {
+    "identity": {
+      "count": 1,
+      "signed_count": 1,
+      "integral": "1"
+    },
+    "single_transposition": {
+      "count": 6,
+      "signed_count": -6,
+      "integral": "2/3"
+    },
+    "three_cycle": {
+      "count": 8,
+      "signed_count": 8,
+      "integral": "1/2"
+    },
+    "double_adjacent": {
+      "count": 2,
+      "signed_count": 2,
+      "integral": "9/20"
+    },
+    "four_cycle_same": {
+      "count": 2,
+      "signed_count": -2,
+      "integral": "2/5"
+    },
+    "K4_doubled_matching": {
+      "count": 5,
+      "signed_count": -3,
+      "integral": "11/30"
+    }
+  },
+  "third_all_distinct_cycle": "0",
+  "fourth_three_vertex_double_spoke": "1/15",
+  "fourth_all_distinct_cycle": "0",
+  "third_moment_limit": "2",
+  "fourth_moment_limit": "13/4",
+  "partition_records": [
+    {
+      "m": 3,
+      "canonical_partition_word": [
+        0,
+        0,
+        0
+      ],
+      "tag": "single"
+    },
+    {
+      "m": 3,
+      "canonical_partition_word": [
+        0,
+        0,
+        1
+      ],
+      "tag": "two_k2"
+    },
+    {
+      "m": 3,
+      "canonical_partition_word": [
+        0,
+        1,
+        0
+      ],
+      "tag": "two_k2"
+    },
+    {
+      "m": 3,
+      "canonical_partition_word": [
+        0,
+        1,
+        1
+      ],
+      "tag": "two_k2"
+    },
+    {
+      "m": 3,
+      "canonical_partition_word": [
+        0,
+        1,
+        2
+      ],
+      "tag": "triangle"
+    },
+    {
+      "m": 4,
+      "canonical_partition_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "tag": "single"
+    },
+    {
+      "m": 4,
+      "canonical_partition_word": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "tag": "two_k2"
+    },
+    {
+      "m": 4,
+      "canonical_partition_word": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "tag": "two_k2"
+    },
+    {
+      "m": 4,
+      "canonical_partition_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "tag": "two_k2"
+    },
+    {
+      "m": 4,
+      "canonical_partition_word": [
+        0,
+        0,
+        1,
+        2
+      ],
+      "tag": "triangle"
+    },
+    {
+      "m": 4,
+      "canonical_partition_word": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "tag": "two_k2"
+    },
+    {
+      "m": 4,
+      "canonical_partition_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "tag": "two_k4"
+    },
+    {
+      "m": 4,
+      "canonical_partition_word": [
+        0,
+        1,
+        0,
+        2
+      ],
+      "tag": "double_spoke"
+    },
+    {
+      "m": 4,
+      "canonical_partition_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "tag": "two_k2"
+    },
+    {
+      "m": 4,
+      "canonical_partition_word": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "tag": "two_k2"
+    },
+    {
+      "m": 4,
+      "canonical_partition_word": [
+        0,
+        1,
+        1,
+        2
+      ],
+      "tag": "triangle"
+    },
+    {
+      "m": 4,
+      "canonical_partition_word": [
+        0,
+        1,
+        2,
+        0
+      ],
+      "tag": "triangle"
+    },
+    {
+      "m": 4,
+      "canonical_partition_word": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "tag": "double_spoke"
+    },
+    {
+      "m": 4,
+      "canonical_partition_word": [
+        0,
+        1,
+        2,
+        2
+      ],
+      "tag": "triangle"
+    },
+    {
+      "m": 4,
+      "canonical_partition_word": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "tag": "four_cycle"
+    }
+  ],
+  "all24_fourth_permutations": [
+    {
+      "permutation": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "cycle_type": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "sign": 1,
+      "graph_integral_class": "identity",
+      "integral": "1",
+      "signed_contribution": "1"
+    },
+    {
+      "permutation": [
+        1,
+        2,
+        4,
+        3
+      ],
+      "cycle_type": [
+        1,
+        1,
+        2
+      ],
+      "sign": -1,
+      "graph_integral_class": "single_transposition",
+      "integral": "2/3",
+      "signed_contribution": "-2/3"
+    },
+    {
+      "permutation": [
+        1,
+        3,
+        2,
+        4
+      ],
+      "cycle_type": [
+        1,
+        1,
+        2
+      ],
+      "sign": -1,
+      "graph_integral_class": "single_transposition",
+      "integral": "2/3",
+      "signed_contribution": "-2/3"
+    },
+    {
+      "permutation": [
+        1,
+        3,
+        4,
+        2
+      ],
+      "cycle_type": [
+        1,
+        3
+      ],
+      "sign": 1,
+      "graph_integral_class": "three_cycle",
+      "integral": "1/2",
+      "signed_contribution": "1/2"
+    },
+    {
+      "permutation": [
+        1,
+        4,
+        2,
+        3
+      ],
+      "cycle_type": [
+        1,
+        3
+      ],
+      "sign": 1,
+      "graph_integral_class": "three_cycle",
+      "integral": "1/2",
+      "signed_contribution": "1/2"
+    },
+    {
+      "permutation": [
+        1,
+        4,
+        3,
+        2
+      ],
+      "cycle_type": [
+        1,
+        1,
+        2
+      ],
+      "sign": -1,
+      "graph_integral_class": "single_transposition",
+      "integral": "2/3",
+      "signed_contribution": "-2/3"
+    },
+    {
+      "permutation": [
+        2,
+        1,
+        3,
+        4
+      ],
+      "cycle_type": [
+        1,
+        1,
+        2
+      ],
+      "sign": -1,
+      "graph_integral_class": "single_transposition",
+      "integral": "2/3",
+      "signed_contribution": "-2/3"
+    },
+    {
+      "permutation": [
+        2,
+        1,
+        4,
+        3
+      ],
+      "cycle_type": [
+        2,
+        2
+      ],
+      "sign": 1,
+      "graph_integral_class": "double_adjacent",
+      "integral": "9/20",
+      "signed_contribution": "9/20"
+    },
+    {
+      "permutation": [
+        2,
+        3,
+        1,
+        4
+      ],
+      "cycle_type": [
+        1,
+        3
+      ],
+      "sign": 1,
+      "graph_integral_class": "three_cycle",
+      "integral": "1/2",
+      "signed_contribution": "1/2"
+    },
+    {
+      "permutation": [
+        2,
+        3,
+        4,
+        1
+      ],
+      "cycle_type": [
+        4
+      ],
+      "sign": -1,
+      "graph_integral_class": "four_cycle_same",
+      "integral": "2/5",
+      "signed_contribution": "-2/5"
+    },
+    {
+      "permutation": [
+        2,
+        4,
+        1,
+        3
+      ],
+      "cycle_type": [
+        4
+      ],
+      "sign": -1,
+      "graph_integral_class": "K4_doubled_matching",
+      "integral": "11/30",
+      "signed_contribution": "-11/30"
+    },
+    {
+      "permutation": [
+        2,
+        4,
+        3,
+        1
+      ],
+      "cycle_type": [
+        1,
+        3
+      ],
+      "sign": 1,
+      "graph_integral_class": "three_cycle",
+      "integral": "1/2",
+      "signed_contribution": "1/2"
+    },
+    {
+      "permutation": [
+        3,
+        1,
+        2,
+        4
+      ],
+      "cycle_type": [
+        1,
+        3
+      ],
+      "sign": 1,
+      "graph_integral_class": "three_cycle",
+      "integral": "1/2",
+      "signed_contribution": "1/2"
+    },
+    {
+      "permutation": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "cycle_type": [
+        4
+      ],
+      "sign": -1,
+      "graph_integral_class": "K4_doubled_matching",
+      "integral": "11/30",
+      "signed_contribution": "-11/30"
+    },
+    {
+      "permutation": [
+        3,
+        2,
+        1,
+        4
+      ],
+      "cycle_type": [
+        1,
+        1,
+        2
+      ],
+      "sign": -1,
+      "graph_integral_class": "single_transposition",
+      "integral": "2/3",
+      "signed_contribution": "-2/3"
+    },
+    {
+      "permutation": [
+        3,
+        2,
+        4,
+        1
+      ],
+      "cycle_type": [
+        1,
+        3
+      ],
+      "sign": 1,
+      "graph_integral_class": "three_cycle",
+      "integral": "1/2",
+      "signed_contribution": "1/2"
+    },
+    {
+      "permutation": [
+        3,
+        4,
+        1,
+        2
+      ],
+      "cycle_type": [
+        2,
+        2
+      ],
+      "sign": 1,
+      "graph_integral_class": "K4_doubled_matching",
+      "integral": "11/30",
+      "signed_contribution": "11/30"
+    },
+    {
+      "permutation": [
+        3,
+        4,
+        2,
+        1
+      ],
+      "cycle_type": [
+        4
+      ],
+      "sign": -1,
+      "graph_integral_class": "K4_doubled_matching",
+      "integral": "11/30",
+      "signed_contribution": "-11/30"
+    },
+    {
+      "permutation": [
+        4,
+        1,
+        2,
+        3
+      ],
+      "cycle_type": [
+        4
+      ],
+      "sign": -1,
+      "graph_integral_class": "four_cycle_same",
+      "integral": "2/5",
+      "signed_contribution": "-2/5"
+    },
+    {
+      "permutation": [
+        4,
+        1,
+        3,
+        2
+      ],
+      "cycle_type": [
+        1,
+        3
+      ],
+      "sign": 1,
+      "graph_integral_class": "three_cycle",
+      "integral": "1/2",
+      "signed_contribution": "1/2"
+    },
+    {
+      "permutation": [
+        4,
+        2,
+        1,
+        3
+      ],
+      "cycle_type": [
+        1,
+        3
+      ],
+      "sign": 1,
+      "graph_integral_class": "three_cycle",
+      "integral": "1/2",
+      "signed_contribution": "1/2"
+    },
+    {
+      "permutation": [
+        4,
+        2,
+        3,
+        1
+      ],
+      "cycle_type": [
+        1,
+        1,
+        2
+      ],
+      "sign": -1,
+      "graph_integral_class": "single_transposition",
+      "integral": "2/3",
+      "signed_contribution": "-2/3"
+    },
+    {
+      "permutation": [
+        4,
+        3,
+        1,
+        2
+      ],
+      "cycle_type": [
+        4
+      ],
+      "sign": -1,
+      "graph_integral_class": "K4_doubled_matching",
+      "integral": "11/30",
+      "signed_contribution": "-11/30"
+    },
+    {
+      "permutation": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "cycle_type": [
+        2,
+        2
+      ],
+      "sign": 1,
+      "graph_integral_class": "double_adjacent",
+      "integral": "9/20",
+      "signed_contribution": "9/20"
+    }
+  ],
+  "scope": "Exact finite accounting/integral algebra only; Fourier reductions and dominated limits are analytically justified in the independent audit. Not prime-side moment matching."
+}

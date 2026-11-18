@@ -1,0 +1,197 @@
+{
+  "validation": "PASS",
+  "archive_sha256": "844142af1968c605bb3ea7f7ff32e56e4c4519f1db84ffcdf57dd1eb2b5ee77a",
+  "archive_bytes": 20733010,
+  "stage_and_manifest_payloads": 2719,
+  "zip_members": 2720,
+  "renders": {
+    "pdf": {
+      "bytes": 420757,
+      "sha256": "46277a3a10e7b45e07d109db93e440133f10988001feb50f046176141504c282"
+    },
+    "html": {
+      "bytes": 488080,
+      "sha256": "fb64bb210376881403526c23383fc71d604ea74ee825d6e1335c0ca3bdcdddd2"
+    }
+  },
+  "raw_source_pins": [
+    {
+      "id": "PAPER-MN2026-VERTICAL",
+      "version": "arXiv 2610.03568v1",
+      "sha256": "ba5c1ab46edf1dbef9741dd1e999ec492c0be59bc65d82cc7ac7dfab8520c076"
+    },
+    {
+      "id": "PAPER-SM63-POS-040",
+      "version": "v1",
+      "sha256": "756288c39bfd743f08f24b1e5074bb8a4adbe8a959d42edd763af07678801830"
+    },
+    {
+      "id": "PAPER-R001",
+      "version": "v2, 2001-05-06",
+      "sha256": "49cd7ad205f153197c327fa2035dce5bd676738e06fa696ac5e15cca1e49e43c"
+    },
+    {
+      "id": "PAPER-GEO65-001",
+      "version": "arXiv:2204.02714v2, author manuscript",
+      "sha256": "abef52f91f14b13f53602c5af2add8e657caffbcee984b288d3eaf8adca50e37"
+    },
+    {
+      "id": "PAPER-E008",
+      "version": "1997 journal-typeset manifestation, pp. 325–333, recovered from Paperzz mirror",
+      "sha256": "8f5719751f869d71907c9da75270cb8c012b54f1453f54179461dbc331d255a1"
+    },
+    {
+      "id": "PAPER-E014",
+      "version": "2003 Lincei journal scan, pp. 5–11, with two BDIM front sheets",
+      "sha256": "9bfb3943ec8d7690d452b8ac7d50fb10614b4e814738dc091390e6ab4994f0b8"
+    },
+    {
+      "id": "PAPER-AN79-HR-ZETA",
+      "version": "2002 journal typeset version, C. R. Math. 335(8), 667–670",
+      "sha256": "b4572e5bdbf3cf7e891a4128aeb3bb56d151f2b16d23f9e63a94b1a2d2c09139"
+    }
+  ],
+  "index_table_counts": {
+    "papers": 1008,
+    "claims": 461,
+    "connections": 88,
+    "findings": 52,
+    "graph_nodes": 2642,
+    "graph_edges": 2542,
+    "paper_claims": 208,
+    "paper_findings": 84
+  },
+  "original_pdfs": [
+    "experiments/results/augmented_moment63_escape.pdf",
+    "experiments/results/prime_band_round11.pdf",
+    "experiments/results/probability_chains64.pdf",
+    "experiments/results/witness62_prefix_transition.pdf",
+    "experiments/results/witness62_weighted_criterion_phase.pdf",
+    "final_synthesis/synthesis.pdf"
+  ],
+  "lean_receipt_verified": true,
+  "checkpoint10_sha256": "25d0735dd17499cb3b33b109209f91fb26a72c95cbe907ea8d46e033e2975a7b",
+  "round14_source_pins": [
+    {
+      "id": "PAPER-R112-BAKER2012",
+      "version": "2012 Acta Arithmetica publisher PDF, vol. 156 no. 4, pp. 351–372",
+      "source_sha256": "2b1b0690e08489b077bb632fef2d6ea777ebe6684dc02efe5d6af9e67127cbda",
+      "source_locator": "§1, p. 351, definition of S_q(a;x); p. 352, q∼Q notation and Theorem 2"
+    },
+    {
+      "id": "PAPER-R112-BHM2007",
+      "version": "2007 journal typeset PDF, Numdam ASENS_2007_4_40_5_697_0",
+      "source_sha256": "7a07387f1f9da1dcd20d9dda329d0ee02d6d8df5aa3af885227545cbc4149fb5",
+      "source_locator": "§2.3, pp. 708–709, equations (2.25)–(2.27)"
+    },
+    {
+      "id": "PAPER-WEIGHTED107-GHOSH-THESIS1981",
+      "version": "University of Nottingham repository PDF of 1981 doctoral thesis",
+      "source_sha256": "52c201db4b3f5f19c4a1efc38556aef4c97a700e52d2ab741f7fa17a267f2e55",
+      "source_locator": "Chapter 1, §1.1, Theorem 1 hypotheses and Theorem 2, printed p. 4 / PDF p. 12"
+    },
+    {
+      "id": "PAPER-WEIGHTED107-REN2005",
+      "version": "2005 journal version, Science in China Press",
+      "source_sha256": "c9b4f380853e8dcc7efe136dac3b12f2336000cbaab5050c6ec9891c59c2c2e6",
+      "source_locator": "Journal pp. 785–786 / PDF pp. 1–2, Theorem 1.1, Corollary 1.2, and (1.4); corresponding author preprint pp. 1–2"
+    },
+    {
+      "id": "PAPER-WEIGHTED107-KOROLEV2018",
+      "version": "English journal translation, 2018, DOI 10.1070/SM8939",
+      "source_sha256": null,
+      "source_locator": "§1, (1.1) and theorem, printed pp. 652–653 / PDF pp. 1–2"
+    },
+    {
+      "id": "PAPER-R114-FOUVRY-SHPARLINSKI2011",
+      "version": "2011 Acta Arithmetica publisher PDF, vol. 150 no. 3, pp. 285–314",
+      "source_sha256": "dff49b00d5e506a73ecfeab2fd4ab3ccfdc8ed6f5774c939538ebfedae707cff",
+      "source_locator": "§3.1, printed p. 296/PDF p. 12, inverse-prime sum definition; §3.5, printed p. 301/PDF p. 17, Theorem 3.3"
+    }
+  ],
+  "plot_pins": {
+    "png": "105a4acbe1457d6b2819e358b3ac3291074e646bf11d1f6c770caa60ebba2bfb",
+    "svg": "200aaf5c8ec3071e9a8fb23dd4acbd499c77243adf9c64b255d60b6ea19e778b"
+  },
+  "validator_metrics": {
+    "metadata_candidates": 5203,
+    "metadata_candidates_rejected": 56,
+    "metadata_candidates_pending": 5147,
+    "curated_candidate_decisions": 89,
+    "curated_priority_candidates": 80,
+    "curated_provider_matches": 85,
+    "additional_curated_records_unreconciled": 4,
+    "catalogued_works": 1008,
+    "deferred_supporting_works": 1,
+    "selected_checkpoint_works": 1007,
+    "fulltexts_accessed_selected": 962,
+    "selected_primary_excerpt_accessed": 13,
+    "whole_work_or_translation_read": 126,
+    "whole_work_audit_levels": {
+      "0": 881,
+      "1": 119,
+      "3": 7
+    },
+    "scoped_level3_claim_groups": 108,
+    "theorem_or_exercise_records": 461,
+    "connection_records": 88,
+    "graph_nodes": 2642,
+    "graph_edges": 2542
+  },
+  "code_pin_count": 23,
+  "link_audit": {
+    "counts": {
+      "html_anchor_links": 7,
+      "html_local_links": 59,
+      "pdf_local_annotations": 65
+    },
+    "broken": []
+  },
+  "taxonomy": {
+    "counts": {
+      "classified": 996,
+      "unclassified_insufficient_subject_evidence": 12
+    },
+    "six_new_source_families": {
+      "PAPER-R112-BAKER2012": [
+        "A"
+      ],
+      "PAPER-R112-BHM2007": [
+        "A",
+        "E",
+        "H"
+      ],
+      "PAPER-WEIGHTED107-GHOSH-THESIS1981": [
+        "A"
+      ],
+      "PAPER-WEIGHTED107-REN2005": [
+        "A"
+      ],
+      "PAPER-WEIGHTED107-KOROLEV2018": [
+        "A"
+      ],
+      "PAPER-R114-FOUVRY-SHPARLINSKI2011": [
+        "A"
+      ]
+    }
+  },
+  "figure_render_match": {
+    "html_exact_png": true,
+    "pdf_identical_image_pixels": true,
+    "pdf_page": 6
+  },
+  "pdf_visual_qa": {
+    "pages": 23,
+    "all_pages_reviewed": true,
+    "width_pt": 595.27,
+    "height_pt": 841.89,
+    "text_extent_pt": [
+      42.0,
+      48.26,
+      552.0,
+      820.81
+    ],
+    "out_of_page_text_spans": 0,
+    "replacement_characters": 0
+  }
+}

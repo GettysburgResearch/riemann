@@ -1,0 +1,9 @@
+{"source": "PAPER-HC002", "relation": "proves", "target": "THM-HC301", "status": "established_source", "provenance": "Theorem1,Corollary2 pp2–3, proof pp7–10"}
+{"source": "THM-HC301", "relation": "requires", "target": "EXT-BURNOL2007-4.54", "status": "external_dependency_not_audited", "provenance": "PAPER-HC002 p8 identifies Mellin/distribution dictionary Theorem4.54; p9 Remark4.29 support formula"}
+{"source": "THM-HC301", "relation": "rules_out", "target": "BESSEL-MODEL-ORDINARY-DIRICHLET-REPRESENTATION", "status": "established_conditional_obstruction", "provenance": "THM-HC302 verifies remaining hypotheses; model has four off-line zeros and real-axis growth"}
+{"source": "THM-HC302", "relation": "uses", "target": "THM-LB303", "status": "derived_model_match", "provenance": "Bessel model definition and finite-order properties"}
+{"source": "THM-HC303", "relation": "distinguishes", "target": "INTEGER-VERSUS-SQUARE-ROOT-DIRICHLET-FREQUENCIES", "status": "exact_identity", "provenance": "Knopp2000 pp201,211–212; s=2z"}
+{"source": "THM-HC304", "relation": "supplies_counterexample_to", "target": "CONVERSE-WITH-FINITE-POLES-OMITTED", "status": "direct_proof", "provenance": "Explicit rational exponential multiplier in audit"}
+{"source": "THM-HC305", "relation": "uses", "target": "PAPER-HC005-Theorem4.54", "status": "scoped_dictionary_reconstruction", "provenance": "audits/hamburger_dictionary_round3.md"}
+{"source": "THM-HC305", "relation": "independently_reconstructs_special_case", "target": "THM-HC301", "status": "self_dual_case_only", "provenance": "Integer-comb lemma avoids general shifted-zeta classification"}
+{"source": "THM-HC306", "relation": "generalizes_scope_obstruction", "target": "THM-HC302", "status": "direct_asymptotic_derivation_pending_parent_review", "provenance": "All fixed c and polynomial degrees, not only quartet degree4"}

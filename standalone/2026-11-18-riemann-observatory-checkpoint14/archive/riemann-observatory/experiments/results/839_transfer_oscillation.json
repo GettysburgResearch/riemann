@@ -1,0 +1,15 @@
+{
+  "kind": "exact_frozen_potential_oscillation_bound",
+  "prefix_oscillation_integer_bounds": [
+    4038,
+    3903,
+    0,
+    3903,
+    4038
+  ],
+  "sum": 15882,
+  "denominator": 1000000,
+  "omega": "15882/1000000",
+  "matches_source_omega": true,
+  "reason": "Each prefix potential is piecewise linear on shared knots, zero outside; extrema across all pair types occur at knots or exterior0. Summing individual oscillations bounds the coupled state oscillation."
+}

@@ -1,0 +1,13 @@
+# Analytic track audit log
+
+Six sources bibliographically verified and full-text accessed. Two complete substantive readings: PAPER-A002 and PAPER-A003. Four selected-part readings: A001,A004,A005,A006. No whole-work L2 audit, independent L3 audit or original large computation reproduced. Exact fractions are rigorous arithmetic; complex floating-point stress tests are not proofs.
+
+- **Correct argument, commonly misinterpreted:** finite RH verification is a finite theorem, not an asymptotic proportion or RH. A sign-change count needs Turing-style completeness accounting (A002 §2).
+- **Correct argument, commonly misinterpreted:** simple zeros anywhere are not the same statistic as simple critical zeros (A005 Cor1.2 versus Thm1.3).
+- **Unresolved ambiguity requiring expert review:** AF §5.1 lower-window comparison (5.2) is indicator-specific, though stated amid general window notation. It fails in the MT bulk but is only needed for the final indicator squeeze in Prop5.4; Thm5.7 replaces that step by rescaling. This appears repairable/expository and supplies no evidence against the main theorem.
+- **Correct claim with independently reconstructed proof repair:** AF Prop5.2 displayed error O(NlogL/L²) does not follow from its displayed E2 bound O(L³B² l logL) after division by a²L⁴ when L=l and B²≈T: that gives O(TlogL)=O(NlogL/L). The PDF pp8–9 was visually inspected to exclude OCR exponent error. It remains o(N), so this observation alone does not affect asymptotic proportions. Thm5.7's O(N/L) rate also needs a sharper input than that crude bound. Remark6.1 states a loglogT/logT proportion rate compatible with the weaker estimate. An independent frame-operator estimate repairs the claimed remainder: ||H||≪BL and J≪BLlogL imply |E2|≪B²L²logL, better than needed. This reviewer reconstructed that repair; see analytic_window_scope.md. No verified-error label.
+- **Correct argument, insufficiently broad trust description would mislead:** A005 §8/Table5 explicitly distinguishes search soundness from success computed outside the kernel. This is a disclosed trust boundary, not a detected false theorem.
+- **Independently checked with no issue found in inspected portion:** Lamzouri's fixed Q,Q'' deweighting identity, order of smoothing and T limits, and the basic multiset inequality reconstruction.
+- **Independently checked with no issue found in inspected portion:** exact non-implication between GM exponent and BGSTB strong-density requirement, CONN-A001.
+
+Correction searches used exact arXiv IDs plus correction/erratum/withdrawn terms. No relevant retraction was found in those searches. Absence of a search hit is not an exhaustive absence-of-corrections certificate. Source-reported formal proofs have not been compiled locally.

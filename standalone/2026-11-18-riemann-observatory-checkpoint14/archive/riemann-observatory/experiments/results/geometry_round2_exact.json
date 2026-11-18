@@ -1,0 +1,609 @@
+{
+  "curve": "smooth projective elliptic curve y^2=x^3-x over F_5",
+  "curve_counts": [
+    {
+      "q": 5,
+      "degree": 1,
+      "modulus_coefficients_low_to_high": [
+        0,
+        1
+      ],
+      "direct_projective_points": 8,
+      "arithmetic": "exact integer tuple arithmetic mod 5; all nonzero inverses checked",
+      "predicted_points_from_degree_one": 8
+    },
+    {
+      "q": 25,
+      "degree": 2,
+      "modulus_coefficients_low_to_high": [
+        3,
+        0,
+        1
+      ],
+      "direct_projective_points": 32,
+      "arithmetic": "exact integer tuple arithmetic mod 5; all nonzero inverses checked",
+      "predicted_points_from_degree_one": 32
+    },
+    {
+      "q": 125,
+      "degree": 3,
+      "modulus_coefficients_low_to_high": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "direct_projective_points": 104,
+      "arithmetic": "exact integer tuple arithmetic mod 5; all nonzero inverses checked",
+      "predicted_points_from_degree_one": 104
+    }
+  ],
+  "curve_numerator": "1+2t+5t^2",
+  "curve_frobenius_eigenvalues": "-1+2i, -1-2i; squared absolute values exactly 5",
+  "formal_zeta": "(1-5t+5t^2)/((1-t)(1-5t))",
+  "formal_eigenvalues": "(5+sqrt(5))/2, (5-sqrt(5))/2; off modulus sqrt(5)",
+  "formal_euler_exponents": [
+    {
+      "n": 1,
+      "N_n": 1,
+      "euler_exponent": 1,
+      "full_five_shift_primitive_orbits": 5,
+      "graph_primitive_orbits": 5
+    },
+    {
+      "n": 2,
+      "N_n": 11,
+      "euler_exponent": 5,
+      "full_five_shift_primitive_orbits": 10,
+      "graph_primitive_orbits": 5
+    },
+    {
+      "n": 3,
+      "N_n": 76,
+      "euler_exponent": 25,
+      "full_five_shift_primitive_orbits": 40,
+      "graph_primitive_orbits": 15
+    },
+    {
+      "n": 4,
+      "N_n": 451,
+      "euler_exponent": 110,
+      "full_five_shift_primitive_orbits": 150,
+      "graph_primitive_orbits": 40
+    },
+    {
+      "n": 5,
+      "N_n": 2501,
+      "euler_exponent": 500,
+      "full_five_shift_primitive_orbits": 624,
+      "graph_primitive_orbits": 124
+    },
+    {
+      "n": 6,
+      "N_n": 13376,
+      "euler_exponent": 2215,
+      "full_five_shift_primitive_orbits": 2580,
+      "graph_primitive_orbits": 365
+    },
+    {
+      "n": 7,
+      "N_n": 70001,
+      "euler_exponent": 10000,
+      "full_five_shift_primitive_orbits": 11160,
+      "graph_primitive_orbits": 1160
+    },
+    {
+      "n": 8,
+      "N_n": 361251,
+      "euler_exponent": 45100,
+      "full_five_shift_primitive_orbits": 48750,
+      "graph_primitive_orbits": 3650
+    },
+    {
+      "n": 9,
+      "N_n": 1846876,
+      "euler_exponent": 205200,
+      "full_five_shift_primitive_orbits": 217000,
+      "graph_primitive_orbits": 11800
+    },
+    {
+      "n": 10,
+      "N_n": 9381251,
+      "euler_exponent": 937874,
+      "full_five_shift_primitive_orbits": 976248,
+      "graph_primitive_orbits": 38374
+    },
+    {
+      "n": 11,
+      "N_n": 47437501,
+      "euler_exponent": 4312500,
+      "full_five_shift_primitive_orbits": 4438920,
+      "graph_primitive_orbits": 126420
+    },
+    {
+      "n": 12,
+      "N_n": 239109376,
+      "euler_exponent": 19924630,
+      "full_five_shift_primitive_orbits": 20343700,
+      "graph_primitive_orbits": 419070
+    },
+    {
+      "n": 13,
+      "N_n": 1202500001,
+      "euler_exponent": 92500000,
+      "full_five_shift_primitive_orbits": 93900240,
+      "graph_primitive_orbits": 1400240
+    },
+    {
+      "n": 14,
+      "N_n": 6037656251,
+      "euler_exponent": 431256160,
+      "full_five_shift_primitive_orbits": 435959820,
+      "graph_primitive_orbits": 4703660
+    },
+    {
+      "n": 15,
+      "N_n": 30279296876,
+      "euler_exponent": 2018619620,
+      "full_five_shift_primitive_orbits": 2034504992,
+      "graph_primitive_orbits": 15885372
+    },
+    {
+      "n": 16,
+      "N_n": 151725781251,
+      "euler_exponent": 9482838750,
+      "full_five_shift_primitive_orbits": 9536718750,
+      "graph_primitive_orbits": 53880000
+    },
+    {
+      "n": 17,
+      "N_n": 759820312501,
+      "euler_exponent": 44695312500,
+      "full_five_shift_primitive_orbits": 44878791360,
+      "graph_primitive_orbits": 183478860
+    },
+    {
+      "n": 18,
+      "N_n": 3803412109376,
+      "euler_exponent": 211300569400,
+      "full_five_shift_primitive_orbits": 211927516500,
+      "graph_primitive_orbits": 626947100
+    },
+    {
+      "n": 19,
+      "N_n": 19032656250001,
+      "euler_exponent": 1001718750000,
+      "full_five_shift_primitive_orbits": 1003867701480,
+      "graph_primitive_orbits": 2148951480
+    },
+    {
+      "n": 20,
+      "N_n": 95219707031251,
+      "euler_exponent": 4760984882478,
+      "full_five_shift_primitive_orbits": 4768371093720,
+      "graph_primitive_orbits": 7386211242
+    },
+    {
+      "n": 21,
+      "N_n": 476302685546876,
+      "euler_exponent": 22681080260800,
+      "full_five_shift_primitive_orbits": 22706531339280,
+      "graph_primitive_orbits": 25451078480
+    },
+    {
+      "n": 22,
+      "N_n": 2382252050781251,
+      "euler_exponent": 108284181970170,
+      "full_five_shift_primitive_orbits": 108372079190340,
+      "graph_primitive_orbits": 87897220170
+    },
+    {
+      "n": 23,
+      "N_n": 11913932617187501,
+      "euler_exponent": 517997070312500,
+      "full_five_shift_primitive_orbits": 518301258916440,
+      "graph_primitive_orbits": 304188603940
+    },
+    {
+      "n": 24,
+      "N_n": 59579331787109376,
+      "euler_exponent": 2482472147818300,
+      "full_five_shift_primitive_orbits": 2483526855452500,
+      "graph_primitive_orbits": 1054707634200
+    },
+    {
+      "n": 25,
+      "N_n": 297931640625000001,
+      "euler_exponent": 11917265624999900,
+      "full_five_shift_primitive_orbits": 11920928955078000,
+      "graph_primitive_orbits": 3663330078100
+    },
+    {
+      "n": 26,
+      "N_n": 1489784768066406251,
+      "euler_exponent": 57299414110150240,
+      "full_five_shift_primitive_orbits": 57312158390925480,
+      "graph_primitive_orbits": 12744280775240
+    },
+    {
+      "n": 27,
+      "N_n": 7449381756591796876,
+      "euler_exponent": 275903028021850000,
+      "full_five_shift_primitive_orbits": 275947429515625000,
+      "graph_primitive_orbits": 44401493775000
+    },
+    {
+      "n": 28,
+      "N_n": 37248565539550781251,
+      "euler_exponent": 1330305911911183020,
+      "full_five_shift_primitive_orbits": 1330460820661272300,
+      "graph_primitive_orbits": 154908750089280
+    },
+    {
+      "n": 29,
+      "N_n": 186248821899414062501,
+      "euler_exponent": 6422373168945312500,
+      "full_five_shift_primitive_orbits": 6422914307692955280,
+      "graph_primitive_orbits": 541138747642780
+    },
+    {
+      "n": 30,
+      "N_n": 931265796722412109376,
+      "euler_exponent": 31042193223070780682,
+      "full_five_shift_primitive_orbits": 31044085819498371984,
+      "graph_primitive_orbits": 1892596427591302
+    },
+    {
+      "n": 31,
+      "N_n": 4656407448730468750001,
+      "euler_exponent": 150206691894531250000,
+      "full_five_shift_primitive_orbits": 150213318486367502520,
+      "graph_primitive_orbits": 6626591836252520
+    },
+    {
+      "n": 32,
+      "N_n": 23282321133117675781251,
+      "euler_exponent": 727572535405185937500,
+      "full_five_shift_primitive_orbits": 727595761413574218750,
+      "graph_primitive_orbits": 23226008388281250
+    },
+    {
+      "n": 33,
+      "N_n": 116412632787322998046876,
+      "euler_exponent": 3527655539009786382100,
+      "full_five_shift_primitive_orbits": 3527737025058629261360,
+      "graph_primitive_orbits": 81486048842879260
+    },
+    {
+      "n": 34,
+      "N_n": 582066880097961425781251,
+      "euler_exponent": 17119614120505929572610,
+      "full_five_shift_primitive_orbits": 17119900268644445082720,
+      "graph_primitive_orbits": 286148138515510110
+    },
+    {
+      "n": 35,
+      "N_n": 2910347845687866210937501,
+      "euler_exponent": 83152795591081891739000,
+      "full_five_shift_primitive_orbits": 83153801304953438892768,
+      "graph_primitive_orbits": 1005713871547153768
+    },
+    {
+      "n": 36,
+      "N_n": 14551787873622894287109376,
+      "euler_exponent": 404216329822752517664000,
+      "full_five_shift_primitive_orbits": 404219867454528801812500,
+      "graph_primitive_orbits": 3537631776284148500
+    },
+    {
+      "n": 37,
+      "N_n": 72759115368041992187500001,
+      "euler_exponent": 1966462577514648437500000,
+      "full_five_shift_primitive_orbits": 1966475030860385379275760,
+      "graph_primitive_orbits": 12453345736941775760
+    },
+    {
+      "n": 38,
+      "N_n": 363796213613929748535156251,
+      "euler_exponent": 9573584568787124102076480,
+      "full_five_shift_primitive_orbits": 9573628439714532149465460,
+      "graph_primitive_orbits": 43870927408047388980
+    },
+    {
+      "n": 39,
+      "N_n": 1818983371938610076904296876,
+      "euler_exponent": 46640599280477181428251200,
+      "full_five_shift_primitive_orbits": 46640753937073242938701920,
+      "graph_primitive_orbits": 154656596061510450720
+    },
+    {
+      "n": 40,
+      "N_n": 9094925195169258117675781251,
+      "euler_exponent": 227373129879229072449209730,
+      "full_five_shift_primitive_orbits": 227373675443229675292959000,
+      "graph_primitive_orbits": 545564000602843749270
+    },
+    {
+      "n": 41,
+      "N_n": 45474656133882522583007812501,
+      "euler_exponent": 1109137954484939575195312500,
+      "full_five_shift_primitive_orbits": 1109139880210888095018340320,
+      "graph_primitive_orbits": 1925725948519823027820
+    },
+    {
+      "n": 42,
+      "N_n": 227373389782212734222412109376,
+      "euler_exponent": 5413652137671720426516403880,
+      "full_five_shift_primitive_orbits": 5413658939124561491321383560,
+      "graph_primitive_orbits": 6801452841064804979680
+    },
+    {
+      "n": 43,
+      "N_n": 1136867343684883117675781250001,
+      "euler_exponent": 26438775434532165527343750000,
+      "full_five_shift_primitive_orbits": 26438799470143262730088344840,
+      "graph_primitive_orbits": 24035611097202744594840
+    },
+    {
+      "n": 44,
+      "N_n": 5684338146729512214660644531251,
+      "euler_exponent": 129189503334761587100195312490,
+      "full_five_shift_primitive_orbits": 129189588320018161426890980100,
+      "graph_primitive_orbits": 84985256574326695667610
+    },
+    {
+      "n": 45,
+      "N_n": 28421695901303946971893310546876,
+      "euler_exponent": 631593242251198821596956208960,
+      "full_five_shift_primitive_orbits": 631593542897866831884765581600,
+      "graph_primitive_orbits": 300646668010287809372640
+    },
+    {
+      "n": 46,
+      "N_n": 142108498203276181221008300781251,
+      "euler_exponent": 3089315178332090637110340947690,
+      "full_five_shift_primitive_orbits": 3089316242435217940289041270380,
+      "graph_primitive_orbits": 1064103127303178700322690
+    },
+    {
+      "n": 47,
+      "N_n": 710542558661881208419799804687501,
+      "euler_exponent": 15117926780040025711059570312500,
+      "full_five_shift_primitive_orbits": 15117930548087237997257963139960,
+      "graph_primitive_orbits": 3768047212286198392827460
+    },
+    {
+      "n": 48,
+      "N_n": 3552713038053125321865081787109376,
+      "euler_exponent": 74014854959440109630949964053750,
+      "full_five_shift_primitive_orbits": 74014868308343768119808832812500,
+      "graph_primitive_orbits": 13348903658488858868758750
+    },
+    {
+      "n": 49,
+      "N_n": 17763566075756721496582031250000001,
+      "euler_exponent": 362521756648096357073102678570000,
+      "full_five_shift_primitive_orbits": 362521803959234788709757279375000,
+      "graph_primitive_orbits": 47311138431636654600805000
+    },
+    {
+      "n": 50,
+      "N_n": 88817833582520485520362854003906251,
+      "euler_exponent": 1776356671650409704448624267390550,
+      "full_five_shift_primitive_orbits": 1776356839400250458717346191211000,
+      "graph_primitive_orbits": 167749840754268721923820450
+    },
+    {
+      "n": 51,
+      "N_n": 444089179503831343352794647216796876,
+      "euler_exponent": 8707630970663359673584193870519300,
+      "full_five_shift_primitive_orbits": 8707631565687502277832390280330880,
+      "graph_primitive_orbits": 595024142604248196409811580
+    },
+    {
+      "n": 52,
+      "N_n": 2220445939456616905331611633300781251,
+      "euler_exponent": 42700883451088786612342824331430280,
+      "full_five_shift_primitive_orbits": 42700885562506020756868215707632200,
+      "graph_primitive_orbits": 2111417234144525391376201920
+    },
+    {
+      "n": 53,
+      "N_n": 11102229849014240890741348266601562501,
+      "euler_exponent": 209476034887061148881912231445312500,
+      "full_five_shift_primitive_orbits": 209476042382105007627100314734117040,
+      "graph_primitive_orbits": 7495043858745188083288804540
+    },
+    {
+      "n": 54,
+      "N_n": 55511149794039685331284999847412109376,
+      "euler_exponent": 1027984255445179357848807671989075000,
+      "full_five_shift_primitive_orbits": 1027984282060330129883907388757812500,
+      "graph_primitive_orbits": 26615150772035099716768737500
+    },
+    {
+      "n": 55,
+      "N_n": 277555750956385049223899841308593750001,
+      "euler_exponent": 5046468199207000894979997114700842000,
+      "full_five_shift_primitive_orbits": 5046468293750711547380143945866477216,
+      "graph_primitive_orbits": 94543710652400146831165635216
+    },
+    {
+      "n": 56,
+      "N_n": 1387778761968015954568982124328613281251,
+      "euler_exponent": 24781763606571713473780956406947538200,
+      "full_five_shift_primitive_orbits": 24781763942525815633790833609444747500,
+      "graph_primitive_orbits": 335954102160009877202497209300
+    },
+    {
+      "n": 57,
+      "N_n": 6938893835839600202254951000213623046876,
+      "euler_exponent": 121734979576133336881665806687385382400,
+      "full_five_shift_primitive_orbits": 121734980770302252239433296605160361840,
+      "graph_primitive_orbits": 1194168915357767489917774979440
+    },
+    {
+      "n": 58,
+      "N_n": 34694469273265149616077542304992675781251,
+      "euler_exponent": 598180504711468096825711956605056236530,
+      "full_five_shift_primitive_orbits": 598180508957519687725038364015776535560,
+      "graph_primitive_orbits": 4246051590899326407410720299030
+    },
+    {
+      "n": 59,
+      "N_n": 173472346706663888957351446151733398437501,
+      "euler_exponent": 2940209266214642185717821121215820312500,
+      "full_five_shift_primitive_orbits": 2940209281316622193918516070155774132680,
+      "graph_primitive_orbits": 15101980008200694948939953820180
+    },
+    {
+      "n": 60,
+      "N_n": 867361734764674406147561967372894287109376,
+      "euler_exponent": 14456028912744573435777178358015865637574,
+      "full_five_shift_primitive_orbits": 14456028966473392453417181967099503743760,
+      "graph_primitive_orbits": 53728819017640003609083638106186
+    },
+    {
+      "n": 61,
+      "N_n": 4336808678278456133157014846801757812500001,
+      "euler_exponent": 71095224234073051363229751586914062500000,
+      "full_five_shift_primitive_orbits": 71095224425278979279177232843930604027920,
+      "graph_primitive_orbits": 191205927915947481257016541527920
+    },
+    {
+      "n": 62,
+      "N_n": 21684043407510926371077075600624084472656251,
+      "euler_exponent": 349742635605014941468909986986699258127520,
+      "full_five_shift_primitive_orbits": 349742636285646591615232248460092852192540,
+      "graph_primitive_orbits": 680631650146322261473393594065020
+    },
+    {
+      "n": 63,
+      "N_n": 108420217095872439869749359786510467529296876,
+      "euler_exponent": 1720955826918610156662688250571970870506400,
+      "full_five_shift_primitive_orbits": 1720955829342070530170560001373291015594000,
+      "graph_primitive_orbits": 2423460373507871750801320145087600
+    },
+    {
+      "n": 64,
+      "N_n": 542101085690358010894106701016426086425781251,
+      "euler_exponent": 8470329463911843920220053417113952636718750,
+      "full_five_shift_primitive_orbits": 8470329472543003390682861208915710449218750,
+      "graph_primitive_orbits": 8631159470462807791801757812500000
+    },
+    {
+      "n": 65,
+      "N_n": 2710505429215180072125513106584548950195312501,
+      "euler_exponent": 41700083526387385725007893947454599215274000,
+      "full_five_shift_primitive_orbits": 41700083557134785923363569264228527343749952,
+      "graph_primitive_orbits": 30747400198355675316773928128475952
+    },
+    {
+      "n": 66,
+      "N_n": 13552527148837871391175664030015468597412109376,
+      "euler_exponent": 205341320436937445320841630566368167006222810,
+      "full_five_shift_primitive_orbits": 205341320546497051895349145387122125337357720,
+      "graph_primitive_orbits": 109559606574507514820753958331134910
+    },
+    {
+      "n": 67,
+      "N_n": 67762635754182262020343914628028869628906250001,
+      "euler_exponent": 1011382623196750179408118128776550292968750000,
+      "full_five_shift_primitive_orbits": 1011382623587224285454713433647333686031512360,
+      "graph_primitive_orbits": 390474106046595304870783393062762360
+    },
+    {
+      "n": 68,
+      "N_n": 338813178807065980271307053044438362121582031251,
+      "euler_exponent": 4982546747162735003989801043787621531767003670,
+      "full_five_shift_primitive_orbits": 4982546748554707876872476738165406619801240800,
+      "graph_primitive_orbits": 1391972872882675694377785088034237130
+    },
+    {
+      "n": 69,
+      "N_n": 1694065894166138726882144692353904247283935546876,
+      "euler_exponent": 24551679625596213433074560758752062802193019700,
+      "full_five_shift_primitive_orbits": 24551679630559430117922391324047420335852581520,
+      "graph_primitive_orbits": 4963216684847830565295357533659561820
+    },
+    {
+      "n": 70,
+      "N_n": 8470329471303964411190833197906613349914550781251,
+      "euler_exponent": 121004706732913777302726146965125252314889898268,
+      "full_five_shift_primitive_orbits": 121004706750614334152617458520191056387677735536,
+      "graph_primitive_orbits": 17700556849891311555065804072787837268
+    },
+    {
+      "n": 71,
+      "N_n": 42351647358232131812226667534559965133666992187501,
+      "euler_exponent": 596502075468058194538403768092393875122070312500,
+      "full_five_shift_primitive_orbits": 596502075531197421879100352591297156374219437720,
+      "graph_primitive_orbits": 63139227340696584498903281252149125220
+    },
+    {
+      "n": 72,
+      "N_n": 211758236797355853958595296717248857021331787109376,
+      "euler_exponent": 2941086622185497971647156696742512830820916000000,
+      "full_five_shift_primitive_orbits": 2941086622410765066209452925249933368629882812500,
+      "graph_primitive_orbits": 225267094562296228507420537808966812500
+    },
+    {
+      "n": 73,
+      "N_n": 1058791184009193695498923771083354949951171875000001,
+      "euler_exponent": 14503988822043749253409914672374725341796875000000,
+      "full_five_shift_primitive_orbits": 14503988822847608545690453778760992500879993177440,
+      "graph_primitive_orbits": 803859292280539106386267159083118177440
+    },
+    {
+      "n": 74,
+      "N_n": 5293955920127064631537045497680082917213439941406251,
+      "euler_exponent": 71539944866581954480230343580013074988803348025760,
+      "full_five_shift_primitive_orbits": 71539944869451042151040750763353866499823492926520,
+      "graph_primitive_orbits": 2869087670810407183340791511020144900760
+    },
+    {
+      "n": 75,
+      "N_n": 26469779600928731799367624262231402099132537841796876,
+      "euler_exponent": 352930394679049757324901656829752024016011559166700,
+      "full_five_shift_primitive_orbits": 352930394689291807945134375283184146881103108724000,
+      "graph_primitive_orbits": 10242050620232718453432122865091549557300
+    },
+    {
+      "n": 76,
+      "N_n": 132348898005705221435037971968995407223701477050781251,
+      "euler_exponent": 1741432868496121334671552257963147284339101690995060,
+      "full_five_shift_primitive_orbits": 1741432868532689841834544610097318103438929507606900,
+      "graph_primitive_orbits": 36568507162992352134170819099827816611840
+    },
+    {
+      "n": 77,
+      "N_n": 661744490032366876157777129265014082193374633789062501,
+      "euler_exponent": 8594084286134634755295806873571611457056813425215000,
+      "full_five_shift_primitive_orbits": 8594084286265222596066583813713899777307138813919440,
+      "graph_primitive_orbits": 130587840770776940142288320250325388704440
+    },
+    {
+      "n": 78,
+      "N_n": 3308722450175730413510822740136063657701015472412109376,
+      "euler_exponent": 42419518591996543762959265875860003644520777290306320,
+      "full_five_shift_primitive_orbits": 42419518592462957685713266236677718067016357046273840,
+      "graph_primitive_orbits": 466413922754000360817714422495579755967520
+    },
+    {
+      "n": 79,
+      "N_n": 16543612250928928386250862822635099291801452636718750001,
+      "euler_exponent": 209412813302897827674061554716899991035461425781250000,
+      "full_five_shift_primitive_orbits": 209412813304563968321875618245560216092610660987564280,
+      "graph_primitive_orbits": 1666140647814063528660225057149235206314280
+    },
+    {
+      "n": 80,
+      "N_n": 82718061254826543361128374253894435241818428039550781251,
+      "euler_exponent": 1033975765685331792014104678059993875583114622126869750,
+      "full_five_shift_primitive_orbits": 1033975765691284593589260864973766729235649106979375000,
+      "graph_primitive_orbits": 5952801575156186913772853652534484852505250
+    }
+  ],
+  "finite_checks": "n<=80 Euler integrality/nonnegativity; cyclic label injection exhaustively checked for n<=8",
+  "proof_limit": "Finite checks do not prove all n. The all-n labeled graph proof is given in frontiers/geometry_round2.md."
+}

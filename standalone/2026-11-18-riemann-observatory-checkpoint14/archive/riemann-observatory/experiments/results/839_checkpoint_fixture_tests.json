@@ -1,0 +1,79 @@
+{
+  "status": "functional_checkpoint_replay_equivalence_tests_passed",
+  "scope": "In-process reference tests with easier fixtures. Exact full searches separate.",
+  "fixtures": [
+    {
+      "fixture": "first",
+      "alpha_multiplier": 2,
+      "points": 7,
+      "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+      "staged_sha256": "c584492380239533b981175362bdae0bf54beb7a7d7d7dae4901672f6931bc0c",
+      "parameter_sha256": "c10ab48cc04acfcb5cb7884e04df9faf21874923a810ab24e63c766b99247fe2",
+      "unmodified_counts": {
+        "status": "PASS_COB_CONTINUUM",
+        "nodes": 559,
+        "leaves": 280,
+        "basic": 280,
+        "affine": 0,
+        "max_stack": 33
+      },
+      "separate_pause_nodes": [
+        111,
+        186,
+        279
+      ],
+      "uninterrupted_and_resumed_final_state_bytes_match": true,
+      "wrong_identity_and_truncated_state_rejected": true,
+      "completed_state_reopens_to_same_result": true
+    },
+    {
+      "fixture": "second",
+      "alpha_multiplier": 2,
+      "points": 8,
+      "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+      "staged_sha256": "c584492380239533b981175362bdae0bf54beb7a7d7d7dae4901672f6931bc0c",
+      "parameter_sha256": "9a2f7de20eeabd889c40204cb2f1373d4089ce90b22788ac21991e02b0857460",
+      "unmodified_counts": {
+        "status": "PASS_COB_CONTINUUM",
+        "nodes": 855,
+        "leaves": 428,
+        "basic": 428,
+        "affine": 0,
+        "max_stack": 39
+      },
+      "separate_pause_nodes": [
+        171,
+        285,
+        427
+      ],
+      "uninterrupted_and_resumed_final_state_bytes_match": true,
+      "wrong_identity_and_truncated_state_rejected": true,
+      "completed_state_reopens_to_same_result": true
+    },
+    {
+      "fixture": "third",
+      "alpha_multiplier": 2,
+      "points": 7,
+      "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+      "staged_sha256": "c584492380239533b981175362bdae0bf54beb7a7d7d7dae4901672f6931bc0c",
+      "parameter_sha256": "eb4b0dbc06f0ea3e75142a71e035661b4292c09693b59fa0d6a390f3a7468b30",
+      "unmodified_counts": {
+        "status": "PASS_COB_CONTINUUM",
+        "nodes": 3467,
+        "leaves": 1734,
+        "basic": 1734,
+        "affine": 0,
+        "max_stack": 37
+      },
+      "separate_pause_nodes": [
+        693,
+        1155,
+        1733
+      ],
+      "uninterrupted_and_resumed_final_state_bytes_match": true,
+      "wrong_identity_and_truncated_state_rejected": true,
+      "completed_state_reopens_to_same_result": true
+    }
+  ],
+  "date_utc": "2026-11-17T21:23:39.177318+00:00"
+}

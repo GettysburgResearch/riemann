@@ -1,0 +1,152 @@
+{
+  "review_decision": "quality/pending_round13/geometry82_prior_art_decision_receipt.json",
+  "review_decision_sha256": "4f9d412847cc43e19870f284f70d2d9c2a253eb9551df8af4da1ccddfdb8adf7",
+  "old_bibliography_sha256": "ea20432c93ca40b866be399bc1d94e4b9bbbcd031de4116344e2e6f36161f551",
+  "admitted_selected_count": 8,
+  "prior_selected_count": 991,
+  "new_whole_readings": 1,
+  "new_level_2_or_3_audits": 0,
+  "shards": [
+    {
+      "original_pending_path": "quality/pending_round13/uniform78_rmt_dependency_records.jsonl",
+      "original_pending_sha256": "b56d783a06855ee0060b737c7a70a7c47472dfecd50c6ec90e3a0ea13f70fbef",
+      "admitted_path": "papers/rmt80_records.jsonl",
+      "admitted_sha256": "64d4cab3ea32c23972dbe78c139bc5c9acfea7cc4e82d3c3e672d07b77ced1f7",
+      "independent_selection_review": "audits/adversarial_reviews/geometry80_full_cue_adjudication_input.md",
+      "records": [
+        {
+          "id": "PAPER-U78-RMT-BNR-EWENS",
+          "audit_level": 0,
+          "whole_work_read": false,
+          "old_source_path": "quality/pending_round13/uniform78_rmt_sources/bnr_0712.0848v2_author.pdf",
+          "new_source_path": "sources/rmt80/bnr_0712.0848v2_author.pdf",
+          "old_source_sha256": "7f3c9609109d7609017334a434304e5e74a6989bd0461744e0a9e0540b263b93",
+          "new_source_sha256": "7f3c9609109d7609017334a434304e5e74a6989bd0461744e0a9e0540b263b93",
+          "old_record_path": "quality/pending_round13/uniform78_rmt_dependency_notes.md",
+          "new_record_path": "papers/PAPER-U78-RMT-BNR-EWENS.md",
+          "old_record_line_sha256": "33958fca33d1a6a86d4cea870f29b7d5f9655539258f12903787c6661ee94a00",
+          "new_record_line_sha256": "678eca5dd7fa981b8da35cd3ffc566fb9409993f7160524528d385dfeeb29cbe",
+          "old_doi": "10.1007/978-3-642-15217-7_15",
+          "new_doi": "10.1007/978-3-642-15217-7_15"
+        },
+        {
+          "id": "PAPER-U78-RMT-BUFETOV-PALM",
+          "audit_level": 0,
+          "whole_work_read": false,
+          "old_source_path": "quality/pending_round13/uniform78_rmt_sources/bufetov_2401.00518v1.pdf",
+          "new_source_path": "sources/rmt80/bufetov_2401.00518v1.pdf",
+          "old_source_sha256": "bb5f184406c6ae0b2e0eb5f78c30d16181a55fe63c4ee5d471b181dc13f10e1d",
+          "new_source_sha256": "bb5f184406c6ae0b2e0eb5f78c30d16181a55fe63c4ee5d471b181dc13f10e1d",
+          "old_record_path": "quality/pending_round13/uniform78_rmt_dependency_notes.md",
+          "new_record_path": "papers/PAPER-U78-RMT-BUFETOV-PALM.md",
+          "old_record_line_sha256": "03a2d9d54e4bd4d88fbe2961cc1e02c1e71dfd0db0f8d8d1af4cd492794afde7",
+          "new_record_line_sha256": "7892843916b042f0c59bd6c6027c660b7be50ed8c9c4653f3329471d09862c6f",
+          "old_doi": "10.1090/spmj/1827",
+          "new_doi": "10.1090/spmj/1827"
+        },
+        {
+          "id": "PAPER-U78-RMT-BUFETOV-QUASI",
+          "audit_level": 0,
+          "whole_work_read": false,
+          "old_source_path": "quality/pending_round13/uniform78_rmt_sources/bufetov_1409.2068v3.pdf",
+          "new_source_path": "sources/rmt80/bufetov_1409.2068v3.pdf",
+          "old_source_sha256": "a1072ebb9c88dc6c94bf89be0e6275860e3defaeb6487593f07f506de2abad60",
+          "new_source_sha256": "a1072ebb9c88dc6c94bf89be0e6275860e3defaeb6487593f07f506de2abad60",
+          "old_record_path": "quality/pending_round13/uniform78_rmt_dependency_notes.md",
+          "new_record_path": "papers/PAPER-U78-RMT-BUFETOV-QUASI.md",
+          "old_record_line_sha256": "fac76ce6a8006c5ab7bb6a958dfe714564ba55556b9bed3dd7826a483051b9fd",
+          "new_record_line_sha256": "c07fe735a78685d7885bf67604bfb9cb1e9769aa8864fcc93afd6c2cbb8749be",
+          "old_doi": "10.12114/17-AOP1198",
+          "new_doi": "10.1214/17-AOP1198"
+        },
+        {
+          "id": "PAPER-U78-RMT-GORBUNOV",
+          "audit_level": 0,
+          "whole_work_read": false,
+          "old_source_path": "quality/pending_round13/uniform78_rmt_sources/gorbunov_2504.09732v2.pdf",
+          "new_source_path": "sources/rmt80/gorbunov_2504.09732v2.pdf",
+          "old_source_sha256": "1a84448fb55f3805e20054a125770d49cb25bd94c33ebcd87a086b9078b7cb4a",
+          "new_source_sha256": "1a84448fb55f3805e20054a125770d49cb25bd94c33ebcd87a086b9078b7cb4a",
+          "old_record_path": "quality/pending_round13/uniform78_rmt_dependency_notes.md",
+          "new_record_path": "papers/PAPER-U78-RMT-GORBUNOV.md",
+          "old_record_line_sha256": "e25858f875784ce36806145e0038628a3f81dd50edda5796bad50db2030a65bd",
+          "new_record_line_sha256": "1c9ab6e6c626428befca253008c5f836b05082ad02a6e6ebd256c8f98f2774c7",
+          "old_doi": "10.4213/sm10319e",
+          "new_doi": "10.4213/sm10319e"
+        }
+      ]
+    },
+    {
+      "original_pending_path": "quality/pending_round13/geometry82_prior_art_admission_records.jsonl",
+      "original_pending_sha256": "89e595764be070e76b88029116898b2981e0c15d2dd78f9fd93b5ead37ae7d49",
+      "admitted_path": "papers/prior_art82_records.jsonl",
+      "admitted_sha256": "f073633d9ee2483264f9ae382128279aef2893d60e543e4e09bfa4fcb7032423",
+      "independent_selection_review": "quality/pending_round13/geometry82_prior_art_selection_review.md",
+      "records": [
+        {
+          "id": "PAPER-AN79-HR-MOCK",
+          "audit_level": 0,
+          "whole_work_read": false,
+          "old_source_path": "sources/analytic79_prior_art/hughes_rudnick_mock_journal.pdf",
+          "new_source_path": "sources/prior_art82/hughes_rudnick_mock_journal.pdf",
+          "old_source_sha256": "344e849fb291029f57057c9dc91b48fd677f6b1dc829404d98de474823ea5e1f",
+          "new_source_sha256": "344e849fb291029f57057c9dc91b48fd677f6b1dc829404d98de474823ea5e1f",
+          "old_record_path": "audits/adversarial_reviews/analytic79_prior_art.md",
+          "new_record_path": "papers/PAPER-AN79-HR-MOCK.md",
+          "old_record_line_sha256": "d406063a4080693e08c08c8ac6a23d6fa1b5db825370de74448b3e23a0d402eb",
+          "new_record_line_sha256": "1456096a0658d1c4101ca91015d4742b102d273559ad8f4d3ed400c2478f1c8c",
+          "old_doi": "10.1088/0305-4470/36/12/304",
+          "new_doi": "10.1088/0305-4470/36/12/304"
+        },
+        {
+          "id": "PAPER-AN79-HR-ZETA",
+          "audit_level": 1,
+          "whole_work_read": true,
+          "old_source_path": "sources/analytic79_prior_art/hughes_rudnick_zeta_journal.pdf",
+          "new_source_path": "sources/prior_art82/hughes_rudnick_zeta_journal.pdf",
+          "old_source_sha256": "b4572e5bdbf3cf7e891a4128aeb3bb56d151f2b16d23f9e63a94b1a2d2c09139",
+          "new_source_sha256": "b4572e5bdbf3cf7e891a4128aeb3bb56d151f2b16d23f9e63a94b1a2d2c09139",
+          "old_record_path": "audits/adversarial_reviews/analytic79_prior_art.md",
+          "new_record_path": "papers/PAPER-AN79-HR-ZETA.md",
+          "old_record_line_sha256": "f88b9d1c5f5b02ef28e3a5c09a9d794959ee1c538df51bf24b37b7876230bdcb",
+          "new_record_line_sha256": "686440bae76dfac46ddcfd9dfad6c0fc35cbb9b357e9cf8ef2e61da643e9a278",
+          "old_doi": "10.1016/S1631-073X(02)02541-4",
+          "new_doi": "10.1016/S1631-073X(02)02541-4"
+        },
+        {
+          "id": "PAPER-AN79-MAJ-PW-PND",
+          "audit_level": 0,
+          "whole_work_read": false,
+          "old_source_path": "sources/analytic79_prior_art/polynomial_normal_tokyo_2007.pdf",
+          "new_source_path": "sources/prior_art82/polynomial_normal_tokyo_2007.pdf",
+          "old_source_sha256": "d771e1ae496c50fa00cbf77b33210ca3c5c4c172ff052747a901f969fb8ce05e",
+          "new_source_sha256": "d771e1ae496c50fa00cbf77b33210ca3c5c4c172ff052747a901f969fb8ce05e",
+          "old_record_path": "audits/adversarial_reviews/analytic79_prior_art.md",
+          "new_record_path": "papers/PAPER-AN79-MAJ-PW-PND.md",
+          "old_record_line_sha256": "d7af94881ccfe37dcd102fae6c3e115454dc5c3c68aacf5fa25b960edf0e5dc6",
+          "new_record_line_sha256": "2af608ded71bcbc31031df01e205209cf4051c0c7c5400c486961615fc7f3149",
+          "old_doi": null,
+          "new_doi": null
+        },
+        {
+          "id": "PAPER-GEO82-MANGOLDT1905",
+          "audit_level": 0,
+          "whole_work_read": false,
+          "old_source_path": "sources/geometry81/mangoldt1905_gdz.pdf",
+          "new_source_path": "sources/prior_art82/mangoldt1905_gdz.pdf",
+          "old_source_sha256": "7dd69d353ee6a173cc856131fc1bb07e222e1e2f99b138b4b251d0998d11a5ec",
+          "new_source_sha256": "7dd69d353ee6a173cc856131fc1bb07e222e1e2f99b138b4b251d0998d11a5ec",
+          "old_record_path": "audits/adversarial_reviews/geometry81_riemann_adjudication_input.md",
+          "new_record_path": "papers/PAPER-GEO82-MANGOLDT1905.md",
+          "old_record_line_sha256": "c8949b00682dfb46e832efdc0891a84af92c8cf0f336a39c26c9344085f4e761",
+          "new_record_line_sha256": "67c3c0831434365482c8ac5a66e42ca81de6dd6fad2c63c3668e8b9fde2d395b",
+          "old_doi": "10.1007/BF01447494",
+          "new_doi": "10.1007/BF01447494"
+        }
+      ]
+    }
+  ],
+  "expected_selected_after_rebuild": 999,
+  "reading_decision": "The approved geometry82 input preserves the complete four-page Hughes–Rudnick journal reading at Level 1. Longer manuscript comparison remains targeted. The other seven dependencies have targeted Level 0 readings.",
+  "doi_correction": "Independent geometry80 review verifies 10.1214/17-AOP1198. The original pending DOI and bytes are preserved."
+}

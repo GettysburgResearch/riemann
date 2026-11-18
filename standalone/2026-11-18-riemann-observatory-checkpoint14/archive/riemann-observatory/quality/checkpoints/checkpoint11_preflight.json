@@ -1,0 +1,75 @@
+{
+  "validation": "PASS",
+  "metrics": {
+    "catalogued_works": 1008,
+    "deferred_supporting_works": 1,
+    "selected_checkpoint_works": 1007,
+    "fulltexts_accessed_selected": 962,
+    "selected_primary_excerpt_accessed": 13,
+    "whole_work_or_translation_read": 126,
+    "whole_work_audit_levels": {
+      "0": 881,
+      "1": 119,
+      "3": 7
+    },
+    "scoped_level3_claim_groups": 108,
+    "theorem_or_exercise_records": 461,
+    "connection_records": 88,
+    "graph_nodes": 2642,
+    "graph_edges": 2542
+  },
+  "structural_validation": {
+    "validation": "PASS",
+    "structural_checks_and_parsed_records": 92295,
+    "errors": [],
+    "limitations": "Structural, identity, provenance-field and scope consistency only; does not prove mathematics or verify bibliographic fields externally."
+  },
+  "index_counts": {
+    "papers": 1008,
+    "claims": 461,
+    "connections": 88,
+    "graph_nodes": 2642,
+    "graph_edges": 2542,
+    "paper_claims": 208
+  },
+  "taxonomy_families": {
+    "PAPER-R112-BAKER2012": [
+      "A"
+    ],
+    "PAPER-R112-BHM2007": [
+      "A",
+      "E",
+      "H"
+    ],
+    "PAPER-WEIGHTED107-GHOSH-THESIS1981": [
+      "A"
+    ],
+    "PAPER-WEIGHTED107-REN2005": [
+      "A"
+    ],
+    "PAPER-WEIGHTED107-KOROLEV2018": [
+      "A"
+    ],
+    "PAPER-R114-FOUVRY-SHPARLINSKI2011": [
+      "A"
+    ]
+  },
+  "code_pins": [
+    {
+      "result": "experiments/results/geometry111_rankone_hankel_certificate.json",
+      "code": "experiments/code/geometry111_rankone_hankel_certificate.py",
+      "sha256": "836ae6f6495fd0d616ff8c9654a114c844e58659d4c903816633feeb6545a952"
+    },
+    {
+      "result": "experiments/results/prime_regions_round14.json",
+      "code": "experiments/code/geometry118_prime_region_plot.py",
+      "sha256": "a5709bcbee95220a2df8bf0d51af8bad7cdbad4cfca8c6147a74bca959c5b6fb"
+    }
+  ],
+  "figure_pins": {
+    "png": "105a4acbe1457d6b2819e358b3ac3291074e646bf11d1f6c770caa60ebba2bfb",
+    "svg": "200aaf5c8ec3071e9a8fb23dd4acbd499c77243adf9c64b255d60b6ea19e778b"
+  },
+  "report_sha256": "7315bbd0309e25982a13c7804be5d81b10e3d3c7fae9c4ad45995567932178eb",
+  "scope": "Live Round 14 preflight only"
+}

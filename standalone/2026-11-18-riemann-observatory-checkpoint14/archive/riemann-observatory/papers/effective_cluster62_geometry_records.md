@@ -1,0 +1,18 @@
+# Geometry and automorphic primary-source supplement
+
+Ten source identities absent from the inspected 113-row bibliography are recorded here. The supplement uses E for function-field geometry and weights, and H for automorphic and Galois analogues. The existing Weil 1949 and Deligne I–II records remain the references for those works. This pass adds one full substantive reading at L1 and nine L0 records with explicit partial or unread scope.
+
+- E includes Hasse’s genus-one result, Dwork’s rationality proof, Grothendieck’s compact-support determinant formula, and Laumon’s Fourier-transform proof of the weight theorem and product formula.
+- H includes Deligne’s modular representations, Deligne–Serre in weight one, Drinfeld’s two distinct rank-two publications, Laurent Lafforgue’s two-way correspondence for general linear groups over function fields, and Vincent Lafforgue’s automorphic-to-Galois construction for reductive groups over function fields.
+
+[Machine-readable records](effective_cluster62_geometry_records.jsonl) · [Primary source locators](../sources/effective_cluster62_geometry/source_passages.md)
+
+## Full reading of Grothendieck’s exposé 279
+
+The December 1964 talk, as preserved in the 1966 collected publication, starts from the closed-point product and takes logarithms to encode counts over extensions. It extends the setup to constructible \(\ell\)-adic coefficients. Compact-support base change, multiplicativity and Leray reduce the determinant identity first to relative dimension one and then, using normalization and compactification, to a smooth projective curve. The local fixed-point trace identity for transversal Frobenius points supplies the remaining equality. The body labels that dependency future. The June 1965 note records its proof by Artin and Verdier and refines the resolution requirement.
+
+Theorem 5.1 expresses the constructible-sheaf \(L\)-series as an alternating product of finite-dimensional determinants of \(1-t\operatorname{Frob}\) on \(H_c^i\), with the geometric operator indicated by the inverse of the source’s arithmetic generator. Corollary 5.2 gives rationality using affine pieces and multiplicativity. The determinant decomposition identifies candidates for zeros and poles and does not determine their complex moduli. In the smooth proper constant-coefficient setting, purity adds \(|\alpha|=q^{i/2}\) for eigenvalues in degree \(i\). For general mixed coefficients, statements about allowed weights and graded pieces have genuine hypotheses and are not a blanket single-circle statement. Laumon’s paper is a later primary source for the separate weight result. [Original source](../sources/effective_cluster62_geometry/grothendieck_279_numdam.pdf)
+
+## Limits of the number-field analogy
+
+For a fixed curve over \(\mathbf F_q\), one global Frobenius operator acts on finite-dimensional cohomology, and its powers encode all extension degrees. After \(t=q^{-s}\), a magnitude assertion for its eigenvalues turns into a real-part assertion for the corresponding zeros or poles. A number-field Euler product involves different residue-field cardinalities at infinitely many primes. Local Frobenius operators and purity at the good primes constrain the Euler factors. They do not give a single finite-dimensional operator whose powers encode that entire product or a weight theorem for its global complex zeros. Likewise a function-field Langlands parameter and its unramified Satake compatibility do not supply a number-field analogue of the required global geometric realization. The supplement records historical and structural connections, and asserts no mathematical implication for the classical Riemann hypothesis.

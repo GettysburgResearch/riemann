@@ -1,0 +1,147 @@
+{
+  "kind": "static_statement_grounding_not_kernel_replay",
+  "source_commit": "0e961ea199b425010843bc8044676d4ad29fe031",
+  "dependency_commit_as_pinned_by_source_readme": "fbdc36bbf17d20af3fd0447c6d1a8a02773c9844",
+  "definition_matches": [
+    {
+      "challenge": "Challenge839.lean",
+      "definition": "IsNontrivialZero",
+      "matches_pinned_dependency_exactly": true
+    },
+    {
+      "challenge": "Challenge839.lean",
+      "definition": "zeroMult",
+      "matches_pinned_dependency_exactly": true
+    },
+    {
+      "challenge": "Challenge839.lean",
+      "definition": "zerosIn",
+      "matches_pinned_dependency_exactly": true
+    },
+    {
+      "challenge": "Challenge839.lean",
+      "definition": "Ncount",
+      "matches_pinned_dependency_exactly": true
+    },
+    {
+      "challenge": "Challenge839.lean",
+      "definition": "Ndist",
+      "matches_pinned_dependency_exactly": true
+    },
+    {
+      "challenge": "Challenge673.lean",
+      "definition": "IsNontrivialZero",
+      "matches_pinned_dependency_exactly": true
+    },
+    {
+      "challenge": "Challenge673.lean",
+      "definition": "zeroMult",
+      "matches_pinned_dependency_exactly": true
+    },
+    {
+      "challenge": "Challenge673.lean",
+      "definition": "zerosIn",
+      "matches_pinned_dependency_exactly": true
+    },
+    {
+      "challenge": "Challenge673.lean",
+      "definition": "Ncount",
+      "matches_pinned_dependency_exactly": true
+    },
+    {
+      "challenge": "Challenge673.lean",
+      "definition": "N0simple",
+      "matches_pinned_dependency_exactly": true
+    },
+    {
+      "challenge": "Challenge889.lean",
+      "definition": "IsNontrivialZero",
+      "matches_pinned_dependency_exactly": true
+    },
+    {
+      "challenge": "Challenge889.lean",
+      "definition": "zeroMult",
+      "matches_pinned_dependency_exactly": true
+    },
+    {
+      "challenge": "Challenge889.lean",
+      "definition": "zerosIn",
+      "matches_pinned_dependency_exactly": true
+    },
+    {
+      "challenge": "Challenge889.lean",
+      "definition": "Ncount",
+      "matches_pinned_dependency_exactly": true
+    },
+    {
+      "challenge": "ChallengeFurther.lean",
+      "definition": "IsNontrivialZero",
+      "matches_pinned_dependency_exactly": true
+    },
+    {
+      "challenge": "ChallengeFurther.lean",
+      "definition": "zeroMult",
+      "matches_pinned_dependency_exactly": true
+    },
+    {
+      "challenge": "ChallengeFurther.lean",
+      "definition": "zerosIn",
+      "matches_pinned_dependency_exactly": true
+    },
+    {
+      "challenge": "ChallengeFurther.lean",
+      "definition": "Ncount",
+      "matches_pinned_dependency_exactly": true
+    }
+  ],
+  "additional_checks": [
+    "Nsimple definitions exactly match actual riemannZeta count",
+    "union definitions exactly match Challenge/Solution/development",
+    "N0mult is exact renamed copy of Zeta23.N0",
+    "simple constant equals 2q-1",
+    "average constant equals (1+s0)/2"
+  ],
+  "ratios": [
+    {
+      "quantity": "distinct_anywhere",
+      "exact": "1645064/1960733",
+      "decimal": "0.839004596750296955271319450430"
+    },
+    {
+      "quantity": "simple_anywhere",
+      "exact": "1329395/1960733",
+      "decimal": "0.678009193500593910542638900860"
+    },
+    {
+      "quantity": "simple_and_critical",
+      "exact": "1669159/2478195",
+      "decimal": "0.673538200181987293171037791618"
+    },
+    {
+      "quantity": "average_simple_and_critical_mult",
+      "exact": "2073677/2478195",
+      "decimal": "0.836769100090993646585518895809"
+    },
+    {
+      "quantity": "union_first_window_mult",
+      "exact": "3376433/3797325",
+      "decimal": "0.889160922491490720441363328132"
+    },
+    {
+      "quantity": "union_third_window_mult",
+      "exact": "50652159/56956375",
+      "decimal": "0.889315006441333388931440949323"
+    }
+  ],
+  "sha256": {
+    "sources/formal_round2/839-v1/lean/Challenge839.lean": "f52fb4cf20718561987cbc6614cf04232753142b8ceec0d327bea1065a7295a8",
+    "sources/formal_round2/839-v1/lean/Challenge673.lean": "d3b2e00c0cf99f65704cf7c6b9f677c1e6d6ec015d26a60be11947172f18a616",
+    "sources/formal_round2/839-v1/lean/Challenge889.lean": "8a5782b190df1cd8bba7a31c3c4105f7bdd24fb1fceb4155034c95ea65cc2f50",
+    "sources/formal_round2/839-v1/lean/ChallengeFurther.lean": "b81c1cf1cfaa63934832380da539fc7cf3379fb273db0e1c0a67f650b5d61854",
+    "sources/formal_round2/839-v1/lean/Solution839.lean": "c3bd8b60a6835e75a0da10300a5aba6a28cb21aadf6812e05d90264dbe472792",
+    "sources/formal_round2/839-v1/lean/Solution673.lean": "7ad04b241093fc010ea977fd106cf170a974c79fd55f2821040c02c35e48e615",
+    "sources/formal_round2/839-v1/lean/Solution889.lean": "f43491c504984e63024afc478e719b557554911cfa8da68209463eeeec3a1f01",
+    "sources/formal_round2/839-v1/lean/SolutionFurther.lean": "80726f435bf87d659f5d18189c5d6043e91d6a47265c80e1a990ffeb09a590b3"
+  },
+  "scope": "Exact source-text and rational arithmetic checks only; no Lean build or axiom-closure certification."
+}

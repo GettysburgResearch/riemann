@@ -1,0 +1,84 @@
+{
+  "kind": "exact_transfer_bookkeeping_and_scope_check_NOT_zeta_audit",
+  "input_sha256": "e782247f3991118936ef2fcacf59943b510508c9062200c66798f354d95fae92",
+  "index_distance_weight_sums": [
+    [
+      1999996,
+      1999998,
+      1999998,
+      2000000,
+      2000000,
+      2000000
+    ],
+    [
+      3999998,
+      3999999,
+      3999998,
+      3999998,
+      4000000,
+      4000000
+    ],
+    [
+      7999998,
+      7999999,
+      7999998,
+      7999998,
+      8000000,
+      8000000
+    ]
+  ],
+  "state_maximum": "7941/1000000",
+  "state_minimum": "-7941/1000000",
+  "omega_exact": "7941/500000",
+  "maximum_state_labels": [
+    2,
+    2,
+    2,
+    1,
+    1,
+    1
+  ],
+  "maximum_state_gaps": [
+    "9/8",
+    "9/8",
+    "17/20",
+    "7/4",
+    "7/4"
+  ],
+  "minimum_state_labels": [
+    1,
+    1,
+    1,
+    2,
+    2,
+    2
+  ],
+  "minimum_state_gaps": [
+    "7/4",
+    "7/4",
+    "17/20",
+    "9/8",
+    "9/8"
+  ],
+  "six_window_chain_attains_omega": true,
+  "fractional_chain_identities_checked": 21,
+  "uniform_boundary_constant": "2703/6250",
+  "joint_label_boundary_constant": "1067/2500",
+  "pressure_adjusted_boundary_constant": "516027/2000000",
+  "pressure_domination_point_checks": 450,
+  "pressure_adjusted_bookkeeping_equality_witness": "all labels double and all gaps17/20, chain length at least6",
+  "boundary_claim_status": "Independently derived finite strengthening; parent review pending; no asymptotic proportion improvement or literature novelty claim",
+  "all_pairs_without_positivity_counterexample": {
+    "ell": 100,
+    "labels": "all simple",
+    "positions": "y_i=7i,0<=i<100",
+    "epsilon": "1",
+    "R": 693,
+    "e_offdiag": -1,
+    "kernel_values": "K(7n)=0 for every nonzero integer n, because the six-mode sinc expansion has no zero denominator there",
+    "left_side": "-2410428041/500000",
+    "right_side": -9900,
+    "inequality_fails": true
+  },
+  "scope": "LocalInequality is assumed. General transfer proof reconstructed separately; exact tests supplement its bookkeeping, not proof of the input local inequality or analytic zeta bridge."
+}

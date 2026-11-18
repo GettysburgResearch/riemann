@@ -1,0 +1,85 @@
+{
+  "scope": "exact finite auxiliary indexing checks, not zeta computation or proof certification",
+  "endpoint_max_failure": [
+    {
+      "J": 4,
+      "S": "1",
+      "S_times_max_distance_squared": "16"
+    },
+    {
+      "J": 8,
+      "S": "251/216",
+      "S_times_max_distance_squared": "2008/27"
+    },
+    {
+      "J": 16,
+      "S": "9822481/8232000",
+      "S_times_max_distance_squared": "39289924/128625"
+    },
+    {
+      "J": 32,
+      "S": "56154295334575853/46796108014656000",
+      "S_times_max_distance_squared": "112308590669151706/91398648466125"
+    },
+    {
+      "J": 64,
+      "S": "452258383755676134382925365715715643032973/376394829682354658363167213513511232000000",
+      "S_times_max_distance_squared": "452258383755676134382925365715715643032973/91893268965418617764445120486697078125"
+    }
+  ],
+  "regularized_min_bound_checks": [
+    {
+      "J": 4,
+      "sum_absolute_inner_sums": "529/216"
+    },
+    {
+      "J": 8,
+      "sum_absolute_inner_sums": "14280793/4939200"
+    },
+    {
+      "J": 16,
+      "sum_absolute_inner_sums": "144629529517474907/46796108014656000"
+    },
+    {
+      "J": 32,
+      "sum_absolute_inner_sums": "36379357044194050508075629850590778021323/11405903929768322980702036773136704000000"
+    },
+    {
+      "J": 64,
+      "sum_absolute_inner_sums": "133830181476873227231416443498315001503385628631701280845633814022117505233963243/41312985778655166679204196310411882192467758311949972916406056252934533222400000"
+    }
+  ],
+  "harmonic_index_checks": [
+    {
+      "n": 2,
+      "harmonic_sum": "3/2",
+      "restricted_unit_spacing_sum": "9/2"
+    },
+    {
+      "n": 4,
+      "harmonic_sum": "25/12",
+      "restricted_unit_spacing_sum": "125/12"
+    },
+    {
+      "n": 8,
+      "harmonic_sum": "761/280",
+      "restricted_unit_spacing_sum": "6849/280"
+    },
+    {
+      "n": 16,
+      "harmonic_sum": "2436559/720720",
+      "restricted_unit_spacing_sum": "41421503/720720"
+    },
+    {
+      "n": 32,
+      "harmonic_sum": "586061125622639/144403552893600",
+      "restricted_unit_spacing_sum": "586061125622639/4375865239200"
+    },
+    {
+      "n": 64,
+      "harmonic_sum": "623171679694215690971693339/131362987122535807501262400",
+      "restricted_unit_spacing_sum": "623171679694215690971693339/2020969032654397038480960"
+    }
+  ],
+  "all_assertions_passed": true
+}

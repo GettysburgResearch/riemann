@@ -1,0 +1,69 @@
+# Luecking 1986 whole-source skeptical reconstruction
+
+Daniel H. Luecking, “Multipliers of Bergman Spaces into Lebesgue Spaces,” Proceedings of the Edinburgh Mathematical Society 29 (1986), 125–131, received 23 May 1985, DOI 10.1017/S001309150001748X. The pinned journal PDF is [luecking1986.pdf](../../sources/prime146_mellin_provenance/luecking1986.pdf), seven PDF pages, SHA-256 `e5d194ad05a844e376a65b18bc7082864baa38b01ddb1d4f217f67c28cb0d301`. I read all seven pages and checked the proof formulas on the page render where the text extraction lost notation. This reconstruction was made independently of the parallel advocate. The strip specialization below addresses the route in [prime146](prime146_mellin_trace_prior_art.md).
+
+## Source theorem and proof
+
+Write \(A^p\) for the analytic functions on the open unit disk with finite \(L^p(m)\) quasi-norm, where \(m=dA/\pi\). For a positive finite Borel measure \(\mu\), put \(k_\epsilon(z)=\mu(D_\epsilon(z))/m(D_\epsilon(z))\), where \(D_\epsilon(z)=\{w:|(w-z)/(1-\bar z w)|<\epsilon\}\) and \(0<\epsilon<1\) is fixed. For \(0<q<p<\infty\), the embedding \(A^p\hookrightarrow L^q(\mu)\) is bounded exactly when \(k_\epsilon\in L^s(m)\), \(s=p/(p-q)\). The criterion holds for one fixed radius iff it holds for every fixed radius. The introduction specifies finite Borel measure. The theorem line on p. 126 says positive measure. The bounded embedding implies finite mass by testing the constant 1. The local criterion also implies finite mass by the sufficiency calculation with \(f=1\), using Tonelli. There is no assumption on separation of the support of \(\mu\).
+
+**Multiplier motivation.** For measurable \(g\), take \(d\mu=|g|^qdm\). If multiplication maps every \(A^p\) function into \(L^q(m)\), the graph is closed. Convergence in \(A^p\) gives uniform convergence on compact subsets by the analytic submean estimate, and convergence in \(L^q(m)\) gives a subsequence converging almost everywhere. These identify the graph limit. This argument works for \(p\) or \(q<1\) with the complete metrizable quasi-norm spaces. The condition \(g\in A^r\), \(1/r=1/q-1/p\), suffices for analytic \(g\) by Hölder. Luecking references Attele and Axler for necessity in the analytic multiplier problem and Hastings and Oleinik–Pavlov for the previously studied \(p\le q\) embedding regime.
+
+**Sufficiency.** The Euclidean center and radius of \(D_\epsilon(a)\) are \((1-\epsilon^2)a/(1-\epsilon^2|a|^2)\) and \(\epsilon(1-|a|^2)/(1-\epsilon^2|a|^2)\). The center displacement from \(a\) is \(\epsilon|a|\) times the radius. Hence a Euclidean disk centered at \(a\) of at least \(1-\epsilon\) times that radius sits inside \(D_\epsilon(a)\). The submean inequality for \(|f|^q\) proves (2.1). Symmetry of the pseudohyperbolic relation and comparability of disk areas for neighboring centers yield (2.2) by Tonelli. Hölder gives (2.3), with embedding constant bounded by \(C_\epsilon^{1/q}\|k_\epsilon\|_s^{1/q}\) in this normalization. The p. 126 harmonic aside concerns the local submean estimate, with the \(q<1\) argument attributed to Fefferman–Stein.
+
+**Radius independence.** For \(0<\delta<\epsilon<1\), \(k_\delta\lesssim k_\epsilon\) by inclusion and area comparability. For the reverse, here is a proof of the fixed-radius lemma using a slightly larger averaging radius, which removes any dependence on the numerical overlap fraction on p. 127. The distance \(d=\operatorname{arctanh}\rho\) satisfies the triangle inequality. Choose \(R<1\) with \(\operatorname{arctanh}R>\operatorname{arctanh}\epsilon+\operatorname{arctanh}\delta\). The operator \(A_R g(z)=m(D_R(z))^{-1}\int_{D_R(z)}g(w)dm(w)\) is bounded on \(L^s(m)\) for \(1\le s<\infty\) by Jensen, Tonelli and comparability of neighboring areas. If \(t\in D_\epsilon(z)\), then \(D_\delta(t)\subset D_R(z)\). In the Fubini expression for \(A_R k_\delta(z)\) the kernel at \(t\) therefore contributes at least \(c/m(D_R(z))\), since \(\int_{D_\delta(t)}m(D_\delta(w))^{-1}dm(w)\ge c\). Thus \(k_\epsilon\lesssim A_R k_\delta\). This establishes the same equivalence for the finite exponents needed here.
+
+**Interpolating sequences.** The restriction \(f\mapsto(f(a_i))\) to a separated sequence is bounded into the space with quasi-norm \((\sum_i|f(a_i)|^p(1-|a_i|^2)^2)^{1/p}\), by disjoint smaller disks and the analytic submean bound. Interpolation means surjectivity. The open mapping theorem then gives a bounded-norm lift for each sequence. The imported Amar theorem, as stated by Luecking, gives a uniform lift constant \(M=M(p,\eta)\) for all \(\eta\)-separated sequences when \(\eta\) is sufficiently close to 1. The finite partition of a sequence of prescribed separation into such classes can also be seen by coloring the neighbor graph using bounded hyperbolic packing. The greedy lattice on p. 128 chooses a point of least modulus outside the preceding open disks of radius \(\delta/2\). An uncovered point would trap infinitely many uniformly separated choices in a compact set. Equality at a separation threshold is handled by decreasing the advertised separation constant.
+
+**Oscillation estimate (3.1).** For one \(\eta\)-separated class \(a_i\), set \(D_i=D_{\eta/2}(a_i)\), which are disjoint, \(m_i=m(D_i)\), and \(\lambda_i=\mu(D_\delta(a_i))\), with \(\delta<\eta/4\). At the origin, submean estimates and Cauchy's derivative formula on interior subdisks bound \(|f(z)-f(0)|^q\) by \(C\delta^q\int_{D_{\eta/2}(0)}|f|^q dm\) for \(|z|<\delta\). Disk automorphisms transfer it to \(a_i\), with the normalized factor \(1/m_i\) from the comparable inverse Jacobian on \(D_i\). Integrating over the small disks, applying Hölder inside each \(D_i\), then sequence Hölder with exponents \(p/q,s\), and finally disjointness yields
+\[
+\sum_i\int_{D_\delta\(a_i\)} |f-f\(a_i\)|^q d\mu
+\le A\delta^q\|f\|_{A^p}^q
+\left\(\sum_i\lambda_i^s m_i^{1-s}\right\)^{1/s}.
+\]
+
+**Necessity and the \(q>1\) completion.** First replace \(\mu\) by \({\bf1}_{|z|<r}\mu\), preserving the embedding constant. Only finitely many balls in the separated lattice meet the compact closed disk of radius \(r<1\). In one interpolation class set \(E=(\sum_i\lambda_i^s m_i^{1-s})^{1/s}\). With \(t_i=(1-|a_i|^2)^2\asymp_\eta m_i\), the exact supremum of \(\sum\lambda_i|c_i|^q\) over \(\sum t_i|c_i|^p\le1\) is \((\sum\lambda_i^s t_i^{1-s})^{1/s}\asymp_\eta E\). Lift the maximizing data to \(f\) of \(A^p\) quasi-norm at most \(M\). For \(q\le1\), subadditivity bounds the supremum by \(C^qM^q+A\delta^q M^qE\), where \(C\) is the embedding constant. For \(q>1\), use Minkowski on the disjoint small disks before raising to \(q\). This bounds the \(q\)-th root of the supremum by \(CM+A^{1/q}\delta M E^{1/q}\). Both inequalities give a uniform \(E\) bound upon choosing \(\delta\) sufficiently small, before counting the finitely many color classes. Sum those bounds, using the `s`-norm triangle inequality, to obtain the lattice bound (3.4). For \(z\in D_{\delta/2}(b_i)\), \(D_{\delta/2}(z)\subset D_\delta(b_i)\), since \(2(\delta/2)/(1+(\delta/2)^2)<\delta\). The denominator area is comparable to \(m(D_{\eta/2}(b_i))\). Integrating the resulting pointwise bound over the covering small disks gives \(k_{\delta/2}\in L^s(m)\), uniformly in \(r\). Monotone convergence removes the truncation, and radius independence supplies any desired fixed radius. On p. 130 the covering step cites (3.3), with the sum it needs supplied by (3.4).
+
+## Independent check of the weighted strip transfer
+
+Let \(S=\{s:a<\Re s<b\}\) with \(a<0<1<b\) finite, let \(L=b-a\), and let \(h\) be holomorphic on \(S\), with norm squared \(\int_S|h(s)|^2w(\Im s)dA(s)\). Use the weights \(w(t)=(1+t^2)^\sigma\) or \(w(t)=\sqrt{1+t^2}[\log(e+|t|)]^\ell\), for fixed real exponents. Choose \(C+a>e\). The respective multipliers
+\[
+G\(s\)=\(C+s\)^\sigma,\qquad G\(s\)=\(C+s\)^{1/2}\bigl\(\Log(C+s)\bigr\)^{\ell/2}
+\]
+are holomorphic and nonvanishing, using the principal logs on the two right half-planes. In the second case \(\Re\Log(C+s)\ge\log(C+a)>1\). Since the real width is bounded, \(|G(s)|^2\asymp w(\Im s)\) uniformly throughout \(S\). The analytic factor is needed for the onto transfer to the unweighted disk Bergman space.
+
+Map \(S\) conformally to the disk by \(Q=e^{i\pi(s-a)/L}\), \(z=(Q-i)/(Q+i)\), and write \(\Phi(z)=s\). The disk function \(F(z)=h(\Phi(z))G(\Phi(z))\Phi'(z)\) gives an isomorphism onto \(A^2\), up to fixed equivalence constants. The \(L^1\) sample sum at the nontrivial zeta zeros equals \(\int |F|d\mu\) with
+\[
+\mu=\sum_\rho |G\(\rho\)\Phi'\(z_\rho\)|^{-1}\delta_{z_\rho}.
+\]
+Count zeros with multiplicity. Writing \(\vartheta=\pi(\Re s-a)/L\), direct differentiation gives
+\[
+|\Phi'(z)|(1-|z|^2)=(2L/\pi)\sin\vartheta,
+\qquad 1-|z|^2=4\Im Q/|Q+i|^2.
+\]
+At each zero the sine is bounded below and \(1-|z_\rho|^2\ll e^{-\pi|\Im\rho|/L}\). The unit-interval zero count \(O(\log(2+|t|))\) therefore gives finite atom mass, even for negative fixed exponents. There are no atoms at either disk boundary point corresponding to strip infinity. A mapping that retains the strip evaluation weights without the Jacobian factor would give a different atomic criterion.
+
+For one fixed pseudohyperbolic radius, let \(N_\epsilon(s)\) count the zeros in the corresponding disk about \(z=z(s)\). Its strip image has bounded vertical reach because the strip hyperbolic density \((\pi/L)/\sin\vartheta\) is bounded below. If the disk meets a zero then its center stays in a smaller closed horizontal substrip. Indeed integrating that density gives a lower bound on the change in log distance to the vertical boundaries. For disk neighbors, \(1-|z_\rho|^2\asymp 1-|z|^2\). Consequently on the nonempty-ball region,
+\[
+k_\epsilon\(z\)\asymp\frac{N_\epsilon\(s\)}{\(1-|z|^2\)\sqrt{w\(\Im s\)}}.
+\]
+Upon integrating \(k_\epsilon^2dm\), the inverse-area Jacobian cancels the displayed power of \(1-|z|^2\). The remaining factor is comparable to 1 on the smaller horizontal substrip, by the sine formula. Outside this region \(k_\epsilon=0\). Thus the squared norm is comparable to \(\int_S N_\epsilon(s)^2/w(\Im s)dA(s)\).
+
+For \(N_j=\#\{\rho:j\le\Im\rho<j+1\}\), the latter integral is bounded above by a constant times \(\sum_jN_j^2/w(j)\) by bounded vertical reach, fixed horizontal width, comparability of neighboring weights and finite-overlap summation. For a lower bound, choose mutually disjoint small Euclidean disks about \(1/2+i(j+1/2)\). One sufficiently large fixed pseudohyperbolic radius about any point in such a disk covers the entire critical unit rectangle of that height. This follows from compactness at height zero and vertical translation invariance of the strip hyperbolic metric. The integral at this radius dominates a constant times \(\sum_jN_j^2/w(j)\). The source's radius-independence lemma transfers the criterion to any fixed radius. This lower argument does not place every zero of a unit rectangle in an arbitrarily small single ball.
+
+Luecking at \((p,q,s)=(2,1,2)\) therefore gives the absolute trace inequality for the entire holomorphic weighted strip space iff \(\sum_jN_j^2/w(j)<\infty\). Unit counts give convergence for \(\sigma>1/2\) or \(\ell>3\), respectively. For dyadic \(T\to\infty\), Riemann–von Mangoldt gives \(\sum_{T\le j<2T}N_j\gg T\log T\). Cauchy–Schwarz gives \(\sum_{T\le j<2T}N_j^2\gg T\log^2 T\). Since the weights are comparable across a dyadic block, the weighted lower bounds are \(T^{1-2\sigma}\log^2 T\) and \((\log T)^{2-\ell}\). This includes divergence at both endpoints, the latter by harmonic summation over dyadic blocks. The argument uses no RH.
+
+Failure of this bounded inequality yields an actual holomorphic \(h\) in the ambient strip space with divergent absolute trace. Otherwise the map from the weighted Bergman space into \(\ell^1\) of the zero samples would be defined everywhere and linear. The weighted Bergman space is complete by local submean and compact convergence, point evaluations are continuous by the same submean estimate, and convergence in \(\ell^1\) implies coordinate convergence. Hence the map would have closed graph and be bounded. The argument gives no physical-side support, value-decay or smoothness conditions for an inverse Mellin representative of this \(h\). It gives no conclusion about conditional sums by raw height or the explicit formula for that representative.
+
+## Whole-source page ledger
+
+| PDF / print | Content reconstructed or classified |
+| --- | --- |
+| 1 / 125 | Introduction, positive finite Borel measure, prior regimes, multiplier reduction, opening disk geometry. |
+| 2 / 126 | Exact disk area, (2.1)–(2.4), harmonic local aside, sufficiency and complete theorem statement. |
+| 3 / 127 | Fixed-radius lemma in both directions and interpolation-based necessity plan. |
+| 4 / 128 | Weighted interpolation definition, bounded restriction, open mapping, cited Amar theorem, greedy lattice, statement and start of (3.1). |
+| 5 / 129 | Jacobian and Hölder estimate, compact truncation, sequence duality and absorption for \(q\le1\). |
+| 6 / 130 | Lattice bound and covering, \(q>1\) completion specified here, outlook and references [1]–[8]. Weighted balls, pluriharmonic extensions and bounded symmetric domain formulations in §4 are remarks rather than fully stated and proved theorems on these pages. |
+| 7 / 131 | References [9]–[10], including the Rochberg interpolation extension cited in §4, and affiliation. |
+
+The skeptical reconstruction supports the disk theorem and the ambient strip sharpness criterion with the stated fixed-width, interior-zero, nonvanishing weight factor and finite atomic measure hypotheses. The strip application is derived here from the source theorem. Scope is whole-paper review plus this specialization. The cited Amar interpolation theorem and the separate zeta zero-count inputs are used as dependencies.

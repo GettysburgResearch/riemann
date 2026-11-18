@@ -1,0 +1,15 @@
+{
+  "kind": "independent_exact_rational_all_cell_check_with_classical_analytic_bounds",
+  "source_commit": "0e961ea199b425010843bc8044676d4ad29fe031",
+  "table_sha256": "b80e5a8c70e4beb3b872dada426016bc97b0954c1a8a5eabaeb40fba49cded36",
+  "cells": 209010,
+  "all_table_lower_bounds_certified": true,
+  "mismatches": [],
+  "elapsed_seconds": 89.11007823900036,
+  "pi_interval_width": "1/10000000000000000000000000000000000000000000000000000000",
+  "arithmetic": "Python Fraction exact; no floating point in inequalities",
+  "scope": "Full first-window table only; mathematical justification of Taylor, Fourier derivative bounds and mean-value estimate is a short external proof, not Lean-checked here.",
+  "post_run_changes": "Only explicit input assertions, coefficient/spec tie, portable optional input path and tail-bound comment added after observed run; rational arithmetic loop unchanged.",
+  "portable_inputs": "experiments/inputs/839_first_window",
+  "review_status": "Parent independently reviewed analytic cell bound, reflection, derivative formulas and exact-floor implication; not Lean checked."
+}

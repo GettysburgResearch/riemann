@@ -1,0 +1,11 @@
+# PAPER-LRP005 — Báez-Duarte's arithmetic approximations
+
+Luis Báez-Duarte, **Arithmetical Aspects of Beurling's Real Variable Reformulation of the Riemann Hypothesis**, arXiv:math/0011254v1, posted29November2000; internal date20October2000. Primary source: https://arxiv.org/pdf/math/0011254v1 . Local file `sources/logarithmic_riesz_priority_skeptic_round4/baez_arithmetical2000.pdf`, SHA256 `951ecc56eaae5b80eb8128ab4f98b5184d06ed97da608a130d65940daea8e94c`.
+
+The related revised publication is **New versions of the Nyman-Beurling criterion for the Riemann hypothesis**, IJMMS31(7)(2002),387–406, DOI10.1155/S0161171202013248. Matching published introductory definitions and main-result descriptions were compared through a degraded text preview. Its publisher-quality PDF and full mathematical revision were not compared. Do not count the revised title as a separately read second work.
+
+**Reading scope:** actual preprint introduction/definitions pp1–5, relevant divergence statements and proofs pp17–20, references. OverallLevel0 with targeted substantive reading; not a whole21-page read or complete technical audit.
+
+The source distinguishes several natural approximants: unsmoothed Möbius fractional-part sums, two coefficient-constraint corrections, a dual sequence with uniformly spaced dilation parameters, and an integrated Möbius construction. Their precise definitions appear in Eqs1.14–1.19,pp4–5. Proposition4.4,p17, asserts endpoint `L^p` divergence of the unsmoothed and anchored sequences when a zero lies on `Re(s)=1/p`. Proposition4.7,pp19–20, rules out convergence of a **fixed-coefficient series** in the natural constrained generators in that situation. In particular the critical `L²` endpoint is obstructed.
+
+This is compatible with a triangular array whose weights depend on the cutoff even for previously present coefficients. It prevents promoting Lee's below-endpoint theorem by an unproved endpoint passage; it does not prohibit the archive's growing-order taper. No exact moving order was found in these inspected passages, which is not a whole-literature absence or novelty conclusion. Detailed source comparison: `audits/growing_logarithmic_riesz_priority_skeptic_round4.md` §2.

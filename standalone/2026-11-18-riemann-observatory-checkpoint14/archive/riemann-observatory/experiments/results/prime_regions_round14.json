@@ -1,0 +1,100 @@
+{
+  "alt_text": "Exponent map for coprime-prime blocks with modulus K of order T to the theta and prime scale P of order T to the xi. Blue is Baker only, ochre is Fouvry–Shparlinski only, and violet is their overlap. Stronger fill above the descending dashed line xi = 1 − theta shows the additional prime region beyond the limiting elementary short-factor cutoff. The vertical dotted line at theta = 9/17 marks the separate all-square result to its left and does not bound the prime regions. The prime estimates hold at strict interior points for a fixed transition exponent sufficiently close to one. Longer primes remain outside the shaded regions.",
+  "closed_plot_polygon_vertices_exact": {
+    "Baker": [
+      [
+        "12/23",
+        "12/23"
+      ],
+      [
+        "1/2",
+        "1/2"
+      ],
+      [
+        "1/2",
+        "1/4"
+      ],
+      [
+        "2/3",
+        "1/3"
+      ],
+      [
+        "14/25",
+        "12/25"
+      ]
+    ],
+    "Fouvry–Shparlinski": [
+      [
+        "1/2",
+        "11/20"
+      ],
+      [
+        "1/2",
+        "1/4"
+      ],
+      [
+        "17/26",
+        "1/4"
+      ],
+      [
+        "7/13",
+        "1/2"
+      ]
+    ],
+    "overlap": [
+      [
+        "7/13",
+        "1/2"
+      ],
+      [
+        "12/23",
+        "12/23"
+      ],
+      [
+        "1/2",
+        "1/2"
+      ],
+      [
+        "1/2",
+        "1/4"
+      ],
+      [
+        "5/8",
+        "5/16"
+      ]
+    ]
+  },
+  "code": "experiments/code/geometry118_prime_region_plot.py",
+  "code_sha256": "a5709bcbee95220a2df8bf0d51af8bad7cdbad4cfca8c6147a74bca959c5b6fb",
+  "elementary_limiting_short_factor_region": "xi < 1 - theta as kappa tends to 1 from below",
+  "plot_domain": {
+    "theta": [
+      "1/2",
+      "2/3"
+    ],
+    "xi": [
+      "1/4",
+      "3/4"
+    ]
+  },
+  "scope": "Strict interiors, fixed sufficiently close kappa < 1, no numerical onset, longer primes open.",
+  "separate_square_scope": "all prime squares for 1/2 < theta < 9/17",
+  "sha256": {
+    "png": "105a4acbe1457d6b2819e358b3ac3291074e646bf11d1f6c770caa60ebba2bfb",
+    "svg": "200aaf5c8ec3071e9a8fb23dd4acbd499c77243adf9c64b255d60b6ea19e778b"
+  },
+  "source": "audits/adversarial_reviews/director_arithmetic_strata_round14.md",
+  "strict_prime_regions": {
+    "Baker": [
+      "theta/2 < xi < theta",
+      "(11/10)theta + (4/5)xi < 1",
+      "theta + (11/12)xi < 1"
+    ],
+    "Fouvry–Shparlinski": [
+      "0 < xi < (3/2)theta",
+      "(13/10)theta + (3/5)xi < 1",
+      "(13/12)theta + (5/6)xi < 1"
+    ]
+  },
+  "stronger_fill_region": "the union of the two prime regions intersected with xi > 1 - theta"
+}

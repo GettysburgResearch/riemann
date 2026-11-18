@@ -1,0 +1,46 @@
+{
+  "checkpoint": "checkpoint12",
+  "status": "delivered_verified_metadata",
+  "verified_at_utc": "2026-11-18T05:08:35.224479+00:00",
+  "files": [
+    {
+      "kind": "zip",
+      "file_id": "1jDCXGRg3h4WzzKItgi2PLlOrEa91gLWq",
+      "local_path": "/workspace/checkpoints/checkpoint12_sealed.zip",
+      "bytes": 21161053,
+      "sha256": "5ad25a8561fd159488a2f2cafc7ddf3f78847f4a3f369881598a4f3d958e3c09",
+      "url": "https://drive.google.com/file/d/1jDCXGRg3h4WzzKItgi2PLlOrEa91gLWq/view?usp=drivesdk",
+      "parent_ids": [
+        "1VErNe2KOeqqw02o7YktqYOcfkixgHU-K"
+      ],
+      "modified_time": "2026-11-18T05:06:57.458Z"
+    },
+    {
+      "kind": "pdf",
+      "file_id": "15Ec2GU64FjpHwZMWLl1TqhQRAgdFmZrr",
+      "local_path": "/workspace/checkpoints/checkpoint12/final_synthesis/synthesis.pdf",
+      "bytes": 444416,
+      "sha256": "1dd0e3320655814b047f6e93c86db3ee8dd703fd68bdd66d43b21b4e3300e0d1",
+      "url": "https://drive.google.com/file/d/15Ec2GU64FjpHwZMWLl1TqhQRAgdFmZrr/view?usp=drivesdk",
+      "parent_ids": [
+        "1VErNe2KOeqqw02o7YktqYOcfkixgHU-K"
+      ],
+      "modified_time": "2026-11-18T05:07:01.196Z"
+    },
+    {
+      "kind": "html",
+      "file_id": "1TaUMRh5QFnD8j9eJA5i_D1DzDU8czdy0",
+      "local_path": "/workspace/checkpoints/checkpoint12/final_synthesis/synthesis.html",
+      "bytes": 510601,
+      "sha256": "8b2d75c7791b76638edfe77ae432d1771c883b8e1aaa9ef13ca76576596b28e8",
+      "url": "https://drive.google.com/file/d/1TaUMRh5QFnD8j9eJA5i_D1DzDU8czdy0/view?usp=drivesdk",
+      "parent_ids": [
+        "1VErNe2KOeqqw02o7YktqYOcfkixgHU-K"
+      ],
+      "modified_time": "2026-11-18T05:07:04.328Z"
+    }
+  ],
+  "verification_scope": "Local SHA-256 and exact ZIP member bytes verified. In-place Drive uploads succeeded and independent metadata readback verified IDs, byte sizes, parent IDs and new modification timestamps. Remote SHA-256 was unavailable.",
+  "independent_qa": "quality/checkpoints/checkpoint12_independent_qa.md",
+  "tool_responses": "quality/checkpoints/checkpoint12_drive_tool_responses.json"
+}

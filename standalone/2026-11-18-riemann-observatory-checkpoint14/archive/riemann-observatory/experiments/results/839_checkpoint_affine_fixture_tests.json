@@ -1,0 +1,82 @@
+{
+  "status": "functional_checkpoint_replay_equivalence_tests_passed",
+  "scope": "In-process reference tests with easier fixtures. Exact full searches separate.",
+  "fixtures": [
+    {
+      "fixture": "first",
+      "alpha_multiplier_rounded_down": "5/4",
+      "points": 7,
+      "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+      "restored_nodes_after_sigkill": null,
+      "staged_sha256": "c584492380239533b981175362bdae0bf54beb7a7d7d7dae4901672f6931bc0c",
+      "parameter_sha256": "c97bdf3f3011326302fbc35a9ef3b8ea6050cb1a0ba837e89977cd8b98b69ddf",
+      "unmodified_counts": {
+        "status": "PASS_COB_CONTINUUM",
+        "nodes": 730525,
+        "leaves": 365263,
+        "basic": 365256,
+        "affine": 7,
+        "max_stack": 40
+      },
+      "separate_pause_nodes": [
+        146105,
+        243508,
+        365262
+      ],
+      "uninterrupted_and_resumed_final_state_bytes_match": true,
+      "wrong_identity_and_truncated_state_rejected": true,
+      "completed_state_reopens_to_same_result": true
+    },
+    {
+      "fixture": "second",
+      "alpha_multiplier_rounded_down": "5/4",
+      "points": 8,
+      "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+      "restored_nodes_after_sigkill": 1000000,
+      "staged_sha256": "c584492380239533b981175362bdae0bf54beb7a7d7d7dae4901672f6931bc0c",
+      "parameter_sha256": "450f40961db43f8971670c7b4637b27c795e13cb1d89e301e4f484d5439730fd",
+      "unmodified_counts": {
+        "status": "PASS_COB_CONTINUUM",
+        "nodes": 3036783,
+        "leaves": 1518392,
+        "basic": 1512180,
+        "affine": 6212,
+        "max_stack": 57
+      },
+      "separate_pause_nodes": [
+        607356,
+        1012261,
+        1518391
+      ],
+      "uninterrupted_and_resumed_final_state_bytes_match": true,
+      "wrong_identity_and_truncated_state_rejected": true,
+      "completed_state_reopens_to_same_result": true
+    },
+    {
+      "fixture": "third",
+      "alpha_multiplier_rounded_down": "7/6",
+      "points": 7,
+      "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+      "restored_nodes_after_sigkill": 1000000,
+      "staged_sha256": "c584492380239533b981175362bdae0bf54beb7a7d7d7dae4901672f6931bc0c",
+      "parameter_sha256": "462f91aa04bad3643b3aaa1a54674d83edc4b7135e5347b1d07abdb6717d9ec4",
+      "unmodified_counts": {
+        "status": "PASS_COB_CONTINUUM",
+        "nodes": 12158307,
+        "leaves": 6079154,
+        "basic": 6079144,
+        "affine": 10,
+        "max_stack": 49
+      },
+      "separate_pause_nodes": [
+        2431661,
+        4052769,
+        6079153
+      ],
+      "uninterrupted_and_resumed_final_state_bytes_match": true,
+      "wrong_identity_and_truncated_state_rejected": true,
+      "completed_state_reopens_to_same_result": true
+    }
+  ],
+  "date_utc": "2026-11-17T21:25:24.427303+00:00"
+}

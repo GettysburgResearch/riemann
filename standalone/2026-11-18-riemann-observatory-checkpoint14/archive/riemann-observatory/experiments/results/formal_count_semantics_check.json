@@ -1,0 +1,59 @@
+{
+  "kind": "static_count_definition_identity_and_inspected_source_hashes_NOT_Lean_proof",
+  "commit": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510",
+  "count_definitions": [
+    {
+      "name": "IsNontrivialZero",
+      "whitespace_normalized_literal_definition_matches": true
+    },
+    {
+      "name": "zeroMult",
+      "whitespace_normalized_literal_definition_matches": true
+    },
+    {
+      "name": "zerosIn",
+      "whitespace_normalized_literal_definition_matches": true
+    },
+    {
+      "name": "Ncount",
+      "whitespace_normalized_literal_definition_matches": true
+    },
+    {
+      "name": "Ndist",
+      "whitespace_normalized_literal_definition_matches": true
+    },
+    {
+      "name": "N0",
+      "whitespace_normalized_literal_definition_matches": true
+    },
+    {
+      "name": "N0star",
+      "whitespace_normalized_literal_definition_matches": true
+    },
+    {
+      "name": "N0simple",
+      "whitespace_normalized_literal_definition_matches": true
+    },
+    {
+      "name": "Nsimple",
+      "whitespace_normalized_literal_definition_matches": true
+    }
+  ],
+  "source_sha256": {
+    "comparator/ChallengeDeps.lean": "f05666d0745edbf2dac6ce2a4de675abd1bba3c336fe24aebb80f27d1365ebbd",
+    "Zeta23/Statement.lean": "3458af8531decf948319517543f731dcdc2c5a7de47e9339f9a443530e60d205",
+    "Zeta23/Statement/Seam.lean": "d16cbfbbfff2cfe3d4df0425957ae20fd1828d8faf39e70f11a2acd85b45c7e3",
+    "Zeta23/Statement/SeamClosed.lean": "b2b03190fb3cf4520d273f8bdb9fc7a89939381c8aaff360e5845108b4d8b88d",
+    "Zeta23/Defs.lean": "216b34de76394522aea610c57d342f3dfe8aa1c3d9d6b2ec11509de92f1c6bb0",
+    "Zeta23/Final.lean": "46ffcd80ca80b3d5021c08b9829ac1c03a371fee7cecbbc9eeb76fcc1fb1cae6",
+    "Zeta23/FinalMult.lean": "ce5f72526219ba85ade4aa870c71ca3f72e7e39f32e5b595a07798bd4fbf568c",
+    "Zeta23/ThmD/Mult.lean": "9dc42aea8d30092c70632bd6f1b229981b7cb8f3b32dfedc6c007d1e452495aa",
+    "comparator/Solution.lean": "b707c110ecee1ee0e5ae84110417d68ce8f48fb8e88efb12a95021ee911d3f31",
+    "comparator/Solution/Multiplicity.lean": "8a2481fc5ddb8a5cf9ef842536aa1ecb237aaf118767db2e01e3665cfed36bb7",
+    ".lake/packages/mathlib/Mathlib/Analysis/Analytic/Order.lean": "e3c18c988f204af7af6ffedd936dcf4345ab82af65d0632fe7d1daaf10bcddd3",
+    ".lake/packages/mathlib/Mathlib/Data/Set/Card.lean": "66ccca9b43ba4c1f2905dcc5f775675711451d5e4055be95b0ff8ba950dbc39c",
+    ".lake/packages/mathlib/Mathlib/Algebra/BigOperators/Finprod.lean": "6cd224ebd675ce5b3f8c918b7bbc3e839219c744dfcfd4cf1426e6b212fb48e6"
+  },
+  "semantic_review": "audits/adversarial_reviews/AF_count_semantics_skeptic_round2.md",
+  "scope": "Nine literal public/library zeta count definitions checked. Source proofs of finite positive order and finite windows read independently; their complete Lean closure was not built by this reviewer."
+}

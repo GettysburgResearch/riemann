@@ -1,0 +1,42 @@
+# Ghosh’s quadratic prime bound and the \(9/17\) square-stratum threshold
+
+I checked Ghosh’s own 1981 thesis at printed p. 4, PDF p. 12, independently of the later quotation. I then matched the arithmetic square argument in weighted107 and compared the smoothing, gcd reduction and exponent calculation with separate confirmations from weighted89 and prime89. The square-stratum estimate passes for \(1/2<\theta<9/17\). Its endpoint is open, and the genuine-prime stratum and full fourth moment remain outside this conclusion. [Target proof](weighted107_quadratic_and_inverse_prime_savings.md) · [Prior strata and pointwise input](uniform105_strata_adjudication.md)
+
+## Primary statement and later sources
+
+Ghosh’s *The Distribution of \(\alpha p^2\) Modulo 1* appeared in *Proceedings of the London Mathematical Society* (3) 42(2), 252–269, March 1981, DOI 10.1112/plms/s3-42.2.252. I verified the bibliographic metadata, but the Wiley and OUP journal PDF endpoints tested returned HTTP 403. The primary substitute is Ghosh’s contemporaneous Nottingham thesis *Topics in prime number theory*, ch. 1, §1.1, Theorems 1–2. The Nottingham metadata likewise give 1981. I inspected the rendered theorem because the scanned text layer misreads its handwritten formulas. The downloaded 193-page thesis PDF has SHA-256 52c201db4b3f5f19c4a1efc38556aef4c97a700e52d2ab741f7fa17a267f2e55. The thesis's theorem independently supplies the estimate used below. [Journal record](https://doi.org/10.1112/plms/s3-42.2.252) · [Nottingham thesis record](https://repository.nottingham.ac.uk/entities/publication/35ce88be-031b-4391-822e-79ff11e875fc) · [Primary scan p. 4](https://repository.nottingham.ac.uk/bitstreams/8f8d2034-326a-4974-9c1f-e5b488b1fa4e/download#page=12)
+
+Theorem 2 inherits real \(\alpha\), positive integers \(a,q\), \((a,q)=1\), and the strict approximation \(|\alpha-a/q|<q^{-2}\) from Theorem 1. For a positive integer \(L\) and fixed \(\epsilon>0\) it gives
+\[
+ \left|\sum_{v\le L}\Lambda(v)e(\alpha v^2)\right|
+ \ll_\epsilon L^{1+\epsilon}
+        (q^{-1}+L^{-1/2}+qL^{-2})^{1/4}.
+\]
+The implicit constant depends at most on \(\epsilon\). In particular there is no stated irrationality or further \(L\)-versus-\(q\) hypothesis. An exact reduced rational \(a/q\) satisfies the strict approximation inequality, including after choosing a positive residue representative for a negative numerator. The formula bounds a Mangoldt-weighted prefix, not an unweighted prime prefix. Ren, *On exponential sums over primes and application in Waring-Goldbach problem* (2005), p. 786 (1.4), quotes the same estimate for \(x<v\le2x\), with \(S_2\) defined using \(\Lambda\) on p. 785. Section 4, p. 796, actually uses it with reduced \(a/q\) and \(|\alpha-a/q|\le1/(qQ^*)\le q^{-2}\). The square application here has zero approximation error, so endpoint choices for that inequality play no role. The Ren PDF checked has SHA-256 c9b4f380853e8dcc7efe136dac3b12f2336000cbaab5050c6ec9891c59c2c2e6. [Ren primary article](https://files.sciengine.com/pdfs/1006-9283/j3LzycXF2bBF4Z3tC.pdf)
+
+I found no correction to this theorem in the bounded search. Ren’s Theorem 1.1, (1.2) and (1.3), refines the estimate on other denominator ranges, including the stated improvement for \(q\le x^{3/4}\) with a suitable offset. At exact rational \(q\asymp K\) in the large-modulus part of the present threshold \(X\asymp T/K\), a term \(X^{1/2}q^{1/2}\) in that estimate can exceed \(X\) when \(K>X\). Harman–Kumchev, *On sums of squares of primes*, §3 (3.1) and Lemma 1, give the same Ghosh estimate for their genuine prime sum \(f\), and improve its \(7/8\) part to \(6/7\) for a different sieve sum \(g\) under explicit bilinear coefficient hypotheses. This is a refinement for a substitute weight, whose supporting assumptions do not directly apply to the required genuine primes. [Ren, (1.2)–(1.4)](https://files.sciengine.com/pdfs/1006-9283/j3LzycXF2bBF4Z3tC.pdf) · [Harman–Kumchev, primary author copy](https://tigerweb.towson.edu/akumchev/a19.pdf)
+
+Kumchev’s *On Weyl sums over primes and almost primes*, (1.1), (1.7), Theorem 3 and (1.12), is a closer refinement for genuine primes. In degree two with exact rational \(\alpha=a/q\) and \(q\le P^{3/2}\) it bounds the unweighted dyadic sum by \(P^{7/8+\epsilon}+q^{-1/2+\epsilon}P(\log P)^c\). To pass to prefixes at \(X\)-scale, decompose them dyadically down to length comparable to \(q^{2/3}\) and bound the lower remainder trivially. The extra \(O(q^{2/3})\) fits the \(X^{7/8}\) term if \(q\le X^{21/16}\). This stronger relation holds with slack for all \(q\le K\) on the large-square range \(X\ge T^{1-\nu}/K\), if \(\theta<9/17\) and \(\nu\) is small. Abel summation then inserts the full log-cubed weight. This avoids the Ghosh large-\(q\) term on that range but retains the \(X^{7/8}\) term that sets \(9/17\). The same source discusses Baker–Harman estimates for exact rationals with denominator near the prime scale, a separate hypothesis requiring its own match before use across the whole range. Author-copy SHA-256 4d45261ab7e01e1fa832d2e3f1ea30a10725aaee6ccfaabd8cb95709407673f1. [Kumchev primary author copy](https://tigerweb.towson.edu/akumchev/a21.pdf)
+
+## Independent arithmetic calculation
+
+The coefficient in the square part of \(d_2*(\Lambda\log^2)\) is \(d_2(n)\Lambda(p^2)(\log p^2)^2=4d_2(n)\log^3p\). Use \(k\asymp K\), \(X\le p\le2X\), and set \(g=(k,n)\), \(q=k/g\). Compact support of \(w_T(2\pi n p^2/k)\) gives \(n\le CKT/X^2\). At \(q=1\) the primary additive phase and all unit numerators give exactly one, and the centered phase is zero. At \(q>1\), each unit numerator in the average reduces to a unit modulo \(q\), multiplying the coprime \(n/g\). The reduction map of units is surjective with equal fibers, so the average is bounded by the same uniform estimate. No condition \(n\le k\) is used.
+
+Prefix differences give the Ghosh estimate for any interval inside \([X,2X]\), using endpoints comparable to \(X\). Removing base variables \(v=p^j,\ j\ge2\), costs \(O(X^{1/2}\log^2 X)\) by direct integer counting, absorbed by \(X^{7/8+\epsilon}\). If the prior shared-prime removal requires \(p\nmid k\), subtract at most the four supported distinct prime divisors of \(k\), costing \(O(\log X)\) in the Mangoldt-weighted sum. With \(k,n\) fixed, \(p\mapsto2\pi n p^2/k\) is increasing. Choose the permitted cutoff with value bounded by one and two monotone transitions. Its composition in \(p\) then has total variation at most two, uniformly in \(n,k,H\), and the remaining log square costs \(O(\log^2(2X))\) in supremum and variation. Cutting to an end slice adds only its endpoint contributions. Abel summation incurs no \(T/H\) factor and bounds each fixed-\(k,n\) prime sum by
+\[
+ \ll T^\epsilon X
+ \big(q^{-1/4}+X^{-1/8}+q^{1/4}X^{-1/2}\big).
+\]
+
+Write \(Y_0=CKT/X^2\). The divisor bound gives \(\sum_{n\le Y_0,\ g\mid n}d_2(n)\ll T^\epsilon Y_0/g\), including \(Y_0/g<1\) when the sum is empty. After grouping by \(g\mid k\), the three factors of \(g\) are \(g^{-3/4},g^{-1},g^{-5/4}\); the divisor-count loss is \(T^\epsilon\). The outer supported \(c_k/k\) weighs each dyadic modulus block by \(O(1)\) since \(c_k\le24\). Thus a block costs
+\[
+ \ll T^\epsilon\frac{KT}{X}
+     \big(K^{-1/4}+X^{-1/8}+K^{1/4}X^{-1/2}\big).
+\]
+The previous centered-divisor pointwise estimate, with the transition exponent chosen close enough to one, controls the bases \(p\le T^{1-\nu}/K\) at cost \(O(T^{1-\nu+\eta}\log^C T)\) for \(0<\eta<\nu\). Split at that boundary and use the same partial-sum bound for a sliced dyadic interval. Each expression for larger \(X\) decreases with \(X\), so its worst case is at \(X=T^{1-\nu}/K\), giving
+\[
+ T^\nu K^{7/4},\qquad
+ T^{-1/8+9\nu/8}K^{17/8},\qquad
+ T^{-1/2+3\nu/2}K^{11/4}.
+\]
+At \(\nu=0\) their respective restrictions are \(\theta<4/7,\ 9/17,\ 6/11\). Hence for each fixed \(1/2<\theta<9/17\) one can choose \(\nu\), then \(\eta<\nu\), and the other losses small enough to retain strict power savings after all dyadic sums. In particular \(\theta=9/17\) makes the middle term \(T^{1+9\nu/8}\) before extra losses, so this argument does not give the endpoint. Under \(\theta=4b\), the new square-elimination band ends at \(b<9/68\). This is an unconditional bound for the declared smooth square stratum. Transfer to the zero statistic still needs its earlier hypotheses and control of surviving arithmetic terms. No canonical record was changed.

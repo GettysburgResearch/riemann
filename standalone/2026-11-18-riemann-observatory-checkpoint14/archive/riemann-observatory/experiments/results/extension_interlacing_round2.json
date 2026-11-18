@@ -1,0 +1,31 @@
+{
+  "operators": "H_theta=-i d/dx on L2(0,2pi), f(2pi)=exp(2pi i theta)f(0)",
+  "common_symmetric_restriction": "S=-i d/dx on H0^1(0,2pi), deficiency(1,1)",
+  "theta0": "2/5",
+  "theta1": "3/20",
+  "K": "3/10",
+  "heights": [
+    "3/10",
+    "3/5",
+    "6/5"
+  ],
+  "counts_H0": [
+    0,
+    1,
+    1
+  ],
+  "counts_H1": [
+    1,
+    1,
+    2
+  ],
+  "delta_H0": -2,
+  "delta_H1": 1,
+  "curvature_difference": 3,
+  "relative_range_on_test_grid": [
+    0,
+    1
+  ],
+  "checks": "Exact Fraction arithmetic; eigenvalue endpoints included; both reciprocal branches, finite-window additivity and sharp curvature verified. Abstract operator/defect proof is separate.",
+  "proof_file": "audits/extension_interlacing_round2.md"
+}

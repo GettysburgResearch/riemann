@@ -1,0 +1,7 @@
+# Analytic track checkpoint — 2026-11-17
+
+Queries: Guth Maynard large values theorem; Platt Trudgian finite RH; latest critical-line proportions2025/2026; exact arXiv IDs plus correction/erratum/withdrawn. Original PDFs and landing metadata fetched with Python urllib; pdftotext used; AF pp8–9 visually rendered for exponent checks. Source SHA256 values in analytic_records.jsonl. Six real works, no padded candidate entries. Copyrighted fulltexts are local research cache; omit sources/analytic PDFs, text and page images from public/downloadable archive unless license separately verified.
+
+Outputs:6 paper records;8 theorem nodes;3 connections;analytic frontier;audit log;scoped AF review;standard-library exact arithmetic and finite-multiset stress code/results.500 random cases found no failure; this is not validated numerical evidence. Counts:6 existence/identity verified;6 fulltext accessed;2 whole-text substantive reads;4 partial reads;0 whole-work L2;0 independent full-work L3. Local proof reconstruction of A003 finite inequality and A004 matrix lemma is explicitly scoped.
+
+AF boundary-rate issue was independently repaired with a frame-operator estimate and reviewed here. Next priorities: effective constants; BGSTB full proof and effective constants; compiled local-interaction certificate audit; GM S3 sharpness/Prop9.1. Parent notified of latest preprint source evidence and precise exponent non-implication.

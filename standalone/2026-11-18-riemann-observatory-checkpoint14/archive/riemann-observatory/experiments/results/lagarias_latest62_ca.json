@@ -1,0 +1,116 @@
+{
+  "scale": 6277101735386680763835789423207666416102355444464034512896,
+  "precision_bits": 192,
+  "epsilon_exact": "log(14/13) / log(13)",
+  "epsilon_scaled_interval": [
+    181361584882321083344679535666898741020122346813076027113,
+    181361584882321083344679535666898741020122346813076027231
+  ],
+  "prime_thresholds": [
+    {
+      "prime": 2,
+      "maximizing_exponents": [
+        4
+      ],
+      "threshold_k_minus_epsilon_lower_scaled": 115581199446608979805323946975751043601372885566110854002,
+      "epsilon_minus_threshold_kplus1_lower_scaled": 36463396951455040233853511126359292852065749262838298026
+    },
+    {
+      "prime": 3,
+      "maximizing_exponents": [
+        2
+      ],
+      "threshold_k_minus_epsilon_lower_scaled": 275975570750379159630830233135688598084443182640889796546,
+      "epsilon_minus_threshold_kplus1_lower_scaled": 36704131043860383251344393552396392394542893841844344831
+    },
+    {
+      "prime": 5,
+      "maximizing_exponents": [
+        1
+      ],
+      "threshold_k_minus_epsilon_lower_scaled": 529725777797532682916344019991650567149374417381727352990,
+      "epsilon_minus_threshold_kplus1_lower_scaled": 53475288582807607108137707177200635030242254388017457910
+    },
+    {
+      "prime": 7,
+      "maximizing_exponents": [
+        1
+      ],
+      "threshold_k_minus_epsilon_lower_scaled": 249382936789920464250566540655413693025367253069604841895,
+      "epsilon_minus_threshold_kplus1_lower_scaled": 124266427544148562065896604804408036629633977311514045216
+    },
+    {
+      "prime": 11,
+      "maximizing_exponents": [
+        1
+      ],
+      "threshold_k_minus_epsilon_lower_scaled": 46412860355477984373809421851396591374211150027292028536,
+      "epsilon_minus_threshold_kplus1_lower_scaled": 161604851496756856679534908318485524366937603128307924511
+    },
+    {
+      "prime": 13,
+      "maximizing_exponents": [
+        0,
+        1
+      ],
+      "tie": "epsilon is defined by the exact p=13, k=1 threshold",
+      "epsilon_minus_threshold_k2_lower_scaled": 167951899439578779924104405246705161740039296938061467450
+    }
+  ],
+  "exclusion": {
+    "first_prime": 17,
+    "epsilon_minus_first_threshold_lower_scaled": 54724747081386147143668783229689734713685738472559283921
+  },
+  "endpoints": [
+    {
+      "n": 55440,
+      "prime_exponents": {
+        "2": 4,
+        "3": 2,
+        "5": 1,
+        "7": 1,
+        "11": 1,
+        "13": 0
+      },
+      "sigma": 232128,
+      "harmonic_scaled_interval": [
+        72188435815496846889389786919800889608477482221925844035426,
+        72188435815496846889389786919800889608477482221925844090866
+      ],
+      "lagarias_rhs_scaled_interval": [
+        1513910901292070800982021482953906446570257770068297400264054377,
+        1513910901292070800982021482953906446570257770068297414383290996
+      ],
+      "gap_lower_scaled": 56819829660231368634347355723557256733250205455749996854531689,
+      "integer_part_of_gap_lower": 9051
+    },
+    {
+      "n": 720720,
+      "prime_exponents": {
+        "2": 4,
+        "3": 2,
+        "5": 1,
+        "7": 1,
+        "11": 1,
+        "13": 1
+      },
+      "sigma": 3249792,
+      "harmonic_scaled_interval": [
+        88288831621642588850746270717789975246328601999605203182916,
+        88288831621642588850746270717789975246328601999605203903636
+      ],
+      "lagarias_rhs_scaled_interval": [
+        21302101730573448248145347562511162328935285548869164981522702379,
+        21302101730573448248145347562511162328935285548869167496441839756
+      ],
+      "gap_lower_scaled": 902826727727696195277909781286273671217179644293501333789384747,
+      "integer_part_of_gap_lower": 143828
+    }
+  ],
+  "closed_interval": [
+    55440,
+    720720
+  ],
+  "integer_count": 665281,
+  "requires_concavity_input": "proposals/independent_campaigns/lagarias_global_concavity_round2.md"
+}

@@ -1,0 +1,298 @@
+{
+  "zip_sha256": "9f1dcab0d244f667e90cdf712eea15c6f07b8141c1adaee7569f26774c57a198",
+  "zip_bytes": 21554391,
+  "manifest_payloads": 2887,
+  "zip_members": 2888,
+  "renders": {
+    "html": {
+      "bytes": 542087,
+      "sha256": "abacebf4c0d4b4cff5c44ca080af41289d37bc011d82aff18e1f72aa91e5e440"
+    },
+    "pdf": {
+      "bytes": 475026,
+      "sha256": "8e902c98e28b0365b24b980f7bd199ef81586d8d2e79563570dbc7984d46c515"
+    }
+  },
+  "links": {
+    "html_embedded_resources": 2,
+    "html_anchors": 7,
+    "html_local": 95,
+    "html_external": 2,
+    "pdf_local": 103,
+    "pdf_external": 2
+  },
+  "pdf_pages": 37,
+  "pdf_text_bounds": [
+    42.0,
+    48.25820541381836,
+    551.9982299804688,
+    820.8118896484375
+  ],
+  "code_pins": [
+    {
+      "result": "experiments/results/839_majorant_check.json",
+      "source": "experiments/code/839_majorant_check.py",
+      "sha256": "da45687bd8c0d21a58cfa43e92757044a54c243dbff17f9fe3adeb4ced40f3c8"
+    },
+    {
+      "result": "experiments/results/839_majorant_skeptic_replay.json",
+      "source": "experiments/code/839_majorant_check.py",
+      "sha256": "da45687bd8c0d21a58cfa43e92757044a54c243dbff17f9fe3adeb4ced40f3c8"
+    },
+    {
+      "result": "experiments/results/director65_weighted_rolle_checks.json",
+      "source": "scripts/positivity65_weighted_rolle_checks.py",
+      "sha256": "e39e00b518ada6ca232ffcb130cb3b3852606cee987fc48b3874debfc0c63fcc"
+    },
+    {
+      "result": "experiments/results/director_gonek_gap_round15.json",
+      "source": "experiments/code/director_gonek_gap_round15.py",
+      "sha256": "67dd5cd4d7664bf419aa4443b7a92ba72581dff726aab05913670f4c994c2ace"
+    },
+    {
+      "result": "experiments/results/director_petrov_quadratic_round13.json",
+      "source": "experiments/code/director_petrov_quadratic_round13.py",
+      "sha256": "6d9100e1cb5adc03c8993d33a95ffc80f36dd6a2f83e5ccba776faa985c820c8"
+    },
+    {
+      "result": "experiments/results/director_round11_band_third.json",
+      "source": "scripts/prime72_hlz_third_cumulant_check.py",
+      "sha256": "6483c93c25a76828ea5e1093e5325152dbe3c2f5b934962c2165bf95a734f70f"
+    },
+    {
+      "result": "experiments/results/director_round11_band_variance.json",
+      "source": "scripts/prime71_hlz_band_variance_check.py",
+      "sha256": "11ef46fb29086e8565c7c83e5174fc62bb01429bee32e4fea681e89d9e084253"
+    },
+    {
+      "result": "experiments/results/director_round11_cue_covariance.json",
+      "source": "scripts/weighted73_cue_band_checks.py",
+      "sha256": "3e199a0f3d3bd68f2f92dfc67d822913a9684827dfdee18ed923b38bcd3950c1"
+    },
+    {
+      "result": "experiments/results/director_round11_cue_third.json",
+      "source": "scripts/weighted73_cue_third_kernel_checks.py",
+      "sha256": "b7ef0a5a06d02df3f48d4beee878a5e71edf97671394445dca5374fc473353ea"
+    },
+    {
+      "result": "experiments/results/director_round11_global_hardy.json",
+      "source": "scripts/prime69_parameterized_hardy_tail_checks.py",
+      "sha256": "407f22b05d73f6e695e5268b2655ef2721ab1185d4807702c7c2ec818e0a0354"
+    },
+    {
+      "result": "experiments/results/director_round11_integer_trace.json",
+      "source": "scripts/geometry69_integer_toeplitz_checks.py",
+      "sha256": "cf0270f6eaebb78565270646c0ba9311e0e078e156c09e71bc9956c3ee2ad62a"
+    },
+    {
+      "result": "experiments/results/director_round11_prime_kernel.json",
+      "source": "scripts/weighted70_hlz_prime_kernel_checks.py",
+      "sha256": "dd14a84553dcfc851ad4c0d2b036d4ff7d0a17138fe4614f20f5172a5f006103"
+    },
+    {
+      "result": "experiments/results/director_round12_formal_gram.json",
+      "source": "experiments/code/director_round12_formal_gram.py",
+      "sha256": "e22258216ca390b2f5c03dd667e240b31aac41988e76a9e94d46a1279daa1d1a"
+    },
+    {
+      "result": "experiments/results/director_round13_cue_fourth.json",
+      "source": "experiments/code/director_round13_cue_fourth.py",
+      "sha256": "199fb1b5e925225e843721bc378de562f31d7702f618d1f01f9dec2d0de293e6"
+    },
+    {
+      "result": "experiments/results/geometry111_rankone_hankel_certificate.json",
+      "source": "experiments/code/geometry111_rankone_hankel_certificate.py",
+      "sha256": "836ae6f6495fd0d616ff8c9654a114c844e58659d4c903816633feeb6545a952"
+    },
+    {
+      "result": "experiments/results/jump_factorial_prime_array63_arb.json",
+      "source": "experiments/code/history/jump_factorial_prime_array63_arb_v1.py",
+      "sha256": "11ee04883dec90fae9f1bf878f178140c5c06445467117eb1ea85efe9e62e559"
+    },
+    {
+      "result": "experiments/results/jump_factorial_prime_array63_arb_recheck.json",
+      "source": "experiments/code/history/jump_factorial_prime_array63_arb_v1.py",
+      "sha256": "11ee04883dec90fae9f1bf878f178140c5c06445467117eb1ea85efe9e62e559"
+    },
+    {
+      "result": "experiments/results/jump_factorial_prime_array63_arb_v2_n10.json",
+      "source": "experiments/code/jump_factorial_prime_array63_arb.py",
+      "sha256": "65e6445595292e30faeb241310a7610aa1dafe88c1a89261cb392f80abf551d3"
+    },
+    {
+      "result": "experiments/results/prime64_explicit_log4_tail_checks_director.json",
+      "source": "scripts/prime64_explicit_log4_tail_checks.py",
+      "sha256": "606982b68be4d8b5c3be5535ada687f28064a7893a9526cb7deb98d02a79f55e"
+    },
+    {
+      "result": "experiments/results/prime64_finite_remainder_checks_director.json",
+      "source": "scripts/prime64_finite_remainder_checks.py",
+      "sha256": "cabe6c3bf5a93a1d82b5b73f334ddbd2cf442801f713b67ade0f5700889a5991"
+    },
+    {
+      "result": "experiments/results/prime64_nakamura_heavy_tail_checks_director.json",
+      "source": "scripts/prime64_nakamura_heavy_tail_checks.py",
+      "sha256": "d4cc8422d1d83348ce7a2cad1529d1e0049ea50a3f03405a2cfb982415b93930"
+    },
+    {
+      "result": "experiments/results/prime64_sharper_moments_checks_director.json",
+      "source": "scripts/prime64_sharper_moments_checks.py",
+      "sha256": "70be095355de6f5e502c3024e43148cf169717fd3b409dfb3989e10be365634f"
+    },
+    {
+      "result": "experiments/results/prime_band_round11_figure.json",
+      "source": "experiments/code/prime_band_round11_figure.py",
+      "sha256": "bf862e23fbdcac6a87d0b8525b2ad339bdb1333f313db7885603337e35f72b95"
+    },
+    {
+      "result": "experiments/results/prime_regions_round14.json",
+      "source": "experiments/code/geometry118_prime_region_plot.py",
+      "sha256": "a5709bcbee95220a2df8bf0d51af8bad7cdbad4cfca8c6147a74bca959c5b6fb"
+    }
+  ],
+  "whole_work_source_pins": [
+    {
+      "id": "PAPER-MN2026-VERTICAL",
+      "source_sha256": "ba5c1ab46edf1dbef9741dd1e999ec492c0be59bc65d82cc7ac7dfab8520c076"
+    },
+    {
+      "id": "PAPER-SM63-POS-040",
+      "source_sha256": "756288c39bfd743f08f24b1e5074bb8a4adbe8a959d42edd763af07678801830"
+    },
+    {
+      "id": "PAPER-R001",
+      "source_sha256": "49cd7ad205f153197c327fa2035dce5bd676738e06fa696ac5e15cca1e49e43c"
+    },
+    {
+      "id": "PAPER-GEO65-001",
+      "source_sha256": "abef52f91f14b13f53602c5af2add8e657caffbcee984b288d3eaf8adca50e37"
+    },
+    {
+      "id": "PAPER-E008",
+      "source_sha256": "8f5719751f869d71907c9da75270cb8c012b54f1453f54179461dbc331d255a1"
+    },
+    {
+      "id": "PAPER-E014",
+      "source_sha256": "9bfb3943ec8d7690d452b8ac7d50fb10614b4e814738dc091390e6ab4994f0b8"
+    },
+    {
+      "id": "PAPER-AN79-HR-ZETA",
+      "source_sha256": "b4572e5bdbf3cf7e891a4128aeb3bb56d151f2b16d23f9e63a94b1a2d2c09139"
+    },
+    {
+      "id": "PAPER-LF63-GONEK1984",
+      "source_sha256": "dfdd2444a2f62f1947c897e87101080225714dbf1f21db8ca19096d2a6e80fc3"
+    },
+    {
+      "id": "PAPER-S001",
+      "source_sha256": "9e2b9cd404dd8d054689607ef4b7c49734fd0d6648a272244451f6ae9a5f9b4c"
+    }
+  ],
+  "findings": 59,
+  "witnessed_findings": 17,
+  "allowed_pdfs": [
+    "experiments/results/augmented_moment63_escape.pdf",
+    "experiments/results/prime_band_round11.pdf",
+    "experiments/results/probability_chains64.pdf",
+    "experiments/results/witness62_prefix_transition.pdf",
+    "experiments/results/witness62_weighted_criterion_phase.pdf",
+    "final_synthesis/synthesis.pdf"
+  ],
+  "new_sources": [
+    {
+      "id": "PAPER-H406",
+      "title": "Zu Riemanns Abhandlung „Ueber die Anzahl der Primzahlen unter einer gegebenen Grösse“",
+      "version": "1895 J. reine angew. Math. 114, original German journal print, pp. 255–305",
+      "audit_level": 1,
+      "source_path": "sources/history_round4/mangoldt1895_pp255-305.pdf",
+      "source_sha256": "4a75707d429a2ba3c310e0150bfd00d0c79a2c0d8b94df6eb2fd0a8cc071c3e6"
+    }
+  ],
+  "coverage": {
+    "metadata_candidates": 5203,
+    "metadata_candidates_rejected": 56,
+    "metadata_candidates_pending": 5147,
+    "curated_candidate_decisions": 89,
+    "curated_priority_candidates": 80,
+    "curated_provider_matches": 85,
+    "additional_curated_records_unreconciled": 4,
+    "catalogued_works": 1011,
+    "deferred_supporting_works": 1,
+    "selected_checkpoint_works": 1010,
+    "fulltexts_accessed_selected": 965,
+    "selected_primary_excerpt_accessed": 13,
+    "whole_work_or_translation_read": 131,
+    "whole_work_audit_levels": {
+      "0": 879,
+      "1": 122,
+      "3": 9
+    },
+    "scoped_level3_claim_groups": 123,
+    "theorem_or_exercise_records": 489,
+    "connection_records": 97,
+    "graph_nodes": 2691,
+    "graph_edges": 2658
+  },
+  "external_urls": {
+    "https://doi.org/10.1017/S001309150001748X": 2
+  },
+  "local_render_comparison_scope": "Every sealed member compared byte-for-byte against the distributable frozen stage, including both final synthesis renders.",
+  "canonical_round17_claims": [
+    "LEM-MELLIN-NEGATIVE-LOG-SHARP-INVERSION-PACKET",
+    "OBS-MELLIN-ALL-NEGATIVE-LOG-SIGNED-DIVERGENCE",
+    "THM-MELLIN-EXACT-SIGNED-LOG-BOUNDARY",
+    "OBS-CSTAR-COMMON-NONNEGATIVE-SEQUENCE-NORM-COUNTERMODEL",
+    "OBS-CSTAR-COMMON-INTEGER-SEQUENCE-NORM-COUNTERMODEL",
+    "OBS-CSTAR-BOUNDED-COMMON-REAL-SEQUENCE-NORM-COUNTERMODEL",
+    "OBS-CSTAR-BOUNDED-COMMON-INTEGER-SEQUENCE-NORM-COUNTERMODEL"
+  ],
+  "canonical_round17_connections": [
+    "CONN-MELLIN-CRITICAL-SIGNED-SHARP-LOG-BOUNDARY",
+    "CONN-CSTAR-COMMON-SEQUENCE-NORM-OBSTRUCTION"
+  ],
+  "validation": "PASS",
+  "pdf_pages_visually_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37
+  ],
+  "visual_notes": [
+    "The coverage tables and the Round 17 threshold table are legible. The two charts on pages 18 and 29 retain readable axes and legends.",
+    "The Round 16 historical divider at the end of page 7 and the first-print Riemann audit heading at the end of page 9 have their accompanying text on the next pages. Short carryovers begin pages 9, 11 and 27.",
+    "Some formulas remain in linear notation or display literal TeX delimiters. I observed no clipping, overlapping table cells or blank pages."
+  ]
+}

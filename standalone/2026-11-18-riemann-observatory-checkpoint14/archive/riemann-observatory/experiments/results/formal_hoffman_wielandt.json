@@ -1,0 +1,10 @@
+{
+  "kind": "actual_local_Lean_finite_HW_and_Lipschitz_test_check_NOT_full_weaklaw_or_zeta",
+  "exit_code": 0,
+  "elapsed_seconds": 8.386366331000318,
+  "source_sha256": "1ba4288d5722abdfbda52f2958b0794294816b732864addc8cab8f4f01f9654e",
+  "imported_source_commit": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510",
+  "stdout": "ObservatoryFormal.hoffmanWielandtSquared.{u_1, u_2} {\ud835\udd5c : Type u_1} [RCLike \ud835\udd5c] {n : Type u_2} [Fintype n] [DecidableEq n]\n  {A B : Matrix n n \ud835\udd5c} (hA : A.IsHermitian) (hB : B.IsHermitian) :\n  \u2211 i, (hA.eigenvalues\u2080 i - hB.eigenvalues\u2080 i) ^ 2 \u2264 frobSq (A - B)\n'ObservatoryFormal.hoffmanWielandtSquared' depends on axioms: [propext, Classical.choice, Quot.sound]\nObservatoryFormal.lipschitzEigenvalueTestSquared.{u_1, u_2} {\ud835\udd5c : Type u_1} [RCLike \ud835\udd5c] {n : Type u_2} [Fintype n]\n  [DecidableEq n] {A B : Matrix n n \ud835\udd5c} (hA : A.IsHermitian) (hB : B.IsHermitian) (f : \u211d \u2192 \u211d) (C : \u211d) (hC : 0 \u2264 C)\n  (hf : \u2200 (x y : \u211d), |f x - f y| \u2264 C * |x - y|) :\n  (\u2211 i, f (hA.eigenvalues\u2080 i) - \u2211 i, f (hB.eigenvalues\u2080 i)) ^ 2 \u2264 C ^ 2 * \u2191(Fintype.card n) * frobSq (A - B)\n'ObservatoryFormal.lipschitzEigenvalueTestSquared' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "stderr": "",
+  "scope": "Finite sorted-eigenvalue squared displacement and finite Lipschitz empirical-test square bound only, using already built source dependencies. Not a main zeta theorem or weak-law formalization."
+}

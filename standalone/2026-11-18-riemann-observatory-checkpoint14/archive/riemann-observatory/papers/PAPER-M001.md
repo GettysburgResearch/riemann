@@ -1,0 +1,59 @@
+# PAPER-M001 — The Theory of the Riemann Zeta-Function
+
+**id:** "PAPER-M001"
+
+**title:** "The Theory of the Riemann Zeta-Function"
+
+**authors:** ["E. C. Titchmarsh"]
+
+**contributors:** [{"name": "D. R. Heath-Brown", "role": "reviserofsecondedition"}]
+
+**date:** "1986"
+
+**year:** 1986
+
+**venue:** "Clarendon Press, Oxford"
+
+**publication_status:** "published_monograph"
+
+**edition:** "Secondedition,revisedbyD.R.Heath-Brown"
+
+**version:** "1986secondedition; title/copyrightpagesvisually/extractedverified"
+
+**isbn10:** "0198533691"
+
+**isbn13:** "9780198533696"
+
+**doi:** null
+
+**arxiv:** null
+
+**source_url:** "https://sites.math.rutgers.edu/~zeilberg/EM18/TitchmarshZeta.pdf"
+
+**catalogue_url:** "https://openlibrary.org/books/OL2719206M/The_theory_of_the_Riemann_zeta-function"
+
+**family:** ["A", "B", "C"]
+
+**audit_level:** 0
+
+**whole_work_read:** false
+
+**inspected_portions_level:** 1
+
+**read_scope:** "Title/copyrightpagesandtargetedChapXIVportions; bookpp354–355(PDF182),Theorem14.14(B),Eqs14.14.2–5visuallyread; nearby14.2/14.25extractedpassagesinspected. Notwholebookreadorwholebookaudit."
+
+**access_status:** "full_text_accessed_targeted_passages_read"
+
+**available_formats:** ["scannedPDFwithextractedtext"]
+
+**source_file:** "sources/equivalence_round2/titchmarsh1986.pdf"
+
+**source_sha256:** "ee495ba7e6b7af4722317baa79087881c16f648cb8af72843eb869c7497a03d0"
+
+**accessed_at:** "2026-11-17"
+
+**main_result_in_inspected_scope:** "ConditionalonRH, nearcriticallineboundsonlogζ/log|ζ|atdistancesfixedconstant/loglog|t|, withadjacentuniformregionsandcritical-linegrowth, supportthefiniteheightinverseboundintheuniformPerronaudit."
+
+**limitations:** ["Eq14.14.4isprintedonequalityline,nota standalonehalfplanebound; use14.14.2–5withfixedrightstripbridge.", "Fullclassicalproofchainandmonographnotaudited.", "Privateworkingcopyexcludedfromdistributedarchive."]
+
+**audit_relevance:** "StableprimarydependencyfortheuniformshrinkingεMöbiusestimate; noadditionalwhole-readcount."

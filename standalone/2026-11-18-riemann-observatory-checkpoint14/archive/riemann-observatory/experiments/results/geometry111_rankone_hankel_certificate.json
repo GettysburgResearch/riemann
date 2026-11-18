@@ -1,0 +1,166 @@
+{
+  "arithmetic": "Python standard library fractions.Fraction",
+  "code": "experiments/code/geometry111_rankone_hankel_certificate.py",
+  "code_sha256": "836ae6f6495fd0d616ff8c9654a114c844e58659d4c903816633feeb6545a952",
+  "standardized_t_one_half": {
+    "coordinate": "x",
+    "exact_tilt": "1/2",
+    "exact_variance": "1",
+    "functional_of_witness_square": "-30",
+    "least_negative_witness_degree": 3,
+    "moments_degree_zero_through_six": [
+      "1",
+      "-1/2",
+      "1",
+      "-3/2",
+      "3",
+      "-15/2",
+      "15"
+    ],
+    "order_certificates": [
+      {
+        "hankel_determinant": "1",
+        "order": 0,
+        "positive_semidefinite": true,
+        "principal_minors_by_size_then_lexicographic_indices": [
+          "1"
+        ]
+      },
+      {
+        "hankel_determinant": "3/4",
+        "order": 1,
+        "positive_semidefinite": true,
+        "principal_minors_by_size_then_lexicographic_indices": [
+          "1",
+          "1",
+          "3/4"
+        ]
+      },
+      {
+        "hankel_determinant": "1/2",
+        "order": 2,
+        "positive_semidefinite": true,
+        "principal_minors_by_size_then_lexicographic_indices": [
+          "1",
+          "1",
+          "3",
+          "3/4",
+          "2",
+          "3/4",
+          "1/2"
+        ]
+      },
+      {
+        "hankel_determinant": "-15/4",
+        "order": 3,
+        "positive_semidefinite": false,
+        "principal_minors_by_size_then_lexicographic_indices": [
+          "1",
+          "1",
+          "3",
+          "15",
+          "3/4",
+          "2",
+          "51/4",
+          "3/4",
+          "6",
+          "-45/4",
+          "1/2",
+          "9/2",
+          "-21/2",
+          "-9/2",
+          "-15/4"
+        ]
+      }
+    ],
+    "witness_coefficients_ascending": [
+      -3,
+      6,
+      9,
+      2
+    ]
+  },
+  "standardized_t_one_over_sqrt_three": {
+    "coordinate": "y = sqrt(3) * x",
+    "exact_tilt": "1",
+    "exact_variance": "3",
+    "functional_of_witness_square": "-27",
+    "least_negative_witness_degree": 3,
+    "moments_degree_zero_through_six": [
+      "1",
+      "-1",
+      "3",
+      "-9",
+      "27",
+      "-135",
+      "405"
+    ],
+    "order_certificates": [
+      {
+        "hankel_determinant": "1",
+        "order": 0,
+        "positive_semidefinite": true,
+        "principal_minors_by_size_then_lexicographic_indices": [
+          "1"
+        ]
+      },
+      {
+        "hankel_determinant": "2",
+        "order": 1,
+        "positive_semidefinite": true,
+        "principal_minors_by_size_then_lexicographic_indices": [
+          "1",
+          "3",
+          "2"
+        ]
+      },
+      {
+        "hankel_determinant": "0",
+        "order": 2,
+        "positive_semidefinite": true,
+        "principal_minors_by_size_then_lexicographic_indices": [
+          "1",
+          "3",
+          "27",
+          "2",
+          "18",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "hankel_determinant": "-5832",
+        "order": 3,
+        "positive_semidefinite": false,
+        "principal_minors_by_size_then_lexicographic_indices": [
+          "1",
+          "3",
+          "27",
+          "405",
+          "2",
+          "18",
+          "324",
+          "0",
+          "486",
+          "-7290",
+          "0",
+          "324",
+          "-5832",
+          "-8748",
+          "-5832"
+        ]
+      }
+    ],
+    "order_two_null_coefficients_ascending": [
+      0,
+      3,
+      1
+    ],
+    "witness_coefficients_ascending": [
+      0,
+      12,
+      4,
+      1
+    ]
+  }
+}

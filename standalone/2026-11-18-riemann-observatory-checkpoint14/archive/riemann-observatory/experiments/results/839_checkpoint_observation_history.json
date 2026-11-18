@@ -1,0 +1,656 @@
+{
+  "scope": "Periodic observations of trusted local durable state, not a proof of earlier traversal prefix.",
+  "windows": {
+    "second": [
+      {
+        "observed_utc": "2026-11-17T21:26:22.483035+00:00",
+        "attempt_utc": "20261117T212551736201Z",
+        "worker_pid": 105952,
+        "checkpoint_identity": "6e3c2f60f0043b30f05adc239b05dc4f76b8a90175d71c0ed7b80e223cb3ed23",
+        "checkpoint_sha256": "34dad6bf08ac6fa13b32fe4aba2d27528a0708c49747cd7a658f86e1dfaa6a3a",
+        "counts": {
+          "nodes": 5000000,
+          "leaves": 2499980,
+          "basic": 1771770,
+          "affine": 728210,
+          "max_stack": 58,
+          "waiting": 41
+        },
+        "previous_observation_sha256": null,
+        "observation_sha256": "d346f7d9ebabe810e13747cbbdb750de167f563a636e57779f9d2092e10cc84a"
+      },
+      {
+        "observed_utc": "2026-11-17T21:27:23.798192+00:00",
+        "attempt_utc": "20261117T212551736201Z",
+        "worker_pid": 105952,
+        "checkpoint_identity": "6e3c2f60f0043b30f05adc239b05dc4f76b8a90175d71c0ed7b80e223cb3ed23",
+        "checkpoint_sha256": "a3a9b70688528322dbc0f81cb3175cc4465970d24ea968f9c1c0b215b4d05a1f",
+        "counts": {
+          "nodes": 14000000,
+          "leaves": 6999977,
+          "basic": 4628169,
+          "affine": 2371808,
+          "max_stack": 62,
+          "waiting": 47
+        },
+        "previous_observation_sha256": "d346f7d9ebabe810e13747cbbdb750de167f563a636e57779f9d2092e10cc84a",
+        "observation_sha256": "347ad4032dce698ce5aa7698b61505898f42a4b488e99bd969babb84d13d9ae5"
+      },
+      {
+        "observed_utc": "2026-11-17T21:30:33.231106+00:00",
+        "attempt_utc": "20261117T212551736201Z",
+        "worker_pid": 105952,
+        "checkpoint_identity": "6e3c2f60f0043b30f05adc239b05dc4f76b8a90175d71c0ed7b80e223cb3ed23",
+        "checkpoint_sha256": "6d497320c792ada778e8a287db9f74a01cec103807183f4df5215fee07806cb2",
+        "counts": {
+          "nodes": 43000000,
+          "leaves": 21499980,
+          "basic": 13710789,
+          "affine": 7789191,
+          "max_stack": 62,
+          "waiting": 41
+        },
+        "previous_observation_sha256": "347ad4032dce698ce5aa7698b61505898f42a4b488e99bd969babb84d13d9ae5",
+        "observation_sha256": "74704dd2cbd0928da8a37058ab5318bbb1f5c9169251ab33a6de1548aca394f4"
+      },
+      {
+        "observed_utc": "2026-11-17T21:32:10.736722+00:00",
+        "attempt_utc": "20261117T212551736201Z",
+        "worker_pid": 105952,
+        "checkpoint_identity": "6e3c2f60f0043b30f05adc239b05dc4f76b8a90175d71c0ed7b80e223cb3ed23",
+        "checkpoint_sha256": "8f9ad60e79bef80912a986ea0c6053ea0768f0fdcfe67ea3f443ec9955dafbb6",
+        "counts": {
+          "nodes": 60000000,
+          "leaves": 29999981,
+          "basic": 19269870,
+          "affine": 10730111,
+          "max_stack": 62,
+          "waiting": 39
+        },
+        "previous_observation_sha256": "74704dd2cbd0928da8a37058ab5318bbb1f5c9169251ab33a6de1548aca394f4",
+        "observation_sha256": "ecb0d4d1d3f44049428f2e5acabaf723c49eab243d4b86025efadb376b10853d"
+      },
+      {
+        "observed_utc": "2026-11-17T21:33:09.015862+00:00",
+        "attempt_utc": "20261117T212551736201Z",
+        "worker_pid": 105952,
+        "checkpoint_identity": "6e3c2f60f0043b30f05adc239b05dc4f76b8a90175d71c0ed7b80e223cb3ed23",
+        "checkpoint_sha256": "238c404a531d99f28185b9d9d177091217d30a04bec8c7ad65dfe00abcd0fb95",
+        "counts": {
+          "nodes": 69000000,
+          "leaves": 34499979,
+          "basic": 22032729,
+          "affine": 12467250,
+          "max_stack": 63,
+          "waiting": 43
+        },
+        "previous_observation_sha256": "ecb0d4d1d3f44049428f2e5acabaf723c49eab243d4b86025efadb376b10853d",
+        "observation_sha256": "23150df6d7465f49e4d355cb839a4b7f4f3d903d95e5cbc892142e3c7f36a201"
+      },
+      {
+        "observed_utc": "2026-11-17T21:33:40.801842+00:00",
+        "attempt_utc": "20261117T212551736201Z",
+        "worker_pid": 105952,
+        "checkpoint_identity": "6e3c2f60f0043b30f05adc239b05dc4f76b8a90175d71c0ed7b80e223cb3ed23",
+        "checkpoint_sha256": "e1b88ed9bb04604c863e4d92770a6da78e0140eb322d63da164f6bba98488dcb",
+        "counts": {
+          "nodes": 74000000,
+          "leaves": 36999979,
+          "basic": 23489719,
+          "affine": 13510260,
+          "max_stack": 63,
+          "waiting": 43
+        },
+        "previous_observation_sha256": "23150df6d7465f49e4d355cb839a4b7f4f3d903d95e5cbc892142e3c7f36a201",
+        "observation_sha256": "0bc3b39600d6ba2d15c20300d97fe8f3daf45afe75a0601e46493c482e43c440"
+      },
+      {
+        "observed_utc": "2026-11-17T21:34:05.798557+00:00",
+        "attempt_utc": "20261117T212551736201Z",
+        "worker_pid": 105952,
+        "checkpoint_identity": "6e3c2f60f0043b30f05adc239b05dc4f76b8a90175d71c0ed7b80e223cb3ed23",
+        "checkpoint_sha256": "57697df01a0c93bffe3908abdb371602211c74a246dab76cb420a09df484a1f5",
+        "counts": {
+          "nodes": 77000000,
+          "leaves": 38499982,
+          "basic": 24279290,
+          "affine": 14220692,
+          "max_stack": 63,
+          "waiting": 37
+        },
+        "previous_observation_sha256": "0bc3b39600d6ba2d15c20300d97fe8f3daf45afe75a0601e46493c482e43c440",
+        "observation_sha256": "dbae5a1c6ff14a953ea261debb4e81a1101c6386f13bf35bd2d1313a6e7e4ab3"
+      },
+      {
+        "observed_utc": "2026-11-17T21:35:28.000001+00:00",
+        "attempt_utc": "20261117T212551736201Z",
+        "worker_pid": 105952,
+        "checkpoint_identity": "6e3c2f60f0043b30f05adc239b05dc4f76b8a90175d71c0ed7b80e223cb3ed23",
+        "checkpoint_sha256": "d36a2b21611b580c482c981990267bb7d26b26a4d9ad368c89048c8c8a942778",
+        "counts": {
+          "nodes": 91000000,
+          "leaves": 45499978,
+          "basic": 28903435,
+          "affine": 16596543,
+          "max_stack": 63,
+          "waiting": 45
+        },
+        "previous_observation_sha256": "dbae5a1c6ff14a953ea261debb4e81a1101c6386f13bf35bd2d1313a6e7e4ab3",
+        "observation_sha256": "8c38ba419db26853ac2da36d548c6b9026d2b128d62ccfcf3e569b0810d6471c"
+      },
+      {
+        "observed_utc": "2026-11-17T21:36:31.781639+00:00",
+        "attempt_utc": "20261117T212551736201Z",
+        "worker_pid": 105952,
+        "checkpoint_identity": "6e3c2f60f0043b30f05adc239b05dc4f76b8a90175d71c0ed7b80e223cb3ed23",
+        "checkpoint_sha256": "e1f7de21ecb934ebff4e4b077eed6c3d7094f6cdfe9a3f71aba538737e9c267e",
+        "counts": {
+          "nodes": 100000000,
+          "leaves": 49999980,
+          "basic": 31875404,
+          "affine": 18124576,
+          "max_stack": 63,
+          "waiting": 41
+        },
+        "previous_observation_sha256": "8c38ba419db26853ac2da36d548c6b9026d2b128d62ccfcf3e569b0810d6471c",
+        "observation_sha256": "302e710adbe2b081a3ce7a58bcb5eb58ae132e28745b32d09bd80352ae4496ce"
+      },
+      {
+        "observed_utc": "2026-11-17T21:38:07.217566+00:00",
+        "attempt_utc": "20261117T212551736201Z",
+        "worker_pid": 105952,
+        "checkpoint_identity": "6e3c2f60f0043b30f05adc239b05dc4f76b8a90175d71c0ed7b80e223cb3ed23",
+        "checkpoint_sha256": "bf1677124f45eb0b8975d8b2a9f9fb832c305155df5ff814e9d5de09b031952e",
+        "counts": {
+          "nodes": 120000000,
+          "leaves": 59999980,
+          "basic": 39538819,
+          "affine": 20461161,
+          "max_stack": 63,
+          "waiting": 41
+        },
+        "previous_observation_sha256": "302e710adbe2b081a3ce7a58bcb5eb58ae132e28745b32d09bd80352ae4496ce",
+        "observation_sha256": "5f8e0f86e82caea4db812ef8c05c01c1040882a0f51962fcabd61caa97ab9ef7"
+      },
+      {
+        "observed_utc": "2026-11-17T21:39:08.971632+00:00",
+        "attempt_utc": "20261117T212551736201Z",
+        "worker_pid": 105952,
+        "checkpoint_identity": "6e3c2f60f0043b30f05adc239b05dc4f76b8a90175d71c0ed7b80e223cb3ed23",
+        "checkpoint_sha256": "22b5d75ff15ac9b1109c99f5385be25a1a37c4f4728b2cb05b0b7dc0e20bc8a0",
+        "counts": {
+          "nodes": 129000000,
+          "leaves": 64499980,
+          "basic": 42504079,
+          "affine": 21995901,
+          "max_stack": 63,
+          "waiting": 41
+        },
+        "previous_observation_sha256": "5f8e0f86e82caea4db812ef8c05c01c1040882a0f51962fcabd61caa97ab9ef7",
+        "observation_sha256": "3a61080ffdcc8a2c4c9d701bcdf96eec9613cc58208e508e848ad35d446d57db"
+      },
+      {
+        "observed_utc": "2026-11-17T21:40:16.595805+00:00",
+        "attempt_utc": "20261117T212551736201Z",
+        "worker_pid": 105952,
+        "checkpoint_identity": "6e3c2f60f0043b30f05adc239b05dc4f76b8a90175d71c0ed7b80e223cb3ed23",
+        "checkpoint_sha256": "f3ed0a244dc689c4b34199263b9eaa563899e8cd935b9b778d93b105225b9f5c",
+        "counts": {
+          "nodes": 140000000,
+          "leaves": 69999982,
+          "basic": 46241928,
+          "affine": 23758054,
+          "max_stack": 63,
+          "waiting": 37
+        },
+        "previous_observation_sha256": "3a61080ffdcc8a2c4c9d701bcdf96eec9613cc58208e508e848ad35d446d57db",
+        "observation_sha256": "d899b68912750c3f45faeadfea3ecbc93a0aa9c3715b4ceb14e792ddf3bfc8a7"
+      },
+      {
+        "observed_utc": "2026-11-17T21:41:29.679171+00:00",
+        "attempt_utc": "20261117T212551736201Z",
+        "worker_pid": 105952,
+        "checkpoint_identity": "6e3c2f60f0043b30f05adc239b05dc4f76b8a90175d71c0ed7b80e223cb3ed23",
+        "checkpoint_sha256": "a873181f4a3994ca0d04470d377e2695a84eaab463ea27d8fec15394b0c93389",
+        "counts": {
+          "nodes": 154000000,
+          "leaves": 76999982,
+          "basic": 51043054,
+          "affine": 25956928,
+          "max_stack": 63,
+          "waiting": 37
+        },
+        "previous_observation_sha256": "d899b68912750c3f45faeadfea3ecbc93a0aa9c3715b4ceb14e792ddf3bfc8a7",
+        "observation_sha256": "616be5228c880cf806b2b2c25c96adc28e14f56fc63becef98fe217ef0605c5b"
+      },
+      {
+        "observed_utc": "2026-11-17T21:43:32.408336+00:00",
+        "attempt_utc": "20261117T212551736201Z",
+        "worker_pid": 105952,
+        "checkpoint_identity": "6e3c2f60f0043b30f05adc239b05dc4f76b8a90175d71c0ed7b80e223cb3ed23",
+        "checkpoint_sha256": "622ab58c8046cee4f65207c1ac859d5e70e19c421115cef6146a41414148b682",
+        "counts": {
+          "nodes": 174000000,
+          "leaves": 86999979,
+          "basic": 58078265,
+          "affine": 28921714,
+          "max_stack": 63,
+          "waiting": 43
+        },
+        "previous_observation_sha256": "616be5228c880cf806b2b2c25c96adc28e14f56fc63becef98fe217ef0605c5b",
+        "observation_sha256": "b7f5e00a16b7f78fb7a7cecb171f9ad365b2ea7a8eef03595a323171451fd3a0"
+      },
+      {
+        "observed_utc": "2026-11-17T21:45:37.583082+00:00",
+        "attempt_utc": "20261117T212551736201Z",
+        "worker_pid": 105952,
+        "checkpoint_identity": "6e3c2f60f0043b30f05adc239b05dc4f76b8a90175d71c0ed7b80e223cb3ed23",
+        "checkpoint_sha256": "944e3069e9ccd8f7df2f0c3b1391b7c3d56819b7b72b7279b561475ca09f4eff",
+        "counts": {
+          "nodes": 200000000,
+          "leaves": 99999981,
+          "basic": 67543111,
+          "affine": 32456870,
+          "max_stack": 63,
+          "waiting": 39
+        },
+        "previous_observation_sha256": "b7f5e00a16b7f78fb7a7cecb171f9ad365b2ea7a8eef03595a323171451fd3a0",
+        "observation_sha256": "952d37d4e7f749969907173337ec24599e928ea5e71c41770f462d70422db975"
+      },
+      {
+        "observed_utc": "2026-11-17T21:47:48.790287+00:00",
+        "attempt_utc": "20261117T212551736201Z",
+        "worker_pid": 105952,
+        "checkpoint_identity": "6e3c2f60f0043b30f05adc239b05dc4f76b8a90175d71c0ed7b80e223cb3ed23",
+        "checkpoint_sha256": "e53baae00a25eaff8596b78f44b38011742c2b039db492af73a9a1a9cb0a3bc4",
+        "counts": {
+          "nodes": 226000000,
+          "leaves": 112999979,
+          "basic": 76611226,
+          "affine": 36388753,
+          "max_stack": 63,
+          "waiting": 43
+        },
+        "previous_observation_sha256": "952d37d4e7f749969907173337ec24599e928ea5e71c41770f462d70422db975",
+        "observation_sha256": "564d953718ab4e585d0c5bb57818ed94090f94841d47c27034ec44192d8836ae"
+      },
+      {
+        "observed_utc": "2026-11-17T21:49:50.017029+00:00",
+        "attempt_utc": "20261117T212551736201Z",
+        "worker_pid": 105952,
+        "checkpoint_identity": "6e3c2f60f0043b30f05adc239b05dc4f76b8a90175d71c0ed7b80e223cb3ed23",
+        "checkpoint_sha256": "a87d4bcde386dc0e0dfd9b235344f7647dd814eaa4e40ee102ac02a3f1b19882",
+        "counts": {
+          "nodes": 253000000,
+          "leaves": 126499983,
+          "basic": 86546373,
+          "affine": 39953610,
+          "max_stack": 63,
+          "waiting": 35
+        },
+        "previous_observation_sha256": "564d953718ab4e585d0c5bb57818ed94090f94841d47c27034ec44192d8836ae",
+        "observation_sha256": "8c14b2cf07392b9d5108b35bb2d7b08f6308136625a3512e95dfa6c8c6794b0e"
+      },
+      {
+        "observed_utc": "2026-11-17T21:52:12.782677+00:00",
+        "attempt_utc": "20261117T212551736201Z",
+        "worker_pid": 105952,
+        "checkpoint_identity": "6e3c2f60f0043b30f05adc239b05dc4f76b8a90175d71c0ed7b80e223cb3ed23",
+        "checkpoint_sha256": "cf42d94b6b0801704cd8129691f7de1a3db07eeaca72714597e5444712e1e041",
+        "counts": {
+          "nodes": 283000000,
+          "leaves": 141499980,
+          "basic": 97450828,
+          "affine": 44049152,
+          "max_stack": 63,
+          "waiting": 41
+        },
+        "previous_observation_sha256": "8c14b2cf07392b9d5108b35bb2d7b08f6308136625a3512e95dfa6c8c6794b0e",
+        "observation_sha256": "08317d28cf833960cac14158ef95ed33f0100990e9b37d5f26c994dfb82e3a06"
+      },
+      {
+        "observed_utc": "2026-11-17T21:54:15.060663+00:00",
+        "attempt_utc": "20261117T212551736201Z",
+        "worker_pid": 105952,
+        "checkpoint_identity": "6e3c2f60f0043b30f05adc239b05dc4f76b8a90175d71c0ed7b80e223cb3ed23",
+        "checkpoint_sha256": "8881009314b71b451ac7ad27b8f508db0e553f8084ced4d2fa223f375204efa5",
+        "counts": {
+          "nodes": 317000000,
+          "leaves": 158499983,
+          "basic": 111108115,
+          "affine": 47391868,
+          "max_stack": 63,
+          "waiting": 35
+        },
+        "previous_observation_sha256": "08317d28cf833960cac14158ef95ed33f0100990e9b37d5f26c994dfb82e3a06",
+        "observation_sha256": "78da07393a869c973a7095fe902301d315d4fe0cbdf090d0bbbf4124f523f516"
+      },
+      {
+        "observed_utc": "2026-11-17T21:57:28.011261+00:00",
+        "attempt_utc": "20261117T212551736201Z",
+        "worker_pid": 105952,
+        "checkpoint_identity": "6e3c2f60f0043b30f05adc239b05dc4f76b8a90175d71c0ed7b80e223cb3ed23",
+        "checkpoint_sha256": "0714734ae3e5aed4ae5f9e57eb161e59efa31a09e004220e5effcefdfba3ce01",
+        "counts": {
+          "nodes": 348000000,
+          "leaves": 173999981,
+          "basic": 121951762,
+          "affine": 52048219,
+          "max_stack": 63,
+          "waiting": 39
+        },
+        "previous_observation_sha256": "78da07393a869c973a7095fe902301d315d4fe0cbdf090d0bbbf4124f523f516",
+        "observation_sha256": "05f28da625a5ba8a3f12835911a30a6ca8100a2dcf7f1d9c956693c4fb9a3265"
+      },
+      {
+        "observed_utc": "2026-11-17T22:00:27.596385+00:00",
+        "attempt_utc": "20261117T212551736201Z",
+        "worker_pid": 105952,
+        "checkpoint_identity": "6e3c2f60f0043b30f05adc239b05dc4f76b8a90175d71c0ed7b80e223cb3ed23",
+        "checkpoint_sha256": "7d961cfa702510fcc113295339077a02855c258aa858d64693529ee03aea5306",
+        "counts": {
+          "nodes": 392000000,
+          "leaves": 195999979,
+          "basic": 139411761,
+          "affine": 56588218,
+          "max_stack": 63,
+          "waiting": 43
+        },
+        "previous_observation_sha256": "05f28da625a5ba8a3f12835911a30a6ca8100a2dcf7f1d9c956693c4fb9a3265",
+        "observation_sha256": "0fac8ddeaed68c3ab9bc8a61e2cc3ea280601642ec87d591fd850ac1b3644567"
+      },
+      {
+        "observed_utc": "2026-11-17T22:02:34.747360+00:00",
+        "attempt_utc": "20261117T212551736201Z",
+        "worker_pid": 105952,
+        "checkpoint_identity": "6e3c2f60f0043b30f05adc239b05dc4f76b8a90175d71c0ed7b80e223cb3ed23",
+        "checkpoint_sha256": "04560db4a84a88c47568320b10f3d974e036a8374cb4e73d175cc36652c2d662",
+        "counts": {
+          "nodes": 419000000,
+          "leaves": 209499982,
+          "basic": 150430459,
+          "affine": 59069523,
+          "max_stack": 63,
+          "waiting": 37
+        },
+        "previous_observation_sha256": "0fac8ddeaed68c3ab9bc8a61e2cc3ea280601642ec87d591fd850ac1b3644567",
+        "observation_sha256": "d6d24eb73a627d2502d7339d89fbbe87036cc515df03bdc238f7d2887ace517d"
+      },
+      {
+        "observed_utc": "2026-11-17T22:04:29.844395+00:00",
+        "attempt_utc": "20261117T212551736201Z",
+        "worker_pid": 105952,
+        "checkpoint_identity": "6e3c2f60f0043b30f05adc239b05dc4f76b8a90175d71c0ed7b80e223cb3ed23",
+        "checkpoint_sha256": "364fdb2e3465d96e71cf2152c7707a4e2f0ebab4a406973a875d24c7b397698f",
+        "counts": {
+          "nodes": 432000000,
+          "leaves": 215999981,
+          "basic": 156166310,
+          "affine": 59833671,
+          "max_stack": 63,
+          "waiting": 39
+        },
+        "previous_observation_sha256": "d6d24eb73a627d2502d7339d89fbbe87036cc515df03bdc238f7d2887ace517d",
+        "observation_sha256": "64819607fb58516334ce6a0760ddec6202dbd7244690120cae1d728aa09eeb04"
+      },
+      {
+        "observed_utc": "2026-11-17T22:06:33.134241+00:00",
+        "attempt_utc": "20261117T212551736201Z",
+        "worker_pid": 105952,
+        "checkpoint_identity": "6e3c2f60f0043b30f05adc239b05dc4f76b8a90175d71c0ed7b80e223cb3ed23",
+        "checkpoint_sha256": "490f63eb839ef17780ce89f396b8b94a76ec1cc12477ad4a7a61529aa92357eb",
+        "counts": {
+          "nodes": 470000000,
+          "leaves": 234999978,
+          "basic": 173263236,
+          "affine": 61736742,
+          "max_stack": 63,
+          "waiting": 45
+        },
+        "previous_observation_sha256": "64819607fb58516334ce6a0760ddec6202dbd7244690120cae1d728aa09eeb04",
+        "observation_sha256": "3ed103e6830aeb4434ed2089c5cc90673b0c9824ca603c30101529a8a2c15367"
+      },
+      {
+        "observed_utc": "2026-11-17T22:08:33.649056+00:00",
+        "attempt_utc": "20261117T212551736201Z",
+        "worker_pid": 105952,
+        "checkpoint_identity": "6e3c2f60f0043b30f05adc239b05dc4f76b8a90175d71c0ed7b80e223cb3ed23",
+        "checkpoint_sha256": "13cd3e2f0e07ede0f8fb199b5d03ee033c45863fab68ab566c07a996273bf71a",
+        "counts": {
+          "nodes": 497000000,
+          "leaves": 248499979,
+          "basic": 184639721,
+          "affine": 63860258,
+          "max_stack": 63,
+          "waiting": 43
+        },
+        "previous_observation_sha256": "3ed103e6830aeb4434ed2089c5cc90673b0c9824ca603c30101529a8a2c15367",
+        "observation_sha256": "4c4269a0e7091d5ccaf1143569f704fe1547ae8fd11fde89d5fc79be585edc12"
+      },
+      {
+        "observed_utc": "2026-11-17T22:10:52.031043+00:00",
+        "attempt_utc": "20261117T212551736201Z",
+        "worker_pid": 105952,
+        "checkpoint_identity": "6e3c2f60f0043b30f05adc239b05dc4f76b8a90175d71c0ed7b80e223cb3ed23",
+        "checkpoint_sha256": "f178f6cc488a68c28d2d04a92b11ab18ed581fded2308df9713de1229dc8cb2e",
+        "counts": {
+          "nodes": 535332163,
+          "leaves": 267666082,
+          "basic": 202511130,
+          "affine": 65154952,
+          "max_stack": 63,
+          "waiting": 0
+        },
+        "previous_observation_sha256": "4c4269a0e7091d5ccaf1143569f704fe1547ae8fd11fde89d5fc79be585edc12",
+        "observation_sha256": "94e42eac9b4df6934598daf15b9bb968f8672029eb6835777428cbfea1b8a093"
+      }
+    ],
+    "third": [
+      {
+        "observed_utc": "2026-11-17T21:26:22.483156+00:00",
+        "attempt_utc": "20261117T212554223812Z",
+        "worker_pid": 105953,
+        "checkpoint_identity": "f46a164c55c949d47da9e081f4c3f4ef9fd48302cf3b2f8cd26bf68743ab7717",
+        "checkpoint_sha256": "ce23c7fe016f876e611f4f4219b610523f9a4a1118bb62e4260d20416b4af70a",
+        "counts": {
+          "nodes": 12000000,
+          "leaves": 5999982,
+          "basic": 5035765,
+          "affine": 964217,
+          "max_stack": 54,
+          "waiting": 37
+        },
+        "previous_observation_sha256": null,
+        "observation_sha256": "d35da6a67f17ef257a6323209801bcb948c98df14388d6986e8b8cd115f23726"
+      },
+      {
+        "observed_utc": "2026-11-17T21:27:23.798310+00:00",
+        "attempt_utc": "20261117T212554223812Z",
+        "worker_pid": 105953,
+        "checkpoint_identity": "f46a164c55c949d47da9e081f4c3f4ef9fd48302cf3b2f8cd26bf68743ab7717",
+        "checkpoint_sha256": "a76ecc9dbc28a94800bc6c2ae9cd524715bc82b94d034f5b03787ea9ced9f6ab",
+        "counts": {
+          "nodes": 31000000,
+          "leaves": 15499981,
+          "basic": 12491579,
+          "affine": 3008402,
+          "max_stack": 54,
+          "waiting": 39
+        },
+        "previous_observation_sha256": "d35da6a67f17ef257a6323209801bcb948c98df14388d6986e8b8cd115f23726",
+        "observation_sha256": "4389b414fd8b138b46e96bd4f247cc273bdcdd1dd233f4734ec4d90e3a8bcfcb"
+      },
+      {
+        "observed_utc": "2026-11-17T21:30:33.231294+00:00",
+        "attempt_utc": "20261117T212554223812Z",
+        "worker_pid": 105953,
+        "checkpoint_identity": "f46a164c55c949d47da9e081f4c3f4ef9fd48302cf3b2f8cd26bf68743ab7717",
+        "checkpoint_sha256": "c2350c98d7b35f72b1b713bbc74e6a21f9eca3420e81d34875d5f50557a46c3b",
+        "counts": {
+          "nodes": 129000000,
+          "leaves": 64499981,
+          "basic": 55140902,
+          "affine": 9359079,
+          "max_stack": 54,
+          "waiting": 39
+        },
+        "previous_observation_sha256": "4389b414fd8b138b46e96bd4f247cc273bdcdd1dd233f4734ec4d90e3a8bcfcb",
+        "observation_sha256": "18aba18fa8d90b1d913a96f7c8d3c1112a2819e36c5aaef6bb88ec9c132b150f"
+      },
+      {
+        "observed_utc": "2026-11-17T21:32:10.736832+00:00",
+        "attempt_utc": "20261117T212554223812Z",
+        "worker_pid": 105953,
+        "checkpoint_identity": "f46a164c55c949d47da9e081f4c3f4ef9fd48302cf3b2f8cd26bf68743ab7717",
+        "checkpoint_sha256": "a4c38ae7f1469f48c6cd46e4b1ba6fe4d4804d1c5f8128b0d72cd3bb9ccf5644",
+        "counts": {
+          "nodes": 180000000,
+          "leaves": 89999984,
+          "basic": 77005032,
+          "affine": 12994952,
+          "max_stack": 56,
+          "waiting": 33
+        },
+        "previous_observation_sha256": "18aba18fa8d90b1d913a96f7c8d3c1112a2819e36c5aaef6bb88ec9c132b150f",
+        "observation_sha256": "6c6567ddbb920c7c74e3a4d8b78c9999eabef6494259ac687d691d3ed911e5fd"
+      },
+      {
+        "observed_utc": "2026-11-17T21:33:09.016026+00:00",
+        "attempt_utc": "20261117T212554223812Z",
+        "worker_pid": 105953,
+        "checkpoint_identity": "f46a164c55c949d47da9e081f4c3f4ef9fd48302cf3b2f8cd26bf68743ab7717",
+        "checkpoint_sha256": "9ae26eee2e9d72f719703950b032b9b451f3e71686b00b5431e41a07ba0bdb41",
+        "counts": {
+          "nodes": 215000000,
+          "leaves": 107499981,
+          "basic": 89249364,
+          "affine": 18250617,
+          "max_stack": 67,
+          "waiting": 39
+        },
+        "previous_observation_sha256": "6c6567ddbb920c7c74e3a4d8b78c9999eabef6494259ac687d691d3ed911e5fd",
+        "observation_sha256": "33f3fb80e456fc8c1cc4e66f6aa3de0ebc934d756ce0bf1b545e17cdb0387650"
+      },
+      {
+        "observed_utc": "2026-11-17T21:33:40.802073+00:00",
+        "attempt_utc": "20261117T212554223812Z",
+        "worker_pid": 105953,
+        "checkpoint_identity": "f46a164c55c949d47da9e081f4c3f4ef9fd48302cf3b2f8cd26bf68743ab7717",
+        "checkpoint_sha256": "52273a42f215735904b29570459160d1cac34be0f9e629703e1081b0518b8be6",
+        "counts": {
+          "nodes": 229000000,
+          "leaves": 114499983,
+          "basic": 95128437,
+          "affine": 19371546,
+          "max_stack": 67,
+          "waiting": 35
+        },
+        "previous_observation_sha256": "33f3fb80e456fc8c1cc4e66f6aa3de0ebc934d756ce0bf1b545e17cdb0387650",
+        "observation_sha256": "04a36414d14cbc8811caf2a769b7ff902419be3d0b47e4b33f735644168b490c"
+      },
+      {
+        "observed_utc": "2026-11-17T21:34:05.798675+00:00",
+        "attempt_utc": "20261117T212554223812Z",
+        "worker_pid": 105953,
+        "checkpoint_identity": "f46a164c55c949d47da9e081f4c3f4ef9fd48302cf3b2f8cd26bf68743ab7717",
+        "checkpoint_sha256": "263226da34f33768e1aeaaa976a4523285b177792604f35f962f40f267f9c268",
+        "counts": {
+          "nodes": 244000000,
+          "leaves": 121999984,
+          "basic": 101786474,
+          "affine": 20213510,
+          "max_stack": 67,
+          "waiting": 33
+        },
+        "previous_observation_sha256": "04a36414d14cbc8811caf2a769b7ff902419be3d0b47e4b33f735644168b490c",
+        "observation_sha256": "3a70502d80df81190e787dc3fc57b19f881c0652b1a4ad9990c80915774c4802"
+      },
+      {
+        "observed_utc": "2026-11-17T21:35:28.000296+00:00",
+        "attempt_utc": "20261117T212554223812Z",
+        "worker_pid": 105953,
+        "checkpoint_identity": "f46a164c55c949d47da9e081f4c3f4ef9fd48302cf3b2f8cd26bf68743ab7717",
+        "checkpoint_sha256": "076ec4cc67153bcf96a406f88fa6cae2698cf6ad92115fa950319d8cd5019e27",
+        "counts": {
+          "nodes": 303000000,
+          "leaves": 151499987,
+          "basic": 126124587,
+          "affine": 25375400,
+          "max_stack": 68,
+          "waiting": 27
+        },
+        "previous_observation_sha256": "3a70502d80df81190e787dc3fc57b19f881c0652b1a4ad9990c80915774c4802",
+        "observation_sha256": "e2d52e9af86183da6cf25958730ae7da2a1057ffdfa7812cbf3f39c0e3b6bb52"
+      },
+      {
+        "observed_utc": "2026-11-17T21:36:31.781979+00:00",
+        "attempt_utc": "20261117T212554223812Z",
+        "worker_pid": 105953,
+        "checkpoint_identity": "f46a164c55c949d47da9e081f4c3f4ef9fd48302cf3b2f8cd26bf68743ab7717",
+        "checkpoint_sha256": "c9e800c47848142a5e71664362d5a3ecb9e3c4f581767f98104f0961ee0369d3",
+        "counts": {
+          "nodes": 357000000,
+          "leaves": 178499981,
+          "basic": 152045935,
+          "affine": 26454046,
+          "max_stack": 68,
+          "waiting": 39
+        },
+        "previous_observation_sha256": "e2d52e9af86183da6cf25958730ae7da2a1057ffdfa7812cbf3f39c0e3b6bb52",
+        "observation_sha256": "fde33427cc1b9a4c8dc7ed8521a631983bd27ab8a1b62ff24ae799e5c74641f4"
+      },
+      {
+        "observed_utc": "2026-11-17T21:38:07.217684+00:00",
+        "attempt_utc": "20261117T212554223812Z",
+        "worker_pid": 105953,
+        "checkpoint_identity": "f46a164c55c949d47da9e081f4c3f4ef9fd48302cf3b2f8cd26bf68743ab7717",
+        "checkpoint_sha256": "82059a1af46698bb88ab869e0369aa8ed2c42ca2dcac03aad03c7b3a0b2996a5",
+        "counts": {
+          "nodes": 437000000,
+          "leaves": 218499986,
+          "basic": 189887003,
+          "affine": 28612983,
+          "max_stack": 68,
+          "waiting": 29
+        },
+        "previous_observation_sha256": "fde33427cc1b9a4c8dc7ed8521a631983bd27ab8a1b62ff24ae799e5c74641f4",
+        "observation_sha256": "4e69e6918d7f7e45f7187774e82c6812dae54cb1a08fe565cc402e870e08b71b"
+      },
+      {
+        "observed_utc": "2026-11-17T21:39:08.971751+00:00",
+        "attempt_utc": "20261117T212554223812Z",
+        "worker_pid": 105953,
+        "checkpoint_identity": "f46a164c55c949d47da9e081f4c3f4ef9fd48302cf3b2f8cd26bf68743ab7717",
+        "checkpoint_sha256": "1a680e9297f214ef43c8d5f3e8237158361338263f0f3683aa31647a13ebc38f",
+        "counts": {
+          "nodes": 508000000,
+          "leaves": 253999979,
+          "basic": 224536157,
+          "affine": 29463822,
+          "max_stack": 68,
+          "waiting": 43
+        },
+        "previous_observation_sha256": "4e69e6918d7f7e45f7187774e82c6812dae54cb1a08fe565cc402e870e08b71b",
+        "observation_sha256": "a07ac89bad34df8f6b5c7f77d0efa1fa4bb03455cf87c26d35efb596f0fa634c"
+      },
+      {
+        "observed_utc": "2026-11-17T21:40:16.596121+00:00",
+        "attempt_utc": "20261117T212554223812Z",
+        "worker_pid": 105953,
+        "checkpoint_identity": "f46a164c55c949d47da9e081f4c3f4ef9fd48302cf3b2f8cd26bf68743ab7717",
+        "checkpoint_sha256": "7bbcd35ac4398b479768eb51eef80f628d1aec1c0e4e366d7c54f3e6aa99e71b",
+        "counts": {
+          "nodes": 572959453,
+          "leaves": 286479727,
+          "basic": 256891820,
+          "affine": 29587907,
+          "max_stack": 68,
+          "waiting": 0
+        },
+        "previous_observation_sha256": "a07ac89bad34df8f6b5c7f77d0efa1fa4bb03455cf87c26d35efb596f0fa634c",
+        "observation_sha256": "a333e46d4a3411dbba41fb6596d3e4ab1270abbb73ceedfebf0952a7c7fcc3d1"
+      }
+    ]
+  },
+  "date_utc": "2026-11-17T22:10:52.031263+00:00"
+}

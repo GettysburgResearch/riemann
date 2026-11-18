@@ -1,0 +1,45 @@
+{
+  "status": "exact rational/integer checks passed",
+  "completion_convention": "Z=pi^(s/2)F/[s(s-1)Gamma(s/2)], F(1)=1; no factor1/2",
+  "beta_first_correction_factor": "21/32",
+  "summed_first_constant": "3/16",
+  "endpoint_IVT_numerator": 1968300000,
+  "endpoint_T": 256,
+  "tested_N_range": [
+    1,
+    1000
+  ],
+  "examples": [
+    {
+      "N": 1,
+      "T_N": 580,
+      "B_N": 58
+    },
+    {
+      "N": 2,
+      "T_N": 1640,
+      "B_N": 82
+    },
+    {
+      "N": 5,
+      "T_N": 12500,
+      "B_N": 250
+    },
+    {
+      "N": 10,
+      "T_N": 85000,
+      "B_N": 850
+    },
+    {
+      "N": 100,
+      "T_N": 80050000,
+      "B_N": 80050
+    },
+    {
+      "N": 1000,
+      "T_N": 80000500000,
+      "B_N": 8000050
+    }
+  ],
+  "limitations": "Analytic infinite-family statements and tuning existence are proved in the audit; these finite checks validate arithmetic only."
+}

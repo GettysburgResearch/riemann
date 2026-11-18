@@ -1,0 +1,8 @@
+{
+  "unshipped_archive_sha256": "d15401546ad1c81fd9b64c18a4b2734a8b657a1e812b48259dea492807cc2ccb",
+  "unshipped_archive_bytes": 19561476,
+  "reason": "New code-pin fallback accidentally shadowed the already verified archive digest in the printed JSON. Renamed the local source digest variable before delivery. No mathematical payload or PDF/HTML change.",
+  "immutable_stage": "/workspace/checkpoints/checkpoint9_unshipped_validator_shadow",
+  "corrected_stage": "/workspace/checkpoints/checkpoint9",
+  "drive_uploaded": false
+}

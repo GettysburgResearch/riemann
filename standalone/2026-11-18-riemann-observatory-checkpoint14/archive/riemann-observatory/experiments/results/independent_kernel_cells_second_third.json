@@ -1,0 +1,59 @@
+{
+  "kind": "independent_exact_rational_second_third_cell_checks",
+  "arithmetic": "Python Fraction exact; no floats in inequalities",
+  "shared_trig": true,
+  "total_elapsed_seconds": 210.4217187539998,
+  "results": [
+    {
+      "label": "second",
+      "source_commit": "0e961ea199b425010843bc8044676d4ad29fe031",
+      "cells": 262144,
+      "table_sha256": "e32c430de69dd92adbfbdb9935a9983eb7e033113c2c87c2a763f549e4401e0a",
+      "input_sha256": "9f480bd9849cb083325a0ee64deda33faef421fb986a402c0d2206faf4a24ed9",
+      "coefficients": [
+        122290,
+        -45012,
+        16241,
+        1887,
+        2711,
+        3731,
+        -5307,
+        2982,
+        -5153,
+        5358
+      ],
+      "coefficient_denominator": 1000000,
+      "positive_density_lower_bound": "49333/62500",
+      "integral_density": 1,
+      "all_table_lower_bounds_certified": true,
+      "mismatches": [],
+      "energy_upper_cap": "6639737/5000000",
+      "energy_cap_independently_checked": true,
+      "case_seconds": 95.67109378000077
+    },
+    {
+      "label": "third",
+      "source_commit": "0e961ea199b425010843bc8044676d4ad29fe031",
+      "cells": 262144,
+      "table_sha256": "698cd6a9e691e1ed132a8990967c63694cb64f2f614090ba0d6ff9d31eb2da6d",
+      "input_sha256": "048a3337986347b4991af2d48c78cbcdb17cef834c896493647a922c85d1e50d",
+      "coefficients": [
+        200566,
+        19,
+        -9358,
+        9283,
+        -6746,
+        8170
+      ],
+      "coefficient_denominator": 1000000,
+      "positive_density_lower_bound": "382929/500000",
+      "integral_density": 1,
+      "all_table_lower_bounds_certified": true,
+      "mismatches": [],
+      "energy_upper_cap": "6662319/5000000",
+      "energy_cap_independently_checked": true,
+      "case_seconds": 57.040445003999594
+    }
+  ],
+  "scope": "Kernel-table soundness and energy caps only. Does not check second/third branch searches or analytic zeta transfer; not Lean execution."
+}

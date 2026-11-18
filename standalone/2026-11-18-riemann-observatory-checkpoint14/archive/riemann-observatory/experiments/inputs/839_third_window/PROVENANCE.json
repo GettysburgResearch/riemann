@@ -1,0 +1,35 @@
+{
+  "repository": "https://github.com/kristianmk/839",
+  "commit": "0e961ea199b425010843bc8044676d4ad29fe031",
+  "tag": "v1",
+  "arxiv_version": "2610.08965v1",
+  "retrieved": "2026-11-17",
+  "license": "MIT",
+  "files": {
+    "inputs.json": {
+      "upstream_path": "certificate_third/inputs.json",
+      "sha256": "048a3337986347b4991af2d48c78cbcdb17cef834c896493647a922c85d1e50d",
+      "bytes": 5724
+    },
+    "kernel_lower.bin": {
+      "upstream_path": "certificate_third/kernel_lower.bin",
+      "sha256": "698cd6a9e691e1ed132a8990967c63694cb64f2f614090ba0d6ff9d31eb2da6d",
+      "bytes": 1048576
+    }
+  },
+  "coefficient_specification": {
+    "path": "lean/Line889/Defs.lean",
+    "sha256": "66f110e74e1b1aa2867a7b8a190896dc57e0684e1be33600bb91ac68f09bca41",
+    "window_coefficients": [
+      200566,
+      19,
+      -9358,
+      9283,
+      -6746,
+      8170
+    ],
+    "denominator": 1000000,
+    "json_matches_lean_definition": true
+  },
+  "scope": "Data for independent whole-cell table validation only; full search and analytic transfer are separate."
+}

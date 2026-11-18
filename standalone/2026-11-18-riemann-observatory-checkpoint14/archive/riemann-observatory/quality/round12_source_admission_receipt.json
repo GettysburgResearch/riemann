@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-18",
+  "scope": "Source/version/hash and corrected selection-scope admission, not full mathematical proof audit. All pending histories remain. No fixed quota was filled with invented works.",
+  "batches": [
+    {
+      "batch": "analytic70",
+      "input_pending_sha256": "f0b31de90090794b0be33fe680235f584ddaa85b5abc601328dbd07565945ebf",
+      "admitted_shard": "papers/analytic70_records.jsonl",
+      "admitted_sha256": "ce432984d83eff595ac7349f2ed71476b351c9513de117da029a5031d9ebaa03",
+      "works": 54,
+      "whole_readings": 4,
+      "fulltexts": 54,
+      "excerpts": 0
+    },
+    {
+      "batch": "geometry70",
+      "input_pending_sha256": "810e76ad1ef1e4b892b1e9e748f7cd83e3a302bf9b187f5a3b771e2e64780835",
+      "admitted_shard": "papers/geometry70_records.jsonl",
+      "admitted_sha256": "35867fa83a4dbcfb4b5ac4d960092a9195483f26b0e79e53c5cca29fec6460e0",
+      "works": 49,
+      "whole_readings": 3,
+      "fulltexts": 49,
+      "excerpts": 0
+    },
+    {
+      "batch": "release70_positivity",
+      "input_pending_sha256": "0aae5d1ecdd199fb490f28ddb2773b30f9706126445993e4c2853324117ec89f",
+      "admitted_shard": "papers/release70_positivity_records.jsonl",
+      "admitted_sha256": "8a82b04407e5ef7dd46374d4a2513f769f3dc94947c2745ded7f892347d37462",
+      "works": 46,
+      "whole_readings": 4,
+      "fulltexts": 45,
+      "excerpts": 1
+    }
+  ],
+  "independent_reviews": [
+    "quality/release72_analytic_selection_review.md",
+    "quality/analytic72_geometry_selection_review.md",
+    "audits/adversarial_reviews/uniform72_positivity_selection_review.md"
+  ]
+}

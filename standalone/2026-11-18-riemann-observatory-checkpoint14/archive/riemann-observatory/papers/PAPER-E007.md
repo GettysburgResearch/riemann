@@ -1,0 +1,63 @@
+# PAPER-E007 — Notes sur la fonction ζ de Riemann, 1
+
+**id:** "PAPER-E007"
+
+**title:** "Notes sur la fonction ζ de Riemann, 1"
+
+**authors:** ["Michel Balazard", "Éric Saias"]
+
+**date:** "1998-11"
+
+**year:** 1998
+
+**venue:** "Advances in Mathematics139(2)(1998),310–321"
+
+**publication_status:** "published_version_text_reproduced_in_mirror"
+
+**doi:** "10.1006/aima.1998.1760"
+
+**arxiv:** null
+
+**source_url:** "https://doi.org/10.1006/aima.1998.1760"
+
+**mirror_url:** "https://www.academia.edu/114375539/Notes_sur_la_fonction%CE%B6de_Riemann_1"
+
+**publisher_pii:** "S0001870898917601"
+
+**version:** "Version-of-record identity/header/articleAI981760 reproduced; exactpublisherPDF inaccessible"
+
+**language:** "French; Crossref languagefielden conflictswithactualprimarytext"
+
+**family:** ["A", "C"]
+
+**audit_level:** 1
+
+**whole_work_read:** true
+
+**read_scope:** "Complete12-page reproduced primary article text read, pp310–321; Lemmas1–6 and main proof architecture reconstructed. Degraded formula extraction prevents claiming every typeset equation independently verified. Scoped technical reconstruction of Lemma2 Perron mechanism; whole-paper Level2 withheld."
+
+**access_status:** "full_primary_text_accessed_via_degraded_mirror; direct_pdf403"
+
+**accessed_at:** "2026-11-17"
+
+**source_file:** "sources/equivalence_round2/balazard_saias_notes1_mirror_tool_response.json"
+
+**source_sha256:** "35e4dc59f5e25ba4ce0726aebc3a027533d7221ae835b96a56fa6daaaa264bfe"
+
+**metadata_provenance:** "sources/equivalence_round2/balazard_saias_notes1_crossref.json"
+
+**main_result:** "For each p>=1, absenceofzeta zeros inRe(s)>1/p equivalentto correctedBeurlingMöbius sumsB_n→−1 inL^r(0,1) foreach1<r<p, andequivalentto boundednessofrawS_n inthoseL^r. Lemma2 suppliesfixedhalfplanedistancepartialMöbiusDirichlet-serieserror O_(alpha,delta,eta)(N^(-delta/3)(1+|t|)^eta)."
+
+**definitions:** "S_n(t)=Σ_(k<=n)μ(k){1/(kt)}; c_n=Σ_(k<=n)μ(k)/k; B_n=S_n−n c_n{1/(nt)}."
+
+**proof_architecture:** ["zero-freehalfplane givesfixed-distanceζandreciprocalgrowth(Lemma1)", "Perron contour withhalf-distanceleftshift givespartialMöbiusbound(Lemma2)", "Abel summationrelatesc_n tozero-freecondition(Lemma3)", "Mellin/FourierPlancherel weightednormidentity(Lemma4)", "weightedL²decay viaanalyticbounds andmaximumprinciple(Lemma5)", "c_n boundcontrolsB_n−S_n inLr(Lemma6)", "Hölder transfersweightedL²tounweightedLr; easyBeurlingconversecloses equivalence"]
+
+**historical_context:** "Authors p320acknowledgeJ.Lee1996priorityforthecentralconvergence result; refinementsincludeadditionalcriteriaandp-scope. Do noterasepriorityacknowledgement."
+
+**limitations:** ["Printedfixed-deltaimplicitconstantdoesnotbyitselfauthorizeδ=c/loglogN. A separateRHnearlineboundandtrackedPerronreconstructionareprovided in audit.", "ExactpublisherPDF notobtained; degradedformulaextractionexplicit.", "Peripheralremarkedequivalences andallantecedentproofsnotfullyaudited."]
+
+**audit_file:** "audits/baez_uniform_dependency_round2.md"
+
+**correction_search_status:** "Author-relatedlaterannotatedbibliography reportslocalp314misprints; exactjournalcorrectiondocumentnotfullyinspected; exhaustiveforwardcorrectionsearchincomplete"
+
+**research_questions:** ["TrackexplicitconditionalinverseζconstantsintouniformMöbiusboundandusableNthresholds.", "ReadJ.Lee1996originalandmapexactpriority/generalizationrelations."]

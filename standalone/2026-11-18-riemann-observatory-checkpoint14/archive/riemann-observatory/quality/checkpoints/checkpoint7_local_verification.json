@@ -1,0 +1,40 @@
+{
+  "checkpoint": "checkpoint7",
+  "validation": "PASS",
+  "archive_sha256": "c5b135bb932f8165b7e955234e0685181669fd79d5198d84a11a8f359c6ffb17",
+  "archive_bytes": 13114889,
+  "zip_entries": 1223,
+  "manifest_payloads": 1222,
+  "pdf_pages": 18,
+  "pdf_bytes": 303133,
+  "html_bytes": 359562,
+  "metrics": {
+    "cutoff": "2026-11-17",
+    "metadata_candidates": 5203,
+    "metadata_candidates_rejected": 56,
+    "metadata_candidates_pending": 5147,
+    "catalogued_works": 481,
+    "deferred_supporting_works": 1,
+    "selected_checkpoint_works": 480,
+    "fulltexts_accessed_selected": 437,
+    "whole_work_or_translation_read": 80,
+    "whole_work_audit_levels": {
+      "0": 400,
+      "1": 79,
+      "3": 1
+    },
+    "scoped_level3_claim_groups": 68,
+    "theorem_or_exercise_records": 383,
+    "connection_records": 63,
+    "graph_nodes": 1586,
+    "graph_edges": 1434,
+    "warning": "Candidate pool not fully relevance-reviewed or manifestation-deduplicated; selected works may overlap provider candidates. Do not add counts. Scoped adjudication groups are not complete-paper Level3 audits.",
+    "curated_candidate_decisions": 47,
+    "curated_priority_candidates": 45,
+    "curated_provider_matches": 43,
+    "additional_curated_records_unreconciled": 4,
+    "paper_aliases_resolved": 1,
+    "selected_primary_excerpt_accessed": 11
+  },
+  "validation_scope": "Exact sealed entry set and payload hashes, derived metrics, source/read scopes, promotion version/hash, code pins, graph citations, standalone bytes and independent all-page visual QA. Self-receipt created after seal and included only in a later checkpoint."
+}

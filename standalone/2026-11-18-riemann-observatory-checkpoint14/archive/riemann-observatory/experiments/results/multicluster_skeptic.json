@@ -1,0 +1,263 @@
+{
+  "status": "nonvalidated 70-digit observations; analytic theorem proved separately",
+  "basis": "Taylor-complete-homogeneous representation of confluent divided differences",
+  "series_terms": 81,
+  "rows": [
+    {
+      "case": "two_separated",
+      "nodes": [
+        "-1.0",
+        "1.0"
+      ],
+      "F_continuous": "3.73622219231971506086940825217",
+      "beta_endpoint_correction": "9.10831862875281835329268770436",
+      "samples": [
+        {
+          "L": 2,
+          "L_times_optimal_error": "1.606346064525476473280065",
+          "L_times_absolute_remainder": "4.259752255588477175178687",
+          "L_squared_times_corrected_remainder": "3.62492032716013678736621"
+        },
+        {
+          "L": 3,
+          "L_times_optimal_error": "2.00252122831706467104719",
+          "L_times_absolute_remainder": "5.201102892007951169466655",
+          "L_squared_times_corrected_remainder": "4.890408238669987786508582"
+        },
+        {
+          "L": 10,
+          "L_times_optimal_error": "2.990463157802315927882364",
+          "L_times_absolute_remainder": "7.457590345173991329870442",
+          "L_squared_times_corrected_remainder": "8.226993173285708094865472"
+        },
+        {
+          "L": 30,
+          "L_times_optimal_error": "3.453350770198673477282512",
+          "L_times_absolute_remainder": "8.486142663631247507606882",
+          "L_squared_times_corrected_remainder": "9.850777054854075351258668"
+        },
+        {
+          "L": 100,
+          "L_times_optimal_error": "3.64709470460357717443345",
+          "L_times_absolute_remainder": "8.912748771613788643595782",
+          "L_squared_times_corrected_remainder": "10.53884845771206170900477"
+        }
+      ]
+    },
+    {
+      "case": "triple_collision",
+      "nodes": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "F_continuous": "9.0",
+      "beta_endpoint_correction": "45.0",
+      "samples": [
+        {
+          "L": 3,
+          "L_times_optimal_error": "2.85",
+          "L_times_absolute_remainder": "18.45",
+          "L_squared_times_corrected_remainder": "45.9"
+        },
+        {
+          "L": 4,
+          "L_times_optimal_error": "3.542857142857142857142857",
+          "L_times_absolute_remainder": "21.82857142857142857142857",
+          "L_squared_times_corrected_remainder": "56.68571428571428571428571"
+        },
+        {
+          "L": 10,
+          "L_times_optimal_error": "5.804195804195804195804196",
+          "L_times_absolute_remainder": "31.95804195804195804195804",
+          "L_squared_times_corrected_remainder": "89.51048951048951048951049"
+        },
+        {
+          "L": 30,
+          "L_times_optimal_error": "7.675953079178885630498534",
+          "L_times_absolute_remainder": "39.72140762463343108504399",
+          "L_squared_times_corrected_remainder": "114.8093841642228739002933"
+        },
+        {
+          "L": 100,
+          "L_times_optimal_error": "8.567098857230097652826391",
+          "L_times_absolute_remainder": "43.29011427699023471736094",
+          "L_squared_times_corrected_remainder": "126.4341168554319738084602"
+        }
+      ]
+    },
+    {
+      "case": "triple_tiny_gaps",
+      "nodes": [
+        "0.0",
+        "1.0e-35",
+        "2.0e-35"
+      ],
+      "F_continuous": "9.0",
+      "beta_endpoint_correction": "45.0",
+      "samples": [
+        {
+          "L": 3,
+          "L_times_optimal_error": "2.85",
+          "L_times_absolute_remainder": "18.45",
+          "L_squared_times_corrected_remainder": "45.9"
+        },
+        {
+          "L": 4,
+          "L_times_optimal_error": "3.542857142857142857142857",
+          "L_times_absolute_remainder": "21.82857142857142857142857",
+          "L_squared_times_corrected_remainder": "56.68571428571428571428571"
+        },
+        {
+          "L": 10,
+          "L_times_optimal_error": "5.804195804195804195804196",
+          "L_times_absolute_remainder": "31.95804195804195804195804",
+          "L_squared_times_corrected_remainder": "89.51048951048951048951049"
+        },
+        {
+          "L": 30,
+          "L_times_optimal_error": "7.675953079178885630498534",
+          "L_times_absolute_remainder": "39.72140762463343108504399",
+          "L_squared_times_corrected_remainder": "114.8093841642228739002933"
+        },
+        {
+          "L": 100,
+          "L_times_optimal_error": "8.567098857230097652826391",
+          "L_times_absolute_remainder": "43.29011427699023471736094",
+          "L_squared_times_corrected_remainder": "126.4341168554319738084602"
+        }
+      ]
+    },
+    {
+      "case": "two_double_clusters",
+      "nodes": [
+        "-1.0",
+        "-1.0",
+        "1.0",
+        "1.0"
+      ],
+      "F_continuous": "15.7461032238535827278888844741",
+      "beta_endpoint_correction": "132.096761935089525677766332279",
+      "samples": [
+        {
+          "L": 4,
+          "L_times_optimal_error": "3.938615704263006041203196",
+          "L_times_absolute_remainder": "47.22995007836230674674275",
+          "L_squared_times_corrected_remainder": "233.7898378788372551818812"
+        },
+        {
+          "L": 5,
+          "L_times_optimal_error": "4.790169213238980809816324",
+          "L_times_absolute_remainder": "54.7796700530730095903628",
+          "L_squared_times_corrected_remainder": "276.5048244641746423722124"
+        },
+        {
+          "L": 10,
+          "L_times_optimal_error": "7.845393851353991917284041",
+          "L_times_absolute_remainder": "79.00709372499590810604843",
+          "L_squared_times_corrected_remainder": "410.808716705400243282846"
+        },
+        {
+          "L": 30,
+          "L_times_optimal_error": "12.1188802204278550859333",
+          "L_times_absolute_remainder": "108.8166901027718292586676",
+          "L_squared_times_corrected_remainder": "570.5665789033152225622189"
+        },
+        {
+          "L": 100,
+          "L_times_optimal_error": "14.50335558723778235733501",
+          "L_times_absolute_remainder": "124.2747636615800370553876",
+          "L_squared_times_corrected_remainder": "651.4109541478899259232543"
+        }
+      ]
+    },
+    {
+      "case": "two_near_double_clusters",
+      "nodes": [
+        "-1.0",
+        "-0.99999999999999999999999999999999999",
+        "1.0",
+        "1.00000000000000000000000000000000001"
+      ],
+      "F_continuous": "15.7461032238535827278888844741",
+      "beta_endpoint_correction": "132.096761935089525677766332279",
+      "samples": [
+        {
+          "L": 4,
+          "L_times_optimal_error": "3.938615704263006041203196",
+          "L_times_absolute_remainder": "47.22995007836230674674275",
+          "L_squared_times_corrected_remainder": "233.7898378788372551818812"
+        },
+        {
+          "L": 5,
+          "L_times_optimal_error": "4.790169213238980809816324",
+          "L_times_absolute_remainder": "54.7796700530730095903628",
+          "L_squared_times_corrected_remainder": "276.5048244641746423722124"
+        },
+        {
+          "L": 10,
+          "L_times_optimal_error": "7.845393851353991917284041",
+          "L_times_absolute_remainder": "79.00709372499590810604843",
+          "L_squared_times_corrected_remainder": "410.808716705400243282846"
+        },
+        {
+          "L": 30,
+          "L_times_optimal_error": "12.1188802204278550859333",
+          "L_times_absolute_remainder": "108.8166901027718292586676",
+          "L_squared_times_corrected_remainder": "570.5665789033152225622189"
+        },
+        {
+          "L": 100,
+          "L_times_optimal_error": "14.50335558723778235733501",
+          "L_times_absolute_remainder": "124.2747636615800370553876",
+          "L_squared_times_corrected_remainder": "651.4109541478899259232543"
+        }
+      ]
+    },
+    {
+      "case": "five_separated",
+      "nodes": [
+        "-1.0",
+        "-0.5",
+        "0.0",
+        "0.5",
+        "1.0"
+      ],
+      "F_continuous": "24.8736229143522378459362539508",
+      "beta_endpoint_correction": "321.911861504816771941505016357",
+      "samples": [
+        {
+          "L": 5,
+          "L_times_optimal_error": "4.979598933054006681138645",
+          "L_times_absolute_remainder": "99.47011990649115582398804",
+          "L_squared_times_corrected_remainder": "843.9488234042807706363307"
+        },
+        {
+          "L": 6,
+          "L_times_optimal_error": "5.920278488206208754608372",
+          "L_times_absolute_remainder": "113.7200665568761745479673",
+          "L_squared_times_corrected_remainder": "973.2263169692292084113649"
+        },
+        {
+          "L": 10,
+          "L_times_optimal_error": "9.149627076058654854774138",
+          "L_times_absolute_remainder": "157.2399583829358299116212",
+          "L_squared_times_corrected_remainder": "1354.071884396248718533834"
+        },
+        {
+          "L": 30,
+          "L_times_optimal_error": "16.77416352165309119814439",
+          "L_times_absolute_remainder": "242.9837817809743994337561",
+          "L_squared_times_corrected_remainder": "2056.314783807383976579399"
+        },
+        {
+          "L": 100,
+          "L_times_optimal_error": "21.93175297133617712144238",
+          "L_times_absolute_remainder": "294.1869943016060724493876",
+          "L_squared_times_corrected_remainder": "2453.76210496976621461619"
+        }
+      ]
+    }
+  ],
+  "alias_warning": "Distinct frequencies separated by2piL alias on the grid. Actual polynomial multiplicity must replace repeated value constraints; inverse of the aliased value Gram is invalid."
+}

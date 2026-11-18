@@ -1,0 +1,11 @@
+{"from": "THM-G003", "to": "PAPER-G002:(3.3)-(3.4)", "relation": "uses", "provenance": "DeligneI pp284–285", "status": "source established"}
+{"from": "THM-G003", "to": "PAPER-G002:(3.5)-(3.7)", "relation": "uses", "provenance": "DeligneI pp284–285; global pole control via coinvariants", "status": "source established"}
+{"from": "PAPER-G002:(6.3)", "to": "THM-G003", "relation": "uses", "provenance": "DeligneI p295, explicit invocation of(5.10),(6.2),(3.2)", "status": "source established"}
+{"from": "PAPER-G002:(7.1)", "to": "PAPER-G002:(6.3)", "relation": "uses", "provenance": "DeligneI pp299–300 Leray middle term", "status": "source established"}
+{"from": "THM-G004", "to": "PAPER-G002:(7.1)", "relation": "uses", "provenance": "DeligneI(7.3),p301", "status": "source established"}
+{"from": "THM-G002", "to": "THM-G004", "relation": "uses", "provenance": "DeligneI(7.2)⇒(1.7) reduction pp300–301; (1.7)⇒(1.6) pp276–277", "status": "source established"}
+{"from": "THM-G006", "to": "THM-G005", "relation": "uses", "provenance": "WeilII(3.3.4)–(3.3.6),p206", "status": "source established"}
+{"from": "THM-G007", "to": "THM-G006", "relation": "uses", "provenance": "WeilII(3.3.9),p207: properness identifies Hc and H", "status": "source established"}
+{"from": "THM-G009", "to": "THM-G008", "relation": "uses", "provenance": "WeilII introduction pp140–141; (3.2.4) induction pp197–204", "status": "architecture inspected, full dependency audit pending"}
+{"from": "THM-G011", "to": "THM-G003", "relation": "tests necessity of hypothesis", "provenance": "Explicit A with trivial geometric monodromy, frontiers/geometry_round2.md", "status": "independently checked negative control"}
+{"from": "THM-G013", "to": "THM-G003", "relation": "weakens sufficient hypothesis in inspected proof", "provenance": "frontiers/geometry_round2.md §9; DeligneI(3.3)–(3.7)", "status": "derived lemma under independent review"}

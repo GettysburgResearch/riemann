@@ -1,0 +1,133 @@
+{
+  "arithmetic": "exact Fraction; scaled bounds rounded outward",
+  "coefficient_checks": [
+    {
+      "a": "1/2",
+      "N": 0,
+      "tail_coefficient": "-1/2",
+      "identity_verified": true
+    },
+    {
+      "a": "1/2",
+      "N": 1,
+      "tail_coefficient": "-3/4",
+      "identity_verified": true
+    },
+    {
+      "a": "1/2",
+      "N": 3,
+      "tail_coefficient": "-35/32",
+      "identity_verified": true
+    },
+    {
+      "a": "1/2",
+      "N": 10,
+      "tail_coefficient": "-969969/524288",
+      "identity_verified": true
+    },
+    {
+      "a": "3/4",
+      "N": 0,
+      "tail_coefficient": "-3/4",
+      "identity_verified": true
+    },
+    {
+      "a": "3/4",
+      "N": 1,
+      "tail_coefficient": "-21/16",
+      "identity_verified": true
+    },
+    {
+      "a": "3/4",
+      "N": 3,
+      "tail_coefficient": "-1155/512",
+      "identity_verified": true
+    },
+    {
+      "a": "3/4",
+      "N": 10,
+      "tail_coefficient": "-5247931689/1073741824",
+      "identity_verified": true
+    },
+    {
+      "a": "1",
+      "N": 0,
+      "tail_coefficient": "-1",
+      "identity_verified": true
+    },
+    {
+      "a": "1",
+      "N": 1,
+      "tail_coefficient": "-2",
+      "identity_verified": true
+    },
+    {
+      "a": "1",
+      "N": 3,
+      "tail_coefficient": "-4",
+      "identity_verified": true
+    },
+    {
+      "a": "1",
+      "N": 10,
+      "tail_coefficient": "-11",
+      "identity_verified": true
+    },
+    {
+      "a": "5/4",
+      "N": 0,
+      "tail_coefficient": "-5/4",
+      "identity_verified": true
+    },
+    {
+      "a": "5/4",
+      "N": 1,
+      "tail_coefficient": "-45/16",
+      "identity_verified": true
+    },
+    {
+      "a": "5/4",
+      "N": 3,
+      "tail_coefficient": "-3315/512",
+      "identity_verified": true
+    },
+    {
+      "a": "5/4",
+      "N": 10,
+      "tail_coefficient": "-24063071175/1073741824",
+      "identity_verified": true
+    }
+  ],
+  "critical_alpha_minus3_a1_bounds": [
+    {
+      "N": 9,
+      "harmonic_norm_lower_scaled_integer": 2928968253968,
+      "image_norm_squared_upper": "3/5",
+      "normalized_image_norm_squared_upper_scaled_integer": 204850291289,
+      "scale": 1000000000000
+    },
+    {
+      "N": 99,
+      "harmonic_norm_lower_scaled_integer": 5187377517639,
+      "image_norm_squared_upper": "51/100",
+      "normalized_image_norm_squared_upper_scaled_integer": 98315574347,
+      "scale": 1000000000000
+    },
+    {
+      "N": 999,
+      "harmonic_norm_lower_scaled_integer": 7485470860550,
+      "image_norm_squared_upper": "501/1000",
+      "normalized_image_norm_squared_upper_scaled_integer": 66929657377,
+      "scale": 1000000000000
+    },
+    {
+      "N": 9999,
+      "harmonic_norm_lower_scaled_integer": 9787606036044,
+      "image_norm_squared_upper": "5001/10000",
+      "normalized_image_norm_squared_upper_scaled_integer": 51095231884,
+      "scale": 1000000000000
+    }
+  ],
+  "proof": "Ta P_N = -a H_N z^N/(1-z); criticaldomainnorm\u00b2~logN whileimagenorm\u00b2bounded. Fullclassificationandexplicitnonrangegprovedanalyticallyinaudit.",
+  "scope": "Auxiliaryoperatorendpointonly; notcounterexampletoRHorthewholeTheorem5.5."
+}

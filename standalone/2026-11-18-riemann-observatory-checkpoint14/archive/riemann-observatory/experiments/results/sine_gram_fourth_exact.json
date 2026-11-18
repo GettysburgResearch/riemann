@@ -1,0 +1,365 @@
+{
+  "kind": "exact_combinatorial_and_polynomial_integral_check_NOT_prime_asymptotics",
+  "moments": {
+    "1": {
+      "set_partitions": 1,
+      "moment": "1",
+      "contributions_by_distinct_vertices": {
+        "1": "1"
+      },
+      "diagram_table": [
+        {
+          "vertices": 1,
+          "canonical_edge_multiplicities": [],
+          "name": "single vertex",
+          "signed_coefficient": 1,
+          "integral": "1",
+          "contribution": "1"
+        }
+      ]
+    },
+    "2": {
+      "set_partitions": 2,
+      "moment": "4/3",
+      "contributions_by_distinct_vertices": {
+        "1": "1",
+        "2": "1/3"
+      },
+      "diagram_table": [
+        {
+          "vertices": 1,
+          "canonical_edge_multiplicities": [],
+          "name": "single vertex",
+          "signed_coefficient": 1,
+          "integral": "1",
+          "contribution": "1"
+        },
+        {
+          "vertices": 2,
+          "canonical_edge_multiplicities": [
+            2
+          ],
+          "name": "k^2",
+          "signed_coefficient": 1,
+          "integral": "1",
+          "contribution": "1"
+        },
+        {
+          "vertices": 2,
+          "canonical_edge_multiplicities": [
+            4
+          ],
+          "name": "k^4",
+          "signed_coefficient": -1,
+          "integral": "2/3",
+          "contribution": "-2/3"
+        }
+      ]
+    },
+    "3": {
+      "set_partitions": 5,
+      "moment": "2",
+      "contributions_by_distinct_vertices": {
+        "1": "1",
+        "2": "1",
+        "3": "0"
+      },
+      "diagram_table": [
+        {
+          "vertices": 1,
+          "canonical_edge_multiplicities": [],
+          "name": "single vertex",
+          "signed_coefficient": 1,
+          "integral": "1",
+          "contribution": "1"
+        },
+        {
+          "vertices": 2,
+          "canonical_edge_multiplicities": [
+            2
+          ],
+          "name": "k^2",
+          "signed_coefficient": 3,
+          "integral": "1",
+          "contribution": "3"
+        },
+        {
+          "vertices": 2,
+          "canonical_edge_multiplicities": [
+            4
+          ],
+          "name": "k^4",
+          "signed_coefficient": -3,
+          "integral": "2/3",
+          "contribution": "-2"
+        },
+        {
+          "vertices": 3,
+          "canonical_edge_multiplicities": [
+            1,
+            1,
+            1
+          ],
+          "name": "triangle111",
+          "signed_coefficient": 1,
+          "integral": "1",
+          "contribution": "1"
+        },
+        {
+          "vertices": 3,
+          "canonical_edge_multiplicities": [
+            1,
+            1,
+            3
+          ],
+          "name": "triangle311",
+          "signed_coefficient": -3,
+          "integral": "2/3",
+          "contribution": "-2"
+        },
+        {
+          "vertices": 3,
+          "canonical_edge_multiplicities": [
+            2,
+            2,
+            2
+          ],
+          "name": "triangle222",
+          "signed_coefficient": 2,
+          "integral": "1/2",
+          "contribution": "1"
+        }
+      ]
+    },
+    "4": {
+      "set_partitions": 15,
+      "moment": "13/4",
+      "contributions_by_distinct_vertices": {
+        "1": "1",
+        "2": "127/60",
+        "3": "2/15",
+        "4": "0"
+      },
+      "diagram_table": [
+        {
+          "vertices": 1,
+          "canonical_edge_multiplicities": [],
+          "name": "single vertex",
+          "signed_coefficient": 1,
+          "integral": "1",
+          "contribution": "1"
+        },
+        {
+          "vertices": 2,
+          "canonical_edge_multiplicities": [
+            2
+          ],
+          "name": "k^2",
+          "signed_coefficient": 6,
+          "integral": "1",
+          "contribution": "6"
+        },
+        {
+          "vertices": 2,
+          "canonical_edge_multiplicities": [
+            4
+          ],
+          "name": "k^4",
+          "signed_coefficient": -5,
+          "integral": "2/3",
+          "contribution": "-10/3"
+        },
+        {
+          "vertices": 2,
+          "canonical_edge_multiplicities": [
+            6
+          ],
+          "name": "k^6",
+          "signed_coefficient": -1,
+          "integral": "11/20",
+          "contribution": "-11/20"
+        },
+        {
+          "vertices": 3,
+          "canonical_edge_multiplicities": [
+            0,
+            2,
+            2
+          ],
+          "name": "double-edge star22",
+          "signed_coefficient": 2,
+          "integral": "1",
+          "contribution": "2"
+        },
+        {
+          "vertices": 3,
+          "canonical_edge_multiplicities": [
+            0,
+            2,
+            4
+          ],
+          "name": "double-edge star42",
+          "signed_coefficient": -4,
+          "integral": "2/3",
+          "contribution": "-8/3"
+        },
+        {
+          "vertices": 3,
+          "canonical_edge_multiplicities": [
+            1,
+            1,
+            1
+          ],
+          "name": "triangle111",
+          "signed_coefficient": 4,
+          "integral": "1",
+          "contribution": "4"
+        },
+        {
+          "vertices": 3,
+          "canonical_edge_multiplicities": [
+            1,
+            1,
+            3
+          ],
+          "name": "triangle311",
+          "signed_coefficient": -12,
+          "integral": "2/3",
+          "contribution": "-8"
+        },
+        {
+          "vertices": 3,
+          "canonical_edge_multiplicities": [
+            1,
+            3,
+            3
+          ],
+          "name": "triangle331",
+          "signed_coefficient": 4,
+          "integral": "9/20",
+          "contribution": "9/5"
+        },
+        {
+          "vertices": 3,
+          "canonical_edge_multiplicities": [
+            2,
+            2,
+            2
+          ],
+          "name": "triangle222",
+          "signed_coefficient": 6,
+          "integral": "1/2",
+          "contribution": "3"
+        },
+        {
+          "vertices": 4,
+          "canonical_edge_multiplicities": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "name": "cycle1111",
+          "signed_coefficient": 1,
+          "integral": "1",
+          "contribution": "1"
+        },
+        {
+          "vertices": 4,
+          "canonical_edge_multiplicities": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "name": "cycle plus squared diagonal",
+          "signed_coefficient": -2,
+          "integral": "2/3",
+          "contribution": "-4/3"
+        },
+        {
+          "vertices": 4,
+          "canonical_edge_multiplicities": [
+            0,
+            1,
+            1,
+            1,
+            3,
+            0
+          ],
+          "name": "cycle3111",
+          "signed_coefficient": -4,
+          "integral": "2/3",
+          "contribution": "-8/3"
+        },
+        {
+          "vertices": 4,
+          "canonical_edge_multiplicities": [
+            0,
+            1,
+            1,
+            2,
+            2,
+            1
+          ],
+          "name": "cycle plus triangle",
+          "signed_coefficient": 8,
+          "integral": "1/2",
+          "contribution": "4"
+        },
+        {
+          "vertices": 4,
+          "canonical_edge_multiplicities": [
+            0,
+            1,
+            3,
+            3,
+            1,
+            0
+          ],
+          "name": "cycle3131",
+          "signed_coefficient": 2,
+          "integral": "9/20",
+          "contribution": "9/10"
+        },
+        {
+          "vertices": 4,
+          "canonical_edge_multiplicities": [
+            0,
+            2,
+            2,
+            2,
+            2,
+            0
+          ],
+          "name": "cycle2222",
+          "signed_coefficient": -2,
+          "integral": "2/5",
+          "contribution": "-4/5"
+        },
+        {
+          "vertices": 4,
+          "canonical_edge_multiplicities": [
+            1,
+            1,
+            2,
+            2,
+            1,
+            1
+          ],
+          "name": "K4 opposite edges doubled",
+          "signed_coefficient": -3,
+          "integral": "11/30",
+          "contribution": "-11/10"
+        }
+      ]
+    }
+  },
+  "K4_diamond_integral": "11/30",
+  "input_assumptions": "Stationary unit-intensity sine DPP correlation densities det[k(xi-xj)], k=sinc; analytic diagram identities and dominated-limit proof separate.",
+  "scope": "Exact partition/permutation coefficients and one rational polynomial integral; this script alone is not the full analytic proof."
+}

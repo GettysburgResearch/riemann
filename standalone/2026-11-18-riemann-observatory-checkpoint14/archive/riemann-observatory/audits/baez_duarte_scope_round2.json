@@ -1,0 +1,82 @@
+{
+  "paper_id": "PAPER-E001",
+  "version": "math/0205003v1",
+  "audit_date": "2026-11-17",
+  "whole_work_audit_level": 1,
+  "scoped_technical_audits": [
+    {
+      "scope": "Theorem1.1 complete proof including easy converse",
+      "level": 2,
+      "status": "independently_reconstructed_after_local_typographical_and_majorant_repairs",
+      "external_inputs": [
+        "Mellin/Fourier Plancherel",
+        "zeta functional equation and conjugation",
+        "uniform gamma Stirling",
+        "Balazard–Saias fixed-distance partial Möbius estimate",
+        "RH implies fixed-distance Lindelöf"
+      ]
+    },
+    {
+      "scope": "Corollary3.1 including converse",
+      "level": 2,
+      "status": "independent_Mellin_analyticity_and_zero_accumulation_reconstruction"
+    },
+    {
+      "scope": "Proposition3.1",
+      "level": 1,
+      "status": "error_split_and_J_epsilon_audited; original_uniform_shrinking_epsilon_Mobius_input_not_fully_verified"
+    }
+  ],
+  "source_access_limits": [
+    "published2003 PDF503/timeouts; nojournalcorrectioncomparison",
+    "correct Balazard–Saias1998 Lemma2 proof inspected in primarytextmirror, directPDFinaccessible",
+    "ESI623 is a different paper and is not the Lemma2 antecedent"
+  ],
+  "findings": [
+    {
+      "id": "E001-DEEP-01",
+      "classification": "Correct argument, but commonly misinterpreted",
+      "claim": "Main theorem fixed-epsilon norm convergence remains valid for everyfixed0<epsilon<1/2 by retaining the free growth exponent in the partial-sum estimate. Printed exponent−1+2epsilon alone is squareintegrable onlyepsilon<1/4.",
+      "evidence": "preprintp5 Eq2.8 discussion; full reconstruction auditfile",
+      "review": "audits/adversarial_reviews/baez_fixed_epsilon_skeptic.md"
+    },
+    {
+      "id": "E001-DEEP-02",
+      "classification": "Unresolved ambiguity requiring expert review",
+      "claim": "Proposition3.1 invokes shrinking-epsilon uniformity stronger than fixed-epsilon Lemma2.1; originalconstanttracking incomplete here. No theoremerror asserted; laterquantitative results supporttheconclusion.",
+      "evidence": "preprintpp7–8 proofsketch; Balazard–deRotonProps3,14 inspected statements",
+      "current_status": "previously_unresolved_constant_tracking_now_reconstructed; no_source_error_asserted"
+    },
+    {
+      "id": "E001-DEEP-03",
+      "classification": "Correct argument, but commonly misinterpreted",
+      "claim": "Analyticgamma-ratio kernel convergence is unconditional, but identifyingit withMellintransformofpointwisef_epsilon retainsRH. Forgettingthisconditionalidentification wouldinvalidate an allegedRH proof.",
+      "evidence": "preprintpp5–6 and Burnol0202166 §4"
+    }
+  ],
+  "local_typographical_inconsistencies": [
+    {
+      "locator": "p4 K definition beforeEq2.6",
+      "printed": "measure(2pi)^(-1/2)dt with unnormalizedM calledisometry",
+      "repair": "measure dt/(2pi)",
+      "independent_witness": "Mchi=1/(1/2+it), squaredintegral2pi; printedtargetnormsquaredsqrt(2pi)",
+      "impact": "fixedpositive normconstant only; convergence unchanged; journalcomparisonunavailable"
+    },
+    {
+      "locator": "p5 Eq2.9",
+      "printed": "f_(2epsilon,n) taildenominatora^(1+epsilon)",
+      "repair": "a^(1+2epsilon)",
+      "independent_witness": "substitute rho_a(x)=1/(ax) forx>1 in definition",
+      "impact": "uniform-in-n fixed-epsilon tailbound andclosureproof survive"
+    }
+  ],
+  "audit_file": "audits/baez_duarte_deep_round2.md",
+  "promotion_decision": "wholepaperLevel2withheld; noforcedpromotion",
+  "subsequent_dependency_update": {
+    "status": "uniform_shrinking_epsilon_input_reconstructed_by_original_Perron_route",
+    "audit": "audits/baez_uniform_dependency_round2.md",
+    "inputs": "RH_classical_Titchmarsh_nearline_bounds_and_BorelCaratheodory_lowheight_patch",
+    "independent_review": "advocate_statement_and_scope_review_confirmed; parentadjudicationpending",
+    "promotion": "whole_work_level_not_automatically_changed"
+  }
+}

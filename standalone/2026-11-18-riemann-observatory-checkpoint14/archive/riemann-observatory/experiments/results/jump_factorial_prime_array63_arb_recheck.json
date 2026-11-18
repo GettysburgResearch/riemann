@@ -1,0 +1,1636 @@
+{
+  "description": "Unconditional finite-N enclosure of the full squared error for k=2",
+  "code_sha256": "11ee04883dec90fae9f1bf878f178140c5c06445467117eb1ea85efe9e62e559",
+  "python_version": "3.12.14",
+  "python_flint_version": "0.9.0",
+  "flint_version": "3.6.0",
+  "precision_bits": 224,
+  "arb_threads": 1,
+  "block_cells": 8191,
+  "dyadic_convention": "mantissa * 2**exponent; mantissa is an exact decimal integer string",
+  "tail_majorant": "((2*log(X+1)+S_N)^2+4*(2*log(X+1)+S_N)+8)/(X+1)",
+  "cases": [
+    {
+      "N": 10,
+      "X": 4000000,
+      "first_tail_cell": 4000001,
+      "nonzero_coefficient_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "anchor_A_at_1": {
+        "lower_dyadic": {
+          "mantissa": "13763891116952601279231175002852236109213294858987935750219449783623",
+          "exponent": -227
+        },
+        "upper_dyadic": {
+          "mantissa": "13763891116952601279231175002852236109213294858987935750219449783815",
+          "exponent": -227
+        },
+        "lower_decimal_outward": "0.063816386985490688",
+        "upper_decimal_outward": "0.063816386985490689"
+      },
+      "coefficient_l1": {
+        "lower_dyadic": {
+          "mantissa": "9185151552089949092585393345219602382342871366232743317451112576329",
+          "exponent": -221
+        },
+        "upper_dyadic": {
+          "mantissa": "9185151552089949092585393345219602382342871366232743317451112576347",
+          "exponent": -221
+        },
+        "lower_decimal_outward": "2.725569650560652330",
+        "upper_decimal_outward": "2.725569650560652331"
+      },
+      "finite_squared_error": {
+        "lower_dyadic": {
+          "mantissa": "9241911233615252603256205545845871927739937402977060707520571526793",
+          "exponent": -224
+        },
+        "upper_dyadic": {
+          "mantissa": "9241911233615252603256205545845871927739937402977060707520575543201",
+          "exponent": -224
+        },
+        "lower_decimal_outward": "0.342801539918328691",
+        "upper_decimal_outward": "0.342801539918328692"
+      },
+      "tail_majorant_enclosure": {
+        "lower_dyadic": {
+          "mantissa": "2136192255691275437442194867323895642881310118530717401344143109983",
+          "exponent": -232
+        },
+        "upper_dyadic": {
+          "mantissa": "4272384511382550874884389734647791285762620237061434802688286219971",
+          "exponent": -233
+        },
+        "lower_decimal_outward": "0.000309514744291442",
+        "upper_decimal_outward": "0.000309514744291443"
+      },
+      "full_squared_error": {
+        "lower_dyadic": {
+          "mantissa": "9241911233615252603256205545845871927739937402977060707520571526793",
+          "exponent": -224
+        },
+        "upper_dyadic": {
+          "mantissa": "18500511469228093295867428239092711790189885041255142644739152204449",
+          "exponent": -225
+        },
+        "lower_decimal_outward": "0.342801539918328691",
+        "upper_decimal_outward": "0.343111054662620134"
+      },
+      "log_N_times_full_squared_error": {
+        "lower_dyadic": {
+          "mantissa": "21280287037296691881924562540345528028642919199620678664974278841555",
+          "exponent": -224
+        },
+        "upper_dyadic": {
+          "mantissa": "5324875240226247243595127692219652422385921569554878295488026109881",
+          "exponent": -222
+        },
+        "lower_decimal_outward": "0.789329715671346933",
+        "upper_decimal_outward": "0.790042399707614272"
+      },
+      "independent_direct_cell_checks": [
+        {
+          "n": 1,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-802547327",
+              "exponent": -249
+            },
+            "upper_dyadic": {
+              "mantissa": "802547327",
+              "exponent": -249
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "0",
+              "exponent": 0
+            },
+            "upper_dyadic": {
+              "mantissa": "0",
+              "exponent": 0
+            },
+            "lower_decimal_outward": "0.000000000000000000",
+            "upper_decimal_outward": "0.000000000000000000"
+          }
+        },
+        {
+          "n": 2,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-409662271",
+              "exponent": -247
+            },
+            "upper_dyadic": {
+              "mantissa": "426439487",
+              "exponent": -247
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-603979779",
+              "exponent": -251
+            },
+            "upper_dyadic": {
+              "mantissa": "603979779",
+              "exponent": -251
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 3,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-308636795",
+              "exponent": -246
+            },
+            "upper_dyadic": {
+              "mantissa": "308636795",
+              "exponent": -246
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-1124073477",
+              "exponent": -251
+            },
+            "upper_dyadic": {
+              "mantissa": "855638021",
+              "exponent": -251
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 4,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-827713151",
+              "exponent": -247
+            },
+            "upper_dyadic": {
+              "mantissa": "844490367",
+              "exponent": -247
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-177209345",
+              "exponent": -247
+            },
+            "upper_dyadic": {
+              "mantissa": "227540993",
+              "exponent": -247
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 5,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-1019700271",
+              "exponent": -247
+            },
+            "upper_dyadic": {
+              "mantissa": "1015505967",
+              "exponent": -247
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-227540993",
+              "exponent": -247
+            },
+            "upper_dyadic": {
+              "mantissa": "277872641",
+              "exponent": -247
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 6,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-75276131",
+              "exponent": -243
+            },
+            "upper_dyadic": {
+              "mantissa": "76586851",
+              "exponent": -243
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-673185795",
+              "exponent": -248
+            },
+            "upper_dyadic": {
+              "mantissa": "606076931",
+              "exponent": -248
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 9,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-921008293",
+              "exponent": -246
+            },
+            "upper_dyadic": {
+              "mantissa": "915765413",
+              "exponent": -246
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-952107525",
+              "exponent": -248
+            },
+            "upper_dyadic": {
+              "mantissa": "884998661",
+              "exponent": -248
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 10,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-31880961",
+              "exponent": -241
+            },
+            "upper_dyadic": {
+              "mantissa": "31749889",
+              "exponent": -241
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-729808901",
+              "exponent": -247
+            },
+            "upper_dyadic": {
+              "mantissa": "1098907653",
+              "exponent": -247
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 11,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-280629735",
+              "exponent": -244
+            },
+            "upper_dyadic": {
+              "mantissa": "279581159",
+              "exponent": -244
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-432013315",
+              "exponent": -246
+            },
+            "upper_dyadic": {
+              "mantissa": "650117123",
+              "exponent": -246
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 20,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-1017045025",
+              "exponent": -245
+            },
+            "upper_dyadic": {
+              "mantissa": "1027530785",
+              "exponent": -245
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-104202257",
+              "exponent": -243
+            },
+            "upper_dyadic": {
+              "mantissa": "173408273",
+              "exponent": -243
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 8190,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-812772391",
+              "exponent": -236
+            },
+            "upper_dyadic": {
+              "mantissa": "816286759",
+              "exponent": -236
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-853666317",
+              "exponent": -235
+            },
+            "upper_dyadic": {
+              "mantissa": "998074893",
+              "exponent": -235
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 8191,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-406439403",
+              "exponent": -235
+            },
+            "upper_dyadic": {
+              "mantissa": "408194539",
+              "exponent": -235
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-873588763",
+              "exponent": -235
+            },
+            "upper_dyadic": {
+              "mantissa": "978216987",
+              "exponent": -235
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 8192,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-406492867",
+              "exponent": -235
+            },
+            "upper_dyadic": {
+              "mantissa": "408254147",
+              "exponent": -235
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-831882999",
+              "exponent": -235
+            },
+            "upper_dyadic": {
+              "mantissa": "986449655",
+              "exponent": -235
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 2000000,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-776377453",
+              "exponent": -228
+            },
+            "upper_dyadic": {
+              "mantissa": "779704429",
+              "exponent": -228
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-25261905",
+              "exponent": -222
+            },
+            "upper_dyadic": {
+              "mantissa": "43251677",
+              "exponent": -222
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 3999999,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-777257679",
+              "exponent": -227
+            },
+            "upper_dyadic": {
+              "mantissa": "780584707",
+              "exponent": -227
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-541393775",
+              "exponent": -225
+            },
+            "upper_dyadic": {
+              "mantissa": "555244623",
+              "exponent": -225
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 4000000,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-1554515755",
+              "exponent": -228
+            },
+            "upper_dyadic": {
+              "mantissa": "1561169801",
+              "exponent": -228
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-451603925",
+              "exponent": -225
+            },
+            "upper_dyadic": {
+              "mantissa": "645034549",
+              "exponent": -225
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        }
+      ]
+    },
+    {
+      "N": 30,
+      "X": 8000000,
+      "first_tail_cell": 8000001,
+      "nonzero_coefficient_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19,
+        22,
+        23,
+        25,
+        26,
+        27,
+        29
+      ],
+      "anchor_A_at_1": {
+        "lower_dyadic": {
+          "mantissa": "21016970101276277053842116631667550840172667596160753308940196157593",
+          "exponent": -228
+        },
+        "upper_dyadic": {
+          "mantissa": "21016970101276277053842116631667550840172667596160753308940196158305",
+          "exponent": -228
+        },
+        "lower_decimal_outward": "0.048722671730292252",
+        "upper_decimal_outward": "0.048722671730292253"
+      },
+      "coefficient_l1": {
+        "lower_dyadic": {
+          "mantissa": "4512897714377352086418820415177944913781506757247448265763556057837",
+          "exponent": -218
+        },
+        "upper_dyadic": {
+          "mantissa": "9025795428754704172837640830355889827563013514494896531527112115699",
+          "exponent": -219
+        },
+        "lower_decimal_outward": "10.713131494138675315",
+        "upper_decimal_outward": "10.713131494138675316"
+      },
+      "finite_squared_error": {
+        "lower_dyadic": {
+          "mantissa": "26707231311540827733075478978864109451951227862494410946266852275537",
+          "exponent": -226
+        },
+        "upper_dyadic": {
+          "mantissa": "26707231311540827733075478978864109451951227862494410946266868397429",
+          "exponent": -226
+        },
+        "lower_decimal_outward": "0.247656566621497315",
+        "upper_decimal_outward": "0.247656566621497316"
+      },
+      "tail_majorant_enclosure": {
+        "lower_dyadic": {
+          "mantissa": "13696653384870113456744338807365170119571520952427308736612420064325",
+          "exponent": -235
+        },
+        "upper_dyadic": {
+          "mantissa": "13696653384870113456744338807365170119571520952427308736612420064353",
+          "exponent": -235
+        },
+        "lower_decimal_outward": "0.000248064995014618",
+        "upper_decimal_outward": "0.000248064995014619"
+      },
+      "full_squared_error": {
+        "lower_dyadic": {
+          "mantissa": "26707231311540827733075478978864109451951227862494410946266852275537",
+          "exponent": -226
+        },
+        "upper_dyadic": {
+          "mantissa": "417718477932549252709698168212456946091265874833665945838172883287",
+          "exponent": -220
+        },
+        "lower_decimal_outward": "0.247656566621497315",
+        "upper_decimal_outward": "0.247904631616511935"
+      },
+      "log_N_times_full_squared_error": {
+        "lower_dyadic": {
+          "mantissa": "88707583211189643687158156936327371230770750014098965390093411381",
+          "exponent": -216
+        },
+        "upper_dyadic": {
+          "mantissa": "22731887894657397576675288640041252450108526289484071542898439300853",
+          "exponent": -224
+        },
+        "lower_decimal_outward": "0.842328865944475814",
+        "upper_decimal_outward": "0.843172583956001572"
+      },
+      "independent_direct_cell_checks": [
+        {
+          "n": 1,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-186468133",
+              "exponent": -246
+            },
+            "upper_dyadic": {
+              "mantissa": "186468133",
+              "exponent": -246
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "0",
+              "exponent": 0
+            },
+            "upper_dyadic": {
+              "mantissa": "0",
+              "exponent": 0
+            },
+            "lower_decimal_outward": "0.000000000000000000",
+            "upper_decimal_outward": "0.000000000000000000"
+          }
+        },
+        {
+          "n": 2,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-191973157",
+              "exponent": -245
+            },
+            "upper_dyadic": {
+              "mantissa": "217138981",
+              "exponent": -245
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-603979779",
+              "exponent": -251
+            },
+            "upper_dyadic": {
+              "mantissa": "603979779",
+              "exponent": -251
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 3,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-147576865",
+              "exponent": -244
+            },
+            "upper_dyadic": {
+              "mantissa": "143382561",
+              "exponent": -244
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-1124073477",
+              "exponent": -251
+            },
+            "upper_dyadic": {
+              "mantissa": "855638021",
+              "exponent": -251
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 4,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-385519177",
+              "exponent": -245
+            },
+            "upper_dyadic": {
+              "mantissa": "419073609",
+              "exponent": -245
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-177209345",
+              "exponent": -247
+            },
+            "upper_dyadic": {
+              "mantissa": "227540993",
+              "exponent": -247
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 5,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-978108337",
+              "exponent": -246
+            },
+            "upper_dyadic": {
+              "mantissa": "948748209",
+              "exponent": -246
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-227540993",
+              "exponent": -247
+            },
+            "upper_dyadic": {
+              "mantissa": "277872641",
+              "exponent": -247
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 6,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-35472085",
+              "exponent": -241
+            },
+            "upper_dyadic": {
+              "mantissa": "36651733",
+              "exponent": -241
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-673185795",
+              "exponent": -248
+            },
+            "upper_dyadic": {
+              "mantissa": "606076931",
+              "exponent": -248
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 29,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-336582683",
+              "exponent": -242
+            },
+            "upper_dyadic": {
+              "mantissa": "338941979",
+              "exponent": -242
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-829947911",
+              "exponent": -245
+            },
+            "upper_dyadic": {
+              "mantissa": "1207435271",
+              "exponent": -245
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 30,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-173159559",
+              "exponent": -241
+            },
+            "upper_dyadic": {
+              "mantissa": "175780999",
+              "exponent": -241
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-109576201",
+              "exponent": -242
+            },
+            "upper_dyadic": {
+              "mantissa": "148373513",
+              "exponent": -242
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 31,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-358664445",
+              "exponent": -242
+            },
+            "upper_dyadic": {
+              "mantissa": "363383037",
+              "exponent": -242
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-119013385",
+              "exponent": -242
+            },
+            "upper_dyadic": {
+              "mantissa": "141033481",
+              "exponent": -242
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 60,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-43567751",
+              "exponent": -238
+            },
+            "upper_dyadic": {
+              "mantissa": "44059271",
+              "exponent": -238
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-502464567",
+              "exponent": -243
+            },
+            "upper_dyadic": {
+              "mantissa": "707985463",
+              "exponent": -243
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 8190,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-747044845",
+              "exponent": -235
+            },
+            "upper_dyadic": {
+              "mantissa": "751855597",
+              "exponent": -235
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-853666317",
+              "exponent": -235
+            },
+            "upper_dyadic": {
+              "mantissa": "998074893",
+              "exponent": -235
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 8191,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-373569427",
+              "exponent": -234
+            },
+            "upper_dyadic": {
+              "mantissa": "375974803",
+              "exponent": -234
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-873588763",
+              "exponent": -235
+            },
+            "upper_dyadic": {
+              "mantissa": "978216987",
+              "exponent": -235
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 8192,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-747254279",
+              "exponent": -235
+            },
+            "upper_dyadic": {
+              "mantissa": "752103943",
+              "exponent": -235
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-831882999",
+              "exponent": -235
+            },
+            "upper_dyadic": {
+              "mantissa": "986449655",
+              "exponent": -235
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 4000000,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-713784193",
+              "exponent": -226
+            },
+            "upper_dyadic": {
+              "mantissa": "718414009",
+              "exponent": -226
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-451603925",
+              "exponent": -225
+            },
+            "upper_dyadic": {
+              "mantissa": "645034549",
+              "exponent": -225
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 7999999,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-715883693",
+              "exponent": -225
+            },
+            "upper_dyadic": {
+              "mantissa": "720514505",
+              "exponent": -225
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-17188507",
+              "exponent": -219
+            },
+            "upper_dyadic": {
+              "mantissa": "17103303",
+              "exponent": -219
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 8000000,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-715883787",
+              "exponent": -225
+            },
+            "upper_dyadic": {
+              "mantissa": "720514643",
+              "exponent": -225
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-268916889",
+              "exponent": -223
+            },
+            "upper_dyadic": {
+              "mantissa": "279752089",
+              "exponent": -223
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        }
+      ]
+    },
+    {
+      "N": 100,
+      "X": 16000000,
+      "first_tail_cell": 16000001,
+      "nonzero_coefficient_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19,
+        22,
+        23,
+        25,
+        26,
+        27,
+        29,
+        31,
+        32,
+        34,
+        37,
+        38,
+        41,
+        43,
+        46,
+        47,
+        49,
+        50,
+        53,
+        54,
+        58,
+        59,
+        61,
+        62,
+        64,
+        67,
+        71,
+        73,
+        74,
+        79,
+        81,
+        82,
+        83,
+        86,
+        89,
+        94,
+        97,
+        98
+      ],
+      "anchor_A_at_1": {
+        "lower_dyadic": {
+          "mantissa": "15144638730029100289314308122597908648427500694311869312501290906777",
+          "exponent": -228
+        },
+        "upper_dyadic": {
+          "mantissa": "15144638730029100289314308122597908648427500694311869312501290908055",
+          "exponent": -228
+        },
+        "lower_decimal_outward": "0.035109116954601798",
+        "upper_decimal_outward": "0.035109116954601799"
+      },
+      "coefficient_l1": {
+        "lower_dyadic": {
+          "mantissa": "7432960936591741146224183260103908724299147417199191386669748649253",
+          "exponent": -217
+        },
+        "upper_dyadic": {
+          "mantissa": "7432960936591741146224183260103908724299147417199191386669748649293",
+          "exponent": -217
+        },
+        "lower_decimal_outward": "35.290092062496540935",
+        "upper_decimal_outward": "35.290092062496540936"
+      },
+      "finite_squared_error": {
+        "lower_dyadic": {
+          "mantissa": "19367819709715179008866002308823148330590207457093156596215940855675",
+          "exponent": -226
+        },
+        "upper_dyadic": {
+          "mantissa": "19367819709715179008866002308823148330590207457093156596215973244405",
+          "exponent": -226
+        },
+        "lower_decimal_outward": "0.179598089981701525",
+        "upper_decimal_outward": "0.179598089981701526"
+      },
+      "tail_majorant_enclosure": {
+        "lower_dyadic": {
+          "mantissa": "8574553358168897130189519116766994998312293040679846664050704067829",
+          "exponent": -234
+        },
+        "upper_dyadic": {
+          "mantissa": "8574553358168897130189519116766994998312293040679846664050704067879",
+          "exponent": -234
+        },
+        "lower_decimal_outward": "0.000310593613823413",
+        "upper_decimal_outward": "0.000310593613823414"
+      },
+      "full_squared_error": {
+        "lower_dyadic": {
+          "mantissa": "19367819709715179008866002308823148330590207457093156596215940855675",
+          "exponent": -226
+        },
+        "upper_dyadic": {
+          "mantissa": "19401314058770526263280805117873019404802364851783312247247421307171",
+          "exponent": -226
+        },
+        "lower_decimal_outward": "0.179598089981701525",
+        "upper_decimal_outward": "0.179908683595524940"
+      },
+      "log_N_times_full_squared_error": {
+        "lower_dyadic": {
+          "mantissa": "22298026473693218171603577277813342662390693589588564916144773611859",
+          "exponent": -224
+        },
+        "upper_dyadic": {
+          "mantissa": "22336588268110409063611635357650068690031817285519203617585155324679",
+          "exponent": -224
+        },
+        "lower_decimal_outward": "0.827079769444138383",
+        "upper_decimal_outward": "0.828510105894476267"
+      },
+      "independent_direct_cell_checks": [
+        {
+          "n": 1,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-334630709",
+              "exponent": -246
+            },
+            "upper_dyadic": {
+              "mantissa": "334630709",
+              "exponent": -246
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "0",
+              "exponent": 0
+            },
+            "upper_dyadic": {
+              "mantissa": "0",
+              "exponent": 0
+            },
+            "lower_decimal_outward": "0.000000000000000000",
+            "upper_decimal_outward": "0.000000000000000000"
+          }
+        },
+        {
+          "n": 2,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-723787371",
+              "exponent": -246
+            },
+            "upper_dyadic": {
+              "mantissa": "908336747",
+              "exponent": -246
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-603979779",
+              "exponent": -251
+            },
+            "upper_dyadic": {
+              "mantissa": "603979779",
+              "exponent": -251
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 3,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-558233997",
+              "exponent": -245
+            },
+            "upper_dyadic": {
+              "mantissa": "524679565",
+              "exponent": -245
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-1124073477",
+              "exponent": -251
+            },
+            "upper_dyadic": {
+              "mantissa": "855638021",
+              "exponent": -251
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 4,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-86148045",
+              "exponent": -242
+            },
+            "upper_dyadic": {
+              "mantissa": "98206669",
+              "exponent": -242
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-177209345",
+              "exponent": -247
+            },
+            "upper_dyadic": {
+              "mantissa": "227540993",
+              "exponent": -247
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 5,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-114528975",
+              "exponent": -242
+            },
+            "upper_dyadic": {
+              "mantissa": "108499663",
+              "exponent": -242
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-227540993",
+              "exponent": -247
+            },
+            "upper_dyadic": {
+              "mantissa": "277872641",
+              "exponent": -247
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 6,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-64403113",
+              "exponent": -241
+            },
+            "upper_dyadic": {
+              "mantissa": "70170281",
+              "exponent": -241
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-673185795",
+              "exponent": -248
+            },
+            "upper_dyadic": {
+              "mantissa": "606076931",
+              "exponent": -248
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 99,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-1052832215",
+              "exponent": -241
+            },
+            "upper_dyadic": {
+              "mantissa": "1038152151",
+              "exponent": -241
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-286748045",
+              "exponent": -241
+            },
+            "upper_dyadic": {
+              "mantissa": "327642509",
+              "exponent": -241
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 100,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-524244041",
+              "exponent": -240
+            },
+            "upper_dyadic": {
+              "mantissa": "521360457",
+              "exponent": -240
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-437597507",
+              "exponent": -242
+            },
+            "upper_dyadic": {
+              "mantissa": "796210499",
+              "exponent": -242
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 101,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-529587335",
+              "exponent": -240
+            },
+            "upper_dyadic": {
+              "mantissa": "526703751",
+              "exponent": -240
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-504788847",
+              "exponent": -242
+            },
+            "upper_dyadic": {
+              "mantissa": "733378415",
+              "exponent": -242
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 200,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-524134059",
+              "exponent": -239
+            },
+            "upper_dyadic": {
+              "mantissa": "528590507",
+              "exponent": -239
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-139244023",
+              "exponent": -239
+            },
+            "upper_dyadic": {
+              "mantissa": "184070647",
+              "exponent": -239
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 8190,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-673515963",
+              "exponent": -234
+            },
+            "upper_dyadic": {
+              "mantissa": "673634747",
+              "exponent": -234
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-853666317",
+              "exponent": -235
+            },
+            "upper_dyadic": {
+              "mantissa": "998074893",
+              "exponent": -235
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 8191,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-673600321",
+              "exponent": -234
+            },
+            "upper_dyadic": {
+              "mantissa": "673720129",
+              "exponent": -234
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-873588763",
+              "exponent": -235
+            },
+            "upper_dyadic": {
+              "mantissa": "978216987",
+              "exponent": -235
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 8192,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-673748639",
+              "exponent": -234
+            },
+            "upper_dyadic": {
+              "mantissa": "673978015",
+              "exponent": -234
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-831882999",
+              "exponent": -235
+            },
+            "upper_dyadic": {
+              "mantissa": "986449655",
+              "exponent": -235
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 8000000,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-644782497",
+              "exponent": -224
+            },
+            "upper_dyadic": {
+              "mantissa": "644872041",
+              "exponent": -224
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-268916889",
+              "exponent": -223
+            },
+            "upper_dyadic": {
+              "mantissa": "279752089",
+              "exponent": -223
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 15999999,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-646796219",
+              "exponent": -223
+            },
+            "upper_dyadic": {
+              "mantissa": "646873991",
+              "exponent": -223
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-17485973",
+              "exponent": -218
+            },
+            "upper_dyadic": {
+              "mantissa": "20429515",
+              "exponent": -218
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        },
+        {
+          "n": 16000000,
+          "jump_approximation_minus_direct_floor": {
+            "lower_dyadic": {
+              "mantissa": "-5174369349",
+              "exponent": -226
+            },
+            "upper_dyadic": {
+              "mantissa": "5174992059",
+              "exponent": -226
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          },
+          "log_recurrence_minus_direct_factorial": {
+            "lower_dyadic": {
+              "mantissa": "-201014009",
+              "exponent": -222
+            },
+            "upper_dyadic": {
+              "mantissa": "405633817",
+              "exponent": -222
+            },
+            "lower_decimal_outward": "-0.000000000000000001",
+            "upper_decimal_outward": "0.000000000000000001"
+          }
+        }
+      ]
+    }
+  ]
+}

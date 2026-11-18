@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-18",
+  "scope": "Director identity/hash/reading-scope admission after independent selection reviews, not complete-paper proof verification. Pending originals/history retained. All PDFs stay private.",
+  "batches": [
+    {
+      "batch": "analytic65",
+      "input_pending_sha256": "e35830959472383224ad91ffe638812010b608a074bc08784363a8553d8edfda",
+      "admitted_shard": "papers/analytic65_records.jsonl",
+      "admitted_sha256": "47153e887d6a5a581871dc4ce60c992809b27c42e74552a9ab30786941a4934a",
+      "works": 59,
+      "complete_readings": 3,
+      "targeted_or_metadata": 56,
+      "primary_file_hashes_checked": 59
+    },
+    {
+      "batch": "geometry65",
+      "input_pending_sha256": "1e12885d6fb027d881b21841b7fc7819f42aaa62050d48571b318be5b3a7aa5f",
+      "admitted_shard": "papers/geometry65_records.jsonl",
+      "admitted_sha256": "a0216913550e54495c20307660be0c00280dc33124aefd3ee8a6e217e85e08b3",
+      "works": 47,
+      "complete_readings": 5,
+      "targeted_or_metadata": 42,
+      "primary_file_hashes_checked": 47
+    },
+    {
+      "batch": "release65",
+      "input_pending_sha256": "7f46a75bc5c230b29f99e98eec7389822f2efbdabb12a204c6226f851dc1751b",
+      "admitted_shard": "papers/release65_records.jsonl",
+      "admitted_sha256": "fa6478e5546d1dfa52f7caf0ea3522c27b8f66546c249615087abb0f9fa81f0b",
+      "works": 36,
+      "complete_readings": 3,
+      "targeted_or_metadata": 33,
+      "primary_file_hashes_checked": 36
+    }
+  ],
+  "level_corrections": [
+    {
+      "id": "PAPER-GEO65-001",
+      "original_level": 3,
+      "admitted_level": 1,
+      "reason": "Contributor complete reading retained; independent whole-work reviews and director registry promotion have not yet been canonically adjudicated."
+    }
+  ],
+  "independent_reviews": [
+    "quality/release68_selection_review.md",
+    "quality/release69_geometry_selection_review.md"
+  ],
+  "bibliography_baseline": 701,
+  "selected_baseline": 700
+}

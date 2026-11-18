@@ -1,0 +1,79 @@
+{
+  "provenance": "synthetic_profile",
+  "coefficient_source": "Rational coefficient box of radius 1/1000000 around the same synthetic Taylor jet as prefix_moment63_exact.json.",
+  "feasibility_checked": false,
+  "scope": "Bounds and tail conclusions apply if a nonnegative triangular-lattice profile realizes the supplied limiting Taylor data. The tool has not verified feasibility or provenance. Finite-N staircase derivatives are outside this input model.",
+  "cutoff_M": 3,
+  "moments_y0_through_yM_minus_1": [
+    {
+      "lower": "7999999/1000000",
+      "upper": "8000001/1000000"
+    },
+    {
+      "lower": "19999999/500000",
+      "upper": "20000001/500000"
+    },
+    {
+      "lower": "279999987/1250000",
+      "upper": "280000013/1250000"
+    }
+  ],
+  "tail_polynomial_integral": {
+    "lower": "-3/78125",
+    "upper": "3/78125"
+  },
+  "tail_polynomial_at_first_tail_node": "60",
+  "normalized_tail_functional": [
+    "1/5",
+    "-8/25",
+    "3/25"
+  ],
+  "normalized_tail_weighted_mass_upper_bound": "1/1562500",
+  "tail_weighted_mass": {
+    "lower": "0",
+    "upper": "1/1562500"
+  },
+  "tail_W_m_sum_upper_bound": "1/225000000",
+  "tail_constant_term_contribution_upper_bound": "1/14062500",
+  "tail_status_if_feasible": "undetermined",
+  "weights_through_cutoff": [
+    {
+      "multiplicity": 2,
+      "node": 2,
+      "weighted_mass_t_m": {
+        "lower": "999999/500000",
+        "upper": "25000037/12500000"
+      },
+      "weight_W_m": {
+        "lower": "999999/2000000",
+        "upper": "25000037/50000000"
+      },
+      "cardinal_integral": {
+        "lower": "999999/500000",
+        "upper": "1000001/500000"
+      },
+      "cardinal_error_bound": "3/3125000"
+    },
+    {
+      "multiplicity": 3,
+      "node": 6,
+      "weighted_mass_t_m": {
+        "lower": "29999987/5000000",
+        "upper": "6000001/1000000"
+      },
+      "weight_W_m": {
+        "lower": "29999987/180000000",
+        "upper": "6000001/36000000"
+      },
+      "cardinal_integral": {
+        "lower": "5999999/1000000",
+        "upper": "6000001/1000000"
+      },
+      "cardinal_error_bound": "1/625000"
+    }
+  ],
+  "simple_weight_W_1": {
+    "lower": "299997047/900000000",
+    "upper": "20000159/60000000"
+  }
+}

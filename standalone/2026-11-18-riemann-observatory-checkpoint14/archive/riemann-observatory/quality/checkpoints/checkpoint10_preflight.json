@@ -1,0 +1,74 @@
+{
+  "validation": "PASS",
+  "metrics": {
+    "catalogued_works": 1002,
+    "selected_checkpoint_works": 1001,
+    "fulltexts_accessed_selected": 956,
+    "selected_primary_excerpt_accessed": 13,
+    "whole_work_or_translation_read": 126,
+    "whole_work_audit_levels": {
+      "0": 875,
+      "1": 119,
+      "3": 7
+    },
+    "scoped_level3_claim_groups": 103,
+    "theorem_or_exercise_records": 449,
+    "connection_records": 85,
+    "graph_nodes": 2614,
+    "graph_edges": 2492
+  },
+  "new_sources": {
+    "PAPER-U89-GARSIA-RODEMICH-REARRANGEMENT": "full_text_accessed",
+    "PAPER-U89-BILLINGSLEY-CONVERGENCE-1968": "primary_source_excerpt_accessed",
+    "PAPER-GEOMETRY102-PETROV2026": "full_text_accessed"
+  },
+  "whole_work_promotions": [
+    "PAPER-MN2026-VERTICAL",
+    "PAPER-SM63-POS-040",
+    "PAPER-R001",
+    "PAPER-GEO65-001",
+    "PAPER-E008",
+    "PAPER-E014",
+    "PAPER-AN79-HR-ZETA"
+  ],
+  "canonical_index_inputs": 7,
+  "source_pdf_allowlist_count": 6,
+  "render_status": "outside live preflight",
+  "structural_checks_and_parsed_records": 91990,
+  "round13_report_sha256": "ebb9782986b24b54dc93ec82cb6953507bd75be16b1b011ab6d802c8533a0583",
+  "finding_counts": {
+    "total": 52,
+    "witnessed_version_specific_assertions": 10
+  },
+  "index": {
+    "canonical_paper_views": 1002,
+    "alias_redirect_views": 2,
+    "paper_claim_links": 199
+  },
+  "taxonomy_input_sha256": {
+    "corpus/bibliography.jsonl": "98d1f5d2016b0add67ffa80a7e3774e33fdd6e5dac48da8dc583e0bb3ff0ec22",
+    "quality/coverage_taxonomy_rules_round10.json": "6d75f250189f93194f572fdb9cf1ad306cbf9cfaf5125ef99eb437618d50ea8c",
+    "quality/coverage_taxonomy_scope_overrides_round10.jsonl": "8a8c97a8ece575ae4b97f306e244e5f7b742dd79d21410e68ebc1d11cc85b3c2"
+  },
+  "code_pins": [
+    {
+      "result": "experiments/results/director_round13_cue_fourth.json",
+      "source": "experiments/code/director_round13_cue_fourth.py",
+      "sha256": "199fb1b5e925225e843721bc378de562f31d7702f618d1f01f9dec2d0de293e6",
+      "byte_exact_replay": true
+    },
+    {
+      "result": "experiments/results/director_petrov_quadratic_round13.json",
+      "source": "experiments/code/director_petrov_quadratic_round13.py",
+      "sha256": "6d9100e1cb5adc03c8993d33a95ffc80f36dd6a2f83e5ccba776faa985c820c8",
+      "byte_exact_replay": true
+    }
+  ],
+  "lean_pins": {
+    "ledger": "experiments/results/two_scale_scalar_lean_check.sha256",
+    "source_and_receipt_hashes_verified": true,
+    "formal_scope": "Scalar real inequality from two supplied estimates."
+  },
+  "pending_scope_checked": true,
+  "checkpoint9_sha256": "4677a1e77c2f60c04860456eea0ce7f450ca2ee88bf3ac1f6fe1c9a22ae45a3c"
+}

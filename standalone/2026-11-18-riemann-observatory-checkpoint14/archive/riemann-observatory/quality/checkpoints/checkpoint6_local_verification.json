@@ -1,0 +1,37 @@
+{
+  "checkpoint": "checkpoint6",
+  "verified_at_utc": "2026-11-17T22:46:52.151559+00:00",
+  "zip_bytes": 12650695,
+  "zip_sha256": "3f03933052de23cca63d386dd8544ae62dc98cea1c018fd61afe1ca6ab811ca9",
+  "zip_entries": 1113,
+  "exact_payload_hashes": 1112,
+  "metrics": {
+    "cutoff": "2026-11-17",
+    "metadata_candidates": 5203,
+    "metadata_candidates_rejected": 56,
+    "metadata_candidates_pending": 5147,
+    "catalogued_works": 272,
+    "deferred_supporting_works": 1,
+    "selected_checkpoint_works": 271,
+    "fulltexts_accessed_selected": 231,
+    "whole_work_or_translation_read": 65,
+    "whole_work_audit_levels": {
+      "0": 206,
+      "1": 65
+    },
+    "scoped_level3_claim_groups": 55,
+    "theorem_or_exercise_records": 342,
+    "connection_records": 54,
+    "graph_nodes": 1147,
+    "graph_edges": 978,
+    "warning": "Candidate pool not fully relevance-reviewed or manifestation-deduplicated; selected works may overlap provider candidates. Do not add counts. Scoped adjudication groups are not complete-paper Level3 audits.",
+    "curated_candidate_decisions": 47,
+    "curated_priority_candidates": 45,
+    "curated_provider_matches": 43,
+    "additional_curated_records_unreconciled": 4,
+    "paper_aliases_resolved": 1,
+    "selected_primary_excerpt_accessed": 11
+  },
+  "pdf_pages": 35,
+  "checks": "PASS: exact manifest byte hashes, exact entry set, copyright/cache exclusions, parsed all JSONL, canonical/checkpoint metric agreement, all paper links present, PDF/HTML bytes match sealed ZIP."
+}

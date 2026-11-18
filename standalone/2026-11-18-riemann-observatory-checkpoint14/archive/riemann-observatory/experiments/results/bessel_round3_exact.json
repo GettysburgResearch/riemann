@@ -1,0 +1,153 @@
+{
+  "status": "exact standard-library polynomial differentiation and rational finite-prefix bounds",
+  "variables": [
+    "c",
+    "x=cosh(2u)",
+    "y=sinh(2u)"
+  ],
+  "relation": "y^2=x^2-1",
+  "P2": [
+    {
+      "powers": [
+        1,
+        1,
+        0
+      ],
+      "coefficient": -4
+    },
+    {
+      "powers": [
+        2,
+        0,
+        0
+      ],
+      "coefficient": -4
+    },
+    {
+      "powers": [
+        2,
+        2,
+        0
+      ],
+      "coefficient": 4
+    }
+  ],
+  "P4": [
+    {
+      "powers": [
+        1,
+        1,
+        0
+      ],
+      "coefficient": -16
+    },
+    {
+      "powers": [
+        2,
+        0,
+        0
+      ],
+      "coefficient": -64
+    },
+    {
+      "powers": [
+        2,
+        2,
+        0
+      ],
+      "coefficient": 112
+    },
+    {
+      "powers": [
+        3,
+        1,
+        0
+      ],
+      "coefficient": 96
+    },
+    {
+      "powers": [
+        3,
+        3,
+        0
+      ],
+      "coefficient": -96
+    },
+    {
+      "powers": [
+        4,
+        0,
+        0
+      ],
+      "coefficient": 16
+    },
+    {
+      "powers": [
+        4,
+        2,
+        0
+      ],
+      "coefficient": -32
+    },
+    {
+      "powers": [
+        4,
+        4,
+        0
+      ],
+      "coefficient": 16
+    }
+  ],
+  "global_kernel_threshold_T": 32,
+  "global_margin_at_threshold": 793440,
+  "prefix_samples": [
+    {
+      "N": 1,
+      "G_N": 58,
+      "T_N": 580,
+      "baseline_Li_lower": "1/20184",
+      "quartet_Li_absolute_upper": "1/42050",
+      "positive_margin_lower": "13/504600"
+    },
+    {
+      "N": 2,
+      "G_N": 82,
+      "T_N": 1640,
+      "baseline_Li_lower": "1/40344",
+      "quartet_Li_absolute_upper": "1/84050",
+      "positive_margin_lower": "13/1008600"
+    },
+    {
+      "N": 5,
+      "G_N": 250,
+      "T_N": 12500,
+      "baseline_Li_lower": "1/375000",
+      "quartet_Li_absolute_upper": "1/781250",
+      "positive_margin_lower": "13/9375000"
+    },
+    {
+      "N": 10,
+      "G_N": 850,
+      "T_N": 85000,
+      "baseline_Li_lower": "1/4335000",
+      "quartet_Li_absolute_upper": "1/9031250",
+      "positive_margin_lower": "13/108375000"
+    },
+    {
+      "N": 100,
+      "G_N": 80050,
+      "T_N": 80050000,
+      "baseline_Li_lower": "1/38448015000",
+      "quartet_Li_absolute_upper": "1/80100031250",
+      "positive_margin_lower": "13/961200375000"
+    },
+    {
+      "N": 1000,
+      "G_N": 8000050,
+      "T_N": 80000500000,
+      "baseline_Li_lower": "1/384004800015000",
+      "quartet_Li_absolute_upper": "1/800010000031250",
+      "positive_margin_lower": "13/9600120000375000"
+    }
+  ]
+}

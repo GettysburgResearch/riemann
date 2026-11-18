@@ -1,0 +1,16 @@
+{
+  "status": "PASS: exact finite normalization and asymptotic-coefficient algebra",
+  "arithmetic": "Python standard-library Fraction only",
+  "beta_exponent": "3/4",
+  "bessel_order": "5/4",
+  "even_moments_checked": 17,
+  "normalized_MGF": "Gamma(9/4)*(2/(delta*w))^(5/4)*I_(5/4)(delta*w), defined by its even series",
+  "completion_convention": "Z=pi^(s/2)*F/[s*(s-1)*Gamma(s/2)]; NO one-half",
+  "normalizing_limit": "C=A*Gamma(9/4)/(pi^(1/4)*delta^(7/4))",
+  "quartet_tuning_identity": "Q_T(1/2)=(T^2+5/16)^2-1/16",
+  "gamma_ratio_first_coefficient": "5/16",
+  "combined_geometric_first_coefficient": "3/16",
+  "beta_first_correction": "21/32",
+  "b_lower_bound_for_c_ge6_delta_le_0.01": "1335/16",
+  "scope": "Finite algebra only; analytic proofs and remainders are separately reviewed."
+}

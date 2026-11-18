@@ -1,0 +1,38 @@
+{
+  "status": "solution_build_and_type_axiom_query_completed",
+  "date_utc": "2026-11-17T22:19:03.464500+00:00",
+  "project_pin": "ee2a8a32be49a4f73c7386e9dffdea24d7e3d8c0",
+  "mathlib_pin": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "toolchain": "Lean (version 4.35.0-rc2, x86_64-unknown-linux-gnu, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)",
+  "exact_target": "Solution",
+  "completed_lake_jobs": 9755,
+  "build_exit_code": 0,
+  "query_exit_code": 0,
+  "expected_declarations": [
+    "GuthMaynardStatement.global_uniform",
+    "GuthMaynardStatement.middle_large_values"
+  ],
+  "query_axioms": {
+    "GuthMaynardStatement.global_uniform": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "GuthMaynardStatement.middle_large_values": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "query_stderr_empty": true,
+  "hosted_cache_artifacts": 8915,
+  "tracked_project_source_clean": true,
+  "target_olean_sha256": "ffc7311e38e625ccbd0b9e2d598fe8a824bcd391fefe24d14ff06e863f24eea7",
+  "actual_output_path": "experiments/results/formal62_palomar39_build.json",
+  "actual_output_sha256": "f778dbe5ca8c4f6797cbceb387fb001928c72c86d677a2b9c087f73f51af481c",
+  "scope": "Local Lean build from pinned project source with official precompiled pinned dependency artifacts and dedicated type/axiom queries of two named declarations.",
+  "additional_unchecked_local_scopes": [
+    "separate protected Challenge comparator",
+    "external independent proof-kernel replay"
+  ]
+}

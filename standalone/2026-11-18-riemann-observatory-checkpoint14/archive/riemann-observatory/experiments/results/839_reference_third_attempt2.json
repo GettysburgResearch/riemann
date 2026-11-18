@@ -1,0 +1,63 @@
+{
+  "status": "interrupted_before_completion",
+  "window": "third",
+  "source_commit": "0e961ea199b425010843bc8044676d4ad29fe031",
+  "scope": "Unmodified author C++ continuum search; separate rational table validation. No Lean build.",
+  "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+  "compiler_flags": [
+    "-std=c++23",
+    "-O3",
+    "-DNDEBUG",
+    "-D_GLIBCXX_ASSERTIONS",
+    "-DVERIFY_POINT_COUNT=7"
+  ],
+  "source_sha256": {
+    "verify.cpp": "c30310214c121d0acf4b4ae562f396c1e13be13992b1f01e02df584dbd602142",
+    "make_parameters.py": "7cc149b14d0060448712b59c3317b8dab7760865080c11e6e78487d7ff55e18e",
+    "LICENSE": "29ebb443d81df1ef96b296e604e233228979edeebf043ccaf8699fd6d6bd49a8"
+  },
+  "preflight": {
+    "file_sha256": {
+      "inputs.json": "048a3337986347b4991af2d48c78cbcdb17cef834c896493647a922c85d1e50d",
+      "kernel_lower.bin": "698cd6a9e691e1ed132a8990967c63694cb64f2f614090ba0d6ff9d31eb2da6d"
+    },
+    "points": 7,
+    "minimum_gap_grid_steps": 13926,
+    "grid_stop": 262143,
+    "closed_cell_count": 262144,
+    "potential_budget": 38198,
+    "positive_span_margin": 109258684,
+    "basic_64_bit_bound": 69031700253769728,
+    "source_64_bit_search_bound": 286704123087159296,
+    "source_64_bit_support_bound": 2906285183860736,
+    "kernel_offset_64_bit_bound": 70369281048576,
+    "potential_offset_64_bit_bound": 1317526140616704,
+    "affine_128_bit_bound": 20688466806958298628096
+  },
+  "parameters_sha256": "ecab9081ffb49dd7aa9128b408382123a1215f546cf9fd5411a8cab98a6bc171",
+  "binary_sha256": "3445777e0cde797340e5f0d7a3faa95e9b69c32a01b17ca9a40cf293f4a475c0",
+  "expected": {
+    "nodes": 572959453,
+    "leaves": 286479727,
+    "basic": 256891820,
+    "affine": 29587907,
+    "max_stack": 68,
+    "status": "PASS_COB_CONTINUUM"
+  },
+  "pid": 103974,
+  "date_utc": "2026-11-17T21:16:30.841187+00:00",
+  "elapsed_seconds": 300.129,
+  "last_confirmed_progress": {
+    "nodes": 100000000,
+    "waiting": 35
+  },
+  "observed_process_state": "zombie",
+  "observed_wait_status": 9,
+  "observed_utc": "2026-11-17T21:21:29.984458+00:00",
+  "cause": "Execution environment interruption preceded observed child termination; initiator unestablished.",
+  "resume_semantics": "Unmodified verifier restart required; no serialization of traversal state.",
+  "stdout": "",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr": "verify: 50000000 boxes examined, 31 waiting\nverify: 100000000 boxes examined, 35 waiting\n",
+  "stderr_sha256": "a17d441840093541cb37924d179fc22fbdc0553b1495685dc59364330c4338c8"
+}

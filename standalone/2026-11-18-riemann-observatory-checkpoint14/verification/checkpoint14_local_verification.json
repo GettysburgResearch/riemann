@@ -1,0 +1,69 @@
+{
+  "checkpoint": "checkpoint14",
+  "validation": "PASS",
+  "archive_sha256": "9f1dcab0d244f667e90cdf712eea15c6f07b8141c1adaee7569f26774c57a198",
+  "archive_bytes": 21554391,
+  "zip_entries": 2888,
+  "manifest_payloads": 2887,
+  "pdf_pages": 37,
+  "metrics": {
+    "cutoff": "2026-11-18",
+    "metadata_candidates": 5203,
+    "metadata_candidates_rejected": 56,
+    "metadata_candidates_pending": 5147,
+    "catalogued_works": 1011,
+    "deferred_supporting_works": 1,
+    "selected_checkpoint_works": 1010,
+    "fulltexts_accessed_selected": 965,
+    "whole_work_or_translation_read": 131,
+    "whole_work_audit_levels": {
+      "0": 879,
+      "1": 122,
+      "3": 9
+    },
+    "scoped_level3_claim_groups": 123,
+    "theorem_or_exercise_records": 489,
+    "connection_records": 97,
+    "graph_nodes": 2691,
+    "graph_edges": 2658,
+    "warning": "Candidate pool not fully relevance-reviewed or manifestation-deduplicated; selected works may overlap provider candidates. Do not add counts. Scoped adjudication groups are not complete-paper Level3 audits.",
+    "curated_candidate_decisions": 89,
+    "curated_priority_candidates": 80,
+    "curated_provider_matches": 85,
+    "additional_curated_records_unreconciled": 4,
+    "paper_aliases_resolved": 2,
+    "selected_primary_excerpt_accessed": 13
+  },
+  "immutable_stage": "/workspace/checkpoints/checkpoint14",
+  "sealed_zip": "/workspace/checkpoints/checkpoint14_sealed.zip",
+  "standalone_artifacts": {
+    "pdf": {
+      "path": "/workspace/checkpoints/checkpoint14/final_synthesis/synthesis.pdf",
+      "bytes": 475026,
+      "sha256": "8e902c98e28b0365b24b980f7bd199ef81586d8d2e79563570dbc7984d46c515"
+    },
+    "html": {
+      "path": "/workspace/checkpoints/checkpoint14/final_synthesis/synthesis.html",
+      "bytes": 542087,
+      "sha256": "abacebf4c0d4b4cff5c44ca080af41289d37bc011d82aff18e1f72aa91e5e440"
+    }
+  },
+  "independently_verified": true,
+  "delivered": true,
+  "independent_qa": "quality/checkpoints/checkpoint14_independent_qa.md",
+  "drive_receipt": "quality/checkpoints/checkpoint14_drive_receipt.json",
+  "local_zip_copies": [
+    {
+      "path": "/workspace/riemann-observatory.zip",
+      "sidecar": "/workspace/riemann-observatory.zip.sha256"
+    },
+    {
+      "path": "/workspace/artifacts/riemann-observatory.zip",
+      "sidecar": "/workspace/artifacts/riemann-observatory.zip.sha256"
+    }
+  ],
+  "local_render_copies": {
+    "pdf": "/workspace/artifacts/synthesis.pdf",
+    "html": "/workspace/artifacts/synthesis.html"
+  }
+}

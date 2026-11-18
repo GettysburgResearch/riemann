@@ -1,0 +1,565 @@
+{
+  "method": "exact rational orthogonality and norm checks",
+  "rows": [
+    {
+      "m": 1,
+      "N": 0,
+      "L": 1,
+      "optimal_norm_squared": "1/2",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 1,
+      "N": 1,
+      "L": 2,
+      "optimal_norm_squared": "1/3",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 1,
+      "N": 2,
+      "L": 3,
+      "optimal_norm_squared": "1/4",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 1,
+      "N": 3,
+      "L": 4,
+      "optimal_norm_squared": "1/5",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 1,
+      "N": 5,
+      "L": 6,
+      "optimal_norm_squared": "1/7",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 1,
+      "N": 10,
+      "L": 11,
+      "optimal_norm_squared": "1/12",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 1,
+      "N": 30,
+      "L": 31,
+      "optimal_norm_squared": "1/32",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 1,
+      "N": 100,
+      "L": 101,
+      "optimal_norm_squared": "1/102",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 2,
+      "N": 0,
+      "L": 2,
+      "optimal_norm_squared": "5/6",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 2,
+      "N": 1,
+      "L": 3,
+      "optimal_norm_squared": "7/10",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 2,
+      "N": 2,
+      "L": 4,
+      "optimal_norm_squared": "3/5",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 2,
+      "N": 3,
+      "L": 5,
+      "optimal_norm_squared": "11/21",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 2,
+      "N": 5,
+      "L": 7,
+      "optimal_norm_squared": "5/12",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 2,
+      "N": 10,
+      "L": 12,
+      "optimal_norm_squared": "25/91",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 2,
+      "N": 30,
+      "L": 32,
+      "optimal_norm_squared": "65/561",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 2,
+      "N": 100,
+      "L": 102,
+      "optimal_norm_squared": "205/5356",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 3,
+      "N": 0,
+      "L": 3,
+      "optimal_norm_squared": "19/20",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 3,
+      "N": 1,
+      "L": 4,
+      "optimal_norm_squared": "31/35",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 3,
+      "N": 2,
+      "L": 5,
+      "optimal_norm_squared": "23/28",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 3,
+      "N": 3,
+      "L": 6,
+      "optimal_norm_squared": "16/21",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 3,
+      "N": 5,
+      "L": 8,
+      "optimal_norm_squared": "109/165",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 3,
+      "N": 10,
+      "L": 13,
+      "optimal_norm_squared": "137/280",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 3,
+      "N": 30,
+      "L": 33,
+      "optimal_norm_squared": "421/1785",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 3,
+      "N": 100,
+      "L": 103,
+      "optimal_norm_squared": "16069/192920",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 4,
+      "N": 0,
+      "L": 4,
+      "optimal_norm_squared": "69/70",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 4,
+      "N": 1,
+      "L": 5,
+      "optimal_norm_squared": "121/126",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 4,
+      "N": 2,
+      "L": 6,
+      "optimal_norm_squared": "13/14",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 4,
+      "N": 3,
+      "L": 7,
+      "optimal_norm_squared": "59/66",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 4,
+      "N": 5,
+      "L": 9,
+      "optimal_norm_squared": "589/715",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 4,
+      "N": 10,
+      "L": 14,
+      "optimal_norm_squared": "2059/3060",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 4,
+      "N": 30,
+      "L": 34,
+      "optimal_norm_squared": "27439/73815",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 4,
+      "N": 100,
+      "L": 104,
+      "optimal_norm_squared": "760969/5359095",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 5,
+      "N": 0,
+      "L": 5,
+      "optimal_norm_squared": "251/252",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 5,
+      "N": 1,
+      "L": 6,
+      "optimal_norm_squared": "76/77",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 5,
+      "N": 2,
+      "L": 7,
+      "optimal_norm_squared": "257/264",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 5,
+      "N": 3,
+      "L": 8,
+      "optimal_norm_squared": "1231/1287",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 5,
+      "N": 5,
+      "L": 10,
+      "optimal_norm_squared": "131/143",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 5,
+      "N": 10,
+      "L": 15,
+      "optimal_norm_squared": "4167/5168",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 5,
+      "N": 30,
+      "L": 35,
+      "optimal_norm_squared": "41672/82251",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 5,
+      "N": 100,
+      "L": 105,
+      "optimal_norm_squared": "4305146/20398587",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 6,
+      "N": 0,
+      "L": 6,
+      "optimal_norm_squared": "923/924",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 6,
+      "N": 1,
+      "L": 7,
+      "optimal_norm_squared": "1709/1716",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 6,
+      "N": 2,
+      "L": 8,
+      "optimal_norm_squared": "425/429",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 6,
+      "N": 3,
+      "L": 9,
+      "optimal_norm_squared": "703/715",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 6,
+      "N": 5,
+      "L": 11,
+      "optimal_norm_squared": "851/884",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 6,
+      "N": 10,
+      "L": 16,
+      "optimal_norm_squared": "865/969",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 6,
+      "N": 30,
+      "L": 36,
+      "optimal_norm_squared": "235571/374699",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 6,
+      "N": 100,
+      "L": 106,
+      "optimal_norm_squared": "49035937/170886276",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 7,
+      "N": 0,
+      "L": 7,
+      "optimal_norm_squared": "3431/3432",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 7,
+      "N": 1,
+      "L": 8,
+      "optimal_norm_squared": "6427/6435",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 7,
+      "N": 2,
+      "L": 9,
+      "optimal_norm_squared": "2851/2860",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 7,
+      "N": 3,
+      "L": 10,
+      "optimal_norm_squared": "2416/2431",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 7,
+      "N": 5,
+      "L": 12,
+      "optimal_norm_squared": "4133/4199",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 7,
+      "N": 10,
+      "L": 17,
+      "optimal_norm_squared": "3712/3933",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 7,
+      "N": 30,
+      "L": 37,
+      "optimal_norm_squared": "318467/435461",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 7,
+      "N": 100,
+      "L": 107,
+      "optimal_norm_squared": "7535443703/20573429976",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 8,
+      "N": 0,
+      "L": 8,
+      "optimal_norm_squared": "12869/12870",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 8,
+      "N": 1,
+      "L": 9,
+      "optimal_norm_squared": "24301/24310",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 8,
+      "N": 2,
+      "L": 10,
+      "optimal_norm_squared": "4857/4862",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 8,
+      "N": 3,
+      "L": 11,
+      "optimal_norm_squared": "25139/25194",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 8,
+      "N": 5,
+      "L": 13,
+      "optimal_norm_squared": "22467/22610",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 8,
+      "N": 10,
+      "L": 18,
+      "optimal_norm_squared": "10619/10925",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 8,
+      "N": 30,
+      "L": 38,
+      "optimal_norm_squared": "6425131/7907055",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 8,
+      "N": 100,
+      "L": 108,
+      "optimal_norm_squared": "283274268499/635299897870",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 9,
+      "N": 0,
+      "L": 9,
+      "optimal_norm_squared": "48619/48620",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 9,
+      "N": 1,
+      "L": 10,
+      "optimal_norm_squared": "46184/46189",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 9,
+      "N": 2,
+      "L": 11,
+      "optimal_norm_squared": "33581/33592",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 9,
+      "N": 3,
+      "L": 12,
+      "optimal_norm_squared": "29371/29393",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 9,
+      "N": 5,
+      "L": 14,
+      "optimal_norm_squared": "37054/37145",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 9,
+      "N": 10,
+      "L": 19,
+      "optimal_norm_squared": "23827/24150",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 9,
+      "N": 30,
+      "L": 39,
+      "optimal_norm_squared": "33299807/38116060",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 9,
+      "N": 100,
+      "L": 109,
+      "optimal_norm_squared": "359800351873/687755852740",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 10,
+      "N": 0,
+      "L": 10,
+      "optimal_norm_squared": "184755/184756",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 10,
+      "N": 1,
+      "L": 11,
+      "optimal_norm_squared": "352705/352716",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 10,
+      "N": 2,
+      "L": 12,
+      "optimal_norm_squared": "29390/29393",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 10,
+      "N": 3,
+      "L": 13,
+      "optimal_norm_squared": "51990/52003",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 10,
+      "N": 5,
+      "L": 15,
+      "optimal_norm_squared": "296887/297160",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 10,
+      "N": 10,
+      "L": 20,
+      "optimal_norm_squared": "208813/210105",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 10,
+      "N": 30,
+      "L": 40,
+      "optimal_norm_squared": "428391711/466921735",
+      "orthogonality_passed": true
+    },
+    {
+      "m": 10,
+      "N": 100,
+      "L": 110,
+      "optimal_norm_squared": "104329625965/175065126152",
+      "orthogonality_passed": true
+    }
+  ]
+}

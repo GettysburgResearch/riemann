@@ -1,0 +1,26 @@
+{
+  "status": "six_scoped_level0_dependencies_admitted",
+  "ids": [
+    "PAPER-R112-BAKER2012",
+    "PAPER-R112-BHM2007",
+    "PAPER-WEIGHTED107-GHOSH-THESIS1981",
+    "PAPER-WEIGHTED107-REN2005",
+    "PAPER-WEIGHTED107-KOROLEV2018",
+    "PAPER-R114-FOUVRY-SHPARLINSKI2011"
+  ],
+  "pending_inputs_sha256": {
+    "quality/pending_round14/release112_records.jsonl": "ee8306e759f9a584985e982c3f2cc6c306dbe8241ce97ad77806674a3f725c54",
+    "quality/pending_round14/weighted107_prime_estimate_records.jsonl": "fc774ee5281d1da984b9b22915752acf1feff9d4560a568433c8c576b47bf350",
+    "quality/pending_round14/release114_fouvry_shparlinski_record.jsonl": "629e3ebfba895b43b24f5dbcbdc5489c1d5481a7681e28c1055f31f0327ff75d"
+  },
+  "admitted_shard": "papers/round14_dependency_records.jsonl",
+  "admitted_shard_sha256": "89f3637b6d0d50cc36a46e2718663d17d6972c02c485e15b64d3565dd61b8c3d",
+  "source_reading": "audits/adversarial_reviews/director_arithmetic_strata_round14.md",
+  "independent_selection_receipts": [
+    "quality/pending_round14/release112_decision_receipt.json",
+    "quality/pending_round14/release114_prime_estimate_decision_receipt.json",
+    "quality/pending_round14/release114_fouvry_shparlinski_decision_receipt.json"
+  ],
+  "remote_primary_limit": "Korolev English journal read remotely; no local PDF hash. Ghosh source is actual doctoral thesis; inaccessible separate journal not labelled read.",
+  "master_rebuild_pending": true
+}

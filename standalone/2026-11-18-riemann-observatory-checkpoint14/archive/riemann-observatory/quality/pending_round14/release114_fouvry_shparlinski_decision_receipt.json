@@ -1,0 +1,44 @@
+{
+  "status": "recommend_admission_pending_director_action",
+  "id": "PAPER-R114-FOUVRY-SHPARLINSKI2011",
+  "record_path": "quality/pending_round14/release114_fouvry_shparlinski_record.jsonl",
+  "record_sha256": "629e3ebfba895b43b24f5dbcbdc5489c1d5481a7681e28c1055f31f0327ff75d",
+  "source_path": "sources/prime113_references/fouvry_shparlinski2011.pdf",
+  "source_sha256": "dff49b00d5e506a73ecfeab2fd4ab3ccfdc8ed6f5774c939538ebfedae707cff",
+  "source_text_path": "sources/prime113_references/fouvry_shparlinski2011.txt",
+  "source_text_sha256": "edcd7a3059765d486184daffddf0b9ff19c8a45a4a769d733e00d8e17596d474",
+  "pdf_pages": 30,
+  "source_locator": "§3.1, printed p. 296/PDF p. 12, inverse-prime sum definition; §3.5, printed p. 301/PDF p. 17, Theorem 3.3",
+  "publisher_issue": "https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/150/3",
+  "canonical_input_path": "corpus/bibliography.jsonl",
+  "canonical_input_sha256": "98d1f5d2016b0add67ffa80a7e3774e33fdd6e5dac48da8dc583e0bb3ff0ec22",
+  "provider_input_path": "corpus/candidates.jsonl",
+  "provider_input_sha256": "6cd1886b50b6ea42c422a437dae0964399f680176c965800aa897525260f6c3c",
+  "deduplication_counts": {
+    "canonical": {
+      "files": 1,
+      "records": 1002
+    },
+    "contributor": {
+      "files": 89,
+      "records": 1133
+    },
+    "corpus_provider": {
+      "files": 14,
+      "records": 13617
+    },
+    "pending": {
+      "files": 3,
+      "records": 6
+    },
+    "paper_aliases": {
+      "files": 1,
+      "records": 2
+    }
+  },
+  "duplicate_matches": [],
+  "provider_candidate_matches": [],
+  "audit_level": 0,
+  "whole_work_read": false,
+  "scope": "Targeted published theorem passage and distinct work identity. No canonical admission or whole-work reading."
+}

@@ -1,0 +1,1058 @@
+{
+  "kind": "independent_exact_boundary_reconstruction",
+  "input_sha256": "e782247f3991118936ef2fcacf59943b510508c9062200c66798f354d95fae92",
+  "state_patterns": 64,
+  "state_table_integer_units": [
+    {
+      "labels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "left_reward_missing": 163050,
+      "right_reward_missing": 163050,
+      "phi_upper": 5479,
+      "phi_lower": -5479,
+      "left_cost": 168529,
+      "right_cost": 168529
+    },
+    {
+      "labels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "left_reward_missing": 165113,
+      "right_reward_missing": 176070,
+      "phi_upper": 4485,
+      "phi_lower": -5986,
+      "left_cost": 169598,
+      "right_cost": 182056
+    },
+    {
+      "labels": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "left_reward_missing": 168018,
+      "right_reward_missing": 173165,
+      "phi_upper": 3091,
+      "phi_lower": -6175,
+      "left_cost": 171109,
+      "right_cost": 179340
+    },
+    {
+      "labels": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "left_reward_missing": 170081,
+      "right_reward_missing": 186185,
+      "phi_upper": 2603,
+      "phi_lower": -6816,
+      "left_cost": 172684,
+      "right_cost": 193001
+    },
+    {
+      "labels": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "left_reward_missing": 170072,
+      "right_reward_missing": 171111,
+      "phi_upper": 4085,
+      "phi_lower": -5668,
+      "left_cost": 174157,
+      "right_cost": 176779
+    },
+    {
+      "labels": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "left_reward_missing": 172135,
+      "right_reward_missing": 184131,
+      "phi_upper": 3091,
+      "phi_lower": -6175,
+      "left_cost": 175226,
+      "right_cost": 190306
+    },
+    {
+      "labels": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "left_reward_missing": 175040,
+      "right_reward_missing": 181226,
+      "phi_upper": 3127,
+      "phi_lower": -7300,
+      "left_cost": 178167,
+      "right_cost": 188526
+    },
+    {
+      "labels": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "left_reward_missing": 177103,
+      "right_reward_missing": 194246,
+      "phi_upper": 2639,
+      "phi_lower": -7941,
+      "left_cost": 179742,
+      "right_cost": 202187
+    },
+    {
+      "labels": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "left_reward_missing": 171111,
+      "right_reward_missing": 170072,
+      "phi_upper": 5668,
+      "phi_lower": -4085,
+      "left_cost": 176779,
+      "right_cost": 174157
+    },
+    {
+      "labels": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "left_reward_missing": 173174,
+      "right_reward_missing": 183092,
+      "phi_upper": 4674,
+      "phi_lower": -4592,
+      "left_cost": 177848,
+      "right_cost": 187684
+    },
+    {
+      "labels": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "left_reward_missing": 176079,
+      "right_reward_missing": 180187,
+      "phi_upper": 3280,
+      "phi_lower": -4781,
+      "left_cost": 179359,
+      "right_cost": 184968
+    },
+    {
+      "labels": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "left_reward_missing": 178142,
+      "right_reward_missing": 193207,
+      "phi_upper": 2792,
+      "phi_lower": -5422,
+      "left_cost": 180934,
+      "right_cost": 198629
+    },
+    {
+      "labels": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "left_reward_missing": 178133,
+      "right_reward_missing": 178133,
+      "phi_upper": 4274,
+      "phi_lower": -4274,
+      "left_cost": 182407,
+      "right_cost": 182407
+    },
+    {
+      "labels": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "left_reward_missing": 180196,
+      "right_reward_missing": 191153,
+      "phi_upper": 3280,
+      "phi_lower": -4781,
+      "left_cost": 183476,
+      "right_cost": 195934
+    },
+    {
+      "labels": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "left_reward_missing": 183101,
+      "right_reward_missing": 188248,
+      "phi_upper": 3316,
+      "phi_lower": -5906,
+      "left_cost": 186417,
+      "right_cost": 194154
+    },
+    {
+      "labels": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "left_reward_missing": 185164,
+      "right_reward_missing": 201268,
+      "phi_upper": 2828,
+      "phi_lower": -6547,
+      "left_cost": 187992,
+      "right_cost": 207815
+    },
+    {
+      "labels": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "left_reward_missing": 173165,
+      "right_reward_missing": 168018,
+      "phi_upper": 6175,
+      "phi_lower": -3091,
+      "left_cost": 179340,
+      "right_cost": 171109
+    },
+    {
+      "labels": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "left_reward_missing": 175228,
+      "right_reward_missing": 181038,
+      "phi_upper": 5181,
+      "phi_lower": -3598,
+      "left_cost": 180409,
+      "right_cost": 184636
+    },
+    {
+      "labels": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "left_reward_missing": 178133,
+      "right_reward_missing": 178133,
+      "phi_upper": 3787,
+      "phi_lower": -3787,
+      "left_cost": 181920,
+      "right_cost": 181920
+    },
+    {
+      "labels": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "left_reward_missing": 180196,
+      "right_reward_missing": 191153,
+      "phi_upper": 3299,
+      "phi_lower": -4428,
+      "left_cost": 183495,
+      "right_cost": 195581
+    },
+    {
+      "labels": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "left_reward_missing": 180187,
+      "right_reward_missing": 176079,
+      "phi_upper": 4781,
+      "phi_lower": -3280,
+      "left_cost": 184968,
+      "right_cost": 179359
+    },
+    {
+      "labels": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "left_reward_missing": 182250,
+      "right_reward_missing": 189099,
+      "phi_upper": 3787,
+      "phi_lower": -3787,
+      "left_cost": 186037,
+      "right_cost": 192886
+    },
+    {
+      "labels": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "left_reward_missing": 185155,
+      "right_reward_missing": 186194,
+      "phi_upper": 3823,
+      "phi_lower": -4912,
+      "left_cost": 188978,
+      "right_cost": 191106
+    },
+    {
+      "labels": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "left_reward_missing": 187218,
+      "right_reward_missing": 199214,
+      "phi_upper": 3335,
+      "phi_lower": -5553,
+      "left_cost": 190553,
+      "right_cost": 204767
+    },
+    {
+      "labels": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "left_reward_missing": 181226,
+      "right_reward_missing": 175040,
+      "phi_upper": 7300,
+      "phi_lower": -3127,
+      "left_cost": 188526,
+      "right_cost": 178167
+    },
+    {
+      "labels": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "left_reward_missing": 183289,
+      "right_reward_missing": 188060,
+      "phi_upper": 6306,
+      "phi_lower": -3634,
+      "left_cost": 189595,
+      "right_cost": 191694
+    },
+    {
+      "labels": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "left_reward_missing": 186194,
+      "right_reward_missing": 185155,
+      "phi_upper": 4912,
+      "phi_lower": -3823,
+      "left_cost": 191106,
+      "right_cost": 188978
+    },
+    {
+      "labels": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "left_reward_missing": 188257,
+      "right_reward_missing": 198175,
+      "phi_upper": 4424,
+      "phi_lower": -4464,
+      "left_cost": 192681,
+      "right_cost": 202639
+    },
+    {
+      "labels": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "left_reward_missing": 188248,
+      "right_reward_missing": 183101,
+      "phi_upper": 5906,
+      "phi_lower": -3316,
+      "left_cost": 194154,
+      "right_cost": 186417
+    },
+    {
+      "labels": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "left_reward_missing": 190311,
+      "right_reward_missing": 196121,
+      "phi_upper": 4912,
+      "phi_lower": -3823,
+      "left_cost": 195223,
+      "right_cost": 199944
+    },
+    {
+      "labels": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "left_reward_missing": 193216,
+      "right_reward_missing": 193216,
+      "phi_upper": 4948,
+      "phi_lower": -4948,
+      "left_cost": 198164,
+      "right_cost": 198164
+    },
+    {
+      "labels": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "left_reward_missing": 195279,
+      "right_reward_missing": 206236,
+      "phi_upper": 4460,
+      "phi_lower": -5589,
+      "left_cost": 199739,
+      "right_cost": 211825
+    },
+    {
+      "labels": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "left_reward_missing": 176070,
+      "right_reward_missing": 165113,
+      "phi_upper": 5986,
+      "phi_lower": -4485,
+      "left_cost": 182056,
+      "right_cost": 169598
+    },
+    {
+      "labels": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "left_reward_missing": 178133,
+      "right_reward_missing": 178133,
+      "phi_upper": 4992,
+      "phi_lower": -4992,
+      "left_cost": 183125,
+      "right_cost": 183125
+    },
+    {
+      "labels": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "left_reward_missing": 181038,
+      "right_reward_missing": 175228,
+      "phi_upper": 3598,
+      "phi_lower": -5181,
+      "left_cost": 184636,
+      "right_cost": 180409
+    },
+    {
+      "labels": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "left_reward_missing": 183101,
+      "right_reward_missing": 188248,
+      "phi_upper": 3110,
+      "phi_lower": -5822,
+      "left_cost": 186211,
+      "right_cost": 194070
+    },
+    {
+      "labels": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "left_reward_missing": 183092,
+      "right_reward_missing": 173174,
+      "phi_upper": 4592,
+      "phi_lower": -4674,
+      "left_cost": 187684,
+      "right_cost": 177848
+    },
+    {
+      "labels": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "left_reward_missing": 185155,
+      "right_reward_missing": 186194,
+      "phi_upper": 3598,
+      "phi_lower": -5181,
+      "left_cost": 188753,
+      "right_cost": 191375
+    },
+    {
+      "labels": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "left_reward_missing": 188060,
+      "right_reward_missing": 183289,
+      "phi_upper": 3634,
+      "phi_lower": -6306,
+      "left_cost": 191694,
+      "right_cost": 189595
+    },
+    {
+      "labels": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "left_reward_missing": 190123,
+      "right_reward_missing": 196309,
+      "phi_upper": 3146,
+      "phi_lower": -6947,
+      "left_cost": 193269,
+      "right_cost": 203256
+    },
+    {
+      "labels": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "left_reward_missing": 184131,
+      "right_reward_missing": 172135,
+      "phi_upper": 6175,
+      "phi_lower": -3091,
+      "left_cost": 190306,
+      "right_cost": 175226
+    },
+    {
+      "labels": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "left_reward_missing": 186194,
+      "right_reward_missing": 185155,
+      "phi_upper": 5181,
+      "phi_lower": -3598,
+      "left_cost": 191375,
+      "right_cost": 188753
+    },
+    {
+      "labels": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "left_reward_missing": 189099,
+      "right_reward_missing": 182250,
+      "phi_upper": 3787,
+      "phi_lower": -3787,
+      "left_cost": 192886,
+      "right_cost": 186037
+    },
+    {
+      "labels": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "left_reward_missing": 191162,
+      "right_reward_missing": 195270,
+      "phi_upper": 3299,
+      "phi_lower": -4428,
+      "left_cost": 194461,
+      "right_cost": 199698
+    },
+    {
+      "labels": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "left_reward_missing": 191153,
+      "right_reward_missing": 180196,
+      "phi_upper": 4781,
+      "phi_lower": -3280,
+      "left_cost": 195934,
+      "right_cost": 183476
+    },
+    {
+      "labels": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "left_reward_missing": 193216,
+      "right_reward_missing": 193216,
+      "phi_upper": 3787,
+      "phi_lower": -3787,
+      "left_cost": 197003,
+      "right_cost": 197003
+    },
+    {
+      "labels": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "left_reward_missing": 196121,
+      "right_reward_missing": 190311,
+      "phi_upper": 3823,
+      "phi_lower": -4912,
+      "left_cost": 199944,
+      "right_cost": 195223
+    },
+    {
+      "labels": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "left_reward_missing": 198184,
+      "right_reward_missing": 203331,
+      "phi_upper": 3335,
+      "phi_lower": -5553,
+      "left_cost": 201519,
+      "right_cost": 208884
+    },
+    {
+      "labels": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "left_reward_missing": 186185,
+      "right_reward_missing": 170081,
+      "phi_upper": 6816,
+      "phi_lower": -2603,
+      "left_cost": 193001,
+      "right_cost": 172684
+    },
+    {
+      "labels": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "left_reward_missing": 188248,
+      "right_reward_missing": 183101,
+      "phi_upper": 5822,
+      "phi_lower": -3110,
+      "left_cost": 194070,
+      "right_cost": 186211
+    },
+    {
+      "labels": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "left_reward_missing": 191153,
+      "right_reward_missing": 180196,
+      "phi_upper": 4428,
+      "phi_lower": -3299,
+      "left_cost": 195581,
+      "right_cost": 183495
+    },
+    {
+      "labels": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "left_reward_missing": 193216,
+      "right_reward_missing": 193216,
+      "phi_upper": 3940,
+      "phi_lower": -3940,
+      "left_cost": 197156,
+      "right_cost": 197156
+    },
+    {
+      "labels": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "left_reward_missing": 193207,
+      "right_reward_missing": 178142,
+      "phi_upper": 5422,
+      "phi_lower": -2792,
+      "left_cost": 198629,
+      "right_cost": 180934
+    },
+    {
+      "labels": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "left_reward_missing": 195270,
+      "right_reward_missing": 191162,
+      "phi_upper": 4428,
+      "phi_lower": -3299,
+      "left_cost": 199698,
+      "right_cost": 194461
+    },
+    {
+      "labels": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "left_reward_missing": 198175,
+      "right_reward_missing": 188257,
+      "phi_upper": 4464,
+      "phi_lower": -4424,
+      "left_cost": 202639,
+      "right_cost": 192681
+    },
+    {
+      "labels": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "left_reward_missing": 200238,
+      "right_reward_missing": 201277,
+      "phi_upper": 3976,
+      "phi_lower": -5065,
+      "left_cost": 204214,
+      "right_cost": 206342
+    },
+    {
+      "labels": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "left_reward_missing": 194246,
+      "right_reward_missing": 177103,
+      "phi_upper": 7941,
+      "phi_lower": -2639,
+      "left_cost": 202187,
+      "right_cost": 179742
+    },
+    {
+      "labels": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "left_reward_missing": 196309,
+      "right_reward_missing": 190123,
+      "phi_upper": 6947,
+      "phi_lower": -3146,
+      "left_cost": 203256,
+      "right_cost": 193269
+    },
+    {
+      "labels": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "left_reward_missing": 199214,
+      "right_reward_missing": 187218,
+      "phi_upper": 5553,
+      "phi_lower": -3335,
+      "left_cost": 204767,
+      "right_cost": 190553
+    },
+    {
+      "labels": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "left_reward_missing": 201277,
+      "right_reward_missing": 200238,
+      "phi_upper": 5065,
+      "phi_lower": -3976,
+      "left_cost": 206342,
+      "right_cost": 204214
+    },
+    {
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "left_reward_missing": 201268,
+      "right_reward_missing": 185164,
+      "phi_upper": 6547,
+      "phi_lower": -2828,
+      "left_cost": 207815,
+      "right_cost": 187992
+    },
+    {
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "left_reward_missing": 203331,
+      "right_reward_missing": 198184,
+      "phi_upper": 5553,
+      "phi_lower": -3335,
+      "left_cost": 208884,
+      "right_cost": 201519
+    },
+    {
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "left_reward_missing": 206236,
+      "right_reward_missing": 195279,
+      "phi_upper": 5589,
+      "phi_lower": -4460,
+      "left_cost": 211825,
+      "right_cost": 199739
+    },
+    {
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "left_reward_missing": 208299,
+      "right_reward_missing": 208299,
+      "phi_upper": 5101,
+      "phi_lower": -5101,
+      "left_cost": 213400,
+      "right_cost": 213400
+    }
+  ],
+  "max_left": 213400,
+  "max_right": 213400,
+  "denominator": 1000000,
+  "original_boundary": "2703/6250",
+  "joint_endpoint_boundary": "1067/2500",
+  "pressure_aware_boundary": "516027/2000000",
+  "exact_improvement_over_source": "348933/2000000",
+  "potential_nontrivial_knot_inequalities": 390,
+  "theta_endpoint_inequalities": 30,
+  "minimum_positive_knot_slack": "6219/40000000",
+  "defect_coefficient_identity_checked_lengths": [
+    6,
+    80
+  ],
+  "small_chain_cases_pass": true,
+  "small_chain_guard_counterexample": {
+    "theta": "1",
+    "alpha": "1/100",
+    "x1_equals_x2": "11/200",
+    "each_local_reward": "11/1400",
+    "weights_and_potentials": "all0",
+    "local7point_pressure_pays_reward": true,
+    "candidate_C": "3/100",
+    "singleton_violation": "0>=1/40 is false",
+    "meaning": "C>0 alone does not replace required small-chain guard y>=6alpha theta"
+  },
+  "scope": "General proof of endpoint identity and PL implication is in advocate note; finite checks support it. No asymptotic proportion improvement, no novelty asserted."
+}

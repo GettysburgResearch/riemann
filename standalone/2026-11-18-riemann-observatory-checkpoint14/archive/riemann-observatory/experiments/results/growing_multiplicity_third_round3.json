@@ -1,0 +1,594 @@
+{
+  "kind": "independent_exact_polynomial_Gram_projection_checks_NOT_asymptotic_proof",
+  "cases": 96,
+  "N_range": [
+    1,
+    8
+  ],
+  "m_range": [
+    1,
+    12
+  ],
+  "includes_m_greater_than_N": true,
+  "all_pass": true,
+  "method": "Direct coefficient vectors for (1-z)^m z^j; rational Gram-system solve; comparison with product and binomial-ratio formulas. Complex H2 projection has the same real Gram solution.",
+  "scope": "Finite independent indexing/projection checks only. Artanh bounds, uniformity and limiting regimes proved analytically in growing_multiplicity_third_round3.md.",
+  "records": [
+    {
+      "N": 1,
+      "m": 1,
+      "exact_Gram_projection_error": "1/3",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 1,
+      "m": 2,
+      "exact_Gram_projection_error": "7/10",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 1,
+      "m": 3,
+      "exact_Gram_projection_error": "31/35",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 1,
+      "m": 4,
+      "exact_Gram_projection_error": "121/126",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 1,
+      "m": 5,
+      "exact_Gram_projection_error": "76/77",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 1,
+      "m": 6,
+      "exact_Gram_projection_error": "1709/1716",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 1,
+      "m": 7,
+      "exact_Gram_projection_error": "6427/6435",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 1,
+      "m": 8,
+      "exact_Gram_projection_error": "24301/24310",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 1,
+      "m": 9,
+      "exact_Gram_projection_error": "46184/46189",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 1,
+      "m": 10,
+      "exact_Gram_projection_error": "352705/352716",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 1,
+      "m": 11,
+      "exact_Gram_projection_error": "676033/676039",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 1,
+      "m": 12,
+      "exact_Gram_projection_error": "5200287/5200300",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 2,
+      "m": 1,
+      "exact_Gram_projection_error": "1/4",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 2,
+      "m": 2,
+      "exact_Gram_projection_error": "3/5",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 2,
+      "m": 3,
+      "exact_Gram_projection_error": "23/28",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 2,
+      "m": 4,
+      "exact_Gram_projection_error": "13/14",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 2,
+      "m": 5,
+      "exact_Gram_projection_error": "257/264",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 2,
+      "m": 6,
+      "exact_Gram_projection_error": "425/429",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 2,
+      "m": 7,
+      "exact_Gram_projection_error": "2851/2860",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 2,
+      "m": 8,
+      "exact_Gram_projection_error": "4857/4862",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 2,
+      "m": 9,
+      "exact_Gram_projection_error": "33581/33592",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 2,
+      "m": 10,
+      "exact_Gram_projection_error": "29390/29393",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 2,
+      "m": 11,
+      "exact_Gram_projection_error": "416011/416024",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 2,
+      "m": 12,
+      "exact_Gram_projection_error": "742893/742900",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 3,
+      "m": 1,
+      "exact_Gram_projection_error": "1/5",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 3,
+      "m": 2,
+      "exact_Gram_projection_error": "11/21",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 3,
+      "m": 3,
+      "exact_Gram_projection_error": "16/21",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 3,
+      "m": 4,
+      "exact_Gram_projection_error": "59/66",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 3,
+      "m": 5,
+      "exact_Gram_projection_error": "1231/1287",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 3,
+      "m": 6,
+      "exact_Gram_projection_error": "703/715",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 3,
+      "m": 7,
+      "exact_Gram_projection_error": "2416/2431",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 3,
+      "m": 8,
+      "exact_Gram_projection_error": "25139/25194",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 3,
+      "m": 9,
+      "exact_Gram_projection_error": "29371/29393",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 3,
+      "m": 10,
+      "exact_Gram_projection_error": "51990/52003",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 3,
+      "m": 11,
+      "exact_Gram_projection_error": "1114259/1114350",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 3,
+      "m": 12,
+      "exact_Gram_projection_error": "267437/267444",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 4,
+      "m": 1,
+      "exact_Gram_projection_error": "1/6",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 4,
+      "m": 2,
+      "exact_Gram_projection_error": "13/28",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 4,
+      "m": 3,
+      "exact_Gram_projection_error": "17/24",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 4,
+      "m": 4,
+      "exact_Gram_projection_error": "85/99",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 4,
+      "m": 5,
+      "exact_Gram_projection_error": "134/143",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 4,
+      "m": 6,
+      "exact_Gram_projection_error": "557/572",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 4,
+      "m": 7,
+      "exact_Gram_projection_error": "5249/5304",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 4,
+      "m": 8,
+      "exact_Gram_projection_error": "8365/8398",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 4,
+      "m": 9,
+      "exact_Gram_projection_error": "9031/9044",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 4,
+      "m": 10,
+      "exact_Gram_projection_error": "178205/178296",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 4,
+      "m": 11,
+      "exact_Gram_projection_error": "118843/118864",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 4,
+      "m": 12,
+      "exact_Gram_projection_error": "66857/66861",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 5,
+      "m": 1,
+      "exact_Gram_projection_error": "1/7",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 5,
+      "m": 2,
+      "exact_Gram_projection_error": "5/12",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 5,
+      "m": 3,
+      "exact_Gram_projection_error": "109/165",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 5,
+      "m": 4,
+      "exact_Gram_projection_error": "589/715",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 5,
+      "m": 5,
+      "exact_Gram_projection_error": "131/143",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 5,
+      "m": 6,
+      "exact_Gram_projection_error": "851/884",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 5,
+      "m": 7,
+      "exact_Gram_projection_error": "4133/4199",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 5,
+      "m": 8,
+      "exact_Gram_projection_error": "22467/22610",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 5,
+      "m": 9,
+      "exact_Gram_projection_error": "37054/37145",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 5,
+      "m": 10,
+      "exact_Gram_projection_error": "296887/297160",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 5,
+      "m": 11,
+      "exact_Gram_projection_error": "334193/334305",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 5,
+      "m": 12,
+      "exact_Gram_projection_error": "570217/570285",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 6,
+      "m": 1,
+      "exact_Gram_projection_error": "1/8",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 6,
+      "m": 2,
+      "exact_Gram_projection_error": "17/45",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 6,
+      "m": 3,
+      "exact_Gram_projection_error": "34/55",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 6,
+      "m": 4,
+      "exact_Gram_projection_error": "113/143",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 6,
+      "m": 5,
+      "exact_Gram_projection_error": "93/104",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 6,
+      "m": 6,
+      "exact_Gram_projection_error": "210/221",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 6,
+      "m": 7,
+      "exact_Gram_projection_error": "6317/6460",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 6,
+      "m": 8,
+      "exact_Gram_projection_error": "9599/9690",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 6,
+      "m": 9,
+      "exact_Gram_projection_error": "118409/118864",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 6,
+      "m": 10,
+      "exact_Gram_projection_error": "37089/37145",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 6,
+      "m": 11,
+      "exact_Gram_projection_error": "58961/58995",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 6,
+      "m": 12,
+      "exact_Gram_projection_error": "316757/316825",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 7,
+      "m": 1,
+      "exact_Gram_projection_error": "1/9",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 7,
+      "m": 2,
+      "exact_Gram_projection_error": "19/55",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 7,
+      "m": 3,
+      "exact_Gram_projection_error": "83/143",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 7,
+      "m": 4,
+      "exact_Gram_projection_error": "69/91",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 7,
+      "m": 5,
+      "exact_Gram_projection_error": "1349/1547",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 7,
+      "m": 6,
+      "exact_Gram_projection_error": "2118/2261",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 7,
+      "m": 7,
+      "exact_Gram_projection_error": "4702/4845",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 7,
+      "m": 8,
+      "exact_Gram_projection_error": "14663/14858",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 7,
+      "m": 9,
+      "exact_Gram_projection_error": "36937/37145",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 7,
+      "m": 10,
+      "exact_Gram_projection_error": "58859/58995",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 7,
+      "m": 11,
+      "exact_Gram_projection_error": "443147/443555",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 7,
+      "m": 12,
+      "exact_Gram_projection_error": "3617183/3618475",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 8,
+      "m": 1,
+      "exact_Gram_projection_error": "1/10",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 8,
+      "m": 2,
+      "exact_Gram_projection_error": "7/22",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 8,
+      "m": 3,
+      "exact_Gram_projection_error": "199/364",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 8,
+      "m": 4,
+      "exact_Gram_projection_error": "265/364",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 8,
+      "m": 5,
+      "exact_Gram_projection_error": "809/952",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 8,
+      "m": 6,
+      "exact_Gram_projection_error": "11919/12920",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 8,
+      "m": 7,
+      "exact_Gram_projection_error": "4973/5168",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 8,
+      "m": 8,
+      "exact_Gram_projection_error": "7299/7429",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 8,
+      "m": 9,
+      "exact_Gram_projection_error": "2168/2185",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 8,
+      "m": 10,
+      "exact_Gram_projection_error": "15244/15295",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 8,
+      "m": 11,
+      "exact_Gram_projection_error": "233127/233450",
+      "product_and_hypergeometric_identity_pass": true
+    },
+    {
+      "N": 8,
+      "m": 12,
+      "exact_Gram_projection_error": "578633/578956",
+      "product_and_hypergeometric_identity_pass": true
+    }
+  ]
+}

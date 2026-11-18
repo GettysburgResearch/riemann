@@ -1,0 +1,26 @@
+-- Scoped local source-build audit; this is not an external independent kernel replay.
+import Solution.Multiplicity
+#check two_thirds_simple_on_critical_line
+#print axioms two_thirds_simple_on_critical_line
+#check two_thirds_simple_on_critical_line_cumulative
+#print axioms two_thirds_simple_on_critical_line_cumulative
+#check five_sixths_distinct
+#print axioms five_sixths_distinct
+#check five_sixths_distinct_cumulative
+#print axioms five_sixths_distinct_cumulative
+#check montgomery_taylor_simple_on_critical_line_mult
+#print axioms montgomery_taylor_simple_on_critical_line_mult
+#check montgomery_taylor_simple_on_critical_line_mult_cumulative
+#print axioms montgomery_taylor_simple_on_critical_line_mult_cumulative
+#check montgomery_taylor_distinct_mult
+#print axioms montgomery_taylor_distinct_mult
+#check montgomery_taylor_distinct_mult_cumulative
+#print axioms montgomery_taylor_distinct_mult_cumulative
+#check dirichlet_two_thirds_simple_on_critical_line
+#print axioms dirichlet_two_thirds_simple_on_critical_line
+#check dirichlet_five_sixths_distinct
+#print axioms dirichlet_five_sixths_distinct
+#check dirichlet_montgomery_taylor_simple_on_critical_line_mult
+#print axioms dirichlet_montgomery_taylor_simple_on_critical_line_mult
+#check dirichlet_montgomery_taylor_distinct_mult
+#print axioms dirichlet_montgomery_taylor_distinct_mult

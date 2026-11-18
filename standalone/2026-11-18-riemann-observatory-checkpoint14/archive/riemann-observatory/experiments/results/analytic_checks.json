@@ -1,0 +1,32 @@
+{
+  "exact_density_exponents": {
+    "7/10": {
+      "GM": "9/13",
+      "strong_density_target": "3/5",
+      "gap": "6/65"
+    },
+    "3/4": {
+      "GM": "5/9",
+      "strong_density_target": "1/2",
+      "gap": "1/18"
+    },
+    "4/5": {
+      "GM": "3/7",
+      "strong_density_target": "2/5",
+      "gap": "1/35"
+    }
+  },
+  "finite_kernel_stress": {
+    "cases": 500,
+    "min_slack": 0.0,
+    "max_imaginary_roundoff": 1.6574519534628962e-12,
+    "failed_case_indices": [],
+    "arithmetic": "ordinary complex floating point, not validated; not a proof"
+  },
+  "exact_missing_symmetry_witness": {
+    "Z": "{i}",
+    "K(0)": 1,
+    "simple_real": 0,
+    "putative_lower_bound": 1
+  }
+}

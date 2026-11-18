@@ -1,0 +1,117 @@
+{
+  "status": "exact Fraction witnesses; no floating-point assertion",
+  "rows": [
+    {
+      "M": 1,
+      "A_eigenvalue": "3/2",
+      "D_eigenvalue": "3/2",
+      "B_diagonal": "1",
+      "block_eigenvalues": [
+        "1/2",
+        "5/2"
+      ],
+      "delta_A": -2,
+      "delta_block": 1,
+      "difference": 3,
+      "bound": 3
+    },
+    {
+      "M": 1,
+      "A_eigenvalue": "3",
+      "D_eigenvalue": "3",
+      "B_diagonal": "3/2",
+      "block_eigenvalues": [
+        "3/2",
+        "9/2"
+      ],
+      "delta_A": 1,
+      "delta_block": -2,
+      "difference": -3,
+      "bound": 3
+    },
+    {
+      "M": 2,
+      "A_eigenvalue": "3/2",
+      "D_eigenvalue": "3/2",
+      "B_diagonal": "1",
+      "block_eigenvalues": [
+        "1/2",
+        "5/2"
+      ],
+      "delta_A": -4,
+      "delta_block": 2,
+      "difference": 6,
+      "bound": 6
+    },
+    {
+      "M": 2,
+      "A_eigenvalue": "3",
+      "D_eigenvalue": "3",
+      "B_diagonal": "3/2",
+      "block_eigenvalues": [
+        "3/2",
+        "9/2"
+      ],
+      "delta_A": 2,
+      "delta_block": -4,
+      "difference": -6,
+      "bound": 6
+    },
+    {
+      "M": 5,
+      "A_eigenvalue": "3/2",
+      "D_eigenvalue": "3/2",
+      "B_diagonal": "1",
+      "block_eigenvalues": [
+        "1/2",
+        "5/2"
+      ],
+      "delta_A": -10,
+      "delta_block": 5,
+      "difference": 15,
+      "bound": 15
+    },
+    {
+      "M": 5,
+      "A_eigenvalue": "3",
+      "D_eigenvalue": "3",
+      "B_diagonal": "3/2",
+      "block_eigenvalues": [
+        "3/2",
+        "9/2"
+      ],
+      "delta_A": 5,
+      "delta_block": -10,
+      "difference": -15,
+      "bound": 15
+    },
+    {
+      "M": 10,
+      "A_eigenvalue": "3/2",
+      "D_eigenvalue": "3/2",
+      "B_diagonal": "1",
+      "block_eigenvalues": [
+        "1/2",
+        "5/2"
+      ],
+      "delta_A": -20,
+      "delta_block": 10,
+      "difference": 30,
+      "bound": 30
+    },
+    {
+      "M": 10,
+      "A_eigenvalue": "3",
+      "D_eigenvalue": "3",
+      "B_diagonal": "3/2",
+      "block_eigenvalues": [
+        "3/2",
+        "9/2"
+      ],
+      "delta_A": 10,
+      "delta_block": -20,
+      "difference": -30,
+      "bound": 30
+    }
+  ]
+}

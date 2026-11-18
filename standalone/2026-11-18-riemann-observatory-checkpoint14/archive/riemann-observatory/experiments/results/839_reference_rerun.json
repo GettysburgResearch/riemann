@@ -1,0 +1,26 @@
+{
+  "kind": "rerun_of_author_reference_C++_not_Lean_kernel_or_independent_checker",
+  "command": [
+    "/workspace/riemann-observatory/sources/formal_round2/build839/verify7",
+    "/workspace/riemann-observatory/sources/formal_round2/build839/first_window.txt",
+    "certificate/kernel_lower.bin"
+  ],
+  "elapsed_seconds": 433.8164287520003,
+  "exit_code": 0,
+  "stdout": "{\"status\":\"PASS_COB_CONTINUUM\",\"nodes\":60467309,\"leaves\":30233655,\"basic\":21157274,\"affine\":9076381,\"max_stack\":49}\n",
+  "stderr": "verify: 50000000 boxes examined, 33 waiting\n",
+  "source_commit": "0e961ea199b425010843bc8044676d4ad29fe031",
+  "verifier_source_sha256": "c30310214c121d0acf4b4ae562f396c1e13be13992b1f01e02df584dbd602142",
+  "compiler": "g++ (Debian14.2.0-19)14.2.0",
+  "compile_flags": [
+    "-std=c++23",
+    "-O3",
+    "-DNDEBUG",
+    "-D_GLIBCXX_ASSERTIONS",
+    "-DVERIFY_POINT_COUNT=7"
+  ],
+  "input_spec_sha256": "e782247f3991118936ef2fcacf59943b510508c9062200c66798f354d95fae92",
+  "table_sha256": "b80e5a8c70e4beb3b872dada426016bc97b0954c1a8a5eabaeb40fba49cded36",
+  "matches_author_record": true,
+  "scope": "Execution of original C++ reference checker. Independently reconstructed exact table bounds elsewhere. This does not execute Lean or independently establish all analytic transfer steps."
+}

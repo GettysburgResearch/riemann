@@ -1,0 +1,84 @@
+{
+  "status": "exact_rational_sanity_checks_passed",
+  "scope": "decoupled_loop_examples_only",
+  "edge_count": 3,
+  "total_length_over_2pi": "377/126",
+  "samples": [
+    {
+      "K": "1",
+      "counts_K_2K_4K": [
+        3,
+        6,
+        12
+      ],
+      "exact_discrepancies": [
+        "1/126",
+        "1/63",
+        "2/63"
+      ],
+      "dyadic_curvature": 0,
+      "RVM_main_term_curvature_float": 0.2206356001526516
+    },
+    {
+      "K": "10",
+      "counts_K_2K_4K": [
+        30,
+        59,
+        120
+      ],
+      "exact_discrepancies": [
+        "5/63",
+        "53/63",
+        "20/63"
+      ],
+      "dyadic_curvature": 3,
+      "RVM_main_term_curvature_float": 2.2063560015265162
+    },
+    {
+      "K": "100",
+      "counts_K_2K_4K": [
+        300,
+        598,
+        1197
+      ],
+      "exact_discrepancies": [
+        "50/63",
+        "26/63",
+        "11/63"
+      ],
+      "dyadic_curvature": 3,
+      "RVM_main_term_curvature_float": 22.06356001526516
+    },
+    {
+      "K": "1000",
+      "counts_K_2K_4K": [
+        2992,
+        5984,
+        11968
+      ],
+      "exact_discrepancies": [
+        "4/63",
+        "8/63",
+        "16/63"
+      ],
+      "dyadic_curvature": 0,
+      "RVM_main_term_curvature_float": 220.6356001526516
+    },
+    {
+      "K": "10000",
+      "counts_K_2K_4K": [
+        29921,
+        59841,
+        119683
+      ],
+      "exact_discrepancies": [
+        "23/63",
+        "17/63",
+        "29/63"
+      ],
+      "dyadic_curvature": 2,
+      "RVM_main_term_curvature_float": 2206.3560015265157
+    }
+  ],
+  "warning": "Floating RVM curvature values illustrate an analytically derived asymptotic; they are not rigorous zeta-zero counts."
+}

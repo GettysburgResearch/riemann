@@ -1,0 +1,14 @@
+{"source": "THM-SG302", "relation": "uses", "target": "THM-SG301", "status": "direct_proof", "provenance": "SGcampaign§3factorialexpansion"}
+{"source": "THM-SG303", "relation": "uses", "target": "PAPER-SG002-Theorem3", "status": "external_classical_theorem_exact_PW2_statement_read", "provenance": "Gaunardp7citesSeip1995Thm2.2"}
+{"source": "THM-SG304", "relation": "requires", "target": "THM-SG302", "status": "moment_determinacy_input", "provenance": "SGcampaign§6"}
+{"source": "THM-SG304", "relation": "requires", "target": "THM-SG303", "status": "zero_atom_input", "provenance": "SGcampaign§6"}
+{"source": "THM-SG305", "relation": "uses", "target": "THM-SG304", "status": "conditional_math", "provenance": "fixedmfirst,Tlimitthenmtoinfinity"}
+{"source":"THM-SG305","relation":"clarifies_conditional_route_to","target":"PAPER-A004:Section7.2(f)","status":"model_level_only","provenance":"Nozeta higher prime-side moments established","source_reference_history":["PAPER-A004-7.2f"]}
+{"source": "THM-SG307", "relation": "uses", "target": "THM-SG306", "status": "direct_fixed_certificate_proof", "provenance": "clipping belowincreasescertificateandretainsindicatorbound"}
+{"source": "THM-SG308", "relation": "specializes", "target": "THM-SG307", "status": "exact_algebra", "provenance": "quarticq andglobalLip6"}
+{"source": "THM-SG305", "relation": "uses", "target": "THM-SG306", "status": "weak_law_transfer_alternative", "provenance": "nohighermomentcomparisonofzeroandprimesidematrices"}
+{"source": "THM-SG308", "relation": "suggests_precise_missing_input", "target": "PRIME-D-LOWER-BOUND-GREATER-THAN-115", "status": "conditional_research_direction", "provenance": "D84m3−16m4; noarithboundproved"}
+{"source": "THM-SG309", "relation": "closes_moment_existence_condition_for", "target": "THM-SG302", "status": "independent_graph_Holder_DCT_review_passed", "provenance": "momentexistence proposer andthirdreview"}
+{"source": "THM-SG310", "relation": "uses", "target": "THM-SG309", "status": "absolute_graph_integrability_input", "provenance": "validatesFubiniandtracepartitionlimits"}
+{"source":"THM-SG310","relation":"checks_model_numbers_in","target":"PAPER-A004:Section7.2(f)","status":"exact_model_only","provenance":"m4all-distinctcyclezero; noarithHL4","source_reference_history":["PAPER-A004-7.2f"]}
+{"record_type":"node","id":"PAPER-A004:Section7.2(f)","type":"source_passage","label":"§7.2(f), Sharpness and limits of the method","evidence":"papers/PAPER-A004.md; arXiv:2608.13637v2 p. 13","status":"Conditional sine-Gram moment route; inspect the source's arithmetic hypotheses."}

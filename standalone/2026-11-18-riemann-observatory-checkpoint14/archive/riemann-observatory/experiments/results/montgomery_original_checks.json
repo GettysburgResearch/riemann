@@ -1,0 +1,69 @@
+{
+  "status": "exact rational supplemental certificate; pi rational bounds external",
+  "source": "PAPER-E009, pp191\u2013192, triangular transform and Corollary3",
+  "small_gap_a": "17/25",
+  "C_a_lower_bound_fraction": "16117707033301676929831842973644565334960741058555264289552754438460482651510737902630396616457588873334620226263018922579577721279835099134709237073881144332643618475747956987903640582950441011318244810680998462419383735769452718959683676516629/1859058300594538848659237425875662256135097859888983317641224424873707861599485221009299082026636978482974519685059068839800395654765413454175716363247492572361413635959392032194870125749730505049228668212890625000000000000000000000000000000000000",
+  "C_a_lower_bound_decimal_for_display": 0.00866982333375297,
+  "certified_C_a_greater_than": "0.008",
+  "alternating_terms": 20,
+  "triangle_integral_correct": "1",
+  "triangle_integral_as_printed": "2",
+  "negative_beta_witness": {
+    "beta": "-17/50",
+    "correct": "25/34",
+    "as_printed": "75/34"
+  },
+  "multiplicity_examples": [
+    {
+      "m": 1,
+      "simple_indicator": 1,
+      "linear_bound": 1
+    },
+    {
+      "m": 2,
+      "simple_indicator": 0,
+      "linear_bound": 0
+    },
+    {
+      "m": 3,
+      "simple_indicator": 0,
+      "linear_bound": -1
+    },
+    {
+      "m": 4,
+      "simple_indicator": 0,
+      "linear_bound": -2
+    },
+    {
+      "m": 5,
+      "simple_indicator": 0,
+      "linear_bound": -3
+    },
+    {
+      "m": 6,
+      "simple_indicator": 0,
+      "linear_bound": -4
+    },
+    {
+      "m": 7,
+      "simple_indicator": 0,
+      "linear_bound": -5
+    },
+    {
+      "m": 8,
+      "simple_indicator": 0,
+      "linear_bound": -6
+    },
+    {
+      "m": 9,
+      "simple_indicator": 0,
+      "linear_bound": -7
+    },
+    {
+      "m": 10,
+      "simple_indicator": 0,
+      "linear_bound": -8
+    }
+  ],
+  "limitations": "The analytic proof, Fourier convention, zero counting and RH-conditional theorem are in audits/montgomery1973_round2.md; this script does not verify prime or zero sums."
+}

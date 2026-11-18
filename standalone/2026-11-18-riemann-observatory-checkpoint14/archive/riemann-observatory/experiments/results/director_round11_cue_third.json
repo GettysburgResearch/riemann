@@ -1,0 +1,9 @@
+{
+  "script": "scripts/weighted73_cue_third_kernel_checks.py",
+  "code_sha256": "b7ef0a5a06d02df3f48d4beee878a5e71edf97671394445dca5374fc473353ea",
+  "args": [],
+  "exit_code": 0,
+  "elapsed_seconds": 6.415839425004378,
+  "stdout": "Rooted CUE polynomial chamber (3, 4, 5): matched\nRooted CUE polynomial chamber (2, 3, 6): matched\nCommon cubic kernel: 8*x*y*z*(2*x**2*y**2*z**2 - 3*x**2*y**2 - 3*x**2*z**2 + 3*x**2 - 3*y**2*z**2 + 3*y**2 + 3*z**2 - 1)\nAt x=y=z=1/10: -455449/62500000\n",
+  "stderr": ""
+}

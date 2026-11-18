@@ -1,0 +1,28 @@
+{
+  "status": "all_exact_assertions_passed",
+  "hamiltonian_checks": 967,
+  "arithmetic": "Python standard-library Fraction",
+  "endpoint_scope_witnesses": [
+    {
+      "a": 4,
+      "ratio_to_printed_scale_exact": "16"
+    },
+    {
+      "a": 8,
+      "ratio_to_printed_scale_exact": "2008/27"
+    },
+    {
+      "a": 16,
+      "ratio_to_printed_scale_exact": "39289924/128625"
+    },
+    {
+      "a": 32,
+      "ratio_to_printed_scale_exact": "112308590669151706/91398648466125"
+    },
+    {
+      "a": 64,
+      "ratio_to_printed_scale_exact": "452258383755676134382925365715715643032973/91893268965418617764445120486697078125"
+    }
+  ],
+  "scope": "Finite local algebra and an explicit asymptotic scale witness only; not certification of infinite zero dynamics or the entire paper."
+}
