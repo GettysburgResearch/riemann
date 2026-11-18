@@ -86,3 +86,26 @@ This normalization avoids treating the finite product as the exponential of $E_2
 ## The other cases and the finite lower endpoint
 
 For $1/2<\Theta<1$ Zhao proves the two signs by comparing the linear excursions with $X^{2\Theta-1+o(1)}$; the retained $O(\log X)$ prime-power correction has no effect. On RH, Rosser–Schoenfeld's finite range, quoted in Zhao's introduction, gives $E_3(x)>0$ for $2\le x\le10^8$. For $X\ge10^8$, Zhao's equation (18) and the last estimate of §2 give $J_1(X)>1.73\sqrt X/\log X-1.26$. The elementary inequality $e^z-1\ge z$ gives $e^{-\gamma_E}\int_2^X E_3\ge J_1(X)-\log X>0$ on this range (already strict at $10^8$ and $\sqrt X/(\log X)^2$ increases). This supplies the RH direction while accounting for $R$ in the displayed expansion preceding Zhao's (27).
+
+### A shorter RH endpoint estimate using the once-integrated explicit formula
+
+Here is a separate derivation of a weaker constant sufficient for the last inequality. It uses only the classical facts \(\psi(t)-\vartheta(t)>.98\sqrt t\) for \(t\ge121\) and \(\vartheta(t)<t\) through \(10^8\), quoted in Zhao's §2 from Rosser and Schoenfeld. Under RH write \(S=\sum_\rho|\rho|^{-2}=2+\gamma_E-\log(4\pi)<.047\). The nonzero-ordinate coefficients of the integrated explicit formula for \(\psi(t)-t\) are \(-1/[\rho(\rho+1)]\), with sum of absolute values at most \(S\). Its remaining integrand \(-\log(2\pi)-\frac12\log(1-t^{-2})\) lies in \([-2,0]\) on \([2,\infty)\). Consequently for \(t\ge 121\)
+\[
+ \int_2^t(\vartheta(s)-s)ds
+ \le S(t^{3/2}+2^{3/2})-(1.96/3)(t^{3/2}-121^{3/2}).
+\]
+This is negative for \(t\ge10^3\), and the cited bound for \(\vartheta\) gives negativity below \(10^3\). Integrating by parts against the decreasing positive weight \(1/(s\log^2 s)\) now gives \(\int_2^t (\vartheta(s)-s)/(s\log^2s)ds\le0\) at every \(t\ge2\). Ordinary prime partial summation therefore bounds
+\(\pi(t)-\operatorname{li}(t)\le (\vartheta(t)-t)/\log t+3\).
+
+Put \(U(t)=\int_t^\infty(\psi(s)-s)s^{-2}ds\). Using the explicit formula with the integrated coefficients \(-1/[\rho(1-\rho)]\) gives \(|U(t)|\le S/\sqrt t+2/t\). Both integrations of the explicit formula here can be justified first on finite intervals by the once-integrated formula and then by partial summation, using absolute convergence of the twice-denominator zero sums. A further integration by parts bounds
+\[
+ \left|\int_X^\infty\frac{\psi(t)-t}{t^2\log t}dt\right|
+ \le \frac{S/\sqrt X+2/X}{\log X}
+   +\frac{2S/\sqrt X+2/X}{\log^2 X}
+ <\frac{.054}{\sqrt X\log X}\qquad(X\ge10^8).
+\]
+On the other hand \(\int_X^{4X}t^{-3/2}/\log t\,dt\ge1/(\sqrt X\log(4X))\). Combining the two inequalities and the prime-square lower bound, equation (18) gives
+\[
+ J_1(X)>.8\sqrt X/\log X-5>\log X\qquad(X\ge10^8).
+\]
+For the last step \(\sqrt X/(\log X)^2\) increases here and the inequality holds numerically at the left endpoint. This supplies the RH implication with the finite-product correction included.

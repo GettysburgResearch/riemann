@@ -1,0 +1,79 @@
+{
+  "first_index": 12363155497138,
+  "last_index": 12363155507138,
+  "count": 10001,
+  "calls": [
+    {
+      "first_index": 12363155497138,
+      "requested": 10001,
+      "returned": 5402,
+      "precision": 104,
+      "stream_sha256": "b3f55c925502990754737ea8095232b80d68c97df5fb133180f68b5c855f012c",
+      "shifted_parameters": {
+        "T": 3000175814652,
+        "A": 8,
+        "B": 4096,
+        "h_mantissa": 170,
+        "h_exponent": 0,
+        "J": 925000,
+        "K": 16,
+        "sigma_grid": 1965,
+        "Ns_max": 200,
+        "H_mantissa": 93,
+        "H_exponent": -6,
+        "sigma_interp": 25
+      }
+    },
+    {
+      "first_index": 12363155502539,
+      "requested": 4600,
+      "returned": 67,
+      "precision": 104,
+      "stream_sha256": "90fceece07f162bd03837f105b43c837d7975facfb8f83de4cf8984ca995e695",
+      "shifted_parameters": {
+        "T": 3000175815911,
+        "A": 8,
+        "B": 4096,
+        "h_mantissa": 170,
+        "h_exponent": 0,
+        "J": 925000,
+        "K": 16,
+        "sigma_grid": 1965,
+        "Ns_max": 200,
+        "H_mantissa": 93,
+        "H_exponent": -6,
+        "sigma_interp": 25
+      }
+    },
+    {
+      "first_index": 12363155502605,
+      "requested": 4534,
+      "returned": 2266,
+      "precision": 104,
+      "stream_sha256": "ecdc266bd1ea26e0e131b75283daf9bee4e17b6e3dd979d35d2b66d6be11c385"
+    },
+    {
+      "first_index": 12363155504870,
+      "requested": 2269,
+      "returned": 2269,
+      "precision": 104,
+      "stream_sha256": "19fae48022091cb56c7369d1446a080147f9c313e6eea378bfe09f38e7866b3e",
+      "shifted_parameters": {
+        "T": 3000175816183,
+        "A": 8,
+        "B": 4096,
+        "h_mantissa": 170,
+        "h_exponent": 0,
+        "J": 925000,
+        "K": 16,
+        "sigma_grid": 1965,
+        "Ns_max": 200,
+        "H_mantissa": 93,
+        "H_exponent": -6,
+        "sigma_interp": 25
+      }
+    }
+  ],
+  "stream_sha256": "6c0d57774d1c04bc24f4af6bbc4b7d8dceadf3d35b763cce86ecceabe437ab53",
+  "compressed_sha256": "42c297c394d841d758978203bbb7b8723942c9172741f692ad5d59562ddfe013"
+}

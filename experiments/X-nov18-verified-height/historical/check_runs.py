@@ -94,6 +94,31 @@ def frontier(good):
     return end, known[end]
 
 
+def supplemental_sign_grid():
+    path = Path(__file__).parent / "repairs" / "triple.tsv"
+    raw = path.read_bytes()
+    header, packed, looked, missed = raw.decode("ascii").splitlines()
+    if header != "3000175658500 504 144" or not packed.startswith("Grid signs /8:"):
+        raise ValueError("Invalid supplemental grid parameters")
+    left, step, precision = map(int, header.split())
+    signs = packed.removeprefix("Grid signs /8:")
+    if len(signs) != 1+step*512*8//21 or set(signs) - set("+-?"):
+        raise ValueError("Invalid supplemental signs")
+    turing = LOOK.fullmatch(looked)
+    if not turing or not MISS.fullmatch(missed):
+        raise ValueError("Missing original Turing report")
+    upper, lower, difference = map(int, turing.groups())
+    definite = signs.replace("?", "")
+    transitions = sum(a != b for a,b in zip(definite, definite[1:]))
+    if not upper - lower == difference == transitions or transitions <= 0:
+        raise ValueError("Supplemental signs did not exhaust the whole strip")
+    return (Fraction(left), Fraction(left+step), lower, upper), {
+        "sha256": hashlib.sha256(raw).hexdigest(), "points": len(signs),
+        "definite": len(definite), "zeros": transitions,
+        "lower": lower, "upper": upper,
+    }
+
+
 def decimal(point):
     return str(Decimal(point.numerator)/Decimal(point.denominator))
 
@@ -106,9 +131,16 @@ def main():
                         help="certify exact counts at both ends of every disjoint-region sign chain")
     parser.add_argument("--snapshot", type=Path, help="verify only the exact transcript set in this snapshot")
     parser.add_argument("--write-snapshot", type=Path, help="save transcript names, digests and verified result")
+    parser.add_argument("--supplement", action="store_true",
+                        help="also use the re-sampled old-code sign packet around the triple cluster")
     args=parser.parse_args()
     previous = json.loads(args.snapshot.read_text()) if args.snapshot else None
     good, failed, digests=read_all(args.runs, previous["transcripts"] if previous else None)
+    original_regions = len(good)
+    supplementary = None
+    if args.supplement or (previous and previous["result"].get("supplementary_grid")):
+        interval, supplementary = supplemental_sign_grid()
+        good = sorted([*good, interval])
     end, count=frontier(good)
     checked_points = set()
     if args.count or args.check_chains:
@@ -143,10 +175,12 @@ def main():
     for name,h in sorted(digests.items()):
         digest.update(f"{name}\t{h}\n".encode())
     result={"old_height":ANCHOR,"old_count":INDEX,"contiguous_height":decimal(end),
-                      "contiguous_count":count,"new_zeros":count-INDEX,"successful_regions":len(good),
+                      "contiguous_count":count,"new_zeros":count-INDEX,"successful_regions":original_regions,
                       "unsuccessful_attempts":len(failed),"transcripts":len(digests),
                       "ordered_transcript_digest":digest.hexdigest(),"modern_counts_rechecked":bool(checked_points),
                       "checked_sign_chain_endpoints":len(checked_points) if args.check_chains else None}
+    if supplementary is not None:
+        result["supplementary_grid"] = supplementary
     if previous is not None:
         structural = {k:v for k,v in result.items() if k not in
                       ("modern_counts_rechecked", "checked_sign_chain_endpoints")}

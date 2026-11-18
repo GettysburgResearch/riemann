@@ -38,3 +38,19 @@ $$
 It applies without any density information beyond $2T$.
 
 Using python-flint 0.9.0 at 112 bits, the upper-bound expression divided by $M$ is enclosed in $28.137833385679677726077463501\pm4.30\cdot10^{-28}$. The script constructs all 98,800 real-part/height cells from integers and checks strict positivity of every Abel weight difference. Combining the radial, phase and positive reference bounds proves the stated finite corollary. The zero-density inputs and the verified census are imported theorems. This run recomputes the finite combination from their published bounds. [Interval checker](check_li_horizon_nov18.py)
+
+## Extension using the 2025 density estimates
+
+The same argument with \(M=107T^2\) proves strict positivity through index
+\[
+ 963\,112\,566\,946\,950\,210\,874\,880\,000.
+\]
+For each height cell with upper endpoint \(H\), use the smaller of the symmetric counting estimate from §2 and the following upper bounds on its cumulative right-half count. With coefficients from Chourasiya–Simonič Corollary 1, Table 1, use
+\[
+ A H^{3(1-s)/(2-s)}(\log H)^{(7-5s)/(2-s)}+ B(\log H)^2+C\log H .
+\]
+At \(s\ge0.625\) also use their equation (119), Table 4,
+\[
+ A'H^{8(1-s)/3}(\log H)^{2(3-2s)}+B'(\log H)^2 .
+\]
+Their counts include the threshold real part and the upper height, so bound the strict real-part subsets used in the radial sum. At \(s=1/2\) the separate symmetric bound only counts the strict right half. All heights exceed \(3\cdot10^{12}\). The same 98,800 Abel cells and the same fourth-power tail give \(D(M)/M<23.601\); the 128-bit enclosure is \(23.60081928129162436871084543584925\pm4.33\cdot10^{-33}\). Since the phase and reference estimates of §1 remain valid in the larger range, the new loss is strictly below the positive reference margin. The script shares the exact decimal coefficient tables with the Robin density checker. [Chourasiya–Simonič](https://arxiv.org/abs/2507.15184) · [Extended interval checker](check_li_density_horizon_nov18.py)
