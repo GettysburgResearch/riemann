@@ -52,7 +52,7 @@ For completeness choose $M=\lceil(1+2\eta)n/\eta\rceil$, $h=(1+2\eta)u/M$ and ap
 $$
  |\sum_j z_j^k|\ge e^{-C_\eta n}\max_j|z_j|^k .
 $$
-The discrete form is stated in [Thorner and Zaman, Theorem 5.2](https://arxiv.org/pdf/1604.01750). The underlying bound is a constant times $(n/[4e(M+n)])^n$ and requires no separation or simplicity. Equivalently one can use the continuous power-sum form in Pintz, Acta Arith. 36 (1980), Appendix, Theorem 2, equation (18.9). The target has $\lambda=-d$, so at $\tau=kh$ the full arithmetic integral has magnitude at least $\exp(-(1+3\eta)du-o(F(u)))$. The omitted terms and (4)'s absolute error are negligible. [Pintz, On the remainder term of the prime number formula, I](https://matwbn.icm.edu.pl/ksiazki/aa/aa36/aa3644.pdf)
+The discrete form is stated in [Thorner and Zaman, Theorem 5.2](https://arxiv.org/pdf/1604.01750). The exact factor in the Kolesnik–Straus theorem is $1.007(n/[4e(M+n)])^n$. It allows repeated terms and arbitrary separations. [Thorner and Zaman, Theorem 5.2](https://arxiv.org/pdf/1604.01750) Equivalently one can use the continuous power-sum form in Pintz, Acta Arith. 36 (1980), Appendix, Theorem 2, equation (18.9). The target has $\lambda=-d$, so at $\tau=kh$ the full arithmetic integral has magnitude at least $\exp(-(1+3\eta)du-o(F(u)))$. The omitted terms and (4)'s absolute error are negligible. [Pintz, On the remainder term of the prime number formula, I](https://matwbn.icm.edu.pl/ksiazki/aa/aa36/aa3644.pdf)
 
 ## Two signs on the original arithmetic mean
 
