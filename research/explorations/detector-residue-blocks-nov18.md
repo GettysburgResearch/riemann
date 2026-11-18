@@ -84,3 +84,48 @@ Set \(J_{-1}(T)=\sum_{0<\gamma\le T}|\zeta'(1/2+i\gamma)|^{-2}\). As \(|P|\) is 
 Consequently \(J_{-1}(T)\ll T^4/(\log T)^{3+\eta}\) for some \(\eta>0\) implies the weighted sum for (1), by taking \(X=2^j\) and summing \(O(j^{-1-\eta})\). The exponent \(2+\eta\) on the logarithm already gives the unweighted sum for (2). Any fixed power saving \(J_{-1}(T)\ll T^{4-\delta}\), \(\delta>0\), gives (1). By comparison, the direct dyadic Cauchy–Schwarz bound for the absolute residue sum is \(O(X^{-2}(X\log X)^{1/2}J_{-1}(2X+2)^{1/2})\) per dyadic block and certifies absolute convergence for a power exponent strictly below three. These are sufficient conditions for distinct conclusions. This proof does not claim eventual nonnegativity or the necessity of a reciprocal-derivative bound.
 
 No numerical input enters this conditional result. The imported facts are the zeta functional equation, its Euler product in the absolute-convergence half-plane, the xi Hadamard product, Stirling's estimate, and the classical Riemann–von Mangoldt local counting bound. The unresolved hypotheses are the stated zero location, simplicity and residue control.
+
+## 5. Removing the unit-block loss by the adjacent-zero estimate
+
+The [weak Mertens trace argument](trace-weak-mertens-nov18.md) gives a stronger sufficient condition for this same one-sided arithmetic mass. Continue to assume RH and simplicity. Then
+\[
+ \begin{array}{ll}
+ \displaystyle\sum_\gamma |c_\gamma|^2<\infty
+    &\Longrightarrow\displaystyle \int_0^U w_- =o(\log(2+U)),\\[3pt]
+ \displaystyle\sum_\gamma\log(2+|\gamma|)|c_\gamma|^2<\infty
+    &\Longrightarrow\displaystyle \int_0^\infty w_-<\infty.
+ \end{array}
+ \tag{7}
+\]
+Both conclusions concern the original unsmoothed row. No independence, lower spacing, or bounded critical-line gap multiplicity beyond simplicity is assumed. In the moment tests of Section 4, the two sufficient log exponents on \(T^4/(\log T)^p\) improve to \(p>1\) and \(p>2\), respectively, by dyadic summation of \(T^{-4}J_{-1}(2T)\).
+
+Here are the details for the moving-frequency cutoff needed for finite total mass. Let \(y(u)=w(u)-Au-B\) on \(u\ge0\), zero to the left, and \(D(z)\) its Laplace transform. The reciprocal term in \(D(z)\) is \(P(1/2+z)/(z^2\zeta(1/2+z))\); the remaining rational terms are \((6-A)/z^2-B/z\). The combination is regular at zero. Under RH, Littlewood's Mertens bound and partial summation give \(y(u)\ll_\eta e^{\eta u}\) for every \(\eta>0\). For \(0<\delta\le1/4\) and \(|t|\) outside a fixed neighborhood of zero, the consecutive-ordinate inequality (7) in the trace note and Stirling give
+\[
+ |D(\delta+it)|\ll(1+|t|)^{-1}
+   +(2+|t|)^{\delta/2}
+       \sum_{\gamma\in\operatorname{adj}(t)}
+       \frac{|c_\gamma|}{\sqrt{(t-\gamma)^2+\delta^2}} .
+ \tag{8}
+\]
+Indeed the ratio of the xi prefactors costs \(O((2+|t|)^{\delta/2})\) across an adjacent gap, which is bounded by an absolute constant under RH. The additional ratio of dyadic multipliers is bounded because \(P\) is bounded above and bounded away from zero on the vertical strip in use, and the squared denominators have bounded ratios at high ordinates. Compact portions away from all poles have a uniform bound; on a compact interval containing a critical pole use the same adjacent estimate. In particular \(|t|\le1\) is harmless for the full \(D\).
+
+Take a large dyadic \(R\), \(\delta=1/R,\ H=e^{2R}\), and let \(y_H=k_H*y\) with \(k_H(v)=H e^{-H^2v^2/4}/(2\sqrt\pi)\). Then
+\[
+ \int_0^{2R}|y-y_H|^2\,du=O(1).
+\]
+Away from the endpoint, \(w\) is continuous and its a.e. derivative is \(O(e^{u/2})\) by the primitive sum. Thus a translation by \(|v|\le1\) costs \(O(e^{u/2}|v|)\) plus a bounded endpoint jump when \(u\le|v|\). Larger translations are absorbed by the Gaussian and \(|y(u)|\ll e^u\). This gives the bound by integration, uniformly in \(R\).
+
+The Fourier transform of \(e^{-\delta u}y_H(u)\) equals \(e^{(\delta+it)^2/H^2}D(\delta+it)\). Split its inverse into \(L_R\) and \(T_R\) at \(|t|=R\). Integrating (8) through \(R\), each adjacent Cauchy factor with square-root denominator costs \(O(\log R)\); the gaps to endpoints are uniformly bounded, and \((2+|t|)^{\delta/2}=O(1)\) there. Thus
+\[
+ \|L_R\|_\infty\ll \log(2R)\left(1+\sum_{|\gamma|\le R+C_0}|c_\gamma|\right)
+       \ll \sqrt R(\log(2R))^{3/2}\big(1+\|c\|_2\big)=o(R),
+\]
+by the zero count. For the high part use Plancherel and square (8). Each endpoint occurs on at most two intervals; for \(|t|>R\) it must satisfy \(|\gamma|>R-C_0\). Moreover \(e^{-2t^2/H^2}(2+|t|)^\delta\ll H^\delta=e^2\), and the squared Cauchy factor has integral at most \(\pi/\delta\). These give
+\[
+ \|T_R\|_2^2\ll R^{-1}+R\sum_{|\gamma|>R-C_0}|c_\gamma|^2 .
+\]
+On \(R\le u\le2R\) restoring the exponential weight costs at most \(e^2\). The affine term \(Au+B\) absorbs \(e^{\delta u}L_R(u)\) and still exceeds \(cR>0\) after subtracting its magnitude. The same positive-part square inequality used in (5), now with residual \(y-y_H+e^{\delta u}T_R\), gives
+\[
+ \int_R^{2R} w_-\,du\ll R^{-1}+\sum_{|\gamma|>R-C_0}|c_\gamma|^2 .
+\]
+The right side tends to zero under ordinary square-summability, proving the first part of (7) by summing dyadic blocks. Each ordinate occurs in at most \(O(\log(2+|\gamma|))\) such tails, proving the finite-total conclusion under the weighted condition. These conditional upper bounds still require information on all zeros.

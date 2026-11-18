@@ -105,12 +105,54 @@ Here \(\phi'(s)=k+(1-k)(1+4\eta s)^{-1/2}\) is the transform of a positive measu
 \]
 Its transform is \(e^{-zq_\eta(s)}\) by the same Gaussian integral. Thus the right side is the transform of a positive measure whenever \(g_\epsilon\ge0\). If \(g_\epsilon>0\) for all \(u>0\), the atom already contributes a strictly positive density at every positive time. More explicitly, near each \(U>0\) restrict \(u\) to a small fixed closed subinterval of \((0,U/k)\), where both the inverse Gaussian kernel and \(g_\epsilon\) have uniform positive lower bounds. Uniqueness of Laplace transforms and continuity of \(g_\eta\) give \(g_\eta(U)>0\) for all \(U>0\). Sections 2–3 at \(\epsilon=10^{-6}\) therefore prove the full all-center statement.
 
+## 5. An upper bound for the unsmoothed mass using only local signed curvature
+
+Fix \(\epsilon=10^{-6}\), \(d=0.002\), \(X=e^u\), and write
+\[
+ R_t(y)=\sqrt{t/\pi}\exp[-y^2/(4t)]
+            -\frac{|y|}{2}\operatorname{erfc}\left(\frac{|y|}{2\sqrt t}\right),\qquad
+ D^{\rm loc}(u)=\sum_{X^{1-d}\le n\le X^{1+d}}\frac{q(n)}{\sqrt n}
+                             R_{\epsilon u}(u-\log n).
+\]
+Then **for every \(Y\ge1\)**,
+\[
+ \left|\int_1^Y W(X)_-\,\frac{dX}{X}
+ -\int_0^{\log Y}\big(D^{\rm loc}(u)-Au-B\big)_+\,du\right|<2400 .
+ \tag{4}
+\]
+Thus the only curvature charged is the positive signed excess over the actual affine term. The four Möbius dilates in \(q\) are combined before taking this excess.
+
+Indeed \(R_t(y)=\mathbb E[(y+\sqrt{2t}Z)_+]-y_+\) for a standard normal \(Z\), by direct integration. It is nonnegative by convexity and is at most its first displayed term. Applying this identity to each primitive ramp shows the *full* sum \(D(u)\) equals \(g_\epsilon(u)-w(u)\); Fubini follows by the absolute source bound or directly by Gaussian decay. Since \(w_-=(D-g_\epsilon)_+\), the 1-Lipschitz positive-part operation gives the integrated error budget
+\[
+ \int_0^\infty |g_\epsilon(u)-Au-B|\,du
+ \le \frac{0.37}{196\cdot10^{-6}}+\frac{500}{0.99}+1<2394.
+\]
+Here each of the 1517 conjugate residue pairs has \(|\gamma|>14\) and the remaining terms were bounded on the same contour, valid at every \(u>0\).
+
+For the omitted curvature terms use \(|q(n)|\le24\). Put \(f(x)=x^{-1/2}\exp[-(u-\log x)^2/(4\epsilon u)]\). It increases below \(X^{1-d}\) and decreases above \(X^{1+d}\), since \(d>\epsilon\). On each omitted tail, sum \(f(n)\) by the integral plus one boundary value. Each boundary value is at most \(e^{-1.499u}\). In the upper integral use \(\log x=(1+d)u+y\), \(y\ge0\). Its integrand after change of variable is bounded by
+\[
+ \exp\!\left[\left((1+d)/2-d^2/(4\epsilon)\right)u
+                  -(d/(2\epsilon)-1/2)y\right].
+\]
+The lower tail has \((1-d)/2\) and \(d/(2\epsilon)+1/2\) in the corresponding positions. Thus the two integrals total at most \(0.0021e^{-0.499u}\). Multiplying by \(24\sqrt{\epsilon u/\pi}\) and integrating in \(u>0\) gives less than \(0.1\), using \(\int_0^\infty \sqrt{u}e^{-pu}du=\sqrt\pi/(2p^{3/2})\). This proves (4).
+
+A qualitative version uses \(d=4\cdot10^{-13}\) and \(\epsilon=5.56\cdot10^{-26}\) instead. Then \(d^2/(4\epsilon)>(1+d)/2\) and \(d>\epsilon\), so the same discarded curvature is integrable. Section 1 and the published height give \(\int_0^\infty|g_\epsilon-Au-B|\,du<\infty\). The resulting two integrals differ by \(O(1)\) uniformly in \(Y\); this smaller-width version has no stated numerical additive constant.
+
+Proving a subpower upper bound for the second integral of (4), even on an unbounded subsequence of horizons, would exclude every off-line zero by the [positive-isolation theorem](detector-positive-isolation-nov18.md). A fixed power saving \(N_W(Y)\ll Y^{1/2-\delta}\) would already exclude every zeta zero with \(\Re\rho>1-\delta\). The classical Vinogradov–Korobov Mertens bound does give the actual unconditional upper bound
+\[
+ N_W(Y)\ll \sqrt Y\,\exp\left[-c(\log Y)^{3/5}(\log\log Y)^{-1/5}\right]
+ \qquad(Y\ge e^e)
+\]
+for some \(c>0\), by partial summation in the fixed Möbius dilates and logarithmic integration with a smaller \(c\). Equation (4) transfers this known estimate to the localized positive excess with the same form. The missing arithmetic improvement concerns that excess.
+
+The [backward-heat analysis](detector-backward-heat-nov18.md) evaluates the native primitive diagonal, isolates the necessary large reduced ratios, and gives a squarefree counterexample to scale inversion without odd-prime multiplicativity.
+
 ## Verification scope
 
 Run the finite checker at the repository root with python-flint 0.9.0.
 
     python research/explorations/check_detector_diffusion_nov18.py
 
-The 96-bit ball computation returns total signed-ordinate absolute residue sum \(0.366816599536684361093675\) with printed radius \(5.57\cdot10^{-25}\). Coverage uses FLINT's consecutive indexed zero routine from index one through a certified height above 2000. Finite arithmetic and analytic continuation rely on Arb/FLINT; this is a single implementation. Checker SHA-256 is 547621376936ae4cc670ca96928519ad3f36733d9bf07b6006c06bdb68c2163c.
+The 96-bit ball computation returns total signed-ordinate absolute residue sum \(0.366816599536684361093675\) with printed radius \(5.57\cdot10^{-25}\). Coverage uses FLINT's consecutive indexed zero routine from index one through a certified height above 2000. Finite arithmetic and analytic continuation rely on Arb/FLINT; this is a single implementation. Checker SHA-256 is 992b00f9460823ce1153dd85f27cf32c323a299c38420d465c1d5f0baaf3d660.
 
 The proof supplies global positivity for the stated averages. As the variance is proportional to \(U\), it does not yield an upper bound for the negative mass of the unsmoothed source or exclude an off-line zero above the verified census.

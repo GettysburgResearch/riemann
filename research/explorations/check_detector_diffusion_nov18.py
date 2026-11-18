@@ -39,9 +39,37 @@ def verify_arithmetic_prefix():
     assert arb(15) / arb(2).sqrt() > 10
 
 
+def verify_truncated_odd_baseline():
+    cutoff = 3000
+    mu = mobius_table(cutoff)
+
+    def odd_coefficient(n):
+        return mu[n] if n % 2 and n <= cutoff else 0
+
+    def coefficient(n):
+        if n % 2:
+            return odd_coefficient(n)
+        return -odd_coefficient(n // 2)
+
+    slope = arb(0)
+    value = arb(0)
+    for n in range(1, 8 * cutoff + 1):
+        q = 6 * (n == 1) - 6 * coefficient(n)
+        if n % 2 == 0:
+            q += 9 * coefficient(n // 2)
+        if n % 4 == 0:
+            q -= 3 * coefficient(n // 4)
+        slope += q / arb(n).sqrt()
+        value += slope * (arb(n + 1) / n).log()
+        if n >= 2:
+            assert value > 6 * (arb(n + 1) / 2).log()
+    assert slope > 6
+
+
 def main():
     ctx.prec = 96
     verify_arithmetic_prefix()
+    verify_truncated_odd_baseline()
     half = arb(1) / 2
     log_two = arb(2).log()
 
@@ -57,7 +85,7 @@ def main():
     residue_loss = arb(0)
     count = 0
     zeros = acb.zeta_zeros(1, 1600)
-    assert zeros[-1].imag > height
+    assert zeros[0].imag > 14 and zeros[-1].imag > height
     for rho in zeros:
         if rho.imag > height:
             break

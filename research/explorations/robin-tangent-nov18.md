@@ -42,21 +42,33 @@ $$
 $$
 Here $\int_z^\infty dt/(t^2\log t)\le 1/(100q\log q)$ accounts for the finite right endpoint. The right side is increasing in $v$ with $\eta$ fixed. Only the prime-counting estimate between $\sqrt{2v}$ and $100\sqrt{2v}$ enters this step.
 
-For example, with $10^{22}\le v\le10^{40}$, Büthe's verified-height theorem covers $[q,z]$ and gives $\eta=0.0001$. Equation (2) then exceeds $2.72$. In the same range split prime powers at $Y=10^{48}$ as before. Since $\sqrt{10^{22}}=10^{11}$, Büthe gives $\vartheta(\sqrt t)/\sqrt t\le1.0001$ for $v\le t\le Y$; the elementary cubic and higher-power terms give
+For example, set $B=9\cdot10^{21}$. With $B\le v\le10^{40}$, Büthe's verified-height theorem covers $[q,z]$ and gives $\eta=0.0001$. Equation (2) then exceeds $2.72$. In the same range split prime powers at $Y=10^{48}$ as before. Since $\sqrt B>9\cdot10^{10}$, Büthe gives $\vartheta(\sqrt t)/\sqrt t\le1.0001$ for $v\le t\le Y$; the elementary cubic and higher-power terms give
 $$
 \frac{\psi(t)-\vartheta(t)}{\sqrt t}
-\le1.0001+2(10^{22})^{-1/6}
- +2\frac{\log(10^{22})}{\log 2}(10^{22})^{-1/4}<1.002 .
+\le1.0001+2B^{-1/6}
+ +2\frac{\log B}{\log 2}B^{-1/4}<1.002 .
 $$
-For $t>Y$ use $3\sqrt t$ as in the preceding note. Equations (2)–(4) of that note now give, on $10^{22}\le v\le U\le10^{40}$,
+For $t>Y$ use $3\sqrt t$ as in the preceding note. Equations (2)–(4) of that note now give, on $B\le v\le U\le10^{40}$,
 $$
 -\sqrt v\log v\,K(v)\le
-\left(1+\frac1{\log(10^{22})}\right)
-\left[0.047+\mathcal T(U)+\frac{\log(2\pi)}{10^{11}}+2(1.002+3\sqrt{U/Y})\right],
+\left(1+\frac1{\log B}\right)
+\left[0.047+\mathcal T(U)+\frac{\log(2\pi)}{\sqrt B}+2(1.002+3\sqrt{U/Y})\right],
 \tag{3}
 $$
 where
 $$
 \mathcal T(U)=\sum_{|\Im\rho|>3\cdot10^{12}}\frac{U^{(\Re\rho-1/2)_+}}{(\Im\rho)^2}.
 $$
-This is an explicit remaining scalar requirement for extending the horizon. For $v=y$, a bound $\mathcal T(U)<0.60$ already suffices in (3) for all $10^{22}\le y\le U$. The earlier finite note applies through $y=0.99\cdot10^{22}$; its full-support argument also covers $0.99\cdot10^{22}\le y\le10^{22}$ by applying the tangent at $v=y$, with (2) and (3) evaluated at the slightly lower left endpoint. Quantitative endpoint checks appear in the accompanying density/range argument.
+This is an explicit remaining scalar requirement for extending the horizon. For $v=y$, a bound $\mathcal T(U)<0.60$ already suffices in (3) for all $B\le y\le U$. Since $B<0.99\cdot10^{22}$, these ranges overlap the preceding finite theorem.
+
+### Explicit zero density and the pointwise horizon
+
+**Finite consequence.** Robin's strict inequality holds for every integer $5040<n\le\exp(10^{38})$.
+
+Write $H=3\cdot10^{12}$ and $S(\sigma)=\sum_{|\Im\rho|>H,\Re\rho>\sigma}|\Im\rho|^{-2}$. Then $\mathcal T(U)$ equals the full reciprocal-square mass plus $\int_{1/2}^1 S(\sigma)d(U^{\sigma-1/2})$ by integration of each positive summand. The full mass is below $3.1\cdot10^{-12}$ and $S(\sigma)$ is at most half of this for $\sigma\ge1/2$ by reflection across the critical line. For a positive-height zero-density bound $N(\sigma,t)\le\sum c\,t^b(\log t)^k$, partial summation bounds $S(\sigma)$ by $4\int_H^\infty N(\sigma,t)t^{-3}dt$. Each monomial consequently contributes at most
+$$
+\frac{4cH^{b-2}(\log H)^k}{2-b-k/\log H},
+$$
+provided the denominator is positive: use $(\log t/\log H)^k\le(t/H)^{k/\log H}$.
+
+The [density checker](check_robin_density_nov18.py) uses the two explicit density estimates of Chourasiya and Simonič on a mesh of $1/6400$ in $\sigma$. On each cell $S$ is decreasing, so its left endpoint bound times the exact increment of $U^{\sigma-1/2}$ is an upper bound. It follows that $\mathcal T(10^{38})<0.554$. The [tangent checker](check_robin_tangent_nov18.py) verifies the remaining monotone endpoint constants in (2) and (3) with Arb. This proves the consequence, with the low range covered by the preceding finite theorem. [Density inputs: Corollary 1 and equation (119), Tables 1 and 4](https://arxiv.org/abs/2507.15184)
