@@ -39,3 +39,5 @@ At X=1 the digamma difference evaluates to log 2 for even characters and 1−log
 | −2287 | −1.252 |
 
 Each therefore fails eventual negativity under GRH. These six witnesses use only ordinary convergent series for individual characters. They establish no assertion about the proportion of discriminants.
+
+The [classification and exhaustive small-conductor norm bounds](zhao-bias-classification-nov18.md) use this formula together with rigorous arithmetic sign witnesses. The [unconditional dichotomy](zhao-bias-unconditional-nov18.md) removes GRH in the individual exclusions with verified nonvanishing on the positive real segment.

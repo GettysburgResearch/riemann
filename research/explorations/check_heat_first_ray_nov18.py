@@ -34,14 +34,26 @@ def main():
     ceiling = arb(321)/1000
     if not (PI*(4*ceiling).cos() > arb(4)/5 and ERROR < arb("1e-84")):
         raise ArithmeticError("Tail bound invalid")
+    # Uniform bound for Phi on the larger horizontal substrip, used for a
+    # separate finite heat-time certificate via Cauchy and Gaussian moments.
+    b = arb(10)**16
+    radius = arb(1)/100
+    M = arb(10)**6
+    ratio = (-arb(6)/5).exp()
+    sum_four = 98 + ratio*(1+11*ratio+11*ratio**2+ratio**3)/(1-ratio)**5
+    if not (PI*(4*arb("0.34")).cos() > arb(3)/5 and 1000*(-arb(3)).exp() < 50
+            and 50*(2*PI**2+3*PI)*sum_four < M):
+        raise ArithmeticError("Uniform substrip bound failed")
+    value_perturbation = M/(2*b*radius**2)
+    slope_perturbation = 3*M/(2*b*radius**3)
     # Lower bound on each entire interval: no endpoint-only sampling.
     for j in range(3170):
         interval = (arb(j)/10000).union(arb(j+1)/10000)
-        if not kernel(interval) > 0:
+        if not kernel(interval) > value_perturbation:
             raise ArithmeticError(f"Positivity fails at interval {j}")
     for j in range(3170, 3210):
         interval = (arb(j)/10000).union(arb(j+1)/10000)
-        if not kernel(interval, 1) < 0:
+        if not kernel(interval, 1) < -slope_perturbation:
             raise ArithmeticError(f"Derivative test fails at interval {j}")
     if not kernel(ceiling) < 0:
         raise ArithmeticError("No negative endpoint")
@@ -67,6 +79,19 @@ def main():
         raise ArithmeticError("Modular cusp dominance failed")
     root = lo.union(hi)
     additive = kernel(root, 2)/(2*kernel(root, 1))
+    # Check signs at the endpoints of an actual heat-zero enclosure.
+    finite_error = 3*M/(4*b**2*radius**4)
+    center = 2*b*root+additive
+    tolerance = arb(1)/1000
+    for sign in (-1, 1):
+        ordinate = center+sign*tolerance
+        y = ordinate/(2*b)
+        if not arb(317)/1000 < y < ceiling:
+            raise ArithmeticError("Finite test leaves the monotonicity interval")
+        approximation = kernel(y)-kernel(y, 2)/(4*b)
+        if not -sign*approximation > finite_error:
+            raise ArithmeticError("Finite heat-zero sign unresolved")
+    print("first positive heat zero at t=-10^16", center+arb(0,tolerance.upper()))
     print("first positive kernel root", root)
     print("limiting first-zero speed", 2*root)
     print("additive displacement", additive)

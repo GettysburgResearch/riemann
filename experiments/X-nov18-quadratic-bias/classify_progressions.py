@@ -1,7 +1,7 @@
 """Classify eventual negative integrated bias in progressions under GRH + LI."""
 import csv
 from functools import lru_cache
-from math import gcd, prod
+from math import gcd
 from pathlib import Path
 from flint import acb, arb, arb_series, ctx, dirichlet_char
 from census import factor_distinct

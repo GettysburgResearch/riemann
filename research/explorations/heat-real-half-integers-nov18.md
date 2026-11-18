@@ -64,3 +64,39 @@ For fixed \(k\), \(\beta v+A_k/v\) has its unique stationary point at \(v_k=\sqr
 The remainder is \(o_k(L^{-1/2})\) uniformly for \(\beta\) in a compact positive interval. To justify summing this asymptotic, use the second-derivative van der Corput bound separately on consecutive unit intervals in \(v\). On \([m,m+1]\) it bounds the modulus multiplied by \(\sqrt L\) by \(O((m+1)^{3/2}/\sqrt{A_k})\) times the supremum plus the integrated absolute first derivative of the amplitude. For \(m=0\) take the limit from a positive endpoint. After summing over \(m\) these bounds are \(O((1+k)^{C} e^{-c_4 k})\): each arising power of \(v,1/v,A_k\) is absorbed using parts of \(e^{-v^2-A_k/v^2}\), and the remaining exponential gives decay in both \(m\) and \(k\). This also holds with the extra amplitude factor \(v\). Thus the integrated series has the sum of the stated main terms with uniform \(o(L^{-1/2})\) remainder.
 
 Finally \(2L\sqrt{A_k\beta}=(2k+1)\pi N\). Restoring the factors, including \(L^{9/2-1}\) from the cusp and the Jacobian, gives the first equation of (1). For the second, differentiate the normalized integral with \(b\) fixed. The phase supplies \(4i\sqrt{\pi\beta}\,v\), and derivatives of the smooth exterior factors cost \(O(1/L)\) on the compact range. At the stationary point this multiplier equals \(i(2k+1)\pi\). The preceding weighted error bounds therefore give the differentiated equation. This establishes the sign and count statements for the physical heat function.
+
+## The bounded shift in the physical zero ordinate
+
+The first stationary-phase correction sharpens the location to absolute \(o(1)\) after an explicit bounded shift. For \(L=\sqrt b\) put
+\[
+ p_1=\tfrac52\sqrt A\,\beta^{-3/2},\qquad
+ p_3=A^{3/2}(\tfrac43\beta^{-1/2}+\beta^{-5/2}),\qquad
+ B(\beta)=\frac{p_1}{\pi}-\frac{p_3}{\pi^3}
+            \frac{\partial_N^3 T(\beta,1/2)}{\partial_N T(\beta,1/2)} .
+\]
+For \(n_*=k+1/2\) and \(\beta_*=4\pi n_*^2/b\) in any compact positive interval, the corresponding physical zero has
+\[
+ x=\frac{\pi b}{4}+4\pi n_*^2-4\sqrt{\pi\beta_*}\,B(\beta_*)+o(1)
+\]
+uniformly. Thus even though adjacent physical ordinates separate at scale \(\sqrt b\), the first deviation from the half-integer prescription is bounded.
+
+Here are details of the higher-order expansion. In the middle range of (2) use \(\delta=1/100\) and expand one order further. Besides the leading amplitude one obtains the multiplier \(iR_k(v)/L\), where
+\[
+ R_k(v)=\frac{9}{2v}+v(2+4A_k/3-3/A_k)-\frac{A_k}{v^3}.
+\]
+The four inputs are \(z^{-9/2}\), the term \(-12P_kY/(P_k^2D)\), the linear correction \(Y-1/(4z)=-z/3+O(z^3)\), and expansion of \(1/z\) and the external Fourier phase. The factor \(e^{1/b}\) has no linear correction in \(1/L\). The relative algebraic and exponential remainders on the same middle box are \(O(L^{-2+10\delta})\): the largest first-order exponent is \(O(A_k/(Lv^3))\), and its square is covered. The small, large, and high-mode tails still decrease faster than any power. This gives an absolute pre-stationary error \(o(L^{-3/2})\).
+
+For \(D_k(v)=v^{-9/2}\exp(-v^2-A_k/v^2)\), write \(l'=D_k'/D_k\). At \(v=v_k\) the first correction to the complex leading stationary term is \(i Q_k/L\), with
+\[
+ Q_k=R_k(v)+\frac{v^3}{4A_k}\big[(l')^2+l''\big]
+       +\frac{3v^2}{4A_k}l'+\frac{3v}{16A_k}
+ =\frac43 A_k v+\frac{v^5}{A_k}+\frac{5v^3}{2A_k}.
+\]
+The first expression follows from the one-dimensional stationary-phase expansion using \(\phi''=2A_k/v^3\), \(\phi'''=-6A_k/v^4\), \(\phi''''=24A_k/v^5\); direct substitution of \(l'=-9/(2v)-2v+2A_k/v^3\) gives the second. To sum the higher-order remainder uniformly, rescale \(v=v_k u\). The phase becomes \(L\sqrt{A_k\beta}(u+1/u)\), with the stationary point always at one. On a fixed compact neighborhood of one, every fixed-order derivative of the amplitude is bounded by \((1+k)^C e^{-c_1 k}\) after including the rescaling factor, also for the correction amplitude. Standard stationary phase with two terms gives the same summable prefactor times \(O(L^{-5/2})\). Off this neighborhood integration by parts twice gives that prefactor times \(O(L^{-2})\). Indeed the differentiated amplitudes consist of powers of \(u,1/u,A_k\) times \(e^{-(A_k/\beta)u^2-\beta/u^2}\), whose integrated magnitudes have this bound; the derivatives of the reciprocal phase derivative have only polynomial growth there. This justifies a uniform normalized remainder \(o(1/L)\).
+
+Writing \(r=2k+1\) gives \(Q_k=p_1 r+p_3r^3\). The full result is therefore
+\[
+ W_b=T+L^{-1}\left[(p_1/\pi)\partial_N T
+                  -(p_3/\pi^3)\partial_N^3 T\right]+o(L^{-1}).
+\]
+At the half integer the leading term vanishes. The derivative bound (1) and the mean value theorem put the crossing at \(N=n_*-B(\beta_*)/L+o(1/L)\). Antiperiodicity permits the derivative ratio to be evaluated at \(1/2\) for all \(k\). Substituting \(x=\pi b/4+4\pi N^2\) proves the formula.

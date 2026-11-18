@@ -40,3 +40,13 @@ Write \(D_K(s)\) for the logarithmic derivative of the entire completed function
 * At any single \(s>1\), discard all prime-ideal terms over \(p>P\) in \(\zeta'_K/\zeta_K(s)\) when evaluating \(D_K(s)\). All discarded terms are nonpositive. If the resulting upper bound times \(s-1/2\) is less than 2, it excludes every real zero in \((1/2,1)\). The [interval checker](../../scripts/check_zhao_real_zero_exclusion_nov18.py) implements this test from a field polynomial with the exact ramified Euler factors included. This version allows a central zero and suffices for the Landau argument.
 
 Either certificate, together with a strict passing spectral result when GRH holds for the field, proves the individual equivalence.
+
+## A joint arithmetic sign test
+
+Let \(K_1,\ldots,K_m\) be any finite collection with no real zero in \((1/2,1)\). For positive constants \(w_j\), assume that under the individual Riemann hypotheses their spectral bounds give \(\sum w_j B_{K_j}<2\sum w_j\). Then
+\[
+ \sum_j w_j J_{K_j}(X)>0\text{ eventually}
+ \quad\Longleftrightarrow\quad
+ \text{RH holds for every }\zeta_{K_j}.
+\]
+The forward direction uses the preceding Mellin calculation applied to the positive weighted sum. A zero common to several fields has residue equal to a positive weighted sum of multiplicities in the differentiated prime transform, so it cannot cancel. Any off-line zero forces excursions of both signs by the same Landau argument. The other direction follows by adding the critical-line profiles and using the strict summed margin. In particular any positive weighted combination over the fields passing the unconditional completed-derivative test is an individual sign criterion for all their Riemann hypotheses simultaneously. This gives one prime-ideal statistic for the conjunction of these hypotheses. Its eventual sign remains to be proved arithmetically.

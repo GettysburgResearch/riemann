@@ -1,5 +1,4 @@
 """A uniform conductor cutoff for the single low-zero coefficient test."""
-from math import isqrt
 from flint import arb, ctx
 
 

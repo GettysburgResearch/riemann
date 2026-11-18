@@ -1,7 +1,6 @@
 """Sharpen the remaining individual tests using periodic summation and Arb."""
 import argparse
 import csv
-import io
 import lzma
 from decimal import Decimal, localcontext
 from functools import lru_cache

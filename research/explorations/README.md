@@ -1,5 +1,7 @@
 # Research checkpoint, 18 November 2026
 
+[Summary of the three published questions and the 2,580-field census](zhao-results-nov18.md)
+
 These are proposed results for review on the branch based on main `f99d9e3`. RH remains open. The references below identify the assumptions that would still be needed for a resolution. Computations use outward interval arithmetic where the individual notes specify Arb. Published zero censuses, prime bounds and previous Robin verification are imported.
 
 | Question | Current argument and evidence | Remaining burden |
@@ -28,7 +30,7 @@ The [abundance-distribution theorem](abundance-curvature-nov18.md) gives a propo
 
 **A specific published open question.** The [third Mertens mean proof](zhao-third-mertens-nov18.md) removes the regularity assumption in Zhao (2025), §8(1), when zeros approach the line of real part one. A [direct oscillation proof](zhao-native-oscillation-nov18.md) supplies the needed excursions without appealing to Zhao's sketched lower lemma. This proposed answer concerns a criterion equivalent to RH.
 
-For Zhao's §8(2), the [reflected prime-tail formula](zhao-bias-kernel-nov18.md) gives six individual exclusions under GRH. A [family argument](zhao-bias-density-nov18.md) shows that both signs recur for a relative density one of quadratic discriminants under GRH, without an assumption of linear independence. An [independent conductor-aspect proof](zhao-quadratic-conductor-clt-nov18.md) gives a joint Gaussian limit at growing scales.
+For Zhao's §8(2), the [reflected prime-tail formula](zhao-bias-kernel-nov18.md) gives an individual exclusion test under GRH. A [family argument](zhao-bias-density-nov18.md) shows that both signs recur for a relative density one of quadratic discriminants under GRH, without an assumption of linear independence. An [independent conductor-aspect proof](zhao-quadratic-conductor-clt-nov18.md) gives a joint Gaussian limit at growing scales.
 
 The [individual quadratic classification](zhao-bias-classification-nov18.md) gives exactly nineteen discriminants with eventual negative integrated prime bias under GRH, central nonvanishing, and independent positive ordinates. The nineteen suffice under GRH alone. The [unconditional sign argument](zhao-bias-unconditional-nov18.md) gives a positive lower density in a specified negative progression and corrects a proposed containment in Zhao's concluding remarks. The [finite discriminant census](../../experiments/X-nov18-quadratic-bias/README.md) supplies individual unconditional sign changes. The [sparse abundance test](abundance-sparse-moments-nov18.md) gives a proposed RH equivalence using finite rational moments at orders indexed by a cubic logarithmic grid.
 

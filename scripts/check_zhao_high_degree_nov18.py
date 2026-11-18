@@ -102,10 +102,26 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("catalog", type=Path)
     parser.add_argument("output", type=Path)
+    parser.add_argument("--degree",type=int,choices=(6,7,8),
+                        help="Select the admissible rows from an extracted LMFDB directory")
     parser.add_argument("--limits", default="16,64,256,1024,4096,16384")
     args = parser.parse_args()
     ctx.prec = 96
-    entries = json.loads(args.catalog.read_text())
+    if args.degree is None:
+        entries = json.loads(args.catalog.read_text())
+    else:
+        from check_zhao_field_cuts_nov18 import PARAMS, cap
+        n = args.degree
+        choices = {6:range(4), 7:(2,3), 8:(4,)}
+        entries = []
+        for r2 in choices[n]:
+            source = args.catalog / f"n{n}-r{r2}.json"
+            bound = cap(n,r2,*PARAMS[n][r2])
+            for item in json.loads(source.read_text()):
+                degree, r1, d, _ = map(int,item["label"].split("."))
+                assert degree==n and r1==n-2*r2
+                if d<=bound:
+                    entries.append(item)
     assert len({row["label"] for row in entries}) == len(entries)
     result = classify(entries, [int(x) for x in args.limits.split(",")])
     args.output.write_text(json.dumps(result, indent=2)+"\n")

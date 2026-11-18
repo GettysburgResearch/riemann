@@ -56,3 +56,21 @@ Remove from \(I\) intervals of radius \(1/(4(m+1))\) about each \(r_j\). At leas
  \tfrac12[4(m+1)]^{-m} e^{-(h^2+o(1))\sqrt b}.
 \]
 Choose \(h^2<\tfrac14\min(A/3,\epsilon/2)\). This lower bound exceeds the sum of the full signed moment bound (5) and both tail bounds whenever \(m\le c_\epsilon\sqrt b/\log b\) for a sufficiently small positive \(c_\epsilon\). Indeed \(m\log(C'_\epsilon b)+m\log(4(m+1))\le (3/2+o(1))c_\epsilon\sqrt b\). The contradiction proves the stated count on \([0,X]\). For a strict upper endpoint use \(\epsilon/2\) in that argument. The interior-ray theorem removes at most one positive zero below \((2c-\epsilon)b\). Letting \(\epsilon\downarrow0\) gives the individual limits from both sides.
+
+## High ordinates at a fixed nonpositive time
+
+There is also a count when the heat time is held fixed. For each \(b\ge0\), let \(N_b(T)\) count distinct positive sign-changing zeros of \(H_{-b}\) up to \(T\). Then
+\[
+ \int_1^T N_b(u)\frac{du}{u}\gg_b\sqrt T,\qquad
+ N_b(T)\gg_b\frac{\sqrt T}{\log T},\qquad
+ \limsup_{T\to\infty}\frac{N_b(T)}{\sqrt T}>0 .
+\]
+This is a quantitative application of the classical Hardy argument based on flatness of the theta kernel at its cusp. At \(b=0\) substantially stronger counts are known.
+
+Indeed take \(d=T^{-1/2}\), \(y=c-d\), and let \(m=N_b(T)\). Since \(H_{-b}(0)>0\), there are no roots on a fixed interval \([0,2r]\), where \(r>0\) may depend on \(b\). Form the even polynomial \(P(x)=\prod_{j\le m}(x_j^2-x^2)\), with each \(x_j\) a different sign-changing root in \((0,T]\). On \([-T,T]\), \(H_{-b}P\) keeps one sign. Its weighted integral against \(e^{yx}\) there has absolute value at least \(c_b(3/4)^m\prod_j x_j^2\), from integrating on \([0,r]\) (take \(r\) smaller if necessary for a strict uniform lower bound).
+
+Suppose first \(m\le\sqrt T/8\). On \(|z|\le d/4\) the transform \(\int H_{-b}(x)e^{(y+z)x}dx=\pi e^{b(y+z)^2}F(y+z)\) is \(O_b(T^{O(1)}e^{-(A/3)\sqrt T})\). For \(k\le2m\), the Cauchy factor is \(k!(4\sqrt T)^k\le T^k\). Thus the absolute full weighted polynomial moment is at most \(O_b(T^{O(1)}e^{-(A/3)\sqrt T})\prod_j (x_j^2+T^2)\). The tails \(|x|\ge T\) have absolute integral \(\ll_b T^{O(1)}T^{2m}e^{-\sqrt T/2}\). To see this on the positive tail use the contour at \(c-d/2\), (2) with its additional factor \(e^{-|w|}\) from the defining series, and \(x^{2m}\le T^{2m} e^{2m(x-T)/T}\). The factor from the fixed Gaussian costs only a constant depending on \(b\). Evenness gives a smaller bound on the negative tail. Because \(x_j\le T\), the full and tail estimates combined with the single-sign integral imply
+\[
+ 2\sum_{x_j\le T}\log(T/x_j)+O(m)\ \ge\ (A/3)\sqrt T-O_b(\log T).
+\]
+If instead \(m>\sqrt T/8\), then \(\sum_{x_j\le2T}\log(2T/x_j)\ge m\log2\). In both cases the same sum through \(2T\) is \(\gg_b\sqrt T\) (in the first case it absorbs the \(O(m)\) by a constant factor). Partial summation gives the integrated count. The pointwise lower bound follows by monotonicity and the positive first-zero lower bound. If the displayed limsup were zero, integrating \(N_b(u)=o(\sqrt u)\) against \(du/u\) would contradict the integral estimate.

@@ -15,7 +15,7 @@ The finite-support field bound with \(P=4\) and the completely split upper bound
 | 4,096 | 36 | 21 | 103 |
 | 16,384 | 19 | 29 | 55 |
 
-For the remaining 55 fields, 31 pass and 24 fail by the independent theta formula below. The checker aborts on any overlapping threshold interval. The finite-support comparison uses [the general field-weight checker](../../scripts/check_zhao_field_weight_nov18.py).
+For the remaining 55 fields, 31 pass and 24 fail by the independent theta formula below. A separate [full Dedekind contour](../../scripts/check_zhao_dedekind_contour_nov18.py) reproduced overlapping enclosures and the same strict side for every one of those 55 fields. The checker aborts on any overlapping threshold interval. The finite-support comparison uses [the general field-weight checker](../../scripts/check_zhao_field_weight_nov18.py).
 
 ## A degree-two theta certificate
 
@@ -45,3 +45,7 @@ Run from the repository root with python-flint and PARI/GP available:
 python scripts/check_zhao_cubic_fields_nov18.py --output cubic-replay.json
 ```
 The optional environment variable \(\mathtt{PARI\_GP}\) selects the executable.
+
+## An unconditional check at one
+
+The same 367 cubic fields, and no others, satisfy \(2\Xi'_K(1)/\Xi_K(1)<2\) without GRH. The completed entire function here includes the pole-cancelling factor \(s(s-1)\). A separate Euler derivative sieve on all 13,818 non-Galois candidates leaves 928 for a full Dedekind contour. It tests those fields and all 50 cyclic candidates directly. Exactly 360 non-Galois fields pass, identically matching the polynomial inventory above. The seven cyclic passing discriminants are 49, 81, 169, 361, 961, 1849 and 3969. In particular each passing field is unconditionally free of nontrivial real zeros. [Unconditional method and replay](zhao-low-degree-unconditional-nov18.md)

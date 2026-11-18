@@ -1,6 +1,7 @@
 """Enumerate and certify nonabelian quartic Zhao spectral weights."""
 import argparse
 import json
+from math import isqrt
 from functools import cache, lru_cache
 from pathlib import Path
 from flint import arb, ctx, fmpz_poly, nmod_poly
@@ -12,7 +13,7 @@ GROUPS=("D4","A4","S4")
 
 
 def polynomial(c):
-    return '+'.join(f'({a})*x^{4-i}' for i,a in enumerate(c))
+    return '+'.join(f'({a})*x^{len(c)-1-i}' for i,a in enumerate(c))
 
 
 def list_fields(group,r):
@@ -35,7 +36,7 @@ def modular_code(p,c):
     return sum(10**(factor.degree()-1) for factor,_ in factors)
 
 
-def local_rows(rows,limit):
+def local_rows(rows,limit,allow_unknown=False):
     pp=primes_through(limit)
     for start in range(0,len(rows),256):
         chunk=rows[start:start+256]
@@ -43,13 +44,15 @@ def local_rows(rows,limit):
         fallback=[]
         for idx,(_,d,c) in enumerate(chunk):
             index_sq,rem=divmod(int(fmpz_poly(list(reversed(c))).discriminant()),d)
-            if rem or index_sq<1:
+            if rem or index_sq<1 or isqrt(index_sq)**2!=index_sq:
                 raise ArithmeticError("Inconsistent quartic discriminant")
             row=[]
             missing=[]
             for j,p in enumerate(pp):
                 if index_sq%p:
                     row.append(modular_code(p,tuple(a%p for a in c)))
+                elif allow_unknown:
+                    row.append(0)
                 else:
                     row.append(None)
                     missing.append(j)
