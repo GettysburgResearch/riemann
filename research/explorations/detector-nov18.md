@@ -76,6 +76,32 @@ No rightmost-zero, simplicity, or separation assumption is needed. To prove it, 
 Indeed \(\int_0^T v_-\le(K+\eta)e^{aT}T^{m-1}\) eventually for each \(\eta>0\). The transform at \(a+\delta+i\gamma\) has modulus bounded by
 \(\mathcal L v(a+\delta)+2\mathcal L v_-(a+\delta)\). Its modulus times \(\delta^m\) tends to \(|C_m|\), while \(\mathcal L v(a+\delta)\) stays bounded. This proves (2).
 
+### A strictly larger coefficient from classical zero density
+
+For any particular off-line zero in (2), one can strengthen the displayed constant using only one additional regular frequency. Let \(k\ge3\) be an odd integer for which \(\zeta(1/2+a+ik\gamma)\ne0\). Such a \(k\) exists by the classical Bohr–Landau zero-density theorem \(N(\beta,T)=o(T)\) for fixed \(\beta>1/2\); otherwise the odd multiples of \(|\gamma|\) give a set of zeros on \(\Re s=1/2+a\) with positive linear density. Equivalently use the theorem at any fixed \(\beta\) strictly between \(1/2\) and \(1/2+a\).
+
+Then the right side of (2) may be multiplied by \(k^2/(k^2-1)>1\). Indeed the polynomial
+\[
+ p_k(t)=\frac{\cos t-k^{-2}\cos(kt)}{1-k^{-2}}
+\]
+satisfies \(|p_k|\le1\). The upper bound follows from \(1-\cos kt\le k^2(1-\cos t)\), and the lower bound follows by translating by \(\pi\) since \(k\) is odd. Use \(h=(1+p_k(\gamma u+\phi))/2\) and \(v_-\ge-hv\) as in (1), now multiplying the transform by \(\delta^m\) at \(a+\delta\). The constant and both \(k\)-th harmonics have zero limit, while the fundamental has contribution of magnitude \(|C_m|/[2(1-k^{-2})]\) after optimizing the phase. Comparison with the upper bound \(a(m-1)!K\) proves the claim. This refinement uses no arithmetic independence assumption on zero ordinates and no infinite harmonic expansion.
+
+## Multiplicity restrictions on stronger one-sided bounds
+
+Two quantitative distinctions matter when choosing an arithmetic target. Suppose first that
+\(\int_0^T w_-\,du=o(T^2)\); eventual nonnegativity is a special case. This premise implies RH by the fixed detector criterion. It also forces every critical-line zero to have multiplicity at most two. Indeed, absolute Laplace convergence on \(\Re s>0\) follows as in Step 1, and partial integration gives \(\sigma^2\mathcal L w_-(\sigma)\to0\). The pointwise majorization by total variation yields
+\[
+ |\mathcal L w(\sigma+it)|\le\mathcal Lw(\sigma)+2\mathcal Lw_-(\sigma)
+       =(A+o(1))\sigma^{-2}.
+\]
+A pole of order \(m>2\) is impossible. A double zero at \(1/2+i\gamma\) must obey the explicit restriction
+\[
+ \frac{2|P(1/2+i\gamma)|}{\gamma^2|\zeta''(1/2+i\gamma)|}\le A.
+\]
+More generally define \(b(t)=\lim_{\sigma\downarrow0}\sigma^2\mathcal Lw(\sigma+it)\). Then \(b(0)=A\), \(b(\gamma)\) equals the quadratic Laurent coefficient at each double zero, and \(b(t)=0\) otherwise. For every finite list of real frequencies \(t_j\), the matrix \([b(t_j-t_k)]_{j,k}\) is positive semidefinite. Its quadratic forms are limits of nonnegative squares integrated against \(\sigma^2e^{-\sigma u}w_+(u)\,du\), since the omitted negative measure has mass \(o(1)\). This includes simultaneous restrictions on candidate double-zero residues with all difference frequencies present.
+
+Second, the putative bound \(\int_0^T e_-\,du=O(T)\) for the *centered* source forces RH and **simplicity of every nontrivial zeta zero**. Under this bound Step 1 gives absolute convergence on \(\Re s>0\), excluding off-line poles there. Moreover \(\mathcal L e_-(\sigma)=O(\sigma^{-1})\) and \(D(\sigma)=O(1)\). Thus \(|D(\sigma+it)|=O(\sigma^{-1})\), uniformly in real \(t\). The numerator survives at every critical-line zero. Such a zero cannot have multiplicity greater than one. By symmetry all zeros are covered. These are necessary restrictions arising from stronger one-sided attempts. The original open premise only asks for \(O_\epsilon(e^{\epsilon T})\) for each \(\epsilon>0\).
+
 ## Finite arithmetic and remaining gap
 
 The [finite checker](check_detector_nov18.py) uses python-flint 0.9.0 at 128-bit precision. It calls FLINT's indexed zeta-zero enclosure for the first root, requires the real part to be exactly \(1/2\), excludes zero from the derivative enclosure obtained by series evaluation at the entire root ball, and excludes zero from each of the 63 complex zeta enclosures at the required positive odd harmonics. Conjugation handles negative frequencies. It compares the final lower bound to the exact rational \(536/10000\) using ball order. The zero index and all directed primitive arithmetic rely on FLINT. The script provides a single implementation.

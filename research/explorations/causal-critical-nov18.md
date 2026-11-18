@@ -38,3 +38,20 @@ $$
 Indeed majorize the interval indicator by a translate of a smooth compactly supported nonnegative function. Two integrations by parts bound its Fourier transform by $C/(1+|u|^2)$. Group the resulting double sum by unit intervals and apply the $\ell^1$ convolution inequality with kernel $(1+|k|^2)^{-1}$. The implied constants are translation invariant. The zero count in a unit interval is $O(\log(2+|k|))$, so for $b_\gamma=1/(1/2+i\gamma)$ the sum over $|k|\ge K\ge2$ is $O(\log^2(2K)/K)$. This proves uniform block $L^2$ convergence of the series. The explicit formula identifies its limit almost everywhere. Restoring $e^{v/2}$ gives the required block bound, and summing squared blocks gives Cramér's estimate.
 
 Thus the classical cancellation from oscillations within one fixed-length logarithmic interval suffices for the forward direction at the exact scale. The unknown estimate is the converse hypothesis for the actual primes.
+
+## Recurrence of an arithmetic profile on dyadic blocks
+
+There is a stronger unconditional bound on the limsup: **it exceeds 0.26**. The proof uses a mechanism different from reading residues at finitely many frequencies. If RH fails, the converse already makes the limsup infinite. Suppose RH holds. For every integer $m\ge1$, the following fixed profile occurs as an $L^2[0,L]$ subsequential limit of the functions $jL\,2^{-j/2}E(2^j e^u)$, where $L=\log2$:
+$$
+ H_m(u)=2^{-m/2}\big[\psi(t)-t+\log(2\pi)+\tfrac12\log(1-t^{-2})\big]-e^{u/2},
+ \qquad t=2^m e^u .
+$$
+Values at the jumps are irrelevant. This is a statement concerning actual prime counting even though its proof passes through the zeros.
+
+Indeed partial summation as above shows the normalized integral remainder is $O(1/j)$ uniformly. Replacing $jL/\log(2^je^u)$ by 1 costs $O(1/j)$ in block norm. The square correction $(\psi(y)-\vartheta(y))/\sqrt y$ tends uniformly to 1 as $y\to\infty$ by the prime number theorem at $\sqrt y$ and the elementary higher-power estimate. Thus the profile differs by $o(1)$ in block norm from
+$$
+ -e^{u/2}\left(1+\sum_\gamma e^{ijL\gamma}e^{iu\gamma}/(1/2+i\gamma)\right).
+$$
+The tail after $|\gamma|>K$ has norm $O(\log(2K)/\sqrt K)$ uniformly in $j$ by the block estimate. There exist arbitrarily large integers $j$ for which the first finitely many phases approach $e^{imL\gamma}$ simultaneously. This follows by recurrence of a rotation on a finite torus, or by partitioning that torus into small boxes and subtracting two arbitrarily separated indices landing in the same box, then adding $m$. Diagonal selection and the uniform tail prove convergence to the series with $j=m$. Substitution of the full classical explicit formula on that fixed octave, including its constant and trivial zeros, gives $H_m$ above.
+
+Orthogonal projection off constants is continuous. Hence the limsup in question is at least the distance of each $H_m$ from the constants. For $m=10$ we enclosed this distance by an elementary sieve of the prime powers through 2047 and interval integration on $[1024,2048]$ with measure $dt/t$. Each integration cell is confined to one integer step. Its exact logarithmic length multiplies ball enclosures for both the profile and its square. The script omits the additive constant $\log(2\pi)/32$ and adds 1 to limit interval overestimation in the variance calculation. Its strict ball comparison certifies that the variance is greater than $0.26^2$. [Reproduction script](check_recurrent_octave_nov18.py)

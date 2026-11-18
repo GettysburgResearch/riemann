@@ -122,3 +122,52 @@ $$
 At $y=y_N$ the log of the first product is at most $(4\cdot100^{-3/4}+o(1))\log N$; the leading coefficient is below $1/5$. The second product is $\exp(o(\log N))$. Thus the summed errors are $o(1)$.
 
 It remains to evaluate (6) to leading exponential order. The upper bound $\log L(Q)\le(4+o(1))\sqrt y/\log y$ follows from $\log(1+u)\le u$. Fix $0<\delta<1/5$ and restrict $t$ to $[(1-\delta)\pi,(1+\delta)\pi]/\log y$. On $p\ge y^{1-\delta}$ one has $-\cos(t\log p)\ge \cos(2\pi\delta)>0$. The quadratic error in expanding the log product there is $O(\sum_{p\le y}1/p)=O(\log\log y)$. The primes below $y^{1-\delta}$ can cost at most $O(y^{(1-\delta)/2})$ in its log, by the same estimate as in (7). The $\nu$-mass of this interval is $\gg_\delta1/\log y$. Consequently the lower limit of $(\log y)\log L(Q)/\sqrt y$ is at least $4\cos(2\pi\delta)$. Letting $\delta$ decrease to zero proves the matching lower bound. Since $c_0h_N$ has a finite positive limit and $L(Q)$ grows without bound, (8) follows. The entire unequal-rough-part remainder is still present in $B_N$.
+
+## Complete cancellation on one divisibility cone
+
+Let $V_N$ denote the contribution of all ordered pairs $n\mid m$ to the degree block $N\le j<2N$, **including the diagonal once**. Both indices use the original common square cutoff before its limit. For every fixed $A>0$,
+$$
+ V_N=O_A((\log N)^{-A}).
+\tag{9}
+$$
+Thus the complete contribution of distinct comparable pairs in both orientations is $-2(D_{2N}-D_N)+O_A((\log N)^{-A})$. This cancels a specified nonzero piece of the actual native block. It leaves all pairs where neither integer divides the other in the exact remainder.
+
+Here are the uniform tail details. First, the normalized columns satisfy, with $J=j+1$,
+$$
+ |\psi_j(x)|\ll\min(1,(Jx)^{-1})\quad(0<x\le1/2),\qquad
+ \int_0^{1/2}|\phi_j(x)|\,dx/x\ll\log(2J).
+\tag{10}
+$$
+For these estimates, the elementary Laplace integral for the Legendre polynomials gives $|P_l(x)|\ll(l+1)^{-1/2}$ on $|x|\le1/2$ by Gaussian comparison, and $|P_l'(x)|\ll\sqrt{l+1}$ there by differentiation (see [DG26 §2.1 at the same source revision](https://github.com/GettysburgResearch/riemann/blob/a27285abe428835ac0171fe9eb8cbbc97a64a33a/standalone/2026-09-12-astra-polynomial-degree-growth/PROOF.md)). Consequently $|\phi_j(x)|\ll\min(1,Jx)$ by oddness. The primitive $F_j(x)=\int_x^1\phi_j$ is $(P_{l-1}-P_{l+1})/\sqrt{2l+1}$, so it is $O(J^{-1})$ on $|x|\le1/2$; its full $L^2(0,1)$ norm is also $O(J^{-1})$ by TC26 (4). For $x\le1/2$ integrate by parts as $\psi_j=F_j(x)/x-\int_x^1 F_j(u)\,du/u^2$, using the interior bound below $1/2$ and Cauchy–Schwarz above $1/2$. This gives $O((Jx)^{-1})$. For $x<1/J$, instead use $|b_j|=O(1)$ from TC26 (3) and Stirling's formula, and integrate $|\phi_j(u)|/u\ll J$ from zero. This proves (10). It follows that
+$$
+ \sum_{k\text{ odd}} k^{-2}\int_1^3|\psi_j(t/k)|\,dt
+ \ll \frac{\log(2J)}J .
+\tag{11}
+$$
+In fact, $k=1$ vanishes, and $k=3,5$ cost $O(J^{-1})$ by TC26 (2) restricted away from zero. For $k\ge7$, sum $k^{-2}\min(1,k/J)$ using (10).
+
+For $H=N^{1/8}$, $k\le N^3$, and $v\ge H$, classical prime number theorem estimates give
+$$
+ \left|\sum_{b\le v,(b,2k)=1}\frac{\mu(b)}b\right|
+   \ll_A(\log N)^{-A}.
+\tag{12}
+$$
+Indeed the sum is the convolution of $m_{\rm all}(v)=\sum_{n\le v}\mu(n)/n$ with the reciprocal-weighted positive integers supported on primes dividing $2k$. The classical zero-free region and partial summation give $m_{\rm all}(v)\ll_A (\log(2v))^{-A}$ for every fixed $A$. The support weights have total mass $\prod_{p\mid 2k}(1-1/p)^{-1}\ll\log(2k)$ by Mertens. For support indices $d>\sqrt v$, their total mass is at most
+$$
+ v^{-1/8}\prod_{p\mid2k}(1-p^{-3/4})^{-1}
+ \le v^{-1/8}\exp(C(\log(2k))^{1/4}).
+$$
+To see the last inequality, order the prime factors increasingly. The $i$th is at least $i+1$ and there are at most $\log(2k)/\log 2$. For $d\le\sqrt v$ the arbitrary inverse-log decay absorbs the support mass, proving (12). For general $k$, independent of $v$, the same convolution and boundedness of $m_{\rm all}$ give the elementary bound $O(\log(2k))$.
+
+For a finite common cutoff $R$, put $n=k$, $m=kb$ with $k$ odd squarefree. For each $k$ the sum on $H<b\le R/k$ has inner weight $\mu(b)/b$ with $(b,2k)=1$, multiplied by $\psi_j(t/(kb))$. On this interval the multiplier is $O(1)$ and has total variation $O(\log(2J))$ by (10), since $0<t/(kb)\le3/H\le1/2$ for large $N$. Partial summation and (12) bound this inner sum by $O_A((\log N)^{-A}\log(2J))$ for $k\le N^3$. Multiply by $k^{-2}\mu(k)^2|\psi_j(t/k)|$, integrate, and apply (11). After summing the block, the loss is $O((\log N)^2)$, absorbed by taking $A$ larger in (12). For $k>N^3$ use the general $O(\log(2k))$ bound instead, $|\psi_j(t/k)|\ll1$ and the $k^{-2}$ weight. The cost after summing the block is $O(N^{-2}(\log N)^2)$. These estimates are uniform in $R$. The limit exists for each $j,N$: at each fixed $k$ the inner series converges by partial summation, and the general bound just given yields a summable majorant over $k$. Here and below the complete source limit precedes any limit in $N$.
+
+For $b\le H$, (2)–(3) and both indices tending to the common cutoff give
+$$
+ c_0h_N\sum_{b\le H,\,b\text{ odd}}\frac{\mu(b)w(b)}b
+ +O\left( (N^{-1/5}+N^{-1})H\log(2H)\right).
+$$
+The sum of $\tau(2b)$ up to $H$ is $O(H\log(2H))$. Finally the odd Dirichlet series for $\mu(b)w(b)$ factors as the series of the odd Möbius function times one with local factors
+$$
+ 1+\frac1{p+1}\sum_{d\ge1}p^{-ds}\quad (p\ge3).
+$$
+The latter has nonnegative coefficients $h(d)$ and $\sum h(d)d^{-1/2}<\infty$. Splitting its convolution at $d=\sqrt H$ and using (12) with $k=1$ (or directly the odd PNT estimate) shows that the displayed main sum is $O_A((\log H)^{-A})$. This proves (9). As the diagonal block tends to $c_0\log2$, the distinct comparable pairs in both orientations tend to $-2c_0\log2$ and the full comparable class including the diagonal tends to $-c_0\log2$. These signed limits are compatible with $B_N\ge0$ because the incomparable pairs remain.

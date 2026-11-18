@@ -82,3 +82,58 @@ $$
 Infinitely many $D_j$ are nonzero. Otherwise the Taylor series of $1/\zeta(s)$ at $1$ would terminate and agree with a polynomial throughout $\Re s>1$ by the identity theorem. Its limit along the positive real axis is one, forcing that polynomial to be constant, contrary to $D_1=-1$. After subtracting any fixed truncation of (4), let $j$ be the first omitted nonzero order. Summing the squared reciprocal residual on $[B/2,B]$ still costs asymptotically $B D_j^2/(2j^2\log^{2j} B)$. All of these fixed truncations therefore leave an above-subpower cost on this source sector. This conclusion concerns the isolated reciprocal component and allows an exact paired compensation or an order increasing with the cutoff.
 
 **Verification.** The displayed errors and endpoint conventions are derived analytically above. The remaining RH-facing problem is to estimate the joint compensated source to subquadratic precision. These asymptotics quantify one mandatory cancellation without establishing that estimate.
+
+## An adaptive deterministic subtraction
+
+Put $f(s)=1/\zeta(s)$ with its removable value at $s=1$, $a=14/25$, and let
+
+$$
+ {\cal C}(L)=\int_0^a e^{-Lt}\frac{f(1-t)}{t}\,dt,\qquad
+ S_h(L)=\sum_{j=1}^h\frac{D_j}{jL^j}.
+$$
+
+The integral at the origin uses the limiting integrand $-1$. There is a uniform, purely deterministic estimate
+
+$$
+ |{\cal C}(L)-S_{\lfloor 13L/25\rfloor}(L)|\ll e^{-11L/20}\qquad(L\to\infty). \tag{5}
+$$
+
+Consequently the sum of the squared errors in (5) over $B/2\le k\le B$, with $L=\log k$, is $O(B^{-1/10})$. A growing subtraction can remove the entire deterministic series at a cost below the critical squared-energy scale.
+
+Here is a self-contained disk estimate sufficient for (5). For $\sigma=\Re s>0$ the continuation formula gives
+
+$$
+ \frac{s-1}{s}\zeta(s)=1-(s-1)\int_1^\infty\{v\}v^{-s-1}\,dv.
+$$
+
+On every unit interval the increasing function $\{v\}$ has mean $1/2$ and is oppositely ordered to $v^{-\sigma-1}$. Their integrated product is at most half the integral of $v^{-\sigma-1}$, by integration of the pairwise difference inequality on that interval. Thus the integral has absolute value at most $1/(2\sigma)$. When $|s-1|<2/3$ we have $|s-1|<2\sigma$, proving nonvanishing of the normalized zeta throughout that disk. At $s=1$ its value is one. With $R=3/5$ Cauchy's estimate gives $f(1-t)=\sum_{j\ge1}c_jt^j$ and $|c_j|\le C R^{-j}$, $c_j=D_j/j!$.
+
+For any integer $1\le h\le(13/25)L$, replacing the integrand by its degree $h$ Taylor truncation of the numerator costs at most
+
+$$
+ C R^{-h-1}\int_0^a e^{-Lt}t^h\,dt
+ \le C\frac{h!}{(RL)^{h+1}}.
+$$
+
+Extending each resulting term through $t=\infty$ changes the sum by $O(e^{-aL}/L)$ uniformly in that range of $h$. Indeed for $t\ge a$ one has $t^{j-1}\le a^{j-1}\exp((j-1)(t-a)/a)$, and the geometric sum of $R^{-j}a^{j-1}$ is bounded since $a<R$. The full Laplace moments give $c_j(j-1)!/L^j=D_j/(jL^j)$. At $h=\lfloor\kappa L\rfloor$, $\kappa=13/25$, Stirling's estimate gives exponential rate $\kappa(1+\log(R/\kappa))>11/20$. Also $a>11/20$, proving (5).
+
+### Accuracy for the actual large-prime sector
+
+Using the classical de la Vallée Poussin error terms for $M_\mu(t)/t$ and $(\pi(t)-\operatorname{li}(t))/t$, both $O(\exp(-c\sqrt{\log t}))$ for $t\ge2$, one gets, uniformly over the range of (1),
+
+$$
+ m_r(x)-{\cal C}(\log x)=O_\delta\!\left(e^{-c_\delta\sqrt{\log x}}\right),
+ \qquad c_\delta>0.                                                   \tag{6}
+$$
+
+For details, first replace the prime reciprocal sum in (3) by $\log(\log(x/m)/\log b)$. Partial summation of the prime error gives $O(e^{-c_1\sqrt L})$ uniformly at its endpoints. Summing $1/m$ costs $O(L)$, absorbed into the exponent. Put $\eta=\delta/(2+2\delta)$ and $H=x^\eta<T$. The sum for $H<m\le T$ of the resulting log multiplier against $\mu(m)/m$ is $O_\delta(e^{-c_2\sqrt L})$ by partial summation. The multiplier is bounded and its derivative has absolute value at most $1/(m\log b)$.
+
+On $m\le H$, expand $\log(1-\log m/L)$ through $h=\lfloor\lambda\sqrt L\rfloor$ for a sufficiently small fixed $\lambda>0$. The absolute sum of remainders is $O_\delta(L\eta^{h+1})$. To extend every moment to infinity uniformly in $j\le h$, put $v=\log t$. For $v\ge\eta L$,
+
+$$
+ (v/L)^j\le \exp((2/e)\lambda\sqrt v),
+$$
+
+using $\log^+u\le(2/e)\sqrt u$. Choose $\lambda$ with $(2/e)\lambda<c/2$. In partial summation of the tail with weight $(\log t/L)^j/t$, the derivative has at most the extra factor $1+j/v\le2$ for all large $L$. The boundary term and the integral of $2e^{-c\sqrt v/2}$ over $v\ge\eta L$ are both $O_\delta(e^{-c_3\sqrt L})$. The constant moment is treated the same way and vanishes. Summing over $j\le h$ still gives stretched exponential decay. This proves the bound in (6) with $S_h(L)$ in place of $\mathcal C(L)$. The preceding Taylor and endpoint bounds at this smaller $h$ give $|\mathcal C(L)-S_h(L)|\ll e^{-c_4\sqrt L}$, which proves (6).
+
+Together (5) and (6) identify the two errors in adaptive subtraction. The error from evaluating the deterministic correction can be made small enough for a bounded terminal-window energy. The remaining signed arithmetic error in (6), after squaring and summing, only has the proved bound $O_\delta(B e^{-c'_\delta\sqrt{\log B}})$. No estimate at subpower scale follows.
