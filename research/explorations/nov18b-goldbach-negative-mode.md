@@ -45,3 +45,19 @@ Taking the two signs separately proves
  \limsup_{N\to\infty}\frac{\log(1+\max(\pm C_1(N),0))}{\log N}=\Theta .
 \]
 The first negative summand in (1) therefore has absolute limsup exponent $2\Theta$. The full negative part of this *spectral decomposition* dominates that one term in absolute magnitude. Controlling the actual negative values of $B$ can still use the positive eigenmodes in (1). Its one-sided bound at exponent one remains the arithmetic question.
+
+## A test on sparse grids of integers
+
+Fix $c>0$, $0\le\delta<1$, and either sign. Let $I_X=[X\exp(-c\sqrt{\log X}),X\exp(c\sqrt{\log X})]$. Suppose $X_j\to\infty$ and for each $j$ one has a grid $G_j$ of integers such that every integer of $I_{X_j}$ lies within $X_j^{\delta+o(1)}$ of a grid point. The error in this covering radius is uniform over the window. Then
+\[
+ \max_{g\in G_j}B_\pm(g)\le X_j^{1+\delta+o(1)}
+       \quad\Longrightarrow\quad \Theta\le\frac{1+\delta}{2}.
+\]
+For the converse take the grid points in $I_{X_j}$ or within the indicated radius of it. If $\Theta\le(1+\delta)/2$, the published upper bounds for $B$ give the displayed grid bound at every sufficiently large scale. At $\delta=0$, this gives an RH equivalence on any such grid of subpower spacing, for either sign separately. The points may be chosen after seeing the arithmetic data.
+
+Indeed
+\[
+ |B(n+1)-B(n)|\le \sum_{m+\ell=n+1}\Lambda(m)\Lambda(\ell)
+                         +2\psi(n)+n\ll n\log(2n)
+\]
+by Chebyshev and $\Lambda(\ell)\le\log(n+1)$. The same increment bound applies to both positive and negative parts. Telescoping from a nearest grid point propagates the upper bound to $B_\pm(n)\le X_j^{1+\delta+o(1)}$ everywhere in the window. Integer endpoint discrepancies are covered by one more increment. Its integral is then at most $X_j^{2+\delta+o(1)}$. The [local signed mass lower bound, equation (6)](nov18b-goldbach-local.md) contradicts this for any zero with $2\Re\rho>1+\delta$. This interpolation uses the original additive increments and has no hypothesis on the multiplicity or location of the grid representatives.

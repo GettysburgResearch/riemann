@@ -1,6 +1,6 @@
-# A factor-four-thirds interval for both signs of the centered Goldbach error on RH
+# Both signs of the centered Goldbach error in every factor-1.14 interval on RH
 
-Assume RH. With $B(x)=\sum_{m+n\le x}(\Lambda(m)-1)(\Lambda(n)-1)$ and $B_\pm(x)=\max(\pm B(x),0)$, every sufficiently large $X$ satisfies
+Assume RH. For both signs, every sufficiently large interval $[X,57X/50]$ contains centered Goldbach error of total mass $\gg X^2$. The directed certificate below uses the first 160 zeta zeros. A longer interval already follows from elementary estimates for the entire zero spectrum. With $B(x)=\sum_{m+n\le x}(\Lambda(m)-1)(\Lambda(n)-1)$ and $B_\pm(x)=\max(\pm B(x),0)$, every sufficiently large $X$ satisfies
 \[
                   \int_X^{4X/3} B_\pm(x)\,dx\gg X^2.                  \tag{1}
 \]
@@ -60,3 +60,21 @@ For opposite signs the same identities give $|C_{\gamma,\gamma'}|\le 2\pi e^{-\p
 Finally $2B_\pm=|B|\pm B$. Subtraction of (4) from (3) leaves a positive fixed margin for each sign against $w$. Since $w$ is bounded, supported in $[1,4/3]$, and nonnegative, (1) follows. One may move the limits by a bounded number of integer mesh steps using the published pointwise upper bound.
 
 [Goldston–Suriajaya, Theorem 4](https://arxiv.org/abs/2110.14250) · [Riemann zeta zero verification](https://arxiv.org/abs/2004.09765)
+
+## A directed certificate for the factor $57/50$
+
+Use three nonnegative uniform densities of respective widths $\ell_j=13p_j/10000$ with $p_j=51,34,15$, followed by a nonnegative smooth density of width $1/4000$. Their support ends at $0.13025<\log(57/50)$. The arithmetic lower bound (3) is identical. In the signed upper bound the three factor moduli are now $|\operatorname{sinc}(\ell_j S/2)|$, with $\operatorname{sinc} x=\sin(x)/x$. Thus their product is at most $A/S^3$, $A=8/(\ell_1\ell_2\ell_3)$. The smooth fourth factor has modulus at most one.
+
+The [directed checker](nov18b-goldbach-parity-check.py) encloses the first 160 positive ordinates $\gamma_j$ using Arb, and puts $T=\gamma_{160}$. For pairs among them it sums the product of the three actual sinc moduli and the upper bound $\sqrt{2\pi}S^{-3/2}$ for the gamma quotient. This last bound follows from the same two exact gamma identities used above. Write $G=\sum_{j\le160}\gamma_j^{-2}$ and let $D$ be the stated upper bound $(1+1/784)(2+\gamma_{\rm E}-\log(4\pi))/2$ minus $G$. Then the contribution from all other equal-sign pairs is at most
+\[
+ \frac{2\sqrt{2\pi}A}{16\sqrt T}
+ \left(D^2+2D\sum_{g=\gamma_1,\ldots,\gamma_{160}}
+                  \frac{16(g/T)^2}{(1+g/T)^4}g^{-2}\right).
+\]
+Indeed $S\ge T$ for each such pair. For a pair with one low ordinate $g$ and one high ordinate $H$, the factor $16g^2H^2/(g+H)^4$ is bounded by its value at $H=T$, by monotonicity in $g/H\le1$. For two high ordinates the corresponding factor is at most one. Using the nonnegative tail bound $D$ then gives the expression above. For the opposite-sign argument the constant $22^3$ changes to $A$; the checker verifies the corresponding inequalities at $m=14$ and the bounding functions decrease thereafter.
+
+At 96 bits the finite equal-sign contribution is at most $0.424232$, the remaining equal-sign contribution is at most $0.070495$, and the total including the opposite signs is less than $0.496$. Thus the strict gap below $1/2$ survives the $o(1)$ error and proves
+\[
+                 \int_X^{57X/50} B_\pm(x)\,dx\gg X^2 .
+\]
+The same pointwise envelope gives $\gg X/(\log X)^3$ integers in this shorter interval for each sign at magnitude $\gg X$. Run the checker with Python and the python-flint package.

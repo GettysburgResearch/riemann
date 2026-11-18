@@ -94,7 +94,7 @@ For every zero \(\rho=\beta+i\gamma\) with \(\beta\ge1/2\) and every \(X\ge e^4\
  \gg \frac{|p(\rho)|^2}{|\rho|^4}X^{\,2\beta-1}.
  \tag{4}
 \]
-The implied constant is absolute. This gives a one-sided-in-time mean-square counterpart to the [localized Möbius sum test](nov18b-reciprocal-theta.md). As a consequence the cumulative normalized Mertens energy has an actual growth exponent:
+The implied constant can be taken as \(1/2000\). This gives a one-sided-in-time mean-square counterpart to the [localized Möbius sum test](nov18b-reciprocal-theta.md). As a consequence the cumulative normalized Mertens energy has an actual growth exponent:
 \[
  \lim_{X\to\infty}
  \frac{\log\!\left(1+\int_1^X M(u)^2\,du/u^2\right)}{\log X}
@@ -120,3 +120,9 @@ The residual's Mellin value at \(\rho\) is the target value \((1-e^{-\rho})p(\rh
  e^{(2\beta-1)\tau}|p(\rho)|^2/|\rho|^4 .
 \]
 Set \(L=\log X\). For each \(\tau\in[L-1,L]\) one has \(B(\tau)\le e^{1/2}B(L)\), and some such \(\tau\) also has \(|h(\tau)|^2\le e^{1/2}B(L)\). Since \(0\le2\beta-1<1\), moving \(\tau\) to \(L\) loses at most an absolute factor. Finally \(B(L)=X^{-1/2}\int_1^X M(u)^2u^{-3/2}du\), which proves (4).
+
+
+For the numerical constant in (4), \(F(x)\) equals \(0,1,-1,0\) on the four successive unit intervals modulo 4, so \(|K(v)|\le e^{-v/2}\) on \(v\ge0\). The uniform average gives \(T(v)=e^{-v/2}(F(e^v)-F(e^{v-1}))\), of absolute value at most \(2e^{-v/2}\). Thus the pointwise envelope above is explicitly \(e^{-(v-\tau)/2}(|h(\tau)|+2\sqrt{2B(\tau)})\). At the selected \(\tau\), comparison with the exact Mellin value yields the valid absolute coefficient
+\[
+ \frac{e^{-3/2}(1-e^{-1/2})^2}{4(1+2\sqrt2)^2}>\frac1{2000}.
+\]
