@@ -1,0 +1,479 @@
+{
+  "source": "https://doi.org/10.5281/zenodo.23752103",
+  "checker_sha256": "23213c26a6f938b29b2381dffd622d66cbc6dcbc571088f1cbb2e45c5761efb6",
+  "partitions_sha256": "1b14d865027fb2fcb570c92b644fa6ad4d6cc5f870e14cddf51e0d482cfa7554",
+  "plan_sha256": "ec346b7c1136eda38021eb6323033b3b48ed21e6f7458eeeac7cc9579db2497a",
+  "local_python_flint": "0.9.0",
+  "geometry_sha256": "3a539ab7cee8a1bd21e628ca211b35c7852c768403c0ce7bf7350c7221dbb2ff",
+  "logical_rows": [
+    {
+      "row": 0,
+      "boundary_leaves": 28,
+      "boundary_coefficients": 51772,
+      "own_coefficients": 41,
+      "sha256": "4565939f610c8118510fac53c68285d8dc1fc7dcc63e0168b764ae0b610d28f9"
+    },
+    {
+      "row": 1,
+      "boundary_leaves": 9,
+      "boundary_coefficients": 9801,
+      "own_coefficients": 31,
+      "sha256": "67f135335f6d40e3956c4975fbe8e8d890989d18f2ec568a6ff3304f3e2e533e"
+    },
+    {
+      "row": 2,
+      "boundary_leaves": 9,
+      "boundary_coefficients": 9801,
+      "own_coefficients": 31,
+      "sha256": "6481c8b15d1fe2bad78c06269f5c95904e96b349511bacec599ac133e121e6f4"
+    },
+    {
+      "row": 3,
+      "boundary_leaves": 9,
+      "boundary_coefficients": 9801,
+      "own_coefficients": 31,
+      "sha256": "81303ad4804ce7150ec22f9a09fc59c898aaed7f74c02b43c2a21eaf2cfacef2"
+    },
+    {
+      "row": 4,
+      "boundary_leaves": 9,
+      "boundary_coefficients": 9801,
+      "own_coefficients": 31,
+      "sha256": "10adc3a43d42d4300f09324ec0ef337a3bc0e9044adf9fbea353c1a7e2bbdb07"
+    },
+    {
+      "row": 5,
+      "boundary_leaves": 9,
+      "boundary_coefficients": 9801,
+      "own_coefficients": 31,
+      "sha256": "aa7552a8f33ffceb77938800bd968517da208f09f8d22ea7d2b655edbb8aa2a1"
+    },
+    {
+      "row": 6,
+      "boundary_leaves": 9,
+      "boundary_coefficients": 9801,
+      "own_coefficients": 31,
+      "sha256": "28dc34a74e4b39e1c2ed4255c26b707865e50b7e19ec41dca74ea4aea396d081"
+    },
+    {
+      "row": 7,
+      "boundary_leaves": 10,
+      "boundary_coefficients": 10890,
+      "own_coefficients": 31,
+      "sha256": "415a428c7bf9023966412f787a15ffe2fc5d51cd073c10d7fb9844d1401e171d"
+    },
+    {
+      "row": 8,
+      "boundary_leaves": 10,
+      "boundary_coefficients": 10890,
+      "own_coefficients": 31,
+      "sha256": "708d4abaa3ec02fc17981baa8160f8e731135595f10f1309174aca8359944a58"
+    },
+    {
+      "row": 9,
+      "boundary_leaves": 10,
+      "boundary_coefficients": 10890,
+      "own_coefficients": 31,
+      "sha256": "a29ad021e4600a69d0cc0a5ad4df10ff21d3975c58a47fd572478ea26a86bdda"
+    },
+    {
+      "row": 10,
+      "boundary_leaves": 10,
+      "boundary_coefficients": 10890,
+      "own_coefficients": 31,
+      "sha256": "d283d7ac05436bceaebead6a6487f26c7f9d010d50ca885064f2455b95cff27a"
+    },
+    {
+      "row": 11,
+      "boundary_leaves": 7,
+      "boundary_coefficients": 7623,
+      "own_coefficients": 31,
+      "sha256": "e9fe2aaec5aa84816bf2a22d390458660ed947365ecb094c1662e73d743ac546"
+    },
+    {
+      "row": 12,
+      "boundary_leaves": 9,
+      "boundary_coefficients": 9801,
+      "own_coefficients": 31,
+      "sha256": "11017a9d14a56e60a3fb20ceeab04350c4cd17baec63ce2f340ae57994a9ce25"
+    },
+    {
+      "row": 13,
+      "boundary_leaves": 9,
+      "boundary_coefficients": 9801,
+      "own_coefficients": 31,
+      "sha256": "742b30f3e70836e3a4fac44915a57ebd5e795fc200706aabf1a536bca80d3de6"
+    },
+    {
+      "row": 14,
+      "boundary_leaves": 8,
+      "boundary_coefficients": 8712,
+      "own_coefficients": 31,
+      "sha256": "7695cb85cda1c7c3b3160257c252d1ae34601e91fc36f885a8b55bdd4242a37c"
+    },
+    {
+      "row": 15,
+      "boundary_leaves": 10,
+      "boundary_coefficients": 10890,
+      "own_coefficients": 31,
+      "sha256": "c9d30853e34938716ae3ebfab77ff7e76a8e8416637690eb99ee105d988837b5"
+    },
+    {
+      "row": 16,
+      "boundary_leaves": 27,
+      "boundary_coefficients": 49923,
+      "own_coefficients": 41,
+      "sha256": "724010bfa831cf0a1cbdacc5e41c8d580d7ebd2d180adc37530928c9f1bac5ea"
+    },
+    {
+      "row": 17,
+      "boundary_leaves": 10,
+      "boundary_coefficients": 10890,
+      "own_coefficients": 31,
+      "sha256": "8199c3d6a1724228f3b5a3e50f4d321685a1b47fa1a05c4d853725f7f6b505f7"
+    },
+    {
+      "row": 18,
+      "boundary_leaves": 10,
+      "boundary_coefficients": 10890,
+      "own_coefficients": 31,
+      "sha256": "1ebaba0c82a6308c56382a8b667d1712a9eec3c5592e91d57af8d3f3db594d12"
+    },
+    {
+      "row": 19,
+      "boundary_leaves": 10,
+      "boundary_coefficients": 10890,
+      "own_coefficients": 31,
+      "sha256": "d4ee94d6959da64f63fba25e883a833fc52ec300f7e016d796b88bd514cbf4bf"
+    },
+    {
+      "row": 20,
+      "boundary_leaves": 10,
+      "boundary_coefficients": 10890,
+      "own_coefficients": 31,
+      "sha256": "0edba363972a3e81befaf8a464f533a3330a159cdc8d98b8adbb47962db116bb"
+    },
+    {
+      "row": 21,
+      "boundary_leaves": 10,
+      "boundary_coefficients": 10890,
+      "own_coefficients": 31,
+      "sha256": "23c7c3b0631663d75f01e220510f8176e5acd5593f3551fab5d75dd2b9216948"
+    },
+    {
+      "row": 22,
+      "boundary_leaves": 10,
+      "boundary_coefficients": 9610,
+      "own_coefficients": 29,
+      "sha256": "2011a6c28e9e0716b6fe34db113f005c1f13472e60a0a21e0cde5a497cc70af4"
+    },
+    {
+      "row": 23,
+      "boundary_leaves": 10,
+      "boundary_coefficients": 12250,
+      "own_coefficients": 33,
+      "sha256": "be1a5670982be6be1ed6392a28df1b2e90ac0ffe82151fa918af6bdf777be724"
+    },
+    {
+      "row": 24,
+      "boundary_leaves": 10,
+      "boundary_coefficients": 12250,
+      "own_coefficients": 33,
+      "sha256": "0b392459d137d9c99b8049e28a8f917bbffc27704a2481ef87742e9049e06ba2"
+    },
+    {
+      "row": 25,
+      "boundary_leaves": 10,
+      "boundary_coefficients": 12250,
+      "own_coefficients": 33,
+      "sha256": "caac55f497b712e7290b8acfcc218b247e4051f8f964042bec3df47dbeba1847"
+    },
+    {
+      "row": 26,
+      "boundary_leaves": 11,
+      "boundary_coefficients": 13475,
+      "own_coefficients": 33,
+      "sha256": "5ccccbefcaea9521ee6941236e90240b8c5e8d388dd147cbada887cdb7d4d5a0"
+    },
+    {
+      "row": 27,
+      "boundary_leaves": 6,
+      "boundary_coefficients": 61206,
+      "own_coefficients": 99,
+      "sha256": "bf3e2eab55574eb0745cb9f2dd483775e05410027db89d48db349c0d3e21f719"
+    },
+    {
+      "row": 28,
+      "boundary_leaves": 6,
+      "boundary_coefficients": 58806,
+      "own_coefficients": 97,
+      "sha256": "c1f69f2eef0130d4e98e1fd66fb13abd6d37eb44f0ad53ec9a163f252f153044"
+    },
+    {
+      "row": 29,
+      "boundary_leaves": 6,
+      "boundary_coefficients": 58806,
+      "own_coefficients": 97,
+      "sha256": "d2f766fc16041097b1110bc4935cb9110bf5d43ce4bf6d81bbda1566529b13fb"
+    },
+    {
+      "row": 30,
+      "boundary_leaves": 6,
+      "boundary_coefficients": 56454,
+      "own_coefficients": 95,
+      "sha256": "a50f83dca052b30dfc80b067fd056b26bc34ef02e46c4b710e6b7c63617cbe64"
+    },
+    {
+      "row": 31,
+      "boundary_leaves": 6,
+      "boundary_coefficients": 56454,
+      "own_coefficients": 95,
+      "sha256": "9e2a2ac43d575b63109ae4c9a60fba40edc9254d83044b1e91e77fbdd9588fa2"
+    },
+    {
+      "row": 32,
+      "boundary_leaves": 6,
+      "boundary_coefficients": 56454,
+      "own_coefficients": 95,
+      "sha256": "d85ebcff0e057498346dacd5393a3663c78add9e512878ee0a9756ac6ed546a4"
+    },
+    {
+      "row": 33,
+      "boundary_leaves": 6,
+      "boundary_coefficients": 56454,
+      "own_coefficients": 95,
+      "sha256": "351e6193a397745c445443dd407ed0cc43439f3cec19de03c6980262d41d4a03"
+    },
+    {
+      "row": 34,
+      "boundary_leaves": 6,
+      "boundary_coefficients": 51894,
+      "own_coefficients": 91,
+      "sha256": "81827a1fd07638b8f7928746f47d30be50a4aa92f9f65425cf9b7e2bea62ee15"
+    },
+    {
+      "row": 35,
+      "boundary_leaves": 6,
+      "boundary_coefficients": 51894,
+      "own_coefficients": 91,
+      "sha256": "40360aed21087736a72ce02f63b61ac4e0921334e3c58bdb1679ee9921e57f0c"
+    },
+    {
+      "row": 36,
+      "boundary_leaves": 6,
+      "boundary_coefficients": 54150,
+      "own_coefficients": 93,
+      "sha256": "8970e8ea3512afd4da537c4c5cdeaef3983f84a1cc500741f741a2ed3a70eb4f"
+    },
+    {
+      "row": 37,
+      "boundary_leaves": 6,
+      "boundary_coefficients": 54150,
+      "own_coefficients": 93,
+      "sha256": "7c2726961e8973c5c57f8a6e87e92987880d91c253ee3862b442f64cade64200"
+    },
+    {
+      "row": 38,
+      "boundary_leaves": 6,
+      "boundary_coefficients": 54150,
+      "own_coefficients": 93,
+      "sha256": "62a8bfbaae553d24cff306ff23df5a8db979a86e7e2aebbfd0b6bac18096766c"
+    },
+    {
+      "row": 39,
+      "boundary_leaves": 6,
+      "boundary_coefficients": 54150,
+      "own_coefficients": 93,
+      "sha256": "d70196f5b25dd79550dfe7131fbc820d57b71d9781a20eeb7f7aa4826f94b7ca"
+    },
+    {
+      "row": 40,
+      "boundary_leaves": 6,
+      "boundary_coefficients": 54150,
+      "own_coefficients": 93,
+      "sha256": "53fdcf5a8d83a20e0742a1826ce0a9d2b6b04c323968f97aa016a48445188f3a"
+    },
+    {
+      "row": 41,
+      "boundary_leaves": 6,
+      "boundary_coefficients": 54150,
+      "own_coefficients": 93,
+      "sha256": "4c58568b6c5d1963495a82c6b66e6856c4430f729908c89ae9c26ae587f3ff8d"
+    },
+    {
+      "row": 42,
+      "boundary_leaves": 6,
+      "boundary_coefficients": 58806,
+      "own_coefficients": 97,
+      "sha256": "b5ce2c0a2d2d85de3ad658db223709119ae64595fde2d1fda00c7bd02545bede"
+    },
+    {
+      "row": 43,
+      "boundary_leaves": 6,
+      "boundary_coefficients": 58806,
+      "own_coefficients": 97,
+      "sha256": "7b341f97b10b3f265f052d87ef5d30a23b68f4ef13770ee3f888ac79c0c80d9d"
+    },
+    {
+      "row": 44,
+      "boundary_leaves": 15,
+      "boundary_coefficients": 212415,
+      "own_coefficients": 117,
+      "sha256": "9829eb95290e9cd6eb233ec1f00e35524e236e1a3995af458133c36b17deb047"
+    },
+    {
+      "row": 45,
+      "boundary_leaves": 6,
+      "boundary_coefficients": 63654,
+      "own_coefficients": 101,
+      "sha256": "a69990980c2ecd2092097b2289dc12f3caa2e3c84e26d60e01b9e52ed6f07f90"
+    },
+    {
+      "row": 46,
+      "boundary_leaves": 8,
+      "boundary_coefficients": 88200,
+      "own_coefficients": 103,
+      "sha256": "8551a77f35e18faac5609c53b5f9f09e7d9825a4a016d9ba7b6158fb59706fb9"
+    },
+    {
+      "row": 47,
+      "boundary_leaves": 8,
+      "boundary_coefficients": 81608,
+      "own_coefficients": 99,
+      "sha256": "2a73251558c9f90b735f5d4501b8bce6f42870413610ab583b17f04679571581"
+    },
+    {
+      "row": 48,
+      "boundary_leaves": 9,
+      "boundary_coefficients": 95481,
+      "own_coefficients": 101,
+      "sha256": "3e5162a900dceaad5d8b11c8706b42afa43345fec55838b420f6dfae61dd85d7"
+    },
+    {
+      "row": 49,
+      "boundary_leaves": 9,
+      "boundary_coefficients": 99225,
+      "own_coefficients": 103,
+      "sha256": "793761682927f98c308d9872d56f7a3f1381fbca1762a64e69c692f0705c7abc"
+    },
+    {
+      "row": 50,
+      "boundary_leaves": 9,
+      "boundary_coefficients": 88209,
+      "own_coefficients": 97,
+      "sha256": "6d37581650d5fbf86a13626eeb586e08ea666411993d00f8a8f735ac522e0f86"
+    },
+    {
+      "row": 51,
+      "boundary_leaves": 9,
+      "boundary_coefficients": 95481,
+      "own_coefficients": 101,
+      "sha256": "347b38019b4d82fcb4a97d2f481b67a638febb17dfb7aab9a1a247f778935819"
+    },
+    {
+      "row": 52,
+      "boundary_leaves": 16,
+      "boundary_coefficients": 19600,
+      "own_coefficients": 33,
+      "sha256": "f0b2cc4f3b74fa83a176e006277938ba29b89cb1f073f2cfa8ed099b102d79ea"
+    },
+    {
+      "row": 53,
+      "boundary_leaves": 14,
+      "boundary_coefficients": 17150,
+      "own_coefficients": 33,
+      "sha256": "fe5a0f750e793b0ab891c17c341cec9ab32e172e2c731e454c73a3ce2560e40a"
+    },
+    {
+      "row": 54,
+      "boundary_leaves": 14,
+      "boundary_coefficients": 17150,
+      "own_coefficients": 33,
+      "sha256": "6a62b2ec6d318aad581f41e4f9d02e014cba3a476b3e3ad6a73799e464ea16b5"
+    },
+    {
+      "row": 55,
+      "boundary_leaves": 14,
+      "boundary_coefficients": 21294,
+      "own_coefficients": 37,
+      "sha256": "5e4f6ce0bae74f8b603223234a509ed35f436250c6495817e8877cb3704fca25"
+    },
+    {
+      "row": 56,
+      "boundary_leaves": 14,
+      "boundary_coefficients": 21294,
+      "own_coefficients": 37,
+      "sha256": "6078a6457ab145cea135aeac8ade4290c4005ac6e6e4f5db9f3ab71eb1d78f10"
+    },
+    {
+      "row": 57,
+      "boundary_leaves": 14,
+      "boundary_coefficients": 17150,
+      "own_coefficients": 33,
+      "sha256": "432c18eef07a0b622e88666734f7653112d3f256bef6f47aadb9d49a4ad8fb56"
+    },
+    {
+      "row": 58,
+      "boundary_leaves": 14,
+      "boundary_coefficients": 21294,
+      "own_coefficients": 37,
+      "sha256": "76161bd64ec1dd6262df84db8dee4841abab7b5907713fc77bfb701262bdbccd"
+    },
+    {
+      "row": 59,
+      "boundary_leaves": 14,
+      "boundary_coefficients": 17150,
+      "own_coefficients": 33,
+      "sha256": "e6d66e2ddc8e51c0c93f013250772fba7f9183bb735f96f8f5027e80f622ab08"
+    },
+    {
+      "row": 60,
+      "boundary_leaves": 14,
+      "boundary_coefficients": 17150,
+      "own_coefficients": 33,
+      "sha256": "370b405e23d25186f57e8cb6fe2eb0e0be2b8a89bb00ba38b8df866eb9b16ac9"
+    },
+    {
+      "row": 61,
+      "boundary_leaves": 14,
+      "boundary_coefficients": 17150,
+      "own_coefficients": 33,
+      "sha256": "1793057ff3cec96bab3a609581d8c1946313bed453923897e602f55e3a63d216"
+    },
+    {
+      "row": 62,
+      "boundary_leaves": 11,
+      "boundary_coefficients": 107811,
+      "own_coefficients": 97,
+      "sha256": "ac212cad2bda72dec93a6161d9ba7cc4ee7bc4973ae2ff7a81635019ff9d03d2"
+    },
+    {
+      "row": 63,
+      "boundary_leaves": 11,
+      "boundary_coefficients": 107811,
+      "own_coefficients": 97,
+      "sha256": "fb35cea62f638956ea5ae229e848d46612be91c123cb977d636864446f4862b4"
+    },
+    {
+      "row": 64,
+      "boundary_leaves": 11,
+      "boundary_coefficients": 121275,
+      "own_coefficients": 103,
+      "sha256": "4de74d4616b78a69ca1fde8c6b95daade25652a2ba301b2afe9784b6cf35bce5"
+    },
+    {
+      "row": 65,
+      "boundary_leaves": 16,
+      "boundary_coefficients": 24336,
+      "own_coefficients": 37,
+      "sha256": "765ed4c98af3af9e0a4596c9ef8ad23f8d05558649532da082b77a579507f6a2"
+    },
+    {
+      "row": 66,
+      "boundary_leaves": 20,
+      "boundary_coefficients": 24500,
+      "own_coefficients": 33,
+      "sha256": "5a02b5a18f9aade367e60fe39c79b35c12e3c225a74dce28158d1163739f7b75"
+    }
+  ]
+}

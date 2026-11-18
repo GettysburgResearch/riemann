@@ -9,7 +9,7 @@ python check.py 10499/12000
 python check.py 873345856107/1000000000000
 ~~~
 
-The default time step is $1/8192000$. The last two commands use stronger external zero-free theorems or claims than the first one. Each command prints the exact rational endpoint and an upward decimal rounding. The mathematical comparison, its external analytic inputs, and the provenance of each seed are in the [research note](../../research/explorations/nov18b-heat-seed.md).
+The default time step is $1/8192000$. The last two commands use narrower external zero-free inputs. For ordinary zeta the third input also follows from Bebel's externally checked all-Dirichlet theorem. Each command prints the exact rational endpoint and an upward decimal rounding. The mathematical comparison, its external analytic inputs, and the provenance of each seed are in the [research note](../../research/explorations/nov18b-heat-seed.md).
 
 ## Input data and license
 
@@ -30,3 +30,15 @@ python check.py 68973/100000 --ticks 512000
 python check.py 76061/100000 --ticks 512000
 python check.py 422139/500000 --ticks 512000
 ~~~
+
+## Local replay of the continuous kernel inequalities
+
+The archive's geometry verifier was also rerun with python-flint 0.9.0 over five disjoint sets whose union is exactly rows 0–66. It verified nonnegative Bernstein coefficients on 679 leaves for the two-variable boundary kernels (2,712,495 coefficient checks), and on 67 leaves for the signed own derivatives (4,001 coefficient checks). Every row's mathematical payload agreed exactly with Raymond's fresh replay. The [local digest receipt](kernel-replay.json) records the checker, untrusted partition and plan hashes and each row's independent digest. For these digests remove the timing and certificate-file metadata fields from each result row, then serialize with sorted JSON keys and separators comma and colon. The SHA-256 over the complete ordered list of those mathematical payloads is 3a539ab7cee8a1bd21e628ca211b35c7852c768403c0ce7bf7350c7221dbb2ff.
+
+In the original unmodified proof archive, running the following in the kernel-verification directory performs the same calculations in a single process.
+
+~~~sh
+python verify_all67_independent.py
+~~~
+
+The kernel replay checks finite inequalities on complete real spacing and height domains. The mathematical passage to other-zero heights and the physical evaluation of logarithmic derivatives still use the cited analytic sources.
