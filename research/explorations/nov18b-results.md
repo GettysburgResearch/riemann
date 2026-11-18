@@ -1,0 +1,35 @@
+# Research results from the follow-up session of 18 November 2026
+
+**Status.** This draft contains proposed results and computational certificates. RH remains open. The centered Goldbach sum gives a concrete one-sided estimate that would settle it. The heat-flow calculation gives an explicit finite improvement under identified external inputs. The cubic-theta investigation locates an estimate where a genuine arithmetic saving is still needed.
+
+## A one-sided arithmetic estimate sufficient for RH
+
+Let $B(N)=\sum_{m+n\le N}(\Lambda(m)-1)(\Lambda(n)-1)$, $B_\pm=\max(\pm B,0)$ and $\Theta=\sup_\rho\Re\rho$ for nontrivial zeta zeros. For each sign the arguments in this draft give
+\[
+ \limsup_{N\to\infty}\frac{\log(1+B_\pm(N))}{\log N}=2\Theta,\qquad
+ \lim_{X\to\infty}\frac{\log(1+\sum_{N\le X}B_\pm(N))}{\log X}=1+2\Theta .
+\]
+The upper estimates come from Goldston and Suriajaya. For the lower estimates the Laplace transform of $B$ is the square of a real prime exponential sum times a positive factor. A one-sided bound constrains the persistence of that square. The positive Riemann theta kernel, or compact measures built from the sparse off-line zeros, supplies large values and intervening zeros of the prime sum. This covers the case of an unattained supremum. For any fixed $c>0$ the local proof also gives a criterion on $[X\exp(-c\sqrt{\log X}),X\exp(c\sqrt{\log X})]$. A bound $X_j^{2+o(1)}$ for the negative mass on just one unbounded sequence of these windows would imply RH. The positive sign gives a separate criterion. We have no proof of either upper bound on such a sequence. [Signed exponent](nov18b-variance-goldbach.md) · [Independent review and theta proof](nov18b-goldbach-review.md) · [Local lower bounds](nov18b-goldbach-local.md) · [Explicit interval ratio under RH](nov18b-goldbach-parity.md)
+
+Diagonalizing the actual cutoff matrix shows that its first negative eigenmode alone already detects every off-line zero at exponent $2\Re\rho$. Keeping the cancellation between positive and negative modes is a genuine requirement for a proof by this route. The compact-filter argument also handles the unsmoothed Möbius summatory function, including the logarithmic contribution of a multiple isolated reciprocal pole. [Negative eigenmode](nov18b-goldbach-negative-mode.md) · [Compact filters for the original arithmetic functions](nov18b-compact-zero-filter.md)
+
+## A numerical heat-flow bound with reproducible arithmetic
+
+Using the formal $7/8$ strip and Raymond's physical-source, wall and signed-kernel estimates gives $\Lambda<0.107964855684$ in the Polymath normalization. Raymond's November release reported $\Lambda<0.107964910079$. Using the narrower $0.873345856107$ seed gives $\Lambda<0.107550815444$. For ordinary zeta this rounded seed follows from Bebel's externally verified all-Dirichlet theorem at the algebraic endpoint reported by Liu. These deductions use an exact rational integration of Raymond's 67 licensed time intervals. The new checker authenticates the two upstream input files, checks each directed step, and pays the terminal strip cleanup. The external source and kernel theorems retain their own verification scope. [Deduction and individual seed status](nov18b-heat-seed.md) · [Inputs, commands and attribution](../../experiments/X-nov18b-heat-seed/README.md)
+
+A separate asymptotic argument constructs a lateral barrier at a verified finite height and compares heat-zero displacements with actual zeta displacements. Its large-height threshold has not been evaluated. The negative-time estimates describe the number and location of nonreal heat zeros on the negative side of the physical slice. [Thresholds and proof audit](nov18b-heat-review.md) · [Reverse drift](nov18b-heat-drift.md) · [Negative-time edge](nov18b-heat-negative-edge.md)
+
+## Where the cubic-theta argument loses its saving
+
+The pinned OpenAI theorem excludes zeta zeros to the right of $7/8$. Liu's stronger manuscript reports a boundary of $0.8733458561067\ldots$ and proves optimality within a specified system of positive estimates. Inserting a varying calibration prime preserves the target residue and gives cancellation among the other rows. The increased additive cost still consumes the saving at Liu's binding parameters. A separate use of cubic reciprocity improves a reflected-row estimate. At the remaining long quadratic dual sum, an arbitrary bounded replacement of the true theta coefficients attains the unwanted term even with the prescribed prime marks. A stronger result must exploit those coefficients or a signed relation involving them. We derive no smaller global zero-free abscissa. [Primary theorem and correction to Zhao](nov18b-quasi-rh-source.md) · [Formal audit](nov18b-reciprocal-formal-audit.md) · [Moving prime](nov18b-calibration-prime.md) · [Reflected row and sharpness example](nov18b-operator-reflected-marks.md)
+
+## Spectral and reciprocal estimates
+
+| Object | Proposed result | What is left open |
+|---|---|---|
+| Finite prime-divisor matrix | For each fixed eigenvalue index the asymptotic edge is explicit. The top gap tends to $2\log 2$. [Proof](nov18b-weil-divisor-edge.md) | Relating this finite operator's gaps to every direction of the full Weil form. |
+| Balanced Weil packets | One eigenvalue has absolute value at most $q^{-1/2+o(1)}$, and the second exceeds $c\log q$. The small mode approximates an exact theta null. [Proof and orthogonal complement](nov18b-weil-balanced.md) | The sign of the small eigenvalue and possible negative directions outside this packet space. |
+| Pick matrices of the actual completed zeta function | The verified zero census certifies simultaneous positivity through large finite orders. There is a finite negative witness given a displaced zero. [Finite orders](nov18b-operator-moving-bands.md) · [Converse](nov18b-operator-pick-converse.md) | Uniform positivity over unbounded tests. |
+| Reciprocal Möbius approximations | The far tail has a power gain, but a shell near the truncation scale obstructs fixed-shape approximants. A logarithmic taper admits a conditional positive estimate. [Far tail](nov18b-reciprocal-strip-tail.md) · [First shell](nov18b-reciprocal-first-shell.md) · [Taper](nov18b-reciprocal-log-taper.md) | Control of the actual Möbius energy sufficient for convergence. |
+| Mollifiers on the right of the critical line | A sparse mollifier's local mean-square error cannot beat the stated power of its cardinality, even with arbitrarily high integer frequencies. [Mean and cardinality](nov18b-mollifier.md) · [Short intervals](nov18b-mollifier-short.md) | A signed, zero-sensitive estimate beyond this squared mean. |
+| Prime correlations | The valuation graph has an exact local spectral gap; representing individual correlations of a real dilation wave can exceed the available height budget. Dense off-line plateaus also force detectable prime or ordinary-integer sums. [Graph](nov18b-prime-graph.md) · [Zero plateaus](nov18b-variance-bows.md) · [Type I removal](nov18b-euler-bilinear.md) | A bound excluding a single displaced zero. |

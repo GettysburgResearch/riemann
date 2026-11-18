@@ -1,5 +1,7 @@
 # Research checkpoint, 18 November 2026
 
+[Follow-up results on the centered Goldbach sum, the cubic-theta zero-free estimate and the heat flow](nov18b-results.md)
+
 [Summary of the three published questions and the 2,580-field census](zhao-results-nov18.md)
 
 These are proposed results for review on the branch based on main `f99d9e3`. RH remains open. The references below identify the assumptions that would still be needed for a resolution. Computations use outward interval arithmetic where the individual notes specify Arb. Published zero censuses, prime bounds and previous Robin verification are imported.
@@ -28,7 +30,7 @@ The same [near-equality count](robin-census-constant-nov18.md) has a critical-li
 
 The [abundance-distribution theorem](abundance-curvature-nov18.md) gives a proposed converse to Weingartner's conditional tail estimate. On RH the two limiting distributions have opposite signed errors of order square root of the saddle scale, with a common oscillation from the critical-line zeros. The proof includes the Mellin singularity, the smooth comparison, and the transfer between moments and tails. The [sparse Mertens-window analysis](weak-mertens-sparse-windows-nov18.md) includes quantitative excursions from published finite witnesses. The [Selberg-mollified Jensen argument](jensen-selberg-transition-nov18.md) gives a further proposed error term of order the square root of the degree.
 
-**A specific published open question.** The [third Mertens mean proof](zhao-third-mertens-nov18.md) removes the regularity assumption in Zhao (2025), §8(1), when zeros approach the line of real part one. A [direct oscillation proof](zhao-native-oscillation-nov18.md) supplies the needed excursions without appealing to Zhao's sketched lower lemma. This proposed answer concerns a criterion equivalent to RH.
+**Zhao's Mertens-product question.** The formally verified $7/8$ theorem excludes the branch's hypothetical case in which zeta zeros approach real part one. Zhao's earlier argument already handles $1/2<\Theta<1$. Together with the RH direction it gives the stated positivity equivalence. The original conditional oscillation argument is preserved for provenance. [Corrected deduction and formal source](nov18b-quasi-rh-source.md) · [Endpoint and earlier argument](zhao-third-mertens-nov18.md)
 
 For Zhao's §8(2), the [reflected prime-tail formula](zhao-bias-kernel-nov18.md) gives an individual exclusion test under GRH. A [family argument](zhao-bias-density-nov18.md) shows that both signs recur for a relative density one of quadratic discriminants under GRH, without an assumption of linear independence. An [independent conductor-aspect proof](zhao-quadratic-conductor-clt-nov18.md) gives a joint Gaussian limit at growing scales.
 
