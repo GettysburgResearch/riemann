@@ -1,0 +1,22 @@
+# Nonabelian Galois fields in Zhao's spectral inequality
+
+Assume GRH for the Dedekind zeta function of the Galois field in question. Exactly four Galois fields with group \(S_3\) satisfy \(B_L<2\). They are the normal closures of the cubic fields of discriminants \(-23,-31,-44,-108\); the respective absolute sextic discriminants are \(12167,29791,21296,34992\). No quaternionic Galois extension with group \(Q_8\) passes this inequality. The dihedral octic case is separate. [Machine results](zhao-nonabelian-galois-nov18.json) · [Checker](../../scripts/check_zhao_nonabelian_galois_nov18.py) · [Definition and general degree bound](zhao-number-fields-nov18.md)
+
+## The four symmetric-group closures
+
+Let \(C\) be the cubic subfield, unique up to rational isomorphism, and let \(E\) be the quadratic resolvent of \(L\). If \(V\) is the standard two-dimensional representation of \(S_3\), the regular representation decomposes as \(1\oplus\operatorname{sgn}\oplus2V\). The two-dimensional Artin function is entire: it is induced by a nontrivial one-dimensional character of the order-three subgroup, hence is a nontrivial Hecke L-function over \(E\). Thus, under the stated GRH, \(C\) and \(E\) inherit GRH and their zero multisets occur inside that for \(L\). The factorization gives the exact equality
+\[
+ B_L=2B_C+B_\chi-B_\zeta,\qquad \chi=\chi_{\operatorname{disc} E}.
+\]
+Each passing sextic therefore comes from the [cubic pass inventory](zhao-cubic-fields-nov18.json) and the [quadratic pass inventory](zhao-quadratic-fields-nov18.json). Their intersection leaves precisely 79 cubic fields, using the square class of the cubic discriminant to identify the resolvent. The checker evaluates \(B_C\) using the rigorous cubic theta integral and \(B_\chi\) from an interval L-jet. Exactly four sums are below 2 and every other interval is strictly above. Product of the Artin conductors gives \(|\operatorname{disc}L|=|\operatorname{disc}E|(\operatorname{disc}C)^2\).
+
+## Quaternion extensions
+
+For a quaternion extension \(L\), its commutator subgroup is its order-two center. The fixed field \(F\) is biquadratic and totally real because complex conjugation, of order at most two, belongs to the center. The remaining two-dimensional irreducible of \(Q_8\) is induced from a nonreal character of the cyclic order-four subgroup. Its Artin function too is entire, so \(B_F\le B_L\). In the [abelian inventory](zhao-abelian-fields-nov18.md) exactly ten totally real biquadratic fields pass. For every odd prime ramified in \(F\) inertia in \(F\) is cyclic of order two, and inertia in \(L\) must have order four: the unique involution cannot surject onto nontrivial inertia downstairs. Tame discriminant exponents are then 2 in \(F\) and 6 in \(L\). The ordinary discriminant tower gives
+\[
+ |\operatorname{disc}L|\ \ge\ (\operatorname{disc}F)^2\prod_{p\mid\operatorname{disc}F,\ p>2}p^2.
+\]
+
+We bound the same discriminant from above under \(B_L\le2\). In the general logarithmic derivative bound at \(s=5/2\) refine the completely split upper estimate for \(-\zeta_L'/\zeta_L\) at rational primes through 97. For each such \(p\), its contribution divided by \(\log p\) is \((8/e)/(p^{fs}-1)\), where \(e,f\) are its inertia and residue degrees. Write \(e_0,f_0\) for the corresponding values in \(F\). They are computed from the three nontrivial quadratic characters: the number of unramified characters including the identity is \(4/e_0\), and their values at \(p\) determine \(f_0\) as the least common multiple of their orders there. When \(e_0=2,4\), every possible inertia subgroup in \(L\) has order \(2e_0\), because every nontrivial subgroup of \(Q_8\) contains its center; also \(f\ge f_0\). When \(e_0=1,f_0=2\), either \(e=1,f=4\), or \(e=2,f\ge2\), since every lift of order two modulo the center has order four. In either case the local quantity is at most \(4/(p^{2s}-1)\). For completely split \(p\) in \(F\) the unreduced upper bound is valid. Totally real archimedean factors give the larger bound regardless of the signature of \(L\), by monotonicity of digamma.
+
+Every resulting upper bound is smaller than the corresponding ramification lower bound. The two closest discriminant cases illustrate the margin. For \(\operatorname{disc}F=1600\) the upper endpoint is less than 24,237,095, whereas the lower bound is 64,000,000. For \(\operatorname{disc}F=2304\) those numbers are 29,611,692 and 47,775,744. The remaining eight comparisons are in the machine results.
