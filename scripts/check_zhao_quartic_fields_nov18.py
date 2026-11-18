@@ -1,9 +1,9 @@
 """Enumerate and certify nonabelian quartic Zhao spectral weights."""
 import argparse
 import json
-from functools import cache
+from functools import cache, lru_cache
 from pathlib import Path
-from flint import arb, ctx
+from flint import arb, ctx, fmpz_poly, nmod_poly
 from check_zhao_cubic_fields_nov18 import run_gp
 from check_zhao_field_weight_nov18 import field_terms, prime_term, primes_through
 
@@ -29,18 +29,48 @@ def verify_coverage():
             raise ArithmeticError("Quartic discriminant coverage failed")
 
 
+@lru_cache(maxsize=32768)
+def modular_code(p,c):
+    factors=nmod_poly(list(reversed(c)),p).factor()[1]
+    return sum(10**(factor.degree()-1) for factor,_ in factors)
+
+
 def local_rows(rows,limit):
-    for start in range(0,len(rows),128):
-        chunk=rows[start:start+128]
-        expr=','.join(polynomial(c) for _,_,c in chunk)
-        code=('default(parisize,"128M");\nV=['+expr+'];\n'
-              f'P=primes([2,{limit}]);\n'
-              'for(i=1,#V,F=V[i];N=nfinit(F);print(vector(#P,j,my(v=idealprimedec(N,P[j]));'
-              'sum(l=1,#v,10^(v[l].f-1)))));\n')
-        got=run_gp(code)
-        if len(got)!=len(chunk):
-            raise ArithmeticError("Incomplete PARI batch")
-        yield from zip(chunk,got)
+    pp=primes_through(limit)
+    for start in range(0,len(rows),256):
+        chunk=rows[start:start+256]
+        codes=[]
+        fallback=[]
+        for idx,(_,d,c) in enumerate(chunk):
+            index_sq,rem=divmod(int(fmpz_poly(list(reversed(c))).discriminant()),d)
+            if rem or index_sq<1:
+                raise ArithmeticError("Inconsistent quartic discriminant")
+            row=[]
+            missing=[]
+            for j,p in enumerate(pp):
+                if index_sq%p:
+                    row.append(modular_code(p,tuple(a%p for a in c)))
+                else:
+                    row.append(None)
+                    missing.append(j)
+            codes.append(row)
+            if missing:
+                fallback.append((idx,c,missing))
+        if fallback:
+            cases=','.join('['+polynomial(c)+','+str([pp[j] for j in missing])+']'
+                           for _,c,missing in fallback)
+            gp=('default(parisize,"128M");\nV=['+cases+'];\n'
+                'for(i=1,#V,N=nfinit(V[i][1]);P=V[i][2];print(vector(#P,j,'
+                'my(v=idealprimedec(N,P[j]));sum(l=1,#v,10^(v[l].f-1)))));\n')
+            got=run_gp(gp)
+            if len(got)!=len(fallback):
+                raise ArithmeticError("Incomplete index-prime verification")
+            for (idx,_,missing),values in zip(fallback,got):
+                if len(values)!=len(missing):
+                    raise ArithmeticError("Missing index-prime local degree")
+                for j,code in zip(missing,values):
+                    codes[idx][j]=code
+        yield from zip(chunk,codes)
 
 
 @cache

@@ -24,3 +24,15 @@ follows termwise by \(t=\tan\theta\). The integrand decreases, so equally spaced
 ## Individual determinations without independence
 
 For \(1<|D|\le10,000\), a reflected prime-tail and low-zero [census](../../experiments/X-nov18-quadratic-bias/README.md) unconditionally certifies both signs for 6,053 of the 6,086 nonprincipal discriminants. For 14 characters the last step uses a single Hardy sign-change interval \(((j-1)/26,j/26)\) with \(j\le3\). This certifies a positive zero with \(|1/(\rho(\rho+1))|>2/3\) under GRH. The central point is nonzero by its separate real-value enclosure and the published real-zero computations. Apply the [Bohr coefficient bound](zhao-bias-central-nov18.md); a nonnegative function \(K+2/3\) cannot have a coefficient greater in magnitude than its mean. The [off-critical dichotomy](zhao-bias-unconditional-nov18.md) disposes of a possible failure of individual GRH. The nineteen negative cases have the expected sign if and only if their individual GRH holds, by the same real-zero dichotomy. The other fourteen in this finite accounting have conductor at most 73.
+
+## An explicit cutoff for the nonvanishing-center criterion
+
+The asymptotic in the [low-zero argument](zhao-bias-central-nov18.md) has the following finite uniform substitute. Every primitive quadratic character with conductor \(q\ge10^{20}\), its own GRH and a nonzero central value has both signs. The [interval calculation](../../experiments/X-nov18-quadratic-bias/low_zero_cutoff.py) verifies the constants in the following proof.
+
+Use \(w=5/3\), \(T=743/1000\) and \(h(t)=(T^2-t^2)(\sin(wt)/(wt))^4\). Its inverse Fourier transform is \(g=T^2 f+f''\), with \(f\) the density of a sum of four independent uniforms on \([-w,w]\). For \(0\le v\le2w\), \(96w^4f(v)=32w^3-12wv^2+3v^3\). For \(2w\le v\le4w\), the numerator is \((4w-v)^3\). The function is even and vanishes outside that support. The explicit-formula lower bound for \(\sum h(\gamma)\) is
+\[
+ g(0)\log(q/\pi)+g(0)\psi((1/2+a)/2)
+ +2\int_0^\infty \frac{(g(0)-g(v))e^{-(1/2+a)v}}{1-e^{-2v}}\,dv
+ -2\sum_{n\le e^{4w}}\frac{\Lambda(n)}{\sqrt n}|g(\log n)|.
+\]
+Here \(g(0)>0\). Discard the nonnegative integral above \(4w\). For the rest, divide \([0,2w]\) and \([2w,4w]\) each into 512 equal panels and enclose the integrand throughout each panel. At zero use the polynomial for \((g(0)-g(v))/v\); the factor \(v/(1-e^{-2v})\) increases from \(1/2\). The finite prime-power sum stops below 800. At \(q=10^{20}\) the resulting lower bounds exceed 0.0638 for even characters and 0.2404 for odd characters. The same holds for larger \(q\). On GRH the sum can be positive only if a zero has \(|\gamma|<T\). With a nonzero center this gives a nonzero Bohr coefficient larger than \(2/3\), since \((1/4+T^2)(9/4+T^2)<9/4\). This proves the claim.

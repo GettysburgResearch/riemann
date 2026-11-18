@@ -9,7 +9,7 @@ For every nonprincipal quadratic character \(\chi\bmod q\),
 \[
  \max_{a:\chi(a)=-1}\limsup_{X\to\infty}J_a(X)>0. \tag{1}
 \]
-If the conductor \(D\) of \(\chi\) tends to infinity, the left hand side is at least \(4/3-O((\log\log D)^{-2})\), with an absolute implied constant. These assertions are unconditional. Thus, for every \(q>2\), the residue classes with positive limiting supremum have images spanning \((\mathbf Z/q)^\times/((\mathbf Z/q)^\times)^2\). In particular at least its \(\mathbf F_2\)-dimension many classes with independent images fail the eventual strict negativity asked about in [Zhao's §8(2)](https://doi.org/10.1007/s40993-025-00640-y). For \(q=3,4,6\), the unique nonsquare class is respectively \(2,3,5\).
+If the conductor \(D\) of \(\chi\) tends to infinity, the left hand side is at least \((2/(3\sqrt3))\log D-O(\log\log D)\), with an absolute implied constant. These assertions are unconditional. Thus, for every \(q>2\), the residue classes with positive limiting supremum have images spanning \((\mathbf Z/q)^\times/((\mathbf Z/q)^\times)^2\). In particular at least its \(\mathbf F_2\)-dimension many classes with independent images fail the eventual strict negativity asked about in [Zhao's §8(2)](https://doi.org/10.1007/s40993-025-00640-y). For \(q=3,4,6\), the unique nonsquare class is respectively \(2,3,5\).
 
 ## The average over a quadratic coset
 
@@ -48,22 +48,19 @@ The uniformly almost-periodic series \(K\) has mean \(4m(1/2)/3\ge0\). If the me
 
 ## Uniform lower bound as the conductor grows
 
-When \(m(1/2)\ge1\), (3) already gives \(\limsup K\ge4/3\). Otherwise use the real even test
+For any fixed \(t>0\), when the remaining zeros lie on the line,
 \[
- h_R(t)=(1-R^2t^2)(\sin(Rt)/(Rt))^4,\qquad R=\tfrac13\log\log D.
+       K(t)= (e^{-t/2}-e^{-3t/2})\log D+O_t(\log\log(3D)). \tag{4a}
 \]
-The inverse transform has support \([-4R,4R]\), supremum norm \(O(1/R)\), and value \(1/(12R)\) at zero by the [low-zero calculation](zhao-bias-central-nov18.md). Apply the explicit formula to the *difference* of the primitive character and zeta zero sums for this entire test. Common off-line terms cancel even if their individual ordinates make the test argument complex. The ramified and ordinary prime terms are \(O(e^{2R}/R)\) by Chebyshev's bound. Contributions of the two gamma factors are \(O(1/R)\) after integration, and the pole terms \(h_R(\pm i/2)\) of the zeta formula are \(O(e^{2R}/R^2)\). Thus
-\[
- \sum_{\gamma}m(1/2+i\gamma)h_R(\gamma)
- =\log D/(12R)+O(e^{2R}/R)>0
-\]
-for large \(D\). On \(|\gamma|\ge1/R\), the test is nonpositive. Terms there with negative multiplicity difference can contribute positively, but are bounded in sum by \(O(R^{-2})\): they come from critical-line zeta ordinates, all of which have \(|\gamma|>14\), and \(|h_R(\gamma)|\ll (R|\gamma|)^{-2}\). Since the total is \(\gg \log D/R\), some unmatched noncentral character ordinate has \(|\gamma|<1/R\). Its coefficient has modulus at least \(4/3-O(R^{-2})\). Almost-periodicity in (3) and the bound for \(\sup K\) give the asserted lower bound.
+Use the inverse transform \(g(v)=k(v+t)\) with \(k(v)=(e^{-v/2}-e^{-3v/2})\mathbf1_{v>0}\), so its transform at a real ordinate is \(e^{it\gamma}/[\rho(1+\rho)]\). Choose a fixed smooth cutoff, translated so it is one up to \(R\) and zero after \(R+1\), and multiply \(g\) by this cutoff to give \(g_R\). Its support is contained in \([-t,R+1]\). The Fourier transform of the removed tail is \(O_t(e^{-R/2}/(1+\gamma^2))\), because the tail and its first two derivatives have \(L^1\) norms \(O_t(e^{-R/2})\). The classical unit-interval zero counts for the two functions are \(O(\log(D(2+|\gamma|)))\) even without either individual GRH. Thus replacing the kernel in the signed series over remaining real ordinates costs \(O_t(e^{-R/2}\log(3D))\).
+
+Apply the Dirichlet explicit formula to the difference of the primitive character and zeta zero sums for the compactly supported \(g_R\). It is continuous and piecewise smooth with a single jump in its first derivative, admissible by ordinary smooth approximation. Its transform is entire, so any off-line zeros common to both functions with equal multiplicity cancel exactly. The conductor term is \(g_R(0)\log D=k(t)\log D\). The prime contributions are \(O_t(1+R)\): on positive logarithms \(|g_R(\log n)|\ll_t n^{-1/2}\) for \(n\le e^{R+1}\), while \(g_R(-\log n)\) is supported on \(n\le e^t\). Use \(\sum_{n\le x}\Lambda(n)/n\ll\log(2x)\). The gamma terms are \(O_t(1)\) because the real-axis transforms are uniformly \(O_t((1+\gamma^2)^{-1})\). The two pole terms of the zeta formula, equal to the transforms at \(\pm i/2\), cost \(O_t(1+R)\) by integrating \(|g_R(v)|e^{\pm v/2}\) on its support. Take \(R=4\log\log(3D)\) to prove (4a). Finally \(k(\log 3)=2/(3\sqrt3)\) and recurrence gives the claimed limiting supremum. In the off-critical case (2) already exceeds any finite lower bound.
 
 Finally, if the images of the classes satisfying \(\limsup J_a>0\) generated a proper subgroup of the quotient by squares, some nontrivial quadratic character would be one on this entire subgroup. This contradicts (1). This spanning statement does not identify a particular nonsquare class when the coset has multiple elements.
 
-## A positive proportion of individual classes per prime modulus under GRH
+## A positive proportion of individual classes per prime modulus
 
-Assume GRH for the Dirichlet characters modulo a prime \(q\), including RH for the principal character. Fix \(0<\delta<1/4\). For all sufficiently large \(q\), each prime
+Assume the Dirichlet \(L\)-functions modulo a prime \(q\) have no real zero in \((1/2,1)\). In particular GRH is sufficient. Fix \(0<\delta<1/4\). For all sufficiently large \(q\), each prime
 \[
  \delta q\log q <p<(1/2-\delta)q\log q,\quad
  a\equiv p\pmod q,\quad a\not\equiv0,1,-1\pmod q
@@ -74,32 +71,37 @@ satisfies
 \]
 These explicitly specified classes number \(\gg_\delta q\) for each sufficiently large prime modulus. This includes classes on either side of the square-class partition whenever they have a prime witness as above.
 
-For each nonprincipal \(\chi\bmod q\), all primitive, let \(K_\chi(t)=\sum_{\rho_\chi}e^{i\gamma t}/[\rho(1+\rho)]\) and use \(K_\zeta\) for the principal term. Character orthogonality, the once-integrated explicit formula and the prime number theorem in fixed progressions give
-\[
- J_a(X)=-2C_q(a)/3-K_\zeta(\log X)
-      -\sum_{\chi\ne\chi_0}\bar\chi(a)K_\chi(\log X)+o_q(1),
-\]
-where \(C_q(a)\) is the number of square roots of \(a\) modulo \(q\), hence at most two. Indeed the squares in the normalized \(\psi\)-to-\(\vartheta\) transition contribute \(C_q(a)\sqrt t+o_q(\sqrt t)\). All Fourier series are absolutely convergent under the stated GRH. Their combined real almost-periodic profile is approached arbitrarily late at any specified phase \(t\).
+Use the weight \(\mu_a(\rho)=\sum_{\chi\bmod q}\bar\chi(a)m_\chi(\rho)\) on zero multiplicities of the primitive \(L\)-functions, with \(\zeta\) for the principal character. If some off-critical weight is nonzero, reflection across the critical line for each character gives a nonzero weight at a zero with \(\beta>1/2\). For each \(1/2<c<\beta\), the unnormalized integral then has limiting supremum and infimum \(+\infty,-\infty\) after division by \(X^{1+c}\). Indeed, its Mellin transform times \(s(s+1)\varphi(q)\) is \(\sum_\chi\bar\chi(a)\log L(s,\chi^*)+\log(s-1)\) plus a holomorphic term for \(\Re s>1/2\), by prime orthogonality. The missing Euler factor at \(q\) is holomorphic there too. Its derivative has residue \(\mu_a(\rho)\) at the chosen zero, but the real segment of continuation above \(1/2\) is regular by the hypothesis. Apply the one-sided Landau argument from (2) to either sign. Complex character weights pair to real values along the real axis.
 
-Choose \(Y=2p\) and \(t=\log Y\). In the explicit formula for \(K_\chi(t)\), the inverse Fourier kernel is \(g(v)=k(v+t)\), with \(k(v)=(e^{-v/2}-e^{-3v/2})\mathbf1_{v>0}\). In the convention \(h(z)=\int g(v)e^{-izv}dv\), expanding the logarithmic derivative on the right vertical line pairs \(\chi(n)\) with \(g(-\log n)\); the reflected line pairs \(\bar\chi(n)\) with \(g(\log n)\). Thus the direct prime contribution to \(-\sum_{\chi\ne\chi_0}\bar\chi(a)K_\chi(t)\) equals
+In the remaining case all off-critical terms cancel. Character orthogonality, the once-integrated explicit formula and the prime number theorem in fixed progressions give the real almost-periodic profile
 \[
+ J_a(X)=-2C_q(a)/3-K_a(\log X)+o_q(1),\qquad
+ K_a(t)=\sum_\gamma\frac{\mu_a(1/2+i\gamma)e^{i\gamma t}}{(1/2+i\gamma)(3/2+i\gamma)} .
+\]
+Here \(C_q(a)\) counts square roots of \(a\) modulo \(q\), hence is at most two. The squares in the normalized \(\psi\)-to-\(\vartheta\) transition contribute \(C_q(a)\sqrt x+o_q(\sqrt x)\). As in (3) the remaining absolutely convergent sum gives a value approached arbitrarily late at each specified phase.
+
+For \(2\le Y\le q^2\) choose \(t=\log Y\). Use the compact kernel \(g_R(v)=k(v+t)\chi_R(v)\) from (4a), with \(0\le\chi_R\le1\), \(R=4\log q\). On the remaining real ordinates its replacement error in the Fourier sum is \(O(q\log q\,e^{-R/2}/\sqrt Y)\), by two tail integrations by parts and summation of the unit-interval counts over all characters. The explicit formula before this approximation has exact cancellation at all common off-line terms with \(\mu_a(\rho)=0\).
+
+In the convention \(h(z)=\int g_R(v)e^{-izv}dv\), the right vertical line pairs \(\chi(n)\) with \(g_R(-\log n)\); the reflected line pairs \(\bar\chi(n)\) with \(g_R(\log n)\). Thus the direct and reflected prime contributions to \(-K_a(t)\) are respectively
+\[
+ \begin{split}
  Y^{-1/2}\sum_{n<Y}\Lambda(n)(1-n/Y)
- \left((q-1)\mathbf1_{n\equiv a\ (q)}-\mathbf1_{q\nmid n}\right).
+   \left((q-1)\mathbf1_{n\equiv a\ (q)}+\mathbf1_{q\mid n}\right),\\
+ Y^{-1/2}\sum_{n\ge2}\frac{\Lambda(n)}n(1-1/(Yn))\chi_R(\log n)
+   \left((q-1)\mathbf1_{n\equiv a^{-1}\ (q)}+\mathbf1_{q\mid n}\right).
+ \end{split}
 \]
-At \(n=p\) the first term alone supplies \((q-1)\log p/(2\sqrt Y)\). All other first terms are nonnegative. The full subtractive sum is at most \((1/2+o(1))\sqrt Y\) by the ordinary prime number theorem and partial summation.
-
-The reflected prime terms give
+The extra terms at powers of \(q\) are from the principal primitive function \(\zeta\). Both displayed sums are nonnegative. The conductor term costs \(O(\log q/\sqrt Y)\), since the sum of \(\bar\chi(a)\) over nonprincipal characters is \(-1\). The gamma contributions vanish: summed over all characters, both parity totals vanish for \(a\ne\pm1\). The pole contribution from \(\zeta\) in \(-K_a(t)\) is minus the sum of the transforms at \(\pm i/2\). Its magnitude is
 \[
- Y^{-1/2}\sum_{n\ge2}\frac{\Lambda(n)}{n}(1-1/(Yn))
- \left((q-1)\mathbf1_{n\equiv a^{-1}\ (q)}-\mathbf1_{q\nmid n}\right).
+              \sqrt Y/2+O((1+R+\log Y)/\sqrt Y).
 \]
-Truncate these at \(Z=q^4\). The tail costs \(O(q Y^{-1/2} Z^{-1/2}\log^2(qZ))\) by partial summation of \(\psi(x,\chi)\ll\sqrt x\log^2(qx)\) for each nonprincipal character. In the initial part discard the nonnegative term and bound the subtractive sum by \(O(\log Z/\sqrt Y)\). These ordinary convergent reflected sums agree with the explicit formula by damping the translated kernel on its support and then using Abel convergence.
+Indeed the term with \(e^{-v/2}\) integrated against the uncut \(g\) is \(\sqrt Y\int_0^\infty(e^{-w}-e^{-2w})\,dw=\sqrt Y/2\), and cutting off its tail costs \(O(e^{-R}/\sqrt Y)\). For \(e^{v/2}\) the integrand is at most \(Y^{-1/2}\) over its support of length \(R+1+\log Y\).
 
-The conductor term costs \(O(\log q/\sqrt Y)\), since the sum of \(\bar\chi(a)\) over nonprincipal characters is \(-1\). Their signed parity totals for \(a\ne\pm1\) are \(-1\) for even characters and zero for odd characters, so the combined gamma term is \(O(1)\). Each parity integral has this absolute bound uniformly in \(t\) by integration of \(O(\log(2+|v|)/(1+v^2))\) on the ordinate axis. The critical zeta term is also \(O(1)\) by absolute convergence. The resulting limsup bound is
+Take \(Y=2p\). The direct atom at \(n=p\) supplies \((q-1)\log p/(2\sqrt Y)\). Dropping the other nonnegative prime terms gives
 \[
- \frac{(q-1)\log p/2-(1+o(1))p}{\sqrt{2p}}-O(1+\log q/\sqrt p).
+  \limsup J_a(X)\ \ge\ \frac{(q-1)\log p/2-p}{\sqrt{2p}}-O(1+\log q/\sqrt p).
 \]
-For the displayed interval of primes this proves (4). The approximation \(o_q(1)\) in the profile is used only by letting \(X\to\infty\) for each fixed \(q\).
+For the displayed interval of primes this proves (4). Recurrence uses \(X\to\infty\) for each fixed \(q\).
 
 To count the distinct classes, put \(x=q\log q\) and let \(N_a\) be the number of primes in that interval belonging to class \(a\bmod q\). The ordinary prime number theorem gives \(\sum N_a\gg_\delta q\). The classical Selberg upper-bound sieve for a pair of linear forms gives, uniformly for even \(0<h\le x\),
 \[
@@ -115,12 +117,12 @@ Cauchy–Schwarz yields \(\#\{a:N_a>0\}\gg_\delta q\); omitting \(0,1,-1\) has n
 
 ### A negative phase for almost every class
 
-In the same setting take \(2\le a\le q-2\) as its least positive representative and let \(b\in[1,q-1]\) represent its inverse. Now set \(Y=a\). The direct sum above has no positive term from the class \(a\): the first possible representative is the zero-weight endpoint. Its subtractive contribution is \(-(1/2+o(1))\sqrt a\) as \(a\to\infty\). In the reflected sum bound the positive part before \(Z=q^4\) by counting every integer in the class \(b\). Specifically,
+In the same setting take \(2\le a\le q-2\) as its least positive representative and let \(b\in[1,q-1]\) represent its inverse. Now set \(Y=a\). The direct sum above has no positive term from the class \(a\): the first possible representative is the zero-weight endpoint. The direct sum therefore vanishes and the poles contribute \(-\sqrt a/2+O(\log q/\sqrt a)\). Bound the reflected sum up to its support endpoint \(Z=e q^4\) by counting every integer in the class \(b\), together with \(O(\log q/q)\) from the ramified powers. Specifically,
 \[
     (q-1)\sum_{n\le Z,\ n\equiv b\ (q)}\frac{\Lambda(n)}n
        \ll q\log q/b+\log^2 q.
 \]
-This follows by isolating \(b\) and summing \((b+jq)^{-1}\le(jq)^{-1}\) thereafter. The same tail, conductor and gamma estimates apply. Consequently
+This follows by isolating \(b\) and summing \((b+jq)^{-1}\le(jq)^{-1}\) thereafter. The same cutoff, conductor and gamma estimates apply. Consequently
 \[
  \liminf_{X\to\infty} J_a(X)
  \le -(1/2+o(1))\sqrt a
