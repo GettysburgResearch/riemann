@@ -1,0 +1,42 @@
+{
+  "after_admission_reading_event_file": "quality/pending_round15/geometry132_inumaru_reading_event.jsonl",
+  "bibliographic_jsonl_paths_scanned_count": 91,
+  "checked": [
+    {
+      "canonical_crosswalk_target": null,
+      "crosswalk_status_before_admission": "provider_identity_only",
+      "exact_identity_hits_in_canonical_and_contributor_jsonl": [],
+      "identity_matches_in_provider_candidates": 1,
+      "identity_matches_in_round10_crosswalk": 1,
+      "normalized_title_hits_in_canonical_and_contributor_jsonl": [],
+      "openalex_id": "https://openalex.org/W7214051944",
+      "paper_id": "PAPER-P122-FIORI-JASKARI-PNT",
+      "provider_candidate_id": "CAND-C214EEA5C23D",
+      "provider_doi": "https://doi.org/10.48550/arxiv.2609.23222",
+      "recommendation": "Admit the unique exact preprint at initial Level 0, pending director action.",
+      "retained_pdf_sha256": "77d12f382218e5d63e1c3b6de0f96a7bb9dfe23538f1ecf0221d28d1f840c8db",
+      "retained_version_html_sha256": "cbcbed704f5c326be048099a70249b1579c4f6496c0d070899381ba242a3c671",
+      "source_year_added": 2026
+    },
+    {
+      "canonical_crosswalk_target": null,
+      "crosswalk_status_before_admission": "provider_identity_only",
+      "exact_identity_hits_in_canonical_and_contributor_jsonl": [],
+      "identity_matches_in_provider_candidates": 1,
+      "identity_matches_in_round10_crosswalk": 1,
+      "normalized_title_hits_in_canonical_and_contributor_jsonl": [],
+      "openalex_id": "https://openalex.org/W7225102923",
+      "paper_id": "PAPER-P122-INUMARU-SUGIYAMA-TWISTED-DENSITY",
+      "provider_candidate_id": "CAND-AC026DA96A1D",
+      "provider_doi": "https://doi.org/10.48550/arxiv.2610.41394",
+      "recommendation": "Admit the unique exact preprint at initial Level 0, pending director action.",
+      "retained_pdf_sha256": "70d2a3caf711fab1a5d7926ed099e098ab8e41c99bd3075dddf0a218b7d7e290",
+      "retained_version_html_sha256": "0084b958ebc0c460cc8caf697f7265c61971a9c671a2b3e64ffbe643f460fc2c",
+      "source_year_added": 2026
+    }
+  ],
+  "initial_admission_fields_file": "quality/pending_round15/geometry132_latest_sources_admission_fields.jsonl",
+  "review_status": "staged_only_no_canonical_changes",
+  "scope": "Exact arXiv ID/DOI component, canonical or proposed ID, OpenAlex ID and normalized title checked as identity fields. Incidental mentions in related-work arrays do not constitute duplicates.",
+  "source_pin_hashes_verified": true
+}

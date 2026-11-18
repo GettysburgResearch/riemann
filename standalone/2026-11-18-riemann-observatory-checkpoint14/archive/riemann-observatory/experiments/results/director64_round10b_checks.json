@@ -1,0 +1,49 @@
+[
+  {
+    "check": "main_term",
+    "path": "scripts/prime64_main_term_moments_checks.py",
+    "sha256": "bfde849f0f8486275e26a6e138c4bf0f6d1b860fac96b953388b2435972a8efd",
+    "args": [],
+    "exit_code": 0,
+    "elapsed_seconds": 0.09572760599985486,
+    "stdout": "FLINT 3.6.0, analytic tail majorant at 400: [83.0427344086220180221721015701939594 +/- 3.47e-35]\nAnalytic tail majorant at 2e8: [0.001900118775738370329460226742077423602 +/- 2.45e-40]\n",
+    "stderr": ""
+  },
+  {
+    "check": "lagarias",
+    "path": "scripts/release64_lagarias_whole_checks.py",
+    "sha256": "f7bd27d3265dde691976ccc881ea18b2e9c2280d154a688437b1b197ba032b29",
+    "args": [],
+    "exit_code": 0,
+    "elapsed_seconds": 0.1916373480016773,
+    "stdout": "Lagarias gap n=2: [0.31716854341180217831807619065773133142699200154168838849 +/- 5.64e-57]\nLagarias gap n=19: [27.53268205323038199262023308265827419730807283762614487 +/- 9.77e-55]\nLagarias gap n=20: [8.348877459721861648088876805550961306387494720129409903 +/- 7.14e-55]\nKaneko strict exponential-only gap n=60: [-1.7031861482589241283120176999791690443224079669442961 +/- 5.76e-53]\nLagarias gap n=5040: [492.318731089447977311625319904900789872158723587450 +/- 5.99e-49]\nLagarias gap n=5041: [14727.448196968187593360118888016651205190355837850501 +/- 2.40e-49]\nSmallest certified finite gap occurs at n=2.\nRobin equality constant at n=12: [0.64821364942179976272009425643532901899304479911015431576 +/- 7.28e-57]\nFirst crossing of 10^18: 9200527969062830400\nAll 22 Table 1 integers, factorizations, and truncated sigma(n)/n ratios reproduced.\n",
+    "stderr": ""
+  },
+  {
+    "check": "q2_symbolic",
+    "path": "scripts/prime64_q2_full_polynomial.py",
+    "sha256": "b4a4e6972a9c359b9d5de32498d594f472cf2cf1c2183560b3aafcb20e1eaea1",
+    "args": [],
+    "exit_code": 0,
+    "elapsed_seconds": 1.1558532749986625,
+    "stdout": "Independent untwisted polynomial and formal local-factor checks passed.\nQ=1\ndensity Poly(1/12*L**4 + 2*c0/3*L**3 + (c0**2 + 2*c1)*L**2 + (-2*c0**3 + 10*c0*c1 - 2*c2)*L + 2*c0**4 - 12*c0**2*c1 + 16*c0*c2 + 14*c1**2 - 20*c3, L, domain='QQ[c0,c1,c2,c3]')\ncumulative Poly(1/12*L**4 + (2*c0/3 - 1/3)*L**3 + (c0**2 - 2*c0 + 2*c1 + 1)*L**2 + (-2*c0**3 - 2*c0**2 + 10*c0*c1 + 4*c0 - 4*c1 - 2*c2 - 2)*L + 2*c0**4 + 2*c0**3 - 12*c0**2*c1 + 2*c0**2 - 10*c0*c1 + 16*c0*c2 - 4*c0 + 14*c1**2 + 4*c1 + 2*c2 - 20*c3 + 2, L, domain='QQ[c0,c1,c2,c3]')\ntail Poly(1/12*L**4 + (2*c0/3 + 1/3)*L**3 + (c0**2 + 2*c0 + 2*c1 + 1)*L**2 + (-2*c0**3 + 2*c0**2 + 10*c0*c1 + 4*c0 + 4*c1 - 2*c2 + 2)*L + 2*c0**4 - 2*c0**3 - 12*c0**2*c1 + 2*c0**2 + 10*c0*c1 + 16*c0*c2 + 4*c0 + 14*c1**2 + 4*c1 - 2*c2 - 20*c3 + 2, L, domain='QQ[c0,c1,c2,c3]')\nQ=2*2**(-s)-1\ndensity Poly(1/12*L**4 + (2*c0/3 + 2*q/3)*L**3 + (c0**2 + 4*c0*q + 2*c1 + q**2)*L**2 + (-2*c0**3 + 4*c0**2*q + 10*c0*c1 + 4*c0*q**2 + 8*c1*q - 2*c2 - 16*q**3/3)*L + 2*c0**4 - 4*c0**3*q - 12*c0**2*c1 + 2*c0**2*q**2 + 20*c0*c1*q + 16*c0*c2 - 32*c0*q**3/3 + 14*c1**2 + 4*c1*q**2 - 4*c2*q - 20*c3 + 49*q**4/6, L, domain='QQ[q,c0,c1,c2,c3]')\ncumulative Poly(1/12*L**4 + (2*c0/3 + 2*q/3 - 1/3)*L**3 + (c0**2 + 4*c0*q - 2*c0 + 2*c1 + q**2 - 2*q + 1)*L**2 + (-2*c0**3 + 4*c0**2*q - 2*c0**2 + 10*c0*c1 + 4*c0*q**2 - 8*c0*q + 4*c0 + 8*c1*q - 4*c1 - 2*c2 - 16*q**3/3 - 2*q**2 + 4*q - 2)*L + 2*c0**4 - 4*c0**3*q + 2*c0**3 - 12*c0**2*c1 + 2*c0**2*q**2 - 4*c0**2*q + 2*c0**2 + 20*c0*c1*q - 10*c0*c1 + 16*c0*c2 - 32*c0*q**3/3 - 4*c0*q**2 + 8*c0*q - 4*c0 + 14*c1**2 + 4*c1*q**2 - 8*c1*q + 4*c1 - 4*c2*q + 2*c2 - 20*c3 + 49*q**4/6 + 16*q**3/3 + 2*q**2 - 4*q + 2, L, domain='QQ[q,c0,c1,c2,c3]')\ntail Poly(1/12*L**4 + (2*c0/3 + 2*q/3 + 1/3)*L**3 + (c0**2 + 4*c0*q + 2*c0 + 2*c1 + q**2 + 2*q + 1)*L**2 + (-2*c0**3 + 4*c0**2*q + 2*c0**2 + 10*c0*c1 + 4*c0*q**2 + 8*c0*q + 4*c0 + 8*c1*q + 4*c1 - 2*c2 - 16*q**3/3 + 2*q**2 + 4*q + 2)*L + 2*c0**4 - 4*c0**3*q - 2*c0**3 - 12*c0**2*c1 + 2*c0**2*q**2 + 4*c0**2*q + 2*c0**2 + 20*c0*c1*q + 10*c0*c1 + 16*c0*c2 - 32*c0*q**3/3 + 4*c0*q**2 + 8*c0*q + 4*c0 + 14*c1**2 + 4*c1*q**2 + 8*c1*q + 4*c1 - 4*c2*q - 2*c2 - 20*c3 + 49*q**4/6 - 16*q**3/3 + 2*q**2 + 4*q + 2, L, domain='QQ[q,c0,c1,c2,c3]')\n",
+    "stderr": ""
+  },
+  {
+    "check": "q2_finite",
+    "path": "scripts/prime64_q2_partial_tail_observation.py",
+    "sha256": "3f60c973d0ccba1d27c395d1fafbcbc46f4d853de78278f56768e16e5424ea54",
+    "args": [
+      "--max-height",
+      "1000",
+      "--precision",
+      "192",
+      "--output",
+      "experiments/results/director64_q2_finite.json"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 3.061773584999173,
+    "stdout": "Certified finite partials at [100, 400, 1000] in 2.72 s.\n100 29 [0.25253801685456458742967198323134 +/- 1.63e-33] [0.65221762620312322015859711371911 +/- 6.87e-34] [0.82787611711611882425589923338220 +/- 8.45e-34]\n400 202 [0.42948220340932478214486148918318 +/- 2.05e-33] [0.65346489467483460415016161726209 +/- 1.49e-33] [0.78528076850083012196591420589492 +/- 2.38e-34]\n1000 649 [0.51202729849931569330504963416315 +/- 4.87e-33] [0.65346151424536372861697912576194 +/- 1.77e-33] [0.74936022709227474064543971771491 +/- 4.11e-33]\n",
+    "stderr": ""
+  }
+]

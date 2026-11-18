@@ -1,0 +1,13 @@
+# PAPER-A002 — Platt–Trudgian: rigorous finite verification
+
+Dave Platt and Tim Trudgian, *The Riemann hypothesis is true up to 3·10^12*, arXiv:2004.09765v1, 21 April 2020; Bulletin of the London Mathematical Society 53 (2021), 792–797, DOI [10.1112/blms.12460](https://doi.org/10.1112/blms.12460). [Source version](https://arxiv.org/abs/2004.09765v1). Accessed 17 November 2026. Complete eight-page preprint read (L1); underlying computational implementation not audited or rerun (not L2).
+
+Theorem1, p2: RH holds up to height **3,000,175,332,800**, encompassing the lowest **12,363,153,437,138** nontrivial zeros. The theorem concerns the classical ζ, not GRH. “Up to height” is imaginary part, not number of zeros. The rounded title is a lower height than the exact theorem.
+
+§2 reconstructs the certificate architecture: rigorously enclosed completed-zeta values → sign changes on Re s=1/2 → Turing-method total-zero accounting → equality of detected on-line count with all zeros counted with multiplicity → no missed off-line or multiple zeros in the certified range. The authors changed MPFI to Arb ball arithmetic, used rigorously bounded truncation errors, and deliberately avoided storing unnecessarily precise individual zeros. A sign-change sample without an independently justified global zero count would not establish the theorem. The paper reports about 7.5 million core hours; that run was not reproduced here.
+
+§3.1 Corollary1 combines finite RH with Büthe's result: RH up to H gives the Schoenfeld ψ bound for 4.92 sqrt(x/log x)≤H, yielding x≤2.169·10^25 with the paper's specified lower thresholds. This shows finite verification can have rigorous arithmetic consequences over finite ranges. The radical covers x/log x; this parenthesization was verified against the original TeX source, not inferred from broken PDF extraction. §3.4 Corollary2 yields de Bruijn–Newman Λ≤0.2 using Polymath Table1 and its X=2H convention. This consequence is historical, not asserted as the latest Λ bound.
+
+Useful negative knowledge: any finite height leaves all sufficiently high zeros uninspected. No limiting passage establishes RH unless the verification height is unbounded in a proved theorem or an independent tail argument is supplied. Best effort searches for subsequent work were conducted; no global claim that this remains the record is made.
+
+Next tasks: audit the underlying Platt 2017 algorithm and Turing accounting, recover machine-checkable segment certificates where available, and benchmark explicit prime inequalities with separate finite-zero and high-zero terms. Claims about a finite observed segment are not statements about asymptotic zero proportions.

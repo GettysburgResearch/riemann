@@ -1,0 +1,9 @@
+# Zero density in short strips and short-interval bounds toward Hypothesis S
+
+Yangbo Ye. arXiv:2610.15989v2 (14 October 2026), originally submitted 11 October. [Primary PDF](https://arxiv.org/pdf/2610.15989v2) · [Version history](https://arxiv.org/abs/2610.15989)
+
+Complete Level 1 reading of the v2 PDF, pp. 1–26, including all proofs in §§2–6, the tables and references. The [technical audit](../audits/latest62_ye_fullread.md) records the conversion parameters, both transform widths, the separate cusp-form inputs and a shorter-height consequence.
+
+Theorem 1.1 counts zeros with multiplicity, \(\Re\rho>\sigma\) and \(T\le\Im\rho\le T+T^a\). For a fixed globally tempered cuspidal unitary \(\pi\), or zeta, assume a moment bound \(\int_X^{X+X^a}|L(1/2+it,\pi)|^{2\ell}dt\ll_\eta X^{\theta+\eta}\) uniformly for sufficiently large real \(X\), for fixed \(0<a\le1,\ell\ge1,\theta\ge a\). Then for \(3/5\le\sigma<1\) the exponent is \((1-\sigma)\max(15a/(3+5\sigma),4\theta/[\ell(2\sigma-1)+4(1-\sigma)])+\varepsilon\).
+
+Theorem 1.2 is unconditional for zeta for \(2/3\le a\le1\). Its exponent is \(aB(\sigma)+\varepsilon\), where the four pieces on \([1/2,7/10]\), \([7/10,4/5]\), \([4/5,5/6]\), and \([5/6,1)\) are \(3(1-\sigma)/(2-\sigma)\), \(15(1-\sigma)/(3+5\sigma)\), \(3(1-\sigma)/(3\sigma-1)\), and \(2(1-\sigma)\), respectively. At \(\sigma=3/4\) this gives \(5a/9\), improving the earlier Ye–Zhang \(3a/5\) and giving the same exponent as Guth–Maynard at \(a=1\). On zeta, Heath-Brown–Iwaniec's short-interval fourth moment supplies \(\ell=2,\theta=a\). Type I uses Guth–Maynard after moving detector evaluations to the common line and extracting separated samples inside an \(O(T^a)\) window. Type II uses Maynard–Pratt's integral argument with the moment hypothesis. The October zero-free half-plane results are a separate input to subsequent weighted prime-sum applications, outside the density proof itself.

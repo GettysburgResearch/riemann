@@ -1,0 +1,13 @@
+Lean verification of the scalar two-scale estimate
+Project: sources/formal_round2/zeta-23-lean-v1.0
+Project revision: 3635e74826a4c1fcece7d1cd2b6fa75e43a00510
+Mathlib revision: 51e6992efd06126df61a496bebf8f49482a4e129
+Lean (version 4.33.0-rc2, x86_64-unknown-linux-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)
+1ad93c5dae903bae0fe85632ce0af6ab80678a203c0a1a4af48e2462a0e0b982  ../../../experiments/code/ObservatoryTwoScaleScalar.lean
+Command (from project): ../elan/toolchains/leanprover--lean4---v4.33.0-rc2/bin/lake env lean ../../../experiments/code/ObservatoryTwoScaleScalar.lean
+Observatory.twoScaleScalarBound (u v C X : ℝ) (hu : 0 ≤ u) (hu1 : u ≤ 1) (hv : 0 < v) (_hv1 : v ≤ 1) (hC : 0 ≤ C)
+  (coarse : X ≤ C * (u ^ 4 + v ^ 6)) (fine : X * v ^ 2 ≤ C * u ^ 4) : X ≤ 2 * C * u ^ 3
+'Observatory.twoScaleScalarBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+Exit status: 0
+The reported axiom closure excludes sorryAx and project-specific axioms.
+Scope: the two real-variable estimates are hypotheses. With h = u² and L = 1/v, the conclusion is the scalar O(h^(3/2)) bound. The stochastic moment estimates and Brownian limit remain outside this declaration.

@@ -1,0 +1,25 @@
+{
+  "status": "exact arithmetic checks passed",
+  "p_coefficients": [
+    "1",
+    "-7/4",
+    "2/3"
+  ],
+  "q_coefficients": [
+    "0",
+    "7/2",
+    "-211/48",
+    "7/3",
+    "-4/9"
+  ],
+  "integral_p_squared": "5/36",
+  "integral_q": "31/36",
+  "simple_charge_lower": "13/18",
+  "clipped_q_global_Lipschitz_bound": 6,
+  "active_derivative_square_upper": "211/6",
+  "Bell_factorial_checked_orders": [
+    1,
+    30
+  ],
+  "scope": "Polynomial and finite combinatorial bookkeeping only. The uniform moment bound, Riesz input, no-atom theorem and limiting claims are analytic proofs in the audit."
+}

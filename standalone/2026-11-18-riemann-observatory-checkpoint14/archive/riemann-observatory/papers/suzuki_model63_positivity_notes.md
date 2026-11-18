@@ -1,0 +1,31 @@
+# Positivity criteria and canonical systems
+
+This batch adds 43 distinct works. Three primary texts were read in full at Level 1. The other 40 records report verified identity, edition and access at Level 0, with a topic description drawn from the primary text. A complete source reading reports what the inspected text argues. Independent verification of theorem dependencies, contemporary numerical claims and certificates requires separate evidence.
+
+## Burnol, Fourier–Sonine spaces
+
+The complete journal note, pp. 689–692, begins with the de Branges evaluation-kernel framework for the half-plane to the right of the critical line. Section 2 takes even square-integrable functions that vanish along with their cosine transforms on `(−λ,λ)`, with `λ>0`. It recalls the completed Mellin functional equation for tempered distributions having these two support gaps and uses this to describe the corresponding space of entire functions.
+
+Section 3 solves the orthogonal projection problem. Let `Pλ` denote projection onto the time window and `Fλ=Pλ F₊ Pλ` the restricted cosine transform. The window and transform-window components are coupled by the block operator with identity diagonal and `Fλ` off diagonal. Compactness and the strict norm bound on `Fλ` give the inverse through `(I−Fλ²)⁻¹`. Lemma 3 identifies a prolate basis for the complementary subspace. Theorem 4 and Corollary 5 give the projection and its parity-specific versions.
+
+Section 4 applies the calculation to boundary point masses at `±λ` combined with a cosine function. Theorems 6–7 construct two tempered distributions with opposite Fourier parity and the Sonine property, via the resolvents `(I±Fλ)⁻¹`. In §5, Theorem 8 combines these through a completed Mellin transform to get the Hermite–Biehler generator `Eλ` and an isometry with the original Sonine space. The proof sketch uses the boundary jump of the Mellin-evaluation vector, which also gives Theorem 9. The mechanism supplies an explicit positive Hilbert space and real-line zeros for its parity components in the rotated coordinate. Identifying those components with a prescribed arithmetic entire function would require additional input. [Publisher text](https://comptes-rendus.academie-sciences.fr/mathematique/item/CRMATH_2002__335_8_689_0.pdf)
+
+## Omar and Mazhouda, Selberg-class Li coefficients
+
+The complete note, pp. 245–248, introduces the Selberg axioms and the convention `λF(n)=Σρ[1−(1−1/ρ)^n]`. Corollary 2.2 takes the Dirichlet-series, continuation and functional-equation conditions as stated there. It uses Bombieri–Lagarias on both the zero multiset and its reflected multiset, with the symmetry expressed through the completed factors. The positivity comparison in this argument is the real-part comparison for complex coefficients. The use of the larger class requires checking the zero-sum conventions, endpoint nonvanishing and summability in the Bombieri–Lagarias hypothesis.
+
+Theorem 2.3 is stated for the Selberg class. Its proof writes the derivative of `log ξF(1/(1−z))` as the generating series of `λF(n+1)`. It separates the pole term, `−F′/F`, the conductor and the gamma factors. Equation (7) supplies generalized Stieltjes constants via a logarithmically renormalized sum of `ΛF(n)`. Equations (8)–(10) use the digamma expansion and the substitution `s=z/(1−z)` to turn these Laurent and Taylor coefficients into binomial sums. The terminal specialization recovers the zeta formula and discusses Hecke functions. The theorem is recorded in its published scope. A use of its arithmetic formula should check the asymptotic hypotheses under which the renormalized limits are justified. [Numdam journal copy](https://www.numdam.org/item/10.1016/j.crma.2007.07.008.pdf)
+
+## Nakamura and Suzuki, infinite divisibility
+
+The complete five-page arXiv v1 text gives two descriptions of the even screw function `gζ`. Equation (1.5) uses the prime powers, elementary terms and a Hurwitz–Lerch term. Equation (1.7) expresses it as a sum over distinct zeros `γ` of `ξ(1/2−iz)`, with weights `mγ/γ²`. Lemma 2.1 uses the bounded imaginary parts of the zeros and order one of ξ for local uniform convergence.
+
+For RH implying Theorems 1.1–1.2, all the `γ` are nonzero and real. Their inverse-square multiplicity weights form a finite positive Lévy measure at atoms `−γ`, and the Lévy–Khintchine formula gives a compound Poisson law. For the converse, a characteristic function has modulus at most one, giving `gζ≤0`. The one-sided transform in Lemma 2.2 equals `z⁻²(ξ′/ξ)(1/2−iz)` initially for `Im z>1/2`. The fixed sign forces a singularity on the imaginary axis at any positive convergence boundary, whereas the logarithmic derivative is regular there because ξ has no positive real zeros. This extends convergence throughout the open upper half-plane and precludes poles there. The functional equation gives the corresponding conclusion in the lower half-plane.
+
+The appendix recovers (1.7) by computing the same transform on the arithmetic side. The prime-power contribution is the Dirichlet series for `ζ′/ζ` and the Hurwitz–Lerch term becomes a difference of digamma values. Fourier uniqueness identifies the expressions after exponential damping. The forward implication constructs an infinitely divisible law, and the converse as written uses the characteristic-function modulus bound. [Inspected arXiv v1](https://arxiv.org/abs/2306.08317v1)
+
+## Source identity decisions
+
+- Burnol’s published Fourier–Sonine note replaces the interrupted retrieval for arXiv:math/0203122, which identifies Paolo Aluffi’s work on Segre classes. Burnol’s *Entrelacement de co-Poisson* was already indexed as PAPER-HC005.
+- Suzuki identifies arXiv:1308.0228 as an upgraded version of arXiv:1211.2953. Both PDF manifestations and the separate author corrigenda to the 2018 journal printing are in the source receipts under one selected work. The correction sheet removes part of a lemma, revises invariant subspaces and updates the proof of Theorem 1.2(1). [arXiv version history](https://arxiv.org/abs/1308.0228v4)
+- The purported Connes canonical-system hit printed a different title and author list. It concerns multiple-zeta generators, so it was excluded. The attempted Keiper and Bombieri primary PDF retrievals did not produce usable primary PDFs for this batch.

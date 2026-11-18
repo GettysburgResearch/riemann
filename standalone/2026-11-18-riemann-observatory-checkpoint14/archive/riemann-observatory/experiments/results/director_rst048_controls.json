@@ -1,0 +1,206 @@
+{
+  "status": "PASS_exact_finite_controls",
+  "scope": "36 delayed-profile energies and matching Legendre moments;12 optimal local energies; exact rational cutoff exponents. Not verification of infinite analytic estimates or RH.",
+  "sympy_version": "1.14.0",
+  "delayed_cases": [
+    {
+      "k": 1,
+      "m": 1,
+      "delayed_energy": "1"
+    },
+    {
+      "k": 2,
+      "m": 1,
+      "delayed_energy": "11/10"
+    },
+    {
+      "k": 2,
+      "m": 2,
+      "delayed_energy": "89/15"
+    },
+    {
+      "k": 3,
+      "m": 1,
+      "delayed_energy": "41/35"
+    },
+    {
+      "k": 3,
+      "m": 2,
+      "delayed_energy": "46/7"
+    },
+    {
+      "k": 3,
+      "m": 3,
+      "delayed_energy": "3883/63"
+    },
+    {
+      "k": 4,
+      "m": 1,
+      "delayed_energy": "1226/1001"
+    },
+    {
+      "k": 4,
+      "m": 2,
+      "delayed_energy": "1136/143"
+    },
+    {
+      "k": 4,
+      "m": 3,
+      "delayed_energy": "1784936/27027"
+    },
+    {
+      "k": 4,
+      "m": 4,
+      "delayed_energy": "161532/143"
+    },
+    {
+      "k": 5,
+      "m": 1,
+      "delayed_energy": "9253/7293"
+    },
+    {
+      "k": 5,
+      "m": 2,
+      "delayed_energy": "208118/21879"
+    },
+    {
+      "k": 5,
+      "m": 3,
+      "delayed_energy": "5938871/65637"
+    },
+    {
+      "k": 5,
+      "m": 4,
+      "delayed_energy": "5695920268/5316597"
+    },
+    {
+      "k": 5,
+      "m": 5,
+      "delayed_energy": "133427611585/5316597"
+    },
+    {
+      "k": 6,
+      "m": 1,
+      "delayed_energy": "60364/46189"
+    },
+    {
+      "k": 6,
+      "m": 2,
+      "delayed_energy": "518048/46189"
+    },
+    {
+      "k": 6,
+      "m": 3,
+      "delayed_energy": "1569461/12597"
+    },
+    {
+      "k": 6,
+      "m": 4,
+      "delayed_energy": "1863539372/1247103"
+    },
+    {
+      "k": 6,
+      "m": 5,
+      "delayed_energy": "233099471645/11223927"
+    },
+    {
+      "k": 6,
+      "m": 6,
+      "delayed_energy": "5514566914538/9183213"
+    },
+    {
+      "k": 7,
+      "m": 1,
+      "delayed_energy": "3237709/2414425"
+    },
+    {
+      "k": 7,
+      "m": 2,
+      "delayed_energy": "31473314/2414425"
+    },
+    {
+      "k": 7,
+      "m": 3,
+      "delayed_energy": "48612581/289731"
+    },
+    {
+      "k": 7,
+      "m": 4,
+      "delayed_energy": "628709540/289731"
+    },
+    {
+      "k": 7,
+      "m": 5,
+      "delayed_energy": "219458108249/7822737"
+    },
+    {
+      "k": 7,
+      "m": 6,
+      "delayed_energy": "2305846328298082/5280347475"
+    },
+    {
+      "k": 7,
+      "m": 7,
+      "delayed_energy": "319701049935631/21377925"
+    },
+    {
+      "k": 8,
+      "m": 1,
+      "delayed_energy": "7390027/5386025"
+    },
+    {
+      "k": 8,
+      "m": 2,
+      "delayed_energy": "16116358/1077205"
+    },
+    {
+      "k": 8,
+      "m": 3,
+      "delayed_energy": "237343493/1077205"
+    },
+    {
+      "k": 8,
+      "m": 4,
+      "delayed_energy": "9593217484/3079539"
+    },
+    {
+      "k": 8,
+      "m": 5,
+      "delayed_energy": "280586632933/6828543"
+    },
+    {
+      "k": 8,
+      "m": 6,
+      "delayed_energy": "6610237524662006/11779236675"
+    },
+    {
+      "k": 8,
+      "m": 7,
+      "delayed_energy": "614312581982669549/63607878045"
+    },
+    {
+      "k": 8,
+      "m": 8,
+      "delayed_energy": "72893993833441021312/190823634135"
+    }
+  ],
+  "optimal_energy_cases": 12,
+  "cutoff_exponents": {
+    "collective_low": {
+      "rational": "-299919/2000000",
+      "decimal": -0.1499595
+    },
+    "collective_high": {
+      "rational": "-24979/500000",
+      "decimal": -0.049958
+    },
+    "high_strip_slowest": {
+      "rational": "-24989/500000",
+      "decimal": -0.049978
+    },
+    "anchor": {
+      "rational": "-299979/4000000",
+      "decimal": -0.07499475
+    }
+  }
+}

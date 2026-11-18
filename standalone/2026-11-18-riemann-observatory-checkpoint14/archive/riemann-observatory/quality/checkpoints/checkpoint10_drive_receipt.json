@@ -1,0 +1,46 @@
+{
+  "checkpoint": "checkpoint10",
+  "status": "delivered_verified_metadata",
+  "verified_at_utc": "2026-11-18T03:48:16.019597+00:00",
+  "files": [
+    {
+      "kind": "zip",
+      "file_id": "1jDCXGRg3h4WzzKItgi2PLlOrEa91gLWq",
+      "local_path": "/workspace/checkpoints/checkpoint10_sealed.zip",
+      "bytes": 20024472,
+      "sha256": "25d0735dd17499cb3b33b109209f91fb26a72c95cbe907ea8d46e033e2975a7b",
+      "url": "https://drive.google.com/file/d/1jDCXGRg3h4WzzKItgi2PLlOrEa91gLWq/view?usp=drivesdk",
+      "parent_ids": [
+        "1VErNe2KOeqqw02o7YktqYOcfkixgHU-K"
+      ],
+      "modified_time": "2026-11-18T03:47:45.217Z"
+    },
+    {
+      "kind": "pdf",
+      "file_id": "15Ec2GU64FjpHwZMWLl1TqhQRAgdFmZrr",
+      "local_path": "/workspace/checkpoints/checkpoint10/final_synthesis/synthesis.pdf",
+      "bytes": 251569,
+      "sha256": "36a0e61a3d8841b0cf4840a9015b7fa9177f7c863e2b993c55afdfdaa86f4a54",
+      "url": "https://drive.google.com/file/d/15Ec2GU64FjpHwZMWLl1TqhQRAgdFmZrr/view?usp=drivesdk",
+      "parent_ids": [
+        "1VErNe2KOeqqw02o7YktqYOcfkixgHU-K"
+      ],
+      "modified_time": "2026-11-18T03:47:48.854Z"
+    },
+    {
+      "kind": "html",
+      "file_id": "1TaUMRh5QFnD8j9eJA5i_D1DzDU8czdy0",
+      "local_path": "/workspace/checkpoints/checkpoint10/final_synthesis/synthesis.html",
+      "bytes": 249357,
+      "sha256": "09d856f6cc786a429ff940403d2efb488e5a0a1e6e7462181beabcb865476137",
+      "url": "https://drive.google.com/file/d/1TaUMRh5QFnD8j9eJA5i_D1DzDU8czdy0/view?usp=drivesdk",
+      "parent_ids": [
+        "1VErNe2KOeqqw02o7YktqYOcfkixgHU-K"
+      ],
+      "modified_time": "2026-11-18T03:47:52.070Z"
+    }
+  ],
+  "verification_scope": "Exact locally sealed bytes uploaded in place; upload success and independent metadata size/parent readback verified. Remote cryptographic digest was not provided.",
+  "independent_qa": "quality/checkpoints/checkpoint10_independent_qa.md",
+  "tool_responses": "quality/checkpoints/checkpoint10_drive_tool_responses.json"
+}

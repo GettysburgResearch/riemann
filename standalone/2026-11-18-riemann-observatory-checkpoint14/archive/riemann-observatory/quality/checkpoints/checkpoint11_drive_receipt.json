@@ -1,0 +1,46 @@
+{
+  "checkpoint": "checkpoint11",
+  "status": "delivered_verified_metadata",
+  "verified_at_utc": "2026-11-18T04:04:05.144761+00:00",
+  "files": [
+    {
+      "kind": "zip",
+      "file_id": "1jDCXGRg3h4WzzKItgi2PLlOrEa91gLWq",
+      "local_path": "/workspace/checkpoints/checkpoint11_sealed.zip",
+      "bytes": 20733010,
+      "sha256": "844142af1968c605bb3ea7f7ff32e56e4c4519f1db84ffcdf57dd1eb2b5ee77a",
+      "url": "https://drive.google.com/file/d/1jDCXGRg3h4WzzKItgi2PLlOrEa91gLWq/view?usp=drivesdk",
+      "parent_ids": [
+        "1VErNe2KOeqqw02o7YktqYOcfkixgHU-K"
+      ],
+      "modified_time": "2026-11-18T04:03:33.219Z"
+    },
+    {
+      "kind": "pdf",
+      "file_id": "15Ec2GU64FjpHwZMWLl1TqhQRAgdFmZrr",
+      "local_path": "/workspace/checkpoints/checkpoint11/final_synthesis/synthesis.pdf",
+      "bytes": 420757,
+      "sha256": "46277a3a10e7b45e07d109db93e440133f10988001feb50f046176141504c282",
+      "url": "https://drive.google.com/file/d/15Ec2GU64FjpHwZMWLl1TqhQRAgdFmZrr/view?usp=drivesdk",
+      "parent_ids": [
+        "1VErNe2KOeqqw02o7YktqYOcfkixgHU-K"
+      ],
+      "modified_time": "2026-11-18T04:03:36.998Z"
+    },
+    {
+      "kind": "html",
+      "file_id": "1TaUMRh5QFnD8j9eJA5i_D1DzDU8czdy0",
+      "local_path": "/workspace/checkpoints/checkpoint11/final_synthesis/synthesis.html",
+      "bytes": 488080,
+      "sha256": "fb64bb210376881403526c23383fc71d604ea74ee825d6e1335c0ca3bdcdddd2",
+      "url": "https://drive.google.com/file/d/1TaUMRh5QFnD8j9eJA5i_D1DzDU8czdy0/view?usp=drivesdk",
+      "parent_ids": [
+        "1VErNe2KOeqqw02o7YktqYOcfkixgHU-K"
+      ],
+      "modified_time": "2026-11-18T04:03:40.441Z"
+    }
+  ],
+  "verification_scope": "Exact locally sealed bytes uploaded in place; upload success and independent metadata size/parent readback verified. No remote cryptographic digest provided.",
+  "independent_qa": "quality/checkpoints/checkpoint11_independent_qa.md",
+  "tool_responses": "quality/checkpoints/checkpoint11_drive_tool_responses.json"
+}

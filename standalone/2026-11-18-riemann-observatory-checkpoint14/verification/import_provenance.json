@@ -1,0 +1,42 @@
+{
+  "status": "EXPLORATORY_IMPORTED",
+  "checkpoint": 14,
+  "cutoff": "2026-11-18",
+  "repository": "GettysburgResearch/riemann",
+  "base_commit": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "zip_sha256": "9f1dcab0d244f667e90cdf712eea15c6f07b8141c1adaee7569f26774c57a198",
+  "zip_bytes": 21554391,
+  "archive_members": 2888,
+  "manifest_payloads": 2887,
+  "extraction": "All ZIP member bytes and root hierarchy preserved; Git uses regular non-executable files, matching ZIP mode semantics. Invoke retained shell scripts through bash.",
+  "postseal_records": "Checkpoint14 QA, freeze, metrics, delivery and final seal receipts copied unchanged to verification/. Private source/cache trees excluded by the original distribution policy.",
+  "live_distributable_comparison": "The only seven live distributable files absent from the sealed archive are the final QA/delivery/sealed-validation/pre-render-inventory records retained in verification/. Four live distributable files differ and are enumerated below. Final released ZIP, frozen stage and delivered standalone renders are the source of truth, not mutable live renders or live distribution manifest.",
+  "live_differences": [
+    {
+      "path": "final_synthesis/synthesis.html",
+      "sealed_sha256": "abacebf4c0d4b4cff5c44ca080af41289d37bc011d82aff18e1f72aa91e5e440",
+      "live_sha256": "2c663bd313cbb93ad3e73da725f8680633623ff51823e8a29b1ac1625b89fa93",
+      "published_authority": "sealed byte-for-byte member"
+    },
+    {
+      "path": "final_synthesis/synthesis.pdf",
+      "sealed_sha256": "8e902c98e28b0365b24b980f7bd199ef81586d8d2e79563570dbc7984d46c515",
+      "live_sha256": "59da3d576bfffd9a91f09d7486eb9844e9663fd0bfe5924185fb0aec94ffb853",
+      "published_authority": "sealed byte-for-byte member"
+    },
+    {
+      "path": "quality/distribution_manifest.json",
+      "sealed_sha256": "b7bce871c9eadef806ddfa6eb25d76d97f8de40662f0dfc8b2c63b8d904f4bab",
+      "live_sha256": "2fbb1536c432f448848841ddbd8f51eacd96b8756733496a78d06ecdd4f2c2df",
+      "published_authority": "sealed byte-for-byte member"
+    },
+    {
+      "path": "quality/execution_state.json",
+      "sealed_sha256": "7bc1cbe2dda54ef9945be1a7833a760c7cb6b786e36de0ec365a1e659427f8fa",
+      "live_sha256": "3b9e94e598e784b724a692c6119d60e4b9c1a9ee136632ca403fe4087363e808",
+      "published_authority": "sealed byte-for-byte member; latest execution state separately retained"
+    }
+  ],
+  "claim_status": "Internal source-version-specific mathematical reviews preserved; no repository acceptance, external expert validation, publication novelty or RH resolution asserted.",
+  "related_distinct_pull_request": 1030
+}

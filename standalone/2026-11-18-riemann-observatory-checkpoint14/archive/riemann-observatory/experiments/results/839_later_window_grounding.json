@@ -1,0 +1,46 @@
+{
+  "source_commit": "0e961ea199b425010843bc8044676d4ad29fe031",
+  "scope": "Exact match of C++ frozen constants to pinned Lean statement definitions and of expected counts to author record. No new Lean execution.",
+  "windows": {
+    "second": {
+      "lean_source_path": "lean/Simple673/Defs.lean",
+      "lean_source_sha256": "66fc20485be736401c9f735e993e284ed5f711b2ea5b488f02b109d95266c17c",
+      "author_expected_counts": {
+        "status": "PASS_COB_CONTINUUM",
+        "nodes": 535332163,
+        "leaves": 267666082,
+        "basic": 202511130,
+        "affine": 65154952,
+        "max_stack": 63
+      },
+      "matches_all_label_placeholders": true,
+      "checked": [
+        "Wtab",
+        "hTab",
+        "knotTab",
+        "alphaP",
+        "sep"
+      ]
+    },
+    "third": {
+      "lean_source_path": "lean/Line889/Defs.lean",
+      "lean_source_sha256": "66f110e74e1b1aa2867a7b8a190896dc57e0684e1be33600bb91ac68f09bca41",
+      "author_expected_counts": {
+        "status": "PASS_COB_CONTINUUM",
+        "nodes": 572959453,
+        "leaves": 286479727,
+        "basic": 256891820,
+        "affine": 29587907,
+        "max_stack": 68
+      },
+      "matches_all_label_placeholders": true,
+      "checked": [
+        "Wtab",
+        "hTab",
+        "knotTab",
+        "alphaP",
+        "sep"
+      ]
+    }
+  }
+}

@@ -1,0 +1,20 @@
+# Director adjudication: bounded positivity with the correct counting scale
+
+18 November 2026. I checked the complete primary-source bridge positivity64_infdiv_bridge.md, independent geometry64_infdiv_skeptic.md, strengthened construction positivity64_infdiv_rvm_strengthening.md and independent uniform64_infdiv_rvm_skeptic.md. I independently reconstructed the conditional form, continuous running-supremum filling, entire-product growth, global transform and small-time expansion. The obstruction concerns an explicit analytic model class; it does not preserve zeta's Euler product or its arithmetic formula away from the inspected local expansion.
+
+For every H>0, half-width0<a<1/2 and prescribed zero height, there is an even real entire E of order1, infinite exponential type, E(0)=1 and E(iy)>0, with one off-real quartet beyond that height and all zeros in |Im z|<=a. Its positive-real-part count is the smooth Riemann–von Mangoldt main term M(x)=x log(x/(2pi))/(2pi)−x/(2pi)+7/8 plus O(1), eventually within4. This does not match the literal fluctuating actual zero count point by point.
+
+Define g_E by the exact convergent inverse-square signed-zero formula. It has the same half-line logarithmic-derivative transform as the source exponent. For every c>0 the matrix [exp(c g_E(t_i−t_j))] is PSD on EVERY finite grid of diameter<=H, with no bound on its cardinality. Nevertheless g_E is unbounded above at late times, so these functions are not global characteristic functions.
+
+The baseline consists of two irrationally related sine lattices. On [-H,H] its exponent is exactly −C_b|t|+t². For a zero-sum grid vector let F be its cumulative step function. The conditional form is at least (2C_b−2H)||F||². An off-axis quartet has second derivative bounded by4 cosh(aH) on that interval, so its conditional form loses at most4H cosh(aH)||F||², uniformly in the quartet height and number of grid points. Choose b sufficiently small to retain strict positivity. Anchoring the form, applying the Schur exponential series and a positive diagonal congruence proves the assertion for every c. This is a uniform all-grid bound, not numerical checking of a few matrices.
+
+To recover the counting scale, keep every lattice zero and fill its deficit from M. If D=M−L and M' exceeds the fixed lattice density past x0, the continuous running supremum B of D satisfies0<=B−D<=2. A generic level offset theta avoids every lattice collision. An initial finite block plus first hits of B at theta+integers gives exactly floor(B−theta) new simple real zeros. The count differs from M by less than2; the quartet adds2. Every new real pair contributes a nonnegative conditional form and a globally bounded nonpositive exponent. Normal convergence of the paired genus-one product proves that there are no extra zeros. Its log maximum modulus is of order r log r, giving order1 and infinite type.
+
+Bounded counting discrepancy also preserves both cusp coefficients:
+
+    g_E(t)=−|t|log(1/|t|)/2
+       +(log(2pi)+gamma_E−1)|t|/2+O_E(t²).
+
+In the Stieltjes comparison the two apparent1/v terms in the derivative of2(cos v−1)/v² cancel; the derivative is v/6+O(v³) at zero and O(v^(-2)) at infinity. This cancellation is essential for the O(t²) error. The same coefficients, with O(t²) remainder, follow directly from the actual arithmetic source formula. The actual source characteristic law, when it exists, has infinite first absolute moment; ordinary Taylor-moment Hankel tests at the origin lack their required differentiability.
+
+Thus bounded-time positivity, analytic symmetry, the right smooth zero-count scale and the two leading cusp terms together still do not force the real-line criterion. One needs an additional arithmetic propagation or large-time estimate. Eventual fixed sign or absolute subexponential growth of the actual source exponent are exact sufficient targets, equivalent to RH by the transform argument. The derivative-weighted prime-torus law is infinitely divisible on its own compact group, but its discontinuity on real frequencies and its different zero weights prevent importing it as the required real-line characteristic function.

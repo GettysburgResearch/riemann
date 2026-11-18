@@ -1,0 +1,25 @@
+{
+  "kind": "independent_majorant_code_review_and_exact_replay",
+  "source_commit": "0e961ea199b425010843bc8044676d4ad29fe031",
+  "code_sha256": "da45687bd8c0d21a58cfa43e92757044a54c243dbff17f9fe3adeb4ced40f3c8",
+  "replay_exit_code": 0,
+  "table_sha256_matches_previous_whole_cell_validation": true,
+  "table_sha256": "b80e5a8c70e4beb3b872dada426016bc97b0954c1a8a5eabaeb40fba49cded36",
+  "input_sha256": "e782247f3991118936ef2fcacf59943b510508c9062200c66798f354d95fae92",
+  "validated_kernel_cells_in_previous_result": 209010,
+  "current_closepair_cells_used": 13927,
+  "whole_closed_majorant_cells": 42,
+  "all_replayed_certificates_pass": true,
+  "exact_positive_margins": {
+    "2beta_minus_2x": "956002177/41943040000",
+    "4beta_minus_x_minus_y": "72982324121/524288000000",
+    "8beta_minus_2y": "101477376921/262144000000",
+    "clip_squared_margin": "1308215383/838860800",
+    "table_beta_margin": "4175/134217728"
+  },
+  "lambda_upper_below_67_over40": true,
+  "review_note": "audits/adversarial_reviews/839_majorant_skeptic.md",
+  "scope": "Independent analytic/code inspection and replay of this component script, not a separate full search, full theorem proof, or Lean build. Kernel-table soundness uses the separately reviewed previous all-cell result at the identical binary hash.",
+  "stronger_source_LMajBound_16711_over10000_pass": true,
+  "stronger_source_bound_comparison": "The final guarded checker itself now includes the exact source LMajBound comparison; independently inspected and replayed with exit0. Enclosure arithmetic unchanged."
+}

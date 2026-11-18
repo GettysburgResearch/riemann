@@ -1,0 +1,89 @@
+{
+  "kind": "scoped_analytic_track_integrity_checkpoint_NOT_full_archive_coverage",
+  "date_utc": "2026-11-17T18:58:52.010226+00:00",
+  "structured_data": {
+    "papers/analytic_records.jsonl": {
+      "rows": 6,
+      "unique_ids": 6,
+      "key": "paper_id"
+    },
+    "papers/analytic_round2_records.jsonl": {
+      "rows": 1,
+      "unique_ids": 1,
+      "key": "paper_id"
+    },
+    "papers/analytic_round2_updates.jsonl": {
+      "rows": 2,
+      "unique_ids": 2,
+      "key": "paper_id"
+    },
+    "theorems/formal_round2.jsonl": {
+      "rows": 10,
+      "unique_ids": 10,
+      "key": "theorem_id"
+    },
+    "audits/formal_round2_findings.jsonl": {
+      "rows": 12,
+      "unique_ids": 12,
+      "key": "finding_id"
+    },
+    "connections/formal_round2.jsonl": {
+      "rows": 3,
+      "unique_ids": 3,
+      "key": "connection_id"
+    }
+  },
+  "scope_only_updates_do_not_add_works": true,
+  "merged_track_counts": {
+    "works": 7,
+    "bibliographic_verified": 7,
+    "full_text_accessed": 7,
+    "completed_substantive_reading": 3,
+    "whole_work_L2_or_L3_claimed": 0
+  },
+  "offline_input_identity_checks": [
+    {
+      "folder": "839_first_window",
+      "file": "inputs.json",
+      "sha256": "e782247f3991118936ef2fcacf59943b510508c9062200c66798f354d95fae92",
+      "bytes": 5072,
+      "matches_provenance": true
+    },
+    {
+      "folder": "839_first_window",
+      "file": "kernel_lower.bin",
+      "sha256": "b80e5a8c70e4beb3b872dada426016bc97b0954c1a8a5eabaeb40fba49cded36",
+      "bytes": 836040,
+      "matches_provenance": true
+    },
+    {
+      "folder": "839_second_window",
+      "file": "inputs.json",
+      "sha256": "9f480bd9849cb083325a0ee64deda33faef421fb986a402c0d2206faf4a24ed9",
+      "bytes": 6221,
+      "matches_provenance": true
+    },
+    {
+      "folder": "839_second_window",
+      "file": "kernel_lower.bin",
+      "sha256": "e32c430de69dd92adbfbdb9935a9983eb7e033113c2c87c2a763f549e4401e0a",
+      "bytes": 1048576,
+      "matches_provenance": true
+    },
+    {
+      "folder": "839_third_window",
+      "file": "inputs.json",
+      "sha256": "048a3337986347b4991af2d48c78cbcdb17cef834c896493647a922c85d1e50d",
+      "bytes": 5724,
+      "matches_provenance": true
+    },
+    {
+      "folder": "839_third_window",
+      "file": "kernel_lower.bin",
+      "sha256": "698cd6a9e691e1ed132a8990967c63694cb64f2f614090ba0d6ff9d31eb2da6d",
+      "bytes": 1048576,
+      "matches_provenance": true
+    }
+  ],
+  "limits": "Component theorem/proof and compilation statuses remain separate. This validates format, ID uniqueness and bundled input identity; no mathematical result follows from integrity checks."
+}

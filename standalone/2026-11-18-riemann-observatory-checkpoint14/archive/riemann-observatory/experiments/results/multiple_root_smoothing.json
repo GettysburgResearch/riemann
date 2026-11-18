@@ -1,0 +1,54 @@
+{
+  "arithmetic": "fractions.Fraction",
+  "rows": [
+    {
+      "N": 1,
+      "linear_window_error_squared": "5",
+      "optimal_error_squared": "7/10",
+      "N_times_optimal_error_squared": "7/10",
+      "constraints_and_normal_equations": "exactly_verified"
+    },
+    {
+      "N": 2,
+      "linear_window_error_squared": "3",
+      "optimal_error_squared": "3/5",
+      "N_times_optimal_error_squared": "6/5",
+      "constraints_and_normal_equations": "exactly_verified"
+    },
+    {
+      "N": 3,
+      "linear_window_error_squared": "7/3",
+      "optimal_error_squared": "11/21",
+      "N_times_optimal_error_squared": "11/7",
+      "constraints_and_normal_equations": "exactly_verified"
+    },
+    {
+      "N": 5,
+      "linear_window_error_squared": "9/5",
+      "optimal_error_squared": "5/12",
+      "N_times_optimal_error_squared": "25/12",
+      "constraints_and_normal_equations": "exactly_verified"
+    },
+    {
+      "N": 10,
+      "linear_window_error_squared": "7/5",
+      "optimal_error_squared": "25/91",
+      "N_times_optimal_error_squared": "250/91",
+      "constraints_and_normal_equations": "exactly_verified"
+    },
+    {
+      "N": 30,
+      "linear_window_error_squared": "17/15",
+      "optimal_error_squared": "65/561",
+      "N_times_optimal_error_squared": "650/187",
+      "constraints_and_normal_equations": "exactly_verified"
+    },
+    {
+      "N": 100,
+      "linear_window_error_squared": "26/25",
+      "optimal_error_squared": "205/5356",
+      "N_times_optimal_error_squared": "5125/1339",
+      "constraints_and_normal_equations": "exactly_verified"
+    }
+  ]
+}

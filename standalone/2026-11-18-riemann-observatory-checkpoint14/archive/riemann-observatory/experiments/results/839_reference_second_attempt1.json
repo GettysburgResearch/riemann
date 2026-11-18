@@ -1,0 +1,63 @@
+{
+  "status": "interrupted_before_completion",
+  "window": "second",
+  "source_commit": "0e961ea199b425010843bc8044676d4ad29fe031",
+  "scope": "Unmodified author C++ continuum search; separate rational table validation. No Lean build.",
+  "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+  "compiler_flags": [
+    "-std=c++23",
+    "-O3",
+    "-DNDEBUG",
+    "-D_GLIBCXX_ASSERTIONS",
+    "-DVERIFY_POINT_COUNT=8"
+  ],
+  "source_sha256": {
+    "verify.cpp": "c30310214c121d0acf4b4ae562f396c1e13be13992b1f01e02df584dbd602142",
+    "make_parameters.py": "7cc149b14d0060448712b59c3317b8dab7760865080c11e6e78487d7ff55e18e",
+    "LICENSE": "29ebb443d81df1ef96b296e604e233228979edeebf043ccaf8699fd6d6bd49a8"
+  },
+  "preflight": {
+    "file_sha256": {
+      "inputs.json": "9f480bd9849cb083325a0ee64deda33faef421fb986a402c0d2206faf4a24ed9",
+      "kernel_lower.bin": "e32c430de69dd92adbfbdb9935a9983eb7e033113c2c87c2a763f549e4401e0a"
+    },
+    "points": 8,
+    "minimum_gap_grid_steps": 13926,
+    "grid_stop": 262143,
+    "closed_cell_count": 262144,
+    "potential_budget": 1294,
+    "positive_span_margin": 261517,
+    "basic_64_bit_bound": 90328924986703872,
+    "source_64_bit_search_bound": 276365821711745024,
+    "source_64_bit_support_bound": 398299160903680,
+    "kernel_offset_64_bit_bound": 70369281048576,
+    "potential_offset_64_bit_bound": 58639502540800,
+    "affine_128_bit_bound": 31525214272464251781120
+  },
+  "parameters_sha256": "6a0566ad4868671b9729d289dda70b3cdc849695c40fc871b6701be5e7808cd2",
+  "binary_sha256": "3ec4b035c7722bacbc42b0d8d998b70cc94dbd0c55461cbbc9be64948413a7b7",
+  "expected": {
+    "nodes": 535332163,
+    "leaves": 267666082,
+    "basic": 202511130,
+    "affine": 65154952,
+    "max_stack": 63,
+    "status": "PASS_COB_CONTINUUM"
+  },
+  "pid": 103431,
+  "date_utc": "2026-11-17T21:09:54.604317+00:00",
+  "elapsed_seconds": 510.225,
+  "last_confirmed_progress": {
+    "nodes": 50000000,
+    "waiting": 45
+  },
+  "observed_process_state": "zombie",
+  "observed_wait_status": 9,
+  "observed_utc": "2026-11-17T21:11:19.610072+00:00",
+  "cause": "Transport/environment interruption preceded observed child termination; initiator unestablished.",
+  "stdout": "",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr": "verify: 50000000 boxes examined, 45 waiting\n",
+  "stderr_sha256": "3a30c20b7039974419c624f119b4a72555efc91a55f57e6bfa1ee9992c5ebf09",
+  "resume_semantics": "Original unmodified verifier restarts at its root; this progress record is not a traversal snapshot."
+}

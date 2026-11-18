@@ -1,0 +1,128 @@
+{
+  "kind": "pinned_upstream_retrieval_and_patch_application_NOT_build",
+  "origin_repository": "https://github.com/anthropics/formal-math",
+  "origin_commit": "fbdc36bbf17d20af3fd0447c6d1a8a02773c9844",
+  "subtree": "zeta23",
+  "files_retrieved": 347,
+  "all_retrieved_git_blob_hashes_verified": true,
+  "patch_applied_without_rejects_or_fuzz": true,
+  "changed_files": [
+    {
+      "path": "Zeta23/PrimeSideA/Basic.lean",
+      "before_sha256": "06703868b1fc098ab900c7651ec7b3c17ce83c770cb896e0033694c7645edc1f",
+      "after_sha256": "6ac33c0db78a0e14c7b857768bc43331c002add118991e09907396402140d672"
+    },
+    {
+      "path": "Zeta23/ThmD/BridgeD.lean",
+      "before_sha256": "43b0468ac3e757322ba5c0684a0655641335c8a89b4f3a79b0e01f5b17c47847",
+      "after_sha256": "daf2a8018c2e4cbd0cbd65aecf2a5a7aaa39d7337648687c116cc9b68b3efa4a"
+    },
+    {
+      "path": "Zeta23/ThmD/Concrete.lean",
+      "before_sha256": "598031d2f3f4e8365223119df64092145aa60a7e8ad834f4045a8b2ae1f92336",
+      "after_sha256": "30349bd73b96c1789a9e139e0d5c72cf962fd8063d27f6d1338c69f5ef663c75"
+    },
+    {
+      "path": "Zeta23/ThmD/WindowLocalHyps.lean",
+      "before_sha256": "205e020f24f001b0c7f8a6dfd6333608adc62f0e41d610e92f3e4acef4dda7b2",
+      "after_sha256": "a338de676f20f308228c77ccc719cd2bc2c3b3a260045c102d1689909df4aa19"
+    },
+    {
+      "path": "Zeta23/ThmDE/Concrete.lean",
+      "before_sha256": "a791203f303f8478ae9f7a173c40cf7077656844b144a65dc402bd9f41b52728",
+      "after_sha256": "553f872c7be1fed58f8b323b19b8973fa26e4192e7fbe08725586dbeadb9993c"
+    },
+    {
+      "path": "Zeta23/XiPrime/Assembly.lean",
+      "before_sha256": "761ca741f9fc7cee97930cff5960ddf335e5fe1481bc93e7d637dd4e5c75b000",
+      "after_sha256": "84a282f2539200dddcf38692960ad945fdd66349222054c5cabfbf50f35de588"
+    },
+    {
+      "path": "Zeta23/XiPrime/Inputs.lean",
+      "before_sha256": "93e72b5e5ba597b75d0a36d74fe4ba2baf1406a241f695192639b6cc9ab0cb5f",
+      "after_sha256": "9f5faa56757300029b29ee9af6ca427f3e2cffb4054850966a5f0cbe7c6ccf56"
+    },
+    {
+      "path": "Zeta23/XiPrime/PrimeSide/Concrete.lean",
+      "before_sha256": "9f60142d99a15d7b089e8b5367ce7cab202f70ce10f578d2a102b6e1e2750e5f",
+      "after_sha256": "c7df08bb6190967c4bdf3dcbe09735757f006536b1fbecddaf058a11d731dad6"
+    },
+    {
+      "path": "Zeta23/XiPrime/PrimeSide/Moments.lean",
+      "before_sha256": "a495aaaf2ef0446761f723900033b520598656ed189ec3fc5f46efd896fa8669",
+      "after_sha256": "871c8c9ad987386d124ad28f8a8501475f4cadf00b8011d9b95618e768f71fc9"
+    },
+    {
+      "path": "Zeta23/XiPrime/PrimeSide/Traces.lean",
+      "before_sha256": "c9cae9320bec86a6a04012a2470c6853bb82a3ef276b3e647df3e44788e5bc93",
+      "after_sha256": "a40a08b9f4893e7b6ac249bfdb95b5d8bdf8d1fe7631ad238736c7ecad9a9bdd"
+    },
+    {
+      "path": "Zeta23/XiPrime/QuarticWindow/Family.lean",
+      "before_sha256": "9b26448611f024aab5ba54efd33f05635450d9c3e5a285a69c779f300e1a570b",
+      "after_sha256": "18ed65eb980ca603c51c3eb133d8a7b325d295e09a0caf3a8e78bd9276edf690"
+    },
+    {
+      "path": "Zeta23/XiPrime/QuarticWindow/Moments.lean",
+      "before_sha256": "3907dd7ab97c030b42f23963e084f8d8449ba8d688e44e4160acf3e69a42c369",
+      "after_sha256": "5243fbe68323b848fde1e34ae36ed6e34f5b3cf0e44bfff42c13eda0415f4469"
+    },
+    {
+      "path": "Zeta23/XiPrime/QuarticWindow/ZeroSide.lean",
+      "before_sha256": "a6e487afa66147f5c1a724dafec609a550ea4ae20ffde5bf3c286b95858c1b91",
+      "after_sha256": "3f760cc6f2cfd3081cfdb9b7b79b6377c9a4645b4d0f7060a983c3a1a514f0a0"
+    },
+    {
+      "path": "Zeta23/XiPrime/Window/FlatAdm.lean",
+      "before_sha256": "298f43ab2dc02b59b9960e7a3637564597ae3bc866d6059faca8504ef47eec7b",
+      "after_sha256": "034640c04174a8bc828a457872640e33f9c56e88e3f64700d1b811947fc069b7"
+    }
+  ],
+  "unchanged_definition_layers": {
+    "ChallengeDeps.lean": true,
+    "Challenge.lean": true,
+    "Solution.lean": true,
+    "Zeta23/Statement.lean": true
+  },
+  "upstream_vs_standalone_tag": {
+    "identical_files": 314,
+    "different_files": [
+      "lakefile.toml",
+      "README.md",
+      ".gitignore",
+      "AUDIT.md",
+      "Zeta23/LinAlg/Inertia.lean",
+      "Zeta23/LinAlg/VonNeumann.lean",
+      "Zeta23/LinAlg/PosIndex.lean",
+      "Zeta23/LinAlg/RankTrace.lean",
+      "Zeta23/LinAlg/Weyl.lean",
+      "Zeta23/LinAlg/Sylvester.lean",
+      "Zeta23/LinAlg/HermitianPosPart.lean"
+    ],
+    "absent_from_standalone_tag": [
+      "comparator.json",
+      "Gemfile",
+      "formalization.yaml",
+      "ChallengeDeps.lean",
+      "Challenge.lean",
+      "comparator-xiprime.json",
+      "Solution.lean",
+      "Gemfile.lock",
+      "test/landrun_wrapper_test.sh",
+      "test/validate_formalization_test.rb",
+      "docbuild/lean-toolchain",
+      "docbuild/lakefile.toml",
+      "docbuild/lake-manifest.json",
+      "Solution/XiPrime.lean",
+      "scripts/landrun-wrapper.sh",
+      "scripts/PrintAxioms.lean",
+      "scripts/validate-formalization.rb",
+      "scripts/verify-comparator.sh",
+      "ChallengeDeps/XiPrime.lean",
+      "Challenge/XiPrime.lean",
+      "scripts/PrintAxioms/XiPrime.lean",
+      "scripts/PrintAxioms/PairCeiling.lean"
+    ]
+  },
+  "scope": "Source identity and patch applicability; not compilation or mathematical validation of patched proofs."
+}

@@ -1,0 +1,75 @@
+{
+  "status": "checkpoint_replay_completed_counts_match",
+  "window": "second",
+  "attempt_utc": "20261117T212551736201Z",
+  "scope": "Staged author reference verifier with checkpoint hooks; separate from exact vendor replay and Lean.",
+  "checkpoint_identity": "6e3c2f60f0043b30f05adc239b05dc4f76b8a90175d71c0ed7b80e223cb3ed23",
+  "identity_manifest": {
+    "upstream_verifier_sha256": "c30310214c121d0acf4b4ae562f396c1e13be13992b1f01e02df584dbd602142",
+    "parameter_generator_sha256": "7cc149b14d0060448712b59c3317b8dab7760865080c11e6e78487d7ff55e18e",
+    "staged_source_sha256": "c584492380239533b981175362bdae0bf54beb7a7d7d7dae4901672f6931bc0c",
+    "generated_parameters_sha256": "6a0566ad4868671b9729d289dda70b3cdc849695c40fc871b6701be5e7808cd2",
+    "input_hashes": {
+      "inputs.json": "9f480bd9849cb083325a0ee64deda33faef421fb986a402c0d2206faf4a24ed9",
+      "kernel_lower.bin": "e32c430de69dd92adbfbdb9935a9983eb7e033113c2c87c2a763f549e4401e0a"
+    },
+    "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+    "compiler_flags": [
+      "-std=c++23",
+      "-O3",
+      "-DNDEBUG",
+      "-D_GLIBCXX_ASSERTIONS",
+      "-DVERIFY_POINT_COUNT=8"
+    ]
+  },
+  "binary_sha256": "4aa6913c131ca43339069ed722556547a20eb92c9fb21e2c24a26340e63ec5a4",
+  "preflight": {
+    "file_sha256": {
+      "inputs.json": "9f480bd9849cb083325a0ee64deda33faef421fb986a402c0d2206faf4a24ed9",
+      "kernel_lower.bin": "e32c430de69dd92adbfbdb9935a9983eb7e033113c2c87c2a763f549e4401e0a"
+    },
+    "points": 8,
+    "minimum_gap_grid_steps": 13926,
+    "grid_stop": 262143,
+    "closed_cell_count": 262144,
+    "potential_budget": 1294,
+    "positive_span_margin": 261517,
+    "basic_64_bit_bound": 90328924986703872,
+    "source_64_bit_search_bound": 276365821711745024,
+    "source_64_bit_support_bound": 398299160903680,
+    "kernel_offset_64_bit_bound": 70369281048576,
+    "potential_offset_64_bit_bound": 58639502540800,
+    "affine_128_bit_bound": 31525214272464251781120
+  },
+  "expected": {
+    "nodes": 535332163,
+    "leaves": 267666082,
+    "basic": 202511130,
+    "affine": 65154952,
+    "max_stack": 63,
+    "status": "PASS_COB_CONTINUUM"
+  },
+  "starting_checkpoint": null,
+  "last_durable_progress": {
+    "nodes": 535332163,
+    "leaves": 267666082,
+    "basic": 202511130,
+    "affine": 65154952,
+    "max_stack": 63,
+    "waiting": 0
+  },
+  "pid": 105952,
+  "date_utc": "2026-11-17T22:09:55.461731+00:00",
+  "elapsed_seconds_this_attempt": 2641.237,
+  "exit_code": 0,
+  "stdout": "{\"status\":\"PASS_COB_CONTINUUM\",\"nodes\":535332163,\"leaves\":267666082,\"basic\":202511130,\"affine\":65154952,\"max_stack\":63}\n",
+  "stderr": "verify: 50000000 boxes examined, 45 waiting\nverify: 100000000 boxes examined, 41 waiting\nverify: 150000000 boxes examined, 43 waiting\nverify: 200000000 boxes examined, 39 waiting\nverify: 250000000 boxes examined, 39 waiting\nverify: 300000000 boxes examined, 43 waiting\nverify: 350000000 boxes examined, 35 waiting\nverify: 400000000 boxes examined, 45 waiting\nverify: 450000000 boxes examined, 45 waiting\nverify: 500000000 boxes examined, 39 waiting\n",
+  "observed": {
+    "status": "PASS_COB_CONTINUUM",
+    "nodes": 535332163,
+    "leaves": 267666082,
+    "basic": 202511130,
+    "affine": 65154952,
+    "max_stack": 63
+  }
+}

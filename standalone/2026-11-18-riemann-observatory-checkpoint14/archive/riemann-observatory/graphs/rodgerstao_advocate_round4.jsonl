@@ -1,0 +1,4 @@
+{"from": "THM-S004-ROOTODE", "relation": "implies_local_subsystem_identity", "to": "THM-S004-ADV401", "status": "established_scoped_reconstruction", "provenance": "v5pp27–33 and advocateaudit"}
+{"from": "PAPER-S004:Theorem17", "relation": "supplies_integrated_input_for", "to": "PAPER-S004:Proposition27", "status": "source_dependency;boundaryaveragingindependentlyreconstructed", "provenance": "v5pp55–56 and advocateaudit"}
+{"from": "THM-S004-ADV403", "relation": "suggests_repair_for", "to": "PAPER-S004:Proposition22_X4", "status": "proposed_pendingindependentreview", "provenance": "advocatefarfieldproof"}
+{"from": "THM-HF307", "relation": "supplies_generic_kernel_countermodel_to", "to": "generic_positive_kernel_conditions_imply_nonpositive_heat_threshold", "status": "established_model_obstruction;notclassicalRHcounterexample", "provenance": "audits/heatflow_round2.md and fullsourceaudit"}

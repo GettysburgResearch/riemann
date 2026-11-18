@@ -1,0 +1,156 @@
+{
+  "arithmetic": "exact Fraction and quadratic-field pair arithmetic; no floating computation",
+  "witness_eigenvalues": [
+    -1,
+    -1,
+    -1,
+    2,
+    2,
+    2,
+    2,
+    3
+  ],
+  "witness_positive_fraction": "5/8",
+  "claimed_minus_actual": "9/56",
+  "witness": {
+    "moments": [
+      "1",
+      "1",
+      "7/2",
+      "7",
+      "37/2"
+    ],
+    "Hankel_leading_minors": [
+      "1",
+      "5/2",
+      "27/8"
+    ],
+    "minimizer": [
+      "1",
+      "8/21",
+      "-1/3"
+    ],
+    "lambda_at_zero": "3/14",
+    "one_minus_lambda": "11/14",
+    "candidate_q": [
+      "0",
+      "-16/21",
+      "230/441",
+      "16/63",
+      "-1/9"
+    ],
+    "q_expectation": "11/14"
+  },
+  "witness_canonical": {
+    "radicand": 163,
+    "nodes": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "4/7",
+        "-1/7"
+      ],
+      [
+        "4/7",
+        "1/7"
+      ]
+    ],
+    "weights": [
+      [
+        "3/14",
+        "0"
+      ],
+      [
+        "11/28",
+        "-27/2282"
+      ],
+      [
+        "11/28",
+        "27/2282"
+      ]
+    ],
+    "moments_exact": [
+      "1",
+      "1",
+      "7/2",
+      "7",
+      "37/2"
+    ],
+    "weight_positivity_exact": true,
+    "field_encoding": "[a,b] represents a+b sqrt(D)"
+  },
+  "sine_moment_input": {
+    "moments": [
+      "1",
+      "1",
+      "4/3",
+      "2",
+      "13/4"
+    ],
+    "Hankel_leading_minors": [
+      "1",
+      "1/3",
+      "5/108"
+    ],
+    "minimizer": [
+      "1",
+      "-7/4",
+      "2/3"
+    ],
+    "lambda_at_zero": "5/36",
+    "one_minus_lambda": "31/36",
+    "candidate_q": [
+      "0",
+      "7/2",
+      "-211/48",
+      "7/3",
+      "-4/9"
+    ],
+    "q_expectation": "31/36"
+  },
+  "sine_canonical": {
+    "radicand": 57,
+    "nodes": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "21/16",
+        "-1/16"
+      ],
+      [
+        "21/16",
+        "1/16"
+      ]
+    ],
+    "weights": [
+      [
+        "5/36",
+        "0"
+      ],
+      [
+        "31/72",
+        "25/1368"
+      ],
+      [
+        "31/72",
+        "-25/1368"
+      ]
+    ],
+    "moments_exact": [
+      "1",
+      "1",
+      "4/3",
+      "2",
+      "13/4"
+    ],
+    "weight_positivity_exact": true,
+    "field_encoding": "[a,b] represents a+b sqrt(D)"
+  },
+  "sine_positive_index_bound": "31/36",
+  "conditional_simple_bound": "13/18",
+  "scope": "Checks the stated finite moment algebra, not the source prime-side moment hypothesis or the main AF theorem."
+}

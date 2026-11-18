@@ -1,0 +1,30 @@
+{
+  "provider_rows": 5203,
+  "provider_cache_matches": 5203,
+  "work_groups_including_unresolved_singletons": 5162,
+  "crosswalk_statuses": {
+    "provider_identity_only": 4972,
+    "exact_canonical_record_link": 172,
+    "exact_provider_metadata_cluster": 59
+  },
+  "linked_to_selected_canonical_rows": 172,
+  "linked_selected_canonical_works": 169,
+  "flagged_clusters": 53,
+  "flagged_rows": 124,
+  "flag_cluster_outcomes": {
+    "retained_distinct_publication_units": 7,
+    "unresolved_version_or_duplicate": 32,
+    "exact_metadata_work_group": 14
+  },
+  "flag_row_outcomes": {
+    "retained_distinct_publication_units": 15,
+    "unresolved_version_or_duplicate": 67,
+    "exact_metadata_work_group": 42
+  },
+  "input_sha256": {
+    "candidates.jsonl": "6cd1886b50b6ea42c422a437dae0964399f680176c965800aa897525260f6c3c",
+    "bibliography.jsonl": "1fce1582fd8ab9130e9d028951da3eb7f41a2f796cbf2450d7072f9ea2229cdb",
+    "raw_discovery_index.jsonl": "c28a945ac72cf090a081e36052eb2b9839da4b0eac056a2b7f5824f15c712597",
+    "provider_duplicate_registry_evidence_round10.jsonl": "f643422f20b7ac38ad9b5551db816e58226fcb465313dce64b033c94c7143354"
+  }
+}

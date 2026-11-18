@@ -1,0 +1,88 @@
+{
+  "kind": "actual_completed_pinned_source_build_and_query_summary",
+  "date_utc": "2026-11-17T21:13:50.174549+00:00",
+  "commit": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510",
+  "build_exit_code": 0,
+  "query_exit_code": 0,
+  "theorem_axioms": {
+    "two_thirds_simple_on_critical_line": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "two_thirds_simple_on_critical_line_cumulative": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "five_sixths_distinct": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "five_sixths_distinct_cumulative": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "montgomery_taylor_simple_on_critical_line_mult": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "montgomery_taylor_simple_on_critical_line_mult_cumulative": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "montgomery_taylor_distinct_mult": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "montgomery_taylor_distinct_mult_cumulative": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "dirichlet_two_thirds_simple_on_critical_line": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "dirichlet_five_sixths_distinct": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "dirichlet_montgomery_taylor_simple_on_critical_line_mult": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "dirichlet_montgomery_taylor_distinct_mult": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "all_expected_theorems_queried": true,
+  "only_standard_axioms_reported": true,
+  "evidence_file": "experiments/results/formal_multiplicity_build.json",
+  "target_olean_sha256": "201d3197ede30c03964a1420aee0010b62f3bdb1e56cc5bb5ff86e547954540b",
+  "scope": "Actual local Lean source build and type/axiom query for eight zeta declarations and four fixed primitive Dirichlet-character declarations with modulus greater than one.",
+  "target": "Solution.Multiplicity",
+  "elapsed_seconds_attempt_including_query": 2688.180799533002,
+  "successful_query_count": 12,
+  "all_expected_theorems_have_exact_standard_axioms": true,
+  "additional_unchecked_scopes": [
+    "restricted Challenge environment comparison",
+    "external independent-kernel replay",
+    "separate K839 Lean build"
+  ],
+  "query_stderr_empty": true,
+  "completed_lake_jobs": 8887,
+  "pinned_lean_toolchain": "leanprover/lean4:v4.33.0-rc2",
+  "git_head_now": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510",
+  "tracked_source_changes_now": []
+}

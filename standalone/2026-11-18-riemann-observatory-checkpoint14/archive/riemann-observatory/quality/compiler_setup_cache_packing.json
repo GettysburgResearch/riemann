@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-18",
+  "operation": "Reversible gzip packing of generated compiler setup JSON files only",
+  "private_manifest": "sources/cache_maintenance/packed_setup_json.jsonl",
+  "private_manifest_sha256": "8b2a663ae614c9ea0006befbec07a9fdc8532d56a124cea177f21228fc3e7f62",
+  "files": 1605,
+  "original_bytes": 4756121241,
+  "compressed_bytes": 144291159,
+  "all_roundtrip_hashes_verified": true,
+  "formal_sources_and_olean_private_kernel_data": "Untouched; each operated path ended .setup.json in .lake/build/ir",
+  "restore": "python scripts/restore_packed_compiler_setup.py --restore --prefix SELECTED_SOURCE_PATH",
+  "distribution": "Private generated caches remain excluded; the restore utility and this receipt are distributed."
+}

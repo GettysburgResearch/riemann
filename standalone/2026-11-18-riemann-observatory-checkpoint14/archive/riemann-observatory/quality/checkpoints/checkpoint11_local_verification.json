@@ -1,0 +1,40 @@
+{
+  "checkpoint": "checkpoint11",
+  "validation": "PASS",
+  "archive_sha256": "844142af1968c605bb3ea7f7ff32e56e4c4519f1db84ffcdf57dd1eb2b5ee77a",
+  "archive_bytes": 20733010,
+  "zip_entries": 2720,
+  "manifest_payloads": 2719,
+  "pdf_pages": 23,
+  "metrics": {
+    "cutoff": "2026-11-18",
+    "metadata_candidates": 5203,
+    "metadata_candidates_rejected": 56,
+    "metadata_candidates_pending": 5147,
+    "catalogued_works": 1008,
+    "deferred_supporting_works": 1,
+    "selected_checkpoint_works": 1007,
+    "fulltexts_accessed_selected": 962,
+    "whole_work_or_translation_read": 126,
+    "whole_work_audit_levels": {
+      "0": 881,
+      "1": 119,
+      "3": 7
+    },
+    "scoped_level3_claim_groups": 108,
+    "theorem_or_exercise_records": 461,
+    "connection_records": 88,
+    "graph_nodes": 2642,
+    "graph_edges": 2542,
+    "warning": "Candidate pool not fully relevance-reviewed or manifestation-deduplicated; selected works may overlap provider candidates. Do not add counts. Scoped adjudication groups are not complete-paper Level3 audits.",
+    "curated_candidate_decisions": 89,
+    "curated_priority_candidates": 80,
+    "curated_provider_matches": 85,
+    "additional_curated_records_unreconciled": 4,
+    "paper_aliases_resolved": 2,
+    "selected_primary_excerpt_accessed": 13
+  },
+  "immutable_stage": "/workspace/checkpoints/checkpoint11",
+  "independent_qa": "quality/checkpoints/checkpoint11_independent_qa.md",
+  "drive_receipt": "quality/checkpoints/checkpoint11_drive_receipt.json"
+}

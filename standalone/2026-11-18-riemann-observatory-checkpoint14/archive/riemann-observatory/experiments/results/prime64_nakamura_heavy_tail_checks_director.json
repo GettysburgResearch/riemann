@@ -1,0 +1,13 @@
+{
+  "date_utc": "2026-11-18T00:16:00.044867+00:00",
+  "execution": "director_actual_replay",
+  "code_path": "scripts/prime64_nakamura_heavy_tail_checks.py",
+  "code_sha256": "d4cc8422d1d83348ce7a2cad1529d1e0049ea50a3f03405a2cfb982415b93930",
+  "arguments": [],
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "exit_code": 0,
+  "stdout": "FLINT 3.6.0, conditional rate S: [0.046209986230837941577867620860678028 +/- 8.24e-37]\nLower bound for the atom at 0: [0.954876774546447300612283208396826847 +/- 7.98e-37]\nUpper bound for the atom at 0: [0.95490529007639705656499576750384437 +/- 4.51e-36]\n",
+  "stderr": "",
+  "code_unchanged": true,
+  "scope": "Actual Arb component and declared analytic conditions; source and full proof adjudications define the mathematical boundary."
+}

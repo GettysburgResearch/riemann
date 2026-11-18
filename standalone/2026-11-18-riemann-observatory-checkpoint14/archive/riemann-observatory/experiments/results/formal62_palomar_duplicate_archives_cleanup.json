@@ -1,0 +1,31 @@
+{
+  "status": "removed_only_redundant_verified_archives",
+  "date_utc": "2026-11-17T22:04:19.624749+00:00",
+  "deletion_targets": {
+    "/workspace/riemann-observatory/sources/palomar_formal62/lean-4.35.0-rc2-linux.tar.zst": {
+      "sha256": "b67d0e0ba959fc74e186f1b44aebca32d6ecb6a28f8e9a029fc4e9f73398a049",
+      "allocated_bytes": 595398656
+    },
+    "/workspace/riemann-observatory/sources/palomar_formal62/downloaded-mathlib-cache": {
+      "manifest_sha256": "5fc321c1b607882a1ce3b95eb687bb5b3f01f4ef4d777794fba566a027884c10",
+      "manifest_private_path": "/workspace/riemann-observatory/sources/palomar_formal62/downloaded-mathlib-cache.cleanup.sha256",
+      "file_count": 8915,
+      "allocated_bytes": 467443712,
+      "bytes_of_archives": 448908886
+    }
+  },
+  "preserved_sha256_before": {
+    "sources/palomar_formal62/lean-4.35.0-rc2-linux/bin/lean": "bf8d54e4714cc4b03d3f6bb34c83b7202b87e49c8bfcbff6895c085bb90ceb38",
+    "sources/palomar_formal62/zeta-density-39-over-17-lean/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib.olean": "87c1c940603a8d6a1a74ae059f3d59cee6e8ab8f5ba074e5ac7c74ced7d46bb1",
+    "sources/palomar_formal62/mathlib_full_cache_20261117T213522151456Z.log": "edbd8cd153b3658b222e676dbc9da492d2655ca7e71a8d6ef6994f1c2f8e788a"
+  },
+  "disk_free_before": 3540774912,
+  "cpp_state_outside_targets": "/workspace/riemann-observatory/sources/formal_round2/build839/later-windows-durable/second/search.checkpoint",
+  "completed_utc": "2026-11-17T22:04:20.915875+00:00",
+  "disk_free_after": 4603613184,
+  "preserved_sha256_after": {
+    "sources/palomar_formal62/lean-4.35.0-rc2-linux/bin/lean": "bf8d54e4714cc4b03d3f6bb34c83b7202b87e49c8bfcbff6895c085bb90ceb38",
+    "sources/palomar_formal62/zeta-density-39-over-17-lean/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib.olean": "87c1c940603a8d6a1a74ae059f3d59cee6e8ab8f5ba074e5ac7c74ced7d46bb1",
+    "sources/palomar_formal62/mathlib_full_cache_20261117T213522151456Z.log": "edbd8cd153b3658b222e676dbc9da492d2655ca7e71a8d6ef6994f1c2f8e788a"
+  }
+}

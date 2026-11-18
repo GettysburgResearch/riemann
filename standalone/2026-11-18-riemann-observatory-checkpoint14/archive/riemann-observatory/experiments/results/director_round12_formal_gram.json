@@ -1,0 +1,18 @@
+{
+  "method": "Gaussian integration by parts plus exact rational partial exponential sums",
+  "formal_only": true,
+  "arithmetic_supported_orders": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "degree": 70,
+  "formal_moments_used_through": 140,
+  "hermite_shift": "13/2",
+  "precision_bits": 192,
+  "flint": "3.6.0",
+  "normalized_squared_formal_expectation": "[-0.0011820826117612421070700877231385172065234035734122633 +/- 5.66e-56]",
+  "source_code_sha256": "e22258216ca390b2f5c03dd667e240b31aac41988e76a9e94d46a1279daa1d1a"
+}

@@ -1,0 +1,154 @@
+{
+  "checkpoint": "checkpoint11",
+  "archive_sha256": "844142af1968c605bb3ea7f7ff32e56e4c4519f1db84ffcdf57dd1eb2b5ee77a",
+  "archive_bytes": 20733010,
+  "code_pins": [
+    {
+      "result": "experiments/results/839_majorant_check.json",
+      "source": "experiments/code/839_majorant_check.py",
+      "sha256": "da45687bd8c0d21a58cfa43e92757044a54c243dbff17f9fe3adeb4ced40f3c8"
+    },
+    {
+      "result": "experiments/results/839_majorant_skeptic_replay.json",
+      "source": "experiments/code/839_majorant_check.py",
+      "sha256": "da45687bd8c0d21a58cfa43e92757044a54c243dbff17f9fe3adeb4ced40f3c8"
+    },
+    {
+      "result": "experiments/results/director65_weighted_rolle_checks.json",
+      "source": "scripts/positivity65_weighted_rolle_checks.py",
+      "sha256": "e39e00b518ada6ca232ffcb130cb3b3852606cee987fc48b3874debfc0c63fcc"
+    },
+    {
+      "result": "experiments/results/director_petrov_quadratic_round13.json",
+      "source": "experiments/code/director_petrov_quadratic_round13.py",
+      "sha256": "6d9100e1cb5adc03c8993d33a95ffc80f36dd6a2f83e5ccba776faa985c820c8"
+    },
+    {
+      "result": "experiments/results/director_round11_band_third.json",
+      "source": "scripts/prime72_hlz_third_cumulant_check.py",
+      "sha256": "6483c93c25a76828ea5e1093e5325152dbe3c2f5b934962c2165bf95a734f70f"
+    },
+    {
+      "result": "experiments/results/director_round11_band_variance.json",
+      "source": "scripts/prime71_hlz_band_variance_check.py",
+      "sha256": "11ef46fb29086e8565c7c83e5174fc62bb01429bee32e4fea681e89d9e084253"
+    },
+    {
+      "result": "experiments/results/director_round11_cue_covariance.json",
+      "source": "scripts/weighted73_cue_band_checks.py",
+      "sha256": "3e199a0f3d3bd68f2f92dfc67d822913a9684827dfdee18ed923b38bcd3950c1"
+    },
+    {
+      "result": "experiments/results/director_round11_cue_third.json",
+      "source": "scripts/weighted73_cue_third_kernel_checks.py",
+      "sha256": "b7ef0a5a06d02df3f48d4beee878a5e71edf97671394445dca5374fc473353ea"
+    },
+    {
+      "result": "experiments/results/director_round11_global_hardy.json",
+      "source": "scripts/prime69_parameterized_hardy_tail_checks.py",
+      "sha256": "407f22b05d73f6e695e5268b2655ef2721ab1185d4807702c7c2ec818e0a0354"
+    },
+    {
+      "result": "experiments/results/director_round11_integer_trace.json",
+      "source": "scripts/geometry69_integer_toeplitz_checks.py",
+      "sha256": "cf0270f6eaebb78565270646c0ba9311e0e078e156c09e71bc9956c3ee2ad62a"
+    },
+    {
+      "result": "experiments/results/director_round11_prime_kernel.json",
+      "source": "scripts/weighted70_hlz_prime_kernel_checks.py",
+      "sha256": "dd14a84553dcfc851ad4c0d2b036d4ff7d0a17138fe4614f20f5172a5f006103"
+    },
+    {
+      "result": "experiments/results/director_round12_formal_gram.json",
+      "source": "experiments/code/director_round12_formal_gram.py",
+      "sha256": "e22258216ca390b2f5c03dd667e240b31aac41988e76a9e94d46a1279daa1d1a"
+    },
+    {
+      "result": "experiments/results/director_round13_cue_fourth.json",
+      "source": "experiments/code/director_round13_cue_fourth.py",
+      "sha256": "199fb1b5e925225e843721bc378de562f31d7702f618d1f01f9dec2d0de293e6"
+    },
+    {
+      "result": "experiments/results/geometry111_rankone_hankel_certificate.json",
+      "source": "experiments/code/geometry111_rankone_hankel_certificate.py",
+      "sha256": "836ae6f6495fd0d616ff8c9654a114c844e58659d4c903816633feeb6545a952"
+    },
+    {
+      "result": "experiments/results/jump_factorial_prime_array63_arb.json",
+      "source": "experiments/code/history/jump_factorial_prime_array63_arb_v1.py",
+      "sha256": "11ee04883dec90fae9f1bf878f178140c5c06445467117eb1ea85efe9e62e559"
+    },
+    {
+      "result": "experiments/results/jump_factorial_prime_array63_arb_recheck.json",
+      "source": "experiments/code/history/jump_factorial_prime_array63_arb_v1.py",
+      "sha256": "11ee04883dec90fae9f1bf878f178140c5c06445467117eb1ea85efe9e62e559"
+    },
+    {
+      "result": "experiments/results/jump_factorial_prime_array63_arb_v2_n10.json",
+      "source": "experiments/code/jump_factorial_prime_array63_arb.py",
+      "sha256": "65e6445595292e30faeb241310a7610aa1dafe88c1a89261cb392f80abf551d3"
+    },
+    {
+      "result": "experiments/results/prime64_explicit_log4_tail_checks_director.json",
+      "source": "scripts/prime64_explicit_log4_tail_checks.py",
+      "sha256": "606982b68be4d8b5c3be5535ada687f28064a7893a9526cb7deb98d02a79f55e"
+    },
+    {
+      "result": "experiments/results/prime64_finite_remainder_checks_director.json",
+      "source": "scripts/prime64_finite_remainder_checks.py",
+      "sha256": "cabe6c3bf5a93a1d82b5b73f334ddbd2cf442801f713b67ade0f5700889a5991"
+    },
+    {
+      "result": "experiments/results/prime64_nakamura_heavy_tail_checks_director.json",
+      "source": "scripts/prime64_nakamura_heavy_tail_checks.py",
+      "sha256": "d4cc8422d1d83348ce7a2cad1529d1e0049ea50a3f03405a2cfb982415b93930"
+    },
+    {
+      "result": "experiments/results/prime64_sharper_moments_checks_director.json",
+      "source": "scripts/prime64_sharper_moments_checks.py",
+      "sha256": "70be095355de6f5e502c3024e43148cf169717fd3b409dfb3989e10be365634f"
+    },
+    {
+      "result": "experiments/results/prime_band_round11_figure.json",
+      "source": "experiments/code/prime_band_round11_figure.py",
+      "sha256": "bf862e23fbdcac6a87d0b8525b2ad339bdb1333f313db7885603337e35f72b95"
+    },
+    {
+      "result": "experiments/results/prime_regions_round14.json",
+      "source": "experiments/code/geometry118_prime_region_plot.py",
+      "sha256": "a5709bcbee95220a2df8bf0d51af8bad7cdbad4cfca8c6147a74bca959c5b6fb"
+    }
+  ],
+  "validator_result": {
+    "validation": "PASS",
+    "checkpoint": "11",
+    "zip_bytes": 20733010,
+    "zip_sha256": "844142af1968c605bb3ea7f7ff32e56e4c4519f1db84ffcdf57dd1eb2b5ee77a",
+    "manifest_payloads": 2719,
+    "metrics": {
+      "metadata_candidates": 5203,
+      "metadata_candidates_rejected": 56,
+      "metadata_candidates_pending": 5147,
+      "curated_candidate_decisions": 89,
+      "curated_priority_candidates": 80,
+      "curated_provider_matches": 85,
+      "additional_curated_records_unreconciled": 4,
+      "catalogued_works": 1008,
+      "deferred_supporting_works": 1,
+      "selected_checkpoint_works": 1007,
+      "fulltexts_accessed_selected": 962,
+      "selected_primary_excerpt_accessed": 13,
+      "whole_work_or_translation_read": 126,
+      "whole_work_audit_levels": {
+        "0": 881,
+        "1": 119,
+        "3": 7
+      },
+      "scoped_level3_claim_groups": 108,
+      "theorem_or_exercise_records": 461,
+      "connection_records": 88,
+      "graph_nodes": 2642,
+      "graph_edges": 2542
+    }
+  }
+}

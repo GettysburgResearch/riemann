@@ -1,0 +1,48 @@
+{
+  "repository": "https://github.com/kristianmk/839",
+  "tag": "v1",
+  "commit": "0e961ea199b425010843bc8044676d4ad29fe031",
+  "retrieved": "2026-11-17",
+  "arxiv_version": "2610.08965v1",
+  "license": "MIT",
+  "license_url": "https://github.com/kristianmk/839/blob/0e961ea199b425010843bc8044676d4ad29fe031/LICENSE",
+  "files": {
+    "inputs.json": {
+      "upstream_path": "certificate/inputs.json",
+      "sha256": "e782247f3991118936ef2fcacf59943b510508c9062200c66798f354d95fae92",
+      "bytes": 5072
+    },
+    "kernel_lower.bin": {
+      "upstream_path": "certificate/kernel_lower.bin",
+      "sha256": "b80e5a8c70e4beb3b872dada426016bc97b0954c1a8a5eabaeb40fba49cded36",
+      "bytes": 836040
+    }
+  },
+  "coefficient_specification": {
+    "upstream_lean_path": "lean/Distinct839/Defs.lean",
+    "upstream_lean_sha256": "d0edf55916cb873d49fc9ec12b2a20506623a4c79c0d49363649a256ce08fadc",
+    "window_coefficients": [
+      193305,
+      -23105,
+      29166,
+      13952,
+      -21009,
+      41052
+    ],
+    "denominator": 1000000,
+    "assertion": "inputs.json window_coefficients and denominator checked equal these inspected Lean definitions"
+  },
+  "scope": "Offline data for independent first-window kernel-cell validation. Input checksum proves identity, not mathematical correctness; row-level analytic validation is separate.",
+  "reference_code": {
+    "verify.cpp": {
+      "upstream_path": "verifier/verify.cpp",
+      "sha256": "c30310214c121d0acf4b4ae562f396c1e13be13992b1f01e02df584dbd602142",
+      "local_path": "experiments/code/vendor/839_reference/verify.cpp"
+    },
+    "make_parameters.py": {
+      "upstream_path": "verifier/make_parameters.py",
+      "sha256": "7cc149b14d0060448712b59c3317b8dab7760865080c11e6e78487d7ff55e18e",
+      "local_path": "experiments/code/vendor/839_reference/make_parameters.py"
+    }
+  }
+}

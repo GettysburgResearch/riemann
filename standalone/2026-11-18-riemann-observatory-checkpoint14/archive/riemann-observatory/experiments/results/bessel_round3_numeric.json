@@ -1,0 +1,79 @@
+{
+  "status": "nonvalidated85-digit observations; proofs and exact certificates separate",
+  "phase_roots": [
+    {
+      "phase_integer": 50,
+      "tau": "72.847850654516968012098439423052662",
+      "w_positive_ordinate": "145.69570130903393602419687884610532",
+      "scaled_K_residual": "3.88691485801e-84",
+      "scope": "sample phase roots; absolute zero index/completeness not numerically certified"
+    },
+    {
+      "phase_integer": 100,
+      "tau": "118.94461692258643021401325602727447",
+      "w_positive_ordinate": "237.88923384517286042802651205454894",
+      "scaled_K_residual": "7.53202004844e-85",
+      "scope": "sample phase roots; absolute zero index/completeness not numerically certified"
+    },
+    {
+      "phase_integer": 200,
+      "tau": "199.22115288489560929218900917822945",
+      "w_positive_ordinate": "398.44230576979121858437801835645891",
+      "scaled_K_residual": "3.95972706038e-84",
+      "scope": "sample phase roots; absolute zero index/completeness not numerically certified"
+    }
+  ],
+  "Li_samples": [
+    {
+      "n": 1,
+      "baseline_lambda": "0.0185274706966662675960677329362",
+      "model_T32_lambda": "0.0204797616752300431054645275407",
+      "quartet_contribution_exact": "524384/268599305"
+    },
+    {
+      "n": 2,
+      "baseline_lambda": "0.074095826606772773763599419957",
+      "model_T32_lambda": "0.0819030852660887269941682052011",
+      "quartet_contribution_exact": "563259256077184/72145586646483025"
+    },
+    {
+      "n": 3,
+      "baseline_lambda": "0.166662924702566868448279210566",
+      "model_T32_lambda": "0.18422211383890397243721608423",
+      "quartet_contribution_exact": "340266434704650315277664/19378254432062621209297625"
+    },
+    {
+      "n": 4,
+      "baseline_lambda": "0.29615861158741223765202880379",
+      "model_T32_lambda": "0.327357177015020582117640287515",
+      "quartet_contribution_exact": "162388086055289096292326223916544/5204985672565189773295601613150625"
+    },
+    {
+      "n": 5,
+      "baseline_lambda": "0.462484850771566887807930059124",
+      "model_T32_lambda": "0.511196927532003951898754822256",
+      "quartet_contribution_exact": "68102188496620694808948425223281330717024/1398055534185967540300306152849136735315625"
+    },
+    {
+      "n": 6,
+      "baseline_lambda": "0.665515900461466607622837723687",
+      "model_T32_lambda": "0.735598532019836872135250755789",
+      "quartet_contribution_exact": "26317201672182565665246261849805054202645933279104/375516744833754622077221723942501896955745830640625"
+    }
+  ],
+  "predicted_uncompleted_growth_constant": "0.00163868628738166961609926444931",
+  "growth_samples": [
+    {
+      "positive_real_s": 100,
+      "L_model_over_s_pow_7_4": "0.00161906674915451030386480914251"
+    },
+    {
+      "positive_real_s": 1000,
+      "L_model_over_s_pow_7_4": "0.0016087671184432500595246892982"
+    },
+    {
+      "positive_real_s": 10000,
+      "L_model_over_s_pow_7_4": "0.00163537509626212491621081695434"
+    }
+  ]
+}

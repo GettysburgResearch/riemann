@@ -1,0 +1,70 @@
+{
+  "arithmetic": "UNVALIDATED double precision; analytic Abel proof is source of theorem",
+  "rows": [
+    {
+      "size_per_group": 1,
+      "L": 64,
+      "case": "separated",
+      "center_difference_float": 201.06192982974676,
+      "phase_separation_sigma_float": 130.0,
+      "cross_epsilon_float": 0.03076923076923077,
+      "sufficient_conditions_hold_float": true,
+      "scaled_full_optimum_float": 1.9393939393939428,
+      "sum_scaled_local_optima_float": 1.9692307692307727,
+      "absolute_difference_float": 0.029836829836829892,
+      "conditional_bound_float": 7.876923076923077
+    },
+    {
+      "size_per_group": 1,
+      "L": 128,
+      "case": "separated",
+      "center_difference_float": 402.1238596594935,
+      "phase_separation_sigma_float": 258.0,
+      "cross_epsilon_float": 0.015503875968992248,
+      "sufficient_conditions_hold_float": true,
+      "scaled_full_optimum_float": 1.9692307692307662,
+      "sum_scaled_local_optima_float": 1.9844961240310046,
+      "absolute_difference_float": 0.015265354800238384,
+      "conditional_bound_float": 3.9689922480620154
+    },
+    {
+      "size_per_group": 1,
+      "L": 512,
+      "case": "near_alias",
+      "center_difference_float": 3217.990877275948,
+      "phase_separation_sigma_float": 1.0019529657437216,
+      "cross_epsilon_float": 3.9922033635889407,
+      "sufficient_conditions_hold_float": false,
+      "scaled_full_optimum_float": 3.914498345859316,
+      "sum_scaled_local_optima_float": 1.9961013645223888,
+      "absolute_difference_float": 1.918396981336927,
+      "conditional_bound_float": null
+    },
+    {
+      "size_per_group": 2,
+      "L": 2048,
+      "case": "separated",
+      "center_difference_float": 6433.981754551896,
+      "phase_separation_sigma_float": 4098.0,
+      "cross_epsilon_float": 0.003904343582235237,
+      "sufficient_conditions_hold_float": true,
+      "scaled_full_optimum_float": 7.980510626160179,
+      "sum_scaled_local_optima_float": 7.990244854719234,
+      "absolute_difference_float": 0.009734228559055147,
+      "conditional_bound_float": 255.87506100536848
+    },
+    {
+      "size_per_group": 2,
+      "L": 4096,
+      "case": "separated",
+      "center_difference_float": 12867.963509103793,
+      "phase_separation_sigma_float": 8194.0,
+      "cross_epsilon_float": 0.001952648279228704,
+      "sufficient_conditions_hold_float": true,
+      "scaled_full_optimum_float": 7.990244854718003,
+      "sum_scaled_local_optima_float": 7.995119808766318,
+      "absolute_difference_float": 0.004874954048315061,
+      "conditional_bound_float": 127.96875762753234
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "canonical_work": "PAPER-E014",
+  "alias": "PAPER-E001",
+  "preferred_version": "2003 Lincei journal scan, pp. 5–11, with two BDIM front sheets",
+  "preferred_sha256": "9bfb3943ec8d7690d452b8ac7d50fb10614b4e814738dc091390e6ab4994f0b8",
+  "mathematical_result_identity": "May Proposition3.1 and journal Theorem2 are the same quantitative result, not two independent proofs.",
+  "evidence": "audits/adversarial_reviews/director_baez_whole_round13.md",
+  "original_manifestations": [
+    {
+      "version": "arXiv:math/0202141v1, 15 February 2002",
+      "arxiv": "math/0202141v1",
+      "source_path": "sources/analytic74_baez/math_0202141v1.pdf",
+      "source_sha256": "a0b876c54be79af5d1af53d181c6cd6fc94d94cc35d32b22697a97b15c99f589",
+      "audit_level": 1,
+      "whole_work_read": true,
+      "read_scope": "Complete preprint compared by both whole-work reviewers. No quantitative theorem in this version."
+    },
+    {
+      "id": "PAPER-E014",
+      "title": "A strengthening of the Nyman–Beurling criterion for the Riemann hypothesis",
+      "authors": [
+        "Luis Báez-Duarte"
+      ],
+      "date": "2002-02-18",
+      "year": 2002,
+      "first_preprint_date": "2002-02-15",
+      "preprint_year": 2002,
+      "publication_year": 2003,
+      "version": "v2 (2002-02-18), seven-page arXiv preprint",
+      "arxiv": "math/0202141",
+      "doi": "10.48550/arXiv.math/0202141",
+      "doi_scope": "DataCite identifier for the arXiv preprint",
+      "journal_doi": null,
+      "venue": "Rendiconti Lincei, Series 9, 14(1) (2003), 5–11",
+      "publication_status": "Original arXiv preprint inspected. Relation to the published journal article verified by title, author, main theorem and the precise Balazard–Saias estimate in the indexed journal scan.",
+      "canonical_url": "https://arxiv.org/abs/math/0202141v2",
+      "source_url": "https://arxiv.org/pdf/math/0202141v2",
+      "journal_source_url": "https://www.bdim.eu/item?fmt=pdf&id=RLIN_2003_9_14_1_5_0",
+      "journal_relation_scope": "Journal form adds a section on a constructive approximating sequence, with distinct numbering and pagination. Direct bdim PDF download returned HTTP 503. The indexed journal scan displayed Lemma 1 and equation (2.1) on p. 6.",
+      "version_history": "The v2 arXiv comment reports three typographical corrections and one added reference.",
+      "related_sequel": "PAPER-E001 (arXiv:math/0205003), a separate work",
+      "family": [
+        "C",
+        "A"
+      ],
+      "access_status": "full_text_accessed",
+      "full_text_accessed": true,
+      "whole_work_read": false,
+      "audit_level": 0,
+      "read_scope": "Partial close reading of §§1–3 of arXiv v2, covering the main criterion, the quoted Möbius estimate, the quotient estimate and the ordered norm limits. Journal Lemma 1 was located independently in the indexed scan.",
+      "source_path": "sources/ratio62_weightedprior/baez_duarte_0202141v2.pdf",
+      "source_file": "sources/ratio62_weightedprior/baez_duarte_0202141v2.pdf",
+      "source_sha256": "3ce4aff466443c71094affc1f8b6f5f0dd36cb4377dc5d2ceddbd2537c1d1819",
+      "accessed_at": "2026-11-17",
+      "record_path": "papers/PAPER-E014.md",
+      "audit_file": "audits/weighted_criterion_priority_ratio62.md",
+      "main_result": "Theorem 1.1 in arXiv v2, and Theorem 1 on journal p. 5. RH is equivalent to the indicator of (0,1] lying in the closed L²(0,∞) span of the fractional parts {1/(nx)} for positive integers n.",
+      "reusable_lemma": "ArXiv v2 Lemma 2.1, p. 3, equation (2.1), and journal Lemma 1, p. 6, equation (2.1), reproduce the fixed-gap Möbius approximation of PAPER-E007, Lemme 2, for any zero-free half-plane Re(s)>b, 1/2≤b<1.",
+      "selected": true,
+      "selection_status": "selected_checkpoint_priority_work",
+      "selection_reason": "Original source for the discrete Báez-Duarte criterion and a verified formula-complete quotation of the Balazard–Saias lemma used in the corrected weighted criterion.",
+      "original_paper_id": "PAPER-E014",
+      "work_id": "PAPER-E014",
+      "manifestation_role": "February revision, with original record preserved"
+    },
+    {
+      "id": "PAPER-E001",
+      "title": "A strengthening of the Nyman-Beurling criterion for the Riemann hypothesis, 2",
+      "authors": [
+        "Luis Báez-Duarte"
+      ],
+      "date": "2002-05-01",
+      "year": 2002,
+      "doi": null,
+      "arxiv": "math/0205003",
+      "source_url": "https://arxiv.org/abs/math/0205003v1",
+      "version": "v1",
+      "family": [
+        "C",
+        "A"
+      ],
+      "audit_level": 1,
+      "read_scope": "Complete nine-page preprint text read; ordered-limit argument reconstructed; external dependencies not fully independently checked.",
+      "access_status": "full_text_accessed",
+      "venue": "arXiv preprint; distinct from original math/0202141 and subsequent published text",
+      "publication_status": "preprint_version_inspected",
+      "source_file": "baez_duarte",
+      "main_result": "In H=L²((0,infinity),dx), let rho_a(x)={1/(a x)}, chi=1_(0,1], and B_nat=span{rho_a:a in positive integers}. RH iff chi belongs to the H closure of B_nat (Theorem1.1, pp.1–2). Under RH, for some c>0, ||chi+sum_{a<=n}mu(a)exp(-c log(a)/loglog(n))rho_a||_H << (loglog(n))^(-1/3) (Proposition3.1, pp.6–8).",
+      "proof_architecture": [
+        "RH plus Balazard–Saias truncated Möbius estimate",
+        "Mellin transform of fractional part is -zeta(s)/s in 0<Re(s)<1",
+        "Functional-equation ratio bound Lemma2.2",
+        "H convergence n→infinity for fixed sufficiently small epsilon",
+        "H convergence epsilon↓0 to -chi, then closure"
+      ],
+      "limitations": [
+        "No RH-independent construction attaining convergence is supplied.",
+        "The two limits are ordered; pointwise convergence of raw Möbius truncations does not imply H convergence.",
+        "Proposition3.1 is a sketch with external input.",
+        "Displayed integrability range in p.5 needs epsilon<1/4 for the particular majorant; sufficiently small epsilon suffices."
+      ],
+      "historical_importance": "Reduces continuous dilation parameters to integer dilations; turns an abstract closure criterion into arithmetic approximation.",
+      "reusable_lemma": "Lemma2.2 bounds |zeta(1/2-epsilon+it)/zeta(1/2+epsilon+it)| by C(1+|t|)^epsilon, for 0<=epsilon<=epsilon0<1/2, interpreted at removable common zeros; the functional equation supplies the modulus bound.",
+      "research_questions": [
+        "Can a quantitative uniform error bound replace the sequential limiting argument?",
+        "Which smoothing schemes preserve norm convergence with a useful explicit rate?"
+      ],
+      "accessed_at": "2026-11-17",
+      "original_notation": "See downloaded source; normalized notation in this record uses rho for a zero except rho_a in E001.",
+      "source_sha256": "13a2dcc763d3fdd5b52afc87845c6d77c83764a56aab06f574a91ee43c8a152b",
+      "correction_search_status": "arXiv history inspected; exhaustive later-correction search incomplete",
+      "original_paper_id": "PAPER-E001",
+      "work_id": "PAPER-E014",
+      "manifestation_role": "Expanded May deposit; original Level 1 source record preserved",
+      "source_path": "sources/equivalences/baez_duarte.pdf"
+    }
+  ]
+}

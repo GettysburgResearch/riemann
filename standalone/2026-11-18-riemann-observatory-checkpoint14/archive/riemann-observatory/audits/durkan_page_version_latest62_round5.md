@@ -1,0 +1,7 @@
+# Durkan–Page sixth-moment lower bound across arXiv versions
+
+Benjamin Durkan and Timothy Page, *Amplified moments of the Riemann zeta function*. Theorem 1 on p. 2 of the 25 June 2026 primary PDF gives the unconditional lower bound $M_3(T)\ge(34.1+o(1))c_3T(\log T)^9$ for the unnormalized sixth moment. The 5 August 2026 revision gives $34.4$ in the same theorem, with $c_3=a_3/9!$ in both versions. The direction of the inequality is lower in both versions. [v1 PDF](https://arxiv.org/pdf/2606.27323v1) · [v2 PDF](https://arxiv.org/pdf/2606.27323v2)
+
+The revised proof on pp. 44–45 evaluates a limiting quotient arising from Cauchy–Schwarz for an explicit degree-24 polynomial in a shifted Legendre basis. It reports $34.4012085\ldots$ at amplifier exponent $1/4$ and uses continuity from fixed exponents below $1/4$ to report $34.4012$ in the proof. The displayed estimate in Theorem 1 rounds downward to $34.4$. The inspected source establishes a stronger versioned statement. This targeted comparison does not establish a flaw in the earlier $34.1$ estimate or independently verify the numerical quotient. [v2 primary proof](https://arxiv.org/pdf/2606.27323v2#page=45)
+
+The targeted check covered v1 pp. 1–3 and v2 pp. 1–2 and 44–45. The v1 PDF SHA-256 is `b2922880bee7fd7a55378081de55562b8067e02ec0d5395c178bb55448dd331b`. The current-version private PDF is `sources/recent_corpus_round5/2606.27323.pdf`. This version note adds no selected-work or whole-work reading record.

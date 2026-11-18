@@ -1,0 +1,60 @@
+{
+  "status": "cached_public_type_axiom_query_completed",
+  "date_utc": "2026-11-17T23:08:09.195833+00:00",
+  "scope": "Read exact public types, axioms and definitions from the existing compiled Solution module. No rebuild, network retrieval, Comparator run or independent kernel replay.",
+  "targets": [
+    "GuthMaynardStatement.full_curve",
+    "GuthMaynardStatement.uniform_away_boundary"
+  ],
+  "project_pin": "ee2a8a32be49a4f73c7386e9dffdea24d7e3d8c0",
+  "mathlib_pin": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "lean_version": "Lean (version 4.35.0-rc2, x86_64-unknown-linux-gnu, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)",
+  "lean_threads": 1,
+  "command": [
+    "/workspace/riemann-observatory/sources/palomar_formal62/lean-4.35.0-rc2-linux/bin/lean",
+    "--threads=1",
+    "/workspace/riemann-observatory/experiments/code/Palomar39FullCurve63Query.lean"
+  ],
+  "cwd": "/workspace/riemann-observatory/sources/palomar_formal62/zeta-density-39-over-17-lean/lean",
+  "lean_path": [
+    "/workspace/riemann-observatory/sources/palomar_formal62/zeta-density-39-over-17-lean/lean/.lake/build/lib/lean",
+    "/workspace/riemann-observatory/sources/palomar_formal62/zeta-density-39-over-17-lean/lean/.lake/packages/mathlib/.lake/build/lib/lean",
+    "/workspace/riemann-observatory/sources/palomar_formal62/zeta-density-39-over-17-lean/lean/.lake/packages/plausible/.lake/build/lib/lean",
+    "/workspace/riemann-observatory/sources/palomar_formal62/zeta-density-39-over-17-lean/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean",
+    "/workspace/riemann-observatory/sources/palomar_formal62/zeta-density-39-over-17-lean/lean/.lake/packages/importGraph/.lake/build/lib/lean",
+    "/workspace/riemann-observatory/sources/palomar_formal62/zeta-density-39-over-17-lean/lean/.lake/packages/proofwidgets/.lake/build/lib/lean",
+    "/workspace/riemann-observatory/sources/palomar_formal62/zeta-density-39-over-17-lean/lean/.lake/packages/aesop/.lake/build/lib/lean",
+    "/workspace/riemann-observatory/sources/palomar_formal62/zeta-density-39-over-17-lean/lean/.lake/packages/Qq/.lake/build/lib/lean",
+    "/workspace/riemann-observatory/sources/palomar_formal62/zeta-density-39-over-17-lean/lean/.lake/packages/batteries/.lake/build/lib/lean"
+  ],
+  "manifest_packages_without_library_path": [
+    "Cli"
+  ],
+  "query_source": "experiments/code/Palomar39FullCurve63Query.lean",
+  "query_sha256": "0862e379259f84c94e02c356173490ee53386ced539ca731ee30dfb3a6250267",
+  "module_source_sha256": "8b3e9e2dea3baa6c9db288f6d6bc64662b8fd1f14525599e99abb7fd9bc9f7cb",
+  "lake_manifest_sha256": "bcce5b3109c01b6f122ada34b4274356b853cb575ff61a3779b90ae947fc43ac",
+  "mathlib_aggregate_olean_sha256": "87c1c940603a8d6a1a74ae059f3d59cee6e8ab8f5ba074e5ac7c74ced7d46bb1",
+  "target_olean_sha256": "ffc7311e38e625ccbd0b9e2d598fe8a824bcd391fefe24d14ff06e863f24eea7",
+  "target_olean_after_sha256": "ffc7311e38e625ccbd0b9e2d598fe8a824bcd391fefe24d14ff06e863f24eea7",
+  "stdout_sha256": "311a6a37c37b1992c0172e4d1851a9f17b2dd866edcc7375675ba21e2e094ed0",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "query_exit_code": 0,
+  "wall_seconds": 26.66475772099875,
+  "query_timeout_seconds": 115,
+  "timed_out": false,
+  "stdout": "GuthMaynardStatement.full_curve (σ ε : ℝ) (hσ : 1 / 2 ≤ σ) (hσ' : σ ≤ 1) (hε : 0 < ε) :\n  ∃ C,\n    0 < C ∧\n      ∀ (T : ℝ),\n        2 ≤ T →\n          GuthMaynardStatement.actualZeroBound σ T (C * T ^ (GuthMaynardStatement.densityCoefficient σ * (1 - σ) + ε))\n'GuthMaynardStatement.full_curve' depends on axioms: [propext, Classical.choice, Quot.sound]\nGuthMaynardStatement.uniform_away_boundary (δ ε : ℝ) (hδ : 0 < δ) (hε : 0 < ε) :\n  ∃ C,\n    0 < C ∧\n      ∀ (σ T : ℝ),\n        1 / 2 ≤ σ →\n          σ ≤ 1 →\n            σ ≤ 3 / 4 ∨ 3 / 4 + δ ≤ σ →\n              2 ≤ T →\n                GuthMaynardStatement.actualZeroBound σ T\n                  (C * T ^ (GuthMaynardStatement.densityCoefficient σ * (1 - σ) + ε))\n'GuthMaynardStatement.uniform_away_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]\ndef GuthMaynardStatement.densityCoefficient : ℝ → ℝ :=\nfun σ =>\n  if σ ≤ 9 / 13 then 3 / (2 - σ) else if σ ≤ 5 / 7 then 18 / (7 * σ + 3) else if σ ≤ 3 / 4 then 9 / 4 else 3 / (2 * σ)\ndef GuthMaynardStatement.actualZeroBound : ℝ → ℝ → ℝ → Prop :=\nfun σ T B =>\n  ∃ Z,\n    (∀ (ρ : ℂ), ρ ∈ Z ↔ riemannZeta ρ = 0 ∧ 0 < ρ.re ∧ ρ.re < 1 ∧ σ ≤ ρ.re ∧ |ρ.im| ≤ T) ∧\n      ↑(∑ ρ ∈ Z, analyticOrderNatAt riemannZeta ρ) ≤ B\n",
+  "stderr": "",
+  "axioms": {
+    "GuthMaynardStatement.full_curve": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GuthMaynardStatement.uniform_away_boundary": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  }
+}

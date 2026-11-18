@@ -1,0 +1,8 @@
+{
+  "checkpoint": "checkpoint10",
+  "unshipped_draft": "checkpoint10_unshipped_premature_render.zip",
+  "draft_sha256": "b4dd0747320ce2c8aa50650dc9fb5d4f60c3cad8fff9aeb47084e390dde6a181",
+  "draft_bytes": 19714780,
+  "delivered": false,
+  "diagnosis": "Renderer was invoked before asynchronous file-copy exec completed. Draft contained only the payload subset then available. Freeze completion was subsequently observed (2657 copied files); render will be rerun from completed stage and exact bytes independently verified."
+}

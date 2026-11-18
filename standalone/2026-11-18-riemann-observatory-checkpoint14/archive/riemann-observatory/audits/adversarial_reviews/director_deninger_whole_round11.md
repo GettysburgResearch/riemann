@@ -1,0 +1,31 @@
+# Deninger's real-coefficient obstruction: whole-work adjudication
+
+18 November 2026. The director read the complete eight-page arXiv:2204.02714v2 and both independent complete reviews. The source SHA256 is `abef52f91f14b13f53602c5af2add8e657caffbcee984b288d3eaf8adca50e37`; the exact registered version is `arXiv:2204.02714v2, author manuscript`. Both agents also read the complete published nine-page edition, DOI10.2422/2036-2145.202204_005, SHA256 `2e96019e506e76c1c9b12d516c032887cc6d0fadf8194825e64cf4217fc39385`. ArXiv Theorem2.13 is journal Theorem2.1, p.1722. The promotion is pinned to the arXiv source, with the publisher comparison separately evidenced.
+
+## The actual obstruction
+
+Let k/Q be a finite Galois field with group G and a quaternionic irreducible complex representation V_pi whose Artin L-function has odd central order. Suppose a real G-module H_R with real operator theta_R has complexification H and central generalized eigenspace V_k, and satisfies
+
+```text
+dim_C Hom_G(V_pi,V_k) = ord_(s=1/2) L(s,V_pi).
+```
+
+This is the central Artin multiplicity axiom(2.12). Such a real equivariant realization is impossible. The obstruction does not require the proposed positive star operator, a proof of GRH, simplicity of zeros, all noncentral spectral axioms, or the vanishing conjecture for the other Artin factors.
+
+Indeed, conjugation c on V_k commutes with G. Quaternionic V_pi has an antilinear equivariant j with j^2=-1. On the finite multiplicity space M, the map f->c f j^(-1) is antilinear and squares to-1. In coordinates C*conjugation, its square says C conjugate(C)=-I, so |det C|^2=(-1)^(dim M), forcing even dimension. The required odd dimension contradicts this. Generalized eigenspaces at the real value1/2 commute with scalar extension, since kernels of each real polynomial power do and the union is increasing. Infinite-dimensional H does not change the finite multiplicity argument.
+
+Such fields actually exist. The advocate verified Omar's original p.243 table and root-number criteria, using the totally real Q8 field with polynomial X^8-205X^6+13940X^4-378225X^2+3404025 and discriminant5^6*41^6. Its quadratic discriminants are5,41,205. The signed ramification product is205=1mod4 but (1+5+41+205)/4=63=3mod4, giving root number-1 by the quoted exact criterion. The independent skeptic used a separate original source, Shankar–Södergren–Templier's explicit Q8 example and Artin induction. A Q8 two-dimensional irreducible is induced from a nontrivial order-four character of an index-two cyclic subgroup, so its L-function is an entire Hecke L-function. Its self-dual completed functional equation with negative sign forces positive odd central order. The witness does not import a numerical assertion of simple vanishing. The two explicit field presentations need not be silently identified to prove the existence input.
+
+Therefore a functorial ordinary-real theory for all arithmetic curves, covering this field and satisfying(2.12), is excluded. Reading the sentence 'For a number field k' as a theorem forbidding every isolated field is too strong. For Q the central order of zeta is zero; the eta-series lower bound and negative denominator prove zeta(1/2)!=0 unconditionally. Its central Artin axiom is vacuous. A real spectral construction for Q alone remains outside this obstruction. The natural global-functor interpretation resolves the wording without an alleged error in the actual universal obstruction.
+
+## Full coverage and accepted inputs
+
+Section1's supersingular elliptic comparison is reconstructed: a unital real algebra antihomomorphism from Hamilton quaternions to M2(R) would be injective and then an impossible isomorphism of a division and split algebra. The base is the algebraic closure of the finite field; the local crystalline coefficient field and algebraic coefficient closure must retain the bars visible in the PDF. The graded real/quaternionic category avoids this obstruction by giving odd objects an antilinear square-1 structure. The existence statements from standard conjectures, polarized Tannakian theory and Kottwitz categories remain conditional and externally sourced.
+
+Properties(2.1)–(2.4), the binomial generalized-eigenvector cup calculation(2.5), and the separately proposed perfect pairing(2.6) have their distinct logical roles. Positive scalar product(2.7) would make theta-1/2 skew-Hermitian on each finite generalized block, forcing the critical line and excluding Jordan chains. Existing height positivity on an Abel–Jacobi sector does not construct that form on all spectral sectors. The central whole-space parity(2.8)–(2.9) differs from the multiplicity-space parity that proves the obstruction.
+
+Morin's Chow argument requires a nonzero continuous class map on the degree quotient to produce the real line; the compact-kernel observation alone does not give a nonzero image. This is a heuristic, not a hypothesis needed by the obstruction. The evaluation isomorphism and central idempotents are valid for finite G acting on an infinite-dimensional module, and the Artin factorization motivates but does not prove the stronger spectral axiom(2.10). The center conjecture, one-copy isotypic description(2.14), proposed functor(2.15), half-Tate objects, local pairings and leading-coefficient formulas remain conjectural. A negative sign by itself gives odd Laurent parity; the explicit holomorphic quaternion example supplies an actual zero. The foliation comparison forbids the too-simple natural real descent only in the required functorial Artin-compatible setting; twisted complex coefficients remain possible.
+
+All sections, displays, proposals, acknowledgments and17 reference roles were inspected. The v1 conjecture-dependent argument and its replacement by the v2 proof are recorded. Both agents located the essential original representation/root-number inputs through independent routes. Their entire upstream proofs are not collectively reaudited. The whole-work promotion supports a precise established obstruction and its limits, not a proof against all Hilbert–Polya constructions or a new RH theorem.
+
+[Advocate and original Omar input](geometry68_deninger_whole_advocate.md) · [Independent skeptic and second primary route](analytic68_deninger_whole_skeptic.md) · [Exact source](https://arxiv.org/pdf/2204.02714v2)

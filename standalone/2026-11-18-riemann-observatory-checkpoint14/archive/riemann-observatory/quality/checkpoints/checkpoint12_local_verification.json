@@ -1,0 +1,50 @@
+{
+  "checkpoint": "checkpoint12",
+  "validation": "PASS",
+  "archive_sha256": "5ad25a8561fd159488a2f2cafc7ddf3f78847f4a3f369881598a4f3d958e3c09",
+  "archive_bytes": 21161053,
+  "zip_entries": 2809,
+  "manifest_payloads": 2808,
+  "pdf_pages": 30,
+  "metrics": {
+    "cutoff": "2026-11-18",
+    "metadata_candidates": 5203,
+    "metadata_candidates_rejected": 56,
+    "metadata_candidates_pending": 5147,
+    "catalogued_works": 1010,
+    "deferred_supporting_works": 1,
+    "selected_checkpoint_works": 1009,
+    "fulltexts_accessed_selected": 964,
+    "whole_work_or_translation_read": 129,
+    "whole_work_audit_levels": {
+      "0": 880,
+      "1": 121,
+      "3": 8
+    },
+    "scoped_level3_claim_groups": 117,
+    "theorem_or_exercise_records": 473,
+    "connection_records": 93,
+    "graph_nodes": 2665,
+    "graph_edges": 2588,
+    "warning": "Candidate pool not fully relevance-reviewed or manifestation-deduplicated; selected works may overlap provider candidates. Do not add counts. Scoped adjudication groups are not complete-paper Level3 audits.",
+    "curated_candidate_decisions": 89,
+    "curated_priority_candidates": 80,
+    "curated_provider_matches": 85,
+    "additional_curated_records_unreconciled": 4,
+    "paper_aliases_resolved": 2,
+    "selected_primary_excerpt_accessed": 13
+  },
+  "immutable_stage": "/workspace/checkpoints/checkpoint12",
+  "independent_qa": "quality/checkpoints/checkpoint12_independent_qa.md",
+  "drive_receipt": "quality/checkpoints/checkpoint12_drive_receipt.json",
+  "local_zip_copies": [
+    {
+      "path": "/workspace/riemann-observatory.zip",
+      "sidecar": "/workspace/riemann-observatory.zip.sha256"
+    },
+    {
+      "path": "/workspace/artifacts/riemann-observatory.zip",
+      "sidecar": "/workspace/artifacts/riemann-observatory.zip.sha256"
+    }
+  ]
+}

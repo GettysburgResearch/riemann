@@ -1,0 +1,12 @@
+{
+  "status": "PASS: independent Laurent/Chebyshev reconstruction and inverse Bernstein expansion",
+  "arithmetic": "Python standard-library Fraction; no CAS, sampling or transcendental approximation",
+  "reconstruction": "f derivative recurrence A_(n+1)=2r dA_n/dr-c(r-r^-1)A_n; direct log second derivative in r; Chebyshev conversion of symmetric Laurent powers",
+  "nonzero_R_monomials": 199,
+  "xy_groups": 30,
+  "maximum_Bernstein_degree": 9,
+  "minimum_Bernstein_coefficient": "6",
+  "constant_xy_group_present": true,
+  "domain": "v>=1,T\u00b2>=1024,6<=c<=7,a\u00b2=1/16",
+  "proof_scope": "Validates polynomial input/reduction and exact sign certificate; separate analytic P>0/ODE/count/Li proofs reviewed in written adjudication."
+}

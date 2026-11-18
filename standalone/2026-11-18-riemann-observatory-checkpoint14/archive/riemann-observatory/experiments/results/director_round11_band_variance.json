@@ -1,0 +1,9 @@
+{
+  "script": "scripts/prime71_hlz_band_variance_check.py",
+  "code_sha256": "11ef46fb29086e8565c7c83e5174fc62bb01429bee32e4fea681e89d9e084253",
+  "args": [],
+  "exit_code": 0,
+  "elapsed_seconds": 1.2465706060029333,
+  "stdout": "ratio J: (x + y - 1)*(x**2 - 4*x*y + x + y**2 + y - 2)/6\nratio I plus reflection: -(2*x**3*y + 6*x**2*y**2 - 6*x**2*y + 2*x*y**3 - 6*x*y**2 - 2*x - 2*y + 3)/12\nratio normalized kernel: -2*x**3*y + 2*x**3 - 6*x**2*y**2 - 2*x*y**3 + 12*x*y - 4*x + 2*y**3 - 4*y + 1\nproduct J: (x + y - 1)**2*(x + y + 2)/6\nproduct I plus reflection: -(2*x**3*y - 6*x**2*y**2 + 6*x**2*y + 2*x*y**3 + 6*x*y**2 - 12*x*y - 2*x - 2*y + 3)/12\nproduct normalized kernel: -2*x**3*y + 2*x**3 + 6*x**2*y**2 - 2*x*y**3 + 12*x*y - 4*x + 2*y**3 - 4*y + 1\nsquare J: (x + 1)*(2*x - 1)**2/3\nsquare I plus reflection: (x**4 - 6*x**3 + 6*x**2 + 4*x - 3)/12\nsquare normalized kernel: x**4 + 10*x**3 + 6*x**2 - 8*x + 1\ncovariance correction integrand: -4*x**2*y**2 + 6*x**2 + 6*y**2 - 4\nintegrated covariance correction: -4*(lower - upper)**2*(lower**4 + 2*lower**3*upper + 3*lower**2*upper**2 - 9*lower**2 + 2*lower*upper**3 - 9*lower*upper + upper**4 - 9*upper**2 + 9)/9\nCUE cosine correction: -4*x**3*y**3 + 6*x**3*y + 6*x*y**3 - 4*x*y\nCUE sine correction: -6*x**2*y**2\n",
+  "stderr": ""
+}

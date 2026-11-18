@@ -1,0 +1,17 @@
+{
+  "status": "two_primary_sources_admitted_at_initial_level0",
+  "ids": [
+    "PAPER-P122-FIORI-JASKARI-PNT",
+    "PAPER-P122-INUMARU-SUGIYAMA-TWISTED-DENSITY"
+  ],
+  "pending_shard_sha256": "00a9a0851e01fe5b41196ef9c388dea9eb5cfada8897b410b8304baf6c7154b5",
+  "admitted_shard": "papers/round15_dependency_records.jsonl",
+  "admitted_shard_sha256": "280cdfc2c1faf593ef4b38b83b43a7446e56adf33da20a36c1d9029804fa4723",
+  "selection_review": "audits/adversarial_reviews/geometry132_latest_sources_selection_review.md",
+  "decision_receipt": "quality/pending_round15/geometry132_latest_sources_decision_receipt.json",
+  "provider_crosswalks": {
+    "PAPER-P122-FIORI-JASKARI-PNT": "CAND-C214EEA5C23D",
+    "PAPER-P122-INUMARU-SUGIYAMA-TWISTED-DENSITY": "CAND-AC026DA96A1D"
+  },
+  "scope": "Fiori unconditional PNT input only; conditional half-plane example stays conditional. Inumaru continuous statistic is a comparator, not a discrete long-prime estimate. Separate Inumaru complete-reading overlay still pending."
+}

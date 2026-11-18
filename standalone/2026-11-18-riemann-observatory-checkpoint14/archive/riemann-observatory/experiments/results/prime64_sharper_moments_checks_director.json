@@ -1,0 +1,16 @@
+{
+  "date_utc": "2026-11-18T00:16:56.301757+00:00",
+  "execution": "director_actual_replay",
+  "code_path": "scripts/prime64_sharper_moments_checks.py",
+  "code_sha256": "70be095355de6f5e502c3024e43148cf169717fd3b409dfb3989e10be365634f",
+  "arguments": [
+    "--blocks",
+    "2"
+  ],
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "exit_code": 0,
+  "stdout": "FLINT 3.6.0, analytic tail at 100: [24958.590902324090898458029474974166168 +/- 9.05e-34]\nAnalytic tail at 10^12: [0.0005836313176544251600254851964179817540 +/- 7.59e-41]\nY=100, first and second squared norms: {1: [6.1e+2 +/- 2.88], 2: [1.38e+3 +/- 2.05]}; contribution <= [2.21 +/- 6.33e-3]\nY=200, first and second squared norms: {1: [1.99e+3 +/- 4.32], 2: [6.27e+3 +/- 3.41]}; contribution <= [2.12 +/- 3.48e-3]\nSpliced upper bound on the complete tail at 100: [8248.94 +/- 4.48e-3]\n",
+  "stderr": "",
+  "code_unchanged": true,
+  "scope": "Actual Arb component and declared analytic conditions; source and full proof adjudications define the mathematical boundary."
+}

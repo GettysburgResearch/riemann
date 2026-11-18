@@ -1,0 +1,50 @@
+{
+  "cutoff": "2026-11-18",
+  "input_sha256": {
+    "corpus/bibliography.jsonl": "b5e59347fa476e495fb2b750c229827375c67ccb1d77d53ba372fb9a3b125c4b",
+    "quality/coverage_taxonomy_rules_round10.json": "6d75f250189f93194f572fdb9cf1ad306cbf9cfaf5125ef99eb437618d50ea8c",
+    "quality/coverage_taxonomy_scope_overrides_round10.jsonl": "fd00c03d947265687bbb1f60f3e15a55be39e57e9d9338938ab99cb08c18fc7a"
+  },
+  "input_state_counts": {
+    "canonical": 1011
+  },
+  "taxonomy_status_counts": {
+    "classified": 999,
+    "unclassified_insufficient_subject_evidence": 12
+  },
+  "eligible_G_ids": [
+    "PAPER-AS64-BOURGAIN-WATT",
+    "PAPER-S003",
+    "PAPER-S006"
+  ],
+  "withheld_recorded_G_ids": [
+    "PAPER-BESSEL-S03",
+    "PAPER-H402",
+    "PAPER-H404",
+    "PAPER-H405",
+    "PAPER-H406",
+    "PAPER-HC001",
+    "PAPER-HC002",
+    "PAPER-HC003",
+    "PAPER-HC004",
+    "PAPER-HC006"
+  ],
+  "held_pending_ids": {},
+  "overall_tables": [
+    {
+      "universe": "canonical",
+      "view": "overall",
+      "family": "",
+      "stratum": "",
+      "selected_works": 1010,
+      "full_text_accessed": 965,
+      "primary_excerpt_accessed": 13,
+      "whole_work_read": 131,
+      "whole_audit_level_0": 879,
+      "whole_audit_level_1": 122,
+      "whole_audit_level_2": 0,
+      "whole_audit_level_3": 9,
+      "whole_audit_unknown": 0
+    }
+  ]
+}

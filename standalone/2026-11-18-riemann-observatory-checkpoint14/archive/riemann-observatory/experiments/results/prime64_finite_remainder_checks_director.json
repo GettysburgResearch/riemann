@@ -1,0 +1,15 @@
+{
+  "date_utc": "2026-11-17T23:57:47.261442+00:00",
+  "execution": "director_actual_replay",
+  "code_path": "scripts/prime64_finite_remainder_checks.py",
+  "code_sha256": "cabe6c3bf5a93a1d82b5b73f334ddbd2cf442801f713b67ade0f5700889a5991",
+  "arguments": [
+    "--arb"
+  ],
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "PYTHONPATH": "/workspace/riemann-runtime",
+  "exit_code": 0,
+  "stdout": "Tail constants, synthetic kernel/localization, and enclosure checks passed.\nFLINT 3.6.0 certified finite sum: [0.25253801685456458742967198323133838 +/- 7.34e-36]\nCoefficient tail bound at Y=100: [51013336417388447.217905599373863813446 +/- 9.20e-22]\n",
+  "stderr": "",
+  "scope": "Exact rational checks and declared FLINT/Arb component; ordinary Simpson fixture agreement is not interval proof. Analytic proof and API trust scope are in director_prime_remainder_round9.md."
+}

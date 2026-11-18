@@ -1,0 +1,5 @@
+{
+  "status": "superseded_flawed_interim_static_estimate",
+  "evidence": "experiments/results/formal_semantic_import_closure.json",
+  "reason": "Interim source scan counted imports in comments and omitted public/meta headers. Do not use its old totals. Actual successful module build evidence is formal_ranktrace_summary.json."
+}

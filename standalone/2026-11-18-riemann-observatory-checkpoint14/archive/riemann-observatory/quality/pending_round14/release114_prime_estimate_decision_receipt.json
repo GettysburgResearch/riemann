@@ -1,0 +1,105 @@
+{
+  "status": "recommend_admission_pending_director_action",
+  "review_scope": "Independent bibliographic identity, manifestation/access and cited primary-passage review only. No canonical admission.",
+  "records_path": "quality/pending_round14/weighted107_prime_estimate_records.jsonl",
+  "records_sha256": "fc774ee5281d1da984b9b22915752acf1feff9d4560a568433c8c576b47bf350",
+  "canonical_input_path": "corpus/bibliography.jsonl",
+  "canonical_input_sha256": "98d1f5d2016b0add67ffa80a7e3774e33fdd6e5dac48da8dc583e0bb3ff0ec22",
+  "canonical_catalogued_at_review": 1002,
+  "canonical_selected_at_review": 1001,
+  "provider_input_path": "corpus/candidates.jsonl",
+  "provider_input_sha256": "6cd1886b50b6ea42c422a437dae0964399f680176c965800aa897525260f6c3c",
+  "historical_crosswalk_path": "corpus/provider_candidate_work_crosswalk_round10.jsonl",
+  "historical_crosswalk_sha256": "ddd420b546e356a30a48f16170039bddc8f20f138e749e71636a223769162682",
+  "deduplication": {
+    "canonical_or_contributor_duplicates": [],
+    "other_pending_duplicates": [],
+    "provider_matches": [
+      "CAND-9F37E6201214"
+    ],
+    "provider_match_is_overlap": true,
+    "searched_contributor_shards": 89,
+    "searched_top_level_corpus_provider_ledgers": 14
+  },
+  "selected_increment_if_admitted": 3,
+  "complete_reading_increment_if_admitted": 0,
+  "evidence": [
+    {
+      "path": "audits/adversarial_reviews/weighted107_quadratic_and_inverse_prime_savings.md",
+      "sha256": "f6822d6424cebc7ec502367ff99080133d84e2ac479b60dace731d0c216b20ea"
+    },
+    {
+      "path": "audits/adversarial_reviews/geometry108_ghosh_source_qa.md",
+      "sha256": "da9d26238bc9bf07dd091339304789ba3c4c80380c8380a240a1ce55fbe5a88b"
+    },
+    {
+      "path": "audits/adversarial_reviews/geometry114_korolev_primary_qa.md",
+      "sha256": "f178433334ba00ecf10b0a55dcc3c869ee61006beb2d2b56429a7ca4690a11f5"
+    }
+  ],
+  "entries": [
+    {
+      "id": "PAPER-WEIGHTED107-GHOSH-THESIS1981",
+      "action": "recommend_new_selected",
+      "audit_level": 0,
+      "whole_work_read": false,
+      "access_status": "full_text_accessed",
+      "version": "University of Nottingham repository PDF of 1981 doctoral thesis",
+      "source_locator": "Chapter 1, §1.1, Theorem 1 hypotheses and Theorem 2, printed p. 4 / PDF p. 12",
+      "source_path": "sources/weighted107_references/ghosh1981_nottingham_thesis.pdf",
+      "source_sha256": "52c201db4b3f5f19c4a1efc38556aef4c97a700e52d2ab741f7fa17a267f2e55",
+      "pdf_pages": 193,
+      "supporting_render_path": "sources/weighted107_references/ghosh1981_thesis_pdf_p12.png",
+      "supporting_render_sha256": "c363633d7a87b45df5c69cfb8562e0aee8c899d2b15f9d0c2dee2ca578748749",
+      "rendering_exactly_recreated": "pdftoppm -f 12 -l 12 -r 140 -gray -png -singlefile",
+      "identity_check": "Amit Ghosh, Topics in prime number theory, Nottingham doctoral thesis, 1981. The related journal DOI identifies the chapter-related article. The article PDF was not accessed or audited here.",
+      "checked_passage": "Printed p. 4 records Theorem 2, the H=1 case, with the positive coprime rational numerator and denominator and strict approximation bound inherited from Theorem 1. It gives the von Mangoldt quadratic prefix bound N^(1+epsilon)(q^−1+N^−1/2+qN^−2)^(1/4).",
+      "provider_candidate_matches": []
+    },
+    {
+      "id": "PAPER-WEIGHTED107-REN2005",
+      "action": "recommend_new_selected",
+      "audit_level": 0,
+      "whole_work_read": false,
+      "access_status": "full_text_accessed",
+      "version": "2005 journal version, Science in China Press",
+      "source_locator": "Journal pp. 785–786 / PDF pp. 1–2, Theorem 1.1, Corollary 1.2, and (1.4); corresponding author preprint pp. 1–2",
+      "source_path": "sources/weighted107_references/ren2005_journal.pdf",
+      "source_sha256": "c9b4f380853e8dcc7efe136dac3b12f2336000cbaab5050c6ec9891c59c2c2e6",
+      "pdf_pages": 13,
+      "preprint_path": "sources/weighted107_references/ren_imr2004_9_preprint.pdf",
+      "preprint_sha256": "725506b0d0616e67d5b877e2662ab228506cddcb9cf0ff42ab86724fbed4660e",
+      "preprint_pdf_pages": 14,
+      "identity_check": "Journal title uses plural sums, author preprint uses singular sum. Same author and matching introduction, Corollary 1.2 and (1.4). The journal first-page history says received November 2003 and revised November 2004; the preprint series is 2004-9 and the single publication year is 2005.",
+      "checked_passage": "Journal pp. 785–786 and author preprint pp. 1–2. The quadratic equation (1.4) is explicitly attributed to Ghosh and is related corroboration. Corollary 1.2 supplies the direct linear estimate.",
+      "provider_candidate_matches": [
+        {
+          "candidate_id": "CAND-9F37E6201214",
+          "openalex_id": "https://openalex.org/W2155760719",
+          "doi": "10.1360/03ys0341",
+          "crosswalk_state": "provider_identity_only",
+          "decision": "Preserve candidate_id on admission; one selected source identity and one overlapping provider row."
+        }
+      ]
+    },
+    {
+      "id": "PAPER-WEIGHTED107-KOROLEV2018",
+      "action": "recommend_new_selected",
+      "audit_level": 0,
+      "whole_work_read": false,
+      "access_status": "full_text_accessed",
+      "version": "English journal translation, 2018, DOI 10.1070/SM8939",
+      "source_locator": "§1, (1.1) and theorem, printed pp. 652–653 / PDF pp. 1–2",
+      "source_path": null,
+      "source_sha256": null,
+      "pdf_pages": 8,
+      "remote_source_url": "https://www.mathnet.ru/php/getFT.phtml?jrnid=sm&option_lang=eng&paperid=8939&what=fullteng",
+      "remote_metadata_url": "https://www.mathnet.ru/eng/sm8939",
+      "remote_primary_pdf_verified": true,
+      "local_pdf_bytes_verified": false,
+      "identity_check": "English translation, 2018, Sbornik: Mathematics 209(5), 652–659, 10.1070/SM8939. Russian original Matematicheskii Sbornik 209(5), 54–61, 10.4213/sm8939, is the same work. The 2019 preprint arXiv:1911.09981 is not this translation.",
+      "checked_passage": "Remote English primary PDF pp. 652–653. Formula (1.1) uses the homogeneous inverse residue with von Mangoldt weight. For q>q0(epsilon), unit a and q^(7/10+epsilon)≤X≤q, the estimate is X(q^7 X^−10)^(1/74)q^epsilon up to an implied constant.",
+      "provider_candidate_matches": []
+    }
+  ]
+}

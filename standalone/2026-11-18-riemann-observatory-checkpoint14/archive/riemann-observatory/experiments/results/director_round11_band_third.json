@@ -1,0 +1,9 @@
+{
+  "script": "scripts/prime72_hlz_third_cumulant_check.py",
+  "code_sha256": "6483c93c25a76828ea5e1093e5325152dbe3c2f5b934962c2165bf95a734f70f",
+  "args": [],
+  "exit_code": 0,
+  "elapsed_seconds": 1.8608968459957396,
+  "stdout": "J coefficient: (x + y + z - 1)*(x**2 - x*y - x*z + x + y**2 - y*z + y + z**2 + z - 2)/6\nI plus reflection coefficient: -(2*x**3*y + 2*x**3*z + 2*x*y**3 + 18*x*y*z - 6*x*y + 2*x*z**3 - 6*x*z - 2*x + 2*y**3*z + 2*y*z**3 - 6*y*z - 2*y - 2*z + 3)/12\nNormalized distinct-prime raw kernel: -2*x**3*y - 2*x**3*z + 2*x**3 - 2*x*y**3 - 24*x*y*z + 12*x*y - 2*x*z**3 + 12*x*z - 4*x - 2*y**3*z + 2*y**3 - 2*y*z**3 + 12*y*z - 4*y + 2*z**3 - 4*z + 1\nCumulant integrand: 16*x**2*y**2*z**2 - 24*x**2*y**2 - 24*x**2*z**2 + 24*x**2 - 24*y**2*z**2 + 24*y**2 + 24*z**2 - 8\nWitness for [1/20, 1/10]: -818904257/864000000000\n",
+  "stderr": ""
+}

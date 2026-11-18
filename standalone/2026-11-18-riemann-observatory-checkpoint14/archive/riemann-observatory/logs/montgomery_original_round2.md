@@ -1,0 +1,5 @@
+# Montgomery1973 source checkpoint
+
+2026-11-17: New PAPER-E009. ActualauthorPDF479113bytes/full13pagesread; metadataCrossrefandscanverified. Mainformulaoriginaluniformonly0≤alpha≤1−epsilon; no modernendpointinsertion. CentralEq18andmeansquareEq29reconstructed; original2/3simplicityindependentlyreviewed. Localp191missingabsolutevaluevisuallycheckedbytwoagents, correctCor1constantunaffected; parentadjudicationbeforepublicissueelevation. ExactrationalCin(.68)certificate>.008saved. WholeworkL1,notwholeworkL2. BGSTB/Lamzouritargetedcomparisonnotnewwhole-readcounts.
+
+Files: papers/PAPER-E009.md; papers/montgomery_original_round2_records.jsonl; theorems/montgomery_original_round2.jsonl; connections/montgomery_original_round2.jsonl; audits/montgomery1973_round2.md; audits/adversarial_reviews/montgomery_simple_third_round2.md; experiments/code/montgomery_original_checks.py andresults. Sourcesprivateexcludedfromdistribution.

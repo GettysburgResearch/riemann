@@ -1,0 +1,37 @@
+# PAPER-CMS001 — A differential version of the Chebyshev–Markov–Stieltjes inequalities
+
+```json
+{
+  "id": "PAPER-CMS001",
+  "title": "A differential version of the Chebyshev–Markov–Stieltjes inequalities",
+  "authors": [
+    "Shoni Gilboa",
+    "Ron Peled"
+  ],
+  "year": 2015,
+  "date": "2015-02-09",
+  "venue": "Journal of Approximation Theory196,13–54",
+  "doi": "10.1016/j.jat.2015.02.010",
+  "arxiv": "1407.2467v2",
+  "version": "Accessed PDF bears arXivv2 sidebar9Feb2015, body date20Oct2018, PDF creation23Oct2018; no assertion that these dates are identical. Full revision history not audited.",
+  "source_url": "https://arxiv.org/pdf/1407.2467v2",
+  "source_file": "sources/christoffel_round3/gilboa_peled.pdf",
+  "source_sha256": "f649e94cf990e99cb88d5f9d23772fb4abe6aeb492d85f466c068c4dc4938e72",
+  "audit_level": 0,
+  "bibliographic_verified": true,
+  "access_status": "full_text_accessed",
+  "substantive_whole_work_read": false,
+  "read_scope": "Actual primary pp1–2, Eq1–3 introduction, visually inspected to distinguish upper/lower CDF extrema from maximum atom mass. Rest of the43-page preprint not read or audited.",
+  "technical_review": "Classical introductory identity upperπ−lowerπ=λ inspected. This compact-supportλ is not silently identified with unrestricted ordinary Hankel Christoffel function. Differential theorems not audited.",
+  "main_result_inspected": "Finite-moment classes on[−1,1] have separate sharp upper/lower distribution functions and maximum point mass; the atom extremum is their gap.",
+  "family": [
+    "F",
+    "H"
+  ],
+  "accessed_at": "2026-11-17",
+  "publication_status": "published; inspected preprint",
+  "correction_search_status": "Published erratum discovered: JAT199(2015),95,DOI10.1016/j.jat.2015.08.003. Erratum content not accessed; differential theorems not relied on.",
+  "audit_file": "audits/adversarial_reviews/christoffel_independent_third_round3.md",
+  "novelty_claim": false
+}
+```

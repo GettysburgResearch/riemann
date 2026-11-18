@@ -1,0 +1,23 @@
+{
+  "status": "interrupted_before_completion",
+  "date_utc": "2026-11-17T20:01:19.512772+00:00",
+  "commit": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510",
+  "target": "Solution.Multiplicity",
+  "scope": "Target and type/axiom query incomplete. Compiled dependencies retained.",
+  "build_pid": 57846,
+  "elapsed_seconds": 2220.545796548,
+  "lean_threads": 4,
+  "observed_process_state": "zombie",
+  "observed_exit_status": 9,
+  "runner_process": "absent",
+  "observed_utc": "2026-11-17T20:13:36.609785+00:00",
+  "last_known_completed_counter": 6888,
+  "build_log_sha256": "eb5b3b07011302dc20cdcf95fab2a2e98c61d1d813e0eb34c5df48725d717431",
+  "source_error_marker_count": 0,
+  "cgroup_oom": {
+    "oom": 0,
+    "oom_kill": 0,
+    "oom_group_kill": 0
+  },
+  "cause": "SIGKILL observed after execution environment interruption. Initiator unestablished."
+}

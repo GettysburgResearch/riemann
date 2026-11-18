@@ -1,0 +1,15 @@
+{
+  "kind": "local_Lean_core_finite_integer_certificate_NOT_analytic_transfer_proof",
+  "exit_code": 0,
+  "elapsed_seconds": 2.275810668000304,
+  "source_sha256": "d17247406fe376f7f4f6dec1501082a6cb000c6e1acc1c89bccad19a1d38e4a8",
+  "stdout": "'ObservatoryBoundary.shape_checked' does not depend on any axioms\n'ObservatoryBoundary.endpoints_checked' depends on axioms: [propext]\n'ObservatoryBoundary.pressure_knots_checked' depends on axioms: [propext]\n'ObservatoryBoundary.small_chains_checked' does not depend on any axioms\n'ObservatoryBoundary.constant_checked' does not depend on any axioms\n",
+  "stderr": "",
+  "toolchain": "Lean4.33.0-rc2",
+  "scope": "Shape/endpoint checks,390integer knot inequalities,6small-chain inequalities andconstant arithmetic only; PL interpolation and finite-chain theorem reviewed externally.",
+  "data_identity": {
+    "lean_literal_matches_frozen_cob_knots": true,
+    "frozen_input_sha256": "e782247f3991118936ef2fcacf59943b510508c9062200c66798f354d95fae92",
+    "method": "independent Python ast.literal_eval of checked Lean Int-list literal, compared with bundled frozen JSON"
+  }
+}

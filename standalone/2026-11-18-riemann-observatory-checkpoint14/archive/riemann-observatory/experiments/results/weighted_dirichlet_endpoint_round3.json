@@ -1,0 +1,107 @@
+{
+  "status": "supplemental_exact_checks_not_a_substitute_for_analytic_proof",
+  "source": "audits/gallardo_seco_endpoint_round3.md",
+  "coefficient_identity": "T_1 sum_(n0..K)z^n=-(K+1)z^K/(1-z)",
+  "cases": [
+    {
+      "K": 0,
+      "domain_norm_squared_exact": "1",
+      "image_norm_squared_rigorous_interval": [
+        "1/2",
+        "3/2"
+      ],
+      "normalized_image_norm_squared_upper": "3/2",
+      "operator_coefficients_checked_through": 8
+    },
+    {
+      "K": 1,
+      "domain_norm_squared_exact": "3/2",
+      "image_norm_squared_rigorous_interval": [
+        "1/2",
+        "1"
+      ],
+      "normalized_image_norm_squared_upper": "2/3",
+      "operator_coefficients_checked_through": 9
+    },
+    {
+      "K": 2,
+      "domain_norm_squared_exact": "11/6",
+      "image_norm_squared_rigorous_interval": [
+        "1/2",
+        "5/6"
+      ],
+      "normalized_image_norm_squared_upper": "5/11",
+      "operator_coefficients_checked_through": 10
+    },
+    {
+      "K": 4,
+      "domain_norm_squared_exact": "137/60",
+      "image_norm_squared_rigorous_interval": [
+        "1/2",
+        "7/10"
+      ],
+      "normalized_image_norm_squared_upper": "42/137",
+      "operator_coefficients_checked_through": 12
+    },
+    {
+      "K": 8,
+      "domain_norm_squared_exact": "7129/2520",
+      "image_norm_squared_rigorous_interval": [
+        "1/2",
+        "11/18"
+      ],
+      "normalized_image_norm_squared_upper": "1540/7129",
+      "operator_coefficients_checked_through": 16
+    },
+    {
+      "K": 16,
+      "domain_norm_squared_exact": "42142223/12252240",
+      "image_norm_squared_rigorous_interval": [
+        "1/2",
+        "19/34"
+      ],
+      "normalized_image_norm_squared_upper": "6846840/42142223",
+      "operator_coefficients_checked_through": 24
+    },
+    {
+      "K": 32,
+      "domain_norm_squared_exact": "53676090078349/13127595717600",
+      "image_norm_squared_rigorous_interval": [
+        "1/2",
+        "35/66"
+      ],
+      "normalized_image_norm_squared_upper": "76577641686000/590436990861839",
+      "operator_coefficients_checked_through": 40
+    },
+    {
+      "K": 64,
+      "domain_norm_squared_exact": "625192648726870088010174299/131362987122535807501262400",
+      "image_norm_squared_rigorous_interval": [
+        "1/2",
+        "67/130"
+      ],
+      "normalized_image_norm_squared_upper": "67702462593922300789112160/625192648726870088010174299",
+      "operator_coefficients_checked_through": 72
+    },
+    {
+      "K": 128,
+      "domain_norm_squared_exact": "72656438570025037632015926945477460829631429062127376701/13353756090997411579403749204440236542538872688049072000",
+      "image_norm_squared_rigorous_interval": [
+        "1/2",
+        "131/258"
+      ],
+      "normalized_image_norm_squared_upper": "6780395534576205104270895913882445686327877217575304000/72656438570025037632015926945477460829631429062127376701",
+      "operator_coefficients_checked_through": 136
+    },
+    {
+      "K": 256,
+      "domain_norm_squared_exact": "26261600272461085793732316940604414546118054871536423020699189604989105713889682724546651510161895949551626985769/4285344137372231566616365249206531035019473398789780525438551598725494569614018464395658307122505077932281312000",
+      "image_norm_squared_rigorous_interval": [
+        "1/2",
+        "259/514"
+      ],
+      "normalized_image_norm_squared_upper": "2159346559493011625979841633355041902860007023903799914569231253054286174182939265133220820125931547051480272000/26261600272461085793732316940604414546118054871536423020699189604989105713889682724546651510161895949551626985769",
+      "operator_coefficients_checked_through": 264
+    }
+  ]
+}

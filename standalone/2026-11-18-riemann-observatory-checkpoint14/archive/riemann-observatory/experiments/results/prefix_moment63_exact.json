@@ -1,0 +1,79 @@
+{
+  "provenance": "synthetic_profile",
+  "coefficient_source": "Exact expansion with W_1=1/3, W_2=1/2, W_3=1/6, and all higher W_m=0.",
+  "feasibility_checked": false,
+  "scope": "Bounds and tail conclusions apply if a nonnegative triangular-lattice profile realizes the supplied limiting Taylor data. The tool has not verified feasibility or provenance. Finite-N staircase derivatives are outside this input model.",
+  "cutoff_M": 3,
+  "moments_y0_through_yM_minus_1": [
+    {
+      "lower": "8",
+      "upper": "8"
+    },
+    {
+      "lower": "40",
+      "upper": "40"
+    },
+    {
+      "lower": "224",
+      "upper": "224"
+    }
+  ],
+  "tail_polynomial_integral": {
+    "lower": "0",
+    "upper": "0"
+  },
+  "tail_polynomial_at_first_tail_node": "60",
+  "normalized_tail_functional": [
+    "1/5",
+    "-8/25",
+    "3/25"
+  ],
+  "normalized_tail_weighted_mass_upper_bound": "0",
+  "tail_weighted_mass": {
+    "lower": "0",
+    "upper": "0"
+  },
+  "tail_W_m_sum_upper_bound": "0",
+  "tail_constant_term_contribution_upper_bound": "0",
+  "tail_status_if_feasible": "zero_tail",
+  "weights_through_cutoff": [
+    {
+      "multiplicity": 2,
+      "node": 2,
+      "weighted_mass_t_m": {
+        "lower": "2",
+        "upper": "2"
+      },
+      "weight_W_m": {
+        "lower": "1/2",
+        "upper": "1/2"
+      },
+      "cardinal_integral": {
+        "lower": "2",
+        "upper": "2"
+      },
+      "cardinal_error_bound": "0"
+    },
+    {
+      "multiplicity": 3,
+      "node": 6,
+      "weighted_mass_t_m": {
+        "lower": "6",
+        "upper": "6"
+      },
+      "weight_W_m": {
+        "lower": "1/6",
+        "upper": "1/6"
+      },
+      "cardinal_integral": {
+        "lower": "6",
+        "upper": "6"
+      },
+      "cardinal_error_bound": "0"
+    }
+  ],
+  "simple_weight_W_1": {
+    "lower": "1/3",
+    "upper": "1/3"
+  }
+}

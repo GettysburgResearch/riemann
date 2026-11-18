@@ -1,0 +1,192 @@
+{
+  "integrator": "scripts/integrate_research_round13.py",
+  "shards": {
+    "theorems/research_round13_claims.jsonl": {
+      "rows": 21,
+      "sha256": "70827cf5b394b0143c39d95ae144c255b8226c1e45afd5e75fc38d9ce16c0099",
+      "record_ids": [
+        "LEM-ROOTED-CUE-TAGGED-COMPRESSION",
+        "THM-ROOTED-CUE-JOINT-CLOSED-MOMENT-WINDOW",
+        "THM-ROOTED-CUE-FIRST-FREQUENCY-CORRECTION",
+        "CERT-ROOTED-CUE-FIRST-CHAMBER-FOURTH",
+        "THM-ROOTED-CUE-INTEGER-RANK-WINDOW",
+        "OBS-ROOTED-CUE-ALL-RANK-FINITE-SQUARE-BARRIER",
+        "THM-ROOTED-CUE-RANK-CORRECTION-PARITY",
+        "THM-GRID-TWO-SCALE-UNIVERSAL-TIGHTNESS",
+        "LEM-GRID-TWO-SCALE-DIRECT-EXPONENT",
+        "CERT-LEAN-TWO-SCALE-SCALAR",
+        "THM-HR-REPAIRED-FINITE-GAUSSIAN-MOMENTS",
+        "THM-HR-OSCILLATORY-PRINTED-WEIGHT-WINDOW",
+        "OBS-HLZ-FOURTH-PURE-ARM-REDUCTION",
+        "LEM-HLZ-ONE-SIDED-LONG-CONTINUOUS",
+        "LEM-HLZ-SMOOTH-REFLECTED-SADDLE",
+        "LEM-HLZ-REFLECTED-EDGE-FIXED-SEQUENCE",
+        "OPEN-HLZ-PURE-FOURTH-CSTAR-CANCELLATION",
+        "THM-GR1974-GRR-MODULUS",
+        "THM-BILLINGSLEY1968-C-TIGHTNESS-AND-TRIANGLE",
+        "LEM-PETROV-ROOTED-CUE-EXACT-FACTOR-BRIDGE",
+        "OBS-PETROV-ROOTED-CUE-GRAM-QUADRATIC-MISMATCH"
+      ]
+    },
+    "theorems/research_round13_proof_edges.jsonl": {
+      "rows": 15,
+      "sha256": "f81acd1f2d94ffe749851bf20fed01ffb6e1b6f31df055b2b2d9a858f4bab2ed",
+      "record_ids": [
+        [
+          "THM-ROOTED-CUE-JOINT-CLOSED-MOMENT-WINDOW",
+          "uses_exact_scoped_input",
+          "LEM-ROOTED-CUE-TAGGED-COMPRESSION"
+        ],
+        [
+          "THM-ROOTED-CUE-FIRST-FREQUENCY-CORRECTION",
+          "uses_exact_scoped_input",
+          "THM-ROOTED-CUE-JOINT-CLOSED-MOMENT-WINDOW"
+        ],
+        [
+          "THM-ROOTED-CUE-INTEGER-RANK-WINDOW",
+          "uses_exact_scoped_input",
+          "PAPER-LF63-HKO2000"
+        ],
+        [
+          "THM-ROOTED-CUE-INTEGER-RANK-WINDOW",
+          "uses_exact_scoped_input",
+          "LEM-ROOTED-CUE-TAGGED-COMPRESSION"
+        ],
+        [
+          "OBS-ROOTED-CUE-ALL-RANK-FINITE-SQUARE-BARRIER",
+          "uses_exact_scoped_input",
+          "THM-ROOTED-CUE-INTEGER-RANK-WINDOW"
+        ],
+        [
+          "THM-ROOTED-CUE-RANK-CORRECTION-PARITY",
+          "uses_exact_scoped_input",
+          "THM-ROOTED-CUE-INTEGER-RANK-WINDOW"
+        ],
+        [
+          "THM-GRID-TWO-SCALE-UNIVERSAL-TIGHTNESS",
+          "uses_exact_scoped_input",
+          "THM-GR1974-GRR-MODULUS"
+        ],
+        [
+          "THM-GRID-TWO-SCALE-UNIVERSAL-TIGHTNESS",
+          "uses_exact_scoped_input",
+          "THM-BILLINGSLEY1968-C-TIGHTNESS-AND-TRIANGLE"
+        ],
+        [
+          "THM-SHRINKING-BAND-BROWNIAN-PROCESS",
+          "uses_exact_scoped_input",
+          "THM-GRID-TWO-SCALE-UNIVERSAL-TIGHTNESS"
+        ],
+        [
+          "THM-HR-REPAIRED-FINITE-GAUSSIAN-MOMENTS",
+          "uses_exact_scoped_input",
+          "THM-HR-OSCILLATORY-PRINTED-WEIGHT-WINDOW"
+        ],
+        [
+          "OBS-HLZ-FOURTH-PURE-ARM-REDUCTION",
+          "uses_exact_scoped_input",
+          "THM-HLZ-JOURNAL5-REAL-COEFFICIENTS"
+        ],
+        [
+          "LEM-HLZ-REFLECTED-EDGE-FIXED-SEQUENCE",
+          "uses_exact_scoped_input",
+          "LEM-HLZ-SMOOTH-REFLECTED-SADDLE"
+        ],
+        [
+          "LEM-PETROV-ROOTED-CUE-EXACT-FACTOR-BRIDGE",
+          "uses_exact_scoped_input",
+          "PAPER-GEOMETRY102-PETROV2026"
+        ],
+        [
+          "LEM-PETROV-ROOTED-CUE-EXACT-FACTOR-BRIDGE",
+          "uses_exact_scoped_input",
+          "LEM-ROOTED-CUE-TAGGED-COMPRESSION"
+        ],
+        [
+          "OBS-PETROV-ROOTED-CUE-GRAM-QUADRATIC-MISMATCH",
+          "uses_exact_scoped_input",
+          "LEM-PETROV-ROOTED-CUE-EXACT-FACTOR-BRIDGE"
+        ]
+      ]
+    },
+    "graphs/research_round13_boundaries.jsonl": {
+      "rows": 7,
+      "sha256": "0a713d1b3971df7ff9c2d5cc0b89640ac3a0a518b77d9f63be683a7944fb7f06",
+      "record_ids": [
+        [
+          "CERT-ROOTED-CUE-FIRST-CHAMBER-FOURTH",
+          "checks_finite_and_continuum_correction",
+          "THM-ROOTED-CUE-FIRST-FREQUENCY-CORRECTION"
+        ],
+        [
+          "THM-ROOTED-CUE-JOINT-CLOSED-MOMENT-WINDOW",
+          "compares_to_smaller_arithmetic_window",
+          "THM-HLZ-FINITE-BAND-MOMENT-WINDOW"
+        ],
+        [
+          "CERT-LEAN-TWO-SCALE-SCALAR",
+          "formalizes_scalar_implication_only",
+          "LEM-SUBPOWER-SUBSET-TWO-SCALE-FOURTH"
+        ],
+        [
+          "OBS-HLZ-FOURTH-PURE-ARM-REDUCTION",
+          "intrinsic_comparator_without_arithmetic_transfer",
+          "THM-ROOTED-CUE-JOINT-CLOSED-MOMENT-WINDOW"
+        ],
+        [
+          "OBS-HLZ-FOURTH-PURE-ARM-REDUCTION",
+          "identifies_open_sufficient_estimate_for_moment_extension",
+          "OPEN-HLZ-PURE-FOURTH-CSTAR-CANCELLATION"
+        ],
+        [
+          "OPEN-HLZ-PURE-FOURTH-CSTAR-CANCELLATION",
+          "remaining_target_after_proved_reduction",
+          "LEM-HLZ-REFLECTED-EDGE-FIXED-SEQUENCE"
+        ],
+        [
+          "OBS-PETROV-ROOTED-CUE-GRAM-QUADRATIC-MISMATCH",
+          "distinguishes_exact_factors_from_formal_continuation",
+          "OBS-ROOTED-CUE-ALL-RANK-FINITE-SQUARE-BARRIER"
+        ]
+      ]
+    },
+    "connections/research_round13_connections.jsonl": {
+      "rows": 5,
+      "sha256": "235fdf2473e1c18b123b167ce48dd4e62f39018a3c4559091234f122479b1366",
+      "record_ids": [
+        "CONN-ROOTED-CUE-CLOSED-WINDOW-ARITHMETIC-GAP",
+        "CONN-GRID-TIGHTNESS-CLASSICAL-MODULUS",
+        "CONN-HR-BANDLIMITED-AVERAGE-LOG-TAIL",
+        "CONN-PURE-FOURTH-SMOOTH-CSTAR-EDGE",
+        "CONN-PETROV-EXACT-TAIL-AND-FORMAL-CUE-WINDOW"
+      ]
+    },
+    "audits/research_round13_findings.jsonl": {
+      "rows": 1,
+      "sha256": "130a80dc148e36f91ddea18e8fc97fd6e71d17fda745bf9c22e95479f6e7adcb",
+      "record_ids": [
+        "FIND-R13-HR-AVERAGING-WEIGHT-LOG-MOMENT"
+      ]
+    },
+    "quality/zzzzzzzz_round13_research_source_scope_updates.jsonl": {
+      "rows": 1,
+      "sha256": "53c8908289a0a79cca61850bf7a3ed30f75ecc2681fd426c4f52c3e6f28ac193",
+      "record_ids": [
+        "PAPER-AN79-HR-ZETA"
+      ]
+    }
+  },
+  "scoped_groups": [
+    "REVIEW-GROUP-R13-CUE-WINDOW",
+    "REVIEW-GROUP-R13-CUE-CHAMBER-CERT",
+    "REVIEW-GROUP-R13-CUE-RANK-BARRIER",
+    "REVIEW-GROUP-R13-GRID-TIGHTNESS",
+    "REVIEW-GROUP-R13-HR-WEIGHT",
+    "REVIEW-GROUP-R13-PURE-FOURTH",
+    "REVIEW-GROUP-R13-FIXED-CSTAR",
+    "REVIEW-GROUP-R13-PETROV-BRIDGE"
+  ],
+  "whole_work_promoted": "PAPER-AN79-HR-ZETA",
+  "open_target": "OPEN-HLZ-PURE-FOURTH-CSTAR-CANCELLATION",
+  "scope": "Staging and cross-reference receipt. Live canonical masters and release outputs were outside the integration run."
+}

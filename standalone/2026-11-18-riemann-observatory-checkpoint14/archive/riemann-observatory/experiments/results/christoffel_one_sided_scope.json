@@ -1,0 +1,49 @@
+{
+  "kind": "exact_rational_scope_check_NOT_actual_zeta_or_full_prime_moment",
+  "countermodel_dimension": 66,
+  "eigenvalues": [
+    "-1",
+    "1",
+    "6/5"
+  ],
+  "multiplicities": [
+    5,
+    11,
+    50
+  ],
+  "normalized_moments": [
+    "1",
+    "1",
+    "4/3",
+    "7/5",
+    "136/75"
+  ],
+  "christoffel_minimizer_coefficients": [
+    "1",
+    "12/103",
+    "-85/103"
+  ],
+  "orthogonality_to_x_and_x_squared": true,
+  "ordinary_Lambda2_0": "5/309",
+  "one_minus_Lambda": "304/309",
+  "actual_positive_fraction": "61/66",
+  "generic_one_sided_claim_fails": true,
+  "difference": "135/2266",
+  "source_specific_sine_moments": [
+    "1",
+    "1",
+    "4/3",
+    "2",
+    "13/4"
+  ],
+  "source_specific_minimizer": [
+    "1",
+    "-7/4",
+    "2/3"
+  ],
+  "source_specific_Lambda2": "5/36",
+  "source_specific_one_sided_certificate_valid": "For x<=0,1-7x/4+2x^2/3>=1, hence its square majorizes1_{x<=0}.",
+  "conditional_positive_fraction": "31/36",
+  "conditional_simple_critical_fraction_after_source_count_step": "13/18",
+  "scope": "Generic ordinary Christoffel function controls an atom at0, not automatically a negative halfline. The source-specific four-moment certificate is valid; no main-theorem error alleged."
+}

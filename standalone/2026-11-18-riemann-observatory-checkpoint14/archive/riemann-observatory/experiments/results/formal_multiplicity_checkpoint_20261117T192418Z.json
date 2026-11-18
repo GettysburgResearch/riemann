@@ -1,0 +1,25 @@
+{
+  "status": "interrupted_before_completion",
+  "date_utc": "2026-11-17T19:22:31.083782+00:00",
+  "commit": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510",
+  "target": "Solution.Multiplicity",
+  "scope": "No successful main theorem build claimed; caches retained for exact-source continuation.",
+  "build_pid": 36321,
+  "elapsed_seconds": 2220.349181562,
+  "lean_threads": 4,
+  "observed_process_state": "zombie",
+  "observed_exit_status": 9,
+  "runner_process": "absent",
+  "observed_utc": "2026-11-17T19:24:18.888351+00:00",
+  "last_known_completed_counter": 4948,
+  "cause": "SIGKILL observed after transient exec transport outage; cause not established; no source-level error logged",
+  "cgroup_oom": {
+    "oom": 0,
+    "oom_kill": 0,
+    "oom_group_kill": 0,
+    "memory_peak_bytes": 9839947776,
+    "memory_max_bytes": 17179869184
+  },
+  "resume_observed_utc": "20261117T192418Z",
+  "observed_previous_pid_active": false
+}

@@ -1,0 +1,41 @@
+{
+  "claim_id": "OBS-THM-839-TRANSFER-BOUNDARY",
+  "title": "Pressure-aware finite boundary constant for the first-window transfer",
+  "source_paper_id": "PAPER-A005",
+  "source_version": "arXiv2610.08965v1",
+  "source_locators": [
+    "Lemma2.5,pp10\u201311",
+    "Proposition3.3,pp15\u201316",
+    "lean/Distinct839/Defs.lean",
+    "lean/Distinct839/Transfer/{Main,Potential,Sums,Tables}.lean"
+  ],
+  "source_commit": "0e961ea199b425010843bc8044676d4ad29fe031",
+  "kind": "conditional finite-configuration lemma; independently derived strengthening; no literature novelty claim",
+  "statement": "For the frozen first-window data, LocalInequality implies the source transfer inequality with boundary constant516027/2000000 in place of2703/6250. More generally the near-pair energy may be directed/signed provided K\u00b2<=symmetrized energy+nonnegative per-pair defect; subtract exact defect2sum_near m_i m_j delta_ij.",
+  "hypotheses": [
+    "Original frozen LocalInequality for all six gaps>=17/20 and all seven labels in{1,2}",
+    "Finite increasing chain with gaps>=17/20 and spread<=R, R>=0",
+    "Near-pair approximation as stated; additional nonnegative symmetrized far energies only for an all-pairs output",
+    "Frozen y>=6alpha theta, needed for small-chain cases"
+  ],
+  "proof_dependencies": [
+    "Exact reward deficit<=6y",
+    "Exact pressure deficit identityDelta=left weighted gaps+right weighted gaps",
+    "Finite PL knot domination A_q<=alpha(5-q)(t-theta) and -A_q<=alpha(q+1)(t-theta)",
+    "Near-pair weight caps and exact approximation defect"
+  ],
+  "evidence": [
+    "audits/adversarial_reviews/839_transfer_skeptic_round2.md",
+    "experiments/results/839_transfer_skeptic_checks.json",
+    "experiments/results/839_transfer_pressure_certificate.csv",
+    "experiments/results/839_transfer_boundary_core.json"
+  ],
+  "review_status": "Proposer reconstruction complete; parent independently reconstructed pressure identity and is reviewing exact data; final director adjudication pending",
+  "scope_limits": [
+    "No new asymptotic zero proportion",
+    "No RH proof or disproof",
+    "LocalInequality and analytic zeta bridge not proved by this lemma",
+    "Lean checks finite integer certificate only, not PL interpolation or the full transfer theorem"
+  ],
+  "negative_knowledge": "Dropping y>=6alpha theta from a generic all-chain-length version fails already for one point; explicit witness in review."
+}

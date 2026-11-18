@@ -1,0 +1,62 @@
+{
+  "status": "all exact rational checks passed",
+  "arithmetic": "fractions.Fraction and integers",
+  "d_positive_lower": "14898922139351236715859107/3546800652308466802534084800",
+  "log2_strict_lower": "842/1215",
+  "divisor_identity_checked_integer_Y": [
+    1,
+    2000
+  ],
+  "finite_li_examples": [
+    {
+      "N": 1,
+      "a": "1/500",
+      "li_perturbation_upper": "1/46875",
+      "li_baseline_lower": "1/576",
+      "li_result_lower": "1/1152"
+    },
+    {
+      "N": 2,
+      "a": "1/5000",
+      "li_perturbation_upper": "1/468750",
+      "li_baseline_lower": "1/576",
+      "li_result_lower": "1/1152"
+    },
+    {
+      "N": 5,
+      "a": "1/1562500",
+      "li_perturbation_upper": "1/146484375",
+      "li_baseline_lower": "1/576",
+      "li_result_lower": "1/1152"
+    },
+    {
+      "N": 10,
+      "a": "1/9765625000",
+      "li_perturbation_upper": "1/915527343750",
+      "li_baseline_lower": "1/576",
+      "li_result_lower": "1/1152"
+    },
+    {
+      "N": 25,
+      "a": "1/745058059692382812500",
+      "li_perturbation_upper": "1/69849193096160888671875",
+      "li_baseline_lower": "1/576",
+      "li_result_lower": "1/1152"
+    },
+    {
+      "N": 50,
+      "a": "1/444089209850062616169452667236328125000",
+      "li_perturbation_upper": "1/41633363423443370265886187553405761718750",
+      "li_baseline_lower": "1/576",
+      "li_result_lower": "1/1152"
+    },
+    {
+      "N": 100,
+      "a": "1/78886090522101180541172856528278622967320643510902300477027893066406250000",
+      "li_perturbation_upper": "1/7395570986446985675734955299526120903186310329147090669721364974975585937500",
+      "li_baseline_lower": "1/576",
+      "li_result_lower": "1/1152"
+    }
+  ],
+  "limitations": "Checks support constants; see audit for analytic proof and exact scope."
+}

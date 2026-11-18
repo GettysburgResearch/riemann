@@ -1,0 +1,151 @@
+{
+  "kind": "static_semantic_source_comparison_not_lean_build",
+  "repository_commit": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510",
+  "mathlib_commit": "51e6992efd06126df61a496bebf8f49482a4e129",
+  "literal_definition_matches": [
+    "IsNontrivialZero",
+    "zeroMult",
+    "zerosIn",
+    "Ncount",
+    "Ndist",
+    "N0",
+    "N0star",
+    "N0simple",
+    "Nsimple"
+  ],
+  "zeta_only_comparator_type_matches": [
+    {
+      "name": "two_thirds_on_critical_line",
+      "challenge": "comparator/Challenge.lean",
+      "solution": "comparator/Solution.lean",
+      "whitespace_normalized_type": "\u2200 \u03b5 > 0, \u2203 T\u2080 : \u211d, \u2200 T \u2265 T\u2080, (2 / 3 - \u03b5) * (Ncount T (2 * T) : \u211d) \u2264 N0star T (2 * T)",
+      "exact_source_type_match": true
+    },
+    {
+      "name": "two_thirds_on_critical_line_cumulative",
+      "challenge": "comparator/Challenge.lean",
+      "solution": "comparator/Solution.lean",
+      "whitespace_normalized_type": "\u2200 \u03b5 > 0, \u2203 T\u2080 : \u211d, \u2200 T \u2265 T\u2080, (2 / 3 - \u03b5) * (Ncount 0 T : \u211d) \u2264 N0star 0 T",
+      "exact_source_type_match": true
+    },
+    {
+      "name": "half_simple_on_critical_line",
+      "challenge": "comparator/Challenge.lean",
+      "solution": "comparator/Solution.lean",
+      "whitespace_normalized_type": "\u2200 \u03b5 > 0, \u2203 T\u2080 : \u211d, \u2200 T \u2265 T\u2080, (1 / 2 - \u03b5) * (Ncount T (2 * T) : \u211d) \u2264 N0simple T (2 * T)",
+      "exact_source_type_match": true
+    },
+    {
+      "name": "half_simple_on_critical_line_cumulative",
+      "challenge": "comparator/Challenge.lean",
+      "solution": "comparator/Solution.lean",
+      "whitespace_normalized_type": "\u2200 \u03b5 > 0, \u2203 T\u2080 : \u211d, \u2200 T \u2265 T\u2080, (1 / 2 - \u03b5) * (Ncount 0 T : \u211d) \u2264 N0simple 0 T",
+      "exact_source_type_match": true
+    },
+    {
+      "name": "three_quarters_distinct",
+      "challenge": "comparator/Challenge.lean",
+      "solution": "comparator/Solution.lean",
+      "whitespace_normalized_type": "\u2200 \u03b5 > 0, \u2203 T\u2080 : \u211d, \u2200 T \u2265 T\u2080, (3 / 4 - \u03b5) * (Ncount T (2 * T) : \u211d) \u2264 Ndist T (2 * T)",
+      "exact_source_type_match": true
+    },
+    {
+      "name": "three_quarters_distinct_cumulative",
+      "challenge": "comparator/Challenge.lean",
+      "solution": "comparator/Solution.lean",
+      "whitespace_normalized_type": "\u2200 \u03b5 > 0, \u2203 T\u2080 : \u211d, \u2200 T \u2265 T\u2080, (3 / 4 - \u03b5) * (Ncount 0 T : \u211d) \u2264 Ndist 0 T",
+      "exact_source_type_match": true
+    },
+    {
+      "name": "montgomery_taylor_on_critical_line",
+      "challenge": "comparator/Challenge.lean",
+      "solution": "comparator/Solution.lean",
+      "whitespace_normalized_type": "\u2200 \u03b5 > 0, \u2203 T\u2080 : \u211d, \u2200 T \u2265 T\u2080, (2 - 1 / cMT - \u03b5) * (Ncount T (2 * T) : \u211d) \u2264 N0star T (2 * T)",
+      "exact_source_type_match": true
+    },
+    {
+      "name": "montgomery_taylor_simple_on_critical_line",
+      "challenge": "comparator/Challenge.lean",
+      "solution": "comparator/Solution.lean",
+      "whitespace_normalized_type": "\u2200 \u03b5 > 0, \u2203 T\u2080 : \u211d, \u2200 T \u2265 T\u2080, (2 * cMT - 1 - \u03b5) * (Ncount T (2 * T) : \u211d) \u2264 N0simple T (2 * T)",
+      "exact_source_type_match": true
+    },
+    {
+      "name": "montgomery_taylor_distinct",
+      "challenge": "comparator/Challenge.lean",
+      "solution": "comparator/Solution.lean",
+      "whitespace_normalized_type": "\u2200 \u03b5 > 0, \u2203 T\u2080 : \u211d, \u2200 T \u2265 T\u2080, (cMT - \u03b5) * (Ncount T (2 * T) : \u211d) \u2264 Ndist T (2 * T)",
+      "exact_source_type_match": true
+    },
+    {
+      "name": "two_thirds_simple_on_critical_line",
+      "challenge": "comparator/Challenge/Multiplicity.lean",
+      "solution": "comparator/Solution/Multiplicity.lean",
+      "whitespace_normalized_type": "\u2200 \u03b5 > 0, \u2203 T\u2080 : \u211d, \u2200 T \u2265 T\u2080, (2 / 3 - \u03b5) * (Ncount T (2 * T) : \u211d) \u2264 N0simple T (2 * T)",
+      "exact_source_type_match": true
+    },
+    {
+      "name": "two_thirds_simple_on_critical_line_cumulative",
+      "challenge": "comparator/Challenge/Multiplicity.lean",
+      "solution": "comparator/Solution/Multiplicity.lean",
+      "whitespace_normalized_type": "\u2200 \u03b5 > 0, \u2203 T\u2080 : \u211d, \u2200 T \u2265 T\u2080, (2 / 3 - \u03b5) * (Ncount 0 T : \u211d) \u2264 N0simple 0 T",
+      "exact_source_type_match": true
+    },
+    {
+      "name": "five_sixths_distinct",
+      "challenge": "comparator/Challenge/Multiplicity.lean",
+      "solution": "comparator/Solution/Multiplicity.lean",
+      "whitespace_normalized_type": "\u2200 \u03b5 > 0, \u2203 T\u2080 : \u211d, \u2200 T \u2265 T\u2080, (5 / 6 - \u03b5) * (Ncount T (2 * T) : \u211d) \u2264 Ndist T (2 * T)",
+      "exact_source_type_match": true
+    },
+    {
+      "name": "five_sixths_distinct_cumulative",
+      "challenge": "comparator/Challenge/Multiplicity.lean",
+      "solution": "comparator/Solution/Multiplicity.lean",
+      "whitespace_normalized_type": "\u2200 \u03b5 > 0, \u2203 T\u2080 : \u211d, \u2200 T \u2265 T\u2080, (5 / 6 - \u03b5) * (Ncount 0 T : \u211d) \u2264 Ndist 0 T",
+      "exact_source_type_match": true
+    },
+    {
+      "name": "montgomery_taylor_simple_on_critical_line_mult",
+      "challenge": "comparator/Challenge/Multiplicity.lean",
+      "solution": "comparator/Solution/Multiplicity.lean",
+      "whitespace_normalized_type": "\u2200 \u03b5 > 0, \u2203 T\u2080 : \u211d, \u2200 T \u2265 T\u2080, (2 - 1 / cMT - \u03b5) * (Ncount T (2 * T) : \u211d) \u2264 N0simple T (2 * T)",
+      "exact_source_type_match": true
+    },
+    {
+      "name": "montgomery_taylor_simple_on_critical_line_mult_cumulative",
+      "challenge": "comparator/Challenge/Multiplicity.lean",
+      "solution": "comparator/Solution/Multiplicity.lean",
+      "whitespace_normalized_type": "\u2200 \u03b5 > 0, \u2203 T\u2080 : \u211d, \u2200 T \u2265 T\u2080, (2 - 1 / cMT - \u03b5) * (Ncount 0 T : \u211d) \u2264 N0simple 0 T",
+      "exact_source_type_match": true
+    },
+    {
+      "name": "montgomery_taylor_distinct_mult",
+      "challenge": "comparator/Challenge/Multiplicity.lean",
+      "solution": "comparator/Solution/Multiplicity.lean",
+      "whitespace_normalized_type": "\u2200 \u03b5 > 0, \u2203 T\u2080 : \u211d, \u2200 T \u2265 T\u2080, (3 / 2 - cMT\u207b\u00b9 / 2 - \u03b5) * (Ncount T (2 * T) : \u211d) \u2264 Ndist T (2 * T)",
+      "exact_source_type_match": true
+    },
+    {
+      "name": "montgomery_taylor_distinct_mult_cumulative",
+      "challenge": "comparator/Challenge/Multiplicity.lean",
+      "solution": "comparator/Solution/Multiplicity.lean",
+      "whitespace_normalized_type": "\u2200 \u03b5 > 0, \u2203 T\u2080 : \u211d, \u2200 T \u2265 T\u2080, (3 / 2 - cMT\u207b\u00b9 / 2 - \u03b5) * (Ncount 0 T : \u211d) \u2264 Ndist 0 T",
+      "exact_source_type_match": true
+    }
+  ],
+  "sha256": {
+    "comparator/ChallengeDeps.lean": "f05666d0745edbf2dac6ce2a4de675abd1bba3c336fe24aebb80f27d1365ebbd",
+    "comparator/Challenge.lean": "8b56a6f1cf33ac1fee63a13777395d6b9555c21b354b7e6182da78fd88848463",
+    "comparator/Solution.lean": "b707c110ecee1ee0e5ae84110417d68ce8f48fb8e88efb12a95021ee911d3f31",
+    "comparator/Challenge/Multiplicity.lean": "a3cb50165fab91a1fc9e113cdcec6baa85a9a2d309b899317b736ac1481262d3",
+    "comparator/Solution/Multiplicity.lean": "8a2481fc5ddb8a5cf9ef842536aa1ecb237aaf118767db2e01e3665cfed36bb7",
+    "Zeta23/Statement.lean": "3458af8531decf948319517543f731dcdc2c5a7de47e9339f9a443530e60d205",
+    "Zeta23/Statement/Seam.lean": "d16cbfbbfff2cfe3d4df0425957ae20fd1828d8faf39e70f11a2acd85b45c7e3",
+    "Zeta23/Statement/SeamClosed.lean": "b2b03190fb3cf4520d273f8bdb9fc7a89939381c8aaff360e5845108b4d8b88d",
+    "Zeta23/Defs/Counting.lean": "0d403d6d4d3f4cdfa370b374376dede2d56fa79e1b0146d48ce8c4321496ee0d",
+    "Zeta23/FinalMult.lean": "ce5f72526219ba85ade4aa870c71ca3f72e7e39f32e5b595a07798bd4fbf568c",
+    "Zeta23/ThmD/Mult.lean": "9dc42aea8d30092c70632bd6f1b229981b7cb8f3b32dfedc6c007d1e452495aa"
+  },
+  "scope": "Definition/type source equality only. The semantic proof is independently reconstructed in the accompanying review; no kernel replay, successful build, or complete axiom-closure claim."
+}

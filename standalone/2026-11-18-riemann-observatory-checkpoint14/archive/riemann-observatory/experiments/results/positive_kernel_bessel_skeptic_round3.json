@@ -1,0 +1,16 @@
+{
+  "status": "exact algebra/constant checks passed",
+  "arithmetic": "integer and Fraction only",
+  "fourth_derivative_polynomial": {
+    "v^0 c^2": "-64",
+    "v^0 c^4": "16",
+    "v^1 c^1": "-16",
+    "v^1 c^3": "96",
+    "v^2 c^2": "112",
+    "v^2 c^4": "-32",
+    "v^3 c^3": "-96",
+    "v^4 c^4": "16"
+  },
+  "positive_kernel_lower_at_T32": 793440,
+  "limitations": "Infinite spectral and phase arguments are analytic proofs in the accompanying audit, not numerical claims."
+}

@@ -1,0 +1,39 @@
+{
+  "admission_path": "quality/pending_round13/release92_tightness_source_admission_records.jsonl",
+  "admission_sha256": "5556dea9d67ddf1678fd29b9d83f29bb28c1578d2184fceb441765bea8f06dd1",
+  "superseded_proposal_path": "quality/pending_round13/uniform89_tightness_dependency_records.jsonl",
+  "superseded_proposal_sha256": "4c0582d4c645f31518458acc678a47f05b9bb408c5f514b55630ca0459d7d13b",
+  "review_path": "audits/adversarial_reviews/release92_tightness_source_selection.md",
+  "review_sha256": "1538a7676212cffafa366d5bac954b5d8ab527ebc8d63d89fa4160a04c14ef85",
+  "canonical_input_path": "corpus/bibliography.jsonl",
+  "canonical_input_sha256": "a350effaa90e7cd4c0c866e4c008683ec63bd752213182a5f02f222a2a67985d",
+  "canonical_catalogued_at_review": 999,
+  "canonical_selected_at_review": 998,
+  "provider_candidate_input_sha256": "6cd1886b50b6ea42c422a437dae0964399f680176c965800aa897525260f6c3c",
+  "new_selected_count": 2,
+  "canonical_admission_status": "pending director action",
+  "entries": [
+    {
+      "id": "PAPER-U89-GARSIA-RODEMICH-REARRANGEMENT",
+      "action": "recommend_new_selected",
+      "source_path": "sources/release92_tightness/garsia_rodemich_1974_numdam.pdf",
+      "source_sha256": "36a0909f6684535ed0170fb89bf964628d6710bfb1cb49cd0e74954d9cf40a93",
+      "source_sha256_kind": "full journal scan PDF",
+      "audit_level": 0,
+      "whole_work_read": false,
+      "access_status": "full_text_accessed",
+      "provider_candidate_matches": []
+    },
+    {
+      "id": "PAPER-U89-BILLINGSLEY-CONVERGENCE-1968",
+      "action": "recommend_new_selected",
+      "source_excerpt_manifest": "sources/release92_tightness/billingsley1968/scan_excerpt_manifest.json",
+      "source_excerpt_manifest_sha256": "fc8513c0cb06082053fa970ddfd5cea7caa79e178f2a68abcb96bff09da8cb68",
+      "source_excerpt_count": 6,
+      "audit_level": 0,
+      "whole_work_read": false,
+      "access_status": "primary_source_excerpt_accessed",
+      "provider_candidate_matches": []
+    }
+  ]
+}

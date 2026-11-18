@@ -1,0 +1,21 @@
+{
+  "kind": "exact_frozen_uniform_error_budget_exploration",
+  "input_sha256": "e782247f3991118936ef2fcacf59943b510508c9062200c66798f354d95fae92",
+  "labelings_checked": 128,
+  "pair_count": 21,
+  "max_total_local_weight": "47999993/1000000",
+  "maximizer_labels_0simple_1double": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "min_total_local_weight": "1499999/125000",
+  "old_per_site_error_coefficient": "48",
+  "relative_coefficient_gain": "7/48000000",
+  "conditional_refinement": "For chain length ell>=6, original nonnegative near energies and uniform kernel defect epsilon, the direct local-window sum costs at most(47999993/10^6)*epsilon*max(ell-6,0). This follows by replacing each local kernel square by e+epsilon before applying the nonnegative weight cap. This M refinement is asserted only for nonnegative near energies; the signed-energy extension retains the previously documented per-pair shifted-energy defect D_delta instead.",
+  "conclusion": "The worst-case label pattern almost saturates48. This exploration gives only a negligible uniform coefficient improvement and no asymptotic density gain; do not prioritize it over pressure-aware boundary work."
+}

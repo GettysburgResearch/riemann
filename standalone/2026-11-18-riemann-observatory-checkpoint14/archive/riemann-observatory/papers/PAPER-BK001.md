@@ -1,0 +1,35 @@
+# PAPER-BK001 — Asymptotic Estimation for Eigenvalues in the Exponential Potential and for Zeros of Kiν(z) with Respect to Order
+
+{
+  "id": "PAPER-BK001",
+  "title": "Asymptotic Estimation for Eigenvalues in the Exponential Potential and for Zeros of Kiν(z) with Respect to Order",
+  "authors": [
+    "Yuri Krynytskyi",
+    "Andrij Rovenchak"
+  ],
+  "year": 2021,
+  "date": "2021-06-10",
+  "venue": "SIGMA17(2021),057,7pages",
+  "doi": "10.3842/SIGMA.2021.057",
+  "arxiv": "2103.01732v2",
+  "version": "v2,2021-06-10,publishedSIGMAversion",
+  "source_url": "https://arxiv.org/pdf/2103.01732v2",
+  "publication_status": "published",
+  "family": [
+    "D",
+    "F",
+    "H"
+  ],
+  "audit_level": 1,
+  "bibliographic_verified": true,
+  "access_status": "full_text_accessed",
+  "substantive_whole_work_read": true,
+  "read_scope": "Complete7-pageprimarytextread,includingSchrodingerreduction§3andquasiclassicalLambert-Wformula;figurecurves/numericaltablesnotindependentlyaudited.",
+  "source_file": "sources/bessel_round3/krynytskyi2021.pdf",
+  "source_sha256": "9890d645a706658522bb7bf7884c98f8fefec4be2ad58a8d4652c1bcfa4588ab",
+  "accessed_at": "2026-11-17",
+  "main_result_inspected": "Fixedz>0large-indexν-zerosestimatedbyπ(n-1/4)/W(2π(n-1/4)/(ez)) times[1+O(logn/n²)],p4Eq7,derivedthroughquasiclassicalquantization.",
+  "technical_review": "Schrodinger-to-Besselscalingindependentlyreconstructed;WKBerrornotindependentlyvalidatedandnotusedasrigorousO(1)countinput.",
+  "correction_search_status": "incomplete",
+  "research_connection": "ClassicalBesselbaseforpositivefinite-offlinecountermodel;thecampaignaddsownexactI-seriesphaseproofratherthanassumingWKBprecision."
+}

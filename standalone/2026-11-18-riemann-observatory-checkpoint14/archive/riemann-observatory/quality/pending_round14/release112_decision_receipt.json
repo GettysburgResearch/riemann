@@ -1,0 +1,37 @@
+{
+  "status": "pending_director_primary_passage_read_and_admission",
+  "records_path": "quality/pending_round14/release112_records.jsonl",
+  "records_sha256": "ee8306e759f9a584985e982c3f2cc6c306dbe8241ce97ad77806674a3f725c54",
+  "review_path": "audits/adversarial_reviews/release112_baker_bhm_source_selection.md",
+  "review_sha256": "87bf4b05064f1de14f68178fe6e01e0dc71dc369b1410c2d5c721da6d2af211f",
+  "canonical_input_path": "corpus/bibliography.jsonl",
+  "canonical_input_sha256": "98d1f5d2016b0add67ffa80a7e3774e33fdd6e5dac48da8dc583e0bb3ff0ec22",
+  "provider_input_path": "corpus/candidates.jsonl",
+  "provider_input_sha256": "6cd1886b50b6ea42c422a437dae0964399f680176c965800aa897525260f6c3c",
+  "canonical_catalogued_at_review": 1002,
+  "canonical_selected_at_review": 1001,
+  "distinct_recommended_count": 2,
+  "duplicate_matches": [],
+  "entries": [
+    {
+      "id": "PAPER-R112-BAKER2012",
+      "action": "recommend_new_selected",
+      "source_path": "sources/prime107_references/baker2012_acta.pdf",
+      "source_sha256": "2b1b0690e08489b077bb632fef2d6ea777ebe6684dc02efe5d6af9e67127cbda",
+      "source_locator": "§1, p. 351, definition of S_q(a;x); p. 352, q∼Q notation and Theorem 2",
+      "audit_level": 0,
+      "whole_work_read": false,
+      "provider_candidate_matches": []
+    },
+    {
+      "id": "PAPER-R112-BHM2007",
+      "action": "recommend_new_selected",
+      "source_path": "sources/prime107_references/blomer_harcos_michel2007_annales.pdf",
+      "source_sha256": "7a07387f1f9da1dcd20d9dda329d0ee02d6d8df5aa3af885227545cbc4149fb5",
+      "source_locator": "§2.3, pp. 708–709, equations (2.25)–(2.27)",
+      "audit_level": 0,
+      "whole_work_read": false,
+      "provider_candidate_matches": []
+    }
+  ]
+}

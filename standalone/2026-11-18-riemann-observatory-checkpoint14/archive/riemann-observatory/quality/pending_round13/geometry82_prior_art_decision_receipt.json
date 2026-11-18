@@ -1,0 +1,56 @@
+{
+  "admission_path": "quality/pending_round13/geometry82_prior_art_admission_records.jsonl",
+  "admission_sha256": "89e595764be070e76b88029116898b2981e0c15d2dd78f9fd93b5ead37ae7d49",
+  "superseded_proposal_path": "quality/pending_round13/analytic79_prior_art_records.jsonl",
+  "superseded_proposal_sha256": "e5cc145a49f6bd3b2029ebb82cc0ac53326fdb1c99c8eb493221d6cf95f3ee16",
+  "canonical_input_sha256": "ea20432c93ca40b866be399bc1d94e4b9bbbcd031de4116344e2e6f36161f551",
+  "canonical_selected_at_review": 991,
+  "new_selected_count": 4,
+  "entries": [
+    {
+      "id": "PAPER-AN79-HR-MOCK",
+      "action": "admit_new_selected",
+      "source_path": "sources/analytic79_prior_art/hughes_rudnick_mock_journal.pdf",
+      "source_sha256": "344e849fb291029f57057c9dc91b48fd677f6b1dc829404d98de474823ea5e1f",
+      "audit_level": 0,
+      "whole_work_read": false
+    },
+    {
+      "id": "PAPER-AN79-HR-ZETA",
+      "action": "admit_new_selected",
+      "source_path": "sources/analytic79_prior_art/hughes_rudnick_zeta_journal.pdf",
+      "source_sha256": "b4572e5bdbf3cf7e891a4128aeb3bb56d151f2b16d23f9e63a94b1a2d2c09139",
+      "audit_level": 1,
+      "whole_work_read": true
+    },
+    {
+      "id": "PAPER-AN79-MAJ-PW-PND",
+      "action": "admit_new_selected",
+      "source_path": "sources/analytic79_prior_art/polynomial_normal_tokyo_2007.pdf",
+      "source_sha256": "d771e1ae496c50fa00cbf77b33210ca3c5c4c172ff052747a901f969fb8ce05e",
+      "audit_level": 0,
+      "whole_work_read": false
+    },
+    {
+      "id": "PAPER-GEO82-MANGOLDT1905",
+      "action": "admit_new_selected",
+      "source_path": "sources/geometry81/mangoldt1905_gdz.pdf",
+      "source_sha256": "7dd69d353ee6a173cc856131fc1bb07e222e1e2f99b138b4b251d0998d11a5ec",
+      "audit_level": 0,
+      "whole_work_read": false
+    },
+    {
+      "id": "PAPER-LF63-HKO2000",
+      "action": "reuse_existing_selected",
+      "doi": "10.1098/rspa.2000.0628",
+      "source_path": "sources/classical63_lfunctions/hko2000.pdf",
+      "source_sha256": "d73c088120f1b12c78ae21f403ff30d47e2a09f9e5df6184584edf35ec83b086",
+      "scope": "Theorem 1.2 and §2(a), (2.2)–(2.9), derivative scalar moments and finite Haar-label tilt lineage"
+    }
+  ],
+  "pending_source_qualification": {
+    "id": "PAPER-AN79-HR-ZETA",
+    "status": "pending_independent_adjudication",
+    "scope": "literal averaging-weight log tails; sufficient Schwartz setting proposed"
+  }
+}

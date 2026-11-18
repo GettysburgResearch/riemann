@@ -1,0 +1,35 @@
+# Independent check of the Dong–Wang–Wang–Zhang inverse phase map
+
+I checked the source arXiv:2608.31060v1 PDF, SHA-256 3c9ec2c584be3b00b751a96b47df0de2d96eb2657b1afbaa5cbf95b58fcc1972. The review uses Theorem 1.1 on pp. 2–3, the twist in §2, the Gaussian identity (3.6), Proposition 4.1 and equations (4.10)–(4.13), and Lemma 5.1 on pp. 15–16. This is a targeted check of the stated consequences rather than a new proof of the cited multiplicative estimates. [Primary source](https://arxiv.org/pdf/2608.31060v1) [Proponent's map](../latest62_dong_inverse_phase_map.md)
+
+## Pointwise trigger and the common center
+
+For \(Q=\log T\), \(y=\log x\), the actual range is \(\sqrt Q\le y\le Q/2\), \(T\le |t|\le2T\), and the input is \(|S(x,t)|=x/N\) for \(S(x,t)=\sum_{n\le x}n^{it}\) and real \(1\le N\le y^{1/100}\). The twist \(t_0\) is chosen from (2.4) independently of \(L\). The theorem's one center \(1+i\phi\), \(\phi=t-t_0\), satisfies \(|\phi-t|\le cN\), and each \(cN^6\le L\le y/2\) has at least \(L/360\) nontrivial zero copies in the open disk of radius \(LQ/y^2\). The proof's small extra shift \(\eta\) need not be common across different \(L\). Neither a lower bound for a differently weighted Dirichlet polynomial nor an upper moment of the specified sum supplies the stated antecedent.
+
+In Proposition 4.1 the normalization scales the Gaussian error as \((\lambda y)^{-1/6}\), which is subordinate to \(1/N\) when \(\lambda y\) exceeds a sufficiently large multiple of \(N^6\). The shifted-pole term in (3.6) is present before it is bounded by (4.6). The pointwise lower bound on the left-line modulus resulting from (4.8) has the asserted \(\lambda^{-1}(\lambda y)^{1/3}e^{\lambda y/2}\) form because \(\sqrt{y/\lambda}/N=\lambda^{-1}\sqrt{\lambda y}/N\) and \(N\ll(\lambda y)^{1/6}\). The sign is a lower bound for \(|\zeta(1-\lambda+iu)|\). Replacing it by a lower bound for the reciprocal on the critical line does not give the same Hadamard comparison.
+
+For the last counting step, suppose the weighted sum in (4.10) has been supplied independently at \(\lambda=L/(40y)\) with \(|\eta|\le2\lambda\sqrt{Q/y}\), center \(|\phi|\asymp T\), and the prescribed range. Put \(a=20\lambda Q/y\). For exterior zeros \(|1+i\phi-\rho|\ge2a\), the denominator in (4.10) is at least \(9/20\) times \(|1+a+i\phi-\rho|\); here \(|\eta|/a\le1/(10\sqrt2)\) and \(\Re\rho\le1\). Formula (4.12) follows by using \(5\lambda/a=y/(4Q)\). The reciprocal \(1/a=y^2/(20\lambda y Q)\le Q/(80c_0N^6)\) when \(\lambda y\ge c_0N^6\). The real logarithmic derivative bound then makes the exterior contribution at most \(5y/36\) for sufficiently large \(T\), leaving at least \(y/9\) inside. Each contribution is at most \(1/\lambda\), giving \(L/360\). This confirms the secondary sufficient input under the same threshold bounds.
+
+## Moment extraction and finite enclosures
+
+For fixed admissible \(x,T\), any probability measure on the allowed \(t\)-set with lower \(2k\) moment strictly larger than \((x/N_0)^{2k}\), \(k>0\), gives at least one point with \(|S(x,t)|>x/N_0\). The triangle bound \(|S(x,t)|\le\lfloor x\rfloor\le x\) ensures its resulting real \(N=x/|S(x,t)|\) is at least 1. Thus \(N_0\le y^{1/100}\) guarantees the required upper bound on \(N\), and \(L\ge cN_0^6\) works for the chosen point when \(L\le y/2\). Continuity gives a relatively open witness set for an ordinary interval. The moment itself does not select an explicit point or identify a zero.
+
+At an interval of possible \(t\) with center \(t_\circ\) and radius \(d\), the direct finite sum bound gives
+\[
+ |S(x,t)-S(x,t_\circ)|\le d\sum_{n\le x}\log n.
+\]
+Together with a ball around \(S(x,t_\circ)\), this supplies a test for \(N\le N_0\). All resulting centers lie on \(\Re s=1\), with imaginary displacement at most \(cN_0+d\) from \(t_\circ\), and the disk radius at the selected \(L\) is \(LQ/y^2\). The union over the allowed center segment preserves the real-part information. A single round disk enlarged by the center uncertainty can lose that information. The paper gives existence of absolute \(c,T_0\), not numerical values for them. Certification of the sum alone therefore gives no explicit finite enclosure with independently validated radius and applicability, absent additional effective control of those theorem constants. One also needs a nonempty allowed interval for \(L\).
+
+## Geometry, VK transfer, and phase limitation
+
+With \(r=LQ/y^2\), the actual open disk lies in \(1-r<\Re s<1+r\). Its zero real parts are in \(1-r<\Re\rho<1\) by the classical nonvanishing at 1 and to its right. For an open disk, even \(r=1/2\) excludes the critical line. A positive geometric margin requires \(r<1/2\). At larger radii the disk may meet that line, but the source does not locate any of its zero copies there. Multiplicity counts do not distinguish the ordinates or certify the vanishing order of a selected zero. The result cannot be used as an actual critical-line phase certificate solely from this conclusion. At \(y=\sqrt Q\), attaining a near-one radius would require \(cN^6\) itself to be small, which is not guaranteed.
+
+For a separate high-height Vinogradov–Korobov zero-free width \(C Q^{-2/3}(\log Q)^{-1/3}\), choose \(r=c_1Q^{-2/3}(\log Q)^{-1/3}\), with \(c_1>0\) strictly below the width constant after bounded changes of height. The centers satisfy \(|\phi|\asymp T\), and the disk has constant-comparable heights. Set \(L=ry^2/Q\); the upper bound \(L\le y/2\) follows from \(y\le Q/2\) and \(r<1\). For all admissible \(N\), the lower bound \(L\ge cN^6\) follows from
+\[
+ y^{97/50}\ge (c/c_1)Q^{5/3}(\log Q)^{1/3}.
+\]
+Inverting yields \(y\ge C_1Q^{250/291}(\log Q)^{50/291}\). This lower endpoint eventually lies below \(Q/2\) and above \(\sqrt Q\). With that choice the disk is zero-free, contradicting the positive count if the trigger holds. The resulting strict upper bound \(|S(x,t)|<x/(\log x)^{1/100}\) is uniform within those asymptotic ranges. It is a consequence of the inverse theorem and the separate zero-free region. It does not claim an explicit \(T_0\) or numerical \(C_1\).
+
+At \(x=\sqrt T\), the upper endpoint of Theorem 1.1, Lemma 5.1 applies with the same inclusive lower length. Uniformly on the whole block the ratio \(|S|/x\ll T^{-1/13}=o((\log x)^{-1/100})\). Infinitely many actual critical-line zeros permit arbitrarily high choices of \(T\) whose positive block contains such a zero (for instance take \(T\) equal to its positive ordinate). Thus the existence of an actual line zero in the height block cannot imply the trigger at this particular admissible length. This says nothing about triggers at other lengths and provides no independently computed high zero.
+
+I found no material parameter defect in the stated map. The only boundary refinement is that an open disk tangent to the critical line at \(r=1/2\) already excludes the line, even though a strict positive margin needs \(r<1/2\). The main compatibility conclusion remains a derivative-free existence region only.

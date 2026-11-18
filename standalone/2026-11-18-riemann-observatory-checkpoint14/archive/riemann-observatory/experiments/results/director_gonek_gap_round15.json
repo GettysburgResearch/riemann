@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "beta": "19/10",
+  "method": "Exact fractions, Machin arctangent bounds, interval evaluation and alternating tail",
+  "arctan_terms": 80,
+  "series_last_index": 40,
+  "first_tail_index": 41,
+  "pi_lower": "3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679",
+  "pi_upper": "3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170680",
+  "gap_integral_lower": "0.99726619997764485330428683895726174554962281741506",
+  "gap_integral_upper": "0.99726619997764485330428683895726174554962281741507",
+  "conclusion": "F(1.9)<1. The gap implication additionally uses the RH theorem and the repaired bulk covering argument.",
+  "code_sha256": "67dd5cd4d7664bf419aa4443b7a92ba72581dff726aab05913670f4c994c2ace"
+}

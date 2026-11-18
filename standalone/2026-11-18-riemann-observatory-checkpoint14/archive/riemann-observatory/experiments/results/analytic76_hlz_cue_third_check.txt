@@ -1,0 +1,8 @@
+Normalization: 1/12
+F: 2*x**3 - 4*x + 1
+K2: -2*x**3*y + 2*x**3 - 2*x*y**3 + 12*x*y - 4*x + 2*y**3 - 4*y + 1
+K3: -2*x**3*y - 2*x**3*z + 2*x**3 - 2*x*y**3 - 24*x*y*z + 12*x*y - 2*x*z**3 + 12*x*z - 4*x - 2*y**3*z + 2*y**3 - 2*y*z**3 + 12*y*z - 4*y + 2*z**3 - 4*z + 1
+C3/(xyz): 16*x**2*y**2*z**2 - 24*x**2*y**2 - 24*x**2*z**2 + 24*x**2 - 24*y**2*z**2 + 24*y**2 + 24*z**2 - 8
+Witness: -818904257/864000000000
+CUE chamber verified at order x<y<z, z<x+y: True
+CUE chamber verified at order x<y<z, z<x+y: False
