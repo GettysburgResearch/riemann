@@ -49,7 +49,7 @@ def main():
     norm_bound = (ball(norm1)/halfwidth).sqrt() + (ball(norm0)*halfwidth).sqrt()/2
     lower = (mass/2-loss-tail)/norm_bound
     print("mass",mass,"finite loss",loss,"tail bound",tail,"lower bound",lower)
-    assert lower > arb("0.0128")
+    assert lower > arb("0.0128151")
 
 
 if __name__ == "__main__":
