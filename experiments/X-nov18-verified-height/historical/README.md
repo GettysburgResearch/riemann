@@ -6,7 +6,7 @@ The [final combined historical inventory](checkpoint-final.json) verifies the co
 
 The two implementations also agree at all 631 distinct historical boundaries covered by the modern indexed archive. At 106 boundaries the height lies between consecutive archived brackets. The other 525 use a separate scalar Hardy sign to locate the height inside a bracket. The historical inventory has 791 distinct boundaries in total. Reproduce this comparison with `python check_modern_endpoints.py checkpoint-final.json ../checkpoint-0305.json`.
 
-To rerun the final archival and endpoint checks, use `python check_runs.py --snapshot checkpoint-final.json --count`. The ordered transcript SHA-256 is `972a64531e7511bcc688e27a5e86ed7a1a882711dffc4952d6a129b056cd86ae`. The supplemental sign SHA-256 is `717a96f6925ade9c9cb71d40b1a50bee34ec31b1d2166e913b26677e318e4ba5`.
+The stronger replay grouped the successful sign intervals into 41 chains and independently recomputed the full-strip count at all 80 distinct chain endpoints, including both ends of the final extension. Each count agreed. Run `python check_runs.py --snapshot checkpoint-final.json --check-chains` to repeat it, or use `--count` for the two outer endpoints. The ordered transcript SHA-256 is `972a64531e7511bcc688e27a5e86ed7a1a882711dffc4952d6a129b056cd86ae`. The supplemental sign SHA-256 is `717a96f6925ade9c9cb71d40b1a50bee34ec31b1d2166e913b26677e318e4ba5`.
 
 From this directory on Debian amd64 with gcc, git, dpkg-deb, GMP development headers and the MPFR runtime, build in a separate workspace. The builder fetches exact source and checks SHA-256 for all seven historical development and runtime packages before local extraction.
 
