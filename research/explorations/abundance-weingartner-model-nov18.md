@@ -6,7 +6,7 @@ $$
  \qquad
  c=\gamma+\log\log 2-\int_2^\infty\left(b(v)-\frac1v\right)\frac{dv}{\log v}.
 $$
-Here $W_0$ is a logarithmic moment, distinct from Weingartner's moment product $W$. For $y=\exp(te^{-\gamma})\to\infty$, put $J_y=[y\log y-y,y\log y+y]$. Weingartner's equation (3) uses exactly
+Here $W_0$ is a deterministic integral of local log moments, distinct from Weingartner's moment product $W$. For $y=\exp(te^{-\gamma})\to\infty$, put $J_y=[y\log y-y,y\log y+y]$. Weingartner's equation (3) uses exactly
 $$
  I(y,s)=\int_e^y\log(1+v e^{-s/v})\frac{dv}{\log v}
  +\int_y^{y\log y}\log(1+v^{-1}e^{s/v})\frac{dv}{\log v}.
@@ -74,3 +74,36 @@ $$
 Indeed $b(v)-1/v=1/(2v^2)+O(v^{-3})$ and an integration by parts shows that the residual main term below $y$ is $-y+3/2+O(1/\log y)$. In the lower replacement of $\log(1+(v-1)e^{-sb(v)})$ the part up to $\sqrt y$ is exponentially small and the part from $\sqrt y$ to $y/2$ is $O(1/\log y)$ by the earlier pointwise bound. On $[y/2,y]$ the exponent difference $O((\log y)/y)$ is multiplied by a logistic derivative $\ll\exp(-c(y-v)\log y/y)$, giving another $O(1/\log y)$ after integration. The analogous upper exponent replacement on $[y,2y]$ has the bound with $v-y$ in the exponent; on $[2y,y\log y]$ the logistic derivative is $O(y^{-1/2+o(1)})$, so its total cost is smaller still. These exponential bounds follow from the derivative of $\log v-s/v$, bounded below by $c\log y/y$ on $[y/2,2y]$, with endpoint value $O(1)$ at $y$.
 
 Restoring the subtraction of $1/v$ in the upper logarithm changes it by $-1/(v+e^{sb(v)})+O(v^{-2})$. Replacing this by $-1/v$ costs $O(1/\log y)$ after integration: on $[y,2y]$ this follows even from $\int_y^{2y}dv/(v\log v)$, and on $[2y,y\log y]$ one gains an additional $O(y^{-1/2+o(1)})$. Its contribution is therefore $-\log(1+\log\log y/\log y)+O(1/\log y)$. The tail beyond $y\log y$ was already $O(1/\log y)$. All bounds are uniform in $s\in J_y$, so taking minima preserves the displayed correction.
+
+## Explicit constants above $\log y=1100$
+
+For all $L=\log x\ge1000$ the derivative estimate in (2) satisfies
+$$
+ |W_0'(xL)+c-\gamma-\log L|\le25/L^3.
+ \tag{3}
+$$
+Here are explicit error bounds. Use $u=L\log(v/x)$ and denote $H=\log(v-1)-xLb(v)$ as before. On $|u|\le L/4$, $\log v=L+u/L$, $xL/v=L e^{-u/L}$, and
+$$
+ |H-u|\le (|u|+0.65u^2)/L+4Le^{-L}.
+$$
+This follows by Taylor's bound $|1-e^{-z}-z|\le e^{1/4}z^2/2$ and $0\le b(v)-1/v\le 1/v^2$ for $v\ge2$. The derivative $dH/du=(v+xL)/(L(v-1))\ge e^{-1/4}>0.77$, and $|H(0)|\le3Le^{-L}$. Thus for every point $w$ between $H$ and $u$, $|f'(w)|\le 1.01 e^{-0.75|u|}$. Also $|f(H)-\mathbf1_{u<0}|\le1.01e^{-0.75|u|}$, apart from the irrelevant point at zero. The normalized weight in this coordinate is $L^2 b(v)dv/\log v=R(u)du$, with
+$$
+ |R(u)-1|=\left|\frac{v b(v)}{1+u/L^2}-1\right|
+ \le 2|u|/L^2+3e^{-L}.
+$$
+The integral over $[-L/4,L/4]$ of $f(u)-\mathbf1_{u<0}$ is exactly zero. The integrals there of $|f(H)-f(u)|$ and $|R-1|\,|f(H)-\mathbf1_{u<0}|$ together are bounded by $12/L$: extend the exponential majorants to the whole line and use $\int_\mathbb R (|u|+0.65u^2)e^{-0.75|u|}du<9.8$ and $\int_\mathbb R|u|e^{-0.75|u|}du<3.6$.
+
+Below $v=xe^{-1/4}$, the error factor is at most $e^{-0.28L}$ and $\int_2^x b(v)dv/\log v\le2(\log L+1)$. Above $v=xe^{1/4}$ we have $xL b(v)\le0.78L$, so the integrated logistic tail is bounded by $4e^{-0.22L}$ using $f(H)\le2e^{0.78L}/v$ and $b(v)\le2/v$. Both tails together, multiplied by $L^2$, are below $1/L$ for $L\ge1000$; the right-hand exponential bounds decrease after multiplication by $L^3(1+\log L)$ in this range. The base correction $\int_x^\infty(b(v)-1/v)dv/\log v\le1/(xL)$ is also less than $1/L^3$. These inequalities prove (3).
+
+Now let $\ell=\log y\ge1100$, and define $v_\pm=\log(x_\pm/y)$ at the endpoints of $J_y$. Then
+$$
+ e^{v_\pm}(1+v_\pm/\ell)=1\pm1/\ell,\qquad
+ 0.99/\ell\le |v_\pm|\le2/\ell .
+$$
+The second statement follows by evaluating the strictly increasing left side at $\pm0.99/\ell$ and $\pm2/\ell$; use $1+w\le e^w\le1+w+w^2$ for $|w|\le0.01$. The signed difference $\log\log x_\pm-\log\ell$ has magnitude at least $0.99/(\ell(\ell+2/\ell))>0.98/\ell^2$. By (3), the derivative signs at both endpoints are as asserted in the asymptotic proof. Thus the unique model saddle lies in $J_y$ for every $\ell\ge1100$.
+
+Finally, the uniform error in the first integral comparison above is strictly less than 10 throughout $J_y$ in this range. The base term differs from $-y$ by at most 2 since $0\le s\int_y^\infty(b-1/v)dv/\log v\le1+1/\ell$. The lower comparison up to $y/2$ costs less than 3: both logarithms are nonnegative and individually at most $e^2/(2y)<4/y$, including the section from 2 to $e$ present in just one integral. From $y/2$ to $y$, the exponent comparison costs at most $[2\log 2+s/y]/(\ell-\log 2)<1.01$. From $y$ to $y\ell$, the two upper replacements cost at most $\log(1+\log\ell/\ell)+s/(y\ell)<1.02$. Finally $v\ge y\ell$ gives $sb(v)<1.01$ and $(e^{s b(v)}-1)/v\le 4s/v^2$, so the remaining tail costs at most $4s/(y\ell\log(y\ell))<0.01$. Taking the minima gives the explicit deterministic bound
+$$
+ \left|\inf_s\{W_*(s)-s\log t\}+y-\min_{s\in J_y}I(y,s)\right|<10
+ \qquad(\log y\ge1100).
+$$

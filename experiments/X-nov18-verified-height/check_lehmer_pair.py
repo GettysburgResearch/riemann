@@ -8,6 +8,57 @@ ANCHOR = 12_363_153_437_138
 INDEX = 12_363_153_519_193
 
 
+def check_pair_heat(h, B, center_height, slope):
+    """Bound the Gaussian heat deformation of the pair-removed genus-one product."""
+    radius = arb("0.003")
+    final = h*h
+    low = h*h*arb("0.999")/2
+    high = h*h*arb("1.001")/2
+
+    def error_coeff(vmax, size):
+        denom = 1-8*B*vmax
+        if not denom > 0:
+            raise ArithmeticError("Gaussian majorant diverges")
+        variance = 2*vmax/denom
+        K = B*(arb(1)/2 + 2*B*size**2).exp()/(2*denom.sqrt())
+        return K*(3*variance**2+h*h*variance), K*(size**2+6*variance+h*h)
+
+    def error(vmax, size):
+        a, b = error_coeff(vmax, size)
+        return a+b*size**2
+
+    if not error(final, radius) < radius**2-h*h:
+        raise ArithmeticError("Local two-zero disk is not isolated throughout the heat interval")
+    curvature_error = 2*error(final, 2*radius)/radius**2
+    if not curvature_error < arb("0.1"):
+        raise ArithmeticError("Failed uniform heat convexity")
+    constant, quadratic = error_coeff(high, radius)
+    if not (constant < arb("0.001")*h*h and quadratic < 1):
+        raise ArithmeticError("Failed time bracketing at the moving minimum")
+    small = arb("0.003")*h
+    if not error(final, h+small) < small*(2*h-small):
+        raise ArithmeticError("Failed isolation of the nonreal conjugate heat zeros")
+    if not (low > arb("1.026e-6") and high < arb("1.030e-6")):
+        raise ArithmeticError("Wrong stated time bracket")
+    # At the moving minimum the derivative vanishes. Bound G'(0) by Cauchy,
+    # then use the lower curvature already proved on the whole diameter.
+    shift = error(high, radius)/radius/(2-curvature_error)
+    collision_height = center_height-2*low.union(high)*slope + arb(0,shift.upper())
+    final_center = center_height-2*final*slope
+    stated_final = arb("3000175351972.0825943698701")
+    if not abs(final_center-stated_final) < arb("1e-13"):
+        raise ArithmeticError("Failed final real center")
+    if not abs(collision_height-arb("3000175351972.082590")) < arb("0.000004"):
+        raise ArithmeticError("Failed collision ordinate enclosure")
+    print(f"pair-removed real logarithmic slope = {slope}")
+    print(f"heat double zero ordinate = {collision_height}")
+    print(f"final conjugate-disk real center = {final_center}")
+    print(f"heat collision backward-time lower endpoint: {low}")
+    print(f"heat collision backward-time upper endpoint: {high}")
+    print(f"heat curvature error from 2: <= {curvature_error}")
+    print(f"heat nonreal conjugate centers offset +/-i*h: {h}, disks radius {small}")
+
+
 def main():
     ctx.prec = 160
     block, row = divmod(INDEX-ANCHOR, 10000)
@@ -52,7 +103,7 @@ def main():
                        ("absolute all-zero Lehmer statistic",gbar),
                        ("strong Lehmer derivative statistic",strong)):
         print(f"{name} <= {value}")
-    if not (poisson<16 and gbar<arb("0.01") and strong<arb(42)/5):
+    if not (poisson<16 and gbar<arb("0.00134") and strong<arb("8.057") and strong<arb(42)/5):
         raise ArithmeticError("Lehmer criteria are not certified")
 
     # A nearby zero of zeta', without assumptions about the remaining zeros.
@@ -96,9 +147,16 @@ def main():
         log_ratio=((trial+h).zeta()/trial.zeta()/step_ratio).log()/h
         derivative_error=(h*Gprime/2).upper()
         Gval=log_ratio+acb(arb(0,derivative_error),arb(0,derivative_error))
+        if _ == 0:
+            # i*(log xi/p)' at the exact pair midpoint is real; the trial
+            # differs from that midpoint only by the enclosed root errors.
+            slope_error = ((Gprime+1)*abs(z)).upper()
+            slope = -(Gval+E).imag + arb(0,slope_error)
+            check_pair_heat(half_gap, square_sum, center_height, slope)
         image=-pair_poly*Gval/2
         certified_error=abs(z-image)/(1-contraction)
-        if certified_error < arb("1e-13"):
+        stated=acb(arb("0.500013823730388624"), arb("3000175351972.082587159392354416"))
+        if certified_error+abs(trial-stated) < arb("2.3e-15"):
             print(f"refined derivative zero center = {trial}; absolute error <= {certified_error}")
             break
         trial=(mid+image).mid()

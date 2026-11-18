@@ -63,3 +63,37 @@ $$
  \qquad \epsilon=2^{-38}.
 $$
 The logarithm is the principal branch because $\epsilon G_0<\pi$. This expression averages $G$ on the short segment and differs from $G(s)$ by at most $\epsilon D/2$. The trial's distance to the unique zero is bounded by $|z-J(z)|/(1-q)$, evaluated with the original uncertain $a,b$. Iterating with enclosure midpoints leaves a residual bound below $2.20\cdot10^{-15}$ before rounding the displayed center. This computation uses only scalar evaluations of $\zeta$ and the proven local derivative bounds.
+
+### A local collision under the de Bruijn–Newman heat flow
+
+In the ordinate normalization $F_0(x)=\Xi(x)$, put $F_{-v}=e^{v\partial_x^2}\Xi$ for $v\ge0$. Let $m=(a+b)/2$, $h=(b-a)/2$ and $A=Q'(m)/Q(m)$. As $v$ increases from $0$ to $h^2$, the two indexed zeros in the moving disk $|x-m+2vA|<0.003$ undergo **exactly one collision**. Its backward time satisfies
+$$
+ .999\,h^2/2<v_*<1.001\,h^2/2,
+ \qquad 1.026\cdot10^{-6}<v_*<1.030\cdot10^{-6}.
+$$
+Before the collision both zeros are simple and real. At $v_*$ there is one real zero of multiplicity two. Afterwards the roots form a simple nonreal conjugate pair. At $v=h^2$ each lies in the disk of radius $.003h$ about $m-2h^2A\pm ih$. In particular their imaginary parts have magnitude between $.997h$ and $1.003h$, where $h$ is about $0.001433907$. The collision ordinate is $3000175351972.082590\pm0.000004$. The final disks have common real center $3000175351972.0825943698701\pm10^{-13}$. This statement follows from the verified pair and the full-strip bound $B$ above, with no assumption on the more distant zeros. For the common normalization with initial function proportional to $\Xi(x/2)$, multiply the ordinates by two and the times by four.
+
+To bound the heat convolution globally, let $E(z)=Q(m+z)e^{-Az}/Q(m)$. The genus-one product at $m$ gives $E(z)=\prod_{w\ne a,b}(1+u_w)e^{-u_w}$, with $u_w=z/(m-w)$ and $\sum |u_w|^2\le B|z|^2$. Each factor has modulus at most $e^{|u_w|^2/2}$ since $|1+u|^2\le e^{2\Re u+|u|^2}$. Integrating the derivative of $(1+u)e^{-u}$ on the segment from zero to $u$ gives $|(1+u)e^{-u}-1|\le |u|^2e^{|u|}/2$. Telescoping the product and using $\sqrt B|z|\le (1+B|z|^2)/2$ yields the global estimate
+$$
+ |E(z)-1|\le\tfrac12\sqrt e\, B|z|^2e^{B|z|^2}.
+$$
+
+Write $x=m+w-2vA$ and use a real Gaussian $U$ of variance $2v$. Completing the square in the Gaussian integral for $F_{-v}(x)$ shows that its zeros in this coordinate equal those of
+$$
+ G_v(w)=\mathbb E[((w+U)^2-h^2)E(w+U)] .
+$$
+The omitted factor is $Q(m)e^{A w-vA^2}$, which never vanishes. The Gaussian bounds justify differentiation and give $\partial_v G_v=G_v''$. Equivalently this convolution follows by multiplying each frequency in the Fourier representation of $\Xi$ by $e^{-v\omega^2}$. At $v=0$ the formulas use $U=0$.
+
+For $|w|\le R$ define $D=1-8Bv$, $s^2=2v/D$ and $K=B\exp(1/2+2BR^2)/(2\sqrt D)$. For the times used here $D>0$. Then
+$$
+ |G_v(w)-(w^2+2v-h^2)|\le C_0+C_1 |w|^2,
+ \quad C_0=K(3s^4+h^2s^2),\quad C_1=K(R^2+6s^2+h^2).
+$$
+Indeed $e^{B|w+U|^2}\le e^{2BR^2}e^{2BU^2}$, and tilting the Gaussian by the second factor changes its variance to $s^2$ and its total mass to $D^{-1/2}$. Its second and fourth absolute moments after translation by $w$ are bounded by $|w|^2+s^2$ and $|w|^4+6|w|^2s^2+3s^4$. The expressions increase with $v$ and $R$.
+
+Take $R=.003$. On $|w|=R$ and $0\le v\le h^2$, the error is less than $R^2-h^2$. Rouché's theorem keeps exactly two zeros in the disk and the function is strictly positive at its real endpoints. Cauchy's inequality on radii $R$ applied to the error on $|w|\le2R$ gives $|G_v''(w)-2|<.1$ for $|w|\le R$. On the real diameter the function is therefore strictly convex and increases with $v$ with derivative greater than $1.9$. The minimum on that fixed diameter is continuous and also increases at least this quickly. At $v=.999h^2/2$ the value at $w=0$ is negative since $C_0<.001 h^2$. At $v=1.001h^2/2$ all real values are positive since $C_0<.001 h^2$ and $C_1<1$. At the unique zero of the minimum the endpoints remain strictly positive, so the minimum occurs in the interior and is a double zero. Strict convexity and the conserved two-zero count give the claimed transition. Finally at $v=h^2$, on $|w\mp ih|=.003h$, the lower bound for the quadratic is $.003(2-.003)h^2$ and exceeds the error bound with $R=1.003h$. Each small disk therefore contains exactly one simple zero. The numerical inequalities use directed ball arithmetic in [the same verifier](check_lehmer_pair.py).
+
+For the displayed real coordinates the scalar logarithmic derivative enclosure in the preceding section gives $A=-\Im(G(m_s)+E(m_s))=-1.55979826\pm3\cdot10^{-9}$, writing $m_s=1/2+im$ and using $G,E$ there in their logarithmic-derivative notation. To enclose the collision ordinate, Cauchy on $|w|=R$ bounds $|G_v'(0)|$ by $(C_0+C_1R^2)/R$ since the quadratic has derivative zero at the origin. Dividing by the proved lower curvature bounds the distance from the origin to the collision minimum. The physical ordinate adds $m-2vA$.
+
+
+The same estimates give a local criterion for any real entire genus-one function with two simple real zeros $m\pm h$: if the sum $B$ of absolute inverse-square distances from $m$ to the other zeros satisfies $Bh^2\le1/4000$, these two zeros have a unique collision in the moving disk of radius $2h$ at $.999h^2/2<v<1.001h^2/2$ and lie within $.003h$ of the stated conjugate centers at $v=h^2$. Indeed rescale $h$ to one, replace $B$ by $1/4000$ in the same monotone error bounds, and use $R=2$. The error on the outer circle is below $.017$, the uniform curvature error is below $.050$, and at $v=1.001/2$ the constant and quadratic error coefficients are below $.000830$ and $.00228$. On the final two small circles the error is below $.00582$, while the quadratic has modulus at least $.005991$. The real Gaussian convolution exists because the global product bound has quadratic type small enough at all the stated times.

@@ -36,7 +36,7 @@ def main():
     parser.add_argument("--deadline",type=int,help="Unix deadline for beginning a new run")
     parser.add_argument("--batch",type=int,default=8)
     args=parser.parse_args()
-    if not 1<=args.batch<=64 or not ANCHOR<=args.start<args.until<3_010_000_000_000:
+    if not 1<=args.batch<=64 or not ANCHOR<=args.start<args.until<=3_000_200_000_000-3000-args.step:
         parser.error("Invalid batch or target")
     args.runs.mkdir(parents=True,exist_ok=True)
     while args.deadline is None or time.time()<args.deadline:

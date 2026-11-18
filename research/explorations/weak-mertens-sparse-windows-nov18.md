@@ -1,5 +1,9 @@
 # Weak Mertens from arbitrarily sparse physical windows
 
+The [finite Ingham witness transfer](#transferring-the-finite-ingham-witnesses-to-every-sufficiently-late-window) and [its narrower interval](#a-narrower-interval-for-the-two-published-witness-levels) give both signs of Mertens-conjecture violations in every sufficiently late interval $[X,A X(\\log\\log X)(\\log\\log\\log X)]$, with $M(x)/\\sqrt x>1.82$ and $M(x)/\\sqrt x<-1.83$ respectively. The proof treats RH and its failure separately and uses Hurst's published finite computation. On the slightly wider intervals $[X,X(\\log\\log X)^{1+\\epsilon}]$, [integrated excess](#positive-integrated-excess-above-both-numerical-thresholds) gives at least $X^{1-\\delta}$ qualifying integers of each sign up to a fixed positive factor, for every $\\delta>0$.
+
+The local upper-bound characterizations of weak Mertens also use the proposed reciprocal-residue converse cited below. The unconditional oscillation inequalities are independent of that converse; the numerical onset of the interval results is unspecified.
+
 Let $g(u)=e^{-u/2}M(e^u)$ for $u\ge0$. The weak Mertens hypothesis is
 $\int_0^R |g(u)|^2du=O(R)$. For any fixed $d>1/2$ define
 $$
@@ -733,4 +737,168 @@ give measure $\gg R$ to each exceedance set there. The same proof gives
 positive relative measure on individual windows where the normalized
 square mean stays bounded, which holds in density for the present widths
 under weak Mertens. No assertion about the existence of an ordinary
-logarithmic density is needed here.
+logarithmic density is needed here. Related conditional distribution
+results, including Ng's positive-mass tail estimates at arbitrarily
+large levels under additional hypotheses, are discussed by
+[Hu et al., §7](https://doi.org/10.1017/S0305004124000306).
+
+There is also an unconditional counting consequence. For every
+$\epsilon,\delta>0$, each interval $[X,X(\log\log X)^{1+\epsilon}]$
+contains $\gg_{\epsilon,\delta}X^{1-\delta}$ integers $n$ with
+$M(n)>1.82\sqrt n$ and as many with $M(n)<-1.83\sqrt n$, for all
+sufficiently large $X$. On RH use $M(x)\ll_\eta x^{1/2+\eta}$ to
+convert the positive integrated excess into logarithmic measure
+$\gg X^{-\delta}$ for either event, taking $\eta$ small. Off RH choose
+a zero with real part $\beta>\Theta-\delta/4$, $\beta>1/2$, where
+$\Theta$ is the supremal real part. The positive compact filter gives
+each signed $L^1$ mass $\gg_\rho X^{\beta-1/2}$ on a fixed-width
+log interval inside the test range (a polynomial multiplicity factor
+can be discarded). Subtracting a bounded threshold on that fixed
+interval does not alter this lower order. The supremum of $|g|$ there
+is $O_\eta(X^{\Theta-1/2+\eta})$ by the generalized Littlewood bound
+for $M$, or by $|M(x)|\le x$ if $\Theta=1$. Thus the same measure
+conclusion holds taking $\eta<\delta/4$. Ordinary length is at least
+$X$ times logarithmic measure, and each qualifying real $x$ makes
+$\lfloor x\rfloor$ qualify for the corresponding positive numerical
+threshold since $M(x)=M(\lfloor x\rfloor)$ and
+$\sqrt{\lfloor x\rfloor}\le\sqrt x$. At most one endpoint integer is
+lost. This does not imply a uniform positive proportion of all integers
+in the interval.
+
+## A local pair bound that gives uniform convergence on all long windows
+
+Assume RH and simplicity, and put $c_\gamma=1/(\rho\zeta'(\rho))$.
+A sufficient condition for the stronger **uniform** arithmetic mean law is
+$$
+ \sum_{j\in\mathbb Z}\left(\sum_{j\le\gamma<j+1}|c_\gamma|\right)^2<\infty .
+ \tag{12}
+$$
+Then
+$$
+ \lim_{H\to\infty}\ \sup_{R\ge0}
+ \left|\frac1H\int_R^{R+H}|g(u)|^2du -B\right|=0,\qquad
+ W_{n,d}\longrightarrow B\quad(d>1/2\text{ fixed}).
+$$
+By the unit-interval zero count and Cauchy–Schwarz,
+$\sum_\gamma |c_\gamma|^2\log(2+|\gamma|)<\infty$ suffices for (12).
+Thus the extra sufficient weight over bare residue-square convergence
+is at most a single logarithm. For instance dyadic unweighted
+inverse-square masses of order $T^2/(\log T)^3$ fit this sufficient
+bound even though they have no fixed power saving from $T^2$.
+This comparison describes the bounds as conditions; it makes no
+assertion that zeta actually has such masses. For related work on
+the Besicovitch residue process and an additional log moment for
+continuity of a random process, see [Iksanov–Kabluchko–Marynych,
+§4.2](https://arxiv.org/abs/2502.04969).
+
+To prove the uniform law, majorize any translated interval of length one
+by a constant times a translate of $(\sin(v/2)/(v/2))^2$ centered at
+its midpoint. Its Fourier transform vanishes outside $[-1,1]$.
+The squared local $L^2$ norm of any finite exponential sum over a subset
+of ordinates is therefore bounded uniformly in the translate by
+a constant times the square-bin sum in (12) restricted to that subset:
+only equal or adjacent bins can interact and $2xy\le x^2+y^2$.
+Thus the finite trigonometric sums converge to a function $g_*$ in the
+Stepanov norm $\sup_a\|\,\cdot\,\|_{L^2(a,a+1)}$.
+
+For identification with the physical function, invert $G(s)=1/(s\zeta(s))$
+against a compact Gevrey test in $u>0$, shifting to $\Re s=-1$. The
+separated horizontal reciprocal estimates and rapid Gevrey transform decay
+justify the shift exactly as above; on $\Re s=-1$ the functional equation
+and the Euler product on $\Re(1-s)=2$ give $G(s)=O((1+|\Im s|)^{-5/2})$.
+The simple pole at zero has residue $-2$. The critical residue series
+against the test is absolutely convergent by (12) and its Fourier decay.
+Hence distributionally, and therefore almost everywhere on $u>0$,
+$$
+ g(u)=g_*(u)-2e^{-u/2}+O(e^{-3u/2}),
+$$
+where the last term is $e^{-3u/2}$ times the bounded inverse Fourier
+transform on the shifted line. An equality on compact Gevrey tests
+determines locally integrable functions since such tests provide compact
+approximate identities. Finite trigonometric squares have uniform interval
+means tending to the sum of squared coefficients. Stepanov convergence
+transfers this to $g_*$ by Cauchy–Schwarz, uniformly in the translate.
+The exponentially decaying terms and their cross products have uniformly
+bounded total integrals on the positive half-line, the latter by
+Stepanov boundedness on the unit intervals. This proves the uniform law.
+
+Finally $p_{n,d}$ is unimodal, of supremum $O_d(n^{-1/2})$ and total
+variation twice its supremum. Partition the positive half-line into
+intervals of a fixed large length $H$. Replacing $p_{n,d}$ by its
+cell average against $|g|^2$ costs $O(H n^{-1/2})$, because each cell's
+$|g|^2$ mass is $O(H)$ and the sum of the cell oscillations of the
+density is bounded by its total variation. All the cell means of $|g|^2$
+are then uniformly near $B$. First let $n\to\infty$ and then $H\to\infty$.
+
+### Necessity for the unit-window bound under linear independence
+
+If the distinct positive ordinates are linearly independent over
+$\mathbb Q$, (12) is also necessary for
+$\sup_{R\ge0}\int_R^{R+1}|g(u)|^2du<\infty$. Indeed this bound implies
+weak Mertens, hence RH and simplicity by Titchmarsh's necessary conditions.
+Extend $g$ by zero to the negative axis; its unit-window bound continues
+to hold. Choose a real even nonnegative Schwartz probability density
+$\phi$ with compactly supported nonnegative smooth Fourier transform
+$\widehat\phi$, $\widehat\phi(0)=1$. For example normalize the squared
+absolute value of the inverse transform of a real even nonnegative
+smooth compact bump. Put $\phi_T(u)=T\phi(Tu)$. Minkowski gives the
+same unit-window bound $C$ for $|\phi_T*g|^2$, uniformly in $T$.
+
+The Laplace boundary of $G(1/2+z)$ is the Fourier transform of $g$ in
+tempered distributions, since the unit-window bound makes $g$ tempered
+and $e^{-\epsilon u}g\to g$ against Schwartz tests. On the compact
+support of $\widehat\phi_T$ subtract the finitely many principal parts
+$c_\gamma/(z-i\gamma)$; the remainder is smooth on that boundary.
+After multiplication by the smooth cutoff its inverse Fourier transform
+tends to zero at infinity. The contribution of each pole, in physical
+space, is the convolution of $\phi_T$ with
+$c_\gamma\mathbf1_{u\ge0}e^{i\gamma u}$, which equals
+$c_\gamma\widehat\phi(\gamma/T)e^{i\gamma u}+o(1)$ as $u\to\infty$.
+Thus for fixed $T$ the finite real trigonometric sum
+$P_T(u)=\sum_\gamma c_\gamma\widehat\phi(\gamma/T)e^{i\gamma u}$
+inherits the bound $C$ on every unit interval, even after independently
+changing the phases of its positive ordinates and reflecting the
+phases at their conjugates. This last assertion follows by Kronecker's
+theorem, which approximates each finite phase assignment by arbitrarily
+large real translations.
+
+Choose one independent uniform random phase for each positive unit
+frequency bin and assign it to every coefficient in that bin, adjusting
+the original coefficient phase to make its amplitude
+$a_\gamma=|c_\gamma|\widehat\phi(\gamma/T)$. On averaging the real
+polynomial's squared norm on $[-1/2,1/2]$, all inter-bin terms vanish.
+The result is twice the sum of
+$a_\gamma a_{\gamma'}\operatorname{sinc}((\gamma-\gamma')/2)$ over pairs
+in the same positive bin. Every sinc factor here is at least
+$2\sin(1/2)>0$. Hence $C$ controls the squared bin sums uniformly in
+$T$, and Fatou as $T\to\infty$ proves (12) including the reflected bins.
+This necessity uses linear independence; the sufficient direction does not.
+
+### Saving an iterated logarithm in (11)
+
+Writing $\log_j$ for the $j$th iterated logarithm, the right endpoint
+in (11) can be reduced to
+$$
+ A X\frac{(\log_2 X)(\log_3 X)}{\log_4 X}
+$$
+for some fixed $A$, still with no explicit threshold. Only the required
+theta truncation length changes. On RH and $2\le|t|\le2V$, split the
+nearby zeros when proving (4) at distance $1/\log\log(10+|t|)$.
+There are $O(\log(2+|t|)/\log\log(10+|t|))$ ordinates in the inner
+interval including multiplicities, by the Riemann–von Mangoldt formula
+with Littlewood's bound on $S(t)$. Each costs $O(\log R)$ in the horizontal
+log-modulus integral. Each of the other $O(\log(2+|t|))$ neighbors costs
+only $O(1+\log\log\log(10+|t|))$. Bounded ordinates cost $O(\log R)$.
+Thus the low-frequency logarithmic loss is
+$$
+ O\!\left(\frac{\log V}{\log\log V}\log R+
+       \log V(1+\log\log\log V)\right).
+$$
+The same bound holds for each fixed frequency translation upon replacing
+$2V$ by $3V$. With $V=(\log R)^4$, the first term dominates. In the proof
+of (11) choose $e^{2L}=C(\log R)(\log_2 R)/\log_3 R$ with a sufficiently
+large fixed $C$. This pays the truncation error uniformly on the low band;
+(4) continues to pay the upper band against the short-uniform factors.
+The surplus-width argument and diagonal selection of a fixed constant
+apply verbatim. This slight shortening uses the RH counting estimate
+only in the RH branch of the unconditional sign argument.

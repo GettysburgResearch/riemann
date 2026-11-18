@@ -67,10 +67,16 @@ def integer_floor(endpoint):
 
 
 def exact_count(point):
-    count = arb(point).zeta_nzeros()
-    if not count.is_exact() or not count.is_integer():
+    precision = ctx.prec
+    try:
+        while ctx.prec <= max(4096, precision):
+            count = arb(point).zeta_nzeros()
+            if count.is_exact() and count.is_integer():
+                return int(count.fmpz())
+            ctx.prec *= 2
         raise ArithmeticError(f"The independent total zero count was not exact: {count}")
-    return int(count.fmpz())
+    finally:
+        ctx.prec = precision
 
 
 def main():

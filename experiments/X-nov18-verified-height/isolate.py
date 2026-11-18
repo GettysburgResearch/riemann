@@ -7,6 +7,7 @@ refined to printed decimal ordinates. Its reported count can be below the reques
 
 import argparse
 import ctypes
+import fcntl
 import hashlib
 import json
 import lzma
@@ -182,6 +183,8 @@ def main():
                         help="optional Unix timestamp after which no new block starts")
     parser.add_argument("--shifted", action="store_true",
                         help="try the explicitly centered native grid before the default grid")
+    parser.add_argument("--claim-dir", type=Path,
+                        help="optional shared directory of advisory block locks for cooperating workers")
     args = parser.parse_args()
     if not 0 <= args.first_block < args.stop_block or args.stride < 1:
         parser.error("invalid range")
@@ -191,10 +194,22 @@ def main():
     if args.shifted:
         from shifted_isolator import ShiftedIsolator
         shifted = ShiftedIsolator()
+    if args.claim_dir:
+        args.claim_dir.mkdir(exist_ok=True, parents=True)
     for block in range(args.first_block, args.stop_block, args.stride):
         if args.deadline_utc is not None and time.time() >= args.deadline_utc:
             break
-        create_block(isolator, block, args.output, args.precision, shifted)
+        if args.claim_dir is None:
+            create_block(isolator, block, args.output, args.precision, shifted)
+            continue
+        if (args.output / f"{block:04d}.json").is_file():
+            continue
+        with (args.claim_dir / f"{block:04d}.lock").open("a") as claim:
+            try:
+                fcntl.flock(claim, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            except BlockingIOError:
+                continue
+            create_block(isolator, block, args.output, args.precision, shifted)
 
 
 if __name__ == "__main__":

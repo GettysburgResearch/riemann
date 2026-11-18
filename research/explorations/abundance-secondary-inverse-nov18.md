@@ -115,3 +115,31 @@ $$
 Indeed $-g_s(Qw)/\log(Qw)$ tends to 1 for $0<w<1$ and to $w^{-2}$ for $w>1$. The bound on $g_s$ supplies integrable majorants. The uniform bound (7) passes this limit through the sum including the phases $e^{i\gamma\log Q}$.
 
 To convert from $\psi$ to $\pi$ subtract $\sum_{k\ge2}k^{-1}\sum_p\eta(p^k)g_s(p^k)$. For $k=2$ its negative divided by $\sqrt Q$ tends to $\int_0^1dw+\int_1^\infty w^{-4}dw=4/3$: apply PNT on fixed compact ranges of $p/\sqrt Q$, using the uniform convergence on compact sets away from 1 of the preceding rescaled soft minimum (a narrow interval around 1 has negligible mass after shrinking). Below $a\sqrt Q$ Chebyshev bounds the contribution by $O(a\sqrt Q)$, and above $A\sqrt Q$ partial summation gives $O(\sqrt Q/A^3)$ for fixed $A\ge2$. Higher powers with $p^k\le Q$ cost $O(Q^{1/3}\log Q)$ by Chebyshev. Above $Q$ the cumulative count of powers of exponent at least three is $O(v^{1/3}\log v)$ and $|g_s(v)|\le s/v^2$, giving $O(Q^{1/3}(\log Q)^2)$ there. This proves (5).
+
+## The two limiting tails at a common threshold
+
+For $Z\in\{\sigma,\phi\}$ let $I_{Z,0}(u)=\min_{v\ge1}(M_Z(v)+cv-vu)$ with the common linear anchor $c$ in the primary note, and abbreviate $A_\sigma(t)=\Pr(\sigma(n)/n\ge t)$, $A_\phi(t)=\Pr(n/\varphi(n)\ge t)$ in limiting natural density. Set
+$$
+ V(t)=\log\frac{A_\sigma(t)}{A_\phi(t)}
+       -\big(I_{\sigma,0}(\log t)-I_{\phi,0}(\log t)\big).
+$$
+Let $s_{\rm m}$ be the minimizer for $I_{\phi,0}(\log t)$, $y=\exp(te^{-\gamma_E})$ and $Q^2\log Q=s_{\rm m}$. If $\Theta<1$ then
+$$
+ V(t)=U_2(s_{\rm m})+O_\epsilon(y^{\Theta-1/2+\epsilon}).
+ \tag{8}
+$$
+In particular, under RH, (5) holds with $U_2(s)$ replaced by $V(t)$, giving an eventual positive residual in the ratio of two *observed tails at the same threshold*, with both continuous models fixed. If $1/2<\Theta<1$, (8) gives exact upper exponent $\Theta/2$ for $V$ measured against $y$, and transfers the value lower exponent as well, since $\Theta-1/2<\Theta/2$.
+
+Here are the interpolation details. Let $W_\lambda=W_\phi+\lambda D$, $M_\lambda=M_\phi+\lambda D_0+c\,\mathrm{id}$ for $0\le\lambda\le1$, and let $s_\lambda,\tilde s_\lambda$ be their respective saddles at $u=\log t$. All functions are strictly convex, being convex combinations of the corresponding true or continuous log moments, plus a linear term if needed. At $v=x\log x$ their curvatures are $\asymp1/(x\log^2x)$ uniformly in $\lambda$, by the ordinary logistic variance computation and the prime-square variance difference, which also holds with continuous prime measure. Their derivatives equal $\gamma_E+\log\log x+o((\log x)^{-2})$ uniformly, by the [exact saddle analysis](abundance-exact-saddle-nov18.md) and its continuous counterpart. Consequently $x\sim y$ uniformly at all these saddles and between any of them. In particular each saddle is $y^{1+o(1)}$ and $s_{\rm m}=\tilde s_0$.
+
+The primary derivative discrepancy and (2) imply, uniformly in $\lambda$,
+$$
+ |s_\lambda-\tilde s_\lambda|\ll_\epsilon y^{\Theta+\epsilon}.
+$$
+Indeed the discrepancy at a saddle is $O_\epsilon(y^{\Theta-1+\epsilon})$ and the inverse curvature costs $O(y\log^2y)$. Also $|\tilde s_\lambda-s_{\rm m}|\ll_\epsilon y^{1/2+\epsilon}$ since $D_0'(v)=O((v\log v)^{-1/2})$. This last bound follows by the continuous prime-square calculation, or by combining $D'$ from the [prime-square note](abundance-curvature-sigma-nov18.md) with $U_2'=O_\epsilon(v^{-1+\Theta/2+\epsilon})$ for $\Theta<1$. The same $O_\epsilon(y^{-1/2+\epsilon})$ bound applies to $D'$ throughout the saddle interval.
+
+By differentiation of a strictly convex Legendre minimum with respect to $\lambda$, the difference between the arithmetic and continuous log-minimum *ratios* is
+$$
+ \int_0^1 (D(s_\lambda)-D_0(\tilde s_\lambda))\,d\lambda .
+$$
+Replace $s_\lambda$ by $\tilde s_\lambda$ inside $D$ at cost $O_\epsilon(y^{\Theta-1/2+\epsilon})$. Replace $U_2(\tilde s_\lambda)$ by $U_2(s_{\rm m})$ at cost $O_\epsilon(y^{(\Theta-1)/2+\epsilon})$ by the secondary derivative bound. The prefactor $-\tfrac12\log(2\pi y)$ in the exact saddle formula is common to the two true tails and cancels up to $o(1)$. These estimates prove (8). This same-threshold argument makes no lower-exponent assertion when $\Theta=1$; (1) itself has no such restriction.

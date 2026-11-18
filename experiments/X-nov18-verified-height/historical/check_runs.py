@@ -56,11 +56,19 @@ def parse_log(text):
     return states
 
 
-def read_all(directory):
+def read_all(directory, expected=None):
     good, failed, digests = [], [], {}
-    for path in sorted(directory.glob("*.log")):
+    if expected is None:
+        paths = sorted(directory.glob("*.log"))
+    else:
+        if any(Path(name).name != name or not name.endswith(".log") for name in expected):
+            raise ValueError("Invalid local transcript name in snapshot")
+        paths = [directory / name for name in sorted(expected)]
+    for path in paths:
         raw = path.read_bytes()
         digests[path.name] = hashlib.sha256(raw).hexdigest()
+        if expected is not None and digests[path.name] != expected[path.name]:
+            raise ValueError(f"Transcript differs from snapshot: {path}")
         for left, right, counts in parse_log(raw.decode("ascii")):
             if counts is None:
                 failed.append((left, right))
@@ -96,8 +104,11 @@ def main():
     parser.add_argument("--count", action="store_true", help="also cross-check historical endpoints with modern FLINT")
     parser.add_argument("--check-chains", action="store_true",
                         help="certify exact counts at both ends of every disjoint-region sign chain")
+    parser.add_argument("--snapshot", type=Path, help="verify only the exact transcript set in this snapshot")
+    parser.add_argument("--write-snapshot", type=Path, help="save transcript names, digests and verified result")
     args=parser.parse_args()
-    good, failed, digests=read_all(args.runs)
+    previous = json.loads(args.snapshot.read_text()) if args.snapshot else None
+    good, failed, digests=read_all(args.runs, previous["transcripts"] if previous else None)
     end, count=frontier(good)
     checked_points = set()
     if args.count or args.check_chains:
@@ -131,12 +142,21 @@ def main():
     digest=hashlib.sha256()
     for name,h in sorted(digests.items()):
         digest.update(f"{name}\t{h}\n".encode())
-    print(json.dumps({"old_height":ANCHOR,"old_count":INDEX,"contiguous_height":decimal(end),
+    result={"old_height":ANCHOR,"old_count":INDEX,"contiguous_height":decimal(end),
                       "contiguous_count":count,"new_zeros":count-INDEX,"successful_regions":len(good),
                       "unsuccessful_attempts":len(failed),"transcripts":len(digests),
                       "ordered_transcript_digest":digest.hexdigest(),"modern_counts_rechecked":bool(checked_points),
-                      "checked_sign_chain_endpoints":len(checked_points) if args.check_chains else None},
-                     indent=2))
+                      "checked_sign_chain_endpoints":len(checked_points) if args.check_chains else None}
+    if previous is not None:
+        structural = {k:v for k,v in result.items() if k not in
+                      ("modern_counts_rechecked", "checked_sign_chain_endpoints")}
+        if any(previous["result"].get(k) != v for k,v in structural.items()):
+            raise ValueError("Computed coverage differs from snapshot")
+    if args.write_snapshot:
+        temporary = args.write_snapshot.with_suffix(".tmp")
+        temporary.write_text(json.dumps({"result":result,"transcripts":digests},indent=2)+"\n")
+        temporary.replace(args.write_snapshot)
+    print(json.dumps(result, indent=2))
 
 
 if __name__=="__main__":

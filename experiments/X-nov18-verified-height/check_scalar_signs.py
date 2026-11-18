@@ -21,16 +21,23 @@ def exact_dyadic(mantissa, exponent):
 
 
 def hardy_sign(t):
-    half = arb(1) / 2
-    phase = acb(half / 2, t / 2).lgamma().imag - t * arb.pi().log() / 2
-    value = acb(0, phase).exp() * acb(half, t).zeta()
-    if 0 not in value.imag:
-        raise ArithmeticError("Expected a real Hardy value")
-    if value.real > 0:
-        return 1
-    if value.real < 0:
-        return -1
-    raise ArithmeticError(f"Undetermined sign at {t}")
+    initial = ctx.prec
+    try:
+        while True:
+            half = arb(1) / 2
+            phase = acb(half / 2, t / 2).lgamma().imag - t * arb.pi().log() / 2
+            value = acb(0, phase).exp() * acb(half, t).zeta()
+            if 0 not in value.imag:
+                raise ArithmeticError("Expected a real Hardy value")
+            if value.real > 0:
+                return 1
+            if value.real < 0:
+                return -1
+            if ctx.prec >= 512 or not t.is_exact():
+                raise ArithmeticError(f"Undetermined sign at {t}")
+            ctx.prec *= 2
+    finally:
+        ctx.prec = initial
 
 
 def main():
