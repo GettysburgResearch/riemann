@@ -123,6 +123,8 @@ def main():
     parser.add_argument("--stop", type=int, required=True)
     parser.add_argument("--output", type=Path, default=here / "grid-errors")
     parser.add_argument("--verify", action="store_true")
+    parser.add_argument("--skip-complete", action="store_true",
+                        help="skip records already tied to every native call digest")
     parser.add_argument("--native-probe", type=Path,
                         help="compiled capture_default_grid.c for default-grid calls")
     args = parser.parse_args()
@@ -130,6 +132,14 @@ def main():
     args.output.mkdir(exist_ok=True, parents=True)
     for number in range(args.first, args.stop):
         manifest = json.loads((args.blocks / f"{number:04d}.json").read_text())
+        path = args.output / f"{number:04d}.json"
+        if args.skip_complete and path.is_file() and not args.verify:
+            old = json.loads(path.read_text())
+            archived = old.get("explicit_grid_calls", []) + old.get("default_grid_calls", [])
+            if (old["stream_sha256"] == manifest["stream_sha256"]
+                    and sorted(e["raw_stream_sha256"] for e in archived)
+                    == sorted(c["stream_sha256"] for c in manifest["calls"])):
+                continue
         calls, stock = [], []
         for call in manifest["calls"]:
             if "shifted_parameters" in call:
@@ -145,7 +155,6 @@ def main():
                                   "error_exponents": engine.capture(parameters, call["precision"])})
         if stock:
             result["default_grid_calls"] = stock
-        path = args.output / f"{number:04d}.json"
         if args.verify:
             if json.loads(path.read_text()) != result:
                 raise ArithmeticError(f"Analytic error record differs in block {number}")

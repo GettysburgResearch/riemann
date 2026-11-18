@@ -152,6 +152,8 @@ def main():
             # differs from that midpoint only by the enclosed root errors.
             slope_error = ((Gprime+1)*abs(z)).upper()
             slope = -(Gval+E).imag + arb(0,slope_error)
+            if not (abs(slope) < arb("1.57") and square_sum < arb("81.436")):
+                raise ArithmeticError("Fine heat envelope inputs failed")
             check_pair_heat(half_gap, square_sum, center_height, slope)
         image=-pair_poly*Gval/2
         certified_error=abs(z-image)/(1-contraction)

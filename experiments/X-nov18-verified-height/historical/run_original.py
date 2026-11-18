@@ -31,7 +31,7 @@ def main():
     parser.add_argument("--runs",type=Path,default=Path(__file__).parent/"runs")
     parser.add_argument("--start",type=int,default=ANCHOR,help="first required ordinate of this lane")
     parser.add_argument("--until",required=True,type=int,help="target ordinate; finish any covering iteration")
-    parser.add_argument("--step",type=int,default=1176,choices=(504,672,840,1008,1176,1260))
+    parser.add_argument("--step",type=int,default=1176,choices=(504,672,840,1008,1176,1260,1344,1680,1848,1932,2016,2100,2184))
     parser.add_argument("--precision",type=int,default=160,choices=(120,128,144,160))
     parser.add_argument("--deadline",type=int,help="Unix deadline for beginning a new run")
     parser.add_argument("--batch",type=int,default=8)

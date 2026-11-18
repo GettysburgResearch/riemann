@@ -67,6 +67,9 @@ def main():
         raise ArithmeticError("The heat double root has not been enclosed")
     backward_time = (nu+error)*arb(SCALE)**2
     ordinate = arb(CENTER)+(z+error)*arb(SCALE)
+    if not (abs(backward_time-arb("1.0281241341155220688976e-6")) < arb("1e-28")
+            and abs(ordinate-arb("3000175351972.0825911632211648425075631")) < arb("1e-25")):
+        raise ArithmeticError("Failed the advertised double-root coordinates")
     print(f"backward time in Xi units: {backward_time}")
     print(f"double zero ordinate in Xi units: {ordinate}")
     print(f"rescaled contraction constant at most {lip}")

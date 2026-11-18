@@ -49,6 +49,8 @@ To check hashes, coverage, overlapping indices and the independent total counts 
 python check_frontier.py --max-blocks 3 --count
 ```
 
+The [1.5-million file manifest](native-files-0150.sha256) also binds the per-call analytic error records, core code and independently counted endpoint. Running `sha256sum -c native-files-0150.sha256` from this directory checks all 457 files from that checkpoint. The [manifest generator](native_files.py) checks that each native call digest appears in the correct default or explicit error record.
+
 To regenerate a specific block's native arithmetic, compare the raw sign-interval digests, and reconstruct and verify its merged stream, add the zero-based block number
 
 ```sh

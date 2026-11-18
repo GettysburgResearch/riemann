@@ -23,7 +23,7 @@ def parse_log(text):
         raise ValueError("Unexpected program or precision")
     first, step = Fraction(first), Fraction(step)
     iterations = int(iterations)
-    if (not 0 < iterations or not 0 < step <= 1344 or (step * 512 / 21).denominator != 1
+    if (not 0 < iterations or not 0 < step <= 2184 or (step * 512 / 21).denominator != 1
             or int(step * 512 / 21) % 2 != 0 or first.denominator > 64 or first - 3000 < 3_000_000_000_000
             or first + iterations*step + 3000 > 3_000_200_000_000):
         raise ValueError("Invalid grid domain for the pinned historical parameters")

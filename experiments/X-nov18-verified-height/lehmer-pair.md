@@ -96,4 +96,27 @@ Take $R=.003$. On $|w|=R$ and $0\le v\le h^2$, the error is less than $R^2-h^2$.
 For the displayed real coordinates the scalar logarithmic derivative enclosure in the preceding section gives $A=-\Im(G(m_s)+E(m_s))=-1.55979826\pm3\cdot10^{-9}$, writing $m_s=1/2+im$ and using $G,E$ there in their logarithmic-derivative notation. To enclose the collision ordinate, Cauchy on $|w|=R$ bounds $|G_v'(0)|$ by $(C_0+C_1R^2)/R$ since the quadratic has derivative zero at the origin. Dividing by the proved lower curvature bounds the distance from the origin to the collision minimum. The physical ordinate adds $m-2vA$.
 
 
-The same estimates give a local criterion for any real entire genus-one function with two simple real zeros $m\pm h$: if the sum $B$ of absolute inverse-square distances from $m$ to the other zeros satisfies $Bh^2\le1/4000$, these two zeros have a unique collision in the moving disk of radius $2h$ at $.999h^2/2<v<1.001h^2/2$ and lie within $.003h$ of the stated conjugate centers at $v=h^2$. Indeed rescale $h$ to one, replace $B$ by $1/4000$ in the same monotone error bounds, and use $R=2$. The error on the outer circle is below $.017$, the uniform curvature error is below $.050$, and at $v=1.001/2$ the constant and quadratic error coefficients are below $.000830$ and $.00228$. On the final two small circles the error is below $.00582$, while the quadratic has modulus at least $.005991$. The real Gaussian convolution exists because the global product bound has quadratic type small enough at all the stated times.
+The same estimates give a local criterion for any real entire function of Hadamard genus at most one with two simple real zeros $m\pm h$: if the sum $B$ of absolute inverse-square distances from $m$ to the other zeros, counted with multiplicity, satisfies $Bh^2\le1/4000$, these two zeros have a unique collision in the moving disk of radius $2h$ at $.999h^2/2<v<1.001h^2/2$ and lie within $.003h$ of the stated conjugate centers at $v=h^2$. Indeed rescale $h$ to one, replace $B$ by $1/4000$ in the same monotone error bounds, and use $R=2$. The error on the outer circle is below $.017$, the uniform curvature error is below $.050$, and at $v=1.001/2$ the constant and quadratic error coefficients are below $.000830$ and $.00228$. On the final two small circles the error is below $.00582$, while the quadratic has modulus at least $.005991$. The real Gaussian convolution exists because the global product bound has quadratic type small enough at all the stated times.
+
+### An independently enclosed double root
+
+A second calculation, evaluating the completed zeta function on a complex circle, encloses the unique collision more tightly:
+$$
+ \begin{aligned}
+ v_* &=1.0281241341155220688976\cdot10^{-6}\ \pm10^{-28},\\
+ x_* &=3000175351972.0825911632211648425075631\ \pm10^{-25}.
+ \end{aligned}
+$$
+Here $x_*$ is the common real ordinate at heat time $-v_*$ in the $\Xi$ normalization. [Independent scalar heat replay](check_heat_collision.py)
+
+Set $x_0=3000175351972.08258795570117635$, $d_0=.001434$ and $f(z)=-\Xi(x_0+d_0z)/\Xi(x_0)$. The preceding root enclosures give $|x_0-m|<2\cdot10^{-15}$ and $.999<h/d_0<1.001$. The pair-removed estimates give $|A|<1.57$ and $B<81.436$. Substitution in the quadratic factor and the bound $|E(z)|\le e^{B|z|^2/2}$ yields
+$$
+ |f(z)|\le 2(2+r)^2e^{.003r+.0001r^2}\le 10000e^{.001r^2},\qquad r=|z|.
+$$
+For the denominator use $|E(x_0-m)-1|<.01$. For the final inequality use $.003r\le.0225+.0001r^2$ and $(2+r)^2\le8+2r^2\le(8+2/(.0008e))e^{.0008r^2}$.
+
+Write $f(z)=\sum c_n z^n$. The checker evaluates $f$ at the 48 equally spaced points of $|z|=8$, using conjugation symmetry and interval evaluations of $\zeta$ and $\log\Gamma$. The discrete Fourier coefficient divided by $8^n$ equals $c_n+\sum_{j\ge1}c_{n+48j}8^{48j}$. By the outer circle $|z|=128$ the error is at most $10000e^{.001(128)^2}16^{-48}/(8^n(1-16^{-48}))$.
+
+Put $C(\nu,z)=\mathbb E[f(z+\sqrt{2\nu}N)]$, with $N$ standard real normal, so the physical coordinates are $v=d_0^2\nu$ and $x=x_0+d_0z$. For $|z|\le2$ and $0<\nu<.51$ the Gaussian absolute-moment norm $\|z+\sqrt{2\nu}N\|_n\le 2+\sqrt{1.02n}\le1.30\sqrt n$ for $n\ge48$. Cauchy optimized at $r=\sqrt{n/.002}$ gives $|c_n|\le10000(.002e/n)^{n/2}$. Consequently the discarded terms of $C$ have modulus at most $10000(.097)^{48}/(1-.097)$, uniformly in that disk. For $|z|<.1$ the $j$th $z$ derivative of the tail is bounded by $j!$ times the same number by Cauchy on radius one. The retained terms use the exact heat moments $p_0=1$, $p_1=z$, $p_{k+1}=zp_k+2\nu k p_{k-1}$.
+
+After ordinary Newton iteration chooses a numerical center, the checker applies the contraction $(\nu,z)\mapsto(\nu-C/2,z-C_z/2)$ on the closed real square of radius $10^{-23}$ about that center. Since $C_\nu=C_{zz}$, its two Jacobian row sums are bounded explicitly by $|1-C_{zz}/2|+|C_z|/2$ and $|C_{zzz}|/2+|1-C_{zz}/2|$. Both are below $.007$. The center residual plus this Lipschitz bound times the radius is less than the radius. The resulting common zero of $C,C_z$ lies inside the previously proved disk and time interval and hence is the unique collision already identified.
