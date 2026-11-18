@@ -23,3 +23,30 @@ $$
 Indeed bounded norm implies the lemma's hypothesis with $D=E$, $b=a$, since $y^a\le(2X)^a$. Applying this for all $a>1/2$ gives the classical bound. Conversely under RH the classical estimate $E(t)=O(\sqrt t\log t)$ makes the displayed norm $O_a(X^{1/2-a}\log X)$ for large $X$. No estimate outside this octave is required for either implication.
 
 In particular, a proposed unconditional global norm bound at a fixed $a$ on the corrected *difference* must already control these overlapping prime-counting increments. The unresolved source estimate is uniform boundedness of the displayed octave norm for every $a>1/2$. The identity and overlap argument supply no cancellation estimate for those increments.
+
+## Disjoint octaves suffice, even after freely fitting one constant per octave
+
+There is a stronger conclusion for the actual prime source. Fix $1/2<a<1$. Suppose there are real numbers $c_j$, one for each integer $j\ge1$, and a common $B$ such that
+$$
+\int_{2^j}^{2^{j+1}} |E(y)-c_j|^2\,dy/y\le B^2 2^{2aj}.
+$$
+Then zeta has no zero in $\Re s>a$. The forward implication uses the classical unconditional zero-density theorem $N(\sigma,T)=o(T)$ for fixed $\sigma>1/2$ (for instance Ingham's density estimate). The same criterion imposed for every $a>1/2$ is consequently equivalent to RH, by the classical conditional prime-counting bound for the converse. One may omit any finite number of blocks.
+
+**Proof.** Let $C(y)=c_j$ on the half-open octave and set $h=2\pi/\log 2$. By Cauchy–Schwarz on each block,
+$$
+R(s)=s\int_2^\infty (E(y)-C(y))y^{-s}\,dy/y
+$$
+is holomorphic for $\Re s>a$ by locally uniform absolute convergence. The constants are $O(2^j)$ by the hypothesis and the elementary $E(y)=O(y)$, so the separate transforms converge on $\Re s>1$. Write $Q(s)=s\int_2^\infty E(y)y^{-s}dy/y$. There
+$$
+Q(s)-R(s)=(1-2^{-s})\sum_{j\ge1}c_j 2^{-js}.
+$$
+The right-hand side is invariant under $s\mapsto s+ih$. Hence $Q'(s+ih)-Q'(s)$ extends holomorphically to $\Re s>a$, as $R'(s+ih)-R'(s)$.
+
+By integrating each prime step and the continuous main term before differentiating in $\Re s>1$, we have
+$$
+Q'(s)=\frac{\zeta'}{\zeta}(s)+\sum_{p,k\ge2}^{*}(\log p)p^{-ks}
+       +\frac{2^{1-s}}{s-1}.
+$$
+Here the starred sum ranges over every prime $p$ and every integer $k\ge2$. It converges locally absolutely for $\Re s>1/2$. The rational-exponential term cancels the pole of the logarithmic derivative at 1. Thus the meromorphic continuation of $Q'$ in this half-plane has precisely the zeta zeros as poles, with residues their multiplicities. The identity theorem applied to the derivative difference shows that a zero $\beta+i\gamma$ with $\beta>a$ forces zeros at every $\beta+i(\gamma+mh)$ for positive integers $m$, with the same multiplicity. Their number at heights in $(0,T]$ grows at least as $T/h-O_\gamma(1)$, contradicting $N(\beta,T)=o(T)$. This proves the assertion.
+
+The least-squares choice is the logarithmic average of $E$ on each block. Equivalently one may project the rescaled first-octave residual $y^a(G_{X,a}-F_a)(\log y)$ off constants on dyadic blocks, since the $E(X)$ term vanishes under that projection. This removes every block's unknown level from the target. A sufficient source estimate remains square-root-scale within-block variation on all large dyadic blocks with arbitrary positive exponent slack.
